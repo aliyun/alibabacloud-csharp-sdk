@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class GetBotSessionDataRequest : TeaModel {
         /// <summary>
-        /// <para>The key for the workspace. If you omit this parameter, the operation uses the default workspace. You can find the key on the business management page of your main account.</para>
+        /// <para>The business space key. If this parameter is not specified, the default business space is accessed. You can obtain the key value on the business management page of the Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// <para>The end time for the query. The format must be <c>yyyyMMdd</c>. For example: <c>20240605</c>.</para>
+        /// <para>The end time of the query. The time format is yyyyMMdd, such as 20240605.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the bot instance.</para>
+        /// <para>The ID of the chatbot instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RobotInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The start time for the query. The format must be <c>yyyyMMdd</c>. For example: <c>20240505</c>.</para>
+        /// <para>The start time of the query. The time format is yyyyMMdd, such as 20240505.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

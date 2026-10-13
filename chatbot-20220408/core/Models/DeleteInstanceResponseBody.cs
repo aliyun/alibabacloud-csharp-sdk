@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class DeleteInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of business types.</para>
+        /// <para>The list of business types.</para>
         /// </summary>
         [NameInMap("BizTypeList")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user who created the task.</para>
+        /// <para>The ID of the task creator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9052</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? CreateUserId { get; set; }
 
         /// <summary>
-        /// <para>The username of the user who created the task.</para>
+        /// <para>The name of the task creator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xuqiang_test</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>检查待发布模块是否空闲发生错误，faq</para>
+        /// <para>An error occurred while checking whether the module to be published is idle, faq</para>
         /// </summary>
         [NameInMap("Error")]
         [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The task ID. This parameter is an alias for <c>Id</c>.</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8521</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? Response { get; set; }
 
         /// <summary>
-        /// <para>The task status. For more information about possible states, see the GetInstancePublishTaskState API operation.</para>
+        /// <para>The task status. You can call the GetInstancePublishTaskState operation to learn more about the status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FE_RUNNING</para>

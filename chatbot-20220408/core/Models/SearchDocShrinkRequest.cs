@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class SearchDocShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The workspace key. If omitted, the default workspace is used. You can obtain this key from the Business Management page of your main account.</para>
+        /// <para>The business space key. If not specified, the default business space is accessed. You can obtain the key value from the business management page of the primary account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// <para>A list of category IDs.</para>
+        /// <para>The list of category IDs.</para>
         /// </summary>
         [NameInMap("CategoryIds")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         /// <para>The name of the creator.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>张三</para>
+        /// <para>John</para>
         /// </summary>
         [NameInMap("CreateUserName")]
         [Validation(Required=false)]
@@ -77,10 +77,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string EndTimeEnd { get; set; }
 
         /// <summary>
-        /// <para>The search keyword.</para>
+        /// <para>The keyword.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>搜索关键字</para>
+        /// <para>SearchKeyword</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
@@ -107,17 +107,17 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string ModifyTimeEnd { get; set; }
 
         /// <summary>
-        /// <para>The name of the last modifier.</para>
+        /// <para>The name of the modifier.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>李四</para>
+        /// <para>Jane</para>
         /// </summary>
         [NameInMap("ModifyUserName")]
         [Validation(Required=false)]
         public string ModifyUserName { get; set; }
 
         /// <summary>
-        /// <para>The page number to return.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -137,7 +137,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The task status.<br>Valid values:<br>• -1: Queued<br>• 0: Succeeded<br>• 1: Parsing<br>• 2: Processing<br>• 3: Failed<br><br><br><br><br><br></para>
+        /// <para>The task status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>-1: queued</description></item>
+        /// <item><description>0: succeeded</description></item>
+        /// <item><description>1: parsing</description></item>
+        /// <item><description>2: processing</description></item>
+        /// <item><description>3: processing failed</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -147,7 +154,11 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public int? ProcessStatus { get; set; }
 
         /// <summary>
-        /// <para>The search scope.<br>Valid values:<br>• 1: Search titles<br>• 2: Search content<br><br><br></para>
+        /// <para>The search scope. Valid values: </para>
+        /// <list type="bullet">
+        /// <item><description>1: search by title</description></item>
+        /// <item><description>2: search by content</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -177,7 +188,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string StartTimeEnd { get; set; }
 
         /// <summary>
-        /// <para>The edit status.<br>Valid values:<br>• 1: Unpublished<br>• 2: Published<br>• 3: Updated but not published<br><br><br><br></para>
+        /// <para>The editing status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: unpublished</description></item>
+        /// <item><description>2: published</description></item>
+        /// <item><description>3: updated but not published</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -187,7 +203,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>A list of tag IDs. If you provide multiple IDs, the operation returns documents that match at least one of the specified tags (logical OR).</para>
+        /// <para>The list of label IDs. When multiple labels are specified, the union logic is used for filtering.</para>
         /// </summary>
         [NameInMap("TagIds")]
         [Validation(Required=false)]

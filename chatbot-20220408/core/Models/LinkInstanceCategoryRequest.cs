@@ -10,7 +10,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class LinkInstanceCategoryRequest : TeaModel {
         /// <summary>
-        /// <para>The category\&quot;s ability type. Valid values: <c>FAQ</c> and <c>MRC</c> (machine reading comprehension). Defaults to <c>FAQ</c>.</para>
+        /// <para>The capability type of the category. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>FAQ: Frequently asked questions.</description></item>
+        /// <item><description>MRC: Document-based machine reading comprehension.</description></item>
+        /// </list>
+        /// <para>Default value: FAQ.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FAQ,MRC</para>
@@ -20,7 +25,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AbilityType { get; set; }
 
         /// <summary>
-        /// <para>The key for the business space. If you do not specify this parameter, the default business space is used. You can obtain the key on the Business Management page of your primary account.</para>
+        /// <para>The business space key. If this parameter is not specified, the default business space is accessed. You can obtain the key on the business management page of the Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -30,7 +35,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// <para>An array of FAQ category IDs to link to the chatbot.</para>
+        /// <para>The array of FAQ category IDs to associate with the chatbot.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[\&quot;30000065789\&quot;]</para>

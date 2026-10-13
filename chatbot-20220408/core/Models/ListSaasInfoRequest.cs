@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class ListSaasInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The key for the business space. If this parameter is omitted, the default business space is used. You can obtain the key from the Business Management page of your primary account.</para>
+        /// <para>The business space key. If this parameter is not specified, the default business space is accessed. You can obtain the key value from the business management page of the Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// <para>The codes of the user\&quot;s SaaS permission groups. Separate multiple codes with a comma.</para>
+        /// <para>The SaaS permission group codes owned by the user. Separate multiple codes with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>DS,FAQ</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string SaasGroupCodes { get; set; }
 
         /// <summary>
-        /// <para>The username of the business user.</para>
+        /// <para>The username of the business party.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

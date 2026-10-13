@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class CreateCategoryRequest : TeaModel {
         /// <summary>
-        /// <para>The key of the business space. If this parameter is not specified, the default business space is used. You can obtain the key from the Business Management page of your main account.</para>
+        /// <para>The business space key. If this parameter is not specified, the default business space is accessed. You can obtain the key value from the business management page of the Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -30,7 +30,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string BizCode { get; set; }
 
         /// <summary>
-        /// <para>The knowledge type. Valid values are 1 for an FAQ category and 3 for a document category. The default value is 1.</para>
+        /// <para>The knowledge type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: FAQ category.</description></item>
+        /// <item><description>3: Document category.</description></item>
+        /// </list>
+        /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -44,14 +49,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试1</para>
+        /// <para>Test1</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the parent category. Defaults to -1, which indicates the root category.</para>
+        /// <para>The parent category ID. Default value: -1, which indicates the root directory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-1</para>

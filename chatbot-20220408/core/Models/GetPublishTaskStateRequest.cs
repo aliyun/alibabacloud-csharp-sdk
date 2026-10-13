@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class GetPublishTaskStateRequest : TeaModel {
         /// <summary>
-        /// <para>The key that identifies the business space. If omitted, the default business space is used. You can get the key from the Business Management page of your main account.</para>
+        /// <para>The key of the business space. If this parameter is not specified, the default business space is accessed. Obtain the key value from the business management page of the primary account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// <para>The publish task ID.</para>
+        /// <para>The ID of the publish task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8521</para>

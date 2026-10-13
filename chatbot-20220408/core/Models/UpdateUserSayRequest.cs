@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class UpdateUserSayRequest : TeaModel {
         /// <summary>
-        /// <para>The workspace key. If you omit this parameter, the default workspace is used. You can find this key on the Workspace Management page in your main account.</para>
+        /// <para>The business space key. If this parameter is not specified, the default business space is accessed. You can obtain the key value from the business management page of the Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// <para>The ID of the bot.</para>
+        /// <para>The robot ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,25 +31,25 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The definition of the user say.</para>
+        /// <para>The definition of the user utterance.</para>
         /// </summary>
         [NameInMap("UserSayDefinition")]
         [Validation(Required=false)]
         public UpdateUserSayRequestUserSayDefinition UserSayDefinition { get; set; }
         public class UpdateUserSayRequestUserSayDefinition : TeaModel {
             /// <summary>
-            /// <para>The content of the user say.</para>
+            /// <para>The user utterance.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>做核酸了吗您</para>
+            /// <para>Have you taken a COVID test?</para>
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The ID of the intent.</para>
+            /// <para>The intent ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public long? IntentId { get; set; }
 
             /// <summary>
-            /// <para>An array that contains information for each slot.</para>
+            /// <para>The slot information.</para>
             /// </summary>
             [NameInMap("SlotInfos")]
             [Validation(Required=false)]
             public List<UpdateUserSayRequestUserSayDefinitionSlotInfos> SlotInfos { get; set; }
             public class UpdateUserSayRequestUserSayDefinitionSlotInfos : TeaModel {
                 /// <summary>
-                /// <para>The zero-based end index (exclusive) of the slot within the content of the user say.</para>
+                /// <para>The end index of the slot in the intent utterance (exclusive).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
                 public int? EndIndex { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the slot.</para>
+                /// <para>The slot ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>346ffg3q23dv</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
                 public string SlotId { get; set; }
 
                 /// <summary>
-                /// <para>The zero-based start index of the slot within the content of the user say.</para>
+                /// <para>The start index of the slot in the intent utterance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         }
 
         /// <summary>
-        /// <para>The ID of the user say.</para>
+        /// <para>The user utterance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

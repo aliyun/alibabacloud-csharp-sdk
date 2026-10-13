@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class NluResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the natural language understanding response.</para>
+        /// <para>The ID of the NLU response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2828708A-2C7A-1BAE-B810-87DB9DA9C661</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public List<NluResponseBodyMessages> Messages { get; set; }
         public class NluResponseBodyMessages : TeaModel {
             /// <summary>
-            /// <para>The natural language understanding information from DialogHub.</para>
+            /// <para>The NLU information from the dialog central controller.</para>
             /// </summary>
             [NameInMap("DialogHubNluInfo")]
             [Validation(Required=false)]
             public NluResponseBodyMessagesDialogHubNluInfo DialogHubNluInfo { get; set; }
             public class NluResponseBodyMessagesDialogHubNluInfo : TeaModel {
                 /// <summary>
-                /// <para>The list of global dictionary entries.</para>
+                /// <para>The list of global nouns.</para>
                 /// </summary>
                 [NameInMap("GlobalDictList")]
                 [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             }
 
             /// <summary>
-            /// <para>The natural language understanding information from Dialog Studio.</para>
+            /// <para>The NLU information from the dialog flow.</para>
             /// </summary>
             [NameInMap("DsNluInfo")]
             [Validation(Required=false)]
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
                 public List<NluResponseBodyMessagesDsNluInfoEntityList> EntityList { get; set; }
                 public class NluResponseBodyMessagesDsNluInfoEntityList : TeaModel {
                     /// <summary>
-                    /// <para>The name of the entity.</para>
+                    /// <para>The entity name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>@城市</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The original word for the entity, also known as an entity member.</para>
+                    /// <para>The original word of the entity (entity member).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>北京</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
                     public string Origin { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the entity. Currently, only the <c>text</c> type is supported.</para>
+                    /// <para>The entity type. Currently, only the text type is supported.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>text</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// <para>The entity\&quot;s synonym.</para>
+                    /// <para>The synonym of the entity.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>首都</para>
@@ -167,17 +167,24 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
                     public long? IntentId { get; set; }
 
                     /// <summary>
-                    /// <para>The details of the matching process.</para>
+                    /// <para>The match details (matching process).</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>classifierType=Fewshot,from=Fewshot,content=[我要查北京的天气, 帮我查北京的天气, 北京天气怎么样, 北京今天下雨吗, 北京今天多少度]</para>
+                    /// <para>classifierType=Fewshot,from=Fewshot,content=[I want to check the weather in Beijing, Help me check the weather in Beijing, How is the weather in Beijing, Is it raining in Beijing today, What is the temperature in Beijing today]</para>
                     /// </summary>
                     [NameInMap("MatchDetail")]
                     [Validation(Required=false)]
                     public string MatchDetail { get; set; }
 
                     /// <summary>
-                    /// <para>The match type. Valid values are <c>Similarity</c> (match by utterance similarity), <c>Lgf</c> (match by LGF), <c>Classify</c> (match by model training), <c>FewShotLearning</c> (match by the built-in few-shot learning model), and <c>BuildIn</c> (match with a built-in intent).</para>
+                    /// <para>The match type. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>Similarity: The query matches the intent through intent utterance similarity.</description></item>
+                    /// <item><description>Lgf: The query matches the intent through LGF.</description></item>
+                    /// <item><description>Classify: The query matches the intent through model training.</description></item>
+                    /// <item><description>FewShotLearning: The query matches the intent through the built-in few-shot model.</description></item>
+                    /// <item><description>BuildIn: The query matches a built-in system intent.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>FewShotLearning</para>
@@ -187,17 +194,17 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
                     public string MatchType { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the intent.</para>
+                    /// <para>The intent name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>查天气意图</para>
+                    /// <para>CheckWeatherIntent</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The confidence score of the match.</para>
+                    /// <para>The score.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.995</para>
@@ -214,7 +221,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
                     public List<NluResponseBodyMessagesDsNluInfoIntentListSlotList> SlotList { get; set; }
                     public class NluResponseBodyMessagesDsNluInfoIntentListSlotList : TeaModel {
                         /// <summary>
-                        /// <para>The name of the entity.</para>
+                        /// <para>The entity name.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>@城市</para>
@@ -224,7 +231,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
                         public string Name { get; set; }
 
                         /// <summary>
-                        /// <para>The original word for the entity, also known as an entity member.</para>
+                        /// <para>The original word of the entity (entity member).</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>北京</para>
@@ -234,7 +241,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
                         public string Origin { get; set; }
 
                         /// <summary>
-                        /// <para>The type of the entity. Currently, only the <c>text</c> type is supported.</para>
+                        /// <para>The entity type. Currently, only the text type is supported.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>text</para>
@@ -244,7 +251,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
                         public string Type { get; set; }
 
                         /// <summary>
-                        /// <para>The entity\&quot;s synonym.</para>
+                        /// <para>The synonym of the entity.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>首都</para>

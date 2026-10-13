@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class DeleteDSEntityValueResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the deleted entity value.</para>
+        /// <para>The entity member ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3453453452</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? EntityValueId { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dfdf2t3rfvb45y</para>

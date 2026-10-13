@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class GetAsyncResultRequest : TeaModel {
         /// <summary>
-        /// <para>The key for the business space. If unspecified, the default business space is used. This key is available on the Business Management page of your Alibaba Cloud account.</para>
+        /// <para>The workspace key. If not specified, the default workspace is accessed. Obtain the key value from the business management page of the Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// <para>The ID of the asynchronous task.</para>
+        /// <para>The task ID of the asynchronous service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>从Chat接口中获取TASK_ID</para>
+        /// <para>Obtain TASK_ID from the Chat operation</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

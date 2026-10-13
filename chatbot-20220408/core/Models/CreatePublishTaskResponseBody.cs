@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public List<string> BizTypeList { get; set; }
 
         /// <summary>
-        /// <para>The time when the task was created, in UTC.</para>
+        /// <para>The UTC time when the task was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-04-12T06:30:17Z</para>
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The error message if the task fails.</para>
+        /// <para>The task failure information.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>检查待发布模块是否空闲发生错误，faq</para>
+        /// <para>An error occurred while checking whether the module to be published is idle, faq</para>
         /// </summary>
         [NameInMap("Error")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The time when the task was last modified, in UTC.</para>
+        /// <para>The UTC time when the task was last modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-04-12T06:30:33Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The publish task ID. This parameter is redundant. Use the <c>Id</c> parameter instead.</para>
+        /// <para>The publish task ID. This is a redundant field. Use the publish task ID from the Id field instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8522</para>
@@ -77,8 +77,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string Response { get; set; }
 
         /// <summary>
-        /// <para>The task status. Valid values:</para>
-        /// <para><c>FE_RUNNING</c>: Publishing<br><br><c>FE_SUCCESS</c>: Published<br><br><c>FE_FAILED</c>: Failed<br><br><c>FE_ABORTED</c>: Canceled<br><br><br><br><br><br></para>
+        /// <para>The task status.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>FE_RUNNING: Publishing in progress.</description></item>
+        /// <item><description>FE_SUCCESS: Published.</description></item>
+        /// <item><description>FE_FAILED: Publish failed.</description></item>
+        /// <item><description>FE_ABORTED: Publish canceled.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>FE_RUNNING</para>

@@ -27,22 +27,22 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the task fails.</para>
+        /// <para>The failure information of the task.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>检查待发布模块是否空闲发生错误，faq</para>
+        /// <para>An error occurred while checking whether the module to be published is idle, faq</para>
         /// </summary>
         [NameInMap("Error")]
         [Validation(Required=false)]
         public string Error { get; set; }
 
         /// <summary>
-        /// <para>A map of error messages for each submodule, where the key is the submodule name and the value is the error message.</para>
+        /// <para>The fault information of each sub-publish module. The key is the sub-publish module and the value is the fault information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
         ///     &quot;faq&quot;: [
-        ///         &quot;答案资源未发布，资源类型：全局服务，名称：动态答案服务&quot;
+        ///         &quot;Answer resource not published. Resource type: global service. Name: dynamic answer service&quot;
         ///     ]
         /// }</para>
         /// </summary>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public Dictionary<string, object> Errors { get; set; }
 
         /// <summary>
-        /// <para>The publish task ID.</para>
+        /// <para>The ID of the publish task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8522</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The publish task ID. This field is redundant. Use the <c>Id</c> field instead.</para>
+        /// <para>The ID of the publish task. This is a redundant field. Use the publish task ID instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8522</para>
@@ -91,16 +91,13 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string Response { get; set; }
 
         /// <summary>
-        /// <para>The task status. Valid values:</para>
+        /// <para>The task status.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>FE_RUNNING</c>: Publishing</para>
-        /// </description></item>
-        /// <item><description><para><c>FE_SUCCESS</c>: Success</para>
-        /// </description></item>
-        /// <item><description><para><c>FE_FAILED</c>: Failed</para>
-        /// </description></item>
-        /// <item><description><para><c>FE_ABORTED</c>: Aborted</para>
-        /// </description></item>
+        /// <item><description>FE_RUNNING: Publishing in progress.</description></item>
+        /// <item><description>FE_SUCCESS: Published.</description></item>
+        /// <item><description>FE_FAILED: Publish failed.</description></item>
+        /// <item><description>FE_ABORTED: Publish canceled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -111,12 +108,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>A map of warning messages for each submodule, where the key is the submodule name and the value is the warning message.</para>
+        /// <para>The warning information of each sub-publish module. The key is the sub-publish module and the value is the warning information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
         ///     &quot;faq&quot;: [
-        ///         &quot;答案资源未发布，类型：service，名称：null，答案资源未发布，类型：service，名称：null&quot;
+        ///         &quot;Answer resource not published. Type: service. Name: null. Answer resource not published. Type: service. Name: null&quot;
         ///     ]
         /// }</para>
         /// </summary>

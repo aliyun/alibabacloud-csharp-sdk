@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class ListDSEntityValueResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of entity values.</para>
+        /// <para>The entity list.</para>
         /// </summary>
         [NameInMap("EntityValues")]
         [Validation(Required=false)]
         public List<ListDSEntityValueResponseBodyEntityValues> EntityValues { get; set; }
         public class ListDSEntityValueResponseBodyEntityValues : TeaModel {
             /// <summary>
-            /// <para>The content of the entity value, which can be a standard value or a regular expression.</para>
+            /// <para>The entity member name (entity value or regular expression).</para>
             /// 
             /// <b>Example:</b>
-            /// <para>书类型</para>
+            /// <para>Book type</para>
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the entity value in UTC.</para>
+            /// <para>The creation time in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-08-12T16:00:01Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the entity.</para>
+            /// <para>The entity ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>34313785463</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public long? EntityId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the entity value.</para>
+            /// <para>The entity member ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3467858234534534532</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public long? EntityValueId { get; set; }
 
             /// <summary>
-            /// <para>The last modification time of the entity value in UTC.</para>
+            /// <para>The modification time in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-08-12T16:00:01Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>A list of synonyms for the entity value.</para>
+            /// <para>The synonym list.</para>
             /// </summary>
             [NameInMap("Synonyms")]
             [Validation(Required=false)]
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned results.</para>
+        /// <para>The current page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries on the returned page.</para>
+        /// <para>The page size. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total count of matching entries.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

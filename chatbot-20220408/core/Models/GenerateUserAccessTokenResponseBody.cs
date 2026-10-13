@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class GenerateUserAccessTokenResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. 200 indicates a successful request.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The generated token value.</para>
+        /// <para>The token value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DDEXEDAFWAGASDFWAEFFAWEFAWFWEAFWAFWAEF</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>The error message for a failed request.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Parameter.Invalid</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>E6988CE6-41CF-1103-9BEC-2B20D26C0B51</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values: <c>true</c> and <c>false</c>.</para>
+        /// <para>Indicates whether the operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

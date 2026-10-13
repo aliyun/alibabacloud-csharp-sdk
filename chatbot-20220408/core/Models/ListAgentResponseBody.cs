@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public long? AgentId { get; set; }
 
             /// <summary>
-            /// <para>The business space signature, used to identify the business space in Platform-as-a-Service (PaaS) API calls.</para>
+            /// <para>The business space signature, which is used to specify the business space when calling PaaS API operations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4e7400028e6f4a7393ed3acf6a7b8927_p_beebot_public</para>
@@ -37,17 +37,17 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string AgentKey { get; set; }
 
             /// <summary>
-            /// <para>The name of the business space.</para>
+            /// <para>The business space name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>业务空间_881</para>
+            /// <para>BusinessSpace_881</para>
             /// </summary>
             [NameInMap("AgentName")]
             [Validation(Required=false)]
             public string AgentName { get; set; }
 
             /// <summary>
-            /// <para>Details of the associated commodity instance. The object keys are commodity codes.</para>
+            /// <para>The commodity instance information.</para>
             /// </summary>
             [NameInMap("InstanceInfos")]
             [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned results.</para>
+        /// <para>The current page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on the current page.</para>
+        /// <para>The number of records per page in the response. Maximum value: 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>F55D90C1-31BE-4B2A-AA3F-25EFC36F9419</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total count of business spaces that match the query.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>

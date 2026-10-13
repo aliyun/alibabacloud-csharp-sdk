@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class DescribeInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The URL of the robot\&quot;s avatar.</para>
+        /// <para>The URL of the chatbot avatar.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/alimefe/meebot/robot/0.0.5/img/xxx-90-97.png</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string Avatar { get; set; }
 
         /// <summary>
-        /// <para>A list of categories.</para>
+        /// <para>The list of categories.</para>
         /// </summary>
         [NameInMap("Categories")]
         [Validation(Required=false)]
         public List<DescribeInstanceResponseBodyCategories> Categories { get; set; }
         public class DescribeInstanceResponseBodyCategories : TeaModel {
             /// <summary>
-            /// <para>The ability type of the category, such as FAQ or MRC.</para>
+            /// <para>The ability type of the category, such as FAQ (frequently asked questions) or MRC (document).</para>
             /// 
             /// <b>Example:</b>
             /// <para>FAQ</para>
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public long? CategoryId { get; set; }
 
             /// <summary>
-            /// <para>The category name.</para>
+            /// <para>The name of the category.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>杭州市防疫政策</para>
+            /// <para>Pandemic Prevention Policy</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         }
 
         /// <summary>
-        /// <para>The UTC time when the robot was created.</para>
+        /// <para>The UTC time when the chatbot was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-08-12T16:00:01Z</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The status of the robot.</para>
+        /// <para>The status of the chatbot.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PUBLISHED</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string EditStatus { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the robot instance.</para>
+        /// <para>The unique identifier of the chatbot.</para>
         /// 
         /// <b>Example:</b>
         /// <para>chatbot-cn-mp90s2lrk00050</para>
@@ -99,17 +99,17 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The robot\&quot;s introduction.</para>
+        /// <para>The remarks of the chatbot.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>用于C端问答的机器人</para>
+        /// <para>A chatbot for consumer Q&amp;A</para>
         /// </summary>
         [NameInMap("Introduction")]
         [Validation(Required=false)]
         public string Introduction { get; set; }
 
         /// <summary>
-        /// <para>The language of the robot, such as zh-cn and en-us.</para>
+        /// <para>The language of the chatbot service, such as zh-cn or en-us.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh-cn</para>
@@ -119,10 +119,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string LanguageCode { get; set; }
 
         /// <summary>
-        /// <para>The robot name.</para>
+        /// <para>The name of the chatbot.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>智能客服-小C</para>
+        /// <para>Intelligent Customer Service - Bot C</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The robot type.</para>
+        /// <para>The type of the chatbot.</para>
         /// 
         /// <b>Example:</b>
         /// <para>scenario_im</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RobotType { get; set; }
 
         /// <summary>
-        /// <para>The time zone of the robot. For more information, see Time zone codes.</para>
+        /// <para>The time zone of the chatbot. For more information, see the common time zone codes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Asia/Chongqing</para>

@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class ListAgentRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the business space. Use this parameter to filter the results.</para>
+        /// <para>The business space name. You can use this parameter to search by name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>业务空间_001</para>
+        /// <para>BusinessSpace_001</para>
         /// </summary>
         [NameInMap("AgentName")]
         [Validation(Required=false)]
         public string AgentName { get; set; }
 
         /// <summary>
-        /// <para>The commodity code. Filters the results to return only business spaces associated with a specific commodity code.</para>
+        /// <para>The commodity code. You can use this parameter to filter by commodity code and query instance information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>G_cloudBeeBot_public</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string GoodsCodes { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The current page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>The number of records per page in the response. Maximum value: 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

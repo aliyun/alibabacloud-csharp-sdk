@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class DescribeDSEntityResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time when the entity was created, in UTC.</para>
+        /// <para>The creation time in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-08-12T16:00:01Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user who created the entity.</para>
+        /// <para>The ID of the creator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123231</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string CreateUserId { get; set; }
 
         /// <summary>
-        /// <para>The name of the user who created the entity.</para>
+        /// <para>The name of the creator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -50,17 +50,17 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? EntityId { get; set; }
 
         /// <summary>
-        /// <para>The entity name. The name can contain only Chinese characters, letters, digits, and underscores (_).</para>
+        /// <para>The entity name. Only Chinese characters, uppercase and lowercase letters, digits, and underscores are supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>书类型</para>
+        /// <para>BookType</para>
         /// </summary>
         [NameInMap("EntityName")]
         [Validation(Required=false)]
         public string EntityName { get; set; }
 
         /// <summary>
-        /// <para>The entity type. Valid values are <c>synonyms</c> and <c>regex</c>.</para>
+        /// <para>The entity type. Valid values: synonyms (synonym) and regex (regular expression).</para>
         /// 
         /// <b>Example:</b>
         /// <para>synonyms</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string EntityType { get; set; }
 
         /// <summary>
-        /// <para>The time when the entity was last modified, in UTC.</para>
+        /// <para>The modification time in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-08-12T16:00:01Z</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string ModifyTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user who last modified the entity.</para>
+        /// <para>The unique identifier of the modifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123231</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string ModifyUserId { get; set; }
 
         /// <summary>
-        /// <para>The name of the user who last modified the entity.</para>
+        /// <para>The name of the modifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The code of the system entity, such as sys.date. This parameter is empty for user-defined entities.</para>
+        /// <para>The system entity code, such as sys.date. This parameter is empty for user entities.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sys.date</para>

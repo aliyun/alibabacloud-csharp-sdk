@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class UpdateLgfRequest : TeaModel {
         /// <summary>
-        /// <para>The key for the business space. If omitted, the default business space is used. You can get the key on the Business Management page of your main account.</para>
+        /// <para>The business space key. If not specified, the default business space is accessed. You can obtain the key value from the business management page of the Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// <para>The bot ID.</para>
+        /// <para>The chatbot ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The LGF definition.</para>
+        /// <para>The LGF information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("LgfDefinition")]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         }
 
         /// <summary>
-        /// <para>The LGF ID.</para>
+        /// <para>LGF ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

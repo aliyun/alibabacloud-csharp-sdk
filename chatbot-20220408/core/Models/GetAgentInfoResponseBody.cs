@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class GetAgentInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The agent details.</para>
+        /// <para>The business space data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetAgentInfoResponseBodyData Data { get; set; }
         public class GetAgentInfoResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The agent key. It is used to specify the agent in Platform as a Service (PaaS) API calls.</para>
+            /// <para>The signature of the business space, used to specify the business space when calling PaaS API operations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4e7400028e6f4a7393ed3acf6a7b8927_p_beebot_public</para>
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string AgentKey { get; set; }
 
             /// <summary>
-            /// <para>The agent name.</para>
+            /// <para>The name of the business space.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>业务空间_881</para>
+            /// <para>BusinessSpace_881</para>
             /// </summary>
             [NameInMap("AgentName")]
             [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         }
 
         /// <summary>
-        /// <para>The error message returned if the request fails.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Parameter.Invalid</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>FC384CE1-8D42-1900-84E1-F33F990F2B5E</para>

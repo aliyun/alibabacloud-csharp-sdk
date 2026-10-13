@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class CreatePublishTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The key of the business space. If you omit this parameter, the default business space is used. You can obtain the key from the Business Management page of your main account.</para>
+        /// <para>The workspace key. If not specified, the default workspace is accessed. Obtain the key value from the business management page of the Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// <para>The type of content to publish. To publish a bot, use the <c>CreateInstancePublishTask</c> API.</para>
+        /// <para>The publish unit type. To publish a chatbot, use the CreateInstancePublishTask API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>faq</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string BizType { get; set; }
 
         /// <summary>
-        /// <para>Specifies data to publish by ID. This parameter is used only when <c>BizType</c> is set to <c>faq</c>. In this case, provide one or more category IDs to publish knowledge exclusively from the specified categories.</para>
+        /// <para>Additional publish information. Currently supported: if BizType is faq, this field specifies category IDs, indicating that only knowledge under these categories is published.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;8521&quot;]</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class ListIntentRequest : TeaModel {
         /// <summary>
-        /// <para>The unique key for the business space. If you omit this parameter, the default business space is used. You can find this key on the business management page of your main account.</para>
+        /// <para>The business space key. If this parameter is not specified, the default business space is accessed. You can obtain the key value on the business management page of the primary account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// <para>The ID of the chatbot.</para>
+        /// <para>The chatbot ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         /// <para>The intent name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>查天气</para>
+        /// <para>CheckWeather</para>
         /// </summary>
         [NameInMap("IntentName")]
         [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of intents per page. Default value: 10.</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

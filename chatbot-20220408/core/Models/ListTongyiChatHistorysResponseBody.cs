@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class ListTongyiChatHistorysResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request duration, in milliseconds.</para>
+        /// <para>The time consumed by the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>116</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string CostTime { get; set; }
 
         /// <summary>
-        /// <para>A list of chat history entries.</para>
+        /// <para>The data details.</para>
         /// </summary>
         [NameInMap("Datas")]
         [Validation(Required=false)]

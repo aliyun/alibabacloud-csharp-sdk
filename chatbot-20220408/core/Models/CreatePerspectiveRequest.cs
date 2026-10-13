@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class CreatePerspectiveRequest : TeaModel {
         /// <summary>
-        /// <para>The agent key. If unspecified, the system uses the default agent. You can obtain this key from the Business Management page of your Alibaba Cloud account.</para>
+        /// <para>The key of the business space. If this parameter is not specified, the default business space is accessed. You can obtain the key from the business management page of the Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -23,17 +23,17 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         /// <para>The description of the perspective.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>用于购物APP的移动端视角</para>
+        /// <para>A mobile perspective for the shopping app</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The name of the perspective. The maximum length is 50 characters.</para>
+        /// <para>The name of the perspective. The name can be up to 50 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>移动端视角</para>
+        /// <para>Mobile perspective</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

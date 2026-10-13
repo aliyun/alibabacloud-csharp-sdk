@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class UpdateSimQuestionRequest : TeaModel {
         /// <summary>
-        /// <para>The key of the workspace. If you do not specify this parameter, the default workspace is used. You can find the key on the Business Management page of your master account.</para>
+        /// <para>The key of the business space. If this parameter is not specified, the default business space is accessed. You can obtain the key on the business management page of the Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// <para>The ID of the similar question that you want to update.</para>
+        /// <para>The ID of the similar question.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,11 +31,11 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? SimQuestionId { get; set; }
 
         /// <summary>
-        /// <para>The new title of the similar question. The title can be up to 120 characters long.</para>
+        /// <para>The title of the similar question. The maximum length is 120 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试相似问标题</para>
+        /// <para>Test similar question title</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

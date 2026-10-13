@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class ListSolutionRequest : TeaModel {
         /// <summary>
-        /// <para>The agent key. If omitted, the default agent is used. You can find the key on the agent management page of your main account.</para>
+        /// <para>The key of the business space. If not specified, the default business space is accessed. Obtain the key value from the business management page of the primary account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>

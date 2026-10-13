@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the intent-user say pair.</para>
+        /// <para>The unique ID of the intent utterance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>46456176856</para>

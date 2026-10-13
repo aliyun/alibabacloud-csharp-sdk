@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public List<ListSimQuestionResponseBodySimQuestions> SimQuestions { get; set; }
         public class ListSimQuestionResponseBodySimQuestions : TeaModel {
             /// <summary>
-            /// <para>The creation time of the similar question, in UTC.</para>
+            /// <para>The creation time in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-05-30T02:08:33Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The modification time of the similar question, in UTC.</para>
+            /// <para>The modification time in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-05-13T03:49:28Z</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             /// <para>The title of the similar question.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>相似问</para>
+            /// <para>Similar question</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]

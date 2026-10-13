@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class ContinueInstancePublishTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business types associated with the publish task.</para>
+        /// <para>The list of business types.</para>
         /// </summary>
         [NameInMap("BizTypeList")]
         [Validation(Required=false)]
@@ -27,17 +27,17 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The error message if the task fails.</para>
+        /// <para>The job failure information.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>检查待发布模块是否空闲发生错误，faq</para>
+        /// <para>An error occurred while checking whether the module to be published is idle, faq</para>
         /// </summary>
         [NameInMap("Error")]
         [Validation(Required=false)]
         public string Error { get; set; }
 
         /// <summary>
-        /// <para>A key-value map of errors. Keys are the submodule names, and values are arrays of error messages.</para>
+        /// <para>The fault information for each sub-publish module. The key is the sub-publish module and the value is the fault information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public Dictionary<string, object> Errors { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task.</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8522</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string ModifyTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5CBF0581-EAE7-1DC4-95C6-A089656A1E2D</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task, returned as a string.</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8522</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string Response { get; set; }
 
         /// <summary>
-        /// <para>The status of the task.</para>
+        /// <para>The task status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FE_RUNNING</para>
@@ -97,12 +97,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>A key-value map of warnings. Keys are the submodule names, and values are arrays of warning messages.</para>
+        /// <para>The warning information for each sub-publish module. The key is the sub-publish module and the value is the warning information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
         ///     &quot;category_bind_faq&quot;: [
-        ///         &quot;以下类目没有发布到正式环境: 项目交付信息汇总&quot;
+        ///         &quot;The following categories have not been published to the production environment: Project Delivery Information Summary&quot;
         ///     ]
         /// }</para>
         /// </summary>

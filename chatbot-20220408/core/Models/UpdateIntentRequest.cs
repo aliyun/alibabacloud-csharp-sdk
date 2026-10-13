@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class UpdateIntentRequest : TeaModel {
         /// <summary>
-        /// <para>The key for the business space. If you omit this parameter, the system uses the default business space. You can find this key on the Business Management page of your primary account.</para>
+        /// <para>The business space key. If this parameter is not specified, the default business space is accessed. You can obtain the key value on the business management page of the Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// <para>The ID of the chatbot instance.</para>
+        /// <para>The chatbot ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,42 +31,42 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The intent definition object.</para>
+        /// <para>The intent definition struct.</para>
         /// </summary>
         [NameInMap("IntentDefinition")]
         [Validation(Required=false)]
         public UpdateIntentRequestIntentDefinition IntentDefinition { get; set; }
         public class UpdateIntentRequestIntentDefinition : TeaModel {
             /// <summary>
-            /// <para>The alias for the intent.</para>
+            /// <para>The intent alias.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>查天气意图</para>
+            /// <para>CheckWeatherIntent</para>
             /// </summary>
             [NameInMap("AliasName")]
             [Validation(Required=false)]
             public string AliasName { get; set; }
 
             /// <summary>
-            /// <para>The name of the intent.</para>
+            /// <para>The intent name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>查天气意图</para>
+            /// <para>CheckWeatherIntent</para>
             /// </summary>
             [NameInMap("IntentName")]
             [Validation(Required=false)]
             public string IntentName { get; set; }
 
             /// <summary>
-            /// <para>A list of slot objects.</para>
+            /// <para>The slot information.</para>
             /// </summary>
             [NameInMap("SlotInfos")]
             [Validation(Required=false)]
             public List<UpdateIntentRequestIntentDefinitionSlotInfos> SlotInfos { get; set; }
             public class UpdateIntentRequestIntentDefinitionSlotInfos : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether the slot can contain an array of values.</para>
+                /// <para>Specifies whether the slot is an array.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
                 public bool? Array { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable data masking for the slot value.</para>
+                /// <para>Specifies whether the slot value is masked.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
                 public bool? Encrypt { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the slot is interactive. If true, the chatbot prompts the user for a value if the user does not provide one.</para>
+                /// <para>Specifies whether the slot is interactive.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -96,18 +96,18 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
                 public bool? Interactive { get; set; }
 
                 /// <summary>
-                /// <para>The name of the slot.</para>
+                /// <para>The slot name.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>天气</para>
+                /// <para>Weather</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the slot.</para>
+                /// <para>The slot ID.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>天气</para>
+                /// <para>Weather</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         }
 
         /// <summary>
-        /// <para>The ID of the intent.</para>
+        /// <para>The intent ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

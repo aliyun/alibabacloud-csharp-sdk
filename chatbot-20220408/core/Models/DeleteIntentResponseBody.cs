@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class DeleteIntentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the deleted intent.</para>
+        /// <para>The intent ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345</para>

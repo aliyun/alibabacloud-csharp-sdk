@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class DescribePerspectiveRequest : TeaModel {
         /// <summary>
-        /// <para>The key for the business space. If you do not specify this parameter, the default business space is used. You can get the key from your main account\&quot;s Business Management page.</para>
+        /// <para>The business space key. If not specified, the default business space is accessed. Obtain the key value from the business management page of the primary account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// <para>The ID of the perspective.</para>
+        /// <para>The perspective ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3001</para>

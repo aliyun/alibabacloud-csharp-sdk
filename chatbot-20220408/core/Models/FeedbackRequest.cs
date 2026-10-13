@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class FeedbackRequest : TeaModel {
         /// <summary>
-        /// <para>The key for the business space. If this parameter is not set, the system uses the default business space. You can obtain the key from the business management page of your primary account.</para>
+        /// <para>The business space key. If this parameter is not specified, the default business space is accessed. You can obtain the key value on the business management page of the Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -20,8 +20,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// <para>The feedback rating for the response. This parameter corresponds to <c>FeedbackType</c> in the session history API.</para>
-        /// <para>Enumerated values: \&quot;good\&quot; (a positive rating) and \&quot;bad\&quot; (a negative rating).</para>
+        /// <para>The feedback type, which corresponds to the FeedbackType field in the session history API.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>good: Like.</description></item>
+        /// <item><description>bad: Dislike.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>good</para>
@@ -31,13 +35,13 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string Feedback { get; set; }
 
         /// <summary>
-        /// <para>The detailed feedback content. You can provide this as a raw string or as a JSON string. If you use a JSON string, the \&quot;content\&quot; field corresponds to \&quot;FeedbackUserInfo\&quot; and the \&quot;feedbackLabels\&quot; field corresponds to \&quot;FeedbackLabels\&quot; in the session history.</para>
+        /// <para>The content of the like or dislike feedback. You can directly enter the feedback content or pass in a JSON string as shown in the example. The content field corresponds to FeedbackUserInfo in the session history, and feedbackLabels corresponds to FeedbackLabels in the session history.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
-        ///     &quot;content&quot;: &quot;我觉得这个答案不对，需要依据事实回答。&quot;,
+        ///     &quot;content&quot;: &quot;I think this answer is incorrect. It should be based on facts.&quot;,
         ///     &quot;feedbackLabels&quot;: [
-        ///         &quot;存在事实性错误&quot;
+        ///         &quot;Contains factual errors&quot;
         ///     ]
         /// }</para>
         /// </summary>
@@ -46,7 +50,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string FeedbackContent { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the chatbot instance.</para>
+        /// <para>The unique identifier of the chatbot.</para>
         /// 
         /// <b>Example:</b>
         /// <para>chatbot-cn-mp90s2lrk00050</para>
@@ -56,7 +60,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of a single message within the session.</para>
+        /// <para>The ID that uniquely identifies a single message in a session window.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5ca40988-4f99-47ad-ac96-9060d0f81db9</para>
@@ -66,7 +70,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string MessageId { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier for the session. The instant messaging (IM) system uses this ID to track the conversation.</para>
+        /// <para>The session ID that uniquely identifies an IM session.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7c3cec23cc8940bc9db4a318c8f4f0aa</para>

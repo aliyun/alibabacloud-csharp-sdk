@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string ModifyTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the perspective.</para>
+        /// <para>The perspective name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>移动端视角</para>
+        /// <para>Mobile perspective</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The perspective code (used for the Q\&amp;A API).</para>
+        /// <para>The perspective code, which is used for the Q&amp;A API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FZJBY3raWr</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string PerspectiveCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the perspective.</para>
+        /// <para>The perspective ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3001</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the perspective is user-defined.</para>
+        /// <para>Indicates whether the perspective is custom-defined.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -80,7 +80,11 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public bool? SelfDefine { get; set; }
 
         /// <summary>
-        /// <para>The status of the perspective. Valid values: 3 (Enabled) and 1 (Disabled).</para>
+        /// <para>The data status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>3: Enabled.</description></item>
+        /// <item><description>1: Not enabled.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

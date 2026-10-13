@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class DeleteDSEntityValueRequest : TeaModel {
         /// <summary>
-        /// <para>The Agent key. If omitted, the system uses the default Agent. You can get this key from the Business Management page of your main account.</para>
+        /// <para>The key of the workspace. If this parameter is not specified, the default workspace is accessed. You can obtain the key on the business management page of the Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the entity.</para>
+        /// <para>The entity ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? EntityId { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the entity value.</para>
+        /// <para>The entity member ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? EntityValueId { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the instance.</para>
+        /// <para>The robot ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

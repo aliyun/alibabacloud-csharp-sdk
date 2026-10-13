@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class UpdateUserSayShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The workspace key. If you omit this parameter, the default workspace is used. You can find this key on the Workspace Management page in your main account.</para>
+        /// <para>The business space key. If this parameter is not specified, the default business space is accessed. You can obtain the key value from the business management page of the Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// <para>The ID of the bot.</para>
+        /// <para>The robot ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The definition of the user say.</para>
+        /// <para>The definition of the user utterance.</para>
         /// </summary>
         [NameInMap("UserSayDefinition")]
         [Validation(Required=false)]
         public string UserSayDefinitionShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user say.</para>
+        /// <para>The user utterance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

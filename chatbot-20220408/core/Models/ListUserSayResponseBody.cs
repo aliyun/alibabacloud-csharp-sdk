@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class ListUserSayResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on the current page.</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of matching entries.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,24 +50,24 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>A list of user says.</para>
+        /// <para>The list of utterances.</para>
         /// </summary>
         [NameInMap("UserSays")]
         [Validation(Required=false)]
         public List<ListUserSayResponseBodyUserSays> UserSays { get; set; }
         public class ListUserSayResponseBodyUserSays : TeaModel {
             /// <summary>
-            /// <para>The content of the user say.</para>
+            /// <para>The utterance content.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>您做核酸了嘛</para>
+            /// <para>Have you taken a COVID test</para>
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The time when the user say was created. The time is in UTC.</para>
+            /// <para>The time when the utterance was created, in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-08-12T16:00:01Z</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the intent.</para>
+            /// <para>The intent ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>235564564</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public long? IntentId { get; set; }
 
             /// <summary>
-            /// <para>The time when the user say was last modified. The time is in UTC.</para>
+            /// <para>The time when the utterance was last modified, in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-08-12T16:00:01Z</para>
@@ -97,14 +97,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>A list of associated slots.</para>
+            /// <para>The associated slot information.</para>
             /// </summary>
             [NameInMap("SlotInfos")]
             [Validation(Required=false)]
             public List<ListUserSayResponseBodyUserSaysSlotInfos> SlotInfos { get; set; }
             public class ListUserSayResponseBodyUserSaysSlotInfos : TeaModel {
                 /// <summary>
-                /// <para>The zero-based end index of the slot in the user say. This value is exclusive.</para>
+                /// <para>The end index of the slot in the intent utterance (exclusive).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
                 public int? EndIndex { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the intent slot.</para>
+                /// <para>The intent slot ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3456sdfg3tu</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
                 public string SlotId { get; set; }
 
                 /// <summary>
-                /// <para>The zero-based start index of the slot in the user say. This value is inclusive.</para>
+                /// <para>The start index of the slot in the intent utterance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             }
 
             /// <summary>
-            /// <para>The ID of the user say.</para>
+            /// <para>The utterance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3453452138</para>

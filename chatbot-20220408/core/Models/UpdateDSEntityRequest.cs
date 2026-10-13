@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class UpdateDSEntityRequest : TeaModel {
         /// <summary>
-        /// <para>The business space key. If you do not specify this parameter, the system uses the default business space. You can get this key from the business management page of your Alibaba Cloud account.</para>
+        /// <para>The business space key. If this parameter is not set, the default business space is accessed. You can obtain the key value from the business management page of the main account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// <para>The ID of the entity.</para>
+        /// <para>The entity ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,18 +31,18 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? EntityId { get; set; }
 
         /// <summary>
-        /// <para>The new name for the entity. The name can contain only Chinese characters, letters, digits, and underscores (_).</para>
+        /// <para>The entity name. Only Chinese characters, uppercase and lowercase letters, digits, and underscores are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>实体名称</para>
+        /// <para>EntityName</para>
         /// </summary>
         [NameInMap("EntityName")]
         [Validation(Required=false)]
         public string EntityName { get; set; }
 
         /// <summary>
-        /// <para>The type of the entity. This parameter cannot be modified. Valid values: <c>synonyms</c> and <c>regex</c>.</para>
+        /// <para>The entity type. Valid values: synonyms (synonym) and regex (regular expression).</para>
         /// 
         /// <b>Example:</b>
         /// <para>synonyms</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string EntityType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The chatbot ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public List<ListDSEntityResponseBodyEntities> Entities { get; set; }
         public class ListDSEntityResponseBodyEntities : TeaModel {
             /// <summary>
-            /// <para>The creation time in UTC.</para>
+            /// <para>The creation time (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-08-12T16:00:01Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string CreateUserName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the entity.</para>
+            /// <para>The entity ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>234564567445</para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             /// <para>The entity name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>书实体</para>
+            /// <para>BookEntity</para>
             /// </summary>
             [NameInMap("EntityName")]
             [Validation(Required=false)]
             public string EntityName { get; set; }
 
             /// <summary>
-            /// <para>The entity type. Valid values: <c>synonyms</c>, <c>regex</c>, and <c>system</c>.</para>
+            /// <para>The entity type (synonyms | regex | system).</para>
             /// 
             /// <b>Example:</b>
             /// <para>synonyms</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string EntityType { get; set; }
 
             /// <summary>
-            /// <para>The update time in UTC.</para>
+            /// <para>The modification time (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-08-12T16:00:01Z</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string ModifyUserName { get; set; }
 
             /// <summary>
-            /// <para>The code for the system entity, such as <c>sys_date</c>. This parameter is blank for custom entities.</para>
+            /// <para>The system entity code, such as sys.date. This parameter is empty for user entities.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sys_date</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         }
 
         /// <summary>
-        /// <para>The current page number. Default value: 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total count of matching entries.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

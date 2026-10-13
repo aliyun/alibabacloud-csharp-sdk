@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class NluRequest : TeaModel {
         /// <summary>
-        /// <para>The agent key. If not specified, the default agent is used. Find the key on the Business Management page of your Alibaba Cloud account.</para>
+        /// <para>The business space key. If not specified, the default business space is accessed. You can obtain the key on the business management page of the Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the bot instance.</para>
+        /// <para>The unique identifier of the chatbot.</para>
         /// 
         /// <b>Example:</b>
         /// <para>chatbot-cn-mp90s2lrk00050</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The user\&quot;s text input.</para>
+        /// <para>The user utterance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>北京的天气怎么样</para>
+        /// <para>How is the weather in Beijing</para>
         /// </summary>
         [NameInMap("Utterance")]
         [Validation(Required=false)]

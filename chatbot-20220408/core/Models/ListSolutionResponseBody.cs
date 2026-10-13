@@ -20,24 +20,28 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of solutions.</para>
+        /// <para>The list of answers.</para>
         /// </summary>
         [NameInMap("Solutions")]
         [Validation(Required=false)]
         public List<ListSolutionResponseBodySolutions> Solutions { get; set; }
         public class ListSolutionResponseBodySolutions : TeaModel {
             /// <summary>
-            /// <para>The content of the solution.</para>
+            /// <para>The answer content.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>答案内容</para>
+            /// <para>Answer content</para>
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The type of the solution content. Valid values: <c>0</c> (plain text) and <c>1</c> (rich text).</para>
+            /// <para>The answer type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: plain text.</description></item>
+            /// <item><description>1: rich text.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +51,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public int? ContentType { get; set; }
 
             /// <summary>
-            /// <para>The time when the solution was created, in UTC.</para>
+            /// <para>The creation time in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-03-29T03:55:04Z</para>
@@ -57,7 +61,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the solution was last modified, in UTC.</para>
+            /// <para>The modification time in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-03-29T06:23:53Z</para>
@@ -67,24 +71,24 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>A list of perspective codes.</para>
+            /// <para>The list of perspective codes.</para>
             /// </summary>
             [NameInMap("PerspectiveCodes")]
             [Validation(Required=false)]
             public List<string> PerspectiveCodes { get; set; }
 
             /// <summary>
-            /// <para>The content of the solution in plain text.</para>
+            /// <para>The plain text content of the answer.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>答案内容</para>
+            /// <para>Answer content</para>
             /// </summary>
             [NameInMap("PlainText")]
             [Validation(Required=false)]
             public string PlainText { get; set; }
 
             /// <summary>
-            /// <para>The solution ID.</para>
+            /// <para>The answer ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>496</para>
@@ -94,7 +98,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public long? SolutionId { get; set; }
 
             /// <summary>
-            /// <para>A list of tag IDs.</para>
+            /// <para>The list of label IDs.</para>
             /// </summary>
             [NameInMap("TagIdList")]
             [Validation(Required=false)]

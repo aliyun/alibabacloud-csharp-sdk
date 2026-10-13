@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class DeleteFaqResponseBody : TeaModel {
         /// <summary>
-        /// <para>A unique identifier for the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F79E7305-5314-5069-A701-9591AD051902</para>

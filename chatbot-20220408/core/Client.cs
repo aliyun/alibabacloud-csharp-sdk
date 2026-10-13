@@ -19,10 +19,6 @@ namespace AlibabaCloud.SDK.Chatbot20220408
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"cn-shanghai", "chatbot.cn-shanghai.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("chatbot", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -43,7 +39,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the Connection information for stream invocation.</para>
+        /// <para>Retrieves the connection information for streaming calls.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -85,7 +81,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the Connection information for stream invocation.</para>
+        /// <para>Retrieves the connection information for streaming calls.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -127,7 +123,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the Connection information for stream invocation.</para>
+        /// <para>Retrieves the connection information for streaming calls.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -145,7 +141,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the Connection information for stream invocation.</para>
+        /// <para>Retrieves the connection information for streaming calls.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -163,7 +159,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Suggests FAQs from the knowledge base based on a user\&quot;s utterance.</para>
+        /// <para>Suggests FAQs from the knowledge base based on a user query.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -231,7 +227,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Suggests FAQs from the knowledge base based on a user\&quot;s utterance.</para>
+        /// <para>Suggests FAQs from the knowledge base based on a user query.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -299,7 +295,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Suggests FAQs from the knowledge base based on a user\&quot;s utterance.</para>
+        /// <para>Suggests FAQs from the knowledge base based on a user query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -317,7 +313,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Suggests FAQs from the knowledge base based on a user\&quot;s utterance.</para>
+        /// <para>Suggests FAQs from the knowledge base based on a user query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -335,7 +331,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiates a session and retrieves a welcome message.</para>
+        /// <para>Retrieves the welcome message.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -395,7 +391,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiates a session and retrieves a welcome message.</para>
+        /// <para>Retrieves the welcome message.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -455,7 +451,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiates a session and retrieves a welcome message.</para>
+        /// <para>Retrieves the welcome message.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -473,7 +469,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiates a session and retrieves a welcome message.</para>
+        /// <para>Retrieves the welcome message.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -491,12 +487,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels or interrupts an ongoing chat.</para>
+        /// <para>Cancels or interrupts a specified conversation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation supports only the new version of chatbots. You can query data only from the last 90 days.</para>
+        /// <para>Only new version chatbots are supported. Only data within the last 90 days can be queried.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -558,12 +554,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels or interrupts an ongoing chat.</para>
+        /// <para>Cancels or interrupts a specified conversation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation supports only the new version of chatbots. You can query data only from the last 90 days.</para>
+        /// <para>Only new version chatbots are supported. Only data within the last 90 days can be queried.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -625,12 +621,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels or interrupts an ongoing chat.</para>
+        /// <para>Cancels or interrupts a specified conversation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation supports only the new version of chatbots. You can query data only from the last 90 days.</para>
+        /// <para>Only new version chatbots are supported. Only data within the last 90 days can be queried.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -648,12 +644,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels or interrupts an ongoing chat.</para>
+        /// <para>Cancels or interrupts a specified conversation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation supports only the new version of chatbots. You can query data only from the last 90 days.</para>
+        /// <para>Only new version chatbots are supported. Only data within the last 90 days can be queried.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -671,7 +667,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a publishing task for a chatbot.</para>
+        /// <para>Cancels a chatbot publish task during the publishing process.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -721,7 +717,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a publishing task for a chatbot.</para>
+        /// <para>Cancels a chatbot publish task during the publishing process.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -771,7 +767,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a publishing task for a chatbot.</para>
+        /// <para>Cancels a chatbot publish task during the publishing process.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -789,7 +785,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a publishing task for a chatbot.</para>
+        /// <para>Cancels a chatbot publish task during the publishing process.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -935,7 +931,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a conversation with a bot by specifying its Bot ID. This applies only to Chatbot (Legacy).</para>
+        /// <para>Initiates a conversation with a chatbot by using the unique chatbot identifier (chatbot ID). This operation is applicable only to Chatbot (legacy).</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1023,7 +1019,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a conversation with a bot by specifying its Bot ID. This applies only to Chatbot (Legacy).</para>
+        /// <para>Initiates a conversation with a chatbot by using the unique chatbot identifier (chatbot ID). This operation is applicable only to Chatbot (legacy).</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1111,7 +1107,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a conversation with a bot by specifying its Bot ID. This applies only to Chatbot (Legacy).</para>
+        /// <para>Initiates a conversation with a chatbot by using the unique chatbot identifier (chatbot ID). This operation is applicable only to Chatbot (legacy).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1129,7 +1125,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a conversation with a bot by specifying its Bot ID. This applies only to Chatbot (Legacy).</para>
+        /// <para>Initiates a conversation with a chatbot by using the unique chatbot identifier (chatbot ID). This operation is applicable only to Chatbot (legacy).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1147,7 +1143,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Ignores an alarm and continues a chatbot publish task.</para>
+        /// <para>Ignores alerts and continues publishing when the chatbot triggers a publish alert.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1197,7 +1193,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Ignores an alarm and continues a chatbot publish task.</para>
+        /// <para>Ignores alerts and continues publishing when the chatbot triggers a publish alert.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1247,7 +1243,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Ignores an alarm and continues a chatbot publish task.</para>
+        /// <para>Ignores alerts and continues publishing when the chatbot triggers a publish alert.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1265,7 +1261,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Ignores an alarm and continues a chatbot publish task.</para>
+        /// <para>Ignores alerts and continues publishing when the chatbot triggers a publish alert.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1439,7 +1435,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a connected question for a knowledge item.</para>
+        /// <para>Adds associated knowledge to a knowledge entry.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1491,7 +1487,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a connected question for a knowledge item.</para>
+        /// <para>Adds associated knowledge to a knowledge entry.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1543,7 +1539,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a connected question for a knowledge item.</para>
+        /// <para>Adds associated knowledge to a knowledge entry.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1561,7 +1557,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a connected question for a knowledge item.</para>
+        /// <para>Adds associated knowledge to a knowledge entry.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1579,7 +1575,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an <c>entity</c> and its metadata, such as the <c>entity name</c> and <c>entity type</c>.</para>
+        /// <para>Creates an entity, specifically the meta information of the entity, such as the entity name and entity type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1633,7 +1629,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an <c>entity</c> and its metadata, such as the <c>entity name</c> and <c>entity type</c>.</para>
+        /// <para>Creates an entity, specifically the meta information of the entity, such as the entity name and entity type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1687,7 +1683,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an <c>entity</c> and its metadata, such as the <c>entity name</c> and <c>entity type</c>.</para>
+        /// <para>Creates an entity, specifically the meta information of the entity, such as the entity name and entity type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1705,7 +1701,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an <c>entity</c> and its metadata, such as the <c>entity name</c> and <c>entity type</c>.</para>
+        /// <para>Creates an entity, specifically the meta information of the entity, such as the entity name and entity type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1723,7 +1719,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an entity member to a specified entity. An entity member includes an entity value and a synonym list. All entity values and synonyms must be unique within the same entity.</para>
+        /// <para>Adds entity member information for a specified entity, including the entity value and the corresponding synonym list. Entity values and synonyms must be unique within the same entity.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1789,7 +1785,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an entity member to a specified entity. An entity member includes an entity value and a synonym list. All entity values and synonyms must be unique within the same entity.</para>
+        /// <para>Adds entity member information for a specified entity, including the entity value and the corresponding synonym list. Entity values and synonyms must be unique within the same entity.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1855,7 +1851,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an entity member to a specified entity. An entity member includes an entity value and a synonym list. All entity values and synonyms must be unique within the same entity.</para>
+        /// <para>Adds entity member information for a specified entity, including the entity value and the corresponding synonym list. Entity values and synonyms must be unique within the same entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1873,7 +1869,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an entity member to a specified entity. An entity member includes an entity value and a synonym list. All entity values and synonyms must be unique within the same entity.</para>
+        /// <para>Adds entity member information for a specified entity, including the entity value and the corresponding synonym list. Entity values and synonyms must be unique within the same entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2111,7 +2107,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a knowledge item.</para>
+        /// <para>Creates a knowledge entry.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2189,7 +2185,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a knowledge item.</para>
+        /// <para>Creates a knowledge entry.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2267,7 +2263,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a knowledge item.</para>
+        /// <para>Creates a knowledge entry.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2285,7 +2281,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a knowledge item.</para>
+        /// <para>Creates a knowledge entry.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2303,7 +2299,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a robot in the sandbox environment.</para>
+        /// <para>Creates a chatbot in a sandbox environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2361,7 +2357,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a robot in the sandbox environment.</para>
+        /// <para>Creates a chatbot in a sandbox environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2419,7 +2415,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a robot in the sandbox environment.</para>
+        /// <para>Creates a chatbot in a sandbox environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2437,7 +2433,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a robot in the sandbox environment.</para>
+        /// <para>Creates a chatbot in a sandbox environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2455,7 +2451,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes a sandbox robot to the production environment.</para>
+        /// <para>Publishes a sandbox chatbot to the production environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2501,7 +2497,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes a sandbox robot to the production environment.</para>
+        /// <para>Publishes a sandbox chatbot to the production environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2547,7 +2543,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes a sandbox robot to the production environment.</para>
+        /// <para>Publishes a sandbox chatbot to the production environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2565,7 +2561,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes a sandbox robot to the production environment.</para>
+        /// <para>Publishes a sandbox chatbot to the production environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2583,7 +2579,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an intent. This operation defines an intent\&quot;s metadata, such as its name, alias, and associated slots. It does not include utterances or LGF.</para>
+        /// <para>Creates an intent. The intent includes meta information such as the intent name, intent alias, and associated slot information, but does not include intent utterances or LGF.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2639,7 +2635,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an intent. This operation defines an intent\&quot;s metadata, such as its name, alias, and associated slots. It does not include utterances or LGF.</para>
+        /// <para>Creates an intent. The intent includes meta information such as the intent name, intent alias, and associated slot information, but does not include intent utterances or LGF.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2695,7 +2691,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an intent. This operation defines an intent\&quot;s metadata, such as its name, alias, and associated slots. It does not include utterances or LGF.</para>
+        /// <para>Creates an intent. The intent includes meta information such as the intent name, intent alias, and associated slot information, but does not include intent utterances or LGF.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2713,7 +2709,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an intent. This operation defines an intent\&quot;s metadata, such as its name, alias, and associated slots. It does not include utterances or LGF.</para>
+        /// <para>Creates an intent. The intent includes meta information such as the intent name, intent alias, and associated slot information, but does not include intent utterances or LGF.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3015,7 +3011,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a publish task in the publishing center.</para>
+        /// <para>Creates a publish task in the publish center.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3071,7 +3067,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a publish task in the publishing center.</para>
+        /// <para>Creates a publish task in the publish center.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3127,7 +3123,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a publish task in the publishing center.</para>
+        /// <para>Creates a publish task in the publish center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3145,7 +3141,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a publish task in the publishing center.</para>
+        /// <para>Creates a publish task in the publish center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3767,7 +3763,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a user say to a specified intent.</para>
+        /// <para>Adds utterance information to a specified intent.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3823,7 +3819,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a user say to a specified intent.</para>
+        /// <para>Adds utterance information to a specified intent.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3879,7 +3875,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a user say to a specified intent.</para>
+        /// <para>Adds utterance information to a specified intent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3897,7 +3893,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a user say to a specified intent.</para>
+        /// <para>Adds utterance information to a specified intent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3915,7 +3911,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a category. A published category is marked as deleted and unpublished, while an unpublished category is deleted permanently.</para>
+        /// <para>Deletes a category. A published category changes to the deleted and unpublished state, while an unpublished category is deleted directly.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3963,7 +3959,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a category. A published category is marked as deleted and unpublished, while an unpublished category is deleted permanently.</para>
+        /// <para>Deletes a category. A published category changes to the deleted and unpublished state, while an unpublished category is deleted directly.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4011,7 +4007,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a category. A published category is marked as deleted and unpublished, while an unpublished category is deleted permanently.</para>
+        /// <para>Deletes a category. A published category changes to the deleted and unpublished state, while an unpublished category is deleted directly.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4029,7 +4025,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a category. A published category is marked as deleted and unpublished, while an unpublished category is deleted permanently.</para>
+        /// <para>Deletes a category. A published category changes to the deleted and unpublished state, while an unpublished category is deleted directly.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4047,7 +4043,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a knowledge association.</para>
+        /// <para>Deletes the associated knowledge of a knowledge item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4095,7 +4091,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a knowledge association.</para>
+        /// <para>Deletes the associated knowledge of a knowledge item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4143,7 +4139,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a knowledge association.</para>
+        /// <para>Deletes the associated knowledge of a knowledge item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4161,7 +4157,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a knowledge association.</para>
+        /// <para>Deletes the associated knowledge of a knowledge item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4179,7 +4175,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an entity. This operation also cascade-deletes all associated entity members, synonyms, and regular expressions.</para>
+        /// <para>Deletes an entity. This operation cascade deletes all entity members, synonyms, and regular expressions under the entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4229,7 +4225,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an entity. This operation also cascade-deletes all associated entity members, synonyms, and regular expressions.</para>
+        /// <para>Deletes an entity. This operation cascade deletes all entity members, synonyms, and regular expressions under the entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4279,7 +4275,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an entity. This operation also cascade-deletes all associated entity members, synonyms, and regular expressions.</para>
+        /// <para>Deletes an entity. This operation cascade deletes all entity members, synonyms, and regular expressions under the entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4297,7 +4293,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an entity. This operation also cascade-deletes all associated entity members, synonyms, and regular expressions.</para>
+        /// <para>Deletes an entity. This operation cascade deletes all entity members, synonyms, and regular expressions under the entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4315,7 +4311,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specific entity value from an entity. If the entity is a standard entity, its synonyms (if any) are also deleted.</para>
+        /// <para>Deletes a member of a specified entity. If the entity is a standard entity, the synonyms of the member are also deleted, if any.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4369,7 +4365,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specific entity value from an entity. If the entity is a standard entity, its synonyms (if any) are also deleted.</para>
+        /// <para>Deletes a member of a specified entity. If the entity is a standard entity, the synonyms of the member are also deleted, if any.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4423,7 +4419,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specific entity value from an entity. If the entity is a standard entity, its synonyms (if any) are also deleted.</para>
+        /// <para>Deletes a member of a specified entity. If the entity is a standard entity, the synonyms of the member are also deleted, if any.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4441,7 +4437,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specific entity value from an entity. If the entity is a standard entity, its synonyms (if any) are also deleted.</para>
+        /// <para>Deletes a member of a specified entity. If the entity is a standard entity, the synonyms of the member are also deleted, if any.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4587,7 +4583,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a knowledge item.</para>
+        /// <para>Deletes a knowledge entry.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4635,7 +4631,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a knowledge item.</para>
+        /// <para>Deletes a knowledge entry.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4683,7 +4679,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a knowledge item.</para>
+        /// <para>Deletes a knowledge entry.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4701,7 +4697,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a knowledge item.</para>
+        /// <para>Deletes a knowledge entry.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4719,7 +4715,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an instance from the sandbox and online environments.</para>
+        /// <para>Deletes a chatbot from both the sandbox and production environments.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4765,7 +4761,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an instance from the sandbox and online environments.</para>
+        /// <para>Deletes a chatbot from both the sandbox and production environments.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4811,7 +4807,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an instance from the sandbox and online environments.</para>
+        /// <para>Deletes a chatbot from both the sandbox and production environments.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4829,7 +4825,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an instance from the sandbox and online environments.</para>
+        /// <para>Deletes a chatbot from both the sandbox and production environments.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4847,7 +4843,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified intent and its associated user utterances and advanced semantic configurations (LGF).</para>
+        /// <para>Deletes an intent and cascade deletes all intent utterances and advanced semantic configurations (LGF) under the intent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4897,7 +4893,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified intent and its associated user utterances and advanced semantic configurations (LGF).</para>
+        /// <para>Deletes an intent and cascade deletes all intent utterances and advanced semantic configurations (LGF) under the intent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4947,7 +4943,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified intent and its associated user utterances and advanced semantic configurations (LGF).</para>
+        /// <para>Deletes an intent and cascade deletes all intent utterances and advanced semantic configurations (LGF) under the intent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4965,7 +4961,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified intent and its associated user utterances and advanced semantic configurations (LGF).</para>
+        /// <para>Deletes an intent and cascade deletes all intent utterances and advanced semantic configurations (LGF) under the intent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4983,7 +4979,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified LGF configuration.</para>
+        /// <para>Deletes a specified advanced semantic configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5037,7 +5033,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified LGF configuration.</para>
+        /// <para>Deletes a specified advanced semantic configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5091,7 +5087,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified LGF configuration.</para>
+        /// <para>Deletes a specified advanced semantic configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5109,7 +5105,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified LGF configuration.</para>
+        /// <para>Deletes a specified advanced semantic configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5387,7 +5383,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified solution.</para>
+        /// <para>Deletes an answer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5435,7 +5431,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified solution.</para>
+        /// <para>Deletes an answer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5483,7 +5479,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified solution.</para>
+        /// <para>Deletes an answer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5501,7 +5497,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified solution.</para>
+        /// <para>Deletes an answer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5807,7 +5803,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a user say from a specified intent.</para>
+        /// <para>Modifies the utterance information of an intent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5861,7 +5857,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a user say from a specified intent.</para>
+        /// <para>Modifies the utterance information of an intent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5915,7 +5911,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a user say from a specified intent.</para>
+        /// <para>Modifies the utterance information of an intent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5933,7 +5929,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a user say from a specified intent.</para>
+        /// <para>Modifies the utterance information of an intent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5951,7 +5947,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets information about a specific category.</para>
+        /// <para>Queries the information of a single category.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5999,7 +5995,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets information about a specific category.</para>
+        /// <para>Queries the information of a single category.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6047,7 +6043,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets information about a specific category.</para>
+        /// <para>Queries the information of a single category.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6065,7 +6061,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets information about a specific category.</para>
+        /// <para>Queries the information of a single category.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6083,7 +6079,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves metadata for a specified entity associated with a robot, such as the entity type, entity name, creation time, and modification time.</para>
+        /// <para>Queries the metadata of a specified entity under a specified chatbot, such as entity type, entity name, creation time, and modification time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6133,7 +6129,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves metadata for a specified entity associated with a robot, such as the entity type, entity name, creation time, and modification time.</para>
+        /// <para>Queries the metadata of a specified entity under a specified chatbot, such as entity type, entity name, creation time, and modification time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6183,7 +6179,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves metadata for a specified entity associated with a robot, such as the entity type, entity name, creation time, and modification time.</para>
+        /// <para>Queries the metadata of a specified entity under a specified chatbot, such as entity type, entity name, creation time, and modification time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6201,7 +6197,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves metadata for a specified entity associated with a robot, such as the entity type, entity name, creation time, and modification time.</para>
+        /// <para>Queries the metadata of a specified entity under a specified chatbot, such as entity type, entity name, creation time, and modification time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6219,7 +6215,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Document details.</para>
+        /// <para>Queries the details of a document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6269,7 +6265,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Document details.</para>
+        /// <para>Queries the details of a document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6319,7 +6315,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Document details.</para>
+        /// <para>Queries the details of a document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6337,7 +6333,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Document details.</para>
+        /// <para>Queries the details of a document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6355,7 +6351,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves knowledge details.</para>
+        /// <para>Queries the details of a knowledge entry.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6403,7 +6399,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves knowledge details.</para>
+        /// <para>Queries the details of a knowledge entry.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6451,7 +6447,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves knowledge details.</para>
+        /// <para>Queries the details of a knowledge entry.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6469,7 +6465,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves knowledge details.</para>
+        /// <para>Queries the details of a knowledge entry.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6487,7 +6483,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a robot.</para>
+        /// <para>Queries the details of a chatbot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6533,7 +6529,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a robot.</para>
+        /// <para>Queries the details of a chatbot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6579,7 +6575,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a robot.</para>
+        /// <para>Queries the details of a chatbot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6597,7 +6593,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a robot.</para>
+        /// <para>Queries the details of a chatbot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6615,7 +6611,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns metadata for a specified intent, including its type, name, creation time, and modification time.</para>
+        /// <para>Returns the metadata of a specified intent, such as the intent type, intent name, creation time, and modification time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6667,7 +6663,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns metadata for a specified intent, including its type, name, creation time, and modification time.</para>
+        /// <para>Returns the metadata of a specified intent, such as the intent type, intent name, creation time, and modification time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6719,7 +6715,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns metadata for a specified intent, including its type, name, creation time, and modification time.</para>
+        /// <para>Returns the metadata of a specified intent, such as the intent type, intent name, creation time, and modification time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6737,7 +6733,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns metadata for a specified intent, including its type, name, creation time, and modification time.</para>
+        /// <para>Returns the metadata of a specified intent, such as the intent type, intent name, creation time, and modification time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6755,7 +6751,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified perspective.</para>
+        /// <para>Queries the details of a perspective.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6801,7 +6797,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified perspective.</para>
+        /// <para>Queries the details of a perspective.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6847,7 +6843,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified perspective.</para>
+        /// <para>Queries the details of a perspective.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6865,7 +6861,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified perspective.</para>
+        /// <para>Queries the details of a perspective.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7171,7 +7167,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves user feedback on chatbot responses.</para>
+        /// <para>Saves user feedback on Q&amp;A results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7233,7 +7229,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves user feedback on chatbot responses.</para>
+        /// <para>Saves user feedback on Q&amp;A results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7295,7 +7291,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves user feedback on chatbot responses.</para>
+        /// <para>Saves user feedback on Q&amp;A results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7313,7 +7309,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves user feedback on chatbot responses.</para>
+        /// <para>Saves user feedback on Q&amp;A results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7331,12 +7327,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a user access token to enable single sign-on for a chat window. The token associates the user with their corporate identity.</para>
+        /// <para>Retrieves a token for passwordless logon in the chat window, which carries the enterprise identity of the user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For security, each generated token is single-use and must be used before it expires. If a user signs in from multiple browsers, you must call this operation for each session to get a unique token.</para>
+        /// <para>For security reasons, the generated token is valid only for the first use within the expiration period. If the same user logs on from multiple browsers, call this operation multiple times.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7404,12 +7400,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a user access token to enable single sign-on for a chat window. The token associates the user with their corporate identity.</para>
+        /// <para>Retrieves a token for passwordless logon in the chat window, which carries the enterprise identity of the user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For security, each generated token is single-use and must be used before it expires. If a user signs in from multiple browsers, you must call this operation for each session to get a unique token.</para>
+        /// <para>For security reasons, the generated token is valid only for the first use within the expiration period. If the same user logs on from multiple browsers, call this operation multiple times.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7477,12 +7473,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a user access token to enable single sign-on for a chat window. The token associates the user with their corporate identity.</para>
+        /// <para>Retrieves a token for passwordless logon in the chat window, which carries the enterprise identity of the user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For security, each generated token is single-use and must be used before it expires. If a user signs in from multiple browsers, you must call this operation for each session to get a unique token.</para>
+        /// <para>For security reasons, the generated token is valid only for the first use within the expiration period. If the same user logs on from multiple browsers, call this operation multiple times.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7500,12 +7496,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a user access token to enable single sign-on for a chat window. The token associates the user with their corporate identity.</para>
+        /// <para>Retrieves a token for passwordless logon in the chat window, which carries the enterprise identity of the user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For security, each generated token is single-use and must be used before it expires. If a user signs in from multiple browsers, you must call this operation for each session to get a unique token.</para>
+        /// <para>For security reasons, the generated token is valid only for the first use within the expiration period. If the same user logs on from multiple browsers, call this operation multiple times.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7523,7 +7519,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details for a specified agent.</para>
+        /// <para>Retrieves the business space ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7565,7 +7561,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details for a specified agent.</para>
+        /// <para>Retrieves the business space ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7607,7 +7603,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details for a specified agent.</para>
+        /// <para>Retrieves the business space ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7625,7 +7621,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details for a specified agent.</para>
+        /// <para>Retrieves the business space ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7643,12 +7639,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the execution result of an asynchronous service. This API is used in conjunction with the Chat API.</para>
+        /// <para>Retrieves the result of an asynchronous service execution. This operation is used together with the Chat operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the execution result of an asynchronous service.</para>
+        /// <para>Retrieves the result of an asynchronous service execution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7694,12 +7690,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the execution result of an asynchronous service. This API is used in conjunction with the Chat API.</para>
+        /// <para>Retrieves the result of an asynchronous service execution. This operation is used together with the Chat operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the execution result of an asynchronous service.</para>
+        /// <para>Retrieves the result of an asynchronous service execution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7745,12 +7741,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the execution result of an asynchronous service. This API is used in conjunction with the Chat API.</para>
+        /// <para>Retrieves the result of an asynchronous service execution. This operation is used together with the Chat operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the execution result of an asynchronous service.</para>
+        /// <para>Retrieves the result of an asynchronous service execution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7768,12 +7764,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the execution result of an asynchronous service. This API is used in conjunction with the Chat API.</para>
+        /// <para>Retrieves the result of an asynchronous service execution. This operation is used together with the Chat operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the execution result of an asynchronous service.</para>
+        /// <para>Retrieves the result of an asynchronous service execution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7791,12 +7787,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves overview metrics for a bot.</para>
+        /// <para>Queries the overview metrics of chatbot Q&amp;A.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation retrieves data for the previous day (T-1) only. Data for the current day is not available.</para>
+        /// <para>Only data from T-1 (excluding the current day) can be queried.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7850,12 +7846,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves overview metrics for a bot.</para>
+        /// <para>Queries the overview metrics of chatbot Q&amp;A.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation retrieves data for the previous day (T-1) only. Data for the current day is not available.</para>
+        /// <para>Only data from T-1 (excluding the current day) can be queried.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7909,12 +7905,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves overview metrics for a bot.</para>
+        /// <para>Queries the overview metrics of chatbot Q&amp;A.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation retrieves data for the previous day (T-1) only. Data for the current day is not available.</para>
+        /// <para>Only data from T-1 (excluding the current day) can be queried.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7932,12 +7928,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves overview metrics for a bot.</para>
+        /// <para>Queries the overview metrics of chatbot Q&amp;A.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation retrieves data for the previous day (T-1) only. Data for the current day is not available.</para>
+        /// <para>Only data from T-1 (excluding the current day) can be queried.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7955,7 +7951,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the status of a bot publishing task.</para>
+        /// <para>Queries the publish progress of a chatbot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8005,7 +8001,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the status of a bot publishing task.</para>
+        /// <para>Queries the publish progress of a chatbot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8055,7 +8051,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the status of a bot publishing task.</para>
+        /// <para>Queries the publish progress of a chatbot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8073,7 +8069,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the status of a bot publishing task.</para>
+        /// <para>Queries the publish progress of a chatbot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8091,7 +8087,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the progress of a publish task.</para>
+        /// <para>Queries the publish progress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8137,7 +8133,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the progress of a publish task.</para>
+        /// <para>Queries the publish progress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8183,7 +8179,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the progress of a publish task.</para>
+        /// <para>Queries the publish progress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8201,7 +8197,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the progress of a publish task.</para>
+        /// <para>Queries the publish progress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8219,7 +8215,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initializes the Instant Messaging (IM) connection using the <c>From</c> value configured in the channel console. This operation lets you pass a user authentication token during initialization.</para>
+        /// <para>Initializes an IM connection with custom settings by using the from value generated from the channel backend configuration. Supports passing a user authentication token during initialization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8271,7 +8267,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initializes the Instant Messaging (IM) connection using the <c>From</c> value configured in the channel console. This operation lets you pass a user authentication token during initialization.</para>
+        /// <para>Initializes an IM connection with custom settings by using the from value generated from the channel backend configuration. Supports passing a user authentication token during initialization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8323,7 +8319,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initializes the Instant Messaging (IM) connection using the <c>From</c> value configured in the channel console. This operation lets you pass a user authentication token during initialization.</para>
+        /// <para>Initializes an IM connection with custom settings by using the from value generated from the channel backend configuration. Supports passing a user authentication token during initialization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8341,7 +8337,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initializes the Instant Messaging (IM) connection using the <c>From</c> value configured in the channel console. This operation lets you pass a user authentication token during initialization.</para>
+        /// <para>Initializes an IM connection with custom settings by using the from value generated from the channel backend configuration. Supports passing a user authentication token during initialization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8359,7 +8355,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Links knowledge categories to a chatbot.</para>
+        /// <para>Associates knowledge categories with a chatbot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8415,7 +8411,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Links knowledge categories to a chatbot.</para>
+        /// <para>Associates knowledge categories with a chatbot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8471,7 +8467,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Links knowledge categories to a chatbot.</para>
+        /// <para>Associates knowledge categories with a chatbot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8489,7 +8485,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Links knowledge categories to a chatbot.</para>
+        /// <para>Associates knowledge categories with a chatbot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8507,7 +8503,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the business spaces for your Alibaba Cloud account.</para>
+        /// <para>Retrieves the list of business spaces for the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8561,7 +8557,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the business spaces for your Alibaba Cloud account.</para>
+        /// <para>Retrieves the list of business spaces for the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8615,7 +8611,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the business spaces for your Alibaba Cloud account.</para>
+        /// <para>Retrieves the list of business spaces for the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8633,7 +8629,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the business spaces for your Alibaba Cloud account.</para>
+        /// <para>Retrieves the list of business spaces for the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8651,7 +8647,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists categories.</para>
+        /// <para>Retrieves the list of categories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8703,7 +8699,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists categories.</para>
+        /// <para>Retrieves the list of categories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8755,7 +8751,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists categories.</para>
+        /// <para>Retrieves the list of categories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8773,7 +8769,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists categories.</para>
+        /// <para>Retrieves the list of categories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8791,7 +8787,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the connected questions for a knowledge item.</para>
+        /// <para>Queries the list of associated questions for a knowledge item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8839,7 +8835,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the connected questions for a knowledge item.</para>
+        /// <para>Queries the list of associated questions for a knowledge item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8887,7 +8883,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the connected questions for a knowledge item.</para>
+        /// <para>Queries the list of associated questions for a knowledge item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8905,7 +8901,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the connected questions for a knowledge item.</para>
+        /// <para>Queries the list of associated questions for a knowledge item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8923,7 +8919,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the entities for a specified robot. This operation returns only entity metadata, such as the entity type, name, creation time, and update time.</para>
+        /// <para>Queries the list of entities under a specified chatbot. Only the metadata of each entity is returned, such as entity type, entity name, creation time, and modification time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8985,7 +8981,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the entities for a specified robot. This operation returns only entity metadata, such as the entity type, name, creation time, and update time.</para>
+        /// <para>Queries the list of entities under a specified chatbot. Only the metadata of each entity is returned, such as entity type, entity name, creation time, and modification time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9047,7 +9043,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the entities for a specified robot. This operation returns only entity metadata, such as the entity type, name, creation time, and update time.</para>
+        /// <para>Queries the list of entities under a specified chatbot. Only the metadata of each entity is returned, such as entity type, entity name, creation time, and modification time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9065,7 +9061,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the entities for a specified robot. This operation returns only entity metadata, such as the entity type, name, creation time, and update time.</para>
+        /// <para>Queries the list of entities under a specified chatbot. Only the metadata of each entity is returned, such as entity type, entity name, creation time, and modification time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9083,7 +9079,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of entity values for a specified entity. You can filter by keyword using a <c>contains</c> match. The search covers both entity values and their synonyms.</para>
+        /// <para>Queries the list and details of entity members for a specified entity. Keyword filtering (contains) is supported. The filtering scope includes entity values and synonyms.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9151,7 +9147,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of entity values for a specified entity. You can filter by keyword using a <c>contains</c> match. The search covers both entity values and their synonyms.</para>
+        /// <para>Queries the list and details of entity members for a specified entity. Keyword filtering (contains) is supported. The filtering scope includes entity values and synonyms.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9219,7 +9215,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of entity values for a specified entity. You can filter by keyword using a <c>contains</c> match. The search covers both entity values and their synonyms.</para>
+        /// <para>Queries the list and details of entity members for a specified entity. Keyword filtering (contains) is supported. The filtering scope includes entity values and synonyms.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9237,7 +9233,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of entity values for a specified entity. You can filter by keyword using a <c>contains</c> match. The search covers both entity values and their synonyms.</para>
+        /// <para>Queries the list and details of entity members for a specified entity. Keyword filtering (contains) is supported. The filtering scope includes entity values and synonyms.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9255,7 +9251,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances.</para>
+        /// <para>Queries the list of chatbots.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9317,7 +9313,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances.</para>
+        /// <para>Queries the list of chatbots.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9379,7 +9375,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances.</para>
+        /// <para>Queries the list of chatbots.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9397,7 +9393,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances.</para>
+        /// <para>Queries the list of chatbots.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9415,7 +9411,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves metadata for all intents in a specified bot, including the intent type, intent name, creation time, and modification time.</para>
+        /// <para>Queries the list of intents under a specified chatbot. Only the metadata of each intent is returned, such as the intent type, intent name, creation time, and modification time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9473,7 +9469,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves metadata for all intents in a specified bot, including the intent type, intent name, creation time, and modification time.</para>
+        /// <para>Queries the list of intents under a specified chatbot. Only the metadata of each intent is returned, such as the intent type, intent name, creation time, and modification time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9531,7 +9527,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves metadata for all intents in a specified bot, including the intent type, intent name, creation time, and modification time.</para>
+        /// <para>Queries the list of intents under a specified chatbot. Only the metadata of each intent is returned, such as the intent type, intent name, creation time, and modification time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9549,7 +9545,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves metadata for all intents in a specified bot, including the intent type, intent name, creation time, and modification time.</para>
+        /// <para>Queries the list of intents under a specified chatbot. Only the metadata of each intent is returned, such as the intent type, intent name, creation time, and modification time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9567,7 +9563,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the advanced semantic configurations (LGF) for a specified intent.</para>
+        /// <para>Queries the advanced semantic configuration (LGF) of a specified intent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9629,7 +9625,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the advanced semantic configurations (LGF) for a specified intent.</para>
+        /// <para>Queries the advanced semantic configuration (LGF) of a specified intent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9691,7 +9687,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the advanced semantic configurations (LGF) for a specified intent.</para>
+        /// <para>Queries the advanced semantic configuration (LGF) of a specified intent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9709,7 +9705,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the advanced semantic configurations (LGF) for a specified intent.</para>
+        /// <para>Queries the advanced semantic configuration (LGF) of a specified intent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9727,7 +9723,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists SaaS integration information.</para>
+        /// <para>Retrieves the list of SaaS integration information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9777,7 +9773,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists SaaS integration information.</para>
+        /// <para>Retrieves the list of SaaS integration information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9827,7 +9823,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists SaaS integration information.</para>
+        /// <para>Retrieves the list of SaaS integration information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9845,7 +9841,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists SaaS integration information.</para>
+        /// <para>Retrieves the list of SaaS integration information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9863,7 +9859,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the permission groups for integrated SaaS applications. Use these groups to grant permissions to users.</para>
+        /// <para>Retrieves the list of permission integration information. You can use the permission groups returned in this list to grant permissions to users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9905,7 +9901,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the permission groups for integrated SaaS applications. Use these groups to grant permissions to users.</para>
+        /// <para>Retrieves the list of permission integration information. You can use the permission groups returned in this list to grant permissions to users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9947,7 +9943,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the permission groups for integrated SaaS applications. Use these groups to grant permissions to users.</para>
+        /// <para>Retrieves the list of permission integration information. You can use the permission groups returned in this list to grant permissions to users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9965,7 +9961,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the permission groups for integrated SaaS applications. Use these groups to grant permissions to users.</para>
+        /// <para>Retrieves the list of permission integration information. You can use the permission groups returned in this list to grant permissions to users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10115,7 +10111,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the solutions for a knowledge entry.</para>
+        /// <para>Queries the list of answers for a knowledge item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10163,7 +10159,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the solutions for a knowledge entry.</para>
+        /// <para>Queries the list of answers for a knowledge item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10211,7 +10207,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the solutions for a knowledge entry.</para>
+        /// <para>Queries the list of answers for a knowledge item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10229,7 +10225,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the solutions for a knowledge entry.</para>
+        /// <para>Queries the list of answers for a knowledge item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10567,7 +10563,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves chat history details.</para>
+        /// <para>Retrieves the session history details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10625,7 +10621,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves chat history details.</para>
+        /// <para>Retrieves the session history details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10683,7 +10679,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves chat history details.</para>
+        /// <para>Retrieves the session history details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10701,7 +10697,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves chat history details.</para>
+        /// <para>Retrieves the session history details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10719,12 +10715,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the conversation logs for a single session of a Tongyi chatbot.</para>
+        /// <para>Queries the conversation records of a single session for Chatbot Tongyi Edition.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation retrieves conversation logs generated within the past two hours.</para>
+        /// <para>Only conversation records from the last 2 hours can be queried.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10774,12 +10770,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the conversation logs for a single session of a Tongyi chatbot.</para>
+        /// <para>Queries the conversation records of a single session for Chatbot Tongyi Edition.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation retrieves conversation logs generated within the past two hours.</para>
+        /// <para>Only conversation records from the last 2 hours can be queried.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10829,12 +10825,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the conversation logs for a single session of a Tongyi chatbot.</para>
+        /// <para>Queries the conversation records of a single session for Chatbot Tongyi Edition.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation retrieves conversation logs generated within the past two hours.</para>
+        /// <para>Only conversation records from the last 2 hours can be queried.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10852,12 +10848,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the conversation logs for a single session of a Tongyi chatbot.</para>
+        /// <para>Queries the conversation records of a single session for Chatbot Tongyi Edition.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation retrieves conversation logs generated within the past two hours.</para>
+        /// <para>Only conversation records from the last 2 hours can be queried.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10875,7 +10871,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the user says and their associated slot information for a specified intent. You can filter the results by keywords.</para>
+        /// <para>Queries the utterance content and associated slot information of a specified intent. Supports filtering utterances by keyword (contains).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10937,7 +10933,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the user says and their associated slot information for a specified intent. You can filter the results by keywords.</para>
+        /// <para>Queries the utterance content and associated slot information of a specified intent. Supports filtering utterances by keyword (contains).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10999,7 +10995,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the user says and their associated slot information for a specified intent. You can filter the results by keywords.</para>
+        /// <para>Queries the utterance content and associated slot information of a specified intent. Supports filtering utterances by keyword (contains).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11017,7 +11013,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the user says and their associated slot information for a specified intent. You can filter the results by keywords.</para>
+        /// <para>Queries the utterance content and associated slot information of a specified intent. Supports filtering utterances by keyword (contains).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11035,7 +11031,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns the natural language understanding (NLU) results for a user query. Currently, this feature only supports NLU from Conversation Factory and Central Control. Support for other engines will be added as needed.</para>
+        /// <para>Returns the natural language understanding (NLU) result of a chatbot for a user query. Currently, only NLU information from dialog flow and the central controller is supported. Other engines will be supported as needed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11085,7 +11081,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns the natural language understanding (NLU) results for a user query. Currently, this feature only supports NLU from Conversation Factory and Central Control. Support for other engines will be added as needed.</para>
+        /// <para>Returns the natural language understanding (NLU) result of a chatbot for a user query. Currently, only NLU information from dialog flow and the central controller is supported. Other engines will be supported as needed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11135,7 +11131,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns the natural language understanding (NLU) results for a user query. Currently, this feature only supports NLU from Conversation Factory and Central Control. Support for other engines will be added as needed.</para>
+        /// <para>Returns the natural language understanding (NLU) result of a chatbot for a user query. Currently, only NLU information from dialog flow and the central controller is supported. Other engines will be supported as needed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11153,7 +11149,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns the natural language understanding (NLU) results for a user query. Currently, this feature only supports NLU from Conversation Factory and Central Control. Support for other engines will be added as needed.</para>
+        /// <para>Returns the natural language understanding (NLU) result of a chatbot for a user query. Currently, only NLU information from dialog flow and the central controller is supported. Other engines will be supported as needed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11171,7 +11167,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of perspectives.</para>
+        /// <para>Queries the list of perspectives.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11213,7 +11209,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of perspectives.</para>
+        /// <para>Queries the list of perspectives.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11255,7 +11251,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of perspectives.</para>
+        /// <para>Queries the list of perspectives.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11273,7 +11269,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of perspectives.</para>
+        /// <para>Queries the list of perspectives.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11291,7 +11287,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retries a document processing task.</para>
+        /// <para>Retries document processing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11337,7 +11333,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retries a document processing task.</para>
+        /// <para>Retries document processing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11383,7 +11379,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retries a document processing task.</para>
+        /// <para>Retries document processing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11401,7 +11397,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retries a document processing task.</para>
+        /// <para>Retries document processing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11419,7 +11415,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search the documentation.</para>
+        /// <para>Searches for documents.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11543,7 +11539,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search the documentation.</para>
+        /// <para>Searches for documents.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11667,7 +11663,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search the documentation.</para>
+        /// <para>Searches for documents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11685,7 +11681,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search the documentation.</para>
+        /// <para>Searches for documents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11703,7 +11699,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search the knowledge base.</para>
+        /// <para>Searches for knowledge.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11817,7 +11813,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search the knowledge base.</para>
+        /// <para>Searches for knowledge.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11931,7 +11927,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search the knowledge base.</para>
+        /// <para>Searches for knowledge.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11949,7 +11945,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search the knowledge base.</para>
+        /// <para>Searches for knowledge.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11967,12 +11963,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Debugging information for large language model Q&amp;A.</para>
+        /// <para>Retrieves the debugging information for large language model Q&amp;A.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only supported for new version chatbots. Only data within the last 90 days can be queried.</para>
+        /// <para>Supports only new-version chatbots. You can query only data generated within the last 90 days.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12022,12 +12018,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Debugging information for large language model Q&amp;A.</para>
+        /// <para>Retrieves the debugging information for large language model Q&amp;A.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only supported for new version chatbots. Only data within the last 90 days can be queried.</para>
+        /// <para>Supports only new-version chatbots. You can query only data generated within the last 90 days.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12077,12 +12073,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Debugging information for large language model Q&amp;A.</para>
+        /// <para>Retrieves the debugging information for large language model Q&amp;A.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only supported for new version chatbots. Only data within the last 90 days can be queried.</para>
+        /// <para>Supports only new-version chatbots. You can query only data generated within the last 90 days.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12100,12 +12096,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Debugging information for large language model Q&amp;A.</para>
+        /// <para>Retrieves the debugging information for large language model Q&amp;A.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only supported for new version chatbots. Only data within the last 90 days can be queried.</para>
+        /// <para>Supports only new-version chatbots. You can query only data generated within the last 90 days.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12271,7 +12267,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a connection.</para>
+        /// <para>Updates an association.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12323,7 +12319,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a connection.</para>
+        /// <para>Updates an association.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12375,7 +12371,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a connection.</para>
+        /// <para>Updates an association.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12393,7 +12389,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a connection.</para>
+        /// <para>Updates an association.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12411,7 +12407,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the metadata of an entity. You can modify the entity name, but not the entity type.</para>
+        /// <para>Modifies the meta information of an entity. Only the entity name can be modified. The entity type cannot be modified.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12469,7 +12465,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the metadata of an entity. You can modify the entity name, but not the entity type.</para>
+        /// <para>Modifies the meta information of an entity. Only the entity name can be modified. The entity type cannot be modified.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12527,7 +12523,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the metadata of an entity. You can modify the entity name, but not the entity type.</para>
+        /// <para>Modifies the meta information of an entity. Only the entity name can be modified. The entity type cannot be modified.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12545,7 +12541,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the metadata of an entity. You can modify the entity name, but not the entity type.</para>
+        /// <para>Modifies the meta information of an entity. Only the entity name can be modified. The entity type cannot be modified.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12563,7 +12559,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an entity value. This applies to entity values that use synonyms or regular expressions. Note: You cannot add a regular expression to a standard entity, and vice versa.</para>
+        /// <para>Modifies a member of a specified entity. Two types of data can be modified: entity values with synonyms, and regular expressions. Note: Adding a regular expression to a standard entity is not allowed, and vice versa.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12633,7 +12629,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an entity value. This applies to entity values that use synonyms or regular expressions. Note: You cannot add a regular expression to a standard entity, and vice versa.</para>
+        /// <para>Modifies a member of a specified entity. Two types of data can be modified: entity values with synonyms, and regular expressions. Note: Adding a regular expression to a standard entity is not allowed, and vice versa.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12703,7 +12699,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an entity value. This applies to entity values that use synonyms or regular expressions. Note: You cannot add a regular expression to a standard entity, and vice versa.</para>
+        /// <para>Modifies a member of a specified entity. Two types of data can be modified: entity values with synonyms, and regular expressions. Note: Adding a regular expression to a standard entity is not allowed, and vice versa.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12721,7 +12717,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an entity value. This applies to entity values that use synonyms or regular expressions. Note: You cannot add a regular expression to a standard entity, and vice versa.</para>
+        /// <para>Modifies a member of a specified entity. Two types of data can be modified: entity values with synonyms, and regular expressions. Note: Adding a regular expression to a standard entity is not allowed, and vice versa.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12967,7 +12963,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an existing knowledge entry.</para>
+        /// <para>Edits a knowledge entry.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13041,7 +13037,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an existing knowledge entry.</para>
+        /// <para>Edits a knowledge entry.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13115,7 +13111,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an existing knowledge entry.</para>
+        /// <para>Edits a knowledge entry.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13133,7 +13129,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an existing knowledge entry.</para>
+        /// <para>Edits a knowledge entry.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13151,7 +13147,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a chatbot\&quot;s name and description.</para>
+        /// <para>Updates the name and description of a chatbot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13205,7 +13201,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a chatbot\&quot;s name and description.</para>
+        /// <para>Updates the name and description of a chatbot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13259,7 +13255,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a chatbot\&quot;s name and description.</para>
+        /// <para>Updates the name and description of a chatbot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13277,7 +13273,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a chatbot\&quot;s name and description.</para>
+        /// <para>Updates the name and description of a chatbot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13295,7 +13291,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the metadata of a specified intent, including the intent name, alias name, and associated slots. This operation does not modify the intent\&quot;s utterances or LGF.</para>
+        /// <para>Modifies an intent, including the meta information of the intent, such as the intent name, intent alias, and slot information associated with the intent. This operation does not include intent utterances or LGF.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13355,7 +13351,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the metadata of a specified intent, including the intent name, alias name, and associated slots. This operation does not modify the intent\&quot;s utterances or LGF.</para>
+        /// <para>Modifies an intent, including the meta information of the intent, such as the intent name, intent alias, and slot information associated with the intent. This operation does not include intent utterances or LGF.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13415,7 +13411,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the metadata of a specified intent, including the intent name, alias name, and associated slots. This operation does not modify the intent\&quot;s utterances or LGF.</para>
+        /// <para>Modifies an intent, including the meta information of the intent, such as the intent name, intent alias, and slot information associated with the intent. This operation does not include intent utterances or LGF.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13433,7 +13429,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the metadata of a specified intent, including the intent name, alias name, and associated slots. This operation does not modify the intent\&quot;s utterances or LGF.</para>
+        /// <para>Modifies an intent, including the meta information of the intent, such as the intent name, intent alias, and slot information associated with the intent. This operation does not include intent utterances or LGF.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13451,7 +13447,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the advanced semantic feature (LGF) for a specified intent.</para>
+        /// <para>Creates an advanced semantic configuration (LGF) for a specified intent.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13511,7 +13507,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the advanced semantic feature (LGF) for a specified intent.</para>
+        /// <para>Creates an advanced semantic configuration (LGF) for a specified intent.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13571,7 +13567,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the advanced semantic feature (LGF) for a specified intent.</para>
+        /// <para>Creates an advanced semantic configuration (LGF) for a specified intent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13589,7 +13585,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the advanced semantic feature (LGF) for a specified intent.</para>
+        /// <para>Creates an advanced semantic configuration (LGF) for a specified intent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13607,7 +13603,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a perspective\&quot;s name and description.</para>
+        /// <para>Updates the name and description of a perspective.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13657,7 +13653,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a perspective\&quot;s name and description.</para>
+        /// <para>Updates the name and description of a perspective.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13707,7 +13703,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a perspective\&quot;s name and description.</para>
+        /// <para>Updates the name and description of a perspective.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13725,7 +13721,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a perspective\&quot;s name and description.</para>
+        /// <para>Updates the name and description of a perspective.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13883,7 +13879,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a solution.</para>
+        /// <para>Updates an answer.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13953,7 +13949,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a solution.</para>
+        /// <para>Updates an answer.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -14023,7 +14019,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a solution.</para>
+        /// <para>Updates an answer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14041,7 +14037,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a solution.</para>
+        /// <para>Updates an answer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14363,7 +14359,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an existing user say.</para>
+        /// <para>Modifies the utterance information of an intent.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -14423,7 +14419,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an existing user say.</para>
+        /// <para>Modifies the utterance information of an intent.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -14483,7 +14479,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an existing user say.</para>
+        /// <para>Modifies the utterance information of an intent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14501,7 +14497,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an existing user say.</para>
+        /// <para>Modifies the utterance information of an intent.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class DescribeInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The key for the business space. If this parameter is omitted, the default business space is used. You can obtain this key from the business management page of your main account.</para>
+        /// <para>The key of the business space. If this parameter is not specified, the default business space is accessed. You can obtain the key on the business management page of the Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the robot instance.</para>
+        /// <para>The unique identifier of the chatbot.</para>
         /// 
         /// <b>Example:</b>
         /// <para>chatbot-cn-mp90s2lrk00050</para>

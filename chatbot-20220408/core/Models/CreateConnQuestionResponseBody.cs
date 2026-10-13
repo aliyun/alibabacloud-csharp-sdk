@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class CreateConnQuestionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The outline ID.</para>
+        /// <para>The association ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000002123</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class ListLgfRequest : TeaModel {
         /// <summary>
-        /// <para>The key of the business space. If you do not specify this parameter, the default business space is used. You can obtain the key from the Business Management page of your main account.</para>
+        /// <para>The business space key. If not specified, the default business space is accessed. You can obtain the key value from the business management page of the Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// <para>The ID of the chatbot.</para>
+        /// <para>The chatbot ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the intent.</para>
+        /// <para>The intent ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? IntentId { get; set; }
 
         /// <summary>
-        /// <para>The text used to filter the advanced semantic configurations.</para>
+        /// <para>The semantic configuration content to filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>.{0,5}北京天气</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string LgfText { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Defaults to 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Defaults to 10.</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

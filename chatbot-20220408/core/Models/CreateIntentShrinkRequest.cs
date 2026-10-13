@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class CreateIntentShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The key of the business space. If you do not specify this parameter, the default business space is used. You can get the key from the business management page of your main account.</para>
+        /// <para>The business space key. If this parameter is not set, the default business space is accessed. You can obtain the key value on the business management page of the main account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The chatbot ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The intent definition.</para>
+        /// <para>The intent definition struct.</para>
         /// </summary>
         [NameInMap("IntentDefinition")]
         [Validation(Required=false)]

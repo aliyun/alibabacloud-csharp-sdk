@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string Avatar { get; set; }
 
             /// <summary>
-            /// <para>The time when the chatbot was created. The time is in the UTC format.</para>
+            /// <para>The UTC time when the chatbot was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-08-12T16:00:01Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the chatbot.</para>
+            /// <para>The unique identifier of the chatbot.</para>
             /// 
             /// <b>Example:</b>
             /// <para>chatbot-cn-mp90s2lrk00050</para>
@@ -47,17 +47,17 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The remarks on the chatbot.</para>
+            /// <para>The description of the chatbot.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>用于C端问答的机器人</para>
+            /// <para>A chatbot for consumer Q&amp;A</para>
             /// </summary>
             [NameInMap("Introduction")]
             [Validation(Required=false)]
             public string Introduction { get; set; }
 
             /// <summary>
-            /// <para>The language of the chatbot, such as zh-cn and en-us. For more information, see http\://www\.lingoes.net/en/translator/langcode.htm.</para>
+            /// <para>The language of the chatbot service, such as zh-cn or en-us. For more information, see <a href="http://www.lingoes.net/zh/translator/langcode.htm">http://www.lingoes.net/zh/translator/langcode.htm</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>zh-cn</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             /// <para>The name of the chatbot.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>智能客服-小C</para>
+            /// <para>Intelligent Customer Service - Bot C</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

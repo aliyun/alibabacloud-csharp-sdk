@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? CategoryId { get; set; }
 
         /// <summary>
-        /// <para>The time the knowledge was created, in UTC.</para>
+        /// <para>The creation time in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-11-30T03:03:37Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The creator of the knowledge.</para>
+        /// <para>The user who created the knowledge.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test01</para>
@@ -40,7 +40,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string CreateUserName { get; set; }
 
         /// <summary>
-        /// <para>The validity status of the knowledge, calculated based on <c>StartDate</c> and <c>EndDate</c>. Valid values: <c>20</c> (Active), <c>21</c> (Expired), and <c>22</c> (Pending).</para>
+        /// <para>The knowledge effective status, calculated based on StartDate and EndDate. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>20: effective.</description></item>
+        /// <item><description>21: expired.</description></item>
+        /// <item><description>22: pending.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -50,7 +55,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public int? EffectStatus { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the knowledge, in UTC.</para>
+        /// <para>The expiration time in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-04-27T06:08:54Z</para>
@@ -70,7 +75,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? KnowledgeId { get; set; }
 
         /// <summary>
-        /// <para>The time the knowledge was last modified, in UTC.</para>
+        /// <para>The modification time in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-12-02T06:35:50Z</para>
@@ -90,7 +95,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string ModifyUserName { get; set; }
 
         /// <summary>
-        /// <para>A list of related questions.</para>
+        /// <para>The list of related questions.</para>
         /// </summary>
         [NameInMap("Outlines")]
         [Validation(Required=false)]
@@ -107,7 +112,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public long? ConnQuestionId { get; set; }
 
             /// <summary>
-            /// <para>The time the related question was created, in UTC.</para>
+            /// <para>The creation time in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-05-26T10:24:00Z</para>
@@ -117,7 +122,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The time the related question was last modified, in UTC.</para>
+            /// <para>The modification time in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-05-26T18:12:02Z</para>
@@ -127,7 +132,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The relationship ID.</para>
+            /// <para>The relation ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>797</para>
@@ -140,7 +145,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             /// <para>The related knowledge title.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试关联问标题</para>
+            /// <para>Test related question title</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
@@ -159,14 +164,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of similar questions.</para>
+        /// <para>The list of similar questions.</para>
         /// </summary>
         [NameInMap("SimQuestions")]
         [Validation(Required=false)]
         public List<DescribeFaqResponseBodySimQuestions> SimQuestions { get; set; }
         public class DescribeFaqResponseBodySimQuestions : TeaModel {
             /// <summary>
-            /// <para>The time the similar question was created, in UTC.</para>
+            /// <para>The creation time in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-05-26T10:24:00Z</para>
@@ -176,7 +181,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The time the similar question was last modified, in UTC.</para>
+            /// <para>The modification time in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-05-29T03:55:07Z</para>
@@ -199,7 +204,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             /// <para>The similar question title.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试相似问标题</para>
+            /// <para>Test similar question title</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
@@ -208,7 +213,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         }
 
         /// <summary>
-        /// <para>A list of solutions.</para>
+        /// <para>The list of solutions.</para>
         /// </summary>
         [NameInMap("Solutions")]
         [Validation(Required=false)]
@@ -218,14 +223,18 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             /// <para>The solution content.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试答案内容</para>
+            /// <para>Test solution content</para>
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The solution content type. Valid values: <c>0</c> (plain text) and <c>1</c> (rich text).</para>
+            /// <para>The solution type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: plain text.</description></item>
+            /// <item><description>1: rich text.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -235,7 +244,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public int? ContentType { get; set; }
 
             /// <summary>
-            /// <para>The time the solution was created, in UTC.</para>
+            /// <para>The creation time in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-05-26T10:24:00Z</para>
@@ -245,7 +254,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The time the solution was last modified, in UTC.</para>
+            /// <para>The modification time in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-05-29T07:07:13Z</para>
@@ -255,7 +264,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>A list of perspective codes.</para>
+            /// <para>The list of perspective codes.</para>
             /// </summary>
             [NameInMap("PerspectiveCodes")]
             [Validation(Required=false)]
@@ -265,7 +274,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             /// <para>The plain text content of the solution.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试答案内容</para>
+            /// <para>Test solution content</para>
             /// </summary>
             [NameInMap("PlainText")]
             [Validation(Required=false)]
@@ -282,7 +291,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public long? SolutionId { get; set; }
 
             /// <summary>
-            /// <para>A list of tag IDs.</para>
+            /// <para>The list of label IDs.</para>
             /// </summary>
             [NameInMap("TagIdList")]
             [Validation(Required=false)]
@@ -291,7 +300,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         }
 
         /// <summary>
-        /// <para>The effective start time of the knowledge, in UTC.</para>
+        /// <para>The effective period in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-04-27T07:04:39Z</para>
@@ -301,7 +310,13 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string StartDate { get; set; }
 
         /// <summary>
-        /// <para>The knowledge status. Valid values: <c>-1</c> (Deleted and unpublished), <c>1</c> (Unpublished), <c>2</c> (Published), and <c>3</c> (Updated and unpublished).</para>
+        /// <para>The knowledge status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>-1: deleted but not published.</description></item>
+        /// <item><description>1: not published.</description></item>
+        /// <item><description>2: published.</description></item>
+        /// <item><description>3: updated but not published.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -311,17 +326,17 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>A list of tag IDs associated with the knowledge.</para>
+        /// <para>The list of label IDs.</para>
         /// </summary>
         [NameInMap("TagIdList")]
         [Validation(Required=false)]
         public List<long?> TagIdList { get; set; }
 
         /// <summary>
-        /// <para>The knowledge title.</para>
+        /// <para>The title.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试标题</para>
+        /// <para>Test title</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

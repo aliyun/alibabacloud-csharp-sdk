@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the knowledge answer.</para>
+        /// <para>The answer ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100001089003</para>

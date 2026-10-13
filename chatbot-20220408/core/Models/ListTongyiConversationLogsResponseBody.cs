@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class ListTongyiConversationLogsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request processing time, in milliseconds.</para>
+        /// <para>The time consumed by the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>66</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string CostTime { get; set; }
 
         /// <summary>
-        /// <para>An array of conversation log entries.</para>
+        /// <para>The data details.</para>
         /// </summary>
         [NameInMap("Datas")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The debug information for the session flow.</para>
+        /// <para>The session flow debug information.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public ListTongyiConversationLogsResponseBodySessionFlowDebugInfo SessionFlowDebugInfo { get; set; }
         public class ListTongyiConversationLogsResponseBodySessionFlowDebugInfo : TeaModel {
             /// <summary>
-            /// <para>The API parameters from the session flow.</para>
+            /// <para>The API parameters of the session flow debug information.</para>
             /// </summary>
             [NameInMap("ApiParams")]
             [Validation(Required=false)]
             public Dictionary<string, object> ApiParams { get; set; }
 
             /// <summary>
-            /// <para>The slot parameters from the session flow.</para>
+            /// <para>The slot parameters of the session flow debug information.</para>
             /// </summary>
             [NameInMap("SlotParams")]
             [Validation(Required=false)]

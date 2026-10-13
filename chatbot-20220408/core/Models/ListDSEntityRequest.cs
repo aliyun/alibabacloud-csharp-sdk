@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class ListDSEntityRequest : TeaModel {
         /// <summary>
-        /// <para>The key of the business space. If this parameter is not set, the default business space is used. You can find this key on the Business Management page of your main account.</para>
+        /// <para>The business space key. If this parameter is not specified, the default business space is accessed. You can obtain the key value on the business management page of the primary account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// <para>The entity type. If you omit this parameter, all custom entities are returned.</para>
+        /// <para>If left empty, all custom entities are returned (default).</para>
         /// 
         /// <b>Example:</b>
         /// <para>synonyms
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string EntityType { get; set; }
 
         /// <summary>
-        /// <para>The robot ID.</para>
+        /// <para>The chatbot ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,17 +43,17 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>A keyword to filter entities by name using a \&quot;contains\&quot; match. Future releases will also support searching by entity member and synonym.</para>
+        /// <para>The filter keyword. Uses contains matching. Scope: entity name (future expansion: entity members, synonyms).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>实体</para>
+        /// <para>entity</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The current page number. Default value: 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per page. The default value is 10.</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

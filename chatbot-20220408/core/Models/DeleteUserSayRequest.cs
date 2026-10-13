@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class DeleteUserSayRequest : TeaModel {
         /// <summary>
-        /// <para>The key of the business space. If omitted, the default business space is used. You can obtain the key from the Business Management page of your primary account.</para>
+        /// <para>The business space key. If this parameter is not set, the default business space is accessed. You can obtain the key value on the business management page of the Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the bot.</para>
+        /// <para>The robot ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the intent.</para>
+        /// <para>The intent ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? IntentId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user say.</para>
+        /// <para>The utterance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

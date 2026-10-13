@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class ListInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The key of the business space. You can obtain the key on the Business Management page of the primary account. If you do not set this parameter, the default business space is accessed.</para>
+        /// <para>The business space key. If not specified, the default business space is accessed. Obtain the key value from the business management page of the Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// <para>The name of the chatbot. A fuzzy search is supported.</para>
+        /// <para>Performs a fuzzy match by chatbot name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>售前客服</para>
+        /// <para>Pre-sales Customer Service</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The page number for pagination. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of instances to return on each page. Default value: 10.</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The type of the chatbot.</para>
+        /// <para>Filters chatbots by type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>scenario_im</para>

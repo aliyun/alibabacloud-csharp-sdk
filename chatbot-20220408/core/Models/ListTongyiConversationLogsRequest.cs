@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class ListTongyiConversationLogsRequest : TeaModel {
         /// <summary>
-        /// <para>The key for the business space. If omitted, the default business space is used. You can find this key on the Business Management page of your root account.</para>
+        /// <para>The business space key. If not specified, the default business space is accessed. You can obtain the key value from the business management page of the Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// <para>The ID of the chatbot instance.</para>
+        /// <para>The robot instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RobotInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the session.</para>
+        /// <para>The session ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

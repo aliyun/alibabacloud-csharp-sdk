@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class ChatRequest : TeaModel {
         /// <summary>
-        /// <para>The key for the business space. If omitted, the request is routed to the default business space. You can get this key from the <b>Business Management</b> page of your main account.</para>
+        /// <para>The business space key. If this parameter is not specified, the default business space is accessed. Obtain the key value from the business management page of the Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the chatbot instance. To get this ID, log in to the Alibaba Cloud Chatbot console and go to <b>Chatbot Details</b> &gt; <b>Session API</b>.</para>
+        /// <para>The unique chatbot identifier (chatbot ID). Log on to the Chatbot console and navigate to Chatbot Details &gt; Session Interface to view the chatbot instance information and obtain the instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>chatbot-cn-mp90s2lrk00050</para>
@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of an intent within a dialog flow. If specified, the chatbot directly activates this intent to process the user\&quot;s request.</para>
+        /// <para>The intent name in the dialog flow. If this name is specified, the chatbot directly enters this intent for Q&amp;A.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>查天气意图</para>
+        /// <para>CheckWeatherIntent</para>
         /// </summary>
         [NameInMap("IntentName")]
         [Validation(Required=false)]
         public string IntentName { get; set; }
 
         /// <summary>
-        /// <para>The ID of an entry in the knowledge base. If you specify this ID, the chatbot directly returns the corresponding answer.</para>
+        /// <para>The ID of a knowledge title in the knowledge base. If this ID is specified, the chatbot directly returns the answer for the specified knowledge title.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30002406051</para>
@@ -50,19 +50,17 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string KnowledgeId { get; set; }
 
         /// <summary>
-        /// <para>An array of perspective codes. Use these codes to retrieve answers from different perspectives for the same knowledge entry. Example: <c>Perspective=[&quot;FZJBY3raWr&quot;]</c>. When using an SDK, refer to its parameter definitions.</para>
+        /// <para>The array of perspective codes, which is used to call answers from different perspectives under the same knowledge title. Example: Perspective=[&quot;FZJBY3raWr&quot;]. When using the SDK, use the parameters defined in the SDK.</para>
         /// </summary>
         [NameInMap("Perspective")]
         [Validation(Required=false)]
         public List<string> Perspective { get; set; }
 
         /// <summary>
-        /// <para>Specifies the environment to use. The default value is <c>false</c>, which indicates the production environment.</para>
+        /// <para>Specifies whether to use the test or production environment. Default value: false (production environment). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: The test environment. This environment is for testing only. Do not use it in production due to potential instability and QPS limitations.</para>
-        /// </description></item>
-        /// <item><description><para><c>false</c>: The production environment.</para>
-        /// </description></item>
+        /// <item><description>true: Test environment. This is for testing only. Using it in production may cause instability and QPS throttling.</description></item>
+        /// <item><description>false: Production environment.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,7 +71,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public bool? SandBox { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the user in the current session.</para>
+        /// <para>The visitor ID, which identifies the user in the current session.</para>
         /// 
         /// <b>Example:</b>
         /// <para>custumer_123456</para>
@@ -83,17 +81,17 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string SenderId { get; set; }
 
         /// <summary>
-        /// <para>The nickname of the user in the current session.</para>
+        /// <para>The nickname of the visitor in the current session.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>用户123456</para>
+        /// <para>User123456</para>
         /// </summary>
         [NameInMap("SenderNick")]
         [Validation(Required=false)]
         public string SenderNick { get; set; }
 
         /// <summary>
-        /// <para>The session ID, used to identify a user session and maintain context. For a new user, omit this parameter in the first call to the <c>Chat</c> API. The chatbot automatically starts a session and returns the <c>SessionId</c> in the response. To continue the conversation, include this <c>SessionId</c> in all subsequent requests. The maximum length is 64 characters.</para>
+        /// <para>The session ID, which identifies a visitor\&quot;s session and maintains context information. For a new visitor, you do not need to pass this field when calling the Chat operation for the first time. The chatbot starts a session and returns the SessionId in the response of the Chat operation. For subsequent conversation turns of the visitor, pass the SessionId of the current session when calling the Chat operation so that the chatbot can continue the conversation based on the SessionId. Maximum length: 64 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9c6ebdc6e66f46ecadab3434314f6959</para>
@@ -103,17 +101,17 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string SessionId { get; set; }
 
         /// <summary>
-        /// <para>The user\&quot;s input text.</para>
+        /// <para>The input from the chatbot visitor.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>今天天气怎么样？</para>
+        /// <para>How is the weather today?</para>
         /// </summary>
         [NameInMap("Utterance")]
         [Validation(Required=false)]
         public string Utterance { get; set; }
 
         /// <summary>
-        /// <para>A JSON-formatted string containing custom parameters to pass to various dialog engines.</para>
+        /// <para>A JSON-formatted set of user-defined parameters that can be passed to various dialog engines.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;phone&quot;:123456789}</para>

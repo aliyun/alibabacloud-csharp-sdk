@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class CreateSolutionShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The key of the business space. If this parameter is omitted, the system uses the default business space. You can obtain the key from the Business Management page of your primary account.</para>
+        /// <para>The key of the workspace. If this parameter is not specified, the default workspace is accessed. You can obtain the key on the business management page of the Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -20,18 +20,22 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// <para>The content of the knowledge answer.</para>
+        /// <para>The content of the answer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>答案内容</para>
+        /// <para>Answer content</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>The answer type. Valid values: <c>0</c> (plain text) and <c>1</c> (rich text).</para>
+        /// <para>The type of the answer. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: plain text.</description></item>
+        /// <item><description>1: rich text.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -41,7 +45,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public int? ContentType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the knowledge.</para>
+        /// <para>The knowledge ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +56,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? KnowledgeId { get; set; }
 
         /// <summary>
-        /// <para>A list of perspective codes.</para>
+        /// <para>The list of perspective codes.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("PerspectiveCodes")]
@@ -60,7 +64,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public List<string> PerspectiveCodes { get; set; }
 
         /// <summary>
-        /// <para>A list of tag IDs.</para>
+        /// <para>The list of tag IDs.</para>
         /// </summary>
         [NameInMap("TagIdList")]
         [Validation(Required=false)]

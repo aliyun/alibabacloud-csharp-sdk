@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class ListLgfResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of advanced semantic configurations.</para>
+        /// <para>The list of LGF configurations.</para>
         /// </summary>
         [NameInMap("Lgfs")]
         [Validation(Required=false)]
         public List<ListLgfResponseBodyLgfs> Lgfs { get; set; }
         public class ListLgfResponseBodyLgfs : TeaModel {
             /// <summary>
-            /// <para>The creation time, in UTC.</para>
+            /// <para>The creation time in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-08-12T16:00:01Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the intent.</para>
+            /// <para>The intent ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>256756734345</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public long? IntentId { get; set; }
 
             /// <summary>
-            /// <para>The LGF ID.</para>
+            /// <para>LGF ID</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public long? LgfId { get; set; }
 
             /// <summary>
-            /// <para>The modification time, in UTC.</para>
+            /// <para>The modification time in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-08-12T16:00:01Z</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         }
 
         /// <summary>
-        /// <para>The returned page number.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total count of matching entries.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

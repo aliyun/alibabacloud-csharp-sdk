@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the perspective was successfully deleted.</para>
+        /// <para>The result of deleting the perspective.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

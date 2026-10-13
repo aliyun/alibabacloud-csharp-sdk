@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class BeginSessionRequest : TeaModel {
         /// <summary>
-        /// <para>The key for the business space. If not specified, the default business space is used. You can find the key on the Business Management page of your main account.</para>
+        /// <para>The key of the workspace. If this parameter is not set, the default workspace is accessed. You can obtain the key on the business management page of the Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class QueryPerspectivesResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of perspectives.</para>
+        /// <para>The list of perspectives.</para>
         /// </summary>
         [NameInMap("Perspectives")]
         [Validation(Required=false)]
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             /// <para>The perspective name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>移动端视角</para>
+            /// <para>Mobile perspective</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The perspective code (used for the Q\&amp;A API).</para>
+            /// <para>The perspective code, which is used for the Q&amp;A API.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FZJBY3raWr</para>
@@ -77,7 +77,11 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public bool? SelfDefine { get; set; }
 
             /// <summary>
-            /// <para>The status of the perspective. Valid values are 3 (enabled) and 1 (disabled).</para>
+            /// <para>The data status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>3: Enabled.</description></item>
+            /// <item><description>1: Not enabled.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class CreateDocShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The key for the business space. If this parameter is not specified, the default business space is used. You can obtain the key from the Business Management page of your primary account.</para>
+        /// <para>The business space key. If this parameter is not specified, the default business space is accessed. You can obtain the key value on the business management page of the primary account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -31,10 +31,27 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? CategoryId { get; set; }
 
         /// <summary>
-        /// <para>The configuration for document splitting. Set the key to <c>Splitter</c>. Valid values are <c>paragraphSplitter</c> (identifies content hierarchy) and <c>treeSplitter</c> (uses a rule-based hierarchy).</para>
-        /// <para>The document chunk size. Set the key to <c>ChunkSize</c>. The default value is 500. The value must be in the range of 200 to 800.</para>
-        /// <para>The patterns for the rule-based hierarchy. Set the key to <c>TreePatterns</c>. The default value is an empty array (<c>[]</c>).</para>
-        /// <para>The document title source. Set the key to <c>TitleSource</c>. Valid values are <c>ocrTitle</c> (default), which uses the title recognized by Optical Character Recognition (OCR), and <c>docName</c>, which uses the document name as the title.</para>
+        /// <para>The document parsing and chunking configuration.</para>
+        /// <para>Configuration item: Splitter
+        /// KEY: Splitter
+        /// Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ParagraphSplitter: recognition-based hierarchy.</description></item>
+        /// <item><description>TreeSplitter: rule-based hierarchy.</description></item>
+        /// </list>
+        /// <para>Configuration item: Document chunk size
+        /// KEY: ChunkSize
+        /// VALUE: Default value: 500. Value range: [200, 800].</para>
+        /// <para>Configuration item: Rule-based hierarchy
+        /// KEY: TreePatterns
+        /// VALUE: Default value: [].</para>
+        /// <para>Configuration item: Document title source
+        /// KEY: TitleSource
+        /// Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ocrTitle: OCR-recognized title. This is the default value.</description></item>
+        /// <item><description>docName: the document name is used as the title.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;Splitter&quot;:&quot;treeSplitter&quot;,&quot;ChunkSize&quot;:500,&quot;TreePatterns&quot;:[&quot;^# .<em>&quot;,&quot;^## .</em>&quot;,&quot;^### .<em>&quot;,&quot;^#### .</em>&quot;],&quot;TitleSource&quot;:&quot;&quot;}</para>
@@ -44,10 +61,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The document content. You must specify either this parameter or <c>Url</c>.</para>
+        /// <para>The document content. Specify either this parameter or URL.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试内容</para>
+        /// <para>Test content</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
@@ -58,7 +75,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string DocMetadataShrink { get; set; }
 
         /// <summary>
-        /// <para>The time when the document expires. The time is in UTC.</para>
+        /// <para>The effective end time in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2032-05-25T16:28:36Z</para>
@@ -68,7 +85,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>The passthrough data of the document.</para>
+        /// <para>The document metadata.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;code&quot;:&quot;xxx&quot;}</para>
@@ -78,7 +95,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string Meta { get; set; }
 
         /// <summary>
-        /// <para>The time when the document takes effect. The time is in UTC.</para>
+        /// <para>The effective start time in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-05-25T16:28:36Z</para>
@@ -88,7 +105,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string StartDate { get; set; }
 
         /// <summary>
-        /// <para>A list of tag IDs.</para>
+        /// <para>The list of tag IDs.</para>
         /// </summary>
         [NameInMap("TagIds")]
         [Validation(Required=false)]
@@ -99,14 +116,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试标题</para>
+        /// <para>Test title</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]
         public string Title { get; set; }
 
         /// <summary>
-        /// <para>The URL of the document. You must specify either this parameter or <c>Content</c>. Supported formats include .txt, .pdf, .markdown, .doc, and .docx. The following limits apply to a single file: a maximum of 100 pages, less than 200 KB for .txt and .markdown files, and less than 100 MB for .pdf, .doc, and .docx files.</para>
+        /// <para>The URL of the document. Specify either this parameter or Content. Supported formats: txt, pdf, markdown, doc, and docx. Limits for a single file: up to 100 pages, txt files smaller than 200 KB, pdf files smaller than 100 MB, markdown files smaller than 200 KB, doc files smaller than 100 MB, and docx files smaller than 100 MB.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/example.pdf">https://example.com/example.pdf</a></para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class DeleteDocResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the knowledge.</para>
+        /// <para>The knowledge ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30002406051</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? KnowledgeId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DFB71B34-4188-4EA2-9988-EF3014E75910</para>

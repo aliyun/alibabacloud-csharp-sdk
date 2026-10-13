@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class UpdateDSEntityValueRequest : TeaModel {
         /// <summary>
-        /// <para>The key for the business space. If you omit this parameter, the default business space is used. You can find this key on the Business Management page of your primary account.</para>
+        /// <para>The business space key. If this parameter is not set, the default business space is accessed. Obtain the key value from the business management page of the main account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -20,18 +20,18 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// <para>The new content for the entity value. For an entity type of <c>synonyms</c>, this is the normalized value. For an entity type of <c>regex</c>, this is the regular expression.</para>
+        /// <para>When the entity type is synonyms, this parameter specifies the normalized value of the entity. When the entity type is regex, this parameter specifies the regular expression text.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>书本类型</para>
+        /// <para>Book type</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>The entity ID. You can leave this parameter empty when modifying an entity value.</para>
+        /// <para>The entity ID. This parameter can be left empty when you modify an entity member.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? EntityId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the entity value to update.</para>
+        /// <para>The entity member ID. This parameter is left empty when you create an entity member.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? EntityValueId { get; set; }
 
         /// <summary>
-        /// <para>The bot ID.</para>
+        /// <para>The chatbot ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The synonym list for the normalized value.</para>
+        /// <para>The list of synonyms.</para>
         /// </summary>
         [NameInMap("Synonyms")]
         [Validation(Required=false)]

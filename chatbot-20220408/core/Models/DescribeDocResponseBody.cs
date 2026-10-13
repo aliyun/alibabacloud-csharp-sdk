@@ -30,10 +30,11 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? CategoryId { get; set; }
 
         /// <summary>
-        /// <para>The configuration for document parsing and splitting. Key: <c>Splitter</c>. Valid values: <c>paragraphSplitter</c> (splits by recognition level, default) and <c>treeSplitter</c> (splits by rule level).</para>
-        /// <para>Key: <c>ChunkSize</c>. The size of each document chunk, which must be between 200 and 800. The default value is 500.</para>
-        /// <para>Key: <c>TreePatterns</c>. The patterns for the rule-based hierarchy. The default value is [].</para>
-        /// <para>Key: <c>TitleSource</c>. The source of the document title. Valid values: <c>ocrTitle</c> (OCR-recognized title, default) and <c>docName</c> (document name).</para>
+        /// <para>The document parsing and chunking configuration items:</para>
+        /// <para>Chunker KEY: Splitter. Valid values: paragraphSplitter - hierarchy recognition (default). treeSplitter - rule-based hierarchy.</para>
+        /// <para>Document chunk size KEY: ChunkSize. VALUE: default 500. Range: [200, 800].</para>
+        /// <para>Rule-based hierarchy KEY: TreePatterns. VALUE: default [].</para>
+        /// <para>Document title source KEY: TitleSource. Valid values: ocrTitle - OCR-recognized title (default). docName - document name as title.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;Splitter&quot;:&quot;treeSplitter&quot;,&quot;ChunkSize&quot;:500,&quot;TreePatterns&quot;:[&quot;^# .<em>&quot;,&quot;^## .</em>&quot;,&quot;^### .<em>&quot;,&quot;^#### .</em>&quot;],&quot;TitleSource&quot;:&quot;docName&quot;}</para>
@@ -53,7 +54,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The creator ID.</para>
+        /// <para>The ID of the user who created the document.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1111111111</para>
@@ -63,10 +64,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? CreateUserId { get; set; }
 
         /// <summary>
-        /// <para>The creator name.</para>
+        /// <para>The name of the user who created the document.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>张三</para>
+        /// <para>Jane</para>
         /// </summary>
         [NameInMap("CreateUserName")]
         [Validation(Required=false)]
@@ -80,7 +81,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public DescribeDocResponseBodyDocInfo DocInfo { get; set; }
         public class DescribeDocResponseBodyDocInfo : TeaModel {
             /// <summary>
-            /// <para>The paragraphs of the document.</para>
+            /// <para>The document paragraph information.</para>
             /// </summary>
             [NameInMap("DocParas")]
             [Validation(Required=false)]
@@ -97,7 +98,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
                 public int? ParaLevel { get; set; }
 
                 /// <summary>
-                /// <para>The paragraph number.</para>
+                /// <para>The paragraph sequence number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -107,17 +108,22 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
                 public int? ParaNo { get; set; }
 
                 /// <summary>
-                /// <para>The paragraph content. The content can be plain text, text extracted from an image using optical character recognition (OCR), or a table in Markdown format.</para>
+                /// <para>The paragraph content (plain text, OCR content for images, or Markdown representation for tables).</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>内容</para>
+                /// <para>Content</para>
                 /// </summary>
                 [NameInMap("ParaText")]
                 [Validation(Required=false)]
                 public string ParaText { get; set; }
 
                 /// <summary>
-                /// <para>The paragraph type.<br>text: Text<br>figure: Image<br>table: Table<br><br><br></para>
+                /// <para>The paragraph content type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>text: Text.</description></item>
+                /// <item><description>figure: Image.</description></item>
+                /// <item><description>table: Table.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>text</para>
@@ -130,51 +136,33 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 
         }
 
-        /// <summary>
-        /// <para>A list of metadata sets, where each set corresponds to a business view.</para>
-        /// </summary>
         [NameInMap("DocMetadata")]
         [Validation(Required=false)]
         public List<DescribeDocResponseBodyDocMetadata> DocMetadata { get; set; }
         public class DescribeDocResponseBodyDocMetadata : TeaModel {
-            /// <summary>
-            /// <para>The ID of the business view.</para>
-            /// </summary>
             [NameInMap("BusinessViewId")]
             [Validation(Required=false)]
             public string BusinessViewId { get; set; }
 
             /// <summary>
-            /// <para>The business view name.</para>
+            /// <para>The tag name.</para>
             /// </summary>
             [NameInMap("BusinessViewName")]
             [Validation(Required=false)]
             public string BusinessViewName { get; set; }
 
-            /// <summary>
-            /// <para>A list of metadata cells.</para>
-            /// </summary>
             [NameInMap("MetaCellInfoDTOList")]
             [Validation(Required=false)]
             public List<DescribeDocResponseBodyDocMetadataMetaCellInfoDTOList> MetaCellInfoDTOList { get; set; }
             public class DescribeDocResponseBodyDocMetadataMetaCellInfoDTOList : TeaModel {
-                /// <summary>
-                /// <para>The code of the field.</para>
-                /// </summary>
                 [NameInMap("FieldCode")]
                 [Validation(Required=false)]
                 public string FieldCode { get; set; }
 
-                /// <summary>
-                /// <para>The field name.</para>
-                /// </summary>
                 [NameInMap("FieldName")]
                 [Validation(Required=false)]
                 public string FieldName { get; set; }
 
-                /// <summary>
-                /// <para>The value of the field.</para>
-                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
@@ -187,21 +175,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         /// <para>The document name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>文档名称</para>
+        /// <para>Document name</para>
         /// </summary>
         [NameInMap("DocName")]
         [Validation(Required=false)]
         public string DocName { get; set; }
 
         /// <summary>
-        /// <para>A list of document tags.</para>
+        /// <para>The list of tag details.</para>
         /// </summary>
         [NameInMap("DocTags")]
         [Validation(Required=false)]
         public List<DescribeDocResponseBodyDocTags> DocTags { get; set; }
         public class DescribeDocResponseBodyDocTags : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the tag represents all items by default.</para>
+            /// <para>Indicates whether this is the default &quot;all tags&quot; label.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -211,7 +199,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public bool? DefaultTag { get; set; }
 
             /// <summary>
-            /// <para>The tag\&quot;s group ID.</para>
+            /// <para>The tag group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3610</para>
@@ -224,7 +212,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             /// <para>The tag group name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>文章</para>
+            /// <para>Article</para>
             /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]
@@ -244,7 +232,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             /// <para>The tag name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>小说</para>
+            /// <para>Novel</para>
             /// </summary>
             [NameInMap("TagName")]
             [Validation(Required=false)]
@@ -253,7 +241,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         }
 
         /// <summary>
-        /// <para>The effective status, calculated from <c>StartDate</c> and <c>EndDate</c>.<br>20: Active<br>21: Expired<br>22: Pending<br><br><br></para>
+        /// <para>The effective status, which is calculated based on StartDate and EndDate. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>20: Effective.</description></item>
+        /// <item><description>21: Expired.</description></item>
+        /// <item><description>22: Pending effective.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -263,7 +256,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public int? EffectStatus { get; set; }
 
         /// <summary>
-        /// <para>The end time in UTC format.</para>
+        /// <para>The expiration time (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-04-27T06:08:54Z</para>
@@ -283,7 +276,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? KnowledgeId { get; set; }
 
         /// <summary>
-        /// <para>The document\&quot;s metadata.</para>
+        /// <para>The metadata associated with the document.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;code&quot;:&quot;xxx&quot;}</para>
@@ -303,7 +296,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string ModifyTime { get; set; }
 
         /// <summary>
-        /// <para>The modifier ID.</para>
+        /// <para>The ID of the user who last modified the document.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2222222222</para>
@@ -313,17 +306,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? ModifyUserId { get; set; }
 
         /// <summary>
-        /// <para>The modifier name.</para>
+        /// <para>The name of the user who last modified the document.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>李四</para>
+        /// <para>John</para>
         /// </summary>
         [NameInMap("ModifyUserName")]
         [Validation(Required=false)]
         public string ModifyUserName { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether a failed task can be retried.<br><c>true</c>: The task can be retried.<br><c>false</c>: The task cannot be retried.<br><br></para>
+        /// <para>Indicates whether the task can be retried. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The task can be retried.</description></item>
+        /// <item><description>false: The task cannot be retried.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -333,17 +330,24 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public bool? ProcessCanRetry { get; set; }
 
         /// <summary>
-        /// <para>The processing message.</para>
+        /// <para>The task processing message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>任务处理成功</para>
+        /// <para>Task processed successfully</para>
         /// </summary>
         [NameInMap("ProcessMessage")]
         [Validation(Required=false)]
         public string ProcessMessage { get; set; }
 
         /// <summary>
-        /// <para>The processing status of the task.<br>-1: Queued<br>0: Succeeded<br>1: Parsing<br>2: Processing<br>3: Failed<br><br><br><br><br></para>
+        /// <para>The task processing status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>-1: Queued.</description></item>
+        /// <item><description>0: Succeeded.</description></item>
+        /// <item><description>1: Parsing.</description></item>
+        /// <item><description>2: Processing.</description></item>
+        /// <item><description>3: Failed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -353,7 +357,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public int? ProcessStatus { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>7F132693-212A-40A9-8A81-11E7694E478B</para>
@@ -363,7 +367,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The start time in UTC format.</para>
+        /// <para>The effective period (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1979-12-31T16:00:00Z</para>
@@ -373,7 +377,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string StartDate { get; set; }
 
         /// <summary>
-        /// <para>The edit status.<br>1: Unpublished<br>2: Published<br>3: Updated but not published<br><br><br></para>
+        /// <para>The editing status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: Unpublished.</description></item>
+        /// <item><description>2: Published.</description></item>
+        /// <item><description>3: Updated but not published.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -386,14 +395,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         /// <para>The document title.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试标题</para>
+        /// <para>Test title</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]
         public string Title { get; set; }
 
         /// <summary>
-        /// <para>The OSS address of the document.</para>
+        /// <para>The OSS URL where the document is stored.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://doc2bot-bucket-cloud.oss-cn-shanghai.aliyuncs.com/doc2bot/input/%E6%96%87%E6%A1%A3%E9%97%AE%E7%AD%94%E8%AF%B4%E6%98%8E%E4%B9%A6_V1.pdf">https://doc2bot-bucket-cloud.oss-cn-shanghai.aliyuncs.com/doc2bot/input/文档问答说明书_V1.pdf</a></para>

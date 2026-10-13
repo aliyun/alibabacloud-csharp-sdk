@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class UpdateDSEntityResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the updated entity.</para>
+        /// <para>The entity ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>

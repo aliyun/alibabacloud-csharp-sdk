@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class AssociateResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of suggested FAQs.</para>
+        /// <para>The list of associated suggestions.</para>
         /// </summary>
         [NameInMap("Associate")]
         [Validation(Required=false)]
         public List<AssociateResponseBodyAssociate> Associate { get; set; }
         public class AssociateResponseBodyAssociate : TeaModel {
             /// <summary>
-            /// <para>Additional information.</para>
+            /// <para>The additional information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string Meta { get; set; }
 
             /// <summary>
-            /// <para>The title of the suggested FAQ.</para>
+            /// <para>The title of the associated question.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>公积金提取的政策</para>
+            /// <para>Housing fund withdrawal policy</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         }
 
         /// <summary>
-        /// <para>The response message ID.</para>
+        /// <para>The ID of the response message in the current session.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5ADF0EBD-7C50-1922-A28B-43215B47CC1A</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The session ID.</para>
+        /// <para>The ID of the current session.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1531ded6b3df4afca4be63943f708bb7</para>

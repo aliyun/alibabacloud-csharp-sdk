@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class CreateInstancePublishTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of business types.</para>
+        /// <para>The list of business types.</para>
         /// </summary>
         [NameInMap("BizTypeList")]
         [Validation(Required=false)]
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The error message for the publish task.</para>
+        /// <para>The error message of the job failure.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>检查待发布模块是否空闲发生错误,faq</para>
+        /// <para>An error occurred while checking whether the module to be published is idle, faq</para>
         /// </summary>
         [NameInMap("Error")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The task ID, returned as a string.</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8522</para>

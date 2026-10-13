@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class SearchFaqResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of matching FAQs.</para>
+        /// <para>The knowledge search results.</para>
         /// </summary>
         [NameInMap("FaqHits")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public long? CategoryId { get; set; }
 
             /// <summary>
-            /// <para>The creation time (UTC).</para>
+            /// <para>The creation time in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-04-02T03:09:30Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The creator ID.</para>
+            /// <para>The ID of the creator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>18453</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public long? CreateUserId { get; set; }
 
             /// <summary>
-            /// <para>The creator\&quot;s username.</para>
+            /// <para>The name of the creator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test01</para>
@@ -57,7 +57,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string CreateUserName { get; set; }
 
             /// <summary>
-            /// <para>The effective status of the FAQ. This status is determined by the StartDate and EndDate parameters.</para>
+            /// <para>The effective status of the knowledge, calculated based on StartDate and EndDate. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>20: Active.</description></item>
+            /// <item><description>21: Expired.</description></item>
+            /// <item><description>22: Pending.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -67,21 +72,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public int? EffectStatus { get; set; }
 
             /// <summary>
-            /// <para>A list of matched similar titles.</para>
+            /// <para>The list of hit similar questions.</para>
             /// </summary>
             [NameInMap("HitSimilarTitles")]
             [Validation(Required=false)]
             public List<string> HitSimilarTitles { get; set; }
 
             /// <summary>
-            /// <para>A list of matched answers.</para>
+            /// <para>The list of hit solutions.</para>
             /// </summary>
             [NameInMap("HitSolutions")]
             [Validation(Required=false)]
             public List<string> HitSolutions { get; set; }
 
             /// <summary>
-            /// <para>The FAQ ID.</para>
+            /// <para>The knowledge ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30002145804</para>
@@ -91,7 +96,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public long? KnowledgeId { get; set; }
 
             /// <summary>
-            /// <para>The modification time (UTC).</para>
+            /// <para>The modification time in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-04-02T03:09:30Z</para>
@@ -101,7 +106,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The modifier ID.</para>
+            /// <para>The ID of the modifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>18453</para>
@@ -111,7 +116,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public long? ModifyUserId { get; set; }
 
             /// <summary>
-            /// <para>The modifier\&quot;s username.</para>
+            /// <para>The name of the modifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test01</para>
@@ -121,7 +126,13 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string ModifyUserName { get; set; }
 
             /// <summary>
-            /// <para>The FAQ status.</para>
+            /// <para>The knowledge status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>-1: deleted and unpublished.</description></item>
+            /// <item><description>1: unpublished.</description></item>
+            /// <item><description>2: published.</description></item>
+            /// <item><description>3: updated and unpublished.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -131,10 +142,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The title of the FAQ.</para>
+            /// <para>The title.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试标题</para>
+            /// <para>Test title</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
@@ -173,7 +184,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of matched entries.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1075</para>

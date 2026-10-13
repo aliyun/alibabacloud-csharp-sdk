@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class SearchFaqRequest : TeaModel {
         /// <summary>
-        /// <para>The key for the workspace. If this parameter is not specified, the default workspace is used. You can get the key on the Business Management page of your main account.</para>
+        /// <para>The business space key. If not specified, the default business space is accessed. Obtain the key value from the business management page of the Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// <para>An array of category IDs to filter the search results.</para>
+        /// <para>The unique identifier of the category.</para>
         /// </summary>
         [NameInMap("CategoryIds")]
         [Validation(Required=false)]
         public List<long?> CategoryIds { get; set; }
 
         /// <summary>
-        /// <para>The start of the creation period.</para>
+        /// <para>The start of the creation time range.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-04-02T03:09:30Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string CreateTimeBegin { get; set; }
 
         /// <summary>
-        /// <para>The end of the creation period.</para>
+        /// <para>The end of the creation time range.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-05-02T03:09:30Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string CreateTimeEnd { get; set; }
 
         /// <summary>
-        /// <para>The creator\&quot;s username.</para>
+        /// <para>The name of the creator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test01</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string CreateUserName { get; set; }
 
         /// <summary>
-        /// <para>The start of the expiration period.</para>
+        /// <para>The start of the expiration time range.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-04-02T03:09:30Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string EndTimeBegin { get; set; }
 
         /// <summary>
-        /// <para>The end of the expiration period.</para>
+        /// <para>The end of the expiration time range.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-05-02T03:09:30Z</para>
@@ -77,17 +77,17 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string EndTimeEnd { get; set; }
 
         /// <summary>
-        /// <para>The search keyword.</para>
+        /// <para>The keyword.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>搜索标题</para>
+        /// <para>Search title</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The start of the modification period.</para>
+        /// <para>The start of the modification time range.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-04-02T03:09:30Z</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string ModifyTimeBegin { get; set; }
 
         /// <summary>
-        /// <para>The end of the modification period.</para>
+        /// <para>The end of the modification time range.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-05-02T03:09:30Z</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string ModifyTimeEnd { get; set; }
 
         /// <summary>
-        /// <para>The modifier\&quot;s username.</para>
+        /// <para>The name of the modifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test01</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string ModifyUserName { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. The default value is 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. The default value is 10, and the maximum value is 100.</para>
+        /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -137,7 +137,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The search scope.</para>
+        /// <para>The search scope. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: Search titles and similar questions.</description></item>
+        /// <item><description>2: Search answers.</description></item>
+        /// <item><description>3: Search all.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -147,7 +152,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public int? SearchScope { get; set; }
 
         /// <summary>
-        /// <para>The start of the effective period.</para>
+        /// <para>The start of the effective time range.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-04-02T03:09:30Z</para>
@@ -157,7 +162,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string StartTimeBegin { get; set; }
 
         /// <summary>
-        /// <para>The end of the effective period.</para>
+        /// <para>The end of the effective time range.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-04-03T03:09:30Z</para>
@@ -167,7 +172,13 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string StartTimeEnd { get; set; }
 
         /// <summary>
-        /// <para>The status of the knowledge item.</para>
+        /// <para>The knowledge status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>-1: deleted and unpublished.</description></item>
+        /// <item><description>1: unpublished.</description></item>
+        /// <item><description>2: published.</description></item>
+        /// <item><description>3: updated and unpublished.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

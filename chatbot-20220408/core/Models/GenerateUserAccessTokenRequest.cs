@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class GenerateUserAccessTokenRequest : TeaModel {
         /// <summary>
-        /// <para>The key of the business space. If you do not specify this parameter, the system accesses the default business space. You can obtain the key from the Business Management page of your main account.</para>
+        /// <para>The key of the business space. If you do not specify this parameter, the default business space is accessed. You can obtain the key value on the business management page of the primary account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -19,15 +19,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         [Validation(Required=false)]
         public string AgentKey { get; set; }
 
-        /// <summary>
-        /// <para>The user\&quot;s email address.</para>
-        /// </summary>
         [NameInMap("Email")]
         [Validation(Required=false)]
         public string Email { get; set; }
 
         /// <summary>
-        /// <para>This parameter is reserved. You do not need to specify it.</para>
+        /// <para>Reserved parameter. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -37,7 +34,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public int? ExpireTime { get; set; }
 
         /// <summary>
-        /// <para>Additional information formatted as a JSON string.</para>
+        /// <para>The additional information in JSON string format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -45,15 +42,15 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         ///     &quot;yy&quot;: 22332,
         ///     &quot;customerNameCard&quot;: [
         ///         {
-        ///             &quot;key&quot;: &quot;姓名&quot;,
-        ///             &quot;value&quot;: &quot;张三&quot;
+        ///             &quot;key&quot;: &quot;Name&quot;,
+        ///             &quot;value&quot;: &quot;John&quot;
         ///         },
         ///         {
-        ///             &quot;key&quot;: &quot;等级&quot;,
+        ///             &quot;key&quot;: &quot;Level&quot;,
         ///             &quot;value&quot;: &quot;v2&quot;
         ///         },
         ///         {
-        ///             &quot;key&quot;: &quot;联系方式&quot;,
+        ///             &quot;key&quot;: &quot;Contact&quot;,
         ///             &quot;value&quot;: &quot;123&quot;
         ///         }
         ///     ]
@@ -75,19 +72,16 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string ForeignId { get; set; }
 
         /// <summary>
-        /// <para>The visitor\&quot;s nickname.</para>
+        /// <para>The nickname of the visitor.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>张三</para>
+        /// <para>John</para>
         /// </summary>
         [NameInMap("Nick")]
         [Validation(Required=false)]
         public string Nick { get; set; }
 
-        /// <summary>
-        /// <para>The user\&quot;s telephone number.</para>
-        /// </summary>
         [NameInMap("Telephone")]
         [Validation(Required=false)]
         public string Telephone { get; set; }

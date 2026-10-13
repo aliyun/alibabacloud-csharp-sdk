@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class UpdateDocRequest : TeaModel {
         /// <summary>
-        /// <para>The key for the business space. If this parameter is not specified, the default business space is used. You can obtain the key on the Business Management page of your master account.</para>
+        /// <para>The business space key. If this parameter is not specified, the default business space is accessed. You can obtain the key value on the business management page of the primary account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -30,10 +30,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? CategoryId { get; set; }
 
         /// <summary>
-        /// <para><b>Splitter</b>: The method used to split the document. Valid values: <c>paragraphSplitter</c> (splits by paragraph, default) and <c>treeSplitter</c> (splits by hierarchical rules).</para>
-        /// <para><b>ChunkSize</b>: The chunk size. The value must be an integer from 200 to 800. The default value is 500.</para>
-        /// <para><b>TreePatterns</b>: An array of regular expressions that define the structure for rule-based splitting. The default value is <c>[]</c>.</para>
-        /// <para><b>TitleSource</b>: The source of the document title. Valid values: <c>ocrTitle</c> (uses the OCR-recognized title, default) and <c>docName</c> (uses the document name as the title).</para>
+        /// <para>The document parsing/chunking configuration.
+        /// Configuration item: Splitter
+        /// KEY: Splitter
+        /// Valid values: paragraphSplitter - hierarchy recognition (default)
+        /// Valid values: treeSplitter - rule-based hierarchy</para>
+        /// <para>Configuration item: Document chunk size
+        /// KEY: ChunkSize
+        /// VALUE: Default 500. Range: [200,800]</para>
+        /// <para>Configuration item: Rule-based hierarchy
+        /// KEY: TreePatterns
+        /// VALUE: Default []</para>
+        /// <para>Configuration item: Document title source
+        /// KEY: TitleSource
+        /// Valid values: ocrTitle - OCR-recognized title (default)
+        /// Valid values: docName - document name as title.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;Splitter&quot;:&quot;treeSplitter&quot;,&quot;ChunkSize&quot;:500,&quot;TreePatterns&quot;:[&quot;^# .<em>&quot;,&quot;^## .</em>&quot;,&quot;^### .<em>&quot;,&quot;^#### .</em>&quot;],&quot;TitleSource&quot;:&quot;&quot;}</para>
@@ -46,7 +57,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         /// <para>The document content.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>文档内容</para>
+        /// <para>Document content</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
@@ -88,14 +99,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         /// <para>The document name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>文档问答模块功能说明文档</para>
+        /// <para>Document QA Module Feature Description</para>
         /// </summary>
         [NameInMap("DocName")]
         [Validation(Required=false)]
         public string DocName { get; set; }
 
         /// <summary>
-        /// <para>The time when the document expires. Specify the time in UTC, using the <c>YYYY-MM-DDThh:mm:ssZ</c> format.</para>
+        /// <para>The end of the effective period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-03-11T23:59:59Z</para>
@@ -116,7 +127,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? KnowledgeId { get; set; }
 
         /// <summary>
-        /// <para>The metadata of the document, specified as a JSON string.</para>
+        /// <para>The document metadata.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;code&quot;:&quot;xxx&quot;}</para>
@@ -126,7 +137,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string Meta { get; set; }
 
         /// <summary>
-        /// <para>The time when the document becomes effective. Specify the time in UTC, using the <c>YYYY-MM-DDThh:mm:ssZ</c> format.</para>
+        /// <para>The start of the effective period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-05-25T16:28:36Z</para>
@@ -136,7 +147,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string StartDate { get; set; }
 
         /// <summary>
-        /// <para>The tag IDs to associate with the document. Passing an empty array removes all existing tag associations.</para>
+        /// <para>The list of tag IDs. If this parameter is left empty, the tag bindings are removed.</para>
         /// </summary>
         [NameInMap("TagIds")]
         [Validation(Required=false)]
@@ -146,7 +157,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         /// <para>The document title.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>文档问答功能说明</para>
+        /// <para>Document QA Feature Description</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

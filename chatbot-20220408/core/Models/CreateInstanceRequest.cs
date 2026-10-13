@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class CreateInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The key of the agent. If you omit this parameter, the default agent is used. You can find the key on the Business Management page of your Alibaba Cloud account.</para>
+        /// <para>The workspace key. If this parameter is not specified, the default workspace is accessed. Obtain the key value from the business management page of the Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// <para>A description of the robot. The description can be up to 50 characters long.</para>
+        /// <para>The description of the chatbot. The description can be up to 50 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>用于手机app的小蜜机器人</para>
+        /// <para>A sample chatbot for the mobile app</para>
         /// </summary>
         [NameInMap("Introduction")]
         [Validation(Required=false)]
         public string Introduction { get; set; }
 
         /// <summary>
-        /// <para>The language of the robot, such as <c>zh-cn</c> or <c>en-us</c>. The language must be supported by the agent. If you omit this parameter, the agent\&quot;s default language is used.</para>
+        /// <para>The language of the chatbot service, such as zh-cn or en-us. Default value: the default language of the workspace. Valid values: the languages supported by the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh-cn</para>
@@ -40,17 +40,17 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string LanguageCode { get; set; }
 
         /// <summary>
-        /// <para>The name of the robot. The maximum length is 50 characters.</para>
+        /// <para>The name of the chatbot. The name can be up to 50 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>小蜜机器人</para>
+        /// <para>SampleChatbot</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The robot type. The default value is <c>scenario_im</c>.</para>
+        /// <para>The type of the chatbot. Default value: scenario_im.</para>
         /// 
         /// <b>Example:</b>
         /// <para>scenario_im</para>

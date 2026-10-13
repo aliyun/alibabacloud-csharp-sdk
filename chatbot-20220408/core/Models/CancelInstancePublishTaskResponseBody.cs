@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class CancelInstancePublishTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of business types.</para>
+        /// <para>The list of business types.</para>
         /// </summary>
         [NameInMap("BizTypeList")]
         [Validation(Required=false)]
         public List<string> BizTypeList { get; set; }
 
         /// <summary>
-        /// <para>The creation time of the task in UTC.</para>
+        /// <para>The UTC time when the task was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-04-12T06:30:17Z</para>
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The error message if the task fails.</para>
+        /// <para>The job failure information.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>检查待发布模块是否空闲发生错误，faq</para>
+        /// <para>An error occurred while checking whether the module to be published is idle, faq</para>
         /// </summary>
         [NameInMap("Error")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The last modification time of the task in UTC.</para>
+        /// <para>The UTC time when the task was last modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-04-12T06:30:33Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The task ID, returned as a string.</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8522</para>

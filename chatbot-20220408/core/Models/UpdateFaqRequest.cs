@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class UpdateFaqRequest : TeaModel {
         /// <summary>
-        /// <para>The key for the business space. If this parameter is omitted, the default business space is used. You can find this key on the Business Management page of your main account.</para>
+        /// <para>The workspace key. If not specified, the default workspace is accessed. You can obtain the key value from the business management page of the Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// <para>The ID of the knowledge entry\&quot;s category.</para>
+        /// <para>The category ID of the knowledge entry.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? CategoryId { get; set; }
 
         /// <summary>
-        /// <para>The expiration date and time. The value must be in ISO 8601 format.</para>
+        /// <para>The expiration time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2030-12-31T16:00:00Z</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>The ID of the knowledge entry.</para>
+        /// <para>The knowledge ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? KnowledgeId { get; set; }
 
         /// <summary>
-        /// <para>The effective start date and time. The value must be in ISO 8601 format.</para>
+        /// <para>The effective period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-05-27T05:18:20Z</para>
@@ -62,18 +62,18 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string StartDate { get; set; }
 
         /// <summary>
-        /// <para>A list of tag IDs.</para>
+        /// <para>The list of tag IDs.</para>
         /// </summary>
         [NameInMap("TagIdList")]
         [Validation(Required=false)]
         public List<long?> TagIdList { get; set; }
 
         /// <summary>
-        /// <para>The knowledge title.</para>
+        /// <para>The title of the knowledge entry.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试标题</para>
+        /// <para>Test title</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

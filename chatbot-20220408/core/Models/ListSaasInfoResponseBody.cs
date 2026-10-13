@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class ListSaasInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of SaaS integrations.</para>
+        /// <para>The list of SaaS integration entries.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListSaasInfoResponseBodyData> Data { get; set; }
         public class ListSaasInfoResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The unique identifier of the SaaS atomic page. Use this code to reference the page and query its information.</para>
+            /// <para>The unique identifier of the SaaS atomic page. This identifier can be used to associate and query related information about the atomic page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GLOBAL_SERVICE</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The URL to embed the SaaS page in an iframe.</para>
+            /// <para>The iframe-embedded SaaS page URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://pre-alime4service.console.aliyun.com/?productCode=p_beebot_public&switchAgent=1204001&saasCode=Robot&saasToken=06614fdb-c72f-436e-8003-dfe8a2854a15&saasName=123#/robot">https://pre-alime4service.console.aliyun.com/?productCode=p_beebot_public&amp;switchAgent=1204001&amp;saasCode=Robot&amp;saasToken=06614fdb-c72f-436e-8003-dfe8a2854a15&amp;saasName=123#/robot</a></para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>A629A28F-F25E-5572-A679-FA46FB0151D6</para>

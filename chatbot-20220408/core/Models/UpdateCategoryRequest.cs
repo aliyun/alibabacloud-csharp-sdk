@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class UpdateCategoryRequest : TeaModel {
         /// <summary>
-        /// <para>The key for the business space. If this parameter is omitted, the default business space is used. You can obtain the key on the <b>Business Management</b> page of your primary account.</para>
+        /// <para>The business space key. If this parameter is not specified, the default business space is accessed. Obtain the key value from the business management page of the Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>类目名称</para>
+        /// <para>Category name</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

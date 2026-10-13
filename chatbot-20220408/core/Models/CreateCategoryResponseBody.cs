@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class CreateCategoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of the created category.</para>
+        /// <para>The category information.</para>
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             /// <para>The category name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>类目名称</para>
+            /// <para>Category name</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the parent category.</para>
+            /// <para>The parent category ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>-1</para>
@@ -57,7 +57,11 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public long? ParentCategoryId { get; set; }
 
             /// <summary>
-            /// <para>The category status. A value of -1 indicates that the category has been deleted, but this change has not been published. A value of 0 indicates Normal.</para>
+            /// <para>The category status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>-1: deleted but not published.</description></item>
+            /// <item><description>0: Normal.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>

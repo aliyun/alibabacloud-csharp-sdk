@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class BeginSessionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ASR end-pointing detection time, in milliseconds.</para>
+        /// <para>The Automatic Speech Recognition (ASR) end-of-speech detection time. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>700</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public int? AsrMaxEndSilence { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether voice playback is interruptible.</para>
+        /// <para>Indicates whether the voice broadcast can be interrupted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The silence timeout, in seconds.</para>
+        /// <para>The silence timeout period. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         /// <para>The welcome message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>智能对话机器人为您服务，请问有什么可以帮您？</para>
+        /// <para>The intelligent chatbot is at your service. How can I help you?</para>
         /// </summary>
         [NameInMap("WelcomeMessage")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class CancelPublishTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of business types.</para>
+        /// <para>The list of business types.</para>
         /// </summary>
         [NameInMap("BizTypeList")]
         [Validation(Required=false)]
         public List<string> BizTypeList { get; set; }
 
         /// <summary>
-        /// <para>The time when the task was created, in UTC.</para>
+        /// <para>The UTC time when the task was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-04-12T06:30:17Z</para>
@@ -27,17 +27,17 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the task fails.</para>
+        /// <para>The task failure information.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>检查待发布模块是否空闲发生错误，faq</para>
+        /// <para>An error occurred while checking whether the module to be published is idle, faq</para>
         /// </summary>
         [NameInMap("Error")]
         [Validation(Required=false)]
         public string Error { get; set; }
 
         /// <summary>
-        /// <para>The ID of the publish task.</para>
+        /// <para>The publish task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8522</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The time when the task was last modified, in UTC.</para>
+        /// <para>The UTC time when the task was last modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-04-12T06:30:33Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the publish task. This is a redundant field. We recommend that you use the <c>Id</c> field instead.</para>
+        /// <para>The publish task ID. This is a redundant field. Use the publish task ID instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8522</para>
@@ -77,8 +77,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string Response { get; set; }
 
         /// <summary>
-        /// <para>The task status. Valid values:</para>
-        /// <para><c>FE_RUNNING</c>: in progress, <c>FE_SUCCESS</c>: succeeded, <c>FE_FAILED</c>: failed, <c>FE_ABORTED</c>: aborted.</para>
+        /// <para>The task status.
+        /// Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>FE_RUNNING: Publishing in progress.</description></item>
+        /// <item><description>FE_SUCCESS: Published successfully.</description></item>
+        /// <item><description>FE_FAILED: Publishing failed.</description></item>
+        /// <item><description>FE_ABORTED: Publishing canceled.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>FE_ABORTED</para>

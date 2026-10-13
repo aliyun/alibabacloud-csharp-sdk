@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class ListConnQuestionResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of connected questions.</para>
+        /// <para>The list of associated questions.</para>
         /// </summary>
         [NameInMap("Outlines")]
         [Validation(Required=false)]
         public List<ListConnQuestionResponseBodyOutlines> Outlines { get; set; }
         public class ListConnQuestionResponseBodyOutlines : TeaModel {
             /// <summary>
-            /// <para>The ID of the connected question.</para>
+            /// <para>The associated knowledge ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30001979424</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public long? ConnQuestionId { get; set; }
 
             /// <summary>
-            /// <para>The creation time, in UTC.</para>
+            /// <para>The creation time in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-02-25T02:47:18Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The last modification time, in UTC.</para>
+            /// <para>The modification time in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-05-26T10:18:15Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The relation ID.</para>
+            /// <para>The association ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>797</para>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public long? OutlineId { get; set; }
 
             /// <summary>
-            /// <para>The title of the connected question.</para>
+            /// <para>The title of the associated knowledge item.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>关联问</para>
+            /// <para>Associated question</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]

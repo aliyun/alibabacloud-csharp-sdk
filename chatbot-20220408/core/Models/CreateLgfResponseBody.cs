@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class CreateLgfResponseBody : TeaModel {
         /// <summary>
-        /// <para>The LGF ID.</para>
+        /// <para>LGF ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>123453433453</para>

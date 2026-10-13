@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string BizCode { get; set; }
 
             /// <summary>
-            /// <para>The ID of the category.</para>
+            /// <para>The category ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30000049006</para>
@@ -37,17 +37,17 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public long? CategoryId { get; set; }
 
             /// <summary>
-            /// <para>The name of the category.</para>
+            /// <para>The category name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>类目名称</para>
+            /// <para>CategoryName</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the parent category. A value of -1 indicates the root directory.</para>
+            /// <para>The parent category ID. Default value: -1, which indicates the root directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>-1</para>
@@ -57,7 +57,11 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public long? ParentCategoryId { get; set; }
 
             /// <summary>
-            /// <para>The status of the category. Valid values: 0 (Normal) or -1 (Deleted).</para>
+            /// <para>The category status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>-1: deleted and unpublished.</description></item>
+            /// <item><description>0: Normal.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>

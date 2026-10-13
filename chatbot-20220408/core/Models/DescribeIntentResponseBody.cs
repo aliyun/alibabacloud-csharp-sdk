@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         /// <para>The intent alias.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>查天气意图</para>
+        /// <para>CheckWeatherIntent</para>
         /// </summary>
         [NameInMap("AliasName")]
         [Validation(Required=false)]
         public string AliasName { get; set; }
 
         /// <summary>
-        /// <para>The time when the intent was created, in UTC format.</para>
+        /// <para>The creation time in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-08-12T16:00:01Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The creator ID.</para>
+        /// <para>The unique identifier of the creator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123231</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string CreateUserId { get; set; }
 
         /// <summary>
-        /// <para>The creator name.</para>
+        /// <para>The name of the creator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -63,14 +63,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         /// <para>The intent name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>查天气意图</para>
+        /// <para>CheckWeatherIntent</para>
         /// </summary>
         [NameInMap("IntentName")]
         [Validation(Required=false)]
         public string IntentName { get; set; }
 
         /// <summary>
-        /// <para>The time when the intent was last modified, in UTC format.</para>
+        /// <para>The modification time in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-08-12T16:00:01Z</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string ModifyTime { get; set; }
 
         /// <summary>
-        /// <para>The modifier ID.</para>
+        /// <para>The unique identifier of the user who last modified the intent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123231</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string ModifyUserId { get; set; }
 
         /// <summary>
-        /// <para>The modifier name.</para>
+        /// <para>The name of the user who last modified the intent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -110,14 +110,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>An array of objects that contain the slot information for the intent.</para>
+        /// <para>The slot information associated with the intent.</para>
         /// </summary>
         [NameInMap("SlotInfos")]
         [Validation(Required=false)]
         public List<DescribeIntentResponseBodySlotInfos> SlotInfos { get; set; }
         public class DescribeIntentResponseBodySlotInfos : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the slot can contain an array of values.</para>
+            /// <para>Indicates whether the slot is an array.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public bool? Array { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the slot is configured to encrypt its value.</para>
+            /// <para>Indicates whether the slot is sensitive.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -150,14 +150,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             /// <para>The slot name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>天气</para>
+            /// <para>Weather</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The slot ID.</para>
+            /// <para>The unique identifier of the slot.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aa4d2a343a3ad4afad</para>
@@ -167,10 +167,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string SlotId { get; set; }
 
             /// <summary>
-            /// <para>The value extracted for the slot.</para>
+            /// <para>The slot tagging result.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>天气</para>
+            /// <para>Weather</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

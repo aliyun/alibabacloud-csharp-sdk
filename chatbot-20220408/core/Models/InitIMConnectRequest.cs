@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class InitIMConnectRequest : TeaModel {
         /// <summary>
-        /// <para>The key for the business space. Omit this parameter to use the default business space. You can get the key from the business management page of your main account.</para>
+        /// <para>The business space key. If this parameter is not specified, the default business space is accessed. You can obtain the key value on the business management page of the Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -20,16 +20,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// <para>The identifier for the connection source. You can obtain this value from the channel console.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("From")]
         [Validation(Required=false)]
         public string From { get; set; }
 
-        /// <summary>
-        /// <para>The access token for user authentication.</para>
-        /// </summary>
         [NameInMap("UserAccessToken")]
         [Validation(Required=false)]
         public string UserAccessToken { get; set; }

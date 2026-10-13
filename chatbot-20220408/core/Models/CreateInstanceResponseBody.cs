@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class CreateInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the robot.</para>
+        /// <para>The unique identifier of the chatbot.</para>
         /// 
         /// <b>Example:</b>
         /// <para>chatbot-cn-mp90s2lrk00050</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F2E2C40D-AB09-45A1-B5C5-EB9F5C4E4E4A</para>

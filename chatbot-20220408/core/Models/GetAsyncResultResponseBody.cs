@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class GetAsyncResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>The task result, returned as a JSON-formatted string.</para>
+        /// <para>The execution result data of the customer service.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;message&quot;:&quot;执行完成&quot;}</para>
+        /// <para>{&quot;message&quot;:&quot;Execution completed&quot;}</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The task\&quot;s execution status. Valid values:</para>
+        /// <para>The execution status.</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -40,15 +40,15 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         /// </thead>
         /// <tbody><tr>
         /// <td>Success</td>
-        /// <td>The task completed successfully.</td>
+        /// <td>The task is executed.</td>
         /// </tr>
         /// <tr>
-        /// <td>Running</td>
-        /// <td>The task is running.</td>
+        /// <td>Runninig</td>
+        /// <td>The task is being executed.</td>
         /// </tr>
         /// <tr>
         /// <td>Fail</td>
-        /// <td>The task failed.</td>
+        /// <td>The task failed to be executed.</td>
         /// </tr>
         /// </tbody></table>
         /// 
