@@ -4487,6 +4487,394 @@ namespace AlibabaCloud.SDK.LHM20250116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>停止探查任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>接口说明</h2>
+        /// <para>校验一个数据源名称在当前租户下是否已被占用，用于新建数据源或修改数据源名称之前的前置检查。
+        /// 同租户内的数据源名称不可重复，名称冲突时新建会直接失败。先调用本接口确认名称可用，可以避免把冲突留到提交新建请求时才暴露。</para>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><c>dsName</c> 为待校验的数据源名称，按名称精确匹配当前租户下未删除的数据源，不支持前缀或模糊匹配。</description></item>
+        /// <item><description>校验范围限定在当前租户，其他租户下的同名数据源不影响结果；已被删除的数据源名称可以重新使用。</description></item>
+        /// </list>
+        /// <h2>返回说明</h2>
+        /// <para>返回单值响应，<c>data</c> 为布尔值，表示名称校验结果：<c>true</c>-已存在同名数据源，该名称不可用；<c>false</c>-该名称未被占用，可以用于新建。
+        /// 注意 <c>data</c> 的语义与 <c>success</c> 相反方向：<c>success</c> 为 <c>true</c> 且 <c>data</c> 为 <c>true</c> 表示接口调用成功且查到了同名数据源，此时应当更换名称。<c>success</c> 为 <c>false</c> 时结合 <c>errCode</c> 与 <c>errMessage</c> 定位调用失败原因。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ExecMetaProfilingSkillJobDisableRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecMetaProfilingSkillJobDisableResponse
+        /// </returns>
+        public ExecMetaProfilingSkillJobDisableResponse ExecMetaProfilingSkillJobDisableWithOptions(ExecMetaProfilingSkillJobDisableRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DsId))
+            {
+                body["dsId"] = request.DsId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecMetaProfilingSkillJobDisable",
+                Version = "2025-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/meta/skill/profiling/job/disable",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecMetaProfilingSkillJobDisableResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止探查任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>接口说明</h2>
+        /// <para>校验一个数据源名称在当前租户下是否已被占用，用于新建数据源或修改数据源名称之前的前置检查。
+        /// 同租户内的数据源名称不可重复，名称冲突时新建会直接失败。先调用本接口确认名称可用，可以避免把冲突留到提交新建请求时才暴露。</para>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><c>dsName</c> 为待校验的数据源名称，按名称精确匹配当前租户下未删除的数据源，不支持前缀或模糊匹配。</description></item>
+        /// <item><description>校验范围限定在当前租户，其他租户下的同名数据源不影响结果；已被删除的数据源名称可以重新使用。</description></item>
+        /// </list>
+        /// <h2>返回说明</h2>
+        /// <para>返回单值响应，<c>data</c> 为布尔值，表示名称校验结果：<c>true</c>-已存在同名数据源，该名称不可用；<c>false</c>-该名称未被占用，可以用于新建。
+        /// 注意 <c>data</c> 的语义与 <c>success</c> 相反方向：<c>success</c> 为 <c>true</c> 且 <c>data</c> 为 <c>true</c> 表示接口调用成功且查到了同名数据源，此时应当更换名称。<c>success</c> 为 <c>false</c> 时结合 <c>errCode</c> 与 <c>errMessage</c> 定位调用失败原因。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ExecMetaProfilingSkillJobDisableRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecMetaProfilingSkillJobDisableResponse
+        /// </returns>
+        public async Task<ExecMetaProfilingSkillJobDisableResponse> ExecMetaProfilingSkillJobDisableWithOptionsAsync(ExecMetaProfilingSkillJobDisableRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DsId))
+            {
+                body["dsId"] = request.DsId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecMetaProfilingSkillJobDisable",
+                Version = "2025-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/meta/skill/profiling/job/disable",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecMetaProfilingSkillJobDisableResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止探查任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>接口说明</h2>
+        /// <para>校验一个数据源名称在当前租户下是否已被占用，用于新建数据源或修改数据源名称之前的前置检查。
+        /// 同租户内的数据源名称不可重复，名称冲突时新建会直接失败。先调用本接口确认名称可用，可以避免把冲突留到提交新建请求时才暴露。</para>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><c>dsName</c> 为待校验的数据源名称，按名称精确匹配当前租户下未删除的数据源，不支持前缀或模糊匹配。</description></item>
+        /// <item><description>校验范围限定在当前租户，其他租户下的同名数据源不影响结果；已被删除的数据源名称可以重新使用。</description></item>
+        /// </list>
+        /// <h2>返回说明</h2>
+        /// <para>返回单值响应，<c>data</c> 为布尔值，表示名称校验结果：<c>true</c>-已存在同名数据源，该名称不可用；<c>false</c>-该名称未被占用，可以用于新建。
+        /// 注意 <c>data</c> 的语义与 <c>success</c> 相反方向：<c>success</c> 为 <c>true</c> 且 <c>data</c> 为 <c>true</c> 表示接口调用成功且查到了同名数据源，此时应当更换名称。<c>success</c> 为 <c>false</c> 时结合 <c>errCode</c> 与 <c>errMessage</c> 定位调用失败原因。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ExecMetaProfilingSkillJobDisableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecMetaProfilingSkillJobDisableResponse
+        /// </returns>
+        public ExecMetaProfilingSkillJobDisableResponse ExecMetaProfilingSkillJobDisable(ExecMetaProfilingSkillJobDisableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ExecMetaProfilingSkillJobDisableWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止探查任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>接口说明</h2>
+        /// <para>校验一个数据源名称在当前租户下是否已被占用，用于新建数据源或修改数据源名称之前的前置检查。
+        /// 同租户内的数据源名称不可重复，名称冲突时新建会直接失败。先调用本接口确认名称可用，可以避免把冲突留到提交新建请求时才暴露。</para>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><c>dsName</c> 为待校验的数据源名称，按名称精确匹配当前租户下未删除的数据源，不支持前缀或模糊匹配。</description></item>
+        /// <item><description>校验范围限定在当前租户，其他租户下的同名数据源不影响结果；已被删除的数据源名称可以重新使用。</description></item>
+        /// </list>
+        /// <h2>返回说明</h2>
+        /// <para>返回单值响应，<c>data</c> 为布尔值，表示名称校验结果：<c>true</c>-已存在同名数据源，该名称不可用；<c>false</c>-该名称未被占用，可以用于新建。
+        /// 注意 <c>data</c> 的语义与 <c>success</c> 相反方向：<c>success</c> 为 <c>true</c> 且 <c>data</c> 为 <c>true</c> 表示接口调用成功且查到了同名数据源，此时应当更换名称。<c>success</c> 为 <c>false</c> 时结合 <c>errCode</c> 与 <c>errMessage</c> 定位调用失败原因。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ExecMetaProfilingSkillJobDisableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecMetaProfilingSkillJobDisableResponse
+        /// </returns>
+        public async Task<ExecMetaProfilingSkillJobDisableResponse> ExecMetaProfilingSkillJobDisableAsync(ExecMetaProfilingSkillJobDisableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ExecMetaProfilingSkillJobDisableWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>立即执行探查任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>接口说明</h2>
+        /// <para>校验一个数据源名称在当前租户下是否已被占用，用于新建数据源或修改数据源名称之前的前置检查。
+        /// 同租户内的数据源名称不可重复，名称冲突时新建会直接失败。先调用本接口确认名称可用，可以避免把冲突留到提交新建请求时才暴露。</para>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><c>dsName</c> 为待校验的数据源名称，按名称精确匹配当前租户下未删除的数据源，不支持前缀或模糊匹配。</description></item>
+        /// <item><description>校验范围限定在当前租户，其他租户下的同名数据源不影响结果；已被删除的数据源名称可以重新使用。</description></item>
+        /// </list>
+        /// <h2>返回说明</h2>
+        /// <para>返回单值响应，<c>data</c> 为布尔值，表示名称校验结果：<c>true</c>-已存在同名数据源，该名称不可用；<c>false</c>-该名称未被占用，可以用于新建。
+        /// 注意 <c>data</c> 的语义与 <c>success</c> 相反方向：<c>success</c> 为 <c>true</c> 且 <c>data</c> 为 <c>true</c> 表示接口调用成功且查到了同名数据源，此时应当更换名称。<c>success</c> 为 <c>false</c> 时结合 <c>errCode</c> 与 <c>errMessage</c> 定位调用失败原因。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ExecMetaProfilingTaskRunRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecMetaProfilingTaskRunResponse
+        /// </returns>
+        public ExecMetaProfilingTaskRunResponse ExecMetaProfilingTaskRunWithOptions(ExecMetaProfilingTaskRunRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchNo))
+            {
+                body["batchNo"] = request.BatchNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComponentId))
+            {
+                body["componentId"] = request.ComponentId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecMetaProfilingTaskRun",
+                Version = "2025-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/meta/profiling/task/runNow",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecMetaProfilingTaskRunResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>立即执行探查任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>接口说明</h2>
+        /// <para>校验一个数据源名称在当前租户下是否已被占用，用于新建数据源或修改数据源名称之前的前置检查。
+        /// 同租户内的数据源名称不可重复，名称冲突时新建会直接失败。先调用本接口确认名称可用，可以避免把冲突留到提交新建请求时才暴露。</para>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><c>dsName</c> 为待校验的数据源名称，按名称精确匹配当前租户下未删除的数据源，不支持前缀或模糊匹配。</description></item>
+        /// <item><description>校验范围限定在当前租户，其他租户下的同名数据源不影响结果；已被删除的数据源名称可以重新使用。</description></item>
+        /// </list>
+        /// <h2>返回说明</h2>
+        /// <para>返回单值响应，<c>data</c> 为布尔值，表示名称校验结果：<c>true</c>-已存在同名数据源，该名称不可用；<c>false</c>-该名称未被占用，可以用于新建。
+        /// 注意 <c>data</c> 的语义与 <c>success</c> 相反方向：<c>success</c> 为 <c>true</c> 且 <c>data</c> 为 <c>true</c> 表示接口调用成功且查到了同名数据源，此时应当更换名称。<c>success</c> 为 <c>false</c> 时结合 <c>errCode</c> 与 <c>errMessage</c> 定位调用失败原因。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ExecMetaProfilingTaskRunRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecMetaProfilingTaskRunResponse
+        /// </returns>
+        public async Task<ExecMetaProfilingTaskRunResponse> ExecMetaProfilingTaskRunWithOptionsAsync(ExecMetaProfilingTaskRunRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchNo))
+            {
+                body["batchNo"] = request.BatchNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComponentId))
+            {
+                body["componentId"] = request.ComponentId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecMetaProfilingTaskRun",
+                Version = "2025-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/meta/profiling/task/runNow",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecMetaProfilingTaskRunResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>立即执行探查任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>接口说明</h2>
+        /// <para>校验一个数据源名称在当前租户下是否已被占用，用于新建数据源或修改数据源名称之前的前置检查。
+        /// 同租户内的数据源名称不可重复，名称冲突时新建会直接失败。先调用本接口确认名称可用，可以避免把冲突留到提交新建请求时才暴露。</para>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><c>dsName</c> 为待校验的数据源名称，按名称精确匹配当前租户下未删除的数据源，不支持前缀或模糊匹配。</description></item>
+        /// <item><description>校验范围限定在当前租户，其他租户下的同名数据源不影响结果；已被删除的数据源名称可以重新使用。</description></item>
+        /// </list>
+        /// <h2>返回说明</h2>
+        /// <para>返回单值响应，<c>data</c> 为布尔值，表示名称校验结果：<c>true</c>-已存在同名数据源，该名称不可用；<c>false</c>-该名称未被占用，可以用于新建。
+        /// 注意 <c>data</c> 的语义与 <c>success</c> 相反方向：<c>success</c> 为 <c>true</c> 且 <c>data</c> 为 <c>true</c> 表示接口调用成功且查到了同名数据源，此时应当更换名称。<c>success</c> 为 <c>false</c> 时结合 <c>errCode</c> 与 <c>errMessage</c> 定位调用失败原因。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ExecMetaProfilingTaskRunRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecMetaProfilingTaskRunResponse
+        /// </returns>
+        public ExecMetaProfilingTaskRunResponse ExecMetaProfilingTaskRun(ExecMetaProfilingTaskRunRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ExecMetaProfilingTaskRunWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>立即执行探查任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>接口说明</h2>
+        /// <para>校验一个数据源名称在当前租户下是否已被占用，用于新建数据源或修改数据源名称之前的前置检查。
+        /// 同租户内的数据源名称不可重复，名称冲突时新建会直接失败。先调用本接口确认名称可用，可以避免把冲突留到提交新建请求时才暴露。</para>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><c>dsName</c> 为待校验的数据源名称，按名称精确匹配当前租户下未删除的数据源，不支持前缀或模糊匹配。</description></item>
+        /// <item><description>校验范围限定在当前租户，其他租户下的同名数据源不影响结果；已被删除的数据源名称可以重新使用。</description></item>
+        /// </list>
+        /// <h2>返回说明</h2>
+        /// <para>返回单值响应，<c>data</c> 为布尔值，表示名称校验结果：<c>true</c>-已存在同名数据源，该名称不可用；<c>false</c>-该名称未被占用，可以用于新建。
+        /// 注意 <c>data</c> 的语义与 <c>success</c> 相反方向：<c>success</c> 为 <c>true</c> 且 <c>data</c> 为 <c>true</c> 表示接口调用成功且查到了同名数据源，此时应当更换名称。<c>success</c> 为 <c>false</c> 时结合 <c>errCode</c> 与 <c>errMessage</c> 定位调用失败原因。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ExecMetaProfilingTaskRunRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecMetaProfilingTaskRunResponse
+        /// </returns>
+        public async Task<ExecMetaProfilingTaskRunResponse> ExecMetaProfilingTaskRunAsync(ExecMetaProfilingTaskRunRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ExecMetaProfilingTaskRunWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Converts a single SQL script.</para>
         /// </summary>
         /// 
@@ -8363,6 +8751,208 @@ namespace AlibabaCloud.SDK.LHM20250116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Retrieves an overview of incremental changes in a data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries the overview of a data validation report by validation batch. Returns the number of tables validated, the number of passed tables, the pass rate, statistics by partition and field, and the report generation status. This operation serves as the primary entry point for viewing validation results. For table-level details, call the report instance or column-level result API operation.</para>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description><c>batchId</c>: Required. The ID of the validation job (batch), which is obtained from the return value of the save validation task API operation. Subsequent execution, termination, rerun, and report API operations use this ID to reference the same validation.</description></item>
+        /// </list>
+        /// <h2>Response description</h2>
+        /// <para>Returns a single-value response. The <c>data</c> field is the overview object: <c>checkType</c> indicates the validation type (0: data volume comparison, 1: metric comparison, 2: weak content comparison), <c>checkResult</c> indicates the validation result (0: no records, 1: passed, 2: failed), <c>reportStatus</c> indicates the report generation status (0: not generated, 1: generating, 2: generated), and <c>reportGenerateMessage</c> provides the generation prompt message. The statistics section includes the number of validated tables, failed tables, passed tables, skipped tables and partitions, validated partitions, validated rows and passed rows, pass rate (<c>passProcess</c> is a decimal, <c>passProcessExport</c> is a string with a percentage sign), the number of validated and passed fields, as well as the source and destination data source information, associated task ID and time, and template information in metric validation scenarios.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetMetaCompareIncrementDbOverviewRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMetaCompareIncrementDbOverviewResponse
+        /// </returns>
+        public GetMetaCompareIncrementDbOverviewResponse GetMetaCompareIncrementDbOverviewWithOptions(GetMetaCompareIncrementDbOverviewRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogName))
+            {
+                body["catalogName"] = request.CatalogName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
+            {
+                body["dbName"] = request.DbName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSummary))
+            {
+                body["isSummary"] = request.IsSummary;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["taskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMetaCompareIncrementDbOverview",
+                Version = "2025-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/meta/profiling/result/databases/overviewOfCompareIncrement",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMetaCompareIncrementDbOverviewResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves an overview of incremental changes in a data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries the overview of a data validation report by validation batch. Returns the number of tables validated, the number of passed tables, the pass rate, statistics by partition and field, and the report generation status. This operation serves as the primary entry point for viewing validation results. For table-level details, call the report instance or column-level result API operation.</para>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description><c>batchId</c>: Required. The ID of the validation job (batch), which is obtained from the return value of the save validation task API operation. Subsequent execution, termination, rerun, and report API operations use this ID to reference the same validation.</description></item>
+        /// </list>
+        /// <h2>Response description</h2>
+        /// <para>Returns a single-value response. The <c>data</c> field is the overview object: <c>checkType</c> indicates the validation type (0: data volume comparison, 1: metric comparison, 2: weak content comparison), <c>checkResult</c> indicates the validation result (0: no records, 1: passed, 2: failed), <c>reportStatus</c> indicates the report generation status (0: not generated, 1: generating, 2: generated), and <c>reportGenerateMessage</c> provides the generation prompt message. The statistics section includes the number of validated tables, failed tables, passed tables, skipped tables and partitions, validated partitions, validated rows and passed rows, pass rate (<c>passProcess</c> is a decimal, <c>passProcessExport</c> is a string with a percentage sign), the number of validated and passed fields, as well as the source and destination data source information, associated task ID and time, and template information in metric validation scenarios.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetMetaCompareIncrementDbOverviewRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMetaCompareIncrementDbOverviewResponse
+        /// </returns>
+        public async Task<GetMetaCompareIncrementDbOverviewResponse> GetMetaCompareIncrementDbOverviewWithOptionsAsync(GetMetaCompareIncrementDbOverviewRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogName))
+            {
+                body["catalogName"] = request.CatalogName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
+            {
+                body["dbName"] = request.DbName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSummary))
+            {
+                body["isSummary"] = request.IsSummary;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["taskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMetaCompareIncrementDbOverview",
+                Version = "2025-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/meta/profiling/result/databases/overviewOfCompareIncrement",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMetaCompareIncrementDbOverviewResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves an overview of incremental changes in a data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries the overview of a data validation report by validation batch. Returns the number of tables validated, the number of passed tables, the pass rate, statistics by partition and field, and the report generation status. This operation serves as the primary entry point for viewing validation results. For table-level details, call the report instance or column-level result API operation.</para>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description><c>batchId</c>: Required. The ID of the validation job (batch), which is obtained from the return value of the save validation task API operation. Subsequent execution, termination, rerun, and report API operations use this ID to reference the same validation.</description></item>
+        /// </list>
+        /// <h2>Response description</h2>
+        /// <para>Returns a single-value response. The <c>data</c> field is the overview object: <c>checkType</c> indicates the validation type (0: data volume comparison, 1: metric comparison, 2: weak content comparison), <c>checkResult</c> indicates the validation result (0: no records, 1: passed, 2: failed), <c>reportStatus</c> indicates the report generation status (0: not generated, 1: generating, 2: generated), and <c>reportGenerateMessage</c> provides the generation prompt message. The statistics section includes the number of validated tables, failed tables, passed tables, skipped tables and partitions, validated partitions, validated rows and passed rows, pass rate (<c>passProcess</c> is a decimal, <c>passProcessExport</c> is a string with a percentage sign), the number of validated and passed fields, as well as the source and destination data source information, associated task ID and time, and template information in metric validation scenarios.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetMetaCompareIncrementDbOverviewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMetaCompareIncrementDbOverviewResponse
+        /// </returns>
+        public GetMetaCompareIncrementDbOverviewResponse GetMetaCompareIncrementDbOverview(GetMetaCompareIncrementDbOverviewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetMetaCompareIncrementDbOverviewWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves an overview of incremental changes in a data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries the overview of a data validation report by validation batch. Returns the number of tables validated, the number of passed tables, the pass rate, statistics by partition and field, and the report generation status. This operation serves as the primary entry point for viewing validation results. For table-level details, call the report instance or column-level result API operation.</para>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description><c>batchId</c>: Required. The ID of the validation job (batch), which is obtained from the return value of the save validation task API operation. Subsequent execution, termination, rerun, and report API operations use this ID to reference the same validation.</description></item>
+        /// </list>
+        /// <h2>Response description</h2>
+        /// <para>Returns a single-value response. The <c>data</c> field is the overview object: <c>checkType</c> indicates the validation type (0: data volume comparison, 1: metric comparison, 2: weak content comparison), <c>checkResult</c> indicates the validation result (0: no records, 1: passed, 2: failed), <c>reportStatus</c> indicates the report generation status (0: not generated, 1: generating, 2: generated), and <c>reportGenerateMessage</c> provides the generation prompt message. The statistics section includes the number of validated tables, failed tables, passed tables, skipped tables and partitions, validated partitions, validated rows and passed rows, pass rate (<c>passProcess</c> is a decimal, <c>passProcessExport</c> is a string with a percentage sign), the number of validated and passed fields, as well as the source and destination data source information, associated task ID and time, and template information in metric validation scenarios.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetMetaCompareIncrementDbOverviewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMetaCompareIncrementDbOverviewResponse
+        /// </returns>
+        public async Task<GetMetaCompareIncrementDbOverviewResponse> GetMetaCompareIncrementDbOverviewAsync(GetMetaCompareIncrementDbOverviewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetMetaCompareIncrementDbOverviewWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves temporary OSS upload credentials (STS), including the AccessKey, security token, bucket, upload directory, and expiration time.</para>
         /// </summary>
         /// 
@@ -8525,6 +9115,144 @@ namespace AlibabaCloud.SDK.LHM20250116
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetMetaOssTempKeyWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the data source overview.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMetaProfilingResultDbOverviewRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMetaProfilingResultDbOverviewResponse
+        /// </returns>
+        public GetMetaProfilingResultDbOverviewResponse GetMetaProfilingResultDbOverviewWithOptions(GetMetaProfilingResultDbOverviewRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSummary))
+            {
+                query["isSummary"] = request.IsSummary;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["taskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMetaProfilingResultDbOverview",
+                Version = "2025-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/meta/profiling/result/databases/overviewOfTaskDimension",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMetaProfilingResultDbOverviewResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the data source overview.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMetaProfilingResultDbOverviewRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMetaProfilingResultDbOverviewResponse
+        /// </returns>
+        public async Task<GetMetaProfilingResultDbOverviewResponse> GetMetaProfilingResultDbOverviewWithOptionsAsync(GetMetaProfilingResultDbOverviewRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSummary))
+            {
+                query["isSummary"] = request.IsSummary;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["taskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMetaProfilingResultDbOverview",
+                Version = "2025-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/meta/profiling/result/databases/overviewOfTaskDimension",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMetaProfilingResultDbOverviewResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the data source overview.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMetaProfilingResultDbOverviewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMetaProfilingResultDbOverviewResponse
+        /// </returns>
+        public GetMetaProfilingResultDbOverviewResponse GetMetaProfilingResultDbOverview(GetMetaProfilingResultDbOverviewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetMetaProfilingResultDbOverviewWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the data source overview.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMetaProfilingResultDbOverviewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMetaProfilingResultDbOverviewResponse
+        /// </returns>
+        public async Task<GetMetaProfilingResultDbOverviewResponse> GetMetaProfilingResultDbOverviewAsync(GetMetaProfilingResultDbOverviewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetMetaProfilingResultDbOverviewWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -11267,6 +11995,902 @@ namespace AlibabaCloud.SDK.LHM20250116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取catalog分页列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMetaProfilingResultCatalogPageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMetaProfilingResultCatalogPageResponse
+        /// </returns>
+        public ListMetaProfilingResultCatalogPageResponse ListMetaProfilingResultCatalogPageWithOptions(ListMetaProfilingResultCatalogPageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogName))
+            {
+                body["catalogName"] = request.CatalogName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
+            {
+                body["dbName"] = request.DbName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupBy))
+            {
+                body["groupBy"] = request.GroupBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedTotalCount))
+            {
+                body["needTotalCount"] = request.NeedTotalCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                body["orderBy"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderDirection))
+            {
+                body["orderDirection"] = request.OrderDirection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageIndex))
+            {
+                body["pageIndex"] = request.PageIndex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["taskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMetaProfilingResultCatalogPage",
+                Version = "2025-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/meta/profiling/result/catalogs/pageOfTaskDimension",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMetaProfilingResultCatalogPageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取catalog分页列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMetaProfilingResultCatalogPageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMetaProfilingResultCatalogPageResponse
+        /// </returns>
+        public async Task<ListMetaProfilingResultCatalogPageResponse> ListMetaProfilingResultCatalogPageWithOptionsAsync(ListMetaProfilingResultCatalogPageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogName))
+            {
+                body["catalogName"] = request.CatalogName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
+            {
+                body["dbName"] = request.DbName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupBy))
+            {
+                body["groupBy"] = request.GroupBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedTotalCount))
+            {
+                body["needTotalCount"] = request.NeedTotalCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                body["orderBy"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderDirection))
+            {
+                body["orderDirection"] = request.OrderDirection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageIndex))
+            {
+                body["pageIndex"] = request.PageIndex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["taskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMetaProfilingResultCatalogPage",
+                Version = "2025-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/meta/profiling/result/catalogs/pageOfTaskDimension",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMetaProfilingResultCatalogPageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取catalog分页列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMetaProfilingResultCatalogPageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMetaProfilingResultCatalogPageResponse
+        /// </returns>
+        public ListMetaProfilingResultCatalogPageResponse ListMetaProfilingResultCatalogPage(ListMetaProfilingResultCatalogPageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListMetaProfilingResultCatalogPageWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取catalog分页列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMetaProfilingResultCatalogPageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMetaProfilingResultCatalogPageResponse
+        /// </returns>
+        public async Task<ListMetaProfilingResultCatalogPageResponse> ListMetaProfilingResultCatalogPageAsync(ListMetaProfilingResultCatalogPageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListMetaProfilingResultCatalogPageWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paging query on table-level details in metadata profiling results, and returns the storage size, record count, partition information, external or transactional property, migration status, and last access time of each table.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMetaProfilingResultTablePageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMetaProfilingResultTablePageResponse
+        /// </returns>
+        public ListMetaProfilingResultTablePageResponse ListMetaProfilingResultTablePageWithOptions(ListMetaProfilingResultTablePageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComponentType))
+            {
+                body["componentType"] = request.ComponentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataRange))
+            {
+                body["dataRange"] = request.DataRange;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSize))
+            {
+                body["dataSize"] = request.DataSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataUnit))
+            {
+                body["dataUnit"] = request.DataUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
+            {
+                body["dbName"] = request.DbName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupBy))
+            {
+                body["groupBy"] = request.GroupBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsPartitioned))
+            {
+                body["isPartitioned"] = request.IsPartitioned;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSummary))
+            {
+                body["isSummary"] = request.IsSummary;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MigrationStatus))
+            {
+                body["migrationStatus"] = request.MigrationStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedTotalCount))
+            {
+                body["needTotalCount"] = request.NeedTotalCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                body["orderBy"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderDirection))
+            {
+                body["orderDirection"] = request.OrderDirection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageIndex))
+            {
+                body["pageIndex"] = request.PageIndex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
+            {
+                body["tableName"] = request.TableName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["taskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMetaProfilingResultTablePage",
+                Version = "2025-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/meta/profiling/result/tables/pageOfTaskDimension",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMetaProfilingResultTablePageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paging query on table-level details in metadata profiling results, and returns the storage size, record count, partition information, external or transactional property, migration status, and last access time of each table.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMetaProfilingResultTablePageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMetaProfilingResultTablePageResponse
+        /// </returns>
+        public async Task<ListMetaProfilingResultTablePageResponse> ListMetaProfilingResultTablePageWithOptionsAsync(ListMetaProfilingResultTablePageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComponentType))
+            {
+                body["componentType"] = request.ComponentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataRange))
+            {
+                body["dataRange"] = request.DataRange;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSize))
+            {
+                body["dataSize"] = request.DataSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataUnit))
+            {
+                body["dataUnit"] = request.DataUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
+            {
+                body["dbName"] = request.DbName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupBy))
+            {
+                body["groupBy"] = request.GroupBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsPartitioned))
+            {
+                body["isPartitioned"] = request.IsPartitioned;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSummary))
+            {
+                body["isSummary"] = request.IsSummary;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MigrationStatus))
+            {
+                body["migrationStatus"] = request.MigrationStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedTotalCount))
+            {
+                body["needTotalCount"] = request.NeedTotalCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                body["orderBy"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderDirection))
+            {
+                body["orderDirection"] = request.OrderDirection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageIndex))
+            {
+                body["pageIndex"] = request.PageIndex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
+            {
+                body["tableName"] = request.TableName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["taskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMetaProfilingResultTablePage",
+                Version = "2025-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/meta/profiling/result/tables/pageOfTaskDimension",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMetaProfilingResultTablePageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paging query on table-level details in metadata profiling results, and returns the storage size, record count, partition information, external or transactional property, migration status, and last access time of each table.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMetaProfilingResultTablePageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMetaProfilingResultTablePageResponse
+        /// </returns>
+        public ListMetaProfilingResultTablePageResponse ListMetaProfilingResultTablePage(ListMetaProfilingResultTablePageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListMetaProfilingResultTablePageWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paging query on table-level details in metadata profiling results, and returns the storage size, record count, partition information, external or transactional property, migration status, and last access time of each table.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMetaProfilingResultTablePageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMetaProfilingResultTablePageResponse
+        /// </returns>
+        public async Task<ListMetaProfilingResultTablePageResponse> ListMetaProfilingResultTablePageAsync(ListMetaProfilingResultTablePageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListMetaProfilingResultTablePageWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询函数分页列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMetaProfilingResultUdfPageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMetaProfilingResultUdfPageResponse
+        /// </returns>
+        public ListMetaProfilingResultUdfPageResponse ListMetaProfilingResultUdfPageWithOptions(ListMetaProfilingResultUdfPageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogName))
+            {
+                body["catalogName"] = request.CatalogName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComponentType))
+            {
+                body["componentType"] = request.ComponentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
+            {
+                body["dbName"] = request.DbName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FuncName))
+            {
+                body["funcName"] = request.FuncName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupBy))
+            {
+                body["groupBy"] = request.GroupBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSummary))
+            {
+                body["isSummary"] = request.IsSummary;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedTotalCount))
+            {
+                body["needTotalCount"] = request.NeedTotalCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                body["orderBy"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderDirection))
+            {
+                body["orderDirection"] = request.OrderDirection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageIndex))
+            {
+                body["pageIndex"] = request.PageIndex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["taskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMetaProfilingResultUdfPage",
+                Version = "2025-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/meta/profiling/result/udf/pageOfTaskDimension",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMetaProfilingResultUdfPageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询函数分页列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMetaProfilingResultUdfPageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMetaProfilingResultUdfPageResponse
+        /// </returns>
+        public async Task<ListMetaProfilingResultUdfPageResponse> ListMetaProfilingResultUdfPageWithOptionsAsync(ListMetaProfilingResultUdfPageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogName))
+            {
+                body["catalogName"] = request.CatalogName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComponentType))
+            {
+                body["componentType"] = request.ComponentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
+            {
+                body["dbName"] = request.DbName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FuncName))
+            {
+                body["funcName"] = request.FuncName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupBy))
+            {
+                body["groupBy"] = request.GroupBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSummary))
+            {
+                body["isSummary"] = request.IsSummary;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedTotalCount))
+            {
+                body["needTotalCount"] = request.NeedTotalCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                body["orderBy"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderDirection))
+            {
+                body["orderDirection"] = request.OrderDirection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageIndex))
+            {
+                body["pageIndex"] = request.PageIndex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["taskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMetaProfilingResultUdfPage",
+                Version = "2025-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/meta/profiling/result/udf/pageOfTaskDimension",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMetaProfilingResultUdfPageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询函数分页列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMetaProfilingResultUdfPageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMetaProfilingResultUdfPageResponse
+        /// </returns>
+        public ListMetaProfilingResultUdfPageResponse ListMetaProfilingResultUdfPage(ListMetaProfilingResultUdfPageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListMetaProfilingResultUdfPageWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询函数分页列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMetaProfilingResultUdfPageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMetaProfilingResultUdfPageResponse
+        /// </returns>
+        public async Task<ListMetaProfilingResultUdfPageResponse> ListMetaProfilingResultUdfPageAsync(ListMetaProfilingResultUdfPageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListMetaProfilingResultUdfPageWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query on metadata profiling nodes and their scheduling and execute information, and returns paging data including basic node information, associated data components, comparison difference counts, the latest execute batch, and the next scheduled time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMetaProfilingSkillJobPageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMetaProfilingSkillJobPageResponse
+        /// </returns>
+        public ListMetaProfilingSkillJobPageResponse ListMetaProfilingSkillJobPageWithOptions(ListMetaProfilingSkillJobPageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComponentIds))
+            {
+                body["componentIds"] = request.ComponentIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DsId))
+            {
+                body["dsId"] = request.DsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DsName))
+            {
+                body["dsName"] = request.DsName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DsType))
+            {
+                body["dsType"] = request.DsType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupBy))
+            {
+                body["groupBy"] = request.GroupBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsDisplaySystemTask))
+            {
+                body["isDisplaySystemTask"] = request.IsDisplaySystemTask;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["jobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobName))
+            {
+                body["jobName"] = request.JobName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedTotalCount))
+            {
+                body["needTotalCount"] = request.NeedTotalCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                body["orderBy"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderDirection))
+            {
+                body["orderDirection"] = request.OrderDirection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageIndex))
+            {
+                body["pageIndex"] = request.PageIndex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMetaProfilingSkillJobPage",
+                Version = "2025-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/meta/skill/profiling/job/page",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMetaProfilingSkillJobPageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query on metadata profiling nodes and their scheduling and execute information, and returns paging data including basic node information, associated data components, comparison difference counts, the latest execute batch, and the next scheduled time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMetaProfilingSkillJobPageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMetaProfilingSkillJobPageResponse
+        /// </returns>
+        public async Task<ListMetaProfilingSkillJobPageResponse> ListMetaProfilingSkillJobPageWithOptionsAsync(ListMetaProfilingSkillJobPageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComponentIds))
+            {
+                body["componentIds"] = request.ComponentIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DsId))
+            {
+                body["dsId"] = request.DsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DsName))
+            {
+                body["dsName"] = request.DsName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DsType))
+            {
+                body["dsType"] = request.DsType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupBy))
+            {
+                body["groupBy"] = request.GroupBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsDisplaySystemTask))
+            {
+                body["isDisplaySystemTask"] = request.IsDisplaySystemTask;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["jobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobName))
+            {
+                body["jobName"] = request.JobName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedTotalCount))
+            {
+                body["needTotalCount"] = request.NeedTotalCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                body["orderBy"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderDirection))
+            {
+                body["orderDirection"] = request.OrderDirection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageIndex))
+            {
+                body["pageIndex"] = request.PageIndex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMetaProfilingSkillJobPage",
+                Version = "2025-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/meta/skill/profiling/job/page",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMetaProfilingSkillJobPageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query on metadata profiling nodes and their scheduling and execute information, and returns paging data including basic node information, associated data components, comparison difference counts, the latest execute batch, and the next scheduled time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMetaProfilingSkillJobPageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMetaProfilingSkillJobPageResponse
+        /// </returns>
+        public ListMetaProfilingSkillJobPageResponse ListMetaProfilingSkillJobPage(ListMetaProfilingSkillJobPageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListMetaProfilingSkillJobPageWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query on metadata profiling nodes and their scheduling and execute information, and returns paging data including basic node information, associated data components, comparison difference counts, the latest execute batch, and the next scheduled time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMetaProfilingSkillJobPageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMetaProfilingSkillJobPageResponse
+        /// </returns>
+        public async Task<ListMetaProfilingSkillJobPageResponse> ListMetaProfilingSkillJobPageAsync(ListMetaProfilingSkillJobPageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListMetaProfilingSkillJobPageWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>User Scheduling Task Transformation</para>
         /// </summary>
         /// 
@@ -12217,6 +13841,216 @@ namespace AlibabaCloud.SDK.LHM20250116
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await SingleSqlDryRunWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or updates a metadata profiling task by using a skill, configures the target component, profiling schema, profiling type, and rules, and returns the profiling task ID.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SkillAddMetaProfilingJobRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SkillAddMetaProfilingJobResponse
+        /// </returns>
+        public SkillAddMetaProfilingJobResponse SkillAddMetaProfilingJobWithOptions(SkillAddMetaProfilingJobRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComponentId))
+            {
+                body["componentId"] = request.ComponentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobDesc))
+            {
+                body["jobDesc"] = request.JobDesc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["jobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobName))
+            {
+                body["jobName"] = request.JobName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetaIds))
+            {
+                body["metaIds"] = request.MetaIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PluginId))
+            {
+                body["pluginId"] = request.PluginId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProfilingFlag))
+            {
+                body["profilingFlag"] = request.ProfilingFlag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProfilingPermission))
+            {
+                body["profilingPermission"] = request.ProfilingPermission;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProfilingRule))
+            {
+                body["profilingRule"] = request.ProfilingRule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProfilingSchemaList))
+            {
+                body["profilingSchemaList"] = request.ProfilingSchemaList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProfilingType))
+            {
+                body["profilingType"] = request.ProfilingType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SkillAddMetaProfilingJob",
+                Version = "2025-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/meta/skill/profiling/job",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SkillAddMetaProfilingJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or updates a metadata profiling task by using a skill, configures the target component, profiling schema, profiling type, and rules, and returns the profiling task ID.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SkillAddMetaProfilingJobRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SkillAddMetaProfilingJobResponse
+        /// </returns>
+        public async Task<SkillAddMetaProfilingJobResponse> SkillAddMetaProfilingJobWithOptionsAsync(SkillAddMetaProfilingJobRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComponentId))
+            {
+                body["componentId"] = request.ComponentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobDesc))
+            {
+                body["jobDesc"] = request.JobDesc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["jobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobName))
+            {
+                body["jobName"] = request.JobName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetaIds))
+            {
+                body["metaIds"] = request.MetaIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PluginId))
+            {
+                body["pluginId"] = request.PluginId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProfilingFlag))
+            {
+                body["profilingFlag"] = request.ProfilingFlag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProfilingPermission))
+            {
+                body["profilingPermission"] = request.ProfilingPermission;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProfilingRule))
+            {
+                body["profilingRule"] = request.ProfilingRule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProfilingSchemaList))
+            {
+                body["profilingSchemaList"] = request.ProfilingSchemaList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProfilingType))
+            {
+                body["profilingType"] = request.ProfilingType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SkillAddMetaProfilingJob",
+                Version = "2025-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/meta/skill/profiling/job",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SkillAddMetaProfilingJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or updates a metadata profiling task by using a skill, configures the target component, profiling schema, profiling type, and rules, and returns the profiling task ID.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SkillAddMetaProfilingJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SkillAddMetaProfilingJobResponse
+        /// </returns>
+        public SkillAddMetaProfilingJobResponse SkillAddMetaProfilingJob(SkillAddMetaProfilingJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return SkillAddMetaProfilingJobWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or updates a metadata profiling task by using a skill, configures the target component, profiling schema, profiling type, and rules, and returns the profiling task ID.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SkillAddMetaProfilingJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SkillAddMetaProfilingJobResponse
+        /// </returns>
+        public async Task<SkillAddMetaProfilingJobResponse> SkillAddMetaProfilingJobAsync(SkillAddMetaProfilingJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await SkillAddMetaProfilingJobWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
