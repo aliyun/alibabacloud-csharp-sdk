@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public List<GetProblemPercentageResponseBodyData> Data { get; set; }
         public class GetProblemPercentageResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The type of the abnormal item.</para>
+            /// <para>The anomaly item type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>saturation</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The number of abnormal items of this type.</para>
+            /// <para>The number of anomaly items of this type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>

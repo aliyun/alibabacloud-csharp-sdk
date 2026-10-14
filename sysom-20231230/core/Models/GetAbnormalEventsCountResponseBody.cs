@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public List<string> EventList { get; set; }
 
             /// <summary>
-            /// <para>The type of the abnormal event.</para>
+            /// <para>The type of the abnormality.</para>
             /// 
             /// <b>Example:</b>
             /// <para>health</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The number of abnormal events of this type.</para>
+            /// <para>The number of abnormalities of this type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

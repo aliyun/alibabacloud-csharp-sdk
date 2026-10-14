@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The response result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{

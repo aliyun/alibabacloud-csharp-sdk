@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetInstantScoreRequest : TeaModel {
-        [NameInMap("X-Debug-Id")]
-        [Validation(Required=false)]
-        public string XDebugId { get; set; }
-
         /// <summary>
         /// <para>The cluster ID.</para>
         /// 
@@ -32,10 +28,6 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("instance")]
         [Validation(Required=false)]
         public string Instance { get; set; }
-
-        [NameInMap("x-sysom-invoke-source")]
-        [Validation(Required=false)]
-        public string XSysomInvokeSource { get; set; }
 
     }
 

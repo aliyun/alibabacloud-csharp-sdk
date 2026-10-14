@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The list of chat records. The length equals the requested count. If the actual chat records are fewer than the requested count, the actual number is returned. Format: [{&quot;user&quot;:&quot;&quot;,&quot;content&quot;:&quot;&quot;.question,&quot;time&quot;:&quot;&quot;},{...}]</para>
+        /// <para>The list of chat records. The length equals the requested number. If the actual chat records are fewer than the requested number, the actual number is returned. Format: [{&quot;user&quot;:&quot;&quot;,&quot;content&quot;:&quot;&quot;.question,&quot;time&quot;:&quot;&quot;},{...}]</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             /// <para>The chat content text.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Specific content replied by Copilot</para>
+            /// <para>The specific content replied by Copilot</para>
             /// </summary>
             [NameInMap("content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The time of the chat record. The value is of the string type.</para>
+            /// <para>The chat record time, of the string type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-09-02 10:02:39</para>
@@ -49,8 +49,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             /// <summary>
             /// <para>The role identifier. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>user: a user.</description></item>
-            /// <item><description>copilot: a bot.</description></item>
+            /// <item><description>user: the user.</description></item>
+            /// <item><description>copilot: the bot.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

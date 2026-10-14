@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <para>The error message.</para>
         /// <list type="bullet">
         /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
-        /// <item><description>Otherwise, this field contains the request error information.</description></item>
+        /// <item><description>Otherwise, this field contains the request error message.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

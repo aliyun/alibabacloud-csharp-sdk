@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <para>The status code.</para>
         /// <list type="bullet">
         /// <item><description><c>code == Success</c> indicates that the authorization is successful.</description></item>
-        /// <item><description>Other status codes indicate that the authorization failed. If the authorization fails, check the <c>message</c> field for the detailed fault information.</description></item>
+        /// <item><description>Other status codes indicate that the authorization failed. Check the <c>message</c> field for the detailed fault information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The component description.</para>
+            /// <para>The description of the component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SysOM Agent</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The component name.</para>
+            /// <para>The name of the component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SysOM</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The supported architectures.</para>
+            /// <para>The supported architecture.</para>
             /// 
             /// <b>Example:</b>
             /// <para>x86</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string UpdatedAt { get; set; }
 
             /// <summary>
-            /// <para>The component version information.</para>
+            /// <para>The version information of the component.</para>
             /// </summary>
             [NameInMap("versions")]
             [Validation(Required=false)]
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string UpdatedAt { get; set; }
 
                 /// <summary>
-                /// <para>The update script for this agent version.</para>
+                /// <para>The upgrade script for this agent version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sysom.sh upgrade</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string UpgradeScript { get; set; }
 
                 /// <summary>
-                /// <para>The agent version number.</para>
+                /// <para>The version number of the agent.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3.4.0-1</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <para>The error message.</para>
         /// <list type="bullet">
         /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
-        /// <item><description>Otherwise, this field contains the request error information.</description></item>
+        /// <item><description>Otherwise, this field contains the error information of the request.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

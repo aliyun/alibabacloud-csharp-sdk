@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetHotSpotUniqListRequest : TeaModel {
-        [NameInMap("X-Debug-Id")]
-        [Validation(Required=false)]
-        public string XDebugId { get; set; }
-
         /// <summary>
         /// <para>The end time.</para>
         /// <para>This parameter is required.</para>
@@ -71,15 +67,11 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>默认需要为&quot;flag&quot;，待查询的字段</para>
+        /// <para>The default value must be &quot;flag&quot;, which specifies the field to query</para>
         /// </summary>
         [NameInMap("uniq")]
         [Validation(Required=false)]
         public string Uniq { get; set; }
-
-        [NameInMap("x-sysom-invoke-source")]
-        [Validation(Required=false)]
-        public string XSysomInvokeSource { get; set; }
 
     }
 

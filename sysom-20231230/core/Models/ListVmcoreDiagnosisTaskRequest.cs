@@ -9,12 +9,8 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListVmcoreDiagnosisTaskRequest : TeaModel {
-        [NameInMap("X-Debug-Id")]
-        [Validation(Required=false)]
-        public string XDebugId { get; set; }
-
         /// <summary>
-        /// <para>The number of past days to query tasks for, up to a maximum of 30 days.</para>
+        /// <para>The number of past days for which to query tasks. Maximum value: 30.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,10 +19,6 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("days")]
         [Validation(Required=false)]
         public long? Days { get; set; }
-
-        [NameInMap("x-sysom-invoke-source")]
-        [Validation(Required=false)]
-        public string XSysomInvokeSource { get; set; }
 
     }
 

@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description><c>code == Success</c> indicates that the authorization is successful.</description></item>
-        /// <item><description>Other status codes indicate that the authorization failed. Check the <c>message</c> field for the detailed fault information.</description></item>
+        /// <item><description>If <c>code == Success</c>, the authorization is successful.</description></item>
+        /// <item><description>Other status codes indicate authorization failed. Check the <c>message</c> field for the detailed fault information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,8 +44,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             /// <para>The actual cluster ID.</para>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description>For <c>ACK</c> type clusters, this is the ACK cluster ID.</description></item>
-            /// <item><description>For <c>CUSTOM</c> type clusters, this serves as a unique identifier with no additional meaning.</description></item>
+            /// <item><description>For <c>ACK</c> clusters, this cluster ID is the ACK cluster ID.</description></item>
+            /// <item><description>For <c>CUSTOM</c> clusters, this cluster ID serves as a unique identifier and has no additional meaning.</description></item>
             /// </list>
             /// </remarks>
             /// 
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             /// <summary>
             /// <list type="bullet">
             /// <item><description><c>ACK</c>: ACK cluster.</description></item>
-            /// <item><description><c>CUSTOM</c>: Custom cluster (default clusters belong to custom clusters).</description></item>
+            /// <item><description><c>CUSTOM</c>: Custom cluster. The default cluster belongs to the custom cluster type.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

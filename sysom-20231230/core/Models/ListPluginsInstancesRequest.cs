@@ -9,12 +9,8 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListPluginsInstancesRequest : TeaModel {
-        [NameInMap("X-Debug-Id")]
-        [Validation(Required=false)]
-        public string XDebugId { get; set; }
-
         /// <summary>
-        /// <para>The page number for pagination. This field indicates the current page.</para>
+        /// <para>The page number for paginated queries. This field indicates the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -44,7 +40,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string InstanceTag { get; set; }
 
         /// <summary>
-        /// <para>Filters instances by plugin installation status.</para>
+        /// <para>Filters instances by plug-in installation status.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -85,10 +81,6 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("region")]
         [Validation(Required=false)]
         public string Region { get; set; }
-
-        [NameInMap("x-sysom-invoke-source")]
-        [Validation(Required=false)]
-        public string XSysomInvokeSource { get; set; }
 
     }
 

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetHotspotAnalysisRequest : TeaModel {
-        [NameInMap("X-Debug-Id")]
-        [Validation(Required=false)]
-        public string XDebugId { get; set; }
-
         /// <summary>
         /// <para>The application type.</para>
         /// <para>This parameter is required.</para>
@@ -76,10 +72,6 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("table")]
         [Validation(Required=false)]
         public string Table { get; set; }
-
-        [NameInMap("x-sysom-invoke-source")]
-        [Validation(Required=false)]
-        public string XSysomInvokeSource { get; set; }
 
     }
 

@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description><c>code == Success</c> indicates that the authorization is successful.</description></item>
-        /// <item><description>Other status codes indicate that the authorization failed. Check the <c>message</c> field for the detailed error message.</description></item>
+        /// <item><description><c>code == Success</c> indicates that the authorization was successful.</description></item>
+        /// <item><description>Other status codes indicate that the authorization failed. Check the <c>message</c> field for the detailed fault information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,8 +63,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             /// <summary>
             /// <para>The running status of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Running</b>: running.</description></item>
-            /// <item><description><b>Offline</b>: offline.</description></item>
+            /// <item><description><b>Running</b>: The instance is running.</description></item>
+            /// <item><description><b>Offline</b>: The instance is offline.</description></item>
             /// </list>
             /// <remarks>
             /// <para>An instance in the Offline status indicates that the heartbeat between the node and the SysOM server is lost. It does not mean that the corresponding ECS instance is not running.</para>

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class CheckInstanceSupportRequest : TeaModel {
-        [NameInMap("X-Debug-Id")]
-        [Validation(Required=false)]
-        public string XDebugId { get; set; }
-
         /// <summary>
         /// <para>The list of instance IDs to check.</para>
         /// 
@@ -24,7 +20,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public List<string> Instances { get; set; }
 
         /// <summary>
-        /// <para>The region to which the instances belong. Ensure that all instance IDs passed in instances belong to the same region.</para>
+        /// <para>The region to which the instances belong. Make sure that all instance IDs specified in instances belong to the same region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -32,10 +28,6 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("region")]
         [Validation(Required=false)]
         public string Region { get; set; }
-
-        [NameInMap("x-sysom-invoke-source")]
-        [Validation(Required=false)]
-        public string XSysomInvokeSource { get; set; }
 
     }
 

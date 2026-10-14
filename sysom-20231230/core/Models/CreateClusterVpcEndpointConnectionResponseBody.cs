@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public CreateClusterVpcEndpointConnectionResponseBodyData Data { get; set; }
         public class CreateClusterVpcEndpointConnectionResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the endpoint connection.</para>
+            /// <para>The endpoint connection ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ep-xxx</para>

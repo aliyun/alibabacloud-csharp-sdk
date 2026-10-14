@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>code == Success</c>, the authorization is successful.</description></item>
-        /// <item><description>Other status codes indicate that the authorization has failed. Check the <c>message</c> field for the detailed fault information.</description></item>
+        /// <item><description><c>code == Success</c> indicates that the authorization is successful.</description></item>
+        /// <item><description>Other status codes indicate that the authorization failed. Check the <c>message</c> field for the detailed fault information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <para>The error message.</para>
         /// <list type="bullet">
         /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
-        /// <item><description>Otherwise, this field contains the request error information.</description></item>
+        /// <item><description>Otherwise, this field contains the error message of the request.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total amount of data.</para>
+        /// <para>The total data volume.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

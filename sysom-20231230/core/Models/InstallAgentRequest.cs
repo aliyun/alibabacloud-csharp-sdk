@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class InstallAgentRequest : TeaModel {
-        [NameInMap("X-Debug-Id")]
-        [Validation(Required=false)]
-        public string XDebugId { get; set; }
-
         /// <summary>
         /// <para>The ID of the component to install.</para>
         /// <para>This parameter is required.</para>
@@ -41,7 +37,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <item><description>InstallAndUpgrade: installs the component if it does not exist, or updates it if it exists.</description></item>
         /// <item><description>OnlyInstallNotHasAgent: installs the component if it does not exist, or takes no action if it exists.</description></item>
         /// <item><description>OnlyUpgradeHasAgent: takes no action if the component does not exist, or updates it if it exists.</description></item>
-        /// <item><description>OnlyInstallWithoutStart: installs the component only without starting the service.</description></item>
+        /// <item><description>OnlyInstallWithoutStart: only installs the component without starting the service.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -83,10 +79,6 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Region { get; set; }
 
         }
-
-        [NameInMap("x-sysom-invoke-source")]
-        [Validation(Required=false)]
-        public string XSysomInvokeSource { get; set; }
 
     }
 

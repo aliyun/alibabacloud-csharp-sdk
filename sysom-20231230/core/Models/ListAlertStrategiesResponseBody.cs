@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>code == Success</c>, the authorization is successful.</description></item>
-        /// <item><description>Other status codes indicate that the authorization has failed. Check the <c>message</c> field for the detailed fault information.</description></item>
+        /// <item><description><c>code == Success</c> indicates that the authorization is successful.</description></item>
+        /// <item><description>Other status codes indicate that the authorization failed. Check the <c>message</c> field for the detailed fault information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,6 +60,9 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             [Validation(Required=false)]
             public long? Id { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether Kubernetes labels are required.</para>
+            /// </summary>
             [NameInMap("k8sLabel")]
             [Validation(Required=false)]
             public bool? K8sLabel { get; set; }
@@ -82,18 +85,21 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public ListAlertStrategiesResponseBodyDataStrategy Strategy { get; set; }
             public class ListAlertStrategiesResponseBodyDataStrategy : TeaModel {
                 /// <summary>
-                /// <para>The collection of clusters for which alerts are received.</para>
+                /// <para>The collection of clusters that receive alerts.</para>
                 /// </summary>
                 [NameInMap("clusters")]
                 [Validation(Required=false)]
                 public List<string> Clusters { get; set; }
 
+                /// <summary>
+                /// <para>The list of alert contacts and policy destinations.</para>
+                /// </summary>
                 [NameInMap("destinations")]
                 [Validation(Required=false)]
                 public List<int?> Destinations { get; set; }
 
                 /// <summary>
-                /// <para>接收告警的异常项列表</para>
+                /// <para>The list of anomaly items that receive alerts.</para>
                 /// </summary>
                 [NameInMap("items")]
                 [Validation(Required=false)]
@@ -137,7 +143,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <para>The error message.</para>
         /// <list type="bullet">
         /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
-        /// <item><description>Otherwise, this field contains the error information for the request.</description></item>
+        /// <item><description>Otherwise, this field contains the request error information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

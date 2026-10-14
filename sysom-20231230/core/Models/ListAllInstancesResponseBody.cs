@@ -268,11 +268,11 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             /// <summary>
             /// <para>The running status of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Running</b>: The instance is running.</description></item>
-            /// <item><description><b>Offline</b>: The instance is offline.</description></item>
+            /// <item><description><b>Running</b>: Running.</description></item>
+            /// <item><description><b>Offline</b>: Offline.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>An instance in the Offline state indicates that the heartbeat from the node to the SysOM server is lost. It does not mean that the corresponding ECS instance is not running.</para>
+            /// <para>An instance in the Offline status indicates that the heartbeat between the node and the SysOM server is lost. It does not mean that the corresponding ECS instance is not running.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -298,7 +298,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <para>The error message.</para>
         /// <list type="bullet">
         /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
-        /// <item><description>Otherwise, this field contains the request error message.</description></item>
+        /// <item><description>Otherwise, this field contains the error message of the request.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

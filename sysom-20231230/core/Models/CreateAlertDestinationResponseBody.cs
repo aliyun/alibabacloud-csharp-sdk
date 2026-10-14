@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public CreateAlertDestinationResponseBodyData Data { get; set; }
         public class CreateAlertDestinationResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The time when the contact was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1753669116286</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string Phone { get; set; }
 
                 /// <summary>
-                /// <para>The secret key of the chatbot.</para>
+                /// <para>The chatbot secret key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SECxxx</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Uid { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The time when the contact was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1751254826285</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <para>The error message.</para>
         /// <list type="bullet">
         /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
-        /// <item><description>Otherwise, this field contains the error message for the request.</description></item>
+        /// <item><description>Otherwise, this field contains the error message of the request.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

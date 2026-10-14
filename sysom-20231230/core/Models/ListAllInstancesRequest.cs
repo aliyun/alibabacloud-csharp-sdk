@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListAllInstancesRequest : TeaModel {
-        [NameInMap("X-Debug-Id")]
-        [Validation(Required=false)]
-        public string XDebugId { get; set; }
-
         /// <summary>
         /// <para>The current page number.</para>
         /// 
@@ -54,7 +50,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string ManagedType { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records to retrieve in a single request.</para>
+        /// <para>The maximum number of entries to return in a single request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -105,10 +101,6 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("region")]
         [Validation(Required=false)]
         public string Region { get; set; }
-
-        [NameInMap("x-sysom-invoke-source")]
-        [Validation(Required=false)]
-        public string XSysomInvokeSource { get; set; }
 
     }
 

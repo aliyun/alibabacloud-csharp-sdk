@@ -9,12 +9,8 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListInstancesWithEcsInfoShrinkRequest : TeaModel {
-        [NameInMap("X-Debug-Id")]
-        [Validation(Required=false)]
-        public string XDebugId { get; set; }
-
         /// <summary>
-        /// <para>The page number for pagination. This parameter specifies the current page.</para>
+        /// <para>The page number for pagination. This field indicates the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -34,7 +30,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string HealthStatus { get; set; }
 
         /// <summary>
-        /// <para>Specifies an instance ID to filter the Agent installation status of the specified instance.</para>
+        /// <para>Specifies the instance ID to filter the Agent installation status of the specified instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp118piqcio9tiwgh84b</para>
@@ -71,7 +67,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string InstanceTagShrink { get; set; }
 
         /// <summary>
-        /// <para>Filters instances by management status.</para>
+        /// <para>Filters instances by managed status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -160,10 +156,6 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("resource_group_name")]
         [Validation(Required=false)]
         public string ResourceGroupName { get; set; }
-
-        [NameInMap("x-sysom-invoke-source")]
-        [Validation(Required=false)]
-        public string XSysomInvokeSource { get; set; }
 
     }
 

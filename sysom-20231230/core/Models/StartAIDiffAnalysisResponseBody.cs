@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description><c>code == Success</c> indicates that authorization is successful.</description></item>
-        /// <item><description>Other status codes indicate authorization failed. Check the <c>message</c> field for the detailed fault information.</description></item>
+        /// <item><description>If code is Success, the authorization is successful.</description></item>
+        /// <item><description>Other status codes indicate that the authorization has failed. Check the message field for the detailed fault information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -29,19 +29,19 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <b>Example:</b>
         /// <para>&quot;[
         ///   {
-        ///       name: &quot;xxx&quot;, #operator name
-        ///       before_time: 2, # total time of the former
-        ///       after_time: 4, # total time of the latter
-        ///       time_diff: 2,  # time difference
-        ///       before_time_perc: &quot;80%&quot;, # total time percentage of the former
-        ///       after_time_perc: &quot;23%&quot;, # total time percentage of the latter
-        ///       time_perc_diff: &quot;-54%&quot;,  # time percentage difference
-        ///       before_count: 1, # total call count of the former
-        ///       after_count: 2,  # total call count of the latter
-        ///       count_diff: 1,   # call count difference
-        ///       before_count_perc: &quot;56%&quot;, # total call percentage of the former
-        ///       after_count_perc: &quot;32%&quot;,  # total call percentage of the latter
-        ///       count_perc_diff: &quot;44%&quot;,   # call percentage difference
+        ///       name: &quot;xxx&quot;, # Operator name
+        ///       before_time: 2, # Total time of the former
+        ///       after_time: 4, # Total time of the latter
+        ///       time_diff: 2,  # Time difference
+        ///       before_time_perc: &quot;80%&quot;, # Total time percentage of the former
+        ///       after_time_perc: &quot;23%&quot;, # Total time percentage of the latter
+        ///       time_perc_diff: &quot;-54%&quot;,  # Time percentage difference
+        ///       before_count: 1, # Total call count of the former
+        ///       after_count: 2,  # Total call count of the latter
+        ///       count_diff: 1,   # Call count difference
+        ///       before_count_perc: &quot;56%&quot;, # Total call percentage of the former
+        ///       after_count_perc: &quot;32%&quot;,  # Total call percentage of the latter
+        ///       count_perc_diff: &quot;44%&quot;,   # Call percentage difference
         ///   },
         ///   {...}
         /// ]&quot;</para>

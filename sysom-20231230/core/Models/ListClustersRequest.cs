@@ -9,12 +9,8 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListClustersRequest : TeaModel {
-        [NameInMap("X-Debug-Id")]
-        [Validation(Required=false)]
-        public string XDebugId { get; set; }
-
         /// <summary>
-        /// <para>Filters by cluster ID.</para>
+        /// <para>The cluster ID used to filter clusters.</para>
         /// <remarks>
         /// <para>This cluster ID is not the ACK cluster ID. It is the <c>id</c> field returned by this operation.</para>
         /// </remarks>
@@ -45,7 +41,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <summary>
         /// <list type="bullet">
         /// <item><description><c>ACK</c>: ACK cluster.</description></item>
-        /// <item><description><c>CUSTOM</c>: Custom cluster (default clusters belong to custom clusters).</description></item>
+        /// <item><description><c>CUSTOM</c>: Custom cluster. The default cluster belongs to the custom cluster type.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,7 +62,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? Current { get; set; }
 
         /// <summary>
-        /// <para><b>[Deprecated]</b> Use the cluster_id parameter to filter instead.</para>
+        /// <para><b>[Deprecated]</b> Use the cluster_id parameter to filter clusters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cb7d4cc26c8f845fb8a8255ffd394820e</para>
@@ -76,7 +72,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>Filters plugins by plugin name.</para>
+        /// <para>The name of the plug-in used to filter plug-ins.</para>
         /// 
         /// <b>Example:</b>
         /// <para>proxy-next-upstream</para>
@@ -94,10 +90,6 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
-
-        [NameInMap("x-sysom-invoke-source")]
-        [Validation(Required=false)]
-        public string XSysomInvokeSource { get; set; }
 
     }
 

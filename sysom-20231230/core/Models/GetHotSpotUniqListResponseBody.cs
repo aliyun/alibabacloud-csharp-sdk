@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -67,7 +67,11 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call is successful. true: successful. false: failed.</para>
+        /// <para>Indicates whether the API call is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The API call is successful.</description></item>
+        /// <item><description>false: The API call failed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

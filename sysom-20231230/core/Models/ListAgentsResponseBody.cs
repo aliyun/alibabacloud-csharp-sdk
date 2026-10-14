@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The supported architectures (multiple architectures are separated by commas).</para>
+            /// <para>The supported architectures. Multiple architectures are separated by commas.</para>
             /// 
             /// <b>Example:</b>
             /// <para>x86</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The time when the component was updated.</para>
+            /// <para>The time when the component was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-09-14T20:46:08</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string InstallScript { get; set; }
 
                 /// <summary>
-                /// <para>The uninstallation script of the component.</para>
+                /// <para>The uninstall script of the component.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sysom.sh uninstall</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string UninstallScript { get; set; }
 
                 /// <summary>
-                /// <para>The time when the component version was updated.</para>
+                /// <para>The time when the component version was last updated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-09-14T20:46:08</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string UpdatedAt { get; set; }
 
                 /// <summary>
-                /// <para>The update script of the component.</para>
+                /// <para>The upgrade script of the component.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sysom.sh upgrade</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string UpgradeScript { get; set; }
 
                 /// <summary>
-                /// <para>The component version number.</para>
+                /// <para>The version number of the component.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3.4.0-1</para>

@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             /// <para>The analysis failure log.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>机器i-wz9dej066kii4goqpnze分析失败, 失败原因: Not get GPU trace data for \&quot;e59ce870-dbd4-4c44-a814-174ac6ab5bcf\&quot; \&quot;[\&quot;118534\&quot;]\&quot;!</para>
+            /// <para>Analysis failed for instance i-wz9dej066kii4goqpnze. Failure reason: Not get GPU trace data for \&quot;e59ce870-dbd4-4c44-a814-174ac6ab5bcf\&quot; \&quot;[\&quot;118534\&quot;]\&quot;!</para>
             /// </summary>
             [NameInMap("failedLog")]
             [Validation(Required=false)]
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>The description of the status code.</para>
+        /// <para>The status code description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>

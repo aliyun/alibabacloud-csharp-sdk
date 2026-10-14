@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class CreateVmcoreDiagnosisTaskRequest : TeaModel {
-        [NameInMap("X-Debug-Id")]
-        [Validation(Required=false)]
-        public string XDebugId { get; set; }
-
         /// <summary>
         /// <para>The download URL of the debuginfo-common file. This parameter is optional when the diagnosis type is vmcore.</para>
         /// <para>For CentOS or Alinux kernel diagnostics, the corresponding debuginfo-common file is automatically downloaded, so this parameter is not required. For other distribution kernels, manually provide the download URL of the debuginfo-common file that corresponds to the kernel version.</para>
@@ -48,8 +44,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <summary>
         /// <para>The task type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>vmcore: vmcore file diagnostic task.</description></item>
-        /// <item><description>dmesg: dmesg log diagnostic task.</description></item>
+        /// <item><description>vmcore: a vmcore file diagnostic task.</description></item>
+        /// <item><description>dmesg: a dmesg log diagnostic task.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -69,10 +65,6 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("vmcoreUrl")]
         [Validation(Required=false)]
         public string VmcoreUrl { get; set; }
-
-        [NameInMap("x-sysom-invoke-source")]
-        [Validation(Required=false)]
-        public string XSysomInvokeSource { get; set; }
 
     }
 

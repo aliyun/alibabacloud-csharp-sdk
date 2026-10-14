@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class UpdateAlertDestinationRequest : TeaModel {
-        [NameInMap("X-Debug-Id")]
-        [Validation(Required=false)]
-        public string XDebugId { get; set; }
-
         [NameInMap("app_id")]
         [Validation(Required=false)]
         public string AppId { get; set; }
@@ -77,7 +73,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Phone { get; set; }
 
             /// <summary>
-            /// <para>The secret key of the chatbot.</para>
+            /// <para>The chatbot secret key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SECxxx</para>
@@ -87,7 +83,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Sec { get; set; }
 
             /// <summary>
-            /// <para>The webhook URL of the chatbot.</para>
+            /// <para>The webhook URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://oapi.dingtalk.com/robot/send?access_token=xxx">https://oapi.dingtalk.com/robot/send?access_token=xxx</a></para>
@@ -109,7 +105,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The alert notification target. Currently, only DingTalk contacts are supported.</para>
+        /// <para>The alert push target. Currently, only DingTalk contacts are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dingtalk</para>
@@ -117,10 +113,6 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("target")]
         [Validation(Required=false)]
         public string Target { get; set; }
-
-        [NameInMap("x-sysom-invoke-source")]
-        [Validation(Required=false)]
-        public string XSysomInvokeSource { get; set; }
 
     }
 

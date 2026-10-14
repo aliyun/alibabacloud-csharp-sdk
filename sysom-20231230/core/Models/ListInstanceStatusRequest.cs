@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListInstanceStatusRequest : TeaModel {
-        [NameInMap("X-Debug-Id")]
-        [Validation(Required=false)]
-        public string XDebugId { get; set; }
-
         /// <summary>
         /// <para>The current page number (starting from 1). This field is present when pagination is used.</para>
         /// 
@@ -54,7 +50,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>Filters the instance list by status. If this field is specified, only instances with the corresponding status are returned.</para>
+        /// <para>The instance status used to filter the instance list. If this parameter is specified, only instances in the specified status are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -62,10 +58,6 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("status")]
         [Validation(Required=false)]
         public string Status { get; set; }
-
-        [NameInMap("x-sysom-invoke-source")]
-        [Validation(Required=false)]
-        public string XSysomInvokeSource { get; set; }
 
     }
 

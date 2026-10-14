@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class StartAIDiffAnalysisRequest : TeaModel {
-        [NameInMap("X-Debug-Id")]
-        [Validation(Required=false)]
-        public string XDebugId { get; set; }
-
         /// <summary>
         /// <para>The task1 parameters.</para>
         /// <para>This parameter is required.</para>
@@ -35,7 +31,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string AnalysisId { get; set; }
 
             /// <summary>
-            /// <para>The process IDs (PIDs) of AI job processes. Batch input is supported with comma-separated values.</para>
+            /// <para>The PIDs of AI job processes. You can specify multiple PIDs separated by commas.</para>
             /// </summary>
             [NameInMap("pids")]
             [Validation(Required=false)]
@@ -68,7 +64,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>task2 parameters. Currently, only comparison with the same analysisId and pid is supported</para>
+        /// <para>task2 parameters. Currently, only comparison with the same analysisId and PID is supported</para>
         /// </summary>
         [NameInMap("task2")]
         [Validation(Required=false)]
@@ -86,7 +82,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string AnalysisId { get; set; }
 
             /// <summary>
-            /// <para>The process IDs (PIDs) of AI job processes. Batch input is supported with comma-separated values.</para>
+            /// <para>The PIDs of AI job processes. You can specify multiple PIDs separated by commas.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -119,10 +115,6 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public float? StepStart { get; set; }
 
         }
-
-        [NameInMap("x-sysom-invoke-source")]
-        [Validation(Required=false)]
-        public string XSysomInvokeSource { get; set; }
 
     }
 

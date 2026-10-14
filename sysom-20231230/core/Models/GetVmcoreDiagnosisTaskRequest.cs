@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetVmcoreDiagnosisTaskRequest : TeaModel {
-        [NameInMap("X-Debug-Id")]
-        [Validation(Required=false)]
-        public string XDebugId { get; set; }
-
         /// <summary>
         /// <para>The task ID.</para>
         /// <para>This parameter is required.</para>
@@ -23,10 +19,6 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("taskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
-
-        [NameInMap("x-sysom-invoke-source")]
-        [Validation(Required=false)]
-        public string XSysomInvokeSource { get; set; }
 
     }
 

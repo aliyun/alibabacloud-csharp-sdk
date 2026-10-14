@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description><c>code == Success</c> indicates that the authorization is successful.</description></item>
-        /// <item><description>Other status codes indicate that the authorization failed. Check the <c>message</c> field for the detailed fault information.</description></item>
+        /// <item><description><c>code == Success</c>: The authorization is successful.</description></item>
+        /// <item><description>Other status codes: The authorization failed. Check the <c>message</c> field for the detailed fault information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public List<ListVmcoreDiagnosisTaskResponseBodyData> Data { get; set; }
         public class ListVmcoreDiagnosisTaskResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The task creation time.</para>
+            /// <para>The time when the task was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-12-02T17:36:12</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <para>The error message.</para>
         /// <list type="bullet">
         /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
-        /// <item><description>Otherwise, this field contains the error message of the request.</description></item>
+        /// <item><description>Otherwise, this field contains the request error information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

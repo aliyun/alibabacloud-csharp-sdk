@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned result. The data volume is large.</para>
+        /// <para>The response data. The data volume can be large.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;task_id\&quot;: \&quot;y4ba8uRV\&quot;}</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// 
         /// <b>Example:</b>
         /// <para>Analysis ID: 56dae746-ef55-4f77-8373-cb3594c41457
-        /// Analysis failed for machine i-bp164ns76pzirbwv0snt. Cause: Not get GPU trace data for \&quot;56dae746-ef55-4f77-8373-cb3594c41457\&quot; \&quot;[\&quot;93811\&quot;]\&quot;!</para>
+        /// Analysis failed for instance i-bp164ns76pzirbwv0snt. Cause: Not get GPU trace data for \&quot;56dae746-ef55-4f77-8373-cb3594c41457\&quot; \&quot;[\&quot;93811\&quot;]\&quot;!</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]

@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>

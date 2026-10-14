@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetInspectionReportRequest : TeaModel {
-        [NameInMap("X-Debug-Id")]
-        [Validation(Required=false)]
-        public string XDebugId { get; set; }
-
         /// <summary>
         /// <para>The inspection report ID.</para>
         /// 
@@ -22,10 +18,6 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("reportId")]
         [Validation(Required=false)]
         public string ReportId { get; set; }
-
-        [NameInMap("x-sysom-invoke-source")]
-        [Validation(Required=false)]
-        public string XSysomInvokeSource { get; set; }
 
     }
 

@@ -9,12 +9,8 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListPodsOfInstanceRequest : TeaModel {
-        [NameInMap("X-Debug-Id")]
-        [Validation(Required=false)]
-        public string XDebugId { get; set; }
-
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The cluster identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c96e34d74eb6748f3b2a46552d5d653f6</para>
@@ -24,7 +20,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The current page number. Pages start from page 1.</para>
+        /// <para>The current page number (starting from 1).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -52,10 +48,6 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
-
-        [NameInMap("x-sysom-invoke-source")]
-        [Validation(Required=false)]
-        public string XSysomInvokeSource { get; set; }
 
     }
 

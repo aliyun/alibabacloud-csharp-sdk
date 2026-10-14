@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetAbnormalEventsCountRequest : TeaModel {
-        [NameInMap("X-Debug-Id")]
-        [Validation(Required=false)]
-        public string XDebugId { get; set; }
-
         /// <summary>
         /// <para>The cluster ID.</para>
         /// 
@@ -44,7 +40,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Instance { get; set; }
 
         /// <summary>
-        /// <para>The severity level of abnormal events.</para>
+        /// <para>The severity level of the abnormal event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>potential</para>
@@ -92,10 +88,6 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("start")]
         [Validation(Required=false)]
         public float? Start { get; set; }
-
-        [NameInMap("x-sysom-invoke-source")]
-        [Validation(Required=false)]
-        public string XSysomInvokeSource { get; set; }
 
     }
 

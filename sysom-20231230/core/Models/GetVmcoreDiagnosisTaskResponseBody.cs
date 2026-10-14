@@ -91,14 +91,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string TaskType { get; set; }
 
             /// <summary>
-            /// <para>The download URLs of related files associated with the task.</para>
+            /// <para>The download links for files related to the task.</para>
             /// </summary>
             [NameInMap("urls")]
             [Validation(Required=false)]
             public GetVmcoreDiagnosisTaskResponseBodyDataUrls Urls { get; set; }
             public class GetVmcoreDiagnosisTaskResponseBodyDataUrls : TeaModel {
                 /// <summary>
-                /// <para>The download URL of the debuginfo-common RPM package.</para>
+                /// <para>The download link for the debuginfo-common RPM package.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo-common/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo-common/file/path</a></para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string DebuginfoCommonUrl { get; set; }
 
                 /// <summary>
-                /// <para>The download URL of the debuginfo RPM package.</para>
+                /// <para>The download link for the debuginfo RPM package.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo/file/path</a></para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string DebuginfoUrl { get; set; }
 
                 /// <summary>
-                /// <para>The download URL of the dmesg log.</para>
+                /// <para>The download link for the dmesg log.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/dmesg/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/dmesg/file/path</a></para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string DmesgUrl { get; set; }
 
                 /// <summary>
-                /// <para>The download URL of the vmcore file.</para>
+                /// <para>The download link for the vmcore file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/vmcore/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/vmcore/file/path</a></para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <para>The error message.</para>
         /// <list type="bullet">
         /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
-        /// <item><description>Otherwise, this field contains the request error information.</description></item>
+        /// <item><description>Otherwise, this field contains the request error message.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListDiagnosisRequest : TeaModel {
-        [NameInMap("X-Debug-Id")]
-        [Validation(Required=false)]
-        public string XDebugId { get; set; }
-
         /// <summary>
         /// <para>The current page number.</para>
         /// 
@@ -69,10 +65,6 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("status")]
         [Validation(Required=false)]
         public string Status { get; set; }
-
-        [NameInMap("x-sysom-invoke-source")]
-        [Validation(Required=false)]
-        public string XSysomInvokeSource { get; set; }
 
     }
 

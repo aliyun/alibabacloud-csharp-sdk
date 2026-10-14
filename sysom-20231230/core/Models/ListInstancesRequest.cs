@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListInstancesRequest : TeaModel {
-        [NameInMap("X-Debug-Id")]
-        [Validation(Required=false)]
-        public string XDebugId { get; set; }
-
         /// <summary>
         /// <para>The cluster ID.</para>
         /// 
@@ -24,7 +20,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The current page number. This field exists when pagination is used.</para>
+        /// <para>The current page number. This field is present when pagination is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -72,10 +68,6 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("status")]
         [Validation(Required=false)]
         public string Status { get; set; }
-
-        [NameInMap("x-sysom-invoke-source")]
-        [Validation(Required=false)]
-        public string XSysomInvokeSource { get; set; }
 
     }
 

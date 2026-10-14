@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The canary release environment.</para>
+            /// <para>The grayscale configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string PluginVersion { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-12-25T15:08:19</para>

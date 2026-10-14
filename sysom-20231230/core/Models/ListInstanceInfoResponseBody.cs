@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries returned per request.</para>
+        /// <para>The maximum number of records returned in a single request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <para>The error message.</para>
         /// <list type="bullet">
         /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
-        /// <item><description>Otherwise, this field contains the request error message.</description></item>
+        /// <item><description>Otherwise, this field contains the error message of the request.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

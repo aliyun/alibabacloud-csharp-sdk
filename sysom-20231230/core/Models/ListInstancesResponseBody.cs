@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description><c>code == Success</c> indicates that the authorization is successful.</description></item>
-        /// <item><description>Other status codes indicate that the authorization failed. Check the <c>message</c> field for the detailed fault information.</description></item>
+        /// <item><description>If <c>code == Success</c>, the authorization is successful.</description></item>
+        /// <item><description>Other status codes indicate authorization failed. Check the <c>message</c> field for the detailed fault information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string KernelVersion { get; set; }
 
             /// <summary>
-            /// <para>The metadata of the instance.</para>
+            /// <para>The instance metadata.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string OsHealthScore { get; set; }
 
             /// <summary>
-            /// <para>The operating system name of the instance (obtained from /etc/os-release).</para>
+            /// <para>The operating system name of the instance, obtained from /etc/os-release.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Anolis OS</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string OsName { get; set; }
 
             /// <summary>
-            /// <para>The operating system name ID of the instance (obtained from /etc/os-release).</para>
+            /// <para>The operating system name ID of the instance, obtained from /etc/os-release.</para>
             /// 
             /// <b>Example:</b>
             /// <para>anolis</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string OsNameId { get; set; }
 
             /// <summary>
-            /// <para>The operating system version of the instance (obtained from /etc/os-release).</para>
+            /// <para>The operating system version of the instance, obtained from /etc/os-release.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8.9</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string OsVersion { get; set; }
 
             /// <summary>
-            /// <para>The operating system version ID of the instance (obtained from /etc/os-release).</para>
+            /// <para>The operating system version ID of the instance, obtained from /etc/os-release.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rhel fedora centos</para>

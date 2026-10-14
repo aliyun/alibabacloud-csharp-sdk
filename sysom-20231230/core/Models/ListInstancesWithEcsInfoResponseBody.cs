@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             /// <item><description><b>Offline</b>: The instance is offline.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>An instance in the Offline state indicates that the heartbeat between the node and the SysOM server is lost. It does not mean that the corresponding ECS instance has stopped running.</para>
+            /// <para>An instance in the Offline state indicates that the heartbeat between the node and the SysOM server is lost. It does not mean that the corresponding ECS instance is not running.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

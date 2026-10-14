@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned results.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]

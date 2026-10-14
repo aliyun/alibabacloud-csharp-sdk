@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class InstallAgentForClusterRequest : TeaModel {
-        [NameInMap("X-Debug-Id")]
-        [Validation(Required=false)]
-        public string XDebugId { get; set; }
-
         /// <summary>
         /// <para>The component ID.</para>
         /// 
@@ -65,10 +61,6 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("grayscale_config")]
         [Validation(Required=false)]
         public string GrayscaleConfig { get; set; }
-
-        [NameInMap("x-sysom-invoke-source")]
-        [Validation(Required=false)]
-        public string XSysomInvokeSource { get; set; }
 
     }
 

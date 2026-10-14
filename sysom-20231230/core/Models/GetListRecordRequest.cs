@@ -9,12 +9,8 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetListRecordRequest : TeaModel {
-        [NameInMap("X-Debug-Id")]
-        [Validation(Required=false)]
-        public string XDebugId { get; set; }
-
         /// <summary>
-        /// <para>The ID of the analysis record to query the status of.</para>
+        /// <para>The ID of the analysis record to query the status for.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxxxxxxx-f37b-478d-87f6-2259ed8766bf</para>
@@ -56,10 +52,6 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("region")]
         [Validation(Required=false)]
         public string Region { get; set; }
-
-        [NameInMap("x-sysom-invoke-source")]
-        [Validation(Required=false)]
-        public string XSysomInvokeSource { get; set; }
 
     }
 

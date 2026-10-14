@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description><c>code == Success</c> indicates that the authorization was successful.</description></item>
+        /// <item><description><c>code == Success</c> indicates that the authorization is successful.</description></item>
         /// <item><description>Other status codes indicate that the authorization failed. Check the <c>message</c> field for the detailed fault information.</description></item>
         /// </list>
         /// 
@@ -41,24 +41,17 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public long? CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The detailed description of the anomaly item.</para>
+            /// <para>The description of the anomaly item.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>节点发生OOM, 可查看OOM发生原因</para>
+            /// <para>An OOM event occurred on the node. Check the cause of the OOM event</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The diagnostic status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>1: diagnosis ready.</description></item>
-            /// <item><description>2: diagnosis in progress.</description></item>
-            /// <item><description>3: diagnosis completed.</description></item>
-            /// <item><description>4: not diagnosable.</description></item>
-            /// <item><description>5: diagnosis failed.</description></item>
-            /// </list>
+            /// <para>The diagnostic status. Valid values: 1: the diagnosis is ready. 2: the diagnosis is running. 3: the diagnosis is complete. 4: the item is not diagnosable. 5: the diagnosis failed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -91,7 +84,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             /// <para>The name of the anomaly item.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>节点CPU使用率检测</para>
+            /// <para>Node CPU usage check</para>
             /// </summary>
             [NameInMap("item")]
             [Validation(Required=false)]
@@ -254,7 +247,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>The error code description. This value is empty if no error occurred.</para>
+        /// <para>The error code description. This field is empty if no error occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>

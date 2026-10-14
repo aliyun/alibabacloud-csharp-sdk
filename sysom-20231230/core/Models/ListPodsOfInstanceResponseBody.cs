@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public List<ListPodsOfInstanceResponseBodyData> Data { get; set; }
         public class ListPodsOfInstanceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The namespace in which the pod resides.</para>
+            /// <para>The namespace of the pod.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries returned for this request.</para>
+        /// <para>The maximum number of records returned in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>42</para>

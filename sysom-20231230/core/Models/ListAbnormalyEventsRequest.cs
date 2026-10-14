@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListAbnormalyEventsRequest : TeaModel {
-        [NameInMap("X-Debug-Id")]
-        [Validation(Required=false)]
-        public string XDebugId { get; set; }
-
         /// <summary>
         /// <para>The cluster ID.</para>
         /// 
@@ -24,7 +20,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Cluster { get; set; }
 
         /// <summary>
-        /// <para>The current page number. This parameter is present during paginated queries.</para>
+        /// <para>The current page number. This field exists when pagination is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -47,7 +43,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <para>The name of the anomaly event.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>节点根文件系统使用检测</para>
+        /// <para>Node root filesystem usage check</para>
         /// </summary>
         [NameInMap("event")]
         [Validation(Required=false)]
@@ -104,7 +100,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Pod { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to display pod anomaly events.</para>
+        /// <para>Specifies whether to display anomaly events of the pod.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -122,10 +118,6 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("start")]
         [Validation(Required=false)]
         public float? Start { get; set; }
-
-        [NameInMap("x-sysom-invoke-source")]
-        [Validation(Required=false)]
-        public string XSysomInvokeSource { get; set; }
 
     }
 

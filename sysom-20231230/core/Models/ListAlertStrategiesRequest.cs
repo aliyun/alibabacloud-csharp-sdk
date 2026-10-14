@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListAlertStrategiesRequest : TeaModel {
-        [NameInMap("X-Debug-Id")]
-        [Validation(Required=false)]
-        public string XDebugId { get; set; }
-
         /// <summary>
         /// <para>The current page number (starting from 1).</para>
         /// 
@@ -34,7 +30,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The policy name of the alerting policy.</para>
+        /// <para>The Policy Name of the alerting policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>strategy1</para>
@@ -62,10 +58,6 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
-
-        [NameInMap("x-sysom-invoke-source")]
-        [Validation(Required=false)]
-        public string XSysomInvokeSource { get; set; }
 
     }
 

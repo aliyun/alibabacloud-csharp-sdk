@@ -9,16 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetConfigByNameRequest : TeaModel {
-        [NameInMap("X-Debug-Id")]
-        [Validation(Required=false)]
-        public string XDebugId { get; set; }
-
         /// <summary>
         /// <para>The configuration name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>节点网络延时检测</para>
+        /// <para>Node network latency detection</para>
         /// </summary>
         [NameInMap("configName")]
         [Validation(Required=false)]
@@ -46,7 +42,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string EntityId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use the global UID.</para>
+        /// <para>Specifies whether to use a global UID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -64,10 +60,6 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("versionId")]
         [Validation(Required=false)]
         public long? VersionId { get; set; }
-
-        [NameInMap("x-sysom-invoke-source")]
-        [Validation(Required=false)]
-        public string XSysomInvokeSource { get; set; }
 
     }
 

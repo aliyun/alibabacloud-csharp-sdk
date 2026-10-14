@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class UpgradeAgentWithTypeRequest : TeaModel {
-        [NameInMap("X-Debug-Id")]
-        [Validation(Required=false)]
-        public string XDebugId { get; set; }
-
         /// <summary>
         /// <para>The ID of the component to update.</para>
         /// <para>This parameter is required.</para>
@@ -25,7 +21,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string AgentId { get; set; }
 
         /// <summary>
-        /// <para>The version of the component to update to.</para>
+        /// <para>The version to which the component is updated.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +42,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The list of instances for which to update the component.</para>
+        /// <para>The list of instances on which to update the component.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("instances")]
@@ -76,10 +72,6 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Region { get; set; }
 
         }
-
-        [NameInMap("x-sysom-invoke-source")]
-        [Validation(Required=false)]
-        public string XSysomInvokeSource { get; set; }
 
     }
 

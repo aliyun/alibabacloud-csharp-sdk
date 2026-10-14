@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListAgentInstallRecordsRequest : TeaModel {
-        [NameInMap("X-Debug-Id")]
-        [Validation(Required=false)]
-        public string XDebugId { get; set; }
-
         /// <summary>
         /// <para>The current page number. Pages start from page 1.</para>
         /// 
@@ -24,7 +20,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? Current { get; set; }
 
         /// <summary>
-        /// <para>Specifies the instance ID. If this parameter is specified, only the Agent installation records for the specified instance are returned.</para>
+        /// <para>The instance ID. If you specify this parameter, only the Agent installation records for the specified instance are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp118piqcio9tiwgh84b</para>
@@ -44,7 +40,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Specifies the Agent ID. If this parameter is specified, only the installation records for the specified Agent are returned. You can use this parameter together with the plugin_version parameter.</para>
+        /// <para>The Agent ID. If you specify this parameter, only the installation records for the specified Agent are returned. You can use this parameter together with the plugin_version parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>74a86327-3170-412c-8e67-da3389ec56a9</para>
@@ -54,7 +50,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string PluginId { get; set; }
 
         /// <summary>
-        /// <para>Specifies the Agent version. This parameter cannot be used alone and must be used together with the plugin_id parameter to filter the installation records for a specific version of the specified Agent.</para>
+        /// <para>The Agent version. This parameter cannot be used alone. Use it together with the plugin_id parameter to filter the installation records for a specific version of the specified Agent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3.4.0-1</para>
@@ -74,7 +70,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>Filters component installation records by status.</para>
+        /// <para>The status used to filter component installation records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Installed</para>
@@ -82,10 +78,6 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("status")]
         [Validation(Required=false)]
         public string Status { get; set; }
-
-        [NameInMap("x-sysom-invoke-source")]
-        [Validation(Required=false)]
-        public string XSysomInvokeSource { get; set; }
 
     }
 

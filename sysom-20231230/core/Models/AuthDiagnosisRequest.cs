@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class AuthDiagnosisRequest : TeaModel {
-        [NameInMap("X-Debug-Id")]
-        [Validation(Required=false)]
-        public string XDebugId { get; set; }
-
         /// <summary>
         /// <para>Specifies whether to enable automatic creation of the service-linked role.</para>
         /// </summary>
@@ -21,14 +17,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public bool? AutoCreateRole { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to automatically install the latest version of the agent if it is not installed.</para>
+        /// <para>Specifies whether to automatically install the latest version of the agent if it is not already installed.</para>
         /// </summary>
         [NameInMap("autoInstallAgent")]
         [Validation(Required=false)]
         public bool? AutoInstallAgent { get; set; }
 
         /// <summary>
-        /// <para>The list of instances authorized for diagnosis.</para>
+        /// <para>The list of instances authorized for diagnostics.</para>
         /// </summary>
         [NameInMap("instances")]
         [Validation(Required=false)]
@@ -55,10 +51,6 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Region { get; set; }
 
         }
-
-        [NameInMap("x-sysom-invoke-source")]
-        [Validation(Required=false)]
-        public string XSysomInvokeSource { get; set; }
 
     }
 

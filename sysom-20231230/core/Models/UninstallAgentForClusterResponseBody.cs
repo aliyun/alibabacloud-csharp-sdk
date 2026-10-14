@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description><c>code == Success</c> indicates that the authorization is successful.</description></item>
+        /// <item><description><c>code == Success</c> indicates that the authorization was successful.</description></item>
         /// <item><description>Other status codes indicate that the authorization failed. Check the <c>message</c> field for the detailed fault information.</description></item>
         /// </list>
         /// 
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public UninstallAgentForClusterResponseBodyData Data { get; set; }
         public class UninstallAgentForClusterResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The task ID. You can use this task ID to call GetAgentTask to query the execution status of the task.</para>
+            /// <para>The task ID. You can use this task ID to call the GetAgentTasK operation to query the execution status of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>049ea0609515414b9e19c3389d7ba638</para>
