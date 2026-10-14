@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
 {
     public class SyncDataAssetsRequest : TeaModel {
         /// <summary>
+        /// <para>The language of the response. Valid values: zh: Chinese. en: English.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>The cloud product code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two parameters must match.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>RDS</para>
         /// </summary>

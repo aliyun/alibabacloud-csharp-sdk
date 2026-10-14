@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Sddp20260120.Models
 {
     public class ListRegionsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of regions where assets reside.</para>
+        /// </summary>
         [NameInMap("RegionList")]
         [Validation(Required=false)]
         public List<ListRegionsResponseBodyRegionList> RegionList { get; set; }
         public class ListRegionsResponseBodyRegionList : TeaModel {
             /// <summary>
+            /// <para>The region ID where the assets reside.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-zhangjiakou</para>
             /// </summary>
@@ -22,8 +27,10 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <para>The name of the region where the assets reside.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>华北 3（张家口）</para>
+            /// <para>China North 3 (Zhangjiakou)</para>
             /// </summary>
             [NameInMap("RegionName")]
             [Validation(Required=false)]
@@ -32,6 +39,8 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         }
 
         /// <summary>
+        /// <para>The request ID, which can be used to locate this API call.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7C6D8E9F-1234-5678-ABCD-0123456789AB</para>
         /// </summary>

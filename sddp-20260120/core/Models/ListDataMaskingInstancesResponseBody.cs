@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
 {
     public class ListDataMaskingInstancesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The page number of the returned data.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        /// <summary>
+        /// <para>The list of records returned by the current query.</para>
+        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<ListDataMaskingInstancesResponseBodyItems> Items { get; set; }
         public class ListDataMaskingInstancesResponseBodyItems : TeaModel {
             /// <summary>
+            /// <para>The column encryption algorithm used by the instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>AES_256_GCM</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string EncryptionAlgorithm { get; set; }
 
             /// <summary>
+            /// <para>The ID of the KMS key used by the instance. This field may not be returned for local key scenarios.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>12345678-1234-1234-1234-12345678****</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string EncryptionKeyId { get; set; }
 
             /// <summary>
+            /// <para>The database engine type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>MySQL</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string EngineType { get; set; }
 
             /// <summary>
+            /// <para>The number of database accounts that have fullAccess plaintext access permissions.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public int? FullAccessAccountCount { get; set; }
 
             /// <summary>
+            /// <para>The instance identity of the database instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>rm-2ze1abcdefgh****</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The code of the cloud product.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>RDS</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string ProductCode { get; set; }
 
             /// <summary>
+            /// <para>The ID of the cloud product type. Valid values: 5 (RDS), 8 (POLARDB), and 27 (PolarDBX2).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>5</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? ProductId { get; set; }
 
             /// <summary>
+            /// <para>The region ID of the asset.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-zhangjiakou</para>
             /// </summary>
@@ -86,8 +107,10 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <para>The region name of the asset.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>华北 3（张家口）</para>
+            /// <para>China (Zhangjiakou)</para>
             /// </summary>
             [NameInMap("RegionName")]
             [Validation(Required=false)]
@@ -96,6 +119,8 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         }
 
         /// <summary>
+        /// <para>The number of records per page for the current query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -104,6 +129,8 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID. You can use this ID to locate the API call.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7C6D8E9F-1234-5678-ABCD-0123456789AB</para>
         /// </summary>
@@ -112,6 +139,8 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of records that match the current statistics or query scope.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

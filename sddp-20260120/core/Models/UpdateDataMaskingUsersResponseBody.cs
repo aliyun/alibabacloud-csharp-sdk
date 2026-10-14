@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
 {
     public class UpdateDataMaskingUsersResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID, which can be used to locate this API call.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7C6D8E9F-1234-5678-ABCD-0123456789AB</para>
         /// </summary>

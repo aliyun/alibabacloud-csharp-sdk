@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
 {
     public class ListDataMaskingColumnsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The page number of the returned data.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        /// <summary>
+        /// <para>The list of records returned by the current query.</para>
+        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<ListDataMaskingColumnsResponseBodyItems> Items { get; set; }
         public class ListDataMaskingColumnsResponseBodyItems : TeaModel {
             /// <summary>
+            /// <para>The data type of the database column.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>varchar</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string DataType { get; set; }
 
             /// <summary>
+            /// <para>The database name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>business_db</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string DbName { get; set; }
 
             /// <summary>
+            /// <para>The database engine type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>MySQL</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string EngineType { get; set; }
 
             /// <summary>
+            /// <para>The business error code of the record or operation. This value can be empty if no error occurs. Evaluate this value together with ErrorMessage.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>data_masking_not_running</para>
             /// </summary>
@@ -54,14 +67,18 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
+            /// <para>The business error description of the record or operation.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>实例未处于运行状态</para>
+            /// <para>The instance is not in the running state</para>
             /// </summary>
             [NameInMap("ErrorMessage")]
             [Validation(Required=false)]
             public string ErrorMessage { get; set; }
 
             /// <summary>
+            /// <para>The ID of the column record.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>column-example-001</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>The instance identity of the database.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>rm-2ze1abcdefgh****</para>
             /// </summary>
@@ -78,6 +97,16 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The column encryption status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>NotEncrypted: Not encrypted.</description></item>
+            /// <item><description>Processing: Being processed.</description></item>
+            /// <item><description>Success: Encryption succeeded.</description></item>
+            /// <item><description>Failed: Encryption failed.</description></item>
+            /// <item><description>Deleting: Being disabled.</description></item>
+            /// <item><description>DeleteFailed: Disabling failed.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Success</para>
             /// </summary>
@@ -85,11 +114,16 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             [Validation(Required=false)]
             public string MaskingStatus { get; set; }
 
+            /// <summary>
+            /// <para>The list of matched model tags.</para>
+            /// </summary>
             [NameInMap("ModelTags")]
             [Validation(Required=false)]
             public List<ListDataMaskingColumnsResponseBodyItemsModelTags> ModelTags { get; set; }
             public class ListDataMaskingColumnsResponseBodyItemsModelTags : TeaModel {
                 /// <summary>
+                /// <para>The ID of the model tag.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>101</para>
                 /// </summary>
@@ -98,8 +132,10 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
                 public long? Id { get; set; }
 
                 /// <summary>
+                /// <para>The name of the model tag.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>个人信息</para>
+                /// <para>Personal information</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -108,6 +144,8 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             }
 
             /// <summary>
+            /// <para>The name of the data column.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>phone</para>
             /// </summary>
@@ -116,6 +154,8 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The cloud product code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>RDS</para>
             /// </summary>
@@ -124,6 +164,13 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string ProductCode { get; set; }
 
             /// <summary>
+            /// <para>The cloud product type ID. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>5: RDS.</description></item>
+            /// <item><description>8: POLARDB.</description></item>
+            /// <item><description>27: PolarDBX2.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>5</para>
             /// </summary>
@@ -132,6 +179,8 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? ProductId { get; set; }
 
             /// <summary>
+            /// <para>The region ID of the asset.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-zhangjiakou</para>
             /// </summary>
@@ -140,6 +189,8 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the sensitivity level.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -148,6 +199,8 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? RiskLevelId { get; set; }
 
             /// <summary>
+            /// <para>The name of the sensitivity level.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>S2</para>
             /// </summary>
@@ -156,6 +209,8 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string RiskLevelName { get; set; }
 
             /// <summary>
+            /// <para>The ID of the matched detection rule.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1001</para>
             /// </summary>
@@ -164,14 +219,18 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? RuleId { get; set; }
 
             /// <summary>
+            /// <para>The name of the matched detection rule.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>手机号</para>
+            /// <para>Phone number</para>
             /// </summary>
             [NameInMap("RuleName")]
             [Validation(Required=false)]
             public string RuleName { get; set; }
 
             /// <summary>
+            /// <para>The table name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>customer</para>
             /// </summary>
@@ -182,6 +241,8 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         }
 
         /// <summary>
+        /// <para>The number of records per page for the current query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -190,6 +251,8 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID, which can be used to locate this API call.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7C6D8E9F-1234-5678-ABCD-0123456789AB</para>
         /// </summary>
@@ -198,6 +261,8 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of records that match the current query scope.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
