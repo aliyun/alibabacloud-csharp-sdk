@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class UpdateConnectorResponseBody : TeaModel {
         /// <summary>
-        /// <para>Connector。</para>
+        /// <para>The connector.</para>
         /// </summary>
         [NameInMap("Connector")]
         [Validation(Required=false)]
         public UpdateConnectorResponseBodyConnector Connector { get; set; }
         public class UpdateConnectorResponseBodyConnector : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable Global Accelerator. Valid values:</para>
+            /// <para>Specifies whether to enable global acceleration. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Enabled</b>: Enabled.</description></item>
             /// <item><description><b>Disabled</b>: Disabled.</description></item>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string AccelerateStatus { get; set; }
 
             /// <summary>
-            /// <para>ConnectorID。</para>
+            /// <para>The connector ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>connector-94db94e06b98****</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string ConnectorId { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the Connector.</para>
+            /// <para>The time when the connector was created, in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-05-16 17:18:46</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The Connector name.</para>
+            /// <para>The name of the connector.</para>
             /// 
             /// <b>Example:</b>
             /// <para>connector_name</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The connection status of the Connector. Valid values:</para>
+            /// <para>The connection status of the connector. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Online</b>: Online.</description></item>
             /// <item><description><b>Offline</b>: Offline.</description></item>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The instance status of the Connector. Valid values:</para>
+            /// <para>The instance status of the connector. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Enabled</b>: Enabled.</description></item>
             /// <item><description><b>Disabled</b>: Shutdown.</description></item>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string SwitchStatus { get; set; }
 
             /// <summary>
-            /// <para>The upgrade time of the Connector.</para>
+            /// <para>The upgrade time of the connector.</para>
             /// </summary>
             [NameInMap("UpgradeTime")]
             [Validation(Required=false)]
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BE4FB974-11BC-5453-9BE1-1606A73EACA6</para>

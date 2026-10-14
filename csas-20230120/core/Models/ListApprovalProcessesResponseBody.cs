@@ -17,21 +17,21 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public List<ListApprovalProcessesResponseBodyProcesses> Processes { get; set; }
         public class ListApprovalProcessesResponseBodyProcesses : TeaModel {
             /// <summary>
-            /// <para>The list of policies associated with agent uninstallation.</para>
+            /// <para>The list of policies associated with endpoint uninstallation.</para>
             /// </summary>
             [NameInMap("AppUninstallPolicies")]
             [Validation(Required=false)]
             public ListApprovalProcessesResponseBodyProcessesAppUninstallPolicies AppUninstallPolicies { get; set; }
             public class ListApprovalProcessesResponseBodyProcessesAppUninstallPolicies : TeaModel {
                 /// <summary>
-                /// <para>The list of agent uninstallation policy IDs.</para>
+                /// <para>The IDs of the endpoint uninstallation policies.</para>
                 /// </summary>
                 [NameInMap("PolicyIds")]
                 [Validation(Required=false)]
                 public List<string> PolicyIds { get; set; }
 
                 /// <summary>
-                /// <para>The approval template ID.</para>
+                /// <para>The ID of the approval template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>approval-schema-090134f1ebff****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public int? ApprovalType { get; set; }
 
             /// <summary>
-            /// <para>The time when the approval process was created.</para>
+            /// <para>The time when the approval process was created. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-02-27 14:04:27</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <para>The description of the approval process.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>这是一个审批流程</para>
+            /// <para>This is an approval process</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public ListApprovalProcessesResponseBodyProcessesDeviceRegistrationPolicies DeviceRegistrationPolicies { get; set; }
             public class ListApprovalProcessesResponseBodyProcessesDeviceRegistrationPolicies : TeaModel {
                 /// <summary>
-                /// <para>The list of device registration policy IDs.</para>
+                /// <para>The IDs of the device registration policies.</para>
                 /// </summary>
                 [NameInMap("PolicyIds")]
                 [Validation(Required=false)]
                 public List<string> PolicyIds { get; set; }
 
                 /// <summary>
-                /// <para>The approval template ID.</para>
+                /// <para>The ID of the approval template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>approval-schema-090134f1ebff****</para>
@@ -93,21 +93,21 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             }
 
             /// <summary>
-            /// <para>The list of policies associated with file outgoing.</para>
+            /// <para>The list of policies associated with file sending.</para>
             /// </summary>
             [NameInMap("DlpSendPolicies")]
             [Validation(Required=false)]
             public ListApprovalProcessesResponseBodyProcessesDlpSendPolicies DlpSendPolicies { get; set; }
             public class ListApprovalProcessesResponseBodyProcessesDlpSendPolicies : TeaModel {
                 /// <summary>
-                /// <para>The list of file outgoing policy IDs.</para>
+                /// <para>The IDs of the file sending policies.</para>
                 /// </summary>
                 [NameInMap("PolicyIds")]
                 [Validation(Required=false)]
                 public List<string> PolicyIds { get; set; }
 
                 /// <summary>
-                /// <para>The approval template ID.</para>
+                /// <para>The ID of the approval template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>approval-schema-090134f1ebff****</para>
@@ -126,14 +126,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public ListApprovalProcessesResponseBodyProcessesDomainBlacklistPolicies DomainBlacklistPolicies { get; set; }
             public class ListApprovalProcessesResponseBodyProcessesDomainBlacklistPolicies : TeaModel {
                 /// <summary>
-                /// <para>The list of domain name blacklist policy IDs.</para>
+                /// <para>The IDs of the domain name blacklist policies.</para>
                 /// </summary>
                 [NameInMap("PolicyIds")]
                 [Validation(Required=false)]
                 public List<string> PolicyIds { get; set; }
 
                 /// <summary>
-                /// <para>The approval template ID.</para>
+                /// <para>The ID of the approval template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>approval-schema-090134f1ebff****</para>
@@ -152,14 +152,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public ListApprovalProcessesResponseBodyProcessesDomainWhitelistPolicies DomainWhitelistPolicies { get; set; }
             public class ListApprovalProcessesResponseBodyProcessesDomainWhitelistPolicies : TeaModel {
                 /// <summary>
-                /// <para>The list of domain name whitelist policy IDs.</para>
+                /// <para>The IDs of the domain name whitelist policies.</para>
                 /// </summary>
                 [NameInMap("PolicyIds")]
                 [Validation(Required=false)]
                 public List<string> PolicyIds { get; set; }
 
                 /// <summary>
-                /// <para>The approval template ID.</para>
+                /// <para>The ID of the approval template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>approval-schema-090134f1ebff****</para>
@@ -192,14 +192,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public ListApprovalProcessesResponseBodyProcessesPeripheralBlockPolicies PeripheralBlockPolicies { get; set; }
             public class ListApprovalProcessesResponseBodyProcessesPeripheralBlockPolicies : TeaModel {
                 /// <summary>
-                /// <para>The list of peripheral control policy IDs.</para>
+                /// <para>The IDs of the peripheral control policy.</para>
                 /// </summary>
                 [NameInMap("PolicyIds")]
                 [Validation(Required=false)]
                 public List<string> PolicyIds { get; set; }
 
                 /// <summary>
-                /// <para>The approval template ID.</para>
+                /// <para>The ID of the approval template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>approval-schema-090134f1ebff****</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             }
 
             /// <summary>
-            /// <para>The approval process ID.</para>
+            /// <para>The ID of the approval process.</para>
             /// 
             /// <b>Example:</b>
             /// <para>approval-process-35ee09077ee9****</para>
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <para>The name of the approval process.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试</para>
+            /// <para>Test</para>
             /// </summary>
             [NameInMap("ProcessName")]
             [Validation(Required=false)]
@@ -252,7 +252,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public List<List<ListApprovalProcessesResponseBodyProcessesProcessNodes>> ProcessNodes { get; set; }
             public class ListApprovalProcessesResponseBodyProcessesProcessNodes : TeaModel {
                 /// <summary>
-                /// <para>审批人ID。</para>
+                /// <para>The ID of the approver.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</para>
@@ -262,7 +262,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string SaseUserId { get; set; }
 
                 /// <summary>
-                /// <para>审批人用户名。</para>
+                /// <para>The username of the approver.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>王先生</para>
@@ -281,14 +281,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public ListApprovalProcessesResponseBodyProcessesSoftwareBlockPolicies SoftwareBlockPolicies { get; set; }
             public class ListApprovalProcessesResponseBodyProcessesSoftwareBlockPolicies : TeaModel {
                 /// <summary>
-                /// <para>The list of software blocking policy IDs.</para>
+                /// <para>The IDs of the software blocking policies.</para>
                 /// </summary>
                 [NameInMap("PolicyIds")]
                 [Validation(Required=false)]
                 public List<string> PolicyIds { get; set; }
 
                 /// <summary>
-                /// <para>The approval template ID.</para>
+                /// <para>The ID of the approval template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>approval-schema-090134f1ebff****</para>
@@ -316,7 +316,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7E39C33B-F565-55C6-ACC2-953FCE7DA7D6</para>

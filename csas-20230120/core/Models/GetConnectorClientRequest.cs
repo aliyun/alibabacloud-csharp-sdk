@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class GetConnectorClientRequest : TeaModel {
         /// <summary>
-        /// <para>The connector ID. You can call <a href="~~ListConnectors~~">ListConnectors</a> to query connectors.</para>
+        /// <para>The connector ID. You can obtain this value from the <a href="~~ListConnectors~~">ListConnectors</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string ConnectorId { get; set; }
 
         /// <summary>
-        /// <para>The unique device identifier of the ConnectorClient. You can call <a href="~~ListConnectors~~">ListConnectors</a> to query connectors.</para>
+        /// <para>The unique identifier of the ConnectorClient device. You can obtain this value from the <a href="~~ListConnectors~~">ListConnectors</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

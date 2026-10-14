@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class GetRegistrationPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time when the device registration policy was created.</para>
+        /// <para>The time when the device registration policy was created. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-05-16 17:18:46</para>
@@ -23,24 +23,24 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <para>The description of the device registration policy.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>这是一条设备注册策略。</para>
+        /// <para>This is a device registration policy</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The list of limit details of the device registration policy.</para>
+        /// <para>The list of limit details for the device registration policy.</para>
         /// </summary>
         [NameInMap("LimitDetail")]
         [Validation(Required=false)]
         public List<GetRegistrationPolicyResponseBodyLimitDetail> LimitDetail { get; set; }
         public class GetRegistrationPolicyResponseBodyLimitDetail : TeaModel {
             /// <summary>
-            /// <para>The ownership of the device. Valid values:</para>
+            /// <para>The device ownership. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Company</b>: company-owned device.</description></item>
-            /// <item><description><b>Personal</b>: personal device.</description></item>
+            /// <item><description><b>Company</b>: Corporate device.</description></item>
+            /// <item><description><b>Personal</b>: Personal device.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -51,14 +51,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string DeviceBelong { get; set; }
 
             /// <summary>
-            /// <para>The device registration limit count.</para>
+            /// <para>The limit on the number of device registrations.</para>
             /// </summary>
             [NameInMap("LimitCount")]
             [Validation(Required=false)]
             public GetRegistrationPolicyResponseBodyLimitDetailLimitCount LimitCount { get; set; }
             public class GetRegistrationPolicyResponseBodyLimitDetailLimitCount : TeaModel {
                 /// <summary>
-                /// <para>The total device registration limit. This parameter is valid when the device registration limit type is <b>LimitAll</b>.</para>
+                /// <para>The total limit on the number of device registrations. This field is valid only when the type of device registration limit is <b>LimitAll</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public int? All { get; set; }
 
                 /// <summary>
-                /// <para>The number of mobile logins allowed by the device registration limit. This parameter is valid when the device registration limit type is <b>LimitDiff</b>.</para>
+                /// <para>The limit on the number of mobile logons for device registration. This field is valid only when the type of device registration limit is <b>LimitDiff</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public int? Mobile { get; set; }
 
                 /// <summary>
-                /// <para>The number of PC logins allowed by the device registration limit. This parameter is valid when the device registration limit type is <b>LimitDiff</b>.</para>
+                /// <para>The limit on the number of PC logons for device registration. This field is valid only when the type of device registration limit is <b>LimitDiff</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -90,11 +90,11 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             }
 
             /// <summary>
-            /// <para>The type of the device registration limit. Valid values:</para>
+            /// <para>The type of device registration limit. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Unlimited</b>: no limit.</description></item>
-            /// <item><description><b>LimitAll</b>: limit by total count.</description></item>
-            /// <item><description><b>LimitDiff</b>: limit by terminal category.</description></item>
+            /// <item><description><b>Unlimited</b>: Unlimited.</description></item>
+            /// <item><description><b>LimitAll</b>: Limited by total count.</description></item>
+            /// <item><description><b>LimitDiff</b>: Limited by endpoint category.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -107,10 +107,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         }
 
         /// <summary>
-        /// <para>The match mode of the policy. Valid values:</para>
+        /// <para>The target type for policy matching. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>UserGroupAll</b>: associated with all users.</description></item>
-        /// <item><description><b>UserGroupNormal</b>: associated with specific user groups.</description></item>
+        /// <item><description><b>UserGroupAll</b>: All users.</description></item>
+        /// <item><description><b>UserGroupNormal</b>: Specific user groups.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string MatchMode { get; set; }
 
         /// <summary>
-        /// <para>The name of the device registration policy.</para>
+        /// <para>The policy name of the device registration policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>registration_policy_name</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string PolicyId { get; set; }
 
         /// <summary>
-        /// <para>The priority of the device registration policy. The value 0 indicates the highest priority, and the value 99 indicates the lowest priority.</para>
+        /// <para>The policy priority of the device registration policy. A value of 0 indicates the highest priority, and a value of 99 indicates the lowest priority.</para>
         /// 
         /// <b>Example:</b>
         /// <para>99</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public long? Priority { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>47363C2B-1AAA-5954-8847-0E50FCC54117</para>
@@ -163,8 +163,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <summary>
         /// <para>The status of the device registration policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enabled</b>: enabled.</description></item>
-        /// <item><description><b>Disabled</b>: disabled.</description></item>
+        /// <item><description><b>Enabled</b>: Enabled.</description></item>
+        /// <item><description><b>Disabled</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -175,14 +175,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the user groups associated with the device registration policy. This parameter is valid when the match mode of the policy is <b>UserGroupNormal</b>.</para>
+        /// <para>The IDs of the user groups associated with the device registration policy. This field has a value only when the target type for policy matching is <b>UserGroupNormal</b>.</para>
         /// </summary>
         [NameInMap("UserGroupIds")]
         [Validation(Required=false)]
         public List<string> UserGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The list of whitelisted users in the device registration policy.</para>
+        /// <para>The list of whitelisted users for the device registration policy.</para>
         /// </summary>
         [NameInMap("Whitelist")]
         [Validation(Required=false)]

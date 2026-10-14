@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <para>The primary channel.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Web Upload</para>
+            /// <para>Web upload</para>
             /// </summary>
             [NameInMap("ChannelType")]
             [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Department { get; set; }
 
             /// <summary>
-            /// <para>The local path of the file on the device.</para>
+            /// <para>The local path of the file on the endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>C:\Users\a\Desktop\x.xlsx</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string DevFilePath { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier of the device.</para>
+            /// <para>The unique identifier of the endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>69FFB8EB-3E5E-5F11-A9D3-59ED8CBB345D</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string DeviceTag { get; set; }
 
             /// <summary>
-            /// <para>The device type.</para>
+            /// <para>The endpoint type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Windows</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string DlpStorageType { get; set; }
 
             /// <summary>
-            /// <para>The outbound destination address or URL.</para>
+            /// <para>The destination address or URL of the outbound transfer.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://mail.example.com">https://mail.example.com</a></para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string FileOriginReferrer { get; set; }
 
             /// <summary>
-            /// <para>The file content preview snippet.</para>
+            /// <para>The preview snippet of the file content.</para>
             /// 
             /// <b>Example:</b>
             /// <para>preview</para>
@@ -170,14 +170,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <para>The organizational structure path.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>R&amp;D Center-Data Platform Team</para>
+            /// <para>R&amp;D Center - Data Platform Team</para>
             /// </summary>
             [NameInMap("GroupInfo")]
             [Validation(Required=false)]
             public string GroupInfo { get; set; }
 
             /// <summary>
-            /// <para>The hostname of the device.</para>
+            /// <para>The endpoint hostname.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MacBook-Pro</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string LogId { get; set; }
 
             /// <summary>
-            /// <para>The matched dictionary statistics.</para>
+            /// <para>The statistics of matched dictionaries.</para>
             /// </summary>
             [NameInMap("MatchedDicts")]
             [Validation(Required=false)]
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public List<ListDlpOutboundLogsResponseBodyLogsMatchedDictsInnerDicts> InnerDicts { get; set; }
                 public class ListDlpOutboundLogsResponseBodyLogsMatchedDictsInnerDicts : TeaModel {
                     /// <summary>
-                    /// <para>The number of matches.</para>
+                    /// <para>The hit count.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public List<ListDlpOutboundLogsResponseBodyLogsMatchedDictsKeywords> Keywords { get; set; }
                 public class ListDlpOutboundLogsResponseBodyLogsMatchedDictsKeywords : TeaModel {
                     /// <summary>
-                    /// <para>The number of matches.</para>
+                    /// <para>The hit count.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -269,7 +269,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public List<ListDlpOutboundLogsResponseBodyLogsMatchedDictsUserDicts> UserDicts { get; set; }
                 public class ListDlpOutboundLogsResponseBodyLogsMatchedDictsUserDicts : TeaModel {
                     /// <summary>
-                    /// <para>The number of matches.</para>
+                    /// <para>The hit count.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -313,14 +313,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 /// <para>The corresponding data type.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Company Data</para>
+                /// <para>Corporate data</para>
                 /// </summary>
                 [NameInMap("EngineDataType")]
                 [Validation(Required=false)]
                 public string EngineDataType { get; set; }
 
                 /// <summary>
-                /// <para>The matched detection rule name.</para>
+                /// <para>The name of the matched identification rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ID No</para>
@@ -340,7 +340,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string PolicyDesc { get; set; }
 
                 /// <summary>
-                /// <para>The matched policy name.</para>
+                /// <para>The hit Policy Name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>default</para>
@@ -379,7 +379,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public List<string> PolicyName { get; set; }
 
             /// <summary>
-            /// <para>The outbound process name.</para>
+            /// <para>The outbound transfer process name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>chrome.exe</para>
@@ -392,7 +392,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <para>The secondary channel description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>WeCom-FileSend</para>
+            /// <para>WeCom-File Transfer</para>
             /// </summary>
             [NameInMap("ProcessNameDesc")]
             [Validation(Required=false)]
@@ -442,14 +442,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <para>The original file name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2026Q2FinancialReport.xlsx</para>
+            /// <para>2026Q2_Financial_Report.xlsx</para>
             /// </summary>
             [NameInMap("SrcFileName")]
             [Validation(Required=false)]
             public string SrcFileName { get; set; }
 
             /// <summary>
-            /// <para>The source IP address of the device.</para>
+            /// <para>The source IP address of the endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.0.0.5</para>
@@ -459,7 +459,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string SrcIp { get; set; }
 
             /// <summary>
-            /// <para>The time when the event occurred.</para>
+            /// <para>The time when the event occurred. Format: YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-10 14:03:22</para>
@@ -469,7 +469,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the log was reported.</para>
+            /// <para>The time when the log was reported. Format: YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-10 14:03:25</para>
@@ -491,7 +491,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9350F06D-80FB-5B8B-983A-0E25CBD08479</para>
@@ -501,7 +501,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records that match the query conditions.</para>
+        /// <para>The total number of records that meet the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>120</para>

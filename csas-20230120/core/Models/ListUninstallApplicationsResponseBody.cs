@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListUninstallApplicationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of uninstall applications.</para>
+        /// <para>The list of uninstallation applications.</para>
         /// </summary>
         [NameInMap("Applications")]
         [Validation(Required=false)]
         public List<ListUninstallApplicationsResponseBodyApplications> Applications { get; set; }
         public class ListUninstallApplicationsResponseBodyApplications : TeaModel {
             /// <summary>
-            /// <para>The uninstall application ID.</para>
+            /// <para>The ID of the uninstallation application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>uninstall-app-6646831ac314****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>The time when the uninstall application was created.</para>
+            /// <para>The time when the uninstallation application was created. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-07-17 18:46:55</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <para>The department to which the user belongs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Testing Department</para>
+            /// <para>Test Department</para>
             /// </summary>
             [NameInMap("Department")]
             [Validation(Required=false)]
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Reason { get; set; }
 
             /// <summary>
-            /// <para>The user ID.</para>
+            /// <para>The ID of the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</para>
@@ -142,9 +142,9 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string SaseUserId { get; set; }
 
             /// <summary>
-            /// <para>The uninstall application status. Valid values:</para>
+            /// <para>The status of the uninstallation application. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Pending</b>: Pending processing.</description></item>
+            /// <item><description><b>Pending</b>: Pending.</description></item>
             /// <item><description><b>Approved</b>: Approved.</description></item>
             /// <item><description><b>Rejected</b>: Rejected.</description></item>
             /// </list>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of uninstall applications.</para>
+        /// <para>The total number of uninstallation applications.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string AccessModes { get; set; }
 
         /// <summary>
-        /// <para>The address of the internal-facing access application. The address is 1 to 128 characters in length and supports IPv4 addresses, CIDR blocks, domain names, and wildcard domain names.</para>
+        /// <para>The address of the private access application. The address must be 1 to 128 characters in length, and can be an IPv4 address, a CIDR block, a domain name, or a wildcard domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.0.0/16</para>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Address { get; set; }
 
         /// <summary>
-        /// <para>The IDs of internal-facing access applications. You can specify up to 100 application IDs.</para>
+        /// <para>The IDs of the private access applications. You can specify up to 100 IDs.</para>
         /// </summary>
         [NameInMap("ApplicationIds")]
         [Validation(Required=false)]
         public List<string> ApplicationIds { get; set; }
 
         /// <summary>
-        /// <para>The connector ID. You can obtain the ID from the <a href="~~ListConnectors~~">ListConnectors</a> operation.</para>
+        /// <para>The ID of the connector. You can obtain the ID from the following operation: <a href="~~ListConnectors~~">ListConnectors</a>: List connectors.</para>
         /// 
         /// <b>Example:</b>
         /// <para>connector-94db94e06b98****</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string ConnectorId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page displayed in a paged query. Valid values: 1 to 10000.</para>
+        /// <para>The page number of the current page in a paging query. Valid values: 1 to 10000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,23 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The name of the internal-facing access application. The name is 1 to 128 characters in length, supports Chinese and uppercase and lowercase letters, and can contain digits, periods (.), underscores (_), and hyphens (-).</para>
+        /// <para>Filters applications by health check status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>normal: The success rate of the last check is greater than or equal to 95%.</description></item>
+        /// <item><description>partialError: The success rate of the last check is greater than 0 and less than 95%.</description></item>
+        /// <item><description>error: The success rate of the last check is 0.</description></item>
+        /// <item><description>uncompleted: No check results are available.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>normal</para>
+        /// </summary>
+        [NameInMap("HealthCheckStatus")]
+        [Validation(Required=false)]
+        public string HealthCheckStatus { get; set; }
+
+        /// <summary>
+        /// <para>The name of the private access application. The name must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>private_access_application_name</para>
@@ -72,7 +88,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Valid values: 1 to 1000.</para>
+        /// <para>The Settings for the number of entries per page in a paging query. Valid values: 1 to 1000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -83,10 +99,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the internal-facing access policy. You can obtain the ID from the following operations:</para>
+        /// <para>The ID of the private access policy. You can obtain the ID from the following operations:</para>
         /// <list type="bullet">
-        /// <item><description><a href="~~ListPrivateAccessPolices~~">ListPrivateAccessPolices</a>: queries internal-facing access policies in batches.</description></item>
-        /// <item><description><a href="~~CreatePrivateAccessPolicy~~">CreatePrivateAccessPolicy</a>: creates an internal-facing access policy.</description></item>
+        /// <item><description><a href="~~ListPrivateAccessPolices~~">ListPrivateAccessPolices</a>: List private access policies.</description></item>
+        /// <item><description><a href="~~CreatePrivateAccessPolicy~~">CreatePrivateAccessPolicy</a>: Create a private access policy.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -97,7 +113,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string PolicyId { get; set; }
 
         /// <summary>
-        /// <para>The status of the internal-facing access application. Valid values:</para>
+        /// <para>The status of the private access application. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Enabled</b>: enabled.</description></item>
         /// <item><description><b>Disabled</b>: disabled.</description></item>
@@ -111,10 +127,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The ID of the internal-facing access tag. You can obtain the ID from the following operations:</para>
+        /// <para>The ID of the private access tag. You can obtain the ID from the following operations:</para>
         /// <list type="bullet">
-        /// <item><description><a href="~~ListPrivateAccessTags~~">ListPrivateAccessTags</a>: queries internal-facing access tags in batches.</description></item>
-        /// <item><description><a href="~~CreatePrivateAccessTag~~">CreatePrivateAccessTag</a>: creates an internal-facing access tag.</description></item>
+        /// <item><description><a href="~~ListPrivateAccessTags~~">ListPrivateAccessTags</a>: List private access tags.</description></item>
+        /// <item><description><a href="~~CreatePrivateAccessTag~~">CreatePrivateAccessTag</a>: Create a private access tag.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

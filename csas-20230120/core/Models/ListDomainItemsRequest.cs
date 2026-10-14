@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListDomainItemsRequest : TeaModel {
         /// <summary>
-        /// <para>The current page number in paging.</para>
+        /// <para>The page number of the current page in a paged query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string ItemValue { get; set; }
 
         /// <summary>
-        /// <para>The list ID. This is a unique business identifier used for policy references and CRUD operations.</para>
+        /// <para>The list ID. This is a unique business identifier used for policy references and create, delete, and update operations.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,11 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string ListId { get; set; }
 
         /// <summary>
-        /// <para>The list type (Blacklist/Whitelist).</para>
+        /// <para>The list type (Blacklist/Whitelist). Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>la_domain_white_list: domain name whitelist.</description></item>
+        /// <item><description>la_domain_black_list: domain name blacklist.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +57,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string ListType { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in paging. Valid values: 1 to 1000.</para>
+        /// <para>The number of entries per page in a paged query. Valid values: 1 to 1000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

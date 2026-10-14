@@ -10,14 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListDomainAccessLogsRequest : TeaModel {
         /// <summary>
-        /// <para>The action taken upon a rule hit. Exact match is used. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Audit: Audit.</description></item>
-        /// <item><description>Observe: Observe only.</description></item>
-        /// <item><description>WhiteList: Allowed by whitelist.</description></item>
-        /// <item><description>Block: Blocked.</description></item>
-        /// <item><description>Redirect: Redirected to a prompt page.</description></item>
-        /// </list>
+        /// <para>The matched action for exact match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Block</para>
@@ -37,7 +30,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The department. Exact match is used.</para>
+        /// <para>The department for exact match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>IT department</para>
@@ -47,7 +40,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Department { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. This value is a UNIX timestamp in seconds.</para>
+        /// <para>The end time of the query, which is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1754956800</para>
@@ -57,7 +50,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in paging. Valid values: 1 to 1000.</para>
+        /// <para>The Settings for the number of entries per page during paging in a paged query. Valid values: 1 to 1000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -67,7 +60,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The policy type used to filter results.</para>
+        /// <para>The policy type used for filtering.</para>
         /// 
         /// <b>Example:</b>
         /// <para>la_domain_white</para>
@@ -77,7 +70,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string PolicyType { get; set; }
 
         /// <summary>
-        /// <para>The destination domain name accessed. Exact match is used.</para>
+        /// <para>The destination domain name for exact match.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.example.com">www.example.com</a></para>
@@ -87,7 +80,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string RemoteHost { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. This value is a UNIX timestamp in seconds.</para>
+        /// <para>The start time of the query, which is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1754870400</para>
@@ -97,7 +90,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The username. Exact match is used.</para>
+        /// <para>The username for exact match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zhangsan</para>

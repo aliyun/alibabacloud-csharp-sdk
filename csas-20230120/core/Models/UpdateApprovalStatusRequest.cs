@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class UpdateApprovalStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The approval instance ID. You can obtain this value from the following operations:</para>
+        /// <para>The ID of the approval instance. You can obtain the value from the following operations:</para>
         /// <list type="bullet">
-        /// <item><description><a href="~~ListApprovals~~">ListApprovals</a>: Lists approval instances.</description></item>
+        /// <item><description><a href="~~ListApprovals~~">ListApprovals</a>: Queries a list of approval instances.</description></item>
         /// <item><description><a href="~~GetApproval~~">GetApproval</a>: Queries the details of an approval instance.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -25,10 +25,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string ApprovalId { get; set; }
 
         /// <summary>
-        /// <para>The approval instance status. Valid values:</para>
+        /// <para>The status of the approval instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Approved</b>: Approved.</description></item>
-        /// <item><description><b>Rejected</b>: Rejected.</description></item>
+        /// <item><description><b>Rejected</b>: deny.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

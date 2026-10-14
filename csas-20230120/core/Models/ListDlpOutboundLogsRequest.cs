@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListDlpOutboundLogsRequest : TeaModel {
         /// <summary>
-        /// <para>The current page number, starting from 1.</para>
+        /// <para>The current page number. Pages start from 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. UNIX timestamp in seconds.</para>
+        /// <para>The end time of the query. The value is a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The policy action. Single-value exact match.</para>
+        /// <para>The policy action. Exact match for a single value is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>block_and_hint</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string PolicyAction { get; set; }
 
         /// <summary>
-        /// <para>The original file name. Fuzzy match.</para>
+        /// <para>The original file name. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TestFile</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string SrcFileName { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. UNIX timestamp in seconds.</para>
+        /// <para>The start time of the query. The value is a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The secondary channel ID in the format of <c>PrimaryChannelID.SubChannelID</c>. Separate multiple values with commas.</para>
+        /// <para>The secondary channel ID. Format: primary channel ID.secondary channel ID. Multiple values are separated by commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3.1,3.2</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string SubChannelType { get; set; }
 
         /// <summary>
-        /// <para>The username. Exact match.</para>
+        /// <para>The username. Exact match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zhangsan</para>

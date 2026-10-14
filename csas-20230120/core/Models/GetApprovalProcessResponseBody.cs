@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public GetApprovalProcessResponseBodyProcessAppUninstallPolicies AppUninstallPolicies { get; set; }
             public class GetApprovalProcessResponseBodyProcessAppUninstallPolicies : TeaModel {
                 /// <summary>
-                /// <para>The external process ID.</para>
+                /// <para>The ID of the external process.</para>
                 /// </summary>
                 [NameInMap("ExternalProcessId")]
                 [Validation(Required=false)]
                 public string ExternalProcessId { get; set; }
 
                 /// <summary>
-                /// <para>The field mapping table.</para>
+                /// <para>The field mapping.</para>
                 /// </summary>
                 [NameInMap("FieldMap")]
                 [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 }
 
                 /// <summary>
-                /// <para>The list of endpoint uninstall policy IDs.</para>
+                /// <para>The list of endpoint uninstallation policy IDs.</para>
                 /// </summary>
                 [NameInMap("PolicyIds")]
                 [Validation(Required=false)]
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public int? ApprovalType { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the approval process.</para>
+            /// <para>The creation time of the approval process. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-10-25 10:44:09</para>
@@ -117,14 +117,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public GetApprovalProcessResponseBodyProcessDeviceRegistrationPolicies DeviceRegistrationPolicies { get; set; }
             public class GetApprovalProcessResponseBodyProcessDeviceRegistrationPolicies : TeaModel {
                 /// <summary>
-                /// <para>The external process ID.</para>
+                /// <para>The ID of the external process.</para>
                 /// </summary>
                 [NameInMap("ExternalProcessId")]
                 [Validation(Required=false)]
                 public string ExternalProcessId { get; set; }
 
                 /// <summary>
-                /// <para>The field mapping table.</para>
+                /// <para>The field mapping.</para>
                 /// </summary>
                 [NameInMap("FieldMap")]
                 [Validation(Required=false)]
@@ -170,21 +170,21 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             }
 
             /// <summary>
-            /// <para>The list of associated policies for file outgoing.</para>
+            /// <para>The list of associated outbound file policies.</para>
             /// </summary>
             [NameInMap("DlpSendPolicies")]
             [Validation(Required=false)]
             public GetApprovalProcessResponseBodyProcessDlpSendPolicies DlpSendPolicies { get; set; }
             public class GetApprovalProcessResponseBodyProcessDlpSendPolicies : TeaModel {
                 /// <summary>
-                /// <para>The external process ID.</para>
+                /// <para>The ID of the external process.</para>
                 /// </summary>
                 [NameInMap("ExternalProcessId")]
                 [Validation(Required=false)]
                 public string ExternalProcessId { get; set; }
 
                 /// <summary>
-                /// <para>The field mapping table.</para>
+                /// <para>The field mapping.</para>
                 /// </summary>
                 [NameInMap("FieldMap")]
                 [Validation(Required=false)]
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 }
 
                 /// <summary>
-                /// <para>The list of file outgoing policy IDs.</para>
+                /// <para>The list of outbound file policy IDs.</para>
                 /// </summary>
                 [NameInMap("PolicyIds")]
                 [Validation(Required=false)]
@@ -230,21 +230,21 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             }
 
             /// <summary>
-            /// <para>The list of policies associated with the domain blacklist.</para>
+            /// <para>The list of policies associated with the domain name blacklist.</para>
             /// </summary>
             [NameInMap("DomainBlacklistPolicies")]
             [Validation(Required=false)]
             public GetApprovalProcessResponseBodyProcessDomainBlacklistPolicies DomainBlacklistPolicies { get; set; }
             public class GetApprovalProcessResponseBodyProcessDomainBlacklistPolicies : TeaModel {
                 /// <summary>
-                /// <para>The external process ID.</para>
+                /// <para>The ID of the external process.</para>
                 /// </summary>
                 [NameInMap("ExternalProcessId")]
                 [Validation(Required=false)]
                 public string ExternalProcessId { get; set; }
 
                 /// <summary>
-                /// <para>The field mapping table.</para>
+                /// <para>The field mapping.</para>
                 /// </summary>
                 [NameInMap("FieldMap")]
                 [Validation(Required=false)]
@@ -271,7 +271,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 }
 
                 /// <summary>
-                /// <para>The list of domain blacklist policy IDs.</para>
+                /// <para>The list of domain name blacklist policy IDs.</para>
                 /// </summary>
                 [NameInMap("PolicyIds")]
                 [Validation(Required=false)]
@@ -290,14 +290,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             }
 
             /// <summary>
-            /// <para>The list of policies associated with the domain whitelist.</para>
+            /// <para>The list of policies associated with the domain name whitelist.</para>
             /// </summary>
             [NameInMap("DomainWhitelistPolicies")]
             [Validation(Required=false)]
             public GetApprovalProcessResponseBodyProcessDomainWhitelistPolicies DomainWhitelistPolicies { get; set; }
             public class GetApprovalProcessResponseBodyProcessDomainWhitelistPolicies : TeaModel {
                 /// <summary>
-                /// <para>The external process ID.</para>
+                /// <para>The ID of the external process.</para>
                 /// </summary>
                 [NameInMap("ExternalProcessId")]
                 [Validation(Required=false)]
@@ -331,7 +331,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 }
 
                 /// <summary>
-                /// <para>The list of domain whitelist policy IDs.</para>
+                /// <para>The list of domain name whitelist policy IDs.</para>
                 /// </summary>
                 [NameInMap("PolicyIds")]
                 [Validation(Required=false)]
@@ -350,21 +350,21 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             }
 
             /// <summary>
-            /// <para>The endpoint protection policy.</para>
+            /// <para>The endpoint hardening policies.</para>
             /// </summary>
             [NameInMap("EndpointHardeningPolicies")]
             [Validation(Required=false)]
             public GetApprovalProcessResponseBodyProcessEndpointHardeningPolicies EndpointHardeningPolicies { get; set; }
             public class GetApprovalProcessResponseBodyProcessEndpointHardeningPolicies : TeaModel {
                 /// <summary>
-                /// <para>The external process ID.</para>
+                /// <para>The ID of the external process.</para>
                 /// </summary>
                 [NameInMap("ExternalProcessId")]
                 [Validation(Required=false)]
                 public string ExternalProcessId { get; set; }
 
                 /// <summary>
-                /// <para>The field mapping table.</para>
+                /// <para>The field mapping.</para>
                 /// </summary>
                 [NameInMap("FieldMap")]
                 [Validation(Required=false)]
@@ -421,21 +421,21 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string ExternalConfig { get; set; }
 
             /// <summary>
-            /// <para>The list of associated policies for peripheral control.</para>
+            /// <para>The list of associated peripheral control policies.</para>
             /// </summary>
             [NameInMap("PeripheralBlockPolicies")]
             [Validation(Required=false)]
             public GetApprovalProcessResponseBodyProcessPeripheralBlockPolicies PeripheralBlockPolicies { get; set; }
             public class GetApprovalProcessResponseBodyProcessPeripheralBlockPolicies : TeaModel {
                 /// <summary>
-                /// <para>The external process ID.</para>
+                /// <para>The ID of the external process.</para>
                 /// </summary>
                 [NameInMap("ExternalProcessId")]
                 [Validation(Required=false)]
                 public string ExternalProcessId { get; set; }
 
                 /// <summary>
-                /// <para>The field mapping table.</para>
+                /// <para>The field mapping.</para>
                 /// </summary>
                 [NameInMap("FieldMap")]
                 [Validation(Required=false)]
@@ -488,14 +488,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public GetApprovalProcessResponseBodyProcessPrivateAccessBlockPolicies PrivateAccessBlockPolicies { get; set; }
             public class GetApprovalProcessResponseBodyProcessPrivateAccessBlockPolicies : TeaModel {
                 /// <summary>
-                /// <para>The external process ID.</para>
+                /// <para>The ID of the external process.</para>
                 /// </summary>
                 [NameInMap("ExternalProcessId")]
                 [Validation(Required=false)]
                 public string ExternalProcessId { get; set; }
 
                 /// <summary>
-                /// <para>The field mapping table.</para>
+                /// <para>The field mapping.</para>
                 /// </summary>
                 [NameInMap("FieldMap")]
                 [Validation(Required=false)]
@@ -575,10 +575,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string SaseUserId { get; set; }
 
                 /// <summary>
-                /// <para>The username of the approver.</para>
+                /// <para>The approver username.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>John</para>
+                /// <para>王先生</para>
                 /// </summary>
                 [NameInMap("Username")]
                 [Validation(Required=false)]
@@ -594,14 +594,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public GetApprovalProcessResponseBodyProcessSoftwareBlockPolicies SoftwareBlockPolicies { get; set; }
             public class GetApprovalProcessResponseBodyProcessSoftwareBlockPolicies : TeaModel {
                 /// <summary>
-                /// <para>The external process ID.</para>
+                /// <para>The ID of the external process.</para>
                 /// </summary>
                 [NameInMap("ExternalProcessId")]
                 [Validation(Required=false)]
                 public string ExternalProcessId { get; set; }
 
                 /// <summary>
-                /// <para>The field mapping table.</para>
+                /// <para>The field mapping.</para>
                 /// </summary>
                 [NameInMap("FieldMap")]
                 [Validation(Required=false)]
@@ -654,14 +654,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public GetApprovalProcessResponseBodyProcessSoftwareHardeningPolicies SoftwareHardeningPolicies { get; set; }
             public class GetApprovalProcessResponseBodyProcessSoftwareHardeningPolicies : TeaModel {
                 /// <summary>
-                /// <para>The external process ID.</para>
+                /// <para>The ID of the external process.</para>
                 /// </summary>
                 [NameInMap("ExternalProcessId")]
                 [Validation(Required=false)]
                 public string ExternalProcessId { get; set; }
 
                 /// <summary>
-                /// <para>The field mapping table.</para>
+                /// <para>The field mapping.</para>
                 /// </summary>
                 [NameInMap("FieldMap")]
                 [Validation(Required=false)]
@@ -706,7 +706,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         }
 
         /// <summary>
-        /// <para>The ID of this request.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C81E0B4B-AAEB-5FDD-B27E-3F5AF7EBD7EF</para>

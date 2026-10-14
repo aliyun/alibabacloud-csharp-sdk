@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class UpdatePrivateAccessApplicationRequest : TeaModel {
         /// <summary>
-        /// <para>The application address groups. This parameter can be specified when ConfigMode is set to Precise. This parameter cannot be specified when ConfigMode is an empty string.</para>
+        /// <para>The application address groups. You can specify this parameter when ConfigMode is Precise. You cannot specify this parameter when ConfigMode is an empty string.</para>
         /// </summary>
         [NameInMap("AddressGroups")]
         [Validation(Required=false)]
         public List<AddressGroup> AddressGroups { get; set; }
 
         /// <summary>
-        /// <para>The addresses of the private access application. You can specify up to 1000 addresses.</para>
+        /// <para>The collection of private access application addresses. You can enter up to 1,000 private access application addresses.</para>
         /// </summary>
         [NameInMap("Addresses")]
         [Validation(Required=false)]
         public List<string> Addresses { get; set; }
 
         /// <summary>
-        /// <para>The ID of the private access application. You can obtain the value from:</para>
+        /// <para>The ID of the private access application. You can obtain the value from the following operations:</para>
         /// <list type="bullet">
         /// <item><description><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: Lists private access applications.</description></item>
         /// <item><description><a href="~~CreatePrivateAccessApplication~~">CreatePrivateAccessApplication</a>: Creates a private access application.</description></item>
@@ -41,16 +41,19 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <summary>
         /// <para>The configuration mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Empty string: default mode.</description></item>
-        /// <item><description>Precise: precise mode.</description></item>
+        /// <item><description>Empty string: the default mode.</description></item>
+        /// <item><description>Precise: the precise mode.</description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Precise</para>
         /// </summary>
         [NameInMap("ConfigMode")]
         [Validation(Required=false)]
         public string ConfigMode { get; set; }
 
         /// <summary>
-        /// <para>The description of the private access application. The description must be 1 to 128 characters in length and can contain Chinese characters, letters, digits, periods (.), underscores (_), hyphens (-), and spaces.</para>
+        /// <para>The description of the private access application. The description must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), and spaces.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is a private access application</para>
@@ -63,14 +66,36 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The browser access mode parameter: the Layer 7 application configuration.</para>
+        /// <para>The health check configuration. This parameter is valid only when HealthCheckMode is set to Continuous. You cannot specify this parameter when HealthCheckMode is set to OnAccess.</para>
+        /// </summary>
+        [NameInMap("HealthCheckConfig")]
+        [Validation(Required=false)]
+        public HealthCheckConfig HealthCheckConfig { get; set; }
+
+        /// <summary>
+        /// <para>The health check mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>OnAccess: Checks upon access without active probing.</description></item>
+        /// <item><description>Continuous: Performs continuous checks and periodically probes based on the configurations in HealthCheckConfig.
+        /// If this parameter is not specified, the default value is OnAccess. When the application addresses include wildcard domain names or CIDR blocks, or when the number of application addresses exceeds 10, only OnAccess is supported.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OnAccess</para>
+        /// </summary>
+        [NameInMap("HealthCheckMode")]
+        [Validation(Required=false)]
+        public string HealthCheckMode { get; set; }
+
+        /// <summary>
+        /// <para>The Layer 7 application configuration in browser access mode.</para>
         /// </summary>
         [NameInMap("L7Config")]
         [Validation(Required=false)]
         public PAL7Config L7Config { get; set; }
 
         /// <summary>
-        /// <para>The browser access mode parameter: the prefix of the mapped proxy domain name. The prefix must be 3 to 20 characters in length and can contain lowercase letters, digits, and hyphens (-).</para>
+        /// <para>The prefix of the mapped proxy domain name in browser access mode. The prefix must be 3 to 20 characters in length, and can contain lowercase letters, digits, and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>app1-xxx</para>
@@ -80,7 +105,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string L7ProxyDomainAutomaticPrefix { get; set; }
 
         /// <summary>
-        /// <para>The browser access mode parameter: the custom proxy domain name.</para>
+        /// <para>The custom proxy domain name in browser access mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app1.example.com</para>
@@ -92,7 +117,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The browser access mode parameter: the private proxy domain name.</para>
+        /// <para>The private proxy domain name in browser access mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app1.example.com</para>
@@ -105,8 +130,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <summary>
         /// <para>The modification type of the private access application. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Cover</b> (default): overwrites the original addresses, port ranges, and tag IDs with the values of the <b>Addresses</b>, <b>PortRanges</b>, and <b>TagIds</b> parameters.</description></item>
-        /// <item><description><b>Append</b>: appends the values of the <b>Addresses</b>, <b>PortRanges</b>, and <b>TagIds</b> parameters to the original addresses, port ranges, and tag IDs.</description></item>
+        /// <item><description><b>Cover</b> (default): Overwrites the original addresses, port ranges, and tag IDs with the values of the <b>Addresses</b>, <b>PortRanges</b>, and <b>TagIds</b> parameters.</description></item>
+        /// <item><description><b>Append</b>: Appends the values specified in the <b>Addresses</b>, <b>PortRanges</b>, and <b>TagIds</b> parameters to the original addresses, port ranges, and tag IDs.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -117,14 +142,17 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string ModifyType { get; set; }
 
         /// <summary>
-        /// <para>The application name.</para>
+        /// <para>The name of the application.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>private_access_application_name</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The port ranges of the private access application. You can specify up to 65535 port ranges. Multiple port ranges cannot overlap.</para>
+        /// <para>The collection of port ranges for the private access application. You can enter up to 65,535 port ranges. Multiple port ranges cannot be duplicate or overlap.</para>
         /// </summary>
         [NameInMap("PortRanges")]
         [Validation(Required=false)]
@@ -155,7 +183,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <summary>
         /// <para>The protocol of the private access application. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>All</b>: all protocols.</description></item>
+        /// <item><description><b>All</b>: All protocols.</description></item>
         /// <item><description><b>TCP</b></description></item>
         /// <item><description><b>UDP</b></description></item>
         /// </list>
@@ -170,8 +198,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <summary>
         /// <para>The status of the private access application. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enabled</b>: enabled.</description></item>
-        /// <item><description><b>Disabled</b>: disabled.</description></item>
+        /// <item><description><b>Enabled</b>: Enabled.</description></item>
+        /// <item><description><b>Disabled</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -182,7 +210,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The IDs of private access tags. A private access application can be associated with up to 6 custom private access tags.</para>
+        /// <para>The collection of private access tag IDs. You can associate up to six custom private access tags with a single private access application.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>

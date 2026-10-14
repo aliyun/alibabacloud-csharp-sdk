@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public List<ListSoftwarelibSoftwareResponseBodyDataList> DataList { get; set; }
         public class ListSoftwarelibSoftwareResponseBodyDataList : TeaModel {
             /// <summary>
-            /// <para>The associated built-in software ID.</para>
+            /// <para>The ID of the associated built-in software.</para>
             /// 
             /// <b>Example:</b>
             /// <para>softwarelib-software-1da844a39729****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string BuiltinSoftwareId { get; set; }
 
             /// <summary>
-            /// <para>The software BundleId used for verification.</para>
+            /// <para>The software bundle ID used for verification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test software</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string CheckSoftwareName { get; set; }
 
             /// <summary>
-            /// <para>The software classification ID.</para>
+            /// <para>The software category ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>softwarelib-classify-61b7ccc63cae****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string ClassifyId { get; set; }
 
             /// <summary>
-            /// <para>The time when the software was created, in seconds-level UNIX timestamp.</para>
+            /// <para>The time when the software was created. The value is a UNIX timestamp accurate to seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1781748302</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The list of associated terminal device IDs.</para>
+            /// <para>The list of associated endpoint device IDs.</para>
             /// </summary>
             [NameInMap("DevTags")]
             [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public List<string> DeviceGroupIds { get; set; }
 
             /// <summary>
-            /// <para>The number of times the software has been manually downloaded from the client.</para>
+            /// <para>The number of times the software is manually downloaded from the client.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string LogoUrl { get; set; }
 
             /// <summary>
-            /// <para>The latest software version number for Mac (Apple).</para>
+            /// <para>The maximum software version number for macOS with Apple silicon.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0.0</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string MacAppleVersion { get; set; }
 
             /// <summary>
-            /// <para>The latest software version number for Mac (Intel).</para>
+            /// <para>The maximum software version number for macOS with Intel chips.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0.0</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string MacIntelVersion { get; set; }
 
             /// <summary>
-            /// <para>The policy matching target type. Valid values:</para>
+            /// <para>The policy match target type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>UserGroupAll</b>: all users.</description></item>
             /// <item><description><b>UserGroupNormal</b>: specified user groups.</description></item>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string OfficialDownloadUrl { get; set; }
 
             /// <summary>
-            /// <para>The execution account (only supported on Windows).</para>
+            /// <para>The execution account. Only Windows is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>admin</para>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string SoftwareName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the built-in library source has been deleted.</para>
+            /// <para>Indicates whether the built-in library source is deleted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -230,14 +230,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public List<string> UserGroupIds { get; set; }
 
             /// <summary>
-            /// <para>The software version list. This field is not returned by this operation. Call <a href="~~ListSoftwarelibVersion~~">ListSoftwarelibVersion</a> to query software versions.</para>
+            /// <para>The software version list. This field is not returned by the current operation. Call <a href="~~ListSoftwarelibVersion~~">ListSoftwarelibVersion</a> to query software versions.</para>
             /// </summary>
             [NameInMap("Versions")]
             [Validation(Required=false)]
             public List<ListSoftwarelibSoftwareResponseBodyDataListVersions> Versions { get; set; }
             public class ListSoftwarelibSoftwareResponseBodyDataListVersions : TeaModel {
                 /// <summary>
-                /// <para>The time when the software version was created.</para>
+                /// <para>The time when the software version was created. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-08-05 18:03:58</para>
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The number of times the software has been downloaded from the client.</para>
+                /// <para>The number of times the software is downloaded from the client.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public long? DownloadTimes { get; set; }
 
                 /// <summary>
-                /// <para>The MD5 value of the software package.</para>
+                /// <para>The MD5 hash value of the software package.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0b5824cdd509d3ed560e2d20d29a1bcb</para>
@@ -277,11 +277,11 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string ModifyTime { get; set; }
 
                 /// <summary>
-                /// <para>The operating system to which the software package applies. Valid values:</para>
+                /// <para>The operating system applicable to the software package. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>Windows</b>: Windows.</description></item>
                 /// <item><description><b>Mac(Apple)</b>: macOS with Apple silicon.</description></item>
-                /// <item><description><b>Mac(Intel)</b>: macOS with Intel processors.</description></item>
+                /// <item><description><b>Mac(Intel)</b>: macOS with Intel chips.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -294,7 +294,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 /// <summary>
                 /// <para>The software publisher type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>local</b>: locally uploaded.</description></item>
+                /// <item><description><b>local</b>: local upload.</description></item>
                 /// <item><description><b>thirdparty</b>: third-party link.</description></item>
                 /// </list>
                 /// 
@@ -306,7 +306,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string PublisherType { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the software to which this version belongs.</para>
+                /// <para>The ID of the software to which the version belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>softwarelib-software-1da844a39729****</para>
@@ -346,10 +346,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string SoftwareUrl { get; set; }
 
                 /// <summary>
-                /// <para>The version publish status. Valid values:</para>
+                /// <para>The release status of the version. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>published</b>: published.</description></item>
-                /// <item><description><b>unpublished</b>: not published.</description></item>
+                /// <item><description><b>unpublished</b>: unpublished.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -382,7 +382,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             }
 
             /// <summary>
-            /// <para>The latest software version number for Windows.</para>
+            /// <para>The maximum software version number for Windows.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0.0</para>
@@ -394,7 +394,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries per page. This parameter is not returned by this operation.</para>
+        /// <para>The maximum number of entries per page. This parameter is not returned by the current operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -404,7 +404,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. This parameter is not returned by this operation.</para>
+        /// <para>The query token. This parameter is not returned by the current operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FFM+3L1WZbKngBeLWcDmQrzLuGDDwAw7JA5q2AjvTSJm9WyhQ0MwJoOWpky9ZhgcWfIgtGpZ+4NQX97+EIwsqUNQ==</para>
@@ -424,7 +424,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of software entries that match the query conditions.</para>
+        /// <para>The total number of software packages that meet the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

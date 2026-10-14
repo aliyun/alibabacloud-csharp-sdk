@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class UpdateUninstallApplicationsStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of uninstall applications.</para>
+        /// <para>The list of uninstallation applications.</para>
         /// </summary>
         [NameInMap("Applications")]
         [Validation(Required=false)]
         public List<UpdateUninstallApplicationsStatusResponseBodyApplications> Applications { get; set; }
         public class UpdateUninstallApplicationsStatusResponseBodyApplications : TeaModel {
             /// <summary>
-            /// <para>The uninstall application ID.</para>
+            /// <para>The uninstallation application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>uninstall-app-6646831ac314****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>The time when the uninstall application was created.</para>
+            /// <para>The time when the uninstallation application was created. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-07-17 18:46:55</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <para>The department to which the user belongs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Testing Department</para>
+            /// <para>Test Department</para>
             /// </summary>
             [NameInMap("Department")]
             [Validation(Required=false)]
             public string Department { get; set; }
 
             /// <summary>
-            /// <para>The ID of the endpoint device.</para>
+            /// <para>The ID of the terminal device.</para>
             /// 
             /// <b>Example:</b>
             /// <para>36efa42d-2c32-c4dc-e3fc-8541e33a****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string DevTag { get; set; }
 
             /// <summary>
-            /// <para>The operating system type of the endpoint device. Valid values:</para>
+            /// <para>The operating system type of the terminal device. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Windows</b>: Windows.</description></item>
             /// <item><description><b>macOS</b>: macOS.</description></item>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string DevType { get; set; }
 
             /// <summary>
-            /// <para>The name of the endpoint device.</para>
+            /// <para>The name of the terminal device.</para>
             /// 
             /// <b>Example:</b>
             /// <para>win10-64bit</para>
@@ -85,17 +85,17 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Hostname { get; set; }
 
             /// <summary>
-            /// <para>The name of the identity provider.</para>
+            /// <para>The name of the user identity source.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Test Identity Provider</para>
+            /// <para>Test Identity Source</para>
             /// </summary>
             [NameInMap("IdpName")]
             [Validation(Required=false)]
             public string IdpName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the uninstallation has been performed.</para>
+            /// <para>Specifies whether the uninstallation has been executed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public bool? IsUninstall { get; set; }
 
             /// <summary>
-            /// <para>The MAC address of the endpoint device.</para>
+            /// <para>The MAC address of the terminal device.</para>
             /// 
             /// <b>Example:</b>
             /// <para>00:16:XX:XX:7c:46</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string SaseUserId { get; set; }
 
             /// <summary>
-            /// <para>The status of the uninstall application. Valid values:</para>
+            /// <para>The status of the uninstallation application. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Pending</b>: Pending.</description></item>
             /// <item><description><b>Approved</b>: Approved.</description></item>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9B769522-D50C-5978-8981-52BE800D6099</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class GetConnectorRequest : TeaModel {
         /// <summary>
-        /// <para>ConnectorID。</para>
+        /// <para>The connector ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

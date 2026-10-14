@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListSoftwarelibSoftwareRequest : TeaModel {
         /// <summary>
-        /// <para>The software classification ID. You can call <a href="~~ListSoftwarelibClassify~~">ListSoftwarelibClassify</a> to obtain the value.</para>
+        /// <para>The software category ID. You can call <a href="~~ListSoftwarelibClassify~~">ListSoftwarelibClassify</a> to obtain the value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>softwarelib-classify-61b7ccc63cae****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string ClassifyId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page in a paging query. Valid values: 1 to 10000.</para>
+        /// <para>The page number of the current page displayed during paging in a paged query. Valid values: 1 to 10000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page. This parameter is not supported by this operation. Use CurrentPage and PageSize for pagination.</para>
+        /// <para>The maximum number of entries per page. This parameter is not supported by the current operation. Use CurrentPage and PageSize for pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. This parameter is not supported by this operation. Use CurrentPage and PageSize for pagination.</para>
+        /// <para>The query token. This parameter is not supported by the current operation. Use CurrentPage and PageSize for pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAARbaCuN6hiD08qrLdwJ9Fh27/Jy4SXvlU9WgqeV7az+t</para>
@@ -51,11 +51,11 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The operating system to which the software package applies. Valid values:</para>
+        /// <para>The operating system applicable to the software package. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Windows</b>: Windows.</description></item>
         /// <item><description><b>Mac(Apple)</b>: macOS with Apple silicon.</description></item>
-        /// <item><description><b>Mac(Intel)</b>: macOS with Intel processors.</description></item>
+        /// <item><description><b>Mac(Intel)</b>: macOS with Intel chips.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Os { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paging query. Valid values: 1 to 500.</para>
+        /// <para>The Settings for the number of entries per page during paging in a paged query. Valid values: 1 to 500.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

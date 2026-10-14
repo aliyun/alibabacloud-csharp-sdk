@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListPrivateAccessPolicesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the private access application. The application ID cannot be used together with the private access tag ID for filtering. Sources of the value:</para>
+        /// <para>The ID of the private access application. This parameter cannot be used together with the private access tag ID for filtering. You can obtain the value from the following sources:</para>
         /// <list type="bullet">
-        /// <item><description><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: Queries private access applications by batch.</description></item>
-        /// <item><description><a href="~~CreatePrivateAccessApplication~~">CreatePrivateAccessApplication</a>: Creates a private access application.</description></item>
+        /// <item><description><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: List private access applications.</description></item>
+        /// <item><description><a href="~~CreatePrivateAccessApplication~~">CreatePrivateAccessApplication</a>: Create a private access application.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <para>The name of the private access application.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>办公</para>
+        /// <para>Office</para>
         /// </summary>
         [NameInMap("ApplicationName")]
         [Validation(Required=false)]
         public string ApplicationName { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page that is returned during paginated queries. Valid values: 1 to 10000.</para>
+        /// <para>The page number of the current page returned during paging in a paged query. Valid values: 1 to 10000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The name of the private access policy. The name must be 1 to 128 characters in length and supports Chinese characters and uppercase and lowercase English letters. It can contain digits, periods (.), underscores (_), and hyphens (-).</para>
+        /// <para>Policy Name of the private access policy. Policy Name must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>private_access_policy_name</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page that is set during paginated queries. Valid values: 1 to 1000.</para>
+        /// <para>The Settings for the number of entries per page during paging in a paged query. Valid values: 1 to 1000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string PolicyAction { get; set; }
 
         /// <summary>
-        /// <para>The collection of private access policy IDs. You can specify up to 100 private access policy IDs.</para>
+        /// <para>The IDs of the private access policies. You can specify up to 100 private access policy IDs.</para>
         /// </summary>
         [NameInMap("PolicyIds")]
         [Validation(Required=false)]
@@ -101,10 +101,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The ID of the private access tag. The tag ID cannot be used together with the application ID for filtering. Sources of the value:</para>
+        /// <para>The ID of the private access tag. This parameter cannot be used together with the application ID for filtering. You can obtain the value from the following sources:</para>
         /// <list type="bullet">
-        /// <item><description><a href="~~ListPrivateAccessTags~~">ListPrivateAccessTags</a>: Queries private access tags by batch.</description></item>
-        /// <item><description><a href="~~CreatePrivateAccessTag~~">CreatePrivateAccessTag</a>: Creates a private access tag.</description></item>
+        /// <item><description><a href="~~ListPrivateAccessTags~~">ListPrivateAccessTags</a>: List private access tags.</description></item>
+        /// <item><description><a href="~~CreatePrivateAccessTag~~">CreatePrivateAccessTag</a>: Create a private access tag.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -118,17 +118,17 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <para>The name of the tag.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>云产品</para>
+        /// <para>Cloud products</para>
         /// </summary>
         [NameInMap("TagName")]
         [Validation(Required=false)]
         public string TagName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user group. Sources of the value:</para>
+        /// <para>The ID of the user group. You can obtain the value from the following sources:</para>
         /// <list type="bullet">
-        /// <item><description><a href="~~ListUserGroups~~">ListUserGroups</a>: Queries user groups by batch.</description></item>
-        /// <item><description><a href="~~CreateUserGroup~~">CreateUserGroup</a>: Creates a user group.</description></item>
+        /// <item><description><a href="~~ListUserGroups~~">ListUserGroups</a>: List user groups.</description></item>
+        /// <item><description><a href="~~CreateUserGroup~~">CreateUserGroup</a>: Create a user group.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

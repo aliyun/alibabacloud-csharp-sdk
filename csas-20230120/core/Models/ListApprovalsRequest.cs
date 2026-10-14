@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListApprovalsRequest : TeaModel {
         /// <summary>
-        /// <para>The collection of approval instance IDs.</para>
+        /// <para>The IDs of the approval instances.</para>
         /// </summary>
         [NameInMap("ApprovalIds")]
         [Validation(Required=false)]
         public List<string> ApprovalIds { get; set; }
 
         /// <summary>
-        /// <para>The end time for querying approval instance creation, in seconds-level timestamp.</para>
+        /// <para>The end time when the approval instance was created. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1736750500</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public long? CreateEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time for querying approval instance creation, in seconds-level timestamp.</para>
+        /// <para>The start time when the approval instance was created. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1730000000</para>
@@ -37,17 +37,17 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public long? CreateStartTime { get; set; }
 
         /// <summary>
-        /// <para>The department of the approval instance creator.</para>
+        /// <para>The department of the user who created the approval instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>QA Department</para>
+        /// <para>Test Department</para>
         /// </summary>
         [NameInMap("CreatorDepartment")]
         [Validation(Required=false)]
         public string CreatorDepartment { get; set; }
 
         /// <summary>
-        /// <para>The terminal device ID of the approval instance creator.</para>
+        /// <para>The ID of the endpoint device on which the approval instance was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>36efa42d-2c32-c4dc-e3fc-8541e33a****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string CreatorDevTag { get; set; }
 
         /// <summary>
-        /// <para>The ID of the approval instance creator.</para>
+        /// <para>The ID of the user who created the approval instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string CreatorUserId { get; set; }
 
         /// <summary>
-        /// <para>The username of the approval instance creator.</para>
+        /// <para>The username of the user who created the approval instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Mr. Wang</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string CreatorUsername { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page in a paging query. Valid values: 1 to 10000.</para>
+        /// <para>The page number of the current page for a paging query. Valid values: 1 to 10000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -88,10 +88,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The list of report effective statuses, serialized in Flat format. Duplicate values are not allowed. Only records with an approval status of Approved are matched. Valid values:</para>
+        /// <para>The list of effective statuses of reports. The list uses the flat serialization format and cannot contain duplicate values. Only records with the Approved approval status are matched. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Enabled: effective.</description></item>
-        /// <item><description>Expired: expired or invalidated.</description></item>
+        /// <item><description>Enabled: Valid.</description></item>
+        /// <item><description>Expired: Invalid or expired.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("EffectStatuses")]
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public List<string> EffectStatuses { get; set; }
 
         /// <summary>
-        /// <para>The ID of the approval instance operator.</para>
+        /// <para>The ID of the user who operated the approval instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string OperatorUserId { get; set; }
 
         /// <summary>
-        /// <para>The username of the approval instance operator.</para>
+        /// <para>The username of the user who operated the approval instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ms. Li</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string OperatorUsername { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paging query. Valid values: 1 to 500.</para>
+        /// <para>The number of entries per page for a paging query. Valid values: 1 to 500.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -130,13 +130,13 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The adaptation policy type. Valid values:</para>
+        /// <para>The type of the adapted policy. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>DomainBlacklist</b>: Domain name blacklist.</description></item>
         /// <item><description><b>DomainWhitelist</b>: Domain name whitelist.</description></item>
         /// <item><description><b>SoftwareBlock</b>: Software blocking.</description></item>
-        /// <item><description><b>AppUninstall</b>: Agent uninstallation.</description></item>
-        /// <item><description><b>DlpSend</b>: File outbound transfer.</description></item>
+        /// <item><description><b>AppUninstall</b>: Endpoint uninstallation.</description></item>
+        /// <item><description><b>DlpSend</b>: Outbound file transfer.</description></item>
         /// <item><description><b>PeripheralBlock</b>: Peripheral control.</description></item>
         /// </list>
         /// 
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string PolicyType { get; set; }
 
         /// <summary>
-        /// <para>The associated approval process ID.</para>
+        /// <para>The ID of the associated approval process.</para>
         /// 
         /// <b>Example:</b>
         /// <para>approval-process-fcc351b8a95b****</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string ProcessId { get; set; }
 
         /// <summary>
-        /// <para>The associated approval process name.</para>
+        /// <para>The name of the associated approval process.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test</para>
@@ -168,11 +168,11 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string ProcessName { get; set; }
 
         /// <summary>
-        /// <para>The list of report types, serialized in Flat format. Duplicate values are not allowed. Valid values:</para>
+        /// <para>The list of report types. The list uses the flat serialization format and cannot contain duplicate values. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ApprovalReport: approval report.</description></item>
-        /// <item><description>BackendReport: backend report.
-        /// If not specified, only ApprovalReport is queried by default.</description></item>
+        /// <item><description>ApprovalReport: Approval report.</description></item>
+        /// <item><description>BackendReport: Backend report.
+        /// If you do not specify this parameter, only ApprovalReport is queried by default.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("ReportTypes")]
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public List<string> ReportTypes { get; set; }
 
         /// <summary>
-        /// <para>The associated approval template ID.</para>
+        /// <para>The ID of the associated approval template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>approval-schema-090134f1ebff****</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string SchemaId { get; set; }
 
         /// <summary>
-        /// <para>The associated approval template name.</para>
+        /// <para>The name of the associated approval template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string SchemaName { get; set; }
 
         /// <summary>
-        /// <para>The collection of approval instance statuses.</para>
+        /// <para>The statuses of the approval instances.</para>
         /// </summary>
         [NameInMap("Statuses")]
         [Validation(Required=false)]

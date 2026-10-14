@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <summary>
             /// <para>The client status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Online</b>: online.</description></item>
-            /// <item><description><b>Offline</b>: offline.</description></item>
+            /// <item><description><b>Online</b>: Online.</description></item>
+            /// <item><description><b>Offline</b>: Offline.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -60,12 +60,18 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public string CPU { get; set; }
 
+            /// <summary>
+            /// <para>The city of the public IP address.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Hangzhou City</para>
+            /// </summary>
             [NameInMap("City")]
             [Validation(Required=false)]
             public string City { get; set; }
 
             /// <summary>
-            /// <para>The city name in English.</para>
+            /// <para>The city in English.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Beijing City</para>
@@ -75,7 +81,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string CityEn { get; set; }
 
             /// <summary>
-            /// <para>The city name in Chinese.</para>
+            /// <para>The city in Chinese.</para>
             /// 
             /// <b>Example:</b>
             /// <para>北京市</para>
@@ -84,12 +90,18 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public string CityZh { get; set; }
 
+            /// <summary>
+            /// <para>The continent of the public IP address.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Asia</para>
+            /// </summary>
             [NameInMap("Continent")]
             [Validation(Required=false)]
             public string Continent { get; set; }
 
             /// <summary>
-            /// <para>The continent name in English.</para>
+            /// <para>The continent in English.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Asia</para>
@@ -99,7 +111,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string ContinentEn { get; set; }
 
             /// <summary>
-            /// <para>The continent name in Chinese.</para>
+            /// <para>The continent in Chinese.</para>
             /// 
             /// <b>Example:</b>
             /// <para>亚洲</para>
@@ -108,12 +120,18 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public string ContinentZh { get; set; }
 
+            /// <summary>
+            /// <para>The country of the public IP address.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>China</para>
+            /// </summary>
             [NameInMap("Country")]
             [Validation(Required=false)]
             public string Country { get; set; }
 
             /// <summary>
-            /// <para>The country name in English.</para>
+            /// <para>The country in English.</para>
             /// 
             /// <b>Example:</b>
             /// <para>China</para>
@@ -123,7 +141,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string CountryEn { get; set; }
 
             /// <summary>
-            /// <para>The country name in Chinese.</para>
+            /// <para>The country in Chinese.</para>
             /// 
             /// <b>Example:</b>
             /// <para>中国</para>
@@ -146,7 +164,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <para>The department to which the user belongs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试部</para>
+            /// <para>Test Department</para>
             /// </summary>
             [NameInMap("Department")]
             [Validation(Required=false)]
@@ -155,8 +173,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <summary>
             /// <para>The ownership of the endpoint device. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Personal</b>: personal device.</description></item>
-            /// <item><description><b>Company</b>: company device.</description></item>
+            /// <item><description><b>Personal</b>: Personal device.</description></item>
+            /// <item><description><b>Company</b>: Company device.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -179,12 +197,12 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <summary>
             /// <para>The status of the endpoint device. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Online</b>: online.</description></item>
-            /// <item><description><b>Offline</b>: offline.</description></item>
-            /// <item><description><b>LongTermOffline</b>: long-term offline.</description></item>
-            /// <item><description><b>Locked</b>: locked.</description></item>
-            /// <item><description><b>Lost</b>: reported as lost.</description></item>
-            /// <item><description><b>Unbound</b>: unbound.</description></item>
+            /// <item><description><b>Online</b>: Online.</description></item>
+            /// <item><description><b>Offline</b>: Offline.</description></item>
+            /// <item><description><b>LongTermOffline</b>: Long-term offline.</description></item>
+            /// <item><description><b>Locked</b>: Locked.</description></item>
+            /// <item><description><b>Lost</b>: Reported lost.</description></item>
+            /// <item><description><b>Unbound</b>: Unbound.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -195,7 +213,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string DeviceStatus { get; set; }
 
             /// <summary>
-            /// <para>The endpoint device ID.</para>
+            /// <para>The ID of the endpoint device.</para>
             /// 
             /// <b>Example:</b>
             /// <para>36efa42d-2c32-c4dc-e3fc-8541e33a****</para>
@@ -245,10 +263,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <summary>
             /// <para>The office data protection status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Enabled</b>: enabled.</description></item>
-            /// <item><description><b>Disabled</b>: disabled.</description></item>
-            /// <item><description><b>Unprovisioned</b>: not configured.</description></item>
-            /// <item><description><b>Unauthorized</b>: unauthorized.</description></item>
+            /// <item><description><b>Enabled</b>: Enabled.</description></item>
+            /// <item><description><b>Disabled</b>: Disabled.</description></item>
+            /// <item><description><b>Unprovisioned</b>: Unprovisioned.</description></item>
+            /// <item><description><b>Unauthorized</b>: Unauthorized.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -261,8 +279,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <summary>
             /// <para>The anti-intrusion status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Enabled</b>: enabled.</description></item>
-            /// <item><description><b>Disabled</b>: disabled.</description></item>
+            /// <item><description><b>Enabled</b>: Enabled.</description></item>
+            /// <item><description><b>Disabled</b>: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -292,9 +310,9 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <summary>
             /// <para>The Internet access status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Enabled</b>: enabled.</description></item>
-            /// <item><description><b>Disabled</b>: disabled.</description></item>
-            /// <item><description><b>Unprovisioned</b>: not configured.</description></item>
+            /// <item><description><b>Enabled</b>: Enabled.</description></item>
+            /// <item><description><b>Disabled</b>: Disabled.</description></item>
+            /// <item><description><b>Unprovisioned</b>: Unprovisioned.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -315,7 +333,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string InnerIP { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the device is joined to an Active Directory (AD) domain.</para>
+            /// <para>Indicates whether the endpoint device is added to an Active Directory (AD) domain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -335,7 +353,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Mac { get; set; }
 
             /// <summary>
-            /// <para>The collection of matched device group IDs.</para>
+            /// <para>The IDs of the matched device groups.</para>
             /// </summary>
             [NameInMap("MatchDeviceGroupIds")]
             [Validation(Required=false)]
@@ -354,9 +372,9 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <summary>
             /// <para>The network access control status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Enabled</b>: enabled.</description></item>
-            /// <item><description><b>Disabled</b>: disabled.</description></item>
-            /// <item><description><b>Unprovisioned</b>: not configured.</description></item>
+            /// <item><description><b>Enabled</b>: Enabled.</description></item>
+            /// <item><description><b>Disabled</b>: Disabled.</description></item>
+            /// <item><description><b>Unprovisioned</b>: Unprovisioned.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -367,14 +385,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string NacStatus { get; set; }
 
             /// <summary>
-            /// <para>The list of network interfaces of the endpoint device.</para>
+            /// <para>The list of network interface controllers (NICs) of the endpoint device.</para>
             /// </summary>
             [NameInMap("NetInterfaceInfo")]
             [Validation(Required=false)]
             public List<ListUserDevicesResponseBodyDevicesNetInterfaceInfo> NetInterfaceInfo { get; set; }
             public class ListUserDevicesResponseBodyDevicesNetInterfaceInfo : TeaModel {
                 /// <summary>
-                /// <para>The MAC address of the network interface.</para>
+                /// <para>The MAC address of the NIC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>00:16:XX:XX:7c:46</para>
@@ -384,7 +402,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string Mac { get; set; }
 
                 /// <summary>
-                /// <para>The name of the network interface.</para>
+                /// <para>The name of the NIC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>eth0</para>
@@ -396,11 +414,11 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             }
 
             /// <summary>
-            /// <para>The private access status. Valid values:</para>
+            /// <para>The internal network access status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Enabled</b>: enabled.</description></item>
-            /// <item><description><b>Disabled</b>: disabled.</description></item>
-            /// <item><description><b>Unprovisioned</b>: not configured.</description></item>
+            /// <item><description><b>Enabled</b>: Enabled.</description></item>
+            /// <item><description><b>Disabled</b>: Disabled.</description></item>
+            /// <item><description><b>Unprovisioned</b>: Unprovisioned.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -410,12 +428,18 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public string PaStatus { get; set; }
 
+            /// <summary>
+            /// <para>The province of the public IP address.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Zhejiang</para>
+            /// </summary>
             [NameInMap("Province")]
             [Validation(Required=false)]
             public string Province { get; set; }
 
             /// <summary>
-            /// <para>The province name in English.</para>
+            /// <para>The province in English.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Beijing</para>
@@ -425,7 +449,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string ProvinceEn { get; set; }
 
             /// <summary>
-            /// <para>The province name in Chinese.</para>
+            /// <para>The province in Chinese.</para>
             /// 
             /// <b>Example:</b>
             /// <para>北京市</para>
@@ -435,7 +459,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string ProvinceZh { get; set; }
 
             /// <summary>
-            /// <para>The user ID.</para>
+            /// <para>The ID of the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</para>
@@ -459,7 +483,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public bool? SharingStatus { get; set; }
 
             /// <summary>
-            /// <para>The motherboard serial number.</para>
+            /// <para>The serial number of the baseboard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PJGGU00WBD****</para>
@@ -469,7 +493,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string SnBaseBoard { get; set; }
 
             /// <summary>
-            /// <para>The BIOS system serial number.</para>
+            /// <para>The serial number of the BIOS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5CG003****</para>
@@ -479,7 +503,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string SnBios { get; set; }
 
             /// <summary>
-            /// <para>The hard disk serial number.</para>
+            /// <para>The serial number of the hard disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WD-WXR1A99A****</para>
@@ -489,7 +513,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string SnDiskDrive { get; set; }
 
             /// <summary>
-            /// <para>The processor serial number.</para>
+            /// <para>The serial number of the processor.</para>
             /// 
             /// <b>Example:</b>
             /// <para>BFEBFBFF0008****</para>
@@ -499,7 +523,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string SnProcessor { get; set; }
 
             /// <summary>
-            /// <para>The system serial number.</para>
+            /// <para>The system serial number (SN).</para>
             /// 
             /// <b>Example:</b>
             /// <para>KVN9C9****</para>
@@ -532,7 +556,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <para>The username.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>王先生</para>
+            /// <para>Mr. Wang</para>
             /// </summary>
             [NameInMap("Username")]
             [Validation(Required=false)]
@@ -542,7 +566,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <para>The name of the office area.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试办公区</para>
+            /// <para>Test office area</para>
             /// </summary>
             [NameInMap("Workshop")]
             [Validation(Required=false)]
@@ -551,7 +575,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5FEF5CFA-14CC-5DE5-BD1F-AFFE0996E71D</para>

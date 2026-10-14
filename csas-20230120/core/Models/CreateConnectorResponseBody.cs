@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CreateConnectorResponseBody : TeaModel {
         /// <summary>
-        /// <para>Connector。</para>
+        /// <para>The connector.</para>
         /// </summary>
         [NameInMap("Connector")]
         [Validation(Required=false)]
         public CreateConnectorResponseBodyConnector Connector { get; set; }
         public class CreateConnectorResponseBodyConnector : TeaModel {
             /// <summary>
-            /// <para>ConnectorID。</para>
+            /// <para>The connector ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>connector-94db94e06b98****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string ConnectorId { get; set; }
 
             /// <summary>
-            /// <para>The connector creation time.</para>
+            /// <para>The time when the connector was created. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-05-16 17:18:46</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The connector name.</para>
+            /// <para>The name of the connector.</para>
             /// 
             /// <b>Example:</b>
             /// <para>connector_name</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The connector connection status. Valid values:</para>
+            /// <para>The connection status of the connector. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Online</b>: Online.</description></item>
             /// <item><description><b>Offline</b>: Offline.</description></item>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The connector instance status. Valid values:</para>
+            /// <para>The instance status of the connector. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Enabled</b>: Enabled.</description></item>
             /// <item><description><b>Disabled</b>: Shutdown.</description></item>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string SwitchStatus { get; set; }
 
             /// <summary>
-            /// <para>The connector upgrade time.</para>
+            /// <para>The upgrade time of the connector.</para>
             /// </summary>
             [NameInMap("UpgradeTime")]
             [Validation(Required=false)]

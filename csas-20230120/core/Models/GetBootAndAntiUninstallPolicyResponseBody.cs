@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The auto-start and anti-uninstall policy.</para>
+        /// <para>The auto-start and anti-uninstallation policy.</para>
         /// </summary>
         [NameInMap("Strategy")]
         [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public GetBootAndAntiUninstallPolicyResponseBodyStrategyBlockContentBlockTextEn BlockTextEn { get; set; }
                 public class GetBootAndAntiUninstallPolicyResponseBodyStrategyBlockContentBlockTextEn : TeaModel {
                     /// <summary>
-                    /// <para>The pop-up window content.</para>
+                    /// <para>The content of the pop-up window.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>After uninstalling, the device can no longer be used for company work, and it will lose access to the company\&quot;s intranet!</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                     public string MinorButtonText { get; set; }
 
                     /// <summary>
-                    /// <para>The pop-up window title.</para>
+                    /// <para>The title of the pop-up window.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Anti-Uninstall Warning</para>
@@ -100,10 +100,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public GetBootAndAntiUninstallPolicyResponseBodyStrategyBlockContentBlockTextZh BlockTextZh { get; set; }
                 public class GetBootAndAntiUninstallPolicyResponseBodyStrategyBlockContentBlockTextZh : TeaModel {
                     /// <summary>
-                    /// <para>The pop-up window content.</para>
+                    /// <para>The content of the pop-up window.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>卸载后该设备无法再用于公司办公，同时该设备将失去进入公司内网权限！</para>
+                    /// <para>After uninstallation, this device can no longer be used for company work and will lose access to the company intranet!</para>
                     /// </summary>
                     [NameInMap("Content")]
                     [Validation(Required=false)]
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                     /// <para>The text of the primary button in the pop-up window.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>去报备</para>
+                    /// <para>Submit report</para>
                     /// </summary>
                     [NameInMap("MainButtonText")]
                     [Validation(Required=false)]
@@ -123,17 +123,17 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                     /// <para>The text of the secondary button in the pop-up window.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>我知道了</para>
+                    /// <para>I understand</para>
                     /// </summary>
                     [NameInMap("MinorButtonText")]
                     [Validation(Required=false)]
                     public string MinorButtonText { get; set; }
 
                     /// <summary>
-                    /// <para>The pop-up window title.</para>
+                    /// <para>The title of the pop-up window.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>防卸载警告</para>
+                    /// <para>Anti-uninstallation warning</para>
                     /// </summary>
                     [NameInMap("Title")]
                     [Validation(Required=false)]
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             }
 
             /// <summary>
-            /// <para>The time when the policy was created.</para>
+            /// <para>The time when the policy was created. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-04-16 10:50:05</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the anti-uninstall feature is enabled.</para>
+            /// <para>Indicates whether the anti-uninstallation feature is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public bool? IsBoot { get; set; }
 
             /// <summary>
-            /// <para>The policy ID.</para>
+            /// <para>The ID of the policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>auto-boot-anti-uninstall-6f6cbf5f6605****</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string ReportProcessId { get; set; }
 
             /// <summary>
-            /// <para>The time when the policy was updated.</para>
+            /// <para>The time when the policy was updated. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-06-14 10:17:14</para>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public List<string> UserGroupIds { get; set; }
 
             /// <summary>
-            /// <para>The list of whitelist users.</para>
+            /// <para>The list of whitelisted users.</para>
             /// </summary>
             [NameInMap("WhitelistUsers")]
             [Validation(Required=false)]

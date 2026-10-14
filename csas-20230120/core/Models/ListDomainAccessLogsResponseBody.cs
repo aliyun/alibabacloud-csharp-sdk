@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListDomainAccessLogsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of access log records.</para>
+        /// <para>The list of access records.</para>
         /// </summary>
         [NameInMap("AccessLogs")]
         [Validation(Required=false)]
         public List<ListDomainAccessLogsResponseBodyAccessLogs> AccessLogs { get; set; }
         public class ListDomainAccessLogsResponseBodyAccessLogs : TeaModel {
             /// <summary>
-            /// <para>The action taken upon a rule hit.</para>
+            /// <para>The matched action.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WhiteList</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string DestAddress { get; set; }
 
             /// <summary>
-            /// <para>The event time.</para>
+            /// <para>The time when the event occurred, in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-10 14:03:22</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records that match the query conditions.</para>
+        /// <para>The total number of records that meet the specified conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>122</para>

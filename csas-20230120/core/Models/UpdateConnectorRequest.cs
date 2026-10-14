@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class UpdateConnectorRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable Global Accelerator. Valid values:</para>
+        /// <para>Specifies whether to enable global acceleration. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Enabled</b>: Enabled.</description></item>
         /// <item><description><b>Disabled</b>: Disabled.</description></item>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string AccelerateStatus { get; set; }
 
         /// <summary>
-        /// <para>The Connector ID. You can obtain the value by calling <a href="~~ListConnectors~~">ListConnectors</a>.</para>
+        /// <para>The ID of the connector. You can call the <a href="~~ListConnectors~~">ListConnectors</a> operation to query connectors and obtain the value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string ConnectorId { get; set; }
 
         /// <summary>
-        /// <para>The Connector name. The name must be 1 to 128 characters in length and can contain Chinese characters, letters, digits, periods (.), underscores (_), and hyphens (-).</para>
+        /// <para>The name of the connector. The name must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>connector_name</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The instance status of the Connector. Valid values:</para>
+        /// <para>The instance status of the connector. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Enabled</b>: Enabled.</description></item>
         /// <item><description><b>Disabled</b>: Shutdown.</description></item>

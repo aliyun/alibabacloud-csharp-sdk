@@ -10,25 +10,28 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListUserDevicesRequest : TeaModel {
         /// <summary>
-        /// <para>The collection of client statuses.</para>
+        /// <para>The client statuses.</para>
         /// </summary>
         [NameInMap("AppStatuses")]
         [Validation(Required=false)]
         public List<string> AppStatuses { get; set; }
 
         /// <summary>
-        /// <para>The collection of client versions.</para>
+        /// <para>The client versions.</para>
         /// </summary>
         [NameInMap("AppVersions")]
         [Validation(Required=false)]
         public List<string> AppVersions { get; set; }
 
+        /// <summary>
+        /// <para>The automatic logon statuses used to filter user endpoint devices.</para>
+        /// </summary>
         [NameInMap("AutoLoginStatuses")]
         [Validation(Required=false)]
         public List<string> AutoLoginStatuses { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page in a paging query. Valid values: 1 to 10000.</para>
+        /// <para>The current page number for paging queries. Valid values: 1 to 10000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,10 +42,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The department to which the user belongs. The value is 1 to 128 characters in length and supports Chinese characters and uppercase and lowercase letters. It can contain digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (_), forward slashes (/), at signs (@), and spaces.</para>
+        /// <para>The department to which the user belongs. The name must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (_), forward slashes (/), at signs (@), and spaces.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试部</para>
+        /// <para>Test Department</para>
         /// </summary>
         [NameInMap("Department")]
         [Validation(Required=false)]
@@ -51,8 +54,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <summary>
         /// <para>The ownership of the endpoint device. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Personal</b>: personal device.</description></item>
-        /// <item><description><b>Company</b>: company device.</description></item>
+        /// <item><description><b>Personal</b>: Personal device.</description></item>
+        /// <item><description><b>Company</b>: Company device.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,7 +66,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string DeviceBelong { get; set; }
 
         /// <summary>
-        /// <para>The device group ID.</para>
+        /// <para>The ID of the device group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>device-group-5191cf830a5e****</para>
@@ -73,35 +76,35 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string DeviceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The collection of endpoint device statuses.</para>
+        /// <para>The endpoint device statuses.</para>
         /// </summary>
         [NameInMap("DeviceStatuses")]
         [Validation(Required=false)]
         public List<string> DeviceStatuses { get; set; }
 
         /// <summary>
-        /// <para>The collection of endpoint device IDs.</para>
+        /// <para>The IDs of the endpoint devices.</para>
         /// </summary>
         [NameInMap("DeviceTags")]
         [Validation(Required=false)]
         public List<string> DeviceTags { get; set; }
 
         /// <summary>
-        /// <para>The collection of endpoint device operating system types.</para>
+        /// <para>The operating system types of the endpoint devices.</para>
         /// </summary>
         [NameInMap("DeviceTypes")]
         [Validation(Required=false)]
         public List<string> DeviceTypes { get; set; }
 
         /// <summary>
-        /// <para>The collection of office data protection statuses.</para>
+        /// <para>The office data protection statuses.</para>
         /// </summary>
         [NameInMap("DlpStatuses")]
         [Validation(Required=false)]
         public List<string> DlpStatuses { get; set; }
 
         /// <summary>
-        /// <para>The name of the endpoint device. The value is 1 to 128 characters in length and supports Chinese characters and uppercase and lowercase letters. It can contain digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (<em>), forward slashes (/), at signs (@), and spaces. If you enter only an underscore (</em>), endpoint devices whose names contain 4-byte UTF-8 characters are also queried.</para>
+        /// <para>The name of the endpoint device. The name must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (<em>), forward slashes (/), at signs (@), and spaces. If you enter only an underscore (</em>), the system also queries all endpoint devices whose names contain 4-byte UTF-8 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>win10-64bit</para>
@@ -111,7 +114,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Hostname { get; set; }
 
         /// <summary>
-        /// <para>The collection of Internet access statuses.</para>
+        /// <para>The Internet access statuses.</para>
         /// </summary>
         [NameInMap("IaStatuses")]
         [Validation(Required=false)]
@@ -138,21 +141,21 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Mac { get; set; }
 
         /// <summary>
-        /// <para>The collection of network access control statuses.</para>
+        /// <para>The network access control statuses.</para>
         /// </summary>
         [NameInMap("NacStatuses")]
         [Validation(Required=false)]
         public List<string> NacStatuses { get; set; }
 
         /// <summary>
-        /// <para>The collection of private access statuses.</para>
+        /// <para>The internal network access statuses.</para>
         /// </summary>
         [NameInMap("PaStatuses")]
         [Validation(Required=false)]
         public List<string> PaStatuses { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paging query. Settings: 1 to 500.</para>
+        /// <para>The number of entries per page for paging queries. Valid values: 1 to 500.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -163,10 +166,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The user ID. You can obtain this value from the following operations:</para>
+        /// <para>The user ID. You can obtain the value from the following operations:</para>
         /// <list type="bullet">
         /// <item><description><a href="~~GetUserDevice~~">GetUserDevice</a>: Queries the details of a user endpoint device.</description></item>
-        /// <item><description><a href="~~ListUserDevices~~">ListUserDevices</a>: Lists user endpoint devices.</description></item>
+        /// <item><description><a href="~~ListUserDevices~~">ListUserDevices</a>: Queries a list of user endpoint devices.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -191,7 +194,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public bool? SharingStatus { get; set; }
 
         /// <summary>
-        /// <para>The BIOS system serial number.</para>
+        /// <para>The BIOS system SN.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5CG003****</para>
@@ -201,7 +204,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string SnBios { get; set; }
 
         /// <summary>
-        /// <para>The system serial number.</para>
+        /// <para>The system serial number (SN).</para>
         /// 
         /// <b>Example:</b>
         /// <para>KVN9C9****</para>
@@ -211,12 +214,12 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string SnSystem { get; set; }
 
         /// <summary>
-        /// <para>The sort parameter. Valid values:</para>
+        /// <para>The sorting parameter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Username</b>: sorted by Username in ascending order.</description></item>
-        /// <item><description><b>AppVersion</b>: sorted by AppVersion in descending order.</description></item>
-        /// <item><description><b>UpdateTime</b>: sorted by UpdateTime in descending order.</description></item>
-        /// <item><description><b>CreateTime</b>: sorted by CreateTime in descending order.</description></item>
+        /// <item><description><b>Username</b>: Sorts by Username in ascending order.</description></item>
+        /// <item><description><b>AppVersion</b>: Sorts by AppVersion in descending order.</description></item>
+        /// <item><description><b>UpdateTime</b>: Sorts by UpdateTime in descending order.</description></item>
+        /// <item><description><b>CreateTime</b>: Sorts by CreateTime in descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -227,10 +230,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The username. The value is 1 to 128 characters in length and supports Chinese characters and uppercase and lowercase letters. It can contain digits, periods (.), underscores (_), hyphens (-), asterisks (*), at signs (@), and spaces.</para>
+        /// <para>The username. The name must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), asterisks (*), at signs (@), and spaces.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>王先生</para>
+        /// <para>Mr. Wang</para>
         /// </summary>
         [NameInMap("Username")]
         [Validation(Required=false)]
@@ -240,7 +243,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <para>The name of the office area.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试办公区</para>
+        /// <para>Test office area</para>
         /// </summary>
         [NameInMap("Workshop")]
         [Validation(Required=false)]

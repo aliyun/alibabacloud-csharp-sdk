@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The time when the entry was last modified.</para>
+            /// <para>The time when the entry was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-01 10:20:30</para>
@@ -37,6 +37,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string GmtModified { get; set; }
 
             /// <summary>
+            /// <para>The entry ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>499</para>
             /// </summary>
@@ -45,7 +47,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public long? ItemId { get; set; }
 
             /// <summary>
-            /// <para>The domain name. Wildcard domain names are supported.</para>
+            /// <para>The specific domain name. Wildcard domain names are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.example.com">www.example.com</a></para>
@@ -67,7 +69,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records that match the specified conditions. This is an optional parameter and may not be returned by default.</para>
+        /// <para>The total number of records that match the specified conditions. This is an optional parameter and is not returned by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>13</para>
