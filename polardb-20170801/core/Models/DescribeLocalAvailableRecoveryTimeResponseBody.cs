@@ -20,10 +20,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range available for recovery.</para>
+        /// <para>The start time from which backups can be restored.</para>
         /// <remarks>
-        /// <para>This is calculated based on level-1 backups and does not include level-2 backups.</para>
+        /// <para>Calculated based on level-1 backups. Level-2 backups are not included.</para>
         /// </remarks>
+        /// <para>The time is in the ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-09-10T14:19:48Z</para>
@@ -33,10 +34,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RecoveryBeginTime { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range available for recovery.</para>
+        /// <para>The end time to which backups can be restored.</para>
         /// <remarks>
-        /// <para>This is calculated based on level-1 backups and does not include level-2 backups.</para>
+        /// <para>Calculated based on level-1 backups. Level-2 backups are not included.</para>
         /// </remarks>
+        /// <para>The time is in the ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-09-17T08:56:45Z</para>

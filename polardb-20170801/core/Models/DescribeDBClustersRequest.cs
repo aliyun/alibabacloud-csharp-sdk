@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterDescription { get; set; }
 
         /// <summary>
-        /// <para>The cluster ID. Separate multiple cluster IDs with commas (,).</para>
+        /// <para>The cluster IDs. Separate multiple cluster IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-****************</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterStatus { get; set; }
 
         /// <summary>
-        /// <para>The node ID. You can specify multiple node IDs, separated by commas (,).</para>
+        /// <para>The node IDs. You can specify multiple node IDs and separate them with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>pi-***************</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBType { get; set; }
 
         /// <summary>
-        /// <para>The database engine version.</para>
+        /// <para>The database version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5.6</para>
@@ -85,9 +85,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBVersion { get; set; }
 
         /// <summary>
-        /// <para>The query mode for the list. Set the value to Simple to use the simple mode, which returns only basic metadata of clusters.</para>
+        /// <para>The query mode for the list. A value of Simple indicates the brief mode, in which only the basic metadata of the clusters is returned.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the detailed mode is used by default, which returns detailed information about clusters.</para>
+        /// <para>If this parameter is not specified, the detailed mode is used by default, and the detailed information of the clusters is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -145,8 +145,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The billing method. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
-        /// <item><description><b>Prepaid</b>: subscription.</description></item>
+        /// <item><description><b>Postpaid</b>: pay-as-you-go</description></item>
+        /// <item><description><b>Prepaid</b>: subscription</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>Filters clusters created within the last N days. Valid values: 0 to 15.</para>
+        /// <para>Filters the clusters created in the last N days. Valid values: 0 to 15.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? RecentCreationInterval { get; set; }
 
         /// <summary>
-        /// <para>Filters clusters that expire within the next N days. Valid values: 0 to 15.</para>
+        /// <para>Filters the clusters that expire in N days. Valid values: 0 to 15.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>
@@ -209,14 +209,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeDBClustersRequestTag> Tag { get; set; }
         public class DescribeDBClustersRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. You can use tags to filter the cluster list. You can specify up to 20 tag pairs. The number n for each tag pair must be unique and must be a consecutive integer that starts from 1. The Tag.n.Key parameter is paired with the Tag.n.Value parameter.</para>
+            /// <para>The tag key. You can filter the cluster list based on tags. You can specify up to 20 tag key-value pairs. The number n in each tag key-value pair must be unique and must be a consecutive integer starting from 1. The value of Tag.n.Key is Tag.n.Value.</para>
             /// <remarks>
             /// <para>The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c>, <c>acs:</c>, <c>http://</c>, or <c>https://</c>.</para>
             /// </remarks>

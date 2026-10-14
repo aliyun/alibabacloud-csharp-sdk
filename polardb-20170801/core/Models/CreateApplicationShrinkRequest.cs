@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateApplicationShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of an existing model operator instance to associate. This parameter takes effect only when ApplicationType is set to polarclaw.</para>
+        /// <para>The ID of the existing model operator instance to associate. This parameter takes effect only when ApplicationType is set to polarclaw.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pm-xxxxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AIDBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The AgenticDB branch specification.</para>
+        /// <para>The AgenticDB branch specifications.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;DBClusterId&quot;:&quot;pagc-2zea920mcvd5o87&quot;,&quot;TenantId&quot;:&quot;t-cfc2d7df0e59439681f0087f51&quot;,&quot;ProjectId&quot;:&quot;proj-d7849d0050664c758af795d468&quot;,&quot;BranchId&quot;:&quot;br-9054b3b7649e4c0d977bd0df37&quot;,&quot;ForkFromBranch&quot;:true,&quot;ForkFromApplicationId&quot;:&quot;pa-source&quot;}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AgenticDBBranchSpecShrink { get; set; }
 
         /// <summary>
-        /// <para>The AgenticDB cluster ID.</para>
+        /// <para>The ID of the AgenticDB cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pagc-xxx</para>
@@ -42,9 +42,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The application type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>supabase: Set this value to create a managed Supabase application.</description></item>
-        /// <item><description>raycluster: Set this value to create a managed Ray Cluster application.</description></item>
-        /// <item><description>polarclaw: Set this value to create a managed PolarClaw application.</description></item>
+        /// <item><description>supabase: Specify this value to create a managed Supabase application.</description></item>
+        /// <item><description>raycluster: Specify this value to create a managed Ray Cluster application.</description></item>
+        /// <item><description>polarclaw: Specify this value to create a managed PolarClaw application.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Architecture { get; set; }
 
         /// <summary>
-        /// <para>The authentication service provider.</para>
+        /// <para>The authentication provider.</para>
         /// 
         /// <b>Example:</b>
         /// <para>feishu</para>
@@ -90,20 +90,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AuthProviderConfig { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to automatically create an elastic IP address (EIP) and associate it with the instance.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>qwen3-max</para>
+        /// <para>Specifies if automatic creation is enabled and the instance will attach and associate with an EIP.</para>
         /// </summary>
         [NameInMap("AutoAllocatePublicEip")]
         [Validation(Required=false)]
         public bool? AutoAllocatePublicEip { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable automatic creation of a cold storage Polarlakebase. Valid values:</para>
+        /// <para>Specifies whether to automatically create a Polarlakebase cold storage instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false (default): Automatic creation is disabled.</description></item>
-        /// <item><description>true: Automatic creation is enabled.</description></item>
+        /// <item><description>false: Does not automatically create the instance. This is the default value.</description></item>
+        /// <item><description>true: Automatically creates the instance.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -126,8 +123,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>Specifies whether to automatically use coupons. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true (default): Use coupons.</description></item>
-        /// <item><description>false: Do not use coupons.</description></item>
+        /// <item><description>true: Uses coupons. This is the default value.</description></item>
+        /// <item><description>false: Does not use coupons.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -138,14 +135,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? AutoUseCoupon { get; set; }
 
         /// <summary>
-        /// <para>The list of user-defined application subcomponents.</para>
+        /// <para>The list of custom application subcomponents.</para>
         /// </summary>
         [NameInMap("Components")]
         [Validation(Required=false)]
         public string ComponentsShrink { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the PolarDB instance on which the application depends.</para>
+        /// <para>The ID of the PolarDB instance on which the application depends.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-**************</para>
@@ -155,7 +152,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The description of the application.</para>
+        /// <para>The description or remark of the application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myapp</para>
@@ -165,14 +162,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The list of expected DNAT entries for NAT mapping. Specify this parameter together with VpcNatGatewayId. This parameter can be left empty, which indicates that no DNAT entries are created.</para>
+        /// <para>The expected list of DNAT entries for NAT mapping. This parameter must be specified together with VpcNatGatewayId. It can be left empty, which indicates that no DNAT entries are created.</para>
         /// </summary>
         [NameInMap("DnatEntries")]
         [Validation(Required=false)]
         public string DnatEntriesShrink { get; set; }
 
         /// <summary>
-        /// <para>The DNAT-dedicated NAT IP address allocated by the customer, which must be separate from the SNAT IP address. The IP address must belong to the specified gateway and be in an available state. The vSwitch where the gateway resides must be in a primary CIDR block reachable from the office network. Specify this parameter together with VpcNatGatewayId. Prerequisite: The customer has bound an SNAT entry to the vSwitch where the application resides.</para>
+        /// <para>The dedicated NAT IP address allocated for DNAT, which is separate from the SNAT IP address. The IP address must belong to the NAT gateway, be in the available state, and the vSwitch where the gateway resides must belong to the primary CIDR block reachable from the office network. This parameter must be specified together with VpcNatGatewayId. Prerequisite: An SNAT entry is associated with the vSwitch where the application resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.64.0.10</para>
@@ -182,7 +179,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DnatIpAddress { get; set; }
 
         /// <summary>
-        /// <para>Default value: <c>false</c>. If you set this parameter to <c>true</c>, only parameter and resource validation is performed without actually creating the resource.</para>
+        /// <para>Specifies whether to perform a dry run. Default value: <c>false</c>. If you set this parameter to <c>true</c>, the system only checks the parameters and resources without actually creating the resources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -192,7 +189,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The list of user-defined service endpoints. By default, a VPC endpoint is created.</para>
+        /// <para>The list of custom service endpoints. By default, a VPC endpoint is created.</para>
         /// </summary>
         [NameInMap("Endpoints")]
         [Validation(Required=false)]
@@ -223,7 +220,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ModelApi { get; set; }
 
         /// <summary>
-        /// <para>The model API key. This parameter takes effect only when ApplicationType is set to polarclaw.</para>
+        /// <para>The API key of the model. This parameter takes effect only when ApplicationType is set to polarclaw.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sk-xxxxxx</para>
@@ -233,7 +230,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ModelApiKey { get; set; }
 
         /// <summary>
-        /// <para>The model base URL. This parameter takes effect only when ApplicationType is set to polarclaw.</para>
+        /// <para>The base URL of the model. This parameter takes effect only when ApplicationType is set to polarclaw.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://dashscope.aliyuncs.com/compatible-mode/v1">https://dashscope.aliyuncs.com/compatible-mode/v1</a></para>
@@ -245,9 +242,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The model source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>bailian: Bailian model.</description></item>
-        /// <item><description>custom: Custom model.</description></item>
-        /// <item><description>maas: PolarDB model operator.</description></item>
+        /// <item><description>bailian: Model Studio models.</description></item>
+        /// <item><description>custom: Custom models.</description></item>
+        /// <item><description>maas: PolarDB model operators.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -275,7 +272,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ParametersShrink { get; set; }
 
         /// <summary>
-        /// <para>The billing type.</para>
+        /// <para>The billing method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Postpaid</para>
@@ -285,7 +282,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The subscription type (yearly or monthly).</para>
+        /// <para>The subscription period unit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Year</para>
@@ -295,8 +292,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the Polarlakebase cold storage or high-performance edition. Default value: empty. If specified, the corresponding storage is mounted to the application.</para>
-        /// <para>Currently, only the following applications support this parameter:</para>
+        /// <para>The ID of the Polarlakebase cold storage or high-performance instance. Default value: empty. If you specify this parameter, the corresponding storage is mounted to the application. This parameter is supported only for the following applications:</para>
         /// <list type="bullet">
         /// <item><description>supabase</description></item>
         /// <item><description>raycluster</description></item>
@@ -320,7 +316,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PromotionCode { get; set; }
 
         /// <summary>
-        /// <para>The region. Default value: the region of the instance.</para>
+        /// <para>The region ID. Default value: the region of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -330,7 +326,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-********************</para>
@@ -340,7 +336,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The security group ID.</para>
+        /// <para>The ID of the security group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sg-********************</para>
@@ -350,7 +346,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the IP whitelist group. Default value: <c>default</c>.</para>
+        /// <para>The name of the IP address whitelist group. Default value: <c>default</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -360,7 +356,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SecurityIPArrayName { get; set; }
 
         /// <summary>
-        /// <para>The IP whitelist. If you do not specify this parameter, the default value <c>127.0.0.1</c> is used.</para>
+        /// <para>The IP address whitelist. If you do not specify this parameter, the default value <c>127.0.0.1</c> is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>127.0.0.1,172.17.0.0/24</para>
@@ -390,7 +386,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SkillTemplateId { get; set; }
 
         /// <summary>
-        /// <para>The list of application storages.</para>
+        /// <para>The list of storage resources for the application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;StorageType&quot;:&quot;oss&quot;,&quot;StorageInstanceId&quot;:&quot;pfs-xxxx&quot;,&quot;EndpointId&quot;:&quot;pe-xxxx&quot;}]</para>
@@ -449,7 +445,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string UsedTime { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch. Default value: the vSwitch in the primary zone of the instance.</para>
+        /// <para>The vSwitch ID. Default value: the current vSwitch in the primary zone of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-*********************</para>
@@ -459,7 +455,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The VPC ID.</para>
+        /// <para>The ID of the virtual private cloud (VPC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-********************</para>
@@ -469,7 +465,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The VPC NAT gateway ID for NAT mapping. If specified, NAT mapping is enabled when the instance is created. The NAT gateway must be in the same VPC as the application, use the private network type (intranet), and be in active status.</para>
+        /// <para>NAT mapping: the user-created VPC NAT gateway ID. If you specify this parameter, NAT mapping is enabled when the instance is created. The NAT gateway must reside in the same VPC as the application, be of the private network (intranet) type, and be in the active state.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ngw-xxx</para>
@@ -479,7 +475,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string VpcNatGatewayId { get; set; }
 
         /// <summary>
-        /// <para>The zone. Default value: the primary zone of the instance.</para>
+        /// <para>The zone ID. Default value: the primary zone of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing-k</para>

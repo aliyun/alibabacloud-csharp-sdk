@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>Specifies whether to enable No-activity Suspension. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Enables the feature.</para>
+        /// <item><description><para><b>true</b>: Enabled.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): Disables the feature.</para>
+        /// <item><description><para><b>false</b> (default): Disabled.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AllowShutDown { get; set; }
 
         /// <summary>
-        /// <para>The Cron expression.</para>
+        /// <para>The cron expression.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,6 +49,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The end time.</para>
+        /// <para>Specify the time in the ISO 8601 standard in the YYYY-MM-DDTHH:mmZ format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,7 +60,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the scheduled task.</para>
+        /// <para>The scheduled task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8006e51c-dab3-4602-bc69-4f728002c6ce</para>
@@ -116,7 +117,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ScaleApRoNumMin { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of PCUs. Valid values: 1 to 32.</para>
+        /// <para>The maximum value. Valid values: 1 to 32. Unit: PCU.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>
@@ -126,7 +127,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ScaleMax { get; set; }
 
         /// <summary>
-        /// <para>The minimum number of PolarDB Capacity Units (PCUs). Valid values: 0.25 to 32. This value must be less than or equal to the value of ScaleMax.</para>
+        /// <para>The minimum value. Valid values: 0.25 to 32. The minimum value must be less than or equal to the maximum value. Unit: PCU.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -136,7 +137,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ScaleMin { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of read-only nodes for scaling. Valid values: 0 to 15.</para>
+        /// <para>The maximum number of read-only nodes for scaling. The value cannot be less than the minimum value. Valid values: 0 to 15.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -156,7 +157,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ScaleRoNumMin { get; set; }
 
         /// <summary>
-        /// <para>The detection period for No-activity Suspension. Unit: minutes. Valid values: 5 to 1440. The value must be a multiple of 5.</para>
+        /// <para>The detection duration for No-activity Suspension. Valid values: 5 to 1440. Unit: minutes. The detection duration must be a multiple of 5 minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -166,7 +167,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SecondsUntilAutoPause { get; set; }
 
         /// <summary>
-        /// <para>The CPU utilization threshold for a scale-up. Unit: percent. Valid values: 40 to 100.</para>
+        /// <para>The CPU scale-up threshold. Valid values: 40 to 100. Unit: %.</para>
         /// 
         /// <b>Example:</b>
         /// <para>80</para>
@@ -176,7 +177,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ServerlessRuleCpuEnlargeThreshold { get; set; }
 
         /// <summary>
-        /// <para>The CPU utilization threshold for a scale-down. Unit: percent. Valid values: 10 to 100. The value of ServerlessRuleCpuEnlargeThreshold minus the value of this parameter must be greater than or equal to 30.</para>
+        /// <para>The CPU scale-down threshold. Valid values: 10 to 100. Unit: %. The difference between the scale-up threshold and the scale-down threshold must be at least 30.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25</para>
@@ -188,10 +189,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The scaling sensitivity. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>normal</para>
-        /// </description></item>
-        /// <item><description><para>flexible</para>
-        /// </description></item>
+        /// <item><description>normal: standard.</description></item>
+        /// <item><description>flexible: sensitive.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -202,7 +201,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ServerlessRuleMode { get; set; }
 
         /// <summary>
-        /// <para>The start time. Specify the time in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in UTC.</para>
+        /// <para>The start time. Specify the time in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-09-23T01:00:00Z</para>

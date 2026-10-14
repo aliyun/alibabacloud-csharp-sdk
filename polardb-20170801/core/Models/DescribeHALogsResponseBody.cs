@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The instance type. Valid values:</para>
+        /// <para>The instance type. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><b>polardb_mysql_rw</b>: read-write instance.</description></item>
+        /// <item><description><b>polardb_mysql_rw</b>: read/write instance.</description></item>
         /// <item><description><b>polardb_mysql_ro</b>: read-only instance.</description></item>
         /// <item><description><b>polardb_mysql_standby</b>: standby instance.</description></item>
         /// </list>
@@ -35,14 +35,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBInstanceType { get; set; }
 
         /// <summary>
-        /// <para>The list of primary/secondary 这里 AI 机翻使用了 failover，但代码里用了 switch，建议保持一致，都改为 swichover logs.</para>
+        /// <para>The list of primary/secondary switchover logs.</para>
         /// </summary>
         [NameInMap("HaLogItems")]
         [Validation(Required=false)]
         public List<DescribeHALogsResponseBodyHaLogItems> HaLogItems { get; set; }
         public class DescribeHALogsResponseBodyHaLogItems : TeaModel {
             /// <summary>
-            /// <para>The cause code of the switchover.</para>
+            /// <para>The switchover cause code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Platform.Ha.AuroraService.ManualOperations</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string SwitchCauseCode { get; set; }
 
             /// <summary>
-            /// <para>The cause of the switchover.</para>
+            /// <para>The switchover cause.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Platform.Ha.ManuallyTriggered</para>
@@ -63,6 +63,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
             /// <summary>
             /// <para>The end time of the switchover.</para>
+            /// <para>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-05-20T03:09:56Z</para>
@@ -83,6 +84,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
             /// <summary>
             /// <para>The start time of the switchover.</para>
+            /// <para>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-05-20T03:09:45Z</para>
@@ -96,8 +98,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>Indicates whether primary/secondary switchover records exist. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: No</description></item>
-        /// <item><description><b>0</b>: Yes</description></item>
+        /// <item><description><b>1</b>: No records exist.</description></item>
+        /// <item><description><b>0</b>: Records exist.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -118,7 +120,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? ItemsNumbers { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value is greater than 0 and does not exceed the maximum value of the Integer data type. Default value: 1.</para>
+        /// <para>The page number. The value is a positive integer that does not exceed the maximum value of the Integer data type. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -128,7 +130,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page. Valid values: 30 to 100. Default value: 30.</para>
+        /// <para>The number of entries per page. Valid values: 30 to 100. Default value: 30.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

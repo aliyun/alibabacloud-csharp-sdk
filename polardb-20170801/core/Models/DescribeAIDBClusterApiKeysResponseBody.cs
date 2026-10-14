@@ -28,6 +28,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
             /// <summary>
             /// <para>The creation time.</para>
+            /// <para>The time is displayed in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-09T03:19:19Z</para>

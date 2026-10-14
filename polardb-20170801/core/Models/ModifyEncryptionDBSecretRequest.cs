@@ -23,10 +23,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The status of the key. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Enabled</b></para>
-        /// </description></item>
-        /// <item><description><para><b>Disabled</b></para>
-        /// </description></item>
+        /// <item><description><b>Enabled</b>: Enabled.</description></item>
+        /// <item><description><b>Disabled</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,7 +61,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The Global Resource Descriptor (GRD) of the role. For more information, see <a href="https://help.aliyun.com/document_detail/93689.html">Overview of RAM roles</a>.</para>
+        /// <para>The global resource descriptor of the RAM role. The descriptor is used to specify a RAM role. For details, see <a href="https://help.aliyun.com/document_detail/93689.html">RAM role overview</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::1406926*****:role/aliyunrdsinstanceencryptiondefaultrole</para>

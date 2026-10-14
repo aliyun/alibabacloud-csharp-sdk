@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeGlobalDataNetworkListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the Global Data Networks (GDNs).</para>
+        /// <para>The GDN details.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public List<DescribeGlobalDataNetworkListResponseBodyItemsNetworks> Networks { get; set; }
             public class DescribeGlobalDataNetworkListResponseBodyItemsNetworks : TeaModel {
                 /// <summary>
-                /// <para>The synchronization channels.</para>
+                /// <para>The list of synchronization channels.</para>
                 /// </summary>
                 [NameInMap("Channels")]
                 [Validation(Required=false)]
                 public List<DescribeGlobalDataNetworkListResponseBodyItemsNetworksChannels> Channels { get; set; }
                 public class DescribeGlobalDataNetworkListResponseBodyItemsNetworksChannels : TeaModel {
                     /// <summary>
-                    /// <para>The ID of the synchronization channel.</para>
+                    /// <para>The synchronization channel ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>gdc-xxx</para>
@@ -41,36 +41,22 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                     public string ChannelId { get; set; }
 
                     /// <summary>
-                    /// <para>The status of the synchronization channel. Valid values:</para>
+                    /// <para>The synchronization channel status. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para><b>Creating</b>: The channel is being created.</para>
-                    /// </description></item>
-                    /// <item><description><para><b>Running</b>: The channel is running.</para>
-                    /// </description></item>
-                    /// <item><description><para><b>Syncing</b>: The channel is synchronizing data.</para>
-                    /// </description></item>
-                    /// <item><description><para><b>SyncFinished</b>: Data synchronization is complete.</para>
-                    /// </description></item>
-                    /// <item><description><para><b>SyncFailed</b>: Data synchronization failed.</para>
-                    /// </description></item>
-                    /// <item><description><para><b>SyncPartialFailed</b>: Data synchronization partially failed.</para>
-                    /// </description></item>
-                    /// <item><description><para><b>Stopped</b>: The channel is stopped.</para>
-                    /// </description></item>
-                    /// <item><description><para><b>Maintaining</b>: The channel is under maintenance.</para>
-                    /// </description></item>
-                    /// <item><description><para><b>Restarting</b>: The channel is restarting.</para>
-                    /// </description></item>
-                    /// <item><description><para><b>Locking</b>: The channel is being locked.</para>
-                    /// </description></item>
-                    /// <item><description><para><b>Locked</b>: The channel is locked.</para>
-                    /// </description></item>
-                    /// <item><description><para><b>Unlocking</b>: The channel is being unlocked.</para>
-                    /// </description></item>
-                    /// <item><description><para><b>Deleting</b>: The channel is being deleted.</para>
-                    /// </description></item>
-                    /// <item><description><para><b>Deleted</b>: The channel is deleted.</para>
-                    /// </description></item>
+                    /// <item><description><b>Creating</b>: Being created.</description></item>
+                    /// <item><description><b>Running</b>: Running.</description></item>
+                    /// <item><description><b>Syncing</b>: Being synchronized.</description></item>
+                    /// <item><description><b>SyncFinished</b>: Synchronization completed.</description></item>
+                    /// <item><description><b>SyncFailed</b>: Synchronization failed.</description></item>
+                    /// <item><description><b>SyncPartialFailed</b>: Partial synchronization failed.</description></item>
+                    /// <item><description><b>Stopped</b>: Stopped.</description></item>
+                    /// <item><description><b>Maintaining</b>: Under maintenance.</description></item>
+                    /// <item><description><b>Restarting</b>: Being restarted.</description></item>
+                    /// <item><description><b>Locking</b>: Being locked.</description></item>
+                    /// <item><description><b>Locked</b>: Locked.</description></item>
+                    /// <item><description><b>Unlocking</b>: Being unlocked.</description></item>
+                    /// <item><description><b>Deleting</b>: Being deleted.</description></item>
+                    /// <item><description><b>Deleted</b>: Deleted.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -81,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                     public string ChannelStatus { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the source path is frozen during data transmission.</para>
+                    /// <para>Specifies whether to freeze the source path during the transfer.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -91,9 +77,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                     public bool? FreezeSourceDuringSync { get; set; }
 
                     /// <summary>
-                    /// <para>The synchronization progress.</para>
+                    /// <para>The current synchronization progress.</para>
                     /// <remarks>
-                    /// <para>The value is a percentage that is accurate to two decimal places.</para>
+                    /// <para>The value is a floating-point percentage with two decimal places.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -106,7 +92,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 }
 
                 /// <summary>
-                /// <para>The time when the GDN was created.</para>
+                /// <para>The creation time of the GDN.</para>
+                /// <para>The time is in the ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-03-25T09:37:10Z</para>
@@ -126,7 +113,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string NetworkDescription { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the GDN.</para>
+                /// <para>GDN ID</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>gdn-xxx</para>
@@ -136,36 +123,22 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string NetworkId { get; set; }
 
                 /// <summary>
-                /// <para>The status of the GDN. Valid values:</para>
+                /// <para>The GDN status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>Creating</b>: The GDN is being created.</para>
-                /// </description></item>
-                /// <item><description><para><b>Running</b>: The GDN is running.</para>
-                /// </description></item>
-                /// <item><description><para><b>Syncing</b>: The GDN is synchronizing data.</para>
-                /// </description></item>
-                /// <item><description><para><b>SyncFinished</b>: Data synchronization is complete.</para>
-                /// </description></item>
-                /// <item><description><para><b>SyncFailed</b>: Data synchronization failed.</para>
-                /// </description></item>
-                /// <item><description><para><b>SyncPartialFailed</b>: Data synchronization partially failed.</para>
-                /// </description></item>
-                /// <item><description><para><b>Stopped</b>: The GDN is stopped.</para>
-                /// </description></item>
-                /// <item><description><para><b>Maintaining</b>: The GDN is under maintenance.</para>
-                /// </description></item>
-                /// <item><description><para><b>Restarting</b>: The GDN is restarting.</para>
-                /// </description></item>
-                /// <item><description><para><b>Locking</b>: The GDN is being locked.</para>
-                /// </description></item>
-                /// <item><description><para><b>Locked</b>: The GDN is locked.</para>
-                /// </description></item>
-                /// <item><description><para><b>Unlocking</b>: The GDN is being unlocked.</para>
-                /// </description></item>
-                /// <item><description><para><b>Deleting</b>: The GDN is being deleted.</para>
-                /// </description></item>
-                /// <item><description><para><b>Deleted</b>: The GDN is deleted.</para>
-                /// </description></item>
+                /// <item><description><b>Creating</b>: Being created.</description></item>
+                /// <item><description><b>Running</b>: Running.</description></item>
+                /// <item><description><b>Syncing</b>: Being synchronized.</description></item>
+                /// <item><description><b>SyncFinished</b>: Synchronization completed.</description></item>
+                /// <item><description><b>SyncFailed</b>: Synchronization failed.</description></item>
+                /// <item><description><b>SyncPartialFailed</b>: Partial synchronization failed.</description></item>
+                /// <item><description><b>Stopped</b>: Stopped.</description></item>
+                /// <item><description><b>Maintaining</b>: Under maintenance.</description></item>
+                /// <item><description><b>Restarting</b>: Being restarted.</description></item>
+                /// <item><description><b>Locking</b>: Being locked.</description></item>
+                /// <item><description><b>Locked</b>: Locked.</description></item>
+                /// <item><description><b>Unlocking</b>: Being unlocked.</description></item>
+                /// <item><description><b>Deleting</b>: Being deleted.</description></item>
+                /// <item><description><b>Deleted</b>: Deleted.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -176,14 +149,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string NetworkStatus { get; set; }
 
                 /// <summary>
-                /// <para>The network topology of the GDN.</para>
+                /// <para>The GDN network topology.</para>
                 /// </summary>
                 [NameInMap("NetworkTopology")]
                 [Validation(Required=false)]
                 public DescribeGlobalDataNetworkListResponseBodyItemsNetworksNetworkTopology NetworkTopology { get; set; }
                 public class DescribeGlobalDataNetworkListResponseBodyItemsNetworksNetworkTopology : TeaModel {
                     /// <summary>
-                    /// <para>The synchronization destinations.</para>
+                    /// <para>The list of synchronization destinations.</para>
                     /// </summary>
                     [NameInMap("Destinations")]
                     [Validation(Required=false)]
@@ -200,7 +173,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                         public string DestinationFileSystemPath { get; set; }
 
                         /// <summary>
-                        /// <para>Destination PolarDB instance</para>
+                        /// <para>The destination Polarlakebase instance.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>pfs-xxx</para>
@@ -210,7 +183,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                         public string DestinationId { get; set; }
 
                         /// <summary>
-                        /// <para>The region of the destination.</para>
+                        /// <para>The destination region.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>cn-beijing</para>
@@ -220,12 +193,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                         public string DestinationRegion { get; set; }
 
                         /// <summary>
-                        /// <para>The type of the destination. Valid values:</para>
+                        /// <para>The destination type. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><para><b>pfs</b>: Polarlakebase High-performance Edition.</para>
-                        /// </description></item>
-                        /// <item><description><para><b>pcs</b>: Polarlakebase Cold Storage Edition.</para>
-                        /// </description></item>
+                        /// <item><description><b>pfs</b>: Polarlakebase High-performance Edition.</description></item>
+                        /// <item><description><b>pcs</b>: Polarlakebase Cold Storage Edition.</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -238,7 +209,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                     }
 
                     /// <summary>
-                    /// <para>The synchronization sources.</para>
+                    /// <para>The list of synchronization sources.</para>
                     /// </summary>
                     [NameInMap("Sources")]
                     [Validation(Required=false)]
@@ -255,7 +226,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                         public string SourceFileSystemPath { get; set; }
 
                         /// <summary>
-                        /// <para>The ID of the source Polarlakebase instance.</para>
+                        /// <para>The source Polarlakebase instance.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>pcs-xxx</para>
@@ -265,7 +236,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                         public string SourceId { get; set; }
 
                         /// <summary>
-                        /// <para>The region of the source.</para>
+                        /// <para>The source region.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>cn-wulanchabu</para>
@@ -275,12 +246,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                         public string SourceRegion { get; set; }
 
                         /// <summary>
-                        /// <para>The type of the source. Valid values:</para>
+                        /// <para>The source type. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><para><b>pfs</b>: Polarlakebase High-performance Edition.</para>
-                        /// </description></item>
-                        /// <item><description><para><b>pcs</b>: Polarlakebase Cold Storage Edition.</para>
-                        /// </description></item>
+                        /// <item><description><b>pfs</b>: Polarlakebase High-performance Edition.</description></item>
+                        /// <item><description><b>pcs</b>: Polarlakebase Cold Storage Edition.</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>

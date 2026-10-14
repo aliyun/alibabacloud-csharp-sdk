@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para>To find the cluster ID for enterprise, basic, or data lakehouse edition clusters, call the <a href="https://help.aliyun.com/document_detail/2319131.html">DescribeDBClusters</a> operation.</para>
+        /// <para>Enterprise Edition, Basic Edition, and Data Lakehouse Edition: You can call the <a href="https://help.aliyun.com/document_detail/2319131.html">DescribeDBClusters</a> operation to query the cluster ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The destination path.</para>
+        /// <para>The target path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/data</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Path { get; set; }
 
         /// <summary>
-        /// <para>The PolarFS instance ID.</para>
+        /// <para>The Polarlakebase instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to find the IDs of all available regions in your account.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query all available regions for the current account, including region IDs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

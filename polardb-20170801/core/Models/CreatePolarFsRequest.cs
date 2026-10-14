@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreatePolarFsRequest : TeaModel {
         /// <summary>
-        /// <para>The acceleration storage space for Basic Edition with acceleration enabled. Unit: GB.</para>
+        /// <para>The acceleration storage space for the Basic Edition with acceleration enabled. Unit: GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AccelerateType { get; set; }
 
         /// <summary>
-        /// <para>The list of authorized account IDs for Cold Storage Edition instances, separated by commas (,).</para>
+        /// <para>The list of authorized account IDs for the Cold Storage Edition instance, separated by commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>128***********，198***********</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>Specifies whether to automatically use coupons. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Coupons are used (default).</description></item>
+        /// <item><description><b>true</b>: Coupons are automatically used (default).</description></item>
         /// <item><description><b>false</b>: Coupons are not used.</description></item>
         /// </list>
         /// 
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The bucket and path information.</para>
         /// <remarks>
-        /// <para>This parameter is required for transparent acceleration scenarios.</para>
+        /// <para>This parameter is required for the transparent acceleration scenario.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("CustomBucketPathList")]
@@ -221,10 +221,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required when <b>PayType</b> is set to <b>Prepaid</b>. Specifies whether the subscription cluster uses a yearly or monthly billing cycle. You must pass this parameter when the billing method is subscription. </para>
+        /// <para>The unit of the subscription duration. This parameter is required if PayType is set to <b>Prepaid</b>. Specifies whether the subscription cluster uses a yearly or monthly billing cycle. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><b>Year</b>: The subscription period is measured in years.</description></item>
-        /// <item><description><b>Month</b>: The subscription period is measured in months.</description></item>
+        /// <item><description><b>Year</b>: The subscription duration is measured in years.</description></item>
+        /// <item><description><b>Month</b>: The subscription duration is measured in months.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query region IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the region ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -269,16 +269,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? StorageSpace { get; set; }
 
         /// <summary>
-        /// <para>Valid values for high-performance storage type:</para>
+        /// <para>Valid values for the high-performance storage type:</para>
         /// <list type="bullet">
         /// <item><description><b>ESSDPL0</b></description></item>
         /// <item><description><b>ESSDPL1</b></description></item>
         /// </list>
-        /// <para>Valid values for Basic Edition storage type:</para>
+        /// <para>Valid values for the Basic Edition storage type:</para>
         /// <list type="bullet">
         /// <item><description><b>city_redundancy (zone-redundant)</b></description></item>
         /// </list>
-        /// <para>Valid values for Cold Storage Edition storage type:</para>
+        /// <para>Valid values for the Cold Storage Edition storage type:</para>
         /// <list type="bullet">
         /// <item><description><b>city_redundancy (zone-redundant)</b></description></item>
         /// <item><description><b>local_redundancy (locally redundant)</b></description></item>
@@ -292,10 +292,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string StorageType { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required when <b>PayType</b> is set to <b>Prepaid</b>.</para>
+        /// <para>The subscription duration. This parameter is required when PayType is set to <b>Prepaid</b>.</para>
         /// <list type="bullet">
-        /// <item><description>When <b>Period</b> is set to <b>Month</b>, the valid values of <b>UsedTime</b> are integers in the range of <c>[1-9]</c>.</description></item>
-        /// <item><description>When <b>Period</b> is set to <b>Year</b>, the valid values of <b>UsedTime</b> are integers in the range of <c>[1-3]</c>.</description></item>
+        /// <item><description>If <b>Period</b> is set to <b>Month</b>, valid values of <b>UsedTime</b> are integers in the range of <c>[1-9]</c>.</description></item>
+        /// <item><description>If <b>Period</b> is set to <b>Year</b>, valid values of <b>UsedTime</b> are integers in the range of <c>[1-3]</c>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -306,7 +306,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string UsedTime { get; set; }
 
         /// <summary>
-        /// <para>The VPC ID.</para>
+        /// <para>The virtual private cloud (VPC) ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-*******************</para>

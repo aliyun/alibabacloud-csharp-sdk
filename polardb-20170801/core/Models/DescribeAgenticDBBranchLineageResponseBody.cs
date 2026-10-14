@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAgenticDBBranchLineageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The anchor branch ID.</para>
+        /// <para>The ID of the anchor branch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>br-7g8h9i0j1k2l</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<DescribeAgenticDBBranchLineageResponseBodyItems> Items { get; set; }
         public class DescribeAgenticDBBranchLineageResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The compute cluster ID of the branch.</para>
+            /// <para>The ID of the compute cluster associated with the branch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pc-g0lsayq8c5qe</para>
@@ -68,6 +68,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
             /// <summary>
             /// <para>The time when the branch was created.</para>
+            /// <para>The time is in the ISO 8601 standard in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-06-10T11:00:00Z</para>
@@ -77,7 +78,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The depth relative to the anchor branch. The anchor branch has a depth of 0. Ancestor branches have negative values. Descendant branches have positive values.</para>
+            /// <para>The depth relative to the anchor branch. The anchor branch has a depth of 0. Ancestor branches have negative values, and descendant branches have positive values.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -127,6 +128,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public bool? IsAnchor { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the branch is the default branch.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -145,7 +148,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public bool? IsRoot { get; set; }
 
             /// <summary>
-            /// <para>The parent branch ID.</para>
+            /// <para>The ID of the parent branch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>br-1a2b3c4d5e6f</para>
@@ -155,7 +158,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ParentBranchId { get; set; }
 
             /// <summary>
-            /// <para>The parent branch name.</para>
+            /// <para>The name of the parent branch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>main</para>
@@ -181,7 +184,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The total number of returned nodes.</para>
+        /// <para>The total number of nodes returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>
@@ -221,7 +224,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The primary branch ID.</para>
+        /// <para>The ID of the primary branch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>br-root</para>

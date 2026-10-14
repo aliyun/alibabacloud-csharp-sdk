@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string BranchId { get; set; }
 
         /// <summary>
-        /// <para>The AgenticDB cluster ID.</para>
+        /// <para>The ID of the AgenticDB cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

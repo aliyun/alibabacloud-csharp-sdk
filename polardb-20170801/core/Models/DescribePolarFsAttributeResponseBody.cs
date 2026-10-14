@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AccelerateType { get; set; }
 
         /// <summary>
-        /// <para>The acceleration storage space, in GB.</para>
+        /// <para>The acceleration storage space. Unit: GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AuthorizedUserIds { get; set; }
 
         /// <summary>
-        /// <para>The bandwidth, in MB/s.</para>
+        /// <para>The bandwidth. Unit: MB/s.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public double? Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The bandwidth baseline, in MB/s/TiB.</para>
+        /// <para>The bandwidth baseline. Unit: MB/s/TiB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -123,6 +123,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The creation time.</para>
+        /// <para>The time is in the ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-08-02T05:57:10Z</para>
@@ -195,7 +196,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBType { get; set; }
 
         /// <summary>
-        /// <para>The list of endpoints, including endpoint information for NAS, S3Gateway, and other types.</para>
+        /// <para>The list of endpoints, including endpoint information for types such as NAS and S3Gateway.</para>
         /// </summary>
         [NameInMap("EndpointItems")]
         [Validation(Required=false)]
@@ -209,7 +210,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public List<DescribePolarFsAttributeResponseBodyEndpointItemsAddressItems> AddressItems { get; set; }
             public class DescribePolarFsAttributeResponseBodyEndpointItemsAddressItems : TeaModel {
                 /// <summary>
-                /// <para>The endpoint of the protocol connection.</para>
+                /// <para>The protocol endpoint.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aclsh-prd-pdb12-rw.rwlb.rds.aliyuncs.com</para>
@@ -302,6 +303,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <remarks>
         /// <para>This parameter is returned only for clusters whose billing method is <b>Prepaid</b> (subscription). An empty value is returned for <b>Postpaid</b> (pay-as-you-go) clusters.</para>
         /// </remarks>
+        /// <para>The time is in the ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-10-10T16:00:00Z</para>
@@ -359,7 +361,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string MaxscaleEndpointId { get; set; }
 
         /// <summary>
-        /// <para>The metadata service cluster endpoint.</para>
+        /// <para>The cluster endpoint of the metadata service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-x67w12d2d5t13mt88.pg.polardb.rds.aliyuncs.com</para>
@@ -379,7 +381,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string MetaInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The metadata proxy service cluster endpoint.</para>
+        /// <para>The cluster endpoint of the metadata proxy service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-y3610mp168p3bb740.rwlb.rds.aliyuncs.com</para>
@@ -389,7 +391,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string MetaMxsConnString { get; set; }
 
         /// <summary>
-        /// <para>The metadata address for Fuse mount (encrypted).</para>
+        /// <para>The metadata address for Fuse mounting (encrypted).</para>
         /// 
         /// <b>Example:</b>
         /// <para>e6cc1d2e2a6fa292038d999fda6501*****</para>
@@ -494,8 +496,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The instance version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PolarFS 2.0</b>: 2.0</description></item>
-        /// <item><description><b>PolarFS 1.0</b>: 1.0</description></item>
+        /// <item><description><b>PolarFS 2.0</b>: 2.0.</description></item>
+        /// <item><description><b>PolarFS 1.0</b>: 1.0.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -566,7 +568,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The storage space, in GB.</para>
+        /// <para>The storage space. Unit: GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -576,14 +578,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public double? StorageSpace { get; set; }
 
         /// <summary>
-        /// <para>The storage type for the High-performance Edition. Valid values:</para>
+        /// <para>Storage types for the High-performance Edition. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>ESSDPL1</b></description></item>
         /// <item><description><b>ESSDPL0</b></description></item>
         /// </list>
-        /// <para>The storage type for the Basic Edition. Valid values:</para>
+        /// <para>Storage types for the Basic Edition. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>city_redundancy</b>: cross-zone redundancy.</description></item>
+        /// <item><description><b>city_redundancy</b>: zone-redundant storage.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -594,7 +596,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string StorageType { get; set; }
 
         /// <summary>
-        /// <para>The storage usage, in bytes.</para>
+        /// <para>The used storage space. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3012558848</para>

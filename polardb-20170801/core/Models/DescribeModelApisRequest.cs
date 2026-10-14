@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GwClusterId { get; set; }
 
         /// <summary>
-        /// <para>The model API IDs.</para>
+        /// <para>The IDs of the model APIs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mi-xxx,mi-xxxx</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ModelApiIds { get; set; }
 
         /// <summary>
-        /// <para>The model category. Valid values:</para>
+        /// <para>The category. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>text</b></description></item>
         /// <item><description><b>embedding</b></description></item>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ModelCategory { get; set; }
 
         /// <summary>
-        /// <para>The model API name.</para>
+        /// <para>The name of the model API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testName</para>
@@ -70,9 +70,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <list type="bullet">
         /// <item><description><b>30</b></description></item>
         /// <item><description><b>50</b></description></item>
-        /// <item><description><b>100</b></description></item>
+        /// <item><description><b>100</b>
+        /// Default value: <b>30</b>.</description></item>
         /// </list>
-        /// <para>Default value: <b>30</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The model API status.</para>
+        /// <para>The status of the model API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Enable</para>

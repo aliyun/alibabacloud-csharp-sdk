@@ -40,6 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <remarks>
         /// <para>This response parameter is returned only when <b>PayType</b> is set to <b>Prepaid</b>.</para>
         /// </remarks>
+        /// <para>The time follows the ISO 8601 standard in the format of YYYY-MM-DDTHH:mm:ssZ. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-04-20T10:00:00Z</para>

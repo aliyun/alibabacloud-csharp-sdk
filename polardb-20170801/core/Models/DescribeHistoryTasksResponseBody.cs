@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeHistoryTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of tasks.</para>
+        /// <para>The task list.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>The allowed operation information.</para>
             /// <remarks>
-            /// <para>This feature is not supported yet.</para>
+            /// <para>This feature is not supported.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -32,10 +32,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>The request source. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>System</b>: system</para>
-            /// </description></item>
-            /// <item><description><para><b>User</b>: user</para>
-            /// </description></item>
+            /// <item><description><b>System</b>: system.</description></item>
+            /// <item><description><b>User</b>: user.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -46,7 +44,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string CallerSource { get; set; }
 
             /// <summary>
-            /// <para>The ID of the requesting user. If <c>CallerSource</c> is <c>User</c>, this is the user\&quot;s UID.</para>
+            /// <para>The ID of the requesting user. When CallerSource is set to User, this value represents the user UID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1816563541899***</para>
@@ -56,7 +54,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string CallerUid { get; set; }
 
             /// <summary>
-            /// <para>The name of the current step being executed. If this parameter is empty, the task has not started.</para>
+            /// <para>The name of the current step being executed. An empty value indicates that the task has not started.</para>
             /// 
             /// <b>Example:</b>
             /// <para>finish_task</para>
@@ -76,7 +74,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DbType { get; set; }
 
             /// <summary>
-            /// <para>The end time of the task.</para>
+            /// <para>The task end time.</para>
+            /// <para>The time is in the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-03-03T07:30:57Z</para>
@@ -126,7 +125,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Product { get; set; }
 
             /// <summary>
-            /// <para>The completion progress of the task, from 0.0 to 100.0.</para>
+            /// <para>The current progress.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100.0</para>
@@ -136,7 +135,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public float? Progress { get; set; }
 
             /// <summary>
-            /// <para>The reason for initiating the current task.</para>
+            /// <para>The reason why the current task was initiated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;&quot;</para>
@@ -156,9 +155,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The estimated remaining execution time, in seconds (s).</para>
+            /// <para>The estimated remaining execution duration. Unit: seconds.</para>
             /// <remarks>
-            /// <para>This value is for reference only. The actual execution time prevails.</para>
+            /// <para>This value is for reference only. The actual execution duration may vary.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -169,7 +168,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public int? RemainTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of the task.</para>
+            /// <para>The task start time.</para>
+            /// <para>The time is in the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-03-03T07:25:16Z</para>
@@ -179,22 +179,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The final status of the task.</para>
+            /// <para>The task status.</para>
             /// <list type="bullet">
-            /// <item><description><para>Scheduled: waiting for execution</para>
-            /// </description></item>
-            /// <item><description><para>Running: executing</para>
-            /// </description></item>
-            /// <item><description><para>Succeed: executed successfully</para>
-            /// </description></item>
-            /// <item><description><para>Failed: execution failed</para>
-            /// </description></item>
-            /// <item><description><para>Cancelling: stopping</para>
-            /// </description></item>
-            /// <item><description><para>Canceled: stopped</para>
-            /// </description></item>
-            /// <item><description><para>Waiting: waiting for preset time</para>
-            /// </description></item>
+            /// <item><description>Scheduled: Waiting for execution.</description></item>
+            /// <item><description>Running: Running.</description></item>
+            /// <item><description>Succeed: Succeeded.</description></item>
+            /// <item><description>Failed: Failed.</description></item>
+            /// <item><description>Cancelling: Being canceled.</description></item>
+            /// <item><description>Canceled: Canceled.</description></item>
+            /// <item><description>Waiting: Waiting for the scheduled time.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -235,7 +228,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string TaskType { get; set; }
 
             /// <summary>
-            /// <para>The UID of the account that owns the resource.</para>
+            /// <para>The ID of the user to whom the resource belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1816563541899***</para>
@@ -247,7 +240,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The page number of the query result.</para>
+        /// <para>The page number of the query results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -257,7 +250,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -267,7 +260,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F90D7C14-2D1C-5B88-9CD1-23AB2CF89***</para>
@@ -277,7 +270,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of tasks that meet the conditions, regardless of paging factors.</para>
+        /// <para>The total number of tasks that meet the filter conditions, regardless of pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

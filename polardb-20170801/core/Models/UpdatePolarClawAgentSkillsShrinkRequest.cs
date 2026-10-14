@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class UpdatePolarClawAgentSkillsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Agent ID</para>
+        /// <para>PolarClaw Agent ID。</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AgentId { get; set; }
 
         /// <summary>
-        /// <para>The application ID.</para>
+        /// <para>The PolarClaw application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

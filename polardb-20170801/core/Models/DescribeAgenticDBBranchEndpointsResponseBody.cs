@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Account { get; set; }
 
             /// <summary>
-            /// <para>The compatible connection address. The public endpoint is returned first. If no public endpoint is available, the private endpoint is returned.</para>
+            /// <para>The compatible connection address. A public endpoint is returned first. If no public endpoint is available, a private endpoint is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.0.1.100</para>
@@ -64,7 +64,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string ConnectionString { get; set; }
 
                 /// <summary>
-                /// <para>The network type. Valid values: Private and Public.</para>
+                /// <para>The network type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Private: private network.</description></item>
+                /// <item><description>Public: public network.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Private</para>
@@ -86,7 +90,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             }
 
             /// <summary>
-            /// <para>The compatible connection string. The public connection string is returned first. If no public connection string is available, the private connection string is returned.</para>
+            /// <para>The compatible connection string. A public connection string is returned first. If no public connection string is available, a private connection string is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>postgresql://cloud_admin:******@10.0.1.100:5432/neondb</para>

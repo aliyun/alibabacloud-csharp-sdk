@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on the current page.</para>
+        /// <para>The number of records on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 5 to 50. Default value: 10.</para>
+        /// <para>The number of records per page. Valid values: 5 to 50. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The path of the directory.</para>
+        /// <para>The directory path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/data</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Path { get; set; }
 
         /// <summary>
-        /// <para>The PolarFS instance ID.</para>
+        /// <para>The Polarlakebase instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pfs-2ze0i74ka607*****</para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PolarFsInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The details of the rules.</para>
+        /// <para>The rule details.</para>
         /// </summary>
         [NameInMap("PolicyItems")]
         [Validation(Required=false)]
         public List<DescribePolarFsQuotaResponseBodyPolicyItems> PolicyItems { get; set; }
         public class DescribePolarFsQuotaResponseBodyPolicyItems : TeaModel {
             /// <summary>
-            /// <para>The TTL of the access time. Unit: seconds.</para>
+            /// <para>The TTL for access time. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7200</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? AccessTTL { get; set; }
 
             /// <summary>
-            /// <para>The TTL of the change time. Unit: seconds.</para>
+            /// <para>The TTL for change time. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7200</para>
@@ -97,12 +97,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the rule is enabled. Valid values:</para>
+            /// <para>Specifies whether the rule is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: The rule takes effect immediately for new events. This is the default value.</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: The rule does not take effect for new events.</para>
-            /// </description></item>
+            /// <item><description><b>true</b>: The new event takes effect immediately for new transactions. This is the default value.</description></item>
+            /// <item><description><b>false</b>: The new event does not take effect for new transactions.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -113,9 +111,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The glob pattern of paths to exclude.</para>
+            /// <para>The matching rule for excluding specific paths.</para>
             /// <list type="bullet">
-            /// <item><description>The pattern must start with <c>/</c> and supports glob syntax, including <c>*</c>, <c>?</c>, and <c>**</c>.</description></item>
+            /// <item><description>A path pattern that starts with <c>/</c> (supports <c>*</c>, <c>?</c>, and <c>**</c> glob syntax).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -126,7 +124,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Exclude { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of files in the directory.</para>
+            /// <para>The file count limit for users in the directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>77</para>
@@ -146,9 +144,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The glob pattern for paths to include.</para>
+            /// <para>The glob pattern for matching paths.</para>
             /// <list type="bullet">
-            /// <item><description>The pattern must start with <c>/</c> and supports glob syntax, including <c>*</c>, <c>?</c>, and <c>**</c>.</description></item>
+            /// <item><description>A path pattern that starts with <c>/</c> (supports <c>*</c>, <c>?</c>, and <c>**</c> glob syntax).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -179,9 +177,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public int? Priority { get; set; }
 
             /// <summary>
-            /// <para>The maximum total size of files in the directory. Unit: GB.</para>
+            /// <para>The total file capacity limit for the directory. Unit: GB.</para>
             /// <list type="bullet">
-            /// <item><description>The value must be greater than or equal to 1.</description></item>
+            /// <item><description>Note: The value must be at least 1 GB.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -211,7 +209,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? Capacity { get; set; }
 
             /// <summary>
-            /// <para>The total number of inodes.</para>
+            /// <para>Inodes</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -253,7 +251,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>2FED790E-FB61-4721-8C1C-07C627******</para>
@@ -263,7 +261,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

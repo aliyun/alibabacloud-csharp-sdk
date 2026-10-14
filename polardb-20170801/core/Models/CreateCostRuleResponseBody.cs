@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateCostRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The cost rule ID.</para>
+        /// <para>The ID of the cost rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>924d450014e64e88ac6e8486f8e990**</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAgenticDBBranchLineageRequest : TeaModel {
         /// <summary>
-        /// <para>The anchor branch ID. If this parameter is not specified, the primary branch of the project is used by default.</para>
+        /// <para>The ID of the anchor branch. If this parameter is not specified, the primary branch of the project is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>br-7g8h9i0j1k2l</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string BranchId { get; set; }
 
         /// <summary>
-        /// <para>The AgenticDB cluster ID.</para>
+        /// <para>The ID of the AgenticDB cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,6 +41,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? IncludeDestroying { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of levels to return in the view, including the anchor branch itself. Valid values: 1 to 20. Default value: 3. The server automatically allocates the budget for ancestor and descendant levels with a downward bias.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>

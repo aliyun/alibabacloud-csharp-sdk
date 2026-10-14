@@ -20,8 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ClientId { get; set; }
 
         /// <summary>
-        /// <para>The time when the synchronization link was created.</para>
-        /// <para>The time is in the ISO 8601 standard in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</para>
+        /// <para>The creation time. The time is in ISO 8601 format and the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-08-14T05:58:42Z</para>
@@ -31,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string CreationTime { get; set; }
 
         /// <summary>
-        /// <para>The description of the synchronization link.</para>
+        /// <para>The description of the link.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testDesc</para>
@@ -65,7 +64,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string LinkId { get; set; }
 
         /// <summary>
-        /// <para>The name of the synchronization link.</para>
+        /// <para>The name of the link.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testName</para>
@@ -85,7 +84,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The directory address of the synchronization source.</para>
+        /// <para>The source directory address for synchronization.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.feishu.cn/wiki/space/xxxxxx">https://example.feishu.cn/wiki/space/xxxxxx</a></para>
@@ -95,7 +94,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SourceDir { get; set; }
 
         /// <summary>
-        /// <para>The synchronization interval. Unit: minutes.</para>
+        /// <para>The synchronization interval, in minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class VerifyAgenticDBTenantApiKeyRequest : TeaModel {
         /// <summary>
-        /// <para>The plaintext API key to validate.</para>
+        /// <para>The plaintext of the API key to be validated.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -30,7 +30,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the API key. This parameter is empty if the API key is permanently valid.</para>
+        /// <para>The expiration time. This parameter is empty if the API key is permanently valid.</para>
+        /// <para>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2027-01-01T00:00:00Z</para>
@@ -40,13 +41,20 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ExpireTime { get; set; }
 
         /// <summary>
-        /// <para>The reason why the validation failed. Valid values: NotFound, Expired, and Revoked. This parameter is empty if the API key is valid.</para>
+        /// <para>The reason for the validation failure. This parameter is empty if the API key is valid. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>NotFound: The API key is not found.</description></item>
+        /// <item><description>Expired: The API key has expired.</description></item>
+        /// <item><description>Revoked: The API key has been revoked.</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("Reason")]
         [Validation(Required=false)]
         public string Reason { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>

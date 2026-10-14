@@ -58,6 +58,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
             /// <summary>
             /// <para>The time when the cluster was created.</para>
+            /// <para>The time is in the ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-08-14T05:58:42Z</para>
@@ -121,6 +122,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <remarks>
             /// <para>A specific value is returned only for clusters whose billing method is <b>Prepaid</b> (subscription). An empty value is returned for <b>Postpaid</b> (pay-as-you-go) clusters.</para>
             /// </remarks>
+            /// <para>The time is in the ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-25T09:37:10Z</para>
@@ -152,8 +154,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <para>The lock status of the cluster. Valid values: </para>
             /// <list type="bullet">
             /// <item><description><b>Unlock</b>: Normal. </description></item>
-            /// <item><description><b>ManualLock</b>: Manually locked. </description></item>
-            /// <item><description><b>LockByExpiration</b>: Automatically locked due to cluster expiration.</description></item>
+            /// <item><description><b>ManualLock</b>: manually locked. </description></item>
+            /// <item><description><b>LockByExpiration</b>: automatically locked due to cluster expiration.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -208,7 +210,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ScaleMin { get; set; }
 
             /// <summary>
-            /// <para>The serverless type. A value of <b>AgileServerless</b> indicates that the cluster is a serverless cluster.</para>
+            /// <para>The serverless type. A return value of <b>AgileServerless</b> indicates that the cluster is a serverless cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AgileServerless</para>
@@ -244,7 +246,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? StorageUsed { get; set; }
 
             /// <summary>
-            /// <para>The tag key. You can filter the cluster list by tag. You can specify up to 20 tag pairs. The number n for each tag pair must be unique and must be a consecutive integer starting from 1. The value of Tag.n.Key corresponds to Tag.n.Value.</para>
+            /// <para>The tag key. You can use tags to filter clusters. You can specify up to 20 tags. The number n for each tag pair must be unique and must be a consecutive integer that starts from 1. The Tag.n.Key parameter is paired with the Tag.n.Value parameter.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -315,7 +317,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous API call. If there is no next query, do not pass this parameter.</para>
+        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous API call. If there is no next query, do not specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>212db86sca4384811e0b5e8707e******</para>

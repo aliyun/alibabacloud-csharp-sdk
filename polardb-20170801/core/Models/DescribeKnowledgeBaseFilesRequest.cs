@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeKnowledgeBaseFilesRequest : TeaModel {
         /// <summary>
-        /// <para>The list of file IDs, separated by commas (,).</para>
+        /// <para>The list of file IDs, separated by commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>doc_a,doc_b</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string FileIds { get; set; }
 
         /// <summary>
-        /// <para>The keyword used to filter file names.</para>
+        /// <para>The keyword for the file name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Financial report</para>
+        /// <para>FinancialReport</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the knowledge base.</para>
+        /// <para>The unique identifier of the knowledge base.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string KnowledgeBaseId { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the synchronization link.</para>
+        /// <para>The unique identifier of the synchronization link.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pkbl-2ze123456789abc</para>

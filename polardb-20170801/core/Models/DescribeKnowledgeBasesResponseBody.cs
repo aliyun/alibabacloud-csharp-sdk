@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<DescribeKnowledgeBasesResponseBodyItems> Items { get; set; }
         public class DescribeKnowledgeBasesResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The number of AI applications bound to the knowledge base.</para>
+            /// <para>The number of AI applications that are associated with the knowledge base.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -28,6 +28,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
             /// <summary>
             /// <para>The creation time.</para>
+            /// <para>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-03-25T09:37:10Z</para>

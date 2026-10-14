@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class RevokeAccountPrivilegeZonalRequest : TeaModel {
         /// <summary>
-        /// <para>The account name.</para>
+        /// <para>The name of the account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>A client-generated token that ensures the idempotence of the request. The token must be unique for each request. It is case-sensitive and cannot exceed 64 ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the token. The token must be unique across different requests and is case-sensitive. The token can be up to 64 ASCII characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6000170000591aed949d0f5********************</para>
@@ -32,6 +32,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The cluster ID.</para>
+        /// <remarks>
+        /// <para>Note: This API supports only the cluster IDs of PolarDB on ENS clusters. For common clusters, use RevokeAccountPrivilege. You can call the DescribeDBClustersZonal operation to query the list of edge clusters.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +45,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database. To specify multiple databases, separate the names with a comma (,).</para>
+        /// <para>The name of the database. You can specify multiple database names separated by commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

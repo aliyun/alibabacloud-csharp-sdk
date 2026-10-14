@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The redemption code. If specified, the recharge-type activation branch is used, and the count and quota are populated from the database.</para>
+        /// <para>The redemption code. If specified, the recharge activation branch is used, and the count and quota are populated from the database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;9&quot;</para>

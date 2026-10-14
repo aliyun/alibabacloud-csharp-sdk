@@ -58,6 +58,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
             /// <summary>
             /// <para>The time when the compute instance was created.</para>
+            /// <para>The time is in the ISO 8601 standard in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-06-10T11:00:00Z</para>
@@ -77,6 +78,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the compute instance is the default branch.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -124,10 +127,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string OperatorType { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the parent branch. This value is an empty string for the root branch.</para>
+            /// </summary>
             [NameInMap("ParentBranchId")]
             [Validation(Required=false)]
             public string ParentBranchId { get; set; }
 
+            /// <summary>
+            /// <para>The name of the parent branch. This value is an empty string for the root branch.</para>
+            /// </summary>
             [NameInMap("ParentBranchName")]
             [Validation(Required=false)]
             public string ParentBranchName { get; set; }
@@ -163,7 +172,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The amount of used data, in bytes.</para>
+            /// <para>The amount of data used, in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1073741824</para>

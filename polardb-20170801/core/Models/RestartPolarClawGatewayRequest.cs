@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class RestartPolarClawGatewayRequest : TeaModel {
         /// <summary>
-        /// <para>The application ID.</para>
+        /// <para>The PolarClaw application ID. Example: pa-xxx.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,8 +23,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The restart mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>in-process: lightweight restart without applying environment variable changes. This is the default value.</description></item>
-        /// <item><description>pkill: cold start that applies environment variable changes.</description></item>
+        /// <item><description>in-process: lightweight restart. Environment variables do not take effect. This is the default value.</description></item>
+        /// <item><description>pkill: cold start. Environment variables take effect.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The list of child components.</para>
+        /// <para>The list of subcomponents.</para>
         /// </summary>
         [NameInMap("Components")]
         [Validation(Required=false)]
         public List<CreateApplicationResponseBodyComponents> Components { get; set; }
         public class CreateApplicationResponseBodyComponents : TeaModel {
             /// <summary>
-            /// <para>The child component ID.</para>
+            /// <para>The subcomponent ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pac-********************</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The description of the application.</para>
+        /// <para>The application description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myapp</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether resources are sufficient. This parameter is returned only when DryRun is set to true.</para>
+        /// <para>Indicates whether the resources are sufficient. This parameter is returned only when DryRun is set to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? ResourceAvailable { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-********************</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class FailoverDBClusterZonalRequest : TeaModel {
         /// <summary>
-        /// <para>A client token to ensure the idempotence of the request. The client generates this token. It must be unique across requests. The token is case-sensitive and cannot exceed 64 ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token is case-sensitive and can contain a maximum of 64 ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6000170000591aed949d0f54a343f1a4233c1e7d1c5******</para>
@@ -47,12 +47,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to fail back to the original primary zone after a failover. Valid values:</para>
+        /// <para>Specifies whether to switch back to the original primary zone after a failover. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Yes.</para>
-        /// </description></item>
-        /// <item><description><para>false: No.</para>
-        /// </description></item>
+        /// <item><description>true: Switch back to the original primary zone.</description></item>
+        /// <item><description>false: Do not switch back to the original primary zone.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,7 +61,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? RollBackForDisaster { get; set; }
 
         /// <summary>
-        /// <para>The ID of the node to promote to the primary node. If you do not specify this parameter, the system automatically selects a node. Call the DescribeDBClusters operation to query node information, such as node IDs.</para>
+        /// <para>The ID of the node to be switched to the primary node. If you leave this parameter empty, the system automatically elects a node. You can call the DescribeDBClusters operation to query the node ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pi-***********</para>
@@ -73,13 +71,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TargetDBNodeId { get; set; }
 
         /// <summary>
-        /// <para>The type of failover. Valid values:</para>
+        /// <para>Specifies whether the switchover is a primary/secondary switchover within the primary zone. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Primary: A primary/secondary failover within the primary zone.</para>
-        /// </description></item>
-        /// <item><description><para>Standby: A switch to the hot standby storage cluster.</para>
-        /// </description></item>
+        /// <item><description>Primary: primary/secondary switchover within the primary zone.</description></item>
+        /// <item><description>Standby: switchover to the hot standby storage cluster.</description></item>
         /// </list>
+        /// <para>Default value: Primary. This value indicates that the switchover is performed within the active zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Primary</para>

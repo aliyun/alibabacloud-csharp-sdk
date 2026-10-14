@@ -12,10 +12,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>Specifies whether to clean up data. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Enable</b></para>
-        /// </description></item>
-        /// <item><description><para><b>Disable</b></para>
-        /// </description></item>
+        /// <item><description><b>Enable</b>: Enable data cleanup.</description></item>
+        /// <item><description><b>Disable</b>: Disable data cleanup.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,7 +26,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters in a specific region, including cluster IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query information about all clusters in the specified region, including the cluster ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

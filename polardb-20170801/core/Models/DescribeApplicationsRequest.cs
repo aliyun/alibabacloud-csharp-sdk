@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeApplicationsRequest : TeaModel {
         /// <summary>
-        /// <para>The list of application IDs. If specified, only information about these applications is returned.</para>
+        /// <para>The list of application IDs. If specified, only the information of these applications is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pa-**************</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationTypes { get; set; }
 
         /// <summary>
-        /// <para>The PolarDB instance ID. If specified, only application information related to this PolarDB instance is returned.</para>
+        /// <para>The PolarDB instance ID. If specified, only the application information related to this PolarDB instance is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-**************</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The tag.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

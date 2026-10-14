@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string NetType { get; set; }
 
         /// <summary>
-        /// <para>The new endpoint prefix.</para>
+        /// <para>The new endpoint address prefix.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xg06iror0l</para>

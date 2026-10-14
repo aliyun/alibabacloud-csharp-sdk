@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeLicenseOrdersRequest : TeaModel {
         /// <summary>
-        /// <para>The Alibaba Cloud order ID. This can be a virtual order ID.</para>
+        /// <para>The Alibaba Cloud order ID, including virtual order IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>239618016570503</para>
@@ -30,16 +30,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The package type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>single_node_subscribe: single node (subscription)</para>
-        /// </description></item>
-        /// <item><description><para>single_node_long_term: single node (long-term)</para>
-        /// </description></item>
-        /// <item><description><para>primary_backup_subscribe: primary/standby (subscription)</para>
-        /// </description></item>
-        /// <item><description><para>primary_backup_long_term: primary/standby (long-term)</para>
-        /// </description></item>
-        /// <item><description><para>pre_generation_long_term: pre-generated (long-term)</para>
-        /// </description></item>
+        /// <item><description>single_node_subscribe: single node (subscription).</description></item>
+        /// <item><description>single_node_long_term: single node (long-term).</description></item>
+        /// <item><description>primary_backup_subscribe: primary/secondary (subscription).</description></item>
+        /// <item><description>primary_backup_long_term: primary/secondary (long-term).</description></item>
+        /// <item><description>pre_generation_long_term: pre-generation (long-term).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,7 +45,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PackageType { get; set; }
 
         /// <summary>
-        /// <para>The page number to query.</para>
+        /// <para>The page number of the page to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,7 +55,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records to return on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -70,7 +65,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The purchase channel. Valid values: \<c>aliyun_market\\</c> (Alibaba Cloud Marketplace) and \<c>aliyun_public\\</c> (standard purchase page).</para>
+        /// <para>The purchase channel. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>aliyun_market: Alibaba Cloud Marketplace.</description></item>
+        /// <item><description>aliyun_public: standard purchase page.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>aliyun_market</para>

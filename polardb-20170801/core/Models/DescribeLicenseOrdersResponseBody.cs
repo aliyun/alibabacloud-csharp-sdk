@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public int? ActivatedCodeCount { get; set; }
 
             /// <summary>
-            /// <para>The quota for requesting activation codes.</para>
+            /// <para>The quota of activation codes that can be requested.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string AliyunOrderId { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the System Identifier can be left empty when an activation code is generated.</para>
+            /// <para>Indicates whether the System Identifier field can be left empty when generating an activation code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public bool? AllowEmptySystemIdentifier { get; set; }
 
             /// <summary>
-            /// <para>The database type, such as PG, Oracle, or MySQL.</para>
+            /// <para>The database engine type, such as PG, Oracle, or MySQL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PG</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Engine { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The time when the order was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-02-11 03:14:15</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GmtCreated { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The time when the order was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-02-11 03:14:15</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the order is a virtual order. Virtual orders allow for pre-generating activation codes.</para>
+            /// <para>Indicates whether the order is a virtual order. Virtual orders allow pre-generation of activation codes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public bool? IsVirtualOrder { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the virtual order is frozen. No more activation codes can be generated from a frozen order.</para>
+            /// <para>Indicates whether the virtual order is frozen. A frozen virtual order does not allow further generation of activation codes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -109,16 +109,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>The package type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>single_node_subscribe: single node (subscription)</para>
-            /// </description></item>
-            /// <item><description><para>single_node_long_term: single node (long-term)</para>
-            /// </description></item>
-            /// <item><description><para>primary_backup_subscribe: primary/standby (subscription)</para>
-            /// </description></item>
-            /// <item><description><para>primary_backup_long_term: primary/standby (long-term)</para>
-            /// </description></item>
-            /// <item><description><para>pre_generation_long_term: pre-generated (long-term)</para>
-            /// </description></item>
+            /// <item><description>single_node_subscribe: single node (subscription).</description></item>
+            /// <item><description>single_node_long_term: single node (long-term).</description></item>
+            /// <item><description>primary_backup_subscribe: primary/secondary (subscription).</description></item>
+            /// <item><description>primary_backup_long_term: primary/secondary (long-term).</description></item>
+            /// <item><description>pre_generation_long_term: pre-generation (long-term).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -129,7 +124,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string PackageType { get; set; }
 
             /// <summary>
-            /// <para>The validity period of the package. Common options are one year or long-term (30 years).</para>
+            /// <para>The validity period of the package. Typical values are one year or long-term (30 years).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1 year</para>
@@ -139,7 +134,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string PackageValidity { get; set; }
 
             /// <summary>
-            /// <para>The purchase channel. Valid values: \<c>aliyun_market\\</c> (Alibaba Cloud Marketplace) and \<c>aliyun_public\\</c> (standard purchase page).</para>
+            /// <para>The purchase channel. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>aliyun_market: Alibaba Cloud Marketplace.</description></item>
+            /// <item><description>aliyun_public: standard purchase page.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>aliyun_public</para>

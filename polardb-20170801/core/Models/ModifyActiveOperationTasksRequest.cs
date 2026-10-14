@@ -10,19 +10,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyActiveOperationTasksRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to immediately start scheduling. Valid values:</para>
+        /// <para>Specifies whether to immediately start execution scheduling.</para>
         /// <list type="bullet">
-        /// <item><description>0: No. This is the default value.</description></item>
+        /// <item><description>0: No (default).</description></item>
         /// <item><description>1: Yes.</description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>If you set this parameter to 0, you must specify the SwitchTime parameter.</para>
-        /// </description></item>
-        /// <item><description><para>If you set this parameter to 1, the SwitchTime parameter does not take effect. In this case, the start time of the event is set to the current time, and the system determines the switching time based on the start time. Scheduling is started immediately, which is a prerequisite for the switchover. Then, the switchover is performed. You can call the DescribeActiveOperationTasks operation and check the return value of the PrepareInterval parameter for the preparation time.</para>
-        /// </description></item>
+        /// <item><description>If the value is 0, the SwitchTime parameter is required.</description></item>
+        /// <item><description>If the value is 1, the SwitchTime parameter does not take effect. The event start time is set to the current time, and the switchover time is automatically calculated based on the new start time. The event immediately enters execution scheduling (not an immediate switchover) and begins pre-switchover preparations. The switchover is performed after the preparations are complete. You can call the DescribeActiveOperationTasks operation and obtain the preparation time from the PrepareInterval response parameter.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -42,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the region information about all clusters within a specified account.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the region information of all clusters under the target account.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -66,15 +64,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The scheduled switching time that you want to specify. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The planned switchover time to set. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>The time that is specified by this parameter cannot be later than the latest execution time.</para>
-        /// </description></item>
-        /// <item><description><para>You can call the DescribeActiveOperationTasks operation and check the return value of the Deadline parameter for the latest execution time.</para>
-        /// </description></item>
+        /// <item><description>The time cannot be later than the deadline.</description></item>
+        /// <item><description>You can call the DescribeActiveOperationTasks operation and obtain the deadline from the Deadline response parameter.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>2023-04-25T06:00:00Z</para>
@@ -84,7 +80,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SwitchTime { get; set; }
 
         /// <summary>
-        /// <para>The task IDs.</para>
+        /// <para>The list of task IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

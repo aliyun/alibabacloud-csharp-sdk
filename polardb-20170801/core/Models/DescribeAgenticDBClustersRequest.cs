@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous API call. If there is no next query, do not pass this parameter.</para>
+        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous API call. If there is no next query, do not specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>212db86sca4384811e0b5e8707e******</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<DescribeAgenticDBClustersRequestTag> Tag { get; set; }
         public class DescribeAgenticDBClustersRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. You can filter the cluster list by tag. You can specify up to 20 tag pairs. The number n for each tag pair must be unique and must be a consecutive integer starting from 1. The value of Tag.n.Key corresponds to Tag.n.Value.</para>
+            /// <para>The tag key. You can use tags to filter clusters. You can specify up to 20 tags. The number n for each tag pair must be unique and must be a consecutive integer that starts from 1. The Tag.n.Key parameter is paired with the Tag.n.Value parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>type</para>

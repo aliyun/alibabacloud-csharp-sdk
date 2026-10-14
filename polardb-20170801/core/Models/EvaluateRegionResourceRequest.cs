@@ -10,14 +10,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class EvaluateRegionResourceRequest : TeaModel {
         /// <summary>
-        /// <para>The link type of the cluster. The backend randomly selects a default value. Valid values:</para>
+        /// <para>The cluster link type. The backend randomly selects a default value. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>lvs</b>: Linux Virtual Server.</para>
-        /// </description></item>
-        /// <item><description><para><b>proxy</b>: proxy server.</para>
-        /// </description></item>
-        /// <item><description><para><b>dns</b>: Domain Name System.</para>
-        /// </description></item>
+        /// <item><description><b>lvs</b>: Linux virtual server.</description></item>
+        /// <item><description><b>proxy</b>: proxy server.</description></item>
+        /// <item><description><b>dns</b>: Domain Name System.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,14 +25,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBInstanceConnType { get; set; }
 
         /// <summary>
-        /// <para>The node specifications. For more information, see the following documents:</para>
+        /// <para>The node specification. For more information, see the following topics:</para>
         /// <list type="bullet">
-        /// <item><description><para>PolarDB for MySQL: <a href="https://help.aliyun.com/document_detail/102542.html">Compute node specifications</a>.</para>
-        /// </description></item>
-        /// <item><description><para>PolarDB for PostgreSQL (Oracle Compatible): <a href="https://help.aliyun.com/document_detail/207921.html">Compute node specifications</a>.</para>
-        /// </description></item>
-        /// <item><description><para>PolarDB for PostgreSQL: <a href="https://help.aliyun.com/document_detail/209380.html">Compute node specifications</a>.</para>
-        /// </description></item>
+        /// <item><description>PolarDB for MySQL: <a href="https://help.aliyun.com/document_detail/102542.html">Compute node specifications</a>.</description></item>
+        /// <item><description>PolarDB for PostgreSQL (Compatible with Oracle): <a href="https://help.aliyun.com/document_detail/207921.html">Compute node specifications</a>.</description></item>
+        /// <item><description>PolarDB for PostgreSQL: <a href="https://help.aliyun.com/document_detail/209380.html">Compute node specifications</a>.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -47,14 +41,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBNodeClass { get; set; }
 
         /// <summary>
-        /// <para>The database engine type. Valid values:</para>
+        /// <para>The type of the database engine. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>MySQL</b></para>
-        /// </description></item>
-        /// <item><description><para><b>PostgreSQL</b></para>
-        /// </description></item>
-        /// <item><description><para><b>Oracle</b></para>
-        /// </description></item>
+        /// <item><description><b>MySQL</b></description></item>
+        /// <item><description><b>PostgreSQL</b></description></item>
+        /// <item><description><b>Oracle</b></description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -66,32 +57,22 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBType { get; set; }
 
         /// <summary>
-        /// <para>The version of the database engine.</para>
+        /// <para>The database DPI engine version number.</para>
         /// <list type="bullet">
-        /// <item><description><para>Valid values for MySQL:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>5.6</b></para>
-        /// </description></item>
-        /// <item><description><para><b>5.7</b></para>
-        /// </description></item>
-        /// <item><description><para><b>8.0</b></para>
-        /// </description></item>
+        /// <item><description>Valid version numbers for MySQL: <list type="bullet">
+        /// <item><description><b>5.6</b></description></item>
+        /// <item><description><b>5.7</b></description></item>
+        /// <item><description><b>8.0</b></description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>Valid values for PostgreSQL:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>11</b></para>
-        /// </description></item>
-        /// <item><description><para><b>14</b></para>
-        /// </description></item>
+        /// <item><description>Valid version numbers for PostgreSQL:<list type="bullet">
+        /// <item><description><b>11</b></description></item>
+        /// <item><description><b>14</b></description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>Valid values for Oracle:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>11</b></para>
-        /// </description></item>
-        /// <item><description><para><b>14</b></para>
-        /// </description></item>
+        /// <item><description>Valid version numbers for Oracle:<list type="bullet">
+        /// <item><description><b>11</b></description></item>
+        /// <item><description><b>14</b></description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -107,10 +88,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>Specifies whether to return the list of zones that support single-zone deployment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>0</b> (default): The list is not returned.</para>
-        /// </description></item>
-        /// <item><description><para><b>1</b>: The list is returned.</para>
-        /// </description></item>
+        /// <item><description><b>0</b> (default): does not return the list.</description></item>
+        /// <item><description><b>1</b>: returns the list.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -121,12 +100,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DispenseMode { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to create a MaxScale cluster. Valid values:</para>
+        /// <para>Specifies whether to create MaxScale. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b> (default): A MaxScale cluster is created.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: A MaxScale cluster is not created.</para>
-        /// </description></item>
+        /// <item><description><b>true</b> (default): creates MaxScale.</description></item>
+        /// <item><description><b>false</b>: does not create MaxScale.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -148,7 +125,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available regions.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available regions.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -160,7 +137,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-************</para>
@@ -178,7 +155,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The subdomain. A subdomain is a level below a top-level domain. For example, if the parent domain is \<c>cn-beijing\\</c>, a valid subdomain is \<c>cn-beijing-i-aliyun\\</c>.</para>
+        /// <para>The subdomain. The subdomain is the next level under the top-level domain (first-level domain or parent domain). For example, if the parent domain is cn-beijing, the subdomain can be cn-beijing-i-aliyun.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing-i-aliyun</para>
@@ -190,7 +167,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The zone ID.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the available zones.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available zones.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

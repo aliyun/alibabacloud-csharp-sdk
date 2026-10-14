@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The project ID to which the resource belongs.</para>
+        /// <para>The project ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>proj-7140b4c74b3a44978c825bac77</para>

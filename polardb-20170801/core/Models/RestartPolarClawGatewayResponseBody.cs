@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Mode { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful.</para>
+        /// <para>Indicates whether the operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the gateway has been confirmed available after the restart. This value is returned synchronously.</para>
+        /// <para>Indicates whether the gateway is confirmed available after the restart. This value is returned synchronously.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

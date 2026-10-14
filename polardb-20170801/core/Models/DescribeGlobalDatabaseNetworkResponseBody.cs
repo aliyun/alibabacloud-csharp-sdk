@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeGlobalDatabaseNetworkResponseBody : TeaModel {
         /// <summary>
-        /// <para>The connection details.</para>
+        /// <para>The connection information.</para>
         /// </summary>
         [NameInMap("Connections")]
         [Validation(Required=false)]
@@ -50,6 +50,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The time when the GDN was created.</para>
+        /// <para>The time is in the ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-02-24T11:57:54Z</para>
@@ -76,16 +77,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<DescribeGlobalDatabaseNetworkResponseBodyDBClusters> DBClusters { get; set; }
         public class DescribeGlobalDatabaseNetworkResponseBodyDBClusters : TeaModel {
             /// <summary>
-            /// <para>The edition of the cluster. Valid values:</para>
-            /// <para><c>Normal</c>: Cluster Edition <c>Basic</c>: Single-node Edition <c>Archive</c>: X-Engine Edition <c>NormalMultimaster</c>: Multi-master Cluster Edition <c>SENormal</c>: Standard Edition</para>
+            /// <para>The edition of the product. Valid values:</para>
+            /// <para>Normal: Cluster Edition
+            /// Basic: Single Node Edition
+            /// Archive: PolarDB X-Engine Edition
+            /// NormalMultimaster: Multi-master Cluster Edition
+            /// SENormal: PolarDB for MySQL Standard Edition</para>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description><para>Single-node Edition is not supported for PolarDB for PostgreSQL clusters that run PostgreSQL 11.</para>
-            /// </description></item>
-            /// <item><description><para>Standard Edition is supported for PolarDB for MySQL clusters that run MySQL 8.0 or 5.7 and for PolarDB for PostgreSQL clusters that run PostgreSQL 14.</para>
-            /// </description></item>
-            /// <item><description><para>X-Engine Edition and Multi-master Cluster Edition are supported only for PolarDB for MySQL clusters that run MySQL 8.0.</para>
-            /// </description></item>
+            /// <item><description>PolarDB for PostgreSQL 11 does not support Single Node Edition.</description></item>
+            /// <item><description>PolarDB for MySQL 8.0, PolarDB for MySQL 5.7, and PolarDB for PostgreSQL 14 support PolarDB for MySQL Standard Edition.</description></item>
+            /// <item><description>PolarDB for MySQL 8.0 supports PolarDB X-Engine Edition and Multi-master Cluster Edition.</description></item>
             /// </list>
             /// </remarks>
             /// 
@@ -97,7 +99,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// <para>The description of the cluster.</para>
+            /// <para>The cluster description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -107,7 +109,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DBClusterDescription { get; set; }
 
             /// <summary>
-            /// <para>The cluster ID.</para>
+            /// <para>The cluster ID in the GDN.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pc-wz9fb5nn44u1d****</para>
@@ -117,7 +119,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DBClusterId { get; set; }
 
             /// <summary>
-            /// <para>The status of the cluster. For more information, see <a href="https://help.aliyun.com/document_detail/99286.html">Cluster statuses</a>.</para>
+            /// <para>The status of the cluster in the GDN. For more information, see <a href="https://help.aliyun.com/document_detail/99286.html">Cluster status table</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -127,7 +129,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DBClusterStatus { get; set; }
 
             /// <summary>
-            /// <para>The node type.</para>
+            /// <para>The node specifications of the database node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>polar.mysql.x4.large</para>
@@ -137,14 +139,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DBNodeClass { get; set; }
 
             /// <summary>
-            /// <para>The details of the nodes in the cluster.</para>
+            /// <para>The details of the database nodes.</para>
             /// </summary>
             [NameInMap("DBNodes")]
             [Validation(Required=false)]
             public List<DescribeGlobalDatabaseNetworkResponseBodyDBClustersDBNodes> DBNodes { get; set; }
             public class DescribeGlobalDatabaseNetworkResponseBodyDBClustersDBNodes : TeaModel {
                 /// <summary>
-                /// <para>The time when the node was created.</para>
+                /// <para>The time when the database node was created.</para>
+                /// <para>The time is in the ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-03-23T21:35:43Z</para>
@@ -154,7 +157,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// <para>The node type.</para>
+                /// <para>The node specifications of the database node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>polar.mysql.x4.large</para>
@@ -164,7 +167,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string DBNodeClass { get; set; }
 
                 /// <summary>
-                /// <para>The node ID.</para>
+                /// <para>The database node ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pi-****************</para>
@@ -174,11 +177,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string DBNodeId { get; set; }
 
                 /// <summary>
-                /// <para>The role of the node. Valid values:</para>
+                /// <para>The role of the database node. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>Writer</b>: the primary node</para>
+                /// <item><description><para><b>Writer</b>: primary node</para>
                 /// </description></item>
-                /// <item><description><para><b>Reader</b>: a read-only node</para>
+                /// <item><description><para><b>Reader</b>: read-only node</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -192,25 +195,25 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 /// <summary>
                 /// <para>The status of the node. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>Creating</b>: The node is being created.</para>
+                /// <item><description><para><b>Creating</b>: Being created.</para>
                 /// </description></item>
-                /// <item><description><para><b>Running</b>: The node is running.</para>
+                /// <item><description><para><b>Running</b>: Running.</para>
                 /// </description></item>
-                /// <item><description><para><b>Deleting</b>: The node is being deleted.</para>
+                /// <item><description><para><b>Deleting</b>: Being deleted.</para>
                 /// </description></item>
-                /// <item><description><para><b>Rebooting</b>: The node is being restarted.</para>
+                /// <item><description><para><b>Rebooting</b>: Being restarted.</para>
                 /// </description></item>
-                /// <item><description><para><b>ClassChanging</b>: The node type is being changed.</para>
+                /// <item><description><para><b>ClassChanging</b>: The node specifications are being changed.</para>
                 /// </description></item>
-                /// <item><description><para><b>NetAddressCreating</b>: A network connection is being created.</para>
+                /// <item><description><para><b>NetAddressCreating</b>: Network connectivity is being created.</para>
                 /// </description></item>
-                /// <item><description><para><b>NetAddressDeleting</b>: A network connection is being deleted.</para>
+                /// <item><description><para><b>NetAddressDeleting</b>: Network connectivity is being deleted.</para>
                 /// </description></item>
-                /// <item><description><para><b>NetAddressModifying</b>: A network connection is being modified.</para>
+                /// <item><description><para><b>NetAddressModifying</b>: Network connectivity is being modified.</para>
                 /// </description></item>
-                /// <item><description><para><b>MinorVersionUpgrading</b>: The minor version is being upgraded.</para>
+                /// <item><description><para><b>MinorVersionUpgrading</b>: A minor engine version upgrade is in progress.</para>
                 /// </description></item>
-                /// <item><description><para><b>Maintaining</b>: The cluster is being maintained.</para>
+                /// <item><description><para><b>Maintaining</b>: The cluster is under maintenance.</para>
                 /// </description></item>
                 /// <item><description><para><b>Switching</b>: A failover is in progress.</para>
                 /// </description></item>
@@ -224,7 +227,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string DBNodeStatus { get; set; }
 
                 /// <summary>
-                /// <para>The failover priority. In the event of a failover, the system promotes a read-only node to the primary node. A larger value indicates a higher priority. Each read-only node is assigned a failover priority. Valid values: 1 to 15.</para>
+                /// <para>The failover priority. Each node has a failover priority that determines the likelihood of the node being elected as the primary node during a failover. A higher value indicates a higher priority. Valid values: 1 to 15.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -234,7 +237,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public int? FailoverPriority { get; set; }
 
                 /// <summary>
-                /// <para>The maximum number of concurrent connections.</para>
+                /// <para>The maximum number of concurrent connections to the cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8000</para>
@@ -244,7 +247,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public int? MaxConnections { get; set; }
 
                 /// <summary>
-                /// <para>The maximum I/O operations per second (IOPS).</para>
+                /// <para>The maximum number of I/O requests per second (IOPS).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>32000</para>
@@ -266,7 +269,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             }
 
             /// <summary>
-            /// <para>The database engine. Only MySQL is supported.</para>
+            /// <para>The database engine type. Currently, only MySQL is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MySQL</para>
@@ -276,7 +279,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DBType { get; set; }
 
             /// <summary>
-            /// <para>The database engine version. Only version 8.0 is supported.</para>
+            /// <para>The database engine version. Currently, only version 8.0 is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8.0</para>
@@ -288,8 +291,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>The expiration time of the cluster.</para>
             /// <remarks>
-            /// <para>This parameter is returned only for subscription clusters. An empty string is returned for pay-as-you-go clusters.</para>
+            /// <para>This parameter is returned only for clusters whose billing method is <b>Prepaid</b> (subscription). An empty value is returned for <b>Postpaid</b> (pay-as-you-go) clusters.</para>
             /// </remarks>
+            /// <para>The time is in the ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-11-14T16:00:00Z</para>
@@ -301,13 +305,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>Indicates whether the cluster has expired. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: The cluster has expired.</para>
+            /// <item><description><para><b>true</b></para>
             /// </description></item>
-            /// <item><description><para><b>false</b>: The cluster has not expired.</para>
+            /// <item><description><para><b>false</b></para>
             /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para>This parameter is returned only for subscription clusters.</para>
+            /// <para>This parameter is returned only for clusters whose billing method is <b>Prepaid</b> (subscription).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -318,7 +322,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Expired { get; set; }
 
             /// <summary>
-            /// <para>The billing method of the cluster. Valid values:</para>
+            /// <para>The billing method. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para><b>Postpaid</b>: pay-as-you-go.</para>
             /// </description></item>
@@ -334,7 +338,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string PayType { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the cluster.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -344,7 +348,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The replication lag for cross-region replication between the primary and standby clusters. Unit: seconds.</para>
+            /// <para>The cross-region replication delay between the primary and secondary clusters. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -354,15 +358,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ReplicaLag { get; set; }
 
             /// <summary>
-            /// <para>The role of the cluster in the GDN. Valid values:</para>
+            /// <para>The role of the cluster. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>primary</b>: the primary cluster</para>
+            /// <item><description><para><b>primary</b>: primary cluster</para>
             /// </description></item>
-            /// <item><description><para><b>standby</b>: a standby cluster</para>
+            /// <item><description><para><b>standby</b>: secondary cluster</para>
             /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para>A GDN consists of one primary cluster and up to four standby clusters.</para>
+            /// <para>A GDN contains one primary cluster and up to four secondary clusters.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -373,9 +377,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Role { get; set; }
 
             /// <summary>
-            /// <para>The type of the Serverless cluster. The value is fixed as <c>AgileServerless</c>.</para>
+            /// <para>The serverless type. The value is fixed as AgileServerless.</para>
             /// <remarks>
-            /// <para>This parameter is returned only for Serverless clusters.</para>
+            /// <para>This parameter is supported only for serverless clusters.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -386,7 +390,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ServerlessType { get; set; }
 
             /// <summary>
-            /// <para>The amount of storage space used. Unit: bytes.</para>
+            /// <para>The storage usage. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3012558848</para>
@@ -398,7 +402,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The database engine type. Only MySQL is supported.</para>
+        /// <para>The database engine type. Currently, only MySQL is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MySQL</para>
@@ -408,7 +412,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBType { get; set; }
 
         /// <summary>
-        /// <para>The database engine version. Only version 8.0 is supported.</para>
+        /// <para>The database engine version. Currently, only version 8.0 is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8.0</para>
@@ -418,13 +422,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBVersion { get; set; }
 
         /// <summary>
-        /// <para>The description of the GDN. It must meet the following requirements:</para>
+        /// <para>The description of the GDN. The description must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description><para>It cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <item><description><para>It cannot start with http:// or https://.</para>
         /// </description></item>
-        /// <item><description><para>It must start with a letter or a Chinese character.</para>
+        /// <item><description><para>It must start with an uppercase letter, a lowercase letter, or a Chinese character.</para>
         /// </description></item>
-        /// <item><description><para>It can contain only letters, Chinese characters, digits, underscores (_), and hyphens (-).</para>
+        /// <item><description><para>It can contain uppercase letters, lowercase letters, Chinese characters, digits, underscores (_), or hyphens (-).</para>
         /// </description></item>
         /// <item><description><para>It must be 2 to 126 characters in length.</para>
         /// </description></item>
@@ -438,7 +442,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GDNDescription { get; set; }
 
         /// <summary>
-        /// <para>The GDN ID.</para>
+        /// <para>GDN ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>gdn-bp1fttxsrmv*****</para>
@@ -448,15 +452,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GDNId { get; set; }
 
         /// <summary>
-        /// <para>The status of the Global Database Network (GDN). Valid values:</para>
+        /// <para>The status of the GDN. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>creating</b>: The GDN is being created.</para>
+        /// <item><description><para><b>creating</b>: Being created.</para>
         /// </description></item>
-        /// <item><description><para><b>active</b>: The GDN is running.</para>
+        /// <item><description><para><b>active</b>: Running.</para>
         /// </description></item>
-        /// <item><description><para><b>deleting</b>: The GDN is being deleted.</para>
+        /// <item><description><para><b>deleting</b>: Being deleted.</para>
         /// </description></item>
-        /// <item><description><para><b>locked</b>: The GDN is locked. In this state, you cannot perform any operations on any cluster in the GDN.</para>
+        /// <item><description><para><b>locked</b>: Locked. No operations can be performed on any cluster in the GDN.</para>
         /// </description></item>
         /// <item><description><para><b>removing_member</b>: A cluster is being removed from the GDN.</para>
         /// </description></item>
@@ -480,14 +484,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GlobalDomainName { get; set; }
 
         /// <summary>
-        /// <para>The labels of the GDN.</para>
+        /// <para>The property labels.</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public DescribeGlobalDatabaseNetworkResponseBodyLabels Labels { get; set; }
         public class DescribeGlobalDatabaseNetworkResponseBodyLabels : TeaModel {
             /// <summary>
-            /// <para>The version of the GDN.</para>
+            /// <para>The GDN version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.0</para>

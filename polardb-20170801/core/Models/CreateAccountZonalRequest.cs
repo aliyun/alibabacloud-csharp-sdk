@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The description of the account. The description must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description><para>Cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <item><description><para>It cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// </description></item>
-        /// <item><description><para>Be 2 to 256 characters in length.</para>
+        /// <item><description><para>It must be 2 to 256 characters in length.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -26,15 +26,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AccountDescription { get; set; }
 
         /// <summary>
-        /// <para>The account name. The name must meet the following requirements:</para>
+        /// <para>The name of the account. The name must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description><para>Start with a lowercase letter and end with a letter or a digit.</para>
+        /// <item><description><para>It must start with a lowercase letter and end with a letter or a digit.</para>
         /// </description></item>
-        /// <item><description><para>Contain only lowercase letters, digits, and underscores (_).</para>
+        /// <item><description><para>It can contain lowercase letters, digits, and underscores (_).</para>
         /// </description></item>
-        /// <item><description><para>Be 2 to 16 characters in length.</para>
+        /// <item><description><para>It must be 2 to 16 characters in length.</para>
         /// </description></item>
-        /// <item><description><para>Cannot be a reserved username, such as root or admin.</para>
+        /// <item><description><para>It cannot be a reserved username, such as root or admin.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -47,13 +47,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The account password. The password must meet the following requirements:</para>
+        /// <para>The password of the account. The password must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description><para>Contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</para>
+        /// <item><description><para>It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</para>
         /// </description></item>
-        /// <item><description><para>Be 8 to 32 characters in length.</para>
+        /// <item><description><para>It must be 8 to 32 characters in length.</para>
         /// </description></item>
-        /// <item><description><para>Special characters are <c>!@#$%^&amp;*()_+-=</c>.</para>
+        /// <item><description><para>Special characters include <c>!@#$%^&amp;*()_+-=</c>.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -68,15 +68,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The permissions of the account. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>ReadWrite: read and write permissions.</para>
+        /// <item><description><para>ReadWrite: read and write permissions</para>
         /// </description></item>
-        /// <item><description><para>ReadOnly: read-only permissions.</para>
+        /// <item><description><para>ReadOnly: read-only permissions</para>
         /// </description></item>
-        /// <item><description><para>DMLOnly: DML permissions only.</para>
+        /// <item><description><para>DMLOnly: DML-only permissions</para>
         /// </description></item>
-        /// <item><description><para>DDLOnly: DDL permissions only.</para>
+        /// <item><description><para>DDLOnly: DDL-only permissions</para>
         /// </description></item>
-        /// <item><description><para>ReadIndex: read and index permissions.</para>
+        /// <item><description><para>ReadIndex: read and index permissions</para>
         /// </description></item>
         /// </list>
         /// 
@@ -88,11 +88,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AccountPrivilege { get; set; }
 
         /// <summary>
-        /// <para>The account type. Valid values:</para>
+        /// <para>The type of the account. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Normal: a standard account.</para>
+        /// <item><description><para>Normal: standard account</para>
         /// </description></item>
-        /// <item><description><para>Super: a privileged account.</para>
+        /// <item><description><para>Super: privileged account</para>
         /// </description></item>
         /// </list>
         /// 
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AccountType { get; set; }
 
         /// <summary>
-        /// <para>A client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token is case-sensitive and can contain a maximum of 64 ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and is case-sensitive. It can contain a maximum of 64 ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6000170000591aed949d0f54a343f1a4233c1e7d1c5c******</para>
@@ -115,6 +115,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The cluster ID.</para>
+        /// <remarks>
+        /// <para>Note: Only edge cluster (Zonal) IDs are supported. You can query them by calling the DescribeDBClustersZonal operation. Standard PolarDB cluster IDs returned by DescribeDBClusters cannot be used for this API operation.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -125,7 +128,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database that the destination account can access. You can specify multiple database names. Separate them with commas (,).</para>
+        /// <para>The names of the databases that the account is authorized to access. You can specify multiple database names separated by commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>testdb</para>
@@ -153,11 +156,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to grant permissions on all current and future databases in the cluster. Valid values:</para>
+        /// <para>Specifies whether to grant the account permissions on all existing databases and all databases to be created in the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0 or empty: Does not grant permissions.</para>
+        /// <item><description><para>0 or empty: no</para>
         /// </description></item>
-        /// <item><description><para>1: Grants permissions.</para>
+        /// <item><description><para>1: yes</para>
         /// </description></item>
         /// </list>
         /// 

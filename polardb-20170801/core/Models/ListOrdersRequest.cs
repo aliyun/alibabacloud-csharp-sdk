@@ -10,27 +10,19 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ListOrdersRequest : TeaModel {
         /// <summary>
-        /// <para>The <a href="https://help.aliyun.com/document_detail/183258.html">edition</a> of the cluster. Valid values:</para>
+        /// <para>The <a href="https://help.aliyun.com/document_detail/183258.html">product edition</a>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Normal</b>: Cluster Edition</para>
-        /// </description></item>
-        /// <item><description><para><b>Basic</b>: single node</para>
-        /// </description></item>
-        /// <item><description><para><b>Archive</b>: X-Engine</para>
-        /// </description></item>
-        /// <item><description><para><b>NormalMultimaster</b>: Multi-master Cluster Edition</para>
-        /// </description></item>
-        /// <item><description><para><b>SENormal</b>: Standard Edition</para>
-        /// </description></item>
+        /// <item><description><b>Normal</b>: Cluster Edition.</description></item>
+        /// <item><description><b>Basic</b>: Single Node Edition.</description></item>
+        /// <item><description><b>Archive</b>: X-Engine (Warm Data).</description></item>
+        /// <item><description><b>NormalMultimaster</b>: Multi-master Cluster Edition.</description></item>
+        /// <item><description><b>SENormal</b>: Standard Edition.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>The single node edition is not supported on PolarDB for PostgreSQL clusters that run PostgreSQL 11.</para>
-        /// </description></item>
-        /// <item><description><para>The Standard Edition is supported on PolarDB for MySQL clusters that run MySQL 8.0 or 5.7, and on PolarDB for PostgreSQL clusters that run PostgreSQL 14.</para>
-        /// </description></item>
-        /// <item><description><para>PolarDB for MySQL clusters that run MySQL 8.0 support X-Engine and the Multi-master Cluster Edition.</para>
-        /// </description></item>
+        /// <item><description>PolarDB for PostgreSQL 11 does not support Single Node Edition.</description></item>
+        /// <item><description>PolarDB for MySQL 8.0, PolarDB for MySQL 5.7, and PolarDB for PostgreSQL 14 support Standard Edition.</description></item>
+        /// <item><description>PolarDB for MySQL 8.0 supports X-Engine (Warm Data) and Multi-master Cluster Edition.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -42,7 +34,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>The ID of the current instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-2zed3m89cw***</para>
@@ -52,7 +44,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return for the current request. Default value: 10.</para>
+        /// <para>The maximum number of entries to return. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -62,7 +54,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. If the query results are not returned in a single call, this token is returned. Use this token in a subsequent call to retrieve the remaining results.</para>
+        /// <para>The pagination token that is used to retrieve more results. If a single request does not return all results, this parameter is returned. You can pass the returned token in a subsequent request to continue retrieving results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>212db86sca4384811e0b5e8707e******</para>
@@ -72,17 +64,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The status of the order.</para>
+        /// <para>The order status. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>pending</b>: The task is waiting to start.</para>
         /// </description></item>
-        /// <item><description><para><b>create</b>: The order is placed and is being processed.</para>
+        /// <item><description><para><b>create</b>: The order has been placed and entered the production process.</para>
         /// </description></item>
-        /// <item><description><para><b>fail</b>: The instance failed to be created.</para>
+        /// <item><description><para><b>fail</b>: Production failed.</para>
         /// </description></item>
         /// <item><description><para><b>cancel</b>: The order is canceled.</para>
         /// </description></item>
-        /// <item><description><para><b>success</b>: The instance is created.</para>
+        /// <item><description><para><b>success</b>: Production succeeded.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -104,14 +96,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values:</para>
+        /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>30</b></para>
-        /// </description></item>
-        /// <item><description><para><b>50</b></para>
-        /// </description></item>
-        /// <item><description><para><b>100</b></para>
-        /// </description></item>
+        /// <item><description><b>30</b></description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
         /// </list>
         /// <para>Default value: 30.</para>
         /// 
@@ -135,7 +124,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view the details of regions.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query region information.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

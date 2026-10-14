@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The access control list (ACL) mode of the knowledge space. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DISABLED</description></item>
-        /// <item><description>ENFORCED</description></item>
+        /// <item><description>DISABLED: ACL is disabled.</description></item>
+        /// <item><description>ENFORCED: ACL is enforced.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ACLMode { get; set; }
 
         /// <summary>
-        /// <para>The time when the knowledge space was created.</para>
+        /// <para>The creation time.</para>
+        /// <para>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-06-25T09:53:44Z</para>
@@ -54,7 +55,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBName { get; set; }
 
         /// <summary>
-        /// <para>The type of the database engine. Valid values:</para>
+        /// <para>The database engine type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>MySQL</description></item>
         /// <item><description>PostgreSQL</description></item>
@@ -178,7 +179,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? ShardSize { get; set; }
 
         /// <summary>
-        /// <para>The default chunking strategy configuration of the knowledge space. This parameter may be empty if existing instances do not have the complete configuration saved.</para>
+        /// <para>The default chunking strategy configuration of the knowledge space. This value may be empty if existing instances do not have a complete configuration saved.</para>
         /// </summary>
         [NameInMap("ShardingStrategyConfig")]
         [Validation(Required=false)]
@@ -295,7 +296,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                     }
 
                     /// <summary>
-                    /// <para>The chunking strategy type used when a rule is matched.</para>
+                    /// <para>The chunking strategy type used when the rule is matched.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>hierarchical</para>

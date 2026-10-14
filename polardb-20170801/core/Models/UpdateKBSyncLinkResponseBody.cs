@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class UpdateKBSyncLinkResponseBody : TeaModel {
         /// <summary>
-        /// <para>The synchronization link ID.</para>
+        /// <para>The ID of the synchronization link.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pkbl-xxxxx</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The scheduled time of the synchronization task.</para>
+        /// <para>The schedule time of the synchronization task.</para>
         /// </summary>
         [NameInMap("SyncSchedule")]
         [Validation(Required=false)]

@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of clusters on the current page.</para>
+        /// <para>The number of clusters returned on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -260,7 +260,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16</para>

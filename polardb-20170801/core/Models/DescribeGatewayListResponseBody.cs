@@ -10,14 +10,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeGatewayListResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of gateway instances.</para>
+        /// <para>The list of gateway instances.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeGatewayListResponseBodyItems> Items { get; set; }
         public class DescribeGatewayListResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The time when the gateway instance was created.</para>
+            /// <para>The creation time.</para>
+            /// <para>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-08-14T05:58:42Z</para>
@@ -37,13 +38,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DbType { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the gateway instance.</para>
+            /// <para>The expiration time of the cluster.</para>
             /// <list type="bullet">
-            /// <item><description><para>For subscription instances, this parameter indicates the expiration time.</para>
-            /// </description></item>
-            /// <item><description><para>This parameter is empty for pay-as-you-go instances.</para>
-            /// </description></item>
+            /// <item><description>If the billing method of the cluster is subscription, the actual expiration time is returned.</description></item>
+            /// <item><description>If the billing method of the cluster is pay-as-you-go, an empty value is returned.</description></item>
             /// </list>
+            /// <para>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2028-09-01T16:00:00Z</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the gateway instance has expired. Valid values:</para>
+            /// <para>Indicates whether the cluster has expired. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para><b>true</b></para>
             /// </description></item>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GwClusterId { get; set; }
 
             /// <summary>
-            /// <para>The description of the gateway instance.</para>
+            /// <para>The gateway description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pg-xxxxxx</para>
@@ -89,7 +89,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GwDescription { get; set; }
 
             /// <summary>
-            /// <para>The time when the gateway instance was last modified.</para>
+            /// <para>The last modification time.</para>
+            /// <para>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-29T09:31:37Z</para>
@@ -99,12 +100,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The billing method. Valid values:</para>
+            /// <para>The billing method. Valid values: </para>
             /// <list type="bullet">
-            /// <item><description><para><b>Postpaid</b>: pay-as-you-go</para>
-            /// </description></item>
-            /// <item><description><para><b>Prepaid</b>: subscription</para>
-            /// </description></item>
+            /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
+            /// <item><description><b>Prepaid</b>: subscription.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -125,12 +124,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The status of the gateway instance. Valid values:</para>
+            /// <para>The application status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>CREATE</b>: creating</para>
-            /// </description></item>
-            /// <item><description><para><b>ACTIVATION</b>: running</para>
-            /// </description></item>
+            /// <item><description>CREATE: being created.</description></item>
+            /// <item><description>ACTIVATION: running.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -151,7 +148,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the virtual private cloud (VPC).</para>
+            /// <para>The VPC ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-****************</para>
@@ -163,7 +160,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -173,7 +170,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on the current page.</para>
+        /// <para>The number of entries on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -183,14 +180,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>30</b></para>
-        /// </description></item>
-        /// <item><description><para><b>50</b></para>
-        /// </description></item>
-        /// <item><description><para><b>100</b></para>
-        /// </description></item>
+        /// <item><description><b>30</b></description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
         /// </list>
         /// <para>Default value: 30.</para>
         /// 
@@ -202,7 +196,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>CED079B7-A408-41A1-BFF1-EC608E******</para>

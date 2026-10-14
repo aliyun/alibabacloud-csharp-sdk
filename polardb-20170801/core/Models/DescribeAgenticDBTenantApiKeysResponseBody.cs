@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAgenticDBTenantApiKeysResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of API keys.</para>
+        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeAgenticDBTenantApiKeysResponseBodyItems> Items { get; set; }
         public class DescribeAgenticDBTenantApiKeysResponseBodyItems : TeaModel {
             /// <summary>
+            /// <para>The resource ID of the API key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ak-71304e39c7e841a1</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ApiKeyId { get; set; }
 
             /// <summary>
+            /// <para>The masked API key value.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>pagc_key_cGFnYy1icDFhMmIz****</para>
             /// </summary>
@@ -30,6 +37,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ApiKeyMasked { get; set; }
 
             /// <summary>
+            /// <para>The time when the API key was created.</para>
+            /// <para>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2026-06-10T10:30:00Z</para>
             /// </summary>
@@ -38,6 +48,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The description of the API key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>MCP server token</para>
             /// </summary>
@@ -46,6 +58,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The time when the API key expires.</para>
+            /// <para>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2027-01-01T00:00:00Z</para>
             /// </summary>
@@ -54,6 +69,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
+            /// <para>The status of the API key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Active</para>
             /// </summary>
@@ -62,6 +79,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The ID of the tenant to which the API key belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>t-4b83e0da66674951</para>
             /// </summary>
@@ -70,6 +89,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string TenantId { get; set; }
 
             /// <summary>
+            /// <para>The name of the tenant to which the API key belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>my-saas-app</para>
             /// </summary>
@@ -80,6 +101,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
+        /// <para>The current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -88,6 +111,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -96,6 +121,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>C3D4E5F6-A7B8-9012-CDEF-123456789012</para>
         /// </summary>
@@ -104,6 +131,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>

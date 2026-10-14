@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The subscription type of the subscription instance. Valid values:</para>
+        /// <para>The unit of the subscription duration for the instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>Year</b>: yearly subscription</para>
         /// </description></item>
@@ -127,9 +127,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The subscription duration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If <b>Period</b> is set to <b>Year</b>, set <b>UsedTime</b> to a value from 1 to 3.</para>
+        /// <item><description><para>If <b>Period</b> is set to <b>Year</b>, set UsedTime to a value from 1 to 3.</para>
         /// </description></item>
-        /// <item><description><para>If <b>Period</b> is set to <b>Month</b>, set <b>UsedTime</b> to a value from 1 to 9.</para>
+        /// <item><description><para>If <b>Period</b> is set to <b>Month</b>, set UsedTime to a value from 1 to 9.</para>
         /// </description></item>
         /// </list>
         /// <remarks>

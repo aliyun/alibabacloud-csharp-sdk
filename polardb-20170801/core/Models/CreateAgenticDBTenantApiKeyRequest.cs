@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The tenant name. The name must be unique within the cluster and contain 2 to 64 characters.</para>
+        /// <para>The tenant name. The name must be unique within the cluster and must be 2 to 64 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

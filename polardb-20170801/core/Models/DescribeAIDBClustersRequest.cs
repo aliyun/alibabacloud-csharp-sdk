@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAIDBClustersRequest : TeaModel {
         /// <summary>
-        /// <para>The node type. Multiple types are supported. Separate two values with a comma (,).</para>
+        /// <para>The node type. You can specify multiple types separated by commas (,). Valid values:</para>
         /// <list type="bullet">
         /// <item><description>vnode: managed by Kubernetes.</description></item>
         /// <item><description>container: logon-enabled container.</description></item>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AiNodeType { get; set; }
 
         /// <summary>
-        /// <para>The cluster description. Fuzzy match is supported.</para>
+        /// <para>The description of the cluster. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-****************</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterDescription { get; set; }
 
         /// <summary>
-        /// <para>The cluster ID. Separate multiple cluster IDs with commas (,).</para>
+        /// <para>The cluster IDs. Separate multiple cluster IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-***************</para>
@@ -45,22 +45,20 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterIds { get; set; }
 
         /// <summary>
-        /// <para>The cluster status. Valid values:</para>
+        /// <para>The status of the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Creating</b>: being created.</description></item>
-        /// <item><description><b>Running</b>: running.</description></item>
-        /// <item><description><b>Deleting</b>: being released.</description></item>
-        /// <item><description><b>Rebooting</b>: being restarted.</description></item>
-        /// <item><description><b>DBNodeCreating</b>: a node is being added (increase).</description></item>
-        /// <item><description><b>DBNodeDeleting</b>: a node is being deleted.</description></item>
-        /// <item><description><b>ClassChanging</b>: node specifications are being changed.</description></item>
-        /// <item><description><b>NetAddressCreating</b>: a network connectivity is being created.</description></item>
-        /// <item><description><b>NetAddressDeleting</b>: a network connectivity is being deleted.</description></item>
-        /// <item><description><b>NetAddressModifying</b>: a network connectivity is being modified. </description></item>
-        /// <item><description><b>Deleted</b>: released.</description></item>
-        /// </list>
-        /// <list type="bullet">
-        /// <item><description><b>ClassChanged</b>: resources are being revoked after a decrease the quota operation.</description></item>
+        /// <item><description><b>Creating</b>: The cluster is being created.</description></item>
+        /// <item><description><b>Running</b>: The cluster is running.</description></item>
+        /// <item><description><b>Deleting</b>: The cluster is being released.</description></item>
+        /// <item><description><b>Rebooting</b>: The cluster is being restarted.</description></item>
+        /// <item><description><b>DBNodeCreating</b>: Nodes are being increased.</description></item>
+        /// <item><description><b>DBNodeDeleting</b>: Nodes are being deleted.</description></item>
+        /// <item><description><b>ClassChanging</b>: The node specifications are being changed.</description></item>
+        /// <item><description><b>NetAddressCreating</b>: The network connectivity is being created.</description></item>
+        /// <item><description><b>NetAddressDeleting</b>: The network connectivity is being deleted.</description></item>
+        /// <item><description><b>NetAddressModifying</b>: The network connectivity is being modified. </description></item>
+        /// <item><description><b>Deleted</b>: The cluster is released.</description></item>
+        /// <item><description><b>ClassChanged</b>: Resources are being revoked after you upgrade or decrease the quota.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -89,7 +87,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>.</para>
+        /// <para>The number of entries to return on each page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>.</para>
         /// <para>Default value: <b>30</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -133,14 +131,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The list of tags.</para>
+        /// <para>The tag list.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeAIDBClustersRequestTag> Tag { get; set; }
         public class DescribeAIDBClustersRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. You can filter the cluster list by tag. You can specify up to 20 tag pairs. The number n for each tag pair must be unique and must be a consecutive integer starting from 1. The value of Tag.n.Key corresponds to Tag.n.Value.</para>
+            /// <para>The tag key. You can filter clusters by tag. You can specify up to 20 tag key-value pairs. The number n in each tag pair must be unique and must be a consecutive integer starting from 1. The value of Tag.n.Key is Tag.n.Value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testKey</para>

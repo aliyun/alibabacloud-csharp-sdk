@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Details { get; set; }
 
         /// <summary>
-        /// <para>The database type of the destination instance. Valid values:</para>
+        /// <para>The database type of the target instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>MySQL</b></para>
-        /// </description></item>
-        /// <item><description><para><b>Oracle</b></para>
-        /// </description></item>
+        /// <item><description><b>MySQL</b>.</description></item>
+        /// <item><description><b>Oracle</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,9 +34,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DstDBType { get; set; }
 
         /// <summary>
-        /// <para>The list of Oracle compatibility evaluation details.</para>
+        /// <para>The Oracle compatibility assessment details list.</para>
         /// <remarks>
-        /// <para>This parameter is supported only for <b>Oracle</b> instances.</para>
+        /// <para>Only <b>Oracle</b> instances are supported.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Items")]
@@ -46,7 +44,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<DescribeUpgradeReportResponseBodyItems> Items { get; set; }
         public class DescribeUpgradeReportResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The Data Definition Language (DDL) statements for object synchronization.</para>
+            /// <para>The DDL statement for object synchronization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CREATE XXXX</para>
@@ -56,7 +54,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DDL { get; set; }
 
             /// <summary>
-            /// <para>The name of the evaluation object.</para>
+            /// <para>The name of the assessed object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testName</para>
@@ -66,7 +64,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The schema of the evaluation object.</para>
+            /// <para>The schema to which the assessed object belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ny_openapi</para>
@@ -76,12 +74,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Schema { get; set; }
 
             /// <summary>
-            /// <para>The result of the compatibility evaluation. Valid values:</para>
+            /// <para>The compatibility assessment result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>0</b>: Failed.</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>: Succeeded.</para>
-            /// </description></item>
+            /// <item><description><b>0</b>: Failed.</description></item>
+            /// <item><description><b>1</b>: Succeeded.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -92,7 +88,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The type of the evaluation object.</para>
+            /// <para>The object type of the assessed object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>orca</para>
@@ -104,7 +100,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The number of entries in the list of Oracle compatibility evaluation details.</para>
+        /// <para>The length of the Oracle compatibility assessment details list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -114,7 +110,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ItemsSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>2FED790E-FB61-4721-8C1C-07C627******</para>
@@ -124,7 +120,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the source instance.</para>
+        /// <para>The source instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-2zen5pe5vi56447d0</para>
@@ -136,10 +132,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The database type of the source instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>MySQL</b></para>
-        /// </description></item>
-        /// <item><description><para><b>Oracle</b></para>
-        /// </description></item>
+        /// <item><description><b>MySQL</b>.</description></item>
+        /// <item><description><b>Oracle</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -152,10 +146,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The deletion status of the source instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>0</b>: Not deleted.</para>
-        /// </description></item>
-        /// <item><description><para><b>1</b>: Deleted.</para>
-        /// </description></item>
+        /// <item><description><b>0</b>: Not deleted.</description></item>
+        /// <item><description><b>1</b>: Deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -166,7 +158,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SrcDeleted { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries in the query result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>137</para>
@@ -176,7 +168,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? TotalSize { get; set; }
 
         /// <summary>
-        /// <para>A special metric. This parameter is supported only for instances that use the Tair architecture.</para>
+        /// <para>The special metric. Currently, only tair (PolarTair architecture) is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tair</para>
@@ -186,7 +178,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The list of evaluation reports.</para>
+        /// <para>The list of assessment reports.</para>
         /// </summary>
         [NameInMap("UpgradeReportList")]
         [Validation(Required=false)]
@@ -194,6 +186,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public class DescribeUpgradeReportResponseBodyUpgradeReportList : TeaModel {
             /// <summary>
             /// <para>The check time.</para>
+            /// <para>The time is in the ISO 8601 standard in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-03-15T06:48:44Z</para>
@@ -203,7 +196,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string CheckTime { get; set; }
 
             /// <summary>
-            /// <para>The version of the destination instance.</para>
+            /// <para>The version of the target instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8.0</para>
@@ -213,7 +206,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DstVersion { get; set; }
 
             /// <summary>
-            /// <para>The effective time of the evaluation.</para>
+            /// <para>The effective period of the assessment.</para>
+            /// <para>The time is in the ISO 8601 standard in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-03-08T06:48:44Z</para>
@@ -223,7 +217,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string EffectiveTime { get; set; }
 
             /// <summary>
-            /// <para>The end time of the evaluation.</para>
+            /// <para>The end time of the assessment.</para>
+            /// <para>The time is in the ISO 8601 standard in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-03-08T06:48:44Z</para>
@@ -233,7 +228,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the evaluation task.</para>
+            /// <para>The status of the assessment task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>running</para>
@@ -263,7 +258,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string SrcVersion { get; set; }
 
             /// <summary>
-            /// <para>The start time of the evaluation.</para>
+            /// <para>The start time of the assessment.</para>
+            /// <para>The time is in the ISO 8601 standard in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-07-05T01:56:00Z</para>
@@ -273,7 +269,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The task ID.</para>
+            /// <para>The ID of the target task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>275948</para>

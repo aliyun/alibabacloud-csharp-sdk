@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class RemovePolarClawMCPServerRequest : TeaModel {
         /// <summary>
-        /// <para>The application ID.</para>
+        /// <para>The PolarClaw application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

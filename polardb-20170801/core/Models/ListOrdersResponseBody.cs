@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ListOrdersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries returned for the current request. Default value: 10.</para>
+        /// <para>The maximum number of entries to return. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. If the query results are not returned in a single call, this token is returned. Use this token in a subsequent call to retrieve the remaining results.</para>
+        /// <para>The pagination token that is used to retrieve more results. If a single request does not return all results, this parameter is returned. You can pass the returned token in a subsequent request to continue retrieving results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>212db86sca4384811e0b5e8707e******</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The list of orders.</para>
+        /// <para>The order list.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("OrderList")]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<ListOrdersResponseBodyOrderList> OrderList { get; set; }
         public class ListOrdersResponseBodyOrderList : TeaModel {
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account.</para>
+            /// <para>The Alibaba Cloud account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1910740440664****</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>The billing method of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Postpaid</b>: pay-as-you-go</para>
+            /// <item><description><para><b>Postpaid</b>: pay-as-you-go.</para>
             /// </description></item>
-            /// <item><description><para><b>Prepaid</b>: subscription</para>
+            /// <item><description><para><b>Prepaid</b>: subscription.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -66,35 +66,23 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>The commodity code. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>polardb_sub: subscription in the Chinese mainland.</para>
-            /// </description></item>
-            /// <item><description><para>polardb_sub_intl: subscription in Hong Kong (China) and regions outside China.</para>
-            /// </description></item>
-            /// <item><description><para>polardb_payg: pay-as-you-go in the Chinese mainland.</para>
-            /// </description></item>
-            /// <item><description><para>polardb_payg_intl: pay-as-you-go in Hong Kong (China) and regions outside China.</para>
-            /// </description></item>
-            /// <item><description><para>polardb_sub_jushita: Jushita subscription.</para>
-            /// </description></item>
-            /// <item><description><para>polardb_payg_jushita: Jushita pay-as-you-go.</para>
-            /// </description></item>
-            /// <item><description><para>polardb_sub_cainiao: Cainiao subscription.</para>
-            /// </description></item>
-            /// <item><description><para>polardb_payg_cainiao: Cainiao pay-as-you-go.</para>
-            /// </description></item>
-            /// </list>
-            /// <remarks>
+            /// <item><description>polardb_sub: subscription in the Chinese mainland.</description></item>
+            /// <item><description>polardb_sub_intl: subscription in Hong Kong (China) and outside China.</description></item>
+            /// <item><description>polardb_payg: pay-as-you-go in the Chinese mainland.</description></item>
+            /// <item><description>polardb_payg_intl: pay-as-you-go in Hong Kong (China) and outside China.</description></item>
+            /// <item><description>polardb_sub_jushita: Jushita subscription.</description></item>
+            /// <item><description>polardb_payg_jushita: Jushita pay-as-you-go.</description></item>
+            /// <item><description>polardb_sub_cainiao: Cainiao subscription.</description></item>
+            /// <item><description>polardb_payg_cainiao: Cainiao pay-as-you-go.<remarks>
             /// <list type="bullet">
-            /// <item><description><para>If you use an Alibaba Cloud account for the China site, you can view only the commodity codes for the Chinese mainland.</para>
-            /// </description></item>
-            /// <item><description><para>If you use an Alibaba Cloud international site account, you can view only the commodity codes for regions outside the Chinese mainland.</para>
-            /// </description></item>
-            /// <item><description><para>If you use a Jushita account, you can view only the commodity codes for Jushita.</para>
-            /// </description></item>
-            /// <item><description><para>If you use a Cainiao account, you can view only the commodity codes for Cainiao.</para>
-            /// </description></item>
+            /// <item><description>If you use an Alibaba Cloud China Website account, you can view only the commodity codes for the Chinese mainland.</description></item>
+            /// <item><description>If you use an Alibaba Cloud International Website account, you can view only the commodity codes for international regions.</description></item>
+            /// <item><description>If you use a Jushita account, you can view only the commodity codes for Jushita.</description></item>
+            /// <item><description>If you use a Cainiao account, you can view only the commodity codes for Cainiao.</description></item>
             /// </list>
             /// </remarks>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>polardb_payg_intl</para>
@@ -104,7 +92,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string CommodityCode { get; set; }
 
             /// <summary>
-            /// <para>The time when the order was created.</para>
+            /// <para>The creation time.</para>
+            /// <para>The time is in the YYYY-MM-DDTHH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-03-31T16:09:13</para>
@@ -114,7 +103,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string CreatedTime { get; set; }
 
             /// <summary>
-            /// <para>The cluster ID.</para>
+            /// <para>The cluster ID of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pc-uf6k532gav*******</para>
@@ -134,17 +123,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string OrderId { get; set; }
 
             /// <summary>
-            /// <para>The status of the order.</para>
+            /// <para>The order status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para><b>pending</b>: The task is waiting to start.</para>
             /// </description></item>
-            /// <item><description><para><b>create</b>: The order is placed and is being processed.</para>
+            /// <item><description><para><b>create</b>: The order has been placed and entered the production process.</para>
             /// </description></item>
-            /// <item><description><para><b>fail</b>: The instance failed to be created.</para>
+            /// <item><description><para><b>fail</b>: Production failed.</para>
             /// </description></item>
             /// <item><description><para><b>cancel</b>: The order is canceled.</para>
             /// </description></item>
-            /// <item><description><para><b>success</b>: The instance is created.</para>
+            /// <item><description><para><b>success</b>: Production succeeded.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -156,16 +145,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string OrderStatus { get; set; }
 
             /// <summary>
-            /// <para>The type of the order. Valid values:</para>
+            /// <para>The order type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>BUY: The instance is purchased.</para>
-            /// </description></item>
-            /// <item><description><para>UPGRADE: The instance configuration is changed.</para>
-            /// </description></item>
-            /// <item><description><para>RENEW: The subscription is renewed.</para>
-            /// </description></item>
-            /// <item><description><para>CONVERT: The billing method is changed.</para>
-            /// </description></item>
+            /// <item><description>BUY: new purchase.</description></item>
+            /// <item><description>UPGRADE: configuration change.</description></item>
+            /// <item><description>RENEW: renewal.</description></item>
+            /// <item><description>CONVERT: billing method conversion.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -186,7 +171,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ProduceCode { get; set; }
 
             /// <summary>
-            /// <para>The region information</para>
+            /// <para>The region information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -198,7 +183,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page. Default value: 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -208,14 +193,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page. Valid values:</para>
+        /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>30</b></para>
-        /// </description></item>
-        /// <item><description><para><b>50</b></para>
-        /// </description></item>
-        /// <item><description><para><b>100</b></para>
-        /// </description></item>
+        /// <item><description><b>30</b></description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
         /// </list>
         /// <para>Default value: 30.</para>
         /// 

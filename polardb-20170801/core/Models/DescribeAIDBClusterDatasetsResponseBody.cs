@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAIDBClusterDatasetsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The continuation token from the request.</para>
+        /// <para>The ContinuationToken element is included in the response if the ContinuationToken parameter is specified in the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EFSDF-DF-***</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ContinuationToken { get; set; }
 
         /// <summary>
-        /// <para>The data service ID.</para>
+        /// <para>The instance ID of the dataset management service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pcs-2zeei***</para>
@@ -40,14 +40,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DatasetId { get; set; }
 
         /// <summary>
-        /// <para>The training mode. Valid values:</para>
+        /// <para>The training mode of the dataset. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>sft</b>: Supervised Fine-Tuning (SFT).</para>
-        /// </description></item>
-        /// <item><description><para><b>grpo</b>: Reinforcement Learning (RL).</para>
-        /// </description></item>
-        /// <item><description><para><b>text</b>: Text generation.</para>
-        /// </description></item>
+        /// <item><description><b>sft</b>: supervised fine-tuning.</description></item>
+        /// <item><description><b>grpo</b>: reinforcement learning.</description></item>
+        /// <item><description><b>text</b>: text generation.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,12 +55,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DatasetMode { get; set; }
 
         /// <summary>
-        /// <para>The dataset type. Valid values:</para>
+        /// <para>The type of the dataset. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>train</b>: The training set.</para>
-        /// </description></item>
-        /// <item><description><para><b>eval</b>: The evaluation set.</para>
-        /// </description></item>
+        /// <item><description><b>train</b>: training dataset.</description></item>
+        /// <item><description><b>eval</b>: evaluation dataset.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,14 +69,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DatasetType { get; set; }
 
         /// <summary>
-        /// <para>An array of dataset objects.</para>
+        /// <para>The datasets.</para>
         /// </summary>
         [NameInMap("Datasets")]
         [Validation(Required=false)]
         public List<DescribeAIDBClusterDatasetsResponseBodyDatasets> Datasets { get; set; }
         public class DescribeAIDBClusterDatasetsResponseBodyDatasets : TeaModel {
             /// <summary>
-            /// <para>The bucket name.</para>
+            /// <para>The bucket to which the dataset belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pcs-2ze22***-q7***</para>
@@ -91,7 +86,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string BucketName { get; set; }
 
             /// <summary>
-            /// <para>The file size in bytes.</para>
+            /// <para>The file size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2845904</para>
@@ -101,7 +96,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Capacity { get; set; }
 
             /// <summary>
-            /// <para>The time the file was created, in UTC and formatted as ISO 8601.</para>
+            /// <para>The creation time.</para>
+            /// <para>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-11-06T06:50:43Z</para>
@@ -121,12 +117,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DatasetId { get; set; }
 
             /// <summary>
-            /// <para>The dataset type. Valid values:</para>
+            /// <para>The type of the dataset. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>train</b>: The training set.</para>
-            /// </description></item>
-            /// <item><description><para><b>eval</b>: The evaluation set.</para>
-            /// </description></item>
+            /// <item><description><b>train</b>: training dataset.</description></item>
+            /// <item><description><b>eval</b>: evaluation dataset.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -147,7 +141,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string FileName { get; set; }
 
             /// <summary>
-            /// <para>The time the file was last modified, in UTC and formatted as ISO 8601.</para>
+            /// <para>The last modified time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-11-06T06:50:43Z</para>
@@ -157,7 +151,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string LastModified { get; set; }
 
             /// <summary>
-            /// <para>The file path.</para>
+            /// <para>The dataset path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>polardb_ai/datasets/train/sft/dataset01/train-***.json</para>
@@ -167,9 +161,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Path { get; set; }
 
             /// <summary>
-            /// <para>The storage type. The only valid value is:</para>
+            /// <para>The storage type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Standard</b>.</description></item>
+            /// <item><description><b>Standard</b>: Standard storage.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -180,14 +174,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string StorageType { get; set; }
 
             /// <summary>
-            /// <para>The training mode. Valid values:</para>
+            /// <para>The training mode of the dataset. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>sft</b>: Supervised Fine-Tuning (SFT).</para>
-            /// </description></item>
-            /// <item><description><para><b>grpo</b>: Reinforcement Learning (RL).</para>
-            /// </description></item>
-            /// <item><description><para><b>text</b>: Text generation.</para>
-            /// </description></item>
+            /// <item><description><b>sft</b>: supervised fine-tuning.</description></item>
+            /// <item><description><b>grpo</b>: reinforcement learning.</description></item>
+            /// <item><description><b>text</b>: text generation.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -200,7 +191,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The total number of files in the dataset.</para>
+        /// <para>The total number of files.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>
@@ -210,12 +201,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string FileCount { get; set; }
 
         /// <summary>
-        /// <para>Indicates if more datasets are available. Valid values:</para>
+        /// <para>Indicates whether more datasets exist. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: More datasets are available.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: All datasets have been listed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: More datasets exist.</description></item>
+        /// <item><description><b>false</b>: No more datasets exist.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -226,7 +215,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? IsTruncated { get; set; }
 
         /// <summary>
-        /// <para>The token for retrieving the next page of results. This parameter is returned only if <c>IsTruncated</c> is <c>true</c>.</para>
+        /// <para>The ContinuationToken for the next listing of files.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EFSDF-DF-***</para>
@@ -256,7 +245,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The relative DB cluster ID.</para>
+        /// <para>The ID of the database management service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-2ze88***</para>
@@ -266,7 +255,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RelativeDBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>2921D843-433A-5FB3-A03B-4EC093B219F8</para>
@@ -276,7 +265,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total count of datasets.</para>
+        /// <para>The total number of records. This parameter is returned only when you query a list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>

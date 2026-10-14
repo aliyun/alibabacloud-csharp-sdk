@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAccountsZonalResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the accounts.</para>
+        /// <para>The details of the account information.</para>
         /// </summary>
         [NameInMap("Accounts")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string AccountDescription { get; set; }
 
             /// <summary>
-            /// <para>The lock state of the account. Valid values:</para>
+            /// <para>The lock status of the account. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>UnLock: The account is not locked.</para>
             /// </description></item>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string AccountName { get; set; }
 
             /// <summary>
-            /// <para>The time when the password expires.</para>
+            /// <para>The expiration time of the password.</para>
             /// 
             /// <b>Example:</b>
             /// <para>undefined</para>
@@ -64,9 +64,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
             /// <summary>
             /// <para>The status of the account. Valid values:</para>
-            /// <para>Creating: The account is being created.</para>
-            /// <para>Available: The account is active.</para>
-            /// <para>Deleting: The account is being deleted.</para>
+            /// <list type="bullet">
+            /// <item><description><para>Creating: The account is being created.</para>
+            /// </description></item>
+            /// <item><description><para>Available: The account is available.</para>
+            /// </description></item>
+            /// <item><description><para>Deleting: The account is being deleted.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Available</para>
@@ -78,11 +83,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>The type of the account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Normal: A standard account.</para>
+            /// <item><description><para>Normal: standard account.</para>
             /// </description></item>
-            /// <item><description><para>Super: A privileged account.</para>
+            /// <item><description><para>Super: privileged account.</para>
             /// </description></item>
-            /// <item><description><para>ReadOnly: A global read-only account.</para>
+            /// <item><description><para>ReadOnly: global read-only account.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -94,7 +99,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string AccountType { get; set; }
 
             /// <summary>
-            /// <para>The details of the database permissions that the account has.</para>
+            /// <para>The details of the database permissions granted to the account.</para>
             /// </summary>
             [NameInMap("DatabasePrivileges")]
             [Validation(Required=false)]
@@ -125,7 +130,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries returned in the request.</para>
+        /// <para>The maximum number of entries to return for this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -135,7 +140,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the next page of results. If the results are not fully returned, this token is returned. You can use this token in the next request to retrieve the remaining results.</para>
+        /// <para>The query token. Set the value to the NextToken value returned in the last API call. If no subsequent query is required, do not specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>212db86sca4384811e0b5e8707e******</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class SearchMemoriesRequest : TeaModel {
         /// <summary>
-        /// <para>The application ID.</para>
+        /// <para>The application ID. Example: pa-**************.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

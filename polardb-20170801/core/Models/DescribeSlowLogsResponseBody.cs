@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query.</para>
+        /// <para>The end date of the query.</para>
+        /// <para>The date is in UTC. Format: YYYY-MM-DDZ.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-05-30Z</para>
@@ -142,7 +143,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query.</para>
+        /// <para>The start date of the query.</para>
+        /// <para>The date is in UTC. Format: YYYY-MM-DDZ.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-05-01Z</para>

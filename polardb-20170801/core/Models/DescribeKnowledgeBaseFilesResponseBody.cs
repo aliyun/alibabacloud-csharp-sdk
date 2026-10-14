@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <para>The file name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Financial_report.pdf</para>
+            /// <para>FinancialReport.pdf</para>
             /// </summary>
             [NameInMap("FileName")]
             [Validation(Required=false)]
             public string FileName { get; set; }
 
             /// <summary>
-            /// <para>The file size, in bytes.</para>
+            /// <para>The file size in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>318881</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string FileType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the chunking strategy is inherited from the knowledge space.</para>
+            /// <para>Indicates whether the knowledge space chunking strategy is inherited.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <para>The OSS file path.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>oss://test-bucket-example/pks-xxxx/pkb-xxxx/Financial_report.pdf</para>
+            /// <para>oss://test-bucket-example/pks-xxxx/pkb-xxxx/FinancialReport.pdf</para>
             /// </summary>
             [NameInMap("OSSPath")]
             [Validation(Required=false)]
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public int? ShardCount { get; set; }
 
             /// <summary>
-            /// <para>The chunking strategy configuration currently in effect for the document. This value may be empty if the complete configuration was not saved for existing objects.</para>
+            /// <para>The chunking strategy configuration currently in effect for the document. This value may be empty if the complete configuration was not saved for existing instances.</para>
             /// </summary>
             [NameInMap("ShardingStrategyConfig")]
             [Validation(Required=false)]
@@ -244,7 +244,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                         }
 
                         /// <summary>
-                        /// <para>The chunking strategy type applied after a rule is matched.</para>
+                        /// <para>The chunking strategy type after a rule is matched.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>hierarchical</para>
@@ -281,6 +281,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
             /// <summary>
             /// <para>The update time.</para>
+            /// <para>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-06-15T22:28:53Z</para>
@@ -291,6 +292,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
             /// <summary>
             /// <para>The upload time.</para>
+            /// <para>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-06-15T22:28:53Z</para>

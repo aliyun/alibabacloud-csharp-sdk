@@ -12,12 +12,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The database engine type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>MySQL</para>
-        /// </description></item>
-        /// <item><description><para>PostgreSQL</para>
-        /// </description></item>
-        /// <item><description><para>Oracle</para>
-        /// </description></item>
+        /// <item><description>MySQL</description></item>
+        /// <item><description>PostgreSQL</description></item>
+        /// <item><description>Oracle</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -29,24 +26,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBType { get; set; }
 
         /// <summary>
-        /// <para>The version number of the database engine.</para>
+        /// <para>The database engine version.</para>
         /// <para>Valid values for MySQL:</para>
         /// <list type="bullet">
-        /// <item><description><para>5.6</para>
-        /// </description></item>
-        /// <item><description><para>5.7</para>
-        /// </description></item>
-        /// <item><description><para>8.0</para>
-        /// </description></item>
+        /// <item><description>5.6</description></item>
+        /// <item><description>5.7</description></item>
+        /// <item><description>8.0</description></item>
         /// </list>
         /// <para>Valid values for PostgreSQL:</para>
         /// <list type="bullet">
-        /// <item><description><para>11</para>
-        /// </description></item>
-        /// <item><description><para>14</para>
-        /// </description></item>
-        /// <item><description><para>15</para>
-        /// </description></item>
+        /// <item><description>11</description></item>
+        /// <item><description>14</description></item>
+        /// <item><description>15</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,7 +59,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The storage class.</para>
+        /// <para>The storage type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

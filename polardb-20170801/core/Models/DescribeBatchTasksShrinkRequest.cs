@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeBatchTasksShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The end time of the query range. Specify the time in UTC format.</para>
+        /// <para>The end of the creation time range.</para>
+        /// <para>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +22,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be a positive integer. The default is 1.</para>
+        /// <para>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -31,7 +32,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of records per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -41,7 +42,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query range. Specify the time in UTC format.</para>
+        /// <para>The start of the creation time range.</para>
+        /// <para>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
         /// <b>Example:</b>
@@ -52,9 +54,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The task statuses.</para>
+        /// <para>The list of task statuses.</para>
         /// <remarks>
-        /// <para>If you omit this parameter, the operation returns tasks of all statuses.</para>
+        /// <para>If this parameter is left empty, scheduled tasks in all statuses are queried by default.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Status")]
@@ -62,7 +64,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string StatusShrink { get; set; }
 
         /// <summary>
-        /// <para>The type of the batch task.</para>
+        /// <para>The batch task type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>polarclaw_install_skills</para>

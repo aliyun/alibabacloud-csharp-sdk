@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeNetworkChannelResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of network channels.</para>
+        /// <para>The list of network channels.</para>
         /// </summary>
         [NameInMap("ChannelInfos")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ChannelName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the source cluster.</para>
+            /// <para>The source instance name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pc-*************</para>
@@ -37,6 +37,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DBClusterId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the elastic network interfaces (ENIs) used by the reverse access link of the network channel. The network interface controller (NIC) is used for the connection.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>eni-2z******</para>
             /// </summary>
@@ -45,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string EniId { get; set; }
 
             /// <summary>
-            /// <para>The notes about the channel.</para>
+            /// <para>The remarks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test update</para>
@@ -65,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the target cluster.</para>
+            /// <para>The target instance name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pc-*************</para>
@@ -75,7 +77,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string TargetDBClusterId { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the target cluster.</para>
+            /// <para>The IP address of the target instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>33.<em>.</em>.240</para>
@@ -85,7 +87,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string TargetIp { get; set; }
 
             /// <summary>
-            /// <para>The port of the target cluster.</para>
+            /// <para>The port of the target instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3389</para>
@@ -95,7 +97,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string TargetPort { get; set; }
 
             /// <summary>
-            /// <para>The type of the target cluster.</para>
+            /// <para>The target instance type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>polardb_for_postgresql</para>
@@ -105,7 +107,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string TargetType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPC that contains the endpoint.</para>
+            /// <para>The ID of the VPC where the access endpoint resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-2ze13g2c6j7j2jl*******</para>
@@ -117,7 +119,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>925B84D9-CA72-432C-95CF-738C22******</para>

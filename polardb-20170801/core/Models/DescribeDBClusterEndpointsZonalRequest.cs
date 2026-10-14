@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
     public class DescribeDBClusterEndpointsZonalRequest : TeaModel {
         /// <summary>
         /// <para>The cluster ID.</para>
+        /// <remarks>
+        /// <para>Note: Only edge cluster (Zonal) IDs are supported. Regular PolarDB cluster IDs are not supported. You can call DescribeDBClustersZonal to retrieve the list of edge clusters.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +34,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBEndpointId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return information about AI nodes.</para>
+        /// <para>Specifies whether to return AI node information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AI</para>

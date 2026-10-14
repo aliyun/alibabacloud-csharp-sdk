@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<DescribeCostRulesResponseBodyItems> Items { get; set; }
         public class DescribeCostRulesResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The cost points per million cache tokens. Default value: 0.</para>
+            /// <para>The cache read cost points per million tokens. Default value: 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -27,7 +27,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string CacheCostPointsPerMillion { get; set; }
 
             /// <summary>
-            /// <para>The cost rule ID.</para>
+            /// <para>The cache creation or write cost points per million tokens.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>400</para>
+            /// </summary>
+            [NameInMap("CacheCreationCostPointsPerMillion")]
+            [Validation(Required=false)]
+            public string CacheCreationCostPointsPerMillion { get; set; }
+
+            /// <summary>
+            /// <para>The ID of the cost rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>924d450014e64e88ac6e8486f8e990**</para>
@@ -37,7 +47,27 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string CostRuleId { get; set; }
 
             /// <summary>
-            /// <para>The effective target type.</para>
+            /// <para>The end time of the effective period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2026-10-01T00:00:00Z</para>
+            /// </summary>
+            [NameInMap("EffectiveEndTime")]
+            [Validation(Required=false)]
+            public string EffectiveEndTime { get; set; }
+
+            /// <summary>
+            /// <para>The start time of the effective period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2026-09-01T00:00:00Z</para>
+            /// </summary>
+            [NameInMap("EffectiveStartTime")]
+            [Validation(Required=false)]
+            public string EffectiveStartTime { get; set; }
+
+            /// <summary>
+            /// <para>The type of the effective target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>global</para>
@@ -47,7 +77,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string EffectiveTargetType { get; set; }
 
             /// <summary>
-            /// <para>The effective target value.</para>
+            /// <para>The value of the effective target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user</para>
@@ -57,7 +87,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string EffectiveTargetValue { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The explicit cache read cost points per million tokens.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
+            [NameInMap("ExplicitCacheCostPointsPerMillion")]
+            [Validation(Required=false)]
+            public string ExplicitCacheCostPointsPerMillion { get; set; }
+
+            /// <summary>
+            /// <para>The time when the cost rule was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-04T16:09:29+08:00</para>
@@ -67,7 +107,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GmtCreated { get; set; }
 
             /// <summary>
-            /// <para>The last modification time.</para>
+            /// <para>The time when the cost rule was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-16 16:46:20</para>
@@ -87,7 +127,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GwClusterId { get; set; }
 
             /// <summary>
-            /// <para>The cost points per million input tokens. Default value: 0.</para>
+            /// <para>The image input cost points per image.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
+            /// </summary>
+            [NameInMap("ImageCostPointsPerCount")]
+            [Validation(Required=false)]
+            public string ImageCostPointsPerCount { get; set; }
+
+            /// <summary>
+            /// <para>The input cost points per million tokens. Default value: 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -97,7 +147,46 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string InputCostPointsPerMillion { get; set; }
 
             /// <summary>
-            /// <para>The model name.</para>
+            /// <para>The input token tier. An empty value indicates a legacy or default rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0-32K</para>
+            /// </summary>
+            [NameInMap("InputTokenTier")]
+            [Validation(Required=false)]
+            public string InputTokenTier { get; set; }
+
+            /// <summary>
+            /// <para>The non-cumulative tiered pricing for input tokens. Each element includes the tier and the input cost points per million tokens.</para>
+            /// </summary>
+            [NameInMap("InputTokenTiers")]
+            [Validation(Required=false)]
+            public List<DescribeCostRulesResponseBodyItemsInputTokenTiers> InputTokenTiers { get; set; }
+            public class DescribeCostRulesResponseBodyItemsInputTokenTiers : TeaModel {
+                /// <summary>
+                /// <para>The input cost points per million tokens for the tier.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1000</para>
+                /// </summary>
+                [NameInMap("InputCostPointsPerMillion")]
+                [Validation(Required=false)]
+                public string InputCostPointsPerMillion { get; set; }
+
+                /// <summary>
+                /// <para>The token tier. Valid values: &quot;&quot; (default tier), 0-32K, 32K-64K, 64K-128K, 128K-256K, 256K-512K, 512K-1M, and 1M+.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0-32K</para>
+                /// </summary>
+                [NameInMap("Tier")]
+                [Validation(Required=false)]
+                public string Tier { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The name of the model.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gpt-4</para>
@@ -107,7 +196,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Model { get; set; }
 
             /// <summary>
-            /// <para>The model service ID.</para>
+            /// <para>The ID of the model service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ms-xxxxxxxxx</para>
@@ -117,7 +206,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ModelServiceId { get; set; }
 
             /// <summary>
-            /// <para>The cost points per million output tokens. Default value: 0.</para>
+            /// <para>The model service name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>qwen-service</para>
+            /// </summary>
+            [NameInMap("ModelServiceName")]
+            [Validation(Required=false)]
+            public string ModelServiceName { get; set; }
+
+            /// <summary>
+            /// <para>The output cost points per million tokens. Default value: 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -125,6 +224,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [NameInMap("OutputCostPointsPerMillion")]
             [Validation(Required=false)]
             public string OutputCostPointsPerMillion { get; set; }
+
+            /// <summary>
+            /// <para>The video input cost points per second.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
+            /// </summary>
+            [NameInMap("VideoCostPointsPerSecond")]
+            [Validation(Required=false)]
+            public string VideoCostPointsPerSecond { get; set; }
 
         }
 
@@ -139,7 +248,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records on the current page.</para>
+        /// <para>The number of entries on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -169,7 +278,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

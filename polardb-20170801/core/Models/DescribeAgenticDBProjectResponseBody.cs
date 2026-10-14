@@ -10,6 +10,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAgenticDBProjectResponseBody : TeaModel {
         /// <summary>
+        /// <para>The time when the project was created.</para>
+        /// <para>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-06-10T11:00:00Z</para>
         /// </summary>
@@ -18,6 +21,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string CreateTime { get; set; }
 
         /// <summary>
+        /// <para>The ID of the default branch.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>br-1a2b3c4d5e6f</para>
         /// </summary>
@@ -26,6 +31,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DefaultBranchId { get; set; }
 
         /// <summary>
+        /// <para>The name of the default branch.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>main</para>
         /// </summary>
@@ -34,6 +41,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DefaultBranchName { get; set; }
 
         /// <summary>
+        /// <para>The description of the project.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Production analytics database</para>
         /// </summary>
@@ -42,6 +51,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>Project ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>proj-a1b2c3d4e5f6</para>
         /// </summary>
@@ -50,6 +61,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ProjectId { get; set; }
 
         /// <summary>
+        /// <para>The project name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>analytics-prod</para>
         /// </summary>
@@ -58,6 +71,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ProjectName { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>I9J0K1L2-M3N4-5678-IJKL-789012345678</para>
         /// </summary>
@@ -66,6 +81,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The project status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Active: Normal.</description></item>
+        /// <item><description>Destroying: Being destroyed.</description></item>
+        /// <item><description>Destroyed: Destroyed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Active</para>
         /// </summary>
@@ -74,6 +96,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>The ID of the tenant to which the project belongs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>t-4b83e0da66674951</para>
         /// </summary>

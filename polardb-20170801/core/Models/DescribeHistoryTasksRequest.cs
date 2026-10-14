@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeHistoryTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The minimum task execution time in seconds. Filters for tasks that took longer than this value. Default value: 0.</para>
+        /// <para>The minimum execution duration. Filters tasks whose execution duration is greater than this value. Unit: seconds. Default value: 0, which indicates no restriction.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,8 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? FromExecTime { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range to query, based on task start time. The time follows the ISO8601 standard and must be in <c>UTC+0</c> time. Format: <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
-        /// <para>The earliest supported time is 30 days ago. If the specified time is more than 30 days ago, it will be automatically converted to 30 days ago.</para>
+        /// <para>The beginning of the time range for the task start time. Tasks whose start time is later than this time are queried. Specify the time in the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in <c>UTC+0</c>. The earliest supported time is 30 days before the current time. A value earlier than 30 days is automatically converted to 30 days before the current time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,9 +31,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string FromStartTime { get; set; }
 
         /// <summary>
-        /// <para>The resource ID to filter by. You can provide a comma-separated list of up to 30 IDs. Default value: empty, indicating no restriction.</para>
+        /// <para>The resource ID. Specify this parameter to query tasks for the corresponding resource. Separate multiple IDs with commas (,). A maximum of 30 IDs are supported. Default value: empty, which indicates no restriction.</para>
         /// <remarks>
-        /// <para>Currently, only PolarDB cluster IDs are supported.</para>
+        /// <para>Currently, only cluster IDs are supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -59,7 +58,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Valid values: positive integers. Default value: 1.</para>
+        /// <para>The page number of the query results. Valid values: positive integers. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -69,7 +68,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page. Valid values: 10 to 100. Default value: 10.</para>
+        /// <para>The number of entries per page. Valid values: 10 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -81,7 +80,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a>.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query region information.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -116,20 +115,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Scheduled</b>: waiting for execution</para>
-        /// </description></item>
-        /// <item><description><para><b>Running</b>: executing</para>
-        /// </description></item>
-        /// <item><description><para><b>Succeed</b>: executed successfully</para>
-        /// </description></item>
-        /// <item><description><para><b>Cancelling</b>: stopping</para>
-        /// </description></item>
-        /// <item><description><para><b>Canceled</b>: stopped</para>
-        /// </description></item>
-        /// <item><description><para><b>Waiting</b>: waiting for preset time</para>
-        /// </description></item>
+        /// <item><description><b>Scheduled</b>: Waiting for execution.</description></item>
+        /// <item><description><b>Running</b>: Running.</description></item>
+        /// <item><description><b>Succeed</b>: Succeeded.</description></item>
+        /// <item><description><b>Cancelling</b>: Being canceled.</description></item>
+        /// <item><description><b>Canceled</b>: Canceled.</description></item>
+        /// <item><description><b>Waiting</b>: Waiting for the scheduled time.</description></item>
         /// </list>
-        /// <para>You can provide a comma-separated list. Default value: empty, which indicates all statuses.</para>
+        /// <para>Separate multiple statuses with commas (,). Default value: empty, which indicates all statuses.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -139,7 +132,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The task ID. You can provide a comma-separated list of up to 30 IDs. Default value: empty, indicating no restriction.</para>
+        /// <para>The task ID. Separate multiple task IDs with commas (,). A maximum of 30 IDs are supported. Default value: empty, which indicates no restriction.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-0mqi38ho0cgjv***</para>
@@ -149,7 +142,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The task type. You can provide a comma-separated list of up to 30 task types. Default value: empty, indicating no restriction.</para>
+        /// <para>The task type. Specify this parameter to query tasks of a specific type. Separate multiple types with commas (,). A maximum of 30 types are supported. Default value: empty, which indicates no restriction.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ChangeVariable</para>
@@ -159,7 +152,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TaskType { get; set; }
 
         /// <summary>
-        /// <para>The maximum task execution time in seconds. Filters for tasks that took less than this value. Default value: 0.</para>
+        /// <para>The maximum execution duration. Filters tasks whose execution duration is not less than this value. Unit: seconds. Default value: 0, which indicates no restriction.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -169,7 +162,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? ToExecTime { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query, based on task start time. The time follows the ISO8601 standard and must be in <c>UTC+0</c> time. Format: <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
+        /// <para>The end of the time range for the task start time. Tasks whose start time is earlier than this time are queried. Specify the time in the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in <c>UTC+0</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

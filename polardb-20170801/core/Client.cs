@@ -3337,7 +3337,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks a PolarDB account name.</para>
+        /// <para>Checks the PolarDB account name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3399,7 +3399,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks a PolarDB account name.</para>
+        /// <para>Checks the PolarDB account name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3461,7 +3461,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks a PolarDB account name.</para>
+        /// <para>Checks the PolarDB account name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3479,7 +3479,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks a PolarDB account name.</para>
+        /// <para>Checks the PolarDB account name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3817,7 +3817,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the name of a database in an edge cluster for PolarDB on ENS.</para>
+        /// <para>Checks the ApsaraDB database name for PolarDB on ENS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3879,7 +3879,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the name of a database in an edge cluster for PolarDB on ENS.</para>
+        /// <para>Checks the ApsaraDB database name for PolarDB on ENS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3941,7 +3941,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the name of a database in an edge cluster for PolarDB on ENS.</para>
+        /// <para>Checks the ApsaraDB database name for PolarDB on ENS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3959,7 +3959,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the name of a database in an edge cluster for PolarDB on ENS.</para>
+        /// <para>Checks the ApsaraDB database name for PolarDB on ENS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6569,7 +6569,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an account for a PolarDB on ENS cluster.</para>
+        /// <para>Creates an account for an edge cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6663,7 +6663,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an account for a PolarDB on ENS cluster.</para>
+        /// <para>Creates an account for an edge cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6757,7 +6757,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an account for a PolarDB on ENS cluster.</para>
+        /// <para>Creates an account for an edge cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6775,7 +6775,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an account for a PolarDB on ENS cluster.</para>
+        /// <para>Creates an account for an edge cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7457,7 +7457,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application that is associated with a PolarDB instance.</para>
+        /// <para>Creates an application attached to a PolarDB instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7709,7 +7709,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application that is associated with a PolarDB instance.</para>
+        /// <para>Creates an application attached to a PolarDB instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7961,7 +7961,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application that is associated with a PolarDB instance.</para>
+        /// <para>Creates an application attached to a PolarDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7979,7 +7979,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application that is associated with a PolarDB instance.</para>
+        /// <para>Creates an application attached to a PolarDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8632,8 +8632,8 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Each cluster can have a maximum of three manually created backups at the same time.</description></item>
-        /// <item><description>If the error message <c>Exceeding the daily backup times of this DB cluster</c> is returned, three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a> before calling this operation.</description></item>
+        /// <item><description>Each cluster can have a maximum of three manually created backups at a time.</description></item>
+        /// <item><description>If the error message <c>Exceeding the daily backup times of this DB cluster</c> is returned, three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a> before you call this operation.</description></item>
         /// <item><description>After you call this operation, a backup task is created in the background. If the data volume is large, the backup may take a long time. Wait until the backup is complete.</description></item>
         /// </list>
         /// </remarks>
@@ -8709,8 +8709,8 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Each cluster can have a maximum of three manually created backups at the same time.</description></item>
-        /// <item><description>If the error message <c>Exceeding the daily backup times of this DB cluster</c> is returned, three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a> before calling this operation.</description></item>
+        /// <item><description>Each cluster can have a maximum of three manually created backups at a time.</description></item>
+        /// <item><description>If the error message <c>Exceeding the daily backup times of this DB cluster</c> is returned, three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a> before you call this operation.</description></item>
         /// <item><description>After you call this operation, a backup task is created in the background. If the data volume is large, the backup may take a long time. Wait until the backup is complete.</description></item>
         /// </list>
         /// </remarks>
@@ -8786,8 +8786,8 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Each cluster can have a maximum of three manually created backups at the same time.</description></item>
-        /// <item><description>If the error message <c>Exceeding the daily backup times of this DB cluster</c> is returned, three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a> before calling this operation.</description></item>
+        /// <item><description>Each cluster can have a maximum of three manually created backups at a time.</description></item>
+        /// <item><description>If the error message <c>Exceeding the daily backup times of this DB cluster</c> is returned, three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a> before you call this operation.</description></item>
         /// <item><description>After you call this operation, a backup task is created in the background. If the data volume is large, the backup may take a long time. Wait until the backup is complete.</description></item>
         /// </list>
         /// </remarks>
@@ -8815,8 +8815,8 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Each cluster can have a maximum of three manually created backups at the same time.</description></item>
-        /// <item><description>If the error message <c>Exceeding the daily backup times of this DB cluster</c> is returned, three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a> before calling this operation.</description></item>
+        /// <item><description>Each cluster can have a maximum of three manually created backups at a time.</description></item>
+        /// <item><description>If the error message <c>Exceeding the daily backup times of this DB cluster</c> is returned, three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a> before you call this operation.</description></item>
         /// <item><description>After you call this operation, a backup task is created in the background. If the data volume is large, the backup may take a long time. Wait until the backup is complete.</description></item>
         /// </list>
         /// </remarks>
@@ -9686,6 +9686,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["CacheCostPointsPerMillion"] = request.CacheCostPointsPerMillion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CacheCreationCostPointsPerMillion))
+            {
+                query["CacheCreationCostPointsPerMillion"] = request.CacheCreationCostPointsPerMillion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveStartTime))
+            {
+                query["EffectiveStartTime"] = request.EffectiveStartTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTargetType))
             {
                 query["EffectiveTargetType"] = request.EffectiveTargetType;
@@ -9694,13 +9702,25 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["EffectiveTargetValue"] = request.EffectiveTargetValue;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExplicitCacheCostPointsPerMillion))
+            {
+                query["ExplicitCacheCostPointsPerMillion"] = request.ExplicitCacheCostPointsPerMillion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GwClusterId))
             {
                 query["GwClusterId"] = request.GwClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageCostPointsPerCount))
+            {
+                query["ImageCostPointsPerCount"] = request.ImageCostPointsPerCount;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputCostPointsPerMillion))
             {
                 query["InputCostPointsPerMillion"] = request.InputCostPointsPerMillion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputTokenTiers))
+            {
+                query["InputTokenTiers"] = request.InputTokenTiers;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelName))
             {
@@ -9717,6 +9737,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoCostPointsPerSecond))
+            {
+                query["VideoCostPointsPerSecond"] = request.VideoCostPointsPerSecond;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9760,6 +9784,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["CacheCostPointsPerMillion"] = request.CacheCostPointsPerMillion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CacheCreationCostPointsPerMillion))
+            {
+                query["CacheCreationCostPointsPerMillion"] = request.CacheCreationCostPointsPerMillion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveStartTime))
+            {
+                query["EffectiveStartTime"] = request.EffectiveStartTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTargetType))
             {
                 query["EffectiveTargetType"] = request.EffectiveTargetType;
@@ -9768,13 +9800,25 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["EffectiveTargetValue"] = request.EffectiveTargetValue;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExplicitCacheCostPointsPerMillion))
+            {
+                query["ExplicitCacheCostPointsPerMillion"] = request.ExplicitCacheCostPointsPerMillion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GwClusterId))
             {
                 query["GwClusterId"] = request.GwClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageCostPointsPerCount))
+            {
+                query["ImageCostPointsPerCount"] = request.ImageCostPointsPerCount;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputCostPointsPerMillion))
             {
                 query["InputCostPointsPerMillion"] = request.InputCostPointsPerMillion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputTokenTiers))
+            {
+                query["InputTokenTiers"] = request.InputTokenTiers;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelName))
             {
@@ -9791,6 +9835,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoCostPointsPerSecond))
+            {
+                query["VideoCostPointsPerSecond"] = request.VideoCostPointsPerSecond;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -10126,7 +10174,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DBLink can connect two PolarDB for PostgreSQL (Compatible with Oracle) clusters, or connect a PolarDB for PostgreSQL (Compatible with Oracle) cluster to a self-managed PostgreSQL database on an ECS instance. You can use DBLink to query data across clusters.</para>
+        /// <para>A DBLink can connect two PolarDB for PostgreSQL (Compatible with Oracle) clusters, or connect a PolarDB for PostgreSQL (Compatible with Oracle) cluster to a self-managed PostgreSQL database on an ECS instance. You can use DBLink to query data across clusters.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>You can create up to 10 DBLinks for a cluster.</description></item>
+        /// <item><description>A DBLink occupies one DBLink quota on both the source cluster and the destination cluster.</description></item>
+        /// <item><description>The source cluster and the destination cluster or destination ECS instance must be in the same region.</description></item>
+        /// </list>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -10433,7 +10488,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DBLink can connect two PolarDB for PostgreSQL (Compatible with Oracle) clusters, or connect a PolarDB for PostgreSQL (Compatible with Oracle) cluster to a self-managed PostgreSQL database on an ECS instance. You can use DBLink to query data across clusters.</para>
+        /// <para>A DBLink can connect two PolarDB for PostgreSQL (Compatible with Oracle) clusters, or connect a PolarDB for PostgreSQL (Compatible with Oracle) cluster to a self-managed PostgreSQL database on an ECS instance. You can use DBLink to query data across clusters.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>You can create up to 10 DBLinks for a cluster.</description></item>
+        /// <item><description>A DBLink occupies one DBLink quota on both the source cluster and the destination cluster.</description></item>
+        /// <item><description>The source cluster and the destination cluster or destination ECS instance must be in the same region.</description></item>
+        /// </list>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -10740,7 +10802,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DBLink can connect two PolarDB for PostgreSQL (Compatible with Oracle) clusters, or connect a PolarDB for PostgreSQL (Compatible with Oracle) cluster to a self-managed PostgreSQL database on an ECS instance. You can use DBLink to query data across clusters.</para>
+        /// <para>A DBLink can connect two PolarDB for PostgreSQL (Compatible with Oracle) clusters, or connect a PolarDB for PostgreSQL (Compatible with Oracle) cluster to a self-managed PostgreSQL database on an ECS instance. You can use DBLink to query data across clusters.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>You can create up to 10 DBLinks for a cluster.</description></item>
+        /// <item><description>A DBLink occupies one DBLink quota on both the source cluster and the destination cluster.</description></item>
+        /// <item><description>The source cluster and the destination cluster or destination ECS instance must be in the same region.</description></item>
+        /// </list>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -10763,7 +10832,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DBLink can connect two PolarDB for PostgreSQL (Compatible with Oracle) clusters, or connect a PolarDB for PostgreSQL (Compatible with Oracle) cluster to a self-managed PostgreSQL database on an ECS instance. You can use DBLink to query data across clusters.</para>
+        /// <para>A DBLink can connect two PolarDB for PostgreSQL (Compatible with Oracle) clusters, or connect a PolarDB for PostgreSQL (Compatible with Oracle) cluster to a self-managed PostgreSQL database on an ECS instance. You can use DBLink to query data across clusters.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>You can create up to 10 DBLinks for a cluster.</description></item>
+        /// <item><description>A DBLink occupies one DBLink quota on both the source cluster and the destination cluster.</description></item>
+        /// <item><description>The source cluster and the destination cluster or destination ECS instance must be in the same region.</description></item>
+        /// </list>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -11037,7 +11113,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edge Cloud API: Create Link Address</para>
+        /// <para>Creates a custom cluster endpoint for a PolarDB on ENS cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11135,7 +11211,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edge Cloud API: Create Link Address</para>
+        /// <para>Creates a custom cluster endpoint for a PolarDB on ENS cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11233,7 +11309,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edge Cloud API: Create Link Address</para>
+        /// <para>Creates a custom cluster endpoint for a PolarDB on ENS cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11251,7 +11327,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edge Cloud API: Create Link Address</para>
+        /// <para>Creates a custom cluster endpoint for a PolarDB on ENS cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13742,6 +13818,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeishuChatMemberStaleTtlSeconds))
+            {
+                query["FeishuChatMemberStaleTtlSeconds"] = request.FeishuChatMemberStaleTtlSeconds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
             {
                 query["KnowledgeBaseId"] = request.KnowledgeBaseId;
@@ -13785,6 +13865,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
                 query["UserId"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserRefreshToken))
+            {
+                query["UserRefreshToken"] = request.UserRefreshToken;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -13836,6 +13920,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeishuChatMemberStaleTtlSeconds))
+            {
+                query["FeishuChatMemberStaleTtlSeconds"] = request.FeishuChatMemberStaleTtlSeconds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
             {
                 query["KnowledgeBaseId"] = request.KnowledgeBaseId;
@@ -13879,6 +13967,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
                 query["UserId"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserRefreshToken))
+            {
+                query["UserRefreshToken"] = request.UserRefreshToken;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -15137,7 +15229,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or obtains a virtual license order.</para>
+        /// <para>Creates or retrieves a virtual certificate order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15195,7 +15287,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or obtains a virtual license order.</para>
+        /// <para>Creates or retrieves a virtual certificate order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15253,7 +15345,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or obtains a virtual license order.</para>
+        /// <para>Creates or retrieves a virtual certificate order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15271,7 +15363,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or obtains a virtual license order.</para>
+        /// <para>Creates or retrieves a virtual certificate order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18437,7 +18529,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an account from an edge cluster for PolarDB on ENS.</para>
+        /// <para>Deletes an account for a PolarDB on ENS cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18499,7 +18591,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an account from an edge cluster for PolarDB on ENS.</para>
+        /// <para>Deletes an account for a PolarDB on ENS cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18561,7 +18653,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an account from an edge cluster for PolarDB on ENS.</para>
+        /// <para>Deletes an account for a PolarDB on ENS cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18579,7 +18671,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an account from an edge cluster for PolarDB on ENS.</para>
+        /// <para>Deletes an account for a PolarDB on ENS cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19053,7 +19145,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an API key for an AgenticDB tenant.</para>
+        /// <para>Deletes an API key of an AgenticDB tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19107,7 +19199,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an API key for an AgenticDB tenant.</para>
+        /// <para>Deletes an API key of an AgenticDB tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19161,7 +19253,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an API key for an AgenticDB tenant.</para>
+        /// <para>Deletes an API key of an AgenticDB tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19179,7 +19271,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an API key for an AgenticDB tenant.</para>
+        /// <para>Deletes an API key of an AgenticDB tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20385,7 +20477,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a pay-as-you-go PolarDB cluster.</para>
+        /// <para>Releases a pay-as-you-go PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20451,7 +20543,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a pay-as-you-go PolarDB cluster.</para>
+        /// <para>Releases a pay-as-you-go PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20517,7 +20609,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a pay-as-you-go PolarDB cluster.</para>
+        /// <para>Releases a pay-as-you-go PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20535,7 +20627,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a pay-as-you-go PolarDB cluster.</para>
+        /// <para>Releases a pay-as-you-go PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21641,7 +21733,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a database from a PolarDB edge cloud cluster.</para>
+        /// <para>Deletes a database in a PolarDB on ENS cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21703,7 +21795,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a database from a PolarDB edge cloud cluster.</para>
+        /// <para>Deletes a database in a PolarDB on ENS cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21765,7 +21857,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a database from a PolarDB edge cloud cluster.</para>
+        /// <para>Deletes a database in a PolarDB on ENS cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21783,7 +21875,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a database from a PolarDB edge cloud cluster.</para>
+        /// <para>Deletes a database in a PolarDB on ENS cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26361,7 +26453,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query datasets</para>
+        /// <para>Queries a list of datasets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26447,7 +26539,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query datasets</para>
+        /// <para>Queries a list of datasets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26533,7 +26625,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query datasets</para>
+        /// <para>Queries a list of datasets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26551,7 +26643,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query datasets</para>
+        /// <para>Queries a list of datasets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27269,15 +27361,15 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of template operators for a specified PolarDB database instance.</para>
+        /// <para>Queries the list of model operators for a specified PolarDB database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation supports filtering and returning the list of template operators based on the <c>RelativeDBClusterId</c> and <c>KubeType</c> parameters.</description></item>
-        /// <item><description>Note: Ensure that the <c>RelativeDBClusterId</c> provided in the request matches an existing PolarDB database instance ID. Otherwise, data cannot be retrieved correctly.</description></item>
+        /// <item><description>This operation filters and returns a list of model operators based on the RelativeDBClusterId and KubeType parameters.</description></item>
+        /// <item><description>Note: Make sure that the RelativeDBClusterId provided in the request matches the instance ID of an existing PolarDB database instance. Otherwise, the data cannot be retrieved.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -27352,15 +27444,15 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of template operators for a specified PolarDB database instance.</para>
+        /// <para>Queries the list of model operators for a specified PolarDB database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation supports filtering and returning the list of template operators based on the <c>RelativeDBClusterId</c> and <c>KubeType</c> parameters.</description></item>
-        /// <item><description>Note: Ensure that the <c>RelativeDBClusterId</c> provided in the request matches an existing PolarDB database instance ID. Otherwise, data cannot be retrieved correctly.</description></item>
+        /// <item><description>This operation filters and returns a list of model operators based on the RelativeDBClusterId and KubeType parameters.</description></item>
+        /// <item><description>Note: Make sure that the RelativeDBClusterId provided in the request matches the instance ID of an existing PolarDB database instance. Otherwise, the data cannot be retrieved.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -27435,15 +27527,15 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of template operators for a specified PolarDB database instance.</para>
+        /// <para>Queries the list of model operators for a specified PolarDB database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation supports filtering and returning the list of template operators based on the <c>RelativeDBClusterId</c> and <c>KubeType</c> parameters.</description></item>
-        /// <item><description>Note: Ensure that the <c>RelativeDBClusterId</c> provided in the request matches an existing PolarDB database instance ID. Otherwise, data cannot be retrieved correctly.</description></item>
+        /// <item><description>This operation filters and returns a list of model operators based on the RelativeDBClusterId and KubeType parameters.</description></item>
+        /// <item><description>Note: Make sure that the RelativeDBClusterId provided in the request matches the instance ID of an existing PolarDB database instance. Otherwise, the data cannot be retrieved.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -27462,15 +27554,15 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of template operators for a specified PolarDB database instance.</para>
+        /// <para>Queries the list of model operators for a specified PolarDB database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation supports filtering and returning the list of template operators based on the <c>RelativeDBClusterId</c> and <c>KubeType</c> parameters.</description></item>
-        /// <item><description>Note: Ensure that the <c>RelativeDBClusterId</c> provided in the request matches an existing PolarDB database instance ID. Otherwise, data cannot be retrieved correctly.</description></item>
+        /// <item><description>This operation filters and returns a list of model operators based on the RelativeDBClusterId and KubeType parameters.</description></item>
+        /// <item><description>Note: Make sure that the RelativeDBClusterId provided in the request matches the instance ID of an existing PolarDB database instance. Otherwise, the data cannot be retrieved.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -27489,7 +27581,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of custom AI clusters.</para>
+        /// <para>Queries the list of custom clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27579,7 +27671,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of custom AI clusters.</para>
+        /// <para>Queries the list of custom clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27669,7 +27761,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of custom AI clusters.</para>
+        /// <para>Queries the list of custom clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27687,7 +27779,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of custom AI clusters.</para>
+        /// <para>Queries the list of custom clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28001,7 +28093,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the edge clusters for PolarDB on ENS.</para>
+        /// <para>Queries the list of PolarDB edge clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28083,7 +28175,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the edge clusters for PolarDB on ENS.</para>
+        /// <para>Queries the list of PolarDB edge clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28165,7 +28257,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the edge clusters for PolarDB on ENS.</para>
+        /// <para>Queries the list of PolarDB edge clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28183,7 +28275,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the edge clusters for PolarDB on ENS.</para>
+        /// <para>Queries the list of PolarDB edge clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28545,7 +28637,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Operations and Maintenance (O&amp;M) configuration for a user, including the active O&amp;M window.</para>
+        /// <para>Retrieves the O&amp;M configuration of a user, which currently includes proactive O&amp;M window information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28611,7 +28703,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Operations and Maintenance (O&amp;M) configuration for a user, including the active O&amp;M window.</para>
+        /// <para>Retrieves the O&amp;M configuration of a user, which currently includes proactive O&amp;M window information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28677,7 +28769,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Operations and Maintenance (O&amp;M) configuration for a user, including the active O&amp;M window.</para>
+        /// <para>Retrieves the O&amp;M configuration of a user, which currently includes proactive O&amp;M window information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28695,7 +28787,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Operations and Maintenance (O&amp;M) configuration for a user, including the active O&amp;M window.</para>
+        /// <para>Retrieves the O&amp;M configuration of a user, which currently includes proactive O&amp;M window information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29097,7 +29189,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the connection information of an AgenticDB branch.</para>
+        /// <para>Queries the branch connection information of an AgenticDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29155,7 +29247,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the connection information of an AgenticDB branch.</para>
+        /// <para>Queries the branch connection information of an AgenticDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29213,7 +29305,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the connection information of an AgenticDB branch.</para>
+        /// <para>Queries the branch connection information of an AgenticDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29231,7 +29323,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the connection information of an AgenticDB branch.</para>
+        /// <para>Queries the branch connection information of an AgenticDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29601,7 +29693,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <h2>Operation description</h2>
         /// <list type="bullet">
         /// <item><description>This operation supports filtering and returning the list of related model operators based on the <c>RelativeDBClusterId</c> and <c>KubeType</c> parameters.</description></item>
-        /// <item><description>Note: Ensure that the <c>RelativeDBClusterId</c> provided in the request matches an existing PolarDB database instance ID. Otherwise, data cannot be retrieved correctly.</description></item>
+        /// <item><description>Note: Ensure that the <c>RelativeDBClusterId</c> provided in the request matches an existing PolarDB instance ID. Otherwise, data cannot be retrieved correctly.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29692,7 +29784,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <h2>Operation description</h2>
         /// <list type="bullet">
         /// <item><description>This operation supports filtering and returning the list of related model operators based on the <c>RelativeDBClusterId</c> and <c>KubeType</c> parameters.</description></item>
-        /// <item><description>Note: Ensure that the <c>RelativeDBClusterId</c> provided in the request matches an existing PolarDB database instance ID. Otherwise, data cannot be retrieved correctly.</description></item>
+        /// <item><description>Note: Ensure that the <c>RelativeDBClusterId</c> provided in the request matches an existing PolarDB instance ID. Otherwise, data cannot be retrieved correctly.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29783,7 +29875,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <h2>Operation description</h2>
         /// <list type="bullet">
         /// <item><description>This operation supports filtering and returning the list of related model operators based on the <c>RelativeDBClusterId</c> and <c>KubeType</c> parameters.</description></item>
-        /// <item><description>Note: Ensure that the <c>RelativeDBClusterId</c> provided in the request matches an existing PolarDB database instance ID. Otherwise, data cannot be retrieved correctly.</description></item>
+        /// <item><description>Note: Ensure that the <c>RelativeDBClusterId</c> provided in the request matches an existing PolarDB instance ID. Otherwise, data cannot be retrieved correctly.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29810,7 +29902,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <h2>Operation description</h2>
         /// <list type="bullet">
         /// <item><description>This operation supports filtering and returning the list of related model operators based on the <c>RelativeDBClusterId</c> and <c>KubeType</c> parameters.</description></item>
-        /// <item><description>Note: Ensure that the <c>RelativeDBClusterId</c> provided in the request matches an existing PolarDB database instance ID. Otherwise, data cannot be retrieved correctly.</description></item>
+        /// <item><description>Note: Ensure that the <c>RelativeDBClusterId</c> provided in the request matches an existing PolarDB instance ID. Otherwise, data cannot be retrieved correctly.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29989,7 +30081,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 AgenticDB 项目详情</para>
+        /// <para>Queries the details of an AgenticDB project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30043,7 +30135,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 AgenticDB 项目详情</para>
+        /// <para>Queries the details of an AgenticDB project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30097,7 +30189,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 AgenticDB 项目详情</para>
+        /// <para>Queries the details of an AgenticDB project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30115,7 +30207,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 AgenticDB 项目详情</para>
+        /// <para>Queries the details of an AgenticDB project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30597,12 +30689,12 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified PolarDB instance application.</para>
+        /// <para>Queries the details of a specified PolarDB instance application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation queries all information about a specific PolarDB application, including but not limited to component details and endpoints.</para>
+        /// <para>This API queries all relevant information about a specific PolarDB application, including but not limited to component details and connection endpoints.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30644,12 +30736,12 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified PolarDB instance application.</para>
+        /// <para>Queries the details of a specified PolarDB instance application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation queries all information about a specific PolarDB application, including but not limited to component details and endpoints.</para>
+        /// <para>This API queries all relevant information about a specific PolarDB application, including but not limited to component details and connection endpoints.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30691,12 +30783,12 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified PolarDB instance application.</para>
+        /// <para>Queries the details of a specified PolarDB instance application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation queries all information about a specific PolarDB application, including but not limited to component details and endpoints.</para>
+        /// <para>This API queries all relevant information about a specific PolarDB application, including but not limited to component details and connection endpoints.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30714,12 +30806,12 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified PolarDB instance application.</para>
+        /// <para>Queries the details of a specified PolarDB instance application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation queries all information about a specific PolarDB application, including but not limited to component details and endpoints.</para>
+        /// <para>This API queries all relevant information about a specific PolarDB application, including but not limited to component details and connection endpoints.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -32017,7 +32109,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of applications for all PolarDB instances in a specified region.</para>
+        /// <para>Queries the list of applications for all PolarDB instances in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32083,7 +32175,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of applications for all PolarDB instances in a specified region.</para>
+        /// <para>Queries the list of applications for all PolarDB instances in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32149,7 +32241,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of applications for all PolarDB instances in a specified region.</para>
+        /// <para>Queries the list of applications for all PolarDB instances in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32167,7 +32259,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of applications for all PolarDB instances in a specified region.</para>
+        /// <para>Queries the list of applications for all PolarDB instances in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34942,6 +35034,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CostRuleId))
+            {
+                query["CostRuleId"] = request.CostRuleId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTargetType))
             {
                 query["EffectiveTargetType"] = request.EffectiveTargetType;
@@ -34953,6 +35049,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GwClusterId))
             {
                 query["GwClusterId"] = request.GwClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputTokenTier))
+            {
+                query["InputTokenTier"] = request.InputTokenTier;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelName))
             {
@@ -35012,6 +35112,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CostRuleId))
+            {
+                query["CostRuleId"] = request.CostRuleId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTargetType))
             {
                 query["EffectiveTargetType"] = request.EffectiveTargetType;
@@ -35023,6 +35127,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GwClusterId))
             {
                 query["GwClusterId"] = request.GwClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputTokenTier))
+            {
+                query["InputTokenTier"] = request.InputTokenTier;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelName))
             {
@@ -35285,7 +35393,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the supported cross-cloud specifications.</para>
+        /// <para>Queries the list of specifications supported for cross-cloud scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35339,7 +35447,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the supported cross-cloud specifications.</para>
+        /// <para>Queries the list of specifications supported for cross-cloud scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35393,7 +35501,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the supported cross-cloud specifications.</para>
+        /// <para>Queries the list of specifications supported for cross-cloud scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35411,7 +35519,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the supported cross-cloud specifications.</para>
+        /// <para>Queries the list of specifications supported for cross-cloud scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36885,7 +36993,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the endpoints of an edge cluster for PolarDB on ENS.</para>
+        /// <para>Queries the endpoints of PolarDB on ENS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36951,7 +37059,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the endpoints of an edge cluster for PolarDB on ENS.</para>
+        /// <para>Queries the endpoints of PolarDB on ENS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37017,7 +37125,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the endpoints of an edge cluster for PolarDB on ENS.</para>
+        /// <para>Queries the endpoints of PolarDB on ENS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37035,7 +37143,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the endpoints of an edge cluster for PolarDB on ENS.</para>
+        /// <para>Queries the endpoints of PolarDB on ENS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39085,7 +39193,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the version of a PolarDB edge cluster.</para>
+        /// <para>Queries the version of a PolarDB on ENS cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39147,7 +39255,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the version of a PolarDB edge cluster.</para>
+        /// <para>Queries the version of a PolarDB on ENS cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39209,7 +39317,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the version of a PolarDB edge cluster.</para>
+        /// <para>Queries the version of a PolarDB on ENS cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39227,7 +39335,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the version of a PolarDB edge cluster.</para>
+        /// <para>Queries the version of a PolarDB on ENS cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39245,7 +39353,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of PolarDB clusters or clusters authorized by RAM authorization.</para>
+        /// <para>Queries the list of PolarDB clusters or the details of clusters with RAM authorization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39367,7 +39475,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of PolarDB clusters or clusters authorized by RAM authorization.</para>
+        /// <para>Queries the list of PolarDB clusters or the details of clusters with RAM authorization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39489,7 +39597,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of PolarDB clusters or clusters authorized by RAM authorization.</para>
+        /// <para>Queries the list of PolarDB clusters or the details of clusters with RAM authorization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39507,7 +39615,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of PolarDB clusters or clusters authorized by RAM authorization.</para>
+        /// <para>Queries the list of PolarDB clusters or the details of clusters with RAM authorization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43541,7 +43649,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details for Polarlakebase Global Data Networks (GDNs) across all regions in your account.</para>
+        /// <para>Queries the details of Polarlakebase Global Database Networks (GDNs) across all regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43587,7 +43695,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details for Polarlakebase Global Data Networks (GDNs) across all regions in your account.</para>
+        /// <para>Queries the details of Polarlakebase Global Database Networks (GDNs) across all regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43633,7 +43741,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details for Polarlakebase Global Data Networks (GDNs) across all regions in your account.</para>
+        /// <para>Queries the details of Polarlakebase Global Database Networks (GDNs) across all regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43651,7 +43759,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details for Polarlakebase Global Data Networks (GDNs) across all regions in your account.</para>
+        /// <para>Queries the details of Polarlakebase Global Database Networks (GDNs) across all regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43669,7 +43777,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details for a Global Database Network (GDN).</para>
+        /// <para>Queries the details of a global database network (GDN).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43735,7 +43843,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details for a Global Database Network (GDN).</para>
+        /// <para>Queries the details of a global database network (GDN).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43801,7 +43909,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details for a Global Database Network (GDN).</para>
+        /// <para>Queries the details of a global database network (GDN).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43819,7 +43927,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details for a Global Database Network (GDN).</para>
+        /// <para>Queries the details of a global database network (GDN).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44397,7 +44505,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries high availability (HA) logs for an instance.</para>
+        /// <para>Queries high-availability logs of an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -44472,7 +44580,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries high availability (HA) logs for an instance.</para>
+        /// <para>Queries high-availability logs of an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -44547,7 +44655,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries high availability (HA) logs for an instance.</para>
+        /// <para>Queries high-availability logs of an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -44574,7 +44682,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries high availability (HA) logs for an instance.</para>
+        /// <para>Queries high-availability logs of an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -44833,7 +44941,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of historical administrative tasks for PolarDB for MySQL instances, such as parameter changes, and instance restarts.</para>
+        /// <para>Queries the historical task list for PolarDB for MySQL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44939,7 +45047,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of historical administrative tasks for PolarDB for MySQL instances, such as parameter changes, and instance restarts.</para>
+        /// <para>Queries the historical task list for PolarDB for MySQL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45045,7 +45153,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of historical administrative tasks for PolarDB for MySQL instances, such as parameter changes, and instance restarts.</para>
+        /// <para>Queries the historical task list for PolarDB for MySQL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45063,7 +45171,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of historical administrative tasks for PolarDB for MySQL instances, such as parameter changes, and instance restarts.</para>
+        /// <para>Queries the historical task list for PolarDB for MySQL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45301,6 +45409,142 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeHistoryTasksStatWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a knowledge base synchronization link.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeKBSyncLinkAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeKBSyncLinkAttributeResponse
+        /// </returns>
+        public DescribeKBSyncLinkAttributeResponse DescribeKBSyncLinkAttributeWithOptions(DescribeKBSyncLinkAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                query["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LinkId))
+            {
+                query["LinkId"] = request.LinkId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeKBSyncLinkAttribute",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeKBSyncLinkAttributeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a knowledge base synchronization link.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeKBSyncLinkAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeKBSyncLinkAttributeResponse
+        /// </returns>
+        public async Task<DescribeKBSyncLinkAttributeResponse> DescribeKBSyncLinkAttributeWithOptionsAsync(DescribeKBSyncLinkAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                query["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LinkId))
+            {
+                query["LinkId"] = request.LinkId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeKBSyncLinkAttribute",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeKBSyncLinkAttributeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a knowledge base synchronization link.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeKBSyncLinkAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeKBSyncLinkAttributeResponse
+        /// </returns>
+        public DescribeKBSyncLinkAttributeResponse DescribeKBSyncLinkAttribute(DescribeKBSyncLinkAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeKBSyncLinkAttributeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a knowledge base synchronization link.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeKBSyncLinkAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeKBSyncLinkAttributeResponse
+        /// </returns>
+        public async Task<DescribeKBSyncLinkAttributeResponse> DescribeKBSyncLinkAttributeAsync(DescribeKBSyncLinkAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeKBSyncLinkAttributeWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -46049,7 +46293,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of knowledge bases.</para>
+        /// <para>Queries a list of knowledge bases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46111,7 +46355,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of knowledge bases.</para>
+        /// <para>Queries a list of knowledge bases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46173,7 +46417,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of knowledge bases.</para>
+        /// <para>Queries a list of knowledge bases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46191,7 +46435,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of knowledge bases.</para>
+        /// <para>Queries a list of knowledge bases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46625,7 +46869,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation queries a list of license orders.</para>
+        /// <para>Queries the list of license orders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46703,7 +46947,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation queries a list of license orders.</para>
+        /// <para>Queries the list of license orders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46781,7 +47025,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation queries a list of license orders.</para>
+        /// <para>Queries the list of license orders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46799,7 +47043,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation queries a list of license orders.</para>
+        /// <para>Queries the list of license orders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46817,7 +47061,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the available time range to recover from a backup.</para>
+        /// <para>Queries the restorable time range of backups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46879,7 +47123,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the available time range to recover from a backup.</para>
+        /// <para>Queries the restorable time range of backups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46941,7 +47185,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the available time range to recover from a backup.</para>
+        /// <para>Queries the restorable time range of backups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46959,7 +47203,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the available time range to recover from a backup.</para>
+        /// <para>Queries the restorable time range of backups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47849,7 +48093,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the modification history of parameters.</para>
+        /// <para>Queries the modification history of query parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47915,7 +48159,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the modification history of parameters.</para>
+        /// <para>Queries the modification history of query parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47981,7 +48225,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the modification history of parameters.</para>
+        /// <para>Queries the modification history of query parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47999,7 +48243,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the modification history of parameters.</para>
+        /// <para>Queries the modification history of query parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48017,7 +48261,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries network channels.</para>
+        /// <para>Queries a network channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48095,7 +48339,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries network channels.</para>
+        /// <para>Queries a network channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48173,7 +48417,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries network channels.</para>
+        /// <para>Queries a network channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48191,7 +48435,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries network channels.</para>
+        /// <para>Queries a network channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51489,18 +51733,18 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves all quota rules for a specified PolarFileSystem (PolarFS) instance.</para>
+        /// <para>Retrieves all quota rule information for a specified Polarlakebase instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation queries all quota rules for a specific PolarFS instance. It supports wildcard matching with the <c>QuotaNameMatch</c> and <c>PatternMatch</c> parameters.</description></item>
-        /// <item><description>Paging is not yet available and will be released in a future kernel update.</description></item>
-        /// <item><description>The <c>PolarFsInstanceId</c> parameter is required to specify the PolarFS instance to query.</description></item>
-        /// <item><description>You can use optional parameters, such as <c>QuotaNameMatch</c> and <c>PatternMatch</c>, to filter quota rules.</description></item>
-        /// <item><description>The returned data includes the total number of quota rules, the number of rules on the current page, and details for each rule, such as the rule ID, name, description, and capacity limit.</description></item>
+        /// <item><description>This API operation queries all quota rules for a specific Polarlakebase instance. You can use the <c>QuotaNameMatch</c> and <c>PatternMatch</c> parameters for fuzzy matching.</description></item>
+        /// <item><description>The pagination feature is not yet publicly available and will be released after the kernel is ready. Currently, results are returned without pagination limits.</description></item>
+        /// <item><description><c>PolarFsInstanceId</c> is required and specifies the Polarlakebase instance to query.</description></item>
+        /// <item><description>Optional parameters such as <c>QuotaNameMatch</c> and <c>PatternMatch</c> can be used to further filter quota rules that meet the specified conditions.</description></item>
+        /// <item><description>The returned data includes but is not limited to the total number of quota rules, the number of rules on the current page, and specific rule details such as rule ID, name, description, and capacity limits.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -51559,18 +51803,18 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves all quota rules for a specified PolarFileSystem (PolarFS) instance.</para>
+        /// <para>Retrieves all quota rule information for a specified Polarlakebase instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation queries all quota rules for a specific PolarFS instance. It supports wildcard matching with the <c>QuotaNameMatch</c> and <c>PatternMatch</c> parameters.</description></item>
-        /// <item><description>Paging is not yet available and will be released in a future kernel update.</description></item>
-        /// <item><description>The <c>PolarFsInstanceId</c> parameter is required to specify the PolarFS instance to query.</description></item>
-        /// <item><description>You can use optional parameters, such as <c>QuotaNameMatch</c> and <c>PatternMatch</c>, to filter quota rules.</description></item>
-        /// <item><description>The returned data includes the total number of quota rules, the number of rules on the current page, and details for each rule, such as the rule ID, name, description, and capacity limit.</description></item>
+        /// <item><description>This API operation queries all quota rules for a specific Polarlakebase instance. You can use the <c>QuotaNameMatch</c> and <c>PatternMatch</c> parameters for fuzzy matching.</description></item>
+        /// <item><description>The pagination feature is not yet publicly available and will be released after the kernel is ready. Currently, results are returned without pagination limits.</description></item>
+        /// <item><description><c>PolarFsInstanceId</c> is required and specifies the Polarlakebase instance to query.</description></item>
+        /// <item><description>Optional parameters such as <c>QuotaNameMatch</c> and <c>PatternMatch</c> can be used to further filter quota rules that meet the specified conditions.</description></item>
+        /// <item><description>The returned data includes but is not limited to the total number of quota rules, the number of rules on the current page, and specific rule details such as rule ID, name, description, and capacity limits.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -51629,18 +51873,18 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves all quota rules for a specified PolarFileSystem (PolarFS) instance.</para>
+        /// <para>Retrieves all quota rule information for a specified Polarlakebase instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation queries all quota rules for a specific PolarFS instance. It supports wildcard matching with the <c>QuotaNameMatch</c> and <c>PatternMatch</c> parameters.</description></item>
-        /// <item><description>Paging is not yet available and will be released in a future kernel update.</description></item>
-        /// <item><description>The <c>PolarFsInstanceId</c> parameter is required to specify the PolarFS instance to query.</description></item>
-        /// <item><description>You can use optional parameters, such as <c>QuotaNameMatch</c> and <c>PatternMatch</c>, to filter quota rules.</description></item>
-        /// <item><description>The returned data includes the total number of quota rules, the number of rules on the current page, and details for each rule, such as the rule ID, name, description, and capacity limit.</description></item>
+        /// <item><description>This API operation queries all quota rules for a specific Polarlakebase instance. You can use the <c>QuotaNameMatch</c> and <c>PatternMatch</c> parameters for fuzzy matching.</description></item>
+        /// <item><description>The pagination feature is not yet publicly available and will be released after the kernel is ready. Currently, results are returned without pagination limits.</description></item>
+        /// <item><description><c>PolarFsInstanceId</c> is required and specifies the Polarlakebase instance to query.</description></item>
+        /// <item><description>Optional parameters such as <c>QuotaNameMatch</c> and <c>PatternMatch</c> can be used to further filter quota rules that meet the specified conditions.</description></item>
+        /// <item><description>The returned data includes but is not limited to the total number of quota rules, the number of rules on the current page, and specific rule details such as rule ID, name, description, and capacity limits.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -51659,18 +51903,18 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves all quota rules for a specified PolarFileSystem (PolarFS) instance.</para>
+        /// <para>Retrieves all quota rule information for a specified Polarlakebase instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation queries all quota rules for a specific PolarFS instance. It supports wildcard matching with the <c>QuotaNameMatch</c> and <c>PatternMatch</c> parameters.</description></item>
-        /// <item><description>Paging is not yet available and will be released in a future kernel update.</description></item>
-        /// <item><description>The <c>PolarFsInstanceId</c> parameter is required to specify the PolarFS instance to query.</description></item>
-        /// <item><description>You can use optional parameters, such as <c>QuotaNameMatch</c> and <c>PatternMatch</c>, to filter quota rules.</description></item>
-        /// <item><description>The returned data includes the total number of quota rules, the number of rules on the current page, and details for each rule, such as the rule ID, name, description, and capacity limit.</description></item>
+        /// <item><description>This API operation queries all quota rules for a specific Polarlakebase instance. You can use the <c>QuotaNameMatch</c> and <c>PatternMatch</c> parameters for fuzzy matching.</description></item>
+        /// <item><description>The pagination feature is not yet publicly available and will be released after the kernel is ready. Currently, results are returned without pagination limits.</description></item>
+        /// <item><description><c>PolarFsInstanceId</c> is required and specifies the Polarlakebase instance to query.</description></item>
+        /// <item><description>Optional parameters such as <c>QuotaNameMatch</c> and <c>PatternMatch</c> can be used to further filter quota rules that meet the specified conditions.</description></item>
+        /// <item><description>The returned data includes but is not limited to the total number of quota rules, the number of rules on the current page, and specific rule details such as rule ID, name, description, and capacity limits.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -53625,17 +53869,15 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the slow query log statistics for a PolarDB cluster.</para>
+        /// <para>Queries the slow query log statistics information of a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>This API is available only for PolarDB for MySQL.</para>
-        /// </description></item>
-        /// <item><description><para>Effective September 1, 2024, the SQLHash field value will change when you call this API due to an optimization to the SQL templating algorithm. For more information, see <a href="https://help.aliyun.com/document_detail/2845725.html">Optimization of the templating algorithm for slow SQL queries</a>.</para>
-        /// </description></item>
+        /// <item><description>Only PolarDB for MySQL supports this operation.</description></item>
+        /// <item><description>Starting from September 1, 2024, due to the optimization of the SQL template algorithm, the value of the SQLHash field will change when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/2845725.html">Notice: Optimization of the slow SQL template algorithm</a>.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -53719,17 +53961,15 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the slow query log statistics for a PolarDB cluster.</para>
+        /// <para>Queries the slow query log statistics information of a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>This API is available only for PolarDB for MySQL.</para>
-        /// </description></item>
-        /// <item><description><para>Effective September 1, 2024, the SQLHash field value will change when you call this API due to an optimization to the SQL templating algorithm. For more information, see <a href="https://help.aliyun.com/document_detail/2845725.html">Optimization of the templating algorithm for slow SQL queries</a>.</para>
-        /// </description></item>
+        /// <item><description>Only PolarDB for MySQL supports this operation.</description></item>
+        /// <item><description>Starting from September 1, 2024, due to the optimization of the SQL template algorithm, the value of the SQLHash field will change when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/2845725.html">Notice: Optimization of the slow SQL template algorithm</a>.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -53813,17 +54053,15 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the slow query log statistics for a PolarDB cluster.</para>
+        /// <para>Queries the slow query log statistics information of a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>This API is available only for PolarDB for MySQL.</para>
-        /// </description></item>
-        /// <item><description><para>Effective September 1, 2024, the SQLHash field value will change when you call this API due to an optimization to the SQL templating algorithm. For more information, see <a href="https://help.aliyun.com/document_detail/2845725.html">Optimization of the templating algorithm for slow SQL queries</a>.</para>
-        /// </description></item>
+        /// <item><description>Only PolarDB for MySQL supports this operation.</description></item>
+        /// <item><description>Starting from September 1, 2024, due to the optimization of the SQL template algorithm, the value of the SQLHash field will change when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/2845725.html">Notice: Optimization of the slow SQL template algorithm</a>.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -53843,17 +54081,15 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the slow query log statistics for a PolarDB cluster.</para>
+        /// <para>Queries the slow query log statistics information of a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>This API is available only for PolarDB for MySQL.</para>
-        /// </description></item>
-        /// <item><description><para>Effective September 1, 2024, the SQLHash field value will change when you call this API due to an optimization to the SQL templating algorithm. For more information, see <a href="https://help.aliyun.com/document_detail/2845725.html">Optimization of the templating algorithm for slow SQL queries</a>.</para>
-        /// </description></item>
+        /// <item><description>Only PolarDB for MySQL supports this operation.</description></item>
+        /// <item><description>Starting from September 1, 2024, due to the optimization of the SQL template algorithm, the value of the SQLHash field will change when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/2845725.html">Notice: Optimization of the slow SQL template algorithm</a>.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -53873,14 +54109,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the progress details of tasks generated by API calls, such as creating a cluster.</para>
+        /// <para>Queries the progress details of tasks generated through API operations, such as creating a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>You can view tasks generated by directly calling an API operation such as <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a>, or tasks generated when the system calls the corresponding API operation while you use a feature in the PolarDB console, such as <a href="https://help.aliyun.com/document_detail/58769.html">creating a cluster</a>.</para>
         /// <list type="bullet">
-        /// <item><description>You can view the progress details of tasks generated by either direct API calls, such as <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a>, or operations in the PolarDB console, such as <a href="https://help.aliyun.com/document_detail/58769.html">creating a cluster</a>.</description></item>
-        /// <item><description>Currently, this operation supports viewing the progress details only for tasks generated when you create a cluster by calling the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation, provided that the <c>CreationOption</c> parameter is not set to <c>CreateGdnStandby</c>.</description></item>
+        /// <item><description>Currently, you can view only the progress details of tasks generated when creating a cluster, that is, when the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation is called and the <c>CreationOption</c> parameter is not set to <c>CreateGdnStandby</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -53963,14 +54199,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the progress details of tasks generated by API calls, such as creating a cluster.</para>
+        /// <para>Queries the progress details of tasks generated through API operations, such as creating a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>You can view tasks generated by directly calling an API operation such as <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a>, or tasks generated when the system calls the corresponding API operation while you use a feature in the PolarDB console, such as <a href="https://help.aliyun.com/document_detail/58769.html">creating a cluster</a>.</para>
         /// <list type="bullet">
-        /// <item><description>You can view the progress details of tasks generated by either direct API calls, such as <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a>, or operations in the PolarDB console, such as <a href="https://help.aliyun.com/document_detail/58769.html">creating a cluster</a>.</description></item>
-        /// <item><description>Currently, this operation supports viewing the progress details only for tasks generated when you create a cluster by calling the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation, provided that the <c>CreationOption</c> parameter is not set to <c>CreateGdnStandby</c>.</description></item>
+        /// <item><description>Currently, you can view only the progress details of tasks generated when creating a cluster, that is, when the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation is called and the <c>CreationOption</c> parameter is not set to <c>CreateGdnStandby</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -54053,14 +54289,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the progress details of tasks generated by API calls, such as creating a cluster.</para>
+        /// <para>Queries the progress details of tasks generated through API operations, such as creating a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>You can view tasks generated by directly calling an API operation such as <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a>, or tasks generated when the system calls the corresponding API operation while you use a feature in the PolarDB console, such as <a href="https://help.aliyun.com/document_detail/58769.html">creating a cluster</a>.</para>
         /// <list type="bullet">
-        /// <item><description>You can view the progress details of tasks generated by either direct API calls, such as <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a>, or operations in the PolarDB console, such as <a href="https://help.aliyun.com/document_detail/58769.html">creating a cluster</a>.</description></item>
-        /// <item><description>Currently, this operation supports viewing the progress details only for tasks generated when you create a cluster by calling the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation, provided that the <c>CreationOption</c> parameter is not set to <c>CreateGdnStandby</c>.</description></item>
+        /// <item><description>Currently, you can view only the progress details of tasks generated when creating a cluster, that is, when the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation is called and the <c>CreationOption</c> parameter is not set to <c>CreateGdnStandby</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -54079,14 +54315,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the progress details of tasks generated by API calls, such as creating a cluster.</para>
+        /// <para>Queries the progress details of tasks generated through API operations, such as creating a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <para>You can view tasks generated by directly calling an API operation such as <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a>, or tasks generated when the system calls the corresponding API operation while you use a feature in the PolarDB console, such as <a href="https://help.aliyun.com/document_detail/58769.html">creating a cluster</a>.</para>
         /// <list type="bullet">
-        /// <item><description>You can view the progress details of tasks generated by either direct API calls, such as <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a>, or operations in the PolarDB console, such as <a href="https://help.aliyun.com/document_detail/58769.html">creating a cluster</a>.</description></item>
-        /// <item><description>Currently, this operation supports viewing the progress details only for tasks generated when you create a cluster by calling the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation, provided that the <c>CreationOption</c> parameter is not set to <c>CreateGdnStandby</c>.</description></item>
+        /// <item><description>Currently, you can view only the progress details of tasks generated when creating a cluster, that is, when the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation is called and the <c>CreationOption</c> parameter is not set to <c>CreateGdnStandby</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -54105,7 +54341,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the verification reports.</para>
+        /// <para>Queries an upgrade or migration verification report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -54199,7 +54435,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the verification reports.</para>
+        /// <para>Queries an upgrade or migration verification report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -54293,7 +54529,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the verification reports.</para>
+        /// <para>Queries an upgrade or migration verification report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -54311,7 +54547,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the verification reports.</para>
+        /// <para>Queries an upgrade or migration verification report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -54329,7 +54565,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of Key Management Service (KMS) keys.</para>
+        /// <para>Queries the list of KMS keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -54403,7 +54639,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of Key Management Service (KMS) keys.</para>
+        /// <para>Queries the list of KMS keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -54477,7 +54713,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of Key Management Service (KMS) keys.</para>
+        /// <para>Queries the list of KMS keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -54495,7 +54731,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of Key Management Service (KMS) keys.</para>
+        /// <para>Queries the list of KMS keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -55385,7 +55621,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the Orca (Redis-compatible) feature for a PolarDB cluster.</para>
+        /// <para>Disables the relational algebra of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -55447,7 +55683,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the Orca (Redis-compatible) feature for a PolarDB cluster.</para>
+        /// <para>Disables the relational algebra of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -55509,7 +55745,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the Orca (Redis-compatible) feature for a PolarDB cluster.</para>
+        /// <para>Disables the relational algebra of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -55527,7 +55763,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the Orca (Redis-compatible) feature for a PolarDB cluster.</para>
+        /// <para>Disables the relational algebra of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -57417,7 +57653,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Evaluates the resources in a region.</para>
+        /// <para>Evaluates resource availability.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -57511,7 +57747,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Evaluates the resources in a region.</para>
+        /// <para>Evaluates resource availability.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -57605,7 +57841,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Evaluates the resources in a region.</para>
+        /// <para>Evaluates resource availability.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -57623,7 +57859,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Evaluates the resources in a region.</para>
+        /// <para>Evaluates resource availability.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -57761,7 +57997,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a manual failover to promote a read-only node to the primary node in a PolarDB cluster.</para>
+        /// <para>Performs a manual primary/secondary switchover for a PolarDB cluster. You can specify a read-only node as the new primary node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -57835,7 +58071,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a manual failover to promote a read-only node to the primary node in a PolarDB cluster.</para>
+        /// <para>Performs a manual primary/secondary switchover for a PolarDB cluster. You can specify a read-only node as the new primary node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -57909,7 +58145,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a manual failover to promote a read-only node to the primary node in a PolarDB cluster.</para>
+        /// <para>Performs a manual primary/secondary switchover for a PolarDB cluster. You can specify a read-only node as the new primary node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -57927,7 +58163,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a manual failover to promote a read-only node to the primary node in a PolarDB cluster.</para>
+        /// <para>Performs a manual primary/secondary switchover for a PolarDB cluster. You can specify a read-only node as the new primary node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -57945,7 +58181,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiates a zonal failover for a PolarDB cluster, promoting a secondary node to primary.</para>
+        /// <para>Performs a manual primary/secondary switchover for an edge cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58019,7 +58255,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiates a zonal failover for a PolarDB cluster, promoting a secondary node to primary.</para>
+        /// <para>Performs a manual primary/secondary switchover for an edge cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58093,7 +58329,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiates a zonal failover for a PolarDB cluster, promoting a secondary node to primary.</para>
+        /// <para>Performs a manual primary/secondary switchover for an edge cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58111,7 +58347,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiates a zonal failover for a PolarDB cluster, promoting a secondary node to primary.</para>
+        /// <para>Performs a manual primary/secondary switchover for an edge cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58129,7 +58365,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a report for a pre-upgrade check.</para>
+        /// <para>Generates a check report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58215,7 +58451,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a report for a pre-upgrade check.</para>
+        /// <para>Generates a check report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58301,7 +58537,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a report for a pre-upgrade check.</para>
+        /// <para>Generates a check report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58319,7 +58555,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a report for a pre-upgrade check.</para>
+        /// <para>Generates a check report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -59633,7 +59869,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of orders.</para>
+        /// <para>Queries orders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -59711,7 +59947,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of orders.</para>
+        /// <para>Queries orders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -59789,7 +60025,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of orders.</para>
+        /// <para>Queries orders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -59807,7 +60043,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of orders.</para>
+        /// <para>Queries orders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -61221,7 +61457,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of a PolarDB on ENS account.</para>
+        /// <para>Modifies the description of an account in a PolarDB on ENS cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -61291,7 +61527,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of a PolarDB on ENS account.</para>
+        /// <para>Modifies the description of an account in a PolarDB on ENS cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -61361,7 +61597,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of a PolarDB on ENS account.</para>
+        /// <para>Modifies the description of an account in a PolarDB on ENS cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -61379,7 +61615,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of a PolarDB on ENS account.</para>
+        /// <para>Modifies the description of an account in a PolarDB on ENS cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -62149,7 +62385,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the switching time of scheduled O\\\&amp;M events for an instance.</para>
+        /// <para>Modifies the switchover time of a scheduled O&amp;M event for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -62223,7 +62459,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the switching time of scheduled O\\\&amp;M events for an instance.</para>
+        /// <para>Modifies the switchover time of a scheduled O&amp;M event for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -62297,7 +62533,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the switching time of scheduled O\\\&amp;M events for an instance.</para>
+        /// <para>Modifies the switchover time of a scheduled O&amp;M event for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -62315,7 +62551,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the switching time of scheduled O\\\&amp;M events for an instance.</para>
+        /// <para>Modifies the switchover time of a scheduled O&amp;M event for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -62461,7 +62697,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the endpoint address of a PolarDB application.</para>
+        /// <para>Modifies a PolarDB application endpoint address.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -62525,7 +62761,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the endpoint address of a PolarDB application.</para>
+        /// <para>Modifies a PolarDB application endpoint address.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -62589,7 +62825,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the endpoint address of a PolarDB application.</para>
+        /// <para>Modifies a PolarDB application endpoint address.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -62607,7 +62843,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the endpoint address of a PolarDB application.</para>
+        /// <para>Modifies a PolarDB application endpoint address.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -64210,17 +64446,33 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["CacheCostPointsPerMillion"] = request.CacheCostPointsPerMillion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CacheCreationCostPointsPerMillion))
+            {
+                query["CacheCreationCostPointsPerMillion"] = request.CacheCreationCostPointsPerMillion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CostRuleId))
             {
                 query["CostRuleId"] = request.CostRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExplicitCacheCostPointsPerMillion))
+            {
+                query["ExplicitCacheCostPointsPerMillion"] = request.ExplicitCacheCostPointsPerMillion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GwClusterId))
             {
                 query["GwClusterId"] = request.GwClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageCostPointsPerCount))
+            {
+                query["ImageCostPointsPerCount"] = request.ImageCostPointsPerCount;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputCostPointsPerMillion))
             {
                 query["InputCostPointsPerMillion"] = request.InputCostPointsPerMillion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputTokenTiers))
+            {
+                query["InputTokenTiers"] = request.InputTokenTiers;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelName))
             {
@@ -64237,6 +64489,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoCostPointsPerSecond))
+            {
+                query["VideoCostPointsPerSecond"] = request.VideoCostPointsPerSecond;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -64280,17 +64536,33 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["CacheCostPointsPerMillion"] = request.CacheCostPointsPerMillion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CacheCreationCostPointsPerMillion))
+            {
+                query["CacheCreationCostPointsPerMillion"] = request.CacheCreationCostPointsPerMillion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CostRuleId))
             {
                 query["CostRuleId"] = request.CostRuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExplicitCacheCostPointsPerMillion))
+            {
+                query["ExplicitCacheCostPointsPerMillion"] = request.ExplicitCacheCostPointsPerMillion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GwClusterId))
             {
                 query["GwClusterId"] = request.GwClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageCostPointsPerCount))
+            {
+                query["ImageCostPointsPerCount"] = request.ImageCostPointsPerCount;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputCostPointsPerMillion))
             {
                 query["InputCostPointsPerMillion"] = request.InputCostPointsPerMillion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputTokenTiers))
+            {
+                query["InputTokenTiers"] = request.InputTokenTiers;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelName))
             {
@@ -64307,6 +64579,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoCostPointsPerSecond))
+            {
+                query["VideoCostPointsPerSecond"] = request.VideoCostPointsPerSecond;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -64365,7 +64641,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the policy for a scheduled task.</para>
+        /// <para>Modifies a scheduled task policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -64487,7 +64763,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the policy for a scheduled task.</para>
+        /// <para>Modifies a scheduled task policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -64609,7 +64885,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the policy for a scheduled task.</para>
+        /// <para>Modifies a scheduled task policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -64627,7 +64903,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the policy for a scheduled task.</para>
+        /// <para>Modifies a scheduled task policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -69549,7 +69825,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the database description of an edge cluster for PolarDB on ENS.</para>
+        /// <para>Modifies the description of a database in a PolarDB on ENS cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -69619,7 +69895,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the database description of an edge cluster for PolarDB on ENS.</para>
+        /// <para>Modifies the description of a database in a PolarDB on ENS cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -69689,7 +69965,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the database description of an edge cluster for PolarDB on ENS.</para>
+        /// <para>Modifies the description of a database in a PolarDB on ENS cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -69707,7 +69983,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the database description of an edge cluster for PolarDB on ENS.</para>
+        /// <para>Modifies the description of a database in a PolarDB on ENS cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -70853,7 +71129,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the specifications of a single node in a PolarDB cluster.</para>
+        /// <para>Changes the specifications of a single node in a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -70951,7 +71227,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the specifications of a single node in a PolarDB cluster.</para>
+        /// <para>Changes the specifications of a single node in a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -71049,7 +71325,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the specifications of a single node in a PolarDB cluster.</para>
+        /// <para>Changes the specifications of a single node in a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -71067,7 +71343,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the specifications of a single node in a PolarDB cluster.</para>
+        /// <para>Changes the specifications of a single node in a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -72541,7 +72817,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the log backup retention policy for a PolarDB cluster.</para>
+        /// <para>Modifies the log backup retention policy of a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -72621,7 +72897,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the log backup retention policy for a PolarDB cluster.</para>
+        /// <para>Modifies the log backup retention policy of a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -72701,7 +72977,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the log backup retention policy for a PolarDB cluster.</para>
+        /// <para>Modifies the log backup retention policy of a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -72719,7 +72995,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the log backup retention policy for a PolarDB cluster.</para>
+        /// <para>Modifies the log backup retention policy of a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -76281,7 +76557,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a PolarClaw MCP server.</para>
+        /// <para>Deletes a PolarClaw MCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -76327,7 +76603,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a PolarClaw MCP server.</para>
+        /// <para>Deletes a PolarClaw MCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -76373,7 +76649,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a PolarClaw MCP server.</para>
+        /// <para>Deletes a PolarClaw MCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -76391,7 +76667,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a PolarClaw MCP server.</para>
+        /// <para>Deletes a PolarClaw MCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -78833,7 +79109,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes permissions from an account.</para>
+        /// <para>Revokes account permissions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -78903,7 +79179,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes permissions from an account.</para>
+        /// <para>Revokes account permissions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -78973,7 +79249,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes permissions from an account.</para>
+        /// <para>Revokes account permissions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -78991,7 +79267,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes permissions from an account.</para>
+        /// <para>Revokes account permissions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -79153,8 +79429,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves memories.</para>
+        /// <para>Retrieves memories from a specified application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves memory data from a specified application.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SearchMemoriesRequest
@@ -79227,8 +79508,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves memories.</para>
+        /// <para>Retrieves memories from a specified application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves memory data from a specified application.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SearchMemoriesRequest
@@ -79301,8 +79587,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves memories.</para>
+        /// <para>Retrieves memories from a specified application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves memory data from a specified application.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SearchMemoriesRequest
@@ -79319,8 +79610,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves memories.</para>
+        /// <para>Retrieves memories from a specified application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves memory data from a specified application.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SearchMemoriesRequest
@@ -80236,9 +80532,9 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>PolarDB clusters support subscription and pay-as-you-go billing methods. You can change the billing method from subscription to pay-as-you-go or from pay-as-you-go to subscription based on your business requirements. For more information, see <a href="https://help.aliyun.com/document_detail/172886.html">Change from subscription to pay-as-you-go</a> and <a href="https://help.aliyun.com/document_detail/84076.html">Change from pay-as-you-go to subscription</a>.</description></item>
-        /// <item><description>If your Alibaba Cloud account balance is insufficient, you cannot change the pay-as-you-go billing method to subscription.</description></item>
-        /// <item><description>When you change the billing method from subscription to pay-as-you-go, the system automatically refunds the remaining balance of the fees that you have paid.</description></item>
+        /// <item><description>PolarDB clusters support the subscription and pay-as-you-go billing methods. You can switch from subscription to pay-as-you-go or from pay-as-you-go to subscription based on your business requirements. For more information, see <a href="https://help.aliyun.com/document_detail/172886.html">Switch from subscription to pay-as-you-go</a> and <a href="https://help.aliyun.com/document_detail/84076.html">Switch from pay-as-you-go to subscription</a>.</description></item>
+        /// <item><description>If your Alibaba Cloud account balance is insufficient, the pay-as-you-go billing method cannot be switched to subscription.</description></item>
+        /// <item><description>When you switch from subscription to pay-as-you-go, the system automatically refunds the remaining balance of the fees that you have paid.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -80337,9 +80633,9 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>PolarDB clusters support subscription and pay-as-you-go billing methods. You can change the billing method from subscription to pay-as-you-go or from pay-as-you-go to subscription based on your business requirements. For more information, see <a href="https://help.aliyun.com/document_detail/172886.html">Change from subscription to pay-as-you-go</a> and <a href="https://help.aliyun.com/document_detail/84076.html">Change from pay-as-you-go to subscription</a>.</description></item>
-        /// <item><description>If your Alibaba Cloud account balance is insufficient, you cannot change the pay-as-you-go billing method to subscription.</description></item>
-        /// <item><description>When you change the billing method from subscription to pay-as-you-go, the system automatically refunds the remaining balance of the fees that you have paid.</description></item>
+        /// <item><description>PolarDB clusters support the subscription and pay-as-you-go billing methods. You can switch from subscription to pay-as-you-go or from pay-as-you-go to subscription based on your business requirements. For more information, see <a href="https://help.aliyun.com/document_detail/172886.html">Switch from subscription to pay-as-you-go</a> and <a href="https://help.aliyun.com/document_detail/84076.html">Switch from pay-as-you-go to subscription</a>.</description></item>
+        /// <item><description>If your Alibaba Cloud account balance is insufficient, the pay-as-you-go billing method cannot be switched to subscription.</description></item>
+        /// <item><description>When you switch from subscription to pay-as-you-go, the system automatically refunds the remaining balance of the fees that you have paid.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -80438,9 +80734,9 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>PolarDB clusters support subscription and pay-as-you-go billing methods. You can change the billing method from subscription to pay-as-you-go or from pay-as-you-go to subscription based on your business requirements. For more information, see <a href="https://help.aliyun.com/document_detail/172886.html">Change from subscription to pay-as-you-go</a> and <a href="https://help.aliyun.com/document_detail/84076.html">Change from pay-as-you-go to subscription</a>.</description></item>
-        /// <item><description>If your Alibaba Cloud account balance is insufficient, you cannot change the pay-as-you-go billing method to subscription.</description></item>
-        /// <item><description>When you change the billing method from subscription to pay-as-you-go, the system automatically refunds the remaining balance of the fees that you have paid.</description></item>
+        /// <item><description>PolarDB clusters support the subscription and pay-as-you-go billing methods. You can switch from subscription to pay-as-you-go or from pay-as-you-go to subscription based on your business requirements. For more information, see <a href="https://help.aliyun.com/document_detail/172886.html">Switch from subscription to pay-as-you-go</a> and <a href="https://help.aliyun.com/document_detail/84076.html">Switch from pay-as-you-go to subscription</a>.</description></item>
+        /// <item><description>If your Alibaba Cloud account balance is insufficient, the pay-as-you-go billing method cannot be switched to subscription.</description></item>
+        /// <item><description>When you switch from subscription to pay-as-you-go, the system automatically refunds the remaining balance of the fees that you have paid.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -80467,9 +80763,9 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>PolarDB clusters support subscription and pay-as-you-go billing methods. You can change the billing method from subscription to pay-as-you-go or from pay-as-you-go to subscription based on your business requirements. For more information, see <a href="https://help.aliyun.com/document_detail/172886.html">Change from subscription to pay-as-you-go</a> and <a href="https://help.aliyun.com/document_detail/84076.html">Change from pay-as-you-go to subscription</a>.</description></item>
-        /// <item><description>If your Alibaba Cloud account balance is insufficient, you cannot change the pay-as-you-go billing method to subscription.</description></item>
-        /// <item><description>When you change the billing method from subscription to pay-as-you-go, the system automatically refunds the remaining balance of the fees that you have paid.</description></item>
+        /// <item><description>PolarDB clusters support the subscription and pay-as-you-go billing methods. You can switch from subscription to pay-as-you-go or from pay-as-you-go to subscription based on your business requirements. For more information, see <a href="https://help.aliyun.com/document_detail/172886.html">Switch from subscription to pay-as-you-go</a> and <a href="https://help.aliyun.com/document_detail/84076.html">Switch from pay-as-you-go to subscription</a>.</description></item>
+        /// <item><description>If your Alibaba Cloud account balance is insufficient, the pay-as-you-go billing method cannot be switched to subscription.</description></item>
+        /// <item><description>When you switch from subscription to pay-as-you-go, the system automatically refunds the remaining balance of the fees that you have paid.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -81674,6 +81970,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["ClientSecret"] = request.ClientSecret;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeishuChatMemberStaleTtlSeconds))
+            {
+                query["FeishuChatMemberStaleTtlSeconds"] = request.FeishuChatMemberStaleTtlSeconds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
             {
                 query["KnowledgeBaseId"] = request.KnowledgeBaseId;
@@ -81709,6 +82009,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
                 query["UserId"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserRefreshToken))
+            {
+                query["UserRefreshToken"] = request.UserRefreshToken;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -81756,6 +82060,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["ClientSecret"] = request.ClientSecret;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeishuChatMemberStaleTtlSeconds))
+            {
+                query["FeishuChatMemberStaleTtlSeconds"] = request.FeishuChatMemberStaleTtlSeconds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
             {
                 query["KnowledgeBaseId"] = request.KnowledgeBaseId;
@@ -81791,6 +82099,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
                 query["UserId"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserRefreshToken))
+            {
+                query["UserRefreshToken"] = request.UserRefreshToken;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -84097,8 +84409,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades a PolarClaw plugin.</para>
+        /// <para>Upgrades a plug-in in a PolarClaw application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Upgrades a plug-in that is installed in a PolarClaw application.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpgradePolarClawPluginRequest
@@ -84151,8 +84468,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades a PolarClaw plugin.</para>
+        /// <para>Upgrades a plug-in in a PolarClaw application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Upgrades a plug-in that is installed in a PolarClaw application.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpgradePolarClawPluginRequest
@@ -84205,8 +84527,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades a PolarClaw plugin.</para>
+        /// <para>Upgrades a plug-in in a PolarClaw application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Upgrades a plug-in that is installed in a PolarClaw application.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpgradePolarClawPluginRequest
@@ -84223,8 +84550,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades a PolarClaw plugin.</para>
+        /// <para>Upgrades a plug-in in a PolarClaw application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Upgrades a plug-in that is installed in a PolarClaw application.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpgradePolarClawPluginRequest

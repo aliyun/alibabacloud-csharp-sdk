@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeGlobalDataNetworkListRequest : TeaModel {
         /// <summary>
-        /// <para>The page number to return.</para>
+        /// <para>The page number of the query results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records to return on each page.</para>
+        /// <para>The number of records per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

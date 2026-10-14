@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeBatchTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned results.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of records per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>925B84D9-CA72-432C-95CF-738C22******</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The task list.</para>
+        /// <para>The task information.</para>
         /// </summary>
         [NameInMap("TaskList")]
         [Validation(Required=false)]
         public List<DescribeBatchTasksResponseBodyTaskList> TaskList { get; set; }
         public class DescribeBatchTasksResponseBodyTaskList : TeaModel {
             /// <summary>
-            /// <para>The batch ID.</para>
+            /// <para>The batch task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pcb-xxx</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The number of successfully completed subtasks in the batch.</para>
+            /// <para>The number of successful batch tasks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string TaskEnd { get; set; }
 
             /// <summary>
-            /// <para>The task name.</para>
+            /// <para>The description of the model service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>batch_task_test</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string TaskType { get; set; }
 
             /// <summary>
-            /// <para>The total number of subtasks in the batch.</para>
+            /// <para>The total number of tasks that meet the filter conditions, regardless of pagination.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The total number of tasks that match the query, ignoring pagination.</para>
+        /// <para>The total number of tasks that meet the filter conditions, regardless of pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>

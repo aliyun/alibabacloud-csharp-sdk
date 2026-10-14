@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public bool? Active { get; set; }
 
             /// <summary>
-            /// <para>The full API key. Returned only in this response.</para>
+            /// <para>The complete API key. Returned only in this response.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxxxxxx</para>
@@ -138,6 +138,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
             /// <summary>
             /// <para>The expiration time.</para>
+            /// <para>The time is in the ISO 8601 standard in the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-25T09:37:10Z</para>
@@ -147,7 +148,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the key is expired.</para>
+            /// <para>Indicates whether the key has expired.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -167,7 +168,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GmtCreated { get; set; }
 
             /// <summary>
-            /// <para>The last modification time.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-04T16:09:29+08:00</para>

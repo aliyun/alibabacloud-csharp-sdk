@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The engine version.</para>
+        /// <para>The database engine version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8.0</para>
@@ -37,7 +37,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<DescribeModifyParameterLogResponseBodyItems> Items { get; set; }
         public class DescribeModifyParameterLogResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The time when the parameter was last modified.</para>
+            /// <para>The last modification time.</para>
+            /// <para>The time is in the ISO 8601 format. The time is displayed in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-29T09:31:37Z</para>
@@ -77,7 +78,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ParameterName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the modification was applied successfully.</para>
+            /// <para>Indicates whether the modification is applied.</para>
             /// 
             /// <b>Example:</b>
             /// <para>True</para>
@@ -89,7 +90,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>CD35F3-F3-44CA-AFFF-BAF869******</para>

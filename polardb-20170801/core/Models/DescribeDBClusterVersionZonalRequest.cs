@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
     public class DescribeDBClusterVersionZonalRequest : TeaModel {
         /// <summary>
         /// <para>The cluster ID.</para>
+        /// <remarks>
+        /// <para>Note: This parameter accepts only the ID of a PolarDB on ENS cluster. Regular PolarDB cluster IDs are not supported. You can call the DescribeDBClustersZonal operation to query the ID of an edge cluster.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,9 +24,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return information about the latest version or a list of upgradable versions. Valid values:</para>
+        /// <para>Specifies the type of version information to return. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>LATEST_VERSION: Queries information about the latest version.</para>
+        /// <item><description><para>LATEST_VERSION: Queries the latest version information.</para>
         /// </description></item>
         /// <item><description><para>AVAILABLE_VERSION: Queries the list of upgradable versions.</para>
         /// </description></item>

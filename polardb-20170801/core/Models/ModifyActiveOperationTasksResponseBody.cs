@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The task IDs.</para>
+        /// <para>The list of task IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11111,22222</para>

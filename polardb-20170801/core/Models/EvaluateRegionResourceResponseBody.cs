@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class EvaluateRegionResourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the resources are sufficient.</para>
+        /// <para>Indicates whether sufficient resources are available.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The resources are sufficient.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The resources are insufficient.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Sufficient resources are available.</description></item>
+        /// <item><description><b>false</b>: Resources are insufficient.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,14 +24,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBInstanceAvailable { get; set; }
 
         /// <summary>
-        /// <para>The database engine type. Valid values:</para>
+        /// <para>The type of the database engine. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>MySQL</b></para>
-        /// </description></item>
-        /// <item><description><para><b>PostgreSQL</b></para>
-        /// </description></item>
-        /// <item><description><para><b>Oracle</b></para>
-        /// </description></item>
+        /// <item><description><b>MySQL</b></description></item>
+        /// <item><description><b>PostgreSQL</b></description></item>
+        /// <item><description><b>Oracle</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,28 +39,20 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBType { get; set; }
 
         /// <summary>
-        /// <para>The version of the database engine.</para>
+        /// <para>The database DPI engine version number.</para>
         /// <list type="bullet">
-        /// <item><description><para>Valid values for MySQL:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>5.6</b></para>
-        /// </description></item>
-        /// <item><description><para><b>5.7</b></para>
-        /// </description></item>
-        /// <item><description><para><b>8.0</b></para>
-        /// </description></item>
+        /// <item><description>Valid version numbers for MySQL: <list type="bullet">
+        /// <item><description><b>5.6</b></description></item>
+        /// <item><description><b>5.7</b></description></item>
+        /// <item><description><b>8.0</b></description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>Valid values for PostgreSQL:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>11</b></para>
-        /// </description></item>
-        /// <item><description><para><b>14</b></para>
-        /// </description></item>
+        /// <item><description>Valid version numbers for PostgreSQL:<list type="bullet">
+        /// <item><description><b>11</b></description></item>
+        /// <item><description><b>14</b></description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>Valid value for Oracle: <b>11</b>.</para>
-        /// </description></item>
+        /// <item><description>Valid version number for Oracle: <b>11</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeCostRulesRequest : TeaModel {
         /// <summary>
-        /// <para>Filters by effective target type. Valid values: global, consumerGroup, and consumer.</para>
+        /// <para>The ID of the cost rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cr-xxx</para>
+        /// </summary>
+        [NameInMap("CostRuleId")]
+        [Validation(Required=false)]
+        public string CostRuleId { get; set; }
+
+        /// <summary>
+        /// <para>The type of the effective target. Valid values: global, consumerGroup, and consumer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>global</para>
@@ -20,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string EffectiveTargetType { get; set; }
 
         /// <summary>
-        /// <para>Filters by effective target value.</para>
+        /// <para>The value of the effective target used to filter results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user</para>
@@ -41,7 +51,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GwClusterId { get; set; }
 
         /// <summary>
-        /// <para>The model name, such as gpt-4 or qwen-turbo.</para>
+        /// <para>The input token tier used to filter results. Rules that include this tier are returned. Valid values: 0-32K, 32K-64K, 64K-128K, 128K-256K, 256K-512K, 512K-1M, and 1M+.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0-32K</para>
+        /// </summary>
+        [NameInMap("InputTokenTier")]
+        [Validation(Required=false)]
+        public string InputTokenTier { get; set; }
+
+        /// <summary>
+        /// <para>The name of the model, such as gpt-4 or qwen-turbo.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qwen3-max</para>
@@ -51,7 +71,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ModelName { get; set; }
 
         /// <summary>
-        /// <para>The model service ID.</para>
+        /// <para>The ID of the model service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ms-xxxxxx</para>

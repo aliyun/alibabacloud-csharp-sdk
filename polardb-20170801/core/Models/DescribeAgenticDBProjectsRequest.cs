@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID to which the project belongs.</para>
+        /// <para>The ID of the tenant to which the project belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-4b83e0da66674951</para>

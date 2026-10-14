@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterEndpointsZonalResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the cluster endpoints.</para>
+        /// <para>The cluster endpoint details.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string ConnectionString { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the endpoint is the dashboard endpoint of a PolarDB search node. Valid values:</para>
+                /// <para>Specifies whether the address is the dashboard address of a PolarDB Search node. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>True: Yes.</para>
+                /// <item><description><para>Ture: Yes.</para>
                 /// </description></item>
                 /// <item><description><para>False: No.</para>
                 /// </description></item>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 /// <list type="bullet">
                 /// <item><description><para>Public: Internet.</para>
                 /// </description></item>
-                /// <item><description><para>Private: internal network.</para>
+                /// <item><description><para>Private: Private network.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string NetType { get; set; }
 
                 /// <summary>
-                /// <para>The port number.</para>
+                /// <para>The port.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1521</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string Port { get; set; }
 
                 /// <summary>
-                /// <para>The private domain name that is bound to the endpoint.</para>
+                /// <para>The bound private domain name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><em><b>.</b></em>.**.com</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string PrivateZoneConnectionString { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the virtual private cloud (VPC).</para>
+                /// <para>The VPC ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-***************</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string VPCId { get; set; }
 
                 /// <summary>
-                /// <para>The virtual switch ID.</para>
+                /// <para>The vSwitch ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vsw-************</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// <para>The VPC instance ID.</para>
+                /// <para>The VPC-connected instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pe-*************</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DBClusterId { get; set; }
 
             /// <summary>
-            /// <para>The name of the endpoint.</para>
+            /// <para>The endpoint name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -176,32 +176,25 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>The advanced configurations of the cluster endpoint.</para>
             /// <list type="bullet">
-            /// <item><description><para><b>DistributedTransaction</b>: The status of transaction splitting. Valid values:</para>
+            /// <item><description><para><b>DistributedTransaction</b>: The transaction splitting status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>on</b>: Transaction splitting is enabled.</para>
-            /// </description></item>
-            /// <item><description><para><b>off</b>: Transaction splitting is disabled.</para>
-            /// </description></item>
+            /// <item><description><b>on</b>: Transaction splitting is enabled.</description></item>
+            /// <item><description><b>off</b>: Transaction splitting is disabled.</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para><b>ConsistLevel</b>: The consistency level. Valid values:</para>
+            /// <item><description><para><b>ConsistLevel</b>: The session consistency level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>0</b>: Eventual consistency.</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>: Session consistency.</para>
-            /// </description></item>
-            /// <item><description><para><b>2</b>: Global consistency.</para>
-            /// </description></item>
+            /// <item><description><b>0</b>: Eventual consistency.</description></item>
+            /// <item><description><b>1</b>: Session consistency.</description></item>
+            /// <item><description><b>2</b>: Global consistency.</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para><b>LoadBalanceStrategy</b>: The load balancing policy for automatic scheduling based on loads. The value is fixed as <b>load</b>.</para>
+            /// <item><description><para><b>LoadBalanceStrategy</b>: The load balancing policy. Automatic scheduling based on load. The value is fixed as <b>load</b>.</para>
             /// </description></item>
-            /// <item><description><para><b>MasterAcceptReads</b>: Specifies whether the primary node accepts read requests. Valid values:</para>
+            /// <item><description><para><b>MasterAcceptReads</b>: Specifies whether the primary database accepts reads. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>on</b>: The primary node accepts read requests.</para>
-            /// </description></item>
-            /// <item><description><para><b>off</b>: The primary node does not accept read requests.</para>
-            /// </description></item>
+            /// <item><description><b>on</b>: The primary database accepts reads.</description></item>
+            /// <item><description><b>off</b>: Offload reads from primary node.</description></item>
             /// </list>
             /// </description></item>
             /// </list>
@@ -214,13 +207,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string EndpointConfig { get; set; }
 
             /// <summary>
-            /// <para>The type of the cluster endpoint. Valid values:</para>
+            /// <para>The cluster endpoint type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Cluster: the default cluster endpoint.</para>
+            /// <item><description><para>Cluster: Default cluster endpoint.</para>
             /// </description></item>
-            /// <item><description><para>Primary: the primary endpoint.</para>
+            /// <item><description><para>Primary: Primary endpoint.</para>
             /// </description></item>
-            /// <item><description><para>Custom: a custom cluster endpoint.</para>
+            /// <item><description><para>Custom: Custom cluster endpoint.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -232,7 +225,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string EndpointType { get; set; }
 
             /// <summary>
-            /// <para>The role of each node in the endpoint. The primary node has the Writer role. Because multiple read-only nodes can be added to an endpoint, each read-only node is assigned a role name suffixed with a number, such as Reader1 and Reader2.</para>
+            /// <para>The role names of the nodes under the target endpoint. The primary node is named Writer. Because multiple read-only nodes can be added to an endpoint, a number is appended to the role name of each read-only node for distinction, such as Reader1 and Reader2.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Reader1</para>
@@ -242,7 +235,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string NodeWithRoles { get; set; }
 
             /// <summary>
-            /// <para>The list of nodes that are configured for the endpoint.</para>
+            /// <para>The list of nodes configured for the endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pi-<em><b><b><b><b><b><b><b>,pi-</b></b></b></b></b></b></b></em></para>
@@ -252,11 +245,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Nodes { get; set; }
 
             /// <summary>
-            /// <para>The policy for global consistency timeout. Valid values:</para>
+            /// <para>The global consistency timeout policy. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>0: Sends the request to the primary node.</para>
             /// </description></item>
-            /// <item><description><para>2: Degrades the request. If a global consistency read times out, the query is automatically degraded to a regular request. The client does not receive an error message.</para>
+            /// <item><description><para>2: Downgrades upon timeout. If a global consistency read times out, the query is automatically downgraded to regular requests, and the client does not receive an error message.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -268,7 +261,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string PolarSccTimeoutAction { get; set; }
 
             /// <summary>
-            /// <para>The timeout period for global consistency.</para>
+            /// <para>The global consistency timeout period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -280,9 +273,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>The read/write mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>ReadWrite: read and write (automatic read/write splitting).</para>
+            /// <item><description><para>ReadWrite: Read and write (automatic read/write splitting).</para>
             /// </description></item>
-            /// <item><description><para>ReadOnly: read-only.</para>
+            /// <item><description><para>ReadOnly: Read-only.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -294,11 +287,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ReadWriteMode { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether global consistency (high-performance mode) is enabled for the node. Valid values:</para>
+            /// <para>Specifies whether the global consistency (high-performance mode) feature is enabled for the node. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>on: enabled.</para>
+            /// <item><description><para>on: Enabled.</para>
             /// </description></item>
-            /// <item><description><para>off: disabled.</para>
+            /// <item><description><para>off: Disabled.</para>
             /// </description></item>
             /// </list>
             /// 

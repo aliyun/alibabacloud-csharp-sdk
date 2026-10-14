@@ -42,7 +42,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the knowledge base.</para>
+        /// <para>The validity period of the Lark group member snapshot for fallback reuse, in seconds. This parameter can be explicitly set only for FEISHU synchronization links. A value of -1 indicates that the snapshot never expires. A value of 0 disables snapshot fallback reuse. A positive integer indicates the maximum age of the snapshot allowed for reuse. Default value: -1. If this parameter is omitted, -1 takes effect.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>-1</para>
+        /// </summary>
+        [NameInMap("FeishuChatMemberStaleTtlSeconds")]
+        [Validation(Required=false)]
+        public int? FeishuChatMemberStaleTtlSeconds { get; set; }
+
+        /// <summary>
+        /// <para>The unique identifier of the knowledge base.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +63,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string KnowledgeBaseId { get; set; }
 
         /// <summary>
-        /// <para>The name of the synchronization link.</para>
+        /// <para>The name of the link.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,7 +74,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string LinkName { get; set; }
 
         /// <summary>
-        /// <para>The MCP Server endpoint for DingTalk documents.</para>
+        /// <para>The endpoint of the DingTalk document MCP server.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx789?key=d5e6fxxxxxx876">https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx789?key=d5e6fxxxxxx876</a></para>
@@ -85,7 +95,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The MCP Server endpoint for DingTalk spreadsheets.</para>
+        /// <para>The endpoint of the DingTalk sheet MCP server.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx567?key=d5e6fxxxxxx543">https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx567?key=d5e6fxxxxxx543</a></para>
@@ -95,7 +105,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SheetMcpEndpoint { get; set; }
 
         /// <summary>
-        /// <para>The directory address of the synchronization source.</para>
+        /// <para>The source directory address for synchronization.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -117,7 +127,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>The synchronization interval. Unit: minutes.</para>
+        /// <para>The synchronization interval, in minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -137,7 +147,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>The Lark user access token. This token is used only when the application identity cannot expand group members because the bot is not in the group chat.</para>
+        /// <para>The Lark user access token. This token is used only when the application identity cannot retrieve group members because the bot is not in the group chat.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>
@@ -147,7 +157,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string UserAccessToken { get; set; }
 
         /// <summary>
-        /// <para>The DingTalk user ID of the operator.</para>
+        /// <para>The ID of the DingTalk operator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123***56</para>
@@ -155,6 +165,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public string UserId { get; set; }
+
+        /// <summary>
+        /// <para>The Lark user refresh token. This token must be provided together with UserAccessToken to automatically rotate the fallback identity for retrieving group members.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <hr>
+        /// </summary>
+        [NameInMap("UserRefreshToken")]
+        [Validation(Required=false)]
+        public string UserRefreshToken { get; set; }
 
     }
 

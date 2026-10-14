@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeCrossCloudLevelsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of supported cross-cloud specifications.</para>
+        /// <para>The list of specifications supported for cross-cloud scenarios.</para>
         /// </summary>
         [NameInMap("CrossCloudLevelList")]
         [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <para>The CPU and memory.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2 core 8 GB</para>
+            /// <para>2 cores 8 GB</para>
             /// </summary>
             [NameInMap("LevelName")]
             [Validation(Required=false)]

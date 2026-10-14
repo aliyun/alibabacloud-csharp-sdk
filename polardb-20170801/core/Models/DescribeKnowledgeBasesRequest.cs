@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeKnowledgeBasesRequest : TeaModel {
         /// <summary>
-        /// <para>The keyword for searching knowledge bases.</para>
+        /// <para>The keyword used to filter knowledge bases.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testkb</para>

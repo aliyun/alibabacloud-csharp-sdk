@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The cluster ID.</para>
+        /// <remarks>
+        /// <para>Note: Only the IDs of edge clusters (clusters created by setting the CloudProvider parameter to ENS when calling CreateDBCluster) are supported. If you specify the ID of common clusters, the CrossCloudOpenAPI.CallError error is returned.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +34,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return in a single request.</para>
+        /// <para>The maximum number of entries to return for this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -41,7 +44,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the next page of results. You do not need to specify this parameter for the first request. In a subsequent request, set this parameter to the NextToken value returned in the previous response.</para>
+        /// <para>The query token. Set the value to the NextToken value returned in the last API call. If no subsequent query is required, do not specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>212db86sca4384811e0b5e8707e******</para>
@@ -51,7 +54,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The node type. This parameter is required when you query the accounts of a PolarDB Search node.</para>
+        /// <para>The node type. This parameter is required when you query the accounts of PolarDB Search nodes. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Search</description></item>
         /// </list>
@@ -72,7 +75,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be an integer that is greater than 0. The default value is 1.</para>
+        /// <para>The page number. Valid values: integers greater than 0 and less than or equal to the maximum value of the Integer type. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -82,7 +85,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values:</para>
+        /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>30</para>
         /// </description></item>
@@ -91,7 +94,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <item><description><para>100</para>
         /// </description></item>
         /// </list>
-        /// <para>The default value is 30.</para>
+        /// <para>Default value: 30.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

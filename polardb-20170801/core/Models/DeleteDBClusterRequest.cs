@@ -10,14 +10,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeleteDBClusterRequest : TeaModel {
         /// <summary>
-        /// <para>The retention policy for backup sets when the cluster is deleted. Valid values:</para>
+        /// <para>The backup data retention policy when the cluster is deleted. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>ALL</b>: permanently retains all backup sets.</para>
-        /// </description></item>
-        /// <item><description><para><b>LATEST</b>: permanently retains the last backup set. The system automatically creates a new backup before the cluster is deleted.</para>
-        /// </description></item>
-        /// <item><description><para><b>NONE</b>: does not retain any backup sets after the cluster is deleted.</para>
-        /// </description></item>
+        /// <item><description><b>ALL</b>: Long-term retention (LTR) of all backups.</description></item>
+        /// <item><description><b>LATEST</b>: Long-term retention (LTR) of the last backup (automatic backup before deletion).</description></item>
+        /// <item><description><b>NONE</b>: Does not retain any backups when the cluster is deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,7 +25,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string BackupRetentionPolicyOnClusterDeletion { get; set; }
 
         /// <summary>
-        /// <para>The cloud service provider of the instance.</para>
+        /// <para>The cloud service provider to which the instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENS</para>

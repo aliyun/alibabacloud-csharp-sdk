@@ -36,6 +36,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The time when the cluster was created.</para>
+        /// <para>The time is in the ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-08-14T05:58:42Z</para>
@@ -122,7 +123,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string MountPath { get; set; }
 
                 /// <summary>
-                /// <para>The cloud disk name.</para>
+                /// <para>The disk name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>jueming</para>
@@ -132,7 +133,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The size of the storage cloud disk.</para>
+                /// <para>The storage disk size.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8192</para>
@@ -175,6 +176,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
             /// <summary>
             /// <para>The creation time.</para>
+            /// <para>The time is in the ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-08-14T05:58:42Z</para>
@@ -314,7 +316,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             }
 
             /// <summary>
-            /// <para>The ID of the Kubernetes virtual node.</para>
+            /// <para>The Kubernetes virtual node ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vn-***************</para>
@@ -383,7 +385,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string EcsSecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The list of network connection addresses of the instance.</para>
+        /// <para>The list of network endpoints of the instance.</para>
         /// </summary>
         [NameInMap("EndpointList")]
         [Validation(Required=false)]
@@ -397,7 +399,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public List<DescribeAIDBClusterAttributeResponseBodyEndpointListNetInfoItems> NetInfoItems { get; set; }
             public class DescribeAIDBClusterAttributeResponseBodyEndpointListNetInfoItems : TeaModel {
                 /// <summary>
-                /// <para>The database connection address.</para>
+                /// <para>The database endpoint.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pc-**********.rwlb.rds.aliyuncs.com</para>
@@ -407,7 +409,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string ConnectionString { get; set; }
 
                 /// <summary>
-                /// <para>The network type of the connection string. Valid values:</para>
+                /// <para>The network type of the endpoint. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>Public</b>: public endpoint</description></item>
                 /// <item><description><b>Private</b>: private endpoint</description></item>
@@ -438,8 +440,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The expiration time of the cluster.</para>
         /// <remarks>
-        /// <para>Only clusters whose billing method is <b>Prepaid</b> (subscription) return a specific value. <b>Postpaid</b> (pay-as-you-go) clusters return an empty value.</para>
+        /// <para>Only clusters with the billing method of <b>Prepaid</b> (subscription) return a specific value. <b>Postpaid</b> (pay-as-you-go) clusters return an empty value.</para>
         /// </remarks>
+        /// <para>The time is in the ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-11-14T16:00:00Z</para>
@@ -503,7 +506,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string KubeClusterId { get; set; }
 
         /// <summary>
-        /// <para>The lock mode of the instance. The value <b>lock</b> indicates that the instance is automatically expired or has an overdue payment.</para>
+        /// <para>The lock mode of the instance. The value is <b>lock</b>, which indicates that the instance is automatically expired or has an overdue payment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Unlock</para>
@@ -743,7 +746,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string MountPath { get; set; }
 
             /// <summary>
-            /// <para>The cloud disk name.</para>
+            /// <para>The disk name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>jueming</para>

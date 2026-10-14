@@ -36,6 +36,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public class SearchMemoriesResponseBodyResults : TeaModel {
             /// <summary>
             /// <para>The creation time.</para>
+            /// <para>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-09-26T08:25:44Z</para>
@@ -106,6 +107,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
             /// <summary>
             /// <para>The update time.</para>
+            /// <para>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-10-16T02:27:33Z</para>
