@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class RemoveSDGsRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the instances.</para>
+        /// <para>The list of instance IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The IDs of SDG.</para>
+        /// <para>The list of SDG IDs.</para>
         /// </summary>
         [NameInMap("SdgIds")]
         [Validation(Required=false)]

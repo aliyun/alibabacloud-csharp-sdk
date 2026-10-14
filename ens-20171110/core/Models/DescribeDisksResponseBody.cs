@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeDisksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned service code. 0 indicates that the request was successful.</para>
+        /// <para>The returned business code. A value of 0 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page for a paged query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned pages.</para>
+        /// <para>The total number of pages for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>13</para>

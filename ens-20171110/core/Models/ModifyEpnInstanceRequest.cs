@@ -43,12 +43,15 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The networking mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>SpeedUp</b>: Intelligent acceleration network (Internet).</description></item>
-        /// <item><description><b>Connection</b>: Internal network.</description></item>
-        /// <item><description><b>SpeedUpAndConnection</b>: Intelligent acceleration network and internal network.</description></item>
+        /// <item><description><para><b>SpeedUp</b>: Intelligent acceleration network (Internet).</para>
+        /// </description></item>
+        /// <item><description><para><b>Connection</b>: Internal network.</para>
+        /// </description></item>
+        /// <item><description><para><b>SpeedUpAndConnection</b>: Intelligent acceleration network and internal network.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> The internal network supports only <b>Connection</b> and <b>SpeedUpAndConnection</b>.</para>
+        /// <para>The internal network supports only <b>Connection</b> and <b>SpeedUpAndConnection</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

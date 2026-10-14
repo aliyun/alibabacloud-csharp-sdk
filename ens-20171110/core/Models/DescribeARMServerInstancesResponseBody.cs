@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeARMServerInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the instance list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page that was specified in the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4EC47282-1B74-4534-BD0E-403F3EE64CAF</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the servers and the AIC instances.</para>
+        /// <para>The array of ARM server and AIC instance information.</para>
         /// </summary>
         [NameInMap("Servers")]
         [Validation(Required=false)]
         public List<DescribeARMServerInstancesResponseBodyServers> Servers { get; set; }
         public class DescribeARMServerInstancesResponseBodyServers : TeaModel {
             /// <summary>
-            /// <para>The information about the AIC instances.</para>
+            /// <para>The array of AIC instance information.</para>
             /// </summary>
             [NameInMap("AICInstances")]
             [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public long? Frequency { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the AIC image.</para>
+                /// <para>The AIC image ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>m-****</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string ImageId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the AIC instance.</para>
+                /// <para>The AIC instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aic-instance****</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The operation that was most recently performed.</para>
+                /// <para>The most recent operation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ServerCreate</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string LatestAction { get; set; }
 
                 /// <summary>
-                /// <para>The name of the container.</para>
+                /// <para>The container name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AIC-Name</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The network attributes of the AIC instance.</para>
+                /// <para>The network attributes.</para>
                 /// </summary>
                 [NameInMap("NetworkAttributes")]
                 [Validation(Required=false)]
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string Resolution { get; set; }
 
                 /// <summary>
-                /// <para>The information about the shared data group (SDG) that is deployed on the AIC instance.</para>
+                /// <para>The shared data group (SDG) information deployed on the instance.</para>
                 /// </summary>
                 [NameInMap("SdgDeployInfo")]
                 [Validation(Required=false)]
@@ -172,9 +172,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     /// <summary>
                     /// <para>The deployment status of the SDG. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>sdg_deploying</b></description></item>
-                    /// <item><description><b>failed</b></description></item>
-                    /// <item><description><b>success</b></description></item>
+                    /// <item><description><para><b>sdg_deploying</b>: Being deployed.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>failed</b>: Deployment failed.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>success</b>: Deployment succeeded.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -197,14 +200,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string Spec { get; set; }
 
                 /// <summary>
-                /// <para>The operation status of the AIC instance. Valid values:</para>
+                /// <para>The operation state of the AIC instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>success</b></description></item>
-                /// <item><description><b>failed</b></description></item>
-                /// <item><description><b>creating</b></description></item>
-                /// <item><description><b>releasing</b></description></item>
-                /// <item><description><b>rebooting</b></description></item>
-                /// <item><description><b>reseting</b></description></item>
+                /// <item><description><b>success</b>: Succeeded.</description></item>
+                /// <item><description><b>failed</b>: Failed.</description></item>
+                /// <item><description><b>creating</b>: Being created.</description></item>
+                /// <item><description><b>releasing</b>: Being released.</description></item>
+                /// <item><description><b>rebooting</b>: Being restarted.</description></item>
+                /// <item><description><b>reseting</b>: Being reset.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -217,9 +220,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 /// <summary>
                 /// <para>The running status of the AIC instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>running</b></description></item>
-                /// <item><description><b>pending</b></description></item>
-                /// <item><description><b>terminating</b></description></item>
+                /// <item><description><b>running</b>: Running.</description></item>
+                /// <item><description><b>pending</b>: Pending.</description></item>
+                /// <item><description><b>terminating</b>: Being terminated.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -242,7 +245,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the ENS node.</para>
+            /// <para>The ENS edge zone ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hanghzou-27</para>
@@ -262,7 +265,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string ExpiredTime { get; set; }
 
             /// <summary>
-            /// <para>The operation that was most recently performed.</para>
+            /// <para>The most recent operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ServerCreate</para>
@@ -272,7 +275,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string LatestAction { get; set; }
 
             /// <summary>
-            /// <para>The name of the server.</para>
+            /// <para>The server name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Server-Name</para>
@@ -282,7 +285,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The namespace of the cluster to which the server belongs.</para>
+            /// <para>The namespace of the cluster to which the card belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -302,7 +305,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string PayType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the server.</para>
+            /// <para>The server ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cas-******</para>
@@ -322,14 +325,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string SpecName { get; set; }
 
             /// <summary>
-            /// <para>The operation status of the server. Valid values:</para>
+            /// <para>The operation state of the server. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>success</b></description></item>
-            /// <item><description><b>failed</b></description></item>
-            /// <item><description><b>creating</b></description></item>
-            /// <item><description><b>releasing</b></description></item>
-            /// <item><description><b>rebooting</b></description></item>
-            /// <item><description><b>upgrading</b></description></item>
+            /// <item><description><b>success</b>: Succeeded.</description></item>
+            /// <item><description><b>failed</b>: Failed.</description></item>
+            /// <item><description><b>creating</b>: Being created.</description></item>
+            /// <item><description><b>releasing</b>: Being released.</description></item>
+            /// <item><description><b>rebooting</b>: Being restarted.</description></item>
+            /// <item><description><b>upgrading</b>: Being upgraded.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -342,10 +345,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The running status of the server. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>running</b></description></item>
-            /// <item><description><b>stopping</b></description></item>
-            /// <item><description><b>down</b></description></item>
-            /// <item><description><b>starting</b></description></item>
+            /// <item><description><b>running</b>: Running.</description></item>
+            /// <item><description><b>stopping</b>: Being stopped.</description></item>
+            /// <item><description><b>down</b>: Shut down.</description></item>
+            /// <item><description><b>starting</b>: Being started.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -355,14 +358,29 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <para>The collection of tags.</para>
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<DescribeARMServerInstancesResponseBodyServersTags> Tags { get; set; }
             public class DescribeARMServerInstancesResponseBodyServersTags : TeaModel {
+                /// <summary>
+                /// <para>The tag key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>key-1</para>
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// <para>The tag value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>value-1</para>
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
@@ -372,7 +390,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of instances returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

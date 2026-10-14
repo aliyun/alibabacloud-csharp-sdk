@@ -33,10 +33,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The billing method for network usage. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>BandwidthByDay</b>: Pay by daily peak bandwidth.</description></item>
-        /// <item><description><b>95BandwidthByMonth</b>: Pay by monthly 95th percentile bandwidth.</description></item>
-        /// <item><description><b>PayByBandwidth4thMonth</b>: Pay by monthly fourth peak bandwidth.</description></item>
-        /// <item><description><b>PayByBandwidth</b>: Pay by fixed bandwidth.</description></item>
+        /// <item><description><para><b>BandwidthByDay</b>: Pay by daily peak bandwidth.</para>
+        /// </description></item>
+        /// <item><description><para><b>95BandwidthByMonth</b>: Pay by monthly 95th percentile bandwidth.</para>
+        /// </description></item>
+        /// <item><description><para><b>PayByBandwidth4thMonth</b>: Pay by monthly fourth peak bandwidth.</para>
+        /// </description></item>
+        /// <item><description><para><b>PayByBandwidth</b>: Pay by fixed bandwidth.</para>
+        /// </description></item>
         /// </list>
         /// <para>You can specify only one metering method for network usage and cannot overwrite the existing metering method.</para>
         /// <para>This parameter is required.</para>
@@ -62,9 +66,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The networking mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>SpeedUp</b>: intelligent acceleration network (Internet)</description></item>
-        /// <item><description><b>Connection</b>: internal network</description></item>
-        /// <item><description><b>SpeedUpAndConnection</b>: intelligent acceleration network and internal network</description></item>
+        /// <item><description><para><b>SpeedUp</b>: intelligent acceleration network (Internet)</para>
+        /// </description></item>
+        /// <item><description><para><b>Connection</b>: internal network</para>
+        /// </description></item>
+        /// <item><description><para><b>SpeedUpAndConnection</b>: intelligent acceleration network and internal network</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

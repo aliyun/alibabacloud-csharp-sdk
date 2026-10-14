@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ImportImageShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>System architecture. Allowed values:</br></para>
+        /// <para>The system architecture. Valid values:</br></para>
         /// <list type="bullet">
-        /// <item><description>x86_64.</br></description></item>
+        /// <item><description>x86_64</description></item>
         /// </list>
         /// <para>Currently, only x86_64 is supported.</para>
         /// <para>This parameter is required.</para>
@@ -25,8 +25,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Architecture { get; set; }
 
         /// <summary>
-        /// <para><c>Image Type</c>
-        /// ens_vm: ens virtual machine image (default)</para>
+        /// <para>The image type. Valid values:</para>
+        /// <para>ens_vm: ENS virtual machine image (default).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ComputeType { get; set; }
 
         /// <summary>
-        /// <para>List of custom image information being created.</para>
+        /// <para>The list of custom image information.</para>
         /// </summary>
         [NameInMap("DiskDeviceMapping")]
         [Validation(Required=false)]
         public string DiskDeviceMappingShrink { get; set; }
 
         /// <summary>
-        /// <para>Image format. Allowed values:</br>
+        /// <para>The image format. Valid values:</br>
         /// qcow2.</br>
         /// Currently, only qcow2 is supported.</para>
         /// <para>This parameter is required.</para>
@@ -57,22 +57,28 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ImageFormat { get; set; }
 
         /// <summary>
-        /// <para>Image name. The length should be [2, 128] English or Chinese characters. It must start with a letter (uppercase or lowercase) or a Chinese character, and cannot start with http:// or https://. It can contain numbers, colons (:), underscores (_), or hyphens (-).</para>
+        /// <para>The image name. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). It must start with a letter and cannot start with http:// or https://.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>镜像名称</para>
+        /// <para>ImageName</para>
         /// </summary>
         [NameInMap("ImageName")]
         [Validation(Required=false)]
         public string ImageName { get; set; }
 
+        /// <summary>
+        /// <para>The image license type. Valid values: Aliyun (Alibaba Cloud license) and BYOL (Bring Your Own Key).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Aliyun</para>
+        /// </summary>
         [NameInMap("LicenseType")]
         [Validation(Required=false)]
         public string LicenseType { get; set; }
 
         /// <summary>
-        /// <para>The OSS Bucket where the image file is located.</para>
+        /// <para>The OSS bucket that stores the image file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tmp-hybrid</para>
@@ -92,7 +98,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string OSSObject { get; set; }
 
         /// <summary>
-        /// <para>The Region where the image is located. Currently, only cn-beijing is supported.</para>
+        /// <para>The region where the image resides. Currently, only cn-beijing is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -102,10 +108,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string OSSRegion { get; set; }
 
         /// <summary>
-        /// <para>Operating system platform type. Allowed values:</para>
+        /// <para>The type of the operating system platform. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>windows.</description></item>
-        /// <item><description>linux.</description></item>
+        /// <item><description>windows</description></item>
+        /// <item><description>linux</description></item>
         /// </list>
         /// <para>Currently, only linux is supported.</para>
         /// <para>This parameter is required.</para>
@@ -118,7 +124,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string OSType { get; set; }
 
         /// <summary>
-        /// <para>Operating system distribution version</para>
+        /// <para>The version of the operating system distribution.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6.8</para>
@@ -128,7 +134,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string OSVersion { get; set; }
 
         /// <summary>
-        /// <para>Operating system distribution. Allowed values:</para>
+        /// <para>The operating system distribution. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>centos</description></item>
         /// <item><description>ubuntu</description></item>
@@ -142,7 +148,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Platform { get; set; }
 
         /// <summary>
-        /// <para>The target OSS region where the image will be stored.</br></para>
+        /// <para>The region of the destination OSS bucket where the image is stored.</br></para>
         /// <remarks>
         /// <para>Currently, only cn-beijing and ap-southeast-1 are supported.</para>
         /// </remarks>

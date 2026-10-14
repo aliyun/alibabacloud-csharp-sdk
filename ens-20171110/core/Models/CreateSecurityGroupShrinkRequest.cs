@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateSecurityGroupShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The description. The description must be 2 to 256 characters in length. It must start with a letter but cannot start with http:// or https://.</para>
+        /// <para>The description of the security group. The description must be 2 to 256 characters in length. It must start with a letter and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testDescription</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>An array of security group rules. You can specify up to 200 IDs of security group rules.</para>
+        /// <para>The rules of the security group. Valid values of N: 0 to 200.</para>
         /// </summary>
         [NameInMap("Permissions")]
         [Validation(Required=false)]
         public string PermissionsShrink { get; set; }
 
         /// <summary>
-        /// <para>The name of the security group. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (<em>), and hyphens (-). It must start with a letter but cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (</em>), and hyphens (-). By default, this parameter is empty.</para>
+        /// <para>The name of the security group. The name must be 2 to 128 characters in length, and can contain digits, colons (:), underscores (_), and hyphens (-). It must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. By default, this parameter is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Dcdn1:2_3-4</para>

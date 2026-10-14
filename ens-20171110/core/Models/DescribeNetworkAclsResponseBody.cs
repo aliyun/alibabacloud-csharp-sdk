@@ -86,8 +86,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 /// <summary>
                 /// <para>The action that is performed on network traffic that matches the rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>accept</b>: allows the network traffic.</description></item>
-                /// <item><description><b>drop</b>: blocks the network traffic.</description></item>
+                /// <item><description><para><b>accept</b>: allows the network traffic.</para>
+                /// </description></item>
+                /// <item><description><para><b>drop</b>: blocks the network traffic.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -100,8 +102,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 /// <summary>
                 /// <para>The destination port range of the outbound rule.</para>
                 /// <list type="bullet">
-                /// <item><description>If <b>Protocol</b> of the outbound rule is set to <b>all</b> or <b>icmp</b> the port range is <b>-1/-1</b>, which indicates all ports.</description></item>
-                /// <item><description>If <b>Protocol</b> of the outbound rule is set to <b>tcp</b> or <b>udp</b>, the port range is in the following format: <b>1/200</b> or <b>80/80</b>. 1/200 indicates port 1 to port 200. 80/80 indicates port 80. Valid values for a port: <b>1 to 65535</b>.</description></item>
+                /// <item><description><para>If <b>Protocol</b> of the outbound rule is set to <b>all</b> or <b>icmp</b> the port range is <b>-1/-1</b>, which indicates all ports.</para>
+                /// </description></item>
+                /// <item><description><para>If <b>Protocol</b> of the outbound rule is set to <b>tcp</b> or <b>udp</b>, the port range is in the following format: <b>1/200</b> or <b>80/80</b>. 1/200 indicates port 1 to port 200. 80/80 indicates port 80. Valid values for a port: <b>1 to 65535</b>.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -124,10 +128,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 /// <summary>
                 /// <para>The protocol type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>icmp</b>: ICMP.</description></item>
-                /// <item><description><b>tcp</b>: TCP.</description></item>
-                /// <item><description><b>udp</b>: UDP.</description></item>
-                /// <item><description><b>all</b>: all protocols.</description></item>
+                /// <item><description><para><b>icmp</b>: ICMP.</para>
+                /// </description></item>
+                /// <item><description><para><b>tcp</b>: TCP.</para>
+                /// </description></item>
+                /// <item><description><para><b>udp</b>: UDP.</para>
+                /// </description></item>
+                /// <item><description><para><b>all</b>: all protocols.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -140,8 +148,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 /// <summary>
                 /// <para>The type of the rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>system</b>: The rule is created by the system.</description></item>
-                /// <item><description><b>custom</b>: The rule is created by a user.</description></item>
+                /// <item><description><para><b>system</b>: The rule is created by the system.</para>
+                /// </description></item>
+                /// <item><description><para><b>custom</b>: The rule is created by a user.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -180,6 +190,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// <para>The destination network.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10.0.0.0/24</para>
+                /// </summary>
                 [NameInMap("DestinationCidrBlock")]
                 [Validation(Required=false)]
                 public string DestinationCidrBlock { get; set; }
@@ -207,8 +223,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 /// <summary>
                 /// <para>The action that is performed on network traffic that matches the rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>accept</b>: allows the network traffic.</description></item>
-                /// <item><description><b>drop</b>: blocks the network traffic.</description></item>
+                /// <item><description><para><b>accept</b>: allows the network traffic.</para>
+                /// </description></item>
+                /// <item><description><para><b>drop</b>: blocks the network traffic.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -221,8 +239,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 /// <summary>
                 /// <para>The destination port range of the inbound rule.</para>
                 /// <list type="bullet">
-                /// <item><description>If <b>Protocol</b> of the inbound rule is set to <b>all</b> or <b>icmp</b>, the port range is <b>-1/-1</b>, which indicates all ports.</description></item>
-                /// <item><description>If <b>Protocol</b> of the inbound rule is set to <b>tcp</b> or <b>udp</b>, the port range is in the following format: <b>1/200</b> or <b>80/80</b>. 1/200 indicates port 1 to port 200. 80/80 indicates port 80. Valid values for a port: <b>1 to 65535</b>.</description></item>
+                /// <item><description><para>If <b>Protocol</b> of the inbound rule is set to <b>all</b> or <b>icmp</b>, the port range is <b>-1/-1</b>, which indicates all ports.</para>
+                /// </description></item>
+                /// <item><description><para>If <b>Protocol</b> of the inbound rule is set to <b>tcp</b> or <b>udp</b>, the port range is in the following format: <b>1/200</b> or <b>80/80</b>. 1/200 indicates port 1 to port 200. 80/80 indicates port 80. Valid values for a port: <b>1 to 65535</b>.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -245,10 +265,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 /// <summary>
                 /// <para>The protocol type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>icmp</b>: ICMP.</description></item>
-                /// <item><description><b>tcp</b>: TCP.</description></item>
-                /// <item><description><b>udp</b>: UDP.</description></item>
-                /// <item><description><b>all</b>: all protocols.</description></item>
+                /// <item><description><para><b>icmp</b>: ICMP.</para>
+                /// </description></item>
+                /// <item><description><para><b>tcp</b>: TCP.</para>
+                /// </description></item>
+                /// <item><description><para><b>udp</b>: UDP.</para>
+                /// </description></item>
+                /// <item><description><para><b>all</b>: all protocols.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -261,8 +285,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 /// <summary>
                 /// <para>The type of the rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>system</b>: The rule is created by the system.</description></item>
-                /// <item><description><b>custom</b>: The rule is created by a user.</description></item>
+                /// <item><description><para><b>system</b>: The rule is created by the system.</para>
+                /// </description></item>
+                /// <item><description><para><b>custom</b>: The rule is created by a user.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -334,9 +360,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 /// <summary>
                 /// <para>The association status of the resource. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>BINDED</b>: The resource is associated with the network ACL.</description></item>
-                /// <item><description><b>BINDING</b>: The resource is being associated with the network ACL.</description></item>
-                /// <item><description><b>UNBINDING</b>: The resource is being disassociated from the network ACL.</description></item>
+                /// <item><description><para><b>BINDED</b>: The resource is associated with the network ACL.</para>
+                /// </description></item>
+                /// <item><description><para><b>BINDING</b>: The resource is being associated with the network ACL.</para>
+                /// </description></item>
+                /// <item><description><para><b>UNBINDING</b>: The resource is being disassociated from the network ACL.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -351,8 +380,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The status of the network ACL. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Available</b>: The network ACL is available.</description></item>
-            /// <item><description><b>Modifying</b>: The network ACL is being configured.</description></item>
+            /// <item><description><para><b>Available</b>: The network ACL is available.</para>
+            /// </description></item>
+            /// <item><description><para><b>Modifying</b>: The network ACL is being configured.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

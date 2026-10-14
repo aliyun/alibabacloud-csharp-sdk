@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string NetDistrictCode { get; set; }
 
+        /// <summary>
+        /// <para>Region code</para>
+        /// </summary>
         [NameInMap("NetDistrictCodeNode")]
         [Validation(Required=false)]
         public bool? NetDistrictCodeNode { get; set; }
@@ -28,9 +31,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The level of the region.</para>
         /// <list type="bullet">
-        /// <item><description><b>Big</b>: area</description></item>
-        /// <item><description><b>Middle</b>: province</description></item>
-        /// <item><description><b>Small</b>: city</description></item>
+        /// <item><description><para><b>Big</b>: area</para>
+        /// </description></item>
+        /// <item><description><para><b>Middle</b>: province</para>
+        /// </description></item>
+        /// <item><description><para><b>Small</b>: city</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

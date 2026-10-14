@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// <para>If the delimiter parameter is specified in the request, the response contains CommonPrefixes. Objects whose names contain the same string from the prefix to the next occurrence of the delimiter are grouped as a single result element in CommonPrefixes.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Not applicable</para>
         /// </summary>
         [NameInMap("CommonPrefixes")]
         [Validation(Required=false)]
@@ -36,9 +39,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The entity tag (ETag). When an object is created, an ETag is created to identify the content of the object.</para>
             /// <list type="bullet">
-            /// <item><description>For an object that is created by calling the PutObject operation, the ETag value of the object is the MD5 hash of the object content.</description></item>
-            /// <item><description>For an object that is not created by calling the PutObject operation, the ETag value of the object is the UUID of the object content.</description></item>
-            /// <item><description>The ETag of an object can be used to check whether the object content is modified. However, we recommend that you use the MD5 hash of an object rather than the ETag value of the object to verify data integrity.</description></item>
+            /// <item><description><para>For an object that is created by calling the PutObject operation, the ETag value of the object is the MD5 hash of the object content.</para>
+            /// </description></item>
+            /// <item><description><para>For an object that is not created by calling the PutObject operation, the ETag value of the object is the UUID of the object content.</para>
+            /// </description></item>
+            /// <item><description><para>The ETag of an object can be used to check whether the object content is modified. However, we recommend that you use the MD5 hash of an object rather than the ETag value of the object to verify data integrity.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -104,7 +110,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <para>The encoding type of the object names in the response.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>N/A</para>
+        /// <para>Not applicable</para>
         /// </summary>
         [NameInMap("EncodingType")]
         [Validation(Required=false)]
@@ -113,8 +119,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>Indicates whether the listed objects are truncated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b></description></item>
-        /// <item><description><b>true</b></description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -22,10 +22,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The metering method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>BandwidthByDay: Pay by daily peak bandwidth</description></item>
-        /// <item><description>95BandwidthByMonth: Pay by monthly 95th percentile bandwidth</description></item>
-        /// <item><description>PayByBandwidth4thMonth: Pay by monthly fourth peak bandwidth</description></item>
-        /// <item><description>PayByBandwidth: Pay by fixed bandwidth</description></item>
+        /// <item><description><para>BandwidthByDay: Pay by daily peak bandwidth</para>
+        /// </description></item>
+        /// <item><description><para>95BandwidthByMonth: Pay by monthly 95th percentile bandwidth</para>
+        /// </description></item>
+        /// <item><description><para>PayByBandwidth4thMonth: Pay by monthly fourth peak bandwidth</para>
+        /// </description></item>
+        /// <item><description><para>PayByBandwidth: Pay by fixed bandwidth</para>
+        /// </description></item>
         /// </list>
         /// <para>You can specify only one metering method for network usage and cannot overwrite the existing metering method.</para>
         /// 

@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <para>The ID of the DNAT entry.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>fwd-5tc07cw14metghn3siv4ak8do</para>
+        /// <para>fwd-5tc07cw14metghn3siv4a****</para>
         /// </summary>
         [NameInMap("ForwardEntryId")]
         [Validation(Required=false)]
         public string ForwardEntryId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EF6D6FA4-DACA-5822-A981-81006271D263</para>

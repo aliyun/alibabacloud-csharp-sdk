@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class RemoveBackendServersRequest : TeaModel {
         /// <summary>
-        /// <para>The list of backend servers that you want to remove. You can remove up to 20 backend servers at a time.</para>
+        /// <para>The list of backend servers to remove. You can remove up to 20 backend servers per call.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("BackendServers")]
@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <para>The IP address of the backend server.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>192.XXX.X.X</para>
+            /// <para>192.168.0.1</para>
             /// </summary>
             [NameInMap("Ip")]
             [Validation(Required=false)]
             public string Ip { get; set; }
 
             /// <summary>
-            /// <para>The backend port that is used by the Edge Load Balancer (ELB) instance.</para>
+            /// <para>The port used by the backend servers of the load balancing instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -49,10 +49,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string ServerId { get; set; }
 
             /// <summary>
-            /// <para>The type of backend server. Valid values:</para>
+            /// <para>The backend server type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ens</b>: an Edge Node Service (ENS) instance.</description></item>
-            /// <item><description><b>eni</b>: an Elastic Network Interface (ENI).</description></item>
+            /// <item><description><b>ens</b>: ENS instance.</description></item>
+            /// <item><description><b>eni</b>: network interface controller (NIC).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The ID of the Edge Load Balancer (ELB) instance.</para>
+        /// <para>The ID of the load balancing instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

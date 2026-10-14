@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateEipInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the EIP.</para>
+        /// <para>The ID of the EIP instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eip-25877c70gddh****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string AllocationId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9DB6123F-470D-510A-A9EB-EBA799340452</para>

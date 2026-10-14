@@ -23,10 +23,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The information template for phased update. The value must be a JSON string and contain the following information:</para>
         /// <list type="bullet">
-        /// <item><description>Version range that you want to update</description></item>
-        /// <item><description>Configuration information of the target version</description></item>
-        /// <item><description>Canary release policy for resources</description></item>
-        /// <item><description>Intelligent upgrade policy that contains information such as the time window and resource usage limit</description></item>
+        /// <item><description><para>Version range that you want to update</para>
+        /// </description></item>
+        /// <item><description><para>Configuration information of the target version</para>
+        /// </description></item>
+        /// <item><description><para>Canary release policy for resources</para>
+        /// </description></item>
+        /// <item><description><para>Intelligent upgrade policy that contains information such as the time window and resource usage limit</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class MountInstanceSDGShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the instances.</para>
+        /// <para>The list of instance IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceIds")]

@@ -75,16 +75,23 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <para>The scheduling operation. The value must be of the enumeration type. Valid values:</para>
         /// <para>Container scenario:</para>
         /// <list type="bullet">
-        /// <item><description>Start: selects and activates an idle cloud device.</description></item>
-        /// <item><description>Stop: stops and releases the cloud device.</description></item>
-        /// <item><description>Console: performs the scheduling operation when the device is in the scheduling state.</description></item>
+        /// <item><description><para>Start: selects and activates an idle cloud device.</para>
+        /// </description></item>
+        /// <item><description><para>Stop: stops and releases the cloud device.</para>
+        /// </description></item>
+        /// <item><description><para>Console: performs the scheduling operation when the device is in the scheduling state.</para>
+        /// </description></item>
         /// </list>
         /// <para>Bare metal instance or virtual machine scenario:</para>
         /// <list type="bullet">
-        /// <item><description>PreSchedule: locks a virtual machine instance for scheduling.</description></item>
-        /// <item><description>Confirm: confirms the scheduling operation.</description></item>
-        /// <item><description>Cancel: cancels the scheduling operation.</description></item>
-        /// <item><description>Console: performs the scheduling operation when the device is in the scheduling state.</description></item>
+        /// <item><description><para>PreSchedule: locks a virtual machine instance for scheduling.</para>
+        /// </description></item>
+        /// <item><description><para>Confirm: confirms the scheduling operation.</para>
+        /// </description></item>
+        /// <item><description><para>Cancel: cancels the scheduling operation.</para>
+        /// </description></item>
+        /// <item><description><para>Console: performs the scheduling operation when the device is in the scheduling state.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

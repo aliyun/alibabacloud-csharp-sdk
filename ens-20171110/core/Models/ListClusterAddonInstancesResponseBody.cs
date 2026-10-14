@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ListClusterAddonInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>List of addon information.</para>
+        /// <para>The list of add-on information.</para>
         /// </summary>
         [NameInMap("Addons")]
         [Validation(Required=false)]
         public List<ListClusterAddonInstancesResponseBodyAddons> Addons { get; set; }
         public class ListClusterAddonInstancesResponseBodyAddons : TeaModel {
             /// <summary>
-            /// <para>Whether to automatically clean up associated cloud resources.</para>
+            /// <para>Specifies whether to automatically clean up associated cloud resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public bool? CleanupCloudResources { get; set; }
 
             /// <summary>
-            /// <para>List of custom parameter schemas for the addon.</para>
+            /// <para>The list of schemas for custom add-on parameters.</para>
             /// </summary>
             [NameInMap("ConfigSchema")]
             [Validation(Required=false)]
             public List<ListClusterAddonInstancesResponseBodyAddonsConfigSchema> ConfigSchema { get; set; }
             public class ListClusterAddonInstancesResponseBodyAddonsConfigSchema : TeaModel {
                 /// <summary>
-                /// <para>Application version.</para>
+                /// <para>The application version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>7380581386597434629002</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string AppVersion { get; set; }
 
                 /// <summary>
-                /// <para>Configuration version.</para>
+                /// <para>The configuration version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4572581386436834662215</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string ConfigVersion { get; set; }
 
                 /// <summary>
-                /// <para>Component name.</para>
+                /// <para>The add-on name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>edge-csi-lite</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Custom parameters.</para>
+                /// <para>The custom add-on parameters.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;key1&quot;: &quot;val1&quot;}</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             }
 
             /// <summary>
-            /// <para>Addon name.</para>
+            /// <para>The plug-in name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test1</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Current addon status. Values:</para>
+            /// <para>The current add-on status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>enabling</b>: Enabling.</description></item>
             /// <item><description><b>enabled</b>: Enabled.</description></item>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Version number.</para>
+            /// <para>The version number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v1</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>125B04C7-3D0D-4245-AF96-14E3758E3F06</para>

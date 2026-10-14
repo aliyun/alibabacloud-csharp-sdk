@@ -96,10 +96,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The bandwidth metering method of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>BandwidthByDay: Pay by daily peak bandwidth</description></item>
-        /// <item><description>95BandwidthByMonth: Pay by monthly 95th percentile bandwidth</description></item>
-        /// <item><description>PayByBandwidth4thMonth: Pay by monthly fourth peak bandwidth</description></item>
-        /// <item><description>PayByBandwidth: Pay by fixed bandwidth</description></item>
+        /// <item><description><para>BandwidthByDay: Pay by daily peak bandwidth</para>
+        /// </description></item>
+        /// <item><description><para>95BandwidthByMonth: Pay by monthly 95th percentile bandwidth</para>
+        /// </description></item>
+        /// <item><description><para>PayByBandwidth4thMonth: Pay by monthly fourth peak bandwidth</para>
+        /// </description></item>
+        /// <item><description><para>PayByBandwidth: Pay by fixed bandwidth</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -113,9 +117,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The subscription duration of the instance.</para>
         /// <list type="bullet">
-        /// <item><description>If you leave the PeriodUnit parameter empty, the instance is purchased on a monthly basis. Valid values: Day and Month.</description></item>
-        /// <item><description>If you set PeriodUnit to Day, you can set Period only to 3.</description></item>
-        /// <item><description>If you set PeriodUnit to Month, you can set Period to a number from 1 to 9, or set Period to 12.</description></item>
+        /// <item><description><para>If you leave the PeriodUnit parameter empty, the instance is purchased on a monthly basis. Valid values: Day and Month.</para>
+        /// </description></item>
+        /// <item><description><para>If you set PeriodUnit to Day, you can set Period only to 3.</para>
+        /// </description></item>
+        /// <item><description><para>If you set PeriodUnit to Month, you can set Period to a number from 1 to 9, or set Period to 12.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -129,8 +136,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The billing cycle of the ENS instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Month (default):</description></item>
-        /// <item><description>Day</description></item>
+        /// <item><description><para>Month (default):</para>
+        /// </description></item>
+        /// <item><description><para>Day</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

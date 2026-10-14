@@ -41,8 +41,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The success status code.</para>
         /// <list type="bullet">
-        /// <item><description><b>PartSuccess</b>: partially succeeded.</description></item>
-        /// <item><description><b>AllSuccess</b>: all succeeded.</description></item>
+        /// <item><description><para><b>PartSuccess</b>: partially succeeded.</para>
+        /// </description></item>
+        /// <item><description><para><b>AllSuccess</b>: all succeeded.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

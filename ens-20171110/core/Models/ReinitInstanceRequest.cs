@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>m-5wn1dhz5syoo9b48f440ntvad</para>
+        /// <para>m-5wn1dh*******b48f440ntvad</para>
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>i-5vn4n3y4laeb2ii9zxxltlvzi</para>
+        /// <para>i-5vn4n3y4laeb*******ltlvzi</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>false</c>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <para>It must be 8 to 30 characters in length. It must include at least three of the following characters types: uppercase letters, lowercase letters, digits, and special characters. The following special character are supported: <c>()\\&quot;~! @#$%^&amp;*-_+={}[]:;\\&quot;&lt;&gt;,.?/</c></para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>Example123@</para>
         /// </summary>
         [NameInMap("Password")]
         [Validation(Required=false)]

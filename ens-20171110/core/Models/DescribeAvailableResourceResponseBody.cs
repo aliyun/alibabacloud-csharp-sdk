@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeAvailableResourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned service code. 0 indicates that the request was successful.</para>
+        /// <para>The business return code. The value 0 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request. This is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</para>
+        /// <para>The common parameter. Each request ID is unique and active for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>

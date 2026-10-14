@@ -9,17 +9,27 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateLoadBalancerRequest : TeaModel {
+        /// <summary>
+        /// <para>The billing cycle of the ELB instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Hour</para>
+        /// </summary>
         [NameInMap("BillingCycle")]
         [Validation(Required=false)]
         public string BillingCycle { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. This prevents repeated operations caused by multiple retries.</para>
+        /// <para>Ensures the idempotency of the request to avoid duplicate operations caused by multiple retries.</para>
         /// <list type="bullet">
-        /// <item><description>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</description></item>
-        /// <item><description>If you retry an API request with the same client token and request parameters after it has completed successfully, the result of the original request is returned. The server status does not change.</description></item>
-        /// <item><description>You can initiate a retry when the operation times out or the error code is PROCESSING. The idempotence is valid. If HTTP status code 200 is returned, the client receives the same result as the last request. However, your server status is not affected. If HTTP status code 4xx is returned and error code is not PROCESSING, the idempotence is invalid.</description></item>
-        /// <item><description>A client token is valid for 10 minutes.</description></item>
+        /// <item><description><para>Generate a parameter value from your client and ensure that the value is unique across different requests. The ClientToken value supports only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// </description></item>
+        /// <item><description><para>If you use a ClientToken that has been used before and the other request parameters remain unchanged, the client receives the same result as the first submission, with no impact on your server-side state.</para>
+        /// </description></item>
+        /// <item><description><para>You can retry when the API times out or returns the PROCESSING error code, and idempotency takes effect. If the return result is an HTTP 200 status code, the retry returns the same result as the previous call with no impact on your server-side state. If the return result is an HTTP 4xx status code and the error code is not PROCESSING, idempotency does not take effect.</para>
+        /// </description></item>
+        /// <item><description><para>The ClientToken is valid for 10 minutes.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -30,7 +40,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Edge Node Service (ENS) node.</para>
+        /// <para>The ID of the ENS edge zone.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,9 +51,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the ELB instance. The name must be 1 to 80 characters in length. If you leave this parameter empty, the system randomly allocates a name as the value of this parameter.</para>
+        /// <para>The name of the load balancing instance. The name must be 1 to 80 characters in length and can contain letters and Chinese characters. If you do not specify this parameter, the system automatically assigns an instance name.</para>
         /// <remarks>
-        /// <para> The value cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The name cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -54,7 +64,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string LoadBalancerName { get; set; }
 
         /// <summary>
-        /// <para>The specification of the ELB instance.</para>
+        /// <para>The specification of the load balancing instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,12 +74,22 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string LoadBalancerSpec { get; set; }
 
+        /// <summary>
+        /// <para>The type of the Edge Load Balancing instance.</para>
+        /// <list type="bullet">
+        /// <item><description>CLB: Classic Load Balancing instance.</description></item>
+        /// <item><description>InternetDR: Public pattern load balancing instance.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CLB</para>
+        /// </summary>
         [NameInMap("LoadBalancerType")]
         [Validation(Required=false)]
         public string LoadBalancerType { get; set; }
 
         /// <summary>
-        /// <para>The network ID of the created ELB instance.</para>
+        /// <para>The network ID of the Edge Load Balancing (ELB) instance to create.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -80,7 +100,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NetworkId { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the cluster. Valid value: PostPaid. PostPaid specifies the pay-as-you-go billing method.</para>
+        /// <para>The billing type. PostPaid (currently the only supported type): pay-as-you-go.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -91,7 +111,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch to which the internal-facing ELB instance belongs.</para>
+        /// <para>The ID of the vSwitch to which the VPC instance belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

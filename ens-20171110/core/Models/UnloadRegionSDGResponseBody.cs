@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class UnloadRegionSDGResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data object.</para>
+        /// <para>The returned Data object.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public UnloadRegionSDGResponseBodyData Data { get; set; }
         public class UnloadRegionSDGResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The response message. Success is returned for a successful request.</para>
+            /// <para>The response message. A value of success indicates a successful request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The execution result of the synchronization request.</para>
+            /// <para>The execution result of the synchronous request.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public UnloadRegionSDGResponseBodyDataResult Result { get; set; }
             public class UnloadRegionSDGResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// <para>The number of failed tasks.</para>
+                /// <para>The total number of failed requests.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -44,14 +44,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public long? FailedCount { get; set; }
 
                 /// <summary>
-                /// <para>Details about the failed tasks.</para>
+                /// <para>The list of failure details.</para>
                 /// </summary>
                 [NameInMap("FailedItems")]
                 [Validation(Required=false)]
                 public List<UnloadRegionSDGResponseBodyDataResultFailedItems> FailedItems { get; set; }
                 public class UnloadRegionSDGResponseBodyDataResultFailedItems : TeaModel {
                     /// <summary>
-                    /// <para>The ID of the destination node.</para>
+                    /// <para>The ID of the destination edge zone.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cn-hangzhou-xxx</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     public string DestinationRegionId { get; set; }
 
                     /// <summary>
-                    /// <para>The error message that is returned.</para>
+                    /// <para>The error message.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>region not found</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 }
 
                 /// <summary>
-                /// <para>The number of successful tasks.</para>
+                /// <para>The number of successes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -85,10 +85,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether all tasks are successful. Valid values:</para>
+            /// <para>Indicates whether all requests were successful. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: All tasks are successful.</description></item>
-            /// <item><description>false: Failed tasks exist.</description></item>
+            /// <item><description>true: All requests were successful.</description></item>
+            /// <item><description>false: Some requests failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

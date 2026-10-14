@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>8080</para>
+        /// <para>80</para>
         /// </summary>
         [NameInMap("ListenerPort")]
         [Validation(Required=false)]

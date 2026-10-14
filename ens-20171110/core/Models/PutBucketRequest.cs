@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class PutBucketRequest : TeaModel {
         /// <summary>
-        /// <para>The access control list (ACL) of the bucket. private public-read-write public-read</para>
+        /// <para>Bucket permission type: private (default). public-read-write: Allows public read and write access. public-read: Allows public read access.</para>
         /// 
         /// <b>Example:</b>
         /// <para>private</para>
@@ -20,52 +20,57 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string BucketAcl { get; set; }
 
         /// <summary>
-        /// <para>The name of the bucket. This parameter can contain 3 to 50 characters in length and can contain only lowercase letters, digits, and hyphens (-). The name cannot start or end with a hyphen (-).</para>
+        /// <para>Bucket name. Must be 3 to 50 characters long. Use only lowercase letters, numbers, and hyphens (-). Cannot start or end with a hyphen.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>my-bucket</para>
         /// </summary>
         [NameInMap("BucketName")]
         [Validation(Required=false)]
         public string BucketName { get; set; }
 
         /// <summary>
-        /// <para>The description. The description can be 0 to 128 characters in length, and can contain Chinese characters and emoticons.</para>
+        /// <para>Comment. Up to 128 characters, including letters, digits, Chinese characters, and emojis.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>numb</para>
+        /// <para>this is comment</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The scheduling scope. This parameter takes effect only when the value of the LogicalBucketType parameter is standard. Valid values:</para>
+        /// <para>Scheduling scope. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>domestic</b>: Chinese mainland.</description></item>
-        /// <item><description><b>oversea</b>: outside the Chinese mainland.</description></item>
+        /// <item><description><para>domestic (within China)</para>
+        /// </description></item>
+        /// <item><description><para>outside China</para>
+        /// </description></item>
         /// </list>
+        /// <remarks>
+        /// <para>You must specify this parameter when creating a global bucket.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>domestic</para>
+        /// <para>sink</para>
         /// </summary>
         [NameInMap("DispatchScope")]
         [Validation(Required=false)]
         public string DispatchScope { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the node is located. If this parameter is not specified, the node is the global default node.</para>
+        /// <para>Edge zone ID. If not specified, the global default edge zone is used.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-beijing-15</para>
+        /// <para>xx-xx-xx</para>
         /// </summary>
         [NameInMap("EnsRegionId")]
         [Validation(Required=false)]
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// <para>The type of the logical bucket. Valid values: sink standard (default)</para>
+        /// <para>The logical type of the bucket. Valid values: sink: A sink bucket on a specified node. standard: A standard global bucket. This is the default value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sink</para>

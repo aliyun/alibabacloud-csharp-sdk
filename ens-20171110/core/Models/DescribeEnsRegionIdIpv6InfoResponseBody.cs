@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <para>The ID of the node.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>cn-chengdu-xxxx-4</para>
+            /// <para>cn-chengdu-****-4</para>
             /// </summary>
             [NameInMap("EnsRegionId")]
             [Validation(Required=false)]
@@ -39,8 +39,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>Specifies whether IPv6 is supported. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true</para>
+            /// </description></item>
+            /// <item><description><para>false</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

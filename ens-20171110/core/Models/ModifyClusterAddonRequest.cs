@@ -9,15 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ModifyClusterAddonRequest : TeaModel {
+        /// <summary>
+        /// <para>The parameter settings of the add-on.</para>
+        /// </summary>
         [NameInMap("Addon")]
         [Validation(Required=false)]
         public ModifyClusterAddonRequestAddon Addon { get; set; }
         public class ModifyClusterAddonRequestAddon : TeaModel {
+            /// <summary>
+            /// <para>The schema of the custom parameters for the add-on.</para>
+            /// </summary>
             [NameInMap("ConfigSchema")]
             [Validation(Required=false)]
             public List<ModifyClusterAddonRequestAddonConfigSchema> ConfigSchema { get; set; }
             public class ModifyClusterAddonRequestAddonConfigSchema : TeaModel {
                 /// <summary>
+                /// <para>The application version.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>d0ead1f4e28de0f9e3c86588409a88a4</para>
                 /// </summary>
@@ -26,6 +34,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string AppVersion { get; set; }
 
                 /// <summary>
+                /// <para>The configuration version.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>d0ead1f4e28de0f9e3c86588409a88a4</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string ConfigVersion { get; set; }
 
                 /// <summary>
+                /// <para>The name of the add-on.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>edge-csi-lite</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>The custom parameters.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;k1&quot;:&quot;v1&quot;}</para>
                 /// </summary>
@@ -52,6 +66,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             }
 
             /// <summary>
+            /// <para>The name of the add-on.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>edge-csi-lite</para>
             /// </summary>
@@ -60,6 +76,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The version number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>v1</para>
             /// </summary>
@@ -70,6 +88,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
+        /// <para>The ID of the cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -80,6 +99,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The name of the add-on. It must reference an installed add-on in the target cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

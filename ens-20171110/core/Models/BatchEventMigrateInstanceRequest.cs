@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class BatchEventMigrateInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The details of events.</para>
+        /// <para>The list of events.</para>
         /// </summary>
         [NameInMap("EventInfos")]
         [Validation(Required=false)]
@@ -19,9 +19,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The data migration policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>abandon: does not migrate data. This is the default value.</description></item>
-            /// <item><description>force_transfer: forcibly migrates data.</description></item>
-            /// <item><description>try_transfer: Migrate data as much as possible.</description></item>
+            /// <item><description>abandon: Does not migrate data. This is the default value.</description></item>
+            /// <item><description>force_transfer: Performs forcible migration of EPS resource data.</description></item>
+            /// <item><description>try_transfer: Migrates data on a best-effort basis.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string DataPolicy { get; set; }
 
             /// <summary>
-            /// <para>Event ID e-\*.</para>
+            /// <para>The event ID, in the format of e-*.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -43,10 +43,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string EventId { get; set; }
 
             /// <summary>
-            /// <para>The type of the O\&amp;M task. Valid values:</para>
+            /// <para>The O&amp;M task type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>immediate</description></item>
-            /// <item><description>scheduled</description></item>
+            /// <item><description>immediate: immediate execution.</description></item>
+            /// <item><description>scheduled: scheduled execution.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -58,9 +58,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string OpsType { get; set; }
 
             /// <summary>
-            /// <para>The password of the instance. This parameter is optional. If you do not specify this parameter, a random password is used.</para>
-            /// <para>The password must be 8 to 30 characters in length. The password must contain uppercase letters, lowercase letters, digits, and special characters.</para>
-            /// <para>Note that you cannot enter a password for scheduled execution.</para>
+            /// <para>The instance password. This parameter is optional. If you do not specify this parameter, a random password is used.</para>
+            /// <para>The password must be 8 to 30 characters in length and must contain uppercase letters, lowercase letters, and digits.</para>
+            /// <para>Note: Password specification is not supported for scheduled execution.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AAaa1234</para>
@@ -70,7 +70,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Password { get; set; }
 
             /// <summary>
-            /// <para>The execution time of the reservation. The timestamp is measured in milliseconds. If the OpsType parameter is set to scheduled, this parameter is required.</para>
+            /// <para>The scheduled execution time. The value is a timestamp in milliseconds.
+            /// This parameter is required when OpsType is set to scheduled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1742452232000</para>
@@ -84,7 +85,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string PlanUtcTime { get; set; }
 
             /// <summary>
-            /// <para>Resource ID i-\*.</para>
+            /// <para>The resource ID, in the format of i-*.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

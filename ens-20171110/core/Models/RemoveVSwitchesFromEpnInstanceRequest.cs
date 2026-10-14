@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class RemoveVSwitchesFromEpnInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of theEPN instance.</para>
+        /// <para>The Edge Private Network (EPN) instance ID. The NetworkingModel of the EPN instance must be Connection or SpeedUpAndConnection. The SpeedUp pattern does not support vSwitch operations.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,11 +21,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EPNInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The internal networking information that you want to delete.</para>
+        /// <para>The internal network configuration information to remove.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>VSwitchesInfo=[{&quot;VSwitchId&quot;:&quot;vs-ixxxx&quot;},{&quot;VSwitchId&quot;:&quot;vs-ixxxx&quot;}]</para>
+        /// <para>[{&quot;VSwitchId&quot;:&quot;vs-ixxxx&quot;}]</para>
         /// </summary>
         [NameInMap("VSwitchesInfo")]
         [Validation(Required=false)]

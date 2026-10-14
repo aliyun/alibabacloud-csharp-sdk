@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeServerLoadBalancerListenMonitorResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request。</para>
         /// 
         /// <b>Example:</b>
         /// <para>125B04C7-3D0D-4245-AF96-14E3758E3F06</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The array of the monitoring data.</para>
+        /// <para>The array of objects.</para>
         /// </summary>
         [NameInMap("ServerLoadBalancerMonitorData")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public int? Acc { get; set; }
 
             /// <summary>
-            /// <para>The business time of the log. Logs are collected every minute.</para>
+            /// <para>The log business time. The log collection granularity is 1 minute.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-05-16 15:00:00</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string BizTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the node to which the ELB instance belongs.</para>
+            /// <para>The ID of the edge node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-fuzhou-7</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string EnsRegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the ELB instance.</para>
+            /// <para>The load balancing instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lb-5rcvo1n1t3hykfhhjwjgqp****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string LoadBalancerId { get; set; }
 
             /// <summary>
-            /// <para>The name of the ELB instance.</para>
+            /// <para>The load balancing instance name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>esk-edge-service-lb-8377****</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string LoadBalancerName { get; set; }
 
             /// <summary>
-            /// <para>The specification of the ELB instance.</para>
+            /// <para>The load balancing instance specification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>elb.s2.medium</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string LoadBalancerSpec { get; set; }
 
             /// <summary>
-            /// <para>The request protocol, such as http, https, or tcp.</para>
+            /// <para>The request protocol, such as http, https, and tcp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tcp</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Proto { get; set; }
 
             /// <summary>
-            /// <para>The number of requests with HTTP 2xx status code returned.</para>
+            /// <para>The number of 2xx status code responses.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public int? Reqs2xx { get; set; }
 
             /// <summary>
-            /// <para>The number of requests with HTTP 3xx status code returned.</para>
+            /// <para>The number of 3xx status code responses.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public int? Reqs3xx { get; set; }
 
             /// <summary>
-            /// <para>The number of requests with HTTP 4xx status code returned.</para>
+            /// <para>The number of 4xx status code responses.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public int? Reqs4xx { get; set; }
 
             /// <summary>
-            /// <para>The number of requests with HTTP 5xx status code returned.</para>
+            /// <para>The number of 5xx status code responses.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public int? Reqs5xx { get; set; }
 
             /// <summary>
-            /// <para>The average response time. Unit: milliseconds.</para>
+            /// <para>The average request latency in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1037</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Vip { get; set; }
 
             /// <summary>
-            /// <para>The ID of the tunnel.</para>
+            /// <para>The tunnel ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>52497</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public int? Vni { get; set; }
 
             /// <summary>
-            /// <para>The VIP port, such as 80, 8080, or 443.</para>
+            /// <para>The VIP port, such as 80, 8080, and 443.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>

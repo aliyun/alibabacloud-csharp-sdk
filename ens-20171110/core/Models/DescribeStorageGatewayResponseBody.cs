@@ -100,10 +100,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The status of the storage gateway. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>creating</description></item>
-            /// <item><description>available</description></item>
-            /// <item><description>deleting</description></item>
-            /// <item><description>deleted</description></item>
+            /// <item><description><para>creating</para>
+            /// </description></item>
+            /// <item><description><para>available</para>
+            /// </description></item>
+            /// <item><description><para>deleting</para>
+            /// </description></item>
+            /// <item><description><para>deleted</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeployInstanceSDGResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data object.</para>
+        /// <para>The returned Data object.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DeployInstanceSDGResponseBodyData Data { get; set; }
         public class DeployInstanceSDGResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The response message. Success is returned for a successful request.</para>
+            /// <para>The response message. The value success is returned if the request is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The execution result of the synchronization request.</para>
+            /// <para>The execution result of the synchronous request.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public DeployInstanceSDGResponseBodyDataResult Result { get; set; }
             public class DeployInstanceSDGResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// <para>The number of failed tasks.</para>
+                /// <para>The number of failures.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -44,14 +44,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public long? FailedCount { get; set; }
 
                 /// <summary>
-                /// <para>Details about the failed tasks.</para>
+                /// <para>The list of failure details.</para>
                 /// </summary>
                 [NameInMap("FailedItems")]
                 [Validation(Required=false)]
                 public List<DeployInstanceSDGResponseBodyDataResultFailedItems> FailedItems { get; set; }
                 public class DeployInstanceSDGResponseBodyDataResultFailedItems : TeaModel {
                     /// <summary>
-                    /// <para>The error message that is returned.</para>
+                    /// <para>The error message.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>sdg not found</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     public string ErrMessage { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the instance.</para>
+                    /// <para>The instance ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>aic-xxxxx-0</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 }
 
                 /// <summary>
-                /// <para>The number of successful tasks.</para>
+                /// <para>The number of successes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -85,10 +85,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether all tasks are successful. Valid values:</para>
+            /// <para>Indicates whether all requests are successful. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: All tasks are successful.</description></item>
-            /// <item><description>false: Failed tasks exist.</description></item>
+            /// <item><description>true: All requests are successful.</description></item>
+            /// <item><description>false: Some requests failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

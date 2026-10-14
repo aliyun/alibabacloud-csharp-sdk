@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The new description of the EIP. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</para>
+        /// <para>The new description of the EIP. The description must be 2 to 256 characters in length and cannot start with http\:// or https\://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The new name of the EIP. The name must be 2 to 128 characters in length and cannot start with http:// or https://.</para>
+        /// <para>The new name of the EIP. The name must be 2 to 128 characters in length and cannot start with http\:// or https\://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-api-modify</para>

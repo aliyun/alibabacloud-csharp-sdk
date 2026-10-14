@@ -36,6 +36,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
+            /// <summary>
+            /// <para>Description.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
@@ -120,10 +126,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 /// <summary>
                 /// <para>The status of the mount target. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>active: The mount target is available.</description></item>
-                /// <item><description>inactive: The mount target is unavailable.</description></item>
-                /// <item><description>pending: The task is running.</description></item>
-                /// <item><description>deleting: The mount target is being deleted.</description></item>
+                /// <item><description><para>active: The mount target is available.</para>
+                /// </description></item>
+                /// <item><description><para>inactive: The mount target is unavailable.</para>
+                /// </description></item>
+                /// <item><description><para>pending: The task is running.</para>
+                /// </description></item>
+                /// <item><description><para>deleting: The mount target is being deleted.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -148,8 +158,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The protocol type of the file system. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>NFS: Network File System (NFS)</description></item>
-            /// <item><description>SMB: Server Message Block (SMB)</description></item>
+            /// <item><description><para>NFS: Network File System (NFS)</para>
+            /// </description></item>
+            /// <item><description><para>SMB: Server Message Block (SMB)</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -162,12 +174,18 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The status of the file system. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>pending: The file system is being created or modified.</description></item>
-            /// <item><description>running: The file system is available. Before you create a mount target for the file system, make sure that the file system is in the running state.</description></item>
-            /// <item><description>stopped: The file system is unavailable.</description></item>
-            /// <item><description>extending: The file system is being scaled out.</description></item>
-            /// <item><description>stopping: The file system is being disabled.</description></item>
-            /// <item><description>deleting: The file system is being deleted.</description></item>
+            /// <item><description><para>pending: The file system is being created or modified.</para>
+            /// </description></item>
+            /// <item><description><para>running: The file system is available. Before you create a mount target for the file system, make sure that the file system is in the running state.</para>
+            /// </description></item>
+            /// <item><description><para>stopped: The file system is unavailable.</para>
+            /// </description></item>
+            /// <item><description><para>extending: The file system is being scaled out.</para>
+            /// </description></item>
+            /// <item><description><para>stopping: The file system is being disabled.</para>
+            /// </description></item>
+            /// <item><description><para>deleting: The file system is being deleted.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -180,8 +198,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The storage type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>capacity: Capacity NAS file systems</description></item>
-            /// <item><description>performance: Performance NAS file systems</description></item>
+            /// <item><description><para>capacity: Capacity NAS file systems</para>
+            /// </description></item>
+            /// <item><description><para>performance: Performance NAS file systems</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

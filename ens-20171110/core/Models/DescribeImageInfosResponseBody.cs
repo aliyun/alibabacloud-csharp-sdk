@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeImageInfosResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code that is returned.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -66,6 +66,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [NameInMap("ImageId")]
                 [Validation(Required=false)]
                 public string ImageId { get; set; }
+
+                [NameInMap("ImageOwnerAlias")]
+                [Validation(Required=false)]
+                public string ImageOwnerAlias { get; set; }
 
                 [NameInMap("ImageSize")]
                 [Validation(Required=false)]

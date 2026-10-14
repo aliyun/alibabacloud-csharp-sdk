@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The type of the resource with which the route table is associated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VSwitch</b></description></item>
-        /// <item><description><b>Gateway</b></description></item>
+        /// <item><description><para><b>VSwitch</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Gateway</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

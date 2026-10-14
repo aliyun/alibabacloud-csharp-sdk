@@ -30,8 +30,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The direction in which the security group rule is applied.</para>
             /// <list type="bullet">
-            /// <item><description>egress</description></item>
-            /// <item><description>ingress</description></item>
+            /// <item><description><para>egress</para>
+            /// </description></item>
+            /// <item><description><para>ingress</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -45,11 +47,16 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>Protocol type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>TCP</description></item>
-            /// <item><description>UDP</description></item>
-            /// <item><description>ICMP: the ICMP protocol</description></item>
-            /// <item><description>ICMPv6: the IPv6 ICMP protocol.</description></item>
-            /// <item><description>ALL: All protocols are supported.</description></item>
+            /// <item><description><para>TCP</para>
+            /// </description></item>
+            /// <item><description><para>UDP</para>
+            /// </description></item>
+            /// <item><description><para>ICMP: the ICMP protocol</para>
+            /// </description></item>
+            /// <item><description><para>ICMPv6: the IPv6 ICMP protocol.</para>
+            /// </description></item>
+            /// <item><description><para>ALL: All protocols are supported.</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -63,7 +70,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The destination IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.</para>
             /// <remarks>
-            /// <para> This parameter and the <c>DestCidrIp</c> parameter cannot be set at the same time.</para>
+            /// <para>This parameter and the <c>DestCidrIp</c> parameter cannot be set at the same time.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -76,7 +83,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The source IPv6 CIDR block of the security group rule. IPv6 CIDR blocks and IPv6 addresses are supported.</para>
             /// <remarks>
-            /// <para> This parameter and the <c>DestCidrIp</c> parameter cannot be set at the same time.</para>
+            /// <para>This parameter and the <c>DestCidrIp</c> parameter cannot be set at the same time.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -89,8 +96,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The action specified in the security group rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Accept</description></item>
-            /// <item><description>Drop</description></item>
+            /// <item><description><para>Accept</para>
+            /// </description></item>
+            /// <item><description><para>Drop</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -104,9 +113,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The destination port range of the security group rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>If you set IpProtocol to TCP or UDP, the valid values of this parameter are 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.</description></item>
-            /// <item><description>If you set IpProtocol to ICMP, the port range is -1/-1.</description></item>
-            /// <item><description>If you set IpProtocol to ALL, the port number range is -1/-1.</description></item>
+            /// <item><description><para>If you set IpProtocol to TCP or UDP, the valid values of this parameter are 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.</para>
+            /// </description></item>
+            /// <item><description><para>If you set IpProtocol to ICMP, the port range is -1/-1.</para>
+            /// </description></item>
+            /// <item><description><para>If you set IpProtocol to ALL, the port number range is -1/-1.</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -141,9 +153,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The range of source port numbers for the protocols specified in the security group rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>If you set IpProtocol to TCP or UDP, the valid values of this parameter are 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.</description></item>
-            /// <item><description>If you set IpProtocol to ICMP, the port range is -1/-1.</description></item>
-            /// <item><description>If you set IpProtocol to ALL, the port range is -1/-1.</description></item>
+            /// <item><description><para>If you set IpProtocol to TCP or UDP, the valid values of this parameter are 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.</para>
+            /// </description></item>
+            /// <item><description><para>If you set IpProtocol to ICMP, the port range is -1/-1.</para>
+            /// </description></item>
+            /// <item><description><para>If you set IpProtocol to ALL, the port range is -1/-1.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

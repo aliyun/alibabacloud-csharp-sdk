@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeLoadBalancerUDPListenerAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The port used by the backend ELB server of the ELB instance. Valid values: <b>1</b> to <b>65535</b>.</para>
+        /// <para>The port used by the backend servers. Valid values: <b>1</b> to <b>65535</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8080</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? BackendServerPort { get; set; }
 
         /// <summary>
-        /// <para>The peak bandwidth of the Edge Load Balancer (ELB) instance. The default value is -1, which indicates that the bandwidth is not limited.</para>
+        /// <para>The peak bandwidth of the load balancer. A value of -1 indicates that no rate limit is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The name of the listener.</para>
+        /// <para>The listener name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -40,10 +40,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether EIP pass-through is enabled. Valid values:</para>
+        /// <para>Specifies whether to enable EIP passthrough. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b></description></item>
-        /// <item><description><b>off</b> (default)</description></item>
+        /// <item><description><para><b>on</b>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>off</b> (default): Disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EipTransmit { get; set; }
 
         /// <summary>
-        /// <para>The timeout period of a connection. Valid values: <b>10</b> to <b>900</b>. Unit: seconds.</para>
+        /// <para>The connection timeout period. Valid values: <b>10</b> to <b>900</b>. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>
@@ -64,10 +66,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? EstablishedTimeout { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the health check feature. Valid values:</para>
+        /// <para>Specifies whether to enable health checks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b></description></item>
-        /// <item><description><b>off</b></description></item>
+        /// <item><description><para><b>on</b>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>off</b>: Disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,7 +82,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string HealthCheck { get; set; }
 
         /// <summary>
-        /// <para>The port that is used for health checks. Valid values: <b>1</b> to <b>65535</b>. If you leave this parameter empty, the port specified by BackendServerPort is used for health checks.</para>
+        /// <para>The port used for health checks. Valid values: <b>1</b> to <b>65535</b>. If you do not specify this parameter, the value of <c>BackendServerPort</c> is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8000</para>
@@ -88,20 +92,23 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? HealthCheckConnectPort { get; set; }
 
         /// <summary>
-        /// <para>The timeout period for a health check response. If a backend server does not respond within the specified timeout period, the server fails the health check.</para>
+        /// <para>The timeout period for a health check response. If a backend ENS instance does not respond within the specified timeout period, the health check fails.</para>
         /// <list type="bullet">
-        /// <item><description>Default value: 5.</description></item>
-        /// <item><description>Valid values: <b>1</b> to <b>300</b>.</description></item>
-        /// <item><description>Unit: seconds.</description></item>
+        /// <item><description><para>Default value: 5.</para>
+        /// </description></item>
+        /// <item><description><para>Valid values: <b>1</b> to <b>300</b>.</para>
+        /// </description></item>
+        /// <item><description><para>Unit: seconds.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter takes effect only if the HealthCheck parameter is set to on.</para>
+        /// <item><description><para>This parameter takes effect only when <c>HealthCheck</c> is set to <c>on</c>.</para>
         /// </description></item>
-        /// <item><description><para>If the value of the HealthCheckTimeout property is smaller than the value of the HealthCheckInterval property, the timeout period specified by the HealthCheckTimeout property becomes invalid and the value of the HealthCheckInterval property is used as the timeout period.</para>
+        /// <item><description><para>If the value of <c>HealthCheckConnectTimeout</c> is less than the value of <c>HealthCheckInterval</c>, the value of <c>HealthCheckInterval</c> is used as the timeout period.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -111,7 +118,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? HealthCheckConnectTimeout { get; set; }
 
         /// <summary>
-        /// <para>The response string for UDP listener health checks. The string can be up to 64 characters in length and can contain only letters and digits.</para>
+        /// <para>The response string for UDP health checks. The string can contain only letters and digits and can be up to 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ok</para>
@@ -121,9 +128,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string HealthCheckExp { get; set; }
 
         /// <summary>
-        /// <para>The interval at which health checks are performed. Valid values: <b>1</b> to <b>50</b>. Unit: seconds.</para>
+        /// <para>The interval between health checks. Valid values: <b>1</b> to <b>50</b>. Unit: seconds.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only if you set HealthCheck to on.</para>
+        /// <para>This parameter takes effect only when <c>HealthCheck</c> is set to <c>on</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -134,7 +141,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? HealthCheckInterval { get; set; }
 
         /// <summary>
-        /// <para>The request string for UDP listener health checks. The string can be up to 64 characters in length and can contain only letters and digits.</para>
+        /// <para>The request string for UDP health checks. The string can contain only letters and digits and can be up to 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hello</para>
@@ -144,9 +151,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string HealthCheckReq { get; set; }
 
         /// <summary>
-        /// <para>The number of consecutive successful health checks that must occur before an unhealthy and inaccessible backend server is declared healthy and accessible. Valid values: <b>2</b> to <b>10</b>.</para>
+        /// <para>The number of consecutive successful health checks that must occur before a backend server can be declared healthy. Valid values: <b>2</b> to <b>10</b>.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only if you set HealthCheck to on.</para>
+        /// <para>This parameter takes effect only when <c>HealthCheck</c> is set to <c>on</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -167,7 +174,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? ListenerPort { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5D7597CF-1630-54EC-A945-624A33F2E7E8</para>
@@ -177,14 +184,22 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The routing algorithm. Valid values:</para>
+        /// <para>The scheduling algorithm. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>wrr</b>: Backend servers with higher weights receive more requests than those with lower weights.</description></item>
-        /// <item><description><b>wlc</b>: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections to a backend server. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.</description></item>
-        /// <item><description><b>rr</b>: Requests are distributed to backend servers in sequence.</description></item>
-        /// <item><description><b>sch</b>: consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</description></item>
-        /// <item><description><b>qch</b>: consistent hashing that is based on QUIC connection IDs. Requests that contain the same QUIC connection ID are distributed to the same backend server.</description></item>
-        /// <item><description><b>iqch</b>: consistent hashing that is based on specific three bytes of the iQUIC CIDs. Requests whose second to fourth bytes are the same are distributed to the same backend server.</description></item>
+        /// <item><description><para><b>wrr</b> (Weighted Round Robin): Backend servers with higher weights receive a larger proportion of requests.</para>
+        /// </description></item>
+        /// <item><description><para><b>wlc</b> (Weighted Least Connections): Requests are distributed based on both the weight and the current connection count of each backend server. If backend servers have the same weight, the server with the fewest connections receives more new requests.</para>
+        /// </description></item>
+        /// <item><description><para><b>rr</b> (Round Robin): Requests are distributed to backend servers sequentially.</para>
+        /// </description></item>
+        /// <item><description><para><b>sch</b> (Source IP Hash): Routes requests from the same source IP address to the same backend server by using a consistent hash of the source IP address.</para>
+        /// </description></item>
+        /// <item><description><para><b>tch</b> (4-tuple Hash): Routes packets from the same flow to the same backend server by using a consistent hash of the 4-tuple (source IP address, destination IP address, source port, and destination port).</para>
+        /// </description></item>
+        /// <item><description><para><b>qch</b> (QUIC Connection ID Hash): Uses a consistent hashing algorithm on the QUIC Connection ID to ensure that requests with the same connection ID are always routed to the same backend server.</para>
+        /// </description></item>
+        /// <item><description><para><b>iqch</b> (iQUIC CID Hash): Uses a consistent hashing algorithm on bytes 2, 3, and 4 of the iQUIC CID. Requests where these three bytes are the same are routed to the same backend server.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -197,11 +212,16 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The status of the listener. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Running</b></description></item>
-        /// <item><description><b>Stopped</b></description></item>
-        /// <item><description><b>Starting</b></description></item>
-        /// <item><description><b>Configuring</b></description></item>
-        /// <item><description><b>Stopping</b></description></item>
+        /// <item><description><para><b>Running</b>: The listener is running.</para>
+        /// </description></item>
+        /// <item><description><para><b>Stopped</b>: The listener is stopped.</para>
+        /// </description></item>
+        /// <item><description><para><b>Starting</b>: The listener is starting.</para>
+        /// </description></item>
+        /// <item><description><para><b>Configuring</b>: The listener is being configured.</para>
+        /// </description></item>
+        /// <item><description><para><b>Stopping</b>: The listener is being stopped.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -212,9 +232,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The number of consecutive failed health checks that must occur before a healthy and accessible backend server is declared unhealthy and inaccessible. Valid values: <b>2</b> to <b>10</b>.</para>
+        /// <para>The number of consecutive failed health checks that must occur before a backend server can be declared unhealthy. Valid values: <b>2</b> to <b>10</b>.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only if you set HealthCheck to on.</para>
+        /// <para>This parameter takes effect only when <c>HealthCheck</c> is set to <c>on</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

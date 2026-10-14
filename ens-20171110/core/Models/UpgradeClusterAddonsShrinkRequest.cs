@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class UpgradeClusterAddonsShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The component information.</para>
+        /// </summary>
         [NameInMap("Addons")]
         [Validation(Required=false)]
         public string AddonsShrink { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

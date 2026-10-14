@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ModifyAICInstanceTypeRequest : TeaModel {
         /// <summary>
+        /// <para>One or more environment variables to set during instance initialization.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[object Object]</para>
         /// </summary>
@@ -18,6 +20,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnvironmentVar { get; set; }
 
         /// <summary>
+        /// <para>The refresh rate. Unit: Hz. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>30</description></item>
+        /// <item><description>60</description></item>
+        /// <item><description>120</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -26,6 +35,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public long? Frequency { get; set; }
 
         /// <summary>
+        /// <para>The image ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +46,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ImageId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the instance whose specifications you want to modify.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +57,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The target AIC container instance specifications.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,6 +68,18 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceType { get; set; }
 
         /// <summary>
+        /// <para>The resolution. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1920*1080</description></item>
+        /// <item><description>1080*1920</description></item>
+        /// <item><description>1280*720</description></item>
+        /// <item><description>720*1280</description></item>
+        /// <item><description>2400*1080</description></item>
+        /// <item><description>1080*2400</description></item>
+        /// <item><description>1920*864</description></item>
+        /// <item><description>864*1920</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>720*1280</para>
         /// </summary>

@@ -87,8 +87,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>Indicates whether all tasks are successful. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: All tasks are successful.</description></item>
-            /// <item><description>false: Failed tasks exist.</description></item>
+            /// <item><description><para>true: All tasks are successful.</para>
+            /// </description></item>
+            /// <item><description><para>false: Failed tasks exist.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

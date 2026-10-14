@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public List<DescribeRegionIspsResponseBodyIsps> Isps { get; set; }
         public class DescribeRegionIspsResponseBodyIsps : TeaModel {
             /// <summary>
-            /// <para>The code of the ISP.</para>
+            /// <para>The ISP code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cmcc</para>
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The name of the ISP.</para>
+            /// <para>The ISP name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>move</para>
+            /// <para>China Mobile</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

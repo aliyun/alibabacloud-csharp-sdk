@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Public Key Grouping</para>
+        /// <para>The group of the public key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>g-test</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string KeyGroup { get; set; }
 
         /// <summary>
-        /// <para>Public Key Name</para>
+        /// <para>The name of the public key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mykey</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string KeyName { get; set; }
 
         /// <summary>
-        /// <para>Public key type</para>
+        /// <para>The type of the public key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>adb</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string KeyType { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of records to display per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

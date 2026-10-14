@@ -18,7 +18,17 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"cn-beijing", "ens.aliyuncs.com"},
+                {"cn-chengdu", "ens.aliyuncs.com"},
+                {"cn-hangzhou", "ens.aliyuncs.com"},
+                {"cn-heyuan", "ens.aliyuncs.com"},
+                {"cn-shanghai", "ens.aliyuncs.com"},
+                {"cn-wulanchabu", "ens.aliyuncs.com"},
+                {"cn-zhangjiakou", "ens.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("ens", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,7 +49,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a network access control list (ACL) with a network.</para>
+        /// <para>Calls the AccosicateNetworkAcl operation to attach a network ACL to a network.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -85,7 +95,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a network access control list (ACL) with a network.</para>
+        /// <para>Calls the AccosicateNetworkAcl operation to attach a network ACL to a network.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -131,7 +141,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a network access control list (ACL) with a network.</para>
+        /// <para>Calls the AccosicateNetworkAcl operation to attach a network ACL to a network.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -149,7 +159,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a network access control list (ACL) with a network.</para>
+        /// <para>Calls the AccosicateNetworkAcl operation to attach a network ACL to a network.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -172,9 +182,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per account.</description></item>
+        /// <item><description>API call rate limit: 100 calls per second.</description></item>
+        /// <item><description>Per-user call rate limit: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -232,9 +242,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per account.</description></item>
+        /// <item><description>API call rate limit: 100 calls per second.</description></item>
+        /// <item><description>Per-user call rate limit: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -292,9 +302,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per account.</description></item>
+        /// <item><description>API call rate limit: 100 calls per second.</description></item>
+        /// <item><description>Per-user call rate limit: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -318,9 +328,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per account.</description></item>
+        /// <item><description>API call rate limit: 100 calls per second.</description></item>
+        /// <item><description>Per-user call rate limit: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -344,9 +354,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 5 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 5 times per second per user.</description></item>
         /// <item><description>Internal networks and IPv4 addresses are not supported.</description></item>
         /// </list>
         /// </description>
@@ -403,9 +413,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 5 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 5 times per second per user.</description></item>
         /// <item><description>Internal networks and IPv4 addresses are not supported.</description></item>
         /// </list>
         /// </description>
@@ -462,9 +472,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 5 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 5 times per second per user.</description></item>
         /// <item><description>Internal networks and IPv4 addresses are not supported.</description></item>
         /// </list>
         /// </description>
@@ -489,9 +499,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 5 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 5 times per second per user.</description></item>
         /// <item><description>Internal networks and IPv4 addresses are not supported.</description></item>
         /// </list>
         /// </description>
@@ -767,7 +777,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates an elastic IP address (EIP) with a cloud resource that is deployed in the same region.</para>
+        /// <para>Associates an Elastic IP Address (EIP) with a cloud product instance on the same edge node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -821,7 +831,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates an elastic IP address (EIP) with a cloud resource that is deployed in the same region.</para>
+        /// <para>Associates an Elastic IP Address (EIP) with a cloud product instance on the same edge node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -875,7 +885,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates an elastic IP address (EIP) with a cloud resource that is deployed in the same region.</para>
+        /// <para>Associates an Elastic IP Address (EIP) with a cloud product instance on the same edge node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -893,7 +903,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates an elastic IP address (EIP) with a cloud resource that is deployed in the same region.</para>
+        /// <para>Associates an Elastic IP Address (EIP) with a cloud product instance on the same edge node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -916,7 +926,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation to associate an HAVIP, take note of the following items:</para>
+        /// <para>When you To associate an HAVIP, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>An HAVIP immediately takes effect after it is associated. You do not need to restart the ENS instance. However, you need to associate the HAVIP with the ENI of the ENS instance.</description></item>
         /// <item><description>The HAVIP and ENS instance must belong to the same vSwitch.</description></item>
@@ -982,7 +992,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation to associate an HAVIP, take note of the following items:</para>
+        /// <para>When you To associate an HAVIP, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>An HAVIP immediately takes effect after it is associated. You do not need to restart the ENS instance. However, you need to associate the HAVIP with the ENI of the ENS instance.</description></item>
         /// <item><description>The HAVIP and ENS instance must belong to the same vSwitch.</description></item>
@@ -1048,7 +1058,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation to associate an HAVIP, take note of the following items:</para>
+        /// <para>When you To associate an HAVIP, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>An HAVIP immediately takes effect after it is associated. You do not need to restart the ENS instance. However, you need to associate the HAVIP with the ENI of the ENS instance.</description></item>
         /// <item><description>The HAVIP and ENS instance must belong to the same vSwitch.</description></item>
@@ -1082,7 +1092,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation to associate an HAVIP, take note of the following items:</para>
+        /// <para>When you To associate an HAVIP, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>An HAVIP immediately takes effect after it is associated. You do not need to restart the ENS instance. However, you need to associate the HAVIP with the ENI of the ENS instance.</description></item>
         /// <item><description>The HAVIP and ENS instance must belong to the same vSwitch.</description></item>
@@ -1247,16 +1257,17 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an Edge Node Service (ENS) instance to Container Service for Kubernetes (ACK).</para>
+        /// <para>Add ENS instances to Container Service for Kubernetes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h1><a href="#"></a>Usage notes</h1>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per account.</description></item>
-        /// <item><description>After you execute the command, the instance restarts loading.</description></item>
-        /// <item><description>Limits: The instance has at least two vCPUs and 4 GB memory. An image of CentOS 7.4 or later is required.</description></item>
+        /// <item><description>Maximum request rate per user: 10 requests per second.</description></item>
+        /// <item><description>After the command script runs successfully, the instance restarts and loads automatically.</description></item>
+        /// <item><description>Instance requirements: minimum size of 2C4G and CentOS 7.4 or later image.
+        /// &lt;props=&quot;china&quot;&gt;
+        /// Before calling this operation, <a href="https://cs.console.aliyun.com/#/k8s/overview">activate Container Service for Kubernetes</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1303,16 +1314,17 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an Edge Node Service (ENS) instance to Container Service for Kubernetes (ACK).</para>
+        /// <para>Add ENS instances to Container Service for Kubernetes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h1><a href="#"></a>Usage notes</h1>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per account.</description></item>
-        /// <item><description>After you execute the command, the instance restarts loading.</description></item>
-        /// <item><description>Limits: The instance has at least two vCPUs and 4 GB memory. An image of CentOS 7.4 or later is required.</description></item>
+        /// <item><description>Maximum request rate per user: 10 requests per second.</description></item>
+        /// <item><description>After the command script runs successfully, the instance restarts and loads automatically.</description></item>
+        /// <item><description>Instance requirements: minimum size of 2C4G and CentOS 7.4 or later image.
+        /// &lt;props=&quot;china&quot;&gt;
+        /// Before calling this operation, <a href="https://cs.console.aliyun.com/#/k8s/overview">activate Container Service for Kubernetes</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1359,16 +1371,17 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an Edge Node Service (ENS) instance to Container Service for Kubernetes (ACK).</para>
+        /// <para>Add ENS instances to Container Service for Kubernetes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h1><a href="#"></a>Usage notes</h1>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per account.</description></item>
-        /// <item><description>After you execute the command, the instance restarts loading.</description></item>
-        /// <item><description>Limits: The instance has at least two vCPUs and 4 GB memory. An image of CentOS 7.4 or later is required.</description></item>
+        /// <item><description>Maximum request rate per user: 10 requests per second.</description></item>
+        /// <item><description>After the command script runs successfully, the instance restarts and loads automatically.</description></item>
+        /// <item><description>Instance requirements: minimum size of 2C4G and CentOS 7.4 or later image.
+        /// &lt;props=&quot;china&quot;&gt;
+        /// Before calling this operation, <a href="https://cs.console.aliyun.com/#/k8s/overview">activate Container Service for Kubernetes</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1387,16 +1400,17 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an Edge Node Service (ENS) instance to Container Service for Kubernetes (ACK).</para>
+        /// <para>Add ENS instances to Container Service for Kubernetes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h1><a href="#"></a>Usage notes</h1>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per account.</description></item>
-        /// <item><description>After you execute the command, the instance restarts loading.</description></item>
-        /// <item><description>Limits: The instance has at least two vCPUs and 4 GB memory. An image of CentOS 7.4 or later is required.</description></item>
+        /// <item><description>Maximum request rate per user: 10 requests per second.</description></item>
+        /// <item><description>After the command script runs successfully, the instance restarts and loads automatically.</description></item>
+        /// <item><description>Instance requirements: minimum size of 2C4G and CentOS 7.4 or later image.
+        /// &lt;props=&quot;china&quot;&gt;
+        /// Before calling this operation, <a href="https://cs.console.aliyun.com/#/k8s/overview">activate Container Service for Kubernetes</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1415,7 +1429,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches a shared data group (SDG) to the corresponding Android in Container (AIC) instance.</para>
+        /// <para>Attaches an SDG to the corresponding AIC instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1483,7 +1497,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches a shared data group (SDG) to the corresponding Android in Container (AIC) instance.</para>
+        /// <para>Attaches an SDG to the corresponding AIC instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1551,7 +1565,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches a shared data group (SDG) to the corresponding Android in Container (AIC) instance.</para>
+        /// <para>Attaches an SDG to the corresponding AIC instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1569,7 +1583,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches a shared data group (SDG) to the corresponding Android in Container (AIC) instance.</para>
+        /// <para>Attaches an SDG to the corresponding AIC instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1587,7 +1601,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds existing nodes to a specific node pool. You can add existing ENS instances to an ECK cluster as worker nodes. You can also add removed worker nodes back to the node pool by invoking AttachInstancesToNodePool.</para>
+        /// <para>Adds existing instances to a node pool. You can call this operation to add existing Edge Node Service (ENS) instances to an ECK cluster as worker nodes, or to re-add node instances to a node pool after they are removed.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1643,7 +1657,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds existing nodes to a specific node pool. You can add existing ENS instances to an ECK cluster as worker nodes. You can also add removed worker nodes back to the node pool by invoking AttachInstancesToNodePool.</para>
+        /// <para>Adds existing instances to a node pool. You can call this operation to add existing Edge Node Service (ENS) instances to an ECK cluster as worker nodes, or to re-add node instances to a node pool after they are removed.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1699,7 +1713,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds existing nodes to a specific node pool. You can add existing ENS instances to an ECK cluster as worker nodes. You can also add removed worker nodes back to the node pool by invoking AttachInstancesToNodePool.</para>
+        /// <para>Adds existing instances to a node pool. You can call this operation to add existing Edge Node Service (ENS) instances to an ECK cluster as worker nodes, or to re-add node instances to a node pool after they are removed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1717,7 +1731,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds existing nodes to a specific node pool. You can add existing ENS instances to an ECK cluster as worker nodes. You can also add removed worker nodes back to the node pool by invoking AttachInstancesToNodePool.</para>
+        /// <para>Adds existing instances to a node pool. You can call this operation to add existing Edge Node Service (ENS) instances to an ECK cluster as worker nodes, or to re-add node instances to a node pool after they are removed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1735,17 +1749,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a Secure Shell (SSH) key pair to specific instances. You can bind a maximum of 30 instances at a time.</para>
+        /// <para>Attaches an SSH key pair to up to 30 instances in a single call.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a></h2>
-        /// <para>This operation is used to bind a key pair to instances. Only disabled instances are supported.</para>
+        /// <para>You can only attach a key pair to stopped instances.</para>
         /// <list type="bullet">
-        /// <item><description>You can bind a maximum of 30 instances at a time.</description></item>
-        /// <item><description>At least one of the key_pair_name and key_pair_id parameters is not empty.</description></item>
-        /// <item><description>Specify the key_pair_id parameter when you call this parameter. The key_pair_name parameter will be discarded.</description></item>
+        /// <item><description>Specify up to 30 instances per call.</description></item>
+        /// <item><description>Specify either <c>KeyPairName</c> or <c>KeyPairId</c>.</description></item>
+        /// <item><description>We recommend using <c>KeyPairId</c>, as <c>KeyPairName</c> will be deprecated.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1802,17 +1815,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a Secure Shell (SSH) key pair to specific instances. You can bind a maximum of 30 instances at a time.</para>
+        /// <para>Attaches an SSH key pair to up to 30 instances in a single call.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a></h2>
-        /// <para>This operation is used to bind a key pair to instances. Only disabled instances are supported.</para>
+        /// <para>You can only attach a key pair to stopped instances.</para>
         /// <list type="bullet">
-        /// <item><description>You can bind a maximum of 30 instances at a time.</description></item>
-        /// <item><description>At least one of the key_pair_name and key_pair_id parameters is not empty.</description></item>
-        /// <item><description>Specify the key_pair_id parameter when you call this parameter. The key_pair_name parameter will be discarded.</description></item>
+        /// <item><description>Specify up to 30 instances per call.</description></item>
+        /// <item><description>Specify either <c>KeyPairName</c> or <c>KeyPairId</c>.</description></item>
+        /// <item><description>We recommend using <c>KeyPairId</c>, as <c>KeyPairName</c> will be deprecated.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1869,17 +1881,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a Secure Shell (SSH) key pair to specific instances. You can bind a maximum of 30 instances at a time.</para>
+        /// <para>Attaches an SSH key pair to up to 30 instances in a single call.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a></h2>
-        /// <para>This operation is used to bind a key pair to instances. Only disabled instances are supported.</para>
+        /// <para>You can only attach a key pair to stopped instances.</para>
         /// <list type="bullet">
-        /// <item><description>You can bind a maximum of 30 instances at a time.</description></item>
-        /// <item><description>At least one of the key_pair_name and key_pair_id parameters is not empty.</description></item>
-        /// <item><description>Specify the key_pair_id parameter when you call this parameter. The key_pair_name parameter will be discarded.</description></item>
+        /// <item><description>Specify up to 30 instances per call.</description></item>
+        /// <item><description>Specify either <c>KeyPairName</c> or <c>KeyPairId</c>.</description></item>
+        /// <item><description>We recommend using <c>KeyPairId</c>, as <c>KeyPairName</c> will be deprecated.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1898,17 +1909,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a Secure Shell (SSH) key pair to specific instances. You can bind a maximum of 30 instances at a time.</para>
+        /// <para>Attaches an SSH key pair to up to 30 instances in a single call.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a></h2>
-        /// <para>This operation is used to bind a key pair to instances. Only disabled instances are supported.</para>
+        /// <para>You can only attach a key pair to stopped instances.</para>
         /// <list type="bullet">
-        /// <item><description>You can bind a maximum of 30 instances at a time.</description></item>
-        /// <item><description>At least one of the key_pair_name and key_pair_id parameters is not empty.</description></item>
-        /// <item><description>Specify the key_pair_id parameter when you call this parameter. The key_pair_name parameter will be discarded.</description></item>
+        /// <item><description>Specify up to 30 instances per call.</description></item>
+        /// <item><description>Specify either <c>KeyPairName</c> or <c>KeyPairId</c>.</description></item>
+        /// <item><description>We recommend using <c>KeyPairId</c>, as <c>KeyPairName</c> will be deprecated.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1938,7 +1948,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <item><description>An ENI can be attached to only one instance that is the same zone and the same Virtual Private Cloud (VPC).</description></item>
         /// <item><description>The instance must be in the Stopped state.</description></item>
         /// <item><description>A maximum of 10 ENIs can be attached to an instance.</description></item>
-        /// <item><description>This operation is an asynchronous operation. After you call this operation to attach an ENI, you can view the status of the ENI to check whether the ENI is attached.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After you To attach an ENI, you can view the status of the ENI to check whether the ENI is attached.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1996,7 +2006,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <item><description>An ENI can be attached to only one instance that is the same zone and the same Virtual Private Cloud (VPC).</description></item>
         /// <item><description>The instance must be in the Stopped state.</description></item>
         /// <item><description>A maximum of 10 ENIs can be attached to an instance.</description></item>
-        /// <item><description>This operation is an asynchronous operation. After you call this operation to attach an ENI, you can view the status of the ENI to check whether the ENI is attached.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After you To attach an ENI, you can view the status of the ENI to check whether the ENI is attached.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2054,7 +2064,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <item><description>An ENI can be attached to only one instance that is the same zone and the same Virtual Private Cloud (VPC).</description></item>
         /// <item><description>The instance must be in the Stopped state.</description></item>
         /// <item><description>A maximum of 10 ENIs can be attached to an instance.</description></item>
-        /// <item><description>This operation is an asynchronous operation. After you call this operation to attach an ENI, you can view the status of the ENI to check whether the ENI is attached.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After you To attach an ENI, you can view the status of the ENI to check whether the ENI is attached.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2084,7 +2094,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <item><description>An ENI can be attached to only one instance that is the same zone and the same Virtual Private Cloud (VPC).</description></item>
         /// <item><description>The instance must be in the Stopped state.</description></item>
         /// <item><description>A maximum of 10 ENIs can be attached to an instance.</description></item>
-        /// <item><description>This operation is an asynchronous operation. After you call this operation to attach an ENI, you can view the status of the ENI to check whether the ENI is attached.</description></item>
+        /// <item><description>This operation is an asynchronous operation. After you To attach an ENI, you can view the status of the ENI to check whether the ENI is attached.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2103,7 +2113,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an inbound security group rule. This operation allows or denies the inbound traffic from other devices to instances in the security group.</para>
+        /// <para>Calls AuthorizeSecurityGroup to configure inbound access permissions for a security group, allowing or denying other devices from sending inbound traffic to instances in the security group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2169,7 +2179,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an inbound security group rule. This operation allows or denies the inbound traffic from other devices to instances in the security group.</para>
+        /// <para>Calls AuthorizeSecurityGroup to configure inbound access permissions for a security group, allowing or denying other devices from sending inbound traffic to instances in the security group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2235,7 +2245,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an inbound security group rule. This operation allows or denies the inbound traffic from other devices to instances in the security group.</para>
+        /// <para>Calls AuthorizeSecurityGroup to configure inbound access permissions for a security group, allowing or denying other devices from sending inbound traffic to instances in the security group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2253,7 +2263,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an inbound security group rule. This operation allows or denies the inbound traffic from other devices to instances in the security group.</para>
+        /// <para>Calls AuthorizeSecurityGroup to configure inbound access permissions for a security group, allowing or denying other devices from sending inbound traffic to instances in the security group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2459,14 +2469,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates multiple instances in a specified event at a time. You can execute the task immediately or schedule the task execution.</para>
+        /// <para>Batch migrates instances under a specified event. Supports immediate or scheduled execution.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This O\&amp;M operation is supported only by the Instance:SystemUpgrade.Migrate event.</description></item>
+        /// <item><description>This O&amp;M operation currently supports only the following event type: Instance:SystemUpgrade.Migrate (migration required due to underlying infrastructure upgrade).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2515,14 +2525,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates multiple instances in a specified event at a time. You can execute the task immediately or schedule the task execution.</para>
+        /// <para>Batch migrates instances under a specified event. Supports immediate or scheduled execution.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This O\&amp;M operation is supported only by the Instance:SystemUpgrade.Migrate event.</description></item>
+        /// <item><description>This O&amp;M operation currently supports only the following event type: Instance:SystemUpgrade.Migrate (migration required due to underlying infrastructure upgrade).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2571,14 +2581,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates multiple instances in a specified event at a time. You can execute the task immediately or schedule the task execution.</para>
+        /// <para>Batch migrates instances under a specified event. Supports immediate or scheduled execution.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This O\&amp;M operation is supported only by the Instance:SystemUpgrade.Migrate event.</description></item>
+        /// <item><description>This O&amp;M operation currently supports only the following event type: Instance:SystemUpgrade.Migrate (migration required due to underlying infrastructure upgrade).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2597,14 +2607,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates multiple instances in a specified event at a time. You can execute the task immediately or schedule the task execution.</para>
+        /// <para>Batch migrates instances under a specified event. Supports immediate or scheduled execution.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This O\&amp;M operation is supported only by the Instance:SystemUpgrade.Migrate event.</description></item>
+        /// <item><description>This O&amp;M operation currently supports only the following event type: Instance:SystemUpgrade.Migrate (migration required due to underlying infrastructure upgrade).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2623,12 +2633,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The event that is used to immediately redeploy specified resources in batches or by appointment</para>
+        /// <para>Batch restarts specified resources immediately or at a scheduled time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This O\&amp;M operation supports only the following event types: Instance:SystemMaintenance.Reboot (instance reboot due to system problems)</para>
+        /// <list type="bullet">
+        /// <item><description>This O&amp;M operation currently supports only the following event type: Instance:SystemMaintenance.Reboot (instance restart due to system maintenance).</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2676,12 +2688,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The event that is used to immediately redeploy specified resources in batches or by appointment</para>
+        /// <para>Batch restarts specified resources immediately or at a scheduled time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This O\&amp;M operation supports only the following event types: Instance:SystemMaintenance.Reboot (instance reboot due to system problems)</para>
+        /// <list type="bullet">
+        /// <item><description>This O&amp;M operation currently supports only the following event type: Instance:SystemMaintenance.Reboot (instance restart due to system maintenance).</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2729,12 +2743,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The event that is used to immediately redeploy specified resources in batches or by appointment</para>
+        /// <para>Batch restarts specified resources immediately or at a scheduled time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This O\&amp;M operation supports only the following event types: Instance:SystemMaintenance.Reboot (instance reboot due to system problems)</para>
+        /// <list type="bullet">
+        /// <item><description>This O&amp;M operation currently supports only the following event type: Instance:SystemMaintenance.Reboot (instance restart due to system maintenance).</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -2752,12 +2768,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The event that is used to immediately redeploy specified resources in batches or by appointment</para>
+        /// <para>Batch restarts specified resources immediately or at a scheduled time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This O\&amp;M operation supports only the following event types: Instance:SystemMaintenance.Reboot (instance reboot due to system problems)</para>
+        /// <list type="bullet">
+        /// <item><description>This O&amp;M operation currently supports only the following event type: Instance:SystemMaintenance.Reboot (instance restart due to system maintenance).</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -2775,13 +2793,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch redeployment</para>
+        /// <para>Batch redeploys specified resources immediately or at a scheduled time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation currently only supports event types: Instance:SystemFailure.Redeploy (redeploy instance due to system issues), Instance:SystemMaintenance.Redeploy (redeploy instance due to system maintenance)</description></item>
+        /// <item><description>This O&amp;M operation currently supports only the following event types: Instance:SystemFailure.Redeploy (instance redeployment due to system failures) and Instance:SystemMaintenance.Redeploy (instance redeployment due to system maintenance).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2830,13 +2848,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch redeployment</para>
+        /// <para>Batch redeploys specified resources immediately or at a scheduled time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation currently only supports event types: Instance:SystemFailure.Redeploy (redeploy instance due to system issues), Instance:SystemMaintenance.Redeploy (redeploy instance due to system maintenance)</description></item>
+        /// <item><description>This O&amp;M operation currently supports only the following event types: Instance:SystemFailure.Redeploy (instance redeployment due to system failures) and Instance:SystemMaintenance.Redeploy (instance redeployment due to system maintenance).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2885,13 +2903,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch redeployment</para>
+        /// <para>Batch redeploys specified resources immediately or at a scheduled time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation currently only supports event types: Instance:SystemFailure.Redeploy (redeploy instance due to system issues), Instance:SystemMaintenance.Redeploy (redeploy instance due to system maintenance)</description></item>
+        /// <item><description>This O&amp;M operation currently supports only the following event types: Instance:SystemFailure.Redeploy (instance redeployment due to system failures) and Instance:SystemMaintenance.Redeploy (instance redeployment due to system maintenance).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2910,13 +2928,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch redeployment</para>
+        /// <para>Batch redeploys specified resources immediately or at a scheduled time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation currently only supports event types: Instance:SystemFailure.Redeploy (redeploy instance due to system issues), Instance:SystemMaintenance.Redeploy (redeploy instance due to system maintenance)</description></item>
+        /// <item><description>This O&amp;M operation currently supports only the following event types: Instance:SystemFailure.Redeploy (instance redeployment due to system failures) and Instance:SystemMaintenance.Redeploy (instance redeployment due to system maintenance).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3079,7 +3097,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copies a shared data group (SDG) across nodes.</para>
+        /// <para>Copies an SDG across edge zones by calling CopySDG.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3123,7 +3141,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copies a shared data group (SDG) across nodes.</para>
+        /// <para>Copies an SDG across edge zones by calling CopySDG.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3167,7 +3185,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copies a shared data group (SDG) across nodes.</para>
+        /// <para>Copies an SDG across edge zones by calling CopySDG.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3185,7 +3203,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copies a shared data group (SDG) across nodes.</para>
+        /// <para>Copies an SDG across edge zones by calling CopySDG.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3203,7 +3221,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copies a snapshot across nodes.</para>
+        /// <para>Calls CopySnapshot to copy a snapshot across edge zones.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3267,7 +3285,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copies a snapshot across nodes.</para>
+        /// <para>Calls CopySnapshot to copy a snapshot across edge zones.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3331,7 +3349,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copies a snapshot across nodes.</para>
+        /// <para>Calls CopySnapshot to copy a snapshot across edge zones.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3349,7 +3367,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copies a snapshot across nodes.</para>
+        /// <para>Calls CopySnapshot to copy a snapshot across edge zones.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3367,7 +3385,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an ARM server.</para>
+        /// <para>Creates ARM board card servers by calling CreateARMServerInstances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3481,7 +3499,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an ARM server.</para>
+        /// <para>Creates ARM board card servers by calling CreateARMServerInstances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3595,7 +3613,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an ARM server.</para>
+        /// <para>Creates ARM board card servers by calling CreateARMServerInstances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3613,7 +3631,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an ARM server.</para>
+        /// <para>Creates ARM board card servers by calling CreateARMServerInstances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3903,14 +3921,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Container Service for Kubernetes (ACK) edge cluster.</para>
+        /// <para>Creates an edge container cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 10 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>Creating a cluster is an asynchronous operation. After this operation returns the response, it takes 10 to 20 minutes to initialize the cluster. You can call the DescribeCluster operation to query the cluster status. After you create a cluster, you can call the DescribeClusterKubeConfig operation to obtain the cluster certificate.</description></item>
+        /// <item><description>Single-user call frequency: 10 calls per second.</description></item>
+        /// <item><description>Creating a cluster is an asynchronous operation. After the API call returns, wait 10 to 20 minutes for the cluster to finish initialization. During this process, call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3958,6 +3976,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["EnsRegionId"] = request.EnsRegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Isp))
+            {
+                query["Isp"] = request.Isp;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KubernetesVersion))
             {
                 query["KubernetesVersion"] = request.KubernetesVersion;
@@ -3969,6 +3991,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatGatewayId))
+            {
+                query["NatGatewayId"] = request.NatGatewayId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PodVswitchIdsShrink))
             {
@@ -4015,14 +4041,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Container Service for Kubernetes (ACK) edge cluster.</para>
+        /// <para>Creates an edge container cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 10 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>Creating a cluster is an asynchronous operation. After this operation returns the response, it takes 10 to 20 minutes to initialize the cluster. You can call the DescribeCluster operation to query the cluster status. After you create a cluster, you can call the DescribeClusterKubeConfig operation to obtain the cluster certificate.</description></item>
+        /// <item><description>Single-user call frequency: 10 calls per second.</description></item>
+        /// <item><description>Creating a cluster is an asynchronous operation. After the API call returns, wait 10 to 20 minutes for the cluster to finish initialization. During this process, call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4070,6 +4096,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["EnsRegionId"] = request.EnsRegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Isp))
+            {
+                query["Isp"] = request.Isp;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KubernetesVersion))
             {
                 query["KubernetesVersion"] = request.KubernetesVersion;
@@ -4081,6 +4111,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatGatewayId))
+            {
+                query["NatGatewayId"] = request.NatGatewayId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PodVswitchIdsShrink))
             {
@@ -4127,14 +4161,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Container Service for Kubernetes (ACK) edge cluster.</para>
+        /// <para>Creates an edge container cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 10 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>Creating a cluster is an asynchronous operation. After this operation returns the response, it takes 10 to 20 minutes to initialize the cluster. You can call the DescribeCluster operation to query the cluster status. After you create a cluster, you can call the DescribeClusterKubeConfig operation to obtain the cluster certificate.</description></item>
+        /// <item><description>Single-user call frequency: 10 calls per second.</description></item>
+        /// <item><description>Creating a cluster is an asynchronous operation. After the API call returns, wait 10 to 20 minutes for the cluster to finish initialization. During this process, call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4153,14 +4187,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Container Service for Kubernetes (ACK) edge cluster.</para>
+        /// <para>Creates an edge container cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 10 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>Creating a cluster is an asynchronous operation. After this operation returns the response, it takes 10 to 20 minutes to initialize the cluster. You can call the DescribeCluster operation to query the cluster status. After you create a cluster, you can call the DescribeClusterKubeConfig operation to obtain the cluster certificate.</description></item>
+        /// <item><description>Single-user call frequency: 10 calls per second.</description></item>
+        /// <item><description>Creating a cluster is an asynchronous operation. After the API call returns, wait 10 to 20 minutes for the cluster to finish initialization. During this process, call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4179,8 +4213,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建集群节点池</para>
+        /// <para>A node pool is a logical collection of nodes with identical attributes that enables unified management and O&amp;M operations such as node upgrades and elastic scaling. You can further leverage the automated O&amp;M capabilities of node pools to reduce O&amp;M costs through features such as automatic OS CVE vulnerability remediation, automatic recovery of faulty nodes, and automatic version upgrades for kubelet and containerd. You can call the CreateClusterNodePool operation to create a node pool for a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Rate limit per user: 10 calls per second.</description></item>
+        /// <item><description>Creating a cluster is an asynchronous operation. After the API call returns, you must wait 10 to 20 minutes for the cluster initialization to complete. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateClusterNodePoolRequest
@@ -4247,8 +4289,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建集群节点池</para>
+        /// <para>A node pool is a logical collection of nodes with identical attributes that enables unified management and O&amp;M operations such as node upgrades and elastic scaling. You can further leverage the automated O&amp;M capabilities of node pools to reduce O&amp;M costs through features such as automatic OS CVE vulnerability remediation, automatic recovery of faulty nodes, and automatic version upgrades for kubelet and containerd. You can call the CreateClusterNodePool operation to create a node pool for a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Rate limit per user: 10 calls per second.</description></item>
+        /// <item><description>Creating a cluster is an asynchronous operation. After the API call returns, you must wait 10 to 20 minutes for the cluster initialization to complete. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateClusterNodePoolRequest
@@ -4315,8 +4365,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建集群节点池</para>
+        /// <para>A node pool is a logical collection of nodes with identical attributes that enables unified management and O&amp;M operations such as node upgrades and elastic scaling. You can further leverage the automated O&amp;M capabilities of node pools to reduce O&amp;M costs through features such as automatic OS CVE vulnerability remediation, automatic recovery of faulty nodes, and automatic version upgrades for kubelet and containerd. You can call the CreateClusterNodePool operation to create a node pool for a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Rate limit per user: 10 calls per second.</description></item>
+        /// <item><description>Creating a cluster is an asynchronous operation. After the API call returns, you must wait 10 to 20 minutes for the cluster initialization to complete. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateClusterNodePoolRequest
@@ -4333,8 +4391,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建集群节点池</para>
+        /// <para>A node pool is a logical collection of nodes with identical attributes that enables unified management and O&amp;M operations such as node upgrades and elastic scaling. You can further leverage the automated O&amp;M capabilities of node pools to reduce O&amp;M costs through features such as automatic OS CVE vulnerability remediation, automatic recovery of faulty nodes, and automatic version upgrades for kubelet and containerd. You can call the CreateClusterNodePool operation to create a node pool for a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Rate limit per user: 10 calls per second.</description></item>
+        /// <item><description>Creating a cluster is an asynchronous operation. After the API call returns, you must wait 10 to 20 minutes for the cluster initialization to complete. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateClusterNodePoolRequest
@@ -4351,7 +4417,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a pay-as-you-go or subscription data disk.</para>
+        /// <para>Creates a pay-as-you-go or subscription data cloud disk by calling CreateDisk.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4429,7 +4495,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a pay-as-you-go or subscription data disk.</para>
+        /// <para>Creates a pay-as-you-go or subscription data cloud disk by calling CreateDisk.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4507,7 +4573,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a pay-as-you-go or subscription data disk.</para>
+        /// <para>Creates a pay-as-you-go or subscription data cloud disk by calling CreateDisk.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4525,7 +4591,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a pay-as-you-go or subscription data disk.</para>
+        /// <para>Creates a pay-as-you-go or subscription data cloud disk by calling CreateDisk.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4543,14 +4609,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for an elastic IP address (EIP).</para>
+        /// <para>Creates an elastic IP address (EIP) by calling the CreateEipInstance operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 5,000 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 50 times per second per user.</description></item>
+        /// <item><description>API call frequency: 5000 calls per second.</description></item>
+        /// <item><description>Per-user call frequency: 50 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4633,14 +4699,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for an elastic IP address (EIP).</para>
+        /// <para>Creates an elastic IP address (EIP) by calling the CreateEipInstance operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 5,000 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 50 times per second per user.</description></item>
+        /// <item><description>API call frequency: 5000 calls per second.</description></item>
+        /// <item><description>Per-user call frequency: 50 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4723,14 +4789,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for an elastic IP address (EIP).</para>
+        /// <para>Creates an elastic IP address (EIP) by calling the CreateEipInstance operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 5,000 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 50 times per second per user.</description></item>
+        /// <item><description>API call frequency: 5000 calls per second.</description></item>
+        /// <item><description>Per-user call frequency: 50 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4749,14 +4815,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for an elastic IP address (EIP).</para>
+        /// <para>Creates an elastic IP address (EIP) by calling the CreateEipInstance operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 5,000 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 50 times per second per user.</description></item>
+        /// <item><description>API call frequency: 5000 calls per second.</description></item>
+        /// <item><description>Per-user call frequency: 50 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5379,7 +5445,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a NAS file system.</para>
+        /// <para>Creates a NAS file system by calling the CreateFileSystem operation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5423,7 +5489,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a NAS file system.</para>
+        /// <para>Creates a NAS file system by calling the CreateFileSystem operation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5467,7 +5533,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a NAS file system.</para>
+        /// <para>Creates a NAS file system by calling the CreateFileSystem operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5485,7 +5551,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a NAS file system.</para>
+        /// <para>Creates a NAS file system by calling the CreateFileSystem operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5503,7 +5569,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a Destination Network Address Translation (DNAT) entry to a DNAT table.</para>
+        /// <para>Adds a DNAT entry by calling CreateForwardEntry.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5577,7 +5643,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a Destination Network Address Translation (DNAT) entry to a DNAT table.</para>
+        /// <para>Adds a DNAT entry by calling CreateForwardEntry.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5651,7 +5717,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a Destination Network Address Translation (DNAT) entry to a DNAT table.</para>
+        /// <para>Adds a DNAT entry by calling CreateForwardEntry.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5669,7 +5735,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a Destination Network Address Translation (DNAT) entry to a DNAT table.</para>
+        /// <para>Adds a DNAT entry by calling CreateForwardEntry.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5839,7 +5905,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an image from an instance.</para>
+        /// <para>Creates an image from a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5901,7 +5967,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an image from an instance.</para>
+        /// <para>Creates an image from a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5963,7 +6029,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an image from an instance.</para>
+        /// <para>Creates an image from a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5981,7 +6047,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an image from an instance.</para>
+        /// <para>Creates an image from a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5999,15 +6065,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an instance.</para>
+        /// <para>Creates a subscription instance. This operation can be replaced by RunInstances. No new features will be added to CreateInstance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 10 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>We recommend that you increase the request time because instance creation is an asynchronous operation. If the return code of the API operation is 0, it indicates that the request is successful, but does not indicate that the instance is created. If the request is successful, an instance ID is returned. You can check whether the instance is created based on the instance ID.</description></item>
-        /// <item><description>InvalidUserData.NotInWhiteList operation restriction: You can create an instance only if you are in the whitelist in which members have the purchase permissions. Otherwise, an error is returned.</description></item>
+        /// <item><description>Per-user call frequency: 10 calls per second.</description></item>
+        /// <item><description>Because instance creation is an asynchronous operation, increase the request timeout as needed. When the API returns Code=0, this only indicates that the request was successful, not that the instance was created successfully. An instance ID is returned upon a successful request. You can then query the instance by its ID to check whether the instance is created.</description></item>
+        /// <item><description>InvalidUserData.NotInWhiteList restriction: Only accounts that are added to the relevant whitelist with purchase permissions can create instances. Otherwise, an error is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6138,15 +6204,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an instance.</para>
+        /// <para>Creates a subscription instance. This operation can be replaced by RunInstances. No new features will be added to CreateInstance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 10 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>We recommend that you increase the request time because instance creation is an asynchronous operation. If the return code of the API operation is 0, it indicates that the request is successful, but does not indicate that the instance is created. If the request is successful, an instance ID is returned. You can check whether the instance is created based on the instance ID.</description></item>
-        /// <item><description>InvalidUserData.NotInWhiteList operation restriction: You can create an instance only if you are in the whitelist in which members have the purchase permissions. Otherwise, an error is returned.</description></item>
+        /// <item><description>Per-user call frequency: 10 calls per second.</description></item>
+        /// <item><description>Because instance creation is an asynchronous operation, increase the request timeout as needed. When the API returns Code=0, this only indicates that the request was successful, not that the instance was created successfully. An instance ID is returned upon a successful request. You can then query the instance by its ID to check whether the instance is created.</description></item>
+        /// <item><description>InvalidUserData.NotInWhiteList restriction: Only accounts that are added to the relevant whitelist with purchase permissions can create instances. Otherwise, an error is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6277,15 +6343,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an instance.</para>
+        /// <para>Creates a subscription instance. This operation can be replaced by RunInstances. No new features will be added to CreateInstance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 10 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>We recommend that you increase the request time because instance creation is an asynchronous operation. If the return code of the API operation is 0, it indicates that the request is successful, but does not indicate that the instance is created. If the request is successful, an instance ID is returned. You can check whether the instance is created based on the instance ID.</description></item>
-        /// <item><description>InvalidUserData.NotInWhiteList operation restriction: You can create an instance only if you are in the whitelist in which members have the purchase permissions. Otherwise, an error is returned.</description></item>
+        /// <item><description>Per-user call frequency: 10 calls per second.</description></item>
+        /// <item><description>Because instance creation is an asynchronous operation, increase the request timeout as needed. When the API returns Code=0, this only indicates that the request was successful, not that the instance was created successfully. An instance ID is returned upon a successful request. You can then query the instance by its ID to check whether the instance is created.</description></item>
+        /// <item><description>InvalidUserData.NotInWhiteList restriction: Only accounts that are added to the relevant whitelist with purchase permissions can create instances. Otherwise, an error is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6304,15 +6370,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an instance.</para>
+        /// <para>Creates a subscription instance. This operation can be replaced by RunInstances. No new features will be added to CreateInstance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 10 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>We recommend that you increase the request time because instance creation is an asynchronous operation. If the return code of the API operation is 0, it indicates that the request is successful, but does not indicate that the instance is created. If the request is successful, an instance ID is returned. You can check whether the instance is created based on the instance ID.</description></item>
-        /// <item><description>InvalidUserData.NotInWhiteList operation restriction: You can create an instance only if you are in the whitelist in which members have the purchase permissions. Otherwise, an error is returned.</description></item>
+        /// <item><description>Per-user call frequency: 10 calls per second.</description></item>
+        /// <item><description>Because instance creation is an asynchronous operation, increase the request timeout as needed. When the API returns Code=0, this only indicates that the request was successful, not that the instance was created successfully. An instance ID is returned upon a successful request. You can then query the instance by its ID to check whether the instance is created.</description></item>
+        /// <item><description>InvalidUserData.NotInWhiteList restriction: Only accounts that are added to the relevant whitelist with purchase permissions can create instances. Otherwise, an error is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6603,14 +6669,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an Edge Load Balancer (ELB) instance.</para>
+        /// <para>Creates a load balancing instance by calling the CreateLoadBalancer operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 5 times per second per user.</description></item>
+        /// <item><description>API call frequency: 100 times per second.</description></item>
+        /// <item><description>Per-user call frequency: 5 times per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6685,14 +6751,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an Edge Load Balancer (ELB) instance.</para>
+        /// <para>Creates a load balancing instance by calling the CreateLoadBalancer operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 5 times per second per user.</description></item>
+        /// <item><description>API call frequency: 100 times per second.</description></item>
+        /// <item><description>Per-user call frequency: 5 times per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6767,14 +6833,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an Edge Load Balancer (ELB) instance.</para>
+        /// <para>Creates a load balancing instance by calling the CreateLoadBalancer operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 5 times per second per user.</description></item>
+        /// <item><description>API call frequency: 100 times per second.</description></item>
+        /// <item><description>Per-user call frequency: 5 times per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6793,14 +6859,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an Edge Load Balancer (ELB) instance.</para>
+        /// <para>Creates a load balancing instance by calling the CreateLoadBalancer operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 5 times per second per user.</description></item>
+        /// <item><description>API call frequency: 100 times per second.</description></item>
+        /// <item><description>Per-user call frequency: 5 times per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6824,9 +6890,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6950,9 +7016,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7076,9 +7142,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7102,9 +7168,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7128,9 +7194,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7266,9 +7332,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7404,9 +7470,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7430,9 +7496,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7451,14 +7517,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Transmission Control Protocol (TCP) listener.</para>
+        /// <para>To create a TCP listener, call <c>CreateLoadBalancerTCPListener</c>.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>API call rate: 100 requests per second.</description></item>
+        /// <item><description>Per-user call rate: 10 requests per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7565,14 +7631,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Transmission Control Protocol (TCP) listener.</para>
+        /// <para>To create a TCP listener, call <c>CreateLoadBalancerTCPListener</c>.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>API call rate: 100 requests per second.</description></item>
+        /// <item><description>Per-user call rate: 10 requests per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7679,14 +7745,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Transmission Control Protocol (TCP) listener.</para>
+        /// <para>To create a TCP listener, call <c>CreateLoadBalancerTCPListener</c>.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>API call rate: 100 requests per second.</description></item>
+        /// <item><description>Per-user call rate: 10 requests per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7705,14 +7771,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Transmission Control Protocol (TCP) listener.</para>
+        /// <para>To create a TCP listener, call <c>CreateLoadBalancerTCPListener</c>.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>API call rate: 100 requests per second.</description></item>
+        /// <item><description>Per-user call rate: 10 requests per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7731,14 +7797,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a User Datagram Protocol (UDP) listener.</para>
+        /// <para>To create a UDP listener, call <c>CreateLoadBalancerUDPListener</c>.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>API call rate: 100 calls per second.</description></item>
+        /// <item><description>Per-user call rate: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7833,14 +7899,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a User Datagram Protocol (UDP) listener.</para>
+        /// <para>To create a UDP listener, call <c>CreateLoadBalancerUDPListener</c>.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>API call rate: 100 calls per second.</description></item>
+        /// <item><description>Per-user call rate: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7935,14 +8001,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a User Datagram Protocol (UDP) listener.</para>
+        /// <para>To create a UDP listener, call <c>CreateLoadBalancerUDPListener</c>.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>API call rate: 100 calls per second.</description></item>
+        /// <item><description>Per-user call rate: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7961,14 +8027,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a User Datagram Protocol (UDP) listener.</para>
+        /// <para>To create a UDP listener, call <c>CreateLoadBalancerUDPListener</c>.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>API call rate: 100 calls per second.</description></item>
+        /// <item><description>Per-user call rate: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8155,7 +8221,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a network address translation (NAT) gateway.</para>
+        /// <para>Creates a NAT gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8221,7 +8287,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a network address translation (NAT) gateway.</para>
+        /// <para>Creates a NAT gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8287,7 +8353,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a network address translation (NAT) gateway.</para>
+        /// <para>Creates a NAT gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8305,7 +8371,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a network address translation (NAT) gateway.</para>
+        /// <para>Creates a NAT gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8323,14 +8389,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a virtual private cloud (VPC).</para>
+        /// <para>Call CreateNetwork to create a virtual private cloud (VPC).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 5 times per second per user.</description></item>
+        /// <item><description>API call frequency: 100 calls per second.</description></item>
+        /// <item><description>Per-user call frequency: 5 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8356,9 +8422,17 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableIpv6))
+            {
+                query["EnableIpv6"] = request.EnableIpv6;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionId))
             {
                 query["EnsRegionId"] = request.EnsRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6Isp))
+            {
+                query["Ipv6Isp"] = request.Ipv6Isp;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkName))
             {
@@ -8389,14 +8463,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a virtual private cloud (VPC).</para>
+        /// <para>Call CreateNetwork to create a virtual private cloud (VPC).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 5 times per second per user.</description></item>
+        /// <item><description>API call frequency: 100 calls per second.</description></item>
+        /// <item><description>Per-user call frequency: 5 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8422,9 +8496,17 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableIpv6))
+            {
+                query["EnableIpv6"] = request.EnableIpv6;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionId))
             {
                 query["EnsRegionId"] = request.EnsRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6Isp))
+            {
+                query["Ipv6Isp"] = request.Ipv6Isp;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkName))
             {
@@ -8455,14 +8537,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a virtual private cloud (VPC).</para>
+        /// <para>Call CreateNetwork to create a virtual private cloud (VPC).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 5 times per second per user.</description></item>
+        /// <item><description>API call frequency: 100 calls per second.</description></item>
+        /// <item><description>Per-user call frequency: 5 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8481,14 +8563,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a virtual private cloud (VPC).</para>
+        /// <para>Call CreateNetwork to create a virtual private cloud (VPC).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 5 times per second per user.</description></item>
+        /// <item><description>API call frequency: 100 calls per second.</description></item>
+        /// <item><description>Per-user call frequency: 5 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8635,7 +8717,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a network access control list (ACL) rule.</para>
+        /// <para>You can invoke the CreateNetworkAclEntry API to create a network ACL rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8713,7 +8795,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a network access control list (ACL) rule.</para>
+        /// <para>You can invoke the CreateNetworkAclEntry API to create a network ACL rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8791,7 +8873,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a network access control list (ACL) rule.</para>
+        /// <para>You can invoke the CreateNetworkAclEntry API to create a network ACL rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8809,7 +8891,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a network access control list (ACL) rule.</para>
+        /// <para>You can invoke the CreateNetworkAclEntry API to create a network ACL rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8983,17 +9065,17 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a shared data group (SDG) on an Android in Container (AIC) instance.</para>
+        /// <para>Creates a Shared Data Group (SDG) on an Android in Container (AIC) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A SDG can be regarded as a data partition image of a virtual device. You can save a data partition of a virtual device as an SDG. A created SDG can be deployed in data partitions of other virtual devices to achieve rapid data distribution and application. The procedure for calling SDG-related API operations:</para>
+        /// <para>A Shared Data Group (SDG) is a data partition image of a virtual device. You can save the data partition of a virtual device as an SDG. The SDG can then be deployed to the data partition of other virtual devices for fast data sharing and application deployment. The following describes the workflow of SDG-related operations:</para>
         /// <list type="bullet">
-        /// <item><description>Call the <a href="~~CreateSDG~~">CreateSDG</a> operation to create an SDG, which is bound to AIC Instance A (InstanceId). After you create the SDG, a blank cloud disk (also known as an original cloud disk) is attached to Device A (InstanceId).</description></item>
-        /// <item><description>Install applications on and deliver files to AIC Instance A (InstanceId).</description></item>
-        /// <item><description>Call the <a href="~~SaveSDG~~">SaveSDG</a> operation to save the data disk of AIC instance A as SDG A.</description></item>
-        /// <item><description>Call the <a href="~~DeploySDG~~">DeploySDG</a> operation to deploy SDG A to AIC Instance B. This operattion is executed asynchronously. You can call the <a href="~~DescribeARMServerInstances~~">DescribeARMServerInstances</a> operation to query the status of AIC Instance B. If the status of AIC Instance B changes to success, AIC insance B is available, and AIC Instances A and B have the same applications running.</description></item>
+        /// <item><description>Call the <a href="~~CreateSDG~~">CreateSDG</a> operation to create an SDG. The SDG is bound to AIC instance A (InstanceId). After the SDG is created, a blank cloud disk (also called a raw cloud disk) is mounted to device A (InstanceId) for SDG creation.</description></item>
+        /// <item><description>Install applications, deliver files, and perform other required operations on AIC instance A (InstanceId).</description></item>
+        /// <item><description>Call the <a href="~~SaveSDG~~">SaveSDG</a> operation to save the data cloud disk of AIC instance A as SDG A.</description></item>
+        /// <item><description>Call the <a href="~~DeploySDG~~">DeploySDG</a> operation to deploy SDG A to AIC instance B. This process is asynchronous. You can call the <a href="~~DescribeARMServerInstances~~">DescribeARMServerInstances</a> operation to query the status of AIC instance B. When the status changes back to success, AIC instance B is available and has the same applications as AIC instance A.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9032,17 +9114,17 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a shared data group (SDG) on an Android in Container (AIC) instance.</para>
+        /// <para>Creates a Shared Data Group (SDG) on an Android in Container (AIC) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A SDG can be regarded as a data partition image of a virtual device. You can save a data partition of a virtual device as an SDG. A created SDG can be deployed in data partitions of other virtual devices to achieve rapid data distribution and application. The procedure for calling SDG-related API operations:</para>
+        /// <para>A Shared Data Group (SDG) is a data partition image of a virtual device. You can save the data partition of a virtual device as an SDG. The SDG can then be deployed to the data partition of other virtual devices for fast data sharing and application deployment. The following describes the workflow of SDG-related operations:</para>
         /// <list type="bullet">
-        /// <item><description>Call the <a href="~~CreateSDG~~">CreateSDG</a> operation to create an SDG, which is bound to AIC Instance A (InstanceId). After you create the SDG, a blank cloud disk (also known as an original cloud disk) is attached to Device A (InstanceId).</description></item>
-        /// <item><description>Install applications on and deliver files to AIC Instance A (InstanceId).</description></item>
-        /// <item><description>Call the <a href="~~SaveSDG~~">SaveSDG</a> operation to save the data disk of AIC instance A as SDG A.</description></item>
-        /// <item><description>Call the <a href="~~DeploySDG~~">DeploySDG</a> operation to deploy SDG A to AIC Instance B. This operattion is executed asynchronously. You can call the <a href="~~DescribeARMServerInstances~~">DescribeARMServerInstances</a> operation to query the status of AIC Instance B. If the status of AIC Instance B changes to success, AIC insance B is available, and AIC Instances A and B have the same applications running.</description></item>
+        /// <item><description>Call the <a href="~~CreateSDG~~">CreateSDG</a> operation to create an SDG. The SDG is bound to AIC instance A (InstanceId). After the SDG is created, a blank cloud disk (also called a raw cloud disk) is mounted to device A (InstanceId) for SDG creation.</description></item>
+        /// <item><description>Install applications, deliver files, and perform other required operations on AIC instance A (InstanceId).</description></item>
+        /// <item><description>Call the <a href="~~SaveSDG~~">SaveSDG</a> operation to save the data cloud disk of AIC instance A as SDG A.</description></item>
+        /// <item><description>Call the <a href="~~DeploySDG~~">DeploySDG</a> operation to deploy SDG A to AIC instance B. This process is asynchronous. You can call the <a href="~~DescribeARMServerInstances~~">DescribeARMServerInstances</a> operation to query the status of AIC instance B. When the status changes back to success, AIC instance B is available and has the same applications as AIC instance A.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9081,17 +9163,17 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a shared data group (SDG) on an Android in Container (AIC) instance.</para>
+        /// <para>Creates a Shared Data Group (SDG) on an Android in Container (AIC) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A SDG can be regarded as a data partition image of a virtual device. You can save a data partition of a virtual device as an SDG. A created SDG can be deployed in data partitions of other virtual devices to achieve rapid data distribution and application. The procedure for calling SDG-related API operations:</para>
+        /// <para>A Shared Data Group (SDG) is a data partition image of a virtual device. You can save the data partition of a virtual device as an SDG. The SDG can then be deployed to the data partition of other virtual devices for fast data sharing and application deployment. The following describes the workflow of SDG-related operations:</para>
         /// <list type="bullet">
-        /// <item><description>Call the <a href="~~CreateSDG~~">CreateSDG</a> operation to create an SDG, which is bound to AIC Instance A (InstanceId). After you create the SDG, a blank cloud disk (also known as an original cloud disk) is attached to Device A (InstanceId).</description></item>
-        /// <item><description>Install applications on and deliver files to AIC Instance A (InstanceId).</description></item>
-        /// <item><description>Call the <a href="~~SaveSDG~~">SaveSDG</a> operation to save the data disk of AIC instance A as SDG A.</description></item>
-        /// <item><description>Call the <a href="~~DeploySDG~~">DeploySDG</a> operation to deploy SDG A to AIC Instance B. This operattion is executed asynchronously. You can call the <a href="~~DescribeARMServerInstances~~">DescribeARMServerInstances</a> operation to query the status of AIC Instance B. If the status of AIC Instance B changes to success, AIC insance B is available, and AIC Instances A and B have the same applications running.</description></item>
+        /// <item><description>Call the <a href="~~CreateSDG~~">CreateSDG</a> operation to create an SDG. The SDG is bound to AIC instance A (InstanceId). After the SDG is created, a blank cloud disk (also called a raw cloud disk) is mounted to device A (InstanceId) for SDG creation.</description></item>
+        /// <item><description>Install applications, deliver files, and perform other required operations on AIC instance A (InstanceId).</description></item>
+        /// <item><description>Call the <a href="~~SaveSDG~~">SaveSDG</a> operation to save the data cloud disk of AIC instance A as SDG A.</description></item>
+        /// <item><description>Call the <a href="~~DeploySDG~~">DeploySDG</a> operation to deploy SDG A to AIC instance B. This process is asynchronous. You can call the <a href="~~DescribeARMServerInstances~~">DescribeARMServerInstances</a> operation to query the status of AIC instance B. When the status changes back to success, AIC instance B is available and has the same applications as AIC instance A.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9110,17 +9192,17 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a shared data group (SDG) on an Android in Container (AIC) instance.</para>
+        /// <para>Creates a Shared Data Group (SDG) on an Android in Container (AIC) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A SDG can be regarded as a data partition image of a virtual device. You can save a data partition of a virtual device as an SDG. A created SDG can be deployed in data partitions of other virtual devices to achieve rapid data distribution and application. The procedure for calling SDG-related API operations:</para>
+        /// <para>A Shared Data Group (SDG) is a data partition image of a virtual device. You can save the data partition of a virtual device as an SDG. The SDG can then be deployed to the data partition of other virtual devices for fast data sharing and application deployment. The following describes the workflow of SDG-related operations:</para>
         /// <list type="bullet">
-        /// <item><description>Call the <a href="~~CreateSDG~~">CreateSDG</a> operation to create an SDG, which is bound to AIC Instance A (InstanceId). After you create the SDG, a blank cloud disk (also known as an original cloud disk) is attached to Device A (InstanceId).</description></item>
-        /// <item><description>Install applications on and deliver files to AIC Instance A (InstanceId).</description></item>
-        /// <item><description>Call the <a href="~~SaveSDG~~">SaveSDG</a> operation to save the data disk of AIC instance A as SDG A.</description></item>
-        /// <item><description>Call the <a href="~~DeploySDG~~">DeploySDG</a> operation to deploy SDG A to AIC Instance B. This operattion is executed asynchronously. You can call the <a href="~~DescribeARMServerInstances~~">DescribeARMServerInstances</a> operation to query the status of AIC Instance B. If the status of AIC Instance B changes to success, AIC insance B is available, and AIC Instances A and B have the same applications running.</description></item>
+        /// <item><description>Call the <a href="~~CreateSDG~~">CreateSDG</a> operation to create an SDG. The SDG is bound to AIC instance A (InstanceId). After the SDG is created, a blank cloud disk (also called a raw cloud disk) is mounted to device A (InstanceId) for SDG creation.</description></item>
+        /// <item><description>Install applications, deliver files, and perform other required operations on AIC instance A (InstanceId).</description></item>
+        /// <item><description>Call the <a href="~~SaveSDG~~">SaveSDG</a> operation to save the data cloud disk of AIC instance A as SDG A.</description></item>
+        /// <item><description>Call the <a href="~~DeploySDG~~">DeploySDG</a> operation to deploy SDG A to AIC instance B. This process is asynchronous. You can call the <a href="~~DescribeARMServerInstances~~">DescribeARMServerInstances</a> operation to query the status of AIC instance B. When the status changes back to success, AIC instance B is available and has the same applications as AIC instance A.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9287,7 +9369,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an ENS security group rule.</para>
+        /// <para>Creates a security group rule for Edge Node Service (ENS).</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9339,7 +9421,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an ENS security group rule.</para>
+        /// <para>Creates a security group rule for Edge Node Service (ENS).</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9391,7 +9473,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an ENS security group rule.</para>
+        /// <para>Creates a security group rule for Edge Node Service (ENS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9409,7 +9491,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an ENS security group rule.</para>
+        /// <para>Creates a security group rule for Edge Node Service (ENS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9427,7 +9509,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a snapshot.</para>
+        /// <para>Creates a snapshot by calling CreateSnapshot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9485,7 +9567,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a snapshot.</para>
+        /// <para>Creates a snapshot by calling CreateSnapshot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9543,7 +9625,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a snapshot.</para>
+        /// <para>Creates a snapshot by calling CreateSnapshot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9561,7 +9643,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a snapshot.</para>
+        /// <para>Creates a snapshot by calling CreateSnapshot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10095,7 +10177,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>A vSwitch is created.</para>
+        /// <para>Creates a VSwitch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10123,6 +10205,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionId))
             {
                 query["EnsRegionId"] = request.EnsRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6CidrBlock))
+            {
+                query["Ipv6CidrBlock"] = request.Ipv6CidrBlock;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkId))
             {
@@ -10157,7 +10243,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>A vSwitch is created.</para>
+        /// <para>Creates a VSwitch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10185,6 +10271,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionId))
             {
                 query["EnsRegionId"] = request.EnsRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6CidrBlock))
+            {
+                query["Ipv6CidrBlock"] = request.Ipv6CidrBlock;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkId))
             {
@@ -10219,7 +10309,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>A vSwitch is created.</para>
+        /// <para>Creates a VSwitch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10237,7 +10327,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>A vSwitch is created.</para>
+        /// <para>Creates a VSwitch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10255,7 +10345,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified AIC public key. You can delete a public key only if it is not associated with the public key.</para>
+        /// <para>Deletes a specified AIC public key. The public key can be deleted only when it is not associated with any resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10297,7 +10387,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified AIC public key. You can delete a public key only if it is not associated with the public key.</para>
+        /// <para>Deletes a specified AIC public key. The public key can be deleted only when it is not associated with any resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10339,7 +10429,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified AIC public key. You can delete a public key only if it is not associated with the public key.</para>
+        /// <para>Deletes a specified AIC public key. The public key can be deleted only when it is not associated with any resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10357,7 +10447,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified AIC public key. You can delete a public key only if it is not associated with the public key.</para>
+        /// <para>Deletes a specified AIC public key. The public key can be deleted only when it is not associated with any resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10503,14 +10593,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a bucket.</para>
+        /// <para>You can call the DeleteBucket operation to delete a bucket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only the Alibaba Cloud Account ID owner of a bucket can delete the bucket from the account.</para>
         /// <list type="bullet">
-        /// <item><description>You cannot delete buckets that store objects. You can only delete empty buckets.</description></item>
+        /// <item><description>Only the Alibaba Cloud account that owns the bucket can delete it.</description></item>
+        /// <item><description>A bucket must be empty before it can be deleted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10553,14 +10643,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a bucket.</para>
+        /// <para>You can call the DeleteBucket operation to delete a bucket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only the Alibaba Cloud Account ID owner of a bucket can delete the bucket from the account.</para>
         /// <list type="bullet">
-        /// <item><description>You cannot delete buckets that store objects. You can only delete empty buckets.</description></item>
+        /// <item><description>Only the Alibaba Cloud account that owns the bucket can delete it.</description></item>
+        /// <item><description>A bucket must be empty before it can be deleted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10603,14 +10693,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a bucket.</para>
+        /// <para>You can call the DeleteBucket operation to delete a bucket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only the Alibaba Cloud Account ID owner of a bucket can delete the bucket from the account.</para>
         /// <list type="bullet">
-        /// <item><description>You cannot delete buckets that store objects. You can only delete empty buckets.</description></item>
+        /// <item><description>Only the Alibaba Cloud account that owns the bucket can delete it.</description></item>
+        /// <item><description>A bucket must be empty before it can be deleted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10629,14 +10719,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a bucket.</para>
+        /// <para>You can call the DeleteBucket operation to delete a bucket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only the Alibaba Cloud Account ID owner of a bucket can delete the bucket from the account.</para>
         /// <list type="bullet">
-        /// <item><description>You cannot delete buckets that store objects. You can only delete empty buckets.</description></item>
+        /// <item><description>Only the Alibaba Cloud account that owns the bucket can delete it.</description></item>
+        /// <item><description>A bucket must be empty before it can be deleted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10655,7 +10745,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the lifecycle rules for objects in a bucket.</para>
+        /// <para>Deletes the lifecycle rules of a bucket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10701,7 +10791,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the lifecycle rules for objects in a bucket.</para>
+        /// <para>Deletes the lifecycle rules of a bucket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10747,7 +10837,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the lifecycle rules for objects in a bucket.</para>
+        /// <para>Deletes the lifecycle rules of a bucket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10765,7 +10855,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the lifecycle rules for objects in a bucket.</para>
+        /// <para>Deletes the lifecycle rules of a bucket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10783,8 +10873,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除集群</para>
+        /// <para>Deletes a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can specify the RetainResources parameter when you delete a cluster. The default value is false. If you set this parameter to true, the Edge Node Service (ENS) compute instances on which worker nodes run are retained.
+        /// When you delete a cluster, all nodes and node pools in the cluster are automatically deleted. ENS compute instances that you manually added by using scripts obtained from the DescribeAttachScript operation are retained.
+        /// If a node pool in the cluster is being scaled out or in, wait until the scaling process is complete before you delete the cluster.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteClusterRequest
@@ -10829,8 +10926,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除集群</para>
+        /// <para>Deletes a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can specify the RetainResources parameter when you delete a cluster. The default value is false. If you set this parameter to true, the Edge Node Service (ENS) compute instances on which worker nodes run are retained.
+        /// When you delete a cluster, all nodes and node pools in the cluster are automatically deleted. ENS compute instances that you manually added by using scripts obtained from the DescribeAttachScript operation are retained.
+        /// If a node pool in the cluster is being scaled out or in, wait until the scaling process is complete before you delete the cluster.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteClusterRequest
@@ -10875,8 +10979,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除集群</para>
+        /// <para>Deletes a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can specify the RetainResources parameter when you delete a cluster. The default value is false. If you set this parameter to true, the Edge Node Service (ENS) compute instances on which worker nodes run are retained.
+        /// When you delete a cluster, all nodes and node pools in the cluster are automatically deleted. ENS compute instances that you manually added by using scripts obtained from the DescribeAttachScript operation are retained.
+        /// If a node pool in the cluster is being scaled out or in, wait until the scaling process is complete before you delete the cluster.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteClusterRequest
@@ -10893,8 +11004,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除集群</para>
+        /// <para>Deletes a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can specify the RetainResources parameter when you delete a cluster. The default value is false. If you set this parameter to true, the Edge Node Service (ENS) compute instances on which worker nodes run are retained.
+        /// When you delete a cluster, all nodes and node pools in the cluster are automatically deleted. ENS compute instances that you manually added by using scripts obtained from the DescribeAttachScript operation are retained.
+        /// If a node pool in the cluster is being scaled out or in, wait until the scaling process is complete before you delete the cluster.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteClusterRequest
@@ -10911,8 +11029,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除节点池</para>
+        /// <para>You can call the DeleteClusterNodePool operation to delete a node pool that you no longer need. When you delete a node pool, all pods on its nodes are also deleted. This action may trigger descheduling. If the pods cannot be rescheduled, your services may be affected. Before you delete the node pool, ensure that the cluster has sufficient resources for rescheduling.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Each user is limited to 10 calls per second.</description></item>
+        /// <item><description>Cluster creation is an asynchronous operation. After the API call is successful, wait 10 to 20 minutes for the cluster to initialize. During this time, you can call the DescribeClustersV1 operation to check the cluster status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster\&quot;s kubeconfig file.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteClusterNodePoolRequest
@@ -10957,8 +11083,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除节点池</para>
+        /// <para>You can call the DeleteClusterNodePool operation to delete a node pool that you no longer need. When you delete a node pool, all pods on its nodes are also deleted. This action may trigger descheduling. If the pods cannot be rescheduled, your services may be affected. Before you delete the node pool, ensure that the cluster has sufficient resources for rescheduling.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Each user is limited to 10 calls per second.</description></item>
+        /// <item><description>Cluster creation is an asynchronous operation. After the API call is successful, wait 10 to 20 minutes for the cluster to initialize. During this time, you can call the DescribeClustersV1 operation to check the cluster status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster\&quot;s kubeconfig file.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteClusterNodePoolRequest
@@ -11003,8 +11137,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除节点池</para>
+        /// <para>You can call the DeleteClusterNodePool operation to delete a node pool that you no longer need. When you delete a node pool, all pods on its nodes are also deleted. This action may trigger descheduling. If the pods cannot be rescheduled, your services may be affected. Before you delete the node pool, ensure that the cluster has sufficient resources for rescheduling.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Each user is limited to 10 calls per second.</description></item>
+        /// <item><description>Cluster creation is an asynchronous operation. After the API call is successful, wait 10 to 20 minutes for the cluster to initialize. During this time, you can call the DescribeClustersV1 operation to check the cluster status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster\&quot;s kubeconfig file.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteClusterNodePoolRequest
@@ -11021,8 +11163,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除节点池</para>
+        /// <para>You can call the DeleteClusterNodePool operation to delete a node pool that you no longer need. When you delete a node pool, all pods on its nodes are also deleted. This action may trigger descheduling. If the pods cannot be rescheduled, your services may be affected. Before you delete the node pool, ensure that the cluster has sufficient resources for rescheduling.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Each user is limited to 10 calls per second.</description></item>
+        /// <item><description>Cluster creation is an asynchronous operation. After the API call is successful, wait 10 to 20 minutes for the cluster to initialize. During this time, you can call the DescribeClustersV1 operation to check the cluster status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster\&quot;s kubeconfig file.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteClusterNodePoolRequest
@@ -11039,8 +11189,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除节点池指定节点</para>
+        /// <para>Removes nodes from a cluster when the nodes are no longer needed. The ReleaseNode parameter specifies whether to release the underlying Edge Node Service (ENS) compute instances. Default value: false. If the node to be removed is in the failed state, this parameter does not take effect and the corresponding compute instance is released by default. For ENS compute instances that you manually connect to the cluster by using the script obtained from the DescribeAttachScript operation, this parameter does not take effect and the corresponding compute instances are not released by default.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If ReleaseNode is set to false, you must manually stop the kubelet process on the node before you call DeleteClusterNodes. Otherwise, the node may automatically rejoin the cluster.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DeleteClusterNodesRequest
@@ -11095,8 +11250,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除节点池指定节点</para>
+        /// <para>Removes nodes from a cluster when the nodes are no longer needed. The ReleaseNode parameter specifies whether to release the underlying Edge Node Service (ENS) compute instances. Default value: false. If the node to be removed is in the failed state, this parameter does not take effect and the corresponding compute instance is released by default. For ENS compute instances that you manually connect to the cluster by using the script obtained from the DescribeAttachScript operation, this parameter does not take effect and the corresponding compute instances are not released by default.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If ReleaseNode is set to false, you must manually stop the kubelet process on the node before you call DeleteClusterNodes. Otherwise, the node may automatically rejoin the cluster.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DeleteClusterNodesRequest
@@ -11151,8 +11311,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除节点池指定节点</para>
+        /// <para>Removes nodes from a cluster when the nodes are no longer needed. The ReleaseNode parameter specifies whether to release the underlying Edge Node Service (ENS) compute instances. Default value: false. If the node to be removed is in the failed state, this parameter does not take effect and the corresponding compute instance is released by default. For ENS compute instances that you manually connect to the cluster by using the script obtained from the DescribeAttachScript operation, this parameter does not take effect and the corresponding compute instances are not released by default.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If ReleaseNode is set to false, you must manually stop the kubelet process on the node before you call DeleteClusterNodes. Otherwise, the node may automatically rejoin the cluster.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteClusterNodesRequest
@@ -11169,8 +11334,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除节点池指定节点</para>
+        /// <para>Removes nodes from a cluster when the nodes are no longer needed. The ReleaseNode parameter specifies whether to release the underlying Edge Node Service (ENS) compute instances. Default value: false. If the node to be removed is in the failed state, this parameter does not take effect and the corresponding compute instance is released by default. For ENS compute instances that you manually connect to the cluster by using the script obtained from the DescribeAttachScript operation, this parameter does not take effect and the corresponding compute instances are not released by default.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If ReleaseNode is set to false, you must manually stop the kubelet process on the node before you call DeleteClusterNodes. Otherwise, the node may automatically rejoin the cluster.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteClusterNodesRequest
@@ -12019,8 +12189,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a File Storage NAS file system.</para>
+        /// <para>Calls DeleteFileSystem to delete a NAS service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a NAS file system. Before deleting the file system, call DeleteMountTarget to delete all mount targets of the file system. After DeleteMountTarget succeeds, there is an eventual consistency window. Poll DescribeFileSystems to confirm that MountTargets is empty before calling this API operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteFileSystemRequest
@@ -12057,8 +12232,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a File Storage NAS file system.</para>
+        /// <para>Calls DeleteFileSystem to delete a NAS service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a NAS file system. Before deleting the file system, call DeleteMountTarget to delete all mount targets of the file system. After DeleteMountTarget succeeds, there is an eventual consistency window. Poll DescribeFileSystems to confirm that MountTargets is empty before calling this API operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteFileSystemRequest
@@ -12095,8 +12275,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a File Storage NAS file system.</para>
+        /// <para>Calls DeleteFileSystem to delete a NAS service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a NAS file system. Before deleting the file system, call DeleteMountTarget to delete all mount targets of the file system. After DeleteMountTarget succeeds, there is an eventual consistency window. Poll DescribeFileSystems to confirm that MountTargets is empty before calling this API operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteFileSystemRequest
@@ -12113,8 +12298,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a File Storage NAS file system.</para>
+        /// <para>Calls DeleteFileSystem to delete a NAS service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a NAS file system. Before deleting the file system, call DeleteMountTarget to delete all mount targets of the file system. After DeleteMountTarget succeeds, there is an eventual consistency window. Poll DescribeFileSystems to confirm that MountTargets is empty before calling this API operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteFileSystemRequest
@@ -12508,8 +12698,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  After you delete an SSH key pair, you can no longer query the key pair by calling the DescribeKeyPairs operation.</para>
         /// <list type="bullet">
+        /// <item><description>After you delete an SSH key pair, you can no longer query the key pair by calling the DescribeKeyPairs operation.</description></item>
         /// <item><description>If you delete an SSH key pair that is bound to an Edge Node Service (ENS) instance, ENS no longer stores the SSH key pair. However, you can still use the key pair to access the instance. When you call the DescribeInstance operation to query instance information, no other information but the name of the key pair (<b>KeyPairName</b>) is returned.</description></item>
         /// </list>
         /// </description>
@@ -12562,8 +12752,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  After you delete an SSH key pair, you can no longer query the key pair by calling the DescribeKeyPairs operation.</para>
         /// <list type="bullet">
+        /// <item><description>After you delete an SSH key pair, you can no longer query the key pair by calling the DescribeKeyPairs operation.</description></item>
         /// <item><description>If you delete an SSH key pair that is bound to an Edge Node Service (ENS) instance, ENS no longer stores the SSH key pair. However, you can still use the key pair to access the instance. When you call the DescribeInstance operation to query instance information, no other information but the name of the key pair (<b>KeyPairName</b>) is returned.</description></item>
         /// </list>
         /// </description>
@@ -12616,8 +12806,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  After you delete an SSH key pair, you can no longer query the key pair by calling the DescribeKeyPairs operation.</para>
         /// <list type="bullet">
+        /// <item><description>After you delete an SSH key pair, you can no longer query the key pair by calling the DescribeKeyPairs operation.</description></item>
         /// <item><description>If you delete an SSH key pair that is bound to an Edge Node Service (ENS) instance, ENS no longer stores the SSH key pair. However, you can still use the key pair to access the instance. When you call the DescribeInstance operation to query instance information, no other information but the name of the key pair (<b>KeyPairName</b>) is returned.</description></item>
         /// </list>
         /// </description>
@@ -12642,8 +12832,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  After you delete an SSH key pair, you can no longer query the key pair by calling the DescribeKeyPairs operation.</para>
         /// <list type="bullet">
+        /// <item><description>After you delete an SSH key pair, you can no longer query the key pair by calling the DescribeKeyPairs operation.</description></item>
         /// <item><description>If you delete an SSH key pair that is bound to an Edge Node Service (ENS) instance, ENS no longer stores the SSH key pair. However, you can still use the key pair to access the instance. When you call the DescribeInstance operation to query instance information, no other information but the name of the key pair (<b>KeyPairName</b>) is returned.</description></item>
         /// </list>
         /// </description>
@@ -12668,9 +12858,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12726,9 +12916,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12784,9 +12974,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12810,9 +13000,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13607,7 +13797,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases the VPC peering connection.</para>
+        /// <para>Deletes a network peer connection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13649,7 +13839,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases the VPC peering connection.</para>
+        /// <para>Deletes a network peer connection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13691,7 +13881,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases the VPC peering connection.</para>
+        /// <para>Deletes a network peer connection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13709,7 +13899,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases the VPC peering connection.</para>
+        /// <para>Deletes a network peer connection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13855,12 +14045,12 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a shared data group (SDG).</para>
+        /// <para>Deletes an SDG by calling DeleteSDG.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If all the SDGs corresponding to the original disk are deleted, the original disk is automatically cleared.</para>
+        /// <para>If all SDGs associated with the original cloud disk are deleted, the original cloud disk is automatically cleaned up.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -13908,12 +14098,12 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a shared data group (SDG).</para>
+        /// <para>Deletes an SDG by calling DeleteSDG.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If all the SDGs corresponding to the original disk are deleted, the original disk is automatically cleared.</para>
+        /// <para>If all SDGs associated with the original cloud disk are deleted, the original cloud disk is automatically cleaned up.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -13961,12 +14151,12 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a shared data group (SDG).</para>
+        /// <para>Deletes an SDG by calling DeleteSDG.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If all the SDGs corresponding to the original disk are deleted, the original disk is automatically cleared.</para>
+        /// <para>If all SDGs associated with the original cloud disk are deleted, the original cloud disk is automatically cleaned up.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13984,12 +14174,12 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a shared data group (SDG).</para>
+        /// <para>Deletes an SDG by calling DeleteSDG.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If all the SDGs corresponding to the original disk are deleted, the original disk is automatically cleared.</para>
+        /// <para>If all SDGs associated with the original cloud disk are deleted, the original cloud disk is automatically cleaned up.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15035,7 +15225,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploys a shared data group (SDG) to compute instances.</para>
+        /// <para>Deploys an SDG to compute instances.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15099,7 +15289,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploys a shared data group (SDG) to compute instances.</para>
+        /// <para>Deploys an SDG to compute instances.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15163,7 +15353,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploys a shared data group (SDG) to compute instances.</para>
+        /// <para>Deploys an SDG to compute instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15181,7 +15371,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploys a shared data group (SDG) to compute instances.</para>
+        /// <para>Deploys an SDG to compute instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15199,7 +15389,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploys shared data groups (SDGs).</para>
+        /// <para>Deploys an SDG.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15243,7 +15433,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploys shared data groups (SDGs).</para>
+        /// <para>Deploys an SDG.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15287,7 +15477,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploys shared data groups (SDGs).</para>
+        /// <para>Deploys an SDG.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15305,7 +15495,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploys shared data groups (SDGs).</para>
+        /// <para>Deploys an SDG.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15323,7 +15513,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about images of the Android in Container (AIC) instance.</para>
+        /// <para>Retrieves image information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15397,7 +15587,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about images of the Android in Container (AIC) instance.</para>
+        /// <para>Retrieves image information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15471,7 +15661,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about images of the Android in Container (AIC) instance.</para>
+        /// <para>Retrieves image information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15489,7 +15679,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about images of the Android in Container (AIC) instance.</para>
+        /// <para>Retrieves image information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15507,7 +15697,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about ARM servers and Android in Container (AIC) instances.</para>
+        /// <para>Retrieves information about ARM servers and AIC instances.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15571,7 +15761,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about ARM servers and Android in Container (AIC) instances.</para>
+        /// <para>Retrieves information about ARM servers and AIC instances.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15635,7 +15825,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about ARM servers and Android in Container (AIC) instances.</para>
+        /// <para>Retrieves information about ARM servers and AIC instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15653,7 +15843,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about ARM servers and Android in Container (AIC) instances.</para>
+        /// <para>Retrieves information about ARM servers and AIC instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15671,8 +15861,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定组件的信息</para>
+        /// <para>Queries the details of a specified add-on.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Rate limit per user: 100 calls per second.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAddonRequest
@@ -15717,8 +15914,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定组件的信息</para>
+        /// <para>Queries the details of a specified add-on.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Rate limit per user: 100 calls per second.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAddonRequest
@@ -15763,8 +15967,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定组件的信息</para>
+        /// <para>Queries the details of a specified add-on.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Rate limit per user: 100 calls per second.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAddonRequest
@@ -15781,8 +15992,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定组件的信息</para>
+        /// <para>Queries the details of a specified add-on.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Rate limit per user: 100 calls per second.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAddonRequest
@@ -15951,8 +16169,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resources that can be created.</para>
+        /// <para>Queries the instance resources that can be created by calling DescribeAvailableResource.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries available resources. A successful business response is indicated by Code=0 in the response body. Do not confuse the business code in the response body with the HTTP status code.</para>
+        /// </description>
         /// 
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
@@ -15981,8 +16204,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resources that can be created.</para>
+        /// <para>Queries the instance resources that can be created by calling DescribeAvailableResource.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries available resources. A successful business response is indicated by Code=0 in the response body. Do not confuse the business code in the response body with the HTTP status code.</para>
+        /// </description>
         /// 
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
@@ -16011,8 +16239,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resources that can be created.</para>
+        /// <para>Queries the instance resources that can be created by calling DescribeAvailableResource.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries available resources. A successful business response is indicated by Code=0 in the response body. Do not confuse the business code in the response body with the HTTP status code.</para>
+        /// </description>
         /// 
         /// <returns>
         /// DescribeAvailableResourceResponse
@@ -16025,8 +16258,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resources that can be created.</para>
+        /// <para>Queries the instance resources that can be created by calling DescribeAvailableResource.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries available resources. A successful business response is indicated by Code=0 in the response body. Do not confuse the business code in the response body with the HTTP status code.</para>
+        /// </description>
         /// 
         /// <returns>
         /// DescribeAvailableResourceResponse
@@ -16039,7 +16277,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the specifications of resources that you can purchase when you create an instance.</para>
+        /// <para>You can call DescribeAvailableResourceInfo to query the specifications of purchasable resources for instance creation.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -16069,7 +16307,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the specifications of resources that you can purchase when you create an instance.</para>
+        /// <para>You can call DescribeAvailableResourceInfo to query the specifications of purchasable resources for instance creation.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -16099,7 +16337,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the specifications of resources that you can purchase when you create an instance.</para>
+        /// <para>You can call DescribeAvailableResourceInfo to query the specifications of purchasable resources for instance creation.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -16113,7 +16351,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the specifications of resources that you can purchase when you create an instance.</para>
+        /// <para>You can call DescribeAvailableResourceInfo to query the specifications of purchasable resources for instance creation.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -16571,12 +16809,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Container Service for Kubernetes (ACK) edge clusters.</para>
+        /// <para>Queries edge container clusters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
+        /// <list type="bullet">
+        /// <item><description>Single-user call frequency: 100 calls per second.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -16618,12 +16858,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Container Service for Kubernetes (ACK) edge clusters.</para>
+        /// <para>Queries edge container clusters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
+        /// <list type="bullet">
+        /// <item><description>Single-user call frequency: 100 calls per second.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -16665,12 +16907,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Container Service for Kubernetes (ACK) edge clusters.</para>
+        /// <para>Queries edge container clusters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
+        /// <list type="bullet">
+        /// <item><description>Single-user call frequency: 100 calls per second.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -16688,12 +16932,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Container Service for Kubernetes (ACK) edge clusters.</para>
+        /// <para>Queries edge container clusters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
+        /// <list type="bullet">
+        /// <item><description>Single-user call frequency: 100 calls per second.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -16711,7 +16957,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>To add existing ENS instances to an ECK cluster as worker nodes, or to re-add node instances to a node pool after removing worker nodes, ECK supports manually adding existing nodes to a node pool. You can invoke the DescribeClusterAttachScripts interface to obtain the script for adding existing nodes.</para>
+        /// <para>To add an existing ENS instance to an ECK cluster as a worker node or re-add a node to a node pool, call the DescribeClusterAttachScripts operation to get the required script.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16761,7 +17007,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>To add existing ENS instances to an ECK cluster as worker nodes, or to re-add node instances to a node pool after removing worker nodes, ECK supports manually adding existing nodes to a node pool. You can invoke the DescribeClusterAttachScripts interface to obtain the script for adding existing nodes.</para>
+        /// <para>To add an existing ENS instance to an ECK cluster as a worker node or re-add a node to a node pool, call the DescribeClusterAttachScripts operation to get the required script.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16811,7 +17057,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>To add existing ENS instances to an ECK cluster as worker nodes, or to re-add node instances to a node pool after removing worker nodes, ECK supports manually adding existing nodes to a node pool. You can invoke the DescribeClusterAttachScripts interface to obtain the script for adding existing nodes.</para>
+        /// <para>To add an existing ENS instance to an ECK cluster as a worker node or re-add a node to a node pool, call the DescribeClusterAttachScripts operation to get the required script.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16829,7 +17075,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>To add existing ENS instances to an ECK cluster as worker nodes, or to re-add node instances to a node pool after removing worker nodes, ECK supports manually adding existing nodes to a node pool. You can invoke the DescribeClusterAttachScripts interface to obtain the script for adding existing nodes.</para>
+        /// <para>To add an existing ENS instance to an ECK cluster as a worker node or re-add a node to a node pool, call the DescribeClusterAttachScripts operation to get the required script.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16847,8 +17093,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询集群详细信息</para>
+        /// <para>Queries the details of a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Per-user call frequency: 100 calls per second.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeClusterDetailRequest
@@ -16889,8 +17142,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询集群详细信息</para>
+        /// <para>Queries the details of a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Per-user call frequency: 100 calls per second.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeClusterDetailRequest
@@ -16931,8 +17191,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询集群详细信息</para>
+        /// <para>Queries the details of a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Per-user call frequency: 100 calls per second.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeClusterDetailRequest
@@ -16949,8 +17216,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询集群详细信息</para>
+        /// <para>Queries the details of a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Per-user call frequency: 100 calls per second.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeClusterDetailRequest
@@ -16967,12 +17241,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the certificate of a Container Service for Kubernetes (ACK) edge cluster.</para>
+        /// <para>Queries the certificate of an edge container cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The maximum number of times that each user can call this operation per second is 100.</para>
+        /// <list type="bullet">
+        /// <item><description>Single-user call frequency: 100 calls per second.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -17014,12 +17290,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the certificate of a Container Service for Kubernetes (ACK) edge cluster.</para>
+        /// <para>Queries the certificate of an edge container cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The maximum number of times that each user can call this operation per second is 100.</para>
+        /// <list type="bullet">
+        /// <item><description>Single-user call frequency: 100 calls per second.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -17061,12 +17339,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the certificate of a Container Service for Kubernetes (ACK) edge cluster.</para>
+        /// <para>Queries the certificate of an edge container cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The maximum number of times that each user can call this operation per second is 100.</para>
+        /// <list type="bullet">
+        /// <item><description>Single-user call frequency: 100 calls per second.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -17084,12 +17364,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the certificate of a Container Service for Kubernetes (ACK) edge cluster.</para>
+        /// <para>Queries the certificate of an edge container cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The maximum number of times that each user can call this operation per second is 100.</para>
+        /// <list type="bullet">
+        /// <item><description>Single-user call frequency: 100 calls per second.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -17107,8 +17389,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询集群节点池信息</para>
+        /// <para>Queries all node pools in a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Rate limit per user: 100 calls per second.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeClusterNodePoolsRequest
@@ -17157,8 +17446,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询集群节点池信息</para>
+        /// <para>Queries all node pools in a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Rate limit per user: 100 calls per second.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeClusterNodePoolsRequest
@@ -17207,8 +17503,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询集群节点池信息</para>
+        /// <para>Queries all node pools in a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Rate limit per user: 100 calls per second.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeClusterNodePoolsRequest
@@ -17225,8 +17528,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询集群节点池信息</para>
+        /// <para>Queries all node pools in a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Rate limit per user: 100 calls per second.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeClusterNodePoolsRequest
@@ -17243,8 +17553,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询节点池节点</para>
+        /// <para>Queries a list of nodes that meet specific conditions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Rate limit per user: 100 calls per second.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeClusterNodesRequest
@@ -17297,8 +17614,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询节点池节点</para>
+        /// <para>Queries a list of nodes that meet specific conditions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Rate limit per user: 100 calls per second.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeClusterNodesRequest
@@ -17351,8 +17675,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询节点池节点</para>
+        /// <para>Queries a list of nodes that meet specific conditions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Rate limit per user: 100 calls per second.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeClusterNodesRequest
@@ -17369,8 +17700,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询节点池节点</para>
+        /// <para>Queries a list of nodes that meet specific conditions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Rate limit per user: 100 calls per second.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeClusterNodesRequest
@@ -17387,8 +17725,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询集群KubeConfig</para>
+        /// <para>A kubeconfig file contains the credentials required for a client to access an Elastic Container instance on Kubernetes (ECK) cluster. The file includes identity and authentication data for accessing the destination cluster. To manage a cluster using kubectl, you must first connect to the cluster with its kubeconfig file. You can call the DescribeClusterUserKubeconfig operation to query the kubeconfig file for a specific cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>A single user is limited to 100 calls per second.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeClusterUserKubeconfigRequest
@@ -17433,8 +17778,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询集群KubeConfig</para>
+        /// <para>A kubeconfig file contains the credentials required for a client to access an Elastic Container instance on Kubernetes (ECK) cluster. The file includes identity and authentication data for accessing the destination cluster. To manage a cluster using kubectl, you must first connect to the cluster with its kubeconfig file. You can call the DescribeClusterUserKubeconfig operation to query the kubeconfig file for a specific cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>A single user is limited to 100 calls per second.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeClusterUserKubeconfigRequest
@@ -17479,8 +17831,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询集群KubeConfig</para>
+        /// <para>A kubeconfig file contains the credentials required for a client to access an Elastic Container instance on Kubernetes (ECK) cluster. The file includes identity and authentication data for accessing the destination cluster. To manage a cluster using kubectl, you must first connect to the cluster with its kubeconfig file. You can call the DescribeClusterUserKubeconfig operation to query the kubeconfig file for a specific cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>A single user is limited to 100 calls per second.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeClusterUserKubeconfigRequest
@@ -17497,8 +17856,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询集群KubeConfig</para>
+        /// <para>A kubeconfig file contains the credentials required for a client to access an Elastic Container instance on Kubernetes (ECK) cluster. The file includes identity and authentication data for accessing the destination cluster. To manage a cluster using kubectl, you must first connect to the cluster with its kubeconfig file. You can call the DescribeClusterUserKubeconfig operation to query the kubeconfig file for a specific cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>A single user is limited to 100 calls per second.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeClusterUserKubeconfigRequest
@@ -17536,6 +17902,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["ClusterId"] = request.ClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterType))
+            {
+                query["ClusterType"] = request.ClusterType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionId))
             {
                 query["EnsRegionId"] = request.EnsRegionId;
@@ -17543,6 +17913,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Profile))
+            {
+                query["Profile"] = request.Profile;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -17586,6 +17960,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["ClusterId"] = request.ClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterType))
+            {
+                query["ClusterType"] = request.ClusterType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionId))
             {
                 query["EnsRegionId"] = request.EnsRegionId;
@@ -17593,6 +17971,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Profile))
+            {
+                query["Profile"] = request.Profile;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -17771,7 +18153,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the distribution status of data files on edge instances of an application.</para>
+        /// <para>Retrieves the distribution status of data files across edge resource instances of an application by calling DescribeDataDistResult.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17851,7 +18233,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the distribution status of data files on edge instances of an application.</para>
+        /// <para>Retrieves the distribution status of data files across edge resource instances of an application by calling DescribeDataDistResult.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17931,7 +18313,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the distribution status of data files on edge instances of an application.</para>
+        /// <para>Retrieves the distribution status of data files across edge resource instances of an application by calling DescribeDataDistResult.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17949,7 +18331,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the distribution status of data files on edge instances of an application.</para>
+        /// <para>Retrieves the distribution status of data files across edge resource instances of an application by calling DescribeDataDistResult.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17967,7 +18349,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the download URLs of application data on file servers and returns the file servers on which data is pushed.</para>
+        /// <para>Retrieves the download URL of application data from file servers and returns the list of file servers to which the data has been successfully pre-pushed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18005,7 +18387,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the download URLs of application data on file servers and returns the file servers on which data is pushed.</para>
+        /// <para>Retrieves the download URL of application data from file servers and returns the list of file servers to which the data has been successfully pre-pushed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18043,7 +18425,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the download URLs of application data on file servers and returns the file servers on which data is pushed.</para>
+        /// <para>Retrieves the download URL of application data from file servers and returns the list of file servers to which the data has been successfully pre-pushed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18061,7 +18443,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the download URLs of application data on file servers and returns the file servers on which data is pushed.</para>
+        /// <para>Retrieves the download URL of application data from file servers and returns the list of file servers to which the data has been successfully pre-pushed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18079,8 +18461,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the push status of application data files on Edge Node Service (ENS) nodes.</para>
+        /// <para>Queries the pre-push status of data files for an application on edge nodes.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the pre-push results of application data. Before calling this operation, make sure that your account has activated the Edge Node Service (ENS) edge application hosting service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDataPushResultRequest
@@ -18149,8 +18536,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the push status of application data files on Edge Node Service (ENS) nodes.</para>
+        /// <para>Queries the pre-push status of data files for an application on edge nodes.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the pre-push results of application data. Before calling this operation, make sure that your account has activated the Edge Node Service (ENS) edge application hosting service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDataPushResultRequest
@@ -18219,8 +18611,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the push status of application data files on Edge Node Service (ENS) nodes.</para>
+        /// <para>Queries the pre-push status of data files for an application on edge nodes.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the pre-push results of application data. Before calling this operation, make sure that your account has activated the Edge Node Service (ENS) edge application hosting service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDataPushResultRequest
@@ -18237,8 +18634,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the push status of application data files on Edge Node Service (ENS) nodes.</para>
+        /// <para>Queries the pre-push status of data files for an application on edge nodes.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the pre-push results of application data. Before calling this operation, make sure that your account has activated the Edge Node Service (ENS) edge application hosting service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDataPushResultRequest
@@ -18255,7 +18657,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the properties of instances and virtual devices in a specific edge application.</para>
+        /// <para>Queries the list of basic property information such as instances and virtual device network status under an edge application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18293,7 +18695,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the properties of instances and virtual devices in a specific edge application.</para>
+        /// <para>Queries the list of basic property information such as instances and virtual device network status under an edge application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18331,7 +18733,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the properties of instances and virtual devices in a specific edge application.</para>
+        /// <para>Queries the list of basic property information such as instances and virtual device network status under an edge application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18349,7 +18751,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the properties of instances and virtual devices in a specific edge application.</para>
+        /// <para>Queries the list of basic property information such as instances and virtual device network status under an edge application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18367,7 +18769,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the disk IOPS monitoring data.</para>
+        /// <para>Queries disk IOPS monitoring data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18405,7 +18807,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the disk IOPS monitoring data.</para>
+        /// <para>Queries disk IOPS monitoring data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18443,7 +18845,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the disk IOPS monitoring data.</para>
+        /// <para>Queries disk IOPS monitoring data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18461,7 +18863,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the disk IOPS monitoring data.</para>
+        /// <para>Queries disk IOPS monitoring data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18479,7 +18881,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more disks.</para>
+        /// <para>Queries information about one or more created disks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18577,7 +18979,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more disks.</para>
+        /// <para>Queries information about one or more created disks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18675,7 +19077,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more disks.</para>
+        /// <para>Queries information about one or more created disks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18693,7 +19095,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more disks.</para>
+        /// <para>Queries information about one or more created disks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18711,7 +19113,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the specifications of resources that you can purchase when you create an instance.</para>
+        /// <para>Queries the specifications of available resources for purchase when you create an instance by calling DescribeElbAvailableResourceInfo.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -18741,7 +19143,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the specifications of resources that you can purchase when you create an instance.</para>
+        /// <para>Queries the specifications of available resources for purchase when you create an instance by calling DescribeElbAvailableResourceInfo.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -18771,7 +19173,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the specifications of resources that you can purchase when you create an instance.</para>
+        /// <para>Queries the specifications of available resources for purchase when you create an instance by calling DescribeElbAvailableResourceInfo.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -18785,7 +19187,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the specifications of resources that you can purchase when you create an instance.</para>
+        /// <para>Queries the specifications of available resources for purchase when you create an instance by calling DescribeElbAvailableResourceInfo.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -19047,7 +19449,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries elastic IP addresses (EIPs).</para>
+        /// <para>Queries elastic IP addresses (EIPs) in Edge Node Service (ENS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19137,7 +19539,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries elastic IP addresses (EIPs).</para>
+        /// <para>Queries elastic IP addresses (EIPs) in Edge Node Service (ENS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19227,7 +19629,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries elastic IP addresses (EIPs).</para>
+        /// <para>Queries elastic IP addresses (EIPs) in Edge Node Service (ENS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19245,7 +19647,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries elastic IP addresses (EIPs).</para>
+        /// <para>Queries elastic IP addresses (EIPs) in Edge Node Service (ENS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19263,7 +19665,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries regions in which ENS resources can be created.</para>
+        /// <para>Invoke DescribeEnsNetDistrict to query the regions where edge service resources can be created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19313,7 +19715,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries regions in which ENS resources can be created.</para>
+        /// <para>Invoke DescribeEnsNetDistrict to query the regions where edge service resources can be created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19363,7 +19765,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries regions in which ENS resources can be created.</para>
+        /// <para>Invoke DescribeEnsNetDistrict to query the regions where edge service resources can be created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19381,7 +19783,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries regions in which ENS resources can be created.</para>
+        /// <para>Invoke DescribeEnsNetDistrict to query the regions where edge service resources can be created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19735,7 +20137,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries node resources.</para>
+        /// <para>Queries edge zone resource information by calling DescribeEnsRegionIdResource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -19802,7 +20204,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries node resources.</para>
+        /// <para>Queries edge zone resource information by calling DescribeEnsRegionIdResource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -19869,7 +20271,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries node resources.</para>
+        /// <para>Queries edge zone resource information by calling DescribeEnsRegionIdResource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -19892,7 +20294,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries node resources.</para>
+        /// <para>Queries edge zone resource information by calling DescribeEnsRegionIdResource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -19915,7 +20317,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Edge Node Service (ENS) nodes that you can use.</para>
+        /// <para>Queries a list of available ENS nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19957,7 +20359,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Edge Node Service (ENS) nodes that you can use.</para>
+        /// <para>Queries a list of available ENS nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19999,7 +20401,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Edge Node Service (ENS) nodes that you can use.</para>
+        /// <para>Queries a list of available ENS nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20017,7 +20419,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Edge Node Service (ENS) nodes that you can use.</para>
+        /// <para>Queries a list of available ENS nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20955,7 +21357,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the EPN bandwidth usage.</para>
+        /// <para>Invokes DescribeEpnBandWidthData to query the network bandwidth usage of an edge-to-edge network.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21025,7 +21427,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the EPN bandwidth usage.</para>
+        /// <para>Invokes DescribeEpnBandWidthData to query the network bandwidth usage of an edge-to-edge network.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21095,7 +21497,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the EPN bandwidth usage.</para>
+        /// <para>Invokes DescribeEpnBandWidthData to query the network bandwidth usage of an edge-to-edge network.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21113,7 +21515,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the EPN bandwidth usage.</para>
+        /// <para>Invokes DescribeEpnBandWidthData to query the network bandwidth usage of an edge-to-edge network.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21700,8 +22102,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation to query information about all custom images in your account. The information include the image properties, image export status, and the Object Storage Service (OSS) download links.</para>
         /// <list type="bullet">
+        /// <item><description>to query information about all custom images in your account. The information include the image properties, image export status, and the Object Storage Service (OSS) download links.</description></item>
         /// <item><description>Empty strings are returned for images that are not exported.</description></item>
         /// <item><description>The download links may become invalid if you delete objects in OSS.</description></item>
         /// </list>
@@ -21763,8 +22165,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation to query information about all custom images in your account. The information include the image properties, image export status, and the Object Storage Service (OSS) download links.</para>
         /// <list type="bullet">
+        /// <item><description>to query information about all custom images in your account. The information include the image properties, image export status, and the Object Storage Service (OSS) download links.</description></item>
         /// <item><description>Empty strings are returned for images that are not exported.</description></item>
         /// <item><description>The download links may become invalid if you delete objects in OSS.</description></item>
         /// </list>
@@ -21826,8 +22228,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation to query information about all custom images in your account. The information include the image properties, image export status, and the Object Storage Service (OSS) download links.</para>
         /// <list type="bullet">
+        /// <item><description>to query information about all custom images in your account. The information include the image properties, image export status, and the Object Storage Service (OSS) download links.</description></item>
         /// <item><description>Empty strings are returned for images that are not exported.</description></item>
         /// <item><description>The download links may become invalid if you delete objects in OSS.</description></item>
         /// </list>
@@ -21853,8 +22255,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation to query information about all custom images in your account. The information include the image properties, image export status, and the Object Storage Service (OSS) download links.</para>
         /// <list type="bullet">
+        /// <item><description>to query information about all custom images in your account. The information include the image properties, image export status, and the Object Storage Service (OSS) download links.</description></item>
         /// <item><description>Empty strings are returned for images that are not exported.</description></item>
         /// <item><description>The download links may become invalid if you delete objects in OSS.</description></item>
         /// </list>
@@ -21995,7 +22397,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about Apsara File Storage NAS (NAS) file systems.</para>
+        /// <para>Query NAS file system information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22033,7 +22435,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about Apsara File Storage NAS (NAS) file systems.</para>
+        /// <para>Query NAS file system information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22071,7 +22473,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about Apsara File Storage NAS (NAS) file systems.</para>
+        /// <para>Query NAS file system information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22089,7 +22491,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about Apsara File Storage NAS (NAS) file systems.</para>
+        /// <para>Query NAS file system information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22107,7 +22509,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeForwardEntryAttribute operation to query the details of a DNAT rule.</para>
+        /// <para>Queries a DNAT rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22149,7 +22551,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeForwardEntryAttribute operation to query the details of a DNAT rule.</para>
+        /// <para>Queries a DNAT rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22191,7 +22593,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeForwardEntryAttribute operation to query the details of a DNAT rule.</para>
+        /// <para>Queries a DNAT rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22209,7 +22611,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeForwardEntryAttribute operation to query the details of a DNAT rule.</para>
+        /// <para>Queries a DNAT rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22403,7 +22805,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries high-availability virtual IP addresses (HAVIPs).</para>
+        /// <para>Queries high-availability virtual IP addresses (HaVips).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22441,7 +22843,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries high-availability virtual IP addresses (HAVIPs).</para>
+        /// <para>Queries high-availability virtual IP addresses (HaVips).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22479,7 +22881,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries high-availability virtual IP addresses (HAVIPs).</para>
+        /// <para>Queries high-availability virtual IP addresses (HaVips).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22497,7 +22899,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries high-availability virtual IP addresses (HAVIPs).</para>
+        /// <para>Queries high-availability virtual IP addresses (HaVips).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22515,12 +22917,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries instance system events.</para>
+        /// <para>Queries system event information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You must specify an event type to query. You can query multiple event types at the same time.</para>
+        /// <list type="bullet">
+        /// <item><description>EventTypes must specify at least one event type for the query. Multiple event types can be queried at the same time.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -22600,12 +23004,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries instance system events.</para>
+        /// <para>Queries system event information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You must specify an event type to query. You can query multiple event types at the same time.</para>
+        /// <list type="bullet">
+        /// <item><description>EventTypes must specify at least one event type for the query. Multiple event types can be queried at the same time.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -22685,12 +23091,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries instance system events.</para>
+        /// <para>Queries system event information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You must specify an event type to query. You can query multiple event types at the same time.</para>
+        /// <list type="bullet">
+        /// <item><description>EventTypes must specify at least one event type for the query. Multiple event types can be queried at the same time.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -22708,12 +23116,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries instance system events.</para>
+        /// <para>Queries system event information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You must specify an event type to query. You can query multiple event types at the same time.</para>
+        /// <list type="bullet">
+        /// <item><description>EventTypes must specify at least one event type for the query. Multiple event types can be queried at the same time.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -22731,7 +23141,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries available images.</para>
+        /// <para>Queries available image resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22773,7 +23183,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries available images.</para>
+        /// <para>Queries available image resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22815,7 +23225,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries available images.</para>
+        /// <para>Queries available image resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22833,7 +23243,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries available images.</para>
+        /// <para>Queries available image resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23163,7 +23573,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to query whether auto-renewal is enabled for an instance.</para>
+        /// <para>to query whether auto-renewal is enabled for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23209,7 +23619,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to query whether auto-renewal is enabled for an instance.</para>
+        /// <para>to query whether auto-renewal is enabled for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23255,7 +23665,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to query whether auto-renewal is enabled for an instance.</para>
+        /// <para>to query whether auto-renewal is enabled for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23273,7 +23683,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to query whether auto-renewal is enabled for an instance.</para>
+        /// <para>to query whether auto-renewal is enabled for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23291,15 +23701,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed bandwidth data of an instance, which is collected every 5 minutes.</para>
+        /// <para>Queries the bandwidth details of an instance at a 5-minute granularity.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 800 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 100 times per second per user.</description></item>
-        /// <item><description>You can specify multiple request parameters to filter query results. Specified request parameters have logical AND relations. Only the specified parameters are included in the filter conditions. However, if InstanceIds is set to an empty JSON array, this parameter is regarded as a valid filter condition and an empty result is returned.</description></item>
+        /// <item><description>Request parameters act as filters. Filters are evaluated by using the logical AND operator. If a parameter is empty, the corresponding filter does not take effect. However, if InstanceIds is set to an empty JSON array, the filter is considered valid and an empty result is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23338,15 +23746,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed bandwidth data of an instance, which is collected every 5 minutes.</para>
+        /// <para>Queries the bandwidth details of an instance at a 5-minute granularity.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 800 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 100 times per second per user.</description></item>
-        /// <item><description>You can specify multiple request parameters to filter query results. Specified request parameters have logical AND relations. Only the specified parameters are included in the filter conditions. However, if InstanceIds is set to an empty JSON array, this parameter is regarded as a valid filter condition and an empty result is returned.</description></item>
+        /// <item><description>Request parameters act as filters. Filters are evaluated by using the logical AND operator. If a parameter is empty, the corresponding filter does not take effect. However, if InstanceIds is set to an empty JSON array, the filter is considered valid and an empty result is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23385,15 +23791,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed bandwidth data of an instance, which is collected every 5 minutes.</para>
+        /// <para>Queries the bandwidth details of an instance at a 5-minute granularity.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 800 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 100 times per second per user.</description></item>
-        /// <item><description>You can specify multiple request parameters to filter query results. Specified request parameters have logical AND relations. Only the specified parameters are included in the filter conditions. However, if InstanceIds is set to an empty JSON array, this parameter is regarded as a valid filter condition and an empty result is returned.</description></item>
+        /// <item><description>Request parameters act as filters. Filters are evaluated by using the logical AND operator. If a parameter is empty, the corresponding filter does not take effect. However, if InstanceIds is set to an empty JSON array, the filter is considered valid and an empty result is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23412,15 +23816,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed bandwidth data of an instance, which is collected every 5 minutes.</para>
+        /// <para>Queries the bandwidth details of an instance at a 5-minute granularity.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 800 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 100 times per second per user.</description></item>
-        /// <item><description>You can specify multiple request parameters to filter query results. Specified request parameters have logical AND relations. Only the specified parameters are included in the filter conditions. However, if InstanceIds is set to an empty JSON array, this parameter is regarded as a valid filter condition and an empty result is returned.</description></item>
+        /// <item><description>Request parameters act as filters. Filters are evaluated by using the logical AND operator. If a parameter is empty, the corresponding filter does not take effect. However, if InstanceIds is set to an empty JSON array, the filter is considered valid and an empty result is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23603,7 +24005,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the vCPU and memory usage of an instance.</para>
+        /// <para>Queries the CPU and memory usage of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23657,7 +24059,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the vCPU and memory usage of an instance.</para>
+        /// <para>Queries the CPU and memory usage of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23711,7 +24113,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the vCPU and memory usage of an instance.</para>
+        /// <para>Queries the CPU and memory usage of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23729,7 +24131,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the vCPU and memory usage of an instance.</para>
+        /// <para>Queries the CPU and memory usage of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23747,7 +24149,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries shared data groups (SDGs) that are mounted to an Android in Container (AIC) instance.</para>
+        /// <para>Queries the mount status of SDGs under a specified AIC instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -23791,7 +24193,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries shared data groups (SDGs) that are mounted to an Android in Container (AIC) instance.</para>
+        /// <para>Queries the mount status of SDGs under a specified AIC instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -23835,7 +24237,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries shared data groups (SDGs) that are mounted to an Android in Container (AIC) instance.</para>
+        /// <para>Queries the mount status of SDGs under a specified AIC instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23853,7 +24255,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries shared data groups (SDGs) that are mounted to an Android in Container (AIC) instance.</para>
+        /// <para>Queries the mount status of SDGs under a specified AIC instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23959,9 +24361,12 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the specifications of instance types.</para>
+        /// <para>Queries the list of instance types by calling DescribeInstanceTypes.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeInstanceTypesRequest
+        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -23969,9 +24374,18 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <returns>
         /// DescribeInstanceTypesResponse
         /// </returns>
-        public DescribeInstanceTypesResponse DescribeInstanceTypesWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeInstanceTypesResponse DescribeInstanceTypesWithOptions(DescribeInstanceTypesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                query["InstanceType"] = request.InstanceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeInstanceTypes",
@@ -23989,9 +24403,12 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the specifications of instance types.</para>
+        /// <para>Queries the list of instance types by calling DescribeInstanceTypes.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeInstanceTypesRequest
+        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -23999,9 +24416,18 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <returns>
         /// DescribeInstanceTypesResponse
         /// </returns>
-        public async Task<DescribeInstanceTypesResponse> DescribeInstanceTypesWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeInstanceTypesResponse> DescribeInstanceTypesWithOptionsAsync(DescribeInstanceTypesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                query["InstanceType"] = request.InstanceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DescribeInstanceTypes",
@@ -24019,35 +24445,43 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the specifications of instance types.</para>
+        /// <para>Queries the list of instance types by calling DescribeInstanceTypes.</para>
         /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceTypesRequest
+        /// </param>
         /// 
         /// <returns>
         /// DescribeInstanceTypesResponse
         /// </returns>
-        public DescribeInstanceTypesResponse DescribeInstanceTypes()
+        public DescribeInstanceTypesResponse DescribeInstanceTypes(DescribeInstanceTypesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeInstanceTypesWithOptions(runtime);
+            return DescribeInstanceTypesWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the specifications of instance types.</para>
+        /// <para>Queries the list of instance types by calling DescribeInstanceTypes.</para>
         /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceTypesRequest
+        /// </param>
         /// 
         /// <returns>
         /// DescribeInstanceTypesResponse
         /// </returns>
-        public async Task<DescribeInstanceTypesResponse> DescribeInstanceTypesAsync()
+        public async Task<DescribeInstanceTypesResponse> DescribeInstanceTypesAsync(DescribeInstanceTypesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeInstanceTypesWithOptionsAsync(runtime);
+            return await DescribeInstanceTypesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Virtual Network Computing (VNC) URL of an Edge Node Service (ENS) instance.</para>
+        /// <para>Queries the web management terminal URL of an ENS instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24089,7 +24523,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Virtual Network Computing (VNC) URL of an Edge Node Service (ENS) instance.</para>
+        /// <para>Queries the web management terminal URL of an ENS instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24131,7 +24565,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Virtual Network Computing (VNC) URL of an Edge Node Service (ENS) instance.</para>
+        /// <para>Queries the web management terminal URL of an ENS instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24149,7 +24583,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Virtual Network Computing (VNC) URL of an Edge Node Service (ENS) instance.</para>
+        /// <para>Queries the web management terminal URL of an ENS instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24167,15 +24601,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to view the details of one or more instances.</para>
+        /// <para>Queries the details of one or more instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 800 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 100 times per second per user.</description></item>
-        /// <item><description>You can specify multiple request parameters to be queried. Specified parameters are evaluated by using the AND operator. Only the specified parameters are included in the filter conditions. However, if InstanceIds is set to an empty JSON array, it is regarded as a valid filter condition and an empty result is returned.</description></item>
+        /// <item><description>API call frequency: 800 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24320,15 +24752,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to view the details of one or more instances.</para>
+        /// <para>Queries the details of one or more instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 800 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 100 times per second per user.</description></item>
-        /// <item><description>You can specify multiple request parameters to be queried. Specified parameters are evaluated by using the AND operator. Only the specified parameters are included in the filter conditions. However, if InstanceIds is set to an empty JSON array, it is regarded as a valid filter condition and an empty result is returned.</description></item>
+        /// <item><description>API call frequency: 800 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24473,15 +24903,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to view the details of one or more instances.</para>
+        /// <para>Queries the details of one or more instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 800 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 100 times per second per user.</description></item>
-        /// <item><description>You can specify multiple request parameters to be queried. Specified parameters are evaluated by using the AND operator. Only the specified parameters are included in the filter conditions. However, if InstanceIds is set to an empty JSON array, it is regarded as a valid filter condition and an empty result is returned.</description></item>
+        /// <item><description>API call frequency: 800 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24500,15 +24928,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to view the details of one or more instances.</para>
+        /// <para>Queries the details of one or more instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 800 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 100 times per second per user.</description></item>
-        /// <item><description>You can specify multiple request parameters to be queried. Specified parameters are evaluated by using the AND operator. Only the specified parameters are included in the filter conditions. However, if InstanceIds is set to an empty JSON array, it is regarded as a valid filter condition and an empty result is returned.</description></item>
+        /// <item><description>API call frequency: 800 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24671,14 +25097,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries detailed information about an Edge Load Balancer (ELB) instance.</para>
+        /// <para>Queries the details of a specified load balancing instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per account.</description></item>
+        /// <item><description>API call rate: 100 calls per second.</description></item>
+        /// <item><description>Per-user call rate: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24721,14 +25147,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries detailed information about an Edge Load Balancer (ELB) instance.</para>
+        /// <para>Queries the details of a specified load balancing instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per account.</description></item>
+        /// <item><description>API call rate: 100 calls per second.</description></item>
+        /// <item><description>Per-user call rate: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24771,14 +25197,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries detailed information about an Edge Load Balancer (ELB) instance.</para>
+        /// <para>Queries the details of a specified load balancing instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per account.</description></item>
+        /// <item><description>API call rate: 100 calls per second.</description></item>
+        /// <item><description>Per-user call rate: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24797,14 +25223,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries detailed information about an Edge Load Balancer (ELB) instance.</para>
+        /// <para>Queries the details of a specified load balancing instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per account.</description></item>
+        /// <item><description>API call rate: 100 calls per second.</description></item>
+        /// <item><description>Per-user call rate: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24828,9 +25254,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24882,9 +25308,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24936,9 +25362,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24962,9 +25388,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24988,9 +25414,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25042,9 +25468,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25096,9 +25522,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25122,9 +25548,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25148,9 +25574,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25194,9 +25620,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25240,9 +25666,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25266,9 +25692,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25551,14 +25977,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of a Transmission Control Protocol (TCP) listener.</para>
+        /// <para>Call the <c>DescribeLoadBalancerTCPListenerAttribute</c> operation to query the configuration of a TCP listener.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>API call rate: 100 calls per second.</description></item>
+        /// <item><description>Per-user call rate: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25605,14 +26031,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of a Transmission Control Protocol (TCP) listener.</para>
+        /// <para>Call the <c>DescribeLoadBalancerTCPListenerAttribute</c> operation to query the configuration of a TCP listener.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>API call rate: 100 calls per second.</description></item>
+        /// <item><description>Per-user call rate: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25659,14 +26085,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of a Transmission Control Protocol (TCP) listener.</para>
+        /// <para>Call the <c>DescribeLoadBalancerTCPListenerAttribute</c> operation to query the configuration of a TCP listener.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>API call rate: 100 calls per second.</description></item>
+        /// <item><description>Per-user call rate: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25685,14 +26111,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of a Transmission Control Protocol (TCP) listener.</para>
+        /// <para>Call the <c>DescribeLoadBalancerTCPListenerAttribute</c> operation to query the configuration of a TCP listener.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>API call rate: 100 calls per second.</description></item>
+        /// <item><description>Per-user call rate: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25711,14 +26137,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration of a User Datagram Protocol (UDP) listener.</para>
+        /// <para>Call <c>DescribeLoadBalancerUDPListenerAttribute</c> to get a UDP listener\&quot;s configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>API rate limit: 100 requests per second (RPS).</description></item>
+        /// <item><description>Per-user rate limit: 10 RPS.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25765,14 +26191,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration of a User Datagram Protocol (UDP) listener.</para>
+        /// <para>Call <c>DescribeLoadBalancerUDPListenerAttribute</c> to get a UDP listener\&quot;s configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>API rate limit: 100 requests per second (RPS).</description></item>
+        /// <item><description>Per-user rate limit: 10 RPS.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25819,14 +26245,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration of a User Datagram Protocol (UDP) listener.</para>
+        /// <para>Call <c>DescribeLoadBalancerUDPListenerAttribute</c> to get a UDP listener\&quot;s configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>API rate limit: 100 requests per second (RPS).</description></item>
+        /// <item><description>Per-user rate limit: 10 RPS.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25845,14 +26271,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration of a User Datagram Protocol (UDP) listener.</para>
+        /// <para>Call <c>DescribeLoadBalancerUDPListenerAttribute</c> to get a UDP listener\&quot;s configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>API rate limit: 100 requests per second (RPS).</description></item>
+        /// <item><description>Per-user rate limit: 10 RPS.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25871,14 +26297,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Edge Load Balance (ELB) instances that you have created.</para>
+        /// <para>Invokes the DescribeLoadBalancers operation to query the list of created load balancing instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>API call rate: 100 calls per second.</description></item>
+        /// <item><description>Call rate per user: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25917,14 +26343,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Edge Load Balance (ELB) instances that you have created.</para>
+        /// <para>Invokes the DescribeLoadBalancers operation to query the list of created load balancing instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>API call rate: 100 calls per second.</description></item>
+        /// <item><description>Call rate per user: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25963,14 +26389,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Edge Load Balance (ELB) instances that you have created.</para>
+        /// <para>Invokes the DescribeLoadBalancers operation to query the list of created load balancing instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>API call rate: 100 calls per second.</description></item>
+        /// <item><description>Call rate per user: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25989,14 +26415,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Edge Load Balance (ELB) instances that you have created.</para>
+        /// <para>Invokes the DescribeLoadBalancers operation to query the list of created load balancing instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>API call rate: 100 calls per second.</description></item>
+        /// <item><description>Call rate per user: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26015,7 +26441,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metering data of the user.</para>
+        /// <para>Retrieves user metering data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26061,7 +26487,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metering data of the user.</para>
+        /// <para>Retrieves user metering data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26107,7 +26533,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metering data of the user.</para>
+        /// <para>Retrieves user metering data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26125,7 +26551,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metering data of the user.</para>
+        /// <para>Retrieves user metering data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26143,7 +26569,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about mount targets.</para>
+        /// <para>Queries mount target information by calling DescribeMountTargets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26201,7 +26627,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about mount targets.</para>
+        /// <para>Queries mount target information by calling DescribeMountTargets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26259,7 +26685,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about mount targets.</para>
+        /// <para>Queries mount target information by calling DescribeMountTargets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26277,7 +26703,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about mount targets.</para>
+        /// <para>Queries mount target information by calling DescribeMountTargets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26295,7 +26721,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the specifications of resources that you can purchase when you create a NAS.</para>
+        /// <para>Query the resources that you can purchase when creating a NAS file system.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -26325,7 +26751,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the specifications of resources that you can purchase when you create a NAS.</para>
+        /// <para>Query the resources that you can purchase when creating a NAS file system.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -26355,7 +26781,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the specifications of resources that you can purchase when you create a NAS.</para>
+        /// <para>Query the resources that you can purchase when creating a NAS file system.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -26369,7 +26795,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the specifications of resources that you can purchase when you create a NAS.</para>
+        /// <para>Query the resources that you can purchase when creating a NAS file system.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -26495,7 +26921,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries created Network Address Translation (NAT) gateways.</para>
+        /// <para>Invoke DescribeNatGateways to query created NAT Gateways.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26533,7 +26959,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries created Network Address Translation (NAT) gateways.</para>
+        /// <para>Invoke DescribeNatGateways to query created NAT Gateways.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26571,7 +26997,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries created Network Address Translation (NAT) gateways.</para>
+        /// <para>Invoke DescribeNatGateways to query created NAT Gateways.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26589,7 +27015,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries created Network Address Translation (NAT) gateways.</para>
+        /// <para>Invoke DescribeNatGateways to query created NAT Gateways.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26607,7 +27033,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries network access control lists (ACLs).</para>
+        /// <para>You can invoke the DescribeNetworkAcls API to query created network ACLs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26665,7 +27091,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries network access control lists (ACLs).</para>
+        /// <para>You can invoke the DescribeNetworkAcls API to query created network ACLs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26723,7 +27149,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries network access control lists (ACLs).</para>
+        /// <para>You can invoke the DescribeNetworkAcls API to query created network ACLs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26741,7 +27167,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries network access control lists (ACLs).</para>
+        /// <para>You can invoke the DescribeNetworkAcls API to query created network ACLs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26759,14 +27185,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration of a specified network.</para>
+        /// <para>Use DescribeNetworkAttribute to query the configuration of a specific network.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per account.</description></item>
+        /// <item><description>API rate limit: 100 calls/sec.</description></item>
+        /// <item><description>Per-user rate limit: 10 calls/sec.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26809,14 +27235,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration of a specified network.</para>
+        /// <para>Use DescribeNetworkAttribute to query the configuration of a specific network.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per account.</description></item>
+        /// <item><description>API rate limit: 100 calls/sec.</description></item>
+        /// <item><description>Per-user rate limit: 10 calls/sec.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26859,14 +27285,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration of a specified network.</para>
+        /// <para>Use DescribeNetworkAttribute to query the configuration of a specific network.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per account.</description></item>
+        /// <item><description>API rate limit: 100 calls/sec.</description></item>
+        /// <item><description>Per-user rate limit: 10 calls/sec.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26885,14 +27311,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration of a specified network.</para>
+        /// <para>Use DescribeNetworkAttribute to query the configuration of a specific network.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per account.</description></item>
+        /// <item><description>API rate limit: 100 calls/sec.</description></item>
+        /// <item><description>Per-user rate limit: 10 calls/sec.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26911,7 +27337,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Elastic Network Interfaces (ENIs).</para>
+        /// <para>Queries a list of elastic network interfaces (ENIs).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27009,7 +27435,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Elastic Network Interfaces (ENIs).</para>
+        /// <para>Queries a list of elastic network interfaces (ENIs).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27107,7 +27533,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Elastic Network Interfaces (ENIs).</para>
+        /// <para>Queries a list of elastic network interfaces (ENIs).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27125,7 +27551,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Elastic Network Interfaces (ENIs).</para>
+        /// <para>Queries a list of elastic network interfaces (ENIs).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27143,7 +27569,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries VPC peering connections.</para>
+        /// <para>Call <c>DescribeNetworkPeerConnections</c> to query network peer connections.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27205,7 +27631,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries VPC peering connections.</para>
+        /// <para>Call <c>DescribeNetworkPeerConnections</c> to query network peer connections.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27267,7 +27693,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries VPC peering connections.</para>
+        /// <para>Call <c>DescribeNetworkPeerConnections</c> to query network peer connections.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27285,7 +27711,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries VPC peering connections.</para>
+        /// <para>Call <c>DescribeNetworkPeerConnections</c> to query network peer connections.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27303,14 +27729,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the network list.</para>
+        /// <para>Call DescribeNetworks to retrieve a list of networks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per account.</description></item>
+        /// <item><description>API call frequency: 100 calls per second.</description></item>
+        /// <item><description>Per-user call frequency: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -27377,14 +27803,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the network list.</para>
+        /// <para>Call DescribeNetworks to retrieve a list of networks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per account.</description></item>
+        /// <item><description>API call frequency: 100 calls per second.</description></item>
+        /// <item><description>Per-user call frequency: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -27451,14 +27877,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the network list.</para>
+        /// <para>Call DescribeNetworks to retrieve a list of networks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per account.</description></item>
+        /// <item><description>API call frequency: 100 calls per second.</description></item>
+        /// <item><description>Per-user call frequency: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -27477,14 +27903,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the network list.</para>
+        /// <para>Call DescribeNetworks to retrieve a list of networks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per account.</description></item>
+        /// <item><description>API call frequency: 100 calls per second.</description></item>
+        /// <item><description>Per-user call frequency: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -27843,7 +28269,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about the Internet service providers (ISPs) of edge nodes.</para>
+        /// <para>Queries the Internet Service Provider (ISP) information of an ENS edge node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27881,7 +28307,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about the Internet service providers (ISPs) of edge nodes.</para>
+        /// <para>Queries the Internet Service Provider (ISP) information of an ENS edge node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27919,7 +28345,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about the Internet service providers (ISPs) of edge nodes.</para>
+        /// <para>Queries the Internet Service Provider (ISP) information of an ENS edge node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27937,7 +28363,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about the Internet service providers (ISPs) of edge nodes.</para>
+        /// <para>Queries the Internet Service Provider (ISP) information of an ENS edge node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28267,7 +28693,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries basic information about shared data groups (SDGs), including node preload information.</para>
+        /// <para>Queries basic SDG information, including node preload information.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -28327,7 +28753,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries basic information about shared data groups (SDGs), including node preload information.</para>
+        /// <para>Queries basic SDG information, including node preload information.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -28387,7 +28813,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries basic information about shared data groups (SDGs), including node preload information.</para>
+        /// <para>Queries basic SDG information, including node preload information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28405,7 +28831,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries basic information about shared data groups (SDGs), including node preload information.</para>
+        /// <para>Queries basic SDG information, including node preload information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28423,7 +28849,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the deployment status of the shared data group (SDG).</para>
+        /// <para>Queries the deployment status of an SDG.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -28507,7 +28933,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the deployment status of the shared data group (SDG).</para>
+        /// <para>Queries the deployment status of an SDG.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -28591,7 +29017,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the deployment status of the shared data group (SDG).</para>
+        /// <para>Queries the deployment status of an SDG.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28609,7 +29035,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the deployment status of the shared data group (SDG).</para>
+        /// <para>Queries the deployment status of an SDG.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28627,7 +29053,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can query the information of shared disks in a specified SDG.</para>
+        /// <para>Queries the information about shared disks in a specified SDG.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28685,7 +29111,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can query the information of shared disks in a specified SDG.</para>
+        /// <para>Queries the information about shared disks in a specified SDG.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28743,7 +29169,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can query the information of shared disks in a specified SDG.</para>
+        /// <para>Queries the information about shared disks in a specified SDG.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28761,7 +29187,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can query the information of shared disks in a specified SDG.</para>
+        /// <para>Queries the information about shared disks in a specified SDG.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28927,7 +29353,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries created secondary public IP addresses.</para>
+        /// <para>Queries the secondary public IP addresses that have been created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28993,7 +29419,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries created secondary public IP addresses.</para>
+        /// <para>Queries the secondary public IP addresses that have been created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29059,7 +29485,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries created secondary public IP addresses.</para>
+        /// <para>Queries the secondary public IP addresses that have been created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29077,7 +29503,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries created secondary public IP addresses.</para>
+        /// <para>Queries the secondary public IP addresses that have been created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29095,7 +29521,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the rules of a security group.</para>
+        /// <para>You can invoke DescribeSecurityGroupAttribute to query the security group rules of a security group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29137,7 +29563,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the rules of a security group.</para>
+        /// <para>You can invoke DescribeSecurityGroupAttribute to query the security group rules of a security group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29179,7 +29605,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the rules of a security group.</para>
+        /// <para>You can invoke DescribeSecurityGroupAttribute to query the security group rules of a security group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29197,7 +29623,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the rules of a security group.</para>
+        /// <para>You can invoke DescribeSecurityGroupAttribute to query the security group rules of a security group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29511,7 +29937,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeServcieSchedule to query the real-time status of the instance device or container that is being occupied by the UUID.</para>
+        /// <para>Queries the real-time status of the instance devices or containers that are being scheduled and occupied by the specified UUID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29561,7 +29987,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeServcieSchedule to query the real-time status of the instance device or container that is being occupied by the UUID.</para>
+        /// <para>Queries the real-time status of the instance devices or containers that are being scheduled and occupied by the specified UUID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29611,7 +30037,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeServcieSchedule to query the real-time status of the instance device or container that is being occupied by the UUID.</para>
+        /// <para>Queries the real-time status of the instance devices or containers that are being scheduled and occupied by the specified UUID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29629,7 +30055,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeServcieSchedule to query the real-time status of the instance device or container that is being occupied by the UUID.</para>
+        /// <para>Queries the real-time status of the instance devices or containers that are being scheduled and occupied by the specified UUID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29647,14 +30073,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring data of an edge load balancer (ELB) instance based on the listener.</para>
+        /// <para>Queries listener-level monitoring data for an ESLB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>API call rate: 100 calls per second.</description></item>
+        /// <item><description>Per-user call rate: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29693,14 +30119,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring data of an edge load balancer (ELB) instance based on the listener.</para>
+        /// <para>Queries listener-level monitoring data for an ESLB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>API call rate: 100 calls per second.</description></item>
+        /// <item><description>Per-user call rate: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29739,14 +30165,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring data of an edge load balancer (ELB) instance based on the listener.</para>
+        /// <para>Queries listener-level monitoring data for an ESLB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>API call rate: 100 calls per second.</description></item>
+        /// <item><description>Per-user call rate: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29765,14 +30191,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring data of an edge load balancer (ELB) instance based on the listener.</para>
+        /// <para>Queries listener-level monitoring data for an ESLB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>API call rate: 100 calls per second.</description></item>
+        /// <item><description>Per-user call rate: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29791,14 +30217,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the request monitoring data of an edge load balancer (ELB) instance.</para>
+        /// <para>Queries request monitoring data of an ESLB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>API call frequency: 100 calls per second.</description></item>
+        /// <item><description>Per-user call frequency: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29837,14 +30263,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the request monitoring data of an edge load balancer (ELB) instance.</para>
+        /// <para>Queries request monitoring data of an ESLB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>API call frequency: 100 calls per second.</description></item>
+        /// <item><description>Per-user call frequency: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29883,14 +30309,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the request monitoring data of an edge load balancer (ELB) instance.</para>
+        /// <para>Queries request monitoring data of an ESLB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>API call frequency: 100 calls per second.</description></item>
+        /// <item><description>Per-user call frequency: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29909,14 +30335,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the request monitoring data of an edge load balancer (ELB) instance.</para>
+        /// <para>Queries request monitoring data of an ESLB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>API call frequency: 100 calls per second.</description></item>
+        /// <item><description>Per-user call frequency: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29935,7 +30361,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about snapshots.</para>
+        /// <para>Queries snapshot information by calling DescribeSnapshots.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30005,7 +30431,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about snapshots.</para>
+        /// <para>Queries snapshot information by calling DescribeSnapshots.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30075,7 +30501,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about snapshots.</para>
+        /// <para>Queries snapshot information by calling DescribeSnapshots.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30093,7 +30519,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about snapshots.</para>
+        /// <para>Queries snapshot information by calling DescribeSnapshots.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30111,7 +30537,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specific source network address translation (SNAT) entry.</para>
+        /// <para>Queries a specific source network address translation (SNAT) entry.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30153,7 +30579,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specific source network address translation (SNAT) entry.</para>
+        /// <para>Queries a specific source network address translation (SNAT) entry.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30195,7 +30621,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specific source network address translation (SNAT) entry.</para>
+        /// <para>Queries a specific source network address translation (SNAT) entry.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30213,7 +30639,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specific source network address translation (SNAT) entry.</para>
+        /// <para>Queries a specific source network address translation (SNAT) entry.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30831,7 +31257,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the DescribeVSwitchAttributes interface to query the configuration of a specified VSwitch.</para>
+        /// <para>Call the DescribeVSwitchAttributes operation to query the configuration of a specified vSwitch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30873,7 +31299,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the DescribeVSwitchAttributes interface to query the configuration of a specified VSwitch.</para>
+        /// <para>Call the DescribeVSwitchAttributes operation to query the configuration of a specified vSwitch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30915,7 +31341,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the DescribeVSwitchAttributes interface to query the configuration of a specified VSwitch.</para>
+        /// <para>Call the DescribeVSwitchAttributes operation to query the configuration of a specified vSwitch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30933,7 +31359,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the DescribeVSwitchAttributes interface to query the configuration of a specified VSwitch.</para>
+        /// <para>Call the DescribeVSwitchAttributes operation to query the configuration of a specified vSwitch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30951,7 +31377,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about available vSwitches.</para>
+        /// <para>Call the DescribeVSwitches operation to retrieve information about VSwitches. You use VSwitches to configure private networks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30968,6 +31394,10 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableIpv6))
+            {
+                query["EnableIpv6"] = request.EnableIpv6;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionId))
             {
                 query["EnsRegionId"] = request.EnsRegionId;
@@ -31021,7 +31451,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about available vSwitches.</para>
+        /// <para>Call the DescribeVSwitches operation to retrieve information about VSwitches. You use VSwitches to configure private networks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31038,6 +31468,10 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableIpv6))
+            {
+                query["EnableIpv6"] = request.EnableIpv6;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionId))
             {
                 query["EnsRegionId"] = request.EnsRegionId;
@@ -31091,7 +31525,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about available vSwitches.</para>
+        /// <para>Call the DescribeVSwitches operation to retrieve information about VSwitches. You use VSwitches to configure private networks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31109,7 +31543,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about available vSwitches.</para>
+        /// <para>Call the DescribeVSwitches operation to retrieve information about VSwitches. You use VSwitches to configure private networks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31127,7 +31561,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches a pay-as-you-go disk from an Edge Node Service (ENS) instance. You cannot call this operation to detach a disk that is created together with an instance.</para>
+        /// <para>Detaches a pay-as-you-go disk from an Edge Node Service (ENS) instance. You cannot To detach a disk that is created together with an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31173,7 +31607,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches a pay-as-you-go disk from an Edge Node Service (ENS) instance. You cannot call this operation to detach a disk that is created together with an instance.</para>
+        /// <para>Detaches a pay-as-you-go disk from an Edge Node Service (ENS) instance. You cannot To detach a disk that is created together with an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31219,7 +31653,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches a pay-as-you-go disk from an Edge Node Service (ENS) instance. You cannot call this operation to detach a disk that is created together with an instance.</para>
+        /// <para>Detaches a pay-as-you-go disk from an Edge Node Service (ENS) instance. You cannot To detach a disk that is created together with an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31237,7 +31671,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches a pay-as-you-go disk from an Edge Node Service (ENS) instance. You cannot call this operation to detach a disk that is created together with an instance.</para>
+        /// <para>Detaches a pay-as-you-go disk from an Edge Node Service (ENS) instance. You cannot To detach a disk that is created together with an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31395,18 +31829,18 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a Secure Shell (SSH) key pair from specific instances by specifying the name or ID of the SSH key pair.</para>
+        /// <para>Detaches a key pair from up to 30 instances in a single request. You can specify the key pair by its key pair name or key pair ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a></h2>
-        /// <para>This operation is used to unbind a key pair from instances. Only disabled instances are supported.</para>
+        /// <h2>Usage notes</h2>
+        /// <para>This operation detaches a key pair from multiple instances in a batch. The target instances must be in a stopped state.</para>
         /// <list type="bullet">
-        /// <item><description>You can unbind a maximum of 30 instances at a time.</description></item>
-        /// <item><description>If the name of the SSH key pair that is bound to an instance is not same as the value of the keyPairName parameter, an exception is thrown.</description></item>
-        /// <item><description>At least one of key_pair_name and key_pair_id is not empty.</description></item>
-        /// <item><description>Specify the key_pair_id parameter when you call this parameter. The key_pair_name parameter will be discarded.</description></item>
+        /// <item><description>You can detach a key pair from a maximum of 30 instances in a single request.</description></item>
+        /// <item><description>The operation returns an error if you specify the <c>KeyPairName</c> parameter and any of the specified instances are not associated with that key pair name.</description></item>
+        /// <item><description>You must specify either the <c>KeyPairName</c> or <c>KeyPairId</c> parameter.</description></item>
+        /// <item><description>We recommend using the <c>KeyPairId</c> parameter. The <c>KeyPairName</c> parameter will be deprecated in a future release.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31463,18 +31897,18 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a Secure Shell (SSH) key pair from specific instances by specifying the name or ID of the SSH key pair.</para>
+        /// <para>Detaches a key pair from up to 30 instances in a single request. You can specify the key pair by its key pair name or key pair ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a></h2>
-        /// <para>This operation is used to unbind a key pair from instances. Only disabled instances are supported.</para>
+        /// <h2>Usage notes</h2>
+        /// <para>This operation detaches a key pair from multiple instances in a batch. The target instances must be in a stopped state.</para>
         /// <list type="bullet">
-        /// <item><description>You can unbind a maximum of 30 instances at a time.</description></item>
-        /// <item><description>If the name of the SSH key pair that is bound to an instance is not same as the value of the keyPairName parameter, an exception is thrown.</description></item>
-        /// <item><description>At least one of key_pair_name and key_pair_id is not empty.</description></item>
-        /// <item><description>Specify the key_pair_id parameter when you call this parameter. The key_pair_name parameter will be discarded.</description></item>
+        /// <item><description>You can detach a key pair from a maximum of 30 instances in a single request.</description></item>
+        /// <item><description>The operation returns an error if you specify the <c>KeyPairName</c> parameter and any of the specified instances are not associated with that key pair name.</description></item>
+        /// <item><description>You must specify either the <c>KeyPairName</c> or <c>KeyPairId</c> parameter.</description></item>
+        /// <item><description>We recommend using the <c>KeyPairId</c> parameter. The <c>KeyPairName</c> parameter will be deprecated in a future release.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31531,18 +31965,18 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a Secure Shell (SSH) key pair from specific instances by specifying the name or ID of the SSH key pair.</para>
+        /// <para>Detaches a key pair from up to 30 instances in a single request. You can specify the key pair by its key pair name or key pair ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a></h2>
-        /// <para>This operation is used to unbind a key pair from instances. Only disabled instances are supported.</para>
+        /// <h2>Usage notes</h2>
+        /// <para>This operation detaches a key pair from multiple instances in a batch. The target instances must be in a stopped state.</para>
         /// <list type="bullet">
-        /// <item><description>You can unbind a maximum of 30 instances at a time.</description></item>
-        /// <item><description>If the name of the SSH key pair that is bound to an instance is not same as the value of the keyPairName parameter, an exception is thrown.</description></item>
-        /// <item><description>At least one of key_pair_name and key_pair_id is not empty.</description></item>
-        /// <item><description>Specify the key_pair_id parameter when you call this parameter. The key_pair_name parameter will be discarded.</description></item>
+        /// <item><description>You can detach a key pair from a maximum of 30 instances in a single request.</description></item>
+        /// <item><description>The operation returns an error if you specify the <c>KeyPairName</c> parameter and any of the specified instances are not associated with that key pair name.</description></item>
+        /// <item><description>You must specify either the <c>KeyPairName</c> or <c>KeyPairId</c> parameter.</description></item>
+        /// <item><description>We recommend using the <c>KeyPairId</c> parameter. The <c>KeyPairName</c> parameter will be deprecated in a future release.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31561,18 +31995,18 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a Secure Shell (SSH) key pair from specific instances by specifying the name or ID of the SSH key pair.</para>
+        /// <para>Detaches a key pair from up to 30 instances in a single request. You can specify the key pair by its key pair name or key pair ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a></h2>
-        /// <para>This operation is used to unbind a key pair from instances. Only disabled instances are supported.</para>
+        /// <h2>Usage notes</h2>
+        /// <para>This operation detaches a key pair from multiple instances in a batch. The target instances must be in a stopped state.</para>
         /// <list type="bullet">
-        /// <item><description>You can unbind a maximum of 30 instances at a time.</description></item>
-        /// <item><description>If the name of the SSH key pair that is bound to an instance is not same as the value of the keyPairName parameter, an exception is thrown.</description></item>
-        /// <item><description>At least one of key_pair_name and key_pair_id is not empty.</description></item>
-        /// <item><description>Specify the key_pair_id parameter when you call this parameter. The key_pair_name parameter will be discarded.</description></item>
+        /// <item><description>You can detach a key pair from a maximum of 30 instances in a single request.</description></item>
+        /// <item><description>The operation returns an error if you specify the <c>KeyPairName</c> parameter and any of the specified instances are not associated with that key pair name.</description></item>
+        /// <item><description>You must specify either the <c>KeyPairName</c> or <c>KeyPairId</c> parameter.</description></item>
+        /// <item><description>We recommend using the <c>KeyPairId</c> parameter. The <c>KeyPairName</c> parameter will be deprecated in a future release.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31891,12 +32325,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates the instance across nodes after an O\\\&amp;M event occurs on an instance.</para>
+        /// <para>Migrates an instance across physical nodes in response to an O&amp;M event.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This O\&amp;M operation is supported only by the Instance:SystemUpgrade.Migrate event.</para>
+        /// <list type="bullet">
+        /// <item><description>This O\&amp;M task currently supports only the <c>Instance:SystemUpgrade.Migrate</c> event type for migrations due to an underlying upgrade.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -31962,12 +32398,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates the instance across nodes after an O\\\&amp;M event occurs on an instance.</para>
+        /// <para>Migrates an instance across physical nodes in response to an O&amp;M event.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This O\&amp;M operation is supported only by the Instance:SystemUpgrade.Migrate event.</para>
+        /// <list type="bullet">
+        /// <item><description>This O\&amp;M task currently supports only the <c>Instance:SystemUpgrade.Migrate</c> event type for migrations due to an underlying upgrade.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -32033,12 +32471,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates the instance across nodes after an O\\\&amp;M event occurs on an instance.</para>
+        /// <para>Migrates an instance across physical nodes in response to an O&amp;M event.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This O\&amp;M operation is supported only by the Instance:SystemUpgrade.Migrate event.</para>
+        /// <list type="bullet">
+        /// <item><description>This O\&amp;M task currently supports only the <c>Instance:SystemUpgrade.Migrate</c> event type for migrations due to an underlying upgrade.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -32056,12 +32496,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates the instance across nodes after an O\\\&amp;M event occurs on an instance.</para>
+        /// <para>Migrates an instance across physical nodes in response to an O&amp;M event.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This O\&amp;M operation is supported only by the Instance:SystemUpgrade.Migrate event.</para>
+        /// <list type="bullet">
+        /// <item><description>This O\&amp;M task currently supports only the <c>Instance:SystemUpgrade.Migrate</c> event type for migrations due to an underlying upgrade.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -32079,12 +32521,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restart the instance across nodes after an O\\\&amp;M event occurs on an instance.</para>
+        /// <para>Reboots an Instance affected by an Operational Event.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This O\&amp;M operation supports only the Instance:SystemMaintenance.Reboot event</para>
+        /// <list type="bullet">
+        /// <item><description>This operation currently supports only the following Event Type: Instance:SystemMaintenance.Reboot (an Instance Reboot due to System Maintenance).</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -32142,12 +32586,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restart the instance across nodes after an O\\\&amp;M event occurs on an instance.</para>
+        /// <para>Reboots an Instance affected by an Operational Event.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This O\&amp;M operation supports only the Instance:SystemMaintenance.Reboot event</para>
+        /// <list type="bullet">
+        /// <item><description>This operation currently supports only the following Event Type: Instance:SystemMaintenance.Reboot (an Instance Reboot due to System Maintenance).</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -32205,12 +32651,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restart the instance across nodes after an O\\\&amp;M event occurs on an instance.</para>
+        /// <para>Reboots an Instance affected by an Operational Event.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This O\&amp;M operation supports only the Instance:SystemMaintenance.Reboot event</para>
+        /// <list type="bullet">
+        /// <item><description>This operation currently supports only the following Event Type: Instance:SystemMaintenance.Reboot (an Instance Reboot due to System Maintenance).</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -32228,12 +32676,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restart the instance across nodes after an O\\\&amp;M event occurs on an instance.</para>
+        /// <para>Reboots an Instance affected by an Operational Event.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This O\&amp;M operation supports only the Instance:SystemMaintenance.Reboot event</para>
+        /// <list type="bullet">
+        /// <item><description>This operation currently supports only the following Event Type: Instance:SystemMaintenance.Reboot (an Instance Reboot due to System Maintenance).</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -32251,12 +32701,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The event that is used to immediately redeploy a specified resource or by appointment</para>
+        /// <para>Redeploys a specified instance either immediately or at a scheduled time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This O\&amp;M operation supports only the following event types: Instance:SystemFailure.Redeploy (instance redeployment due to system problems) and Instance:SystemMaintenance.Redeploy (instance redeployment due to system maintenance).</para>
+        /// <list type="bullet">
+        /// <item><description>This O\&amp;M operation supports only the following event types: <c>Instance:SystemFailure.Redeploy</c> (redeployment due to a system failure) and <c>Instance:SystemMaintenance.Redeploy</c> (redeployment for system maintenance).</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -32314,12 +32766,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The event that is used to immediately redeploy a specified resource or by appointment</para>
+        /// <para>Redeploys a specified instance either immediately or at a scheduled time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This O\&amp;M operation supports only the following event types: Instance:SystemFailure.Redeploy (instance redeployment due to system problems) and Instance:SystemMaintenance.Redeploy (instance redeployment due to system maintenance).</para>
+        /// <list type="bullet">
+        /// <item><description>This O\&amp;M operation supports only the following event types: <c>Instance:SystemFailure.Redeploy</c> (redeployment due to a system failure) and <c>Instance:SystemMaintenance.Redeploy</c> (redeployment for system maintenance).</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -32377,12 +32831,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The event that is used to immediately redeploy a specified resource or by appointment</para>
+        /// <para>Redeploys a specified instance either immediately or at a scheduled time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This O\&amp;M operation supports only the following event types: Instance:SystemFailure.Redeploy (instance redeployment due to system problems) and Instance:SystemMaintenance.Redeploy (instance redeployment due to system maintenance).</para>
+        /// <list type="bullet">
+        /// <item><description>This O\&amp;M operation supports only the following event types: <c>Instance:SystemFailure.Redeploy</c> (redeployment due to a system failure) and <c>Instance:SystemMaintenance.Redeploy</c> (redeployment for system maintenance).</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -32400,12 +32856,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The event that is used to immediately redeploy a specified resource or by appointment</para>
+        /// <para>Redeploys a specified instance either immediately or at a scheduled time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This O\&amp;M operation supports only the following event types: Instance:SystemFailure.Redeploy (instance redeployment due to system problems) and Instance:SystemMaintenance.Redeploy (instance redeployment due to system maintenance).</para>
+        /// <list type="bullet">
+        /// <item><description>This O\&amp;M operation supports only the following event types: <c>Instance:SystemFailure.Redeploy</c> (redeployment due to a system failure) and <c>Instance:SystemMaintenance.Redeploy</c> (redeployment for system maintenance).</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -32951,7 +33409,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about a bucket.</para>
+        /// <para>You can call GetBucketInfo to retrieve detailed Bucket information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32993,7 +33451,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about a bucket.</para>
+        /// <para>You can call GetBucketInfo to retrieve detailed Bucket information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33035,7 +33493,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about a bucket.</para>
+        /// <para>You can call GetBucketInfo to retrieve detailed Bucket information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33053,7 +33511,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about a bucket.</para>
+        /// <para>You can call GetBucketInfo to retrieve detailed Bucket information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33071,7 +33529,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries lifecycle rules.</para>
+        /// <para>Retrieves lifecycle rule information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33117,7 +33575,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries lifecycle rules.</para>
+        /// <para>Retrieves lifecycle rule information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33163,7 +33621,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries lifecycle rules.</para>
+        /// <para>Retrieves lifecycle rule information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33181,7 +33639,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries lifecycle rules.</para>
+        /// <para>Retrieves lifecycle rule information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33199,8 +33657,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询集群内指定组件实例信息</para>
+        /// <para>Queries the details of a specified add-on in a cluster, including the version, parameter settings, and status of the add-on instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>It can be deleted only when the instance group information is empty.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetClusterAddonInstanceRequest
@@ -33245,8 +33708,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询集群内指定组件实例信息</para>
+        /// <para>Queries the details of a specified add-on in a cluster, including the version, parameter settings, and status of the add-on instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>It can be deleted only when the instance group information is empty.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetClusterAddonInstanceRequest
@@ -33291,8 +33759,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询集群内指定组件实例信息</para>
+        /// <para>Queries the details of a specified add-on in a cluster, including the version, parameter settings, and status of the add-on instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>It can be deleted only when the instance group information is empty.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetClusterAddonInstanceRequest
@@ -33309,8 +33782,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询集群内指定组件实例信息</para>
+        /// <para>Queries the details of a specified add-on in a cluster, including the version, parameter settings, and status of the add-on instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>It can be deleted only when the instance group information is empty.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetClusterAddonInstanceRequest
@@ -33327,7 +33805,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the storage usage in the previous billing cycle and the cumulative number of calls in this month.</para>
+        /// <para>Queries the storage usage of the previous billing cycle and the cumulative number of calls for the current month by bucket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33365,7 +33843,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the storage usage in the previous billing cycle and the cumulative number of calls in this month.</para>
+        /// <para>Queries the storage usage of the previous billing cycle and the cumulative number of calls for the current month by bucket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33403,7 +33881,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the storage usage in the previous billing cycle and the cumulative number of calls in this month.</para>
+        /// <para>Queries the storage usage of the previous billing cycle and the cumulative number of calls for the current month by bucket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33421,7 +33899,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the storage usage in the previous billing cycle and the cumulative number of calls in this month.</para>
+        /// <para>Queries the storage usage of the previous billing cycle and the cumulative number of calls for the current month by bucket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33571,7 +34049,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call ImportImage to import your image file to the cloud server.</para>
+        /// <para>Imports image information.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -33667,7 +34145,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call ImportImage to import your image file to the cloud server.</para>
+        /// <para>Imports image information.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -33763,7 +34241,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call ImportImage to import your image file to the cloud server.</para>
+        /// <para>Imports image information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33781,7 +34259,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call ImportImage to import your image file to the cloud server.</para>
+        /// <para>Imports image information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33804,8 +34282,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  After the key pair is imported, ENS stores the public key. You must securely store the private key.</para>
         /// <list type="bullet">
+        /// <item><description>After the key pair is imported, ENS stores the public key. You must securely store the private key.</description></item>
         /// <item><description>The key pair can be only in the ssh-rsa format.</description></item>
         /// </list>
         /// </description>
@@ -33858,8 +34336,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  After the key pair is imported, ENS stores the public key. You must securely store the private key.</para>
         /// <list type="bullet">
+        /// <item><description>After the key pair is imported, ENS stores the public key. You must securely store the private key.</description></item>
         /// <item><description>The key pair can be only in the ssh-rsa format.</description></item>
         /// </list>
         /// </description>
@@ -33912,8 +34390,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  After the key pair is imported, ENS stores the public key. You must securely store the private key.</para>
         /// <list type="bullet">
+        /// <item><description>After the key pair is imported, ENS stores the public key. You must securely store the private key.</description></item>
         /// <item><description>The key pair can be only in the ssh-rsa format.</description></item>
         /// </list>
         /// </description>
@@ -33938,8 +34416,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  After the key pair is imported, ENS stores the public key. You must securely store the private key.</para>
         /// <list type="bullet">
+        /// <item><description>After the key pair is imported, ENS stores the public key. You must securely store the private key.</description></item>
         /// <item><description>The key pair can be only in the ssh-rsa format.</description></item>
         /// </list>
         /// </description>
@@ -33959,7 +34437,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a service-linked role (SLR) for ENS for the current user to manage resources.</para>
+        /// <para>Creates a service-linked role (SLR) that grants ENS the permissions to manage your resources.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -33989,7 +34467,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a service-linked role (SLR) for ENS for the current user to manage resources.</para>
+        /// <para>Creates a service-linked role (SLR) that grants ENS the permissions to manage your resources.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -34019,7 +34497,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a service-linked role (SLR) for ENS for the current user to manage resources.</para>
+        /// <para>Creates a service-linked role (SLR) that grants ENS the permissions to manage your resources.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -34033,7 +34511,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a service-linked role (SLR) for ENS for the current user to manage resources.</para>
+        /// <para>Creates a service-linked role (SLR) that grants ENS the permissions to manage your resources.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -34047,8 +34525,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>安装集群组件</para>
+        /// <para>To enhance the capabilities of Kubernetes, Edge Kubernetes (ECK) clusters support a variety of components, such as managed core components, applications, logging and monitoring, networking, storage, and security components. You can call the InstallClusterAddons operation to install components by specifying their names and versions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The call frequency for a single user is limited to 10 calls per second.</description></item>
+        /// <item><description>Cluster creation is an asynchronous operation. After the API call returns, the cluster requires 10 to 20 minutes to complete initialization. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// InstallClusterAddonsRequest
@@ -34099,8 +34585,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>安装集群组件</para>
+        /// <para>To enhance the capabilities of Kubernetes, Edge Kubernetes (ECK) clusters support a variety of components, such as managed core components, applications, logging and monitoring, networking, storage, and security components. You can call the InstallClusterAddons operation to install components by specifying their names and versions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The call frequency for a single user is limited to 10 calls per second.</description></item>
+        /// <item><description>Cluster creation is an asynchronous operation. After the API call returns, the cluster requires 10 to 20 minutes to complete initialization. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// InstallClusterAddonsRequest
@@ -34151,8 +34645,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>安装集群组件</para>
+        /// <para>To enhance the capabilities of Kubernetes, Edge Kubernetes (ECK) clusters support a variety of components, such as managed core components, applications, logging and monitoring, networking, storage, and security components. You can call the InstallClusterAddons operation to install components by specifying their names and versions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The call frequency for a single user is limited to 10 calls per second.</description></item>
+        /// <item><description>Cluster creation is an asynchronous operation. After the API call returns, the cluster requires 10 to 20 minutes to complete initialization. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// InstallClusterAddonsRequest
@@ -34169,8 +34671,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>安装集群组件</para>
+        /// <para>To enhance the capabilities of Kubernetes, Edge Kubernetes (ECK) clusters support a variety of components, such as managed core components, applications, logging and monitoring, networking, storage, and security components. You can call the InstallClusterAddons operation to install components by specifying their names and versions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The call frequency for a single user is limited to 10 calls per second.</description></item>
+        /// <item><description>Cluster creation is an asynchronous operation. After the API call returns, the cluster requires 10 to 20 minutes to complete initialization. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// InstallClusterAddonsRequest
@@ -34320,7 +34830,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation to add an instance to a security group, make sure that the instance is in the Stopped or Running state.</para>
+        /// <para>Before you To add an instance to a security group, make sure that the instance is in the Stopped or Running state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34375,7 +34885,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation to add an instance to a security group, make sure that the instance is in the Stopped or Running state.</para>
+        /// <para>Before you To add an instance to a security group, make sure that the instance is in the Stopped or Running state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34430,7 +34940,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation to add an instance to a security group, make sure that the instance is in the Stopped or Running state.</para>
+        /// <para>Before you To add an instance to a security group, make sure that the instance is in the Stopped or Running state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34453,7 +34963,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation to add an instance to a security group, make sure that the instance is in the Stopped or Running state.</para>
+        /// <para>Before you To add an instance to a security group, make sure that the instance is in the Stopped or Running state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34471,12 +34981,12 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs networking.</para>
+        /// <para>Joins vSwitches to an Edge Private Network (EPN) instance for networking.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the Internal Connection mode and the Intelligent Acceleration and Internal Connection mode, instances of the vSwitch take effect automatically. You do not need to manually add instances. For public connections such as intelligent acceleration, you need to call an operation to manually add the instances to Internet-facing instances.</para>
+        /// <para>For the internal network connection and internal network connection with intelligent acceleration modes, instances in the vSwitch take effect automatically and do not require manual addition. For the intelligent acceleration public public mode, you only need to call the API operation to add instances to the public public mode instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34522,12 +35032,12 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs networking.</para>
+        /// <para>Joins vSwitches to an Edge Private Network (EPN) instance for networking.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the Internal Connection mode and the Intelligent Acceleration and Internal Connection mode, instances of the vSwitch take effect automatically. You do not need to manually add instances. For public connections such as intelligent acceleration, you need to call an operation to manually add the instances to Internet-facing instances.</para>
+        /// <para>For the internal network connection and internal network connection with intelligent acceleration modes, instances in the vSwitch take effect automatically and do not require manual addition. For the intelligent acceleration public public mode, you only need to call the API operation to add instances to the public public mode instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34573,12 +35083,12 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs networking.</para>
+        /// <para>Joins vSwitches to an Edge Private Network (EPN) instance for networking.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the Internal Connection mode and the Intelligent Acceleration and Internal Connection mode, instances of the vSwitch take effect automatically. You do not need to manually add instances. For public connections such as intelligent acceleration, you need to call an operation to manually add the instances to Internet-facing instances.</para>
+        /// <para>For the internal network connection and internal network connection with intelligent acceleration modes, instances in the vSwitch take effect automatically and do not require manual addition. For the intelligent acceleration public public mode, you only need to call the API operation to add instances to the public public mode instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34596,12 +35106,12 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs networking.</para>
+        /// <para>Joins vSwitches to an Edge Private Network (EPN) instance for networking.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the Internal Connection mode and the Intelligent Acceleration and Internal Connection mode, instances of the vSwitch take effect automatically. You do not need to manually add instances. For public connections such as intelligent acceleration, you need to call an operation to manually add the instances to Internet-facing instances.</para>
+        /// <para>For the internal network connection and internal network connection with intelligent acceleration modes, instances in the vSwitch take effect automatically and do not require manual addition. For the intelligent acceleration public public mode, you only need to call the API operation to add instances to the public public mode instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34775,7 +35285,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the related information of AIC public keys. Paged query is supported.</para>
+        /// <para>Queries the list of association information for AIC public keys. Paging is supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34837,7 +35347,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the related information of AIC public keys. Paged query is supported.</para>
+        /// <para>Queries the list of association information for AIC public keys. Paging is supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34899,7 +35409,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the related information of AIC public keys. Paged query is supported.</para>
+        /// <para>Queries the list of association information for AIC public keys. Paging is supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34917,7 +35427,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the related information of AIC public keys. Paged query is supported.</para>
+        /// <para>Queries the list of association information for AIC public keys. Paging is supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34935,7 +35445,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of AIC public keys that meet the conditions. Paged query is supported.</para>
+        /// <para>Queries a list of AIC public key information that meets the specified conditions. Paging is supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34993,7 +35503,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of AIC public keys that meet the conditions. Paged query is supported.</para>
+        /// <para>Queries a list of AIC public key information that meets the specified conditions. Paging is supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35051,7 +35561,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of AIC public keys that meet the conditions. Paged query is supported.</para>
+        /// <para>Queries a list of AIC public key information that meets the specified conditions. Paging is supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35069,7 +35579,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of AIC public keys that meet the conditions. Paged query is supported.</para>
+        /// <para>Queries a list of AIC public key information that meets the specified conditions. Paging is supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35087,7 +35597,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Querying the details of a cluster component</para>
+        /// <para>Retrieves details about cluster components.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -35117,7 +35627,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Querying the details of a cluster component</para>
+        /// <para>Retrieves details about cluster components.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -35147,7 +35657,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Querying the details of a cluster component</para>
+        /// <para>Retrieves details about cluster components.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -35161,7 +35671,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Querying the details of a cluster component</para>
+        /// <para>Retrieves details about cluster components.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -35487,7 +35997,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List of Installed Addon Instances in the Cluster</para>
+        /// <para>Retrieves a list of installed add-on instances in a specified cluster and queries related information about the add-on instances, such as the add-on version and status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35529,7 +36039,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List of Installed Addon Instances in the Cluster</para>
+        /// <para>Retrieves a list of installed add-on instances in a specified cluster and queries related information about the add-on instances, such as the add-on version and status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35571,7 +36081,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List of Installed Addon Instances in the Cluster</para>
+        /// <para>Retrieves a list of installed add-on instances in a specified cluster and queries related information about the add-on instances, such as the add-on version and status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35589,7 +36099,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List of Installed Addon Instances in the Cluster</para>
+        /// <para>Retrieves a list of installed add-on instances in a specified cluster and queries related information about the add-on instances, such as the add-on version and status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35863,7 +36373,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tags that are added to Edge Node Service (ENS) instances.</para>
+        /// <para>Queries the tags bound to one or more Edge Node Service (ENS) resources. Currently, only instance resources are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35917,7 +36427,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tags that are added to Edge Node Service (ENS) instances.</para>
+        /// <para>Queries the tags bound to one or more Edge Node Service (ENS) resources. Currently, only instance resources are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35971,7 +36481,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tags that are added to Edge Node Service (ENS) instances.</para>
+        /// <para>Queries the tags bound to one or more Edge Node Service (ENS) resources. Currently, only instance resources are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35989,7 +36499,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tags that are added to Edge Node Service (ENS) instances.</para>
+        /// <para>Queries the tags bound to one or more Edge Node Service (ENS) resources. Currently, only instance resources are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36007,7 +36517,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Log on to the AIC instance. You can associate or disassociate an AIC instance based on the uploaded AIC public key.</para>
+        /// <para>Manages the logon of AIC instances by associating or dissociating instances based on uploaded AIC public keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36061,7 +36571,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Log on to the AIC instance. You can associate or disassociate an AIC instance based on the uploaded AIC public key.</para>
+        /// <para>Manages the logon of AIC instances by associating or dissociating instances based on uploaded AIC public keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36115,7 +36625,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Log on to the AIC instance. You can associate or disassociate an AIC instance based on the uploaded AIC public key.</para>
+        /// <para>Manages the logon of AIC instances by associating or dissociating instances based on uploaded AIC public keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36133,7 +36643,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Log on to the AIC instance. You can associate or disassociate an AIC instance based on the uploaded AIC public key.</para>
+        /// <para>Manages the logon of AIC instances by associating or dissociating instances based on uploaded AIC public keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36151,7 +36661,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>aic实例变配接口</para>
+        /// <para>Modifies the specifications of an Android in Container (AIC) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36213,7 +36723,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>aic实例变配接口</para>
+        /// <para>Modifies the specifications of an Android in Container (AIC) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36275,7 +36785,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>aic实例变配接口</para>
+        /// <para>Modifies the specifications of an Android in Container (AIC) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36293,7 +36803,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>aic实例变配接口</para>
+        /// <para>Modifies the specifications of an Android in Container (AIC) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36311,8 +36821,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改集群组件实例配置</para>
+        /// <para>Modifies the configuration of an installed cluster add-on instance. Modifying the configuration may affect your services. Evaluate the impact, perform this operation during off-peak hours, and back up your data in advance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies an installed add-on in an ECK cluster. The target cluster must be in the running state, and ComponentName must reference an installed add-on.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyClusterAddonRequest
@@ -36367,8 +36882,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改集群组件实例配置</para>
+        /// <para>Modifies the configuration of an installed cluster add-on instance. Modifying the configuration may affect your services. Evaluate the impact, perform this operation during off-peak hours, and back up your data in advance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies an installed add-on in an ECK cluster. The target cluster must be in the running state, and ComponentName must reference an installed add-on.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyClusterAddonRequest
@@ -36423,8 +36943,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改集群组件实例配置</para>
+        /// <para>Modifies the configuration of an installed cluster add-on instance. Modifying the configuration may affect your services. Evaluate the impact, perform this operation during off-peak hours, and back up your data in advance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies an installed add-on in an ECK cluster. The target cluster must be in the running state, and ComponentName must reference an installed add-on.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyClusterAddonRequest
@@ -36441,8 +36966,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改集群组件实例配置</para>
+        /// <para>Modifies the configuration of an installed cluster add-on instance. Modifying the configuration may affect your services. Evaluate the impact, perform this operation during off-peak hours, and back up your data in advance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies an installed add-on in an ECK cluster. The target cluster must be in the running state, and ComponentName must reference an installed add-on.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyClusterAddonRequest
@@ -36459,8 +36989,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新集群节点池</para>
+        /// <para>Modifies the node configurations in a cluster node pool, such as kubelet configurations and node rotation configurations. Modifying node configurations changes node configurations and restarts kubelet in batches, which may affect node operations and workload execution. Perform this operation during off-peak hours.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Single-user call frequency: 10 calls per second.</description></item>
+        /// <item><description>Creating a cluster is an asynchronous operation. After the API call returns, wait 10 to 20 minutes for the cluster to finish initialization. During this process, call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyClusterNodePoolRequest
@@ -36527,8 +37065,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新集群节点池</para>
+        /// <para>Modifies the node configurations in a cluster node pool, such as kubelet configurations and node rotation configurations. Modifying node configurations changes node configurations and restarts kubelet in batches, which may affect node operations and workload execution. Perform this operation during off-peak hours.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Single-user call frequency: 10 calls per second.</description></item>
+        /// <item><description>Creating a cluster is an asynchronous operation. After the API call returns, wait 10 to 20 minutes for the cluster to finish initialization. During this process, call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyClusterNodePoolRequest
@@ -36595,8 +37141,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新集群节点池</para>
+        /// <para>Modifies the node configurations in a cluster node pool, such as kubelet configurations and node rotation configurations. Modifying node configurations changes node configurations and restarts kubelet in batches, which may affect node operations and workload execution. Perform this operation during off-peak hours.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Single-user call frequency: 10 calls per second.</description></item>
+        /// <item><description>Creating a cluster is an asynchronous operation. After the API call returns, wait 10 to 20 minutes for the cluster to finish initialization. During this process, call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyClusterNodePoolRequest
@@ -36613,8 +37167,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新集群节点池</para>
+        /// <para>Modifies the node configurations in a cluster node pool, such as kubelet configurations and node rotation configurations. Modifying node configurations changes node configurations and restarts kubelet in batches, which may affect node operations and workload execution. Perform this operation during off-peak hours.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Single-user call frequency: 10 calls per second.</description></item>
+        /// <item><description>Creating a cluster is an asynchronous operation. After the API call returns, wait 10 to 20 minutes for the cluster to finish initialization. During this process, call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyClusterNodePoolRequest
@@ -37759,15 +38321,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the attributes of an instance, such as the name and the password.</para>
+        /// <para>Calls ModifyInstanceAttribute to modify instance attributes, including the instance password and name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If an instance is in the Starting state, you cannot reset the password of the instance.</para>
         /// <list type="bullet">
-        /// <item><description>When the instance is in the Running state, you cannot change the password of the instance.</description></item>
-        /// <item><description>After resetting the password, you must Restart the instance in the ECS console or call the RebootInstance operation to validate the modifications. The restart operation within the instance does not validate the modifications.</description></item>
+        /// <item><description>You cannot reset the instance password when the instance status is Starting.</description></item>
+        /// <item><description>You cannot modify the instance password when the instance status is Running.</description></item>
+        /// <item><description>After resetting the password, restart the instance in the console or invoke the RebootInstance operation for the change to take effect. Restarting the instance from within the operating system does not take effect.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -37830,15 +38392,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the attributes of an instance, such as the name and the password.</para>
+        /// <para>Calls ModifyInstanceAttribute to modify instance attributes, including the instance password and name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If an instance is in the Starting state, you cannot reset the password of the instance.</para>
         /// <list type="bullet">
-        /// <item><description>When the instance is in the Running state, you cannot change the password of the instance.</description></item>
-        /// <item><description>After resetting the password, you must Restart the instance in the ECS console or call the RebootInstance operation to validate the modifications. The restart operation within the instance does not validate the modifications.</description></item>
+        /// <item><description>You cannot reset the instance password when the instance status is Starting.</description></item>
+        /// <item><description>You cannot modify the instance password when the instance status is Running.</description></item>
+        /// <item><description>After resetting the password, restart the instance in the console or invoke the RebootInstance operation for the change to take effect. Restarting the instance from within the operating system does not take effect.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -37901,15 +38463,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the attributes of an instance, such as the name and the password.</para>
+        /// <para>Calls ModifyInstanceAttribute to modify instance attributes, including the instance password and name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If an instance is in the Starting state, you cannot reset the password of the instance.</para>
         /// <list type="bullet">
-        /// <item><description>When the instance is in the Running state, you cannot change the password of the instance.</description></item>
-        /// <item><description>After resetting the password, you must Restart the instance in the ECS console or call the RebootInstance operation to validate the modifications. The restart operation within the instance does not validate the modifications.</description></item>
+        /// <item><description>You cannot reset the instance password when the instance status is Starting.</description></item>
+        /// <item><description>You cannot modify the instance password when the instance status is Running.</description></item>
+        /// <item><description>After resetting the password, restart the instance in the console or invoke the RebootInstance operation for the change to take effect. Restarting the instance from within the operating system does not take effect.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -37928,15 +38490,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the attributes of an instance, such as the name and the password.</para>
+        /// <para>Calls ModifyInstanceAttribute to modify instance attributes, including the instance password and name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If an instance is in the Starting state, you cannot reset the password of the instance.</para>
         /// <list type="bullet">
-        /// <item><description>When the instance is in the Running state, you cannot change the password of the instance.</description></item>
-        /// <item><description>After resetting the password, you must Restart the instance in the ECS console or call the RebootInstance operation to validate the modifications. The restart operation within the instance does not validate the modifications.</description></item>
+        /// <item><description>You cannot reset the instance password when the instance status is Starting.</description></item>
+        /// <item><description>You cannot modify the instance password when the instance status is Running.</description></item>
+        /// <item><description>After resetting the password, restart the instance in the console or invoke the RebootInstance operation for the change to take effect. Restarting the instance from within the operating system does not take effect.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -38107,16 +38669,12 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the boot configuration of a heterogeneous PC Farm bare metal instance.</para>
+        /// <para>Modifies the boot configuration of a heterogeneous instance (PCFarm bare metal instance).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If an instance is in the Starting state, you cannot reset the password of the instance.</para>
-        /// <list type="bullet">
-        /// <item><description>If the instance is in the Running state, you cannot change the password of the instance.</description></item>
-        /// <item><description>After resetting the password, you must restart the instance in the ENS console or call the RebootInstance operation to apply the change. The restart operation within the instance does not apply the change.</description></item>
-        /// </list>
+        /// <para>Modifies the boot configuration of a heterogeneous instance (PCFarm bare metal instance, where InstanceTypeFamily is pc_bmi). If the current state of the instance does not support this operation, the API returns IncorrectInstanceStatus.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38154,16 +38712,12 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the boot configuration of a heterogeneous PC Farm bare metal instance.</para>
+        /// <para>Modifies the boot configuration of a heterogeneous instance (PCFarm bare metal instance).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If an instance is in the Starting state, you cannot reset the password of the instance.</para>
-        /// <list type="bullet">
-        /// <item><description>If the instance is in the Running state, you cannot change the password of the instance.</description></item>
-        /// <item><description>After resetting the password, you must restart the instance in the ENS console or call the RebootInstance operation to apply the change. The restart operation within the instance does not apply the change.</description></item>
-        /// </list>
+        /// <para>Modifies the boot configuration of a heterogeneous instance (PCFarm bare metal instance, where InstanceTypeFamily is pc_bmi). If the current state of the instance does not support this operation, the API returns IncorrectInstanceStatus.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38201,16 +38755,12 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the boot configuration of a heterogeneous PC Farm bare metal instance.</para>
+        /// <para>Modifies the boot configuration of a heterogeneous instance (PCFarm bare metal instance).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If an instance is in the Starting state, you cannot reset the password of the instance.</para>
-        /// <list type="bullet">
-        /// <item><description>If the instance is in the Running state, you cannot change the password of the instance.</description></item>
-        /// <item><description>After resetting the password, you must restart the instance in the ENS console or call the RebootInstance operation to apply the change. The restart operation within the instance does not apply the change.</description></item>
-        /// </list>
+        /// <para>Modifies the boot configuration of a heterogeneous instance (PCFarm bare metal instance, where InstanceTypeFamily is pc_bmi). If the current state of the instance does not support this operation, the API returns IncorrectInstanceStatus.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38228,16 +38778,12 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the boot configuration of a heterogeneous PC Farm bare metal instance.</para>
+        /// <para>Modifies the boot configuration of a heterogeneous instance (PCFarm bare metal instance).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If an instance is in the Starting state, you cannot reset the password of the instance.</para>
-        /// <list type="bullet">
-        /// <item><description>If the instance is in the Running state, you cannot change the password of the instance.</description></item>
-        /// <item><description>After resetting the password, you must restart the instance in the ENS console or call the RebootInstance operation to apply the change. The restart operation within the instance does not apply the change.</description></item>
-        /// </list>
+        /// <para>Modifies the boot configuration of a heterogeneous instance (PCFarm bare metal instance, where InstanceTypeFamily is pc_bmi). If the current state of the instance does not support this operation, the API returns IncorrectInstanceStatus.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38255,13 +38801,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of Edge Node Service (ENS) instances. You can switch between the pay-as-you-go and subscription billing methods for instances. You can also change the billing method for disks that you created with pay-as-you-go instances to subscription.</para>
+        /// <para>Invokes ModifyInstanceChargeType to convert the billing method of one or more Edge Node Service (ENS) instances. You can convert between instance-level pay-as-you-go and subscription instances. For instance-level pay-as-you-go instances, you can also convert pay-as-you-go cloud disks created with the instances to subscription cloud disks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing methods and pricing of ENS.
-        /// The instances must be in the Running or Stopped state, and you have no overdue payments for them.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and pricing of Edge Node Service (ENS).
+        /// The target instance must be in the Running or Stopped state and must not have an overdue payment before you can change the billing method.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -38337,13 +38883,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of Edge Node Service (ENS) instances. You can switch between the pay-as-you-go and subscription billing methods for instances. You can also change the billing method for disks that you created with pay-as-you-go instances to subscription.</para>
+        /// <para>Invokes ModifyInstanceChargeType to convert the billing method of one or more Edge Node Service (ENS) instances. You can convert between instance-level pay-as-you-go and subscription instances. For instance-level pay-as-you-go instances, you can also convert pay-as-you-go cloud disks created with the instances to subscription cloud disks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing methods and pricing of ENS.
-        /// The instances must be in the Running or Stopped state, and you have no overdue payments for them.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and pricing of Edge Node Service (ENS).
+        /// The target instance must be in the Running or Stopped state and must not have an overdue payment before you can change the billing method.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -38419,13 +38965,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of Edge Node Service (ENS) instances. You can switch between the pay-as-you-go and subscription billing methods for instances. You can also change the billing method for disks that you created with pay-as-you-go instances to subscription.</para>
+        /// <para>Invokes ModifyInstanceChargeType to convert the billing method of one or more Edge Node Service (ENS) instances. You can convert between instance-level pay-as-you-go and subscription instances. For instance-level pay-as-you-go instances, you can also convert pay-as-you-go cloud disks created with the instances to subscription cloud disks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing methods and pricing of ENS.
-        /// The instances must be in the Running or Stopped state, and you have no overdue payments for them.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and pricing of Edge Node Service (ENS).
+        /// The target instance must be in the Running or Stopped state and must not have an overdue payment before you can change the billing method.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38443,13 +38989,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of Edge Node Service (ENS) instances. You can switch between the pay-as-you-go and subscription billing methods for instances. You can also change the billing method for disks that you created with pay-as-you-go instances to subscription.</para>
+        /// <para>Invokes ModifyInstanceChargeType to convert the billing method of one or more Edge Node Service (ENS) instances. You can convert between instance-level pay-as-you-go and subscription instances. For instance-level pay-as-you-go instances, you can also convert pay-as-you-go cloud disks created with the instances to subscription cloud disks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing methods and pricing of ENS.
-        /// The instances must be in the Running or Stopped state, and you have no overdue payments for them.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and pricing of Edge Node Service (ENS).
+        /// The target instance must be in the Running or Stopped state and must not have an overdue payment before you can change the billing method.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38684,9 +39230,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -38738,9 +39284,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -38792,9 +39338,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -38818,9 +39364,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -38844,9 +39390,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 5 times per second per user.</description></item>
+        /// <item><description>Rate limit: 100 requests per second.</description></item>
+        /// <item><description>up to 5 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -38902,9 +39448,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 5 times per second per user.</description></item>
+        /// <item><description>Rate limit: 100 requests per second.</description></item>
+        /// <item><description>up to 5 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -38960,9 +39506,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 5 times per second per user.</description></item>
+        /// <item><description>Rate limit: 100 requests per second.</description></item>
+        /// <item><description>up to 5 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -38986,9 +39532,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 5 times per second per user.</description></item>
+        /// <item><description>Rate limit: 100 requests per second.</description></item>
+        /// <item><description>up to 5 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -39143,8 +39689,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades or downgrades the instance type of a subscription Edge Node Service (ENS) instance. The new instance type takes effect for the remaining lifecycle of the instance.</para>
+        /// <para>Calls ModifyPrepayInstanceSpec to upgrade or downgrade the instance type of a subscription ENS instance. The new instance type takes effect for the entire lifecycle of the instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies the instance type of a subscription instance. Before calling this operation, stop the instance by calling StopInstance. After the specification change is complete, start the instance by calling StartInstance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyPrepayInstanceSpecRequest
@@ -39189,8 +39740,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades or downgrades the instance type of a subscription Edge Node Service (ENS) instance. The new instance type takes effect for the remaining lifecycle of the instance.</para>
+        /// <para>Calls ModifyPrepayInstanceSpec to upgrade or downgrade the instance type of a subscription ENS instance. The new instance type takes effect for the entire lifecycle of the instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies the instance type of a subscription instance. Before calling this operation, stop the instance by calling StopInstance. After the specification change is complete, start the instance by calling StartInstance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyPrepayInstanceSpecRequest
@@ -39235,8 +39791,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades or downgrades the instance type of a subscription Edge Node Service (ENS) instance. The new instance type takes effect for the remaining lifecycle of the instance.</para>
+        /// <para>Calls ModifyPrepayInstanceSpec to upgrade or downgrade the instance type of a subscription ENS instance. The new instance type takes effect for the entire lifecycle of the instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies the instance type of a subscription instance. Before calling this operation, stop the instance by calling StopInstance. After the specification change is complete, start the instance by calling StartInstance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyPrepayInstanceSpecRequest
@@ -39253,8 +39814,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades or downgrades the instance type of a subscription Edge Node Service (ENS) instance. The new instance type takes effect for the remaining lifecycle of the instance.</para>
+        /// <para>Calls ModifyPrepayInstanceSpec to upgrade or downgrade the instance type of a subscription ENS instance. The new instance type takes effect for the entire lifecycle of the instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies the instance type of a subscription instance. Before calling this operation, stop the instance by calling StopInstance. After the specification change is complete, start the instance by calling StartInstance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyPrepayInstanceSpecRequest
@@ -39276,9 +39842,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 5 times per second per user.</description></item>
+        /// <item><description>Rate limit: 100 requests per second.</description></item>
+        /// <item><description>up to 5 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -39334,9 +39900,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 5 times per second per user.</description></item>
+        /// <item><description>Rate limit: 100 requests per second.</description></item>
+        /// <item><description>up to 5 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -39392,9 +39958,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 5 times per second per user.</description></item>
+        /// <item><description>Rate limit: 100 requests per second.</description></item>
+        /// <item><description>up to 5 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -39418,9 +39984,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 5 times per second per user.</description></item>
+        /// <item><description>Rate limit: 100 requests per second.</description></item>
+        /// <item><description>up to 5 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -39575,7 +40141,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a specified SNAT entry.</para>
+        /// <para>Invoke the ModifySnatEntry API to modify an SNAT entry.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39633,7 +40199,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a specified SNAT entry.</para>
+        /// <para>Invoke the ModifySnatEntry API to modify an SNAT entry.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39691,7 +40257,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a specified SNAT entry.</para>
+        /// <para>Invoke the ModifySnatEntry API to modify an SNAT entry.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39709,7 +40275,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a specified SNAT entry.</para>
+        /// <para>Invoke the ModifySnatEntry API to modify an SNAT entry.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39727,14 +40293,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies information about a vSwitch.</para>
+        /// <para>Call ModifyVSwitchAttribute to modify network information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 5 times per second per user.</description></item>
+        /// <item><description>API call frequency: 100 calls per second.</description></item>
+        /// <item><description>Per-user call frequency: 5 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -39755,6 +40321,14 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableIPv6))
+            {
+                query["EnableIPv6"] = request.EnableIPv6;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6CidrBlock))
+            {
+                query["Ipv6CidrBlock"] = request.Ipv6CidrBlock;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
@@ -39785,14 +40359,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies information about a vSwitch.</para>
+        /// <para>Call ModifyVSwitchAttribute to modify network information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 5 times per second per user.</description></item>
+        /// <item><description>API call frequency: 100 calls per second.</description></item>
+        /// <item><description>Per-user call frequency: 5 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -39813,6 +40387,14 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableIPv6))
+            {
+                query["EnableIPv6"] = request.EnableIPv6;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6CidrBlock))
+            {
+                query["Ipv6CidrBlock"] = request.Ipv6CidrBlock;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
@@ -39843,14 +40425,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies information about a vSwitch.</para>
+        /// <para>Call ModifyVSwitchAttribute to modify network information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 5 times per second per user.</description></item>
+        /// <item><description>API call frequency: 100 calls per second.</description></item>
+        /// <item><description>Per-user call frequency: 5 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -39869,14 +40451,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies information about a vSwitch.</para>
+        /// <para>Call ModifyVSwitchAttribute to modify network information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 5 times per second per user.</description></item>
+        /// <item><description>API call frequency: 100 calls per second.</description></item>
+        /// <item><description>Per-user call frequency: 5 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -39895,7 +40477,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploys the SDG that has been attached to instances on the corresponding Android in Container (AIC) instance.</para>
+        /// <para>Deploys an SDG that is already attached to an instance to the corresponding AIC.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -39947,7 +40529,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploys the SDG that has been attached to instances on the corresponding Android in Container (AIC) instance.</para>
+        /// <para>Deploys an SDG that is already attached to an instance to the corresponding AIC.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -39999,7 +40581,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploys the SDG that has been attached to instances on the corresponding Android in Container (AIC) instance.</para>
+        /// <para>Deploys an SDG that is already attached to an instance to the corresponding AIC.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40017,7 +40599,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploys the SDG that has been attached to instances on the corresponding Android in Container (AIC) instance.</para>
+        /// <para>Deploys an SDG that is already attached to an instance to the corresponding AIC.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40035,7 +40617,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Preloads a shared data group (SDG).</para>
+        /// <para>Preloads an SDG.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -40103,7 +40685,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Preloads a shared data group (SDG).</para>
+        /// <para>Preloads an SDG.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -40171,7 +40753,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Preloads a shared data group (SDG).</para>
+        /// <para>Preloads an SDG.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40189,7 +40771,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Preloads a shared data group (SDG).</para>
+        /// <para>Preloads an SDG.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40207,7 +40789,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Prepares the upload and obtains the location of the bucket.</para>
+        /// <para>Prepares for an upload and retrieves information about the physical storage location.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40253,7 +40835,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Prepares the upload and obtains the location of the bucket.</para>
+        /// <para>Prepares for an upload and retrieves information about the physical storage location.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40299,7 +40881,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Prepares the upload and obtains the location of the bucket.</para>
+        /// <para>Prepares for an upload and retrieves information about the physical storage location.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40317,7 +40899,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Prepares the upload and obtains the location of the bucket.</para>
+        /// <para>Prepares for an upload and retrieves information about the physical storage location.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40335,7 +40917,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pushes the business or service data of an application to file servers.</para>
+        /// <para>Pre-pushes the business or service data of an application to a file server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40389,7 +40971,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pushes the business or service data of an application to file servers.</para>
+        /// <para>Pre-pushes the business or service data of an application to a file server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40443,7 +41025,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pushes the business or service data of an application to file servers.</para>
+        /// <para>Pre-pushes the business or service data of an application to a file server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40461,7 +41043,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pushes the business or service data of an application to file servers.</para>
+        /// <para>Pre-pushes the business or service data of an application to a file server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40479,7 +41061,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an Edge Object Storage (EOS) bucket.</para>
+        /// <para>Create a bucket for collaborative storage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40541,7 +41123,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an Edge Object Storage (EOS) bucket.</para>
+        /// <para>Create a bucket for collaborative storage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40603,7 +41185,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an Edge Object Storage (EOS) bucket.</para>
+        /// <para>Create a bucket for collaborative storage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40621,7 +41203,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an Edge Object Storage (EOS) bucket.</para>
+        /// <para>Create a bucket for collaborative storage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40767,14 +41349,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures lifecycle rules for objects.</para>
+        /// <para>You can call the PutBucketLifecycle operation to set lifecycle rules for a bucket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can configure up to 1,000 rules.</para>
         /// <list type="bullet">
-        /// <item><description>If an object meets multiple rules, the rule that has the earliest expiration time prevails.</description></item>
+        /// <item><description>You can configure up to 1,000 rules.</description></item>
+        /// <item><description>If an object matches multiple rules, the rule with the earliest expiration time applies.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -40841,14 +41423,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures lifecycle rules for objects.</para>
+        /// <para>You can call the PutBucketLifecycle operation to set lifecycle rules for a bucket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can configure up to 1,000 rules.</para>
         /// <list type="bullet">
-        /// <item><description>If an object meets multiple rules, the rule that has the earliest expiration time prevails.</description></item>
+        /// <item><description>You can configure up to 1,000 rules.</description></item>
+        /// <item><description>If an object matches multiple rules, the rule with the earliest expiration time applies.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -40915,14 +41497,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures lifecycle rules for objects.</para>
+        /// <para>You can call the PutBucketLifecycle operation to set lifecycle rules for a bucket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can configure up to 1,000 rules.</para>
         /// <list type="bullet">
-        /// <item><description>If an object meets multiple rules, the rule that has the earliest expiration time prevails.</description></item>
+        /// <item><description>You can configure up to 1,000 rules.</description></item>
+        /// <item><description>If an object matches multiple rules, the rule with the earliest expiration time applies.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -40941,14 +41523,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures lifecycle rules for objects.</para>
+        /// <para>You can call the PutBucketLifecycle operation to set lifecycle rules for a bucket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can configure up to 1,000 rules.</para>
         /// <list type="bullet">
-        /// <item><description>If an object meets multiple rules, the rule that has the earliest expiration time prevails.</description></item>
+        /// <item><description>You can configure up to 1,000 rules.</description></item>
+        /// <item><description>If an object matches multiple rules, the rule with the earliest expiration time applies.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -41219,7 +41801,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reboots an Android in Container (AIC) server.</para>
+        /// <para>Restarts an AIC server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41257,7 +41839,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reboots an Android in Container (AIC) server.</para>
+        /// <para>Restarts an AIC server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41295,7 +41877,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reboots an Android in Container (AIC) server.</para>
+        /// <para>Restarts an AIC server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41313,7 +41895,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reboots an Android in Container (AIC) server.</para>
+        /// <para>Restarts an AIC server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41336,8 +41918,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only instances that are in the Running state can be restarted.</para>
         /// <list type="bullet">
+        /// <item><description>Only instances that are in the Running state can be restarted.</description></item>
         /// <item><description>If the operation is successful, the status of the instance becomes Starting.</description></item>
         /// </list>
         /// </description>
@@ -41390,8 +41972,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only instances that are in the Running state can be restarted.</para>
         /// <list type="bullet">
+        /// <item><description>Only instances that are in the Running state can be restarted.</description></item>
         /// <item><description>If the operation is successful, the status of the instance becomes Starting.</description></item>
         /// </list>
         /// </description>
@@ -41444,8 +42026,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only instances that are in the Running state can be restarted.</para>
         /// <list type="bullet">
+        /// <item><description>Only instances that are in the Running state can be restarted.</description></item>
         /// <item><description>If the operation is successful, the status of the instance becomes Starting.</description></item>
         /// </list>
         /// </description>
@@ -41470,8 +42052,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only instances that are in the Running state can be restarted.</para>
         /// <list type="bullet">
+        /// <item><description>Only instances that are in the Running state can be restarted.</description></item>
         /// <item><description>If the operation is successful, the status of the instance becomes Starting.</description></item>
         /// </list>
         /// </description>
@@ -41623,7 +42205,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Recovers an Android in Container (AIC) instance on the server.</para>
+        /// <para>Resumes an AIC on a card by calling RecoverAICInstance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41661,7 +42243,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Recovers an Android in Container (AIC) instance on the server.</para>
+        /// <para>Resumes an AIC on a card by calling RecoverAICInstance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41699,7 +42281,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Recovers an Android in Container (AIC) instance on the server.</para>
+        /// <para>Resumes an AIC on a card by calling RecoverAICInstance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41717,7 +42299,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Recovers an Android in Container (AIC) instance on the server.</para>
+        /// <para>Resumes an AIC on a card by calling RecoverAICInstance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42019,7 +42601,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases an Android in Container (AIC) instance from the server.</para>
+        /// <para>Releases an AIC on a card.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42061,7 +42643,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases an Android in Container (AIC) instance from the server.</para>
+        /// <para>Releases an AIC on a card.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42103,7 +42685,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases an Android in Container (AIC) instance from the server.</para>
+        /// <para>Releases an AIC on a card.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42121,7 +42703,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases an Android in Container (AIC) instance from the server.</para>
+        /// <para>Releases an AIC on a card.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42139,7 +42721,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases an ARM server.</para>
+        /// <para>Releases a cloud application server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42181,7 +42763,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases an ARM server.</para>
+        /// <para>Releases a cloud application server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42223,7 +42805,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases an ARM server.</para>
+        /// <para>Releases a cloud application server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42241,7 +42823,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases an ARM server.</para>
+        /// <para>Releases a cloud application server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42259,13 +42841,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases an instance. You can call this operation to release only Elastic IP Addresses (EIPs), Edge Load Balancer (ELB) instances, and cloud disk-based instances. We recommend that you call service-specific operations to release or unsubscribe from instances.</para>
+        /// <para>Releases an instance. to release only Elastic IP Addresses (EIPs), Edge Load Balancer (ELB) instances, and cloud disk-based instances. We recommend that you call service-specific operations to release or unsubscribe from instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 10,000 times per second per account.</para>
         /// <list type="bullet">
+        /// <item><description>up to 10,000 times per second per account.</description></item>
         /// <item><description>The maximum number of times that each user can call this operation per second is 50.</description></item>
         /// </list>
         /// </description>
@@ -42309,13 +42891,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases an instance. You can call this operation to release only Elastic IP Addresses (EIPs), Edge Load Balancer (ELB) instances, and cloud disk-based instances. We recommend that you call service-specific operations to release or unsubscribe from instances.</para>
+        /// <para>Releases an instance. to release only Elastic IP Addresses (EIPs), Edge Load Balancer (ELB) instances, and cloud disk-based instances. We recommend that you call service-specific operations to release or unsubscribe from instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 10,000 times per second per account.</para>
         /// <list type="bullet">
+        /// <item><description>up to 10,000 times per second per account.</description></item>
         /// <item><description>The maximum number of times that each user can call this operation per second is 50.</description></item>
         /// </list>
         /// </description>
@@ -42359,13 +42941,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases an instance. You can call this operation to release only Elastic IP Addresses (EIPs), Edge Load Balancer (ELB) instances, and cloud disk-based instances. We recommend that you call service-specific operations to release or unsubscribe from instances.</para>
+        /// <para>Releases an instance. to release only Elastic IP Addresses (EIPs), Edge Load Balancer (ELB) instances, and cloud disk-based instances. We recommend that you call service-specific operations to release or unsubscribe from instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 10,000 times per second per account.</para>
         /// <list type="bullet">
+        /// <item><description>up to 10,000 times per second per account.</description></item>
         /// <item><description>The maximum number of times that each user can call this operation per second is 50.</description></item>
         /// </list>
         /// </description>
@@ -42385,13 +42967,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases an instance. You can call this operation to release only Elastic IP Addresses (EIPs), Edge Load Balancer (ELB) instances, and cloud disk-based instances. We recommend that you call service-specific operations to release or unsubscribe from instances.</para>
+        /// <para>Releases an instance. to release only Elastic IP Addresses (EIPs), Edge Load Balancer (ELB) instances, and cloud disk-based instances. We recommend that you call service-specific operations to release or unsubscribe from instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 10,000 times per second per account.</para>
         /// <list type="bullet">
+        /// <item><description>up to 10,000 times per second per account.</description></item>
         /// <item><description>The maximum number of times that each user can call this operation per second is 50.</description></item>
         /// </list>
         /// </description>
@@ -42654,14 +43236,6 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <para>Removes backend servers.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
-        /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per account.</description></item>
-        /// </list>
-        /// </description>
-        /// 
         /// <param name="tmpReq">
         /// RemoveBackendServersRequest
         /// </param>
@@ -42713,14 +43287,6 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <summary>
         /// <para>Removes backend servers.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
-        /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per account.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="tmpReq">
         /// RemoveBackendServersRequest
@@ -42774,14 +43340,6 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <para>Removes backend servers.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
-        /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per account.</description></item>
-        /// </list>
-        /// </description>
-        /// 
         /// <param name="request">
         /// RemoveBackendServersRequest
         /// </param>
@@ -42800,14 +43358,6 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <para>Removes backend servers.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
-        /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per account.</description></item>
-        /// </list>
-        /// </description>
-        /// 
         /// <param name="request">
         /// RemoveBackendServersRequest
         /// </param>
@@ -42823,7 +43373,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a shared data group (SDG) that is attached to the compute instance.</para>
+        /// <para>Unmounts an SDG from compute instances.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -42871,7 +43421,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a shared data group (SDG) that is attached to the compute instance.</para>
+        /// <para>Unmounts an SDG from compute instances.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -42919,7 +43469,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a shared data group (SDG) that is attached to the compute instance.</para>
+        /// <para>Unmounts an SDG from compute instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42937,7 +43487,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a shared data group (SDG) that is attached to the compute instance.</para>
+        /// <para>Unmounts an SDG from compute instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43083,7 +43633,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a deployed shared data group (SDG) and restore local storage.</para>
+        /// <para>Removes a deployed SDG and restores local storage.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -43127,7 +43677,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a deployed shared data group (SDG) and restore local storage.</para>
+        /// <para>Removes a deployed SDG and restores local storage.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -43171,7 +43721,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a deployed shared data group (SDG) and restore local storage.</para>
+        /// <para>Removes a deployed SDG and restores local storage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43189,7 +43739,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a deployed shared data group (SDG) and restore local storage.</para>
+        /// <para>Removes a deployed SDG and restores local storage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43207,7 +43757,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes all versions of SDG and restores the mount to the local disk.</para>
+        /// <para>Removes all versions of SDGs and restores local disk mounting.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -43263,7 +43813,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes all versions of SDG and restores the mount to the local disk.</para>
+        /// <para>Removes all versions of SDGs and restores local disk mounting.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -43319,7 +43869,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes all versions of SDG and restores the mount to the local disk.</para>
+        /// <para>Removes all versions of SDGs and restores local disk mounting.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43337,7 +43887,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes all versions of SDG and restores the mount to the local disk.</para>
+        /// <para>Removes all versions of SDGs and restores local disk mounting.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43355,7 +43905,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the networking information. This operation is applicable only for instances that reside in the internal network.</para>
+        /// <para>Removes networking information from an Edge Private Network (EPN) instance. This operation applies only to internal networks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43401,7 +43951,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the networking information. This operation is applicable only for instances that reside in the internal network.</para>
+        /// <para>Removes networking information from an Edge Private Network (EPN) instance. This operation applies only to internal networks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43447,7 +43997,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the networking information. This operation is applicable only for instances that reside in the internal network.</para>
+        /// <para>Removes networking information from an Edge Private Network (EPN) instance. This operation applies only to internal networks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43465,7 +44015,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the networking information. This operation is applicable only for instances that reside in the internal network.</para>
+        /// <para>Removes networking information from an Edge Private Network (EPN) instance. This operation applies only to internal networks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43483,8 +44033,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews a subscription Android in Container (AIC) instance.</para>
+        /// <para>Renews a subscription AIC instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Renews a subscription AIC server instance. The instance State must be success. You can call DescribeARMServerInstances to query the instance status. Instances in intermediate states such as creating cannot be renewed.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RenewARMServerInstanceRequest
@@ -43537,8 +44092,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews a subscription Android in Container (AIC) instance.</para>
+        /// <para>Renews a subscription AIC instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Renews a subscription AIC server instance. The instance State must be success. You can call DescribeARMServerInstances to query the instance status. Instances in intermediate states such as creating cannot be renewed.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RenewARMServerInstanceRequest
@@ -43591,8 +44151,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews a subscription Android in Container (AIC) instance.</para>
+        /// <para>Renews a subscription AIC instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Renews a subscription AIC server instance. The instance State must be success. You can call DescribeARMServerInstances to query the instance status. Instances in intermediate states such as creating cannot be renewed.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RenewARMServerInstanceRequest
@@ -43609,8 +44174,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews a subscription Android in Container (AIC) instance.</para>
+        /// <para>Renews a subscription AIC instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Renews a subscription AIC server instance. The instance State must be success. You can call DescribeARMServerInstances to query the instance status. Instances in intermediate states such as creating cannot be renewed.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RenewARMServerInstanceRequest
@@ -43739,7 +44309,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scales resources in an asynchronous manner and deploys or releases the container.</para>
+        /// <para>Calls the RescaleApplication operation to asynchronously scale resources in or out and complete container deployment or release operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43801,7 +44371,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scales resources in an asynchronous manner and deploys or releases the container.</para>
+        /// <para>Calls the RescaleApplication operation to asynchronously scale resources in or out and complete container deployment or release operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43863,7 +44433,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scales resources in an asynchronous manner and deploys or releases the container.</para>
+        /// <para>Calls the RescaleApplication operation to asynchronously scale resources in or out and complete container deployment or release operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43881,7 +44451,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scales resources in an asynchronous manner and deploys or releases the container.</para>
+        /// <para>Calls the RescaleApplication operation to asynchronously scale resources in or out and complete container deployment or release operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43899,7 +44469,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scales out a bare metal device.</para>
+        /// <para>Rescales bare metal devices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43979,7 +44549,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scales out a bare metal device.</para>
+        /// <para>Rescales bare metal devices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44059,7 +44629,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scales out a bare metal device.</para>
+        /// <para>Rescales bare metal devices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44077,7 +44647,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scales out a bare metal device.</para>
+        /// <para>Rescales bare metal devices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44095,7 +44665,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets an Android in Container (AIC) instance.</para>
+        /// <para>Resets an AIC instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44133,7 +44703,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets an Android in Container (AIC) instance.</para>
+        /// <para>Resets an AIC instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44171,7 +44741,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets an Android in Container (AIC) instance.</para>
+        /// <para>Resets an AIC instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44189,7 +44759,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets an Android in Container (AIC) instance.</para>
+        /// <para>Resets an AIC instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44507,15 +45077,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an inbound security group rule. After the rule is deleted, the access control implemented by the rule is removed.</para>
+        /// <para>Revokes an inbound rule of a security group to remove the inbound access permission settings.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  In the security group-related API documents, inbound traffic refers to the traffic sent by the source and received by the destination.</para>
         /// <list type="bullet">
-        /// <item><description>You can determine an inbound security group rule by specifying one of the following groups of parameters. You cannot determine a security group rule by specifying only one parameter.</description></item>
-        /// <item><description>You can specify one or more of the following parameters to remove access control for a CIDR block: IpProtocol, PortRange, Policy, and SourceCidrIp.</description></item>
+        /// <item><description>In security group API documentation, the traffic initiator is referred to as the source (Source), and the data transmission receiver is referred to as the destination (Dest).</description></item>
+        /// <item><description>Any one of the following sets of parameters can identify an inbound security group rule. Specifying only a single parameter cannot identify a security group rule.</description></item>
+        /// <item><description>Revoke permission settings for a specified IP address range: IpProtocol, PortRange, Policy, SourceCidrIp.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -44582,15 +45152,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an inbound security group rule. After the rule is deleted, the access control implemented by the rule is removed.</para>
+        /// <para>Revokes an inbound rule of a security group to remove the inbound access permission settings.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  In the security group-related API documents, inbound traffic refers to the traffic sent by the source and received by the destination.</para>
         /// <list type="bullet">
-        /// <item><description>You can determine an inbound security group rule by specifying one of the following groups of parameters. You cannot determine a security group rule by specifying only one parameter.</description></item>
-        /// <item><description>You can specify one or more of the following parameters to remove access control for a CIDR block: IpProtocol, PortRange, Policy, and SourceCidrIp.</description></item>
+        /// <item><description>In security group API documentation, the traffic initiator is referred to as the source (Source), and the data transmission receiver is referred to as the destination (Dest).</description></item>
+        /// <item><description>Any one of the following sets of parameters can identify an inbound security group rule. Specifying only a single parameter cannot identify a security group rule.</description></item>
+        /// <item><description>Revoke permission settings for a specified IP address range: IpProtocol, PortRange, Policy, SourceCidrIp.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -44657,15 +45227,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an inbound security group rule. After the rule is deleted, the access control implemented by the rule is removed.</para>
+        /// <para>Revokes an inbound rule of a security group to remove the inbound access permission settings.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  In the security group-related API documents, inbound traffic refers to the traffic sent by the source and received by the destination.</para>
         /// <list type="bullet">
-        /// <item><description>You can determine an inbound security group rule by specifying one of the following groups of parameters. You cannot determine a security group rule by specifying only one parameter.</description></item>
-        /// <item><description>You can specify one or more of the following parameters to remove access control for a CIDR block: IpProtocol, PortRange, Policy, and SourceCidrIp.</description></item>
+        /// <item><description>In security group API documentation, the traffic initiator is referred to as the source (Source), and the data transmission receiver is referred to as the destination (Dest).</description></item>
+        /// <item><description>Any one of the following sets of parameters can identify an inbound security group rule. Specifying only a single parameter cannot identify a security group rule.</description></item>
+        /// <item><description>Revoke permission settings for a specified IP address range: IpProtocol, PortRange, Policy, SourceCidrIp.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -44684,15 +45254,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an inbound security group rule. After the rule is deleted, the access control implemented by the rule is removed.</para>
+        /// <para>Revokes an inbound rule of a security group to remove the inbound access permission settings.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  In the security group-related API documents, inbound traffic refers to the traffic sent by the source and received by the destination.</para>
         /// <list type="bullet">
-        /// <item><description>You can determine an inbound security group rule by specifying one of the following groups of parameters. You cannot determine a security group rule by specifying only one parameter.</description></item>
-        /// <item><description>You can specify one or more of the following parameters to remove access control for a CIDR block: IpProtocol, PortRange, Policy, and SourceCidrIp.</description></item>
+        /// <item><description>In security group API documentation, the traffic initiator is referred to as the source (Source), and the data transmission receiver is referred to as the destination (Dest).</description></item>
+        /// <item><description>Any one of the following sets of parameters can identify an inbound security group rule. Specifying only a single parameter cannot identify a security group rule.</description></item>
+        /// <item><description>Revoke permission settings for a specified IP address range: IpProtocol, PortRange, Policy, SourceCidrIp.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -44711,13 +45281,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an outbound security group rule. After the rule is deleted, the access control implemented by the rule is removed.</para>
+        /// <para>Calls RevokeSecurityGroupEgress to delete an outbound security group rule and revoke outbound access permissions of the security group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> In the security group-related API documents, outbound traffic refers to the traffic sent by the source and received by the destination.</para>
+        /// <para>In the API documentation for security groups, the end that initiates traffic is referred to as the source, and the end that receives data is referred to as the destination (Dest).</para>
         /// </remarks>
         /// </description>
         /// 
@@ -44784,13 +45354,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an outbound security group rule. After the rule is deleted, the access control implemented by the rule is removed.</para>
+        /// <para>Calls RevokeSecurityGroupEgress to delete an outbound security group rule and revoke outbound access permissions of the security group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> In the security group-related API documents, outbound traffic refers to the traffic sent by the source and received by the destination.</para>
+        /// <para>In the API documentation for security groups, the end that initiates traffic is referred to as the source, and the end that receives data is referred to as the destination (Dest).</para>
         /// </remarks>
         /// </description>
         /// 
@@ -44857,13 +45427,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an outbound security group rule. After the rule is deleted, the access control implemented by the rule is removed.</para>
+        /// <para>Calls RevokeSecurityGroupEgress to delete an outbound security group rule and revoke outbound access permissions of the security group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> In the security group-related API documents, outbound traffic refers to the traffic sent by the source and received by the destination.</para>
+        /// <para>In the API documentation for security groups, the end that initiates traffic is referred to as the source, and the end that receives data is referred to as the destination (Dest).</para>
         /// </remarks>
         /// </description>
         /// 
@@ -44882,13 +45452,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an outbound security group rule. After the rule is deleted, the access control implemented by the rule is removed.</para>
+        /// <para>Calls RevokeSecurityGroupEgress to delete an outbound security group rule and revoke outbound access permissions of the security group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> In the security group-related API documents, outbound traffic refers to the traffic sent by the source and received by the destination.</para>
+        /// <para>In the API documentation for security groups, the end that initiates traffic is referred to as the source, and the end that receives data is referred to as the destination (Dest).</para>
         /// </remarks>
         /// </description>
         /// 
@@ -44907,7 +45477,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rolls back the container version of a specific application.</para>
+        /// <para>Rolls back the container version of edge resources under an application to a historical version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44961,7 +45531,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rolls back the container version of a specific application.</para>
+        /// <para>Rolls back the container version of edge resources under an application to a historical version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45015,7 +45585,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rolls back the container version of a specific application.</para>
+        /// <para>Rolls back the container version of edge resources under an application to a historical version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45033,7 +45603,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rolls back the container version of a specific application.</para>
+        /// <para>Rolls back the container version of edge resources under an application to a historical version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45051,7 +45621,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a pay-as-you-go or subscription ENS instance.</para>
+        /// <para>Creates pay-as-you-go or subscription ENS compute instances.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -45086,6 +45656,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["Amount"] = request.Amount;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoInstallCloudAssistant))
+            {
+                query["AutoInstallCloudAssistant"] = request.AutoInstallCloudAssistant;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoReleaseTime))
             {
                 query["AutoReleaseTime"] = request.AutoReleaseTime;
@@ -45105,6 +45679,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Carrier))
             {
                 query["Carrier"] = request.Carrier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAssistantRegion))
+            {
+                query["CloudAssistantRegion"] = request.CloudAssistantRegion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataDiskShrink))
             {
@@ -45283,7 +45861,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a pay-as-you-go or subscription ENS instance.</para>
+        /// <para>Creates pay-as-you-go or subscription ENS compute instances.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -45318,6 +45896,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["Amount"] = request.Amount;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoInstallCloudAssistant))
+            {
+                query["AutoInstallCloudAssistant"] = request.AutoInstallCloudAssistant;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoReleaseTime))
             {
                 query["AutoReleaseTime"] = request.AutoReleaseTime;
@@ -45337,6 +45919,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Carrier))
             {
                 query["Carrier"] = request.Carrier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAssistantRegion))
+            {
+                query["CloudAssistantRegion"] = request.CloudAssistantRegion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataDiskShrink))
             {
@@ -45515,7 +46101,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a pay-as-you-go or subscription ENS instance.</para>
+        /// <para>Creates pay-as-you-go or subscription ENS compute instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45533,7 +46119,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a pay-as-you-go or subscription ENS instance.</para>
+        /// <para>Creates pay-as-you-go or subscription ENS compute instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45735,8 +46321,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves the disk of a specific device as a shared data group (SDG).</para>
+        /// <para>Saves the cloud disk of a specified device as a Shared Data Group (SDG).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Saves a Shared Data Group (SDG). SDGs in the failed status cannot be saved. Before calling this operation, call DescribeSDGs to query the current status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSDGRequest
@@ -45773,8 +46364,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves the disk of a specific device as a shared data group (SDG).</para>
+        /// <para>Saves the cloud disk of a specified device as a Shared Data Group (SDG).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Saves a Shared Data Group (SDG). SDGs in the failed status cannot be saved. Before calling this operation, call DescribeSDGs to query the current status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSDGRequest
@@ -45811,8 +46407,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves the disk of a specific device as a shared data group (SDG).</para>
+        /// <para>Saves the cloud disk of a specified device as a Shared Data Group (SDG).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Saves a Shared Data Group (SDG). SDGs in the failed status cannot be saved. Before calling this operation, call DescribeSDGs to query the current status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSDGRequest
@@ -45829,8 +46430,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves the disk of a specific device as a shared data group (SDG).</para>
+        /// <para>Saves the cloud disk of a specified device as a Shared Data Group (SDG).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Saves a Shared Data Group (SDG). SDGs in the failed status cannot be saved. Before calling this operation, call DescribeSDGs to query the current status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSDGRequest
@@ -45847,8 +46453,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调整节点池节点数</para>
+        /// <para>Scales out a node pool to ensure that the number of nodes is sufficient to support your workloads. The Count parameter must be greater than the current number of nodes in the node pool. If the node pool contains nodes that failed to scale out, you must call the DeleteClusterNodes operation to delete the failed nodes before you scale out the node pool. A scale-out task typically takes 5 to 10 minutes. If the task takes more than 1 hour, the scale-out fails. In this case, contact technical support.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Rate limit per user: 10 calls per second.</description></item>
+        /// <item><description>Scaling out a node pool is an asynchronous operation. After you call the operation, you must wait 5 to 10 minutes for the task to complete.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ScaleClusterNodePoolRequest
@@ -45903,8 +46517,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调整节点池节点数</para>
+        /// <para>Scales out a node pool to ensure that the number of nodes is sufficient to support your workloads. The Count parameter must be greater than the current number of nodes in the node pool. If the node pool contains nodes that failed to scale out, you must call the DeleteClusterNodes operation to delete the failed nodes before you scale out the node pool. A scale-out task typically takes 5 to 10 minutes. If the task takes more than 1 hour, the scale-out fails. In this case, contact technical support.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Rate limit per user: 10 calls per second.</description></item>
+        /// <item><description>Scaling out a node pool is an asynchronous operation. After you call the operation, you must wait 5 to 10 minutes for the task to complete.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ScaleClusterNodePoolRequest
@@ -45959,8 +46581,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调整节点池节点数</para>
+        /// <para>Scales out a node pool to ensure that the number of nodes is sufficient to support your workloads. The Count parameter must be greater than the current number of nodes in the node pool. If the node pool contains nodes that failed to scale out, you must call the DeleteClusterNodes operation to delete the failed nodes before you scale out the node pool. A scale-out task typically takes 5 to 10 minutes. If the task takes more than 1 hour, the scale-out fails. In this case, contact technical support.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Rate limit per user: 10 calls per second.</description></item>
+        /// <item><description>Scaling out a node pool is an asynchronous operation. After you call the operation, you must wait 5 to 10 minutes for the task to complete.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ScaleClusterNodePoolRequest
@@ -45977,8 +46607,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调整节点池节点数</para>
+        /// <para>Scales out a node pool to ensure that the number of nodes is sufficient to support your workloads. The Count parameter must be greater than the current number of nodes in the node pool. If the node pool contains nodes that failed to scale out, you must call the DeleteClusterNodes operation to delete the failed nodes before you scale out the node pool. A scale-out task typically takes 5 to 10 minutes. If the task takes more than 1 hour, the scale-out fails. In this case, contact technical support.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Rate limit per user: 10 calls per second.</description></item>
+        /// <item><description>Scaling out a node pool is an asynchronous operation. After you call the operation, you must wait 5 to 10 minutes for the task to complete.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ScaleClusterNodePoolRequest
@@ -45995,16 +46633,8 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the weights of backend servers.</para>
+        /// <para>Sets the weights of backend servers by calling SetBackendServers.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
-        /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per account.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SetBackendServersRequest
@@ -46055,16 +46685,8 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the weights of backend servers.</para>
+        /// <para>Sets the weights of backend servers by calling SetBackendServers.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
-        /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per account.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SetBackendServersRequest
@@ -46115,16 +46737,8 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the weights of backend servers.</para>
+        /// <para>Sets the weights of backend servers by calling SetBackendServers.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
-        /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per account.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// SetBackendServersRequest
@@ -46141,16 +46755,8 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the weights of backend servers.</para>
+        /// <para>Sets the weights of backend servers by calling SetBackendServers.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
-        /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per account.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// SetBackendServersRequest
@@ -46167,14 +46773,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of an HTTP listener.</para>
+        /// <para>Modifies the configuration of an HTTP listener.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>API call frequency: 100 calls per second.</description></item>
+        /// <item><description>Per-user call frequency: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -46281,14 +46887,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of an HTTP listener.</para>
+        /// <para>Modifies the configuration of an HTTP listener.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>API call frequency: 100 calls per second.</description></item>
+        /// <item><description>Per-user call frequency: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -46395,14 +47001,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of an HTTP listener.</para>
+        /// <para>Modifies the configuration of an HTTP listener.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>API call frequency: 100 calls per second.</description></item>
+        /// <item><description>Per-user call frequency: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -46421,14 +47027,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of an HTTP listener.</para>
+        /// <para>Modifies the configuration of an HTTP listener.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>API call frequency: 100 calls per second.</description></item>
+        /// <item><description>Per-user call frequency: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -46447,14 +47053,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of an HTTPS listener.</para>
+        /// <para>Modifies an HTTPS listener.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -46561,14 +47167,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of an HTTPS listener.</para>
+        /// <para>Modifies an HTTPS listener.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -46675,14 +47281,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of an HTTPS listener.</para>
+        /// <para>Modifies an HTTPS listener.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -46701,14 +47307,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of an HTTPS listener.</para>
+        /// <para>Modifies an HTTPS listener.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -46732,9 +47338,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -46786,9 +47392,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -46840,9 +47446,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -46866,9 +47472,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -46887,14 +47493,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a TCP listener.</para>
+        /// <para>Modifies the configuration of a TCP listener.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>API call rate limit: 100 calls per second.</description></item>
+        /// <item><description>Per-user call rate limit: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -46997,14 +47603,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a TCP listener.</para>
+        /// <para>Modifies the configuration of a TCP listener.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>API call rate limit: 100 calls per second.</description></item>
+        /// <item><description>Per-user call rate limit: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -47107,14 +47713,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a TCP listener.</para>
+        /// <para>Modifies the configuration of a TCP listener.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>API call rate limit: 100 calls per second.</description></item>
+        /// <item><description>Per-user call rate limit: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -47133,14 +47739,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a TCP listener.</para>
+        /// <para>Modifies the configuration of a TCP listener.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>API call rate limit: 100 calls per second.</description></item>
+        /// <item><description>Per-user call rate limit: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -47159,14 +47765,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a UDP listener.</para>
+        /// <para>Call <c>SetLoadBalancerUDPListenerAttribute</c> to modify a UDP listener.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per account.</description></item>
+        /// <item><description>API call rate limit: 100 requests/second.</description></item>
+        /// <item><description>Per-user rate limit: 10 requests/second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -47257,14 +47863,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a UDP listener.</para>
+        /// <para>Call <c>SetLoadBalancerUDPListenerAttribute</c> to modify a UDP listener.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per account.</description></item>
+        /// <item><description>API call rate limit: 100 requests/second.</description></item>
+        /// <item><description>Per-user rate limit: 10 requests/second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -47355,14 +47961,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a UDP listener.</para>
+        /// <para>Call <c>SetLoadBalancerUDPListenerAttribute</c> to modify a UDP listener.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per account.</description></item>
+        /// <item><description>API call rate limit: 100 requests/second.</description></item>
+        /// <item><description>Per-user rate limit: 10 requests/second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -47381,14 +47987,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a UDP listener.</para>
+        /// <para>Call <c>SetLoadBalancerUDPListenerAttribute</c> to modify a UDP listener.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per account.</description></item>
+        /// <item><description>API call rate limit: 100 requests/second.</description></item>
+        /// <item><description>Per-user rate limit: 10 requests/second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -47407,7 +48013,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Share the specified AIC image to other users.</para>
+        /// <para>Shares a specified AIC image with other users.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -47459,7 +48065,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Share the specified AIC image to other users.</para>
+        /// <para>Shares a specified AIC image with other users.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -47511,7 +48117,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Share the specified AIC image to other users.</para>
+        /// <para>Shares a specified AIC image with other users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47529,7 +48135,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Share the specified AIC image to other users.</para>
+        /// <para>Shares a specified AIC image with other users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47672,8 +48278,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call the operation only when the instance is in the Stopped state.</para>
         /// <list type="bullet">
+        /// <item><description>You can call the operation only when the instance is in the Stopped state.</description></item>
         /// <item><description>If the operation is successful, the status of the instance becomes Starting.</description></item>
         /// </list>
         /// </description>
@@ -47722,8 +48328,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call the operation only when the instance is in the Stopped state.</para>
         /// <list type="bullet">
+        /// <item><description>You can call the operation only when the instance is in the Stopped state.</description></item>
         /// <item><description>If the operation is successful, the status of the instance becomes Starting.</description></item>
         /// </list>
         /// </description>
@@ -47772,8 +48378,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call the operation only when the instance is in the Stopped state.</para>
         /// <list type="bullet">
+        /// <item><description>You can call the operation only when the instance is in the Stopped state.</description></item>
         /// <item><description>If the operation is successful, the status of the instance becomes Starting.</description></item>
         /// </list>
         /// </description>
@@ -47798,8 +48404,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call the operation only when the instance is in the Stopped state.</para>
         /// <list type="bullet">
+        /// <item><description>You can call the operation only when the instance is in the Stopped state.</description></item>
         /// <item><description>If the operation is successful, the status of the instance becomes Starting.</description></item>
         /// </list>
         /// </description>
@@ -47956,9 +48562,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -48014,9 +48620,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -48072,9 +48678,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -48098,9 +48704,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -48372,8 +48978,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation to stop instances that are only in the Running state.</para>
         /// <list type="bullet">
+        /// <item><description>to stop instances that are only in the Running state.</description></item>
         /// <item><description>If the call is successful, the state of the instance becomes Stopping.</description></item>
         /// <item><description>Once the instance is stopped, the state of the instance becomes Stopped.</description></item>
         /// <item><description>Force stop is supported, which is equivalent to power-off. Data that is not written to disks on the instance may be lost.</description></item>
@@ -48428,8 +49034,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation to stop instances that are only in the Running state.</para>
         /// <list type="bullet">
+        /// <item><description>to stop instances that are only in the Running state.</description></item>
         /// <item><description>If the call is successful, the state of the instance becomes Stopping.</description></item>
         /// <item><description>Once the instance is stopped, the state of the instance becomes Stopped.</description></item>
         /// <item><description>Force stop is supported, which is equivalent to power-off. Data that is not written to disks on the instance may be lost.</description></item>
@@ -48484,8 +49090,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation to stop instances that are only in the Running state.</para>
         /// <list type="bullet">
+        /// <item><description>to stop instances that are only in the Running state.</description></item>
         /// <item><description>If the call is successful, the state of the instance becomes Stopping.</description></item>
         /// <item><description>Once the instance is stopped, the state of the instance becomes Stopped.</description></item>
         /// <item><description>Force stop is supported, which is equivalent to power-off. Data that is not written to disks on the instance may be lost.</description></item>
@@ -48512,8 +49118,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation to stop instances that are only in the Running state.</para>
         /// <list type="bullet">
+        /// <item><description>to stop instances that are only in the Running state.</description></item>
         /// <item><description>If the call is successful, the state of the instance becomes Stopping.</description></item>
         /// <item><description>Once the instance is stopped, the state of the instance becomes Stopped.</description></item>
         /// <item><description>Force stop is supported, which is equivalent to power-off. Data that is not written to disks on the instance may be lost.</description></item>
@@ -48672,9 +49278,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -48730,9 +49336,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -48788,9 +49394,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -48814,9 +49420,9 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 10 times per second per user.</description></item>
+        /// <item><description>up to 100 times per second per account.</description></item>
+        /// <item><description>up to 10 times per second per user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -49119,7 +49725,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates an elastic IP address (EIP) from an instance.</para>
+        /// <para>Disassociates an elastic IP address (EIP) from the cloud resource to which it is bound.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49165,7 +49771,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates an elastic IP address (EIP) from an instance.</para>
+        /// <para>Disassociates an elastic IP address (EIP) from the cloud resource to which it is bound.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49211,7 +49817,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates an elastic IP address (EIP) from an instance.</para>
+        /// <para>Disassociates an elastic IP address (EIP) from the cloud resource to which it is bound.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49229,7 +49835,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates an elastic IP address (EIP) from an instance.</para>
+        /// <para>Disassociates an elastic IP address (EIP) from the cloud resource to which it is bound.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49247,8 +49853,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>卸载集群组件</para>
+        /// <para>Uninstalls specified add-ons from a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Uninstalls add-ons from an ECK cluster. The target cluster must be in the running state. You can call DescribeClustersV1 to query the cluster state and wait until the cluster initialization is complete before you call this operation.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UnInstallClusterAddonsRequest
@@ -49299,8 +49910,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>卸载集群组件</para>
+        /// <para>Uninstalls specified add-ons from a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Uninstalls add-ons from an ECK cluster. The target cluster must be in the running state. You can call DescribeClustersV1 to query the cluster state and wait until the cluster initialization is complete before you call this operation.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UnInstallClusterAddonsRequest
@@ -49351,8 +49967,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>卸载集群组件</para>
+        /// <para>Uninstalls specified add-ons from a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Uninstalls add-ons from an ECK cluster. The target cluster must be in the running state. You can call DescribeClustersV1 to query the cluster state and wait until the cluster initialization is complete before you call this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UnInstallClusterAddonsRequest
@@ -49369,8 +49990,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>卸载集群组件</para>
+        /// <para>Uninstalls specified add-ons from a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Uninstalls add-ons from an ECK cluster. The target cluster must be in the running state. You can call DescribeClustersV1 to query the cluster state and wait until the cluster initialization is complete before you call this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UnInstallClusterAddonsRequest
@@ -49643,7 +50269,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a network access control list (ACL) from a network.</para>
+        /// <para>Invokes the UnassociateNetworkAcl operation to disassociate a network ACL from a network, which reverses the attach of the network ACL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49689,7 +50315,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a network access control list (ACL) from a network.</para>
+        /// <para>Invokes the UnassociateNetworkAcl operation to disassociate a network ACL from a network, which reverses the attach of the network ACL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49735,7 +50361,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a network access control list (ACL) from a network.</para>
+        /// <para>Invokes the UnassociateNetworkAcl operation to disassociate a network ACL from a network, which reverses the attach of the network ACL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49753,7 +50379,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a network access control list (ACL) from a network.</para>
+        /// <para>Invokes the UnassociateNetworkAcl operation to disassociate a network ACL from a network, which reverses the attach of the network ACL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49771,7 +50397,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes preloaded data.</para>
+        /// <para>Calls UnloadRegionSDG to delete preloaded data.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -49831,7 +50457,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes preloaded data.</para>
+        /// <para>Calls UnloadRegionSDG to delete preloaded data.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -49891,7 +50517,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes preloaded data.</para>
+        /// <para>Calls UnloadRegionSDG to delete preloaded data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49909,7 +50535,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes preloaded data.</para>
+        /// <para>Calls UnloadRegionSDG to delete preloaded data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50067,7 +50693,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from resources.</para>
+        /// <para>Removes user tags from a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50121,7 +50747,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from resources.</para>
+        /// <para>Removes user tags from a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50175,7 +50801,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from resources.</para>
+        /// <para>Removes user tags from a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50193,7 +50819,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from resources.</para>
+        /// <para>Removes user tags from a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50211,8 +50837,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update cluster certificates</para>
+        /// <para>Updates the cluster certificate.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Rate limit per user: 10 calls per second.</description></item>
+        /// <item><description>Updating the cluster certificate is an asynchronous operation. After you call the API operation, wait 5 to 10 minutes for the cluster certificate to be updated and the control components to restart. During this process, you can call the DescribeClustersV1 operation to query the update status of the cluster certificate. After the cluster certificate is updated, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateClusterCertificateRequest
@@ -50253,8 +50887,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update cluster certificates</para>
+        /// <para>Updates the cluster certificate.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Rate limit per user: 10 calls per second.</description></item>
+        /// <item><description>Updating the cluster certificate is an asynchronous operation. After you call the API operation, wait 5 to 10 minutes for the cluster certificate to be updated and the control components to restart. During this process, you can call the DescribeClustersV1 operation to query the update status of the cluster certificate. After the cluster certificate is updated, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateClusterCertificateRequest
@@ -50295,8 +50937,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update cluster certificates</para>
+        /// <para>Updates the cluster certificate.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Rate limit per user: 10 calls per second.</description></item>
+        /// <item><description>Updating the cluster certificate is an asynchronous operation. After you call the API operation, wait 5 to 10 minutes for the cluster certificate to be updated and the control components to restart. During this process, you can call the DescribeClustersV1 operation to query the update status of the cluster certificate. After the cluster certificate is updated, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateClusterCertificateRequest
@@ -50313,8 +50963,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update cluster certificates</para>
+        /// <para>Updates the cluster certificate.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Rate limit per user: 10 calls per second.</description></item>
+        /// <item><description>Updating the cluster certificate is an asynchronous operation. After you call the API operation, wait 5 to 10 minutes for the cluster certificate to be updated and the control components to restart. During this process, you can call the DescribeClustersV1 operation to query the update status of the cluster certificate. After the cluster certificate is updated, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateClusterCertificateRequest
@@ -50747,8 +51405,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>升级集群实例组件</para>
+        /// <para>Call the UpgradeClusterAddons operation to upgrade cluster component instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Each user can call this operation up to 10 times per second.</description></item>
+        /// <item><description>Creating a cluster is an asynchronous operation. After calling the operation, wait 10 to 20 minutes for the cluster to initialize. During this time, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpgradeClusterAddonsRequest
@@ -50799,8 +51465,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>升级集群实例组件</para>
+        /// <para>Call the UpgradeClusterAddons operation to upgrade cluster component instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Each user can call this operation up to 10 times per second.</description></item>
+        /// <item><description>Creating a cluster is an asynchronous operation. After calling the operation, wait 10 to 20 minutes for the cluster to initialize. During this time, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpgradeClusterAddonsRequest
@@ -50851,8 +51525,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>升级集群实例组件</para>
+        /// <para>Call the UpgradeClusterAddons operation to upgrade cluster component instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Each user can call this operation up to 10 times per second.</description></item>
+        /// <item><description>Creating a cluster is an asynchronous operation. After calling the operation, wait 10 to 20 minutes for the cluster to initialize. During this time, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpgradeClusterAddonsRequest
@@ -50869,8 +51551,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>升级集群实例组件</para>
+        /// <para>Call the UpgradeClusterAddons operation to upgrade cluster component instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Each user can call this operation up to 10 times per second.</description></item>
+        /// <item><description>Creating a cluster is an asynchronous operation. After calling the operation, wait 10 to 20 minutes for the cluster to initialize. During this time, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpgradeClusterAddonsRequest
@@ -50887,7 +51577,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upload a new AIC public key.</para>
+        /// <para>Uploads a new AIC public key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50945,7 +51635,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upload a new AIC public key.</para>
+        /// <para>Uploads a new AIC public key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51003,7 +51693,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upload a new AIC public key.</para>
+        /// <para>Uploads a new AIC public key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51021,7 +51711,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upload a new AIC public key.</para>
+        /// <para>Uploads a new AIC public key.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -89,9 +89,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The protocol. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>TCP</b>: forwards TCP packets.</description></item>
-            /// <item><description><b>UDP</b>: forwards UDP packets.</description></item>
-            /// <item><description><b>Any</b>: forwards all packets.</description></item>
+            /// <item><description><para><b>TCP</b>: forwards TCP packets.</para>
+            /// </description></item>
+            /// <item><description><para><b>UDP</b>: forwards UDP packets.</para>
+            /// </description></item>
+            /// <item><description><para><b>Any</b>: forwards all packets.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -124,10 +127,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The status of the secondary EIP. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Running</description></item>
-            /// <item><description>Stopping</description></item>
-            /// <item><description>Stopped</description></item>
-            /// <item><description>Starting</description></item>
+            /// <item><description><para>Running</para>
+            /// </description></item>
+            /// <item><description><para>Stopping</para>
+            /// </description></item>
+            /// <item><description><para>Stopped</para>
+            /// </description></item>
+            /// <item><description><para>Starting</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -140,9 +147,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The status of the DNAT entry. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Pending: The DNAT entry is being created or modified.</description></item>
-            /// <item><description>Available: The DNAT entry is available.</description></item>
-            /// <item><description>Deleting: The DNAT entry is being deleted.</description></item>
+            /// <item><description><para>Pending: The DNAT entry is being created or modified.</para>
+            /// </description></item>
+            /// <item><description><para>Available: The DNAT entry is available.</para>
+            /// </description></item>
+            /// <item><description><para>Deleting: The DNAT entry is being deleted.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

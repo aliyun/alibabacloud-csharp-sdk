@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteBucketLifecycleRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the bucket.</para>
+        /// <para>The bucket name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string BucketName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the rule. If this parameter is not specified, all rules are removed.</para>
+        /// <para>The rule ID. If this parameter is not specified, all rules are deleted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

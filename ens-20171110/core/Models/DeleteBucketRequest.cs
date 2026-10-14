@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteBucketRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the bucket that you want to delete. You can delete only one bucket at a time.</para>
+        /// <para>The name of the bucket to delete. Only one bucket can be deleted at a time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

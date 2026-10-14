@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class BatchEventMigrateInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FF53E96D-3F1A-42F0-8373-1C2B39D72D44</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The results.</para>
+        /// <para>The list of results.</para>
         /// </summary>
         [NameInMap("Results")]
         [Validation(Required=false)]
         public List<BatchEventMigrateInstanceResponseBodyResults> Results { get; set; }
         public class BatchEventMigrateInstanceResponseBodyResults : TeaModel {
             /// <summary>
-            /// <para>The error code.</para>
+            /// <para>The status code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public int? Code { get; set; }
 
             /// <summary>
-            /// <para>The ID of the event.</para>
+            /// <para>The event ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>e-d71ff150945b9c02eb6ebc0016328468</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string EventId { get; set; }
 
             /// <summary>
-            /// <para>When Code!=200, it indicates the specific error message.</para>
+            /// <para>The error message returned when Code is not 200.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The resource IDs.</para>
+            /// <para>The resource ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-55qi8m11rr53c4i964md8a00l</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ModifyNetworkInterfaceAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The description. The description must be 1 to 256 characters in length and cannot start with http:// or https://.</para>
+        /// <para>The description. The description must be 1 to 256 characters in length and cannot start with http\:// or https\://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testDescription</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NetworkInterfaceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the ENI. The name must be 1 to 128 characters in length, The name cannot start with http:// or https://.</para>
+        /// <para>The name of the ENI. The name must be 1 to 128 characters in length, The name cannot start with http\:// or https\://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-01</para>

@@ -10,18 +10,21 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class GetBucketInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of bucket information.</para>
+        /// <para>Bucket information list.</para>
         /// </summary>
         [NameInMap("BucketInfo")]
         [Validation(Required=false)]
         public GetBucketInfoResponseBodyBucketInfo BucketInfo { get; set; }
         public class GetBucketInfoResponseBodyBucketInfo : TeaModel {
             /// <summary>
-            /// <para>The ACL of the bucket.</para>
+            /// <para>Bucket access control list type:</para>
             /// <list type="bullet">
-            /// <item><description><b>public-read-write</b></description></item>
-            /// <item><description><b>public-read</b></description></item>
-            /// <item><description><b>private</b> (default)</description></item>
+            /// <item><description><para><b>public-read-write</b>: public-read-write</para>
+            /// </description></item>
+            /// <item><description><para><b>public-read</b>: public-read</para>
+            /// </description></item>
+            /// <item><description><para><b>private</b>: private (default)</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -32,7 +35,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string BucketAcl { get; set; }
 
             /// <summary>
-            /// <para>The name of the bucket.</para>
+            /// <para>Bucket name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -42,7 +45,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string BucketName { get; set; }
 
             /// <summary>
-            /// <para>The remarks.</para>
+            /// <para>Comments.</para>
             /// 
             /// <b>Example:</b>
             /// <para>das</para>
@@ -52,7 +55,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The time when the bucket was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>Bucket creation time. Represented in ISO8601 standard, using UTC time. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-10-12T05:45:00Z</para>
@@ -62,7 +65,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Single-node storage. Set the value to sink.</para>
+            /// <para>Single node storage. Value: sink.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sink</para>
@@ -72,7 +75,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string LogicalBucketType { get; set; }
 
             /// <summary>
-            /// <para>The time when the bucket was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>Bucket modification time. Represented in ISO8601 standard, using UTC time. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-10-12T06:45:00Z</para>
@@ -84,7 +87,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C5831388-2D4B-46F4-A96B-D4E6BD06E7521</para>

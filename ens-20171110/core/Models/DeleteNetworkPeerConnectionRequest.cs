@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteNetworkPeerConnectionRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID of the network peer connection to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

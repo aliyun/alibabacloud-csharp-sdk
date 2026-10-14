@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeInstanceSDGStatusShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the AIC instance.</para>
+        /// <para>The AIC instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. Starting value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The IDs of SDGs that you want to query. By default, all SDGs are queried.</para>
+        /// <para>The IDs of the SDGs to query. By default, all SDGs are queried.</para>
         /// </summary>
         [NameInMap("SDGIds")]
         [Validation(Required=false)]

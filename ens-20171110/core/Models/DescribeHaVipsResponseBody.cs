@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeHaVipsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of the HAVIPs.</para>
+        /// <para>The details of the HaVips.</para>
         /// </summary>
         [NameInMap("HaVips")]
         [Validation(Required=false)]
         public List<DescribeHaVipsResponseBodyHaVips> HaVips { get; set; }
         public class DescribeHaVipsResponseBodyHaVips : TeaModel {
             /// <summary>
-            /// <para>The elastic IP addresses (EIPs) that are associated with the HAVIP.</para>
+            /// <para>The elastic IP addresses (EIPs) associated with the HaVip.</para>
             /// </summary>
             [NameInMap("AssociatedEipAddresses")]
             [Validation(Required=false)]
             public List<DescribeHaVipsResponseBodyHaVipsAssociatedEipAddresses> AssociatedEipAddresses { get; set; }
             public class DescribeHaVipsResponseBodyHaVipsAssociatedEipAddresses : TeaModel {
                 /// <summary>
-                /// <para>The EIP.</para>
+                /// <para>The IP address of the EIP.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>47.XX.XX.40</para>
@@ -46,14 +46,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             }
 
             /// <summary>
-            /// <para>The information about instances that are associated with the HAVIP.</para>
+            /// <para>The instances associated with the HaVip.</para>
             /// </summary>
             [NameInMap("AssociatedInstances")]
             [Validation(Required=false)]
             public List<DescribeHaVipsResponseBodyHaVipsAssociatedInstances> AssociatedInstances { get; set; }
             public class DescribeHaVipsResponseBodyHaVipsAssociatedInstances : TeaModel {
                 /// <summary>
-                /// <para>The time when the instance was created.</para>
+                /// <para>The time when the association was created. The time is in the ISO 8601 UTC format of YYYY-MM-DDTHH:mm:ssZ.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-01-05T07:09:28Z</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the instance.</para>
+                /// <para>The instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>i-51p****</para>
@@ -73,10 +73,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the instance that is associated with the HAVIP. Valid values:</para>
+                /// <para>The type of the instance to attach to the HaVip. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>EnsInstance: ENS instance</description></item>
-                /// <item><description>NetworkInterface: elastic network interface (ENI)</description></item>
+                /// <item><description>EnsInstance: An ENS cloud server instance.</description></item>
+                /// <item><description>NetworkInterface: An elastic network interfaces (ENIs) instance, which is a network interface controller (NIC).</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string InstanceType { get; set; }
 
                 /// <summary>
-                /// <para>The private IP address of the instance that is associated with the HAVIP. Valid values:</para>
+                /// <para>The private IP address of the associated instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>192.XX.XX.9</para>
@@ -97,11 +97,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string IpAddress { get; set; }
 
                 /// <summary>
-                /// <para>The association status of the HAVIP. Valid values:</para>
+                /// <para>The association status of the HaVip instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Associating</description></item>
-                /// <item><description>InUse</description></item>
-                /// <item><description>Unassociating</description></item>
+                /// <item><description>Associating: The HaVip is being associated.</description></item>
+                /// <item><description>InUse: The HaVip is available.</description></item>
+                /// <item><description>Unassociating: The HaVip is being disassociated.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             }
 
             /// <summary>
-            /// <para>The time when the HAVIP was created.</para>
+            /// <para>The time when the HaVip was created. The time is in the ISO 8601 UTC format of YYYY-MM-DDTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-03-29T11:17:38Z</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the HAVIP.</para>
+            /// <para>The description of the HaVip instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region.</para>
+            /// <para>The ID of the ENS node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-guiyang-14</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string EnsRegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the HAVIP.</para>
+            /// <para>The HaVip instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>havip-52y28****</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string HaVipId { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the HAVIP.</para>
+            /// <para>The IP address of the HaVip.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.XX.XX.5</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string IpAddress { get; set; }
 
             /// <summary>
-            /// <para>The name of the HAVIP.</para>
+            /// <para>The name of the HaVip instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the network.</para>
+            /// <para>The network ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>n-5wtkyrk****</para>
@@ -184,12 +184,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string NetworkId { get; set; }
 
             /// <summary>
-            /// <para>The status of the HAVIP. Valid values:</para>
+            /// <para>The HaVip status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Creating</description></item>
-            /// <item><description>Available</description></item>
-            /// <item><description>InUse</description></item>
-            /// <item><description>Deleting</description></item>
+            /// <item><description>Creating: The HaVip is being created.</description></item>
+            /// <item><description>Available: The HaVip is available.</description></item>
+            /// <item><description>InUse: The HaVip is in use.</description></item>
+            /// <item><description>Deleting: The HaVip is being deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the vSwitch.</para>
+            /// <para>The vSwitch ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-5yc8d****</para>
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

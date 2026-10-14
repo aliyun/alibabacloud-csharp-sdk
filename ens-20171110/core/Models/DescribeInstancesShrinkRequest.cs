@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeInstancesShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The list of EIP addresses used to filter instances.</para>
+        /// </summary>
         [NameInMap("EipAddresses")]
         [Validation(Required=false)]
         public string EipAddressesShrink { get; set; }
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the regions. The value is a JSON array that consists of up to 100 IDs. Separate multiple IDs with commas (,).</para>
+        /// <para>The list of edge zone IDs. This parameter is a formatted JSON array that contains up to 100 IDs separated by commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;cn-suzhou-telecom&quot;,&quot;cn-chengdu-telecom&quot;]</para>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the edge service. You can use the ID to query information about the instances that are created in the edge service.</para>
+        /// <para>The Edge Node Service ID. You can use this ID to query the instances created under the edge service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ens-20190730202316s****</para>
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsServiceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the image.</para>
+        /// <para>The image ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>centos_6_08_64_20G_alibase_****</para>
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-5iqczfxps7csjrxeca****</para>
@@ -64,17 +67,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the instances. The value is a JSON array that consists of up to 100 IDs. Separate IDs with commas (,).</para>
+        /// <para>The list of instance IDs. This parameter is a formatted JSON array that contains up to 100 IDs separated by commas (,).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[&quot;i-5iqczfxps7csjrxeca07****&quot;, &quot;i-5iqczfxps7csjrxeca07****&quot;]]</para>
+        /// <para>[&quot;i-5iqczfxps7csjrxeca07****&quot;, &quot;i-5iqczfxps7csjrxeca07****&quot;]</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public string InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance.</para>
+        /// <para>The instance name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TestName</para>
@@ -84,13 +87,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The condition that you want to use to filter instances by category. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>EnsInstance: ENS instances that you purchase.</description></item>
-        /// <item><description>EnsService: ENS instances that belong to edge services.</description></item>
-        /// <item><description>BuildMachine: ENS instances that are configured with image builders.</description></item>
-        /// <item><description>EnsPostPaidInstance: Pay-as-you-go ENS instances that you purchase.</description></item>
-        /// </list>
+        /// <para>The filter type. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>EnsService</para>
@@ -110,7 +107,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The internal IP address of the instance.</para>
+        /// <para>The internal IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>47.100.XX.XX</para>
@@ -120,7 +117,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string IntranetIp { get; set; }
 
         /// <summary>
-        /// <para>The ID of the network.</para>
+        /// <para>The network ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>n-2zeuphj08tt7q3brd****</para>
@@ -130,19 +127,22 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NetworkId { get; set; }
 
         /// <summary>
-        /// <para>The method that you want to use to sort instances. The value of this parameter is in the JSON format.</para>
-        /// <para>You can sort instances by name, expiration time, node ID, or creation time. You can specify one or more methods.</para>
+        /// <para>The sorting parameter in JSON format.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;InstanceNameSort&quot;:&quot;asc&quot;,&quot;ExpireTimeSort&quot;:&quot;asc&quot;,&quot;CreationTimeSort&quot;:&quot;desc&quot;}}</para>
+        /// <para>{
+        ///     &quot;InstanceNameSort&quot;: &quot;asc&quot;,
+        ///     &quot;ExpireTimeSort&quot;: &quot;asc&quot;,
+        ///     &quot;CreationTimeSort&quot;: &quot;desc&quot;,
+        ///     &quot;EnsRegionId&quot;: &quot;desc&quot;
+        /// }</para>
         /// </summary>
         [NameInMap("OrderByParams")]
         [Validation(Required=false)]
         public string OrderByParams { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page <b>1</b>.</para>
-        /// <para>Default value: <b>1</b>.</para>
+        /// <para>The page number of the instance status list. The value starts from <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -152,8 +152,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. The maximum value is <b>100</b>.</para>
-        /// <para>Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page for a paged query. Maximum value: <b>100</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -163,7 +162,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The keyword that you use to query the logs of the service. You can specify the values of parameters such as <b>ip</b>, <b>InstanceName</b>, and <b>InstanceId</b> as the keyword.</para>
+        /// <para>The search keyword. Supports parameters such as <b>ip</b>, <b>InstanceName</b>, and <b>InstanceId</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Joshua</para>
@@ -173,7 +172,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string SearchKey { get; set; }
 
         /// <summary>
-        /// <para>The ID of the security group.</para>
+        /// <para>The security group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sg-5kyicq2kfcapxrdds6tar7jqb</para>
@@ -183,18 +182,18 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The status of the service. Valid values.</para>
+        /// <para>The business status of the instance, which does not represent the actual running status of the instance.</para>
         /// </summary>
         [NameInMap("ServiceStatus")]
         [Validation(Required=false)]
         public string ServiceStatusShrink { get; set; }
 
         /// <summary>
-        /// <para>The status of the instance. Valid values:</para>
+        /// <para>The instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Running</description></item>
-        /// <item><description>Stopped</description></item>
-        /// <item><description>Expired</description></item>
+        /// <item><description>Running: Running.</description></item>
+        /// <item><description>Stopped: Stopped.</description></item>
+        /// <item><description>Expired: Expired.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -205,14 +204,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The tags that are added to the resource. This operation does not return tag information. You can call this operation in combination with the tag-related operations.</para>
+        /// <para>The resource tags. This operation does not return tag information. Use this parameter in combination with the APIs in the tag category.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string TagsShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch.</para>
+        /// <para>The vSwitch ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-2zeh0r1pabwtg6wcs****</para>
@@ -221,10 +220,22 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
+        /// <summary>
+        /// <para>The VPD network ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpd-5s7xxxxxxx</para>
+        /// </summary>
         [NameInMap("VpdId")]
         [Validation(Required=false)]
         public string VpdId { get; set; }
 
+        /// <summary>
+        /// <para>The VPD vSwitch ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vsw-5s7xxxxxxx</para>
+        /// </summary>
         [NameInMap("VpdVSwitchId")]
         [Validation(Required=false)]
         public string VpdVSwitchId { get; set; }

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CopySDGResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data object.</para>
+        /// <para>The returned Data object.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CopySDGResponseBodyData Data { get; set; }
         public class CopySDGResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The response message. Success is returned for a successful request.</para>
+            /// <para>The response message. The value success indicates a successful request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The execution result of the synchronization request.</para>
+            /// <para>The execution result of the synchronous request.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public CopySDGResponseBodyDataResult Result { get; set; }
             public class CopySDGResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// <para>The number of failed nodes.</para>
+                /// <para>The number of failed edge zones.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -44,14 +44,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public long? FailedCount { get; set; }
 
                 /// <summary>
-                /// <para>Details of failed nodes.</para>
+                /// <para>The list of failed edge zone details.</para>
                 /// </summary>
                 [NameInMap("FailedItems")]
                 [Validation(Required=false)]
                 public List<CopySDGResponseBodyDataResultFailedItems> FailedItems { get; set; }
                 public class CopySDGResponseBodyDataResultFailedItems : TeaModel {
                     /// <summary>
-                    /// <para>The ID of the destination node.</para>
+                    /// <para>The ID of the destination edge zone.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cn-hangzhou-xxx</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 }
 
                 /// <summary>
-                /// <para>The number of successful nodes.</para>
+                /// <para>The number of successful operations.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -85,10 +85,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether all tasks are successful. Valid values:</para>
+            /// <para>Indicates whether all requests were successful. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: All tasks are successful.</description></item>
-            /// <item><description><b>false</b>: Failed tasks exist.</description></item>
+            /// <item><description><b>true</b>: All requests were successful.</description></item>
+            /// <item><description><b>false</b>: Some tasks failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>XXX-XXX-XXX</para>

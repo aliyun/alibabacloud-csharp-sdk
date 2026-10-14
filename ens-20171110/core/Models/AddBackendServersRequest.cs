@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class AddBackendServersRequest : TeaModel {
         /// <summary>
-        /// <para>The list of backend servers that you want to add to the Edge Load Balancer (ELB) instance. You can add up to 20 backend servers at a time.</para>
+        /// <para>The list of backend servers to add. You can add up to 20 backend servers per invoke.</para>
         /// <remarks>
-        /// <para> Only Edge Node Service (ENS) instances that are in the running state can be added to the ELB instance as backend servers.</para>
+        /// <para>Backend servers (ENS instances) must be in the Running state before they can be added to a load balancing instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <para>The IP address of the backend server.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>192.168.X.X</para>
+            /// <para>192.168.XXX</para>
             /// </summary>
             [NameInMap("Ip")]
             [Validation(Required=false)]
             public string Ip { get; set; }
 
             /// <summary>
-            /// <para>The backend port that is used by the ELB instance.</para>
+            /// <para>The backend port used by the load balancing instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3309</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public int? Port { get; set; }
 
             /// <summary>
-            /// <para>The ID of the ENS instance.</para>
+            /// <para>The ENS instance ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -52,10 +52,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string ServerId { get; set; }
 
             /// <summary>
-            /// <para>The type of the backend server. Valid values:</para>
+            /// <para>The backend server type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ens</b>: ENS instance</description></item>
-            /// <item><description><b>eni</b>: elastic network interface (ENI)</description></item>
+            /// <item><description><b>ens</b>: ENS instance.</description></item>
+            /// <item><description><b>eni</b>: network interface controller (NIC) instance.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The weight of the backend server. Default value: 100. Valid values: <b>0</b> to <b>100</b>.</para>
             /// <remarks>
-            /// <para> The value 0 indicates that requests are not forwarded to the backend server.</para>
+            /// <para>A value of 0 indicates that no requests are forwarded to the backend server.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The frontend port that is used by the Edge Load Balance (ELB) instance. Valid values: <b>1</b> to <b>65535</b>.</para>
+        /// <para>The frontend port used by the load balancing instance. Valid values: <b>1</b> to <b>65535</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

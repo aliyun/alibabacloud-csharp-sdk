@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateFileSystemRequest : TeaModel {
         /// <summary>
-        /// <para>The information about the orders.</para>
+        /// <para>The list of orders. Each element in the list contains the details of an order.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("OrderDetails")]
@@ -18,10 +18,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public List<CreateFileSystemRequestOrderDetails> OrderDetails { get; set; }
         public class CreateFileSystemRequestOrderDetails : TeaModel {
             /// <summary>
-            /// <para>The billing method of the NAS file system. Valid values:</para>
+            /// <para>The billable methods of NAS. Valid values:  </para>
             /// <list type="bullet">
-            /// <item><description>PrePaid: subscription. This billing method is not supported.</description></item>
-            /// <item><description>PostPaid: pay-as-you-go.</description></item>
+            /// <item><description>PrePaid: subscription (currently not supported).  </description></item>
+            /// <item><description>PostPaid: pay-as-you-go billing method.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the edge node.</para>
+            /// <para>The edge zone ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -44,7 +44,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string EnsRegionId { get; set; }
 
             /// <summary>
-            /// <para>The name of the file system. The name must be 1 to 80 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</para>
+            /// <para>The file system name.
+            /// The name must be 1 to 80 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -55,7 +56,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string FileSystemName { get; set; }
 
             /// <summary>
-            /// <para>The name of the mount target. The name must be 1 to 80 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</para>
+            /// <para>The mount target name. The name must be 1 to 80 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -77,7 +78,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string NetworkId { get; set; }
 
             /// <summary>
-            /// <para>The type of the order. Set the value to BUY.</para>
+            /// <para>The order type. Valid values: BUY.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -88,7 +89,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string OrderType { get; set; }
 
             /// <summary>
-            /// <para>The storage protocol. Set the value to nfs.</para>
+            /// <para>The storage protocol. Valid values: nfs.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -101,8 +102,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The storage type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Capacity.</description></item>
-            /// <item><description>Performance.</description></item>
+            /// <item><description><para>capacity: storage-optimized.</para>
+            /// </description></item>
+            /// <item><description><para>Performance: ultra-fast.</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 

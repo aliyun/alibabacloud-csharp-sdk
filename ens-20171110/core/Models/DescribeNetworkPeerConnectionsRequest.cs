@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeNetworkPeerConnectionsRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the ENS node.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-xian-unicom</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the network peer connection.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pcc-5inkeimcipxk26yqtzm4q****</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The name of the network peer connection.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test0</para>
         /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <para>The IDs of the networks involved in the connection. The query does not distinguish between the requester and accepter.</para>
+        /// </summary>
         [NameInMap("NetworkIds")]
         [Validation(Required=false)]
         public List<string> NetworkIds { get; set; }
 
         /// <summary>
+        /// <para>The page number for the returned results. Default: <b>1</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return on each page. Default: <b>10</b>. Valid values: <b>10</b> to <b>100</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

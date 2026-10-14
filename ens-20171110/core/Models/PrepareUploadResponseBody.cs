@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class PrepareUploadResponseBody : TeaModel {
         /// <summary>
-        /// <para>The name of the bucket. This parameter is available only when the OSS SDK is used.</para>
+        /// <para>The name of the physical storage. Pass this value when you use the OSS SDK.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-xxxxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string BucketName { get; set; }
 
         /// <summary>
-        /// <para>The endpoint. This parameter is available only when the OSS SDK is used.</para>
+        /// <para>The endpoint. Pass this value when you use the OSS SDK.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eos.aliyuncs.com</para>

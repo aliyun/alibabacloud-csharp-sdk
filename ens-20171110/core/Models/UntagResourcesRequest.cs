@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to remove all tags from the resource. This parameter takes effect only if you do not specify TagKey.N. Valid values:</para>
+        /// <para>Specifies whether to unbind all tags from the resource. This parameter takes effect only when TagKey.N is not specified in the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><para><b>true</b>: Unbinds all tags.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): Does not unbind all tags.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public bool? All { get; set; }
 
         /// <summary>
-        /// <para>The resource IDs. You can specify up to 50 resource IDs.</para>
+        /// <para>The list of resource IDs. A maximum of 50 items can be specified.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -32,7 +34,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource.</para>
+        /// <para>The resource type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +45,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The keys of the tags. Valid values of N: 1 to 20.</para>
+        /// <para>The tag key. Valid values of n: 1 to 20.</para>
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

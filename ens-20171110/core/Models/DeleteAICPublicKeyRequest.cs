@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteAICPublicKeyRequest : TeaModel {
         /// <summary>
-        /// <para>Public Key Name</para>
+        /// <para>The name of the public key.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

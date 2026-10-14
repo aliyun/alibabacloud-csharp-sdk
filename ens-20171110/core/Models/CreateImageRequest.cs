@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateImageRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically release the instance after the image is packaged and uploaded. Only image builders are supported. Default value: false. Valid values:</para>
+        /// <para>Specifies whether to enable automatic release of the instance after the image is packaged and uploaded. This parameter is supported only for build instances.</para>
         /// <list type="bullet">
-        /// <item><description>true: The image is released when the instance is released.</description></item>
+        /// <item><description>true: The image is released together with the instance when the instance is released.</description></item>
         /// <item><description>false: The image is retained when the instance is released.</description></item>
-        /// <item><description>If you leave this property empty, false is used by default.</description></item>
+        /// <item><description>If this parameter is left empty, the default value is false.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string DeleteAfterImageUpload { get; set; }
 
         /// <summary>
-        /// <para>The name of the image. The name must be 2 to 128 characters in length. The name can contain letters, digits, colons (:), underscores (<em>), and hyphens (-). It must start with a letter but cannot start with <c>http://</c> or <c>https://</c>. The name can contain letters, digits, colons (:), underscores (</em>), and hyphens (-).</para>
+        /// <para>The image name. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). It must start with a letter but cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ImageName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-5rr1bnyrc4tswr8cq3w6y****</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the snapshot.</para>
+        /// <para>The snapshot ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>s-bp67acfmxazb4p****</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string SnapshotId { get; set; }
 
         /// <summary>
-        /// <para>The region of the destination OSS bucket where the image is to be stored.</para>
+        /// <para>The region of the destination OSS bucket where the image is stored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -66,10 +66,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string TargetOSSRegionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to include data disk snapshots in the custom image.</para>
+        /// <para>Specifies whether to include data cloud disks when creating the image.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Value true false (default)</para>
+        /// <para>Valid values:
+        /// true: includes data cloud disks.
+        /// false: default value. Does not include data cloud disks</para>
         /// </summary>
         [NameInMap("WithDataDisks")]
         [Validation(Required=false)]

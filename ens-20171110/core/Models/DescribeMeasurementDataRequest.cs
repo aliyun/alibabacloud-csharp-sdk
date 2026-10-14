@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeMeasurementDataRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The end time in UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The start time in UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

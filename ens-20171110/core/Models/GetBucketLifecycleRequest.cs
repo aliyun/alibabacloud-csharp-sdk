@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string BucketName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the rule that you want to query. If this parameter is not specified, all rules are returned.</para>
+        /// <para>The ID of the rule to retrieve. If this parameter is not specified, information about all rules is retrieved.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

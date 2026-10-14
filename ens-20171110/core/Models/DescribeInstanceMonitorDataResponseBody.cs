@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeInstanceMonitorDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned service code. A value of 0 indicates that the operation was successful.</para>
+        /// <para>The business code. A value of 0 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeEnsRegionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The service code. 0 is returned for a successful request. An error code is returned for a failed request.</para>
+        /// <para>The status code. A value of 0 indicates that the call was successful. If the call failed, an error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

@@ -24,11 +24,16 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The transport layer protocol. The value of this parameter is case-sensitive. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>tcp</description></item>
-        /// <item><description>udp</description></item>
-        /// <item><description>icmp</description></item>
-        /// <item><description>gre</description></item>
-        /// <item><description>all: All protocols are supported.</description></item>
+        /// <item><description><para>tcp</para>
+        /// </description></item>
+        /// <item><description><para>udp</para>
+        /// </description></item>
+        /// <item><description><para>icmp</para>
+        /// </description></item>
+        /// <item><description><para>gre</para>
+        /// </description></item>
+        /// <item><description><para>all: All protocols are supported.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -42,8 +47,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The action of the security group rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>accept: allows access. This is the default value.</description></item>
-        /// <item><description>drop: denies access and does not return responses.</description></item>
+        /// <item><description><para>accept: allows access. This is the default value.</para>
+        /// </description></item>
+        /// <item><description><para>drop: denies access and does not return responses.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,10 +63,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The range of destination ports that correspond to the transport layer protocol for security group rule N. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>When the IpProtocol parameter is set to tcp or udp, the port number range is <b>1</b> to <b>65535</b>. The start port number and the end port number are separated by a forward slash (/). Correct example: <b>1/200</b>. Incorrect example: <b>200/1</b>.</description></item>
-        /// <item><description>When the IpProtocol parameter is set to icmp, the port number range is <b>-1/-1</b>, which indicates all ports.</description></item>
-        /// <item><description>When the IpProtocol parameter is set to gre, the port number range is <b>-1/-1</b>, which indicates all ports.</description></item>
-        /// <item><description>When the IpProtocol parameter is set to all, the port number range is <b>-1/-1</b>, which indicates all ports.</description></item>
+        /// <item><description><para>When the IpProtocol parameter is set to tcp or udp, the port number range is <b>1</b> to <b>65535</b>. The start port number and the end port number are separated by a forward slash (/). Correct example: <b>1/200</b>. Incorrect example: <b>200/1</b>.</para>
+        /// </description></item>
+        /// <item><description><para>When the IpProtocol parameter is set to icmp, the port number range is <b>-1/-1</b>, which indicates all ports.</para>
+        /// </description></item>
+        /// <item><description><para>When the IpProtocol parameter is set to gre, the port number range is <b>-1/-1</b>, which indicates all ports.</para>
+        /// </description></item>
+        /// <item><description><para>When the IpProtocol parameter is set to all, the port number range is <b>-1/-1</b>, which indicates all ports.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -94,10 +105,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The range of port numbers that correspond to the transport layer protocol for the source security group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>When the IpProtocol parameter is set to tcp or udp, the port number range is <b>1</b> to <b>65535</b>. The start port number and the end port number are separated by a forward slash (/). Correct example: <b>1/200</b>. Incorrect example: <b>200/1</b>.</description></item>
-        /// <item><description>When the IpProtocol parameter is set to icmp, the port number range is <b>-1/-1</b>, which indicates all ports.</description></item>
-        /// <item><description>When the IpProtocol parameter is set to gre, the port number range is <b>-1/-1</b>, which indicates all ports.</description></item>
-        /// <item><description>When the IpProtocol parameter is set to all, the port number range is <b>-1/-1</b>, which indicates all ports.</description></item>
+        /// <item><description><para>When the IpProtocol parameter is set to tcp or udp, the port number range is <b>1</b> to <b>65535</b>. The start port number and the end port number are separated by a forward slash (/). Correct example: <b>1/200</b>. Incorrect example: <b>200/1</b>.</para>
+        /// </description></item>
+        /// <item><description><para>When the IpProtocol parameter is set to icmp, the port number range is <b>-1/-1</b>, which indicates all ports.</para>
+        /// </description></item>
+        /// <item><description><para>When the IpProtocol parameter is set to gre, the port number range is <b>-1/-1</b>, which indicates all ports.</para>
+        /// </description></item>
+        /// <item><description><para>When the IpProtocol parameter is set to all, the port number range is <b>-1/-1</b>, which indicates all ports.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

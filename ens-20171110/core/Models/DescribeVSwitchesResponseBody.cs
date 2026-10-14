@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -49,6 +49,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
+        /// <summary>
+        /// <para>A collection of VSwitches.</para>
+        /// </summary>
         [NameInMap("VSwitches")]
         [Validation(Required=false)]
         public DescribeVSwitchesResponseBodyVSwitches VSwitches { get; set; }
@@ -76,6 +79,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [NameInMap("FreeIpCount")]
                 [Validation(Required=false)]
                 public long? FreeIpCount { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2408:XXXX:0:a600::/110</para>
+                /// </summary>
+                [NameInMap("Ipv6CidrBlock")]
+                [Validation(Required=false)]
+                public string Ipv6CidrBlock { get; set; }
 
                 [NameInMap("NetworkId")]
                 [Validation(Required=false)]

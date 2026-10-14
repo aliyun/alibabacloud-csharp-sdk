@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeNetworkInterfacesRequest : TeaModel {
         /// <summary>
-        /// <para>The region ID of the instance.</para>
+        /// <para>The ID of the region where the instance resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-tianjin-cmcc</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of edge nodes. N indicates the number of edge node IDs that you can specify at the same time. Valid values of N: 1 to 100.</para>
+        /// <para>The IDs of the ENS edge zones. N indicates the sequence number of the edge zone ID. Valid values of N: 1 to 100.</para>
         /// </summary>
         [NameInMap("EnsRegionIds")]
         [Validation(Required=false)]
         public List<string> EnsRegionIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-5t7z99n32gplriv</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>IPv6 addresses N of the ENI. You can specify multiple IPv6 addresses. Valid values of N: 1 to 100.</para>
+        /// <para>The IPv6 addresses of the elastic network interfaces (ENIs). N indicates the settings for multiple IPv6 addresses. Valid values of N: 1 to 100.</para>
         /// </summary>
         [NameInMap("Ipv6Address")]
         [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NetworkId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ENI.</para>
+        /// <para>The ID of the elastic network interfaces (ENIs).</para>
         /// 
         /// <b>Example:</b>
         /// <para>eni-58z57orgmt6d1****</para>
@@ -64,14 +64,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NetworkInterfaceId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the elastic network interfaces (ENIs). N indicates the number of ENI IDs that you can specify at the same time. Valid values of N: 1 to 100.</para>
+        /// <para>The list of IDs of the elastic network interfaces (ENIs). N indicates the settings for multiple elastic network interfaces (ENIs) IDs. Valid values of N: 1 to 100.</para>
         /// </summary>
         [NameInMap("NetworkInterfaceIds")]
         [Validation(Required=false)]
         public List<string> NetworkInterfaceIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the ENI.</para>
+        /// <para>The name of the elastic network interfaces (ENIs).</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-01</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NetworkInterfaceName { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number of the instance status list. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Maximum value: 100. Default value: 50.</para>
+        /// <para>The number of entries per page for paging queries. Maximum value: 100. Default value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -101,17 +101,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The primary IP address of the ENI.</para>
+        /// <para>The primary IP address of the elastic network interfaces (ENIs).</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>10.XXX.XXX.5</para>
         /// </summary>
         [NameInMap("PrimaryIpAddress")]
         [Validation(Required=false)]
         public string PrimaryIpAddress { get; set; }
 
         /// <summary>
-        /// <para>The ID of the security group to which the secondary ENI belongs. To query the details of secondary ENIs based on the ID of a security group, specify this parameter.</para>
+        /// <para>The ID of the security group to which the secondary ENI belongs. Specify this parameter if you want to query the information about secondary ENIs by security group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sg-5p1fg655nh68xyz9i***</para>
@@ -121,15 +121,15 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The status of the ENI. Valid values:</para>
+        /// <para>The stateful status of the elastic network interfaces (ENIs). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Available: The ENI is available.</description></item>
-        /// <item><description>Attaching: The ENI is being attached to an instance.</description></item>
-        /// <item><description>InUse: The ENI is attached to an instance.</description></item>
-        /// <item><description>Detaching: The ENI is being detached from an instance.</description></item>
-        /// <item><description>Deleting: The ENI is being deleted.</description></item>
+        /// <item><description>Available: available.</description></item>
+        /// <item><description>Attaching: attaching.</description></item>
+        /// <item><description>InUse: in use.</description></item>
+        /// <item><description>Detaching: detaching.</description></item>
+        /// <item><description>Deleting: the delete operation is in progress.</description></item>
         /// </list>
-        /// <para>This parameter is empty by default, which indicates that ENIs in all states are queried.</para>
+        /// <para>Default value: empty, which indicates that all statuses are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Available</para>
@@ -139,12 +139,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The type of the ENI. Valid values:</para>
+        /// <para>The type of the elastic network interfaces (ENIs). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Primary: the primary ENI.</description></item>
-        /// <item><description>Secondary: the secondary ENI.</description></item>
+        /// <item><description>Primary: primary network interface controller (NIC).</description></item>
+        /// <item><description>Secondary: secondary network interface controller (NIC).</description></item>
         /// </list>
-        /// <para>This parameter is empty by default, which indicates that both primary and secondary ENIs are queried.</para>
+        /// <para>Default value: empty, which indicates that all types are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Secondary</para>

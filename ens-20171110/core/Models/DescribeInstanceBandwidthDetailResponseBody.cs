@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeInstanceBandwidthDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the maximum public bandwidth.</para>
+        /// <para>The collection of Internet bandwidth cap information.</para>
         /// </summary>
         [NameInMap("Bandwidths")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public long? AliUid { get; set; }
 
             /// <summary>
-            /// <para>The bandwidth service time. The data granularity is 5 minutes.</para>
+            /// <para>The bandwidth business time. The bandwidth calculation granularity is 5 minutes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-11 00:00:00</para>
@@ -47,7 +47,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string EnsRegionId { get; set; }
 
             /// <summary>
-            /// <para>The type of the bandwidth. Valid values: 1, which indicates public network bandwidth. 2, which indicates internal network bandwidth.</para>
+            /// <para>The bandwidth type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>1: public network.</description></item>
+            /// <item><description>2: internal network.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -57,7 +61,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public int? FlowType { get; set; }
 
             /// <summary>
-            /// <para>The plan ID.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-6ecpqvkicnchxccozrpxxxx</para>
@@ -67,7 +71,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The type of the instance, such as vm, eip, single_tenant, and nc.</para>
+            /// <para>The instance type, such as vm, eip, single_tenant, or nc.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vm</para>
@@ -77,7 +81,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>null</para>
+            /// <para>The IP address of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>203.107.***</para>
@@ -87,7 +91,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Ip { get; set; }
 
             /// <summary>
-            /// <para>The Internet service provider to which the IP address belongs.</para>
+            /// <para>The Internet service provider (ISP) of the IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cmcc</para>
@@ -97,7 +101,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Isp { get; set; }
 
             /// <summary>
-            /// <para>null</para>
+            /// <para>The inbound bandwidth. Unit: bit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>43795230</para>
@@ -107,7 +111,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public long? RxBw { get; set; }
 
             /// <summary>
-            /// <para>The type of the service, such as vm, eip, esk, and meta.</para>
+            /// <para>The service type, such as vm, eip, esk, or meta.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vm</para>
@@ -117,7 +121,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string ServiceType { get; set; }
 
             /// <summary>
-            /// <para>null</para>
+            /// <para>The outbound bandwidth. Unit: bit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>25415638</para>
@@ -129,7 +133,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The page number of the current page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -139,7 +143,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -159,7 +163,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

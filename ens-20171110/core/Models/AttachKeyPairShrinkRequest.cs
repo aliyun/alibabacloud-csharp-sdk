@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class AttachKeyPairShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The instance IDs.</para>
+        /// <para>A list of instance IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The key pair ID.</para>
+        /// <para>The unique ID of the key pair.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ssh-xxx</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string KeyPairId { get; set; }
 
         /// <summary>
-        /// <para>The name of the SSH key pair.</para>
+        /// <para>The key pair name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-kp</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeNASAvailableResourceInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned service code. A value of 0 indicates that the operation was successful.</para>
+        /// <para>Business status code. Returns 0 on success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>Error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>you are not authorized to this workspace, or workspace not exists.</para>
@@ -30,21 +30,21 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The information of available NAS resources.</para>
+        /// <para>Available NAS resource information.</para>
         /// </summary>
         [NameInMap("NasAvailableResourceInfo")]
         [Validation(Required=false)]
         public List<DescribeNASAvailableResourceInfoResponseBodyNasAvailableResourceInfo> NasAvailableResourceInfo { get; set; }
         public class DescribeNASAvailableResourceInfoResponseBodyNasAvailableResourceInfo : TeaModel {
             /// <summary>
-            /// <para>The product supported by the edge node.</para>
+            /// <para>Edge zone product capabilities.</para>
             /// </summary>
             [NameInMap("Ability")]
             [Validation(Required=false)]
             public List<string> Ability { get; set; }
 
             /// <summary>
-            /// <para>The region to which the ENS node belongs.</para>
+            /// <para>Area to which the ENS edge zone belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SouthWestChina</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Area { get; set; }
 
             /// <summary>
-            /// <para>The English name.</para>
+            /// <para>English name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-chenzhou-telecom_unicom_cmcc</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string EnName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the ENS node.</para>
+            /// <para>ENS edge zone ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-chenzhou-telecom_unicom_cmcc</para>
@@ -74,14 +74,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string EnsRegionId { get; set; }
 
             /// <summary>
-            /// <para>The name of the ENS node.</para>
+            /// <para>ENS edge zone name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>China Hangzhou36</para>
             /// </summary>
             [NameInMap("EnsRegionName")]
             [Validation(Required=false)]
             public string EnsRegionName { get; set; }
 
             /// <summary>
-            /// <para>the number of available NAS resources.</para>
+            /// <para>Available NAS resource count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -91,7 +94,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public int? NasAvailableAmount { get; set; }
 
             /// <summary>
-            /// <para>The types of available NAS resources.</para>
+            /// <para>Available NAS resource type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>capacity</para>
@@ -101,7 +104,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string NasAvailableStorgeType { get; set; }
 
             /// <summary>
-            /// <para>The province to which the ENS node belongs.</para>
+            /// <para>Province to which the ENS edge zone belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>湖北省</para>
             /// </summary>
             [NameInMap("Province")]
             [Validation(Required=false)]

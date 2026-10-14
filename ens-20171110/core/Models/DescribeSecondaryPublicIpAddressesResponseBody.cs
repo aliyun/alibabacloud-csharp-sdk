@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeSecondaryPublicIpAddressesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number returned.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page for paging queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The array of returned secondary IP addresses.</para>
+        /// <para>The list of secondary public IP addresses.</para>
         /// </summary>
         [NameInMap("SecondaryPublicIpAddresses")]
         [Validation(Required=false)]
         public List<DescribeSecondaryPublicIpAddressesResponseBodySecondaryPublicIpAddresses> SecondaryPublicIpAddresses { get; set; }
         public class DescribeSecondaryPublicIpAddressesResponseBodySecondaryPublicIpAddresses : TeaModel {
             /// <summary>
-            /// <para>The subnet mask of the CIDR block.</para>
+            /// <para>The CIDR mask of the IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>24</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public int? CidrMask { get; set; }
 
             /// <summary>
-            /// <para>The time when the secondary public IP address was created. The time is displayed in UTC.</para>
+            /// <para>The creation time in UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-07-25T09:43:49Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the edge node.</para>
+            /// <para>The ID of the ENS edge zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing-15</para>
@@ -87,10 +87,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Gateway { get; set; }
 
             /// <summary>
-            /// <para>The version of the IP address. Valid values:</para>
+            /// <para>The IP address version. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ipv4</b></description></item>
-            /// <item><description><b>ipv6</b></description></item>
+            /// <item><description><para><b>ipv4</b>: IPv4 address.</para>
+            /// </description></item>
+            /// <item><description><para><b>ipv6</b>: IPv6 address.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -101,7 +103,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string IpVersion { get; set; }
 
             /// <summary>
-            /// <para>The Internet service provider. Valid values:</para>
+            /// <para>The Internet service provider (ISP). Valid values:</para>
             /// <list type="bullet">
             /// <item><description>cmcc: China Mobile.</description></item>
             /// <item><description>unicom: China Unicom.</description></item>
@@ -138,7 +140,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>13</para>

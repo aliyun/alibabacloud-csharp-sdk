@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateVSwitchRequest : TeaModel {
         /// <summary>
-        /// <para>The CIDR block of the vSwitch. Take note of the following limits:</para>
+        /// <para>The CIDR block of the VSwitch. The following requirements apply:</para>
         /// <list type="bullet">
-        /// <item><description>The subnet mask must be 16 to 29 bits in length.</description></item>
-        /// <item><description>The CIDR block of the vSwitch must fall within the CIDR block of the VPC to which the vSwitch belongs.</description></item>
-        /// <item><description>The CIDR block of the vSwitch cannot be the same as the destination CIDR block in a route entry of the VPC. However, it can be a subset of the destination CIDR block.</description></item>
+        /// <item><description><para>The prefix length must be an integer from 16 to 29.</para>
+        /// </description></item>
+        /// <item><description><para>The CIDR block of the VSwitch must be a subset of the CIDR block of the VPC to which the VSwitch belongs.</para>
+        /// </description></item>
+        /// <item><description><para>The CIDR block of the VSwitch cannot be the same as the destination CIDR block of an existing route in the VPC, but it can be a subset of the destination CIDR block.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,8 +29,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string CidrBlock { get; set; }
 
         /// <summary>
-        /// <para>The description of the vSwitch.</para>
-        /// <para>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with http:// or https://.</para>
+        /// <para>The description of the VSwitch.</para>
+        /// <para>The description must be 2 to 256 characters in length. It must start with a letter or a Chinese character, and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is my vswitch.</para>
@@ -37,7 +40,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the edge node.</para>
+        /// <para>The ID of the ENS node.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,7 +51,15 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the network to which the vSwitch that you want to create belongs.</para>
+        /// <b>Example:</b>
+        /// <para>2408:XXXX:0:a600::/110</para>
+        /// </summary>
+        [NameInMap("Ipv6CidrBlock")]
+        [Validation(Required=false)]
+        public string Ipv6CidrBlock { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the network to which the VSwitch belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>n-257gqcdfvx6n****</para>
@@ -58,18 +69,21 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NetworkId { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The tags of the resource. You can specify up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateVSwitchRequestTag> Tag { get; set; }
         public class CreateVSwitchRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag that are to add to the instance. Valid values of N: <b>1</b> to <b>20</b>.</para>
+            /// <para>The key of the tag.</para>
             /// <list type="bullet">
-            /// <item><description>The key cannot start with <c>aliyun</c>, <c>acs:</c>, <c>http://</c>, or <c>https://</c>.</description></item>
-            /// <item><description>The key must be up to 64 characters in length.</description></item>
-            /// <item><description>The tag key cannot be an empty string.</description></item>
+            /// <item><description><para>The tag key cannot start with <c>aliyun</c>, <c>acs:</c>, <c>http://</c>, or <c>https://</c>.</para>
+            /// </description></item>
+            /// <item><description><para>The tag key can be up to 64 characters long.</para>
+            /// </description></item>
+            /// <item><description><para>The tag key cannot be an empty string.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -80,7 +94,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N that is added to the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with acs: or contain http:// or https://.</para>
+            /// <para>The value of the tag. It can be up to 128 characters long, can be an empty string, and cannot start with <c>acs:</c> or contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Deep</para>
@@ -92,15 +106,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The name of the vSwitch. The name must meet the following requirements:</para>
+        /// <para>The name of the VSwitch. The following requirements apply:</para>
         /// <list type="bullet">
-        /// <item><description>The name must be 2 to 128 characters in length.</description></item>
-        /// <item><description>The name must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</description></item>
+        /// <item><description><para>The name must be 2 to 128 characters in length.</para>
+        /// </description></item>
+        /// <item><description><para>The name must start with a letter or a Chinese character, and cannot start with <c>http://</c> or <c>https://</c>. The name can contain digits, colons (:), underscores (_), and hyphens (-).</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: null.</para>
+        /// <para>Default value: an empty string.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>Test vSwitch</para>
         /// </summary>
         [NameInMap("VSwitchName")]
         [Validation(Required=false)]

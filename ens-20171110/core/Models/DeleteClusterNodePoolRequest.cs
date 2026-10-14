@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteClusterNodePoolRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the node pool.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeDataPushResultRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application.</para>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The name of the data file. Separate multiple names with commas (,). By default, all data files are queried.</para>
+        /// <para>The names of the data files. This is a filter condition for the query. Multiple values are supported and separated by commas (,). By default, all data files are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>159828628258496/mirror_file/game-2553efe7-7bf8-40fb-a6e7-09c9c00a992a.tar</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string DataNames { get; set; }
 
         /// <summary>
-        /// <para>The version number of the data file. Separate multiple numbers with commas (,). By default, all versions of data files are queried.</para>
+        /// <para>The version numbers of the data files. This is a filter condition for the query. Multiple values are supported and separated by commas (,). By default, all versions are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90396</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string DataVersions { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</para>
+        /// <para>The end time of the query. Format: YYYY-MM-DD. By default, there is no time limit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-02-20</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string MaxDate { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</para>
+        /// <para>The start time of the query. Format: YYYY-MM-DD. By default, there is no time limit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-02-15</para>
@@ -61,6 +61,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string MinDate { get; set; }
 
         /// <summary>
+        /// <para>The page number. Pages start from 1. This parameter is not required when you export all information.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -69,7 +71,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. This parameter is optional if you want to return the push status of all data files.</para>
+        /// <para>The number of entries per page set in Settings for paging during a paged query. This parameter is not required when you export all entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -79,7 +81,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The IDs of ENS nodes. Separate multiple IDs with commas (,). By default, all ENS nodes are queried.</para>
+        /// <para>The IDs of the edge nodes. This is a filter condition for the query. Multiple values are supported and separated by commas (,). By default, all edge nodes are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-wuhan-telecom_unicom_cmcc-2,cn-jiaozuo-2</para>

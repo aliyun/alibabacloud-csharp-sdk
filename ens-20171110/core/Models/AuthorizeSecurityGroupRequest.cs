@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class AuthorizeSecurityGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The transport layer protocol. The values of this parameter are case-sensitive. Valid values:</para>
+        /// <para>The transport-layer protocol. The value is case-sensitive. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>tcp</description></item>
         /// <item><description>udp</description></item>
         /// <item><description>icmp</description></item>
         /// <item><description>gre</description></item>
-        /// <item><description>all: All protocols are supported.</description></item>
+        /// <item><description>all: all protocols are supported</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -28,10 +28,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string IpProtocol { get; set; }
 
         /// <summary>
-        /// <para>The action of security group rule N that determines whether to allow inbound access. Valid values:</para>
+        /// <para>Settings for access permissions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>accept: allows access.</description></item>
-        /// <item><description>drop: denies access and returns no responses.</description></item>
+        /// <item><description>accept: accepts access.</description></item>
+        /// <item><description>drop: deny access without returning a rejection message.</description></item>
         /// </list>
         /// <para>Default value: accept.</para>
         /// 
@@ -43,12 +43,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Policy { get; set; }
 
         /// <summary>
-        /// <para>The range of destination ports that correspond to the transport layer protocol for security group rule N. Valid values:</para>
+        /// <para>The range of port numbers for the transport-layer protocol of the security group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>When the IpProtocol parameter is set to tcp or udp, the port number range is <b>1</b> to <b>65535</b>. The start port number and the end port number are separated by a forward slash (/). Correct example: <b>1/200</b>. Incorrect example: <b>200/1</b>.</description></item>
-        /// <item><description>When the IpProtocol parameter is set to icmp, the port number range is <b>-1/-1</b>, which indicates all ports.</description></item>
-        /// <item><description>When the IpProtocol parameter is set to gre, the port number range is <b>-1/-1</b>, which indicates all ports.</description></item>
-        /// <item><description>When the IpProtocol parameter is set to all, the port number range is <b>-1/-1</b>, which indicates all ports.</description></item>
+        /// <item><description>TCP/UDP protocol: valid values are <b>1</b> to <b>65535</b>. Separate the start port and the end port with a forward slash (/). Correct example: <b>1/200</b>. Incorrect example: <b>200/1</b>.</description></item>
+        /// <item><description>ICMP protocol: <b>-1/-1</b>.</description></item>
+        /// <item><description>GRE protocol: <b>-1/-1</b>.</description></item>
+        /// <item><description>If IpProtocol is set to all: <b>-1/-1</b>.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string PortRange { get; set; }
 
         /// <summary>
-        /// <para>The priority of security group rule N. Valid values: <b>1</b> to <b>100</b>.</para>
+        /// <para>The priority of the security group rule. Valid values: <b>1</b> to <b>100</b>.</para>
         /// <para>Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? Priority { get; set; }
 
         /// <summary>
-        /// <para>The ID of the security group.</para>
+        /// <para>The security group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,8 +82,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The source IPv4 CIDR block. CIDR blocks and IPv4 addresses are supported.</para>
-        /// <para>This parameter is empty by default.</para>
+        /// <para>The source IP address range. CIDR blocks and IPv4 addresses are supported.</para>
+        /// <para>Default value: none.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -94,12 +94,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string SourceCidrIp { get; set; }
 
         /// <summary>
-        /// <para>The range of port numbers that correspond to the transport layer protocol for the source security group. Valid values:</para>
+        /// <para>The range of port numbers for the transport-layer protocol of the source security group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>When the IpProtocol parameter is set to tcp or udp, the port number range is <b>1 to 65535</b>. The start port number and the end port number are separated by a forward slash (/). Correct example: <b>1/200</b>. Incorrect example: <b>200/1</b>.</description></item>
-        /// <item><description>When the IpProtocol parameter is set to icmp, the port number range is <b>-1/-1</b>, which indicates all ports.</description></item>
-        /// <item><description>When the IpProtocol parameter is set to gre, the port number range is <b>-1/-1</b>, which indicates all ports.</description></item>
-        /// <item><description>When the IpProtocol parameter is set to all, the port number range is <b>-1/-1</b>, which indicates all ports.</description></item>
+        /// <item><description>TCP/UDP protocol: valid values are <b>1</b> to <b>65535</b>. Separate the start port and the end port with a forward slash (/). Correct example: <b>1/200</b>. Incorrect example: <b>200/1</b>.</description></item>
+        /// <item><description>ICMP protocol: <b>-1/-1</b>.</description></item>
+        /// <item><description>GRE protocol: <b>-1/-1</b>.</description></item>
+        /// <item><description>If IpProtocol is set to all: <b>-1/-1</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

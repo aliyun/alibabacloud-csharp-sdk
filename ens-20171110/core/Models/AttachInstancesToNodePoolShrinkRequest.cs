@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class AttachInstancesToNodePoolShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The array of instances, including the instance information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Instances")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstancesShrink { get; set; }
 
         /// <summary>
+        /// <para>The node pool ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

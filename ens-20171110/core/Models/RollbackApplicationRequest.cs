@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class RollbackApplicationRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application.</para>
+        /// <para>The application ID.</para>
+        /// <para>The AppId is returned by the CreateApplication operation. FromAppVersion and ToAppVersion must be existing versions created by calling CreateAppVersion. You can call ListAppVersions to query the versions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +22,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The current version number.</para>
+        /// <para>The version number to be rolled back.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +33,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string FromAppVersion { get; set; }
 
         /// <summary>
-        /// <para>The timeout period of the asynchronous rollback operation. Unit: seconds. Default value: 300.</para>
+        /// <para>The timeout period for the asynchronous rollback operation. Unit: seconds. Default value: 300.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1800</para>
@@ -42,7 +43,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? Timeout { get; set; }
 
         /// <summary>
-        /// <para>The target version number. By default, the system automatically rolls back the container version to the previous version.</para>
+        /// <para>The target version number. By default, the application is automatically rolled back to the previous version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v2</para>

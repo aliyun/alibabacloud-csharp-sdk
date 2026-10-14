@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The region code.</para>
         /// <list type="bullet">
-        /// <item><description>If you do not specify this parameter, only nodes under the area level that is specified by NetLevelCode are queried.</description></item>
-        /// <item><description>If you specify this parameter, only child nodes in the area that is specified by NetDistrictCode are queried.</description></item>
+        /// <item><description><para>If you do not specify this parameter, only nodes under the area level that is specified by NetLevelCode are queried.</para>
+        /// </description></item>
+        /// <item><description><para>If you specify this parameter, only child nodes in the area that is specified by NetDistrictCode are queried.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,9 +28,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The network level. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Big</b>: area</description></item>
-        /// <item><description><b>Middle</b>: province</description></item>
-        /// <item><description><b>Small</b>: city</description></item>
+        /// <item><description><para><b>Big</b>: area</para>
+        /// </description></item>
+        /// <item><description><para><b>Middle</b>: province</para>
+        /// </description></item>
+        /// <item><description><para><b>Small</b>: city</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

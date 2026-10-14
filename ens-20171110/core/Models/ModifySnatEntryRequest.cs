@@ -12,11 +12,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>Specifies whether to enable IP affinity. Default value: true. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b></description></item>
-        /// <item><description><b>true</b></description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> Description After you enable IP affinity, if multiple EIPs are associated with an SNAT entry, one client uses the same EIP to for communication. If IP affinity is disabled, the client uses a random EIP for communication.</para>
+        /// <para>Description After you enable IP affinity, if multiple EIPs are associated with an SNAT entry, one client uses the same EIP to for communication. If IP affinity is disabled, the client uses a random EIP for communication.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public bool? EipAffinity { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable carrier affinity.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -35,6 +39,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public bool? IspAffinity { get; set; }
 
         /// <summary>
+        /// <para>The ID of the SNAT entry.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,6 +50,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string SnatEntryId { get; set; }
 
         /// <summary>
+        /// <para>The name of the SNAT entry. The name must be 1 to 128 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test0</para>
         /// </summary>

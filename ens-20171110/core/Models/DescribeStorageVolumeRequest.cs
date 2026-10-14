@@ -32,8 +32,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>Specifies whether to enable the volume. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b> (default): enables the volume.</description></item>
-        /// <item><description><b>0</b>: disables the volume.</description></item>
+        /// <item><description><para><b>1</b> (default): enables the volume.</para>
+        /// </description></item>
+        /// <item><description><para><b>0</b>: disables the volume.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

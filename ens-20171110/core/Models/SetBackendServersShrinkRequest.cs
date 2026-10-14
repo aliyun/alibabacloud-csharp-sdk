@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class SetBackendServersShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The list of backend servers that you added. You can modify the weights of up to 20 backend servers in each request.</para>
+        /// <para>The list of backend servers to add. You can modify up to 20 backend servers in each call.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("BackendServers")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string BackendServersShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Edge Load Balancer (ELB) instance.</para>
+        /// <para>The ID of the load balancing instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

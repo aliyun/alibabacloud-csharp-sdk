@@ -66,9 +66,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 /// <summary>
                 /// <para>The association between the EIP and the Internet NAT gateway. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>UsedByForwardTable</b>: The EIP is specified in a DNAT entry.</description></item>
-                /// <item><description><b>UsedBySnatTable</b>: The EIP is specified in an SNAT entry.</description></item>
-                /// <item><description><b>Idle</b>: The EIP is not specified in an SNAT entry or a DNAT entry.</description></item>
+                /// <item><description><para><b>UsedByForwardTable</b>: The EIP is specified in a DNAT entry.</para>
+                /// </description></item>
+                /// <item><description><para><b>UsedBySnatTable</b>: The EIP is specified in an SNAT entry.</para>
+                /// </description></item>
+                /// <item><description><para><b>Idle</b>: The EIP is not specified in an SNAT entry or a DNAT entry.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -123,9 +126,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The status of the NAT gateway. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Creating</b>: After you send a request to create a NAT gateway, the system creates the NAT gateway in the background. The NAT gateway remains in the Creating state until the operation is completed.</description></item>
-            /// <item><description><b>Available</b>: The NAT gateway is in the Available state after the creation is complete.</description></item>
-            /// <item><description><b>Deleting</b>: After you send a request to delete a NAT gateway, the system deletes the NAT gateway in the background. The NAT gateway remains in the Deleting state until the operation is completed.</description></item>
+            /// <item><description><para><b>Creating</b>: After you send a request to create a NAT gateway, the system creates the NAT gateway in the background. The NAT gateway remains in the Creating state until the operation is completed.</para>
+            /// </description></item>
+            /// <item><description><para><b>Available</b>: The NAT gateway is in the Available state after the creation is complete.</para>
+            /// </description></item>
+            /// <item><description><para><b>Deleting</b>: After you send a request to delete a NAT gateway, the system deletes the NAT gateway in the background. The NAT gateway remains in the Deleting state until the operation is completed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -135,11 +141,16 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <para>The collection of tags.</para>
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<DescribeNatGatewaysResponseBodyNatGatewaysTags> Tags { get; set; }
             public class DescribeNatGatewaysResponseBodyNatGatewaysTags : TeaModel {
                 /// <summary>
+                /// <para>Tag key.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>TestKey</para>
                 /// </summary>
@@ -150,6 +161,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 /// <term><b>Obsolete</b></term>
                 /// 
                 /// <summary>
+                /// <para>Tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TestKey</para>
@@ -162,6 +174,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 /// <term><b>Obsolete</b></term>
                 /// 
                 /// <summary>
+                /// <para>Tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TestValue</para>
@@ -172,6 +185,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string TagValue { get; set; }
 
                 /// <summary>
+                /// <para>Tag value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>TestValue</para>
                 /// </summary>

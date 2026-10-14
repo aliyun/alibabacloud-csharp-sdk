@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The end of the time range to query.</para>
         /// <list type="bullet">
-        /// <item><description>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</description></item>
-        /// <item><description>If the value of the seconds place is not 00, the start time is automatically set to the next minute.</description></item>
+        /// <item><description><para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// </description></item>
+        /// <item><description><para>If the value of the seconds place is not 00, the start time is automatically set to the next minute.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -37,10 +39,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The Internet service provider (ISP). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cmcc: China Mobile</description></item>
-        /// <item><description>telecom: China Telecom</description></item>
-        /// <item><description>unicom: China Unicom</description></item>
-        /// <item><description>multiCarrier: multi-line ISP</description></item>
+        /// <item><description><para>cmcc: China Mobile</para>
+        /// </description></item>
+        /// <item><description><para>telecom: China Telecom</para>
+        /// </description></item>
+        /// <item><description><para>unicom: China Unicom</para>
+        /// </description></item>
+        /// <item><description><para>multiCarrier: multi-line ISP</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,9 +59,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The networking mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>SpeedUp</b>: intelligent acceleration network (Internet)</description></item>
-        /// <item><description><b>Connection</b>: internal network</description></item>
-        /// <item><description><b>SpeedUpAndConnection</b>: intelligent acceleration network and internal network</description></item>
+        /// <item><description><para><b>SpeedUp</b>: intelligent acceleration network (Internet)</para>
+        /// </description></item>
+        /// <item><description><para><b>Connection</b>: internal network</para>
+        /// </description></item>
+        /// <item><description><para><b>SpeedUpAndConnection</b>: intelligent acceleration network and internal network</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,8 +77,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The beginning of the time range to query.</para>
         /// <list type="bullet">
-        /// <item><description>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</description></item>
-        /// <item><description>If the value of the seconds place is not 00, the start time is automatically set to the next minute.</description></item>
+        /// <item><description><para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// </description></item>
+        /// <item><description><para>If the value of the seconds place is not 00, the start time is automatically set to the next minute.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

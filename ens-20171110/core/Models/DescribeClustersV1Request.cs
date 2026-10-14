@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeClustersV1Request : TeaModel {
         /// <summary>
-        /// <para>The name of the ECS instance.</para>
+        /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eck-xxxxxxxx</para>
@@ -19,8 +19,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        [NameInMap("ClusterType")]
+        [Validation(Required=false)]
+        public string ClusterType { get; set; }
+
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The ENS region ID where the cluster resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-58</para>
@@ -30,7 +34,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// <para>System specified parameters. Set the value to <b>DescribeClustersV1</b>.</para>
+        /// <para>The cluster name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-eck-name</para>
@@ -38,6 +42,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("Profile")]
+        [Validation(Required=false)]
+        public string Profile { get; set; }
 
     }
 

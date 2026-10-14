@@ -12,11 +12,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>Specifies whether to enable IP affinity. If you do not specify this parameter, IP affinity is enabled by default. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b></description></item>
-        /// <item><description><b>true</b></description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> After you enable IP affinity, if multiple EIPs are associated with an SNAT entry, one client uses the same EIP to for communication. If IP affinity is disabled, the client uses a random EIP for communication.</para>
+        /// <para>After you enable IP affinity, if multiple EIPs are associated with an SNAT entry, one client uses the same EIP to for communication. If IP affinity is disabled, the client uses a random EIP for communication.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -39,8 +41,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>Whether to enable operator affinity. Value taking:</para>
         /// <list type="bullet">
-        /// <item><description>false:Do not open.</description></item>
-        /// <item><description>true:Open.</description></item>
+        /// <item><description><para>false:Do not open.</para>
+        /// </description></item>
+        /// <item><description><para>true:Open.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -85,7 +89,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The CIDR block. You can specify the CIDR block of a network, a vSwitch, or an instance. You can also specify a custom CIDR block. All instances within the CIDR block can access the Internet or external networks by using SNAT.</para>
         /// <remarks>
-        /// <para> If you specify <b>SourceVSwitchId</b> and <b>SourceCIDR</b>, <b>SourceVSwitchId</b> does not take effect. The value that you specified for <b>SourceCIDR</b> takes precedence.</para>
+        /// <para>If you specify <b>SourceVSwitchId</b> and <b>SourceCIDR</b>, <b>SourceVSwitchId</b> does not take effect. The value that you specified for <b>SourceCIDR</b> takes precedence.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -98,7 +102,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The ID of the network. This parameter specifies that all ENS instances in the network can use the SNAT entry to access the Internet.</para>
         /// <remarks>
-        /// <para> If you specify <b>SourceNetworkId</b> and <b>SourceVSwitchId</b> or <b>SourceCIDR</b>, <b>SourceNetworkId</b> does not take effect. The value that you specified for <b>SourceCIDR</b> takes precedence. Priority: <b>SourceCIDR</b> &gt; <b>SourceVSwitchId</b> &gt; <b>SourceNetworkId</b>.</para>
+        /// <para>If you specify <b>SourceNetworkId</b> and <b>SourceVSwitchId</b> or <b>SourceCIDR</b>, <b>SourceNetworkId</b> does not take effect. The value that you specified for <b>SourceCIDR</b> takes precedence. Priority: <b>SourceCIDR</b> &gt; <b>SourceVSwitchId</b> &gt; <b>SourceNetworkId</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -111,7 +115,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The ID of the vSwitch that you need to access over the Internet. This parameter specifies that Edge Node Service (ENS) instances in the vSwitch can use the SNAT entry to access the Internet.</para>
         /// <remarks>
-        /// <para> If you specify <b>SourceVSwitchId</b> and <b>SourceCIDR</b>, <b>SourceVSwitchId</b> does not take effect. The value that you specified for <b>SourceCIDR</b> takes precedence.</para>
+        /// <para>If you specify <b>SourceVSwitchId</b> and <b>SourceCIDR</b>, <b>SourceVSwitchId</b> does not take effect. The value that you specified for <b>SourceCIDR</b> takes precedence.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

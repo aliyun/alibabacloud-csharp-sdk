@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class BatchEventRedeployInstanceShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>List of events.</para>
+        /// <para>The list of events.</para>
         /// </summary>
         [NameInMap("EventInfos")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeDeviceServiceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application.</para>
+        /// <para>The application ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a2bac6f4-75dc-455e-8389-2dc8e47526d3</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>This parameter does not take effect.</para>
+        /// <para>Invalid parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-chongqing-10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-5sg1owx0g4ojy66ab2tez77r2</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the order.</para>
+        /// <para>The order ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2661b1dd-3453-418d-8182-bb34f79e8d3c</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Edge Node Service (ENS) node.</para>
+        /// <para>The ID of the ENS edge node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-chongqing-11</para>

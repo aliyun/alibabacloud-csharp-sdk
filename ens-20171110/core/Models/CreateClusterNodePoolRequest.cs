@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateClusterNodePoolRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,11 +20,16 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// <para>The cluster-related configurations.</para>
+        /// </summary>
         [NameInMap("KubernetesConfig")]
         [Validation(Required=false)]
         public CreateClusterNodePoolRequestKubernetesConfig KubernetesConfig { get; set; }
         public class CreateClusterNodePoolRequestKubernetesConfig : TeaModel {
             /// <summary>
+            /// <para>The script to be executed after the machine is created and before it is added to the cluster. The content must be Base64-encoded.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ZWNobyBvawo=</para>
             /// </summary>
@@ -32,6 +38,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string PreUserData { get; set; }
 
             /// <summary>
+            /// <para>The script to be executed after the machine is created and added to the cluster. The content must be Base64-encoded.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ZWNobyBvawo=</para>
             /// </summary>
@@ -42,6 +50,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
+        /// <para>The node pool configurations.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NodepoolInfo")]
@@ -49,6 +58,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public CreateClusterNodePoolRequestNodepoolInfo NodepoolInfo { get; set; }
         public class CreateClusterNodePoolRequestNodepoolInfo : TeaModel {
             /// <summary>
+            /// <para>The name of the node pool.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -61,17 +71,23 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
+        /// <para>The scaling group configurations.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ScalingGroup")]
         [Validation(Required=false)]
         public CreateClusterNodePoolRequestScalingGroup ScalingGroup { get; set; }
         public class CreateClusterNodePoolRequestScalingGroup : TeaModel {
+            /// <summary>
+            /// <para>The size of the data cloud disk. Unit: GB.</para>
+            /// </summary>
             [NameInMap("DataDisks")]
             [Validation(Required=false)]
             public List<CreateClusterNodePoolRequestScalingGroupDataDisks> DataDisks { get; set; }
             public class CreateClusterNodePoolRequestScalingGroupDataDisks : TeaModel {
                 /// <summary>
+                /// <para>The disk category.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>cloud_efficiency</para>
                 /// </summary>
@@ -80,6 +96,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string Category { get; set; }
 
                 /// <summary>
+                /// <para>The size of the data cloud disk. Unit: GB. Minimum value: 20. The value must be a multiple of 10.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>80</para>
                 /// </summary>
@@ -90,6 +108,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             }
 
             /// <summary>
+            /// <para>The expected number of instances.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -98,6 +118,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public int? DesiredSize { get; set; }
 
             /// <summary>
+            /// <para>The image ID of the instance.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -108,6 +129,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string ImageId { get; set; }
 
             /// <summary>
+            /// <para>The billing method of the instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>PostPaid</para>
             /// </summary>
@@ -116,6 +139,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string InstanceChargeType { get; set; }
 
             /// <summary>
+            /// <para>The list of instance types for the nodes in the node pool.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("InstanceTypes")]
@@ -123,6 +147,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public List<string> InstanceTypes { get; set; }
 
             /// <summary>
+            /// <para>The key pair of the instance. This parameter and Password are mutually exclusive.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>key-pair-name</para>
             /// </summary>
@@ -131,6 +157,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string KeyPairName { get; set; }
 
             /// <summary>
+            /// <para>The password used when creating instances in the node pool. This parameter and KeyPairName are mutually exclusive.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>some-test-password</para>
             /// </summary>
@@ -139,6 +167,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Password { get; set; }
 
             /// <summary>
+            /// <para>The category of the system cloud disk. Valid values: local_ssd, local_hdd, cloud_efficiency, and cloud_ssd.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cloud_efficiency</para>
             /// </summary>
@@ -147,6 +177,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string SystemDiskCategory { get; set; }
 
             /// <summary>
+            /// <para>The size of the system cloud disk. Unit: GB. Minimum value: 20. The value must be a multiple of 10.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>80</para>
             /// </summary>
@@ -155,6 +187,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public int? SystemDiskSize { get; set; }
 
             /// <summary>
+            /// <para>The vSwitches used by the instances.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("VswitchIds")]

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NetworkAclId { get; set; }
 
         /// <summary>
-        /// <para>The type of resource with which you want to associate the network ACL.</para>
+        /// <para>The information about the associated resources.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Resource")]
@@ -40,8 +40,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The type of the associated resource. Set the value to <b>Network</b>.</para>
-            /// <para>Valid values of <b>N</b>: 0 to 29. You can associate a network ACL with at most 30 resources.</para>
+            /// <para>The type of the associated resource. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Network</b>: network.</description></item>
+            /// </list>
+            /// <para><b>N</b> ranges from 0 to 29. You can associate up to 30 resources.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

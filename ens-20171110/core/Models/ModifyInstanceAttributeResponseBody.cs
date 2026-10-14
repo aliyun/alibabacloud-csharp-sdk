@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ModifyInstanceAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned service code. 0 indicates that the request was successful.</para>
+        /// <para>The business return code. A value of 0 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

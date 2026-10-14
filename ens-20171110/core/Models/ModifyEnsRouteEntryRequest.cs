@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ModifyEnsRouteEntryRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the route entry. The description must be 1 to 256 characters in length and cannot start with http:// or https://.</para>
+        /// <para>The description of the route entry. The description must be 1 to 256 characters in length and cannot start with http\:// or https\://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

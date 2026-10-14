@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The page number, which is used for paged query</para>
+        /// <para>The page number for paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>sdg ID</para>
+        /// <para>The ID of the SDG. You can call the DescribeSDGs operation to query the IDs of existing SDGs. To create an SDG, call the CreateSDG and SaveSDG operations in sequence after the AIC instance is running.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

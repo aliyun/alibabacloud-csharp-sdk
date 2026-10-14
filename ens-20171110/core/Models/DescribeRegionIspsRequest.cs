@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeRegionIspsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the node. You can specify only one node ID in a call.</para>
+        /// <para>The edge node ID. Only a single query is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-dalian-unicom</para>

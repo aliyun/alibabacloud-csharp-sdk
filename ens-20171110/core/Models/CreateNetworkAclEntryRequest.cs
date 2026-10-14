@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// <para>The description of the network ACL.</para>
-        /// <para>The description must be 1 to 256 characters in length and cannot start with http:// or https://.</para>
+        /// <para>The description must be 1 to 256 characters in length and cannot start with http\:// or https\://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is my NetworkAcl.</para>
@@ -31,6 +31,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>The destination network.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10.130.220.0/24</para>
+        /// </summary>
         [NameInMap("DestinationCidrBlock")]
         [Validation(Required=false)]
         public string DestinationCidrBlock { get; set; }
@@ -38,8 +44,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The direction in which the rule is applied. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ingress</b></description></item>
-        /// <item><description><b>egress</b></description></item>
+        /// <item><description><para><b>ingress</b></para>
+        /// </description></item>
+        /// <item><description><para><b>egress</b></para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -52,7 +60,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// <para>The name of the rule.</para>
-        /// <para>The name must be 1 to 128 characters in length and cannot start with http:// or https://.</para>
+        /// <para>The name must be 1 to 128 characters in length and cannot start with http\:// or https\://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acl-1</para>
@@ -75,8 +83,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The action that is performed on network traffic that matches the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>accept</b>: allows network traffic.</description></item>
-        /// <item><description><b>drop</b>: blocks network traffic.</description></item>
+        /// <item><description><para><b>accept</b>: allows network traffic.</para>
+        /// </description></item>
+        /// <item><description><para><b>drop</b>: blocks network traffic.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -90,8 +100,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The port range.</para>
         /// <list type="bullet">
-        /// <item><description>If you set <b>Protocol</b> to <b>all</b> or <b>icmp</b>, set this parameter to -1/-1, which specifies all ports.</description></item>
-        /// <item><description>If you set <b>Protocol</b> to <b>tcp</b> or <b>udp</b>, the port can be <b>1 to 65535</b>. You can set this parameter to <b>1/200</b> or <b>80/80</b>, which specifies ports 1 to 200 or port 80.</description></item>
+        /// <item><description><para>If you set <b>Protocol</b> to <b>all</b> or <b>icmp</b>, set this parameter to -1/-1, which specifies all ports.</para>
+        /// </description></item>
+        /// <item><description><para>If you set <b>Protocol</b> to <b>tcp</b> or <b>udp</b>, the port can be <b>1 to 65535</b>. You can set this parameter to <b>1/200</b> or <b>80/80</b>, which specifies ports 1 to 200 or port 80.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -116,10 +128,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The type of the protocol. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>icmp</b>: ICMP</description></item>
-        /// <item><description><b>tcp</b>: TCP</description></item>
-        /// <item><description><b>udp</b>: UDP</description></item>
-        /// <item><description><b>all</b>: all protocols</description></item>
+        /// <item><description><para><b>icmp</b>: ICMP</para>
+        /// </description></item>
+        /// <item><description><para><b>tcp</b>: TCP</para>
+        /// </description></item>
+        /// <item><description><para><b>udp</b>: UDP</para>
+        /// </description></item>
+        /// <item><description><para><b>all</b>: all protocols</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

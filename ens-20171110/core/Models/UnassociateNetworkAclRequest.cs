@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class UnassociateNetworkAclRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the network ACL that you want to disassociate from a resource.</para>
+        /// <para>The ID of the network ACL.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NetworkAclId { get; set; }
 
         /// <summary>
-        /// <para>Resources that you want to disassociate. Valid values of <b>N</b>: 0 to 29. A maximum of 30 resources can be unbound.</para>
+        /// <para>The list of resources to disassociate. Valid values of N: 1 to 30. The resources must be associated with the network ACL by calling the AssociateNetworkAcl operation, and the current association status must be BINDED.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Resource")]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public List<UnassociateNetworkAclRequestResource> Resource { get; set; }
         public class UnassociateNetworkAclRequestResource : TeaModel {
             /// <summary>
-            /// <para>The ID of the resource that you want to disassociate.</para>
+            /// <para>The ID of the associated resource to disassociate.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -40,9 +40,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The type of the resource that you want to disassociate. Valid values:</para>
+            /// <para>The type of the associated resource to disassociate. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Network</description></item>
+            /// <item><description>Network: network.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 

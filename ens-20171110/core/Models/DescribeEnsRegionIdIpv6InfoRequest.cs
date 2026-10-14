@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-chengdu-xxxx-4</para>
+        /// <para>cn-chengdu-****-4</para>
         /// </summary>
         [NameInMap("EnsRegionId")]
         [Validation(Required=false)]

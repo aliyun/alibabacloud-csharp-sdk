@@ -10,21 +10,35 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ModifyVSwitchAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the listener.</para>
+        /// <para>Description.</para>
         /// <list type="bullet">
-        /// <item><description>The description must be 2 to 256 characters in length.</description></item>
-        /// <item><description>It must start with a letter but cannot start with http:// or https://.</description></item>
+        /// <item><description><para>Must be 2 to 256 characters in length and can contain English or Chinese characters.</para>
+        /// </description></item>
+        /// <item><description><para>Cannot start with http\:// or https\://.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>this is my first network</para>
+        /// <para>this is my first vswitch</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("EnableIPv6")]
+        [Validation(Required=false)]
+        public bool? EnableIPv6 { get; set; }
+
         /// <summary>
-        /// <para>The ID of the vSwitch.</para>
+        /// <b>Example:</b>
+        /// <para>2408:XXXX:0:a600::/110</para>
+        /// </summary>
+        [NameInMap("Ipv6CidrBlock")]
+        [Validation(Required=false)]
+        public string Ipv6CidrBlock { get; set; }
+
+        /// <summary>
+        /// <para>vSwitch ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,10 +49,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The name of the vSwitch.</para>
+        /// <para>vSwitch name.</para>
         /// <list type="bullet">
-        /// <item><description>The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-).</description></item>
-        /// <item><description>It must start with a letter but cannot start with http:// or https://.</description></item>
+        /// <item><description><para>Must be 2 to 128 characters long. Can contain letters, digits, Chinese characters, underscores (_), and hyphens (-).</para>
+        /// </description></item>
+        /// <item><description><para>Must start with a letter or a Chinese character. Cannot start with http\:// or https\://.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

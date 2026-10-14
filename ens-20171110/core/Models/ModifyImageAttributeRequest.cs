@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Image Name</para>
+        /// <para>Image name</para>
         /// </summary>
         [NameInMap("ImageName")]
         [Validation(Required=false)]

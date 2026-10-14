@@ -22,10 +22,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The external port or port range that is used for port forwarding.</para>
         /// <list type="bullet">
-        /// <item><description>Valid values: 1 to 65535.</description></item>
-        /// <item><description>To specify a port range, separate the first port and the last port with a forward slash (/), such as 10/20. The first port and the last port are included.</description></item>
-        /// <item><description>If you set ExternalPort to a port range, you must also set InternalPort to a port range. The number of ports in the port ranges must be the same. For example, if you set ExternalPort to 10/20, you can set InternalPort to 80/90.</description></item>
-        /// <item><description>The maximum port range is 1000.</description></item>
+        /// <item><description><para>Valid values: 1 to 65535.</para>
+        /// </description></item>
+        /// <item><description><para>To specify a port range, separate the first port and the last port with a forward slash (/), such as 10/20. The first port and the last port are included.</para>
+        /// </description></item>
+        /// <item><description><para>If you set ExternalPort to a port range, you must also set InternalPort to a port range. The number of ports in the port ranges must be the same. For example, if you set ExternalPort to 10/20, you can set InternalPort to 80/90.</para>
+        /// </description></item>
+        /// <item><description><para>The maximum port range is 1000.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -79,10 +83,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The private port or port range that is used in port forwarding.</para>
         /// <list type="bullet">
-        /// <item><description>Valid values: 1 to 65535.</description></item>
-        /// <item><description>To specify a port range, separate the first port and the last port with a forward slash (/), such as 10/20. The first port and the last port are included.</description></item>
-        /// <item><description>If you set InternalPort to a port range, you must also set ExternalPort to a port range. The number of ports in the port ranges must be the same. For example, if you set ExternalPort to 10/20, you can set InternalPort to 80/90.</description></item>
-        /// <item><description>The maximum port range is 1000.</description></item>
+        /// <item><description><para>Valid values: 1 to 65535.</para>
+        /// </description></item>
+        /// <item><description><para>To specify a port range, separate the first port and the last port with a forward slash (/), such as 10/20. The first port and the last port are included.</para>
+        /// </description></item>
+        /// <item><description><para>If you set InternalPort to a port range, you must also set ExternalPort to a port range. The number of ports in the port ranges must be the same. For example, if you set ExternalPort to 10/20, you can set InternalPort to 80/90.</para>
+        /// </description></item>
+        /// <item><description><para>The maximum port range is 1000.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -95,9 +103,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The protocol. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>TCP</b>: forwards TCP packets.</description></item>
-        /// <item><description><b>UDP</b>: forwards UDP packets.</description></item>
-        /// <item><description><b>Any</b> (default): forwards all packets.</description></item>
+        /// <item><description><para><b>TCP</b>: forwards TCP packets.</para>
+        /// </description></item>
+        /// <item><description><para><b>UDP</b>: forwards UDP packets.</para>
+        /// </description></item>
+        /// <item><description><para><b>Any</b> (default): forwards all packets.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

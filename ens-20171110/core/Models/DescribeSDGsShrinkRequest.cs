@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeSDGsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The AIC instance ID to be queried.</para>
+        /// <para>The list of AIC instance IDs to query.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public string InstanceIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The IDs of SDGs that you want to query. By default, all SDGs are queried.</para>
+        /// <para>The list of SDG IDs to query.</para>
         /// </summary>
         [NameInMap("SDGIds")]
         [Validation(Required=false)]

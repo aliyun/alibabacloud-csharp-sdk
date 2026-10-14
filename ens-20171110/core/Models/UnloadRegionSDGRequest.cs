@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class UnloadRegionSDGRequest : TeaModel {
         /// <summary>
-        /// <para>The destination nodes.</para>
+        /// <para>The list of destination edge zones.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DestinationRegionIds")]
@@ -18,14 +18,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public List<string> DestinationRegionIds { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of queried namespaces.</para>
+        /// <para>The list of namespaces.</para>
         /// </summary>
         [NameInMap("Namespaces")]
         [Validation(Required=false)]
         public List<string> Namespaces { get; set; }
 
         /// <summary>
-        /// <para>Deletes the shared data group (SDG) ID of the preloaded data.</para>
+        /// <para>The ID of the SDG from which to delete preloaded data.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

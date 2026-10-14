@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class UpdateClusterCertificateResponseBody : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>eck-xxxxxxxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The response message. The value is success if the request is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>

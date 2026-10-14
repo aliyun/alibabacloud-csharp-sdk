@@ -10,12 +10,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ManageAICLoginRequest : TeaModel {
         /// <summary>
-        /// <para>Manage actions</para>
-        /// <para>Valid value:</para>
-        /// <list type="bullet">
-        /// <item><description>open</description></item>
-        /// <item><description>close</description></item>
-        /// </list>
+        /// <para>The management action.
+        /// When this parameter is set to open, the AIC instance must be in the running state. You can call DescribeAICInstances to query the state.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -26,7 +22,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ActionName { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,7 +33,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Public Key Grouping</para>
+        /// <para>The group of the public key.
+        /// When you set ActionName to open and use the public key to log on, you must first upload the public key by calling UploadAICPublicKey and provide the corresponding KeyName and KeyGroup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>g-test</para>
@@ -47,7 +44,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string KeyGroup { get; set; }
 
         /// <summary>
-        /// <para>Public Key Name</para>
+        /// <para>The name of the public key.
+        /// When you set ActionName to open and use the public key to log on, you must first upload the public key by calling UploadAICPublicKey and provide the corresponding KeyName and KeyGroup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mykey</para>

@@ -32,11 +32,16 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The region level by which edge resources of the application are collected. The value is of the enumeration type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>National: Chinese mainland</description></item>
-        /// <item><description>Big: area</description></item>
-        /// <item><description>Middle: province</description></item>
-        /// <item><description>Small: city</description></item>
-        /// <item><description>RegionId: edge node</description></item>
+        /// <item><description><para>National: Chinese mainland</para>
+        /// </description></item>
+        /// <item><description><para>Big: area</para>
+        /// </description></item>
+        /// <item><description><para>Middle: province</para>
+        /// </description></item>
+        /// <item><description><para>Small: city</para>
+        /// </description></item>
+        /// <item><description><para>RegionId: edge node</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: National.</para>
         /// 

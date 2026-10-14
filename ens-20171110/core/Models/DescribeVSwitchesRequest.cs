@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeVSwitchesRequest : TeaModel {
+        [NameInMap("EnableIpv6")]
+        [Validation(Required=false)]
+        public bool? EnableIpv6 { get; set; }
+
         /// <summary>
         /// <para>The ID of the ENS node.</para>
         /// 
@@ -20,14 +24,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of edge nodes. You can specify 1 to 100 IDs.</para>
+        /// <para>The IDs of the ENS nodes. You can specify 1 to 100 IDs.</para>
         /// </summary>
         [NameInMap("EnsRegionIds")]
         [Validation(Required=false)]
         public List<string> EnsRegionIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC to which the vSwitch belongs.</para>
+        /// <para>The ID of the VPC to which the VSwitch belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-25cdvfeq58pl****</para>
@@ -57,7 +61,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch.</para>
+        /// <para>The ID of the VSwitch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-5m9xhlq8oh***</para>
@@ -67,14 +71,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of vSwitches. You can specify 1 to 100 IDs.</para>
+        /// <para>The IDs of the vSwitches. You can specify 1 to 100 IDs.</para>
         /// </summary>
         [NameInMap("VSwitchIds")]
         [Validation(Required=false)]
         public List<string> VSwitchIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the vSwitch.</para>
+        /// <para>The name of the VSwitch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testVSwitchName</para>

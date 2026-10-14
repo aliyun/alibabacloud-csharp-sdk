@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeInstanceVncUrlRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance</para>
+        /// <para>The instance ID. The instance must be in the Running state. You can call DescribeInstances to query the current state.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

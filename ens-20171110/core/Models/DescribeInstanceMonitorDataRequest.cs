@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeInstanceMonitorDataRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query.</para>
-        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of the seconds place is not 00, the start time is automatically set to the next minute.</para>
+        /// <para>The end time of the data to retrieve. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the seconds are not 00, the time is automatically rounded up to the next minute.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-10-30T08:00:00Z</para>
@@ -21,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance. You can specify only one instance ID.</para>
+        /// <para>The instance ID. Only a single instance ID is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>yourInstance ID</para>
@@ -31,7 +30,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The precision of the monitoring data that you want to obtain. Valid values: 60, 300, 1200, 3600, and 14400. Default value: 60. Unit: seconds.</para>
+        /// <para>The precision of the monitoring data to retrieve. Unit: seconds. Valid values: 60 (default), 300, 1200, 3600, and 14400. This parameter is actually required. If this parameter is not specified, the service returns a MissingParameter error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -41,8 +40,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query.</para>
-        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of the seconds place is not 00, the start time is automatically set to the next minute.</para>
+        /// <para>The start time of the data to retrieve. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the seconds are not 00, the time is automatically rounded up to the next minute.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-10-29T23:00:00Z</para>

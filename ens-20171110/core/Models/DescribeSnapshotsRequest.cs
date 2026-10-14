@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeSnapshotsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the disk.</para>
+        /// <para>The ID of the specified cloud disk.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-bp67acfmxazb4p****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ENS node. You can query the node ID by calling the <a href="https://help.aliyun.com/document_detail/2637662.html">DescribeEnsRegions</a> operation.</para>
+        /// <para>The ID of the ENS edge zone. You can call <a href="https://help.aliyun.com/document_detail/2637662.html">DescribeEnsRegions</a> to query edge zone IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// <para>The node information.</para>
+        /// <para>The array of ENS edge zone IDs. Array length: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;cn-suzhou-telecom&quot;,&quot;cn-chengdu-telecom&quot;]</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp67acfmxazb4p****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the current query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the snapshot. The value can be a JSON array that consists of up to 100 snapshot IDs. Separate the snapshot IDs with commas (,).</para>
+        /// <para>The snapshot ID. The value can be a JSON array that consists of up to 100 snapshot IDs. Separate multiple IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>sp-bp67acfmxazb4p****</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string SnapshotId { get; set; }
 
         /// <summary>
-        /// <para>The name of the snapshot. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
+        /// <para>The display name of the snapshot. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with <c>http://</c> or <c>https://</c>. It can contain digits, colons (:), underscores (_), or hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>testSnapshotName</para>

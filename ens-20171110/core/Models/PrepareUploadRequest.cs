@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class PrepareUploadRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the bucket.</para>
+        /// <para>The bucket name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string BucketName { get; set; }
 
         /// <summary>
-        /// <para>The specified IP address. This parameter is applicable to scenarios where the user IP address is inconsistent with the operation calling IP address, such as the scenario where the server obtains authorization and sends the authorization to the client.</para>
+        /// <para>The client\&quot;s IP address. Use this parameter when the client\&quot;s IP address differs from the IP address used to call the API. For example, a server obtains authorization and then sends it to a client.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>180.166.XX.XXX</para>
+        /// <para>180.166.XX.XX</para>
         /// </summary>
         [NameInMap("ClientIp")]
         [Validation(Required=false)]

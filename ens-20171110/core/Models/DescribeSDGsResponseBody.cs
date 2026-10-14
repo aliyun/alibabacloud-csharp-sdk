@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the SDGs.</para>
+        /// <para>The list of SDG information.</para>
         /// </summary>
         [NameInMap("SDGs")]
         [Validation(Required=false)]
         public List<DescribeSDGsResponseBodySDGs> SDGs { get; set; }
         public class DescribeSDGsResponseBodySDGs : TeaModel {
             /// <summary>
-            /// <para>The IDs of available edge nodes.</para>
+            /// <para>The list of available edge zones.</para>
             /// </summary>
             [NameInMap("AvaliableRegionIds")]
             [Validation(Required=false)]
             public List<DescribeSDGsResponseBodySDGsAvaliableRegionIds> AvaliableRegionIds { get; set; }
             public class DescribeSDGsResponseBodySDGsAvaliableRegionIds : TeaModel {
                 /// <summary>
-                /// <para>The time when the SDG was created on the node.</para>
+                /// <para>The creation time of the SDG in the edge zone.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-02-27 15:13:26</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the edge node.</para>
+                /// <para>The edge zone ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-26</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the snapshot.</para>
+                /// <para>The snapshot ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mock-clone_snapshot_id</para>
@@ -64,13 +64,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string SnapshotId { get; set; }
 
                 /// <summary>
-                /// <para>The status of the SDG on the node. Valid values:</para>
+                /// <para>The status of the SDG in the edge zone. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>sdg_making</b></description></item>
-                /// <item><description><b>sdg_saving</b></description></item>
-                /// <item><description><b>sdg_copying</b></description></item>
-                /// <item><description><b>failed</b></description></item>
-                /// <item><description><b>success</b></description></item>
+                /// <item><description><b>sdg_making</b>: Being created.</description></item>
+                /// <item><description><b>sdg_saving</b>: Being saved.</description></item>
+                /// <item><description><b>sdg_copying</b>: Being synchronized across edge zones.</description></item>
+                /// <item><description><b>failed</b>: Creation failed.</description></item>
+                /// <item><description><b>success</b>: Creation succeeded.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -82,11 +82,19 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
             }
 
+            /// <summary>
+            /// <para>The billing cycle of the shared disk.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Hour</para>
+            /// </summary>
             [NameInMap("BillingCycle")]
             [Validation(Required=false)]
             public string BillingCycle { get; set; }
 
             /// <summary>
+            /// <para>The billing type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Open</para>
             /// </summary>
@@ -94,12 +102,18 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public string BillingType { get; set; }
 
+            /// <summary>
+            /// <para>The disk type of the source disk used to create the SDG.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>standard</para>
+            /// </summary>
             [NameInMap("CreationDiskType")]
             [Validation(Required=false)]
             public string CreationDiskType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance on which the SDG is created.</para>
+            /// <para>The instance ID of the instance used to create the SDG.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aic-5x20dyeos****</para>
@@ -109,7 +123,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string CreationInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the node on which the SDG is created.</para>
+            /// <para>The edge zone ID where the SDG was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-26</para>
@@ -129,7 +143,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The deployment information.</para>
+            /// <para>The list of deployment status information.</para>
             /// </summary>
             [NameInMap("DeployedInstanceIds")]
             [Validation(Required=false)]
@@ -146,10 +160,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// <para>The deployment type of the SDG. Valid values:</para>
+                /// <para>The SDG deployment type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>common: common deployment.</description></item>
-                /// <item><description>overlay: read/write splitting deployment.</description></item>
+                /// <item><description>common: standard deployment</description></item>
+                /// <item><description>overlay: read/write splitting deployment</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -160,7 +174,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string DeploymentType { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the instance.</para>
+                /// <para>The AIC instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aic-5x20dyeos****</para>
@@ -172,9 +186,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 /// <summary>
                 /// <para>The deployment status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>sdg_deploying</b></description></item>
-                /// <item><description><b>failed</b></description></item>
-                /// <item><description><b>success</b></description></item>
+                /// <item><description><b>sdg_deploying</b>: Being deployed.</description></item>
+                /// <item><description><b>failed</b>: Deployment failed.</description></item>
+                /// <item><description><b>success</b>: Deployment succeeded.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -190,14 +204,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <para>The description of the SDG.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Testing SDGs</para>
+            /// <para>Test SDG</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the source SDG from which you want to create an SDG. The value of this parameter is the value of the <b>FromSDGId</b> parameter that you need to specify when you call the <a href="https://help.aliyun.com/document_detail/608128.html">CreateSDG</a> operation.</para>
+            /// <para>The ID of the source SDG used for incremental creation. This is the <b>FromSDGId</b> parameter passed when calling <a href="https://help.aliyun.com/document_detail/608128.html">CreateSDG</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sdg-xxxxx</para>
@@ -207,6 +221,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string ParentSDGId { get; set; }
 
             /// <summary>
+            /// <para>The sharing ratio of the SDG.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -215,7 +231,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public long? PerformanceLevel { get; set; }
 
             /// <summary>
-            /// <para>The ID of the SDG.</para>
+            /// <para>The SDG ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sdg-30e1fdba7196bc****</para>
@@ -235,12 +251,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public long? Size { get; set; }
 
             /// <summary>
-            /// <para>The status of the SDG creation. Valid values:</para>
+            /// <para>The creation status of the SDG. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>sdg_making</b></description></item>
-            /// <item><description><b>sdg_saving</b></description></item>
-            /// <item><description><b>failed</b></description></item>
-            /// <item><description><b>success</b></description></item>
+            /// <item><description><b>sdg_making</b>: Being created.</description></item>
+            /// <item><description><b>sdg_saving</b>: Being saved.</description></item>
+            /// <item><description><b>failed</b>: Creation failed.</description></item>
+            /// <item><description><b>success</b>: Creation succeeded.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

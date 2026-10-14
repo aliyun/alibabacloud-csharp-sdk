@@ -49,10 +49,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>Specifies whether to enable EIP affinity. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: no</description></item>
-            /// <item><description><b>1</b>: yes</description></item>
+            /// <item><description><para><b>0</b>: no</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: yes</para>
+            /// </description></item>
             /// </list>
-            /// <para>**</para>
+            /// <para>\<em>\</em></para>
             /// <para><b>Description</b> After you enable EIP affinity, if multiple EIPs are associated with an SNAT entry, each client uses one EIP to access the Internet. If EIP affinity is disabled, each client uses a random EIP to access the Internet.</para>
             /// 
             /// <b>Example:</b>
@@ -151,10 +153,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The status of the secondary EIP. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Running</description></item>
-            /// <item><description>Stopping</description></item>
-            /// <item><description>Stopped</description></item>
-            /// <item><description>Starting</description></item>
+            /// <item><description><para>Running</para>
+            /// </description></item>
+            /// <item><description><para>Stopping</para>
+            /// </description></item>
+            /// <item><description><para>Stopped</para>
+            /// </description></item>
+            /// <item><description><para>Starting</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -167,9 +173,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The status of the SNAT entry. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Pending: The SNAT entry is being created or modified.</description></item>
-            /// <item><description>Available: The SNAT entry is available.</description></item>
-            /// <item><description>Deleting: The SNAT entry is being deleted.</description></item>
+            /// <item><description><para>Pending: The SNAT entry is being created or modified.</para>
+            /// </description></item>
+            /// <item><description><para>Available: The SNAT entry is available.</para>
+            /// </description></item>
+            /// <item><description><para>Deleting: The SNAT entry is being deleted.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

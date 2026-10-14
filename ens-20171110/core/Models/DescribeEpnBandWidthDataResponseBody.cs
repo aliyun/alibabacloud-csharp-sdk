@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public DescribeEpnBandWidthDataResponseBodyMonitorData MonitorData { get; set; }
         public class DescribeEpnBandWidthDataResponseBodyMonitorData : TeaModel {
             /// <summary>
-            /// <para>The bandwidth data.</para>
+            /// <para>The bandwidth monitoring data.</para>
             /// </summary>
             [NameInMap("BandWidthMonitorData")]
             [Validation(Required=false)]
             public List<DescribeEpnBandWidthDataResponseBodyMonitorDataBandWidthMonitorData> BandWidthMonitorData { get; set; }
             public class DescribeEpnBandWidthDataResponseBodyMonitorDataBandWidthMonitorData : TeaModel {
                 /// <summary>
-                /// <para>The outbound bandwidth. Unit: bit/s.</para>
+                /// <para>The downstream bandwidth. Unit: bit/s.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public long? DownBandWidth { get; set; }
 
                 /// <summary>
-                /// <para>The Internet traffic to the instance. Unit: bytes.</para>
+                /// <para>The inbound public network traffic of the instance. Unit: bits.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public long? InternetRX { get; set; }
 
                 /// <summary>
-                /// <para>The Internet traffic from the instance. Unit: bytes.</para>
+                /// <para>The outbound public network traffic of the instance. Unit: bits.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public long? InternetTX { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp when the monitoring data was queried. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+                /// <para>The timestamp of the monitoring data. The time is in UTC and in the format of yyyy-MM-DDThh:mm:ssZ.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2019-10-12T05:45:00Z</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string TimeStamp { get; set; }
 
                 /// <summary>
-                /// <para>The inbound bandwidth. Unit: bit/s.</para>
+                /// <para>The upstream bandwidth. Unit: bit/s.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             }
 
             /// <summary>
-            /// <para>The maximum outbound bandwidth within the queried time range. Unit: bit/s.</para>
+            /// <para>The maximum downstream bandwidth within the queried time range. Unit: bit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16817468</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public long? MaxDownBandWidth { get; set; }
 
             /// <summary>
-            /// <para>The maximum inbound bandwidth within the queried time range. Unit: bit/s.</para>
+            /// <para>The maximum upstream bandwidth within the queried time range. Unit: bit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>231008</para>

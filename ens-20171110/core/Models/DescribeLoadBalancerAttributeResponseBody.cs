@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeLoadBalancerAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IP address that the Edge Load Balancer (ELB) instance uses to provide services.</para>
+        /// <para>The service address of the load balancing instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>192.168XX.XX</para>
+        /// <para>192.168.XX.XX</para>
         /// </summary>
         [NameInMap("Address")]
         [Validation(Required=false)]
         public string Address { get; set; }
 
         /// <summary>
-        /// <para>The IP version of the ELB instance. Valid values: ipv4 and ipv6.</para>
+        /// <para>The IP version of the load balancing instance. Valid values: ipv4 or ipv6.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ipv4</para>
@@ -29,6 +29,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string AddressIPVersion { get; set; }
 
+        /// <summary>
+        /// <para>The address type of the load balancing instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>internet</para>
+        /// </summary>
         [NameInMap("AddressType")]
         [Validation(Required=false)]
         public string AddressType { get; set; }
@@ -51,7 +57,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Ip { get; set; }
 
             /// <summary>
-            /// <para>The port that is used by the backend server.</para>
+            /// <para>The port used by the backend server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -61,7 +67,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Port { get; set; }
 
             /// <summary>
-            /// <para>The ID of the backend server.</para>
+            /// <para>The instance ID of the backend server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-5vb5h5njxiuhn48a****</para>
@@ -71,7 +77,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string ServerId { get; set; }
 
             /// <summary>
-            /// <para>The type of backend server.</para>
+            /// <para>The server type of the backend server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ens</para>
@@ -93,7 +99,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The peak bandwidth of the ELB. The default value is -1, which indicates that the bandwidth is unlimited.</para>
+        /// <para>The peak bandwidth of the load balancing instance. The default value is -1, which indicates that bandwidth is not throttled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-1</para>
@@ -103,7 +109,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The time when the ELB instance was created. The time is displayed in UTC.</para>
+        /// <para>The creation time of the load balancing instance (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-05-21T12:22:00Z</para>
@@ -113,7 +119,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the ELB instance was disabled.</para>
+        /// <para>The end time of the load balancing instance in ISO 8601 UTC format (YYYY-MM-DDTHH:mm:ssZ).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-05-21T12:22:00Z</para>
@@ -123,7 +129,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ENS node.</para>
+        /// <para>The ENS node ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-chengdu-telecom</para>
@@ -133,21 +139,21 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// <para>The frontend ports that are used by the ELB instance.</para>
+        /// <para>The frontend ports used by the load balancing instance.</para>
         /// </summary>
         [NameInMap("ListenerPorts")]
         [Validation(Required=false)]
         public List<string> ListenerPorts { get; set; }
 
         /// <summary>
-        /// <para>The frontend ports and protocols that are used by the ELB instance.</para>
+        /// <para>The frontend ports and protocols used by the load balancing instance.</para>
         /// </summary>
         [NameInMap("ListenerPortsAndProtocols")]
         [Validation(Required=false)]
         public List<DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocols> ListenerPortsAndProtocols { get; set; }
         public class DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocols : TeaModel {
             /// <summary>
-            /// <para>The backend port that is used by the ELB instance. Valid values: <b>1</b> to <b>65535</b>.</para>
+            /// <para>The backend port used by the load balancing instance. Valid values: <b>1</b> to <b>65535</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6000</para>
@@ -157,7 +163,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public int? BackendServerPort { get; set; }
 
             /// <summary>
-            /// <para>The description of the listener.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -167,7 +173,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The destination listening port to which requests are forwarded.</para>
+            /// <para>The destination listener port to which traffic is forwarded.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -177,7 +183,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public int? ForwardPort { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the listener is enabled.</para>
+            /// <para>Indicates whether listener forwarding is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -187,7 +193,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string ListenerForward { get; set; }
 
             /// <summary>
-            /// <para>The listener port of the instance.</para>
+            /// <para>The listener port.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8080</para>
@@ -197,7 +203,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public int? ListenerPort { get; set; }
 
             /// <summary>
-            /// <para>The listener protocol of the instance.</para>
+            /// <para>The listener protocol.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tcp</para>
@@ -209,7 +215,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The ID of the ELB instance.</para>
+        /// <para>The ID of the load balancing instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lb-5rcvo1n1t3hykfhhjwjgqp****</para>
@@ -219,7 +225,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string LoadBalancerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the ELB instance.</para>
+        /// <para>The name of the load balancing instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -229,7 +235,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string LoadBalancerName { get; set; }
 
         /// <summary>
-        /// <para>The specifications of the ELB instance.</para>
+        /// <para>The specification of the load balancing instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>elb.s2.medium</para>
@@ -239,10 +245,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string LoadBalancerSpec { get; set; }
 
         /// <summary>
-        /// <para>The status of the ELB instance. Valid values:</para>
+        /// <para>The listener status of the load balancing instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Active</b> (default): The listener for the instance can forward the received traffic based on the rule.</description></item>
-        /// <item><description><b>InActive</b>: The listener for the instance does not forward the received traffic.</description></item>
+        /// <item><description><b>Active</b>: The listeners of the instance can forward received traffic based on rules.</description></item>
+        /// <item><description><b>InActive</b>: The listeners of the instance no longer forward received traffic.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -252,12 +258,18 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string LoadBalancerStatus { get; set; }
 
+        /// <summary>
+        /// <para>The type of the load balancing instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CLB</para>
+        /// </summary>
         [NameInMap("LoadBalancerType")]
         [Validation(Required=false)]
         public string LoadBalancerType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the network.</para>
+        /// <para>The network ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>n-5rwbi3g9zvgxcsiufwhw8****</para>
@@ -270,7 +282,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>PrePaid</b>: subscription.</description></item>
-        /// <item><description><b>PostPaid</b>: pay-as-you-go. Only this billing method is supported.</description></item>
+        /// <item><description><b>PostPaid</b> (currently the only supported billing method): pay-as-you-go.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -281,7 +293,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
@@ -291,7 +303,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch.</para>
+        /// <para>The vSwitch ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-5s78m2pdr9osa0j64bn78****</para>

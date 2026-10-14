@@ -9,6 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateSDGRequest : TeaModel {
+        /// <summary>
+        /// <para>The billing logic for SDG child disks. This parameter specifies the billing method for the RBD child disks produced by this SDG. This parameter does not apply to standard cloud disks.
+        /// Optional parameter values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Hour.</para>
+        /// </description></item>
+        /// <item><description><para>Day. This is the default value.</para>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Parameter description: The longer the cycle, the lower the cost. If the disk is released before the billing cycle ends, a service fee is charged.</description></item>
+        /// </list>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Day</para>
+        /// </summary>
         [NameInMap("BillingCycle")]
         [Validation(Required=false)]
         public string BillingCycle { get; set; }
@@ -16,32 +34,45 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The description of the SDG.</para>
         /// <remarks>
-        /// <para> We recommend that you specify this parameter in details for subsequent queries.</para>
+        /// <para>Provide a detailed description for easier future queries.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>Testing SDGs</para>
+        /// <para>Test SDG</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>The type of the source disk.
+        /// Optional parameter values:</para>
+        /// <list type="bullet">
+        /// <item><description>standard: standard cloud disk. This is the default value.</description></item>
+        /// <item><description>rbd: RBD disk.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Limits: RBD disk SDGs and standard disk SDGs cannot inherit from each other.</description></item>
+        /// </list>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>standard</para>
+        /// </summary>
         [NameInMap("DiskType")]
         [Validation(Required=false)]
         public string DiskType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SDG from which you want to create an SDG.</para>
+        /// <para>The ID of an existing SDG.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>The first time you create an SDG, the <b>FromSDGId</b> parameter is empty.</para>
-        /// </description></item>
-        /// <item><description><para>If the value of the <b>FromSDGId</b> parameter is invalid or does not correspond to an original disk, an error is reported.</para>
-        /// </description></item>
-        /// <item><description><para>If the value of the <b>FromSDGId</b> parameter is not empty, you have created an SDG, and the operation is performed on the existing SDG.</para>
-        /// </description></item>
+        /// <item><description>If you are creating an SDG for the first time, leave <b>FromSDGId</b> empty.</description></item>
+        /// <item><description>If <b>FromSDGId</b> is invalid or the corresponding raw cloud disk cannot be found, an error is returned.</description></item>
+        /// <item><description>If <b>FromSDGId</b> is not empty, this indicates that you are operating on an existing SDG rather than creating one for the first time.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>sdg-xxxxx</para>
@@ -51,7 +82,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string FromSDGId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the AIC instance. You can call the <a href="~~DescribeARMServerInstances~~">DescribeARMServerInstances</a> operation to query the ID.</para>
+        /// <para>The AIC instance ID. You can call the <a href="~~DescribeARMServerInstances~~">DescribeARMServerInstances</a> operation to obtain the InstanceId value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,6 +93,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The SDG sharing ratio parameter. This parameter supports cloud disks with different maximum sharing ratios.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -72,18 +105,16 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The maximum capacity of the SDG. Unit: GB.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>To save costs, we recommend that you specify this parameter based on your business requirements.</para>
-        /// </description></item>
-        /// <item><description><para>The first time that you create an SDG, the <b>Size</b> parameter is required.</para>
-        /// </description></item>
-        /// <item><description><para>When the amount of data increases, you can pass a new <b>Size</b> parameter for resizing. If the value of the new <b>Size</b> parameter is greater than the value of the old <b>Size</b> parameter, the disk size of the SDG is increased to the size that is specified by the new <b>Size</b> parameter. If the value of the new <b>Size</b> parameter is empty or smaller than that of the old <b>Size</b> parameter, no operation is performed.</para>
-        /// </description></item>
+        /// <item><description>To reduce costs, evaluate the required capacity as needed.</description></item>
+        /// <item><description>If you are creating an SDG for the first time, <b>Size</b> is required.</description></item>
+        /// <item><description>If the data volume increases later, pass a new <b>Size</b> value to expand the capacity. If <b>Size</b> is not empty and is greater than the original <b>Size</b> value of the SDG, the raw cloud disk of the SDG is expanded to the specified <b>Size</b>. If <b>Size</b> is empty or the specified <b>Size</b> is less than the original <b>Size</b> value of the SDG, no action is taken.</description></item>
         /// </list>
+        /// </remarks>
+        /// <para>The minimum tested usable value is 150 GB.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>20</para>
+        /// <para>150</para>
         /// </summary>
         [NameInMap("Size")]
         [Validation(Required=false)]

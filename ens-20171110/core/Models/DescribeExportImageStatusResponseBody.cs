@@ -12,10 +12,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The export status of the image. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Exporting</description></item>
-        /// <item><description>Exported</description></item>
-        /// <item><description>ExportError</description></item>
-        /// <item><description>Unexported</description></item>
+        /// <item><description><para>Exporting</para>
+        /// </description></item>
+        /// <item><description><para>Exported</para>
+        /// </description></item>
+        /// <item><description><para>ExportError</para>
+        /// </description></item>
+        /// <item><description><para>Unexported</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

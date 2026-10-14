@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeForwardEntryAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The creation time. The time is displayed in UTC.</para>
+        /// <para>The creation time in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-04-26T15:38:27Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string CreationTime { get; set; }
 
         /// <summary>
-        /// <para>The EIP in the DNAT entry. The public IP address is used to access the Internet.</para>
+        /// <para>The Elastic IP Address (EIP) that provides public network access in the DNAT entry.</para>
         /// 
         /// <b>Example:</b>
         /// <para>36.XXX.XXX.72</para>
@@ -30,10 +30,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ExternalIp { get; set; }
 
         /// <summary>
-        /// <para>The external port or port range that is used for port forwarding.</para>
+        /// <para>The external port or port range for port forwarding.</para>
         /// <list type="bullet">
-        /// <item><description>Valid values: 1 to 65535.</description></item>
-        /// <item><description>To specify a port range, separate the first port and the last port with a forward slash (/), such as 10/20.</description></item>
+        /// <item><description><para>The port range must be between 1 and 65535.</para>
+        /// </description></item>
+        /// <item><description><para>To forward a port range, separate the start and end ports with a forward slash (/), such as 10/20.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,7 +66,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ForwardEntryName { get; set; }
 
         /// <summary>
-        /// <para>The DNAT probe port. The port must be within the internal port range. By default, this parameter is empty.</para>
+        /// <para>The probe port for DNAT. It must fall within the internal port range. The default value is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>80</para>
@@ -74,7 +76,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string HealthCheckPort { get; set; }
 
         /// <summary>
-        /// <para>The private IP address of the instance that uses the DNAT entry for Internet communication.</para>
+        /// <para>The private IP address of the instance that communicates over the public network through the DNAT entry.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.XXX.XXX.50</para>
@@ -84,10 +86,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InternalIp { get; set; }
 
         /// <summary>
-        /// <para>The internal port or port range that is used for port forwarding.</para>
+        /// <para>The internal port or port range for port forwarding.</para>
         /// <list type="bullet">
-        /// <item><description>Valid values: 1 to 65535.</description></item>
-        /// <item><description>To specify a port range, separate the first port and the last port with a forward slash (/), such as 10/20.</description></item>
+        /// <item><description><para>The port range must be between 1 and 65535.</para>
+        /// </description></item>
+        /// <item><description><para>To forward a port range, separate the start and end ports with a forward slash (/), such as 10/20.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -98,11 +102,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InternalPort { get; set; }
 
         /// <summary>
-        /// <para>The protocol. Valid values:</para>
+        /// <para>The protocol type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>TCP</b>: forwards TCP packets.</description></item>
-        /// <item><description><b>UDP</b>: forwards UDP packets.</description></item>
-        /// <item><description><b>Any</b>: forwards all packets.</description></item>
+        /// <item><description><para><b>TCP</b>: Forwards TCP messages.</para>
+        /// </description></item>
+        /// <item><description><para><b>UDP</b>: Forwards UDP messages.</para>
+        /// </description></item>
+        /// <item><description><para><b>Any</b>: Forwards messages of all protocols.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -113,7 +120,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string IpProtocol { get; set; }
 
         /// <summary>
-        /// <para>The ID of the NAT gateway.</para>
+        /// <para>The ID of the NAT Gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nat-5t7nh1cfm6kxiszlttr38****</para>
@@ -133,7 +140,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The secondary EIP that is used to access the Internet. You need to select a secondary EIP that is bound to NAT. After the DNAT entry is created, the secondary EIP takes effect.</para>
+        /// <para>The standby Elastic IP Address (EIP) that provides public network access. You must select a standby EIP attached to the NAT Gateway. The standby public IP becomes active after the DNAT entry is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>101.XXX.XXX.4</para>
@@ -143,12 +150,16 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string StandbyExternalIp { get; set; }
 
         /// <summary>
-        /// <para>The status of the secondary EIP.</para>
+        /// <para>The status of the standby EIP.</para>
         /// <list type="bullet">
-        /// <item><description>Running</description></item>
-        /// <item><description>Stopping</description></item>
-        /// <item><description>Stopped</description></item>
-        /// <item><description>Starting</description></item>
+        /// <item><description><para>Running: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para>Stopping: Being disabled.</para>
+        /// </description></item>
+        /// <item><description><para>Stopped: Disabled.</para>
+        /// </description></item>
+        /// <item><description><para>Starting: Being enabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -161,9 +172,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The status of the DNAT entry.</para>
         /// <list type="bullet">
-        /// <item><description>Pending: The DNAT entry is being created or modified.</description></item>
-        /// <item><description>Available: The DNAT entry is available.</description></item>
-        /// <item><description>Deleting: The DNAT entry is being deleted.</description></item>
+        /// <item><description><para>Pending: The configuration is in progress, such as during creation or modification.</para>
+        /// </description></item>
+        /// <item><description><para>Available: The entry is active.</para>
+        /// </description></item>
+        /// <item><description><para>Deleting: The entry is being deleted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

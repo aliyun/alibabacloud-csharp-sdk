@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class RemoveBackendServersShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The list of backend servers that you want to remove. You can remove up to 20 backend servers at a time.</para>
+        /// <para>The list of backend servers to remove. You can remove up to 20 backend servers per call.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("BackendServers")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string BackendServersShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Edge Load Balancer (ELB) instance.</para>
+        /// <para>The ID of the load balancing instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

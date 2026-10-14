@@ -37,6 +37,42 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public string GatewayRouteTableId { get; set; }
 
+                [NameInMap("Ipv6CidrBlocks")]
+                [Validation(Required=false)]
+                public DescribeNetworksResponseBodyNetworksNetworkIpv6CidrBlocks Ipv6CidrBlocks { get; set; }
+                public class DescribeNetworksResponseBodyNetworksNetworkIpv6CidrBlocks : TeaModel {
+                    [NameInMap("Ipv6CidrBlock")]
+                    [Validation(Required=false)]
+                    public List<DescribeNetworksResponseBodyNetworksNetworkIpv6CidrBlocksIpv6CidrBlock> Ipv6CidrBlock { get; set; }
+                    public class DescribeNetworksResponseBodyNetworksNetworkIpv6CidrBlocksIpv6CidrBlock : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>2408:XXXX:0:a600::/110</para>
+                        /// </summary>
+                        [NameInMap("Ipv6CidrBlock")]
+                        [Validation(Required=false)]
+                        public string Ipv6CidrBlock { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>telecom</para>
+                        /// </summary>
+                        [NameInMap("Ipv6Isp")]
+                        [Validation(Required=false)]
+                        public string Ipv6Isp { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>system</para>
+                        /// </summary>
+                        [NameInMap("Type")]
+                        [Validation(Required=false)]
+                        public string Type { get; set; }
+
+                    }
+
+                }
+
                 [NameInMap("NetworkAclId")]
                 [Validation(Required=false)]
                 public string NetworkAclId { get; set; }
@@ -128,7 +164,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>Current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -138,7 +174,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on each page.</para>
+        /// <para>Number of entries per page in the current query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -148,7 +184,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
@@ -158,7 +194,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries in the list.</para>
+        /// <para>Total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

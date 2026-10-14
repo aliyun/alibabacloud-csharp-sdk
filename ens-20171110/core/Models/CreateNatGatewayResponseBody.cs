@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateNatGatewayResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the NAT gateway.</para>
+        /// <para>The instance ID of the created NAT gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nat-5t7nh1cfm6kxiszlttr38****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NatGatewayId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>

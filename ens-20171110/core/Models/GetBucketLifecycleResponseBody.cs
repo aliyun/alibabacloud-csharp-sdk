@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The detailed information about the rule.</para>
+        /// <para>The rule details.</para>
         /// </summary>
         [NameInMap("Rule")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public GetBucketLifecycleResponseBodyRuleExpiration Expiration { get; set; }
             public class GetBucketLifecycleResponseBodyRuleExpiration : TeaModel {
                 /// <summary>
-                /// <para>The expiration date.</para>
+                /// <para>The expiration date in ISO 8601 UTC format, which is YYYY-MM-DDTHH:mm:ssZ.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>yyy-MM-DDThh:mm:ssZ</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string CreatedBeforeDate { get; set; }
 
                 /// <summary>
-                /// <para>The validity period, in days.</para>
+                /// <para>The number of days before expiration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string ID { get; set; }
 
             /// <summary>
-            /// <para>The prefix that is applied to the rule.</para>
+            /// <para>The prefix to which the rule applies.</para>
             /// 
             /// <b>Example:</b>
             /// <para>image</para>
@@ -78,8 +78,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The status of the rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Enabled</b>: The rule is periodically executed.</description></item>
-            /// <item><description><b>Disabled</b>: The rule is ignored.</description></item>
+            /// <item><description><para><b>Enabled</b>: The rule is executed periodically.</para>
+            /// </description></item>
+            /// <item><description><para><b>Disabled</b>: The rule is ignored.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

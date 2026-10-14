@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ListAddonsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of component information.</para>
+        /// <para>A list of component information.</para>
         /// </summary>
         [NameInMap("Addons")]
         [Validation(Required=false)]
         public List<ListAddonsResponseBodyAddons> Addons { get; set; }
         public class ListAddonsResponseBodyAddons : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to clear resources.</para>
+            /// <para>Indicates whether to automatically clean up associated cloud resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public bool? CleanupCloudResources { get; set; }
 
             /// <summary>
-            /// <para>The schema of the custom parameters of the component.</para>
+            /// <para>The schemas for the custom parameters of the component.</para>
             /// </summary>
             [NameInMap("ConfigSchema")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string AppVersion { get; set; }
 
                 /// <summary>
-                /// <para>The version of the configuration file.</para>
+                /// <para>The configuration version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4155709cd12a09bdb8cbaca71bf03233</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string ConfigVersion { get; set; }
 
                 /// <summary>
-                /// <para>The component name.</para>
+                /// <para>The name of the component.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>edge-csi-lite</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The custom configurations of the component.</para>
+                /// <para>The custom parameters of the component.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;key1&quot;:&quot;val1&quot;}</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             }
 
             /// <summary>
-            /// <para>The component name.</para>
+            /// <para>The name of the component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>edge-csi-lite</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The component version.</para>
+            /// <para>The version of the component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v2</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>Id of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>C0003E8B-B930-4F59-ADC0-0E209A9012A8</para>

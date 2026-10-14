@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>lb-5t18quoohsrc3xkf86spmnu77</para>
+        /// <para>lb-5t18quoohsrc3xkf86sp*****</para>
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
@@ -23,8 +23,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The new instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Active</b></description></item>
-        /// <item><description><b>InActive</b></description></item>
+        /// <item><description><para><b>Active</b></para>
+        /// </description></item>
+        /// <item><description><para><b>InActive</b></para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

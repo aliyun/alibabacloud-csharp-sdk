@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ListAICPublicKeyDeliveriesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Current page number when paging</para>
+        /// <para>The current page number in the paginated query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of records to display per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Public Key List</para>
+        /// <para>The list of public keys.</para>
         /// </summary>
         [NameInMap("PublicKeyDeliverInfo")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>Public Key Grouping</para>
+            /// <para>The group of the public key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-group</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string KeyGroup { get; set; }
 
             /// <summary>
-            /// <para>Public Key Name</para>
+            /// <para>The name of the public key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mykey</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string KeyName { get; set; }
 
             /// <summary>
-            /// <para>Public key type</para>
+            /// <para>The type of the public key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>adb</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique identifier of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxsxxxxx</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

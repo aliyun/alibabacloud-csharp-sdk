@@ -89,8 +89,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>Indicates whether authentication is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: Authentication is enabled.</description></item>
-            /// <item><description><b>0</b> (default): Authentication is disabled.</description></item>
+            /// <item><description><para><b>1</b>: Authentication is enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>0</b> (default): Authentication is disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -103,8 +105,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>Indicates whether the volume is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b> (default): The volume is enabled.</description></item>
-            /// <item><description><b>0</b>: The volume is disabled.</description></item>
+            /// <item><description><para><b>1</b> (default): The volume is enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>0</b>: The volume is disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -117,10 +121,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The status of the volume. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>creating</description></item>
-            /// <item><description>available</description></item>
-            /// <item><description>deleting</description></item>
-            /// <item><description>deleted</description></item>
+            /// <item><description><para>creating</para>
+            /// </description></item>
+            /// <item><description><para>available</para>
+            /// </description></item>
+            /// <item><description><para>deleting</para>
+            /// </description></item>
+            /// <item><description><para>deleted</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

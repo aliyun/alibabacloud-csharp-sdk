@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <para>The information about the metering method.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{ &quot;BandWidthName&quot;: &quot;Monthly peak bandwidth of 95&quot;, 			&quot;BandWidthType&quot;: &quot;95BandwidthByMonth&quot; 		}</para>
+        /// <para>{ &quot;BandWidthName&quot;: &quot;Monthly 95th percentile bandwidth&quot;, &quot;BandWidthType&quot;: &quot;95BandwidthByMonth&quot; }</para>
         /// </summary>
         [NameInMap("BandWithTypeInfo")]
         [Validation(Required=false)]
@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The metering type.</para>
         /// <list type="bullet">
-        /// <item><description>ChargeByUnified: unified metering.</description></item>
-        /// <item><description>ChargeByGrade: differential metering.</description></item>
+        /// <item><description><para>ChargeByUnified: unified metering.</para>
+        /// </description></item>
+        /// <item><description><para>ChargeByGrade: differential metering.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

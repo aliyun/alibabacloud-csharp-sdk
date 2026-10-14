@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeElbAvailableResourceInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about resources.</para>
+        /// <para>The collection of resource information.</para>
         /// </summary>
         [NameInMap("ElbAvailableResourceInfo")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public List<string> Ability { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region.</para>
+            /// <para>The area.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SouthEast</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Area { get; set; }
 
             /// <summary>
-            /// <para>The number of resources that you can purchase.</para>
+            /// <para>The quantity available for purchase.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string CanBuyCount { get; set; }
 
             /// <summary>
-            /// <para>The name of the node.</para>
+            /// <para>The English name of the edge zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-guangdong-10</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string EnName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Edge Node Service (ENS) node.</para>
+            /// <para>The ID of the ENS edge zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-guangdong-10</para>
@@ -61,14 +61,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string EnsRegionId { get; set; }
 
             /// <summary>
-            /// <para>The specifications of the ELB instances.</para>
+            /// <para>The specification of the load balancing instance.</para>
             /// </summary>
             [NameInMap("LoadBalancerSpec")]
             [Validation(Required=false)]
             public List<string> LoadBalancerSpec { get; set; }
 
             /// <summary>
-            /// <para>The Chinese name of the node.</para>
+            /// <para>The name of the edge zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The province where the node is deployed.</para>
+            /// <para>The province.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Shanghai</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use the ID to troubleshoot issues.</para>
+        /// <para>The common parameter. The ID of the request. Each request has a unique ID, which is active for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25AAD194-4A37-51CF-B1CA-1E86FDAC23A6</para>

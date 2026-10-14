@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class UnInstallClusterAddonsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the cluster.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>eck-xxxxxxxx</para>
         /// </summary>

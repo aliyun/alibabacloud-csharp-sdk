@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteClusterRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,6 +20,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to retain cloud resources. Default value: false.</para>
+        /// </summary>
         [NameInMap("RetainResources")]
         [Validation(Required=false)]
         public bool? RetainResources { get; set; }

@@ -109,9 +109,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The type of the service. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: subscription instance.</description></item>
-            /// <item><description>2: edge service instance.</description></item>
-            /// <item><description>3: pay-as-you-go instance.</description></item>
+            /// <item><description><para>1: subscription instance.</para>
+            /// </description></item>
+            /// <item><description><para>2: edge service instance.</para>
+            /// </description></item>
+            /// <item><description><para>3: pay-as-you-go instance.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -137,7 +140,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E	 Request ID.</para>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

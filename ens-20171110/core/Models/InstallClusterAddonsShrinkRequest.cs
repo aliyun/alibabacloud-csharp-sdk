@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class InstallClusterAddonsShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The component information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Addons")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string AddonsShrink { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

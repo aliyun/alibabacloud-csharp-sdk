@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeEpnBandWidthDataRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the EPN instance.</para>
+        /// <para>The instance ID of the edge-to-edge network.</para>
         /// 
         /// <b>Example:</b>
         /// <para>epn-20200825134537VyK81T</para>
@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The end of the time range to query.</para>
         /// <list type="bullet">
-        /// <item><description>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</description></item>
-        /// <item><description>If the value of the seconds place is not 00, the start time is automatically set to the next minute.</description></item>
+        /// <item><description><para>The time must be in UTC and in the ISO 8601 standard format: yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// </description></item>
+        /// <item><description><para>If the seconds value is not 00, the end time is automatically set to the beginning of the next minute.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,7 +37,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Edge Node Service (ENS) node.</para>
+        /// <para>The ENS edge zone ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing-cmcc</para>
@@ -45,7 +47,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-5sg1owx0g4ojy66ab2tez77r2</para>
@@ -57,10 +59,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The Internet service provider (ISP). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cmcc: China Mobile</description></item>
-        /// <item><description>telecom: China Telecom</description></item>
-        /// <item><description>unicom: China Unicom</description></item>
-        /// <item><description>multiCarrier: multi-line ISP</description></item>
+        /// <item><description>cmcc: China Mobile.</description></item>
+        /// <item><description>telecom: China Telecom.</description></item>
+        /// <item><description>unicom: China Unicom.</description></item>
+        /// <item><description>multiCarrier: multi-ISP.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,9 +75,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The networking mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>SpeedUp</b>: intelligent acceleration network (Internet)</description></item>
-        /// <item><description><b>Connection</b>: internal network</description></item>
-        /// <item><description><b>SpeedUpAndConnection</b>: intelligent acceleration network and internal network</description></item>
+        /// <item><description><b>SpeedUp</b>: intelligent acceleration (public network).</description></item>
+        /// <item><description><b>Connection</b>: internal network connectivity (internal network mode).</description></item>
+        /// <item><description><b>SpeedUpAndConnection</b>: intelligent acceleration and internal network connectivity (internal network mode).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -86,7 +88,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NetworkingModel { get; set; }
 
         /// <summary>
-        /// <para>The precision of the monitoring data that you want to obtain. Valid values: 300, 1200, 3600, and 14400. Default value: 300. Unit: seconds.</para>
+        /// <para>The precision of the monitoring data. Valid values: 300 (default), 1200, 3600, and 14400. Unit: seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -97,10 +99,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query.</para>
+        /// <para>The start of the time range to query.</para>
         /// <list type="bullet">
-        /// <item><description>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</description></item>
-        /// <item><description>If the value of the seconds place is not 00, the start time is automatically set to the next minute.</description></item>
+        /// <item><description><para>The time must be in UTC and in the ISO 8601 standard format: yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// </description></item>
+        /// <item><description><para>If the seconds value is not 00, the start time is automatically set to the beginning of the next minute.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

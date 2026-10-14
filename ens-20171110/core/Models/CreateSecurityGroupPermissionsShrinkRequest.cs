@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string PermissionsShrink { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the security groups.</para>
+        /// <para>The security group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

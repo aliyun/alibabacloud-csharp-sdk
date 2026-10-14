@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeAddonRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the add-on.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string AddonName { get; set; }
 
         /// <summary>
+        /// <para>The version of the add-on. If you do not specify a version, all available versions are returned by default.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>v1</para>
         /// </summary>

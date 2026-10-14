@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteImageRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the image. You can specify only one image ID.</para>
-        /// <para>You can delete only custom images that you created.</para>
+        /// <para>The image ID. Only a single ID is supported.</para>
+        /// <para>Only custom images are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

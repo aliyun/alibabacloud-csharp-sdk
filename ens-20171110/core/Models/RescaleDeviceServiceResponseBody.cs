@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class RescaleDeviceServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IDs of the devices.</para>
+        /// <para>The list of device IDs.</para>
         /// </summary>
         [NameInMap("DeviceIds")]
         [Validation(Required=false)]
         public List<string> DeviceIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the order.</para>
+        /// <para>The order ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b3b5bb9a-4e0b-4cac-8ebf-e5e015726723</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3F3F3570-E721-53F6-853F-37B7725AC6CB</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The key properties of the device.</para>
+        /// <para>The list of primary device attributes.</para>
         /// </summary>
         [NameInMap("ResourceDetailInfos")]
         [Validation(Required=false)]
         public List<RescaleDeviceServiceResponseBodyResourceDetailInfos> ResourceDetailInfos { get; set; }
         public class RescaleDeviceServiceResponseBodyResourceDetailInfos : TeaModel {
             /// <summary>
-            /// <para>The ID of the device.</para>
+            /// <para>The device ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>h-uf6009zoa6hdbjyqxcn1</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string ID { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the device.</para>
+            /// <para>The device IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.152.196.36</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string IP { get; set; }
 
             /// <summary>
-            /// <para>The Internet service provider (ISP) to which the device belongs.</para>
+            /// <para>The ISP of the device.</para>
             /// 
             /// <b>Example:</b>
             /// <para>telecom</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string ISP { get; set; }
 
             /// <summary>
-            /// <para>The media access control (MAC) address of the device.</para>
+            /// <para>The MAC address of the device.</para>
             /// 
             /// <b>Example:</b>
             /// <para>24:0B:88:04:71:E0</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Mac { get; set; }
 
             /// <summary>
-            /// <para>The ID of the edge node to which the device belongs.</para>
+            /// <para>The ID of the edge node where the device is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-chongqing-1</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string RegionID { get; set; }
 
             /// <summary>
-            /// <para>The name of the server on which the device is deployed.</para>
+            /// <para>The name of the server NC where the device is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ens-nc2</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Server { get; set; }
 
             /// <summary>
-            /// <para>The status of the device.</para>
+            /// <para>The device status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The type of the instance.</para>
+            /// <para>The device type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ens.ac6.large</para>

@@ -23,12 +23,18 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <para>The type of the resource.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>instance</description></item>
-        /// <item><description>eip</description></item>
-        /// <item><description>disk</description></item>
-        /// <item><description>network</description></item>
-        /// <item><description>natgateway</description></item>
-        /// <item><description>vswitch</description></item>
+        /// <item><description><para>instance</para>
+        /// </description></item>
+        /// <item><description><para>eip</para>
+        /// </description></item>
+        /// <item><description><para>disk</para>
+        /// </description></item>
+        /// <item><description><para>network</para>
+        /// </description></item>
+        /// <item><description><para>natgateway</para>
+        /// </description></item>
+        /// <item><description><para>vswitch</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

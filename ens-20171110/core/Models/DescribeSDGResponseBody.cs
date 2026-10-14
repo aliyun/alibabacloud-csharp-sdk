@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeSDGResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page for the current query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,21 +40,21 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the SDGs.</para>
+        /// <para>The list of SDG information.</para>
         /// </summary>
         [NameInMap("SDGs")]
         [Validation(Required=false)]
         public List<DescribeSDGResponseBodySDGs> SDGs { get; set; }
         public class DescribeSDGResponseBodySDGs : TeaModel {
             /// <summary>
-            /// <para>SDGs that have snapshots.</para>
+            /// <para>The list of edge zones where SDG snapshots exist.</para>
             /// </summary>
             [NameInMap("AvaliableRegionIds")]
             [Validation(Required=false)]
             public List<DescribeSDGResponseBodySDGsAvaliableRegionIds> AvaliableRegionIds { get; set; }
             public class DescribeSDGResponseBodySDGsAvaliableRegionIds : TeaModel {
                 /// <summary>
-                /// <para>The time when the SDG was created on the node.</para>
+                /// <para>The creation time of the SDG in the edge zone.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-02-27 15:13:26</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the node.</para>
+                /// <para>The edge zone ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-26</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the snapshot.</para>
+                /// <para>The snapshot ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sp-517qu0tgznrg622he7nf4wd7n</para>
@@ -84,13 +84,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string SnapshotId { get; set; }
 
                 /// <summary>
-                /// <para>The status of the SDG on the node. Valid values:</para>
+                /// <para>The status of the SDG in the edge zone. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>sdg_making</b></description></item>
-                /// <item><description><b>sdg_saving</b></description></item>
-                /// <item><description><b>sdg_copying</b></description></item>
-                /// <item><description><b>failed</b></description></item>
-                /// <item><description><b>success</b></description></item>
+                /// <item><description><b>sdg_making</b>: Being created.</description></item>
+                /// <item><description><b>sdg_saving</b>: Being saved.</description></item>
+                /// <item><description><b>sdg_copying</b>: Being synchronized across edge zones.</description></item>
+                /// <item><description><b>failed</b>: Creation failed.</description></item>
+                /// <item><description><b>success</b>: Creation succeeded.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -102,11 +102,19 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
             }
 
+            /// <summary>
+            /// <para>The billing cycle of the shared disk.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Day</para>
+            /// </summary>
             [NameInMap("BillingCycle")]
             [Validation(Required=false)]
             public string BillingCycle { get; set; }
 
             /// <summary>
+            /// <para>The billing type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Open</para>
             /// </summary>
@@ -114,12 +122,18 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public string BillingType { get; set; }
 
+            /// <summary>
+            /// <para>The disk type of the source disk used to create the SDG.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>standard</para>
+            /// </summary>
             [NameInMap("CreationDiskType")]
             [Validation(Required=false)]
             public string CreationDiskType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance on which the SDG is created.</para>
+            /// <para>The instance ID of the instance from which the SDG was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aic-5x20dyeos****</para>
@@ -129,7 +143,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string CreationInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the node on which the SDG is created.</para>
+            /// <para>The ID of the edge zone where the SDG was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-26</para>
@@ -139,7 +153,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string CreationRegionId { get; set; }
 
             /// <summary>
-            /// <para>The time when the first SDG in the node was created.</para>
+            /// <para>The time when the SDG was first created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-02-27 15:07:21</para>
@@ -152,14 +166,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <para>The description of the SDG.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Testing SDGs</para>
+            /// <para>Test SDG</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the source SDG from which you want to create an SDG. The value of this parameter is the value of the <b>FromSDGId</b> parameter that you need to specify when you call the <a href="https://help.aliyun.com/document_detail/608128.html">CreateSDG</a> operation.</para>
+            /// <para>The ID of the source SDG for incremental creation. This is the FromSDGId parameter specified when you called <a href="https://help.aliyun.com/document_detail/608128.html">CreateSDG</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sdg-xxxxx</para>
@@ -168,19 +182,25 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public string ParentSDGId { get; set; }
 
+            /// <summary>
+            /// <para>The sharing ratio of the SDG.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
             [NameInMap("PerformanceLevel")]
             [Validation(Required=false)]
             public string PerformanceLevel { get; set; }
 
             /// <summary>
-            /// <para>The preload information.</para>
+            /// <para>The preload configuration information.</para>
             /// </summary>
             [NameInMap("PreloadInfos")]
             [Validation(Required=false)]
             public List<DescribeSDGResponseBodySDGsPreloadInfos> PreloadInfos { get; set; }
             public class DescribeSDGResponseBodySDGsPreloadInfos : TeaModel {
                 /// <summary>
-                /// <para>The time when the SDG was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+                /// <para>The creation time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-02-16T06:18:40Z</para>
@@ -189,6 +209,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
+                /// <summary>
+                /// <para>The disk type of the redundant shared disks.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>standard</para>
+                /// </summary>
                 [NameInMap("DiskType")]
                 [Validation(Required=false)]
                 public string DiskType { get; set; }
@@ -204,7 +230,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string Namespace { get; set; }
 
                 /// <summary>
-                /// <para>The number of redundant replicas to quickly respond to shared mounts.</para>
+                /// <para>The number of redundant copies for fast shared mounting response.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -214,7 +240,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public int? RedundantNum { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the node.</para>
+                /// <para>The edge zone ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -224,7 +250,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The time when the status was last updated.</para>
+                /// <para>The most recent status update time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-01-22T08:17Z</para>
@@ -256,12 +282,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public long? Size { get; set; }
 
             /// <summary>
-            /// <para>The status of the SDG creation. Valid values:</para>
+            /// <para>The creation status of the SDG. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>sdg_making</b></description></item>
-            /// <item><description><b>sdg_saving</b></description></item>
-            /// <item><description><b>failed</b></description></item>
-            /// <item><description><b>success</b></description></item>
+            /// <item><description><b>sdg_making</b>: Being created.</description></item>
+            /// <item><description><b>sdg_saving</b>: Being saved.</description></item>
+            /// <item><description><b>failed</b>: Creation failed.</description></item>
+            /// <item><description><b>success</b>: Creation succeeded.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -284,7 +310,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The total number of returned entries.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>49</para>

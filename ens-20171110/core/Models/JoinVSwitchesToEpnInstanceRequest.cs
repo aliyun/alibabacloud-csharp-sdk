@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class JoinVSwitchesToEpnInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the edge network instance.</para>
+        /// <para>The edge-to-edge communication instance ID.</para>
+        /// <para>The NetworkingModel of the EPN instance must be Connection or SpeedUpAndConnection. The SpeedUp pattern does not allow you to associate vSwitches.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +22,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EPNInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The information about the internal networking to which you want to add the edge network instance.</para>
+        /// <para>The internal networking information to be added.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

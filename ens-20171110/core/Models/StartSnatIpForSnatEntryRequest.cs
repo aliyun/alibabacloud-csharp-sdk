@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>219.152.82.143</para>
+        /// <para>219.152.XX.XX</para>
         /// </summary>
         [NameInMap("SnatIp")]
         [Validation(Required=false)]

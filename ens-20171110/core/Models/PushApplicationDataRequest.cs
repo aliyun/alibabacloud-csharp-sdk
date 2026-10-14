@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class PushApplicationDataRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application.</para>
+        /// <para>The application ID.</para>
+        /// <para>Before calling this operation, activate the Edge Application Hosting service and create an application by calling CreateApplication. Obtain the AppId from the response of the CreateApplication operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +22,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The data files that you want to push. The value must be a JSON string.</para>
+        /// <para>The list of data files to be pre-pushed, in the string format of a JSON array.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +33,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>The push policy in the canary release environment. The value must be a JSON string. You can specify multiple push policies. By default, all data files are pushed.</para>
+        /// <para>The canary pre-push policy in JSON string format. Multiple distribution policies are supported. By default, all data is pre-pushed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;name\&quot;: \&quot;ScheduleToRegionId\&quot;,  \&quot;parameters\&quot;:{      \&quot;operator\&quot;: \&quot;In\&quot;,       \&quot;values\&quot;: [\&quot;cn-chegndu-telecom-4\&quot;, \&quot;cn-shanghai-cmcc-4\&quot;]  }}</para>
@@ -42,7 +43,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string PushStrategy { get; set; }
 
         /// <summary>
-        /// <para>This parameter does not take effect.</para>
+        /// <para>This parameter is invalid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1800</para>

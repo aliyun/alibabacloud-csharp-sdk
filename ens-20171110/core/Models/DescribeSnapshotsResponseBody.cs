@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeSnapshotsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number of the current query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,24 +40,24 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the snapshots.</para>
+        /// <para>The collection of snapshot details.</para>
         /// </summary>
         [NameInMap("Snapshots")]
         [Validation(Required=false)]
         public List<DescribeSnapshotsResponseBodySnapshots> Snapshots { get; set; }
         public class DescribeSnapshotsResponseBodySnapshots : TeaModel {
             /// <summary>
-            /// <para>The creation time. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The creation time. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ss format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2020-08-20T14:52:28Z</para>
+            /// <para>2020-08-20 14:52:28</para>
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the snapshot.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testDescription</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the edge node.</para>
+            /// <para>The ID of the ENS edge zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing-15</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string EnsRegionId { get; set; }
 
             /// <summary>
-            /// <para>The capacity of the disk. Unit: MiB.</para>
+            /// <para>The disk capacity. Unit: MiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>40</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Size { get; set; }
 
             /// <summary>
-            /// <para>The ID of the snapshot.</para>
+            /// <para>The snapshot ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>s-bp67acfmxazb4p****</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string SnapshotId { get; set; }
 
             /// <summary>
-            /// <para>The name of the snapshot. This parameter is returned only if a snapshot name was specified when the snapshot was created.</para>
+            /// <para>The display name of the snapshot. This field is returned if a display name was specified when the snapshot was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testSnapshotName</para>
@@ -107,12 +107,22 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string SnapshotName { get; set; }
 
             /// <summary>
-            /// <para>The type of the disk. Valid value:</para>
+            /// <para>The snapshot type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>manual</para>
+            /// </summary>
+            [NameInMap("SnapshotType")]
+            [Validation(Required=false)]
+            public string SnapshotType { get; set; }
+
+            /// <summary>
+            /// <para>The disk type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>cloud_efficiency: ultra disk</description></item>
-            /// <item><description>cloud_ssd: all-flash disk</description></item>
-            /// <item><description>local_hdd: local HDD</description></item>
-            /// <item><description>local_ssd: local SSD</description></item>
+            /// <item><description>cloud_efficiency: ultra cloud disk.</description></item>
+            /// <item><description>cloud_ssd: all-flash cloud disk.</description></item>
+            /// <item><description>local_hdd: local HDD.</description></item>
+            /// <item><description>local_ssd: local SSD.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -123,7 +133,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string SourceDiskCategory { get; set; }
 
             /// <summary>
-            /// <para>The ID of the source disk. This parameter is retained even after the source disk for which the snapshot was created is released.</para>
+            /// <para>The ID of the source cloud disk. This field is retained even if the source cloud disk of the snapshot has been released.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d-bp67acfmxazb4ph****</para>
@@ -133,10 +143,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string SourceDiskId { get; set; }
 
             /// <summary>
-            /// <para>The type of the disk. Valid value:</para>
+            /// <para>The disk property. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: system disk</description></item>
-            /// <item><description>2: data disk</description></item>
+            /// <item><description>1: system cloud disk.</description></item>
+            /// <item><description>2: data cloud disk.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -147,7 +157,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string SourceDiskType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the source edge node.</para>
+            /// <para>The ID of the source ENS edge zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-27</para>
@@ -167,12 +177,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string SourceSnapshotId { get; set; }
 
             /// <summary>
-            /// <para>The status of the snapshot. Valid value:</para>
+            /// <para>The snapshot status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>creating: The snapshot is being created.</description></item>
-            /// <item><description>Available: The snapshot is available.</description></item>
+            /// <item><description>available: The snapshot is available.</description></item>
             /// <item><description>deleting: The snapshot is being deleted.</description></item>
-            /// <item><description>error: An error occurred on the snapshot.</description></item>
+            /// <item><description>error: An error occurred.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

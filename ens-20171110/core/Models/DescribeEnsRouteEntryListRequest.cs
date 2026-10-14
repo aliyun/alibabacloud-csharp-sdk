@@ -32,9 +32,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The type of next hop of the custom route entry. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Instance (default): an ENS instance.</description></item>
-        /// <item><description>HaVip: a high-availability virtual IP address (HAVIP).</description></item>
-        /// <item><description>NetworkPeer: VPC peering connection.</description></item>
+        /// <item><description><para>Instance (default): an ENS instance.</para>
+        /// </description></item>
+        /// <item><description><para>HaVip: a high-availability virtual IP address (HAVIP).</para>
+        /// </description></item>
+        /// <item><description><para>NetworkPeer: VPC peering connection.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -87,8 +90,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The route type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Custom: custom route</description></item>
-        /// <item><description>System: system route</description></item>
+        /// <item><description><para>Custom: custom route</para>
+        /// </description></item>
+        /// <item><description><para>System: system route</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

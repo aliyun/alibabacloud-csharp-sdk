@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteFileSystemRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the edge node.</para>
+        /// <para>The edge zone ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file system that you want to delete.</para>
+        /// <para>The ID of the file system to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

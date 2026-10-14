@@ -16,24 +16,48 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public List<DescribeSDGDeploymentStatusResponseBodyDeploymentStatus> DeploymentStatus { get; set; }
         public class DescribeSDGDeploymentStatusResponseBodyDeploymentStatus : TeaModel {
+            /// <summary>
+            /// <para>The size of the writable layer for the block device. Unit: GiB. A value of 0 indicates that this feature is disabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
+            /// </summary>
             [NameInMap("BlockRwSplitSize")]
             [Validation(Required=false)]
             public int? BlockRwSplitSize { get; set; }
 
+            /// <summary>
+            /// <para>The cache size. Unit: GiB. A value of 0 indicates that this feature is disabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
+            /// </summary>
             [NameInMap("CacheSize")]
             [Validation(Required=false)]
             public int? CacheSize { get; set; }
 
+            /// <summary>
+            /// <para>The disk access protocol type of the mounted shared cloud disk.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>iscsi</para>
+            /// </summary>
             [NameInMap("DiskAccessProtocol")]
             [Validation(Required=false)]
             public string DiskAccessProtocol { get; set; }
 
+            /// <summary>
+            /// <para>The disk type of the mounted shared cloud disk.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>standard</para>
+            /// </summary>
             [NameInMap("DiskType")]
             [Validation(Required=false)]
             public string DiskType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the AIC instance.</para>
+            /// <para>The AIC instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aic-xxxx</para>
@@ -44,11 +68,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
             /// <summary>
             /// <para>The deployment type.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>overlay: read/write splitting.</description></item>
-            /// <item><description>common: common deployment.</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>overlay</para>
@@ -58,7 +77,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string MountType { get; set; }
 
             /// <summary>
-            /// <para>The deployment phase of the SDG.</para>
+            /// <para>The SDG deployment phase.</para>
             /// 
             /// <b>Example:</b>
             /// <para>attach</para>
@@ -68,7 +87,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Phase { get; set; }
 
             /// <summary>
-            /// <para>The ID of the edge node.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -79,12 +98,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
             /// <summary>
             /// <para>The deployment status of the SDG.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>sdg_deploying</description></item>
-            /// <item><description>success</description></item>
-            /// <item><description>failed</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -94,7 +107,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the status was last updated.</para>
+            /// <para>The time when the status was last updated. The time is displayed in the ISO 8601 UTC format (YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-02-17T02:44:31Z</para>
@@ -106,7 +119,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1</para>
+        /// <para>The page number. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -116,7 +129,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page in a paging query. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -136,7 +149,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of queried deployment records.</para>
+        /// <para>The total number of deployment records returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

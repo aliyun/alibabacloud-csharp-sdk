@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class GetOssStorageAndAccByBucketsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the bucket.</para>
+        /// <para>The bucket information.</para>
         /// </summary>
         [NameInMap("BucketList")]
         [Validation(Required=false)]
         public List<GetOssStorageAndAccByBucketsResponseBodyBucketList> BucketList { get; set; }
         public class GetOssStorageAndAccByBucketsResponseBodyBucketList : TeaModel {
             /// <summary>
-            /// <para>The number of times that the bucket is accessed.</para>
+            /// <para>The number of access requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public long? Acc { get; set; }
 
             /// <summary>
-            /// <para>The name of the bucket.</para>
+            /// <para>The OSS bucket name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-bucket</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Bucket { get; set; }
 
             /// <summary>
-            /// <para>The storage usage of the bucket. Unit: bytes.</para>
+            /// <para>The storage usage, in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024</para>

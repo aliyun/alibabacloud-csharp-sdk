@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class RemoveInstanceSDGResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned service code. 0 indicates that the request was successful.</para>
+        /// <para>The business code returned. A value of 0 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data object.</para>
+        /// <para>The returned Data object.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public RemoveInstanceSDGResponseBodyData Data { get; set; }
         public class RemoveInstanceSDGResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The response message. Success is returned for a successful request.</para>
+            /// <para>The response message. A value of success indicates a successful request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The execution result of the synchronization request.</para>
+            /// <para>The execution result of the synchronous request.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public long? FailedCount { get; set; }
 
                 /// <summary>
-                /// <para>Details about the failed tasks.</para>
+                /// <para>The list of failure details.</para>
                 /// </summary>
                 [NameInMap("FailedItems")]
                 [Validation(Required=false)]
                 public List<RemoveInstanceSDGResponseBodyDataResultFailedItems> FailedItems { get; set; }
                 public class RemoveInstanceSDGResponseBodyDataResultFailedItems : TeaModel {
                     /// <summary>
-                    /// <para>The error message that is returned.</para>
+                    /// <para>The error message.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>sdg not found</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     public string ErrMessage { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the instance.</para>
+                    /// <para>The instance ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>aic-xxxxx-0</para>
@@ -95,10 +95,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether all tasks are successful. Valid values:</para>
+            /// <para>Indicates whether all requests are successful. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: All tasks are successful.</description></item>
-            /// <item><description><b>false</b>: Failed tasks exist.</description></item>
+            /// <item><description><b>true</b>: All requests are successful.</description></item>
+            /// <item><description><b>false</b>: Some tasks failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

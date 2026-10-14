@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeAICImagesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the images.</para>
+        /// <para>The array of image information.</para>
         /// </summary>
         [NameInMap("Images")]
         [Validation(Required=false)]
         public List<DescribeAICImagesResponseBodyImages> Images { get; set; }
         public class DescribeAICImagesResponseBodyImages : TeaModel {
             /// <summary>
+            /// <para>The Android version of the image.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -25,10 +27,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string AndroidVersion { get; set; }
 
             /// <summary>
-            /// <para>The time when the image was created.</para>
+            /// <para>The time when the image was created, in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2022-09-22 10:54:34</para>
+            /// <para>2022-01-22 10:54:34</para>
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
@@ -38,14 +40,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <para>The description of the image.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Test operation of console</para>
+            /// <para>Console test operation</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The image ID of the AIC instance.</para>
+            /// <para>The ID of the Android in Container (AIC) image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>m-ad0ddaddc2d54adeaa09b7c0f1e****</para>
@@ -65,7 +67,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string ImageUrl { get; set; }
 
             /// <summary>
-            /// <para>The status of the image. <b>Available</b> is returned for this parameter. Available indicates that the image is available.</para>
+            /// <para>The image status. Valid values: <b>available</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>available</para>
@@ -75,7 +77,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The username of the image repository.</para>
+            /// <para>The repository username of the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user</para>
@@ -97,7 +99,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page for paging.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -108,7 +110,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>72DC6C0A-D9A8-5345-A2BE-FE354CC728A0</para>
@@ -118,7 +120,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

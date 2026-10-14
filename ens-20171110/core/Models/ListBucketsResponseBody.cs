@@ -19,9 +19,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The access control list (ACL) of the bucket.</para>
             /// <list type="bullet">
-            /// <item><description><b>public-read-write</b></description></item>
-            /// <item><description><b>public-read</b></description></item>
-            /// <item><description><b>private</b> (default)</description></item>
+            /// <item><description><para><b>public-read-write</b></para>
+            /// </description></item>
+            /// <item><description><para><b>public-read</b></para>
+            /// </description></item>
+            /// <item><description><para><b>private</b> (default)</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

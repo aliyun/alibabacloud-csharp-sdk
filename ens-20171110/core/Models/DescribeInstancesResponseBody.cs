@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned service code. 0 indicates that the request was successful.</para>
+        /// <para>The business code returned. A value of 0 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -416,7 +416,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the instance list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -426,7 +426,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page that was specified in the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -446,7 +446,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of instances returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

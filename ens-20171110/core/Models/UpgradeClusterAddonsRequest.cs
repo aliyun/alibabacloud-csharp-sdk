@@ -9,15 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class UpgradeClusterAddonsRequest : TeaModel {
+        /// <summary>
+        /// <para>The component information.</para>
+        /// </summary>
         [NameInMap("Addons")]
         [Validation(Required=false)]
         public List<UpgradeClusterAddonsRequestAddons> Addons { get; set; }
         public class UpgradeClusterAddonsRequestAddons : TeaModel {
+            /// <summary>
+            /// <para>The schema of the custom parameters for the component.</para>
+            /// </summary>
             [NameInMap("ConfigSchema")]
             [Validation(Required=false)]
             public List<UpgradeClusterAddonsRequestAddonsConfigSchema> ConfigSchema { get; set; }
             public class UpgradeClusterAddonsRequestAddonsConfigSchema : TeaModel {
                 /// <summary>
+                /// <para>The application version.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>4155709cd12a09bdb8cbaca71bf03233</para>
                 /// </summary>
@@ -26,6 +34,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string AppVersion { get; set; }
 
                 /// <summary>
+                /// <para>The configuration version.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>4155709cd12a09bdb8cbaca71bf03233</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string ConfigVersion { get; set; }
 
                 /// <summary>
+                /// <para>The component name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>edge-csi-lite</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>The custom parameters for the component.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;k1&quot;:&quot;v1&quot;}</para>
                 /// </summary>
@@ -52,6 +66,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             }
 
             /// <summary>
+            /// <para>The component name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>edge-csi-lite</para>
             /// </summary>
@@ -60,6 +76,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The target version for the upgrade.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>v2</para>
             /// </summary>
@@ -70,6 +88,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

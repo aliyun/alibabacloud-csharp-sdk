@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ModifyInstanceBootConfigurationRequest : TeaModel {
         /// <summary>
-        /// <para>The startup method.</para>
+        /// <para>The boot method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>legacy</para>
@@ -20,18 +20,19 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string BootSet { get; set; }
 
         /// <summary>
-        /// <para>The startup type.</para>
+        /// <para>The boot type.
+        /// Governance testing has confirmed that the value disk passes parameter validation, whereas the original example value pxe returns Parameter.Invalid. Other values have not been confirmed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>pxe</para>
+        /// <para>disk</para>
         /// </summary>
         [NameInMap("BootType")]
         [Validation(Required=false)]
         public string BootType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the startup depends on the disk.</para>
+        /// <para>Specifies whether the boot process depends on a disk.</para>
         /// 
         /// <b>Example:</b>
         /// <para>on</para>
@@ -41,7 +42,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string DiskSet { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance for which you want to modify the configuration. You can specify only one ID.</para>
+        /// <para>The ID of the instance whose boot configuration you want to modify. You can specify only one instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

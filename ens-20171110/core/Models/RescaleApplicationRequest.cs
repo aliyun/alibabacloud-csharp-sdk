@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class RescaleApplicationRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application. You can query the application ID by calling the ListApplications operation.</para>
+        /// <para>The application ID. You can obtain this value by calling the ListApplications operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,11 +21,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The level of resource scaling. The value is of the enumeration type. Valid values:</para>
+        /// <para>The level of the scaling region. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>AreaIspCode (default): scales resources based on the Internet service provider (ISP).</description></item>
-        /// <item><description>RegionId: scales resources based on the edge node.</description></item>
-        /// <item><description>InstanceId: scales resources based on the instance ID. Resource scale-out specifies resource hosting and scale-in specifies resource release.</description></item>
+        /// <item><description>AreaIspCode: region ISP.</description></item>
+        /// <item><description>RegionId: edge zone.</description></item>
+        /// <item><description>InstanceId: instance. Scale-out indicates resource hosting. Scale-in indicates resource release.</description></item>
         /// </list>
         /// <para>Default value: AreaIspCode.</para>
         /// 
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RescaleLevel { get; set; }
 
         /// <summary>
-        /// <para>The scaling operation. The value must be of the enumerated data type. Valid values:</para>
+        /// <para>The scaling action for resources. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Add: adds new resources.</description></item>
-        /// <item><description>Del: releases resources.</description></item>
+        /// <item><description>Add: Provisions new resources.</description></item>
+        /// <item><description>Del: Releases resources.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RescaleType { get; set; }
 
         /// <summary>
-        /// <para>The required resources. The value must be a JSON string.</para>
+        /// <para>The scaling resource requirements. The value is a string in JSON array format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ResourceSelector { get; set; }
 
         /// <summary>
-        /// <para>The timeout period for asynchronous scaling. Unit: seconds. Default value: 300.</para>
+        /// <para>The timeout period for asynchronous scaling, in seconds. Default value: 300.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1800</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? Timeout { get; set; }
 
         /// <summary>
-        /// <para>The version number of the application deployment package. By default, the stable version number is used. This parameter takes effect only when you perform resource scale-out.</para>
+        /// <para>The application deployment version for new resources. This parameter takes effect only when resources are added. Default value: the stable version number of the application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v2</para>

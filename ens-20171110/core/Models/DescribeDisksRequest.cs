@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeDisksRequest : TeaModel {
         /// <summary>
-        /// <para>The category of the disk.</para>
+        /// <para>The disk category.</para>
         /// <list type="bullet">
-        /// <item><description>cloud_efficiency: ultra disk.</description></item>
-        /// <item><description>cloud_ssd: all-flash disk.</description></item>
-        /// <item><description>local_hdd: local HDD.</description></item>
-        /// <item><description>local_ssd: local SSD.</description></item>
+        /// <item><description>cloud_efficiency: ultra cloud disk</description></item>
+        /// <item><description>cloud_ssd: all-flash cloud disk</description></item>
+        /// <item><description>local_hdd: local HDD</description></item>
+        /// <item><description>local_ssd: local SSD</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,10 +26,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>The billing method.</para>
+        /// <para>The billing type.</para>
         /// <list type="bullet">
-        /// <item><description>prePay: subscription.</description></item>
-        /// <item><description>postpay: pay-as-you-go.</description></item>
+        /// <item><description>prepay: subscription</description></item>
+        /// <item><description>postpay: pay-as-you-go</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string DiskChargeType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the disk.</para>
+        /// <para>The ID of the cloud disk.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-5soak1gqa507lyfzvz0xo****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the disk.</para>
+        /// <para>The disk IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[\&quot;d-wz99njena32z90ki****\&quot;]</para>
@@ -70,11 +70,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string DiskName { get; set; }
 
         /// <summary>
-        /// <para>The purchase method of the disk. Valid values:</para>
+        /// <para>The disk purchase method.</para>
         /// <list type="bullet">
-        /// <item><description>ServiceDisk: The disk is purchased when ENS is activated.</description></item>
-        /// <item><description>ResoureDisk: The disk is purchased when the instance is created.</description></item>
-        /// <item><description>PostPayDisk: The disk is separately purchased.</description></item>
+        /// <item><description>ServiceDisk: disk created by an edge service</description></item>
+        /// <item><description>ResoureDisk: purchased with an instance</description></item>
+        /// <item><description>PostPayDisk: purchased separately</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string DiskType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the edge node.</para>
+        /// <para>The ID of the ENS edge zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-kunming-telecom</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// <para>The node information.</para>
+        /// <para>The list of edge zones.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;cn-suzhou-telecom&quot;,&quot;cn-chengdu-telecom&quot;]</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance to which the disk is attached.</para>
+        /// <para>The instance to which the cloud disk is mounted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-5t77rb0yoz79m28ku60sx****</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The order in which you want to sort the returned data. Example: {&quot;EnsRegionId&quot;:&quot;desc&quot;}. By default, the nodes are sorted by IDs in descending order.</para>
+        /// <para>The sorting parameter. Format example: {&quot;EnsRegionId&quot;:&quot;desc&quot;}. By default, results are sorted by edge zone ID in descending order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{ &quot;DiskNameSort&quot;:&quot;desc&quot;,&quot;EnsRegionIdSort&quot;:&quot;asc&quot; }</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string OrderByParams { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Pages start from page <b>1</b>.</para>
+        /// <para>The page number of the query list. Minimum value: <b>1</b>.</para>
         /// <para>Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Maximum value: <b>50</b>.</para>
+        /// <para>The number of entries per page for a paged query. Maximum value: <b>50</b>.</para>
         /// <para>Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the snapshot.</para>
+        /// <para>The snapshot ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>s-897654321****</para>
@@ -157,17 +157,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string SnapshotId { get; set; }
 
         /// <summary>
-        /// <para>The status of the disk. Valid values:</para>
+        /// <para>The disk status.</para>
         /// <list type="bullet">
-        /// <item><description>In-use: The disk is in use.</description></item>
-        /// <item><description>Available: The disk can be attached.</description></item>
-        /// <item><description>Attaching: The disk is being attached.</description></item>
-        /// <item><description>Detaching: The disk is being detached.</description></item>
-        /// <item><description>Creating: The disk is being created.</description></item>
-        /// <item><description>ReIniting: The disk is being reset.</description></item>
-        /// <item><description>Deleting: The disk is being released.</description></item>
-        /// <item><description>Deleted: The disk is released.</description></item>
-        /// <item><description>Expiring: The disk is about to expire.</description></item>
+        /// <item><description>In-use: in use</description></item>
+        /// <item><description>Available: to be mounted</description></item>
+        /// <item><description>Attaching: being mounted</description></item>
+        /// <item><description>Detaching: being unmounted</description></item>
+        /// <item><description>Creating: being created</description></item>
+        /// <item><description>ReIniting: being reset</description></item>
+        /// <item><description>Deleting: being released</description></item>
+        /// <item><description>Deleted: released</description></item>
+        /// <item><description>Expiring: about to expire</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -178,10 +178,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The type of the disk. Valid values:</para>
+        /// <para>The disk property.</para>
         /// <list type="bullet">
-        /// <item><description>system: system disk.</description></item>
-        /// <item><description>data: data disk.</description></item>
+        /// <item><description>system: system cloud disk</description></item>
+        /// <item><description>data: data cloud disk</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

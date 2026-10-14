@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeClusterAttachScriptsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The cluster attachment script, Base64-encoded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Y2QgWnhiU0o=</para>
         /// </summary>

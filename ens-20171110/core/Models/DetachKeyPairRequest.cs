@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DetachKeyPairRequest : TeaModel {
         /// <summary>
-        /// <para>The instance IDs.</para>
+        /// <para>An array of instance IDs from which to detach the key pair.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The key pair ID.</para>
+        /// <para>The ID of the key pair.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ssh-xxx</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string KeyPairId { get; set; }
 
         /// <summary>
-        /// <para>The name of the SSH key pair.</para>
+        /// <para>The name of the key pair.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-kp</para>

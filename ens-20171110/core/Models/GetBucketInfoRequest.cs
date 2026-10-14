@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class GetBucketInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the bucket.</para>
+        /// <para>Bucket name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

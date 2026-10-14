@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateNetworkResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the network.</para>
+        /// <para>The network ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>n-5***</para>

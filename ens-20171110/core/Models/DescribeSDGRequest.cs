@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeSDGRequest : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of rows per page in a paging query.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The IDs of SDGs that you want to query. By default, all SDGs are queried.</para>
+        /// <para>The IDs of the SDGs to query. By default, all SDGs are queried.</para>
         /// </summary>
         [NameInMap("SDGIds")]
         [Validation(Required=false)]

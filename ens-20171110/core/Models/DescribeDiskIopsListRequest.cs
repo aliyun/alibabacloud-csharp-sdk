@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeDiskIopsListRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the disk. Format: d-\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em>\*.</para>
+        /// <para>The disk ID in the format of d-***********.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss. The time range specified by the StartTime and EndTime parameters cannot exceed one day for a query.</para>
+        /// <para>The end time in the format of yyyy-MM-dd HH:mm:ss. The time span between the start time and end time cannot exceed one day.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</para>
+        /// <para>The start time in the format of yyyy-MM-dd HH:mm:ss.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The token of the first page to query.</para>
+        /// <para>The token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>153ba0bbb2be03f84eb48b699f0a4123</para>
@@ -20,14 +20,15 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The IDs of resources. Valid values of N: 1 to 50.</para>
+        /// <para>The resource ID. Valid values of N: 1 to 50.</para>
+        /// <para>You must specify at least one of ResourceId and Tag. Otherwise, the MissingParameter.ResourceIdsOrTags error is returned.</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Set the value to instance.</para>
+        /// <para>The resource type. Valid values: instance (instance).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,17 +39,18 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The tag list.</para>
+        /// <para>You must specify at least one of ResourceId and Tag. Otherwise, the MissingParameter.ResourceIdsOrTags error is returned.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N of the instance. Valid values of N: <b>1</b> to <b>20</b>.</para>
+            /// <para>The tag key of the instance. Valid values of N: <b>1</b> to <b>20</b>.</para>
             /// <list type="bullet">
-            /// <item><description>The key cannot start with <c>aliyun</c>, <c>acs:</c>, <c>http://</c>, or <c>https://</c>.</description></item>
-            /// <item><description>The key must be up to 64 characters in length.</description></item>
+            /// <item><description>The tag key cannot start with <c>aliyun</c>, <c>acs:</c>, <c>http://</c>, or <c>https://</c>.</description></item>
+            /// <item><description>The tag key can be up to 64 characters in length.</description></item>
             /// <item><description>The tag key cannot be an empty string.</description></item>
             /// </list>
             /// 
@@ -60,11 +62,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of a tag that is attached to the topics you want to query. This parameter is not required. If you configure this parameter, you must also configure the <b>Key</b> parameter.**** If you include the Key and Value parameters in a request, this operation queries only the topics that use the specified tags. If you do not include these parameters in a request, this operation queries all topics that you can access.</para>
+            /// <para>The tag value of the topic. You must specify both <b>Key</b> and <b>Value</b> or neither. If both are specified, the system filters topics based on the tag. If neither is specified, all topics are queried.</para>
             /// <list type="bullet">
             /// <item><description>Valid values of N: 1 to 20.</description></item>
-            /// <item><description>The value of this parameter can be an empty string.</description></item>
-            /// <item><description>The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</description></item>
+            /// <item><description>The tag value can be an empty string.</description></item>
+            /// <item><description>The tag value can be up to 128 characters in length, and cannot start with aliyun or acs:, or contain http:// or https://.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

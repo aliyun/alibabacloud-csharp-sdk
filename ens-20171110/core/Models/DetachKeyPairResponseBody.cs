@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DetachKeyPairResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of instances to which the SSH key pair failed to be bound.</para>
+        /// <para>The number of instances for which the detach operation failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? FailCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SSH key pair.</para>
+        /// <para>The ID of the key pair.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ssh-xxx</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string KeyPairId { get; set; }
 
         /// <summary>
-        /// <para>The name of the SSH key pair.</para>
+        /// <para>The name of the key pair.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-kp</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The operation results.</para>
+        /// <para>The results of the operation for each instance.</para>
         /// </summary>
         [NameInMap("Results")]
         [Validation(Required=false)]
         public List<DetachKeyPairResponseBodyResults> Results { get; set; }
         public class DetachKeyPairResponseBodyResults : TeaModel {
             /// <summary>
-            /// <para>The status code of the operation. 200 indicates that the operation succeeded.</para>
+            /// <para>The status code for the operation on a specific instance. A value of <c>200</c> indicates a successful operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The message of the operation. If the value of the Code parameter is 200, the value of this parameter is successful.</para>
+            /// <para>The response message for the operation. If the <c>Code</c> is <c>200</c>, the message is <c>successful</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>successful</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the operation is successful.</para>
+            /// <para>Indicates whether the operation on the instance succeeded. Valid values: <c>true</c> and <c>false</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The total number of instances to which the SSH key pair is bound.</para>
+        /// <para>The total number of instances specified in the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

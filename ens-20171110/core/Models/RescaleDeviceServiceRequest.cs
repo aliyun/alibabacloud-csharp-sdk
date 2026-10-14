@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class RescaleDeviceServiceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application.</para>
+        /// <para>The application ID.</para>
+        /// <para>This parameter is required. If you do not specify this parameter, the service returns error code 100001. You can call ListApplications to obtain the application ID. To create an application, call CreateApplication first.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7aedc50b-b1cb-4a7c-9e3d-4cf3c9ee55a4</para>
@@ -20,7 +21,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the image.</para>
+        /// <para>The image ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>m-5rynw9g1ow1e928lb83bqmbnf</para>
@@ -30,10 +31,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The type of the network. The value must be of the enumerated data type. Valid values:</para>
+        /// <para>The network type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b> (default): Internet</description></item>
-        /// <item><description><b>2</b>: internal network</description></item>
+        /// <item><description><para><b>1</b> (default): Internet</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: internal network</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? IpType { get; set; }
 
         /// <summary>
-        /// <para>The region level of the scale-out. Set the value to RegionId. RegionId specifies that resource scale-out is performed based on the ID of the edge node.</para>
+        /// <para>The region level for scaling out resources. Valid values: RegionId (specifies an edge node ID).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +58,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RescaleLevel { get; set; }
 
         /// <summary>
-        /// <para>The scaling operation. Set the value to Add to add new resources.</para>
+        /// <para>The resource scaling method. Valid values: Add (provisions new resources).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,7 +69,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RescaleType { get; set; }
 
         /// <summary>
-        /// <para>The information about the resource specification template. The value must be a JSON string.</para>
+        /// <para>The resource specification template information. The value is a string in JSON format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;imageId\&quot;:\&quot;m-5s4z4c10avgwvwtn33gl2vgob\&quot;,\&quot;ipType\&quot;:2,\&quot;specName\&quot;:\&quot;ens.pfb-c3m7.medium\&quot;}</para>
@@ -76,7 +79,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ResourceInfo { get; set; }
 
         /// <summary>
-        /// <para>The required resources. The value must be a JSON string.</para>
+        /// <para>The region requirements for scaling out resources. The value is a string in JSON array format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -87,7 +90,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ResourceSelector { get; set; }
 
         /// <summary>
-        /// <para>The resource specification.</para>
+        /// <para>The resource specification name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ens.a6e.large</para>
@@ -97,7 +100,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ResourceSpec { get; set; }
 
         /// <summary>
-        /// <para>The ID of the service.</para>
+        /// <para>The service ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>service-01c6dd6e93f040698566</para>
@@ -107,7 +110,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// <para>The timeout period for asynchronous scale-out. Unit: seconds. Default value: 300.</para>
+        /// <para>The timeout period for asynchronous resource scaling, in seconds. Default value: 300.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1800</para>

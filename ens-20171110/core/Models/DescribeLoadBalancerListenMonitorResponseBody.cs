@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <para>The virtual IP address (VIP) of the instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>10.8.<em>.</em></para>
+            /// <para>10.8.****</para>
             /// </summary>
             [NameInMap("Vip")]
             [Validation(Required=false)]

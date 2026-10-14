@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeSecondaryPublicIpAddressesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the edge node.</para>
+        /// <para>The ID of the ENS edge zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-44</para>
@@ -19,12 +19,15 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string EnsRegionId { get; set; }
 
+        /// <summary>
+        /// <para>The array of ENS edge zone IDs. Array length: 1 to 100.</para>
+        /// </summary>
         [NameInMap("EnsRegionIds")]
         [Validation(Required=false)]
         public List<string> EnsRegionIds { get; set; }
 
         /// <summary>
-        /// <para>The Internet service provider. Valid values:</para>
+        /// <para>The Internet service provider (ISP). Valid values:</para>
         /// <list type="bullet">
         /// <item><description>cmcc: China Mobile.</description></item>
         /// <item><description>unicom: China Unicom.</description></item>
@@ -39,7 +42,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Isp { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -49,7 +52,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>The number of entries per page for paging queries. Maximum value: 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -59,7 +62,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The secondary IP address.</para>
+        /// <para>The secondary public IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12.XXX.XXX.4</para>

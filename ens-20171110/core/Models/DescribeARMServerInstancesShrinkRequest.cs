@@ -10,17 +10,19 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeARMServerInstancesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The container specifications.</para>
+        /// <para>The list of container specifications.</para>
         /// </summary>
         [NameInMap("AICSpecs")]
         [Validation(Required=false)]
         public string AICSpecsShrink { get; set; }
 
         /// <summary>
-        /// <para>Spcifies whether the result contains the container information. Valid values:</para>
+        /// <para>Specifies whether the query results include container information. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: Included.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Not included.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -31,14 +33,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public bool? DescribeAICInstances { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the Edge Node Service (ENS) nodes.</para>
+        /// <para>The list of ENS edge zone IDs.</para>
         /// </summary>
         [NameInMap("EnsRegionIds")]
         [Validation(Required=false)]
         public string EnsRegionIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</para>
+        /// <para>The end time of the query. Format: &quot;2006-01-02&quot;. By default, no time limit is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2006-01-03</para>
@@ -48,7 +50,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string MaxDate { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</para>
+        /// <para>The start time of the query. Format: &quot;2006-01-02&quot;. By default, no time limit is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2006-01-02</para>
@@ -58,7 +60,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string MinDate { get; set; }
 
         /// <summary>
-        /// <para>The name of the server.</para>
+        /// <para>The server name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Server-Name</para>
@@ -78,18 +80,18 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The sorting order of the results to return. Valid values: ServerIdSort, ServerNameSort, ExpireTimeSort, CreationTimeSort, and EnsRegionIdSort.</para>
-        /// <para>asc: ascending order. desc: descending order.</para>
+        /// <para>The sorting method for query results. You can sort results by one or more of the following fields: ServerIdSort (server ID), ServerNameSort (server name), ExpireTimeSort (expiration time), CreationTimeSort (creation time), and EnsRegionIdSort (edge zone ID).</para>
+        /// <para>Valid values: asc (ascending order) and desc (descending order).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;ServerIdSort&quot;:&quot;desc&quot;,&quot;ServerNameSort&quot;:&quot;desc&quot;,&quot;ExpireTimeSort&quot;:&quot;asc&quot;,&quot;CreationTimeSort&quot;:&quot;asc&quot;,&quot;EnsRegionIdSort&quot;:&quot;asc&quot;}</para>
+        /// <para>{&quot;ServerIdSort&quot;:&quot;desc&quot;,&quot;ServerNameSort&quot;:&quot;desc&quot;,&quot;ExpireTimeSort&quot;:&quot;asc&quot;}</para>
         /// </summary>
         [NameInMap("OrderByParams")]
         [Validation(Required=false)]
         public string OrderByParams { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page <b>1</b>.</para>
+        /// <para>The page number of the query list. Minimum value: <b>1</b>.</para>
         /// <para>Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -100,7 +102,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Maximum value: <b>100</b>.</para>
+        /// <para>The number of entries per page for a paged query. Maximum value: <b>100</b>.</para>
         /// <para>Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -111,26 +113,29 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the ARM servers.</para>
+        /// <para>The list of server instance IDs.</para>
         /// </summary>
         [NameInMap("ServerIds")]
         [Validation(Required=false)]
         public string ServerIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The server specifications.</para>
+        /// <para>The list of server specifications.</para>
         /// </summary>
         [NameInMap("ServerSpecs")]
         [Validation(Required=false)]
         public string ServerSpecsShrink { get; set; }
 
         /// <summary>
-        /// <para>The operation statuses.</para>
+        /// <para>The list of operation states.</para>
         /// </summary>
         [NameInMap("States")]
         [Validation(Required=false)]
         public string StatesShrink { get; set; }
 
+        /// <summary>
+        /// <para>The list of tags.</para>
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string TagsShrink { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class InitializeENSECKServiceRoleResponseBody : TeaModel {
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>F3B261DD-3858-4D3C-877D-303ADF374600</para>

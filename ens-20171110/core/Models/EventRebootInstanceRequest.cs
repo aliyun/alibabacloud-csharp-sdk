@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class EventRebootInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the system event.</para>
+        /// <para>The ID of the system Event.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EventId { get; set; }
 
         /// <summary>
-        /// <para>The type of the O\&amp;M task. Valid values:</para>
+        /// <para>The type of the operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>immediate</description></item>
-        /// <item><description>scheduled</description></item>
+        /// <item><description><para>immediate: Executes the operation immediately.</para>
+        /// </description></item>
+        /// <item><description><para>scheduled: Executes the operation at the specified time.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -36,7 +38,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string OpsType { get; set; }
 
         /// <summary>
-        /// <para>The execution time of the reservation. The timestamp is measured in milliseconds. If the OpsType parameter is set to scheduled, this parameter is required.</para>
+        /// <para>The scheduled execution time, as a Timestamp in milliseconds. This parameter is required when OpsType is set to scheduled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1742452232000</para>
@@ -45,12 +47,15 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public long? PlanTime { get; set; }
 
+        /// <summary>
+        /// <para>Reserved parameter.</para>
+        /// </summary>
         [NameInMap("PlanUtcTime")]
         [Validation(Required=false)]
         public string PlanUtcTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource.</para>
+        /// <para>The ID of the Resource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

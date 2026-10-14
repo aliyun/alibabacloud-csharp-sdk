@@ -10,37 +10,37 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class AssociateEnsEipAddressRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the EIP that you want to associate.</para>
+        /// <para>The ID of the EIP to be associated.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>eip-5sc1sgcrsrwgwdvx44hru3p63</para>
+        /// <para>eip-5sc1sgcrsrwgwdvx44hru****</para>
         /// </summary>
         [NameInMap("AllocationId")]
         [Validation(Required=false)]
         public string AllocationId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud service with which the EIP is associated.</para>
+        /// <para>The ID of the cloud product instance to attach the EIP to.</para>
         /// <remarks>
-        /// <para> You can specify the ID of an Edge Load Balancer (ELB) instance ID.</para>
+        /// <para>Load balancing (ELB) instance IDs are supported.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>lb-5saivuir6b1mupxjfbhmk1xkb</para>
+        /// <para>lb-5saivuir6b1mupxjfbhmk****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of instance with which you want to associate the EIP. Valid values:</para>
+        /// <para>The type of the EIP instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Nat</b>: NAT gateway.</description></item>
-        /// <item><description><b>SlbInstance</b>: Edge Load Balancer (ELB) instance.</description></item>
-        /// <item><description><b>NetworkInterface</b>: secondary elastic network interface (ENI).</description></item>
-        /// <item><description><b>NatSlbInstance</b>: If you want to associate multiple EIPs with an ELB instance, you need to set the parameter to this value.</description></item>
+        /// <item><description><b>SlbInstance</b>: load balancing (ELB).</description></item>
+        /// <item><description><b>NetworkInterface</b>: secondary network interface controller (NIC).</description></item>
+        /// <item><description><b>NatSlbInstance</b>: select this value when attaching multiple EIPs to an ELB.</description></item>
         /// <item><description><b>EnsInstance</b> (default): ENS instance.</description></item>
         /// </list>
         /// 
@@ -52,10 +52,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the EIP is a secondary EIP. Valid values:</para>
+        /// <para>Specifies whether the EIP is a standby EIP. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: standby.</para>
+        /// </description></item>
+        /// <item><description><para>false: not standby.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

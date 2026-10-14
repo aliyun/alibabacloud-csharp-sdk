@@ -23,7 +23,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <para>The destination CIDR block. The rule takes effect only on requests that access the destination CIDR block.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>101.10. XX.XX/24</para>
+        /// <ol start="101">
+        /// <item><description>XXX. XXX.0/24</description></item>
+        /// </ol>
         /// </summary>
         [NameInMap("DestCIDR")]
         [Validation(Required=false)]
@@ -32,11 +34,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>Specifies whether to enable IP affinity. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b></description></item>
-        /// <item><description><b>true</b></description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> After you enable IP affinity, if multiple EIPs are associated with an SNAT entry, one client uses the same EIP to for communication. If IP affinity is disabled, the client uses a random EIP for communication.</para>
+        /// <para>After you enable IP affinity, if multiple EIPs are associated with an SNAT entry, one client uses the same EIP to for communication. If IP affinity is disabled, the client uses a random EIP for communication.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -59,8 +63,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>Whether to enable operator affinity. Value taking:</para>
         /// <list type="bullet">
-        /// <item><description>false:Do not open.</description></item>
-        /// <item><description>true:Open.</description></item>
+        /// <item><description><para>false:Do not open.</para>
+        /// </description></item>
+        /// <item><description><para>true:Open.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -114,7 +120,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <para>The EIP specified in the SNAT entry. Multiple EIPs are separated by commas (,).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>120.72.XX.XX</para>
+        /// <ol start="120">
+        /// <item><description>XXX. XXX.71</description></item>
+        /// </ol>
         /// </summary>
         [NameInMap("SnatIp")]
         [Validation(Required=false)]
@@ -141,7 +149,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <para>The IP address.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>203.132.XX.XX</para>
+            /// <ol start="203">
+            /// <item><description>XXX. XXX.139</description></item>
+            /// </ol>
             /// </summary>
             [NameInMap("Ip")]
             [Validation(Required=false)]
@@ -150,11 +160,16 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The status of the IP address.</para>
             /// <list type="bullet">
-            /// <item><description>Running</description></item>
-            /// <item><description>Stopping</description></item>
-            /// <item><description>Stopped</description></item>
-            /// <item><description>Starting</description></item>
-            /// <item><description>Releasing</description></item>
+            /// <item><description><para>Running</para>
+            /// </description></item>
+            /// <item><description><para>Stopping</para>
+            /// </description></item>
+            /// <item><description><para>Stopped</para>
+            /// </description></item>
+            /// <item><description><para>Starting</para>
+            /// </description></item>
+            /// <item><description><para>Releasing</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -170,7 +185,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <para>The source CIDR block specified in the SNAT entry.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10.0.XX.XX/24</para>
+        /// <ol start="10">
+        /// <item><description>XXX. XXX.0/24</description></item>
+        /// </ol>
         /// </summary>
         [NameInMap("SourceCIDR")]
         [Validation(Required=false)]
@@ -180,7 +197,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <para>The secondary EIP specified in the SNAT entry. Multiple secondary EIPs are separated by commas (,).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>101.23. XX.XX</para>
+        /// <ol start="101">
+        /// <item><description>XXX. XXX.4</description></item>
+        /// </ol>
         /// </summary>
         [NameInMap("StandbySnatIp")]
         [Validation(Required=false)]
@@ -189,10 +208,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The status of the secondary EIP.</para>
         /// <list type="bullet">
-        /// <item><description>Running</description></item>
-        /// <item><description>Stopping</description></item>
-        /// <item><description>Stopped</description></item>
-        /// <item><description>Starting</description></item>
+        /// <item><description><para>Running</para>
+        /// </description></item>
+        /// <item><description><para>Stopping</para>
+        /// </description></item>
+        /// <item><description><para>Stopped</para>
+        /// </description></item>
+        /// <item><description><para>Starting</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -205,9 +228,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The status of the SNAT entry.</para>
         /// <list type="bullet">
-        /// <item><description>Pending: The SNAT entry is being created or modified.</description></item>
-        /// <item><description>Available: The SNAT entry is available.</description></item>
-        /// <item><description>Deleting: The SNAT entry is being deleted.</description></item>
+        /// <item><description><para>Pending: The SNAT entry is being created or modified.</para>
+        /// </description></item>
+        /// <item><description><para>Available: The SNAT entry is available.</para>
+        /// </description></item>
+        /// <item><description><para>Deleting: The SNAT entry is being deleted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -220,8 +246,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The type of the NAT.</para>
         /// <list type="bullet">
-        /// <item><description>Empty: symmetric NAT.</description></item>
-        /// <item><description>FullCone: full cone NAT.</description></item>
+        /// <item><description><para>Empty: symmetric NAT.</para>
+        /// </description></item>
+        /// <item><description><para>FullCone: full cone NAT.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

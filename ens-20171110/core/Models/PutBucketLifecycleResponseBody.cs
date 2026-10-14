@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class PutBucketLifecycleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>62373E71-5521-4620-8AAB-133CCE49357A</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the rule.</para>
+        /// <para>The rule ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b8f93xxxxx4881xxxxxc71d991</para>

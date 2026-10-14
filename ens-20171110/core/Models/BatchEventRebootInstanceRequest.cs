@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class BatchEventRebootInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The details of events.</para>
+        /// <para>The list of events.</para>
         /// </summary>
         [NameInMap("EventInfos")]
         [Validation(Required=false)]
         public List<BatchEventRebootInstanceRequestEventInfos> EventInfos { get; set; }
         public class BatchEventRebootInstanceRequestEventInfos : TeaModel {
             /// <summary>
-            /// <para>The ID of the system event.</para>
+            /// <para>The system event ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>e-4452cec5a8f8eb9b2879a054207687d6</para>
@@ -27,10 +27,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string EventId { get; set; }
 
             /// <summary>
-            /// <para>The type of the O\&amp;M task.</para>
+            /// <para>The O&amp;M task type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>immediate</description></item>
-            /// <item><description>scheduled</description></item>
+            /// <item><description><para>immediate: immediate execution.</para>
+            /// </description></item>
+            /// <item><description><para>scheduled: scheduled execution.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +43,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string OpsType { get; set; }
 
             /// <summary>
-            /// <para>The execution time of the reservation. The timestamp is measured in milliseconds. If the OpsType parameter is set to scheduled, this parameter is required.</para>
+            /// <para>The scheduled execution time. The value is a timestamp in milliseconds. This parameter is required when OpsType is set to scheduled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1742452232000</para>
@@ -55,7 +57,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string PlanUtcTime { get; set; }
 
             /// <summary>
-            /// <para>A client ID.</para>
+            /// <para>The resource ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>n-54hi3ffi63zrjt4wzx9mepeyh</para>

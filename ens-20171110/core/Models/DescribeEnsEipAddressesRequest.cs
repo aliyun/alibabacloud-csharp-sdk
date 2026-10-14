@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeEnsEipAddressesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the EIP that you want to query. You can specify up to 50 EIP IDs. Separate multiple IDs with commas (,).</para>
+        /// <para>The ID of the EIP instance to query. You can specify up to 50 EIP instance IDs separated by commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>eip-5q9uwkd9bznjpxz8hr6cirnjk</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string AllocationId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance with which you want to associate the EIP.</para>
+        /// <para>The instance ID of the cloud service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lb-5t18quoohsrc3xkf86spmnu77</para>
@@ -30,10 +30,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string AssociatedInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the instance that is associated with the EIP. Valid values:</para>
+        /// <para>The type of the cloud service instance to associate. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><b>EnsInstance</b>: ENS instance in a VPC</description></item>
-        /// <item><description><b>SlbInstance</b>: SLB instance</description></item>
+        /// <item><description><para><b>EnsInstance</b>: a VPC-type ENS instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>SlbInstance</b>: a load balancing instance.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,10 +46,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string AssociatedInstanceType { get; set; }
 
         /// <summary>
-        /// <para>The EIP that you want to query. You can specify up to 50 EIPs. Separate multiple EIPs with commas (,).</para>
+        /// <para>The IP address of the EIP to query. You can specify up to 50 EIP addresses separated by commas (,).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>192.168.0.1</para>
+        /// <para>120.XXX.XXX.4</para>
         /// </summary>
         [NameInMap("EipAddress")]
         [Validation(Required=false)]
@@ -64,7 +66,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EipName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Edge Node Service (ENS) node.</para>
+        /// <para>The ENS edge zone ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-chengdu-telecom</para>
@@ -74,17 +76,32 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of edge nodes. You can specify 1 to 100 IDs.</para>
+        /// <para>The array of ENS edge zone IDs. Array length: 1 to 100.</para>
         /// </summary>
         [NameInMap("EnsRegionIds")]
         [Validation(Required=false)]
         public List<string> EnsRegionIds { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether ICMP echo reply is enabled. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b> (default): enabled.</description></item>
+        /// <item><description><b>false</b>: disabled.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("IcmpReplyEnabled")]
         [Validation(Required=false)]
         public bool? IcmpReplyEnabled { get; set; }
 
         /// <summary>
+        /// <para>The lock type.</para>
+        /// <list type="bullet">
+        /// <item><description>financial: locked due to overdue payment.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>financial</para>
         /// </summary>
@@ -93,7 +110,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string LockReason { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The page number of the list. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -103,7 +120,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 100. Default value: 10.</para>
+        /// <para>The number of entries per page for a paged query. Maximum value: 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -113,10 +130,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the EIP is a secondary EIP. Valid values:</para>
+        /// <para>Specifies whether the EIP is a standby EIP. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: standby.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: not standby.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -126,6 +145,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string Standby { get; set; }
 
+        /// <summary>
+        /// <para>The status of the EIP. Valid values: Associating: being associated. Unassociating: being disassociated. InUse: allocated. Available: available.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>InUse</para>
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }

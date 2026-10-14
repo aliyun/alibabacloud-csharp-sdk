@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ScaleClusterNodePoolShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The HTTP request body.</para>
+        /// </summary>
         [NameInMap("Body")]
         [Validation(Required=false)]
         public string BodyShrink { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +28,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The node pool ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

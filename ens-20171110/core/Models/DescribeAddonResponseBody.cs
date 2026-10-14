@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeAddonResponseBody : TeaModel {
         /// <summary>
+        /// <para>The add-on information.</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>false</c>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public List<DescribeAddonResponseBodyAddons> Addons { get; set; }
         public class DescribeAddonResponseBodyAddons : TeaModel {
             /// <summary>
+            /// <para>Indicates whether associated cloud resources are automatically cleaned up.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public string CleanupCloudResources { get; set; }
 
+            /// <summary>
+            /// <para>The schema of custom parameters for the add-on.</para>
+            /// </summary>
             [NameInMap("ConfigSchema")]
             [Validation(Required=false)]
             public List<DescribeAddonResponseBodyAddonsConfigSchema> ConfigSchema { get; set; }
             public class DescribeAddonResponseBodyAddonsConfigSchema : TeaModel {
                 /// <summary>
+                /// <para>The application version.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>859e9d595b2974ed79c444658d1dea89</para>
                 /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string AppVersion { get; set; }
 
                 /// <summary>
+                /// <para>The configuration version.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>4155709cd12a09bdb8cbaca71bf03233</para>
                 /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string ConfigVersion { get; set; }
 
                 /// <summary>
+                /// <para>The name of the add-on.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>edge-csi-lite</para>
                 /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>The custom parameters of the add-on.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;key1&quot;:&quot;val1&quot;}</para>
                 /// </summary>
@@ -64,6 +79,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             }
 
             /// <summary>
+            /// <para>The name of the add-on.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>edge-csi-lite</para>
             /// </summary>
@@ -72,6 +89,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The add-on version.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>v1</para>
             /// </summary>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ModifyInstanceChargeTypeShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable auto-payment when you change the billing method from pay-as-you-go to subscription. Valid values:</para>
-        /// <para>true: enables auto-payment. Make sure that your account has sufficient balance.</para>
-        /// <para>false (default): does not enable auto-payment. The order is generated but not paid.</para>
+        /// <para>Specifies whether to automatically complete the payment when you switch the billing method of the instance from pay-as-you-go to subscription. Valid values:</para>
+        /// <para>true: The payment is automatically completed. Make sure that your account balance is sufficient.</para>
+        /// <para>false: Only an order is generated but no payment is made. This is the default value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -22,9 +22,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal when you change the billing method from pay-as-you-go to subscription. Valid values:</para>
-        /// <para>true: enables auto-renewal for the instance.</para>
-        /// <para>false</para>
+        /// <para>Specifies whether to enable auto-renewal when converting the instance from pay-as-you-go to subscription. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Auto-renewal is enabled.</description></item>
+        /// <item><description>false: Auto-renewal is not enabled (default).</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -33,14 +35,18 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
 
+        /// <summary>
+        /// <para>The billing cycle. Valid values: Month, Day, and Hour.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Month</para>
+        /// </summary>
         [NameInMap("BillingCycle")]
         [Validation(Required=false)]
         public string BillingCycle { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to change the billing method of all data disks that are created with the instance to subscription when you change the billing method of the instance from pay-as-you-go to subscription. Valid values:</para>
-        /// <para>true</para>
-        /// <para>false (default)</para>
+        /// <para>Specifies whether to convert all pay-as-you-go data cloud disks created with the instance to subscription data cloud disks when converting an instance-level pay-as-you-go instance to a subscription instance. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,9 +56,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public bool? IncludeDataDisks { get; set; }
 
         /// <summary>
-        /// <para>The new billing method. Valid values:</para>
-        /// <para>PrePaid</para>
-        /// <para>PostPaid (default)</para>
+        /// <para>The target billing method of the instance. Valid values:</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +67,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the instances.</para>
+        /// <para>The list of instance IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
@@ -71,9 +75,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration. This parameter is required if you set the InstanceChargeType parameter to PrePaid. Valid values:</para>
-        /// <para>If the PeriodUnit parameter is set to Day, Period can only be set to 3.</para>
-        /// <para>If PeriodUnit is Month, Period can be set to 1 to 9 or 12.</para>
+        /// <para>The subscription duration when converting a pay-as-you-go instance to subscription. This parameter is required in this scenario. Valid values:</para>
+        /// <para>If PeriodUnit is set to Day, Period can only be set to 3.</para>
+        /// <para>If PeriodUnit is set to Month, Period can be set to 1-9 or 12.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -83,9 +87,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription duration. This parameter is required if you set the InstanceChargeType parameter to PrePaid. Valid values:</para>
-        /// <para>Month</para>
-        /// <para>Day</para>
+        /// <para>The unit of the subscription duration when converting an instance-level pay-as-you-go instance to a subscription instance. This parameter is required in this scenario. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>

@@ -52,9 +52,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The protocol. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>TCP</b>: forwards TCP packets.</description></item>
-        /// <item><description><b>UDP</b>: forwards UDP packets.</description></item>
-        /// <item><description><b>Any</b>: forwards all packets.</description></item>
+        /// <item><description><para><b>TCP</b>: forwards TCP packets.</para>
+        /// </description></item>
+        /// <item><description><para><b>UDP</b>: forwards UDP packets.</para>
+        /// </description></item>
+        /// <item><description><para><b>Any</b>: forwards all packets.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

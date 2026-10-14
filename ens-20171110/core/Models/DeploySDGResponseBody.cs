@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeploySDGResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data object.</para>
+        /// <para>The returned Data object.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DeploySDGResponseBodyData Data { get; set; }
         public class DeploySDGResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The response message. Success is returned for a successful request.</para>
+            /// <para>The response message. A value of success indicates a successful request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public long? FailedCount { get; set; }
 
                 /// <summary>
-                /// <para>Details of failed tasks.</para>
+                /// <para>The list of failed task details.</para>
                 /// </summary>
                 [NameInMap("FailedItems")]
                 [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     public string ErrMessage { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the instance.</para>
+                    /// <para>The instance ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>aic-xxxxx-0</para>
@@ -85,10 +85,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether all tasks are successful. Valid values:</para>
+            /// <para>Indicates whether all requests are successful. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: All tasks are successful.</description></item>
-            /// <item><description>false: Failed tasks exist.</description></item>
+            /// <item><description>true: All successful.</description></item>
+            /// <item><description>false: Some tasks failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A331CA96-3948-4BD2-B067-F6174F5C17EA</para>

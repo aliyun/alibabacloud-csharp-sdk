@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The cookie that is configured on the server. The cookie must be <b>1</b> to <b>200</b> characters in length and contain only ASCII characters and digits.</para>
         /// <remarks>
-        /// <para> This parameter is required if you set StickySession to on and StickySessionType to server.</para>
+        /// <para>This parameter is required if you set StickySession to on and StickySessionType to server.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The timeout period of a cookie. Valid values: <b>1</b> to <b>86400</b>. Unit: seconds.</para>
         /// <remarks>
-        /// <para> This parameter is required if you set StickySession to on and StickySessionType to insert.</para>
+        /// <para>This parameter is required if you set StickySession to on and StickySessionType to insert.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -48,11 +48,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The description of the listener. The description must be <b>1</b> to <b>80</b> characters in length.</para>
         /// <remarks>
-        /// <para> The value cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The value cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>https_80</para>
+        /// <para>Listener description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -71,8 +71,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>Indicates whether the health check feature is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b></description></item>
-        /// <item><description><b>off</b></description></item>
+        /// <item><description><para><b>on</b></para>
+        /// </description></item>
+        /// <item><description><para><b>off</b></para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -86,7 +88,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The port that is used for health checks. Valid values: <b>1</b> to <b>65535</b>. If you leave this parameter empty, the port specified by BackendServerPort is used for health checks.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only if you set HealthCheck to on.</para>
+        /// <para>This parameter takes effect only if you set HealthCheck to on.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -99,7 +101,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The domain name that you want to use for health checks.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only if you set HealthCheck to on.</para>
+        /// <para>This parameter takes effect only if you set HealthCheck to on.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -112,13 +114,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The HTTP status code for a successful health check. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>http_2xx</b> (default)</description></item>
-        /// <item><description><b>http_3xx</b></description></item>
-        /// <item><description><b>http_4xx</b></description></item>
-        /// <item><description><b>http_5xx</b></description></item>
+        /// <item><description><para><b>http_2xx</b> (default)</para>
+        /// </description></item>
+        /// <item><description><para><b>http_3xx</b></para>
+        /// </description></item>
+        /// <item><description><para><b>http_4xx</b></para>
+        /// </description></item>
+        /// <item><description><para><b>http_5xx</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter takes effect only if you set HealthCheck to on.</para>
+        /// <para>This parameter takes effect only if you set HealthCheck to on.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -131,7 +137,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The interval at which health checks are performed. Valid values: <b>1</b> to <b>50</b>. Default value: <b>2</b>. Unit: seconds.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only if you set HealthCheck to on.</para>
+        /// <para>This parameter takes effect only if you set HealthCheck to on.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -144,11 +150,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The HTTP request method for health checks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>head</b> (default): requests the head of the page.</description></item>
-        /// <item><description><b>get</b>: requests the specified part of the page and returns the entity body.</description></item>
+        /// <item><description><para><b>head</b> (default): requests the head of the page.</para>
+        /// </description></item>
+        /// <item><description><para><b>get</b>: requests the specified part of the page and returns the entity body.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter takes effect only if the HealthCheck parameter is set to on.</para>
+        /// <para>This parameter takes effect only if the HealthCheck parameter is set to on.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -161,9 +169,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails to pass the health check.</para>
         /// <list type="bullet">
-        /// <item><description>Default value: 5.</description></item>
-        /// <item><description>Valid values: <b>1</b> to <b>300</b>.</description></item>
-        /// <item><description>Unit: seconds.</description></item>
+        /// <item><description><para>Default value: 5.</para>
+        /// </description></item>
+        /// <item><description><para>Valid values: <b>1</b> to <b>300</b>.</para>
+        /// </description></item>
+        /// <item><description><para>Unit: seconds.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// </remarks>
@@ -184,7 +195,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The URI used for health checks. The URI must be <b>1</b> to <b>80</b> characters in length.</para>
         /// <remarks>
-        /// <para> A URL must start with a forward slash (<c>/</c>) but cannot contain only forward slashes (<c>/</c>).</para>
+        /// <para>A URL must start with a forward slash (<c>/</c>) but cannot contain only forward slashes (<c>/</c>).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -197,7 +208,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The number of consecutive successful health checks that must occur before an unhealthy and inaccessible backend server is declared healthy and accessible. Valid values: <b>2</b> to <b>10</b>. Default value: <b>3</b>.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only if you set HealthCheck to on.</para>
+        /// <para>This parameter takes effect only if you set HealthCheck to on.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -210,7 +221,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The timeout period for idle connections. Default value: 15. Valid values: <b>1</b> to <b>60</b>. Unit: seconds.</para>
         /// <remarks>
-        /// <para> If no request is received within the specified timeout period, ELB closes the connection. When another request is received, ELB establishes a new connection.</para>
+        /// <para>If no request is received within the specified timeout period, ELB closes the connection. When another request is received, ELB establishes a new connection.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -223,8 +234,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>Specifies whether to enable redirection from HTTP to HTTPS. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b></description></item>
-        /// <item><description><b>off</b> (default)</description></item>
+        /// <item><description><para><b>on</b></para>
+        /// </description></item>
+        /// <item><description><para><b>off</b> (default)</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -237,7 +250,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The listening port that is used by Edge Load Balancer (ELB) to receive requests and forward the requests to backend servers. Valid values: <b>1</b> to <b>65535</b>.</para>
         /// <remarks>
-        /// <para> We recommend that you use port 443 for HTTPS.</para>
+        /// <para>We recommend that you use port 443 for HTTPS.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -262,7 +275,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The timeout period of requests. Default value: 60. Valid values: <b>1</b> to <b>180</b>. Unit: seconds.</para>
         /// <remarks>
-        /// <para> If no response is received from the backend server within the specified timeout period, ELB returns an HTTP 504 error code to the client.</para>
+        /// <para>If no response is received from the backend server within the specified timeout period, ELB returns an HTTP 504 error code to the client.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -275,12 +288,18 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The scheduling algorithm. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>wrr</b> (default): Backend servers with higher weights receive more requests than backend servers with lower weights.</description></item>
-        /// <item><description><b>wlc</b>: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections on a backend server. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.</description></item>
-        /// <item><description><b>rr</b>: Requests are distributed to backend servers in sequence.</description></item>
-        /// <item><description><b>sch</b>: consistent hashing based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</description></item>
-        /// <item><description><b>qch</b>: consistent hashing based on QUIC connection IDs (CIDs). Requests that contain the same QUIC CID are distributed to the same backend server.</description></item>
-        /// <item><description><b>iqch</b>: consistent hashing based on three specific bytes of iQUIC CIDs. Requests with the same second, third, and fourth bytes are distributed to the same backend server.</description></item>
+        /// <item><description><para><b>wrr</b> (default): Backend servers with higher weights receive more requests than backend servers with lower weights.</para>
+        /// </description></item>
+        /// <item><description><para><b>wlc</b>: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections on a backend server. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.</para>
+        /// </description></item>
+        /// <item><description><para><b>rr</b>: Requests are distributed to backend servers in sequence.</para>
+        /// </description></item>
+        /// <item><description><para><b>sch</b>: consistent hashing based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</para>
+        /// </description></item>
+        /// <item><description><para><b>qch</b>: consistent hashing based on QUIC connection IDs (CIDs). Requests that contain the same QUIC CID are distributed to the same backend server.</para>
+        /// </description></item>
+        /// <item><description><para><b>iqch</b>: consistent hashing based on three specific bytes of iQUIC CIDs. Requests with the same second, third, and fourth bytes are distributed to the same backend server.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -304,11 +323,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The method that is used to handle cookies. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>insert</b>: inserts a cookie. ELB inserts a session cookie (SERVERID) into the first HTTP or HTTPS response that is sent to a client. Subsequent requests to ELB carry this cookie, and ELB determines the destination servers of the requests based on the cookies.</description></item>
-        /// <item><description><b>server</b>: rewrites the original cookie. SLB rewrites the custom cookies in requests from a client. Subsequent requests from the client that carry the new cookie are forwarded to the same backend server as the first request.</description></item>
+        /// <item><description><para><b>insert</b>: inserts a cookie. ELB inserts a session cookie (SERVERID) into the first HTTP or HTTPS response that is sent to a client. Subsequent requests to ELB carry this cookie, and ELB determines the destination servers of the requests based on the cookies.</para>
+        /// </description></item>
+        /// <item><description><para><b>server</b>: rewrites the original cookie. SLB rewrites the custom cookies in requests from a client. Subsequent requests from the client that carry the new cookie are forwarded to the same backend server as the first request.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is required when the StickySession parameter is set to on.</para>
+        /// <para>This parameter is required when the StickySession parameter is set to on.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -321,7 +342,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The number of consecutive failed health checks that must occur before a healthy and accessible backend server is declared unhealthy and inaccessible. Valid values: <b>2</b> to <b>10</b>. Default value: <b>3</b>.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only if you set HealthCheck to on.</para>
+        /// <para>This parameter takes effect only if you set HealthCheck to on.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

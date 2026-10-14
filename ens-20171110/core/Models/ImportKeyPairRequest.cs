@@ -12,9 +12,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The name of the key pair. The name must conform to the following naming conventions:</para>
         /// <list type="bullet">
-        /// <item><description>The name must be 2 to 128 characters in length.</description></item>
-        /// <item><description>The name must start with a letter but cannot start with <c>http://</c> or <c>https://</c>.</description></item>
-        /// <item><description>The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</description></item>
+        /// <item><description><para>The name must be 2 to 128 characters in length.</para>
+        /// </description></item>
+        /// <item><description><para>The name must start with a letter but cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// </description></item>
+        /// <item><description><para>The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
+        /// </description></item>
         /// </list>
         /// <para>You can specify the name of only one key pair.</para>
         /// <para>This parameter is required.</para>

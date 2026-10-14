@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CopySnapshotResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of created snapshots.</para>
+        /// <para>The list of successfully created snapshots.</para>
         /// </summary>
         [NameInMap("AllocationId")]
         [Validation(Required=false)]
         public List<CopySnapshotResponseBodyAllocationId> AllocationId { get; set; }
         public class CopySnapshotResponseBodyAllocationId : TeaModel {
             /// <summary>
-            /// <para>The ID of the node.</para>
+            /// <para>The ID of the edge zone where the snapshot resides.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>cn-chengdu-telecom-4</para>
+            /// <para>cn-hangzhou-27</para>
             /// </summary>
             [NameInMap("EnsRegionId")]
             [Validation(Required=false)]
             public string EnsRegionId { get; set; }
 
             /// <summary>
-            /// <para>The IDs of the instances.</para>
+            /// <para>The array of instance IDs.</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -36,14 +36,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The success status code.</para>
+        /// <para>The status code indicating success. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PartSuccess</b>: partially succeeded.</description></item>
-        /// <item><description><b>AllSuccess</b>: all succeeded.</description></item>
+        /// <item><description><b>PartSuccess</b>: Partially successful.</description></item>
+        /// <item><description><b>AllSuccess</b>: All successful.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>AllSuccess</para>
+        /// <para>PartSuccess</para>
         /// </summary>
         [NameInMap("BizStatusCode")]
         [Validation(Required=false)]
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of nodes that are not created.</para>
+        /// <para>The list of edge zones where snapshot creation failed.</para>
         /// </summary>
         [NameInMap("UnAllocationId")]
         [Validation(Required=false)]
         public List<CopySnapshotResponseBodyUnAllocationId> UnAllocationId { get; set; }
         public class CopySnapshotResponseBodyUnAllocationId : TeaModel {
             /// <summary>
-            /// <para>The ID of the node.</para>
+            /// <para>The ID of the edge zone where the snapshot resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-chengdu-26</para>

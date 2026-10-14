@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeDiskIopsListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IOPS monitoring data of the cloud disk.</para>
+        /// <para>The list of cloud disk I/O monitoring data.</para>
         /// </summary>
         [NameInMap("DiskIopsList")]
         [Validation(Required=false)]
         public List<DescribeDiskIopsListResponseBodyDiskIopsList> DiskIopsList { get; set; }
         public class DescribeDiskIopsListResponseBodyDiskIopsList : TeaModel {
             /// <summary>
-            /// <para>The business time . The time is displayed in the yyyy-MM-dd HH:mm:ss.</para>
+            /// <para>The business time in the format of yyyy-MM-dd HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-12-14 00:00:00</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string BizTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the disk.</para>
+            /// <para>The disk ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d-5tzm9wnhzlhjzcbtxo465****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string DiskId { get; set; }
 
             /// <summary>
-            /// <para>The read throughput. Unit: bytes.</para>
+            /// <para>The read throughput (in bytes).</para>
             /// 
             /// <b>Example:</b>
             /// <para>10054</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public long? ReadBytes { get; set; }
 
             /// <summary>
-            /// <para>The read latency. Unit: ms.</para>
+            /// <para>The read latency (in microseconds).</para>
             /// 
             /// <b>Example:</b>
             /// <para>15646532</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public long? ReadOps { get; set; }
 
             /// <summary>
-            /// <para>The ID of the node.</para>
+            /// <para>The edge zone ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-3</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The write throughput. Unit: bytes.</para>
+            /// <para>The write throughput (in bytes).</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public long? WriteBytes { get; set; }
 
             /// <summary>
-            /// <para>The write latency. Unit: microseconds.</para>
+            /// <para>The write latency (in microseconds).</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>

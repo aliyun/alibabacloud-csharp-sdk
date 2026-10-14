@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteClusterNodesShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The request body parameters.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Body")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string BodyShrink { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -26,6 +28,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to release the ENS instance where the node resides. Default value: true.</para>
+        /// </summary>
         [NameInMap("ReleaseNode")]
         [Validation(Required=false)]
         public bool? ReleaseNode { get; set; }

@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The page number.</para>
         /// <list type="bullet">
-        /// <item><description>Pages start from page 1.</description></item>
-        /// <item><description>Default value: 1</description></item>
+        /// <item><description><para>Pages start from page 1.</para>
+        /// </description></item>
+        /// <item><description><para>Default value: 1</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,8 +28,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The number of entries per page.</para>
         /// <list type="bullet">
-        /// <item><description>Maximum value: 50.</description></item>
-        /// <item><description>Default value: 10</description></item>
+        /// <item><description><para>Maximum value: 50.</para>
+        /// </description></item>
+        /// <item><description><para>Default value: 10</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

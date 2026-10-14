@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeInstanceTypesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code. If the request is successful, 0 is returned. If the request fails, a non-zero error code is returned.</para>
+        /// <para>The business code. A value of 0 indicates success. An error code is returned upon failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -30,6 +30,18 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [NameInMap("CpuCoreCount")]
                 [Validation(Required=false)]
                 public int? CpuCoreCount { get; set; }
+
+                [NameInMap("InstanceBandwidthRx")]
+                [Validation(Required=false)]
+                public long? InstanceBandwidthRx { get; set; }
+
+                [NameInMap("InstanceBandwidthTx")]
+                [Validation(Required=false)]
+                public long? InstanceBandwidthTx { get; set; }
+
+                [NameInMap("InstanceType")]
+                [Validation(Required=false)]
+                public string InstanceType { get; set; }
 
                 [NameInMap("InstanceTypeId")]
                 [Validation(Required=false)]

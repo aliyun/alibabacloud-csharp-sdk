@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>eni-uf6533jbifugr5fo2j1w</para>
+        /// <para>eni-uf6533jbifugr5f*****</para>
         /// </summary>
         [NameInMap("NetworkInterfaceId")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <para>The ID of the vSwitch.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>vsw-5rllcjb3ol6duzjdnbm1ombn7</para>
+        /// <para>vsw-5rllcjb3ol6duzjdnbm1o*****</para>
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]

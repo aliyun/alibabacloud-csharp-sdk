@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The time when the network was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>The time at which the network was created. The time is in UTC and is formatted as yyyy-MM-ddTHH:mm:ssZ.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-06-01T00:00:00Z</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the edge node.</para>
+        /// <para>The ID of the ENS node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the gateway route table.</para>
+        /// <para>The gateway route table ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rt-539***tbs</para>
@@ -99,6 +99,42 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         }
 
+        [NameInMap("Ipv6CidrBlocks")]
+        [Validation(Required=false)]
+        public DescribeNetworkAttributeResponseBodyIpv6CidrBlocks Ipv6CidrBlocks { get; set; }
+        public class DescribeNetworkAttributeResponseBodyIpv6CidrBlocks : TeaModel {
+            [NameInMap("Ipv6CidrBlock")]
+            [Validation(Required=false)]
+            public List<DescribeNetworkAttributeResponseBodyIpv6CidrBlocksIpv6CidrBlock> Ipv6CidrBlock { get; set; }
+            public class DescribeNetworkAttributeResponseBodyIpv6CidrBlocksIpv6CidrBlock : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2408:XXXX:0:a600::/110</para>
+                /// </summary>
+                [NameInMap("Ipv6CidrBlock")]
+                [Validation(Required=false)]
+                public string Ipv6CidrBlock { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>telecom</para>
+                /// </summary>
+                [NameInMap("Ipv6Isp")]
+                [Validation(Required=false)]
+                public string Ipv6Isp { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>system</para>
+                /// </summary>
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+            }
+
+        }
+
         [NameInMap("LoadBalancerIds")]
         [Validation(Required=false)]
         public DescribeNetworkAttributeResponseBodyLoadBalancerIds LoadBalancerIds { get; set; }
@@ -120,7 +156,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The ID of the network access control list (ACL).</para>
+        /// <para>The ID of the network ACL.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nacl-a2do9e413e0sp****</para>
@@ -130,7 +166,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NetworkAclId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the network.</para>
+        /// <para>The network ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>n-5***</para>
@@ -150,7 +186,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The name of the network.</para>
+        /// <para>The network name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>
@@ -170,7 +206,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the route table.</para>
+        /// <para>The route table ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rt-539***fpu</para>
@@ -190,7 +226,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The ID of the route table.</para>
+        /// <para>The route table ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rtb-5***</para>
@@ -212,8 +248,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The status of the network. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Pending</description></item>
-        /// <item><description>Available</description></item>
+        /// <item><description><para>Pending: The network is being configured.</para>
+        /// </description></item>
+        /// <item><description><para>Available: The network is ready for use.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

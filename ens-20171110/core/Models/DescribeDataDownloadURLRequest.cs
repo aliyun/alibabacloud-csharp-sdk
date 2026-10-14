@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeDataDownloadURLRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application.</para>
+        /// <para>The application ID.</para>
+        /// <para>You can call ListApplications to obtain the AppId. The call chain is as follows: call CreateApplication to create an application, call PushApplicationData or DistApplicationData to upload data, and then call this operation to query the download URL.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +33,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string DataName { get; set; }
 
         /// <summary>
-        /// <para>The version number of the data file.</para>
+        /// <para>The version number of the data.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +44,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string DataVersion { get; set; }
 
         /// <summary>
-        /// <para>This parameter is reserved.</para>
+        /// <para>A reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>600</para>
@@ -53,7 +54,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public long? ExpireTimeout { get; set; }
 
         /// <summary>
-        /// <para>The condition that you want to use to filter file servers. You can specify multiple canary release policies. By default, all resources are queried.</para>
+        /// <para>The filter condition for file servers. Multiple canary release strategies are supported. By default, all file servers are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;name\&quot;: \&quot;ScheduleToRegionId\&quot;,\&quot;parameters\&quot;:{\&quot;operator\&quot;: \&quot;In\&quot;,\&quot;values\&quot;: [\&quot;cn-shijiazhuang-telecom_unicom_cmcc\&quot;]}}</para>

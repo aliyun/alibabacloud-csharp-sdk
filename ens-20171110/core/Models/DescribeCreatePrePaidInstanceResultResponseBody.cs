@@ -19,10 +19,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The status of the instance creation.</para>
             /// <list type="bullet">
-            /// <item><description>Accepted</description></item>
-            /// <item><description>Creating</description></item>
-            /// <item><description>Failed</description></item>
-            /// <item><description>Successed</description></item>
+            /// <item><description><para>Accepted</para>
+            /// </description></item>
+            /// <item><description><para>Creating</para>
+            /// </description></item>
+            /// <item><description><para>Failed</para>
+            /// </description></item>
+            /// <item><description><para>Successed</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

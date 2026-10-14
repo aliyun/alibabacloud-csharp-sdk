@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch.</para>
+        /// <para>The ID of the VSwitch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-5****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class SetBackendServersRequest : TeaModel {
         /// <summary>
-        /// <para>The list of backend servers that you added. You can modify the weights of up to 20 backend servers in each request.</para>
+        /// <para>The list of backend servers to add. You can modify up to 20 backend servers in each call.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("BackendServers")]
@@ -18,7 +18,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public List<SetBackendServersRequestBackendServers> BackendServers { get; set; }
         public class SetBackendServersRequestBackendServers : TeaModel {
             /// <summary>
-            /// <para>The ID of the instance that you use as the backend server.</para>
+            /// <para>The IP address.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>192.168.0.10</para>
+            /// </summary>
+            [NameInMap("Ip")]
+            [Validation(Required=false)]
+            public string Ip { get; set; }
+
+            /// <summary>
+            /// <para>The instance ID of the backend server.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -29,10 +39,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string ServerId { get; set; }
 
             /// <summary>
-            /// <para>The type of the backend server. Valid values:</para>
+            /// <para>The server type of the backend server. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ens</b>: ENS instance</description></item>
-            /// <item><description><b>eni</b>: elastic network interface (ENI)</description></item>
+            /// <item><description><b>ens</b>: ENS instance.</description></item>
+            /// <item><description><b>eni</b>: elastic network interfaces (ENIs) instance. The backend server is a network interface controller (NIC).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -45,7 +55,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The weight of the backend server. Default value: 100. Valid values: <b>0</b> to <b>100</b>.</para>
             /// <remarks>
-            /// <para> The value 0 indicates that requests are not forwarded to the backend server.</para>
+            /// <para>A value of 0 indicates that no requests are forwarded to the backend server.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -59,7 +69,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The ID of the Edge Load Balancer (ELB) instance.</para>
+        /// <para>The ID of the load balancing instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

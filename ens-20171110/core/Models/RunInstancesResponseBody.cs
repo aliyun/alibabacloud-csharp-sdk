@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class RunInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IDs of instances.</para>
+        /// <para>The list of instance IDs.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]

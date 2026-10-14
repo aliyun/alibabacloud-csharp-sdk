@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeClusterResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of the information about clusters.</para>
+        /// <para>The list of cluster information.</para>
         /// </summary>
         [NameInMap("Clusters")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The version of the cluster.</para>
+            /// <para>The version information of the current cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.18.8</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The next version of the cluster.</para>
+            /// <para>The next version information of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.20.8</para>
@@ -57,12 +57,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string NextVersion { get; set; }
 
             /// <summary>
-            /// <para>The health status of the instance.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>healthy</description></item>
-            /// <item><description>unhealthy</description></item>
-            /// </list>
+            /// <para>The health status of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>healthy</para>
@@ -74,7 +69,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeInstanceBandwidthDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. The maximum interval between the beginning time and the end time is 86400 seconds. The interval is left-closed and right-open. Specify the time in the yyyy-MM-dd HH:mm:ss format.</para>
+        /// <para>The end time. The maximum difference from the start time is 86400 seconds. The query range is left-closed and right-open. Format: yyyy-MM-dd HH:mm:ss.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ENS node.</para>
+        /// <para>The ENS node ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing-cmcc</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// <para>The plan ID.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-6ecpqvkicnchxccozrpxxxx</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the instance, such as vm, eip, single_tenant, and nc. You can leave this parameter empty. The type of the instance, such as vm, eip, single_tenant, and nc.</para>
+        /// <para>The instance type, such as vm, eip, single_tenant, or nc. You can leave this parameter empty if no special query is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vm</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The type of the service, such as vm, eip, esk, and meta.</para>
+        /// <para>The service type, such as vm, eip, esk, or meta.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vm</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ServiceType { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</para>
+        /// <para>The start time in the yyyy-MM-dd HH:mm:ss format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

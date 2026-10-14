@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeLoadBalancersRequest : TeaModel {
         /// <summary>
-        /// <para>The IP address that the ELB instance uses to provide services.</para>
+        /// <para>The service address of the load balancing instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.0.XX.XX</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Address { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Edge Node Service (ENS) node.</para>
+        /// <para>The ENS edge zone ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-guangzhou-10</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the Edge Node Service (ENS) nodes.</para>
+        /// <para>The list of ENS edge zone IDs.</para>
         /// </summary>
         [NameInMap("EnsRegionIds")]
         [Validation(Required=false)]
         public List<string> EnsRegionIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ELB instance.</para>
+        /// <para>The ID of the load balancing instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lb-5q73cv04zeyh43lh74lp4****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string LoadBalancerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the ELB instance.</para>
+        /// <para>The name of the load balancing instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string LoadBalancerName { get; set; }
 
         /// <summary>
-        /// <para>The status of the listener for the ELB instance. Valid values:</para>
+        /// <para>The listener status of the load balancing instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Active</b>: The listener for the instance can forward the received traffic based on forwarding rules.</description></item>
-        /// <item><description><b>InActive</b>: The listener for the instance does not forward the received traffic.</description></item>
+        /// <item><description><b>Active</b>: The listeners in the instance can forward accepted traffic based on rules.</description></item>
+        /// <item><description><b>InActive</b>: The listeners in the instance no longer forward accepted traffic.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,12 +70,18 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string LoadBalancerStatus { get; set; }
 
+        /// <summary>
+        /// <para>The type of the load balancing instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CLB</para>
+        /// </summary>
         [NameInMap("LoadBalancerType")]
         [Validation(Required=false)]
         public string LoadBalancerType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the network.</para>
+        /// <para>The network ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>n-5s9ayrxsd9hszrlt5fgv2****</para>
@@ -85,7 +91,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NetworkId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The page number of the list. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -95,7 +101,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 10. Valid values: <b>10</b> to <b>100</b>.</para>
+        /// <para>The Settings for the number of entries per page during paging in a paged query. Default value: 10. Valid values: <b>10</b> to <b>100</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -105,7 +111,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the backend server.</para>
+        /// <para>The backend server instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-5f67ffjc004wwz0t****</para>
@@ -115,7 +121,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ServerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch.</para>
+        /// <para>The vSwitch ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-5sy773iy25rulsmgskmba****</para>

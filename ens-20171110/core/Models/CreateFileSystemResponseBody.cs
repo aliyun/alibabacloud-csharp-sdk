@@ -10,20 +10,35 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateFileSystemResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the file system that was created.</para>
+        /// <para>The file systems that are created.</para>
         /// </summary>
         [NameInMap("AllocationId")]
         [Validation(Required=false)]
         public List<string> AllocationId { get; set; }
 
+        /// <summary>
+        /// <para>The list of instance allocation information for the file system across ENS edge zones.</para>
+        /// </summary>
         [NameInMap("AllocationIds")]
         [Validation(Required=false)]
         public List<CreateFileSystemResponseBodyAllocationIds> AllocationIds { get; set; }
         public class CreateFileSystemResponseBodyAllocationIds : TeaModel {
+            /// <summary>
+            /// <para>The ENS edge zone ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou-cm</para>
+            /// </summary>
             [NameInMap("EnsRegionId")]
             [Validation(Required=false)]
             public string EnsRegionId { get; set; }
 
+            /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>i-5s7xxxxxxx</para>
+            /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
@@ -31,10 +46,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The status code for successful operations. Valid values:</para>
+        /// <para>The status code that indicates the result. Valid values:  </para>
         /// <list type="bullet">
-        /// <item><description>PartSuccess: The operation is partially successful.</description></item>
-        /// <item><description>AllSuccess: The operation is successful.</description></item>
+        /// <item><description>PartSuccess: partially successful.</description></item>
+        /// <item><description>AllSuccess: all successful.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,7 +60,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string BizStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4EC47282-1B74-4534-BD0E-403F3EE64CAF</para>
@@ -55,7 +70,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the file system that failed to be created.</para>
+        /// <para>The file systems that failed to be created.</para>
         /// </summary>
         [NameInMap("UnAllocationId")]
         [Validation(Required=false)]

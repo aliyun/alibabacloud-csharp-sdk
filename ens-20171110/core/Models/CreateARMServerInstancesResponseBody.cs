@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateARMServerInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IDs of instances.</para>
+        /// <para>The list of instance IDs.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the order.</para>
+        /// <para>The order ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>212630314490***</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</para>

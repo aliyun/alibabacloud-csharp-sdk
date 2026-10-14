@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeMountTargetsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about mount targets.</para>
+        /// <para>The collection of mount target information.</para>
         /// </summary>
         [NameInMap("MountTargets")]
         [Validation(Required=false)]
         public List<DescribeMountTargetsResponseBodyMountTargets> MountTargets { get; set; }
         public class DescribeMountTargetsResponseBodyMountTargets : TeaModel {
             /// <summary>
-            /// <para>The ID of the region.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing-cmcc</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string EnsRegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the file system.</para>
+            /// <para>The file system ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c50f8*****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string FileSystemId { get; set; }
 
             /// <summary>
-            /// <para>The path of the mount target.</para>
+            /// <para>The mount target path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>LB:/fileSystemName/mountTargetName</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string MountTargetDomain { get; set; }
 
             /// <summary>
-            /// <para>The name of the mount target.</para>
+            /// <para>The mount target name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestMountPath</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string MountTargetName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the network.</para>
+            /// <para>The network ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>n-***</para>
@@ -67,12 +67,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string NetWorkId { get; set; }
 
             /// <summary>
-            /// <para>The state of the mount target. Valid values:</para>
+            /// <para>The mount target status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>active: The mount target is available.</description></item>
-            /// <item><description>inactive: The mount target is unavailable.</description></item>
-            /// <item><description>pending: A task is being queued for the mount target.</description></item>
-            /// <item><description>deleting: The mount target is being deleted.</description></item>
+            /// <item><description>active: Active.</description></item>
+            /// <item><description>inactive: Inactive.</description></item>
+            /// <item><description>pending: Queued.</description></item>
+            /// <item><description>deleting: Being deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of rows per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>762DD527-358B-1E48-8005-CCE3ED4EB9E0</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of mount targets.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

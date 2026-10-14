@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class RemoveSDGShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>IDs of Android in Container (AIC) instances.</para>
+        /// <para>The list of AIC instance IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceIds")]

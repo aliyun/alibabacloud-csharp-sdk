@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ResetAICInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the AIC instance.</para>
+        /// <para>The AIC instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aic-instance****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the server.</para>
+        /// <para>The server instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cas-instance****</para>

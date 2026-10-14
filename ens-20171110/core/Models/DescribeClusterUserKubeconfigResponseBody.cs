@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeClusterUserKubeconfigResponseBody : TeaModel {
         /// <summary>
+        /// <para>The kubeconfig file of the cluster.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>apiVersion: v1
         /// clusters:</para>
@@ -38,7 +40,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public object Config { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C0003E8B-B930-4F59-ADC0-0E209A9012A8</para>

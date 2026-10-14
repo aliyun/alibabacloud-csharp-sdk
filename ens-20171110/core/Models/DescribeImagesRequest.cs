@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <para>This parameter is unavailable.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>This parameter is not currently in use.</para>
+        /// <para>This parameter is not in use.</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

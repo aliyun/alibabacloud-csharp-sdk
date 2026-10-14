@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeSDGSharedDisksResponseBody : TeaModel {
         /// <summary>
-        /// <para>Current page number when paging</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxsxxxxx</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Shared disk list</para>
+        /// <para>The list of shared disks.</para>
         /// </summary>
         [NameInMap("SharedDisks")]
         [Validation(Required=false)]
         public List<DescribeSDGSharedDisksResponseBodySharedDisks> SharedDisks { get; set; }
         public class DescribeSDGSharedDisksResponseBodySharedDisks : TeaModel {
             /// <summary>
-            /// <para>The time when the shared disk was created.</para>
+            /// <para>The time when the shared disk was created. The time follows the ISO 8601 standard and includes a time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-10-09T15:13:21+08:00</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>shared disk id</para>
+            /// <para>The ID of the shared disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d-57kvvpuj1rk2ghumlgs6</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string DiskId { get; set; }
 
             /// <summary>
-            /// <para>Shared disk type</para>
+            /// <para>The type of the shared disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>standard</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string DiskType { get; set; }
 
             /// <summary>
-            /// <para>The namespace of the service.</para>
+            /// <para>The namespace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>The node ID.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-1</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>SdgId of the shared disk</para>
+            /// <para>The ID of the SDG.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sdg-fqehhfdjv</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string SdgId { get; set; }
 
             /// <summary>
-            /// <para>Number of shared mounts</para>
+            /// <para>The number of shared mounts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public int? SharedNum { get; set; }
 
             /// <summary>
-            /// <para>Shared disk status</para>
+            /// <para>The status of the shared disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>avaliable</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

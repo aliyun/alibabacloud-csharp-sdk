@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeHaVipsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing-cmcc</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of edge nodes. You can specify 1 to 100 IDs.</para>
+        /// <para>The IDs of ENS nodes. Array length: 1 to 100.</para>
         /// </summary>
         [NameInMap("EnsRegionIds")]
         [Validation(Required=false)]
         public List<string> EnsRegionIds { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the HAVIP.</para>
+        /// <para>The IP address of the HaVip instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.5.XX.XX</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string HaVipAddress { get; set; }
 
         /// <summary>
-        /// <para>The ID of the HAVIP.</para>
+        /// <para>The HaVip instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>havip-5p14t****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string HaVipId { get; set; }
 
         /// <summary>
-        /// <para>The name of the HAVIP.</para>
+        /// <para>The name of the HaVip instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the network.</para>
+        /// <para>The network ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>n-57gqcdfvx6n****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NetworkId { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page in a paged query. Settings for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -87,12 +87,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The status of the HAVIP. Valid values:</para>
+        /// <para>The HaVip status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Creating</description></item>
-        /// <item><description>Available</description></item>
-        /// <item><description>InUse</description></item>
-        /// <item><description>Deleting</description></item>
+        /// <item><description>Creating: The HaVip is being created.</description></item>
+        /// <item><description>Available: The HaVip is available.</description></item>
+        /// <item><description>InUse: The HaVip is in use.</description></item>
+        /// <item><description>Deleting: The HaVip is being deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch.</para>
+        /// <para>The vSwitch ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-5****</para>

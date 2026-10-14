@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class RenewARMServerInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal for the premium bandwidth plan. Valid values:</para>
+        /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>.</description></item>
-        /// <item><description><b>false</b> (default).</description></item>
+        /// <item><description><b>true</b>: Auto-renewal is enabled.</description></item>
+        /// <item><description><b>false</b>: Auto-renewal is not enabled. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance that you want to renew.</para>
+        /// <para>The ID of the server instance to be renewed.</para>
+        /// <para>Pass the ServerId (with the cas- prefix) returned by DescribeARMServerInstances, not the InstanceId (with the aic- prefix) in AICInstances.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +36,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The renewal period. By default, instances are renewed on a monthly basis. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, and 12.</para>
+        /// <para>The renewal period. By default, the instance is renewed on a monthly basis. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, and 12.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

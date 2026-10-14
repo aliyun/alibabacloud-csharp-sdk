@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <para>Enter a description for the route.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>Test</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]

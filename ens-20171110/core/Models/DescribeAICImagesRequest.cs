@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <para>The description of the image.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test operation of console</para>
+        /// <para>Console test operation</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The image ID of the AIC instance.</para>
+        /// <para>The ID of the Android in Container (AIC) image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>m-ad0ddaddc2d54adeaa09b7c0f1e****</para>
@@ -30,10 +30,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The type of the image. Valid values:</para>
+        /// <para>The image type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>public</b>: public image</description></item>
-        /// <item><description><b>private</b>: custom image</description></item>
+        /// <item><description><para><b>public</b>: public image.</para>
+        /// </description></item>
+        /// <item><description><para><b>private</b>: custom image.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ImageUrl { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</para>
+        /// <para>The end time of the query. Format: &quot;2006-01-02&quot;. By default, no time limit is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-02-02</para>
@@ -64,7 +66,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string MaxDate { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</para>
+        /// <para>The start time of the query. Format: &quot;2006-01-02&quot;. By default, no time limit is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-01-02</para>
@@ -74,7 +76,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string MinDate { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value starts from <b>1</b>.
+        /// Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -84,7 +87,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. The maximum value is <b>100</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page for paging. Maximum value: <b>100</b>.
+        /// Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -94,11 +98,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The status of the image. Valid values:</para>
+        /// <para>The image status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>verifying</b></description></item>
-        /// <item><description><b>disable</b></description></item>
-        /// <item><description><b>available</b></description></item>
+        /// <item><description><para><b>verifying</b>: pending verification.</para>
+        /// </description></item>
+        /// <item><description><para><b>disable</b>: unavailable.</para>
+        /// </description></item>
+        /// <item><description><para><b>available</b>: available.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The token of the first page to query.</para>
+        /// <para>The token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abcfeg368547ccdef</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C78D9B61-69D8-5655-A312-A15DA5EA5D5E</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The tags that are added to specified one or more resources.</para>
+        /// <para>The collection of tagged resources.</para>
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
         public List<ListTagResourcesResponseBodyTagResources> TagResources { get; set; }
         public class ListTagResourcesResponseBodyTagResources : TeaModel {
             /// <summary>
-            /// <para>The ID of the associated resources.</para>
+            /// <para>The ID of the associated resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-5zy93g7z1hnkdmav84joxyzgn</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The type of the resource.</para>
+            /// <para>The resource type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>instance</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CLUSTER</para>

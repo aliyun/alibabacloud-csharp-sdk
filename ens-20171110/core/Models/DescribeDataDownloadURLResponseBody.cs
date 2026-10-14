@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeDataDownloadURLResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public long? Code { get; set; }
 
         /// <summary>
-        /// <para>The download URLs of data files.</para>
+        /// <para>The list of download URLs for data files.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeDataDownloadURLResponseBodyData Data { get; set; }
         public class DescribeDataDownloadURLResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the data file expires. The time is displayed in UTC.</para>
+            /// <para>The expiration time of the download URL in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-10T03:36:27Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The file servers.</para>
+            /// <para>The list of file servers.</para>
             /// </summary>
             [NameInMap("ServerList")]
             [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string Host { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Edge Node Service (ENS) node.</para>
+                /// <para>The ID of the ENS edge node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-chenzhou-5</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             }
 
             /// <summary>
-            /// <para>The download URL of the data file.</para>
+            /// <para>The download URL of the file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/file/1450088842124331/97a32f2a-aa2c-436a-b19c-05b20d258618/f0313053530fc727f81b7d03fad93cd2/e4c2e8edac362acab7123654b9e73432?ak=edgepaas-innerapi-daily&amp;ts=1611229454&amp;sign=Yycbax%2F4OsTgm6BLoxR6lPs5gKE%3D</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The response message. Success is returned for a successful request.</para>
+        /// <para>The response message. A value of success indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>

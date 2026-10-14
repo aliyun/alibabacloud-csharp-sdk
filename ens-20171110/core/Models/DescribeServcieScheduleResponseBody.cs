@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeServcieScheduleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The index number of the scheduled virtual device (pod).</para>
+        /// <para>The index number of the scheduled target virtual device (container pod).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? Index { get; set; }
 
         /// <summary>
-        /// <para>The ID of the scheduled instance.</para>
+        /// <para>The target instance ID for scheduling.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-5myukg7hnpbto7m024002****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the scheduled instance.</para>
+        /// <para>The IP address of the scheduled target instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>120.26.XX.XX</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceIp { get; set; }
 
         /// <summary>
-        /// <para>The start port of the scheduled instance.</para>
+        /// <para>The start port of the scheduled target instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3306</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? InstancePort { get; set; }
 
         /// <summary>
-        /// <para>The summary information about the scheduled virtual device.</para>
+        /// <para>The summary information of the scheduled virtual device pod.</para>
         /// </summary>
         [NameInMap("PodAbstractInfo")]
         [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             }
 
             /// <summary>
-            /// <para>The name of the pod.</para>
+            /// <para>The pod name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gcs-prod-websocket-eip-telecom</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public bool? Name { get; set; }
 
             /// <summary>
-            /// <para>The name of the namespace.</para>
+            /// <para>The namespace name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default-aliyun</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public bool? Namespace { get; set; }
 
             /// <summary>
-            /// <para>The pod scope.</para>
+            /// <para>The scope where the pod is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FDN</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public bool? ResourceScope { get; set; }
 
             /// <summary>
-            /// <para>The status of the pod.</para>
+            /// <para>The pod status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is repeated.</para>
+        /// <para>Indicates whether the resource has been created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public bool? RequestRepeated { get; set; }
 
         /// <summary>
-        /// <para>The TCP port range of the scheduled instance or container. The value is in the ${from}-$-{to} format. Example: 80-88.</para>
+        /// <para>The TCP service port range of the scheduled target virtual machine instance or container. Valid values are in the ${from}-${to} format, such as 80-88.</para>
         /// 
         /// <b>Example:</b>
         /// <para>80-88</para>

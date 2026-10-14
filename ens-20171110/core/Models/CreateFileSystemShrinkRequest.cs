@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateFileSystemShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The information about the orders.</para>
+        /// <para>The list of orders. Each element in the list contains the details of an order.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("OrderDetails")]

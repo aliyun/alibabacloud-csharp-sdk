@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class EventRedeployInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the system event.</para>
+        /// <para>The system event ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EventId { get; set; }
 
         /// <summary>
-        /// <para>The type of the O\&amp;M task. Valid values:</para>
+        /// <para>The O\&amp;M task type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>immediate</description></item>
-        /// <item><description>scheduled</description></item>
+        /// <item><description><para>immediate: Immediate execution.</para>
+        /// </description></item>
+        /// <item><description><para>scheduled: Scheduled execution.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -36,7 +38,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string OpsType { get; set; }
 
         /// <summary>
-        /// <para>The execution time of the reservation. The timestamp is measured in milliseconds. If the OpsType parameter is set to scheduled, this parameter is required.</para>
+        /// <para>The scheduled execution time, specified as a timestamp in milliseconds. This parameter is required if \&quot;OpsType\&quot; is set to \&quot;scheduled\&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1742452232000</para>
@@ -50,7 +52,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string PlanUtcTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource.</para>
+        /// <para>The resource ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

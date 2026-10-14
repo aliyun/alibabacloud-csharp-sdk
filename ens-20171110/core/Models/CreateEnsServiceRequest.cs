@@ -23,8 +23,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The operation to perform after you preview the created edge service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Buy</b>: create</description></item>
-        /// <item><description><b>Upgrade</b>: change</description></item>
+        /// <item><description><para><b>Buy</b>: create</para>
+        /// </description></item>
+        /// <item><description><para><b>Upgrade</b>: change</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -22,10 +22,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The state of the mount target. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>active</description></item>
-        /// <item><description>inactive</description></item>
-        /// <item><description>pending</description></item>
-        /// <item><description>deleting</description></item>
+        /// <item><description><para>active</para>
+        /// </description></item>
+        /// <item><description><para>inactive</para>
+        /// </description></item>
+        /// <item><description><para>pending</para>
+        /// </description></item>
+        /// <item><description><para>deleting</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

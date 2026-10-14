@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ListAICPublicKeysResponseBody : TeaModel {
         /// <summary>
-        /// <para>Current page number when paging</para>
+        /// <para>The current page number in the paginated query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of records to display per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Public key list</para>
+        /// <para>The list of public keys.</para>
         /// </summary>
         [NameInMap("PublicKeys")]
         [Validation(Required=false)]
         public List<ListAICPublicKeysResponseBodyPublicKeys> PublicKeys { get; set; }
         public class ListAICPublicKeysResponseBodyPublicKeys : TeaModel {
             /// <summary>
-            /// <para>Public key content</para>
+            /// <para>The content of the public key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fvsvshbvjfksvj</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the voiceprint.</para>
+            /// <para>The time when the public key was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-10-09T15:13:21+08:00</para>
@@ -57,17 +57,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>Public key description</para>
+            /// <para>The description of the public key.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试</para>
+            /// <para>Test</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Public key grouping</para>
+            /// <para>The group of the public key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-group</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string KeyGroup { get; set; }
 
             /// <summary>
-            /// <para>Public key name</para>
+            /// <para>The name of the public key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mykey</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string KeyName { get; set; }
 
             /// <summary>
-            /// <para>Public key type</para>
+            /// <para>The type of the public key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>adb</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique identifier of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxsxxxxx</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

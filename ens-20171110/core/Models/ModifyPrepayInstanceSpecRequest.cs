@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ModifyPrepayInstanceSpecRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance that you want to upgrade or downgrade.</para>
+        /// <para>The instance ID of the instance for which you want to perform an Upgrade/Downgrade.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp67acfmxazb4p****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The updated configuration.</para>
+        /// <para>The new instance type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ens.sn1.tiny</para>

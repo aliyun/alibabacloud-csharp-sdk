@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class RevokeSecurityGroupEgressRequest : TeaModel {
         /// <summary>
-        /// <para>The destination IP addresses. CIDR blocks and IPv4 addresses are supported.</para>
-        /// <para>By default, this parameter is empty.</para>
+        /// <para>The destination IP address range. CIDR blocks and IPv4 address ranges are supported.</para>
+        /// <para>Default value: null.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,13 +22,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string DestCidrIp { get; set; }
 
         /// <summary>
-        /// <para>The transport layer protocol. The value of this parameter is case-sensitive. Valid values:</para>
+        /// <para>The transport layer protocol. The value is case-sensitive. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>tcp</description></item>
         /// <item><description>udp</description></item>
         /// <item><description>icmp</description></item>
         /// <item><description>gre</description></item>
-        /// <item><description>all: All protocols are supported.</description></item>
+        /// <item><description>all: all protocols are supported</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string IpProtocol { get; set; }
 
         /// <summary>
-        /// <para>The action of the security group rule. Valid values:</para>
+        /// <para>Settings for access permissions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>accept</b>: allows access.</description></item>
-        /// <item><description><b>drop</b>: denies access and returns no responses.</description></item>
+        /// <item><description><b>accept</b>: accepts access.</description></item>
+        /// <item><description><b>drop</b>: deny access without returning any denial information.</description></item>
         /// </list>
         /// <para>Default value: <b>accept</b>.</para>
         /// 
@@ -55,12 +55,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Policy { get; set; }
 
         /// <summary>
-        /// <para>The range of destination ports that correspond to the transport layer protocol for the security group rule. Valid values:</para>
+        /// <para>The range of destination ports that correspond to the transport layer protocol. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If you set the IpProtocol parameter to tcp or udp, the port number ranges from <b>1</b> to <b>65535</b>. The start port number and the end port number are separated by a forward slash (/). Correct example: <b>1/200</b>. Incorrect example: <b>200/1</b>.</description></item>
-        /// <item><description>When the IpProtocol parameter is set to icmp, the port number range is <b>-1/-1</b>, which indicates all ports.</description></item>
-        /// <item><description>When the IpProtocol parameter is set to gre, the port number range is <b>-1/-1</b>, which indicates all ports.</description></item>
-        /// <item><description>When the IpProtocol parameter is set to all, the port number range is <b>-1/-1</b>, which indicates all ports.</description></item>
+        /// <item><description>TCP/UDP protocol: Valid values are <b>1</b> to <b>65535</b>. Separate the start port and the end port with a forward slash (/). Correct example: <b>1/200</b>. Incorrect example: <b>200/1</b>.</description></item>
+        /// <item><description>ICMP protocol: <b>-1/-1</b>.</description></item>
+        /// <item><description>GRE protocol: <b>-1/-1</b>.</description></item>
+        /// <item><description>If IpProtocol is set to all: <b>-1/-1</b>.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? Priority { get; set; }
 
         /// <summary>
-        /// <para>The ID of the security group.</para>
+        /// <para>The security group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -94,12 +94,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The range of port numbers that correspond to the transport layer protocol for the source security group. Valid values:</para>
+        /// <para>The range of source ports that correspond to the transport layer protocol. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If you set the IpProtocol parameter to tcp or udp, the port number ranges from <b>1</b> to <b>65535</b>. The start port number and the end port number are separated by a forward slash (/). Correct example: <b>1/200</b>. Incorrect example: <b>200/1</b>.</description></item>
-        /// <item><description>When the IpProtocol parameter is set to icmp, the port number range is <b>-1/-1</b>, which indicates all ports.</description></item>
-        /// <item><description>When the IpProtocol parameter is set to gre, the port number range is <b>-1/-1</b>, which indicates all ports.</description></item>
-        /// <item><description>When the IpProtocol parameter is set to all, the port number range is <b>-1/-1</b>, which indicates all ports.</description></item>
+        /// <item><description>TCP/UDP protocol: Valid values are <b>1</b> to <b>65535</b>. Separate the start port and the end port with a forward slash (/). Correct example: <b>1/200</b>. Incorrect example: <b>200/1</b>.</description></item>
+        /// <item><description>ICMP protocol: <b>-1/-1</b>.</description></item>
+        /// <item><description>GRE protocol: <b>-1/-1</b>.</description></item>
+        /// <item><description>If IpProtocol is set to all: <b>-1/-1</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

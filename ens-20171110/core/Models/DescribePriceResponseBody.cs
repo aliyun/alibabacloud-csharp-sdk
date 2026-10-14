@@ -26,8 +26,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 /// <summary>
                 /// <para>The type of currency.</para>
                 /// <list type="bullet">
-                /// <item><description>USD: US dollar</description></item>
-                /// <item><description>JPY: Japanese Yen</description></item>
+                /// <item><description><para>USD: US dollar</para>
+                /// </description></item>
+                /// <item><description><para>JPY: Japanese Yen</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

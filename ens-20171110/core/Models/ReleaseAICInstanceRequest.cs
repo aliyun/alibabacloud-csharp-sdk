@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ReleaseAICInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the server.</para>
+        /// <para>The server instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

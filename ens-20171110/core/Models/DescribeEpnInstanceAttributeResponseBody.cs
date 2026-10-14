@@ -98,9 +98,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The ISP. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>cmcc: China Mobile</description></item>
-            /// <item><description>unicom: China Unicom</description></item>
-            /// <item><description>telecom: China Telecom</description></item>
+            /// <item><description><para>cmcc: China Mobile</para>
+            /// </description></item>
+            /// <item><description><para>unicom: China Unicom</para>
+            /// </description></item>
+            /// <item><description><para>telecom: China Telecom</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -133,9 +136,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <summary>
             /// <para>The status of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Running</description></item>
-            /// <item><description>Stopped</description></item>
-            /// <item><description>Expired</description></item>
+            /// <item><description><para>Running</para>
+            /// </description></item>
+            /// <item><description><para>Stopped</para>
+            /// </description></item>
+            /// <item><description><para>Expired</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -150,9 +156,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The networking mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SpeedUp: intelligent acceleration network (Internet)</description></item>
-        /// <item><description>Connection: internal network</description></item>
-        /// <item><description>SpeedUpAndConnection: intelligent acceleration network and internal network</description></item>
+        /// <item><description><para>SpeedUp: intelligent acceleration network (Internet)</para>
+        /// </description></item>
+        /// <item><description><para>Connection: internal network</para>
+        /// </description></item>
+        /// <item><description><para>SpeedUpAndConnection: intelligent acceleration network and internal network</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

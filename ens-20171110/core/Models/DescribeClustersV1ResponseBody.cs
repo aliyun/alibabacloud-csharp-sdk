@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeClustersV1ResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of the information about clusters.</para>
+        /// <para>The list of clusters.</para>
         /// </summary>
         [NameInMap("Clusters")]
         [Validation(Required=false)]
         public List<DescribeClustersV1ResponseBodyClusters> Clusters { get; set; }
         public class DescribeClustersV1ResponseBodyClusters : TeaModel {
             /// <summary>
-            /// <para>The user IDs.</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1375383353108460</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The kubeconfig file of the cluster.</para>
+            /// <para>The cluster kubeconfig.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public object Config { get; set; }
 
             /// <summary>
-            /// <para>The pod CIDR block. You can specify 10.0.0.0/8, 172.16-31.0.0/12-16, 192.168.0.0/16, or their subnets as the pod CIDR block. The pod CIDR block cannot overlap with the CIDR block of the VPC in which the cluster is deployed and the CIDR blocks of existing clusters in the VPC. You cannot modify the pod CIDR block after you create the cluster.</para>
+            /// <para>The pod network CIDR block. The value must be a valid private CIDR block, which includes the following CIDR blocks and their subnets: 10.0.0.0/8, 172.16-31.0.0/12-16, and 192.168.0.0/16. The CIDR block cannot overlap with the VPC CIDR block or the CIDR blocks used by existing Kubernetes clusters in the VPC. You cannot modify this value after the cluster is created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.0.0.0/8</para>
@@ -89,14 +89,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string ContainerCidr { get; set; }
 
             /// <summary>
-            /// <para>Control plane configuration.</para>
+            /// <para>The control plane configuration.</para>
             /// </summary>
             [NameInMap("ControlPlaneConfig")]
             [Validation(Required=false)]
             public DescribeClustersV1ResponseBodyClustersControlPlaneConfig ControlPlaneConfig { get; set; }
             public class DescribeClustersV1ResponseBodyClustersControlPlaneConfig : TeaModel {
                 /// <summary>
-                /// <para>The runtime type used by the nodes.</para>
+                /// <para>The container runtime type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>containerd</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string ContainerRuntime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the custom image.</para>
+                /// <para>The image ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>m-68be8cb9f71fhyvjekxa23qsf</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string InstanceSpec { get; set; }
 
                 /// <summary>
-                /// <para>The node port range.</para>
+                /// <para>The node service port range.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30000-32767</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public long? Size { get; set; }
 
                 /// <summary>
-                /// <para>The system disk type of the node. Valid value: local_ssd, cloud_ssd, cloud_efficiency, and local_hdd.</para>
+                /// <para>The system cloud disk type of the node. Valid values: local_ssd, cloud_ssd, cloud_efficiency, and local_hdd.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cloud_ssd</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string SystemDiskCategory { get; set; }
 
                 /// <summary>
-                /// <para>The size of the system disk. Unit: GB.</para>
+                /// <para>The system cloud disk size. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -168,7 +168,15 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             }
 
             /// <summary>
-            /// <para>The ID of the ENS node.</para>
+            /// <b>Example:</b>
+            /// <para>2025-04-07T09:57:26+08:00</para>
+            /// </summary>
+            [NameInMap("Created")]
+            [Validation(Required=false)]
+            public string Created { get; set; }
+
+            /// <summary>
+            /// <para>The ENS node ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-55</para>
@@ -178,7 +186,15 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string EnsRegionId { get; set; }
 
             /// <summary>
-            /// <para>The cluster access authentication token.</para>
+            /// <b>Example:</b>
+            /// <para>unicom</para>
+            /// </summary>
+            [NameInMap("Isp")]
+            [Validation(Required=false)]
+            public string Isp { get; set; }
+
+            /// <summary>
+            /// <para>The authentication token for cluster access.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxxxxxxxx.yyyyyyy</para>
@@ -188,7 +204,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string JoinToken { get; set; }
 
             /// <summary>
-            /// <para>The Kubernetes version of the cluster. The Kubernetes versions supported are the same as the Kubernetes versions supported by open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not specify this parameter, the latest Kubernetes version is used.</para>
+            /// <para>The cluster version, which is consistent with the Kubernetes community baseline version. Use the latest version. If you do not specify this parameter, the latest version is used by default.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.31.9-aliyunedge.1</para>
@@ -198,7 +214,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string KubernetesVersion { get; set; }
 
             /// <summary>
-            /// <para>The ID of the ALB instance.</para>
+            /// <para>The load balancing instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lb-58dngw0fyimzzvwljfec7hy0z</para>
@@ -208,7 +224,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string LoadBalancerId { get; set; }
 
             /// <summary>
-            /// <para>The name of the monitoring object.</para>
+            /// <para>The cluster name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-eck-name</para>
@@ -218,14 +234,18 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>For each vSwitch that allocates IP addresses to worker nodes, you must select a vSwitch in the same zone to allocate IP addresses to pods. If you do not specify this parameter, vswitch_ids is used by default.</para>
+            /// <para>The vSwitch IDs for pods. Each pod vSwitch corresponds to a worker node vSwitch, and the zones of the pod vSwitch and the worker node vSwitch must be the same. If you leave this parameter empty, the value of vswitch_ids is used by default.</para>
             /// </summary>
             [NameInMap("PodVswitchIds")]
             [Validation(Required=false)]
             public List<string> PodVswitchIds { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable Internet access for the application. You can use an elastic IP address (EIP) to expose the API server. This way, you can access the cluster over the Internet. Valid values: true: enables Internet access for the application. false: disables Internet access to the API server of the cluster. If you set the value to false, the API server cannot be accessed over the Internet.</para>
+            /// <para>Indicates whether public network access is enabled. The API Server is exposed through an EIP to enable public access to the cluster. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: Public network access is enabled.</description></item>
+            /// <item><description>false: Public network access is disabled. If you select this option, the cluster API Server cannot be accessed from the Internet.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -235,7 +255,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public bool? PublicAccess { get; set; }
 
             /// <summary>
-            /// <para>Valid values: 10.0.0.0/16-24, 172.16-31.0.0/16-24, and 192.168.0.0/16-24. The Service CIDR block cannot overlap with the VPC CIDR block 10.1.0.0/21 or the CIDR blocks of existing ACK clusters in the VPC. You cannot change the Service CIDR block after you create the cluster.</para>
+            /// <para>The service network CIDR block. Valid ranges: 10.0.0.0/16-24, 172.16-31.0.0/16-24, and 192.168.0.0/16-24. The CIDR block cannot overlap with the VPC CIDR block 10.1.0.0/21 or the CIDR blocks used by existing Kubernetes clusters in the VPC. You cannot modify this value after the cluster is created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.0.0/16</para>
@@ -244,12 +264,18 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public string ServiceCidr { get; set; }
 
+            /// <summary>
+            /// <para>The cluster status.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>running</para>
+            /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The VPC of the cluster.</para>
+            /// <para>The VPC used by the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>n-5wsgr3xeolb2ist303wp3cscp</para>
@@ -259,7 +285,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>the id of the vswitch to which the cluster node belongs. The ENS region of the vswitch_ids service must be the same as that of the ens_region_id.</para>
+            /// <para>The vSwitch IDs of the cluster nodes. The ENS region of the vSwitch IDs must be the same as the value of ens_region_id.</para>
             /// </summary>
             [NameInMap("VswitchIds")]
             [Validation(Required=false)]

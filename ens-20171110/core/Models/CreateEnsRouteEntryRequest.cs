@@ -22,14 +22,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The destination CIDR block of the custom route entry. Make sure that the following requirements are met:</para>
         /// <list type="bullet">
-        /// <item><description>The destination CIDR block cannot point or belong to 100.64.0.0/10.</description></item>
-        /// <item><description>The destination CIDR blocks of the custom route entries in the same route table cannot overlap.</description></item>
-        /// <item><description>0.0.0.0/0 indicates the default CIDR block.</description></item>
+        /// <item><description><para>The destination CIDR block cannot point or belong to 100.64.0.0/10.</para>
+        /// </description></item>
+        /// <item><description><para>The destination CIDR blocks of the custom route entries in the same route table cannot overlap.</para>
+        /// </description></item>
+        /// <item><description><para>0.0.0.0/0 indicates the default CIDR block.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0.0.0.0/0</para>
+        /// <para>120.XXX.XXX.0/24</para>
         /// </summary>
         [NameInMap("DestinationCidrBlock")]
         [Validation(Required=false)]
@@ -49,9 +52,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The next hop type of the custom route. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Instance: an ENS instance.</description></item>
-        /// <item><description>HaVip: a high-availability virtual IP address (HAVIP).</description></item>
-        /// <item><description>NetworkPeer: VPC peering connection.</description></item>
+        /// <item><description><para>Instance: an ENS instance.</para>
+        /// </description></item>
+        /// <item><description><para>HaVip: a high-availability virtual IP address (HAVIP).</para>
+        /// </description></item>
+        /// <item><description><para>NetworkPeer: VPC peering connection.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,7 +68,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NextHopType { get; set; }
 
         /// <summary>
-        /// <para>The name of the custom route entry that you want to add. The name must be 1 to 128 characters in length. It cannot start with http:// or https://.</para>
+        /// <para>The name of the custom route entry that you want to add. The name must be 1 to 128 characters in length. It cannot start with http\:// or https\://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

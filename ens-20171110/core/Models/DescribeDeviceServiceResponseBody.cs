@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public DescribeDeviceServiceResponseBodyAppMetaData AppMetaData { get; set; }
         public class DescribeDeviceServiceResponseBodyAppMetaData : TeaModel {
             /// <summary>
-            /// <para>The ID of the application.</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>97a32f2a-aa2c-436a-b19c-05b20d258618</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The name of the application.</para>
+            /// <para>The application name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>iotx-api-admin</para>
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string AppStableVersion { get; set; }
 
             /// <summary>
-            /// <para>The type of the application. The value is of the enumeration type. Valid values:</para>
+            /// <para>The application type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Common</description></item>
-            /// <item><description>Scheduler</description></item>
+            /// <item><description>Common: common.</description></item>
+            /// <item><description>Scheduler: schedule resource.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string AppType { get; set; }
 
             /// <summary>
-            /// <para>The name of the application cluster.</para>
+            /// <para>The application cluster name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>poc</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <para>The description of the application.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test application</para>
+            /// <para>Test application</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -93,14 +93,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The status information of the application.</para>
+        /// <para>The application status information.</para>
         /// </summary>
         [NameInMap("AppStatus")]
         [Validation(Required=false)]
         public DescribeDeviceServiceResponseBodyAppStatus AppStatus { get; set; }
         public class DescribeDeviceServiceResponseBodyAppStatus : TeaModel {
             /// <summary>
-            /// <para>The status of the application. The value is of the enumeration type. Valid values:</para>
+            /// <para>The application status. Valid values:</para>
             /// <para>Three intermediate states:</para>
             /// <list type="bullet">
             /// <item><description>CREATING</description></item>
@@ -126,14 +126,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             /// <para>The description of the application status.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Creating in progress</para>
+            /// <para>Creating</para>
             /// </summary>
             [NameInMap("StatusDescrip")]
             [Validation(Required=false)]
             public string StatusDescrip { get; set; }
 
             /// <summary>
-            /// <para>The time when the status was last updated.</para>
+            /// <para>The most recent status update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-01-26T05:04Z</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3A535110-3EE3-5EC5-B1ED-10B7067A1FC8</para>
@@ -155,14 +155,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the devices.</para>
+        /// <para>The device list.</para>
         /// </summary>
         [NameInMap("ResourceDetailInfos")]
         [Validation(Required=false)]
         public List<DescribeDeviceServiceResponseBodyResourceDetailInfos> ResourceDetailInfos { get; set; }
         public class DescribeDeviceServiceResponseBodyResourceDetailInfos : TeaModel {
             /// <summary>
-            /// <para>The name of the device.</para>
+            /// <para>The device name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5JhF100NEgdBcpNren32</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string DeviceName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cloud device.</para>
+            /// <para>The cloud device ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>h-uf6009zoaexs5pefypbo</para>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string IP { get; set; }
 
             /// <summary>
-            /// <para>The Internet service provider (ISP).</para>
+            /// <para>The Internet service provider (ISP) information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cmcc</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string ISP { get; set; }
 
             /// <summary>
-            /// <para>The ID of the image.</para>
+            /// <para>The image ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>m-2ze40oyhjorpyw61k7be</para>
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string ImageID { get; set; }
 
             /// <summary>
-            /// <para>The media access control (MAC) address of the device.</para>
+            /// <para>The MAC address of the device.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AA:BB:77:88:99:03</para>
@@ -222,7 +222,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Mac { get; set; }
 
             /// <summary>
-            /// <para>The ID of the ENS node.</para>
+            /// <para>The ID of the ENS edge node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-jiaozuo-2</para>
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string RegionID { get; set; }
 
             /// <summary>
-            /// <para>The server name of the ENS node.</para>
+            /// <para>The server NC name of the ENS edge node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ens-nc2</para>
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Server { get; set; }
 
             /// <summary>
-            /// <para>The status of the device.</para>
+            /// <para>The device status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -252,7 +252,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The type of the device.</para>
+            /// <para>The device type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ens.ac6.large</para>
@@ -264,14 +264,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The information about the instances.</para>
+        /// <para>The list of resource instance information.</para>
         /// </summary>
         [NameInMap("ResourceInfos")]
         [Validation(Required=false)]
         public List<DescribeDeviceServiceResponseBodyResourceInfos> ResourceInfos { get; set; }
         public class DescribeDeviceServiceResponseBodyResourceInfos : TeaModel {
             /// <summary>
-            /// <para>The version of the application.</para>
+            /// <para>The application version number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v1</para>
@@ -291,17 +291,17 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string AreaCode { get; set; }
 
             /// <summary>
-            /// <para>The region name.</para>
+            /// <para>The area name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Jiaozuo City, Henan Province, Central China</para>
+            /// <para>Central China, Henan Province, Jiaozuo City</para>
             /// </summary>
             [NameInMap("AreaName")]
             [Validation(Required=false)]
             public string AreaName { get; set; }
 
             /// <summary>
-            /// <para>The time when the application was created.</para>
+            /// <para>The time when the resource was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-10-02T08:26Z</para>
@@ -311,14 +311,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The information about the devices.</para>
+            /// <para>The list of device information.</para>
             /// </summary>
             [NameInMap("DeviceInfos")]
             [Validation(Required=false)]
             public List<DescribeDeviceServiceResponseBodyResourceInfosDeviceInfos> DeviceInfos { get; set; }
             public class DescribeDeviceServiceResponseBodyResourceInfosDeviceInfos : TeaModel {
                 /// <summary>
-                /// <para>The name of the device.</para>
+                /// <para>The device name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test-api</para>
@@ -328,14 +328,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The network information.</para>
+                /// <para>The list of network information.</para>
                 /// </summary>
                 [NameInMap("Network")]
                 [Validation(Required=false)]
                 public List<DescribeDeviceServiceResponseBodyResourceInfosDeviceInfosNetwork> Network { get; set; }
                 public class DescribeDeviceServiceResponseBodyResourceInfosDeviceInfosNetwork : TeaModel {
                     /// <summary>
-                    /// <para>The port of the container.</para>
+                    /// <para>The container port.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10000-10010</para>
@@ -355,7 +355,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     public string ExternalIp { get; set; }
 
                     /// <summary>
-                    /// <para>The port range.</para>
+                    /// <para>The host port range.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>80-8080</para>
@@ -365,7 +365,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                     public string HostPorts { get; set; }
 
                     /// <summary>
-                    /// <para>The protocol of the gateway. The value is of the enumeration type. Valid values:</para>
+                    /// <para>The gateway protocol. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>TCP</description></item>
                     /// <item><description>UDP</description></item>
@@ -393,7 +393,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             }
 
             /// <summary>
-            /// <para>The ID of the instance.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-5s9boobrmh5000kv4jmi0oeai</para>
@@ -403,7 +403,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The status of the instance.</para>
+            /// <para>The instance status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -413,14 +413,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string InstanceStatus { get; set; }
 
             /// <summary>
-            /// <para>The internal IP addresses.</para>
+            /// <para>The list of internal IP addresses.</para>
             /// </summary>
             [NameInMap("InternalIps")]
             [Validation(Required=false)]
             public List<DescribeDeviceServiceResponseBodyResourceInfosInternalIps> InternalIps { get; set; }
             public class DescribeDeviceServiceResponseBodyResourceInfosInternalIps : TeaModel {
                 /// <summary>
-                /// <para>The internal IP address.</para>
+                /// <para>The IP address.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10.0.2.3</para>
@@ -439,7 +439,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public List<DescribeDeviceServiceResponseBodyResourceInfosPublicIps> PublicIps { get; set; }
             public class DescribeDeviceServiceResponseBodyResourceInfosPublicIps : TeaModel {
                 /// <summary>
-                /// <para>The public IP address.</para>
+                /// <para>The IP address.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>122.13.173.137</para>
@@ -451,7 +451,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             }
 
             /// <summary>
-            /// <para>The ID of the region.</para>
+            /// <para>The region code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-jiaozuo-2</para>
@@ -461,7 +461,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string RegionCode { get; set; }
 
             /// <summary>
-            /// <para>The ID of the ENS node.</para>
+            /// <para>The ID of the ENS edge node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-jiaozuo-2</para>
@@ -471,7 +471,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The name of the region.</para>
+            /// <para>The area name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>China Jiaozuo-2</para>
