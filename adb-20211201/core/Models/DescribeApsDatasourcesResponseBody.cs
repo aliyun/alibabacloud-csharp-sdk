@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeApsDatasourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried APS data sources.</para>
+        /// <para>The data sources.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public List<DescribeApsDatasourcesResponseBodyApsDatasources> ApsDatasources { get; set; }
         public class DescribeApsDatasourcesResponseBodyApsDatasources : TeaModel {
             /// <summary>
-            /// <para>The time when the data source was created.</para>
+            /// <para>The creation time. Format: yyyy-MM-dd HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-10 14:44:33</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string DatasourceDescription { get; set; }
 
             /// <summary>
-            /// <para>The data source ID.</para>
+            /// <para>The ID of the data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of returned entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeApsMigrationWorkloadsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried migration workloads.</para>
+        /// <para>The list of migration workloads.</para>
         /// </summary>
         [NameInMap("MigrationWorkloads")]
         [Validation(Required=false)]
         public List<DescribeApsMigrationWorkloadsResponseBodyMigrationWorkloads> MigrationWorkloads { get; set; }
         public class DescribeApsMigrationWorkloadsResponseBodyMigrationWorkloads : TeaModel {
             /// <summary>
-            /// <para>The number of AnalyticDB compute units (ACUs).</para>
+            /// <para>The number of ACUs.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public int? AcuCount { get; set; }
 
             /// <summary>
-            /// <para>The time when the job was created.</para>
+            /// <para>The time when the task was created. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format and in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-06-21T02:15:16Z</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string FailedMsg { get; set; }
 
             /// <summary>
-            /// <para>The job ID.</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string MaxRT { get; set; }
 
             /// <summary>
-            /// <para>The time when the migration job was modified.</para>
+            /// <para>The time when the task was modified. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format and in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-06-21T02:15:16Z</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the workload.</para>
+            /// <para>The name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TEST-001</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The OSS URL.</para>
+            /// <para>The OSS address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss://******</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string TargetType { get; set; }
 
             /// <summary>
-            /// <para>The sub-type of the workload.</para>
+            /// <para>The subtask type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries returned on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

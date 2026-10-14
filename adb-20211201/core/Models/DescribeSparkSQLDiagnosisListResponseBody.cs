@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeSparkSQLDiagnosisListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the request denial.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The queried diagnostic information.</para>
+        /// <para>The SQL diagnostics information collection.</para>
         /// </summary>
         [NameInMap("SQLDiagnosisList")]
         [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <summary>
             /// <para>The application ID.</para>
             /// <remarks>
-            /// <para> You can call the <a href="https://help.aliyun.com/document_detail/612475.html">ListSparkApps</a> operation to query a list of Spark application IDs.</para>
+            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/612475.html">ListSparkApps</a> operation to query the ID of the Spark application.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The execution duration of the query. Unit: milliseconds.</para>
+            /// <para>The actual running time. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? ElapsedTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the query executed within the Spark application.</para>
+            /// <para>The internal query execution ID within the Spark application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? InnerQueryId { get; set; }
 
             /// <summary>
-            /// <para>The maximum operator execution duration. Unit: milliseconds.</para>
+            /// <para>The maximum operator execution time. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>90</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? MaxExclusiveTime { get; set; }
 
             /// <summary>
-            /// <para>The maximum operator memory used. Unit: bytes.</para>
+            /// <para>The maximum operator memory consumption. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string SQL { get; set; }
 
             /// <summary>
-            /// <para>The number of entries scanned.</para>
+            /// <para>The number of scanned rows.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? ScanRowCount { get; set; }
 
             /// <summary>
-            /// <para>The start time of the query. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time is displayed in UTC.</para>
+            /// <para>The start time of the query. Format: <i>yyyy-MM-ddTHH:mmZ</i> (UTC time).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-11-20 09:09:00</para>
@@ -140,12 +140,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The execution status of the query. Valid values:</para>
+            /// <para>The final execution state of the query. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>COMPLETED</description></item>
-            /// <item><description>CANCELED</description></item>
-            /// <item><description>ABORTED</description></item>
-            /// <item><description>FAILED</description></item>
+            /// <item><description>COMPLETED: The query is completed.</description></item>
+            /// <item><description>CANCELED: The query is canceled.</description></item>
+            /// <item><description>ABORTED: The query is aborted.</description></item>
+            /// <item><description>FAILED: The query failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1343</para>

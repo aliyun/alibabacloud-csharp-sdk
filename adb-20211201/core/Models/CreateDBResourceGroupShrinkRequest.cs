@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AtmConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The auto-stop interval, in minutes (m).</para>
+        /// <para>The automatic stop interval, in minutes (m).</para>
         /// 
         /// <b>Example:</b>
         /// <para>5m</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string EngineParamsShrink { get; set; }
 
         /// <summary>
-        /// <para>The GPU time-based elastic plan.</para>
+        /// <para>The GPU time-sharing elastic plan.</para>
         /// </summary>
         [NameInMap("GpuElasticPlan")]
         [Validation(Required=false)]
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <list type="bullet">
         /// <item><description><b>Interactive</b></description></item>
         /// <item><description><b>Job</b><remarks>
-        /// <para>For more information about Data Lakehouse Edition resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Introduction to resource groups (Data Lakehouse Edition)</a>.</para>
+        /// <para>For more information about Data Lakehouse Edition resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview (Data Lakehouse Edition)</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -171,8 +171,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The maximum reserved computing resources, in ACUs.</para>
         /// <list type="bullet">
-        /// <item><description>If the resource group type is Interactive, the maximum reserved computing resources are the unallocated resources of the cluster, in increments of 16 ACUs.</description></item>
-        /// <item><description>If the resource group type is Job, the maximum reserved computing resources are the unallocated resources of the cluster, in increments of 8 ACUs.</description></item>
+        /// <item><description>If the resource group type is Interactive, the maximum reserved computing resources are the current unallocated resources of the cluster, with a step size of 16 ACUs.</description></item>
+        /// <item><description>If the resource group type is Job, the maximum reserved computing resources are the current unallocated resources of the cluster, with a step size of 8 ACUs.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -261,9 +261,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The scaling policy of the resource group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>AutoScaling: enables the AutoScaling auto-scaling policy.</description></item>
-        /// <item><description>Disable: disables auto-scaling.</description></item>
-        /// <item><description>MultiCluster: enables the MultiCluster auto-scaling policy.</description></item>
+        /// <item><description>AutoScaling: enables the AutoScaling automatic scaling policy.</description></item>
+        /// <item><description>Disable: disables automatic scaling.</description></item>
+        /// <item><description>MultiCluster: enables the MultiCluster automatic scaling policy.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -284,7 +284,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SpecName { get; set; }
 
         /// <summary>
-        /// <para>The name of the destination resource group.</para>
+        /// <para>The name of the target resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

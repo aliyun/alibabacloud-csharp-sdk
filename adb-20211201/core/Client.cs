@@ -5463,7 +5463,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the endpoints of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
+        /// <para>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5624,7 +5624,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the endpoints of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
+        /// <para>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5785,7 +5785,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the endpoints of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
+        /// <para>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5808,7 +5808,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the endpoints of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
+        /// <para>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12770,7 +12770,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an AnalyticDB Pipeline Service (APS) data source.</para>
+        /// <para>Queries the details of an APS data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12820,7 +12820,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an AnalyticDB Pipeline Service (APS) data source.</para>
+        /// <para>Queries the details of an APS data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12870,7 +12870,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an AnalyticDB Pipeline Service (APS) data source.</para>
+        /// <para>Queries the details of an APS data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12888,7 +12888,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an AnalyticDB Pipeline Service (APS) data source.</para>
+        /// <para>Queries the details of an APS data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12906,7 +12906,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of AnalyticDB Pipeline Service (APS) data sources.</para>
+        /// <para>Queries APS data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12976,7 +12976,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of AnalyticDB Pipeline Service (APS) data sources.</para>
+        /// <para>Queries APS data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13046,7 +13046,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of AnalyticDB Pipeline Service (APS) data sources.</para>
+        /// <para>Queries APS data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13064,7 +13064,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of AnalyticDB Pipeline Service (APS) data sources.</para>
+        /// <para>Queries APS data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13346,7 +13346,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of AnalyticDB Pipeline Service (APS) jobs.</para>
+        /// <para>Queries a list of APS tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13408,7 +13408,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of AnalyticDB Pipeline Service (APS) jobs.</para>
+        /// <para>Queries a list of APS tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13470,7 +13470,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of AnalyticDB Pipeline Service (APS) jobs.</para>
+        /// <para>Queries a list of APS tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13488,7 +13488,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of AnalyticDB Pipeline Service (APS) jobs.</para>
+        /// <para>Queries a list of APS tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13506,7 +13506,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the workloads of AnalyticDB Pipeline Service (APS) migration jobs.</para>
+        /// <para>Queries the list of workloads for an APS migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13572,7 +13572,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the workloads of AnalyticDB Pipeline Service (APS) migration jobs.</para>
+        /// <para>Queries the list of workloads for an APS migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13638,7 +13638,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the workloads of AnalyticDB Pipeline Service (APS) migration jobs.</para>
+        /// <para>Queries the list of workloads for an APS migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13656,7 +13656,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the workloads of AnalyticDB Pipeline Service (APS) migration jobs.</para>
+        /// <para>Queries the list of workloads for an APS migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19958,12 +19958,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve historical task records.</para>
+        /// <para>Retrieves historical task records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only supports viewing tasks within the last 30 days.</para>
+        /// <para>You can view only tasks from the last 30 days.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20053,12 +20053,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve historical task records.</para>
+        /// <para>Retrieves historical task records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only supports viewing tasks within the last 30 days.</para>
+        /// <para>You can view only tasks from the last 30 days.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20148,12 +20148,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve historical task records.</para>
+        /// <para>Retrieves historical task records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only supports viewing tasks within the last 30 days.</para>
+        /// <para>You can view only tasks from the last 30 days.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20171,12 +20171,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve historical task records.</para>
+        /// <para>Retrieves historical task records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only supports viewing tasks within the last 30 days.</para>
+        /// <para>You can view only tasks from the last 30 days.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20194,7 +20194,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries task statistics.</para>
+        /// <para>Queries task statistics in the task center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20276,7 +20276,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries task statistics.</para>
+        /// <para>Queries task statistics in the task center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20358,7 +20358,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries task statistics.</para>
+        /// <para>Queries task statistics in the task center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20376,7 +20376,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries task statistics.</para>
+        /// <para>Queries task statistics in the task center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21774,7 +21774,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the service account permissions of an AnalyticDB for MySQL cluster.</para>
+        /// <para>Queries the authorization status of a service account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21832,7 +21832,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the service account permissions of an AnalyticDB for MySQL cluster.</para>
+        /// <para>Queries the authorization status of a service account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21890,7 +21890,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the service account permissions of an AnalyticDB for MySQL cluster.</para>
+        /// <para>Queries the authorization status of a service account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21908,7 +21908,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the service account permissions of an AnalyticDB for MySQL cluster.</para>
+        /// <para>Queries the authorization status of a service account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25098,7 +25098,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the diagnostic information about Spark SQL queries.</para>
+        /// <para>Queries the Spark SQL diagnostics list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25168,7 +25168,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the diagnostic information about Spark SQL queries.</para>
+        /// <para>Queries the Spark SQL diagnostics list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25238,7 +25238,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the diagnostic information about Spark SQL queries.</para>
+        /// <para>Queries the Spark SQL diagnostics list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25256,7 +25256,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the diagnostic information about Spark SQL queries.</para>
+        /// <para>Queries the Spark SQL diagnostics list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29918,7 +29918,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs knowledge base recall.</para>
+        /// <para>Adds a knowledge base document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29947,6 +29947,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             {
                 query["Question"] = request.Question;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SemanticRules))
+            {
+                query["SemanticRules"] = request.SemanticRules;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
             {
                 query["Tags"] = request.Tags;
@@ -29959,9 +29963,15 @@ namespace AlibabaCloud.SDK.Adb20211201
             {
                 query["User"] = request.User;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Images))
+            {
+                body["Images"] = request.Images;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -29980,7 +29990,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs knowledge base recall.</para>
+        /// <para>Adds a knowledge base document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30009,6 +30019,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             {
                 query["Question"] = request.Question;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SemanticRules))
+            {
+                query["SemanticRules"] = request.SemanticRules;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
             {
                 query["Tags"] = request.Tags;
@@ -30021,9 +30035,15 @@ namespace AlibabaCloud.SDK.Adb20211201
             {
                 query["User"] = request.User;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Images))
+            {
+                body["Images"] = request.Images;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -30042,7 +30062,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs knowledge base recall.</para>
+        /// <para>Adds a knowledge base document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30060,7 +30080,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs knowledge base recall.</para>
+        /// <para>Adds a knowledge base document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30526,15 +30546,15 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the retry log of a Spark application.</para>
+        /// <para>Queries the retry logs of a Spark application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</para>
         /// <list type="bullet">
-        /// <item><description>Regional Virtual Private Cloud (VPC) endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
-        /// <para> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</para>
+        /// <item><description>Public endpoint of a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>VPC endpoint of a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
+        /// <para>If you encounter a 409 error when sending requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -30593,15 +30613,15 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the retry log of a Spark application.</para>
+        /// <para>Queries the retry logs of a Spark application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</para>
         /// <list type="bullet">
-        /// <item><description>Regional Virtual Private Cloud (VPC) endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
-        /// <para> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</para>
+        /// <item><description>Public endpoint of a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>VPC endpoint of a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
+        /// <para>If you encounter a 409 error when sending requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -30660,15 +30680,15 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the retry log of a Spark application.</para>
+        /// <para>Queries the retry logs of a Spark application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</para>
         /// <list type="bullet">
-        /// <item><description>Regional Virtual Private Cloud (VPC) endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
-        /// <para> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</para>
+        /// <item><description>Public endpoint of a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>VPC endpoint of a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
+        /// <para>If you encounter a 409 error when sending requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -30689,15 +30709,15 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the retry log of a Spark application.</para>
+        /// <para>Queries the retry logs of a Spark application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</para>
         /// <list type="bullet">
-        /// <item><description>Regional Virtual Private Cloud (VPC) endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
-        /// <para> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</para>
+        /// <item><description>Public endpoint of a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>VPC endpoint of a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
+        /// <para>If you encounter a 409 error when sending requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</para>
         /// </remarks>
         /// </description></item>
         /// </list>

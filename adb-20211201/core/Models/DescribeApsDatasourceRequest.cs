@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeApsDatasourceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL cluster.</para>
+        /// <para>The ADB instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The data source ID.</para>
+        /// <para>The ID of the data source.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

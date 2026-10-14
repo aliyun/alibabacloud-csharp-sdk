@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The prompt message.</para>
+            /// <para>The message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>recall 5 files</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The recall results.</para>
+            /// <para>The retrieval results.</para>
             /// </summary>
             [NameInMap("Results")]
             [Validation(Required=false)]

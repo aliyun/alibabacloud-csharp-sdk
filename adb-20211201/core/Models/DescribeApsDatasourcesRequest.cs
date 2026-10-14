@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeApsDatasourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL cluster.</para>
+        /// <para>The ADB instance ID. This parameter is required. You can invoke the DescribeDBClusters operation to query the cluster ID in the specified region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>amv-******</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DatasourceType { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query.</para>
+        /// <para>The end date. Format: yyyy-MM-dd.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-01-30</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query.</para>
+        /// <para>The start date. Format: yyyy-MM-dd.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-01-01</para>

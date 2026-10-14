@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeOperatorPermissionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time when the permissions take effect.</para>
+        /// <para>The creation time. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-02-25T03:35:02Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The time when the permissions expire.</para>
+        /// <para>The expiration time of the authorization. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-01-10T02:19:00Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ExpiredTime { get; set; }
 
         /// <summary>
-        /// <para>The queried permissions.</para>
+        /// <para>The authorization details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Control,Data</para>

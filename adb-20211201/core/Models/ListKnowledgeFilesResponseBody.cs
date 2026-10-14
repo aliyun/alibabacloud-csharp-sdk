@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public List<ListKnowledgeFilesResponseBodyDataFiles> Files { get; set; }
             public class ListKnowledgeFilesResponseBodyDataFiles : TeaModel {
                 /// <summary>
-                /// <para>The time when the file was added to the knowledge base.</para>
+                /// <para>The time when the file was added to the knowledge base. The format is yyyy-MM-dd HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-06-09 10:27:35</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public long? FileId { get; set; }
 
                 /// <summary>
-                /// <para>The size of the file, in bytes.</para>
+                /// <para>The size of the file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1024</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public long? FileSizeBytes { get; set; }
 
                 /// <summary>
-                /// <para>The Object Storage Service (OSS) URL of the file.</para>
+                /// <para>The OSS URL of the file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>oss://bucketName/path/to/file</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public int? PageCount { get; set; }
 
                 /// <summary>
-                /// <para>The processing message of the knowledge base file.</para>
+                /// <para>The processing information of the knowledge base file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>successful</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string ProcessStatus { get; set; }
 
                 /// <summary>
-                /// <para>The time when the file was last updated.</para>
+                /// <para>The update time. The format is yyyy-MM-dd HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-06-10 10:23:46</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             }
 
             /// <summary>
-            /// <para>The message returned by the request.</para>
+            /// <para>The message returned for the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Successful</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public bool? Success { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>

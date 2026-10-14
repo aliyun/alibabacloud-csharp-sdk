@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeApsJobsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried APS jobs.</para>
+        /// <para>The list of APS tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public List<DescribeApsJobsResponseBodyAPSJobs> APSJobs { get; set; }
         public class DescribeApsJobsResponseBodyAPSJobs : TeaModel {
             /// <summary>
-            /// <para>The job ID.</para>
+            /// <para>The ID of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aps-******</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ApsJobId { get; set; }
 
             /// <summary>
-            /// <para>The name of the APS job.</para>
+            /// <para>The name of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>data-sync-******</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ApsJobName { get; set; }
 
             /// <summary>
-            /// <para>The time when the APS job was created.</para>
+            /// <para>The creation time in the yyyy-MM-dd HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-06-28 15:00:04</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? Delay { get; set; }
 
             /// <summary>
-            /// <para>The destination cluster ID.</para>
+            /// <para>The destination instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>amv-*******</para>
@@ -85,14 +85,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The progress.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>30: progress 30%</para>
+            /// <para>30: 30% progress</para>
             /// </summary>
             [NameInMap("Projress")]
             [Validation(Required=false)]
             public string Projress { get; set; }
 
             /// <summary>
-            /// <para>The ID of the source instance or cluster.</para>
+            /// <para>The source instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pc-******</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string SourceInstanceID { get; set; }
 
             /// <summary>
-            /// <para>The status of the APS job.</para>
+            /// <para>The status of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The status of the task.</para>
+            /// <para>The status of the subtask.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The backend error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ok</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The status code. A value of 200 indicates that the request was successful.</para>
+        /// <para>The HTTP status code returned for the request. A value of 200 indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ok</para>
@@ -148,10 +148,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message. Valid values:</para>
+        /// <para>The additional information about the call result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the request was successful, a success message is returned.****</description></item>
-        /// <item><description>If the request failed, an error message is returned.</description></item>
+        /// <item><description>If the request is successful, <b>Success</b> is returned. </description></item>
+        /// <item><description>If the request fails, a specific error code is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -192,10 +192,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: Successful.</description></item>
+        /// <item><description><b>false</b>: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

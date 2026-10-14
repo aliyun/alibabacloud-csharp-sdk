@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeApsMigrationWorkloadsRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The instance ID. This parameter is required. You can call the DescribeDBClusters operation to query the instance ID in the destination region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>amv-*******</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query.</para>
+        /// <para>The end time of the query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-07-20T16:00:00Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The Object Storage Service (OSS) URL.</para>
+        /// <para>The OSS address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://******</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range to query.</para>
+        /// <para>The start time of the query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-06-20T16:00:00Z</para>

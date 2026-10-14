@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeHistoryTasksStatResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried information about the request denial.</para>
+        /// <para>The access denial details.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public DescribeHistoryTasksStatResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
         public class DescribeHistoryTasksStatResponseBodyAccessDeniedDetail : TeaModel {
             /// <summary>
-            /// <para>Authorized action</para>
+            /// <para>The authentication action.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The display name of the requester.</para>
+            /// <para>The display name of the authorized principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the authentication principal belongs.</para>
+            /// <para>The Alibaba Cloud account ID of the authenticated principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>141345906006****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The requester type.</para>
+            /// <para>The type of the authorized principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -67,10 +67,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>The type of the policy denial. Valid values:</para>
+            /// <para>The type of the access policy denial. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ImplicitDeny</b>: The resource holder has not configured a policy for the current user. By default, unauthorized operations are denied.</description></item>
-            /// <item><description><b>ExplicitDeny</b>: The RAM policy configured by the resource holder explicitly denies the current user access to the corresponding resources.</description></item>
+            /// <item><description><b>ImplicitDeny</b>: The resource owner has not configured a relevant access policy for the current user, and unauthorized operations are denied by default.</description></item>
+            /// <item><description><b>ExplicitDeny</b>: The RAM policy configured by the resource owner explicitly denies the current user access to the corresponding resource.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -81,13 +81,13 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string NoPermissionType { get; set; }
 
             /// <summary>
-            /// <para>The type of the policy that causes the access denied error.</para>
+            /// <para>The type of the policy that caused the permission denial. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ControlPolicy</b>: control policy</description></item>
-            /// <item><description><b>SessionPolicy</b>: an additional policy that is added to the temporary token.</description></item>
-            /// <item><description><b>AssumeRolePolicy</b>: the authorization policy of the RAM role.</description></item>
-            /// <item><description><b>AccountLevelIdentityBasedPolicy</b>: the principal policies of the account authorization scope, including custom policies and system policies.</description></item>
-            /// <item><description><b>ResourceGroupLevelIdentityBasedPolicy</b>: the principal policy of the resource group authorization scope, including custom policies and system policies.</description></item>
+            /// <item><description><b>ControlPolicy</b>: Control policy.</description></item>
+            /// <item><description><b>SessionPolicy</b>: An additional permission policy added to the temporary token.</description></item>
+            /// <item><description><b>AssumeRolePolicy</b>: The trust policy of the RAM role.</description></item>
+            /// <item><description><b>AccountLevelIdentityBasedPolicy</b>: The identity-access policy at the account level, including custom policies and system policies.</description></item>
+            /// <item><description><b>ResourceGroupLevelIdentityBasedPolicy</b>: The identity-access policy at the resource group level, including custom policies and system policies.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>API status or POP error code.</para>
+        /// <para>The API status code or POP error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -120,22 +120,29 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The tasks.</para>
+        /// <para>The list of tasks.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeHistoryTasksStatResponseBodyItems> Items { get; set; }
         public class DescribeHistoryTasksStatResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The status of the APS job.</para>
+            /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Scheduled</b></description></item>
-            /// <item><description><b>Running</b></description></item>
-            /// <item><description><b>Succeed</b></description></item>
-            /// <item><description><b>Failed</b>: The task failed.</description></item>
-            /// <item><description><b>Cancelling</b></description></item>
-            /// <item><description><b>Canceled</b></description></item>
-            /// <item><description><b>Waiting</b></description></item>
+            /// <item><description><para><b>Scheduled</b>: Pending execution.</para>
+            /// </description></item>
+            /// <item><description><para><b>Running</b>: Running.</para>
+            /// </description></item>
+            /// <item><description><para><b>Succeed</b>: Succeeded.</para>
+            /// </description></item>
+            /// <item><description><para><b>Failed</b>: Failed.</para>
+            /// </description></item>
+            /// <item><description><para><b>Cancelling</b>: Cancelling.</para>
+            /// </description></item>
+            /// <item><description><para><b>Canceled</b>: Canceled.</para>
+            /// </description></item>
+            /// <item><description><para><b>Waiting</b>: Waiting for the scheduled time.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -158,10 +165,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The returned message. Valid values:</para>
+        /// <para>The additional information about the call result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the request was successful, an success message is returned.</description></item>
-        /// <item><description>If the request failed, an error message is returned.</description></item>
+        /// <item><description>If the request is normal, OK is returned.</description></item>
+        /// <item><description>If the request is abnormal, a specific error code is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -182,10 +189,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeHistoryTasksRequest : TeaModel {
         /// <summary>
-        /// <para>Minimum task execution time. Used to filter tasks with execution time greater than this value, in seconds. Default 0, meaning no limit.</para>
+        /// <para>The minimum execution duration of the task. This parameter is used to filter tasks whose execution duration is greater than this value. Unit: seconds. Default value: 0, which indicates no limit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? FromExecTime { get; set; }
 
         /// <summary>
-        /// <para>Start time of task start time, indicating querying tasks whose start time is after this time. Expressed according to ISO8601 standard, and must use UTC +0 time, format: yyyy-MM-ddTHH:mm:ssZ. Earliest supports 30 days ago, automatically converts to 30 days ago if more than 30 days from current time.</para>
+        /// <para>The start time of the time range to query task start times. Tasks that start after this time are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The earliest supported time is 30 days ago. If the specified time is more than 30 days before the current time, it is automatically changed to 30 days ago.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string FromStartTime { get; set; }
 
         /// <summary>
-        /// <para>The cluster ID. Separate multiple cluster IDs with commas (,). Maximum 30 cluster IDs. If not filled, defaults to querying historical tasks of all clusters in that region.</para>
+        /// <para>The cluster ID. You can specify multiple cluster IDs separated by commas (,). You can specify up to 30 cluster IDs. If this parameter is left empty, historical tasks of all clusters in the region are queried by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>amv-********</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The instance type. The value is fixed to Instance.</para>
+        /// <para>The instance type. Set the value to Instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Instance</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Valid range: positive integers. Default value: 1</para>
+        /// <para>The page number of the query result. Valid values: positive integers. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-ae****</para>
@@ -91,17 +91,24 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The state of the task. Valid values:</para>
+        /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Scheduled</b></description></item>
-        /// <item><description><b>Running</b></description></item>
-        /// <item><description><b>Succeed</b></description></item>
-        /// <item><description><b>Failed</b>: The task failed.</description></item>
-        /// <item><description><b>Cancelling</b></description></item>
-        /// <item><description><b>Canceled</b></description></item>
-        /// <item><description><b>Waiting</b></description></item>
+        /// <item><description><para><b>Scheduled</b>: Pending execution.</para>
+        /// </description></item>
+        /// <item><description><para><b>Running</b>: Running.</para>
+        /// </description></item>
+        /// <item><description><para><b>Succeed</b>: Succeeded.</para>
+        /// </description></item>
+        /// <item><description><para><b>Failed</b>: Failed.</para>
+        /// </description></item>
+        /// <item><description><para><b>Cancelling</b>: Being canceled.</para>
+        /// </description></item>
+        /// <item><description><para><b>Canceled</b>: Canceled.</para>
+        /// </description></item>
+        /// <item><description><para><b>Waiting</b>: Waiting for the scheduled time.</para>
+        /// </description></item>
         /// </list>
-        /// <para>If querying multiple statuses, separate them with English commas. Default is empty, meaning select all.</para>
+        /// <para>You can specify multiple values separated by commas (,). If this parameter is left empty, all statuses are queried by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Scheduled</para>
@@ -111,7 +118,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The job IDs. Separate multiple task IDs with commas (,). Maximum 30 task IDs. If not filled, defaults to querying historical tasks of all clusters.</para>
+        /// <para>The task ID. You can specify multiple task IDs separated by commas (,). You can specify up to 30 task IDs. If this parameter is left empty, historical tasks of all clusters are queried by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-83br18hloy3faf****</para>
@@ -121,7 +128,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>Task type, used to query specific type task situations. If multiple, separate with English commas (,), maximum 30 supported. Default is empty, meaning no restriction.</para>
+        /// <para>The task type. This parameter is used to query tasks of a specific type. You can specify multiple task types separated by commas (,). You can specify up to 30 task types. If this parameter is left empty, no limit is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>autotest_dispatch_cases</para>
@@ -131,7 +138,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string TaskType { get; set; }
 
         /// <summary>
-        /// <para>Maximum task execution time. Used to filter tasks with execution time not less than this value, in seconds. Default 0, meaning no limit.</para>
+        /// <para>The maximum execution duration of the task. This parameter is used to filter tasks whose execution duration does not exceed this value. Unit: seconds. Default value: 0, which indicates no limit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -141,7 +148,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? ToExecTime { get; set; }
 
         /// <summary>
-        /// <para>End time of task start time, indicating querying tasks whose start time is before this time. Expressed according to ISO8601 standard, and must use UTC +0 time, format: yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// <para>The end time of the time range to query task start times. Tasks that start before this time are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

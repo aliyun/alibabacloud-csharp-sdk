@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class GetSparkAppAttemptLogRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the log.</para>
+        /// <para>The ID of the retry log.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/455887.html">ListSparkAppAttempts</a> operation to query the information about the retry attempts of a Spark application, including the retry log IDs.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/455887.html">ListSparkAppAttempts</a> operation to query the retry history of an application, which includes the retry log ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AttemptId { get; set; }
 
         /// <summary>
-        /// <para>The number of log entries to return. Valid values: 1 to 500. Default value: 300.</para>
+        /// <para>The number of lines in the retry log. Valid values: 1 to 500. Default value: 300.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? LogLength { get; set; }
 
         /// <summary>
-        /// <para>The log offset.</para>
+        /// <para>The start offset for reading logs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of data rows per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>

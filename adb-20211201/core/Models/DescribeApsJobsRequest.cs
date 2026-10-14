@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeApsJobsRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the APS job.</para>
+        /// <para>The name of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aps-xxxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ApsJobName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query.</para>
+        /// <para>The end time of creation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-04-23T01:10Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string CreateTimeEnd { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query.</para>
+        /// <para>The start time of creation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-03-23T01:10Z</para>
