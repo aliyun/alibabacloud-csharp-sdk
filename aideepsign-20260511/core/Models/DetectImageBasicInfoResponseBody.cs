@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
 {
     public class DetectImageBasicInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business error code. &quot;OK&quot; is returned if the request was successful.</para>
+        /// <para>The business error code. Returns &quot;OK&quot; when the request succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The image resolution (width × height), such as 1920 × 1080. This value is empty if the resolution cannot be identified.</para>
+        /// <para>The image resolution (width × height), such as 1920 × 1080. Empty if the resolution cannot be identified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2048 * 2048</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string Dpi { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code. 200 is returned if the request was successful.</para>
+        /// <para>The HTTP status code. Returns 200 when the request succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The additional information. &quot;success&quot; is returned if the request was successful.</para>
+        /// <para>The additional information. Returns &quot;success&quot; when the request succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -80,14 +80,14 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string Size { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The image format, such as JPEG, PNG, GIF, or WEBP. UNKNOWN is returned if the format cannot be identified.</para>
+        /// <para>The image format, such as JPEG, PNG, GIF, or WEBP. Returns <c>UNKNOWN</c> if the format cannot be identified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PNG</para>

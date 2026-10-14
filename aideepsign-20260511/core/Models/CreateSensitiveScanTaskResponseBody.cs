@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The task ID. You can use this ID to call the GetSensitiveScanResult operation to query the result.</para>
+        /// <para>The task ID. You can use this ID to call <c>GetSensitiveScanResult</c> to query the result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>f47ac10b-58cc-4372-a567-0e02b2c3d479</para>

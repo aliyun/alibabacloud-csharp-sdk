@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the issuer is trusted. A value of true indicates that the issuer certificate is issued by a trusted CA.</para>
+        /// <para>Indicates whether the issuer is trusted. A value of true indicates that the issuer certificate is issued by a trusted certification authority (CA).</para>
         /// </summary>
         [NameInMap("IssuerTrusted")]
         [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public VerifyImageSignatureResponseBodyManifest Manifest { get; set; }
         public class VerifyImageSignatureResponseBodyManifest : TeaModel {
             /// <summary>
-            /// <para>The list of assertions, which contains metadata such as the origin and editing history of the image.</para>
+            /// <para>The list of assertions, which contains metadata such as the provenance and editing history of the image.</para>
             /// </summary>
             [NameInMap("Assertions")]
             [Validation(Required=false)]
@@ -172,9 +172,10 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         /// <summary>
         /// <para>The signature verification status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Valid: The signature is valid.</description></item>
-        /// <item><description>Invalid: The signature is invalid or has been tampered with.</description></item>
-        /// <item><description>Trusted: The signature is valid and trusted.</description></item>
+        /// <item><description>Unsigned: The image does not contain C2PA data.</description></item>
+        /// <item><description>Invalid: The signature, data hash, or C2PA structure is invalid.</description></item>
+        /// <item><description>Valid: The signature and data hash are valid, but the issuer is not necessarily trusted.</description></item>
+        /// <item><description>Trusted: The signature is valid and the issuer certificate is trusted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

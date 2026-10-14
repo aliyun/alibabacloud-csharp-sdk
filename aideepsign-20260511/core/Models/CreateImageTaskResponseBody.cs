@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
 {
     public class CreateImageTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business error code. The value <c>OK</c> is returned if the request succeeds.</para>
+        /// <para>The business error code. The value <c>OK</c> is returned if the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code. The value <c>200</c> is returned if the request succeeds.</para>
+        /// <para>The HTTP status code. The value <c>200</c> is returned if the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The additional information. The value <c>success</c> is returned if the request succeeds.</para>
+        /// <para>The additional information. The value <c>success</c> is returned if the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

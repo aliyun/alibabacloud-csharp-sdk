@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string CertificateSubject { get; set; }
 
         /// <summary>
-        /// <para>The business error code. The value &quot;OK&quot; is returned if the request succeeds.</para>
+        /// <para>The business error code. &quot;OK&quot; is returned if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code. The value 200 is returned if the request succeeds.</para>
+        /// <para>The HTTP status code. 200 is returned if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The additional information. The value &quot;success&quot; is returned if the request succeeds.</para>
+        /// <para>The additional information. &quot;success&quot; is returned if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string SignedImageUrl { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
