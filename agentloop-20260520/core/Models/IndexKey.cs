@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class IndexKey : TeaModel {
         /// <summary>
-        /// <para>Specifies whether Chinese is included. This parameter is required only when the <b>type</b> parameter is set to <b>text</b>. Valid values:</para>
+        /// <para>Specifies whether the field contains Chinese characters. This parameter is required only when the <b>type</b> parameter is set to <b>text</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Chinese is included.</description></item>
-        /// <item><description>false: Chinese is not included.</description></item>
+        /// <item><description>true: The field contains Chinese characters.</description></item>
+        /// <item><description>false: The field does not contain Chinese characters.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public bool? Chn { get; set; }
 
         /// <summary>
-        /// <para>The description.</para>
+        /// <para>The field description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The field embedding type.</para>
+        /// <para>The embedding type of the field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>agentloop-embedding-v4</para>
@@ -44,14 +44,17 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Embedding { get; set; }
 
         /// <summary>
-        /// <para>The JSON subfields. This parameter takes effect only when type is set to json.</para>
+        /// <para>The JSON subfields. This property takes effect only when the type is set to json.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;content&quot;:{&quot;type&quot;:&quot;text&quot;,&quot;chn&quot;:true}}</para>
         /// </summary>
         [NameInMap("jsonKeys")]
         [Validation(Required=false)]
         public Dictionary<string, IndexJsonKey> JsonKeys { get; set; }
 
         /// <summary>
-        /// <para>The type.</para>
+        /// <para>The field type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>text</para>

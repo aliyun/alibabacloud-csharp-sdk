@@ -473,7 +473,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a context store.</para>
+        /// <para>Creates a context library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -537,7 +537,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a context store.</para>
+        /// <para>Creates a context library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -601,7 +601,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a context store.</para>
+        /// <para>Creates a context library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -620,7 +620,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a context store.</para>
+        /// <para>Creates a context library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2017,6 +2017,322 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreateExperimentRunWithOptionsAsync(agentSpace, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a run for the specified optimization task and returns the run ID. When preview is set to true, an independent pre-run is executed to generate candidate results and evidence. The pre-run does not publish candidate artifacts or advance the formal run history.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateOptimizeRunRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOptimizeRunResponse
+        /// </returns>
+        public CreateOptimizeRunResponse CreateOptimizeRunWithOptions(string agentSpace, string optimizeTaskName, CreateOptimizeRunRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
+            {
+                body["input"] = request.Input;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Preview))
+            {
+                body["preview"] = request.Preview;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateOptimizeRun",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/agentspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/optimizetasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(optimizeTaskName) + "/runs",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateOptimizeRunResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a run for the specified optimization task and returns the run ID. When preview is set to true, an independent pre-run is executed to generate candidate results and evidence. The pre-run does not publish candidate artifacts or advance the formal run history.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateOptimizeRunRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOptimizeRunResponse
+        /// </returns>
+        public async Task<CreateOptimizeRunResponse> CreateOptimizeRunWithOptionsAsync(string agentSpace, string optimizeTaskName, CreateOptimizeRunRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
+            {
+                body["input"] = request.Input;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Preview))
+            {
+                body["preview"] = request.Preview;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateOptimizeRun",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/agentspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/optimizetasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(optimizeTaskName) + "/runs",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateOptimizeRunResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a run for the specified optimization task and returns the run ID. When preview is set to true, an independent pre-run is executed to generate candidate results and evidence. The pre-run does not publish candidate artifacts or advance the formal run history.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateOptimizeRunRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOptimizeRunResponse
+        /// </returns>
+        public CreateOptimizeRunResponse CreateOptimizeRun(string agentSpace, string optimizeTaskName, CreateOptimizeRunRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateOptimizeRunWithOptions(agentSpace, optimizeTaskName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a run for the specified optimization task and returns the run ID. When preview is set to true, an independent pre-run is executed to generate candidate results and evidence. The pre-run does not publish candidate artifacts or advance the formal run history.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateOptimizeRunRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOptimizeRunResponse
+        /// </returns>
+        public async Task<CreateOptimizeRunResponse> CreateOptimizeRunAsync(string agentSpace, string optimizeTaskName, CreateOptimizeRunRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateOptimizeRunWithOptionsAsync(agentSpace, optimizeTaskName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an optimization task in a specified AgentSpace, and configures the task type, status, and type-specific parameters. Optional prompts only support inline Markdown.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateOptimizeTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOptimizeTaskResponse
+        /// </returns>
+        public CreateOptimizeTaskResponse CreateOptimizeTaskWithOptions(string agentSpace, CreateOptimizeTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OptimizeTaskName))
+            {
+                body["optimizeTaskName"] = request.OptimizeTaskName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateOptimizeTask",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/agentspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/optimizetasks",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateOptimizeTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an optimization task in a specified AgentSpace, and configures the task type, status, and type-specific parameters. Optional prompts only support inline Markdown.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateOptimizeTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOptimizeTaskResponse
+        /// </returns>
+        public async Task<CreateOptimizeTaskResponse> CreateOptimizeTaskWithOptionsAsync(string agentSpace, CreateOptimizeTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OptimizeTaskName))
+            {
+                body["optimizeTaskName"] = request.OptimizeTaskName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateOptimizeTask",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/agentspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/optimizetasks",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateOptimizeTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an optimization task in a specified AgentSpace, and configures the task type, status, and type-specific parameters. Optional prompts only support inline Markdown.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateOptimizeTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOptimizeTaskResponse
+        /// </returns>
+        public CreateOptimizeTaskResponse CreateOptimizeTask(string agentSpace, CreateOptimizeTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateOptimizeTaskWithOptions(agentSpace, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an optimization task in a specified AgentSpace, and configures the task type, status, and type-specific parameters. Optional prompts only support inline Markdown.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateOptimizeTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOptimizeTaskResponse
+        /// </returns>
+        public async Task<CreateOptimizeTaskResponse> CreateOptimizeTaskAsync(string agentSpace, CreateOptimizeTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateOptimizeTaskWithOptionsAsync(agentSpace, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3487,6 +3803,136 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes an optimization task in a specified AgentSpace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOptimizeTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOptimizeTaskResponse
+        /// </returns>
+        public DeleteOptimizeTaskResponse DeleteOptimizeTaskWithOptions(string agentSpace, string optimizeTaskName, DeleteOptimizeTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteOptimizeTask",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/agentspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/optimizetasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(optimizeTaskName),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteOptimizeTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an optimization task in a specified AgentSpace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOptimizeTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOptimizeTaskResponse
+        /// </returns>
+        public async Task<DeleteOptimizeTaskResponse> DeleteOptimizeTaskWithOptionsAsync(string agentSpace, string optimizeTaskName, DeleteOptimizeTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteOptimizeTask",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/agentspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/optimizetasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(optimizeTaskName),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteOptimizeTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an optimization task in a specified AgentSpace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOptimizeTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOptimizeTaskResponse
+        /// </returns>
+        public DeleteOptimizeTaskResponse DeleteOptimizeTask(string agentSpace, string optimizeTaskName, DeleteOptimizeTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteOptimizeTaskWithOptions(agentSpace, optimizeTaskName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an optimization task in a specified AgentSpace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOptimizeTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOptimizeTaskResponse
+        /// </returns>
+        public async Task<DeleteOptimizeTaskResponse> DeleteOptimizeTaskAsync(string agentSpace, string optimizeTaskName, DeleteOptimizeTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteOptimizeTaskWithOptionsAsync(agentSpace, optimizeTaskName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a pipeline.</para>
         /// </summary>
         /// 
@@ -4087,7 +4533,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a context store.</para>
+        /// <para>Queries the context store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4127,7 +4573,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a context store.</para>
+        /// <para>Queries the context store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4167,7 +4613,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a context store.</para>
+        /// <para>Queries the context store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4186,7 +4632,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a context store.</para>
+        /// <para>Queries the context store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5221,6 +5667,242 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询优化任务执行详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetOptimizeRunRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOptimizeRunResponse
+        /// </returns>
+        public GetOptimizeRunResponse GetOptimizeRunWithOptions(string agentSpace, string optimizeTaskName, string optimizeRunId, GetOptimizeRunRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetOptimizeRun",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/agentspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/optimizetasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(optimizeTaskName) + "/runs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(optimizeRunId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetOptimizeRunResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询优化任务执行详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetOptimizeRunRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOptimizeRunResponse
+        /// </returns>
+        public async Task<GetOptimizeRunResponse> GetOptimizeRunWithOptionsAsync(string agentSpace, string optimizeTaskName, string optimizeRunId, GetOptimizeRunRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetOptimizeRun",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/agentspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/optimizetasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(optimizeTaskName) + "/runs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(optimizeRunId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetOptimizeRunResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询优化任务执行详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetOptimizeRunRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOptimizeRunResponse
+        /// </returns>
+        public GetOptimizeRunResponse GetOptimizeRun(string agentSpace, string optimizeTaskName, string optimizeRunId, GetOptimizeRunRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetOptimizeRunWithOptions(agentSpace, optimizeTaskName, optimizeRunId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询优化任务执行详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetOptimizeRunRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOptimizeRunResponse
+        /// </returns>
+        public async Task<GetOptimizeRunResponse> GetOptimizeRunAsync(string agentSpace, string optimizeTaskName, string optimizeRunId, GetOptimizeRunRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetOptimizeRunWithOptionsAsync(agentSpace, optimizeTaskName, optimizeRunId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询优化任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetOptimizeTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOptimizeTaskResponse
+        /// </returns>
+        public GetOptimizeTaskResponse GetOptimizeTaskWithOptions(string agentSpace, string optimizeTaskName, GetOptimizeTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetOptimizeTask",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/agentspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/optimizetasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(optimizeTaskName),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetOptimizeTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询优化任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetOptimizeTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOptimizeTaskResponse
+        /// </returns>
+        public async Task<GetOptimizeTaskResponse> GetOptimizeTaskWithOptionsAsync(string agentSpace, string optimizeTaskName, GetOptimizeTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetOptimizeTask",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/agentspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/optimizetasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(optimizeTaskName),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetOptimizeTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询优化任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetOptimizeTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOptimizeTaskResponse
+        /// </returns>
+        public GetOptimizeTaskResponse GetOptimizeTask(string agentSpace, string optimizeTaskName, GetOptimizeTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetOptimizeTaskWithOptions(agentSpace, optimizeTaskName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询优化任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetOptimizeTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOptimizeTaskResponse
+        /// </returns>
+        public async Task<GetOptimizeTaskResponse> GetOptimizeTaskAsync(string agentSpace, string optimizeTaskName, GetOptimizeTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetOptimizeTaskWithOptionsAsync(agentSpace, optimizeTaskName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries a pipeline.</para>
         /// </summary>
         /// 
@@ -5915,7 +6597,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of context stores.</para>
+        /// <para>Queries the list of context stores.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5977,7 +6659,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of context stores.</para>
+        /// <para>Queries the list of context stores.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6039,7 +6721,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of context stores.</para>
+        /// <para>Queries the list of context stores.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6058,7 +6740,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of context stores.</para>
+        /// <para>Queries the list of context stores.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7295,7 +7977,323 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution history list of a pipeline.</para>
+        /// <para>Performs a paging query on the run records of a specified optimization task. To obtain complete result references and frozen outputs, call GetOptimizeRun.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOptimizeRunsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOptimizeRunsResponse
+        /// </returns>
+        public ListOptimizeRunsResponse ListOptimizeRunsWithOptions(string agentSpace, string optimizeTaskName, ListOptimizeRunsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WindowStartTimeBegin))
+            {
+                query["windowStartTimeBegin"] = request.WindowStartTimeBegin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WindowStartTimeEnd))
+            {
+                query["windowStartTimeEnd"] = request.WindowStartTimeEnd;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListOptimizeRuns",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/agentspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/optimizetasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(optimizeTaskName) + "/runs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListOptimizeRunsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paging query on the run records of a specified optimization task. To obtain complete result references and frozen outputs, call GetOptimizeRun.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOptimizeRunsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOptimizeRunsResponse
+        /// </returns>
+        public async Task<ListOptimizeRunsResponse> ListOptimizeRunsWithOptionsAsync(string agentSpace, string optimizeTaskName, ListOptimizeRunsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WindowStartTimeBegin))
+            {
+                query["windowStartTimeBegin"] = request.WindowStartTimeBegin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WindowStartTimeEnd))
+            {
+                query["windowStartTimeEnd"] = request.WindowStartTimeEnd;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListOptimizeRuns",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/agentspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/optimizetasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(optimizeTaskName) + "/runs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListOptimizeRunsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paging query on the run records of a specified optimization task. To obtain complete result references and frozen outputs, call GetOptimizeRun.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOptimizeRunsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOptimizeRunsResponse
+        /// </returns>
+        public ListOptimizeRunsResponse ListOptimizeRuns(string agentSpace, string optimizeTaskName, ListOptimizeRunsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListOptimizeRunsWithOptions(agentSpace, optimizeTaskName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paging query on the run records of a specified optimization task. To obtain complete result references and frozen outputs, call GetOptimizeRun.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOptimizeRunsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOptimizeRunsResponse
+        /// </returns>
+        public async Task<ListOptimizeRunsResponse> ListOptimizeRunsAsync(string agentSpace, string optimizeTaskName, ListOptimizeRunsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListOptimizeRunsWithOptionsAsync(agentSpace, optimizeTaskName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries optimization tasks in a specified AgentSpace by using paging and returns the task status, configurations, and scheduling checkpoints.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOptimizeTasksRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOptimizeTasksResponse
+        /// </returns>
+        public ListOptimizeTasksResponse ListOptimizeTasksWithOptions(string agentSpace, ListOptimizeTasksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListOptimizeTasks",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/agentspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/optimizetasks",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListOptimizeTasksResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries optimization tasks in a specified AgentSpace by using paging and returns the task status, configurations, and scheduling checkpoints.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOptimizeTasksRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOptimizeTasksResponse
+        /// </returns>
+        public async Task<ListOptimizeTasksResponse> ListOptimizeTasksWithOptionsAsync(string agentSpace, ListOptimizeTasksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListOptimizeTasks",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/agentspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/optimizetasks",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListOptimizeTasksResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries optimization tasks in a specified AgentSpace by using paging and returns the task status, configurations, and scheduling checkpoints.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOptimizeTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOptimizeTasksResponse
+        /// </returns>
+        public ListOptimizeTasksResponse ListOptimizeTasks(string agentSpace, ListOptimizeTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListOptimizeTasksWithOptions(agentSpace, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries optimization tasks in a specified AgentSpace by using paging and returns the task status, configurations, and scheduling checkpoints.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOptimizeTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOptimizeTasksResponse
+        /// </returns>
+        public async Task<ListOptimizeTasksResponse> ListOptimizeTasksAsync(string agentSpace, ListOptimizeTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListOptimizeTasksWithOptionsAsync(agentSpace, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the run history. Supports filtering by status, trigger type, and time range, and cursor-based pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7361,7 +8359,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution history list of a pipeline.</para>
+        /// <para>Queries the run history. Supports filtering by status, trigger type, and time range, and cursor-based pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7427,7 +8425,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution history list of a pipeline.</para>
+        /// <para>Queries the run history. Supports filtering by status, trigger type, and time range, and cursor-based pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7446,7 +8444,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution history list of a pipeline.</para>
+        /// <para>Queries the run history. Supports filtering by status, trigger type, and time range, and cursor-based pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7465,7 +8463,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of pipelines. Supports filtering by name, schedule type, and schedule status with cursor-based pagination.</para>
+        /// <para>Queries a list of pipelines. Supports filtering by name, schedule type, and schedule status, and cursor-based pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7531,7 +8529,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of pipelines. Supports filtering by name, schedule type, and schedule status with cursor-based pagination.</para>
+        /// <para>Queries a list of pipelines. Supports filtering by name, schedule type, and schedule status, and cursor-based pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7597,7 +8595,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of pipelines. Supports filtering by name, schedule type, and schedule status with cursor-based pagination.</para>
+        /// <para>Queries a list of pipelines. Supports filtering by name, schedule type, and schedule status, and cursor-based pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7616,7 +8614,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of pipelines. Supports filtering by name, schedule type, and schedule status with cursor-based pagination.</para>
+        /// <para>Queries a list of pipelines. Supports filtering by name, schedule type, and schedule status, and cursor-based pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8231,7 +9229,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Searches contexts.</para>
+        /// <para>Searches the context.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8305,7 +9303,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Searches contexts.</para>
+        /// <para>Searches the context.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8379,7 +9377,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Searches contexts.</para>
+        /// <para>Searches the context.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8398,7 +9396,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Searches contexts.</para>
+        /// <para>Searches the context.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9718,7 +10716,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls UpdateExperimentPlan to update a specified experiment plan. Fields that are not included in the request remain unchanged. You can update only plans created by the current account.</para>
+        /// <para>Updates a specified experiment plan. Fields that are not specified remain unchanged. You can only update plans created by the current account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9809,7 +10807,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls UpdateExperimentPlan to update a specified experiment plan. Fields that are not included in the request remain unchanged. You can update only plans created by the current account.</para>
+        /// <para>Updates a specified experiment plan. Fields that are not specified remain unchanged. You can only update plans created by the current account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9900,7 +10898,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls UpdateExperimentPlan to update a specified experiment plan. Fields that are not included in the request remain unchanged. You can update only plans created by the current account.</para>
+        /// <para>Updates a specified experiment plan. Fields that are not specified remain unchanged. You can only update plans created by the current account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9924,7 +10922,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls UpdateExperimentPlan to update a specified experiment plan. Fields that are not included in the request remain unchanged. You can update only plans created by the current account.</para>
+        /// <para>Updates a specified experiment plan. Fields that are not specified remain unchanged. You can only update plans created by the current account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10149,6 +11147,306 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateExperimentRunWithOptionsAsync(agentSpace, recordId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels a run or retries a failed artifact application. To cancel a run, set status to Cancelled. To retry a failed artifact application, set extra.application.action to retry and do not specify status.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateOptimizeRunRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateOptimizeRunResponse
+        /// </returns>
+        public UpdateOptimizeRunResponse UpdateOptimizeRunWithOptions(string agentSpace, string optimizeTaskName, string optimizeRunId, UpdateOptimizeRunRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Extra))
+            {
+                body["extra"] = request.Extra;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateOptimizeRun",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/agentspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/optimizetasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(optimizeTaskName) + "/runs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(optimizeRunId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateOptimizeRunResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels a run or retries a failed artifact application. To cancel a run, set status to Cancelled. To retry a failed artifact application, set extra.application.action to retry and do not specify status.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateOptimizeRunRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateOptimizeRunResponse
+        /// </returns>
+        public async Task<UpdateOptimizeRunResponse> UpdateOptimizeRunWithOptionsAsync(string agentSpace, string optimizeTaskName, string optimizeRunId, UpdateOptimizeRunRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Extra))
+            {
+                body["extra"] = request.Extra;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateOptimizeRun",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/agentspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/optimizetasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(optimizeTaskName) + "/runs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(optimizeRunId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateOptimizeRunResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels a run or retries a failed artifact application. To cancel a run, set status to Cancelled. To retry a failed artifact application, set extra.application.action to retry and do not specify status.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateOptimizeRunRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateOptimizeRunResponse
+        /// </returns>
+        public UpdateOptimizeRunResponse UpdateOptimizeRun(string agentSpace, string optimizeTaskName, string optimizeRunId, UpdateOptimizeRunRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateOptimizeRunWithOptions(agentSpace, optimizeTaskName, optimizeRunId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels a run or retries a failed artifact application. To cancel a run, set status to Cancelled. To retry a failed artifact application, set extra.application.action to retry and do not specify status.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateOptimizeRunRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateOptimizeRunResponse
+        /// </returns>
+        public async Task<UpdateOptimizeRunResponse> UpdateOptimizeRunAsync(string agentSpace, string optimizeTaskName, string optimizeRunId, UpdateOptimizeRunRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateOptimizeRunWithOptionsAsync(agentSpace, optimizeTaskName, optimizeRunId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新优化任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateOptimizeTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateOptimizeTaskResponse
+        /// </returns>
+        public UpdateOptimizeTaskResponse UpdateOptimizeTaskWithOptions(string agentSpace, string optimizeTaskName, UpdateOptimizeTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateOptimizeTask",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/agentspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/optimizetasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(optimizeTaskName),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateOptimizeTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新优化任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateOptimizeTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateOptimizeTaskResponse
+        /// </returns>
+        public async Task<UpdateOptimizeTaskResponse> UpdateOptimizeTaskWithOptionsAsync(string agentSpace, string optimizeTaskName, UpdateOptimizeTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateOptimizeTask",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/agentspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/optimizetasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(optimizeTaskName),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateOptimizeTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新优化任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateOptimizeTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateOptimizeTaskResponse
+        /// </returns>
+        public UpdateOptimizeTaskResponse UpdateOptimizeTask(string agentSpace, string optimizeTaskName, UpdateOptimizeTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateOptimizeTaskWithOptions(agentSpace, optimizeTaskName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新优化任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateOptimizeTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateOptimizeTaskResponse
+        /// </returns>
+        public async Task<UpdateOptimizeTaskResponse> UpdateOptimizeTaskAsync(string agentSpace, string optimizeTaskName, UpdateOptimizeTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateOptimizeTaskWithOptionsAsync(agentSpace, optimizeTaskName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

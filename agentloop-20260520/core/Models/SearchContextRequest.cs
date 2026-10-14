@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public Dictionary<string, object> Filter { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to apply structured formatting to the returned results.</para>
+        /// <para>Specifies whether to structurally format the returned results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public bool? Formatted { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to include memories with sourceState=inactive. Default value: false.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -38,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public bool? IncludeInactive { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of returned results (similarity Top-N).</para>
+        /// <para>The maximum number of returned results, which corresponds to the Top-N similarity.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -52,14 +54,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>用户最近的偏好设置</para>
+        /// <para>Recent user preferences</para>
         /// </summary>
         [NameInMap("query")]
         [Validation(Required=false)]
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>The retrieval options that control the retrieval strategy.</para>
+        /// <para>The retrieval options used to control the retrieval strategy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>semantic</para>
@@ -68,11 +70,16 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         [Validation(Required=false)]
         public string RetrievalOption { get; set; }
 
+        /// <summary>
+        /// <para>The recall scope. If a field with the same name conflicts with the filter, a 400 ScopeFilterConflict error is returned.</para>
+        /// </summary>
         [NameInMap("scope")]
         [Validation(Required=false)]
         public SearchContextRequestScope Scope { get; set; }
         public class SearchContextRequestScope : TeaModel {
             /// <summary>
+            /// <para>Agent Id</para>
+            /// 
             /// <b>Example:</b>
             /// <para>sales-copilot</para>
             /// </summary>
@@ -81,6 +88,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string AgentId { get; set; }
 
             /// <summary>
+            /// <para>The application ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>crm-service</para>
             /// </summary>
@@ -89,6 +98,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string AppId { get; set; }
 
             /// <summary>
+            /// <para>The run ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>run-001</para>
             /// </summary>
@@ -97,6 +108,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string RunId { get; set; }
 
             /// <summary>
+            /// <para>The user ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>u-10001</para>
             /// </summary>

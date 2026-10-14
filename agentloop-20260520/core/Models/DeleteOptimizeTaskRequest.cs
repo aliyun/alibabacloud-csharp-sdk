@@ -1,0 +1,24 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.AgentLoop20260520.Models
+{
+    public class DeleteOptimizeTaskRequest : TeaModel {
+        /// <summary>
+        /// <para>The idempotency token.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>a1b2c3d4-1234-5678-90ab-cdef12345678</para>
+        /// </summary>
+        [NameInMap("clientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+    }
+
+}

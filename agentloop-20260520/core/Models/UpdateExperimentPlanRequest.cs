@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The list of evaluators. Omitting this field means no modification. Passing an empty array clears the list.</para>
+        /// <para>The list of evaluators. If this parameter is omitted, the list remains unchanged. If an empty array is passed, the list is cleared.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;evaluatorRef&quot;: &quot;Builtin.agent_task_completion&quot;}]</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public List<Evaluator> Evaluators { get; set; }
 
         /// <summary>
-        /// <para>The experiment type.</para>
+        /// <para>The experiment type. Valid values: OFFLINE (offline experiment) and ONLINE (online experiment).</para>
         /// 
         /// <b>Example:</b>
         /// <para>OFFLINE</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string ExperimentType { get; set; }
 
         /// <summary>
-        /// <para>The list of experiment configurations. When provided, the entire list is replaced. The number of configurations must be 1 to 5.</para>
+        /// <para>The list of experiment configurations. When passed, the entire list is replaced. The number of items must be between 1 and 5.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;label&quot;: &quot;A&quot;, &quot;name&quot;: &quot;baseline&quot;, &quot;modelName&quot;: &quot;qwen-max&quot;}]</para>
@@ -73,14 +73,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         /// <para>Optional.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;question&quot;: &quot;How do I request a refund?&quot;}</para>
+        /// <para>{&quot;question&quot;: &quot;How do I get a refund?&quot;}</para>
         /// </summary>
         [NameInMap("input")]
         [Validation(Required=false)]
         public Dictionary<string, object> Input { get; set; }
 
         /// <summary>
-        /// <para>The name of the associated data processing pipeline. This parameter is optional. If not specified, the value is not updated. If an empty character string is specified, the association is dissociated. After association, when an experiment under this plan completes execution and writes results to the experiment result Logstore, the system filters by the traceId of the experiment trace and invokes PreviewPipeline. The pipeline-processed results are then written together.</para>
+        /// <para>The name of the associated data processing pipeline. This parameter is optional. If it is not passed, the association is not updated. If an empty character string is passed, the pipeline is dissociated. After the association is configured, when an experiment under this plan executes and completes writing the experiment results to the Logstore, the system filters the results by the traceId of the current experiment trace and invokes PreviewPipeline to write the results processed by the pipeline.</para>
         /// </summary>
         [NameInMap("pipelineName")]
         [Validation(Required=false)]
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string QuerySql { get; set; }
 
         /// <summary>
-        /// <para>The list of selected data item IDs in partial dataset mode. Passing an empty array clears the list.</para>
+        /// <para>The list of selected data item IDs in partial dataset mode. If an empty array is passed, the list is cleared.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[]</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class DataFilter : TeaModel {
         /// <summary>
-        /// <para>The maximum number of evaluation records. This takes effect for both backfill and continuous runs. If not specified, the backend does not write a default value.</para>
+        /// <para>The maximum number of evaluation records. This parameter takes effect for both backfill and continuous runs. If this parameter is not specified, the backend does not apply an additional default value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public int? MaxRecords { get; set; }
 
         /// <summary>
-        /// <para>The one-time temporary evaluation input content, primarily used for oneshot tasks. The value is stored as a string. Object or array values are serialized to a JSON string.</para>
+        /// <para>The single-shot input content for temporary evaluation, which is primarily used for one-shot tasks. Values are saved as strings. Object or array values are serialized into JSON strings.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;input&quot;:&quot;用户查询订单状态&quot;,&quot;output&quot;:&quot;已查询到订单状态&quot;}</para>
+        /// <para>{&quot;input&quot;:&quot;User queries order status&quot;,&quot;output&quot;:&quot;Order status queried&quot;}</para>
         /// </summary>
         [NameInMap("provided")]
         [Validation(Required=false)]
         public Dictionary<string, object> Provided { get; set; }
 
         /// <summary>
-        /// <para>The data query filter condition. This takes effect together with the evaluator-level filters.query. In Trace scenarios, you can specify filter expressions such as service name, environment, or labels.</para>
+        /// <para>The data query filter conditions that take effect together with the evaluator-level filters.query. For trace scenarios, you can specify filter expressions such as service name, environment, and tags.</para>
         /// 
         /// <b>Example:</b>
         /// <para>serviceName=\&quot;checkout-service\&quot;</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>The sampling rate percentage. Valid values: 0 to 100. A value of 0 or not specified indicates no sampling. A value of 100 indicates full data. If the value is less than 100, random sampling is applied first, and then the maxRecords limit is applied.</para>
+        /// <para>The sampling rate percentage. Valid values: 0 to 100. A value of 0 or an unspecified value indicates no sampling. A value of 100 indicates full sampling. If the value is less than 100, random sampling is performed first, and then the maxRecords limit is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -49,6 +49,12 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         [Validation(Required=false)]
         public int? SamplingRate { get; set; }
 
+        /// <summary>
+        /// <para>The list of service names used to restrict the services involved in data filtering.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;checkout-service&quot;]</para>
+        /// </summary>
         [NameInMap("serviceNames")]
         [Validation(Required=false)]
         public List<string> ServiceNames { get; set; }

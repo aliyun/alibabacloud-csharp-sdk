@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class ListPipelinesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries per page that was specified in the request. This value is echoed back.</para>
+        /// <para>The maximum number of entries per page specified in the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -68,6 +68,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public ListPipelinesResponseBodyPipelinesExecutePolicy ExecutePolicy { get; set; }
             public class ListPipelinesResponseBodyPipelinesExecutePolicy : TeaModel {
                 /// <summary>
+                /// <para>The continuous execution configuration. This is used when the type is trace. The processing frequency is a fixed value managed by the server.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;fromTime&quot;:1735660800}</para>
                 /// </summary>
@@ -76,6 +78,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public ListPipelinesResponseBodyPipelinesExecutePolicyContinuous Continuous { get; set; }
                 public class ListPipelinesResponseBodyPipelinesExecutePolicyContinuous : TeaModel {
                     /// <summary>
+                    /// <para>The bootstrap history start time as a UNIX timestamp in seconds. It has the same precision as runOnce or scheduled fromTime. Millisecond values greater than or equal to 1e12 are automatically converted. The cursor starts from the grid-aligned time and catches up window by window. After catching up, it switches to minute intervals. By default, it starts from the current time and only processes incremental data.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1735660800</para>
                     /// </summary>
@@ -86,11 +90,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 }
 
                 /// <summary>
-                /// <para>The scheduling mode. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>RunOnce: one-time execution.</description></item>
-                /// <item><description>Scheduled: periodic scheduling.</description></item>
-                /// </list>
+                /// <para>The scheduling mode. Valid values: RunOnce for single execution, Scheduled for periodic execution, and Continuous for continuous execution. Continuous mode is only for trace data sources. The processing frequency is a fixed value managed by the server, and data is automatically processed at minute intervals after the trace is completed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>RunOnce</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public string Mode { get; set; }
 
                 /// <summary>
-                /// <para>The parameters for one-time execution. This parameter has a value only when mode is set to RunOnce.</para>
+                /// <para>The parameters for single execution. This field has a value only when the mode is RunOnce.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;fromTime&quot;:1735660800,&quot;toTime&quot;:1735664400}</para>
@@ -110,20 +110,20 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public ListPipelinesResponseBodyPipelinesExecutePolicyRunOnce RunOnce { get; set; }
                 public class ListPipelinesResponseBodyPipelinesExecutePolicyRunOnce : TeaModel {
                     /// <summary>
-                    /// <para>The start of the time slice, in UNIX millisecond timestamp format.</para>
+                    /// <para>The start time of the time slice as a UNIX timestamp in seconds.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>1735660800000</para>
+                    /// <para>1735660800</para>
                     /// </summary>
                     [NameInMap("fromTime")]
                     [Validation(Required=false)]
                     public long? FromTime { get; set; }
 
                     /// <summary>
-                    /// <para>The end of the time slice, in UNIX millisecond timestamp format.</para>
+                    /// <para>The end time of the time slice as a UNIX timestamp in seconds.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>1735747200000</para>
+                    /// <para>1735747200</para>
                     /// </summary>
                     [NameInMap("toTime")]
                     [Validation(Required=false)]
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 }
 
                 /// <summary>
-                /// <para>The parameters for periodic scheduling. This parameter has a value only when mode is set to Scheduled.</para>
+                /// <para>The parameters for periodic scheduling. This field has a value only when the mode is Scheduled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;interval&quot;:&quot;1h&quot;,&quot;fromTime&quot;:1735660800}</para>
@@ -142,17 +142,17 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public ListPipelinesResponseBodyPipelinesExecutePolicyScheduled Scheduled { get; set; }
                 public class ListPipelinesResponseBodyPipelinesExecutePolicyScheduled : TeaModel {
                     /// <summary>
-                    /// <para>The scheduling start time, in UNIX millisecond timestamp format.</para>
+                    /// <para>The scheduling start time as a UNIX timestamp in seconds.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>1735660800000</para>
+                    /// <para>1735660800</para>
                     /// </summary>
                     [NameInMap("fromTime")]
                     [Validation(Required=false)]
                     public long? FromTime { get; set; }
 
                     /// <summary>
-                    /// <para>The scheduling interval, such as 1h or 30m.</para>
+                    /// <para>The scheduling interval. Valid values: 1h, 6h, 12h, and 1d.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1h</para>
@@ -186,13 +186,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The scheduling status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>None: no scheduling. This value is returned for RunOnce pipelines.</description></item>
-            /// <item><description>Active: active.</description></item>
-            /// <item><description>Paused: paused.</description></item>
-            /// <item><description>Terminated: terminated.</description></item>
-            /// </list>
+            /// <para>The scheduling status. Valid values: None for no scheduling in RunOnce pipelines, Active, Paused, and Terminated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>
@@ -202,11 +196,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string ScheduleStatus { get; set; }
 
             /// <summary>
-            /// <para>The scheduling type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>RunOnce: one-time execution.</description></item>
-            /// <item><description>Scheduled: periodic scheduling.</description></item>
-            /// </list>
+            /// <para>The scheduling type. Valid values: RunOnce for single execution, Scheduled for periodic scheduling, and Continuous for continuous execution driven by trace source signals.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RunOnce</para>
@@ -216,21 +206,21 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string ScheduleType { get; set; }
 
             /// <summary>
-            /// <para>The pipeline sink (data write destination).</para>
+            /// <para>The pipeline sink, which is the destination for data writing.</para>
             /// </summary>
             [NameInMap("sink")]
             [Validation(Required=false)]
             public ListPipelinesResponseBodyPipelinesSink Sink { get; set; }
             public class ListPipelinesResponseBodyPipelinesSink : TeaModel {
                 /// <summary>
-                /// <para>The conditional routing configuration. This parameter is used only when sink.type is set to condition.</para>
+                /// <para>The conditional routing configuration. This is used only when the sink type is condition.</para>
                 /// </summary>
                 [NameInMap("condition")]
                 [Validation(Required=false)]
                 public ListPipelinesResponseBodyPipelinesSinkCondition Condition { get; set; }
                 public class ListPipelinesResponseBodyPipelinesSinkCondition : TeaModel {
                     /// <summary>
-                    /// <para>The default write destination that is used when no condition route is matched.</para>
+                    /// <para>The default write destination used when no conditional route is matched.</para>
                     /// </summary>
                     [NameInMap("defaultSink")]
                     [Validation(Required=false)]
@@ -266,7 +256,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                         }
 
                         /// <summary>
-                        /// <para>The type of the default destination. Currently, only dataset is supported.</para>
+                        /// <para>The default destination type. Currently, only dataset is supported.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>dataset</para>
@@ -288,14 +278,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                     public string MatchMode { get; set; }
 
                     /// <summary>
-                    /// <para>The list of condition routes.</para>
+                    /// <para>The list of conditional routes.</para>
                     /// </summary>
                     [NameInMap("routes")]
                     [Validation(Required=false)]
                     public List<ListPipelinesResponseBodyPipelinesSinkConditionRoutes> Routes { get; set; }
                     public class ListPipelinesResponseBodyPipelinesSinkConditionRoutes : TeaModel {
                         /// <summary>
-                        /// <para>The route expression in SPL. Only where, project, and extend are supported.</para>
+                        /// <para>The route expression in Search Processing Language (SPL). Only where, project, and extend are supported.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <list type="bullet">
@@ -307,7 +297,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                         public string Expression { get; set; }
 
                         /// <summary>
-                        /// <para>The route ID.</para>
+                        /// <para>The ID of the route.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>refund</para>
@@ -353,7 +343,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                             }
 
                             /// <summary>
-                            /// <para>The type of the route destination. Currently, only dataset is supported.</para>
+                            /// <para>The destination type of the route. Currently, only dataset is supported.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>dataset</para>
@@ -369,7 +359,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 }
 
                 /// <summary>
-                /// <para>The destination dataset configuration for the dataset sink. This parameter is used only when sink.type is set to dataset.</para>
+                /// <para>The destination dataset configuration for the dataset sink. This is used only when the sink type is dataset.</para>
                 /// </summary>
                 [NameInMap("dataset")]
                 [Validation(Required=false)]
@@ -398,7 +388,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 }
 
                 /// <summary>
-                /// <para>The destination type. Valid values: dataset or condition.</para>
+                /// <para>The destination type. Valid values: dataset, condition.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>condition</para>
@@ -410,7 +400,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             }
 
             /// <summary>
-            /// <para>The pipeline data source.</para>
+            /// <para>The data source of the pipeline.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;type&quot;:&quot;logstore&quot;,&quot;logstore&quot;:{&quot;project&quot;:&quot;my-sls-project&quot;,&quot;logstore&quot;:&quot;agent-logs&quot;},&quot;inputFields&quot;:[{&quot;name&quot;:&quot;question&quot;,&quot;type&quot;:&quot;text&quot;}]}</para>
@@ -452,6 +442,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 }
 
                 /// <summary>
+                /// <para>The input fields and their types, applicable to all data source types.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>[{&quot;name&quot;:&quot;question&quot;,&quot;type&quot;:&quot;text&quot;}]</para>
                 /// </summary>
@@ -460,6 +452,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public List<ListPipelinesResponseBodyPipelinesSourceInputFields> InputFields { get; set; }
                 public class ListPipelinesResponseBodyPipelinesSourceInputFields : TeaModel {
                     /// <summary>
+                    /// <para>The name of the field.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>question</para>
                     /// </summary>
@@ -468,6 +462,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                     public string Name { get; set; }
 
                     /// <summary>
+                    /// <para>The type of the field. Valid values: text, long, double, and json.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>text</para>
                     /// </summary>
@@ -508,7 +504,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                     public string Project { get; set; }
 
                     /// <summary>
-                    /// <para>The data filtered query statement in SLS query/analysis syntax.</para>
+                    /// <para>The data filtered query statement, which uses the SLS query and analysis syntax.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <list type="bullet">
@@ -522,6 +518,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 }
 
                 /// <summary>
+                /// <para>The trajectory data configuration. This parameter is optional and takes effect only when the type is trace. It obtains ATIF standard trajectory data from the trajectory scrubbing service and extends it by feature.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;enrich&quot;:{&quot;enabled&quot;:true,&quot;columns&quot;:[&quot;input&quot;,&quot;output&quot;]}}</para>
                 /// </summary>
@@ -530,6 +528,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public ListPipelinesResponseBodyPipelinesSourceTrajectory Trajectory { get; set; }
                 public class ListPipelinesResponseBodyPipelinesSourceTrajectory : TeaModel {
                     /// <summary>
+                    /// <para>The trajectory enrichment configuration. It mounts trajectory data into the scrubbing result based on the trace_id. When writing to the dataset, the data is stored in the fixed column agent_trajectory, and the column value is the trajectory JSON content.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>{&quot;enabled&quot;:true,&quot;columns&quot;:[&quot;input&quot;,&quot;output&quot;]}</para>
                     /// </summary>
@@ -538,6 +538,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                     public ListPipelinesResponseBodyPipelinesSourceTrajectoryEnrich Enrich { get; set; }
                     public class ListPipelinesResponseBodyPipelinesSourceTrajectoryEnrich : TeaModel {
                         /// <summary>
+                        /// <para>The list of enrichment columns. This parameter is retained for compatibility. The current implementation outputs only the fixed column agent_trajectory, and this parameter no longer affects the output.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>[&quot;input&quot;,&quot;output&quot;,&quot;session_id&quot;]</para>
                         /// </summary>
@@ -546,6 +548,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                         public List<string> Columns { get; set; }
 
                         /// <summary>
+                        /// <para>Specifies whether to enable trajectory enrichment.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>false</para>
                         /// </summary>
@@ -558,7 +562,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 }
 
                 /// <summary>
-                /// <para>The data source type. Valid values: logstore or dataset.</para>
+                /// <para>The data source type. Valid values: logstore, dataset, and trace. The trace value indicates a trajectory signal-driven processing mode. The validity of the enumerated values is verified by the server.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dataset</para>
@@ -570,7 +574,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             }
 
             /// <summary>
-            /// <para>The time when the pipeline was last updated, in ISO 8601 UTC format.</para>
+            /// <para>The time when the pipeline was last updated. The time is in the ISO 8601 UTC format.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -593,7 +597,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         }
 
         /// <summary>
-        /// <para>The request ID, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID, which is used to locate the request during troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</para>
@@ -603,7 +607,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of pipelines that match the filter conditions.</para>
+        /// <para>The total number of pipelines that meet the filter conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

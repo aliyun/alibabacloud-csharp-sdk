@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class ListContextStoresResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries per page that was specified in the request. This value is echoed back.</para>
+        /// <para>The maximum number of results per page specified in the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page. An empty string indicates that the current page is the last page.</para>
+        /// <para>The token for the next page. An empty string indicates that the last page is reached.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MTIzNDU2Nzg5MA==</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID. You can use this ID to locate and troubleshoot issues.</para>
+        /// <para>The request ID, which can be used to locate the request during troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</para>
@@ -91,14 +91,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             /// <para>The description of the context store.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>我的上下文库</para>
+            /// <para>My context store</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the context store.</para>
+            /// <para>The ID of the region where the context store resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The list of service names. This parameter has a value only for context stores of the experience type. The service names are used together with the data source AgentSpace to locate trace data sources.</para>
+            /// <para>The list of service names. This parameter has a value only for the experience type. It is used together with the data source AgentSpace to locate the trace data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[&quot;order-service&quot;,&quot;payment-service&quot;]</para>
@@ -118,6 +118,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public List<string> ServiceNames { get; set; }
 
             /// <summary>
+            /// <para>The memory data source type, such as manual, trajectory, or dataset. This parameter has a value only for the memory type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>trajectory</para>
             /// </summary>
@@ -126,7 +128,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string SourceType { get; set; }
 
             /// <summary>
-            /// <para>The status of the context store. Valid values: ACTIVE, INITIALIZING, and FAILED.</para>
+            /// <para>The status of the context store. Valid values include ACTIVE, INITIALIZING, and FAILED.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ACTIVE</para>
@@ -136,6 +138,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The memory storage mode, such as event or upsert. This parameter has a value only for the memory type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>upsert</para>
             /// </summary>
@@ -157,7 +161,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         }
 
         /// <summary>
-        /// <para>The total number of context stores that match the query conditions.</para>
+        /// <para>The total number of context stores that meet the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

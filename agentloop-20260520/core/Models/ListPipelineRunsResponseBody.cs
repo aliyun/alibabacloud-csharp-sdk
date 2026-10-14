@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class ListPipelineRunsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries per page specified in the request. This value is echoed back.</para>
+        /// <para>The maximum number of entries per page specified in the request, echoed in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID, which is used to locate the request during troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of pipeline runs.</para>
+        /// <para>The list of runs.</para>
         /// </summary>
         [NameInMap("runs")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string AgentSpaceName { get; set; }
 
             /// <summary>
-            /// <para>The current retry count.</para>
+            /// <para>The current number of retries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string FinishTime { get; set; }
 
             /// <summary>
-            /// <para>The start of the data window, in UNIX seconds.</para>
+            /// <para>The start time of the data window, in UNIX seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1735660800</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The run statistics, including processedRows (number of processed rows), processedBytes (number of processed bytes), outputRows (number of output rows), outputBytes (number of output bytes), elapsedMs (elapsed time in milliseconds), cpuSec (CPU seconds), cpuCores (number of CPU cores), and tokenCount (number of tokens consumed).</para>
+            /// <para>The run statistics, including processedRows (number of processed rows), processedBytes (number of processed bytes), outputRows (number of output rows), outputBytes (number of output bytes), elapsedMs (elapsed time in milliseconds), cpuSec (CPU seconds), cpuCores (number of CPU cores), and tokenCount (number of consumed tokens).</para>
             /// </summary>
             [NameInMap("stats")]
             [Validation(Required=false)]
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The end of the data window, in UNIX seconds.</para>
+            /// <para>The end time of the data window, in UNIX seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1735747200</para>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string TriggerTime { get; set; }
 
             /// <summary>
-            /// <para>The trigger type. Valid values: Scheduled, Manual, and RunOnce.</para>
+            /// <para>The trigger type. Valid values: Scheduled, Manual, RunOnce, and Continuous (continuous micro-batch execution).</para>
             /// 
             /// <b>Example:</b>
             /// <para>Scheduled</para>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         }
 
         /// <summary>
-        /// <para>The total number of pipeline runs that match the filter conditions.</para>
+        /// <para>The total number of pipeline runs that meet the filter conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

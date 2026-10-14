@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class IndexJsonKey : TeaModel {
         /// <summary>
-        /// <para>Specifies whether the field contains Chinese characters. This parameter is required only when the <b>type</b> parameter is set to <b>text</b>. Valid values:</para>
+        /// <para>Specifies whether Chinese characters are included. This parameter is required only when the <b>type</b> parameter is set to <b>text</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The field contains Chinese characters.</description></item>
-        /// <item><description>false: The field does not contain Chinese characters.</description></item>
+        /// <item><description>true: Chinese characters are included.</description></item>
+        /// <item><description>false: Chinese characters are not included.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

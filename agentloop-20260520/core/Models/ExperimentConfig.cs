@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class ExperimentConfig : TeaModel {
         /// <summary>
-        /// <para>The endpoint connector ID. This parameter is required in user/agent mode.</para>
+        /// <para>The endpoint connector ID, which is required in user or agent mode.</para>
         /// </summary>
         [NameInMap("endpointConnectorId")]
         [Validation(Required=false)]
         public string EndpointConnectorId { get; set; }
 
         /// <summary>
-        /// <para>The experiment label (A/B/C/D/E).</para>
+        /// <para>The experiment label (A, B, C, D, or E).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A</para>
         /// </summary>
         [NameInMap("label")]
         [Validation(Required=false)]
         public string Label { get; set; }
 
         /// <summary>
-        /// <para>The model name. You can set this parameter to agent in agent scenarios.</para>
+        /// <para>The model name, which can be set to agent for agent scenarios.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>qwen-max</para>
         /// </summary>
         [NameInMap("modelName")]
         [Validation(Required=false)]
@@ -39,6 +45,9 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 
         /// <summary>
         /// <para>The model provider. Valid values: dashscope (default), user, and agent.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dashscope</para>
         /// </summary>
         [NameInMap("modelProvider")]
         [Validation(Required=false)]
@@ -46,27 +55,36 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 
         /// <summary>
         /// <para>The experiment name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>baseline</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The prompt message template. Supports {{variable name}} placeholders.</para>
+        /// <para>The prompt message template, which supports {{variable name}} placeholders.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;role&quot;:&quot;user&quot;,&quot;content&quot;:&quot;Please answer: {{question}}&quot;}]</para>
         /// </summary>
         [NameInMap("promptTemplate")]
         [Validation(Required=false)]
         public List<PromptTemplateItem> PromptTemplate { get; set; }
 
         /// <summary>
-        /// <para>The agent request body template. This parameter is required in agent mode. Supports {{variable name}} placeholders.</para>
+        /// <para>The agent request body template, which is required in agent mode and supports {{variable name}} placeholders.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;input&quot;:&quot;{{question}}&quot;}</para>
         /// </summary>
         [NameInMap("requestBodyTemplate")]
         [Validation(Required=false)]
         public string RequestBodyTemplate { get; set; }
 
         /// <summary>
-        /// <para>The agent request header template. This parameter is optional in agent mode. Supports {{variable name}} placeholders.</para>
+        /// <para>The agent request header template, which is optional in agent mode and supports {{variable name}} placeholders.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;Content-Type: application/json&quot; }</para>
@@ -77,6 +95,9 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 
         /// <summary>
         /// <para>The agent request method. Valid values: POST (default) and GET.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>POST</para>
         /// </summary>
         [NameInMap("requestMethod")]
         [Validation(Required=false)]
