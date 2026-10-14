@@ -9,19 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListJobRunsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The statistical results aggregated by job state.</para>
+        /// </summary>
         [NameInMap("aggregations")]
         [Validation(Required=false)]
         public Dictionary<string, string> Aggregations { get; set; }
 
         /// <summary>
-        /// <para>The list of Spark jobs.</para>
+        /// <para>The list of Spark job runs.</para>
         /// </summary>
         [NameInMap("jobRuns")]
         [Validation(Required=false)]
         public List<ListJobRunsResponseBodyJobRuns> JobRuns { get; set; }
         public class ListJobRunsResponseBodyJobRuns : TeaModel {
             /// <summary>
-            /// <para>The job code type. Valid values:</para>
+            /// <para>The code type of the job. Valid values:</para>
             /// <para>SQL</para>
             /// <para>JAR</para>
             /// <para>PYTHON.</para>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string CodeType { get; set; }
 
             /// <summary>
-            /// <para>The Spark advanced configurations. This parameter is not returned by the List operation.</para>
+            /// <para>The advanced Spark configurations. This parameter is not returned by the List operation.</para>
             /// </summary>
             [NameInMap("configurationOverrides")]
             [Validation(Required=false)]
@@ -60,7 +63,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>The number of compute units (CUs) consumed during the job run cycle. This value is an estimate. The actual value is subject to the bill.</para>
+            /// <para>The number of compute units (CUs) consumed during the job run. This value is an estimate and the final value is subject to the bill.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.059</para>
@@ -70,7 +73,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public double? CuHours { get; set; }
 
             /// <summary>
-            /// <para>The version of the Spark DPI engine used to run the job.</para>
+            /// <para>The Spark DPI engine version of the running job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>esr-3.0.0 (Spark 3.4.3, Scala 2.12)</para>
@@ -80,7 +83,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string DisplayReleaseVersion { get; set; }
 
             /// <summary>
-            /// <para>The job end time.</para>
+            /// <para>The time when the job ended. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1684119314000</para>
@@ -90,7 +93,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The execution timeout period, in seconds.</para>
+            /// <para>The execution timeout period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3600</para>
@@ -100,7 +103,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public int? ExecutionTimeoutSeconds { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the Fusion engine acceleration is enabled.</para>
+            /// <para>Specifies whether Fusion engine acceleration is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -110,14 +113,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public bool? Fusion { get; set; }
 
             /// <summary>
-            /// <para>The Spark Driver information. This parameter is not returned by the List operation.</para>
+            /// <para>The information about the Spark driver. This parameter is not returned by the List operation.</para>
             /// </summary>
             [NameInMap("jobDriver")]
             [Validation(Required=false)]
             public JobDriver JobDriver { get; set; }
 
             /// <summary>
-            /// <para>The job ID.</para>
+            /// <para>The ID of the job run.</para>
             /// 
             /// <b>Example:</b>
             /// <para>jr-231231</para>
@@ -127,14 +130,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string JobRunId { get; set; }
 
             /// <summary>
-            /// <para>The path of the run log.</para>
+            /// <para>The path to the execution log.</para>
             /// </summary>
             [NameInMap("log")]
             [Validation(Required=false)]
             public RunLog Log { get; set; }
 
             /// <summary>
-            /// <para>The total amount of allocated memory multiplied by the number of seconds the job has been running.</para>
+            /// <para>The total amount of memory allocated to the job multiplied by the number of seconds the job has run.</para>
             /// 
             /// <b>Example:</b>
             /// <para>33030784</para>
@@ -144,7 +147,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? MbSeconds { get; set; }
 
             /// <summary>
-            /// <para>The job name.</para>
+            /// <para>The name of the job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>jobName</para>
@@ -154,6 +157,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The priority of the Spark job.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>5</para>
             /// </summary>
@@ -162,7 +167,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Priority { get; set; }
 
             /// <summary>
-            /// <para>The version of the Spark DPI engine used to run the job.</para>
+            /// <para>The Spark DPI engine version of the running job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>esr-3.0.0 (Spark 3.4.3, Scala 2.12, Native Runtime)</para>
@@ -172,6 +177,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string ReleaseVersion { get; set; }
 
             /// <summary>
+            /// <para>The name of the resource queue in which the Spark job runs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>dev_queue</para>
             /// </summary>
@@ -180,7 +187,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string ResourceQueueId { get; set; }
 
             /// <summary>
-            /// <para>The job states.</para>
+            /// <para>The states of the job runs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -219,7 +226,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
-            /// <para>The job submission time.</para>
+            /// <para>The time when the job was submitted. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1684119314000</para>
@@ -236,7 +243,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public List<Tag> Tags { get; set; }
 
             /// <summary>
-            /// <para>The total number of allocated vcores multiplied by the number of seconds the job has been running.</para>
+            /// <para>The total number of vcores allocated to the job multiplied by the number of seconds the job has run.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8236</para>
@@ -246,7 +253,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? VcoreSeconds { get; set; }
 
             /// <summary>
-            /// <para>The job Web UI.</para>
+            /// <para>The web UI of the job.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://spark-ui">http://spark-ui</a></para>
@@ -256,7 +263,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string WebUI { get; set; }
 
             /// <summary>
-            /// <para>The workspace ID.</para>
+            /// <para>The ID of the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>w-d2d82aa09155****</para>
@@ -268,7 +275,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records returned in this request.</para>
+        /// <para>The maximum number of records returned for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -278,7 +285,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The position from which the data was read.</para>
+        /// <para>The position of the data read.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -298,7 +305,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records that match the request conditions.</para>
+        /// <para>The total number of records that meet the request conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListKyuubiSparkApplicationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of application details.</para>
+        /// <para>The list of application details.</para>
         /// </summary>
         [NameInMap("applications")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string ApplicationName { get; set; }
 
             /// <summary>
-            /// <para>The number of CUs consumed during the task lifecycle. This is an estimated value. The final amount is subject to your bill.</para>
+            /// <para>The number of compute units (CUs) consumed during the task execution. This value is an estimate. The actual value is subject to the bill.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.238302</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public double? CuHours { get; set; }
 
             /// <summary>
-            /// <para>The time when the task ended.</para>
+            /// <para>The end time of the task. The format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-02-12 20:02:02</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The exit code.</para>
+            /// <para>The exit reason of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Exit Code: 137, Exit Reason: OOMKilled</para>
@@ -67,6 +67,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string ExitReason { get; set; }
 
             /// <summary>
+            /// <para>The ID of the Kyuubi service that submitted the Spark application.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>kb-2b93ec*******c9440c</para>
             /// </summary>
@@ -75,7 +77,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string KyuubiServiceId { get; set; }
 
             /// <summary>
-            /// <para>The status of the last task execution in the session.</para>
+            /// <para>The execution status of the latest SQL statement in the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SUCCESS</para>
@@ -85,7 +87,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string LatestSqlStatementStatus { get; set; }
 
             /// <summary>
-            /// <para>The total memory allocated to the task in MB, multiplied by the number of seconds the task ran.</para>
+            /// <para>The total memory allocated to the task multiplied by the task execution duration in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3513900</para>
@@ -95,6 +97,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? MbSeconds { get; set; }
 
             /// <summary>
+            /// <para>The priority of the Spark application.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>5</para>
             /// </summary>
@@ -103,7 +107,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Priority { get; set; }
 
             /// <summary>
-            /// <para>The name of the resource queue where the Spark task runs.</para>
+            /// <para>The name of the resource queue in which the Spark task runs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev_queue</para>
@@ -112,12 +116,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public string ResourceQueueId { get; set; }
 
+            /// <summary>
+            /// <para>The application log.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;driverStdOut&quot;:&quot;oss://bucket/path/to/stdout&quot;,&quot;driverStdError&quot;:&quot;oss://bucket/path/to/stderr&quot;,&quot;driverSyslog&quot;:&quot;oss://bucket/path/to/syslog&quot;,&quot;driverStartup&quot;:&quot;oss://bucket/path/to/startup&quot;}</para>
+            /// </summary>
             [NameInMap("runLog")]
             [Validation(Required=false)]
             public RunLog RunLog { get; set; }
 
             /// <summary>
-            /// <para>The time when the task started.</para>
+            /// <para>The start time of the task. The format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-02-12 19:59:16</para>
@@ -127,14 +137,11 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the Spark application.</para>
+            /// <para>The state of the Spark application. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>STARTING: The application is starting.</para>
-            /// </description></item>
-            /// <item><description><para>RUNNING: The application is running.</para>
-            /// </description></item>
-            /// <item><description><para>TERMINATED: The application is terminated.</para>
-            /// </description></item>
+            /// <item><description>STARTING: The application is starting.</description></item>
+            /// <item><description>RUNNING: The application is running.</description></item>
+            /// <item><description>TERMINATED: The application is terminated.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -144,12 +151,15 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public string State { get; set; }
 
+            /// <summary>
+            /// <para>The list of tags for the Spark application.</para>
+            /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<Tag> Tags { get; set; }
 
             /// <summary>
-            /// <para>The total vCores allocated to the task, multiplied by the number of seconds the task ran.</para>
+            /// <para>The total number of vcores allocated to the task multiplied by the task execution duration in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>780</para>
@@ -168,7 +178,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records returned.</para>
+        /// <para>The maximum number of records to retrieve at a time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -178,7 +188,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the next page of results.</para>
+        /// <para>The token for the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

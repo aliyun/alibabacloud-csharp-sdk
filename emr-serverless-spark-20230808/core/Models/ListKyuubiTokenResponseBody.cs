@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListKyuubiTokenResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListKyuubiTokenResponseBodyData Data { get; set; }
         public class ListKyuubiTokenResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>A list of tokens.</para>
+            /// <para>The list of tokens.</para>
             /// </summary>
             [NameInMap("tokens")]
             [Validation(Required=false)]
             public List<ListKyuubiTokenResponseBodyDataTokens> Tokens { get; set; }
             public class ListKyuubiTokenResponseBodyDataTokens : TeaModel {
                 /// <summary>
-                /// <para>The names of authorized RAM users.</para>
+                /// <para>The list of RAM user names of authorized users.</para>
                 /// </summary>
                 [NameInMap("accountNames")]
                 [Validation(Required=false)]
                 public List<string> AccountNames { get; set; }
 
                 /// <summary>
-                /// <para>The creation time.</para>
+                /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1755496031000</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The creator\&quot;s name.</para>
+                /// <para>The name of the creator.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>admin</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string CreatedBy { get; set; }
 
                 /// <summary>
-                /// <para>The expiration time.</para>
+                /// <para>The expiration time. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1787033891000</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public long? ExpireTime { get; set; }
 
                 /// <summary>
-                /// <para>The last used time.</para>
+                /// <para>The last usage time. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1760366232121</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public long? LastUsedTime { get; set; }
 
                 /// <summary>
-                /// <para>The ARNs of authorized users.</para>
+                /// <para>The list of ARNs of authorized users.</para>
                 /// </summary>
                 [NameInMap("memberArns")]
                 [Validation(Required=false)]

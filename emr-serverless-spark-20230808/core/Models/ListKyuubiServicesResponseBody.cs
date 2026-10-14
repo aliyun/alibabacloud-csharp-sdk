@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public ListKyuubiServicesResponseBodyData Data { get; set; }
         public class ListKyuubiServicesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of KyuubiServer instances.</para>
+            /// <para>The list of Kyuubi servers.</para>
             /// </summary>
             [NameInMap("kyuubiServices")]
             [Validation(Required=false)]
             public List<ListKyuubiServicesResponseBodyDataKyuubiServices> KyuubiServices { get; set; }
             public class ListKyuubiServicesResponseBodyDataKyuubiServices : TeaModel {
                 /// <summary>
-                /// <para>The KyuubiServer instance type.</para>
+                /// <para>The instance specifications of the Kyuubi server.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4C16G</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string ComputeInstance { get; set; }
 
                 /// <summary>
-                /// <para>The creation time.</para>
+                /// <para>The creation time. The time is in UTC and follows the ISO 8601 standard.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-03-11T08:21:58Z</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The UID of the user who created the KyuubiServer.</para>
+                /// <para>The UID of the creator.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>103*******</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string Creator { get; set; }
 
                 /// <summary>
-                /// <para>The internal network endpoint.</para>
+                /// <para>The internal domain name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>kyuubi-cn-hangzhou-internal.spark.emr.aliyuncs.com</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string InnerEndpoint { get; set; }
 
                 /// <summary>
-                /// <para>The KyuubiServer configurations.</para>
+                /// <para>The Kyuubi server configurations.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>kyuubi.conf.key=value1
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string KyuubiConfigs { get; set; }
 
                 /// <summary>
-                /// <para>The KyuubiServer version.</para>
+                /// <para>The version of the Kyuubi server.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.9.2-0.0.1</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string KyuubiReleaseVersion { get; set; }
 
                 /// <summary>
-                /// <para>KyuubiServer ID。</para>
+                /// <para>The KyuubiServer ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>kb-070104e7631242448d12a1377c309f30</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string KyuubiServiceId { get; set; }
 
                 /// <summary>
-                /// <para>The KyuubiServer name.</para>
+                /// <para>The name of the Kyuubi server.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string PublicEndpoint { get; set; }
 
                 /// <summary>
-                /// <para>The queue name.</para>
+                /// <para>The name of the queue.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dev_queue</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string Queue { get; set; }
 
                 /// <summary>
-                /// <para>The Spark DPI engine database engine version number.</para>
+                /// <para>The Spark DPI engine version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>esr-4.2.0 (Spark 3.5.2, Scala 2.12)</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string ReleaseVersion { get; set; }
 
                 /// <summary>
-                /// <para>The number of KyuubiServer replicas.</para>
+                /// <para>The number of replicas of the Kyuubi server.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public int? Replica { get; set; }
 
                 /// <summary>
-                /// <para>The default configurations for Spark applications started by KyuubiServer.</para>
+                /// <para>The default configurations for the Kyuubi server to start a Spark application.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>spark.conf.key=value1
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string SparkConfigs { get; set; }
 
                 /// <summary>
-                /// <para>The most recent start time of KyuubiServer.</para>
+                /// <para>The most recent start time of the Kyuubi server. The format is YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-11-23 09:22:00</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// <para>The KyuubiServer status.</para>
+                /// <para>The state of the Kyuubi server.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Running</para>

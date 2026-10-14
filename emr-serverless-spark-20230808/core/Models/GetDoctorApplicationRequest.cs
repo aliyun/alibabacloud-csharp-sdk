@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class GetDoctorApplicationRequest : TeaModel {
         /// <summary>
-        /// <para>The language of diagnostic information.</para>
+        /// <para>The language of the diagnostic information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh-CN</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Locale { get; set; }
 
         /// <summary>
-        /// <para>The query time.</para>
+        /// <para>The query date in the YYYY-MM-DD format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-01-01</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListRayJobRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the Ray Job (exact match).</para>
+        /// <para>The name of the Ray job. Exact match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myrayjob</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 20.</para>
+        /// <para>The number of entries to return on each page. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The submission ID of the Ray Job.</para>
+        /// <para>The submission ID of the Ray job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rj-xxxxxxxxxxx</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string SubmissionId { get; set; }
 
         /// <summary>
-        /// <para>The submit time range.</para>
+        /// <para>The submission time range.</para>
         /// </summary>
         [NameInMap("submitTime")]
         [Validation(Required=false)]
         public ListRayJobRequestSubmitTime SubmitTime { get; set; }
         public class ListRayJobRequestSubmitTime : TeaModel {
             /// <summary>
-            /// <para>The end of the submit time range. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The end time of the submission time range. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1780018822000</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The start of the submit time range. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The start time of the submission time range. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1780017822000</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// <para>The data development node ID.</para>
+        /// <para>The ID of the data development node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TSK-db8b870d901e443ba0aebba40c923e02</para>

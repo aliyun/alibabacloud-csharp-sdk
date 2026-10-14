@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Kind { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records to return.</para>
+        /// <para>The maximum number of records to return in a single request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that marks the start of the next page of results.</para>
+        /// <para>The token that indicates the position from which to start reading.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the job.</para>
+        /// <para>The job name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>emr-spark-demo-job</para>

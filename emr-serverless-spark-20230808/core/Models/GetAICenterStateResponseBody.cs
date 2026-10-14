@@ -20,14 +20,11 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The state of the AI center. Valid values:</para>
+        /// <para>The status of AI Hub. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Running</para>
-        /// </description></item>
-        /// <item><description><para>inactive</para>
-        /// </description></item>
-        /// <item><description><para>activating</para>
-        /// </description></item>
+        /// <item><description>active</description></item>
+        /// <item><description>inactive</description></item>
+        /// <item><description>activating</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

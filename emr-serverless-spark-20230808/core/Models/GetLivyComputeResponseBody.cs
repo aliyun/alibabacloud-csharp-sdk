@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class GetLivyComputeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. A value of 1000000 indicates a successful request. Other values indicate a failed request. Check the message parameter for the error details.</para>
+        /// <para>The return code of the request. The value 1000000 indicates that the request succeeded. Other values indicate that the request failed. For details about the error, see the message field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -44,12 +44,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public GetLivyComputeResponseBodyDataAutoStopConfiguration AutoStopConfiguration { get; set; }
             public class GetLivyComputeResponseBodyDataAutoStopConfiguration : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether to automatically start the gateway after it is created.</para>
+                /// <para>Specifies whether to automatically start after creation. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>true: Yes.</para>
-                /// </description></item>
-                /// <item><description><para>false: No.</para>
-                /// </description></item>
+                /// <item><description>true: Yes.</description></item>
+                /// <item><description>false: No.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -60,7 +58,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public bool? Enable { get; set; }
 
                 /// <summary>
-                /// <para>The number of minutes after which the Livy Gateway is automatically stopped if it is idle.</para>
+                /// <para>The number of idle minutes after which the Livy Gateway automatically stops.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>300</para>
@@ -82,7 +80,12 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string ComputeId { get; set; }
 
             /// <summary>
-            /// <para>The number of CPU cores for the Livy server.</para>
+            /// <para>The number of CPU cores for the Livy Server. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>1</description></item>
+            /// <item><description>2</description></item>
+            /// <item><description>4</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -102,7 +105,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string CreatedBy { get; set; }
 
             /// <summary>
-            /// <para>The version number of the Spark engine.</para>
+            /// <para>The Spark DPI engine version number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>esr-4.3.0 (Spark 3.5.2, Scala 2.12)</para>
@@ -112,7 +115,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string DisplayReleaseVersion { get; set; }
 
             /// <summary>
-            /// <para>The status of the public endpoint switch.</para>
+            /// <para>The status of the public network address switch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -122,7 +125,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public bool? EnablePublic { get; set; }
 
             /// <summary>
-            /// <para>The public endpoint.</para>
+            /// <para>The public network connection address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>emr-spark-livy-gateway-cn-hangzhou.data.aliyun.com/api/v1/workspace/w-xxxxxxxxx/livycompute/lc-xxxxxxxxxxx</para>
@@ -132,7 +135,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Endpoint { get; set; }
 
             /// <summary>
-            /// <para>The internal endpoint.</para>
+            /// <para>The internal network connection address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>emr-spark-livy-gateway-cn-hangzhou-internal.aliyun.com/api/v1/workspace/w-xxxxxxxxx/livycompute/lc-xxxxxxxxxxx</para>
@@ -142,7 +145,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string EndpointInner { get; set; }
 
             /// <summary>
-            /// <para>The ID of the runtime environment.</para>
+            /// <para>The runtime environment ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ev-cq31c7tlhtgm9nrrlj4g</para>
@@ -152,7 +155,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string EnvironmentId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the fusion switch is enabled.</para>
+            /// <para>Specifies whether the fusion feature is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -174,14 +177,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             /// <summary>
             /// <para>The Livy Gateway configuration in JSON format. The following files are supported:</para>
             /// <list type="bullet">
-            /// <item><description><para>sparkDefaultsConf</para>
-            /// </description></item>
-            /// <item><description><para>sparkBlackListConf</para>
-            /// </description></item>
-            /// <item><description><para>livyConf</para>
-            /// </description></item>
-            /// <item><description><para>livyClientConf</para>
-            /// </description></item>
+            /// <item><description>sparkDefaultsConf</description></item>
+            /// <item><description>sparkBlackListConf</description></item>
+            /// <item><description>livyConf</description></item>
+            /// <item><description>livyClientConf</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -207,7 +206,12 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string LivyVersion { get; set; }
 
             /// <summary>
-            /// <para>The memory size of the Livy server.</para>
+            /// <para>The memory size of the Livy Server. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>4Gi</description></item>
+            /// <item><description>8Gi</description></item>
+            /// <item><description>16Gi</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>4Gi</para>
@@ -227,7 +231,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The name of the network connection.</para>
+            /// <para>The network connectivity name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -257,7 +261,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string RamUserId { get; set; }
 
             /// <summary>
-            /// <para>The version number of the Spark engine. This parameter is deprecated. Use displayReleaseVersion instead.</para>
+            /// <para>The Spark DPI engine version number. This field is deprecated. Use displayReleaseVersion instead.</para>
             /// 
             /// <b>Example:</b>
             /// <para>esr-4.3.0 (Spark 3.5.2, Scala 2.12, Java Runtime)</para>
@@ -267,7 +271,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string ReleaseVersion { get; set; }
 
             /// <summary>
-            /// <para>The start time.</para>
+            /// <para>The start time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1749456094000</para>

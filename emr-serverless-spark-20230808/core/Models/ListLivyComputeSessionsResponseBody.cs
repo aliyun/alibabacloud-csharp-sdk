@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string ComputeId { get; set; }
 
             /// <summary>
-            /// <para>The time when the session was created. This is a UNIX timestamp in milliseconds.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1768213240000</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The number of compute units (CUs) consumed during the task execution. This is an estimated value. The actual value is subject to the bill.</para>
+            /// <para>The number of compute units (CUs) consumed during the job runtime. This value is an estimate. The actual value is subject to the bill.</para>
             /// 
             /// <b>Example:</b>
             /// <para>322.5</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public double? CuHours { get; set; }
 
             /// <summary>
-            /// <para>The time when the session ended. This is a UNIX timestamp in milliseconds.</para>
+            /// <para>The end time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1768213240000</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Info { get; set; }
 
             /// <summary>
-            /// <para>The total amount of memory in MB allocated to the task multiplied by the number of seconds the task has been running.</para>
+            /// <para>The total amount of memory allocated to the job multiplied by the number of seconds the job has run.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1098888</para>
@@ -132,18 +132,13 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string SparkConf { get; set; }
 
             /// <summary>
-            /// <para>The session state.</para>
+            /// <para>The session status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>starting: The session is starting.</para>
-            /// </description></item>
-            /// <item><description><para>running: The session is running.</para>
-            /// </description></item>
-            /// <item><description><para>terminating: The session is being terminated.</para>
-            /// </description></item>
-            /// <item><description><para>terminated: The session is terminated.</para>
-            /// </description></item>
-            /// <item><description><para>error: The session failed.</para>
-            /// </description></item>
+            /// <item><description>starting: Starting.</description></item>
+            /// <item><description>running: Running.</description></item>
+            /// <item><description>terminating: Terminating.</description></item>
+            /// <item><description>terminated: Terminated.</description></item>
+            /// <item><description>error: Error.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -154,7 +149,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The total number of vCores allocated to the task multiplied by the number of seconds the task has been running.</para>
+            /// <para>The total number of vcores allocated to the job multiplied by the number of seconds the job has run.</para>
             /// 
             /// <b>Example:</b>
             /// <para>343</para>
@@ -164,7 +159,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? VcoreSeconds { get; set; }
 
             /// <summary>
-            /// <para>The web UI URL of the session.</para>
+            /// <para>The web UI address of the session.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://emr-spark-ui-cn-hangzhou.data.aliyun.com">http://emr-spark-ui-cn-hangzhou.data.aliyun.com</a></para>

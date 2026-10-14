@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListMembersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries returned per page.</para>
+        /// <para>The maximum number of records to return per request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public List<ListMembersResponseBodyMembers> Members { get; set; }
         public class ListMembersResponseBodyMembers : TeaModel {
             /// <summary>
-            /// <para>The list of operations allowed for this user.</para>
+            /// <para>The list of actions allowed for the user.</para>
             /// </summary>
             [NameInMap("actions")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string ActionArn { get; set; }
 
                 /// <summary>
-                /// <para>The name of the permission.</para>
+                /// <para>The name of the action.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>add</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string ActionName { get; set; }
 
                 /// <summary>
-                /// <para>The list of action dependencies.</para>
+                /// <para>The list of dependencies for the action.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[&quot;view&quot;]</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
-            /// <para>The time when the member was created.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1753412502000</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The Alibaba Cloud Resource Name (ARN) of the user.</para>
+            /// <para>The ARN of the member.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:emr::w-1234*<em><b>abcd:member/202265</b></em>**276</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                     public string ActionArn { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the permission.</para>
+                    /// <para>The name of the action.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>add</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                     public string ActionName { get; set; }
 
                     /// <summary>
-                    /// <para>The list of action dependencies.</para>
+                    /// <para>The list of dependencies for the action.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>[&quot;view&quot;]</para>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 }
 
                 /// <summary>
-                /// <para>The time when the role was created.</para>
+                /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1753412502000</para>
@@ -234,7 +234,11 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string UserName { get; set; }
 
             /// <summary>
-            /// <para>The type of the user.</para>
+            /// <para>The type of the user. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>ROLE</description></item>
+            /// <item><description>MEMBER</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>MEMBER</para>
@@ -256,7 +260,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// <para>The token for the next page of results.</para>
+        /// <para>The pagination token for the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -266,7 +270,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>
@@ -276,7 +280,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

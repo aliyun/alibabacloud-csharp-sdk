@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class SubmitRayJobRequest : TeaModel {
         /// <summary>
-        /// <para>The timeout period of the job, which includes the cluster creation time and job runtime. The job is canceled if this period is exceeded.</para>
+        /// <para>The job timeout period, which includes the cluster creation and job execution time. The job is canceled if it exceeds this period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? ActiveDeadlineSeconds { get; set; }
 
         /// <summary>
-        /// <para>The ID of an existing Ray cluster to which the job is submitted.</para>
+        /// <para>The ID of the existing Ray cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ray-xxxxxxxxx</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The Ray DPI engine version number.</para>
+        /// <para>The Ray DPI engine database engine version number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>err-1.2.0 (Ray 2.55.1, Python 3.12)</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string DisplayReleaseVersion { get; set; }
 
         /// <summary>
-        /// <para>The startup command.</para>
+        /// <para>The entrypoint command.</para>
         /// 
         /// <b>Example:</b>
         /// <para>python -c &quot;print(\&quot;hello ray job\&quot;)&quot;</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Entrypoint { get; set; }
 
         /// <summary>
-        /// <para>The memory size requested by the entrypoint task.</para>
+        /// <para>The memory size requested by the entrypoint job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4Gi</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string EntrypointMemory { get; set; }
 
         /// <summary>
-        /// <para>The number of CPUs requested by the entrypoint task.</para>
+        /// <para>The number of CPUs requested by the entrypoint job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string EntrypointNumCpus { get; set; }
 
         /// <summary>
-        /// <para>The number of GPUs requested by the entrypoint task.</para>
+        /// <para>The number of GPUs requested by the entrypoint job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string EntrypointNumGpus { get; set; }
 
         /// <summary>
-        /// <para>The custom resource request JSON string for the entrypoint task.</para>
+        /// <para>The custom resource request JSON string for the entrypoint job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;fpu&quot;: 1}</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string EntrypointResources { get; set; }
 
         /// <summary>
-        /// <para>The extra parameters in a JSON string.</para>
+        /// <para>The JSON string for additional parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;userDefinedFiles&quot;: &quot;oss://mybucket/artifact/config.json,oss://mybucket/artifact/config2.json&quot;, &quot;userRequirementsFile&quot;: &quot;oss://mybucket/requirements.txt&quot;}</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string ExtraParam { get; set; }
 
         /// <summary>
-        /// <para>The Ray cluster head node parameters.</para>
+        /// <para>The parameters of the Ray cluster head node.</para>
         /// </summary>
         [NameInMap("headSpec")]
         [Validation(Required=false)]
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Cpu { get; set; }
 
             /// <summary>
-            /// <para>The Ray DPI engine version.</para>
+            /// <para>The Ray DPI engine database engine version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>err-1.3.0 (Ray 2.55.1, Python 3.12)</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string DisplayReleaseVersion { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable automatic scaling for workers.</para>
+            /// <para>Specifies whether to enable auto-scaling for worker nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string GpuSpec { get; set; }
 
             /// <summary>
-            /// <para>The worker idle timeout period after automatic scaling is enabled.</para>
+            /// <para>The idle time for worker nodes after auto-scaling is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public int? IdleTimeoutSeconds { get; set; }
 
             /// <summary>
-            /// <para>The memory size. Unit: GiB.</para>
+            /// <para>The memory size, in Gi.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8Gi</para>
@@ -268,7 +268,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// <para>The number of seconds to wait before destroying the cluster. This parameter takes effect only when shutdownAfterJobFinishes is set to true.</para>
+        /// <para>The wait time in seconds before the cluster is destroyed. This parameter takes effect only when shutdownAfterJobFinishes is set to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -285,7 +285,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public List<string> VolumeIds { get; set; }
 
         /// <summary>
-        /// <para>The parameters of the worker nodes in the Ray cluster.</para>
+        /// <para>The Ray cluster worker node parameters.</para>
         /// </summary>
         [NameInMap("workerSpec")]
         [Validation(Required=false)]
@@ -302,7 +302,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Cpu { get; set; }
 
             /// <summary>
-            /// <para>The database engine version.</para>
+            /// <para>The DPI engine version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ray-1.2.0 (Ray 2.55.1, Python 3.12)</para>
@@ -332,7 +332,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of workers after automatic scaling is enabled.</para>
+            /// <para>The maximum number of workers when automatic scaling is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -342,7 +342,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public int? MaxReplica { get; set; }
 
             /// <summary>
-            /// <para>The memory size. Unit: GiB.</para>
+            /// <para>The memory size, in Gi.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16Gi</para>
@@ -352,7 +352,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Memory { get; set; }
 
             /// <summary>
-            /// <para>The minimum number of workers after automatic scaling is enabled.</para>
+            /// <para>The minimum number of workers when automatic scaling is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -394,7 +394,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// <para>The URL of the job code working directory.</para>
+        /// <para>The URL of the working directory for the job code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://mybucket/rayjob.zip</para>

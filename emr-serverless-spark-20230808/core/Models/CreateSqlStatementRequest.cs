@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class CreateSqlStatementRequest : TeaModel {
         /// <summary>
-        /// <para>The SQL code. This parameter accepts one or more SQL statements for execution.</para>
+        /// <para>The SQL code. You can specify one or more SQL statements to execute.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SHOW TABLES</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string CodeContent { get; set; }
 
         /// <summary>
-        /// <para>The ID of the default DLF Catalog.</para>
+        /// <para>The default DLF catalog ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default_catalog</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string DefaultCatalog { get; set; }
 
         /// <summary>
-        /// <para>The name of the default database.</para>
+        /// <para>The default database name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string DefaultDatabase { get; set; }
 
         /// <summary>
-        /// <para>The limit value. The value must be between 1 and 10000, inclusive.</para>
+        /// <para>The limit value. Valid values: 1 to 10000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SQL session. The session must be created in the Session Manager module of the EMR Serverless Spark workspace.</para>
+        /// <para>The SQL session ID. Create the session in the session management module of the EMR Serverless Spark workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sc-dfahdfjafhajd****</para>
@@ -59,6 +59,12 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public string SqlComputeId { get; set; }
 
+        /// <summary>
+        /// <para>The data development node ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>TSK-d87******************</para>
+        /// </summary>
         [NameInMap("taskBizId")]
         [Validation(Required=false)]
         public string TaskBizId { get; set; }

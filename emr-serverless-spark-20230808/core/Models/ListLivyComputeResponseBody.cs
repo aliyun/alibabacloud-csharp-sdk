@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListLivyComputeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. A value of 1000000 indicates that the request is successful. For other values, see the message parameter for error details.</para>
+        /// <para>The return code of the request. A value of 1000000 indicates that the request is successful. Other values indicate that the request failed. For specific error details, see the message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000000</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListLivyComputeResponseBodyData Data { get; set; }
         public class ListLivyComputeResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>A list of Livy Gateways.</para>
+            /// <para>The list of Livy gateways.</para>
             /// </summary>
             [NameInMap("livyComputes")]
             [Validation(Required=false)]
             public List<ListLivyComputeResponseBodyDataLivyComputes> LivyComputes { get; set; }
             public class ListLivyComputeResponseBodyDataLivyComputes : TeaModel {
                 /// <summary>
-                /// <para>The ID of the Livy Gateway.</para>
+                /// <para>The ID of the Livy gateway.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>lc-xxxxxxxxxxxx</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string CreatedBy { get; set; }
 
                 /// <summary>
-                /// <para>The public endpoint.</para>
+                /// <para>The public network connection endpoint.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>emr-spark-livy-gateway-cn-hangzhou.data.aliyun.com/api/v1/workspace/w-xxxxxxxxx/livycompute/lc-xxxxxxxxxxx</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string Endpoint { get; set; }
 
                 /// <summary>
-                /// <para>The internal endpoint.</para>
+                /// <para>The internal network connection endpoint.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>emr-spark-livy-gateway-cn-hangzhou-internal.aliyun.com/api/v1/workspace/w-xxxxxxxxx/livycompute/lc-xxxxxxxxxxx</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string EndpointInner { get; set; }
 
                 /// <summary>
-                /// <para>The time when the resource was created.</para>
+                /// <para>The creation time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1749456094000</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string QueueName { get; set; }
 
                 /// <summary>
-                /// <para>The time when the resource was started.</para>
+                /// <para>The start time. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1749456094000</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 20. Valid values: 1 to 100.</para>
+        /// <para>The number of entries to return on each page. Default value: 20. Minimum value: 1. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

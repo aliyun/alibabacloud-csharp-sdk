@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Ray Job ID。</para>
+        /// <para>The Ray job ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rj-k7nm8ahl5te4tg91</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The creation time. This value is a UNIX timestamp in milliseconds.</para>
+        /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1750327083303</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string DisplayReleaseVersion { get; set; }
 
         /// <summary>
-        /// <para>The extra parameters in JSON format.</para>
+        /// <para>The additional parameters in JSON format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string ExtraParam { get; set; }
 
         /// <summary>
-        /// <para>The gRPC endpoint (internal network). The domain name in this endpoint can also be used to submit Ray jobs.</para>
+        /// <para>The gRPC endpoint (internal network). The domain name in the endpoint can also be used to submit Ray jobs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ray://emr-spark-ray-gateway-cn-hangzhou-internal.emr.aliyuncs.com:80</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string GrpcEndpoint { get; set; }
 
         /// <summary>
-        /// <para>The parameters of the Ray cluster head node.</para>
+        /// <para>The Ray cluster head node parameters.</para>
         /// </summary>
         [NameInMap("headSpec")]
         [Validation(Required=false)]
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string DisplayReleaseVersion { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether automatic scaling is enabled for worker nodes.</para>
+            /// <para>Indicates whether auto scaling is enabled for worker nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string RedisPassword { get; set; }
 
                 /// <summary>
-                /// <para>The Redis URL.</para>
+                /// <para>The Redis address.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10.4.5.6:6789</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string GpuSpec { get; set; }
 
             /// <summary>
-            /// <para>The idle timeout period of worker nodes after automatic scaling is enabled.</para>
+            /// <para>The idle timeout period for worker nodes after auto scaling is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public int? IdleTimeoutSeconds { get; set; }
 
             /// <summary>
-            /// <para>The memory size. Unit: Gi.</para>
+            /// <para>The memory size, in GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8Gi</para>
@@ -275,7 +275,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public List<GetRayClusterResponseBodyInstances> Instances { get; set; }
         public class GetRayClusterResponseBodyInstances : TeaModel {
             /// <summary>
-            /// <para>The exit code of the primary container.</para>
+            /// <para>The main container exit code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>137</para>
@@ -285,7 +285,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public int? ContainerExitCode { get; set; }
 
             /// <summary>
-            /// <para>The status of the primary container.</para>
+            /// <para>The main container state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -295,7 +295,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string ContainerState { get; set; }
 
             /// <summary>
-            /// <para>The primary container status message.</para>
+            /// <para>The main container state information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ContainerExit</para>
@@ -305,7 +305,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string ContainerStateMessage { get; set; }
 
             /// <summary>
-            /// <para>The primary container information.</para>
+            /// <para>The main container information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ok</para>
@@ -315,7 +315,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string ContainerStateReason { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1735870116167</para>
@@ -335,7 +335,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The node pod status message.</para>
+            /// <para>The node pod state information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ok</para>
@@ -345,7 +345,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The node pod status.</para>
+            /// <para>The node pod state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -365,7 +365,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Reason { get; set; }
 
             /// <summary>
-            /// <para>The start time.</para>
+            /// <para>The start time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1762946698000</para>
@@ -387,7 +387,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// <para>The public URL for submitting Ray Jobs.</para>
+        /// <para>The public address for submitting Ray jobs.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://emr-spark-ray-gateway-cn-hangzhou.aliyuncs.com">https://emr-spark-ray-gateway-cn-hangzhou.aliyuncs.com</a></para>
@@ -397,7 +397,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string JobUrl { get; set; }
 
         /// <summary>
-        /// <para>The internal network URL for submitting Ray jobs.</para>
+        /// <para>The internal network address for submitting Ray jobs.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://emr-spark-ray-gateway-cn-hangzhou-internal.emr.aliyuncs.com">http://emr-spark-ray-gateway-cn-hangzhou-internal.emr.aliyuncs.com</a></para>
@@ -407,7 +407,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string JobUrlInner { get; set; }
 
         /// <summary>
-        /// <para>The error message returned when the status is Error.</para>
+        /// <para>The error message when the status is Error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ok</para>
@@ -427,7 +427,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public bool? Modified { get; set; }
 
         /// <summary>
-        /// <para>The update time. This value is a UNIX timestamp in milliseconds.</para>
+        /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1754274541693</para>
@@ -437,7 +437,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public long? ModifiedTime { get; set; }
 
         /// <summary>
-        /// <para>The UID of the user who last modified the cluster.</para>
+        /// <para>The UID of the user who last updated the cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>202077646755523991</para>
@@ -487,7 +487,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The start time. This value is a UNIX timestamp in milliseconds.</para>
+        /// <para>The start time. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1750327083303</para>
@@ -499,11 +499,11 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         /// <summary>
         /// <para>The session status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Starting: Starting.</description></item>
-        /// <item><description>Running: Running.</description></item>
-        /// <item><description>Stopping: Stopping.</description></item>
-        /// <item><description>Stopped: Stopped.</description></item>
-        /// <item><description>Error: Failed.</description></item>
+        /// <item><description>Starting: starting.</description></item>
+        /// <item><description>Running: running.</description></item>
+        /// <item><description>Stopping: stopping.</description></item>
+        /// <item><description>Stopped: stopped.</description></item>
+        /// <item><description>Error: failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -514,7 +514,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string State { get; set; }
 
         /// <summary>
-        /// <para>The authentication token for submitting Ray Jobs. Include this token in the request header as &quot;ray-token&quot;: &quot;token&quot;.</para>
+        /// <para>The authentication token for submitting Ray jobs. Include this token in the request header as &quot;ray-token&quot;: &quot;token&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1d06484d3b424f7fa4ab7082a4076da2</para>
@@ -588,7 +588,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string GpuSpec { get; set; }
 
             /// <summary>
-            /// <para>The name of the worker node group.</para>
+            /// <para>The worker node group name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WorkerGroup1</para>
@@ -608,7 +608,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public int? MaxReplica { get; set; }
 
             /// <summary>
-            /// <para>The memory size. Unit: Gi.</para>
+            /// <para>The memory size, in GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8Gi</para>
@@ -658,7 +658,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public int? Replica { get; set; }
 
             /// <summary>
-            /// <para>The type of the worker node group.</para>
+            /// <para>The worker node group type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CPU</para>

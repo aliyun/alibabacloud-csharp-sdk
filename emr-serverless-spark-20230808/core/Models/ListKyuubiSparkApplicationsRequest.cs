@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListKyuubiSparkApplicationsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Spark application submitted by Kyuubi, used for searching.</para>
+        /// <para>The ID of the Spark application submitted by Kyuubi, used for search.</para>
         /// 
         /// <b>Example:</b>
         /// <para>spark-339f844005b6404c95f9f7c7a13b****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The name of the Spark application submitted by Kyuubi, used for searching.</para>
+        /// <para>The name of the Spark application submitted by Kyuubi, used for search.</para>
         /// 
         /// <b>Example:</b>
         /// <para>kyuubi-connection-spark-sql-anonymous-fa9a5e73-b4b1-474a-b****</para>
@@ -29,11 +29,16 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public string ApplicationName { get; set; }
 
+        /// <summary>
+        /// <para>The end time range of the task.</para>
+        /// </summary>
         [NameInMap("endTime")]
         [Validation(Required=false)]
         public ListKyuubiSparkApplicationsRequestEndTime EndTime { get; set; }
         public class ListKyuubiSparkApplicationsRequestEndTime : TeaModel {
             /// <summary>
+            /// <para>The end point of the task end time range. The value is a UNIX timestamp in seconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1774209636</para>
             /// </summary>
@@ -42,6 +47,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? EndTime { get; set; }
 
             /// <summary>
+            /// <para>The start point of the task end time range. The value is a UNIX timestamp in seconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1774209636</para>
             /// </summary>
@@ -52,6 +59,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
+        /// <para>The list of statuses of the latest SQL statement used for filtering.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[&quot;SUCCESS&quot;]</para>
         /// </summary>
@@ -60,7 +69,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string LatestSqlStatementStatuses { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records to return.</para>
+        /// <para>The maximum number of records to retrieve at a time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -70,6 +79,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The minimum execution duration of the application, in milliseconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>60000</para>
         /// </summary>
@@ -78,7 +89,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public long? MinDuration { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the next page of results.</para>
+        /// <para>The token for the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -87,11 +98,16 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <para>The list of sort fields.</para>
+        /// </summary>
         [NameInMap("orderBy")]
         [Validation(Required=false)]
         public List<string> OrderBy { get; set; }
 
         /// <summary>
+        /// <para>The resource queue ID used to filter Spark applications.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>root_queue</para>
         /// </summary>
@@ -100,6 +116,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string ResourceQueueId { get; set; }
 
         /// <summary>
+        /// <para>The sort order. A value of asc indicates ascending order, and desc indicates descending order.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>asc</para>
         /// </summary>
@@ -108,14 +126,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Sort { get; set; }
 
         /// <summary>
-        /// <para>The time range when the task started.</para>
+        /// <para>The start time range of the task.</para>
         /// </summary>
         [NameInMap("startTime")]
         [Validation(Required=false)]
         public ListKyuubiSparkApplicationsRequestStartTime StartTime { get; set; }
         public class ListKyuubiSparkApplicationsRequestStartTime : TeaModel {
             /// <summary>
-            /// <para>The end of the time range.</para>
+            /// <para>The end point of the task start time range. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1710432000000</para>
@@ -125,7 +143,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The start of the time range.</para>
+            /// <para>The start point of the task start time range. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1709740800000</para>
@@ -137,6 +155,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
+        /// <para>The list of Spark application states used for filtering.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[&quot;ERROR&quot;]</para>
         /// </summary>

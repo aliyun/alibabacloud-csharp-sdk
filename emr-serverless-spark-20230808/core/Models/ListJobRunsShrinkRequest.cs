@@ -30,18 +30,21 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Creator { get; set; }
 
         /// <summary>
-        /// <para>The end time range of the job.</para>
+        /// <para>The time range for the end time of the job run.</para>
         /// </summary>
         [NameInMap("endTime")]
         [Validation(Required=false)]
         public string EndTimeShrink { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to aggregate and return statistical results by job run state.</para>
+        /// </summary>
         [NameInMap("groupByState")]
         [Validation(Required=false)]
         public bool? GroupByState { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the job is a workflow job.</para>
+        /// <para>Specifies whether the job run is a workflow job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -51,7 +54,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string IsWorkflow { get; set; }
 
         /// <summary>
-        /// <para>The job ID of the streaming job deployment.</para>
+        /// <para>The ID of the streaming job deployment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>jd-b6d003f1930f****</para>
@@ -61,7 +64,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string JobRunDeploymentId { get; set; }
 
         /// <summary>
-        /// <para>The job ID.</para>
+        /// <para>The ID of the job run.</para>
         /// 
         /// <b>Example:</b>
         /// <para>j-xxx</para>
@@ -71,7 +74,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string JobRunId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records to retrieve in a single request. Maximum value: 100.</para>
+        /// <para>The maximum number of entries to return in a single call. The maximum value is 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -81,7 +84,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The minimum execution duration of the job, in milliseconds.</para>
+        /// <para>The minimum execution duration of the job run, in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60000</para>
@@ -91,7 +94,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public long? MinDuration { get; set; }
 
         /// <summary>
-        /// <para>The job name.</para>
+        /// <para>The name of the job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>emr-spark-demo-job</para>
@@ -101,7 +104,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that marks the position from which to start reading.</para>
+        /// <para>The pagination token that specifies the starting position for the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C89568980</para>
@@ -121,7 +124,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the resource queue on which the Spark job runs.</para>
+        /// <para>The name of the resource queue in which the Spark job runs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dev_queue</para>
@@ -141,14 +144,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RuntimeConfigs { get; set; }
 
         /// <summary>
-        /// <para>The start time range of the job.</para>
+        /// <para>The time range for the start time of the job run.</para>
         /// </summary>
         [NameInMap("startTime")]
         [Validation(Required=false)]
         public string StartTimeShrink { get; set; }
 
         /// <summary>
-        /// <para>The job states.</para>
+        /// <para>The states of the job runs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;Running&quot;,&quot;Submitted&quot;]</para>

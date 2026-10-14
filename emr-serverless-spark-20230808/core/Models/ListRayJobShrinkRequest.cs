@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListRayJobShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the Ray Job (exact match).</para>
+        /// <para>The name of the Ray job. Exact match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myrayjob</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 20.</para>
+        /// <para>The number of entries to return on each page. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The submission ID of the Ray Job.</para>
+        /// <para>The submission ID of the Ray job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rj-xxxxxxxxxxx</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string SubmissionId { get; set; }
 
         /// <summary>
-        /// <para>The submit time range.</para>
+        /// <para>The submission time range.</para>
         /// </summary>
         [NameInMap("submitTime")]
         [Validation(Required=false)]
         public string SubmitTimeShrink { get; set; }
 
         /// <summary>
-        /// <para>The data development node ID.</para>
+        /// <para>The ID of the data development node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TSK-db8b870d901e443ba0aebba40c923e02</para>

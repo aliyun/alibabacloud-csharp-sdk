@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListKyuubiServicesRequest : TeaModel {
         /// <summary>
-        /// <para>The token of the Kyuubi Gateway.</para>
+        /// <para>The Kyuubi Gateway token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6w3s2e7y7t9fxnvtai9sv1uebw8b7bvc</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListExecutorLogsRequest : TeaModel {
         /// <summary>
-        /// <para>The type of log. Only logs of this type are returned.</para>
+        /// <para>The log type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>log4j</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string LogType { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results to return per page. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The maximum number of records to return in a single request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. This is the <c>nextToken</c> from a previously truncated response.</para>
+        /// <para>The next token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public CreateProcessDefinitionWithScheduleResponseBodyData Data { get; set; }
         public class CreateProcessDefinitionWithScheduleResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the workflow definition.</para>
+            /// <para>The workflow definition ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>160************</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? Code { get; set; }
 
             /// <summary>
-            /// <para>The serial number of the workflow definition.</para>
+            /// <para>The workflow definition number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12342</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>A detailed message for the return code.</para>
+        /// <para>The detailed description corresponding to the request code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>No permission for resource action</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Msg { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

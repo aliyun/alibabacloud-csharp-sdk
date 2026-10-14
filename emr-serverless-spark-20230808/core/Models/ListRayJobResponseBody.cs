@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListRayJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of Ray Jobs.</para>
+        /// <para>The list of Ray jobs.</para>
         /// </summary>
         [NameInMap("rayJobs")]
         [Validation(Required=false)]
@@ -19,10 +19,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             /// <summary>
             /// <para>The status of the corresponding Ray cluster. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Deleted: deleted.</description></item>
-            /// <item><description>Submitted: submitted but not yet being created.</description></item>
-            /// <item><description>Pending: being created.</description></item>
-            /// <item><description>Running: running.</description></item>
+            /// <item><description>Deleted: The cluster is deleted.</description></item>
+            /// <item><description>Submitted: The cluster is submitted but not yet created.</description></item>
+            /// <item><description>Pending: The cluster is being created.</description></item>
+            /// <item><description>Running: The cluster is running.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string CreatorName { get; set; }
 
             /// <summary>
-            /// <para>The number of compute units (CUs) consumed during the job execution cycle. This value is an estimate. The actual value is subject to the bill.</para>
+            /// <para>The number of compute units (CUs) consumed during the job runtime. This value is an estimate. The actual value is subject to the bill.</para>
             /// 
             /// <b>Example:</b>
             /// <para>120</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public double? CuHours { get; set; }
 
             /// <summary>
-            /// <para>The URL of the Ray cluster dashboard. When the Ray cluster is in the Running state, the URL points to the Runtime UI. After the cluster is in the Deleted state, the URL points to the History UI. The History UI is supported only in err-1.2.0 and later versions.</para>
+            /// <para>The URL of the Ray cluster dashboard. If the Ray cluster is in the Running state, the URL points to the Runtime UI. If the cluster is in the Deleted state, the URL points to the History UI. The History UI is supported only in err-1.2.0 and later.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://emr-ray-gateway.aliyuncs.com?token=xxxxxxxxx">https://emr-ray-gateway.aliyuncs.com?token=xxxxxxxxx</a></para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string DashboardUrl { get; set; }
 
             /// <summary>
-            /// <para>The execution duration of the job. Unit: seconds.</para>
+            /// <para>The execution duration of the job, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3564</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? Duration { get; set; }
 
             /// <summary>
-            /// <para>The time when the job ended.</para>
+            /// <para>The time when the job ended. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1776945509000</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the Ray Job.</para>
+            /// <para>The name of the Ray job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testRayJob</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The Ray DPI engine version.</para>
+            /// <para>The Ray engine version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>err-1.2.0 (Ray 2.55.1, Python 3.12)</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string ResourceQueue { get; set; }
 
             /// <summary>
-            /// <para>The time when the job was started.</para>
+            /// <para>The time when the job was started. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1776945499000</para>
@@ -113,16 +113,16 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>The job status. Valid values:</para>
+            /// <para>The status of the job. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Submitted: submitted.</description></item>
-            /// <item><description>Pending: the cluster is being created.</description></item>
-            /// <item><description>Running: the job is running.</description></item>
-            /// <item><description>Succeeded: the job succeeded.</description></item>
-            /// <item><description>Failed: the job failed.</description></item>
-            /// <item><description>Cancelling: the job is being canceled.</description></item>
-            /// <item><description>Cancelled: the job is canceled.</description></item>
-            /// <item><description>Timeout: the job timed out and was canceled.</description></item>
+            /// <item><description>Submitted: The job is submitted.</description></item>
+            /// <item><description>Pending: The cluster is being created.</description></item>
+            /// <item><description>Running: The job is running.</description></item>
+            /// <item><description>Succeeded: The job succeeded.</description></item>
+            /// <item><description>Failed: The job failed.</description></item>
+            /// <item><description>Cancelling: The job is being cancelled.</description></item>
+            /// <item><description>Cancelled: The job is cancelled.</description></item>
+            /// <item><description>Timeout: The job is cancelled due to a timeout.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Ray Job.</para>
+            /// <para>The ID of the Ray job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rj-uiulpgow9xljimm1</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string SubmissionId { get; set; }
 
             /// <summary>
-            /// <para>The time when the job was submitted.</para>
+            /// <para>The time when the job was submitted. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1776945399000</para>

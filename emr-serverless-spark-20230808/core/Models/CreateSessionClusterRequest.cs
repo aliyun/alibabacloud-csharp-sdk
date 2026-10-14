@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public List<CreateSessionClusterRequestApplicationConfigs> ApplicationConfigs { get; set; }
         public class CreateSessionClusterRequestApplicationConfigs : TeaModel {
             /// <summary>
-            /// <para>The name of the configuration file.</para>
+            /// <para>The configuration file name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>spark-defaults.conf</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string ConfigFileName { get; set; }
 
             /// <summary>
-            /// <para>The key of a Spark configuration item.</para>
+            /// <para>The Spark Conf key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>spark.app.name</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string ConfigItemKey { get; set; }
 
             /// <summary>
-            /// <para>The value of a Spark configuration item.</para>
+            /// <para>The Spark Conf value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -49,12 +49,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// <para>The automatic startup configuration.</para>
+        /// <para>Specifies whether to enable automatic startup. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Yes.</para>
-        /// </description></item>
-        /// <item><description><para>false: No.</para>
-        /// </description></item>
+        /// <item><description>true: Enabled.</description></item>
+        /// <item><description>false: Disabled.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("autoStartConfiguration")]
@@ -62,12 +60,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public CreateSessionClusterRequestAutoStartConfiguration AutoStartConfiguration { get; set; }
         public class CreateSessionClusterRequestAutoStartConfiguration : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable automatic startup.</para>
+            /// <para>Specifies whether to enable automatic startup. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true: Enables automatic startup.</para>
-            /// </description></item>
-            /// <item><description><para>false: Disables automatic startup.</para>
-            /// </description></item>
+            /// <item><description>true: Enabled.</description></item>
+            /// <item><description>false: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -87,12 +83,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public CreateSessionClusterRequestAutoStopConfiguration AutoStopConfiguration { get; set; }
         public class CreateSessionClusterRequestAutoStopConfiguration : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable automatic stop.</para>
+            /// <para>Specifies whether to allow automatic stop. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true: Enables automatic stop.</para>
-            /// </description></item>
-            /// <item><description><para>false: Disables automatic stop.</para>
-            /// </description></item>
+            /// <item><description>true: Allowed.</description></item>
+            /// <item><description>false: Not allowed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -103,7 +97,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// <para>The idle timeout period of the session. The session is automatically stopped after it is idle for the specified period. Unit: minutes.</para>
+            /// <para>The number of idle minutes after which the session is automatically stopped.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -114,12 +108,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
         }
 
+        /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>my-token-asxkxxxxxxx</para>
+        /// </summary>
         [NameInMap("clientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The version that is displayed in the console.</para>
+        /// <para>The version displayed in the console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>esr-3.3.1</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string DisplayReleaseVersion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Python environment. This parameter applies only to Notebook sessions.</para>
+        /// <para>The Python environment ID. This parameter takes effect only for Notebook sessions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>env-cpv569tlhtgndjl86t40</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string EnvId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the Fusion engine for acceleration.</para>
+        /// <para>Specifies whether to enable Fusion engine acceleration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -149,12 +149,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public bool? Fusion { get; set; }
 
         /// <summary>
-        /// <para>The type of the session. Valid values:</para>
+        /// <para>The session type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>SQL: an SQL session.</para>
-        /// </description></item>
-        /// <item><description><para>NOTEBOOK: a Notebook session.</para>
-        /// </description></item>
+        /// <item><description>SQL: SQL session.</description></item>
+        /// <item><description>NOTEBOOK: NOTEBOOK session.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -165,7 +163,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Kind { get; set; }
 
         /// <summary>
-        /// <para>The name of the task.</para>
+        /// <para>The node name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>spark_job_name</para>
@@ -174,6 +172,12 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable the public network access endpoint.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("publicEndpointEnabled")]
         [Validation(Required=false)]
         public bool? PublicEndpointEnabled { get; set; }
@@ -189,7 +193,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string QueueName { get; set; }
 
         /// <summary>
-        /// <para>The version of the Spark engine.</para>
+        /// <para>The Spark DPI engine version number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>esr-3.3.1</para>

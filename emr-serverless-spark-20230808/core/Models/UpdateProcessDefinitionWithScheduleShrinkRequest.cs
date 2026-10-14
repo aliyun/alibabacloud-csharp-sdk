@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class UpdateProcessDefinitionWithScheduleShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The email address for alerts.</para>
+        /// <para>The alert email address.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:foo_bar@spark.alert.invalid.com">foo_bar@spark.alert.invalid.com</a></para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The release state of the workflow.</para>
+        /// <para>The online status of the workflow.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ONLINE</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? RetryTimes { get; set; }
 
         /// <summary>
-        /// <para>The user to run the workflow.</para>
+        /// <para>The execution user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113***************</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RunAs { get; set; }
 
         /// <summary>
-        /// <para>The scheduling configuration.</para>
+        /// <para>The scheduling structure.</para>
         /// </summary>
         [NameInMap("schedule")]
         [Validation(Required=false)]
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string TagsShrink { get; set; }
 
         /// <summary>
-        /// <para>A JSON array of task definitions. This array contains the descriptive information for all tasks in the workflow.</para>
+        /// <para>The JSON array of node definitions, which contains the description information of all nodes in the workflow.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("taskDefinitionJson")]
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string TaskDefinitionJsonShrink { get; set; }
 
         /// <summary>
-        /// <para>The degree of concurrent execution for workflow nodes.</para>
+        /// <para>The concurrency of workflow node execution.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? TaskParallelism { get; set; }
 
         /// <summary>
-        /// <para>A JSON array that defines the dependencies between tasks in the workflow. \<c>preTaskCode\\</c> specifies the upstream task ID, and \<c>postTaskCode\\</c> specifies the downstream task ID. Each task must have a unique ID. For a task node without an upstream task, add a dependency and set \<c>preTaskCode\\</c> to 0.</para>
+        /// <para>The JSON array of node dependencies, which contains the dependencies among all nodes in the workflow. preTaskCode is the upstream node ID, and postTaskCode is the downstream node ID. Each node must have a unique ID. If a node does not have an upstream node, you must add a dependency with preTaskCode set to 0.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("taskRelationJson")]
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string TaskRelationJsonShrink { get; set; }
 
         /// <summary>
-        /// <para>The default timeout period for the workflow execution.</para>
+        /// <para>The default timeout for workflow execution.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>

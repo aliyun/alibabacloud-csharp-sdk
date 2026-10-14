@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public GetJobRunResponseBodyJobRun JobRun { get; set; }
         public class GetJobRunResponseBodyJobRun : TeaModel {
             /// <summary>
-            /// <para>The code type of the job. Valid values:</para>
+            /// <para>The job code type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>SQL</para>
             /// </description></item>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public GetJobRunResponseBodyJobRunConfigurationOverrides ConfigurationOverrides { get; set; }
             public class GetJobRunResponseBodyJobRunConfigurationOverrides : TeaModel {
                 /// <summary>
-                /// <para>The list of configurations.</para>
+                /// <para>The configuration list.</para>
                 /// </summary>
                 [NameInMap("configurations")]
                 [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string DisplayReleaseVersion { get; set; }
 
             /// <summary>
-            /// <para>The time when the job ended.</para>
+            /// <para>The job end time. The value is a Unix timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1684122914000</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string EnvironmentId { get; set; }
 
             /// <summary>
-            /// <para>The execution timeout period, in seconds.</para>
+            /// <para>The execution timeout period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3600</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public int? ExecutionTimeoutSeconds { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the Fusion engine acceleration is enabled.</para>
+            /// <para>Specifies whether the Fusion engine acceleration is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public RunLog Log { get; set; }
 
             /// <summary>
-            /// <para>The job run name.</para>
+            /// <para>The job name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>jobName</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The download URL of the NOTEBOOK file. This parameter is returned only when the job type is NOTEBOOK.</para>
+            /// <para>The download URL of the NOTEBOOK file. This parameter is returned only if the job type is NOTEBOOK.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://workflow-ide-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/spark-notebook-output/w-xxxxxxxxx/xxxxxxx">http://workflow-ide-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/spark-notebook-output/w-xxxxxxxxx/xxxxxxx</a></para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Priority { get; set; }
 
             /// <summary>
-            /// <para>The Spark DPI engine version used to run the job.</para>
+            /// <para>The Spark DPI engine version used to run the node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>esr-3.3.1</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string ResourceQueueId { get; set; }
 
             /// <summary>
-            /// <para>The job run state.</para>
+            /// <para>The job status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The reason for the state change.</para>
+            /// <para>The reason for the status change.</para>
             /// </summary>
             [NameInMap("stateChangeReason")]
             [Validation(Required=false)]
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
-            /// <para>The time when the job was submitted.</para>
+            /// <para>The job submission time. The value is a Unix timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1684119314000</para>
@@ -234,11 +234,82 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? SubmitTime { get; set; }
 
             /// <summary>
-            /// <para>The list of tags.</para>
+            /// <para>The tag list.</para>
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<Tag> Tags { get; set; }
+
+            /// <summary>
+            /// <para>The details of token consumption.</para>
+            /// </summary>
+            [NameInMap("tokenDetails")]
+            [Validation(Required=false)]
+            public List<GetJobRunResponseBodyJobRunTokenDetails> TokenDetails { get; set; }
+            public class GetJobRunResponseBodyJobRunTokenDetails : TeaModel {
+                /// <summary>
+                /// <para>Specifies whether thinking mode is enabled.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
+                [NameInMap("enableThinking")]
+                [Validation(Required=false)]
+                public string EnableThinking { get; set; }
+
+                /// <summary>
+                /// <para>The input modality.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <list type="bullet">
+                /// <item><description></description></item>
+                /// </list>
+                /// </summary>
+                [NameInMap("inputModality")]
+                [Validation(Required=false)]
+                public string InputModality { get; set; }
+
+                /// <summary>
+                /// <para>The model name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>qwen-plus</para>
+                /// </summary>
+                [NameInMap("modelName")]
+                [Validation(Required=false)]
+                public string ModelName { get; set; }
+
+                /// <summary>
+                /// <para>The input token range.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0&lt;Token≤256K</para>
+                /// </summary>
+                [NameInMap("tokenRange")]
+                [Validation(Required=false)]
+                public string TokenRange { get; set; }
+
+                /// <summary>
+                /// <para>The token source. Valid values: input and output.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>input</para>
+                /// </summary>
+                [NameInMap("tokenSource")]
+                [Validation(Required=false)]
+                public string TokenSource { get; set; }
+
+                /// <summary>
+                /// <para>The number of tokens consumed.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10000</para>
+                /// </summary>
+                [NameInMap("tokenUsed")]
+                [Validation(Required=false)]
+                public long? TokenUsed { get; set; }
+
+            }
 
             /// <summary>
             /// <para>The total number of tokens consumed.</para>
