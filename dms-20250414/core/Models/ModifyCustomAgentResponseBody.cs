@@ -10,14 +10,28 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class ModifyCustomAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned struct.</para>
+        /// <para>The response struct.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ModifyCustomAgentResponseBodyData Data { get; set; }
         public class ModifyCustomAgentResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The primary Alibaba Cloud account ID.</para>
+            /// <para>The custom agent type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Default: The system-built-in custom agent. Each workspace can have at most one Default type, and it cannot be deleted.</description></item>
+            /// <item><description>Common: The common custom agent.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Common</para>
+            /// </summary>
+            [NameInMap("AgentType")]
+            [Validation(Required=false)]
+            public string AgentType { get; set; }
+
+            /// <summary>
+            /// <para>The ID of the Alibaba Cloud main account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16738266********</para>
@@ -102,7 +116,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             ///   &quot;personal&quot; : {
             ///     &quot;DataSourceType&quot; : &quot;remote_data_center&quot;,
             ///     &quot;FileId&quot; : &quot;f-5qlrwaw10<b><b><b><b>s3gpw1z&quot;,
-            ///     &quot;Database&quot; : &quot;Test_spreadsheet</b></b></b>.xlsx&quot;,
+            ///     &quot;Database&quot; : &quot;Test table</b></b></b>.xlsx&quot;,
             ///     &quot;Tables&quot; : [ &quot;Sheet1&quot; ],
             ///     &quot;TableIds&quot; : [ &quot;</b>****&quot; ],
             ///     &quot;RegionId&quot; : &quot;cn-hangzhou&quot;
@@ -141,7 +155,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public ModifyCustomAgentResponseBodyDataExecutionConfig ExecutionConfig { get; set; }
             public class ModifyCustomAgentResponseBodyDataExecutionConfig : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether to prohibit appending data sources during the session.</para>
+                /// <para>Specifies whether to prohibit appending data sources in a session.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -151,7 +165,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public bool? ForbiddenAppendDataSource { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to disable user inquiries during the process.</para>
+                /// <para>Specifies whether to disable user prompts during the process.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -181,7 +195,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public bool? SkipSqlConfirm { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to skip the web report generation confirmation.</para>
+                /// <para>Specifies whether to skip the confirmation for generating a web report.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -218,8 +232,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <b>Example:</b>
             /// <para>Analysis framework:</para>
             /// <ol>
-            /// <item><description>Monitor core metrics (GMV, order volume, UV, and conversion rate) on a daily, weekly, and monthly basis, and analyze trend changes as well as year-over-year and month-over-month fluctuations.</description></item>
-            /// <item><description>Segment data by new and returning customers, channels, and regions to identify growth drivers and weaknesses.</description></item>
+            /// <item><description>Monitor core metrics (GMV, order volume, UV, and conversion rate) on a daily, weekly, and monthly basis, and analyze trend changes and year-over-year or month-over-month fluctuations.</description></item>
+            /// <item><description>Segment by new and existing customers, channels, and regions to identify growth drivers and weaknesses.</description></item>
             /// <item><description>Conduct funnel analysis based on user behavior paths (browse -&gt; add to cart -&gt; pay) to locate churn points</description></item>
             /// </ol>
             /// </summary>
@@ -244,9 +258,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>Core metric definitions:</para>
             /// <ol>
             /// <item><description>GMV (Gross Merchandise Volume) refers to the total order amount, including both successfully paid and unpaid orders.</description></item>
-            /// <item><description>Order volume refers to the number of valid orders placed per day.</description></item>
+            /// <item><description>Order volume is the number of valid orders placed per day.</description></item>
             /// <item><description>UV (Unique Visitors) refers to the number of deduplicated users who visit the website or app.</description></item>
-            /// <item><description>Conversion rate = Number of paid orders / UV, reflecting the traffic conversion efficiency</description></item>
+            /// <item><description>Conversion rate = paid orders / UV, reflecting the traffic conversion efficiency</description></item>
             /// </ol>
             /// </summary>
             [NameInMap("Knowledge")]
@@ -263,8 +277,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 /// <summary>
                 /// <para>The access type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>mcp: Access through MCP.</description></item>
-                /// <item><description>dms_kb: Access through the DMS knowledge base.</description></item>
+                /// <item><description>mcp: Accessed through MCP.</description></item>
+                /// <item><description>dms_kb: Accessed through the DMS knowledge base.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -285,7 +299,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string KbUuid { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the MCP server.</para>
+                /// <para>The MCP server ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>nhdpt9adf6ac**********ca</para>
@@ -369,6 +383,16 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string OfflineTime { get; set; }
 
             /// <summary>
+            /// <para>The list of recommended questions.</para>
+            /// <list type="bullet">
+            /// <item><description>You can configure up to 10 recommended questions.</description></item>
+            /// </list>
+            /// </summary>
+            [NameInMap("RecommendQuestionList")]
+            [Validation(Required=false)]
+            public List<string> RecommendQuestionList { get; set; }
+
+            /// <summary>
             /// <para>The region.</para>
             /// 
             /// <b>Example:</b>
@@ -406,7 +430,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public ModifyCustomAgentResponseBodyDataScheduleTaskConfig ScheduleTaskConfig { get; set; }
             public class ModifyCustomAgentResponseBodyDataScheduleTaskConfig : TeaModel {
                 /// <summary>
-                /// <para>The cron expression for periodic scheduling.</para>
+                /// <para>The cron expression for scheduled execution.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0 0 0 ? * 1-7</para>
@@ -451,7 +475,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The text report format.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Require all numbers in the text report to be written in Chinese characters instead of Arabic numerals</para>
+            /// <para>The text report requires that all numbers use Chinese numerals instead of Arabic numerals</para>
             /// </summary>
             [NameInMap("TextReportConfig")]
             [Validation(Required=false)]
@@ -468,7 +492,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The web report format.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Require all numbers in the web report to be written in Chinese characters instead of Arabic numerals</para>
+            /// <para>The web report requires that all numbers use Chinese numerals instead of Arabic numerals</para>
             /// </summary>
             [NameInMap("WebReportConfig")]
             [Validation(Required=false)]
@@ -477,11 +501,11 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <summary>
             /// <para>The web report theme. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>default: default.</description></item>
-            /// <item><description>journal: journal.</description></item>
-            /// <item><description>legacy: classic.</description></item>
-            /// <item><description>neobrutalism: stylized.</description></item>
-            /// <item><description>infographic: infographic.</description></item>
+            /// <item><description>default: Default.</description></item>
+            /// <item><description>journal: Journal.</description></item>
+            /// <item><description>legacy: Classic.</description></item>
+            /// <item><description>neobrutalism: Stylized.</description></item>
+            /// <item><description>infographic: Infographic.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

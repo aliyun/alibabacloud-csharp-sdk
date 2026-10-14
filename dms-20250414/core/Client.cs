@@ -39,6 +39,322 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a data source accessible by the Agent data gateway.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enter the connection and authentication information for the data source. The connection is automatically tested before saving. If the test succeeds, the data source is created and metadata synchronization starts.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddAgenticDataSourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddAgenticDataSourceResponse
+        /// </returns>
+        public AddAgenticDataSourceResponse AddAgenticDataSourceWithOptions(AddAgenticDataSourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Alias))
+            {
+                query["Alias"] = request.Alias;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthAccount))
+            {
+                query["AuthAccount"] = request.AuthAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthPassword))
+            {
+                query["AuthPassword"] = request.AuthPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogName))
+            {
+                query["CatalogName"] = request.CatalogName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateMode))
+            {
+                query["CreateMode"] = request.CreateMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbType))
+            {
+                query["DbType"] = request.DbType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvType))
+            {
+                query["EnvType"] = request.EnvType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Host))
+            {
+                query["Host"] = request.Host;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceResourceId))
+            {
+                query["InstanceResourceId"] = request.InstanceResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceSource))
+            {
+                query["InstanceSource"] = request.InstanceSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsSecret))
+            {
+                query["KmsSecret"] = request.KmsSecret;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
+            {
+                query["PolicyId"] = request.PolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Port))
+            {
+                query["Port"] = request.Port;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleArn))
+            {
+                query["RoleArn"] = request.RoleArn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Schema))
+            {
+                query["Schema"] = request.Schema;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnowflakeRole))
+            {
+                query["SnowflakeRole"] = request.SnowflakeRole;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnowflakeWarehouse))
+            {
+                query["SnowflakeWarehouse"] = request.SnowflakeWarehouse;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SyncAlias))
+            {
+                query["SyncAlias"] = request.SyncAlias;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseSsl))
+            {
+                query["UseSsl"] = request.UseSsl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddAgenticDataSource",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddAgenticDataSourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a data source accessible by the Agent data gateway.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enter the connection and authentication information for the data source. The connection is automatically tested before saving. If the test succeeds, the data source is created and metadata synchronization starts.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddAgenticDataSourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddAgenticDataSourceResponse
+        /// </returns>
+        public async Task<AddAgenticDataSourceResponse> AddAgenticDataSourceWithOptionsAsync(AddAgenticDataSourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Alias))
+            {
+                query["Alias"] = request.Alias;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthAccount))
+            {
+                query["AuthAccount"] = request.AuthAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthPassword))
+            {
+                query["AuthPassword"] = request.AuthPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogName))
+            {
+                query["CatalogName"] = request.CatalogName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateMode))
+            {
+                query["CreateMode"] = request.CreateMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbType))
+            {
+                query["DbType"] = request.DbType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvType))
+            {
+                query["EnvType"] = request.EnvType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Host))
+            {
+                query["Host"] = request.Host;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceResourceId))
+            {
+                query["InstanceResourceId"] = request.InstanceResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceSource))
+            {
+                query["InstanceSource"] = request.InstanceSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsSecret))
+            {
+                query["KmsSecret"] = request.KmsSecret;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
+            {
+                query["PolicyId"] = request.PolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Port))
+            {
+                query["Port"] = request.Port;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleArn))
+            {
+                query["RoleArn"] = request.RoleArn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Schema))
+            {
+                query["Schema"] = request.Schema;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnowflakeRole))
+            {
+                query["SnowflakeRole"] = request.SnowflakeRole;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnowflakeWarehouse))
+            {
+                query["SnowflakeWarehouse"] = request.SnowflakeWarehouse;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SyncAlias))
+            {
+                query["SyncAlias"] = request.SyncAlias;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseSsl))
+            {
+                query["UseSsl"] = request.UseSsl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddAgenticDataSource",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddAgenticDataSourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a data source accessible by the Agent data gateway.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enter the connection and authentication information for the data source. The connection is automatically tested before saving. If the test succeeds, the data source is created and metadata synchronization starts.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddAgenticDataSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddAgenticDataSourceResponse
+        /// </returns>
+        public AddAgenticDataSourceResponse AddAgenticDataSource(AddAgenticDataSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddAgenticDataSourceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a data source accessible by the Agent data gateway.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enter the connection and authentication information for the data source. The connection is automatically tested before saving. If the test succeeds, the data source is created and metadata synchronization starts.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddAgenticDataSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddAgenticDataSourceResponse
+        /// </returns>
+        public async Task<AddAgenticDataSourceResponse> AddAgenticDataSourceAsync(AddAgenticDataSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddAgenticDataSourceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Adds a memory entry to a DataAgent.</para>
         /// </summary>
         /// 
@@ -911,6 +1227,190 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a temporary credential for an agent to execute SQL statements.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The credential is used to execute SQL statements through the data gateway (OneQuery) and can be restricted to the instance level or the database level.
+        /// Fixed properties of the credential:</para>
+        /// <list type="bullet">
+        /// <item><description>Validity period: 10 minutes after creation.</description></item>
+        /// <item><description>Maximum number of connections: 500.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAgenticSqlExecuteCredentialRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgenticSqlExecuteCredentialResponse
+        /// </returns>
+        public CreateAgenticSqlExecuteCredentialResponse CreateAgenticSqlExecuteCredentialWithOptions(CreateAgenticSqlExecuteCredentialRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogName))
+            {
+                query["CatalogName"] = request.CatalogName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogUuid))
+            {
+                query["CatalogUuid"] = request.CatalogUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseUuid))
+            {
+                query["DatabaseUuid"] = request.DatabaseUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QualifiedName))
+            {
+                query["QualifiedName"] = request.QualifiedName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAgenticSqlExecuteCredential",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAgenticSqlExecuteCredentialResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a temporary credential for an agent to execute SQL statements.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The credential is used to execute SQL statements through the data gateway (OneQuery) and can be restricted to the instance level or the database level.
+        /// Fixed properties of the credential:</para>
+        /// <list type="bullet">
+        /// <item><description>Validity period: 10 minutes after creation.</description></item>
+        /// <item><description>Maximum number of connections: 500.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAgenticSqlExecuteCredentialRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgenticSqlExecuteCredentialResponse
+        /// </returns>
+        public async Task<CreateAgenticSqlExecuteCredentialResponse> CreateAgenticSqlExecuteCredentialWithOptionsAsync(CreateAgenticSqlExecuteCredentialRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogName))
+            {
+                query["CatalogName"] = request.CatalogName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogUuid))
+            {
+                query["CatalogUuid"] = request.CatalogUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseUuid))
+            {
+                query["DatabaseUuid"] = request.DatabaseUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QualifiedName))
+            {
+                query["QualifiedName"] = request.QualifiedName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAgenticSqlExecuteCredential",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAgenticSqlExecuteCredentialResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a temporary credential for an agent to execute SQL statements.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The credential is used to execute SQL statements through the data gateway (OneQuery) and can be restricted to the instance level or the database level.
+        /// Fixed properties of the credential:</para>
+        /// <list type="bullet">
+        /// <item><description>Validity period: 10 minutes after creation.</description></item>
+        /// <item><description>Maximum number of connections: 500.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAgenticSqlExecuteCredentialRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgenticSqlExecuteCredentialResponse
+        /// </returns>
+        public CreateAgenticSqlExecuteCredentialResponse CreateAgenticSqlExecuteCredential(CreateAgenticSqlExecuteCredentialRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateAgenticSqlExecuteCredentialWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a temporary credential for an agent to execute SQL statements.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The credential is used to execute SQL statements through the data gateway (OneQuery) and can be restricted to the instance level or the database level.
+        /// Fixed properties of the credential:</para>
+        /// <list type="bullet">
+        /// <item><description>Validity period: 10 minutes after creation.</description></item>
+        /// <item><description>Maximum number of connections: 500.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAgenticSqlExecuteCredentialRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgenticSqlExecuteCredentialResponse
+        /// </returns>
+        public async Task<CreateAgenticSqlExecuteCredentialResponse> CreateAgenticSqlExecuteCredentialAsync(CreateAgenticSqlExecuteCredentialRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateAgenticSqlExecuteCredentialWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates an Airflow instance in a workspace.</para>
         /// </summary>
         /// 
@@ -1335,7 +1835,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom agent in a personal space or workspace.</para>
+        /// <para>Creates a custom agent in a personal or shared workspace.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1369,6 +1869,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 request.KnowledgeSemanticConfigListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.KnowledgeSemanticConfigList, "KnowledgeSemanticConfigList", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RecommendQuestionList))
+            {
+                request.RecommendQuestionListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RecommendQuestionList, "RecommendQuestionList", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ScheduleTaskConfig))
             {
                 request.ScheduleTaskConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ScheduleTaskConfig, "ScheduleTaskConfig", "json");
@@ -1378,6 +1882,10 @@ namespace AlibabaCloud.SDK.Dms20250414
                 request.UserSpecifiedSkillListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserSpecifiedSkillList, "UserSpecifiedSkillList", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentType))
+            {
+                query["AgentType"] = request.AgentType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackConfigShrink))
             {
                 query["CallbackConfig"] = request.CallbackConfigShrink;
@@ -1417,6 +1925,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecommendQuestionListShrink))
+            {
+                query["RecommendQuestionList"] = request.RecommendQuestionListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelatedSessionId))
             {
@@ -1467,7 +1979,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom agent in a personal space or workspace.</para>
+        /// <para>Creates a custom agent in a personal or shared workspace.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1501,6 +2013,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 request.KnowledgeSemanticConfigListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.KnowledgeSemanticConfigList, "KnowledgeSemanticConfigList", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RecommendQuestionList))
+            {
+                request.RecommendQuestionListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RecommendQuestionList, "RecommendQuestionList", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ScheduleTaskConfig))
             {
                 request.ScheduleTaskConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ScheduleTaskConfig, "ScheduleTaskConfig", "json");
@@ -1510,6 +2026,10 @@ namespace AlibabaCloud.SDK.Dms20250414
                 request.UserSpecifiedSkillListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserSpecifiedSkillList, "UserSpecifiedSkillList", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentType))
+            {
+                query["AgentType"] = request.AgentType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackConfigShrink))
             {
                 query["CallbackConfig"] = request.CallbackConfigShrink;
@@ -1549,6 +2069,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecommendQuestionListShrink))
+            {
+                query["RecommendQuestionList"] = request.RecommendQuestionListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelatedSessionId))
             {
@@ -1599,7 +2123,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom agent in a personal space or workspace.</para>
+        /// <para>Creates a custom agent in a personal or shared workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1617,7 +2141,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom agent in a personal space or workspace.</para>
+        /// <para>Creates a custom agent in a personal or shared workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2979,6 +3503,146 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateOneMetaSqlTemplateWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a data source and its associated metadata catalog.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After deletion, the data source cannot establish connections and cannot be restored by calling the enable API operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAgenticDataSourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgenticDataSourceResponse
+        /// </returns>
+        public DeleteAgenticDataSourceResponse DeleteAgenticDataSourceWithOptions(DeleteAgenticDataSourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceUuid))
+            {
+                query["DataSourceUuid"] = request.DataSourceUuid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAgenticDataSource",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAgenticDataSourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a data source and its associated metadata catalog.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After deletion, the data source cannot establish connections and cannot be restored by calling the enable API operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAgenticDataSourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgenticDataSourceResponse
+        /// </returns>
+        public async Task<DeleteAgenticDataSourceResponse> DeleteAgenticDataSourceWithOptionsAsync(DeleteAgenticDataSourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceUuid))
+            {
+                query["DataSourceUuid"] = request.DataSourceUuid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAgenticDataSource",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAgenticDataSourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a data source and its associated metadata catalog.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After deletion, the data source cannot establish connections and cannot be restored by calling the enable API operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAgenticDataSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgenticDataSourceResponse
+        /// </returns>
+        public DeleteAgenticDataSourceResponse DeleteAgenticDataSource(DeleteAgenticDataSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteAgenticDataSourceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a data source and its associated metadata catalog.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After deletion, the data source cannot establish connections and cannot be restored by calling the enable API operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAgenticDataSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgenticDataSourceResponse
+        /// </returns>
+        public async Task<DeleteAgenticDataSourceResponse> DeleteAgenticDataSourceAsync(DeleteAgenticDataSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteAgenticDataSourceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5007,7 +5671,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a custom agent by custom agent ID.</para>
+        /// <para>Retrieves the details of a custom agent by custom agent ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5053,7 +5717,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a custom agent by custom agent ID.</para>
+        /// <para>Retrieves the details of a custom agent by custom agent ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5099,7 +5763,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a custom agent by custom agent ID.</para>
+        /// <para>Retrieves the details of a custom agent by custom agent ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5117,7 +5781,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a custom agent by custom agent ID.</para>
+        /// <para>Retrieves the details of a custom agent by custom agent ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6603,6 +7267,642 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetAgenticAgentByInstallTokenWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an Agentic DMS catalog based on the catalog UUID.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgenticCatalogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgenticCatalogResponse
+        /// </returns>
+        public GetAgenticCatalogResponse GetAgenticCatalogWithOptions(GetAgenticCatalogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogUuid))
+            {
+                query["CatalogUuid"] = request.CatalogUuid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgenticCatalog",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgenticCatalogResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an Agentic DMS catalog based on the catalog UUID.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgenticCatalogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgenticCatalogResponse
+        /// </returns>
+        public async Task<GetAgenticCatalogResponse> GetAgenticCatalogWithOptionsAsync(GetAgenticCatalogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogUuid))
+            {
+                query["CatalogUuid"] = request.CatalogUuid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgenticCatalog",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgenticCatalogResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an Agentic DMS catalog based on the catalog UUID.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgenticCatalogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgenticCatalogResponse
+        /// </returns>
+        public GetAgenticCatalogResponse GetAgenticCatalog(GetAgenticCatalogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAgenticCatalogWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an Agentic DMS catalog based on the catalog UUID.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgenticCatalogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgenticCatalogResponse
+        /// </returns>
+        public async Task<GetAgenticCatalogResponse> GetAgenticCatalogAsync(GetAgenticCatalogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAgenticCatalogWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a data source by its UUID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the connection, authentication, status, and metadata catalog information of a specified data source under the current account. Only masked values are returned for passwords.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgenticDataSourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgenticDataSourceResponse
+        /// </returns>
+        public GetAgenticDataSourceResponse GetAgenticDataSourceWithOptions(GetAgenticDataSourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceUuid))
+            {
+                query["DataSourceUuid"] = request.DataSourceUuid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgenticDataSource",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgenticDataSourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a data source by its UUID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the connection, authentication, status, and metadata catalog information of a specified data source under the current account. Only masked values are returned for passwords.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgenticDataSourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgenticDataSourceResponse
+        /// </returns>
+        public async Task<GetAgenticDataSourceResponse> GetAgenticDataSourceWithOptionsAsync(GetAgenticDataSourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceUuid))
+            {
+                query["DataSourceUuid"] = request.DataSourceUuid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgenticDataSource",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgenticDataSourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a data source by its UUID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the connection, authentication, status, and metadata catalog information of a specified data source under the current account. Only masked values are returned for passwords.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgenticDataSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgenticDataSourceResponse
+        /// </returns>
+        public GetAgenticDataSourceResponse GetAgenticDataSource(GetAgenticDataSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAgenticDataSourceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a data source by its UUID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the connection, authentication, status, and metadata catalog information of a specified data source under the current account. Only masked values are returned for passwords.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgenticDataSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgenticDataSourceResponse
+        /// </returns>
+        public async Task<GetAgenticDataSourceResponse> GetAgenticDataSourceAsync(GetAgenticDataSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAgenticDataSourceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a database in Agentic DMS based on the database UUID.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgenticDatabaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgenticDatabaseResponse
+        /// </returns>
+        public GetAgenticDatabaseResponse GetAgenticDatabaseWithOptions(GetAgenticDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseUuid))
+            {
+                query["DatabaseUuid"] = request.DatabaseUuid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgenticDatabase",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgenticDatabaseResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a database in Agentic DMS based on the database UUID.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgenticDatabaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgenticDatabaseResponse
+        /// </returns>
+        public async Task<GetAgenticDatabaseResponse> GetAgenticDatabaseWithOptionsAsync(GetAgenticDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseUuid))
+            {
+                query["DatabaseUuid"] = request.DatabaseUuid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgenticDatabase",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgenticDatabaseResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a database in Agentic DMS based on the database UUID.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgenticDatabaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgenticDatabaseResponse
+        /// </returns>
+        public GetAgenticDatabaseResponse GetAgenticDatabase(GetAgenticDatabaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAgenticDatabaseWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a database in Agentic DMS based on the database UUID.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgenticDatabaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgenticDatabaseResponse
+        /// </returns>
+        public async Task<GetAgenticDatabaseResponse> GetAgenticDatabaseAsync(GetAgenticDatabaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAgenticDatabaseWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the fields of a table based on the database UUID and the fully qualified name of the table.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgenticTableColumnRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgenticTableColumnResponse
+        /// </returns>
+        public GetAgenticTableColumnResponse GetAgenticTableColumnWithOptions(GetAgenticTableColumnRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseUuid))
+            {
+                query["DatabaseUuid"] = request.DatabaseUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableQualifiedName))
+            {
+                query["TableQualifiedName"] = request.TableQualifiedName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgenticTableColumn",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgenticTableColumnResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the fields of a table based on the database UUID and the fully qualified name of the table.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgenticTableColumnRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgenticTableColumnResponse
+        /// </returns>
+        public async Task<GetAgenticTableColumnResponse> GetAgenticTableColumnWithOptionsAsync(GetAgenticTableColumnRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseUuid))
+            {
+                query["DatabaseUuid"] = request.DatabaseUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableQualifiedName))
+            {
+                query["TableQualifiedName"] = request.TableQualifiedName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgenticTableColumn",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgenticTableColumnResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the fields of a table based on the database UUID and the fully qualified name of the table.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgenticTableColumnRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgenticTableColumnResponse
+        /// </returns>
+        public GetAgenticTableColumnResponse GetAgenticTableColumn(GetAgenticTableColumnRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAgenticTableColumnWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the fields of a table based on the database UUID and the fully qualified name of the table.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgenticTableColumnRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgenticTableColumnResponse
+        /// </returns>
+        public async Task<GetAgenticTableColumnResponse> GetAgenticTableColumnAsync(GetAgenticTableColumnRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAgenticTableColumnWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the indexes of a table based on the database UUID and the fully qualified name of the table.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgenticTableIndexRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgenticTableIndexResponse
+        /// </returns>
+        public GetAgenticTableIndexResponse GetAgenticTableIndexWithOptions(GetAgenticTableIndexRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseUuid))
+            {
+                query["DatabaseUuid"] = request.DatabaseUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableQualifiedName))
+            {
+                query["TableQualifiedName"] = request.TableQualifiedName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgenticTableIndex",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgenticTableIndexResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the indexes of a table based on the database UUID and the fully qualified name of the table.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgenticTableIndexRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgenticTableIndexResponse
+        /// </returns>
+        public async Task<GetAgenticTableIndexResponse> GetAgenticTableIndexWithOptionsAsync(GetAgenticTableIndexRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseUuid))
+            {
+                query["DatabaseUuid"] = request.DatabaseUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableQualifiedName))
+            {
+                query["TableQualifiedName"] = request.TableQualifiedName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgenticTableIndex",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgenticTableIndexResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the indexes of a table based on the database UUID and the fully qualified name of the table.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgenticTableIndexRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgenticTableIndexResponse
+        /// </returns>
+        public GetAgenticTableIndexResponse GetAgenticTableIndex(GetAgenticTableIndexRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAgenticTableIndexWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the indexes of a table based on the database UUID and the fully qualified name of the table.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgenticTableIndexRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgenticTableIndexResponse
+        /// </returns>
+        public async Task<GetAgenticTableIndexResponse> GetAgenticTableIndexAsync(GetAgenticTableIndexRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAgenticTableIndexWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -9511,6 +10811,682 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Performs a paging query on the catalogs in Agentic DMS. You can filter the results by catalog type and name prefix.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAgenticCatalogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgenticCatalogResponse
+        /// </returns>
+        public ListAgenticCatalogResponse ListAgenticCatalogWithOptions(ListAgenticCatalogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogType))
+            {
+                query["CatalogType"] = request.CatalogType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchKey))
+            {
+                query["SearchKey"] = request.SearchKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAgenticCatalog",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAgenticCatalogResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paging query on the catalogs in Agentic DMS. You can filter the results by catalog type and name prefix.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAgenticCatalogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgenticCatalogResponse
+        /// </returns>
+        public async Task<ListAgenticCatalogResponse> ListAgenticCatalogWithOptionsAsync(ListAgenticCatalogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogType))
+            {
+                query["CatalogType"] = request.CatalogType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchKey))
+            {
+                query["SearchKey"] = request.SearchKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAgenticCatalog",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAgenticCatalogResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paging query on the catalogs in Agentic DMS. You can filter the results by catalog type and name prefix.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAgenticCatalogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgenticCatalogResponse
+        /// </returns>
+        public ListAgenticCatalogResponse ListAgenticCatalog(ListAgenticCatalogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListAgenticCatalogWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paging query on the catalogs in Agentic DMS. You can filter the results by catalog type and name prefix.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAgenticCatalogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgenticCatalogResponse
+        /// </returns>
+        public async Task<ListAgenticCatalogResponse> ListAgenticCatalogAsync(ListAgenticCatalogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListAgenticCatalogWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query on the data sources of the current account by using paging.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can filter data sources by type, status, endpoint, port, source, and connection target name. You can also perform a fuzzy search by name or endpoint. If multiple filter conditions are specified, the intersection of the conditions is used.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAgenticDataSourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgenticDataSourcesResponse
+        /// </returns>
+        public ListAgenticDataSourcesResponse ListAgenticDataSourcesWithOptions(ListAgenticDataSourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbType))
+            {
+                query["DbType"] = request.DbType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Host))
+            {
+                query["Host"] = request.Host;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceSource))
+            {
+                query["InstanceSource"] = request.InstanceSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Port))
+            {
+                query["Port"] = request.Port;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Schema))
+            {
+                query["Schema"] = request.Schema;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchKey))
+            {
+                query["SearchKey"] = request.SearchKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
+            {
+                query["State"] = request.State;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAgenticDataSources",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAgenticDataSourcesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query on the data sources of the current account by using paging.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can filter data sources by type, status, endpoint, port, source, and connection target name. You can also perform a fuzzy search by name or endpoint. If multiple filter conditions are specified, the intersection of the conditions is used.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAgenticDataSourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgenticDataSourcesResponse
+        /// </returns>
+        public async Task<ListAgenticDataSourcesResponse> ListAgenticDataSourcesWithOptionsAsync(ListAgenticDataSourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbType))
+            {
+                query["DbType"] = request.DbType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Host))
+            {
+                query["Host"] = request.Host;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceSource))
+            {
+                query["InstanceSource"] = request.InstanceSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Port))
+            {
+                query["Port"] = request.Port;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Schema))
+            {
+                query["Schema"] = request.Schema;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchKey))
+            {
+                query["SearchKey"] = request.SearchKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
+            {
+                query["State"] = request.State;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAgenticDataSources",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAgenticDataSourcesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query on the data sources of the current account by using paging.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can filter data sources by type, status, endpoint, port, source, and connection target name. You can also perform a fuzzy search by name or endpoint. If multiple filter conditions are specified, the intersection of the conditions is used.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAgenticDataSourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgenticDataSourcesResponse
+        /// </returns>
+        public ListAgenticDataSourcesResponse ListAgenticDataSources(ListAgenticDataSourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListAgenticDataSourcesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query on the data sources of the current account by using paging.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can filter data sources by type, status, endpoint, port, source, and connection target name. You can also perform a fuzzy search by name or endpoint. If multiple filter conditions are specified, the intersection of the conditions is used.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAgenticDataSourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgenticDataSourcesResponse
+        /// </returns>
+        public async Task<ListAgenticDataSourcesResponse> ListAgenticDataSourcesAsync(ListAgenticDataSourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListAgenticDataSourcesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query for the list of databases in a specified catalog, with options to filter by name prefix and specify the sorting method for paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAgenticDatabaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgenticDatabaseResponse
+        /// </returns>
+        public ListAgenticDatabaseResponse ListAgenticDatabaseWithOptions(ListAgenticDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogUuid))
+            {
+                query["CatalogUuid"] = request.CatalogUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchKey))
+            {
+                query["SearchKey"] = request.SearchKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortFieldName))
+            {
+                query["SortFieldName"] = request.SortFieldName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            {
+                query["SortOrder"] = request.SortOrder;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAgenticDatabase",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAgenticDatabaseResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query for the list of databases in a specified catalog, with options to filter by name prefix and specify the sorting method for paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAgenticDatabaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgenticDatabaseResponse
+        /// </returns>
+        public async Task<ListAgenticDatabaseResponse> ListAgenticDatabaseWithOptionsAsync(ListAgenticDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogUuid))
+            {
+                query["CatalogUuid"] = request.CatalogUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchKey))
+            {
+                query["SearchKey"] = request.SearchKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortFieldName))
+            {
+                query["SortFieldName"] = request.SortFieldName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            {
+                query["SortOrder"] = request.SortOrder;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAgenticDatabase",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAgenticDatabaseResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query for the list of databases in a specified catalog, with options to filter by name prefix and specify the sorting method for paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAgenticDatabaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgenticDatabaseResponse
+        /// </returns>
+        public ListAgenticDatabaseResponse ListAgenticDatabase(ListAgenticDatabaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListAgenticDatabaseWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query for the list of databases in a specified catalog, with options to filter by name prefix and specify the sorting method for paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAgenticDatabaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgenticDatabaseResponse
+        /// </returns>
+        public async Task<ListAgenticDatabaseResponse> ListAgenticDatabaseAsync(ListAgenticDatabaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListAgenticDatabaseWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the basic information and engine metadata of tables in a specified database by using paging. You can filter the results by keyword and table type, and specify the sorting method.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAgenticTableBaseInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgenticTableBaseInfoResponse
+        /// </returns>
+        public ListAgenticTableBaseInfoResponse ListAgenticTableBaseInfoWithOptions(ListAgenticTableBaseInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseUuid))
+            {
+                query["DatabaseUuid"] = request.DatabaseUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchKey))
+            {
+                query["SearchKey"] = request.SearchKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortFieldName))
+            {
+                query["SortFieldName"] = request.SortFieldName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            {
+                query["SortOrder"] = request.SortOrder;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableType))
+            {
+                query["TableType"] = request.TableType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAgenticTableBaseInfo",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAgenticTableBaseInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the basic information and engine metadata of tables in a specified database by using paging. You can filter the results by keyword and table type, and specify the sorting method.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAgenticTableBaseInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgenticTableBaseInfoResponse
+        /// </returns>
+        public async Task<ListAgenticTableBaseInfoResponse> ListAgenticTableBaseInfoWithOptionsAsync(ListAgenticTableBaseInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseUuid))
+            {
+                query["DatabaseUuid"] = request.DatabaseUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchKey))
+            {
+                query["SearchKey"] = request.SearchKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortFieldName))
+            {
+                query["SortFieldName"] = request.SortFieldName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            {
+                query["SortOrder"] = request.SortOrder;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableType))
+            {
+                query["TableType"] = request.TableType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAgenticTableBaseInfo",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAgenticTableBaseInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the basic information and engine metadata of tables in a specified database by using paging. You can filter the results by keyword and table type, and specify the sorting method.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAgenticTableBaseInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgenticTableBaseInfoResponse
+        /// </returns>
+        public ListAgenticTableBaseInfoResponse ListAgenticTableBaseInfo(ListAgenticTableBaseInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListAgenticTableBaseInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the basic information and engine metadata of tables in a specified database by using paging. You can filter the results by keyword and table type, and specify the sorting method.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAgenticTableBaseInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgenticTableBaseInfoResponse
+        /// </returns>
+        public async Task<ListAgenticTableBaseInfoResponse> ListAgenticTableBaseInfoAsync(ListAgenticTableBaseInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListAgenticTableBaseInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Lists the available Airflow versions.</para>
         /// </summary>
         /// 
@@ -9803,7 +11779,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all custom agents in personal spaces and workspaces.</para>
+        /// <para>Lists all custom agents in personal and shared workspaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9820,6 +11796,10 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentType))
+            {
+                query["AgentType"] = request.AgentType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -9865,7 +11845,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all custom agents in personal spaces and workspaces.</para>
+        /// <para>Lists all custom agents in personal and shared workspaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9882,6 +11862,10 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentType))
+            {
+                query["AgentType"] = request.AgentType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -9927,7 +11911,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all custom agents in personal spaces and workspaces.</para>
+        /// <para>Lists all custom agents in personal and shared workspaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9945,7 +11929,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all custom agents in personal spaces and workspaces.</para>
+        /// <para>Lists all custom agents in personal and shared workspaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13531,7 +15515,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a custom agent in a personal or shared workspace.</para>
+        /// <para>Modifies a custom agent in a personal or team workspace.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13564,6 +15548,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.KnowledgeSemanticConfigList))
             {
                 request.KnowledgeSemanticConfigListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.KnowledgeSemanticConfigList, "KnowledgeSemanticConfigList", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RecommendQuestionList))
+            {
+                request.RecommendQuestionListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RecommendQuestionList, "RecommendQuestionList", "json");
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ScheduleTaskConfig))
             {
@@ -13617,6 +15605,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecommendQuestionListShrink))
+            {
+                query["RecommendQuestionList"] = request.RecommendQuestionListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelatedSessionId))
             {
@@ -13667,7 +15659,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a custom agent in a personal or shared workspace.</para>
+        /// <para>Modifies a custom agent in a personal or team workspace.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13700,6 +15692,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.KnowledgeSemanticConfigList))
             {
                 request.KnowledgeSemanticConfigListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.KnowledgeSemanticConfigList, "KnowledgeSemanticConfigList", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RecommendQuestionList))
+            {
+                request.RecommendQuestionListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RecommendQuestionList, "RecommendQuestionList", "json");
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ScheduleTaskConfig))
             {
@@ -13754,6 +15750,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 query["Name"] = request.Name;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecommendQuestionListShrink))
+            {
+                query["RecommendQuestionList"] = request.RecommendQuestionListShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelatedSessionId))
             {
                 query["RelatedSessionId"] = request.RelatedSessionId;
@@ -13803,7 +15803,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a custom agent in a personal or shared workspace.</para>
+        /// <para>Modifies a custom agent in a personal or team workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13821,7 +15821,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a custom agent in a personal or shared workspace.</para>
+        /// <para>Modifies a custom agent in a personal or team workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15135,6 +17135,326 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Searches for catalogs in Agentic DMS by keyword, catalog type, database type, or a list of catalog UUIDs, and returns paginated results.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchAgenticCatalogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchAgenticCatalogResponse
+        /// </returns>
+        public SearchAgenticCatalogResponse SearchAgenticCatalogWithOptions(SearchAgenticCatalogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogType))
+            {
+                query["CatalogType"] = request.CatalogType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogUuids))
+            {
+                query["CatalogUuids"] = request.CatalogUuids;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbType))
+            {
+                query["DbType"] = request.DbType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchKey))
+            {
+                query["SearchKey"] = request.SearchKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SearchAgenticCatalog",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SearchAgenticCatalogResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Searches for catalogs in Agentic DMS by keyword, catalog type, database type, or a list of catalog UUIDs, and returns paginated results.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchAgenticCatalogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchAgenticCatalogResponse
+        /// </returns>
+        public async Task<SearchAgenticCatalogResponse> SearchAgenticCatalogWithOptionsAsync(SearchAgenticCatalogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogType))
+            {
+                query["CatalogType"] = request.CatalogType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogUuids))
+            {
+                query["CatalogUuids"] = request.CatalogUuids;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbType))
+            {
+                query["DbType"] = request.DbType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchKey))
+            {
+                query["SearchKey"] = request.SearchKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SearchAgenticCatalog",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SearchAgenticCatalogResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Searches for catalogs in Agentic DMS by keyword, catalog type, database type, or a list of catalog UUIDs, and returns paginated results.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchAgenticCatalogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchAgenticCatalogResponse
+        /// </returns>
+        public SearchAgenticCatalogResponse SearchAgenticCatalog(SearchAgenticCatalogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SearchAgenticCatalogWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Searches for catalogs in Agentic DMS by keyword, catalog type, database type, or a list of catalog UUIDs, and returns paginated results.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchAgenticCatalogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchAgenticCatalogResponse
+        /// </returns>
+        public async Task<SearchAgenticCatalogResponse> SearchAgenticCatalogAsync(SearchAgenticCatalogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SearchAgenticCatalogWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Searches for databases across catalogs by keyword. You can filter the results by catalog, database type, and environment type. The results are paginated.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchAgenticDatabaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchAgenticDatabaseResponse
+        /// </returns>
+        public SearchAgenticDatabaseResponse SearchAgenticDatabaseWithOptions(SearchAgenticDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogUuid))
+            {
+                query["CatalogUuid"] = request.CatalogUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbType))
+            {
+                query["DbType"] = request.DbType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvType))
+            {
+                query["EnvType"] = request.EnvType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchKey))
+            {
+                query["SearchKey"] = request.SearchKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SearchAgenticDatabase",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SearchAgenticDatabaseResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Searches for databases across catalogs by keyword. You can filter the results by catalog, database type, and environment type. The results are paginated.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchAgenticDatabaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchAgenticDatabaseResponse
+        /// </returns>
+        public async Task<SearchAgenticDatabaseResponse> SearchAgenticDatabaseWithOptionsAsync(SearchAgenticDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogUuid))
+            {
+                query["CatalogUuid"] = request.CatalogUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbType))
+            {
+                query["DbType"] = request.DbType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvType))
+            {
+                query["EnvType"] = request.EnvType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchKey))
+            {
+                query["SearchKey"] = request.SearchKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SearchAgenticDatabase",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SearchAgenticDatabaseResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Searches for databases across catalogs by keyword. You can filter the results by catalog, database type, and environment type. The results are paginated.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchAgenticDatabaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchAgenticDatabaseResponse
+        /// </returns>
+        public SearchAgenticDatabaseResponse SearchAgenticDatabase(SearchAgenticDatabaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SearchAgenticDatabaseWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Searches for databases across catalogs by keyword. You can filter the results by catalog, database type, and environment type. The results are paginated.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchAgenticDatabaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchAgenticDatabaseResponse
+        /// </returns>
+        public async Task<SearchAgenticDatabaseResponse> SearchAgenticDatabaseAsync(SearchAgenticDatabaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SearchAgenticDatabaseWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Sends a user message to a specified session or cancels a session.</para>
         /// </summary>
         /// 
@@ -16231,6 +18551,606 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StopDataAgentAccuracyTestTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Tests whether the network and authentication information of a data source are available.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Validates only the connection information passed in the current request without creating or modifying a data source. When testing an existing data source, you can pass DataSourceUuid to reuse the saved password.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TestAgenticDataSourceConnectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TestAgenticDataSourceConnectionResponse
+        /// </returns>
+        public TestAgenticDataSourceConnectionResponse TestAgenticDataSourceConnectionWithOptions(TestAgenticDataSourceConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Alias))
+            {
+                query["Alias"] = request.Alias;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthAccount))
+            {
+                query["AuthAccount"] = request.AuthAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthPassword))
+            {
+                query["AuthPassword"] = request.AuthPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogName))
+            {
+                query["CatalogName"] = request.CatalogName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceUuid))
+            {
+                query["DataSourceUuid"] = request.DataSourceUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbType))
+            {
+                query["DbType"] = request.DbType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvType))
+            {
+                query["EnvType"] = request.EnvType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Host))
+            {
+                query["Host"] = request.Host;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceResourceId))
+            {
+                query["InstanceResourceId"] = request.InstanceResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceSource))
+            {
+                query["InstanceSource"] = request.InstanceSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsSecret))
+            {
+                query["KmsSecret"] = request.KmsSecret;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Port))
+            {
+                query["Port"] = request.Port;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleArn))
+            {
+                query["RoleArn"] = request.RoleArn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Schema))
+            {
+                query["Schema"] = request.Schema;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnowflakeRole))
+            {
+                query["SnowflakeRole"] = request.SnowflakeRole;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnowflakeWarehouse))
+            {
+                query["SnowflakeWarehouse"] = request.SnowflakeWarehouse;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SyncAlias))
+            {
+                query["SyncAlias"] = request.SyncAlias;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseSsl))
+            {
+                query["UseSsl"] = request.UseSsl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TestAgenticDataSourceConnection",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TestAgenticDataSourceConnectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Tests whether the network and authentication information of a data source are available.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Validates only the connection information passed in the current request without creating or modifying a data source. When testing an existing data source, you can pass DataSourceUuid to reuse the saved password.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TestAgenticDataSourceConnectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TestAgenticDataSourceConnectionResponse
+        /// </returns>
+        public async Task<TestAgenticDataSourceConnectionResponse> TestAgenticDataSourceConnectionWithOptionsAsync(TestAgenticDataSourceConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Alias))
+            {
+                query["Alias"] = request.Alias;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthAccount))
+            {
+                query["AuthAccount"] = request.AuthAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthPassword))
+            {
+                query["AuthPassword"] = request.AuthPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogName))
+            {
+                query["CatalogName"] = request.CatalogName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceUuid))
+            {
+                query["DataSourceUuid"] = request.DataSourceUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbType))
+            {
+                query["DbType"] = request.DbType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvType))
+            {
+                query["EnvType"] = request.EnvType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Host))
+            {
+                query["Host"] = request.Host;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceResourceId))
+            {
+                query["InstanceResourceId"] = request.InstanceResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceSource))
+            {
+                query["InstanceSource"] = request.InstanceSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsSecret))
+            {
+                query["KmsSecret"] = request.KmsSecret;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Port))
+            {
+                query["Port"] = request.Port;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleArn))
+            {
+                query["RoleArn"] = request.RoleArn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Schema))
+            {
+                query["Schema"] = request.Schema;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnowflakeRole))
+            {
+                query["SnowflakeRole"] = request.SnowflakeRole;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnowflakeWarehouse))
+            {
+                query["SnowflakeWarehouse"] = request.SnowflakeWarehouse;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SyncAlias))
+            {
+                query["SyncAlias"] = request.SyncAlias;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseSsl))
+            {
+                query["UseSsl"] = request.UseSsl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TestAgenticDataSourceConnection",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TestAgenticDataSourceConnectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Tests whether the network and authentication information of a data source are available.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Validates only the connection information passed in the current request without creating or modifying a data source. When testing an existing data source, you can pass DataSourceUuid to reuse the saved password.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TestAgenticDataSourceConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TestAgenticDataSourceConnectionResponse
+        /// </returns>
+        public TestAgenticDataSourceConnectionResponse TestAgenticDataSourceConnection(TestAgenticDataSourceConnectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return TestAgenticDataSourceConnectionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Tests whether the network and authentication information of a data source are available.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Validates only the connection information passed in the current request without creating or modifying a data source. When testing an existing data source, you can pass DataSourceUuid to reuse the saved password.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TestAgenticDataSourceConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TestAgenticDataSourceConnectionResponse
+        /// </returns>
+        public async Task<TestAgenticDataSourceConnectionResponse> TestAgenticDataSourceConnectionAsync(TestAgenticDataSourceConnectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await TestAgenticDataSourceConnectionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the connection, authentication, or display information of an existing data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only the parameters passed in the current request are modified. Unpassed parameters remain unchanged. The data source type cannot be modified.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateAgenticDataSourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgenticDataSourceResponse
+        /// </returns>
+        public UpdateAgenticDataSourceResponse UpdateAgenticDataSourceWithOptions(UpdateAgenticDataSourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Alias))
+            {
+                query["Alias"] = request.Alias;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthAccount))
+            {
+                query["AuthAccount"] = request.AuthAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthPassword))
+            {
+                query["AuthPassword"] = request.AuthPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogName))
+            {
+                query["CatalogName"] = request.CatalogName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateMode))
+            {
+                query["CreateMode"] = request.CreateMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceUuid))
+            {
+                query["DataSourceUuid"] = request.DataSourceUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbType))
+            {
+                query["DbType"] = request.DbType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvType))
+            {
+                query["EnvType"] = request.EnvType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Host))
+            {
+                query["Host"] = request.Host;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceResourceId))
+            {
+                query["InstanceResourceId"] = request.InstanceResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsSecret))
+            {
+                query["KmsSecret"] = request.KmsSecret;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
+            {
+                query["PolicyId"] = request.PolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Port))
+            {
+                query["Port"] = request.Port;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleArn))
+            {
+                query["RoleArn"] = request.RoleArn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Schema))
+            {
+                query["Schema"] = request.Schema;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnowflakeRole))
+            {
+                query["SnowflakeRole"] = request.SnowflakeRole;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnowflakeWarehouse))
+            {
+                query["SnowflakeWarehouse"] = request.SnowflakeWarehouse;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SyncAlias))
+            {
+                query["SyncAlias"] = request.SyncAlias;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseSsl))
+            {
+                query["UseSsl"] = request.UseSsl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAgenticDataSource",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAgenticDataSourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the connection, authentication, or display information of an existing data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only the parameters passed in the current request are modified. Unpassed parameters remain unchanged. The data source type cannot be modified.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateAgenticDataSourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgenticDataSourceResponse
+        /// </returns>
+        public async Task<UpdateAgenticDataSourceResponse> UpdateAgenticDataSourceWithOptionsAsync(UpdateAgenticDataSourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Alias))
+            {
+                query["Alias"] = request.Alias;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthAccount))
+            {
+                query["AuthAccount"] = request.AuthAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthPassword))
+            {
+                query["AuthPassword"] = request.AuthPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogName))
+            {
+                query["CatalogName"] = request.CatalogName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateMode))
+            {
+                query["CreateMode"] = request.CreateMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceUuid))
+            {
+                query["DataSourceUuid"] = request.DataSourceUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbType))
+            {
+                query["DbType"] = request.DbType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvType))
+            {
+                query["EnvType"] = request.EnvType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Host))
+            {
+                query["Host"] = request.Host;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceResourceId))
+            {
+                query["InstanceResourceId"] = request.InstanceResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsSecret))
+            {
+                query["KmsSecret"] = request.KmsSecret;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
+            {
+                query["PolicyId"] = request.PolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Port))
+            {
+                query["Port"] = request.Port;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleArn))
+            {
+                query["RoleArn"] = request.RoleArn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Schema))
+            {
+                query["Schema"] = request.Schema;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnowflakeRole))
+            {
+                query["SnowflakeRole"] = request.SnowflakeRole;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnowflakeWarehouse))
+            {
+                query["SnowflakeWarehouse"] = request.SnowflakeWarehouse;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SyncAlias))
+            {
+                query["SyncAlias"] = request.SyncAlias;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseSsl))
+            {
+                query["UseSsl"] = request.UseSsl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAgenticDataSource",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAgenticDataSourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the connection, authentication, or display information of an existing data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only the parameters passed in the current request are modified. Unpassed parameters remain unchanged. The data source type cannot be modified.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateAgenticDataSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgenticDataSourceResponse
+        /// </returns>
+        public UpdateAgenticDataSourceResponse UpdateAgenticDataSource(UpdateAgenticDataSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateAgenticDataSourceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the connection, authentication, or display information of an existing data source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only the parameters passed in the current request are modified. Unpassed parameters remain unchanged. The data source type cannot be modified.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateAgenticDataSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgenticDataSourceResponse
+        /// </returns>
+        public async Task<UpdateAgenticDataSourceResponse> UpdateAgenticDataSourceAsync(UpdateAgenticDataSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateAgenticDataSourceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

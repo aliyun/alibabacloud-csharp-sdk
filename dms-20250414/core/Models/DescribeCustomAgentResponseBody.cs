@@ -17,7 +17,21 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public DescribeCustomAgentResponseBodyData Data { get; set; }
         public class DescribeCustomAgentResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The primary Alibaba Cloud account ID.</para>
+            /// <para>The custom agent type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Default: built-in custom agent.</description></item>
+            /// <item><description>Common: common custom agent.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Common</para>
+            /// </summary>
+            [NameInMap("AgentType")]
+            [Validation(Required=false)]
+            public string AgentType { get; set; }
+
+            /// <summary>
+            /// <para>The ID of the parent Alibaba Cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16738266********</para>
@@ -161,7 +175,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public bool? ForbiddenAppendDataSource { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to prohibit user inquiries during the process.</para>
+                /// <para>Specifies whether to disable user prompts during the process.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -213,7 +227,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string GmtCreated { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-12-11T14:04:32.000+00:00</para>
@@ -269,8 +283,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 /// <summary>
                 /// <para>The access type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>mcp: Accessed through MCP.</description></item>
-                /// <item><description>dms_kb: Accessed through DMS knowledge base.</description></item>
+                /// <item><description>mcp: MCP access.</description></item>
+                /// <item><description>dms_kb: DMS knowledge base access.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -375,6 +389,16 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string OfflineTime { get; set; }
 
             /// <summary>
+            /// <para>The list of recommended questions.</para>
+            /// <list type="bullet">
+            /// <item><description>A maximum of 10 recommended questions can be configured.</description></item>
+            /// </list>
+            /// </summary>
+            [NameInMap("RecommendQuestionList")]
+            [Validation(Required=false)]
+            public List<string> RecommendQuestionList { get; set; }
+
+            /// <summary>
             /// <para>The region.</para>
             /// 
             /// <b>Example:</b>
@@ -385,7 +409,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The referenced historical session ID.</para>
+            /// <para>The ID of the referenced historical session.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5xyz...</para>
@@ -422,7 +446,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string CronExpression { get; set; }
 
                 /// <summary>
-                /// <para>The query for the scheduled task.</para>
+                /// <para>The question for the scheduled task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Analyze the data and provide the report</para>
@@ -432,7 +456,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string Query { get; set; }
 
                 /// <summary>
-                /// <para>The referenced historical session ID.</para>
+                /// <para>The ID of the referenced historical session.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4m24*****mg7j2v</para>
@@ -444,7 +468,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             }
 
             /// <summary>
-            /// <para>The status of the custom agent.</para>
+            /// <para>The custom agent status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RELEASED</para>
@@ -483,11 +507,11 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <summary>
             /// <para>The web report theme. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>default: Default.</description></item>
-            /// <item><description>journal: Journal.</description></item>
-            /// <item><description>legacy: Classic.</description></item>
-            /// <item><description>neobrutalism: Stylized.</description></item>
-            /// <item><description>infographic: Infographic.</description></item>
+            /// <item><description>default: The default theme.</description></item>
+            /// <item><description>journal: The journal theme.</description></item>
+            /// <item><description>legacy: The legacy theme.</description></item>
+            /// <item><description>neobrutalism: The neobrutalism theme.</description></item>
+            /// <item><description>infographic: The infographic theme.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -540,7 +564,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Specifies whether the request is successful. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: The request is successful.                                 </description></item>
         /// <item><description><b>false</b>: The request fails.</description></item>

@@ -10,6 +10,20 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class ListCustomAgentRequest : TeaModel {
         /// <summary>
+        /// <para>The custom agent type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Default: system built-in custom agent</description></item>
+        /// <item><description>Common: regular custom agent</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Common</para>
+        /// </summary>
+        [NameInMap("AgentType")]
+        [Validation(Required=false)]
+        public string AgentType { get; set; }
+
+        /// <summary>
         /// <para>The page number. Pages start from 1.</para>
         /// 
         /// <b>Example:</b>
@@ -40,10 +54,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public bool? QueryAllReleased { get; set; }
 
         /// <summary>
-        /// <para>The search keyword. Fuzzy search is supported for custom agent names and descriptions.</para>
+        /// <para>The search keyword. Supports fuzzy search for custom agent names and descriptions.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test Agent</para>
+        /// <para>Test agent</para>
         /// </summary>
         [NameInMap("SearchKey")]
         [Validation(Required=false)]

@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public string ActorType { get; set; }
 
+        [NameInMap("AuthorizeAddVpcNatWhiteList")]
+        [Validation(Required=false)]
+        public bool? AuthorizeAddVpcNatWhiteList { get; set; }
+
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
