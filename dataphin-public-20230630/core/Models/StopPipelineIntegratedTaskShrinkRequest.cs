@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class StopPipelineIntegratedTaskShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The request context information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Context")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string ContextShrink { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30121101</para>
         /// </summary>
@@ -35,6 +39,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
+        /// <para>The stop parameters.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("StopCommand")]

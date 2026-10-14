@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the operator user.</para>
+        /// <para>The ID of the user who performs the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public SyncDepartmentUserRequestSyncDepartmentUserCommand SyncDepartmentUserCommand { get; set; }
         public class SyncDepartmentUserRequestSyncDepartmentUserCommand : TeaModel {
             /// <summary>
-            /// <para>The mapping between users and their affiliated departments.</para>
+            /// <para>The department membership relationships of the user.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("DeptUserMapping")]
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<SyncDepartmentUserRequestSyncDepartmentUserCommandDeptUserMapping> DeptUserMapping { get; set; }
             public class SyncDepartmentUserRequestSyncDepartmentUserCommandDeptUserMapping : TeaModel {
                 /// <summary>
-                /// <para>The list of department IDs to which the user belongs. If this parameter is left empty, the user affiliation is deleted.</para>
+                /// <para>The list of department IDs to which the user belongs. If the list is empty, the user membership is deleted.</para>
                 /// </summary>
                 [NameInMap("DepartmentIdList")]
                 [Validation(Required=false)]
                 public List<string> DepartmentIdList { get; set; }
 
                 /// <summary>
-                /// <para>The user source type.</para>
+                /// <para>The source type of the user.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aliyun</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>The user ID in the user system. This is the unique identifier of the user.</para>
+                /// <para>The user ID in the user system, which serves as the unique identifier of the user.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>

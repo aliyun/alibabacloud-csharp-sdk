@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public ListTablesRequestListQuery ListQuery { get; set; }
         public class ListTablesRequestListQuery : TeaModel {
             /// <summary>
-            /// <para>The asset catalog, such as the project name or business unit name.</para>
+            /// <para>The asset catalog: project name and business unit name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>LD_test01_dev</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Catalog { get; set; }
 
             /// <summary>
-            /// <para>The keyword for searching. Table names are supported.</para>
+            /// <para>The supported keyword: table name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -37,6 +37,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Keyword { get; set; }
 
             /// <summary>
+            /// <para>The ID of the owner.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>30012011</para>
             /// </summary>
@@ -55,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageNo { get; set; }
 
             /// <summary>
-            /// <para>The number of records per page. Default value: 20.</para>
+            /// <para>The number of entries per page. Default value: 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -64,6 +66,23 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
+            /// <summary>
+            /// <para>The table types. If you do not specify this parameter or pass an empty list, all table types are queried. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>PHYSICAL_TABLE: Physical table of the compute source.</description></item>
+            /// <item><description>PHYSICAL_VIEW: View of the compute source.</description></item>
+            /// <item><description>PHYSICAL_MATERIALIZED_VIEW: Materialized view of the compute source.</description></item>
+            /// <item><description>STREAM_TABLE: Meta table.</description></item>
+            /// <item><description>MIRROR_TABLE: Mirror table.</description></item>
+            /// <item><description>DIM: Logical dimension table.</description></item>
+            /// <item><description>FACT: Logical fact table.</description></item>
+            /// <item><description>SUM_BIZ_UNIT: Logical aggregate table.</description></item>
+            /// <item><description>LOGIC_VIEW: Logical view.</description></item>
+            /// <item><description>DATASOURCE_TABLE: Data source table.</description></item>
+            /// <item><description>DATASOURCE_VIEW: Data source view.</description></item>
+            /// <item><description>DATASOURCE_MATERIALIZED_VIEW: Data source materialized view.</description></item>
+            /// </list>
+            /// </summary>
             [NameInMap("SubTypes")]
             [Validation(Required=false)]
             public List<string> SubTypes { get; set; }
@@ -82,6 +101,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

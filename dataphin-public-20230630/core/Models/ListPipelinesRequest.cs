@@ -18,12 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public ListPipelinesRequestContext Context { get; set; }
         public class ListPipelinesRequestContext : TeaModel {
             /// <summary>
-            /// <para>The environment identifier. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>DEV: development environment.</description></item>
-            /// <item><description>PROD: production environment.</description></item>
-            /// </list>
-            /// <para>Default value: PROD.</para>
+            /// <para>The environment identifier. Valid values: DEV: development environment. PROD: production environment. Default value: PROD.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PROD</para>
@@ -54,42 +49,42 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public ListPipelinesRequestListCommand ListCommand { get; set; }
         public class ListPipelinesRequestListCommand : TeaModel {
             /// <summary>
-            /// <para>The list of creator user IDs for filtering. If left empty, no filtering is applied. Multiple values are evaluated with an OR relationship.</para>
+            /// <para>The user IDs of the creators used for filtering. If this parameter is left empty, no filtering is performed. If multiple IDs are specified, they are evaluated by using the OR operator.</para>
             /// </summary>
             [NameInMap("CreatorList")]
             [Validation(Required=false)]
             public List<string> CreatorList { get; set; }
 
             /// <summary>
-            /// <para>The list of development owner user IDs for filtering. If left empty, no filtering is applied. Multiple values are evaluated with an OR relationship.</para>
+            /// <para>The user IDs of the development owners used for filtering. If this parameter is left empty, no filtering is performed. If multiple IDs are specified, they are evaluated by using the OR operator.</para>
             /// </summary>
             [NameInMap("DevelopOwnerList")]
             [Validation(Required=false)]
             public List<string> DevelopOwnerList { get; set; }
 
             /// <summary>
-            /// <para>The list of full folder paths to query. If left empty, the root folder is queried.</para>
+            /// <para>The full paths of the directories to query. If this parameter is left empty, the root directory is queried.</para>
             /// </summary>
             [NameInMap("Directories")]
             [Validation(Required=false)]
             public List<string> Directories { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to use exact match for node names. Default value: false.</para>
+            /// <para>Specifies whether an exact match is performed on the node name. Default value: false.</para>
             /// </summary>
             [NameInMap("ExactMatch")]
             [Validation(Required=false)]
             public bool? ExactMatch { get; set; }
 
             /// <summary>
-            /// <para>The list of node name keywords. This parameter is optional. If left empty, no filtering by name is applied. For exact match, specify full names. For fuzzy match, specify keywords. Multiple values are evaluated with an OR relationship.</para>
+            /// <para>The keywords used to filter task names. This parameter is optional. If this parameter is left empty, tasks are not filtered by name. If exact match is enabled, this parameter specifies a list of full names. If fuzzy match is used, this parameter specifies a list of keywords. If multiple keywords are specified, they are evaluated by using the OR operator.</para>
             /// </summary>
             [NameInMap("Keywords")]
             [Validation(Required=false)]
             public List<string> Keywords { get; set; }
 
             /// <summary>
-            /// <para>The cursor-based pagination parameter (an opaque cursor that callers do not need to interpret). This parameter is optional. If not specified, the request is treated as a first-page request and returns the actual total count. If specified, the request is treated as a subsequent-page request. Pass the NextCursor value returned from the previous page as-is. The SQL layer automatically filters by incrementing ID to query the next page without re-querying the total count. No OFFSET is used throughout, which avoids performance degradation in deep paging scenarios.</para>
+            /// <para>The cursor for the next page. Leave this parameter empty for the first page. For subsequent pages, pass the NextCursor value returned from the previous page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -99,14 +94,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? NextCursor { get; set; }
 
             /// <summary>
-            /// <para>The list of O&amp;M owner user IDs for filtering. If left empty, no filtering is applied. Multiple values are evaluated with an OR relationship.</para>
+            /// <para>The user IDs of the O&amp;M owners used for filtering. If this parameter is left empty, no filtering is performed. If multiple IDs are specified, they are evaluated by using the OR operator.</para>
             /// </summary>
             [NameInMap("OpsOwnerList")]
             [Validation(Required=false)]
             public List<string> OpsOwnerList { get; set; }
 
             /// <summary>
-            /// <para>The page number. Default value: 1. Pages start from 1.</para>
+            /// <para>The page number. Default value: 1. The value starts from 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -126,23 +121,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The list of node types. Default value: [0] (batch integration). Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>0: batch integration.</description></item>
-            /// <item><description>1: real-time integration.</description></item>
-            /// <item><description>13: data aggregation.</description></item>
-            /// <item><description>14: offline unstructured workflow.</description></item>
-            /// <item><description>15: real-time unstructured workflow.</description></item>
-            /// <item><description>16: online unstructured workflow.</description></item>
-            /// </list>
-            /// <para>If null or an empty list is passed, the default value [0] is used.</para>
+            /// <para>The task types. Default value: [0]. Valid values: 0: offline integration. 1: real-time integration. 13: data ingestion. 14: offline unstructured workflow. 15: real-time unstructured workflow. 16: online unstructured workflow. If you pass null or an empty list, the default value [0] is used.</para>
             /// </summary>
             [NameInMap("PipelineTypeList")]
             [Validation(Required=false)]
             public List<int?> PipelineTypeList { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to recursively query subfolders. Default value: false.</para>
+            /// <para>Specifies whether to recursively query subdirectories. Default value: false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -152,40 +138,28 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? Recursive { get; set; }
 
             /// <summary>
-            /// <para>The list of scheduling types for filtering. If left empty, no filtering is applied. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>1: periodic scheduling.</description></item>
-            /// <item><description>3: manual scheduling.</description></item>
-            /// <item><description>5: real-time scheduling.</description></item>
-            /// <item><description>7: online workflow.</description></item>
-            /// </list>
+            /// <para>The schedule types used for filtering. If this parameter is left empty, no filtering is performed. Valid values: 1: periodic scheduling. 3: manual scheduling. 5: real-time scheduling. 7: online workflow.</para>
             /// </summary>
             [NameInMap("ScheduleTypeList")]
             [Validation(Required=false)]
             public List<int?> ScheduleTypeList { get; set; }
 
             /// <summary>
-            /// <para>The list of submit statuses for filtering. If left empty, no filtering is applied. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>DRAFT: draft.</description></item>
-            /// <item><description>SUBMITTING: submitting.</description></item>
-            /// <item><description>SUBMITTED: submitted.</description></item>
-            /// <item><description>PUBLISHED: published.</description></item>
-            /// </list>
+            /// <para>The submit statuses used for filtering. If this parameter is left empty, no filtering is performed. Valid values: DRAFT: draft. SUBMITTING: submitting. SUBMITTED: submitted. PUBLISHED: published.</para>
             /// </summary>
             [NameInMap("SubmitStatusList")]
             [Validation(Required=false)]
             public List<string> SubmitStatusList { get; set; }
 
             /// <summary>
-            /// <para>The list of label names for filtering. If left empty, no filtering is applied. Multiple values are evaluated with an OR relationship.</para>
+            /// <para>The tag names used for filtering. If this parameter is left empty, no filtering is performed. If multiple names are specified, they are evaluated by using the OR operator.</para>
             /// </summary>
             [NameInMap("TagList")]
             [Validation(Required=false)]
             public List<string> TagList { get; set; }
 
             /// <summary>
-            /// <para>The total number of records for cursor-based pagination. This parameter is optional and takes effect only when NextCursor is not empty. After the first-page request returns the actual total count, pass this value back as-is for subsequent pages. The server does not re-query the total count and directly echoes the value, which avoids redundant count overhead. If not specified, the system falls back to querying one extra record to determine whether a next page exists.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1233</para>
@@ -208,7 +182,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of the operator.</para>
+        /// <para>The ID of the operator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30001011</para>

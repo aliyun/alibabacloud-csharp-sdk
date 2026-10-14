@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class BatchHandoverAssetResponseBody : TeaModel {
         /// <summary>
+        /// <para>The backend response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The result of the batch asset owner transfer.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public BatchHandoverAssetResponseBodyData Data { get; set; }
         public class BatchHandoverAssetResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The error message. This parameter is empty if no error occurs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>NullPointException</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
+            /// <para>The number of failed transfers.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -37,11 +46,23 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [Validation(Required=false)]
             public int? FailCount { get; set; }
 
+            /// <summary>
+            /// <para>The list of asset GUIDs for which the transfer failed. This parameter is empty if all transfers succeed.</para>
+            /// </summary>
             [NameInMap("FailedGuids")]
             [Validation(Required=false)]
             public List<string> FailedGuids { get; set; }
 
             /// <summary>
+            /// <para>The status of the batch transfer task. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>INIT: Initial.</description></item>
+            /// <item><description>HANDOVER_RECORDS_GENERATED: Records generated.</description></item>
+            /// <item><description>PROCESSING_WITHOUT_APPROVAL: Processing.</description></item>
+            /// <item><description>SUCCESS: Success.</description></item>
+            /// <item><description>FINISHED_WITH_EXCEPTION: Finished with failures.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>SUCCESS</para>
             /// </summary>
@@ -50,6 +71,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The number of successful transfers.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -58,6 +81,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? SuccessCount { get; set; }
 
             /// <summary>
+            /// <para>The total number of transferred assets.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -68,6 +93,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -76,6 +103,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The backend exception details.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
         /// </summary>
@@ -84,6 +113,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>82E78D6B-AA8F-1FEF-8AA3-5C9DA2A79140</para>
         /// </summary>
@@ -91,6 +122,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the request is successful.</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

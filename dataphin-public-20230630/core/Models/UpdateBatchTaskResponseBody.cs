@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class UpdateBatchTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. A value of OK indicates a successful request.</para>
+        /// <para>The error code. A value of OK indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public UpdateBatchTaskResponseBodyUpdateResult UpdateResult { get; set; }
         public class UpdateBatchTaskResponseBodyUpdateResult : TeaModel {
             /// <summary>
-            /// <para>The node ID in the folder tree.</para>
+            /// <para>The ID of the task directory tree node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12113111</para>

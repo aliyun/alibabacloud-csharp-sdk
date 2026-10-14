@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class BatchHandoverAssetRequest : TeaModel {
         /// <summary>
+        /// <para>The batch transfer command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("HandoverCommand")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public BatchHandoverAssetRequestHandoverCommand HandoverCommand { get; set; }
         public class BatchHandoverAssetRequestHandoverCommand : TeaModel {
             /// <summary>
+            /// <para>The list of asset GUIDs to be transferred. A maximum of 50 assets can be transferred at a time. Currently, only physical tables and logical tables are supported. Data source tables are not supported.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("GuidList")]
@@ -24,6 +26,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<string> GuidList { get; set; }
 
             /// <summary>
+            /// <para>The user ID of the transfer recipient.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -36,6 +39,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +50,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

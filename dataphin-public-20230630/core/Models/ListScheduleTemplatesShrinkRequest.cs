@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListScheduleTemplatesShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The query conditions for the scheduling template list. This is a JSON object that supports keyword search and pagination.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ListScheduleTemplatesCommand")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string ListScheduleTemplatesCommandShrink { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID, which indicates the tenant for the current operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the user who performs the operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

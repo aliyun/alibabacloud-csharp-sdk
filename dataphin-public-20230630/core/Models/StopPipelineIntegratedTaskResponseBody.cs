@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class StopPipelineIntegratedTaskResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,15 +19,23 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The batch results of stopping integrated incremental and full instances.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public StopPipelineIntegratedTaskResponseBodyData Data { get; set; }
         public class StopPipelineIntegratedTaskResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The stop results for each instance.</para>
+            /// </summary>
             [NameInMap("DevOpsActionResDTOList")]
             [Validation(Required=false)]
             public List<StopPipelineIntegratedTaskResponseBodyDataDevOpsActionResDTOList> DevOpsActionResDTOList { get; set; }
             public class StopPipelineIntegratedTaskResponseBodyDataDevOpsActionResDTOList : TeaModel {
                 /// <summary>
+                /// <para>The job name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>eedsauto</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string JobName { get; set; }
 
                 /// <summary>
+                /// <para>The job owner.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1692173406264688</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Owner { get; set; }
 
                 /// <summary>
+                /// <para>The operation status.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>FAIED</para>
                 /// </summary>
@@ -52,6 +66,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
+            /// <para>The number of failed stops.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -60,6 +76,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Fail { get; set; }
 
             /// <summary>
+            /// <para>The number of successful stops.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -70,6 +88,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -78,6 +98,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
         /// </summary>
@@ -86,6 +108,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</para>
         /// </summary>
@@ -94,6 +118,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

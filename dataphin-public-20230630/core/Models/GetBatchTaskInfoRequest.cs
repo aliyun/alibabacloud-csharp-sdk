@@ -10,12 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetBatchTaskInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The environment identifier. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>dev</description></item>
-        /// <item><description>prod</description></item>
-        /// </list>
-        /// <para>Default value: dev.</para>
+        /// <para>The environment identifier. Valid values: dev and prod. Default value: dev.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dev</para>
@@ -25,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Env { get; set; }
 
         /// <summary>
-        /// <para>The node ID in the directory tree.</para>
+        /// <para>The node ID in the task directory tree.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,7 +59,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the project to which the node belongs.</para>
+        /// <para>The project to which the task belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

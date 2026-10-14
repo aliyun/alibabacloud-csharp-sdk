@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetCheckConnectivityJobByJobIdResponseBody : TeaModel {
         /// <summary>
+        /// <para>The backend response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The connectivity check task.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetCheckConnectivityJobByJobIdResponseBodyData Data { get; set; }
         public class GetCheckConnectivityJobByJobIdResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The ID of the data source. This parameter is empty if the check is performed before creation.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>192</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DataSourceId { get; set; }
 
             /// <summary>
+            /// <para>The error message returned when the check fails.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>notFoundIp</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ErrorMsg { get; set; }
 
             /// <summary>
+            /// <para>The ID of the connectivity check task.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123123</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string JobId { get; set; }
 
             /// <summary>
+            /// <para>The job type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>application/cluster</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string JobType { get; set; }
 
             /// <summary>
+            /// <para>The job status. Valid values: NEW, IN_PROCESS, SUCCESS, and FAILED.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SUCCESS</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The ID of the tenant to which the check task belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>30001011</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string TenantId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the underlying execution task.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>t_7572319950395080706_20251225_7572319950395080707</para>
             /// </summary>
@@ -80,6 +99,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -88,6 +109,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error message of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -96,6 +119,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</para>
         /// </summary>
@@ -104,6 +129,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
