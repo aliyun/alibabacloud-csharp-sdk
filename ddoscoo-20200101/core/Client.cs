@@ -19,11 +19,6 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"ap-southeast-1", "ddoscoo.ap-southeast-1.aliyuncs.com"},
-                {"cn-hangzhou", "ddoscoo.cn-hangzhou.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("ddoscoo", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -42,6 +37,17 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds IP addresses to the blacklist for an Anti-DDoS Pro instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>If you exceed the limit, your API calls are throttled, which may impact your business. To avoid throttling, call this operation at a reasonable rate.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AddAutoCcBlacklistRequest
         /// </param>
@@ -87,6 +93,17 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<AddAutoCcBlacklistResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds IP addresses to the blacklist for an Anti-DDoS Pro instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>If you exceed the limit, your API calls are throttled, which may impact your business. To avoid throttling, call this operation at a reasonable rate.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AddAutoCcBlacklistRequest
         /// </param>
@@ -132,6 +149,17 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<AddAutoCcBlacklistResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds IP addresses to the blacklist for an Anti-DDoS Pro instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>If you exceed the limit, your API calls are throttled, which may impact your business. To avoid throttling, call this operation at a reasonable rate.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AddAutoCcBlacklistRequest
         /// </param>
@@ -145,6 +173,17 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return AddAutoCcBlacklistWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds IP addresses to the blacklist for an Anti-DDoS Pro instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>QPS limit</h3>
+        /// <para>If you exceed the limit, your API calls are throttled, which may impact your business. To avoid throttling, call this operation at a reasonable rate.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AddAutoCcBlacklistRequest
         /// </param>
@@ -158,6 +197,19 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await AddAutoCcBlacklistWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds whitelist IP addresses for an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation adds whitelist IP addresses for a single Anti-DDoS Pro or Anti-DDoS Premium instance so that the instance directly allows request traffic from the specified IP addresses.
+        /// After whitelist IP addresses are added, they are permanently valid by default. If you no longer need the whitelist IP addresses, invoke <a href="https://help.aliyun.com/document_detail/157505.html">EmptyAutoCcWhitelist</a> to clear the whitelist IP address list.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>You can invoke this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation within the limit.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AddAutoCcWhitelistRequest
         /// </param>
@@ -203,6 +255,19 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<AddAutoCcWhitelistResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds whitelist IP addresses for an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation adds whitelist IP addresses for a single Anti-DDoS Pro or Anti-DDoS Premium instance so that the instance directly allows request traffic from the specified IP addresses.
+        /// After whitelist IP addresses are added, they are permanently valid by default. If you no longer need the whitelist IP addresses, invoke <a href="https://help.aliyun.com/document_detail/157505.html">EmptyAutoCcWhitelist</a> to clear the whitelist IP address list.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>You can invoke this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation within the limit.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AddAutoCcWhitelistRequest
         /// </param>
@@ -248,6 +313,19 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<AddAutoCcWhitelistResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds whitelist IP addresses for an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation adds whitelist IP addresses for a single Anti-DDoS Pro or Anti-DDoS Premium instance so that the instance directly allows request traffic from the specified IP addresses.
+        /// After whitelist IP addresses are added, they are permanently valid by default. If you no longer need the whitelist IP addresses, invoke <a href="https://help.aliyun.com/document_detail/157505.html">EmptyAutoCcWhitelist</a> to clear the whitelist IP address list.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>You can invoke this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation within the limit.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AddAutoCcWhitelistRequest
         /// </param>
@@ -261,6 +339,19 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return AddAutoCcWhitelistWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds whitelist IP addresses for an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation adds whitelist IP addresses for a single Anti-DDoS Pro or Anti-DDoS Premium instance so that the instance directly allows request traffic from the specified IP addresses.
+        /// After whitelist IP addresses are added, they are permanently valid by default. If you no longer need the whitelist IP addresses, invoke <a href="https://help.aliyun.com/document_detail/157505.html">EmptyAutoCcWhitelist</a> to clear the whitelist IP address list.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>You can invoke this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation within the limit.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AddAutoCcWhitelistRequest
         /// </param>
@@ -276,7 +367,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定证书</para>
+        /// <para>Associates an SSL certificate with a forwarding rule of a website service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -342,7 +433,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定证书</para>
+        /// <para>Associates an SSL certificate with a forwarding rule of a website service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -408,7 +499,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定证书</para>
+        /// <para>Associates an SSL certificate with a forwarding rule of a website service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -426,7 +517,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定证书</para>
+        /// <para>Associates an SSL certificate with a forwarding rule of a website service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -444,7 +535,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定场景策略生效对象</para>
+        /// <para>Adds protected objects to a scenario-specific policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -494,7 +585,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定场景策略生效对象</para>
+        /// <para>Adds protected objects to a scenario-specific policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -544,7 +635,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定场景策略生效对象</para>
+        /// <para>Adds protected objects to a scenario-specific policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -562,7 +653,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定场景策略生效对象</para>
+        /// <para>Adds protected objects to a scenario-specific policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -580,7 +671,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置安全概要属性</para>
+        /// <para>Configures the switch and level of the Anti-DDoS Global Mitigation Policy mitigation policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -630,7 +721,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置安全概要属性</para>
+        /// <para>Configures the switch and level of the Anti-DDoS Global Mitigation Policy mitigation policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -680,7 +771,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置安全概要属性</para>
+        /// <para>Configures the switch and level of the Anti-DDoS Global Mitigation Policy mitigation policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -698,7 +789,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置安全概要属性</para>
+        /// <para>Configures the switch and level of the Anti-DDoS Global Mitigation Policy mitigation policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -716,7 +807,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置全局模板规则</para>
+        /// <para>Configures an Anti-DDoS Global Mitigation Policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -762,7 +853,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置全局模板规则</para>
+        /// <para>Configures an Anti-DDoS Global Mitigation Policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -808,7 +899,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置全局模板规则</para>
+        /// <para>Configures an Anti-DDoS Global Mitigation Policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -826,7 +917,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置全局模板规则</para>
+        /// <para>Configures an Anti-DDoS Global Mitigation Policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -844,8 +935,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置域名接入回源策略</para>
+        /// <para>Configures back-to-origin policies for website forwarding rules that have been created.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If a website that is added to Anti-DDoS Pro and Anti-DDoS Premium has multiple origin servers in the website configuration, you can modify the load balancing algorithm by configuring back-to-origin policies. The default algorithm is IP Hash. You can change it to polling or Least Time. For more information, see the description of the <b>Policy</b> request parameter.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConfigL7RsPolicyRequest
@@ -898,8 +994,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置域名接入回源策略</para>
+        /// <para>Configures back-to-origin policies for website forwarding rules that have been created.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If a website that is added to Anti-DDoS Pro and Anti-DDoS Premium has multiple origin servers in the website configuration, you can modify the load balancing algorithm by configuring back-to-origin policies. The default algorithm is IP Hash. You can change it to polling or Least Time. For more information, see the description of the <b>Policy</b> request parameter.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConfigL7RsPolicyRequest
@@ -952,8 +1053,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置域名接入回源策略</para>
+        /// <para>Configures back-to-origin policies for website forwarding rules that have been created.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If a website that is added to Anti-DDoS Pro and Anti-DDoS Premium has multiple origin servers in the website configuration, you can modify the load balancing algorithm by configuring back-to-origin policies. The default algorithm is IP Hash. You can change it to polling or Least Time. For more information, see the description of the <b>Policy</b> request parameter.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConfigL7RsPolicyRequest
@@ -970,8 +1076,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置域名接入回源策略</para>
+        /// <para>Configures back-to-origin policies for website forwarding rules that have been created.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If a website that is added to Anti-DDoS Pro and Anti-DDoS Premium has multiple origin servers in the website configuration, you can modify the load balancing algorithm by configuring back-to-origin policies. The default algorithm is IP Hash. You can change it to polling or Least Time. For more information, see the description of the <b>Policy</b> request parameter.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConfigL7RsPolicyRequest
@@ -988,7 +1099,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置长连接</para>
+        /// <para>Configures the persistent connection settings for back-to-origin requests of a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1038,7 +1149,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置长连接</para>
+        /// <para>Configures the persistent connection settings for back-to-origin requests of a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1088,7 +1199,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置长连接</para>
+        /// <para>Configures the persistent connection settings for back-to-origin requests of a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1106,7 +1217,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置长连接</para>
+        /// <para>Configures the persistent connection settings for back-to-origin requests of a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1252,7 +1363,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置端口接入备注</para>
+        /// <para>Adds remarks to port forwarding rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1294,7 +1405,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置端口接入备注</para>
+        /// <para>Adds remarks to port forwarding rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1336,7 +1447,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置端口接入备注</para>
+        /// <para>Adds remarks to port forwarding rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1354,7 +1465,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置端口接入备注</para>
+        /// <para>Adds remarks to port forwarding rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1372,7 +1483,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置端口接入回源主备模式</para>
+        /// <para>Modifies the back-to-origin mode of a port forwarding rule (enables or disables origin redundancy).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1418,7 +1529,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置端口接入回源主备模式</para>
+        /// <para>Modifies the back-to-origin mode of a port forwarding rule (enables or disables origin redundancy).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1464,7 +1575,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置端口接入回源主备模式</para>
+        /// <para>Modifies the back-to-origin mode of a port forwarding rule (enables or disables origin redundancy).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1482,7 +1593,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置端口接入回源主备模式</para>
+        /// <para>Modifies the back-to-origin mode of a port forwarding rule (enables or disables origin redundancy).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1500,7 +1611,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置端口接入策略</para>
+        /// <para>Sets the primary and secondary origin server IP addresses for port forwarding rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1542,7 +1653,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置端口接入策略</para>
+        /// <para>Sets the primary and secondary origin server IP addresses for port forwarding rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1584,7 +1695,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置端口接入策略</para>
+        /// <para>Sets the primary and secondary origin server IP addresses for port forwarding rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1602,7 +1713,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置端口接入策略</para>
+        /// <para>Sets the primary and secondary origin server IP addresses for port forwarding rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1620,7 +1731,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置区域封禁</para>
+        /// <para>Configures location blacklist settings for an Anti-DDoS Pro or Anti-DDoS Premium instance area.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1666,7 +1777,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置区域封禁</para>
+        /// <para>Configures location blacklist settings for an Anti-DDoS Pro or Anti-DDoS Premium instance area.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1712,7 +1823,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置区域封禁</para>
+        /// <para>Configures location blacklist settings for an Anti-DDoS Pro or Anti-DDoS Premium instance area.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1730,7 +1841,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置区域封禁</para>
+        /// <para>Configures location blacklist settings for an Anti-DDoS Pro or Anti-DDoS Premium instance area.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1748,7 +1859,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置端口接入规则</para>
+        /// <para>Modifies the IP addresses of the origin server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1790,7 +1901,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置端口接入规则</para>
+        /// <para>Modifies the IP addresses of the origin server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1832,7 +1943,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置端口接入规则</para>
+        /// <para>Modifies the IP addresses of the origin server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1850,7 +1961,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置端口接入规则</para>
+        /// <para>Modifies the IP addresses of the origin server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1868,8 +1979,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置UDP反射</para>
+        /// <para>Adds a UDP reflection attack attack prevention protection policy to filter specified reflection source ports.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation adds a UDP reflection attack attack prevention protection policy for an Anti-DDoS Pro or Anti-DDoS Premium instance to filter specified reflection source ports.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>You can invoke this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation as needed.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConfigUdpReflectRequest
@@ -1918,8 +2036,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置UDP反射</para>
+        /// <para>Adds a UDP reflection attack attack prevention protection policy to filter specified reflection source ports.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation adds a UDP reflection attack attack prevention protection policy for an Anti-DDoS Pro or Anti-DDoS Premium instance to filter specified reflection source ports.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>You can invoke this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation as needed.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConfigUdpReflectRequest
@@ -1968,8 +2093,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置UDP反射</para>
+        /// <para>Adds a UDP reflection attack attack prevention protection policy to filter specified reflection source ports.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation adds a UDP reflection attack attack prevention protection policy for an Anti-DDoS Pro or Anti-DDoS Premium instance to filter specified reflection source ports.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>You can invoke this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation as needed.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConfigUdpReflectRequest
@@ -1986,8 +2118,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置UDP反射</para>
+        /// <para>Adds a UDP reflection attack attack prevention protection policy to filter specified reflection source ports.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation adds a UDP reflection attack attack prevention protection policy for an Anti-DDoS Pro or Anti-DDoS Premium instance to filter specified reflection source ports.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>You can invoke this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation as needed.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConfigUdpReflectRequest
@@ -2004,7 +2143,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置新版基于匹配条件的cc规则</para>
+        /// <para>Creates or modifies a custom rule for frequency control (HTTP flood mitigation) of website services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2054,7 +2193,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置新版基于匹配条件的cc规则</para>
+        /// <para>Creates or modifies a custom rule for frequency control (HTTP flood mitigation) of website services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2104,7 +2243,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置新版基于匹配条件的cc规则</para>
+        /// <para>Creates or modifies a custom rule for frequency control (HTTP flood mitigation) of website services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2122,7 +2261,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置新版基于匹配条件的cc规则</para>
+        /// <para>Creates or modifies a custom rule for frequency control (HTTP flood mitigation) of website services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2140,7 +2279,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置WEB CC防护模板</para>
+        /// <para>Sets the defense mode for frequency control (HTTP flood mitigation) of a website service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2190,7 +2329,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置WEB CC防护模板</para>
+        /// <para>Sets the defense mode for frequency control (HTTP flood mitigation) of a website service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2240,7 +2379,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置WEB CC防护模板</para>
+        /// <para>Sets the defense mode for frequency control (HTTP flood mitigation) of a website service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2258,7 +2397,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置WEB CC防护模板</para>
+        /// <para>Sets the defense mode for frequency control (HTTP flood mitigation) of a website service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2276,7 +2415,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置防护黑白名单</para>
+        /// <para>Configures the IP blacklist and whitelist for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2330,7 +2469,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置防护黑白名单</para>
+        /// <para>Configures the IP blacklist and whitelist for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2384,7 +2523,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置防护黑白名单</para>
+        /// <para>Configures the IP blacklist and whitelist for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2402,7 +2541,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置防护黑白名单</para>
+        /// <para>Configures the IP blacklist and whitelist for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2418,6 +2557,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await ConfigWebIpSetWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an asynchronous export task to export website forwarding rules, port forwarding rules, session persistence and health check configurations, DDoS mitigation policies, or IP blacklists and whitelists.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateAsyncTaskRequest
         /// </param>
@@ -2463,6 +2607,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<CreateAsyncTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an asynchronous export task to export website forwarding rules, port forwarding rules, session persistence and health check configurations, DDoS mitigation policies, or IP blacklists and whitelists.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateAsyncTaskRequest
         /// </param>
@@ -2508,6 +2657,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<CreateAsyncTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an asynchronous export task to export website forwarding rules, port forwarding rules, session persistence and health check configurations, DDoS mitigation policies, or IP blacklists and whitelists.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateAsyncTaskRequest
         /// </param>
@@ -2521,6 +2675,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return CreateAsyncTaskWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an asynchronous export task to export website forwarding rules, port forwarding rules, session persistence and health check configurations, DDoS mitigation policies, or IP blacklists and whitelists.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateAsyncTaskRequest
         /// </param>
@@ -2536,7 +2695,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>域名资源</para>
+        /// <para>Creates a forwarding rule for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2598,7 +2757,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>域名资源</para>
+        /// <para>Creates a forwarding rule for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2660,7 +2819,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>域名资源</para>
+        /// <para>Creates a forwarding rule for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2678,7 +2837,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>域名资源</para>
+        /// <para>Creates a forwarding rule for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2696,7 +2855,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建全局端口防护规则</para>
+        /// <para>Creates port forwarding rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2742,7 +2901,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建全局端口防护规则</para>
+        /// <para>Creates port forwarding rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2788,7 +2947,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建全局端口防护规则</para>
+        /// <para>Creates port forwarding rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2806,7 +2965,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建全局端口防护规则</para>
+        /// <para>Creates port forwarding rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2824,8 +2983,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terraform创建端口</para>
+        /// <para>Creates a port forwarding rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation supports integration with Terraform. For more information about Terraform, see <a href="https://help.aliyun.com/document_detail/95820.html">What is Terraform</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreatePortRequest
@@ -2890,8 +3054,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terraform创建端口</para>
+        /// <para>Creates a port forwarding rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation supports integration with Terraform. For more information about Terraform, see <a href="https://help.aliyun.com/document_detail/95820.html">What is Terraform</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreatePortRequest
@@ -2956,8 +3125,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terraform创建端口</para>
+        /// <para>Creates a port forwarding rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation supports integration with Terraform. For more information about Terraform, see <a href="https://help.aliyun.com/document_detail/95820.html">What is Terraform</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreatePortRequest
@@ -2974,8 +3148,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terraform创建端口</para>
+        /// <para>Creates a port forwarding rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation supports integration with Terraform. For more information about Terraform, see <a href="https://help.aliyun.com/document_detail/95820.html">What is Terraform</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreatePortRequest
@@ -2990,6 +3169,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await CreatePortWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a scenario-specific policy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateSceneDefensePolicyRequest
         /// </param>
@@ -3039,6 +3223,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<CreateSceneDefensePolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a scenario-specific policy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateSceneDefensePolicyRequest
         /// </param>
@@ -3088,6 +3277,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<CreateSceneDefensePolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a scenario-specific policy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateSceneDefensePolicyRequest
         /// </param>
@@ -3101,6 +3295,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return CreateSceneDefensePolicyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a scenario-specific policy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateSceneDefensePolicyRequest
         /// </param>
@@ -3114,6 +3313,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await CreateSceneDefensePolicyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Sec-Traffic Manager rule.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateSchedulerRuleRequest
         /// </param>
@@ -3167,6 +3371,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<CreateSchedulerRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Sec-Traffic Manager rule.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateSchedulerRuleRequest
         /// </param>
@@ -3220,6 +3429,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<CreateSchedulerRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Sec-Traffic Manager rule.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateSchedulerRuleRequest
         /// </param>
@@ -3233,6 +3447,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return CreateSchedulerRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Sec-Traffic Manager rule.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateSchedulerRuleRequest
         /// </param>
@@ -3248,8 +3467,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建资源标签</para>
+        /// <para>Adds tags to multiple Anti-DDoS Proxy instances at a time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the CreateTagResources operation to add tags to multiple Anti-DDoS Proxy instances at a time.</para>
+        /// <h3><a href="#qps-"></a>Limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateTagResourcesRequest
@@ -3306,8 +3532,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建资源标签</para>
+        /// <para>Adds tags to multiple Anti-DDoS Proxy instances at a time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the CreateTagResources operation to add tags to multiple Anti-DDoS Proxy instances at a time.</para>
+        /// <h3><a href="#qps-"></a>Limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateTagResourcesRequest
@@ -3364,8 +3597,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建资源标签</para>
+        /// <para>Adds tags to multiple Anti-DDoS Proxy instances at a time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the CreateTagResources operation to add tags to multiple Anti-DDoS Proxy instances at a time.</para>
+        /// <h3><a href="#qps-"></a>Limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateTagResourcesRequest
@@ -3382,8 +3622,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建资源标签</para>
+        /// <para>Adds tags to multiple Anti-DDoS Proxy instances at a time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the CreateTagResources operation to add tags to multiple Anti-DDoS Proxy instances at a time.</para>
+        /// <h3><a href="#qps-"></a>Limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateTagResourcesRequest
@@ -3401,6 +3648,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         /// <term><b>Deprecated</b></term>
         /// 
         /// OpenAPI CreateWebCCRule is deprecated, please use ddoscoo::2020-01-01::ConfigWebCCRuleV2 instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom rule for website HTTP flood protection (CC protection).</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// CreateWebCCRuleRequest
@@ -3477,6 +3729,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         /// 
         /// OpenAPI CreateWebCCRule is deprecated, please use ddoscoo::2020-01-01::ConfigWebCCRuleV2 instead.
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom rule for website HTTP flood protection (CC protection).</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateWebCCRuleRequest
         /// </param>
@@ -3552,6 +3809,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         /// 
         /// OpenAPI CreateWebCCRule is deprecated, please use ddoscoo::2020-01-01::ConfigWebCCRuleV2 instead.
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom rule for website HTTP flood protection (CC protection).</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateWebCCRuleRequest
         /// </param>
@@ -3571,6 +3833,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         /// 
         /// OpenAPI CreateWebCCRule is deprecated, please use ddoscoo::2020-01-01::ConfigWebCCRuleV2 instead.
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom rule for website HTTP flood protection (CC protection).</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateWebCCRuleRequest
         /// </param>
@@ -3586,6 +3853,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await CreateWebCCRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a forwarding rule for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateWebRuleRequest
         /// </param>
@@ -3647,6 +3919,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<CreateWebRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a forwarding rule for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateWebRuleRequest
         /// </param>
@@ -3708,6 +3985,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<CreateWebRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a forwarding rule for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateWebRuleRequest
         /// </param>
@@ -3721,6 +4003,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return CreateWebRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a forwarding rule for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateWebRuleRequest
         /// </param>
@@ -3734,6 +4021,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await CreateWebRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an asynchronous export task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAsyncTaskRequest
         /// </param>
@@ -3775,6 +4067,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DeleteAsyncTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an asynchronous export task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAsyncTaskRequest
         /// </param>
@@ -3816,6 +4113,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DeleteAsyncTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an asynchronous export task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAsyncTaskRequest
         /// </param>
@@ -3829,6 +4131,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DeleteAsyncTaskWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an asynchronous export task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAsyncTaskRequest
         /// </param>
@@ -3842,6 +4149,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DeleteAsyncTaskWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes IP addresses from the blacklist of an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAutoCcBlacklistRequest
         /// </param>
@@ -3887,6 +4199,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DeleteAutoCcBlacklistResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes IP addresses from the blacklist of an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAutoCcBlacklistRequest
         /// </param>
@@ -3932,6 +4249,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DeleteAutoCcBlacklistResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes IP addresses from the blacklist of an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAutoCcBlacklistRequest
         /// </param>
@@ -3945,6 +4267,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DeleteAutoCcBlacklistWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes IP addresses from the blacklist of an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAutoCcBlacklistRequest
         /// </param>
@@ -3958,6 +4285,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DeleteAutoCcBlacklistWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes whitelist IPs for an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAutoCcWhitelistRequest
         /// </param>
@@ -3999,6 +4331,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DeleteAutoCcWhitelistResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes whitelist IPs for an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAutoCcWhitelistRequest
         /// </param>
@@ -4040,6 +4377,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DeleteAutoCcWhitelistResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes whitelist IPs for an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAutoCcWhitelistRequest
         /// </param>
@@ -4053,6 +4395,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DeleteAutoCcWhitelistWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes whitelist IPs for an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAutoCcWhitelistRequest
         /// </param>
@@ -4068,7 +4415,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除域名资源</para>
+        /// <para>Deletes the specified website business forwarding rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4110,7 +4457,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除域名资源</para>
+        /// <para>Deletes the specified website business forwarding rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4152,7 +4499,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除域名资源</para>
+        /// <para>Deletes the specified website business forwarding rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4170,7 +4517,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除域名资源</para>
+        /// <para>Deletes the specified website business forwarding rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4188,7 +4535,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除端口转发规则</para>
+        /// <para>Deletes a port forwarding rule. You can delete only one port forwarding rule at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4230,7 +4577,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除端口转发规则</para>
+        /// <para>Deletes a port forwarding rule. You can delete only one port forwarding rule at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4272,7 +4619,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除端口转发规则</para>
+        /// <para>Deletes a port forwarding rule. You can delete only one port forwarding rule at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4290,7 +4637,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除端口转发规则</para>
+        /// <para>Deletes a port forwarding rule. You can delete only one port forwarding rule at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4306,6 +4653,19 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DeleteNetworkRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the specified port forwarding rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you delete a port forwarding rule, the Anti-DDoS Pro or Anti-DDoS Premium instance no longer forwards service traffic on the Layer 4 port. Before you delete a specific port forwarding rule, make sure that the service traffic destined for the Layer 4 port is redirected to the origin server. This can prevent negative impacts on your services.</para>
+        /// <remarks>
+        /// <para>You can call this operation by using Terraform. For more information about Terraform, see <a href="https://help.aliyun.com/document_detail/95820.html">What is Terraform?</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeletePortRequest
         /// </param>
@@ -4359,6 +4719,19 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DeletePortResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the specified port forwarding rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you delete a port forwarding rule, the Anti-DDoS Pro or Anti-DDoS Premium instance no longer forwards service traffic on the Layer 4 port. Before you delete a specific port forwarding rule, make sure that the service traffic destined for the Layer 4 port is redirected to the origin server. This can prevent negative impacts on your services.</para>
+        /// <remarks>
+        /// <para>You can call this operation by using Terraform. For more information about Terraform, see <a href="https://help.aliyun.com/document_detail/95820.html">What is Terraform?</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeletePortRequest
         /// </param>
@@ -4412,6 +4785,19 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DeletePortResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the specified port forwarding rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you delete a port forwarding rule, the Anti-DDoS Pro or Anti-DDoS Premium instance no longer forwards service traffic on the Layer 4 port. Before you delete a specific port forwarding rule, make sure that the service traffic destined for the Layer 4 port is redirected to the origin server. This can prevent negative impacts on your services.</para>
+        /// <remarks>
+        /// <para>You can call this operation by using Terraform. For more information about Terraform, see <a href="https://help.aliyun.com/document_detail/95820.html">What is Terraform?</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeletePortRequest
         /// </param>
@@ -4425,6 +4811,19 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DeletePortWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the specified port forwarding rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you delete a port forwarding rule, the Anti-DDoS Pro or Anti-DDoS Premium instance no longer forwards service traffic on the Layer 4 port. Before you delete a specific port forwarding rule, make sure that the service traffic destined for the Layer 4 port is redirected to the origin server. This can prevent negative impacts on your services.</para>
+        /// <remarks>
+        /// <para>You can call this operation by using Terraform. For more information about Terraform, see <a href="https://help.aliyun.com/document_detail/95820.html">What is Terraform?</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeletePortRequest
         /// </param>
@@ -4438,6 +4837,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DeletePortWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a scenario-specific custom policy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteSceneDefensePolicyRequest
         /// </param>
@@ -4475,6 +4879,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DeleteSceneDefensePolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a scenario-specific custom policy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteSceneDefensePolicyRequest
         /// </param>
@@ -4512,6 +4921,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DeleteSceneDefensePolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a scenario-specific custom policy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteSceneDefensePolicyRequest
         /// </param>
@@ -4525,6 +4939,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DeleteSceneDefensePolicyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a scenario-specific custom policy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteSceneDefensePolicyRequest
         /// </param>
@@ -4538,6 +4957,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DeleteSceneDefensePolicyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a scheduling rule of Sec-Traffic Manager.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteSchedulerRuleRequest
         /// </param>
@@ -4579,6 +5003,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DeleteSchedulerRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a scheduling rule of Sec-Traffic Manager.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteSchedulerRuleRequest
         /// </param>
@@ -4620,6 +5049,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DeleteSchedulerRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a scheduling rule of Sec-Traffic Manager.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteSchedulerRuleRequest
         /// </param>
@@ -4633,6 +5067,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DeleteSchedulerRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a scheduling rule of Sec-Traffic Manager.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteSchedulerRuleRequest
         /// </param>
@@ -4646,6 +5085,21 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DeleteSchedulerRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from an Anti-DDoS Proxy (Chinese Mainland) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation removes tags from an Anti-DDoS Proxy (Chinese Mainland) instance.</para>
+        /// <remarks>
+        /// <para>Only Anti-DDoS Proxy (Chinese Mainland) supports the tag feature.</para>
+        /// </remarks>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Plan your calls accordingly.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteTagResourcesRequest
         /// </param>
@@ -4703,6 +5157,21 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DeleteTagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from an Anti-DDoS Proxy (Chinese Mainland) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation removes tags from an Anti-DDoS Proxy (Chinese Mainland) instance.</para>
+        /// <remarks>
+        /// <para>Only Anti-DDoS Proxy (Chinese Mainland) supports the tag feature.</para>
+        /// </remarks>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Plan your calls accordingly.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteTagResourcesRequest
         /// </param>
@@ -4760,6 +5229,21 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DeleteTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from an Anti-DDoS Proxy (Chinese Mainland) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation removes tags from an Anti-DDoS Proxy (Chinese Mainland) instance.</para>
+        /// <remarks>
+        /// <para>Only Anti-DDoS Proxy (Chinese Mainland) supports the tag feature.</para>
+        /// </remarks>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Plan your calls accordingly.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteTagResourcesRequest
         /// </param>
@@ -4773,6 +5257,21 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DeleteTagResourcesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from an Anti-DDoS Proxy (Chinese Mainland) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation removes tags from an Anti-DDoS Proxy (Chinese Mainland) instance.</para>
+        /// <remarks>
+        /// <para>Only Anti-DDoS Proxy (Chinese Mainland) supports the tag feature.</para>
+        /// </remarks>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Plan your calls accordingly.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteTagResourcesRequest
         /// </param>
@@ -4789,6 +5288,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         /// <term><b>Deprecated</b></term>
         /// 
         /// OpenAPI DeleteWebCCRule is deprecated, please use ddoscoo::2020-01-01::DeleteWebCCRuleV2 instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a custom frequency control rule of a website.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// DeleteWebCCRuleRequest
@@ -4841,6 +5345,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         /// 
         /// OpenAPI DeleteWebCCRule is deprecated, please use ddoscoo::2020-01-01::DeleteWebCCRuleV2 instead.
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a custom frequency control rule of a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteWebCCRuleRequest
         /// </param>
@@ -4892,6 +5401,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         /// 
         /// OpenAPI DeleteWebCCRule is deprecated, please use ddoscoo::2020-01-01::DeleteWebCCRuleV2 instead.
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a custom frequency control rule of a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteWebCCRuleRequest
         /// </param>
@@ -4911,6 +5425,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         /// 
         /// OpenAPI DeleteWebCCRule is deprecated, please use ddoscoo::2020-01-01::DeleteWebCCRuleV2 instead.
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a custom frequency control rule of a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteWebCCRuleRequest
         /// </param>
@@ -4928,7 +5447,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除新版cc规则</para>
+        /// <para>Deletes custom frequency control rules of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4978,7 +5497,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除新版cc规则</para>
+        /// <para>Deletes custom frequency control rules of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5028,7 +5547,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除新版cc规则</para>
+        /// <para>Deletes custom frequency control rules of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5046,7 +5565,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除新版cc规则</para>
+        /// <para>Deletes custom frequency control rules of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5064,8 +5583,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除缓存规则</para>
+        /// <para>Deletes the custom rules of the Static Page Caching policy for a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DeleteWebCacheCustomRule operation to delete the custom rules of the Static Page Caching policy for a website.</para>
+        /// <h3>Limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteWebCacheCustomRuleRequest
@@ -5114,8 +5640,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除缓存规则</para>
+        /// <para>Deletes the custom rules of the Static Page Caching policy for a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DeleteWebCacheCustomRule operation to delete the custom rules of the Static Page Caching policy for a website.</para>
+        /// <h3>Limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteWebCacheCustomRuleRequest
@@ -5164,8 +5697,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除缓存规则</para>
+        /// <para>Deletes the custom rules of the Static Page Caching policy for a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DeleteWebCacheCustomRule operation to delete the custom rules of the Static Page Caching policy for a website.</para>
+        /// <h3>Limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteWebCacheCustomRuleRequest
@@ -5182,8 +5722,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除缓存规则</para>
+        /// <para>Deletes the custom rules of the Static Page Caching policy for a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DeleteWebCacheCustomRule operation to delete the custom rules of the Static Page Caching policy for a website.</para>
+        /// <h3>Limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteWebCacheCustomRuleRequest
@@ -5200,7 +5747,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除精准域名规则</para>
+        /// <para>Deletes the accurate access control rules that are created for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5250,7 +5797,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除精准域名规则</para>
+        /// <para>Deletes the accurate access control rules that are created for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5300,7 +5847,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除精准域名规则</para>
+        /// <para>Deletes the accurate access control rules that are created for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5318,7 +5865,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除精准域名规则</para>
+        /// <para>Deletes the accurate access control rules that are created for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5334,6 +5881,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DeleteWebPreciseAccessRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a forwarding rule of a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteWebRuleRequest
         /// </param>
@@ -5375,6 +5927,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DeleteWebRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a forwarding rule of a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteWebRuleRequest
         /// </param>
@@ -5416,6 +5973,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DeleteWebRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a forwarding rule of a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteWebRuleRequest
         /// </param>
@@ -5429,6 +5991,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DeleteWebRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a forwarding rule of a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteWebRuleRequest
         /// </param>
@@ -5442,6 +6009,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DeleteWebRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries detailed information about asynchronous export tasks, including task ID, start and end times, status, parameters, results, and more.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries detailed information about asynchronous export tasks, including task ID, start and end times, status, parameters, results, and more.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The single-user QPS limit for this operation is 10 queries per second (QPS). API calls that exceed this limit will be throttled, which may affect your business. You should call this operation at a reasonable rate.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeAsyncTasksRequest
         /// </param>
@@ -5487,6 +6066,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeAsyncTasksResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries detailed information about asynchronous export tasks, including task ID, start and end times, status, parameters, results, and more.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries detailed information about asynchronous export tasks, including task ID, start and end times, status, parameters, results, and more.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The single-user QPS limit for this operation is 10 queries per second (QPS). API calls that exceed this limit will be throttled, which may affect your business. You should call this operation at a reasonable rate.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeAsyncTasksRequest
         /// </param>
@@ -5532,6 +6123,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeAsyncTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries detailed information about asynchronous export tasks, including task ID, start and end times, status, parameters, results, and more.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries detailed information about asynchronous export tasks, including task ID, start and end times, status, parameters, results, and more.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The single-user QPS limit for this operation is 10 queries per second (QPS). API calls that exceed this limit will be throttled, which may affect your business. You should call this operation at a reasonable rate.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeAsyncTasksRequest
         /// </param>
@@ -5545,6 +6148,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeAsyncTasksWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries detailed information about asynchronous export tasks, including task ID, start and end times, status, parameters, results, and more.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries detailed information about asynchronous export tasks, including task ID, start and end times, status, parameters, results, and more.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The single-user QPS limit for this operation is 10 queries per second (QPS). API calls that exceed this limit will be throttled, which may affect your business. You should call this operation at a reasonable rate.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeAsyncTasksRequest
         /// </param>
@@ -5558,6 +6173,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeAsyncTasksWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the peak value (QPS) of DDoS attacks within a specified time period.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAttackAnalysisMaxQpsRequest
         /// </param>
@@ -5603,6 +6223,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeAttackAnalysisMaxQpsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the peak value (QPS) of DDoS attacks within a specified time period.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAttackAnalysisMaxQpsRequest
         /// </param>
@@ -5648,6 +6273,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeAttackAnalysisMaxQpsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the peak value (QPS) of DDoS attacks within a specified time period.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAttackAnalysisMaxQpsRequest
         /// </param>
@@ -5661,6 +6291,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeAttackAnalysisMaxQpsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the peak value (QPS) of DDoS attacks within a specified time period.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAttackAnalysisMaxQpsRequest
         /// </param>
@@ -5674,6 +6309,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeAttackAnalysisMaxQpsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the blacklisted IP addresses for an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAutoCcBlacklistRequest
         /// </param>
@@ -5727,6 +6367,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeAutoCcBlacklistResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the blacklisted IP addresses for an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAutoCcBlacklistRequest
         /// </param>
@@ -5780,6 +6425,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeAutoCcBlacklistResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the blacklisted IP addresses for an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAutoCcBlacklistRequest
         /// </param>
@@ -5793,6 +6443,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeAutoCcBlacklistWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the blacklisted IP addresses for an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAutoCcBlacklistRequest
         /// </param>
@@ -5806,6 +6461,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeAutoCcBlacklistWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the numbers of IP addresses in the IP address whitelist and IP address blacklist of an Anti-DDoS Proxy instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAutoCcListCountRequest
         /// </param>
@@ -5847,6 +6507,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeAutoCcListCountResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the numbers of IP addresses in the IP address whitelist and IP address blacklist of an Anti-DDoS Proxy instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAutoCcListCountRequest
         /// </param>
@@ -5888,6 +6553,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeAutoCcListCountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the numbers of IP addresses in the IP address whitelist and IP address blacklist of an Anti-DDoS Proxy instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAutoCcListCountRequest
         /// </param>
@@ -5901,6 +6571,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeAutoCcListCountWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the numbers of IP addresses in the IP address whitelist and IP address blacklist of an Anti-DDoS Proxy instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAutoCcListCountRequest
         /// </param>
@@ -5914,6 +6589,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeAutoCcListCountWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries IP addresses in the IP address whitelist of an Anti-DDoS Proxy instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAutoCcWhitelistRequest
         /// </param>
@@ -5963,6 +6643,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeAutoCcWhitelistResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries IP addresses in the IP address whitelist of an Anti-DDoS Proxy instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAutoCcWhitelistRequest
         /// </param>
@@ -6012,6 +6697,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeAutoCcWhitelistResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries IP addresses in the IP address whitelist of an Anti-DDoS Proxy instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAutoCcWhitelistRequest
         /// </param>
@@ -6025,6 +6715,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeAutoCcWhitelistWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries IP addresses in the IP address whitelist of an Anti-DDoS Proxy instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAutoCcWhitelistRequest
         /// </param>
@@ -6038,6 +6733,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeAutoCcWhitelistWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the back-to-origin CIDR blocks of Anti-DDoS Proxy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeBackSourceCidrRequest
         /// </param>
@@ -6083,6 +6783,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeBackSourceCidrResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the back-to-origin CIDR blocks of Anti-DDoS Proxy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeBackSourceCidrRequest
         /// </param>
@@ -6128,6 +6833,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeBackSourceCidrResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the back-to-origin CIDR blocks of Anti-DDoS Proxy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeBackSourceCidrRequest
         /// </param>
@@ -6141,6 +6851,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeBackSourceCidrWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the back-to-origin CIDR blocks of Anti-DDoS Proxy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeBackSourceCidrRequest
         /// </param>
@@ -6154,6 +6869,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeBackSourceCidrWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the blackhole filtering status of an Anti-DDoS Proxy instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeBlackholeStatusRequest
         /// </param>
@@ -6191,6 +6911,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeBlackholeStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the blackhole filtering status of an Anti-DDoS Proxy instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeBlackholeStatusRequest
         /// </param>
@@ -6228,6 +6953,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeBlackholeStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the blackhole filtering status of an Anti-DDoS Proxy instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeBlackholeStatusRequest
         /// </param>
@@ -6241,6 +6971,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeBlackholeStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the blackhole filtering status of an Anti-DDoS Proxy instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeBlackholeStatusRequest
         /// </param>
@@ -6254,6 +6989,21 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeBlackholeStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the near-origin traffic diversion configurations of an Anti-DDoS Pro and Anti-DDoS Premium instance in the Chinese mainland.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is used to query the near-origin traffic diversion configurations of an Anti-DDoS Pro and Anti-DDoS Premium instance in the Chinese mainland.</para>
+        /// <remarks>
+        /// <para>This operation is applicable only to Anti-DDoS Pro and Anti-DDoS Premium (Chinese Mainland).</para>
+        /// </remarks>
+        /// <h3>QPS limit</h3>
+        /// <para>You can invoke this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation within the limit.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeBlockStatusRequest
         /// </param>
@@ -6295,6 +7045,21 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeBlockStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the near-origin traffic diversion configurations of an Anti-DDoS Pro and Anti-DDoS Premium instance in the Chinese mainland.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is used to query the near-origin traffic diversion configurations of an Anti-DDoS Pro and Anti-DDoS Premium instance in the Chinese mainland.</para>
+        /// <remarks>
+        /// <para>This operation is applicable only to Anti-DDoS Pro and Anti-DDoS Premium (Chinese Mainland).</para>
+        /// </remarks>
+        /// <h3>QPS limit</h3>
+        /// <para>You can invoke this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation within the limit.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeBlockStatusRequest
         /// </param>
@@ -6336,6 +7101,21 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeBlockStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the near-origin traffic diversion configurations of an Anti-DDoS Pro and Anti-DDoS Premium instance in the Chinese mainland.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is used to query the near-origin traffic diversion configurations of an Anti-DDoS Pro and Anti-DDoS Premium instance in the Chinese mainland.</para>
+        /// <remarks>
+        /// <para>This operation is applicable only to Anti-DDoS Pro and Anti-DDoS Premium (Chinese Mainland).</para>
+        /// </remarks>
+        /// <h3>QPS limit</h3>
+        /// <para>You can invoke this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation within the limit.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeBlockStatusRequest
         /// </param>
@@ -6349,6 +7129,21 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeBlockStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the near-origin traffic diversion configurations of an Anti-DDoS Pro and Anti-DDoS Premium instance in the Chinese mainland.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is used to query the near-origin traffic diversion configurations of an Anti-DDoS Pro and Anti-DDoS Premium instance in the Chinese mainland.</para>
+        /// <remarks>
+        /// <para>This operation is applicable only to Anti-DDoS Pro and Anti-DDoS Premium (Chinese Mainland).</para>
+        /// </remarks>
+        /// <h3>QPS limit</h3>
+        /// <para>You can invoke this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation within the limit.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeBlockStatusRequest
         /// </param>
@@ -6362,6 +7157,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeBlockStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Describes the CDN interaction rule configurations for a specified domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeCdnLinkageRulesRequest
         /// </param>
@@ -6411,6 +7211,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeCdnLinkageRulesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Describes the CDN interaction rule configurations for a specified domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeCdnLinkageRulesRequest
         /// </param>
@@ -6460,6 +7265,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeCdnLinkageRulesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Describes the CDN interaction rule configurations for a specified domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeCdnLinkageRulesRequest
         /// </param>
@@ -6473,6 +7283,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeCdnLinkageRulesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Describes the CDN interaction rule configurations for a specified domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeCdnLinkageRulesRequest
         /// </param>
@@ -6486,6 +7301,19 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeCdnLinkageRulesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all certificates that are available for a domain name. This operation does not query the certificate that is currently in use.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query all certificates that are available for a domain name protected by an Anti-DDoS instance. A domain name can be associated with multiple certificates. For example, a query for a specific domain name can return both a certificate for that specific domain name and a wildcard certificate.</para>
+        /// <remarks>
+        /// <para>To query the certificate that is currently used by a domain name, call the <a href="https://help.aliyun.com/document_detail/473610.html">DescribeWebRules</a> operation to obtain the CertName and CertRegion values. Then, call the <a href="https://help.aliyun.com/document_detail/411733.html">ListUserCertificateOrder</a> operation of Certificate Management Service. Use the returned CertName value to query the corresponding certificate ID and other details.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeCertsRequest
         /// </param>
@@ -6527,6 +7355,19 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeCertsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all certificates that are available for a domain name. This operation does not query the certificate that is currently in use.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query all certificates that are available for a domain name protected by an Anti-DDoS instance. A domain name can be associated with multiple certificates. For example, a query for a specific domain name can return both a certificate for that specific domain name and a wildcard certificate.</para>
+        /// <remarks>
+        /// <para>To query the certificate that is currently used by a domain name, call the <a href="https://help.aliyun.com/document_detail/473610.html">DescribeWebRules</a> operation to obtain the CertName and CertRegion values. Then, call the <a href="https://help.aliyun.com/document_detail/411733.html">ListUserCertificateOrder</a> operation of Certificate Management Service. Use the returned CertName value to query the corresponding certificate ID and other details.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeCertsRequest
         /// </param>
@@ -6568,6 +7409,19 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeCertsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all certificates that are available for a domain name. This operation does not query the certificate that is currently in use.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query all certificates that are available for a domain name protected by an Anti-DDoS instance. A domain name can be associated with multiple certificates. For example, a query for a specific domain name can return both a certificate for that specific domain name and a wildcard certificate.</para>
+        /// <remarks>
+        /// <para>To query the certificate that is currently used by a domain name, call the <a href="https://help.aliyun.com/document_detail/473610.html">DescribeWebRules</a> operation to obtain the CertName and CertRegion values. Then, call the <a href="https://help.aliyun.com/document_detail/411733.html">ListUserCertificateOrder</a> operation of Certificate Management Service. Use the returned CertName value to query the corresponding certificate ID and other details.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeCertsRequest
         /// </param>
@@ -6581,6 +7435,19 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeCertsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all certificates that are available for a domain name. This operation does not query the certificate that is currently in use.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query all certificates that are available for a domain name protected by an Anti-DDoS instance. A domain name can be associated with multiple certificates. For example, a query for a specific domain name can return both a certificate for that specific domain name and a wildcard certificate.</para>
+        /// <remarks>
+        /// <para>To query the certificate that is currently used by a domain name, call the <a href="https://help.aliyun.com/document_detail/473610.html">DescribeWebRules</a> operation to obtain the CertName and CertRegion values. Then, call the <a href="https://help.aliyun.com/document_detail/411733.html">ListUserCertificateOrder</a> operation of Certificate Management Service. Use the returned CertName value to query the corresponding certificate ID and other details.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeCertsRequest
         /// </param>
@@ -6594,6 +7461,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeCertsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the CNAME reuse information about websites.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable only to Anti-DDoS Proxy (Outside Chinese Mainland).</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeCnameReusesRequest
         /// </param>
@@ -6635,6 +7512,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeCnameReusesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the CNAME reuse information about websites.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable only to Anti-DDoS Proxy (Outside Chinese Mainland).</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeCnameReusesRequest
         /// </param>
@@ -6676,6 +7563,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeCnameReusesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the CNAME reuse information about websites.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable only to Anti-DDoS Proxy (Outside Chinese Mainland).</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeCnameReusesRequest
         /// </param>
@@ -6689,6 +7586,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeCnameReusesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the CNAME reuse information about websites.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is applicable only to Anti-DDoS Proxy (Outside Chinese Mainland).</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeCnameReusesRequest
         /// </param>
@@ -6704,7 +7611,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询DDoS事件</para>
+        /// <para>Queries attack events on Anti-DDoS Pro or Anti-DDoS Premium instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6766,7 +7673,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询DDoS事件</para>
+        /// <para>Queries attack events on Anti-DDoS Pro or Anti-DDoS Premium instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6828,7 +7735,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询DDoS事件</para>
+        /// <para>Queries attack events on Anti-DDoS Pro or Anti-DDoS Premium instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6846,7 +7753,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询DDoS事件</para>
+        /// <para>Queries attack events on Anti-DDoS Pro or Anti-DDoS Premium instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6862,6 +7769,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeDDoSEventsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of DDoS attack events.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is used to query the list of DDoS attack events within a specified time range by using paging. DDoS attack events contain the following information: attack start time and end time, attack type, attacked object, and peak attack traffic (peak bandwidth or peak packet forwarding rate).</para>
+        /// <h3>Rate limit</h3>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Invoke this operation at an appropriate frequency.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDDosAllEventListRequest
         /// </param>
@@ -6919,6 +7838,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDDosAllEventListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of DDoS attack events.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is used to query the list of DDoS attack events within a specified time range by using paging. DDoS attack events contain the following information: attack start time and end time, attack type, attacked object, and peak attack traffic (peak bandwidth or peak packet forwarding rate).</para>
+        /// <h3>Rate limit</h3>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Invoke this operation at an appropriate frequency.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDDosAllEventListRequest
         /// </param>
@@ -6976,6 +7907,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDDosAllEventListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of DDoS attack events.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is used to query the list of DDoS attack events within a specified time range by using paging. DDoS attack events contain the following information: attack start time and end time, attack type, attacked object, and peak attack traffic (peak bandwidth or peak packet forwarding rate).</para>
+        /// <h3>Rate limit</h3>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Invoke this operation at an appropriate frequency.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDDosAllEventListRequest
         /// </param>
@@ -6989,6 +7932,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeDDosAllEventListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of DDoS attack events.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is used to query the list of DDoS attack events within a specified time range by using paging. DDoS attack events contain the following information: attack start time and end time, attack type, attacked object, and peak attack traffic (peak bandwidth or peak packet forwarding rate).</para>
+        /// <h3>Rate limit</h3>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Invoke this operation at an appropriate frequency.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDDosAllEventListRequest
         /// </param>
@@ -7002,6 +7957,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeDDosAllEventListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the source region details of a volumetric attack.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is applicable only to querying data of volumetric attacks. It is not applicable to querying data of web resource exhaustion or connection flood attacks.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDDosEventAreaRequest
         /// </param>
@@ -7051,6 +8018,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDDosEventAreaResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the source region details of a volumetric attack.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is applicable only to querying data of volumetric attacks. It is not applicable to querying data of web resource exhaustion or connection flood attacks.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDDosEventAreaRequest
         /// </param>
@@ -7100,6 +8079,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDDosEventAreaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the source region details of a volumetric attack.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is applicable only to querying data of volumetric attacks. It is not applicable to querying data of web resource exhaustion or connection flood attacks.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDDosEventAreaRequest
         /// </param>
@@ -7113,6 +8104,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeDDosEventAreaWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the source region details of a volumetric attack.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is applicable only to querying data of volumetric attacks. It is not applicable to querying data of web resource exhaustion or connection flood attacks.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDDosEventAreaRequest
         /// </param>
@@ -7126,6 +8129,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeDDosEventAreaWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the attack type details of a volumetric attack.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is applicable only to querying data of volumetric attacks. It is not applicable to querying data of web resource exhaustion or connection flood attacks.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDDosEventAttackTypeRequest
         /// </param>
@@ -7171,6 +8186,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDDosEventAttackTypeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the attack type details of a volumetric attack.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is applicable only to querying data of volumetric attacks. It is not applicable to querying data of web resource exhaustion or connection flood attacks.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDDosEventAttackTypeRequest
         /// </param>
@@ -7216,6 +8243,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDDosEventAttackTypeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the attack type details of a volumetric attack.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is applicable only to querying data of volumetric attacks. It is not applicable to querying data of web resource exhaustion or connection flood attacks.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDDosEventAttackTypeRequest
         /// </param>
@@ -7229,6 +8268,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeDDosEventAttackTypeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the attack type details of a volumetric attack.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is applicable only to querying data of volumetric attacks. It is not applicable to querying data of web resource exhaustion or connection flood attacks.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDDosEventAttackTypeRequest
         /// </param>
@@ -7242,6 +8293,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeDDosEventAttackTypeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Internet service provider (ISP) information of attack sources for a volumetric attack.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is applicable only to querying data of volumetric attacks. It is not applicable to querying data of web resource exhaustion or connection flood attacks.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDDosEventIspRequest
         /// </param>
@@ -7291,6 +8354,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDDosEventIspResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Internet service provider (ISP) information of attack sources for a volumetric attack.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is applicable only to querying data of volumetric attacks. It is not applicable to querying data of web resource exhaustion or connection flood attacks.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDDosEventIspRequest
         /// </param>
@@ -7340,6 +8415,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDDosEventIspResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Internet service provider (ISP) information of attack sources for a volumetric attack.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is applicable only to querying data of volumetric attacks. It is not applicable to querying data of web resource exhaustion or connection flood attacks.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDDosEventIspRequest
         /// </param>
@@ -7353,6 +8440,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeDDosEventIspWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Internet service provider (ISP) information of attack sources for a volumetric attack.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is applicable only to querying data of volumetric attacks. It is not applicable to querying data of web resource exhaustion or connection flood attacks.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDDosEventIspRequest
         /// </param>
@@ -7366,6 +8465,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeDDosEventIspWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the peak attack throughput of volumetric attacks (bps), connection flood attacks (cps), and web resource exhaustion attacks (qps).</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDDosEventMaxRequest
         /// </param>
@@ -7411,6 +8515,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDDosEventMaxResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the peak attack throughput of volumetric attacks (bps), connection flood attacks (cps), and web resource exhaustion attacks (qps).</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDDosEventMaxRequest
         /// </param>
@@ -7456,6 +8565,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDDosEventMaxResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the peak attack throughput of volumetric attacks (bps), connection flood attacks (cps), and web resource exhaustion attacks (qps).</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDDosEventMaxRequest
         /// </param>
@@ -7469,6 +8583,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeDDosEventMaxWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the peak attack throughput of volumetric attacks (bps), connection flood attacks (cps), and web resource exhaustion attacks (qps).</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDDosEventMaxRequest
         /// </param>
@@ -7482,6 +8601,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeDDosEventMaxWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of attack source IP addresses for a specific volumetric attack event.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is applicable only to querying data of volumetric attacks. It is not applicable to querying data of web resource exhaustion or connection flood attacks.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDDosEventSrcIpRequest
         /// </param>
@@ -7531,6 +8662,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDDosEventSrcIpResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of attack source IP addresses for a specific volumetric attack event.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is applicable only to querying data of volumetric attacks. It is not applicable to querying data of web resource exhaustion or connection flood attacks.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDDosEventSrcIpRequest
         /// </param>
@@ -7580,6 +8723,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDDosEventSrcIpResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of attack source IP addresses for a specific volumetric attack event.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is applicable only to querying data of volumetric attacks. It is not applicable to querying data of web resource exhaustion or connection flood attacks.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDDosEventSrcIpRequest
         /// </param>
@@ -7593,6 +8748,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeDDosEventSrcIpWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of attack source IP addresses for a specific volumetric attack event.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is applicable only to querying data of volumetric attacks. It is not applicable to querying data of web resource exhaustion or connection flood attacks.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDDosEventSrcIpRequest
         /// </param>
@@ -7606,6 +8773,21 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeDDosEventSrcIpWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on advanced mitigation sessions of an Anti-DDoS Proxy (Outside Chinese Mainland) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeDefenseCountStatistics operation to query the information about advanced mitigation sessions of an Anti-DDoS Proxy (Outside Chinese Mainland) instance. For example, you can query the number of advanced mitigation sessions that are used within the current calendar month and the number of remaining advanced mitigation sessions.</para>
+        /// <remarks>
+        /// <para> This operation is suitable only for Anti-DDoS Proxy (Outside Chinese Mainland).</para>
+        /// </remarks>
+        /// <h3><a href="#qps-"></a>QPS limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDefenseCountStatisticsRequest
         /// </param>
@@ -7643,6 +8825,21 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDefenseCountStatisticsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on advanced mitigation sessions of an Anti-DDoS Proxy (Outside Chinese Mainland) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeDefenseCountStatistics operation to query the information about advanced mitigation sessions of an Anti-DDoS Proxy (Outside Chinese Mainland) instance. For example, you can query the number of advanced mitigation sessions that are used within the current calendar month and the number of remaining advanced mitigation sessions.</para>
+        /// <remarks>
+        /// <para> This operation is suitable only for Anti-DDoS Proxy (Outside Chinese Mainland).</para>
+        /// </remarks>
+        /// <h3><a href="#qps-"></a>QPS limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDefenseCountStatisticsRequest
         /// </param>
@@ -7680,6 +8877,21 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDefenseCountStatisticsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on advanced mitigation sessions of an Anti-DDoS Proxy (Outside Chinese Mainland) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeDefenseCountStatistics operation to query the information about advanced mitigation sessions of an Anti-DDoS Proxy (Outside Chinese Mainland) instance. For example, you can query the number of advanced mitigation sessions that are used within the current calendar month and the number of remaining advanced mitigation sessions.</para>
+        /// <remarks>
+        /// <para> This operation is suitable only for Anti-DDoS Proxy (Outside Chinese Mainland).</para>
+        /// </remarks>
+        /// <h3><a href="#qps-"></a>QPS limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDefenseCountStatisticsRequest
         /// </param>
@@ -7693,6 +8905,21 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeDefenseCountStatisticsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on advanced mitigation sessions of an Anti-DDoS Proxy (Outside Chinese Mainland) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeDefenseCountStatistics operation to query the information about advanced mitigation sessions of an Anti-DDoS Proxy (Outside Chinese Mainland) instance. For example, you can query the number of advanced mitigation sessions that are used within the current calendar month and the number of remaining advanced mitigation sessions.</para>
+        /// <remarks>
+        /// <para> This operation is suitable only for Anti-DDoS Proxy (Outside Chinese Mainland).</para>
+        /// </remarks>
+        /// <h3><a href="#qps-"></a>QPS limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDefenseCountStatisticsRequest
         /// </param>
@@ -7706,6 +8933,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeDefenseCountStatisticsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the advanced mitigation logs of Anti-DDoS Premium.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This API operation is available only for the Anti-DDoS Premium service.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDefenseRecordsRequest
         /// </param>
@@ -7763,6 +9002,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDefenseRecordsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the advanced mitigation logs of Anti-DDoS Premium.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This API operation is available only for the Anti-DDoS Premium service.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDefenseRecordsRequest
         /// </param>
@@ -7820,6 +9071,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDefenseRecordsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the advanced mitigation logs of Anti-DDoS Premium.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This API operation is available only for the Anti-DDoS Premium service.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDefenseRecordsRequest
         /// </param>
@@ -7833,6 +9096,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeDefenseRecordsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the advanced mitigation logs of Anti-DDoS Premium.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This API operation is available only for the Anti-DDoS Premium service.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDefenseRecordsRequest
         /// </param>
@@ -7848,7 +9123,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询目的端口事件</para>
+        /// <para>Queries the number of request packets received by the destination ports of the attacked IP address that is protected by Anti-DDoS Proxy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7906,7 +9181,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询目的端口事件</para>
+        /// <para>Queries the number of request packets received by the destination ports of the attacked IP address that is protected by Anti-DDoS Proxy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7964,7 +9239,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询目的端口事件</para>
+        /// <para>Queries the number of request packets received by the destination ports of the attacked IP address that is protected by Anti-DDoS Proxy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7982,7 +9257,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询目的端口事件</para>
+        /// <para>Queries the number of request packets received by the destination ports of the attacked IP address that is protected by Anti-DDoS Proxy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7998,6 +9273,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeDestinationPortEventWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the attack events launched against a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainAttackEventsRequest
         /// </param>
@@ -8055,6 +9335,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainAttackEventsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the attack events launched against a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainAttackEventsRequest
         /// </param>
@@ -8112,6 +9397,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainAttackEventsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the attack events launched against a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainAttackEventsRequest
         /// </param>
@@ -8125,6 +9415,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeDomainAttackEventsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the attack events launched against a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainAttackEventsRequest
         /// </param>
@@ -8140,7 +9435,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名业务带宽流量</para>
+        /// <para>Queries the bandwidths of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8198,7 +9493,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名业务带宽流量</para>
+        /// <para>Queries the bandwidths of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8256,7 +9551,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名业务带宽流量</para>
+        /// <para>Queries the bandwidths of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8274,7 +9569,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名业务带宽流量</para>
+        /// <para>Queries the bandwidths of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8290,6 +9585,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeDomainBpsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of the CC protection feature for the specified domain names.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainCcProtectSwitchRequest
         /// </param>
@@ -8331,6 +9631,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainCcProtectSwitchResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of the CC protection feature for the specified domain names.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainCcProtectSwitchRequest
         /// </param>
@@ -8372,6 +9677,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainCcProtectSwitchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of the CC protection feature for the specified domain names.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainCcProtectSwitchRequest
         /// </param>
@@ -8385,6 +9695,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeDomainCcProtectSwitchWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of the CC protection feature for the specified domain names.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainCcProtectSwitchRequest
         /// </param>
@@ -8400,7 +9715,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询HTTP2指纹</para>
+        /// <para>Queries the HTTP/2.0 fingerprint information of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8458,7 +9773,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询HTTP2指纹</para>
+        /// <para>Queries the HTTP/2.0 fingerprint information of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8516,7 +9831,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询HTTP2指纹</para>
+        /// <para>Queries the HTTP/2.0 fingerprint information of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8534,7 +9849,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询HTTP2指纹</para>
+        /// <para>Queries the HTTP/2.0 fingerprint information of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8550,6 +9865,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeDomainH2FingerprintWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the attack overview of a website, such as the peak HTTP and HTTPS traffic.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainOverviewRequest
         /// </param>
@@ -8599,6 +9919,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainOverviewResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the attack overview of a website, such as the peak HTTP and HTTPS traffic.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainOverviewRequest
         /// </param>
@@ -8648,6 +9973,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainOverviewResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the attack overview of a website, such as the peak HTTP and HTTPS traffic.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainOverviewRequest
         /// </param>
@@ -8661,6 +9991,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeDomainOverviewWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the attack overview of a website, such as the peak HTTP and HTTPS traffic.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainOverviewRequest
         /// </param>
@@ -8674,6 +10009,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeDomainOverviewWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on the queries per second (QPS) of a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainQPSListRequest
         /// </param>
@@ -8727,6 +10067,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainQPSListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on the queries per second (QPS) of a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainQPSListRequest
         /// </param>
@@ -8780,6 +10125,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainQPSListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on the queries per second (QPS) of a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainQPSListRequest
         /// </param>
@@ -8793,6 +10143,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeDomainQPSListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on the queries per second (QPS) of a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainQPSListRequest
         /// </param>
@@ -8806,6 +10161,19 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeDomainQPSListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Describes the forwarding rule configuration for a web service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API returns a paginated list of detailed configurations for your website forwarding rules, such as website domain name, protocol, HTTPS settings, and CC attack protection configuration.
+        /// This API integrates with Terraform. For more information about Terraform, see <a href="https://help.aliyun.com/document_detail/95820.html">What is Terraform?</a>.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The per-user QPS limit for this API is 50 calls per second. If you exceed this limit, API calls are throttled, which may affect your business. Plan your API calls accordingly.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDomainResourceRequest
         /// </param>
@@ -8859,6 +10227,19 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainResourceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Describes the forwarding rule configuration for a web service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API returns a paginated list of detailed configurations for your website forwarding rules, such as website domain name, protocol, HTTPS settings, and CC attack protection configuration.
+        /// This API integrates with Terraform. For more information about Terraform, see <a href="https://help.aliyun.com/document_detail/95820.html">What is Terraform?</a>.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The per-user QPS limit for this API is 50 calls per second. If you exceed this limit, API calls are throttled, which may affect your business. Plan your API calls accordingly.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDomainResourceRequest
         /// </param>
@@ -8912,6 +10293,19 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Describes the forwarding rule configuration for a web service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API returns a paginated list of detailed configurations for your website forwarding rules, such as website domain name, protocol, HTTPS settings, and CC attack protection configuration.
+        /// This API integrates with Terraform. For more information about Terraform, see <a href="https://help.aliyun.com/document_detail/95820.html">What is Terraform?</a>.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The per-user QPS limit for this API is 50 calls per second. If you exceed this limit, API calls are throttled, which may affect your business. Plan your API calls accordingly.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDomainResourceRequest
         /// </param>
@@ -8925,6 +10319,19 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeDomainResourceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Describes the forwarding rule configuration for a web service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API returns a paginated list of detailed configurations for your website forwarding rules, such as website domain name, protocol, HTTPS settings, and CC attack protection configuration.
+        /// This API integrates with Terraform. For more information about Terraform, see <a href="https://help.aliyun.com/document_detail/95820.html">What is Terraform?</a>.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The per-user QPS limit for this API is 50 calls per second. If you exceed this limit, API calls are throttled, which may affect your business. Plan your API calls accordingly.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDomainResourceRequest
         /// </param>
@@ -9060,7 +10467,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询各类响应状态码统计信息</para>
+        /// <para>Queries the statistics on HTTP status codes of a website within a specified period.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9114,7 +10521,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询各类响应状态码统计信息</para>
+        /// <para>Queries the statistics on HTTP status codes of a website within a specified period.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9168,7 +10575,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询各类响应状态码统计信息</para>
+        /// <para>Queries the statistics on HTTP status codes of a website within a specified period.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9186,7 +10593,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询各类响应状态码统计信息</para>
+        /// <para>Queries the statistics on HTTP status codes of a website within a specified period.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9204,7 +10611,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网站业务的响应状态码统计信息</para>
+        /// <para>Queries the response status code statistics information for website services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9266,7 +10673,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网站业务的响应状态码统计信息</para>
+        /// <para>Queries the response status code statistics information for website services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9328,7 +10735,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网站业务的响应状态码统计信息</para>
+        /// <para>Queries the response status code statistics information for website services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9346,7 +10753,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网站业务的响应状态码统计信息</para>
+        /// <para>Queries the response status code statistics information for website services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9362,6 +10769,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeDomainStatusCodeListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the peak queries per second (QPS) data of website services within a specified time period, including attack QPS and total QPS.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainTopAttackListRequest
         /// </param>
@@ -9411,6 +10823,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainTopAttackListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the peak queries per second (QPS) data of website services within a specified time period, including attack QPS and total QPS.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainTopAttackListRequest
         /// </param>
@@ -9460,6 +10877,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainTopAttackListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the peak queries per second (QPS) data of website services within a specified time period, including attack QPS and total QPS.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainTopAttackListRequest
         /// </param>
@@ -9473,6 +10895,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeDomainTopAttackListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the peak queries per second (QPS) data of website services within a specified time period, including attack QPS and total QPS.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainTopAttackListRequest
         /// </param>
@@ -9488,7 +10915,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名 top fingerprint</para>
+        /// <para>Queries the top N client fingerprints for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9554,7 +10981,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名 top fingerprint</para>
+        /// <para>Queries the top N client fingerprints for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9620,7 +11047,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名 top fingerprint</para>
+        /// <para>Queries the top N client fingerprints for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9638,7 +11065,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名 top fingerprint</para>
+        /// <para>Queries the top N client fingerprints for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9656,7 +11083,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名 top HttpMethod</para>
+        /// <para>Queries the top N HTTP methods for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9718,7 +11145,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名 top HttpMethod</para>
+        /// <para>Queries the top N HTTP methods for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9780,7 +11207,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名 top HttpMethod</para>
+        /// <para>Queries the top N HTTP methods for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9798,7 +11225,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名 top HttpMethod</para>
+        /// <para>Queries the top N HTTP methods for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9816,7 +11243,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名top referer</para>
+        /// <para>Queries the top N referers of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9878,7 +11305,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名top referer</para>
+        /// <para>Queries the top N referers of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9940,7 +11367,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名top referer</para>
+        /// <para>Queries the top N referers of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9958,7 +11385,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名top referer</para>
+        /// <para>Queries the top N referers of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9976,7 +11403,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询top user agent</para>
+        /// <para>Queries the top User-Agents for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10038,7 +11465,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询top user agent</para>
+        /// <para>Queries the top User-Agents for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10100,7 +11527,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询top user agent</para>
+        /// <para>Queries the top User-Agents for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10118,7 +11545,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询top user agent</para>
+        /// <para>Queries the top User-Agents for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10134,6 +11561,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeDomainTopUserAgentWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the distribution of request source countries for website services within a specified time period.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainViewSourceCountriesRequest
         /// </param>
@@ -10183,6 +11615,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainViewSourceCountriesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the distribution of request source countries for website services within a specified time period.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainViewSourceCountriesRequest
         /// </param>
@@ -10232,6 +11669,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainViewSourceCountriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the distribution of request source countries for website services within a specified time period.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainViewSourceCountriesRequest
         /// </param>
@@ -10245,6 +11687,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeDomainViewSourceCountriesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the distribution of request source countries for website services within a specified time period.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainViewSourceCountriesRequest
         /// </param>
@@ -10258,6 +11705,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeDomainViewSourceCountriesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the distribution of request sources by province in China for website services within a specified time period.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainViewSourceProvincesRequest
         /// </param>
@@ -10307,6 +11759,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainViewSourceProvincesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the distribution of request sources by province in China for website services within a specified time period.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainViewSourceProvincesRequest
         /// </param>
@@ -10356,6 +11813,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainViewSourceProvincesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the distribution of request sources by province in China for website services within a specified time period.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainViewSourceProvincesRequest
         /// </param>
@@ -10369,6 +11831,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeDomainViewSourceProvincesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the distribution of request sources by province in China for website services within a specified time period.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainViewSourceProvincesRequest
         /// </param>
@@ -10382,6 +11849,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeDomainViewSourceProvincesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top N URLs that require the longest time to respond to requests within a specified period of time.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainViewTopCostTimeRequest
         /// </param>
@@ -10435,6 +11907,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainViewTopCostTimeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top N URLs that require the longest time to respond to requests within a specified period of time.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainViewTopCostTimeRequest
         /// </param>
@@ -10488,6 +11965,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainViewTopCostTimeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top N URLs that require the longest time to respond to requests within a specified period of time.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainViewTopCostTimeRequest
         /// </param>
@@ -10501,6 +11983,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeDomainViewTopCostTimeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top N URLs that require the longest time to respond to requests within a specified period of time.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainViewTopCostTimeRequest
         /// </param>
@@ -10514,6 +12001,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeDomainViewTopCostTimeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top N most visited URLs for website services within a specified time period.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainViewTopUrlRequest
         /// </param>
@@ -10571,6 +12063,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainViewTopUrlResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top N most visited URLs for website services within a specified time period.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainViewTopUrlRequest
         /// </param>
@@ -10628,6 +12125,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainViewTopUrlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top N most visited URLs for website services within a specified time period.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainViewTopUrlRequest
         /// </param>
@@ -10641,6 +12143,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeDomainViewTopUrlWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the top N most visited URLs for website services within a specified time period.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainViewTopUrlRequest
         /// </param>
@@ -10654,6 +12161,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeDomainViewTopUrlWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries domain names for which forwarding rules are created.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainsRequest
         /// </param>
@@ -10695,6 +12207,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries domain names for which forwarding rules are created.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainsRequest
         /// </param>
@@ -10736,6 +12253,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeDomainsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries domain names for which forwarding rules are created.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainsRequest
         /// </param>
@@ -10749,6 +12271,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeDomainsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries domain names for which forwarding rules are created.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDomainsRequest
         /// </param>
@@ -10762,6 +12289,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeDomainsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the available burstable protection bandwidth specifications for an Anti-DDoS Pro and Anti-DDoS Premium instance in the Chinese mainland.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is applicable only to Anti-DDoS Pro and Anti-DDoS Premium (the Chinese mainland) service.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeElasticBandwidthSpecRequest
         /// </param>
@@ -10799,6 +12338,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeElasticBandwidthSpecResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the available burstable protection bandwidth specifications for an Anti-DDoS Pro and Anti-DDoS Premium instance in the Chinese mainland.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is applicable only to Anti-DDoS Pro and Anti-DDoS Premium (the Chinese mainland) service.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeElasticBandwidthSpecRequest
         /// </param>
@@ -10836,6 +12387,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeElasticBandwidthSpecResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the available burstable protection bandwidth specifications for an Anti-DDoS Pro and Anti-DDoS Premium instance in the Chinese mainland.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is applicable only to Anti-DDoS Pro and Anti-DDoS Premium (the Chinese mainland) service.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeElasticBandwidthSpecRequest
         /// </param>
@@ -10849,6 +12412,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeElasticBandwidthSpecWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the available burstable protection bandwidth specifications for an Anti-DDoS Pro and Anti-DDoS Premium instance in the Chinese mainland.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is applicable only to Anti-DDoS Pro and Anti-DDoS Premium (the Chinese mainland) service.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeElasticBandwidthSpecRequest
         /// </param>
@@ -10864,7 +12439,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>高防弹性qps曲线图</para>
+        /// <para>Retrieves the elastic QPS time-series data for an Anti-DDoS instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10922,7 +12497,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>高防弹性qps曲线图</para>
+        /// <para>Retrieves the elastic QPS time-series data for an Anti-DDoS instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10980,7 +12555,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>高防弹性qps曲线图</para>
+        /// <para>Retrieves the elastic QPS time-series data for an Anti-DDoS instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10998,7 +12573,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>高防弹性qps曲线图</para>
+        /// <para>Retrieves the elastic QPS time-series data for an Anti-DDoS instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11016,7 +12591,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询qps日95流量图</para>
+        /// <para>Queries the burstable QPS details of an Anti-DDoS Proxy instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11066,7 +12641,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询qps日95流量图</para>
+        /// <para>Queries the burstable QPS details of an Anti-DDoS Proxy instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11116,7 +12691,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询qps日95流量图</para>
+        /// <para>Queries the burstable QPS details of an Anti-DDoS Proxy instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11134,7 +12709,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询qps日95流量图</para>
+        /// <para>Queries the burstable QPS details of an Anti-DDoS Proxy instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11152,7 +12727,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取header</para>
+        /// <para>Queries the custom headers for a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11198,7 +12773,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取header</para>
+        /// <para>Queries the custom headers for a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11244,7 +12819,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取header</para>
+        /// <para>Queries the custom headers for a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11262,7 +12837,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取header</para>
+        /// <para>Queries the custom headers for a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11280,7 +12855,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询健康检查列表</para>
+        /// <para>Queries the Layer 4 or Layer 7 health check configurations of a port forwarding rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11322,7 +12897,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询健康检查列表</para>
+        /// <para>Queries the Layer 4 or Layer 7 health check configurations of a port forwarding rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11364,7 +12939,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询健康检查列表</para>
+        /// <para>Queries the Layer 4 or Layer 7 health check configurations of a port forwarding rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11382,7 +12957,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询健康检查列表</para>
+        /// <para>Queries the Layer 4 or Layer 7 health check configurations of a port forwarding rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11398,6 +12973,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeHealthCheckListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the health status of an origin server.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeHealthCheckStatusRequest
         /// </param>
@@ -11435,6 +13015,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeHealthCheckStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the health status of an origin server.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeHealthCheckStatusRequest
         /// </param>
@@ -11472,6 +13057,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeHealthCheckStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the health status of an origin server.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeHealthCheckStatusRequest
         /// </param>
@@ -11485,6 +13075,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeHealthCheckStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the health status of an origin server.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeHealthCheckStatusRequest
         /// </param>
@@ -11498,6 +13093,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeHealthCheckStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IP address and line information of an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is used to query the IP address and line information of an Anti-DDoS Pro or Anti-DDoS Premium instance, such as the IP address, status, and protection line of the instance.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>You can invoke this operation up to 10 times per second per account. If the number of calls exceeds the limit, throttling is triggered. Throttling may affect your business. Invoke this operation within the limit.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeInstanceDetailsRequest
         /// </param>
@@ -11535,6 +13142,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeInstanceDetailsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IP address and line information of an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is used to query the IP address and line information of an Anti-DDoS Pro or Anti-DDoS Premium instance, such as the IP address, status, and protection line of the instance.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>You can invoke this operation up to 10 times per second per account. If the number of calls exceeds the limit, throttling is triggered. Throttling may affect your business. Invoke this operation within the limit.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeInstanceDetailsRequest
         /// </param>
@@ -11572,6 +13191,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeInstanceDetailsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IP address and line information of an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is used to query the IP address and line information of an Anti-DDoS Pro or Anti-DDoS Premium instance, such as the IP address, status, and protection line of the instance.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>You can invoke this operation up to 10 times per second per account. If the number of calls exceeds the limit, throttling is triggered. Throttling may affect your business. Invoke this operation within the limit.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeInstanceDetailsRequest
         /// </param>
@@ -11585,6 +13216,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeInstanceDetailsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IP address and line information of an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is used to query the IP address and line information of an Anti-DDoS Pro or Anti-DDoS Premium instance, such as the IP address, status, and protection line of the instance.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>You can invoke this operation up to 10 times per second per account. If the number of calls exceeds the limit, throttling is triggered. Throttling may affect your business. Invoke this operation within the limit.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeInstanceDetailsRequest
         /// </param>
@@ -11600,7 +13243,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例扩展信息用户terraform</para>
+        /// <para>Queries the information about Anti-DDoS Pro and Anti-DDoS Premium instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11650,7 +13293,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例扩展信息用户terraform</para>
+        /// <para>Queries the information about Anti-DDoS Pro and Anti-DDoS Premium instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11700,7 +13343,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例扩展信息用户terraform</para>
+        /// <para>Queries the information about Anti-DDoS Pro and Anti-DDoS Premium instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11718,7 +13361,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例扩展信息用户terraform</para>
+        /// <para>Queries the information about Anti-DDoS Pro and Anti-DDoS Premium instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11734,6 +13377,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeInstanceExtWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IDs, editions, remarks, and IP types of Anti-DDoS Pro or Anti-DDoS Premium instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries the IDs, editions, remarks, and IP types of all Anti-DDoS Pro or Anti-DDoS Premium instances.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the API operation at a reasonable rate.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeInstanceIdsRequest
         /// </param>
@@ -11779,6 +13434,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeInstanceIdsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IDs, editions, remarks, and IP types of Anti-DDoS Pro or Anti-DDoS Premium instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries the IDs, editions, remarks, and IP types of all Anti-DDoS Pro or Anti-DDoS Premium instances.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the API operation at a reasonable rate.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeInstanceIdsRequest
         /// </param>
@@ -11824,6 +13491,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeInstanceIdsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IDs, editions, remarks, and IP types of Anti-DDoS Pro or Anti-DDoS Premium instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries the IDs, editions, remarks, and IP types of all Anti-DDoS Pro or Anti-DDoS Premium instances.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the API operation at a reasonable rate.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeInstanceIdsRequest
         /// </param>
@@ -11837,6 +13516,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeInstanceIdsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IDs, editions, remarks, and IP types of Anti-DDoS Pro or Anti-DDoS Premium instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries the IDs, editions, remarks, and IP types of all Anti-DDoS Pro or Anti-DDoS Premium instances.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the API operation at a reasonable rate.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeInstanceIdsRequest
         /// </param>
@@ -11850,6 +13541,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeInstanceIdsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the specifications of Anti-DDoS Pro or Anti-DDoS Premium instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries the specifications of multiple Anti-DDoS Pro or Anti-DDoS Premium instances in batches, such as the clean bandwidth, mitigation bandwidth, feature edition, number of protected domain names, and number of ports.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable frequency.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeInstanceSpecsRequest
         /// </param>
@@ -11887,6 +13590,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeInstanceSpecsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the specifications of Anti-DDoS Pro or Anti-DDoS Premium instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries the specifications of multiple Anti-DDoS Pro or Anti-DDoS Premium instances in batches, such as the clean bandwidth, mitigation bandwidth, feature edition, number of protected domain names, and number of ports.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable frequency.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeInstanceSpecsRequest
         /// </param>
@@ -11924,6 +13639,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeInstanceSpecsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the specifications of Anti-DDoS Pro or Anti-DDoS Premium instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries the specifications of multiple Anti-DDoS Pro or Anti-DDoS Premium instances in batches, such as the clean bandwidth, mitigation bandwidth, feature edition, number of protected domain names, and number of ports.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable frequency.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeInstanceSpecsRequest
         /// </param>
@@ -11937,6 +13664,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeInstanceSpecsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the specifications of Anti-DDoS Pro or Anti-DDoS Premium instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries the specifications of multiple Anti-DDoS Pro or Anti-DDoS Premium instances in batches, such as the clean bandwidth, mitigation bandwidth, feature edition, number of protected domain names, and number of ports.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit per user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the API at a reasonable frequency.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeInstanceSpecsRequest
         /// </param>
@@ -11950,6 +13689,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeInstanceSpecsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on one or more Anti-DDoS Proxy instances, such as the numbers of protected domain names and ports.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstanceStatisticsRequest
         /// </param>
@@ -11987,6 +13731,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeInstanceStatisticsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on one or more Anti-DDoS Proxy instances, such as the numbers of protected domain names and ports.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstanceStatisticsRequest
         /// </param>
@@ -12024,6 +13773,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeInstanceStatisticsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on one or more Anti-DDoS Proxy instances, such as the numbers of protected domain names and ports.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstanceStatisticsRequest
         /// </param>
@@ -12037,6 +13791,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeInstanceStatisticsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the statistics on one or more Anti-DDoS Proxy instances, such as the numbers of protected domain names and ports.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstanceStatisticsRequest
         /// </param>
@@ -12050,6 +13809,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeInstanceStatisticsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of a specified Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstanceStatusRequest
         /// </param>
@@ -12091,6 +13855,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeInstanceStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of a specified Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstanceStatusRequest
         /// </param>
@@ -12132,6 +13901,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeInstanceStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of a specified Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstanceStatusRequest
         /// </param>
@@ -12145,6 +13919,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeInstanceStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of a specified Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstanceStatusRequest
         /// </param>
@@ -12160,8 +13939,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例列表</para>
+        /// <para>Queries the details of Anti-DDoS Pro or Anti-DDoS Premium instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of Anti-DDoS Pro or Anti-DDoS Premium instances owned by the current Alibaba Cloud account by using paging. The details include the instance ID, edition, expiration time, and service traffic forwarding status.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 invocations per second. If the limit is exceeded, API invocations are throttled, which may affect your services. Invoke this operation based on your business requirements.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstancesRequest
@@ -12246,8 +14032,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例列表</para>
+        /// <para>Queries the details of Anti-DDoS Pro or Anti-DDoS Premium instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of Anti-DDoS Pro or Anti-DDoS Premium instances owned by the current Alibaba Cloud account by using paging. The details include the instance ID, edition, expiration time, and service traffic forwarding status.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 invocations per second. If the limit is exceeded, API invocations are throttled, which may affect your services. Invoke this operation based on your business requirements.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstancesRequest
@@ -12332,8 +14125,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例列表</para>
+        /// <para>Queries the details of Anti-DDoS Pro or Anti-DDoS Premium instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of Anti-DDoS Pro or Anti-DDoS Premium instances owned by the current Alibaba Cloud account by using paging. The details include the instance ID, edition, expiration time, and service traffic forwarding status.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 invocations per second. If the limit is exceeded, API invocations are throttled, which may affect your services. Invoke this operation based on your business requirements.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstancesRequest
@@ -12350,8 +14150,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例列表</para>
+        /// <para>Queries the details of Anti-DDoS Pro or Anti-DDoS Premium instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of Anti-DDoS Pro or Anti-DDoS Premium instances owned by the current Alibaba Cloud account by using paging. The details include the instance ID, edition, expiration time, and service traffic forwarding status.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 10 invocations per second. If the limit is exceeded, API invocations are throttled, which may affect your services. Invoke this operation based on your business requirements.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstancesRequest
@@ -12368,7 +14175,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>展示全局模板规则</para>
+        /// <para>Queries the Anti-DDoS Global Mitigation Policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12414,7 +14221,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>展示全局模板规则</para>
+        /// <para>Queries the Anti-DDoS Global Mitigation Policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12460,7 +14267,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>展示全局模板规则</para>
+        /// <para>Queries the Anti-DDoS Global Mitigation Policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12478,7 +14285,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>展示全局模板规则</para>
+        /// <para>Queries the Anti-DDoS Global Mitigation Policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12496,7 +14303,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名接入回源策略</para>
+        /// <para>Queries the back-to-origin policies for the forwarding rule of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12546,7 +14353,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名接入回源策略</para>
+        /// <para>Queries the back-to-origin policies for the forwarding rule of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12596,7 +14403,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名接入回源策略</para>
+        /// <para>Queries the back-to-origin policies for the forwarding rule of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12614,7 +14421,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名接入回源策略</para>
+        /// <para>Queries the back-to-origin policies for the forwarding rule of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12632,7 +14439,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询长连接</para>
+        /// <para>Queries the persistent connection settings for back-to-origin requests of a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12674,7 +14481,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询长连接</para>
+        /// <para>Queries the persistent connection settings for back-to-origin requests of a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12716,7 +14523,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询长连接</para>
+        /// <para>Queries the persistent connection settings for back-to-origin requests of a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12734,7 +14541,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询长连接</para>
+        /// <para>Queries the persistent connection settings for back-to-origin requests of a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12750,6 +14557,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeL7UsKeepaliveWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the back-to-origin settings of a port forwarding rule.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLayer4RulePolicyRequest
         /// </param>
@@ -12787,6 +14599,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeLayer4RulePolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the back-to-origin settings of a port forwarding rule.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLayer4RulePolicyRequest
         /// </param>
@@ -12824,6 +14641,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeLayer4RulePolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the back-to-origin settings of a port forwarding rule.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLayer4RulePolicyRequest
         /// </param>
@@ -12837,6 +14659,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeLayer4RulePolicyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the back-to-origin settings of a port forwarding rule.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLayer4RulePolicyRequest
         /// </param>
@@ -12850,6 +14677,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeLayer4RulePolicyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether a Logstore is created for Anti-DDoS Proxy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLogStoreExistStatusRequest
         /// </param>
@@ -12887,6 +14719,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeLogStoreExistStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether a Logstore is created for Anti-DDoS Proxy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLogStoreExistStatusRequest
         /// </param>
@@ -12924,6 +14761,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeLogStoreExistStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether a Logstore is created for Anti-DDoS Proxy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLogStoreExistStatusRequest
         /// </param>
@@ -12937,6 +14779,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeLogStoreExistStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether a Logstore is created for Anti-DDoS Proxy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLogStoreExistStatusRequest
         /// </param>
@@ -12950,6 +14797,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeLogStoreExistStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Location Blacklist configuration for an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeNetworkRegionBlockRequest
         /// </param>
@@ -12987,6 +14839,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeNetworkRegionBlockResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Location Blacklist configuration for an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeNetworkRegionBlockRequest
         /// </param>
@@ -13024,6 +14881,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeNetworkRegionBlockResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Location Blacklist configuration for an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeNetworkRegionBlockRequest
         /// </param>
@@ -13037,6 +14899,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeNetworkRegionBlockWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Location Blacklist configuration for an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeNetworkRegionBlockRequest
         /// </param>
@@ -13050,6 +14917,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeNetworkRegionBlockWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the protection settings of port forwarding rules for non-website services, including session persistence and DDoS mitigation policies.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeNetworkRuleAttributesRequest
         /// </param>
@@ -13087,6 +14959,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeNetworkRuleAttributesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the protection settings of port forwarding rules for non-website services, including session persistence and DDoS mitigation policies.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeNetworkRuleAttributesRequest
         /// </param>
@@ -13124,6 +15001,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeNetworkRuleAttributesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the protection settings of port forwarding rules for non-website services, including session persistence and DDoS mitigation policies.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeNetworkRuleAttributesRequest
         /// </param>
@@ -13137,6 +15019,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeNetworkRuleAttributesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the protection settings of port forwarding rules for non-website services, including session persistence and DDoS mitigation policies.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeNetworkRuleAttributesRequest
         /// </param>
@@ -13152,7 +15039,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询端口转发规则</para>
+        /// <para>Queries port forwarding rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13210,7 +15097,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询端口转发规则</para>
+        /// <para>Queries port forwarding rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13268,7 +15155,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询端口转发规则</para>
+        /// <para>Queries port forwarding rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13286,7 +15173,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询端口转发规则</para>
+        /// <para>Queries port forwarding rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13302,6 +15189,19 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeNetworkRulesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the operation logs of Anti-DDoS Pro and Anti-DDoS Premium (the Chinese mainland).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is applicable only to Anti-DDoS Pro and Anti-DDoS Premium (the Chinese mainland).
+        /// Operation log types include: settings for elastic protection specifications of an instance, Unblock (deactivation of blackhole filtering), settings for near-origin traffic diversion, offsetting with anti-DDoS mitigation plans, changing an ECS IP address, and clearing full logs.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeOpEntitiesRequest
         /// </param>
@@ -13363,6 +15263,19 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeOpEntitiesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the operation logs of Anti-DDoS Pro and Anti-DDoS Premium (the Chinese mainland).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is applicable only to Anti-DDoS Pro and Anti-DDoS Premium (the Chinese mainland).
+        /// Operation log types include: settings for elastic protection specifications of an instance, Unblock (deactivation of blackhole filtering), settings for near-origin traffic diversion, offsetting with anti-DDoS mitigation plans, changing an ECS IP address, and clearing full logs.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeOpEntitiesRequest
         /// </param>
@@ -13424,6 +15337,19 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeOpEntitiesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the operation logs of Anti-DDoS Pro and Anti-DDoS Premium (the Chinese mainland).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is applicable only to Anti-DDoS Pro and Anti-DDoS Premium (the Chinese mainland).
+        /// Operation log types include: settings for elastic protection specifications of an instance, Unblock (deactivation of blackhole filtering), settings for near-origin traffic diversion, offsetting with anti-DDoS mitigation plans, changing an ECS IP address, and clearing full logs.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeOpEntitiesRequest
         /// </param>
@@ -13437,6 +15363,19 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeOpEntitiesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the operation logs of Anti-DDoS Pro and Anti-DDoS Premium (the Chinese mainland).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is applicable only to Anti-DDoS Pro and Anti-DDoS Premium (the Chinese mainland).
+        /// Operation log types include: settings for elastic protection specifications of an instance, Unblock (deactivation of blackhole filtering), settings for near-origin traffic diversion, offsetting with anti-DDoS mitigation plans, changing an ECS IP address, and clearing full logs.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeOpEntitiesRequest
         /// </param>
@@ -13452,8 +15391,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terraform 查询端口</para>
+        /// <para>Queries the port forwarding rules created for an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation supports integration with Terraform. For more information about Terraform, see <a href="https://help.aliyun.com/document_detail/95820.html">What is Terraform?</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePortRequest
@@ -13510,8 +15454,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terraform 查询端口</para>
+        /// <para>Queries the port forwarding rules created for an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation supports integration with Terraform. For more information about Terraform, see <a href="https://help.aliyun.com/document_detail/95820.html">What is Terraform?</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePortRequest
@@ -13568,8 +15517,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terraform 查询端口</para>
+        /// <para>Queries the port forwarding rules created for an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation supports integration with Terraform. For more information about Terraform, see <a href="https://help.aliyun.com/document_detail/95820.html">What is Terraform?</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePortRequest
@@ -13586,8 +15540,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terraform 查询端口</para>
+        /// <para>Queries the port forwarding rules created for an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation supports integration with Terraform. For more information about Terraform, see <a href="https://help.aliyun.com/document_detail/95820.html">What is Terraform?</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePortRequest
@@ -13604,8 +15563,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询端口攻击最大峰值</para>
+        /// <para>Queries the peak attack traffic bandwidth and peak attack traffic packet rates of one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specified period of time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the peak bandwidth and peak packet rate of attack traffic on one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specific period of time.</para>
+        /// <h3>Limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePortAttackMaxFlowRequest
@@ -13658,8 +15624,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询端口攻击最大峰值</para>
+        /// <para>Queries the peak attack traffic bandwidth and peak attack traffic packet rates of one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specified period of time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the peak bandwidth and peak packet rate of attack traffic on one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specific period of time.</para>
+        /// <h3>Limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePortAttackMaxFlowRequest
@@ -13712,8 +15685,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询端口攻击最大峰值</para>
+        /// <para>Queries the peak attack traffic bandwidth and peak attack traffic packet rates of one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specified period of time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the peak bandwidth and peak packet rate of attack traffic on one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specific period of time.</para>
+        /// <h3>Limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePortAttackMaxFlowRequest
@@ -13730,8 +15710,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询端口攻击最大峰值</para>
+        /// <para>Queries the peak attack traffic bandwidth and peak attack traffic packet rates of one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specified period of time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the peak bandwidth and peak packet rate of attack traffic on one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specific period of time.</para>
+        /// <h3>Limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePortAttackMaxFlowRequest
@@ -13746,6 +15733,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribePortAttackMaxFlowWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of the Intelligent Protection policy for non-website services.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePortAutoCcStatusRequest
         /// </param>
@@ -13783,6 +15775,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribePortAutoCcStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of the Intelligent Protection policy for non-website services.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePortAutoCcStatusRequest
         /// </param>
@@ -13820,6 +15817,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribePortAutoCcStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of the Intelligent Protection policy for non-website services.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePortAutoCcStatusRequest
         /// </param>
@@ -13833,6 +15835,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribePortAutoCcStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of the Intelligent Protection policy for non-website services.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePortAutoCcStatusRequest
         /// </param>
@@ -13972,7 +15979,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询端口连接数统计</para>
+        /// <para>The statistics on the connections established over the ports of one or more Anti-DDoS Pro or Anti-DDoS Premium instances are queried.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14030,7 +16037,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询端口连接数统计</para>
+        /// <para>The statistics on the connections established over the ports of one or more Anti-DDoS Pro or Anti-DDoS Premium instances are queried.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14088,7 +16095,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询端口连接数统计</para>
+        /// <para>The statistics on the connections established over the ports of one or more Anti-DDoS Pro or Anti-DDoS Premium instances are queried.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14106,7 +16113,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询端口连接数统计</para>
+        /// <para>The statistics on the connections established over the ports of one or more Anti-DDoS Pro or Anti-DDoS Premium instances are queried.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14124,7 +16131,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询端口连接列表</para>
+        /// <para>Queries the connections established over the ports of one or more Anti-DDoS Proxy instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14186,7 +16193,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询端口连接列表</para>
+        /// <para>Queries the connections established over the ports of one or more Anti-DDoS Proxy instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14248,7 +16255,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询端口连接列表</para>
+        /// <para>Queries the connections established over the ports of one or more Anti-DDoS Proxy instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14266,7 +16273,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询端口连接列表</para>
+        /// <para>Queries the connections established over the ports of one or more Anti-DDoS Proxy instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14282,6 +16289,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribePortConnsListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the traffic data list of an Anti-DDoS Pro and Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePortFlowListRequest
         /// </param>
@@ -14335,6 +16347,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribePortFlowListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the traffic data list of an Anti-DDoS Pro and Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePortFlowListRequest
         /// </param>
@@ -14388,6 +16405,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribePortFlowListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the traffic data list of an Anti-DDoS Pro and Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePortFlowListRequest
         /// </param>
@@ -14401,6 +16423,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribePortFlowListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the traffic data list of an Anti-DDoS Pro and Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePortFlowListRequest
         /// </param>
@@ -14414,6 +16441,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribePortFlowListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the peak connection information of ports on an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePortMaxConnsRequest
         /// </param>
@@ -14463,6 +16495,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribePortMaxConnsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the peak connection information of ports on an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePortMaxConnsRequest
         /// </param>
@@ -14512,6 +16549,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribePortMaxConnsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the peak connection information of ports on an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePortMaxConnsRequest
         /// </param>
@@ -14525,6 +16567,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribePortMaxConnsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the peak connection information of ports on an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePortMaxConnsRequest
         /// </param>
@@ -14538,6 +16585,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribePortMaxConnsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the areas and countries from which requests are sent to one or more Anti-DDoS Pro or Anti-DDoS Premium instances within the specified period of time.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePortViewSourceCountriesRequest
         /// </param>
@@ -14587,6 +16639,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribePortViewSourceCountriesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the areas and countries from which requests are sent to one or more Anti-DDoS Pro or Anti-DDoS Premium instances within the specified period of time.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePortViewSourceCountriesRequest
         /// </param>
@@ -14636,6 +16693,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribePortViewSourceCountriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the areas and countries from which requests are sent to one or more Anti-DDoS Pro or Anti-DDoS Premium instances within the specified period of time.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePortViewSourceCountriesRequest
         /// </param>
@@ -14649,6 +16711,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribePortViewSourceCountriesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the areas and countries from which requests are sent to one or more Anti-DDoS Pro or Anti-DDoS Premium instances within the specified period of time.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePortViewSourceCountriesRequest
         /// </param>
@@ -14662,6 +16729,21 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribePortViewSourceCountriesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the distribution of request source ISPs for an Anti-DDoS Pro or Anti-DDoS Premium instance within a specified time period.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the distribution of request source Internet service providers (ISPs) for an Anti-DDoS Pro or Anti-DDoS Premium instance within a specified time period.</para>
+        /// <remarks>
+        /// <para>Because the Layer 4 transport-layer identity statistics algorithm of Anti-DDoS Pro and Anti-DDoS Premium has been updated, the data returned by this operation does not reflect the actual traffic volume. The data can only be used to calculate the proportion of requests from different ISPs (that is, the distribution of request source ISPs). To obtain request traffic data, call <a href="https://help.aliyun.com/document_detail/157460.html">DescribePortFlowList</a>.</para>
+        /// </remarks>
+        /// <h3>QPS limit</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Call this operation as needed.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribePortViewSourceIspsRequest
         /// </param>
@@ -14711,6 +16793,21 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribePortViewSourceIspsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the distribution of request source ISPs for an Anti-DDoS Pro or Anti-DDoS Premium instance within a specified time period.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the distribution of request source Internet service providers (ISPs) for an Anti-DDoS Pro or Anti-DDoS Premium instance within a specified time period.</para>
+        /// <remarks>
+        /// <para>Because the Layer 4 transport-layer identity statistics algorithm of Anti-DDoS Pro and Anti-DDoS Premium has been updated, the data returned by this operation does not reflect the actual traffic volume. The data can only be used to calculate the proportion of requests from different ISPs (that is, the distribution of request source ISPs). To obtain request traffic data, call <a href="https://help.aliyun.com/document_detail/157460.html">DescribePortFlowList</a>.</para>
+        /// </remarks>
+        /// <h3>QPS limit</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Call this operation as needed.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribePortViewSourceIspsRequest
         /// </param>
@@ -14760,6 +16857,21 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribePortViewSourceIspsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the distribution of request source ISPs for an Anti-DDoS Pro or Anti-DDoS Premium instance within a specified time period.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the distribution of request source Internet service providers (ISPs) for an Anti-DDoS Pro or Anti-DDoS Premium instance within a specified time period.</para>
+        /// <remarks>
+        /// <para>Because the Layer 4 transport-layer identity statistics algorithm of Anti-DDoS Pro and Anti-DDoS Premium has been updated, the data returned by this operation does not reflect the actual traffic volume. The data can only be used to calculate the proportion of requests from different ISPs (that is, the distribution of request source ISPs). To obtain request traffic data, call <a href="https://help.aliyun.com/document_detail/157460.html">DescribePortFlowList</a>.</para>
+        /// </remarks>
+        /// <h3>QPS limit</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Call this operation as needed.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribePortViewSourceIspsRequest
         /// </param>
@@ -14773,6 +16885,21 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribePortViewSourceIspsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the distribution of request source ISPs for an Anti-DDoS Pro or Anti-DDoS Premium instance within a specified time period.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the distribution of request source Internet service providers (ISPs) for an Anti-DDoS Pro or Anti-DDoS Premium instance within a specified time period.</para>
+        /// <remarks>
+        /// <para>Because the Layer 4 transport-layer identity statistics algorithm of Anti-DDoS Pro and Anti-DDoS Premium has been updated, the data returned by this operation does not reflect the actual traffic volume. The data can only be used to calculate the proportion of requests from different ISPs (that is, the distribution of request source ISPs). To obtain request traffic data, call <a href="https://help.aliyun.com/document_detail/157460.html">DescribePortFlowList</a>.</para>
+        /// </remarks>
+        /// <h3>QPS limit</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Call this operation as needed.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribePortViewSourceIspsRequest
         /// </param>
@@ -14786,6 +16913,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribePortViewSourceIspsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the administrative regions in China from which requests are sent to one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specified period of time.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePortViewSourceProvincesRequest
         /// </param>
@@ -14835,6 +16967,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribePortViewSourceProvincesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the administrative regions in China from which requests are sent to one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specified period of time.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePortViewSourceProvincesRequest
         /// </param>
@@ -14884,6 +17021,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribePortViewSourceProvincesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the administrative regions in China from which requests are sent to one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specified period of time.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePortViewSourceProvincesRequest
         /// </param>
@@ -14897,6 +17039,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribePortViewSourceProvincesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the administrative regions in China from which requests are sent to one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specified period of time.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePortViewSourceProvincesRequest
         /// </param>
@@ -14910,6 +17057,19 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribePortViewSourceProvincesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the protected objects of a scenario-specific custom policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeSceneDefenseObjects operation to query the protected objects of a scenario-specific custom policy.
+        /// Before you call this operation, make sure that you have created a scenario-specific custom policy by calling the <a href="https://help.aliyun.com/document_detail/159779.html">CreateSceneDefensePolicy</a> operation.</para>
+        /// <h3>Limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeSceneDefenseObjectsRequest
         /// </param>
@@ -14951,6 +17111,19 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeSceneDefenseObjectsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the protected objects of a scenario-specific custom policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeSceneDefenseObjects operation to query the protected objects of a scenario-specific custom policy.
+        /// Before you call this operation, make sure that you have created a scenario-specific custom policy by calling the <a href="https://help.aliyun.com/document_detail/159779.html">CreateSceneDefensePolicy</a> operation.</para>
+        /// <h3>Limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeSceneDefenseObjectsRequest
         /// </param>
@@ -14992,6 +17165,19 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeSceneDefenseObjectsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the protected objects of a scenario-specific custom policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeSceneDefenseObjects operation to query the protected objects of a scenario-specific custom policy.
+        /// Before you call this operation, make sure that you have created a scenario-specific custom policy by calling the <a href="https://help.aliyun.com/document_detail/159779.html">CreateSceneDefensePolicy</a> operation.</para>
+        /// <h3>Limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeSceneDefenseObjectsRequest
         /// </param>
@@ -15005,6 +17191,19 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeSceneDefenseObjectsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the protected objects of a scenario-specific custom policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeSceneDefenseObjects operation to query the protected objects of a scenario-specific custom policy.
+        /// Before you call this operation, make sure that you have created a scenario-specific custom policy by calling the <a href="https://help.aliyun.com/document_detail/159779.html">CreateSceneDefensePolicy</a> operation.</para>
+        /// <h3>Limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeSceneDefenseObjectsRequest
         /// </param>
@@ -15018,6 +17217,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeSceneDefenseObjectsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed configurations of scenario-specific policies.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries the detailed configurations of created scenario-specific policies, such as the policy status, protected objects, and protection rules.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>You can call this operation up to 10 times per second per user. If the number of calls exceeds the limit, throttling is triggered. This may affect your business. Call this operation within the limit.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeSceneDefensePoliciesRequest
         /// </param>
@@ -15063,6 +17274,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeSceneDefensePoliciesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed configurations of scenario-specific policies.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries the detailed configurations of created scenario-specific policies, such as the policy status, protected objects, and protection rules.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>You can call this operation up to 10 times per second per user. If the number of calls exceeds the limit, throttling is triggered. This may affect your business. Call this operation within the limit.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeSceneDefensePoliciesRequest
         /// </param>
@@ -15108,6 +17331,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeSceneDefensePoliciesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed configurations of scenario-specific policies.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries the detailed configurations of created scenario-specific policies, such as the policy status, protected objects, and protection rules.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>You can call this operation up to 10 times per second per user. If the number of calls exceeds the limit, throttling is triggered. This may affect your business. Call this operation within the limit.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeSceneDefensePoliciesRequest
         /// </param>
@@ -15121,6 +17356,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeSceneDefensePoliciesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed configurations of scenario-specific policies.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries the detailed configurations of created scenario-specific policies, such as the policy status, protected objects, and protection rules.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>You can call this operation up to 10 times per second per user. If the number of calls exceeds the limit, throttling is triggered. This may affect your business. Call this operation within the limit.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeSceneDefensePoliciesRequest
         /// </param>
@@ -15134,6 +17381,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeSceneDefensePoliciesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the scheduling rules of Sec-Traffic Manager.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSchedulerRulesRequest
         /// </param>
@@ -15183,6 +17435,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeSchedulerRulesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the scheduling rules of Sec-Traffic Manager.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSchedulerRulesRequest
         /// </param>
@@ -15232,6 +17489,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeSchedulerRulesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the scheduling rules of Sec-Traffic Manager.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSchedulerRulesRequest
         /// </param>
@@ -15245,6 +17507,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeSchedulerRulesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the scheduling rules of Sec-Traffic Manager.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSchedulerRulesRequest
         /// </param>
@@ -15260,7 +17527,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询目的限速事件列表</para>
+        /// <para>Queries the destination rate limit events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15322,7 +17589,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询目的限速事件列表</para>
+        /// <para>Queries the destination rate limit events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15384,7 +17651,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询目的限速事件列表</para>
+        /// <para>Queries the destination rate limit events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15402,7 +17669,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询目的限速事件列表</para>
+        /// <para>Queries the destination rate limit events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15418,6 +17685,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeSlaEventListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether Anti-DDoS Proxy is authorized to access Simple Log Service.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSlsAuthStatusRequest
         /// </param>
@@ -15455,6 +17727,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeSlsAuthStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether Anti-DDoS Proxy is authorized to access Simple Log Service.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSlsAuthStatusRequest
         /// </param>
@@ -15492,6 +17769,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeSlsAuthStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether Anti-DDoS Proxy is authorized to access Simple Log Service.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSlsAuthStatusRequest
         /// </param>
@@ -15505,6 +17787,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeSlsAuthStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether Anti-DDoS Proxy is authorized to access Simple Log Service.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSlsAuthStatusRequest
         /// </param>
@@ -15520,7 +17807,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询全量日志信息</para>
+        /// <para>Queries the log store information of Anti-DDoS Pro or Anti-DDoS Premium, such as log storage capacity and storage duration of logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15562,7 +17849,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询全量日志信息</para>
+        /// <para>Queries the log store information of Anti-DDoS Pro or Anti-DDoS Premium, such as log storage capacity and storage duration of logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15604,7 +17891,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询全量日志信息</para>
+        /// <para>Queries the log store information of Anti-DDoS Pro or Anti-DDoS Premium, such as log storage capacity and storage duration of logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15622,7 +17909,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询全量日志信息</para>
+        /// <para>Queries the log store information of Anti-DDoS Pro or Anti-DDoS Premium, such as log storage capacity and storage duration of logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15638,6 +17925,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeSlsLogstoreInfoWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether Simple Log Service is activated.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSlsOpenStatusRequest
         /// </param>
@@ -15675,6 +17967,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeSlsOpenStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether Simple Log Service is activated.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSlsOpenStatusRequest
         /// </param>
@@ -15712,6 +18009,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeSlsOpenStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether Simple Log Service is activated.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSlsOpenStatusRequest
         /// </param>
@@ -15725,6 +18027,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeSlsOpenStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether Simple Log Service is activated.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSlsOpenStatusRequest
         /// </param>
@@ -15738,6 +18045,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeSlsOpenStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether Anti-DDoS Proxy are authorized to access other cloud services.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries whether your Alibaba Cloud account has authorized Anti-DDoS Pro and Anti-DDoS Premium to access other cloud services.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The maximum number of queries per second (QPS) for this operation is 10 per user. If the number of API calls exceeds this limit, throttling is triggered. This may affect your business operations. Ensure that you call this operation at an appropriate rate.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeStsGrantStatusRequest
         /// </param>
@@ -15779,6 +18098,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeStsGrantStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether Anti-DDoS Proxy are authorized to access other cloud services.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries whether your Alibaba Cloud account has authorized Anti-DDoS Pro and Anti-DDoS Premium to access other cloud services.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The maximum number of queries per second (QPS) for this operation is 10 per user. If the number of API calls exceeds this limit, throttling is triggered. This may affect your business operations. Ensure that you call this operation at an appropriate rate.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeStsGrantStatusRequest
         /// </param>
@@ -15820,6 +18151,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeStsGrantStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether Anti-DDoS Proxy are authorized to access other cloud services.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries whether your Alibaba Cloud account has authorized Anti-DDoS Pro and Anti-DDoS Premium to access other cloud services.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The maximum number of queries per second (QPS) for this operation is 10 per user. If the number of API calls exceeds this limit, throttling is triggered. This may affect your business operations. Ensure that you call this operation at an appropriate rate.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeStsGrantStatusRequest
         /// </param>
@@ -15833,6 +18176,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeStsGrantStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether Anti-DDoS Proxy are authorized to access other cloud services.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries whether your Alibaba Cloud account has authorized Anti-DDoS Pro and Anti-DDoS Premium to access other cloud services.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The maximum number of queries per second (QPS) for this operation is 10 per user. If the number of API calls exceeds this limit, throttling is triggered. This may affect your business operations. Ensure that you call this operation at an appropriate rate.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeStsGrantStatusRequest
         /// </param>
@@ -15848,8 +18203,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询系统日志</para>
+        /// <para>Queries the billing details of burstable clean bandwidth.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation lets you query the system logs of Anti-DDoS Pro. System logs currently include only the billing logs of burstable clean bandwidth.
+        /// If you have enabled burstable clean bandwidth, you can call this operation to query the billing details of burstable clean bandwidth.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for this operation is 10 per second per user. If the number of calls per second exceeds this limit, throttling is triggered. This may affect your business operations. Therefore, call this operation at an appropriate frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeSystemLogRequest
@@ -15910,8 +18273,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询系统日志</para>
+        /// <para>Queries the billing details of burstable clean bandwidth.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation lets you query the system logs of Anti-DDoS Pro. System logs currently include only the billing logs of burstable clean bandwidth.
+        /// If you have enabled burstable clean bandwidth, you can call this operation to query the billing details of burstable clean bandwidth.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for this operation is 10 per second per user. If the number of calls per second exceeds this limit, throttling is triggered. This may affect your business operations. Therefore, call this operation at an appropriate frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeSystemLogRequest
@@ -15972,8 +18343,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询系统日志</para>
+        /// <para>Queries the billing details of burstable clean bandwidth.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation lets you query the system logs of Anti-DDoS Pro. System logs currently include only the billing logs of burstable clean bandwidth.
+        /// If you have enabled burstable clean bandwidth, you can call this operation to query the billing details of burstable clean bandwidth.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for this operation is 10 per second per user. If the number of calls per second exceeds this limit, throttling is triggered. This may affect your business operations. Therefore, call this operation at an appropriate frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeSystemLogRequest
@@ -15990,8 +18369,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询系统日志</para>
+        /// <para>Queries the billing details of burstable clean bandwidth.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation lets you query the system logs of Anti-DDoS Pro. System logs currently include only the billing logs of burstable clean bandwidth.
+        /// If you have enabled burstable clean bandwidth, you can call this operation to query the billing details of burstable clean bandwidth.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The QPS limit for this operation is 10 per second per user. If the number of calls per second exceeds this limit, throttling is triggered. This may affect your business operations. Therefore, call this operation at an appropriate frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeSystemLogRequest
@@ -16006,6 +18393,21 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeSystemLogWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all tag keys and the number of Anti-DDoS Proxy (Chinese Mainland) instances to which each tag key is added.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query all tag keys and the number of Anti-DDoS Proxy (Chinese Mainland) instances to which each tag key is added by page.</para>
+        /// <remarks>
+        /// <para> Only Anti-DDoS Proxy (Chinese Mainland) supports tags.</para>
+        /// </remarks>
+        /// <h3><a href="#qps-"></a>QPS limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeTagKeysRequest
         /// </param>
@@ -16059,6 +18461,21 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeTagKeysResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all tag keys and the number of Anti-DDoS Proxy (Chinese Mainland) instances to which each tag key is added.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query all tag keys and the number of Anti-DDoS Proxy (Chinese Mainland) instances to which each tag key is added by page.</para>
+        /// <remarks>
+        /// <para> Only Anti-DDoS Proxy (Chinese Mainland) supports tags.</para>
+        /// </remarks>
+        /// <h3><a href="#qps-"></a>QPS limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeTagKeysRequest
         /// </param>
@@ -16112,6 +18529,21 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeTagKeysResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all tag keys and the number of Anti-DDoS Proxy (Chinese Mainland) instances to which each tag key is added.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query all tag keys and the number of Anti-DDoS Proxy (Chinese Mainland) instances to which each tag key is added by page.</para>
+        /// <remarks>
+        /// <para> Only Anti-DDoS Proxy (Chinese Mainland) supports tags.</para>
+        /// </remarks>
+        /// <h3><a href="#qps-"></a>QPS limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeTagKeysRequest
         /// </param>
@@ -16125,6 +18557,21 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeTagKeysWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all tag keys and the number of Anti-DDoS Proxy (Chinese Mainland) instances to which each tag key is added.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query all tag keys and the number of Anti-DDoS Proxy (Chinese Mainland) instances to which each tag key is added by page.</para>
+        /// <remarks>
+        /// <para> Only Anti-DDoS Proxy (Chinese Mainland) supports tags.</para>
+        /// </remarks>
+        /// <h3><a href="#qps-"></a>QPS limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeTagKeysRequest
         /// </param>
@@ -16138,6 +18585,21 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeTagKeysWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the tags that are added to an Anti-DDoS Proxy (Chinese Mainland) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeTagResources operation to query the information about the tags that are added to an Anti-DDoS Proxy (Chinese Mainland) instance.</para>
+        /// <remarks>
+        /// <para> Only Anti-DDoS Proxy (Chinese Mainland) supports tags.</para>
+        /// </remarks>
+        /// <h3><a href="#qps-"></a>QPS limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeTagResourcesRequest
         /// </param>
@@ -16195,6 +18657,21 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeTagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the tags that are added to an Anti-DDoS Proxy (Chinese Mainland) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeTagResources operation to query the information about the tags that are added to an Anti-DDoS Proxy (Chinese Mainland) instance.</para>
+        /// <remarks>
+        /// <para> Only Anti-DDoS Proxy (Chinese Mainland) supports tags.</para>
+        /// </remarks>
+        /// <h3><a href="#qps-"></a>QPS limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeTagResourcesRequest
         /// </param>
@@ -16252,6 +18729,21 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the tags that are added to an Anti-DDoS Proxy (Chinese Mainland) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeTagResources operation to query the information about the tags that are added to an Anti-DDoS Proxy (Chinese Mainland) instance.</para>
+        /// <remarks>
+        /// <para> Only Anti-DDoS Proxy (Chinese Mainland) supports tags.</para>
+        /// </remarks>
+        /// <h3><a href="#qps-"></a>QPS limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeTagResourcesRequest
         /// </param>
@@ -16265,6 +18757,21 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeTagResourcesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the tags that are added to an Anti-DDoS Proxy (Chinese Mainland) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeTagResources operation to query the information about the tags that are added to an Anti-DDoS Proxy (Chinese Mainland) instance.</para>
+        /// <remarks>
+        /// <para> Only Anti-DDoS Proxy (Chinese Mainland) supports tags.</para>
+        /// </remarks>
+        /// <h3><a href="#qps-"></a>QPS limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeTagResourcesRequest
         /// </param>
@@ -16422,6 +18929,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeTotalAttackMaxFlowWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the source ports of UDP traffic that are filtered out by the filtering policies for UDP reflection attacks on an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeUdpReflectRequest
         /// </param>
@@ -16463,6 +18975,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeUdpReflectResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the source ports of UDP traffic that are filtered out by the filtering policies for UDP reflection attacks on an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeUdpReflectRequest
         /// </param>
@@ -16504,6 +19021,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeUdpReflectResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the source ports of UDP traffic that are filtered out by the filtering policies for UDP reflection attacks on an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeUdpReflectRequest
         /// </param>
@@ -16517,6 +19039,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeUdpReflectWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the source ports of UDP traffic that are filtered out by the filtering policies for UDP reflection attacks on an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeUdpReflectRequest
         /// </param>
@@ -16530,6 +19057,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeUdpReflectWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of times that blackhole filtering can be deactivated.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeUnBlackholeCountRequest
         /// </param>
@@ -16567,6 +19099,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeUnBlackholeCountResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of times that blackhole filtering can be deactivated.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeUnBlackholeCountRequest
         /// </param>
@@ -16604,6 +19141,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeUnBlackholeCountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of times that blackhole filtering can be deactivated.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeUnBlackholeCountRequest
         /// </param>
@@ -16617,6 +19159,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeUnBlackholeCountWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of times that blackhole filtering can be deactivated.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeUnBlackholeCountRequest
         /// </param>
@@ -16632,8 +19179,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询解封次数</para>
+        /// <para>Queries the available near-origin traffic diversion quota.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is applicable only to Anti-DDoS Pro and Anti-DDoS Premium (the Chinese mainland) service.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeUnBlockCountRequest
@@ -16674,8 +19228,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询解封次数</para>
+        /// <para>Queries the available near-origin traffic diversion quota.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is applicable only to Anti-DDoS Pro and Anti-DDoS Premium (the Chinese mainland) service.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeUnBlockCountRequest
@@ -16716,8 +19277,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询解封次数</para>
+        /// <para>Queries the available near-origin traffic diversion quota.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is applicable only to Anti-DDoS Pro and Anti-DDoS Premium (the Chinese mainland) service.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeUnBlockCountRequest
@@ -16734,8 +19302,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询解封次数</para>
+        /// <para>Queries the available near-origin traffic diversion quota.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is applicable only to Anti-DDoS Pro and Anti-DDoS Premium (the Chinese mainland) service.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeUnBlockCountRequest
@@ -16752,8 +19327,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名的全量日志分发状态</para>
+        /// <para>Queries the full log switch status of all domain names.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is used to query the full log switch status of all domain names that are added to Anti-DDoS Pro for protection.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit on this operation is 10 calls per second per user. If the limit is exceeded, API calls are throttled, which may affect your business. We recommend that you call this operation at a proper frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeWebAccessLogDispatchStatusRequest
@@ -16802,8 +19384,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名的全量日志分发状态</para>
+        /// <para>Queries the full log switch status of all domain names.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is used to query the full log switch status of all domain names that are added to Anti-DDoS Pro for protection.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit on this operation is 10 calls per second per user. If the limit is exceeded, API calls are throttled, which may affect your business. We recommend that you call this operation at a proper frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeWebAccessLogDispatchStatusRequest
@@ -16852,8 +19441,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名的全量日志分发状态</para>
+        /// <para>Queries the full log switch status of all domain names.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is used to query the full log switch status of all domain names that are added to Anti-DDoS Pro for protection.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit on this operation is 10 calls per second per user. If the limit is exceeded, API calls are throttled, which may affect your business. We recommend that you call this operation at a proper frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeWebAccessLogDispatchStatusRequest
@@ -16870,8 +19466,15 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名的全量日志分发状态</para>
+        /// <para>Queries the full log switch status of all domain names.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is used to query the full log switch status of all domain names that are added to Anti-DDoS Pro for protection.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit on this operation is 10 calls per second per user. If the limit is exceeded, API calls are throttled, which may affect your business. We recommend that you call this operation at a proper frequency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeWebAccessLogDispatchStatusRequest
@@ -16886,6 +19489,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeWebAccessLogDispatchStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the remaining quota that allows you to clear the Logstore.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeWebAccessLogEmptyCountRequest
         /// </param>
@@ -16923,6 +19531,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeWebAccessLogEmptyCountResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the remaining quota that allows you to clear the Logstore.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeWebAccessLogEmptyCountRequest
         /// </param>
@@ -16960,6 +19573,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeWebAccessLogEmptyCountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the remaining quota that allows you to clear the Logstore.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeWebAccessLogEmptyCountRequest
         /// </param>
@@ -16973,6 +19591,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeWebAccessLogEmptyCountWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the remaining quota that allows you to clear the Logstore.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeWebAccessLogEmptyCountRequest
         /// </param>
@@ -16986,6 +19609,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeWebAccessLogEmptyCountWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the log analysis feature for a website, such as the feature status and the Simple Log Service project and Logstore that are used.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeWebAccessLogStatusRequest
         /// </param>
@@ -17027,6 +19655,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeWebAccessLogStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the log analysis feature for a website, such as the feature status and the Simple Log Service project and Logstore that are used.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeWebAccessLogStatusRequest
         /// </param>
@@ -17068,6 +19701,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeWebAccessLogStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the log analysis feature for a website, such as the feature status and the Simple Log Service project and Logstore that are used.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeWebAccessLogStatusRequest
         /// </param>
@@ -17081,6 +19719,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeWebAccessLogStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the log analysis feature for a website, such as the feature status and the Simple Log Service project and Logstore that are used.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeWebAccessLogStatusRequest
         /// </param>
@@ -17094,6 +19737,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeWebAccessLogStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the access mode of website businesses.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeWebAccessModeRequest
         /// </param>
@@ -17131,6 +19779,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeWebAccessModeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the access mode of website businesses.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeWebAccessModeRequest
         /// </param>
@@ -17168,6 +19821,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeWebAccessModeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the access mode of website businesses.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeWebAccessModeRequest
         /// </param>
@@ -17181,6 +19839,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeWebAccessModeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the access mode of website businesses.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeWebAccessModeRequest
         /// </param>
@@ -17194,6 +19857,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeWebAccessModeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configuration information of the Location Blacklist feature (for domain names) in website services.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeWebAreaBlockConfigsRequest
         /// </param>
@@ -17235,6 +19903,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeWebAreaBlockConfigsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configuration information of the Location Blacklist feature (for domain names) in website services.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeWebAreaBlockConfigsRequest
         /// </param>
@@ -17276,6 +19949,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeWebAreaBlockConfigsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configuration information of the Location Blacklist feature (for domain names) in website services.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeWebAreaBlockConfigsRequest
         /// </param>
@@ -17289,6 +19967,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeWebAreaBlockConfigsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configuration information of the Location Blacklist feature (for domain names) in website services.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeWebAreaBlockConfigsRequest
         /// </param>
@@ -17305,6 +19988,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         /// <term><b>Deprecated</b></term>
         /// 
         /// OpenAPI DescribeWebCCRules is deprecated, please use ddoscoo::2020-01-01::ConfigWebCCRuleV2 instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the custom rules of frequency control (HTTP flood mitigation) for website services.</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// DescribeWebCCRulesRequest
@@ -17361,6 +20049,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         /// 
         /// OpenAPI DescribeWebCCRules is deprecated, please use ddoscoo::2020-01-01::ConfigWebCCRuleV2 instead.
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the custom rules of frequency control (HTTP flood mitigation) for website services.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeWebCCRulesRequest
         /// </param>
@@ -17416,6 +20109,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         /// 
         /// OpenAPI DescribeWebCCRules is deprecated, please use ddoscoo::2020-01-01::ConfigWebCCRuleV2 instead.
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the custom rules of frequency control (HTTP flood mitigation) for website services.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeWebCCRulesRequest
         /// </param>
@@ -17435,6 +20133,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         /// 
         /// OpenAPI DescribeWebCCRules is deprecated, please use ddoscoo::2020-01-01::ConfigWebCCRuleV2 instead.
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the custom rules of frequency control (HTTP flood mitigation) for website services.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeWebCCRulesRequest
         /// </param>
@@ -17452,7 +20155,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询新版cc规则</para>
+        /// <para>Queries the custom rules of frequency control (HTTP flood mitigation) for website services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17506,7 +20209,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询新版cc规则</para>
+        /// <para>Queries the custom rules of frequency control (HTTP flood mitigation) for website services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17560,7 +20263,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询新版cc规则</para>
+        /// <para>Queries the custom rules of frequency control (HTTP flood mitigation) for website services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17578,7 +20281,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询新版cc规则</para>
+        /// <para>Queries the custom rules of frequency control (HTTP flood mitigation) for website services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17594,6 +20297,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeWebCCRulesV2WithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Static Page Caching configuration of websites.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeWebCacheConfigs operation to query the Static Page Caching configurations of websites. The configurations include cache modes and custom caching rules.</para>
+        /// <h3>Limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeWebCacheConfigsRequest
         /// </param>
@@ -17635,6 +20350,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeWebCacheConfigsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Static Page Caching configuration of websites.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeWebCacheConfigs operation to query the Static Page Caching configurations of websites. The configurations include cache modes and custom caching rules.</para>
+        /// <h3>Limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeWebCacheConfigsRequest
         /// </param>
@@ -17676,6 +20403,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeWebCacheConfigsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Static Page Caching configuration of websites.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeWebCacheConfigs operation to query the Static Page Caching configurations of websites. The configurations include cache modes and custom caching rules.</para>
+        /// <h3>Limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeWebCacheConfigsRequest
         /// </param>
@@ -17689,6 +20428,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeWebCacheConfigsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Static Page Caching configuration of websites.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the DescribeWebCacheConfigs operation to query the Static Page Caching configurations of websites. The configurations include cache modes and custom caching rules.</para>
+        /// <h3>Limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeWebCacheConfigsRequest
         /// </param>
@@ -17702,6 +20453,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeWebCacheConfigsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of protection features for website services.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeWebCcProtectSwitchRequest
         /// </param>
@@ -17743,6 +20499,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeWebCcProtectSwitchResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of protection features for website services.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeWebCcProtectSwitchRequest
         /// </param>
@@ -17784,6 +20545,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeWebCcProtectSwitchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of protection features for website services.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeWebCcProtectSwitchRequest
         /// </param>
@@ -17797,6 +20563,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeWebCcProtectSwitchWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of protection features for website services.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeWebCcProtectSwitchRequest
         /// </param>
@@ -17810,6 +20581,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeWebCcProtectSwitchWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the range of custom ports supported by Anti-DDoS Proxy for website services.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeWebCustomPortsRequest
         /// </param>
@@ -17847,6 +20623,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeWebCustomPortsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the range of custom ports supported by Anti-DDoS Proxy for website services.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeWebCustomPortsRequest
         /// </param>
@@ -17884,6 +20665,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DescribeWebCustomPortsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the range of custom ports supported by Anti-DDoS Proxy for website services.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeWebCustomPortsRequest
         /// </param>
@@ -17897,6 +20683,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DescribeWebCustomPortsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the range of custom ports supported by Anti-DDoS Proxy for website services.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeWebCustomPortsRequest
         /// </param>
@@ -17912,7 +20703,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网站业务关联的DDoS高防实例信息</para>
+        /// <para>Queries the information about Anti-DDoS Pro or Anti-DDoS Premium instances associated with website services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17958,7 +20749,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网站业务关联的DDoS高防实例信息</para>
+        /// <para>Queries the information about Anti-DDoS Pro or Anti-DDoS Premium instances associated with website services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18004,7 +20795,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网站业务关联的DDoS高防实例信息</para>
+        /// <para>Queries the information about Anti-DDoS Pro or Anti-DDoS Premium instances associated with website services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18022,7 +20813,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网站业务关联的DDoS高防实例信息</para>
+        /// <para>Queries the information about Anti-DDoS Pro or Anti-DDoS Premium instances associated with website services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18040,7 +20831,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网站业务精确访问控制规则</para>
+        /// <para>Queries the precise access control rules configured for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18090,7 +20881,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网站业务精确访问控制规则</para>
+        /// <para>Queries the precise access control rules configured for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18140,7 +20931,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网站业务精确访问控制规则</para>
+        /// <para>Queries the precise access control rules configured for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18158,7 +20949,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网站业务精确访问控制规则</para>
+        /// <para>Queries the precise access control rules configured for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18336,8 +21127,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名接入规则</para>
+        /// <para>Queries the configurations of website forwarding rules.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is used to query the configurations of website forwarding rules that you have created by using paging. For example, you can query the forwarding protocol type, origin server address, HTTPS configuration, and IP blacklist configuration.
+        /// Before you invoke this operation, you must have invoked <a href="https://help.aliyun.com/document_detail/157463.html">CreateWebRule</a> to create website forwarding rules.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>You can invoke this operation up to 50 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation within the limit.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeWebRulesRequest
@@ -18402,8 +21201,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名接入规则</para>
+        /// <para>Queries the configurations of website forwarding rules.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is used to query the configurations of website forwarding rules that you have created by using paging. For example, you can query the forwarding protocol type, origin server address, HTTPS configuration, and IP blacklist configuration.
+        /// Before you invoke this operation, you must have invoked <a href="https://help.aliyun.com/document_detail/157463.html">CreateWebRule</a> to create website forwarding rules.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>You can invoke this operation up to 50 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation within the limit.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeWebRulesRequest
@@ -18468,8 +21275,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名接入规则</para>
+        /// <para>Queries the configurations of website forwarding rules.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is used to query the configurations of website forwarding rules that you have created by using paging. For example, you can query the forwarding protocol type, origin server address, HTTPS configuration, and IP blacklist configuration.
+        /// Before you invoke this operation, you must have invoked <a href="https://help.aliyun.com/document_detail/157463.html">CreateWebRule</a> to create website forwarding rules.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>You can invoke this operation up to 50 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation within the limit.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeWebRulesRequest
@@ -18486,8 +21301,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名接入规则</para>
+        /// <para>Queries the configurations of website forwarding rules.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is used to query the configurations of website forwarding rules that you have created by using paging. For example, you can query the forwarding protocol type, origin server address, HTTPS configuration, and IP blacklist configuration.
+        /// Before you invoke this operation, you must have invoked <a href="https://help.aliyun.com/document_detail/157463.html">CreateWebRule</a> to create website forwarding rules.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>You can invoke this operation up to 50 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation within the limit.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeWebRulesRequest
@@ -18504,7 +21327,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询场景策略防护对象</para>
+        /// <para>Removes a protected object from a scenario-specific custom policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18554,7 +21377,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询场景策略防护对象</para>
+        /// <para>Removes a protected object from a scenario-specific custom policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18604,7 +21427,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询场景策略防护对象</para>
+        /// <para>Removes a protected object from a scenario-specific custom policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18622,7 +21445,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询场景策略防护对象</para>
+        /// <para>Removes a protected object from a scenario-specific custom policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18638,6 +21461,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DetachSceneDefenseObjectWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a scenario-specific policy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableSceneDefensePolicyRequest
         /// </param>
@@ -18675,6 +21503,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DisableSceneDefensePolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a scenario-specific policy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableSceneDefensePolicyRequest
         /// </param>
@@ -18712,6 +21545,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DisableSceneDefensePolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a scenario-specific policy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableSceneDefensePolicyRequest
         /// </param>
@@ -18725,6 +21563,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DisableSceneDefensePolicyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a scenario-specific policy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableSceneDefensePolicyRequest
         /// </param>
@@ -18738,6 +21581,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DisableSceneDefensePolicyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Shuts down full logs analysis for a website service.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableWebAccessLogConfigRequest
         /// </param>
@@ -18779,6 +21627,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DisableWebAccessLogConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Shuts down full logs analysis for a website service.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableWebAccessLogConfigRequest
         /// </param>
@@ -18820,6 +21673,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DisableWebAccessLogConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Shuts down full logs analysis for a website service.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableWebAccessLogConfigRequest
         /// </param>
@@ -18833,6 +21691,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DisableWebAccessLogConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Shuts down full logs analysis for a website service.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableWebAccessLogConfigRequest
         /// </param>
@@ -18846,6 +21709,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DisableWebAccessLogConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables frequency control for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableWebCCRequest
         /// </param>
@@ -18887,6 +21755,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DisableWebCCResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables frequency control for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableWebCCRequest
         /// </param>
@@ -18928,6 +21801,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DisableWebCCResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables frequency control for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableWebCCRequest
         /// </param>
@@ -18941,6 +21819,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DisableWebCCWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables frequency control for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableWebCCRequest
         /// </param>
@@ -18954,6 +21837,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DisableWebCCWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the custom rule switch for frequency control (HTTP flood mitigation) of a website service.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableWebCCRuleRequest
         /// </param>
@@ -18995,6 +21883,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DisableWebCCRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the custom rule switch for frequency control (HTTP flood mitigation) of a website service.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableWebCCRuleRequest
         /// </param>
@@ -19036,6 +21929,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<DisableWebCCRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the custom rule switch for frequency control (HTTP flood mitigation) of a website service.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableWebCCRuleRequest
         /// </param>
@@ -19049,6 +21947,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return DisableWebCCRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the custom rule switch for frequency control (HTTP flood mitigation) of a website service.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableWebCCRuleRequest
         /// </param>
@@ -19064,7 +21967,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询CC黑名单</para>
+        /// <para>Clears the IP address blacklist of an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19106,7 +22009,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询CC黑名单</para>
+        /// <para>Clears the IP address blacklist of an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19148,7 +22051,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询CC黑名单</para>
+        /// <para>Clears the IP address blacklist of an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19166,7 +22069,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询CC黑名单</para>
+        /// <para>Clears the IP address blacklist of an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19184,7 +22087,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>清空CC白名单</para>
+        /// <para>Clears the IP address whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19226,7 +22129,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>清空CC白名单</para>
+        /// <para>Clears the IP address whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19268,7 +22171,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>清空CC白名单</para>
+        /// <para>Clears the IP address whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19286,7 +22189,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>清空CC白名单</para>
+        /// <para>Clears the IP address whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19304,7 +22207,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>清空全量日志库</para>
+        /// <para>Deletes the Logstore of Anti-DDoS Proxy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19346,7 +22249,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>清空全量日志库</para>
+        /// <para>Deletes the Logstore of Anti-DDoS Proxy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19388,7 +22291,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>清空全量日志库</para>
+        /// <para>Deletes the Logstore of Anti-DDoS Proxy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19406,7 +22309,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>清空全量日志库</para>
+        /// <para>Deletes the Logstore of Anti-DDoS Proxy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19422,6 +22325,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await EmptySlsLogstoreWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a scenario-specific custom policy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableSceneDefensePolicyRequest
         /// </param>
@@ -19459,6 +22367,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<EnableSceneDefensePolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a scenario-specific custom policy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableSceneDefensePolicyRequest
         /// </param>
@@ -19496,6 +22409,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<EnableSceneDefensePolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a scenario-specific custom policy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableSceneDefensePolicyRequest
         /// </param>
@@ -19509,6 +22427,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return EnableSceneDefensePolicyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a scenario-specific custom policy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableSceneDefensePolicyRequest
         /// </param>
@@ -19522,6 +22445,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await EnableSceneDefensePolicyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the log analysis feature for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableWebAccessLogConfigRequest
         /// </param>
@@ -19563,6 +22491,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<EnableWebAccessLogConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the log analysis feature for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableWebAccessLogConfigRequest
         /// </param>
@@ -19604,6 +22537,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<EnableWebAccessLogConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the log analysis feature for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableWebAccessLogConfigRequest
         /// </param>
@@ -19617,6 +22555,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return EnableWebAccessLogConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the log analysis feature for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableWebAccessLogConfigRequest
         /// </param>
@@ -19630,6 +22573,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await EnableWebAccessLogConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the Frequency Control policy for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableWebCCRequest
         /// </param>
@@ -19671,6 +22619,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<EnableWebCCResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the Frequency Control policy for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableWebCCRequest
         /// </param>
@@ -19712,6 +22665,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<EnableWebCCResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the Frequency Control policy for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableWebCCRequest
         /// </param>
@@ -19725,6 +22683,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return EnableWebCCWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the Frequency Control policy for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableWebCCRequest
         /// </param>
@@ -19738,6 +22701,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await EnableWebCCWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a custom HTTP flood protection rule.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableWebCCRuleRequest
         /// </param>
@@ -19779,6 +22747,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<EnableWebCCRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a custom HTTP flood protection rule.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableWebCCRuleRequest
         /// </param>
@@ -19820,6 +22793,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<EnableWebCCRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a custom HTTP flood protection rule.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableWebCCRuleRequest
         /// </param>
@@ -19833,6 +22811,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return EnableWebCCRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a custom HTTP flood protection rule.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableWebCCRuleRequest
         /// </param>
@@ -19974,6 +22957,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await ModifyBizBandWidthModeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deactivates blackhole filtering that is triggered on an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyBlackholeStatusRequest
         /// </param>
@@ -20015,6 +23003,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyBlackholeStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deactivates blackhole filtering that is triggered on an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyBlackholeStatusRequest
         /// </param>
@@ -20056,6 +23049,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyBlackholeStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deactivates blackhole filtering that is triggered on an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyBlackholeStatusRequest
         /// </param>
@@ -20069,6 +23067,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return ModifyBlackholeStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deactivates blackhole filtering that is triggered on an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyBlackholeStatusRequest
         /// </param>
@@ -20082,6 +23085,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await ModifyBlackholeStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the Diversion from Origin Server configuration of an Anti-DDoS Proxy (Chinese Mainland) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> This operation is suitable only for Anti-DDoS Proxy (Chinese Mainland).</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyBlockStatusRequest
         /// </param>
@@ -20131,6 +23146,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyBlockStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the Diversion from Origin Server configuration of an Anti-DDoS Proxy (Chinese Mainland) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> This operation is suitable only for Anti-DDoS Proxy (Chinese Mainland).</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyBlockStatusRequest
         /// </param>
@@ -20180,6 +23207,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyBlockStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the Diversion from Origin Server configuration of an Anti-DDoS Proxy (Chinese Mainland) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> This operation is suitable only for Anti-DDoS Proxy (Chinese Mainland).</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyBlockStatusRequest
         /// </param>
@@ -20193,6 +23232,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return ModifyBlockStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the Diversion from Origin Server configuration of an Anti-DDoS Proxy (Chinese Mainland) instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> This operation is suitable only for Anti-DDoS Proxy (Chinese Mainland).</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyBlockStatusRequest
         /// </param>
@@ -20206,6 +23257,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await ModifyBlockStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables CNAME reuse for a website.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is suitable only for Anti-DDoS Premium.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyCnameReuseRequest
         /// </param>
@@ -20255,6 +23318,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyCnameReuseResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables CNAME reuse for a website.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is suitable only for Anti-DDoS Premium.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyCnameReuseRequest
         /// </param>
@@ -20304,6 +23379,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyCnameReuseResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables CNAME reuse for a website.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is suitable only for Anti-DDoS Premium.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyCnameReuseRequest
         /// </param>
@@ -20317,6 +23404,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return ModifyCnameReuseWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables CNAME reuse for a website.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is suitable only for Anti-DDoS Premium.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyCnameReuseRequest
         /// </param>
@@ -20332,7 +23431,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改域名接入资源</para>
+        /// <para>Modifies the forwarding rule of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20394,7 +23493,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改域名接入资源</para>
+        /// <para>Modifies the forwarding rule of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20456,7 +23555,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改域名接入资源</para>
+        /// <para>Modifies the forwarding rule of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20474,7 +23573,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改域名接入资源</para>
+        /// <para>Modifies the forwarding rule of a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20490,6 +23589,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await ModifyDomainResourceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the burstable protection bandwidth of an Anti-DDoS Pro or Anti-DDoS Premium instance in the Chinese mainland.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is applicable only to Anti-DDoS Pro (the Chinese mainland) service.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyElasticBandWidthRequest
         /// </param>
@@ -20531,6 +23642,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyElasticBandWidthResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the burstable protection bandwidth of an Anti-DDoS Pro or Anti-DDoS Premium instance in the Chinese mainland.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is applicable only to Anti-DDoS Pro (the Chinese mainland) service.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyElasticBandWidthRequest
         /// </param>
@@ -20572,6 +23695,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyElasticBandWidthResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the burstable protection bandwidth of an Anti-DDoS Pro or Anti-DDoS Premium instance in the Chinese mainland.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is applicable only to Anti-DDoS Pro (the Chinese mainland) service.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyElasticBandWidthRequest
         /// </param>
@@ -20585,6 +23720,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return ModifyElasticBandWidthWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the burstable protection bandwidth of an Anti-DDoS Pro or Anti-DDoS Premium instance in the Chinese mainland.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation is applicable only to Anti-DDoS Pro (the Chinese mainland) service.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyElasticBandWidthRequest
         /// </param>
@@ -20736,8 +23883,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启/关闭弹性QPS 首次模式直接生效</para>
+        /// <para>Configures the burstable QPS and mode of an Anti-DDoS Proxy instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Both IPv4 and IPv6 instances support burstable QPS.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyElasticBizQpsRequest
@@ -20786,8 +23938,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启/关闭弹性QPS 首次模式直接生效</para>
+        /// <para>Configures the burstable QPS and mode of an Anti-DDoS Proxy instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Both IPv4 and IPv6 instances support burstable QPS.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyElasticBizQpsRequest
@@ -20836,8 +23993,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启/关闭弹性QPS 首次模式直接生效</para>
+        /// <para>Configures the burstable QPS and mode of an Anti-DDoS Proxy instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Both IPv4 and IPv6 instances support burstable QPS.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyElasticBizQpsRequest
@@ -20854,8 +24016,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启/关闭弹性QPS 首次模式直接生效</para>
+        /// <para>Configures the burstable QPS and mode of an Anti-DDoS Proxy instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Both IPv4 and IPv6 instances support burstable QPS.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyElasticBizQpsRequest
@@ -20870,6 +24037,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await ModifyElasticBizQpsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the log storage duration for Anti-DDoS Proxy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyFullLogTtlRequest
         /// </param>
@@ -20911,6 +24083,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyFullLogTtlResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the log storage duration for Anti-DDoS Proxy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyFullLogTtlRequest
         /// </param>
@@ -20952,6 +24129,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyFullLogTtlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the log storage duration for Anti-DDoS Proxy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyFullLogTtlRequest
         /// </param>
@@ -20965,6 +24147,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return ModifyFullLogTtlWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the log storage duration for Anti-DDoS Proxy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyFullLogTtlRequest
         /// </param>
@@ -20980,7 +24167,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>流量标记</para>
+        /// <para>Modifies custom headers for a domain on an Anti-DDoS Pro instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21034,7 +24221,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>流量标记</para>
+        /// <para>Modifies custom headers for a domain on an Anti-DDoS Pro instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21088,7 +24275,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>流量标记</para>
+        /// <para>Modifies custom headers for a domain on an Anti-DDoS Pro instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21106,7 +24293,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>流量标记</para>
+        /// <para>Modifies custom headers for a domain on an Anti-DDoS Pro instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21122,6 +24309,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await ModifyHeadersWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the Layer 4 or Layer 7 health check configuration of a port forwarding rule.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyHealthCheckConfigRequest
         /// </param>
@@ -21171,6 +24363,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyHealthCheckConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the Layer 4 or Layer 7 health check configuration of a port forwarding rule.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyHealthCheckConfigRequest
         /// </param>
@@ -21220,6 +24417,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyHealthCheckConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the Layer 4 or Layer 7 health check configuration of a port forwarding rule.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyHealthCheckConfigRequest
         /// </param>
@@ -21233,6 +24435,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return ModifyHealthCheckConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the Layer 4 or Layer 7 health check configuration of a port forwarding rule.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyHealthCheckConfigRequest
         /// </param>
@@ -21246,6 +24453,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await ModifyHealthCheckConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables HTTP/2 for the forwarding rule of a website.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> This operation is suitable only for Anti-DDoS Proxy (Chinese Mainland).</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyHttp2EnableRequest
         /// </param>
@@ -21291,6 +24510,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyHttp2EnableResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables HTTP/2 for the forwarding rule of a website.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> This operation is suitable only for Anti-DDoS Proxy (Chinese Mainland).</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyHttp2EnableRequest
         /// </param>
@@ -21336,6 +24567,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyHttp2EnableResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables HTTP/2 for the forwarding rule of a website.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> This operation is suitable only for Anti-DDoS Proxy (Chinese Mainland).</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyHttp2EnableRequest
         /// </param>
@@ -21349,6 +24592,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return ModifyHttp2EnableWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables HTTP/2 for the forwarding rule of a website.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> This operation is suitable only for Anti-DDoS Proxy (Chinese Mainland).</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyHttp2EnableRequest
         /// </param>
@@ -21364,7 +24619,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例变配  类似bss的变配 </para>
+        /// <para>Modifies the specifications of an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21462,7 +24717,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例变配  类似bss的变配 </para>
+        /// <para>Modifies the specifications of an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21560,7 +24815,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例变配  类似bss的变配 </para>
+        /// <para>Modifies the specifications of an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21578,7 +24833,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例变配  类似bss的变配 </para>
+        /// <para>Modifies the specifications of an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21596,7 +24851,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例备注</para>
+        /// <para>Modifies the remark of an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21642,7 +24897,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例备注</para>
+        /// <para>Modifies the remark of an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21688,7 +24943,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例备注</para>
+        /// <para>Modifies the remark of an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21706,7 +24961,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例备注</para>
+        /// <para>Modifies the remark of an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21724,7 +24979,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑端口转发规则的会话保持和DDoS防护策略设置</para>
+        /// <para>Modifies the session persistence and DDoS mitigation policy settings for a port forwarding rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21782,7 +25037,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑端口转发规则的会话保持和DDoS防护策略设置</para>
+        /// <para>Modifies the session persistence and DDoS mitigation policy settings for a port forwarding rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21840,7 +25095,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑端口转发规则的会话保持和DDoS防护策略设置</para>
+        /// <para>Modifies the session persistence and DDoS mitigation policy settings for a port forwarding rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21858,7 +25113,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑端口转发规则的会话保持和DDoS防护策略设置</para>
+        /// <para>Modifies the session persistence and DDoS mitigation policy settings for a port forwarding rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21874,6 +25129,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await ModifyNetworkRuleAttributeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Specifies whether to enable the Online Certificate Status Protocol (OCSP) feature.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This feature is available only for a website that supports HTTPS. If HTTPS is selected for Protocol, we recommend that you enable this feature.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyOcspStatusRequest
         /// </param>
@@ -21915,6 +25180,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyOcspStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Specifies whether to enable the Online Certificate Status Protocol (OCSP) feature.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This feature is available only for a website that supports HTTPS. If HTTPS is selected for Protocol, we recommend that you enable this feature.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyOcspStatusRequest
         /// </param>
@@ -21956,6 +25231,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyOcspStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Specifies whether to enable the Online Certificate Status Protocol (OCSP) feature.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This feature is available only for a website that supports HTTPS. If HTTPS is selected for Protocol, we recommend that you enable this feature.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyOcspStatusRequest
         /// </param>
@@ -21969,6 +25254,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return ModifyOcspStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Specifies whether to enable the Online Certificate Status Protocol (OCSP) feature.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This feature is available only for a website that supports HTTPS. If HTTPS is selected for Protocol, we recommend that you enable this feature.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyOcspStatusRequest
         /// </param>
@@ -21984,8 +25279,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改端口接入配置</para>
+        /// <para>Modifies a port forwarding rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation can be used with Terraform. For more information, see <a href="https://help.aliyun.com/document_detail/95820.html">What is Terraform</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyPortRequest
@@ -22046,8 +25346,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改端口接入配置</para>
+        /// <para>Modifies a port forwarding rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation can be used with Terraform. For more information, see <a href="https://help.aliyun.com/document_detail/95820.html">What is Terraform</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyPortRequest
@@ -22108,8 +25413,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改端口接入配置</para>
+        /// <para>Modifies a port forwarding rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation can be used with Terraform. For more information, see <a href="https://help.aliyun.com/document_detail/95820.html">What is Terraform</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyPortRequest
@@ -22126,8 +25436,13 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改端口接入配置</para>
+        /// <para>Modifies a port forwarding rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation can be used with Terraform. For more information, see <a href="https://help.aliyun.com/document_detail/95820.html">What is Terraform</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyPortRequest
@@ -22142,6 +25457,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await ModifyPortWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures AI-based intelligent protection for non-website services.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyPortAutoCcStatusRequest
         /// </param>
@@ -22187,6 +25507,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyPortAutoCcStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures AI-based intelligent protection for non-website services.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyPortAutoCcStatusRequest
         /// </param>
@@ -22232,6 +25557,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyPortAutoCcStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures AI-based intelligent protection for non-website services.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyPortAutoCcStatusRequest
         /// </param>
@@ -22245,6 +25575,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return ModifyPortAutoCcStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures AI-based intelligent protection for non-website services.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyPortAutoCcStatusRequest
         /// </param>
@@ -22260,7 +25595,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改弹性qps模式</para>
+        /// <para>Switches between the metering methods of the burstable clean bandwidth feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22306,7 +25641,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改弹性qps模式</para>
+        /// <para>Switches between the metering methods of the burstable clean bandwidth feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22352,7 +25687,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改弹性qps模式</para>
+        /// <para>Switches between the metering methods of the burstable clean bandwidth feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22370,7 +25705,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改弹性qps模式</para>
+        /// <para>Switches between the metering methods of the burstable clean bandwidth feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22386,6 +25721,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await ModifyQpsModeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a scenario-specific custom policy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifySceneDefensePolicyRequest
         /// </param>
@@ -22439,6 +25779,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifySceneDefensePolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a scenario-specific custom policy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifySceneDefensePolicyRequest
         /// </param>
@@ -22492,6 +25837,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifySceneDefensePolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a scenario-specific custom policy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifySceneDefensePolicyRequest
         /// </param>
@@ -22505,6 +25855,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return ModifySceneDefensePolicyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a scenario-specific custom policy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifySceneDefensePolicyRequest
         /// </param>
@@ -22518,6 +25873,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await ModifySceneDefensePolicyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the scheduling rule of Sec-Traffic Manager.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifySchedulerRuleRequest
         /// </param>
@@ -22571,6 +25931,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifySchedulerRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the scheduling rule of Sec-Traffic Manager.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifySchedulerRuleRequest
         /// </param>
@@ -22624,6 +25989,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifySchedulerRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the scheduling rule of Sec-Traffic Manager.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifySchedulerRuleRequest
         /// </param>
@@ -22637,6 +26007,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return ModifySchedulerRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the scheduling rule of Sec-Traffic Manager.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifySchedulerRuleRequest
         /// </param>
@@ -22652,7 +26027,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改证书配置</para>
+        /// <para>Modifies the TLS security policy of a website forwarding rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22702,7 +26077,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改证书配置</para>
+        /// <para>Modifies the TLS security policy of a website forwarding rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22752,7 +26127,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改证书配置</para>
+        /// <para>Modifies the TLS security policy of a website forwarding rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22770,7 +26145,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改证书配置</para>
+        /// <para>Modifies the TLS security policy of a website forwarding rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22786,6 +26161,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await ModifyTlsConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the mode of the intelligent protection feature for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebAIProtectModeRequest
         /// </param>
@@ -22831,6 +26211,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebAIProtectModeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the mode of the intelligent protection feature for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebAIProtectModeRequest
         /// </param>
@@ -22876,6 +26261,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebAIProtectModeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the mode of the intelligent protection feature for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebAIProtectModeRequest
         /// </param>
@@ -22889,6 +26279,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return ModifyWebAIProtectModeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the mode of the intelligent protection feature for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebAIProtectModeRequest
         /// </param>
@@ -22902,6 +26297,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await ModifyWebAIProtectModeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the Intelligent Protection policy for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebAIProtectSwitchRequest
         /// </param>
@@ -22947,6 +26347,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebAIProtectSwitchResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the Intelligent Protection policy for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebAIProtectSwitchRequest
         /// </param>
@@ -22992,6 +26397,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebAIProtectSwitchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the Intelligent Protection policy for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebAIProtectSwitchRequest
         /// </param>
@@ -23005,6 +26415,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return ModifyWebAIProtectSwitchWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the Intelligent Protection policy for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebAIProtectSwitchRequest
         /// </param>
@@ -23018,6 +26433,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await ModifyWebAIProtectSwitchWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the access mode for website services.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebAccessModeRequest
         /// </param>
@@ -23059,6 +26479,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebAccessModeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the access mode for website services.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebAccessModeRequest
         /// </param>
@@ -23100,6 +26525,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebAccessModeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the access mode for website services.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebAccessModeRequest
         /// </param>
@@ -23113,6 +26543,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return ModifyWebAccessModeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the access mode for website services.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebAccessModeRequest
         /// </param>
@@ -23126,6 +26561,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await ModifyWebAccessModeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the blocked regions for Location Blacklist (domain-specific) of website services.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebAreaBlockRequest
         /// </param>
@@ -23171,6 +26611,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebAreaBlockResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the blocked regions for Location Blacklist (domain-specific) of website services.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebAreaBlockRequest
         /// </param>
@@ -23216,6 +26661,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebAreaBlockResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the blocked regions for Location Blacklist (domain-specific) of website services.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebAreaBlockRequest
         /// </param>
@@ -23229,6 +26679,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return ModifyWebAreaBlockWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the blocked regions for Location Blacklist (domain-specific) of website services.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebAreaBlockRequest
         /// </param>
@@ -23242,6 +26697,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await ModifyWebAreaBlockWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the status of the Location Blacklist feature for website services (for domain names).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation sets the status of the Location Blacklist feature for website services (for domain names).</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The single-user queries per second (QPS) limit for this operation is 10. API calls that exceed the limit are throttled, which may affect your business. We recommend that you call this operation at an appropriate rate.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyWebAreaBlockSwitchRequest
         /// </param>
@@ -23287,6 +26754,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebAreaBlockSwitchResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the status of the Location Blacklist feature for website services (for domain names).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation sets the status of the Location Blacklist feature for website services (for domain names).</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The single-user queries per second (QPS) limit for this operation is 10. API calls that exceed the limit are throttled, which may affect your business. We recommend that you call this operation at an appropriate rate.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyWebAreaBlockSwitchRequest
         /// </param>
@@ -23332,6 +26811,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebAreaBlockSwitchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the status of the Location Blacklist feature for website services (for domain names).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation sets the status of the Location Blacklist feature for website services (for domain names).</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The single-user queries per second (QPS) limit for this operation is 10. API calls that exceed the limit are throttled, which may affect your business. We recommend that you call this operation at an appropriate rate.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyWebAreaBlockSwitchRequest
         /// </param>
@@ -23345,6 +26836,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return ModifyWebAreaBlockSwitchWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the status of the Location Blacklist feature for website services (for domain names).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation sets the status of the Location Blacklist feature for website services (for domain names).</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The single-user queries per second (QPS) limit for this operation is 10. API calls that exceed the limit are throttled, which may affect your business. We recommend that you call this operation at an appropriate rate.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyWebAreaBlockSwitchRequest
         /// </param>
@@ -23360,7 +26863,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>统一全局CC开关</para>
+        /// <para>Enables or disables the HTTP flood mitigation feature for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23406,7 +26909,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>统一全局CC开关</para>
+        /// <para>Enables or disables the HTTP flood mitigation feature for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23452,7 +26955,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>统一全局CC开关</para>
+        /// <para>Enables or disables the HTTP flood mitigation feature for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23470,7 +26973,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>统一全局CC开关</para>
+        /// <para>Enables or disables the HTTP flood mitigation feature for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23489,6 +26992,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         /// <term><b>Deprecated</b></term>
         /// 
         /// OpenAPI ModifyWebCCRule is deprecated, please use ddoscoo::2020-01-01::ConfigWebCCRuleV2 instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a custom rule for website business frequency control protection (HTTP flood protection).</para>
+        /// </summary>
         /// 
         /// <param name="request">
         /// ModifyWebCCRuleRequest
@@ -23565,6 +27073,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         /// 
         /// OpenAPI ModifyWebCCRule is deprecated, please use ddoscoo::2020-01-01::ConfigWebCCRuleV2 instead.
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a custom rule for website business frequency control protection (HTTP flood protection).</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebCCRuleRequest
         /// </param>
@@ -23640,6 +27153,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         /// 
         /// OpenAPI ModifyWebCCRule is deprecated, please use ddoscoo::2020-01-01::ConfigWebCCRuleV2 instead.
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a custom rule for website business frequency control protection (HTTP flood protection).</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebCCRuleRequest
         /// </param>
@@ -23659,6 +27177,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
         /// 
         /// OpenAPI ModifyWebCCRule is deprecated, please use ddoscoo::2020-01-01::ConfigWebCCRuleV2 instead.
         /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a custom rule for website business frequency control protection (HTTP flood protection).</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebCCRuleRequest
         /// </param>
@@ -23674,6 +27197,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await ModifyWebCCRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the custom rule of the Static Page Caching policy for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebCacheCustomRuleRequest
         /// </param>
@@ -23719,6 +27247,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebCacheCustomRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the custom rule of the Static Page Caching policy for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebCacheCustomRuleRequest
         /// </param>
@@ -23764,6 +27297,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebCacheCustomRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the custom rule of the Static Page Caching policy for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebCacheCustomRuleRequest
         /// </param>
@@ -23777,6 +27315,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return ModifyWebCacheCustomRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the custom rule of the Static Page Caching policy for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebCacheCustomRuleRequest
         /// </param>
@@ -23790,6 +27333,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await ModifyWebCacheCustomRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the cache mode of the Static Page Caching policy for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebCacheModeRequest
         /// </param>
@@ -23835,6 +27383,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebCacheModeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the cache mode of the Static Page Caching policy for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebCacheModeRequest
         /// </param>
@@ -23880,6 +27433,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebCacheModeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the cache mode of the Static Page Caching policy for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebCacheModeRequest
         /// </param>
@@ -23893,6 +27451,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return ModifyWebCacheModeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the cache mode of the Static Page Caching policy for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebCacheModeRequest
         /// </param>
@@ -23906,6 +27469,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await ModifyWebCacheModeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the Static Page Caching policy for a website.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyWebCacheSwitch operation to enable or disable the Static Page Caching policy for a website.</para>
+        /// <h3>Limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyWebCacheSwitchRequest
         /// </param>
@@ -23951,6 +27526,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebCacheSwitchResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the Static Page Caching policy for a website.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyWebCacheSwitch operation to enable or disable the Static Page Caching policy for a website.</para>
+        /// <h3>Limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyWebCacheSwitchRequest
         /// </param>
@@ -23996,6 +27583,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebCacheSwitchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the Static Page Caching policy for a website.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyWebCacheSwitch operation to enable or disable the Static Page Caching policy for a website.</para>
+        /// <h3>Limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyWebCacheSwitchRequest
         /// </param>
@@ -24009,6 +27608,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return ModifyWebCacheSwitchWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the Static Page Caching policy for a website.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the ModifyWebCacheSwitch operation to enable or disable the Static Page Caching policy for a website.</para>
+        /// <h3>Limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyWebCacheSwitchRequest
         /// </param>
@@ -24022,6 +27633,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await ModifyWebCacheSwitchWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the Black Lists and White Lists (Domain Names) policy for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebIpSetSwitchRequest
         /// </param>
@@ -24067,6 +27683,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebIpSetSwitchResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the Black Lists and White Lists (Domain Names) policy for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebIpSetSwitchRequest
         /// </param>
@@ -24112,6 +27733,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebIpSetSwitchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the Black Lists and White Lists (Domain Names) policy for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebIpSetSwitchRequest
         /// </param>
@@ -24125,6 +27751,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return ModifyWebIpSetSwitchWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the Black Lists and White Lists (Domain Names) policy for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebIpSetSwitchRequest
         /// </param>
@@ -24138,6 +27769,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await ModifyWebIpSetSwitchWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or edits a precise access control rule for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebPreciseAccessRuleRequest
         /// </param>
@@ -24187,6 +27823,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebPreciseAccessRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or edits a precise access control rule for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebPreciseAccessRuleRequest
         /// </param>
@@ -24236,6 +27877,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebPreciseAccessRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or edits a precise access control rule for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebPreciseAccessRuleRequest
         /// </param>
@@ -24249,6 +27895,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return ModifyWebPreciseAccessRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or edits a precise access control rule for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebPreciseAccessRuleRequest
         /// </param>
@@ -24262,6 +27913,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await ModifyWebPreciseAccessRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables accurate access control for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebPreciseAccessSwitchRequest
         /// </param>
@@ -24307,6 +27963,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebPreciseAccessSwitchResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables accurate access control for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebPreciseAccessSwitchRequest
         /// </param>
@@ -24352,6 +28013,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ModifyWebPreciseAccessSwitchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables accurate access control for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebPreciseAccessSwitchRequest
         /// </param>
@@ -24365,6 +28031,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return ModifyWebPreciseAccessSwitchWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables accurate access control for a website.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyWebPreciseAccessSwitchRequest
         /// </param>
@@ -24380,7 +28051,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改已经创建的网站业务转发规则</para>
+        /// <para>Modifies an existing website forwarding rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24446,7 +28117,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改已经创建的网站业务转发规则</para>
+        /// <para>Modifies an existing website forwarding rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24512,7 +28183,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改已经创建的网站业务转发规则</para>
+        /// <para>Modifies an existing website forwarding rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24530,7 +28201,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改已经创建的网站业务转发规则</para>
+        /// <para>Modifies an existing website forwarding rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24546,6 +28217,24 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await ModifyWebRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Release an expired Anti-DDoS Proxy instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After an Anti-DDoS instance expires, it stops providing DDoS attack protection services. Seven days after expiration, it stops forwarding service traffic.</para>
+        /// <list type="bullet">
+        /// <item><description>We recommend that you renew your instance before it expires to avoid impacts on service protection and forwarding. You can call <a href="https://help.aliyun.com/document_detail/91478.html">DescribeInstances</a> to query the expiration time of an instance. To renew the instance, go to the <a href="https://yundun.console.aliyun.com/?p=ddoscoo">Anti-DDoS console</a> to perform the operation.</description></item>
+        /// <item><description>If you do not plan to renew the instance, we recommend that you restore the protected service IP (no longer use the Anti-DDoS IP as the service IP) or service DNS parsing (no longer parse service traffic to the CNAME address of Anti-DDoS) before the Anti-DDoS instance expires. This prevents service traffic from being forwarded to the Anti-DDoS instance and avoids disruption to normal service forwarding when the instance expires.
+        /// After the instance expires, you can call this operation to release the specified Anti-DDoS instance.<remarks>
+        /// <para>Before releasing the specified instance, ensure that you have restored the protected service IP or service DNS parsing.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ReleaseInstanceRequest
         /// </param>
@@ -24583,6 +28272,24 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ReleaseInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Release an expired Anti-DDoS Proxy instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After an Anti-DDoS instance expires, it stops providing DDoS attack protection services. Seven days after expiration, it stops forwarding service traffic.</para>
+        /// <list type="bullet">
+        /// <item><description>We recommend that you renew your instance before it expires to avoid impacts on service protection and forwarding. You can call <a href="https://help.aliyun.com/document_detail/91478.html">DescribeInstances</a> to query the expiration time of an instance. To renew the instance, go to the <a href="https://yundun.console.aliyun.com/?p=ddoscoo">Anti-DDoS console</a> to perform the operation.</description></item>
+        /// <item><description>If you do not plan to renew the instance, we recommend that you restore the protected service IP (no longer use the Anti-DDoS IP as the service IP) or service DNS parsing (no longer parse service traffic to the CNAME address of Anti-DDoS) before the Anti-DDoS instance expires. This prevents service traffic from being forwarded to the Anti-DDoS instance and avoids disruption to normal service forwarding when the instance expires.
+        /// After the instance expires, you can call this operation to release the specified Anti-DDoS instance.<remarks>
+        /// <para>Before releasing the specified instance, ensure that you have restored the protected service IP or service DNS parsing.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ReleaseInstanceRequest
         /// </param>
@@ -24620,6 +28327,24 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return TeaModel.ToObject<ReleaseInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Release an expired Anti-DDoS Proxy instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After an Anti-DDoS instance expires, it stops providing DDoS attack protection services. Seven days after expiration, it stops forwarding service traffic.</para>
+        /// <list type="bullet">
+        /// <item><description>We recommend that you renew your instance before it expires to avoid impacts on service protection and forwarding. You can call <a href="https://help.aliyun.com/document_detail/91478.html">DescribeInstances</a> to query the expiration time of an instance. To renew the instance, go to the <a href="https://yundun.console.aliyun.com/?p=ddoscoo">Anti-DDoS console</a> to perform the operation.</description></item>
+        /// <item><description>If you do not plan to renew the instance, we recommend that you restore the protected service IP (no longer use the Anti-DDoS IP as the service IP) or service DNS parsing (no longer parse service traffic to the CNAME address of Anti-DDoS) before the Anti-DDoS instance expires. This prevents service traffic from being forwarded to the Anti-DDoS instance and avoids disruption to normal service forwarding when the instance expires.
+        /// After the instance expires, you can call this operation to release the specified Anti-DDoS instance.<remarks>
+        /// <para>Before releasing the specified instance, ensure that you have restored the protected service IP or service DNS parsing.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ReleaseInstanceRequest
         /// </param>
@@ -24633,6 +28358,24 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return ReleaseInstanceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Release an expired Anti-DDoS Proxy instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After an Anti-DDoS instance expires, it stops providing DDoS attack protection services. Seven days after expiration, it stops forwarding service traffic.</para>
+        /// <list type="bullet">
+        /// <item><description>We recommend that you renew your instance before it expires to avoid impacts on service protection and forwarding. You can call <a href="https://help.aliyun.com/document_detail/91478.html">DescribeInstances</a> to query the expiration time of an instance. To renew the instance, go to the <a href="https://yundun.console.aliyun.com/?p=ddoscoo">Anti-DDoS console</a> to perform the operation.</description></item>
+        /// <item><description>If you do not plan to renew the instance, we recommend that you restore the protected service IP (no longer use the Anti-DDoS IP as the service IP) or service DNS parsing (no longer parse service traffic to the CNAME address of Anti-DDoS) before the Anti-DDoS instance expires. This prevents service traffic from being forwarded to the Anti-DDoS instance and avoids disruption to normal service forwarding when the instance expires.
+        /// After the instance expires, you can call this operation to release the specified Anti-DDoS instance.<remarks>
+        /// <para>Before releasing the specified instance, ensure that you have restored the protected service IP or service DNS parsing.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ReleaseInstanceRequest
         /// </param>
@@ -24648,8 +28391,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>切换流量调度器</para>
+        /// <para>Switches service traffic to an Anti-DDoS Pro or Anti-DDoS Premium instance for scrubbing or switches service traffic back to the associated cloud resources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the SwitchSchedulerRule operation to modify the resources to which service traffic is switched for a scheduling rule. For example, you can switch service traffic to an Anti-DDoS Pro or Anti-DDoS Premium instance for scrubbing or switch the service traffic back to the associated cloud resources.
+        /// Before you call this operation, you must have created a scheduling rule by calling the <a href="https://help.aliyun.com/document_detail/157479.html">CreateSchedulerRule</a> operation.</para>
+        /// <h3>Limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SwitchSchedulerRuleRequest
@@ -24698,8 +28449,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>切换流量调度器</para>
+        /// <para>Switches service traffic to an Anti-DDoS Pro or Anti-DDoS Premium instance for scrubbing or switches service traffic back to the associated cloud resources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the SwitchSchedulerRule operation to modify the resources to which service traffic is switched for a scheduling rule. For example, you can switch service traffic to an Anti-DDoS Pro or Anti-DDoS Premium instance for scrubbing or switch the service traffic back to the associated cloud resources.
+        /// Before you call this operation, you must have created a scheduling rule by calling the <a href="https://help.aliyun.com/document_detail/157479.html">CreateSchedulerRule</a> operation.</para>
+        /// <h3>Limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SwitchSchedulerRuleRequest
@@ -24748,8 +28507,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>切换流量调度器</para>
+        /// <para>Switches service traffic to an Anti-DDoS Pro or Anti-DDoS Premium instance for scrubbing or switches service traffic back to the associated cloud resources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the SwitchSchedulerRule operation to modify the resources to which service traffic is switched for a scheduling rule. For example, you can switch service traffic to an Anti-DDoS Pro or Anti-DDoS Premium instance for scrubbing or switch the service traffic back to the associated cloud resources.
+        /// Before you call this operation, you must have created a scheduling rule by calling the <a href="https://help.aliyun.com/document_detail/157479.html">CreateSchedulerRule</a> operation.</para>
+        /// <h3>Limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SwitchSchedulerRuleRequest
@@ -24766,8 +28533,16 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>切换流量调度器</para>
+        /// <para>Switches service traffic to an Anti-DDoS Pro or Anti-DDoS Premium instance for scrubbing or switches service traffic back to the associated cloud resources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call the SwitchSchedulerRule operation to modify the resources to which service traffic is switched for a scheduling rule. For example, you can switch service traffic to an Anti-DDoS Pro or Anti-DDoS Premium instance for scrubbing or switch the service traffic back to the associated cloud resources.
+        /// Before you call this operation, you must have created a scheduling rule by calling the <a href="https://help.aliyun.com/document_detail/157479.html">CreateSchedulerRule</a> operation.</para>
+        /// <h3>Limits</h3>
+        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SwitchSchedulerRuleRequest

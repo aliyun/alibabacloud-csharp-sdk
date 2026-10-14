@@ -10,16 +10,41 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeWebPreciseAccessRuleRequest : TeaModel {
         /// <summary>
+        /// <para>The domain name of the website.</para>
+        /// <remarks>
+        /// <para>A forwarding rule must be configured for the domain name. You can call <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> to query all domain names.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="http://www.aliyun.com">www.aliyun.com</a></para>
         /// </summary>
         [NameInMap("Domains")]
         [Validation(Required=false)]
         public List<string> Domains { get; set; }
 
+        /// <summary>
+        /// <para>The source of the rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>manual</b> (default): The rule is manually created.</para>
+        /// </description></item>
+        /// <item><description><para><b>clover</b>: The rule is automatically generated.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>manual</para>
+        /// </summary>
         [NameInMap("Owner")]
         [Validation(Required=false)]
         public string Owner { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the resource group to which the Anti-DDoS Pro instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

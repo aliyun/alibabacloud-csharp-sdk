@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeInstanceSpecsRequest : TeaModel {
         /// <summary>
+        /// <para>The IDs of the Anti-DDoS Pro or Anti-DDoS Premium instances to query.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceIds")]

@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeDDosEventMaxRequest : TeaModel {
         /// <summary>
+        /// <para>The end of the time range to query. This value is a UNIX timestamp. Unit: seconds.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1604073600</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -21,7 +25,11 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         public string Ip { get; set; }
 
         /// <summary>
+        /// <para>The start of the time range to query. This value is a UNIX timestamp. Unit: seconds.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1598889600</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

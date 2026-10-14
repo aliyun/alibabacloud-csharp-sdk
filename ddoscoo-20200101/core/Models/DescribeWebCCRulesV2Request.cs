@@ -10,14 +10,18 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeWebCCRulesV2Request : TeaModel {
         /// <summary>
+        /// <para>The domain name of the website that is added to Anti-DDoS Pro and Anti-DDoS Premium for protection.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para><a href="http://www.aliyun.com">www.aliyun.com</a></para>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
 
         /// <summary>
+        /// <para>The start index, which specifies the position from which the results are displayed. Default value: <b>0</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -26,6 +30,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         public string Offset { get; set; }
 
         /// <summary>
+        /// <para>The source of the rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>manual</b> (default): manually added.</description></item>
+        /// <item><description><b>clover</b>: automatically generated.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>manual</para>
         /// </summary>
@@ -34,8 +44,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         public string Owner { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Maximum value: <b>20</b>. Default value: <b>20</b>.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

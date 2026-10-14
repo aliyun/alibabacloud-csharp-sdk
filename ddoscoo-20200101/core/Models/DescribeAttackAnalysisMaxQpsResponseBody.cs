@@ -9,10 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeAttackAnalysisMaxQpsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The peak value of the DDoS attack. Unit: QPS.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>41652</para>
+        /// </summary>
         [NameInMap("Qps")]
         [Validation(Required=false)]
         public long? Qps { get; set; }
 
+        /// <summary>
+        /// <para>The ID of this request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8DFB602D-1AAC-46C4-90F2-C84086E7A6E4</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

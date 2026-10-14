@@ -10,25 +10,52 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribePortMaxConnsRequest : TeaModel {
         /// <summary>
+        /// <para>The end time of the query. This value is a UNIX timestamp. Unit: seconds.</para>
+        /// <remarks>
+        /// <para>The value must be on the minute.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1583683200</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// <remarks>
+        /// <para>You can invoke <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> to query the IDs of all Anti-DDoS Pro or Anti-DDoS Premium instances.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ddoscoo-cn-mp91j1ao****</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the resource group to which the Anti-DDoS Pro or Anti-DDoS Premium instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
+        /// <para>The start time of the query. This value is a UNIX timestamp. Unit: seconds.</para>
+        /// <remarks>
+        /// <para>The value must be on the minute.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1582992000</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

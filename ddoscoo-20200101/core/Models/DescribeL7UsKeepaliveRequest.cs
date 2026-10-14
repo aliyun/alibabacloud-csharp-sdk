@@ -9,6 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeL7UsKeepaliveRequest : TeaModel {
+        /// <summary>
+        /// <para>The domain name of the website service.</para>
+        /// <remarks>
+        /// <para>The domain name must have a website service forwarding rule configured. You can call <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> to query all domain names.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="http://www.aliyun.com">www.aliyun.com</a></para>
+        /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }

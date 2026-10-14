@@ -10,7 +10,19 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeHealthCheckListRequest : TeaModel {
         /// <summary>
+        /// <para>The information about the port forwarding rule. This parameter is a JSON string. The string contains the following fields:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>InstanceId</b>: the ID of the instance. This field is required and must be of the STRING type.</para>
+        /// </description></item>
+        /// <item><description><para><b>Protocol</b>: the forwarding protocol. This field is required and must be of the STRING type. Valid values: <b>tcp</b> and <b>udp</b>.</para>
+        /// </description></item>
+        /// <item><description><para><b>FrontendPort</b>: the forwarding port. This field is required and must be of the INTEGER type.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;InstanceId&quot;:&quot;ddoscoo-cn-mp91j1ao****&quot;,&quot;Protocol&quot;:&quot;tcp&quot;,&quot;FrontendPort&quot;:8080}]</para>
         /// </summary>
         [NameInMap("NetworkRules")]
         [Validation(Required=false)]

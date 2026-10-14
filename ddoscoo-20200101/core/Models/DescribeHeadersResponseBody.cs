@@ -9,14 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
 {
     public class DescribeHeadersResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The custom header information.</para>
+        /// </summary>
         [NameInMap("CustomHeader")]
         [Validation(Required=false)]
         public DescribeHeadersResponseBodyCustomHeader CustomHeader { get; set; }
         public class DescribeHeadersResponseBodyCustomHeader : TeaModel {
+            /// <summary>
+            /// <para>The domain name of the website.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>example.aliyundoc.com</para>
+            /// </summary>
             [NameInMap("Domain")]
             [Validation(Required=false)]
             public string Domain { get; set; }
 
+            /// <summary>
+            /// <para>The custom headers. The value is a string that consists of a JSON object. The JSON object contains the following fields:</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;X-Forwarded-ClientSrcPort&quot;:&quot;&quot;,&quot;header1&quot;:&quot;hLeLele&quot;}</para>
+            /// </summary>
             [NameInMap("Headers")]
             [Validation(Required=false)]
             public string Headers { get; set; }
@@ -24,6 +39,8 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         }
 
         /// <summary>
+        /// <para>The request header that can be used to mark the Layer 7 attack. The value is a string that consists of a JSON object. The JSON object contains the following fields:</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;X-Client-IP&quot;:true,&quot;X-True-IP&quot;:true,&quot;Web-Server-Type&quot;:true,&quot;WL-Proxy-Client-IP&quot;:true,&quot;X-Forwarded-Proto&quot;:true}</para>
         /// 
@@ -34,6 +51,12 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [Validation(Required=false)]
         public string EmbeddedHeaders { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>48BC7BA5-69BE-5C31-A080-AFF2431AE48D</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
