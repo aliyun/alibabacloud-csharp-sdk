@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListAppPluginsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why access was denied.</para>
+        /// <para>The detailed reason why access is denied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retry is allowed.</para>
+        /// <para>Indicates whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The application name to query.</para>
+        /// <para>The name of the application to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dewuApp</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message, which is used to replace the <c>%s</c> variable in the <b>ErrMessage</b> response parameter.</para>
+        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the error message of the <b>ErrMessage</b> response parameter.</para>
         /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the DtsJobId request parameter is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the value of the <b>DtsJobId</b> request parameter is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,15 +63,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error arguments.</para>
+        /// <para>The returned error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per query.</para>
-        /// <para>Valid values: 10 to 100. Default value: 20.</para>
+        /// <para>The maximum number of results to return per query. Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -88,7 +87,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public List<ListAppPluginsResponseBodyModule> Module { get; set; }
         public class ListAppPluginsResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>The plug-in code.</para>
+            /// <para>The code of the plugin.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -108,7 +107,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string ConfigItems { get; set; }
 
             /// <summary>
-            /// <para>The plug-in description.</para>
+            /// <para>The description of the plugin.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fail to decode json</para>
@@ -118,7 +117,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Desc { get; set; }
 
             /// <summary>
-            /// <para>The image display mode. Valid values:</para>
+            /// <para>The image display setting. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b> (None): Not displayed.</description></item>
             /// <item><description><b>1</b> (Always): Always displayed.</description></item>
@@ -132,8 +131,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? Display { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether scheduled delivery of resource snapshots is enabled.</para>
-            /// <para>Valid values:</para>
+            /// <para>Specifies whether to enable scheduled delivery of resource snapshots. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true: Enabled.</description></item>
             /// <item><description>false: Disabled.</description></item>
@@ -157,7 +155,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Env { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in seconds.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
             /// 
             /// <b>Example:</b>
@@ -168,7 +166,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The modification time. The value is in the ISO 8601 format and the UTC time zone.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
             /// 
             /// <b>Example:</b>
@@ -189,7 +187,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Hooks { get; set; }
 
             /// <summary>
-            /// <para>The plug-in description.</para>
+            /// <para>The description of the plugin.</para>
             /// 
             /// <b>Example:</b>
             /// <para>@lALPM2AwTOg9IUHNAUDNAUA</para>
@@ -209,7 +207,11 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the entry is deleted. Valid values: 0 (no) and 1 (yes).</para>
+            /// <para>Indicates whether the plugin is deleted. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: No.</description></item>
+            /// <item><description>1: Yes.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -219,10 +221,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? IsDeleted { get; set; }
 
             /// <summary>
-            /// <para>The plug-in name.</para>
+            /// <para>The name of the plugin.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>文件名</para>
+            /// <para>File name</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -239,7 +241,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string SkillHeader { get; set; }
 
             /// <summary>
-            /// <para>The category labels.</para>
+            /// <para>The category tags.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{\&quot;Key\&quot;: \&quot;kubernetes.io/cluster-id\&quot;, \&quot;Value\&quot;: \&quot;cc67198b13db948c9848599654da5586e\&quot;}, {\&quot;Key\&quot;: \&quot;created-by\&quot;, \&quot;Value\&quot;: \&quot;alibabacloud-imagecache-controller\&quot;}]</para>
@@ -251,7 +253,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         }
 
         /// <summary>
-        /// <para>The token for the next query. This parameter is empty if no more results are available.</para>
+        /// <para>The token used to start the next query. If there is no next query, this value is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</para>
@@ -284,7 +286,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>系统异常</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retry is allowed.</para>
+        /// <para>Indicates whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message, which is used to replace the <c>%s</c> placeholder in the <b>ErrMessage</b> parameter.</para>
+        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the error message returned by <b>ErrMessage</b>.</para>
         /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the value of the request parameter <b>DtsJobId</b> is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the request parameter <b>DtsJobId</b> is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,20 +63,20 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error parameters.</para>
+        /// <para>The returned error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>The data table module. Valid values:</para>
+        /// <para>The data table module.</para>
         /// <list type="bullet">
         /// <item><description><para>ABTest: experiment data table</para>
         /// </description></item>
         /// <item><description><para>ExperimentTool: experiment tool table</para>
         /// </description></item>
-        /// <item><description><para>DataDiagnosis: data modeling diagnostics</para>
+        /// <item><description><para>DataDiagnosis: data diagnosis</para>
         /// </description></item>
         /// </list>
         /// </summary>
@@ -91,12 +91,18 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             [Validation(Required=false)]
             public List<GetAppRecommendedCommoditiesResponseBodyModuleCommodities> Commodities { get; set; }
             public class GetAppRecommendedCommoditiesResponseBodyModuleCommodities : TeaModel {
+                /// <summary>
+                /// <para>The click action type. Valid values: CONSULT (add WeCom), BUY (purchase), and AUTO (automatic issuance).</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>CONSULT</para>
+                /// </summary>
                 [NameInMap("ActionType")]
                 [Validation(Required=false)]
                 public string ActionType { get; set; }
 
                 /// <summary>
-                /// <para>The commodity code. Applicable to both resource plans and marketing commodities.</para>
+                /// <para>The commodity code. This parameter applies to both resource plans and marketing commodities.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rds</para>
@@ -105,23 +111,22 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 [Validation(Required=false)]
                 public string CommodityCode { get; set; }
 
+                /// <summary>
+                /// <para>The display description of the recommendation.</para>
+                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The extension fields, such as unsupportedReason.</para>
+                /// <para>The extended fields, such as unsupportedReason.</para>
                 /// </summary>
                 [NameInMap("Extend")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> Extend { get; set; }
 
                 /// <summary>
-                /// <para>The order type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>BUY: purchase.</description></item>
-                /// <item><description>UPGRADE: upgrade.</description></item>
-                /// </list>
+                /// <para>The order type. Valid values: BUY (purchase) and UPGRADE (upgrade).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DESC</para>
@@ -141,7 +146,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public int? Priority { get; set; }
 
                 /// <summary>
-                /// <para>The marketing commodity ID. Returned only for new purchases.</para>
+                /// <para>The ID of the marketing commodity. This parameter is returned only for new purchases.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12345</para>
@@ -150,12 +155,18 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 [Validation(Required=false)]
                 public string PromotionCommodityId { get; set; }
 
+                /// <summary>
+                /// <para>The recommendation type. Valid values: COMMODITY (commodity recommendation) and ACTIVITY (promotion activity recommendation).</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>COMMODITY</para>
+                /// </summary>
                 [NameInMap("RecommendType")]
                 [Validation(Required=false)]
                 public string RecommendType { get; set; }
 
                 /// <summary>
-                /// <para>The redirect URL. Returned when redirection is required, such as for upgrades.</para>
+                /// <para>The redirect URL. This parameter is returned when a redirect is required in scenarios such as upgrades.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://ecs-workbench-disposable.aliyun.com/account/disposable/login/sst/1291612921555690/edvo2gevfh">https://ecs-workbench-disposable.aliyun.com/account/disposable/login/sst/1291612921555690/edvo2gevfh</a></para>
@@ -165,7 +176,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string RedirectUrl { get; set; }
 
                 /// <summary>
-                /// <para>The commodity status.</para>
+                /// <para>The status of the commodity.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Normal</para>
@@ -174,6 +185,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                /// <summary>
+                /// <para>The display title of the recommendation.</para>
+                /// </summary>
                 [NameInMap("Title")]
                 [Validation(Required=false)]
                 public string Title { get; set; }
@@ -206,7 +220,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>系统异常</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]

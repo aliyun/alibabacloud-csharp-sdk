@@ -32,8 +32,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The path of the file.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The file path.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://docmind-api-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/4a7f_209934244261306272_14fd429b731245a79f291c64acf3ac77">http://docmind-api-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/4a7f_209934244261306272_14fd429b731245a79f291c64acf3ac77</a></para>
@@ -43,14 +42,24 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string FileUrl { get; set; }
 
         /// <summary>
-        /// <para>The name of the file.</para>
+        /// <para>The file name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试文件</para>
+        /// <para>TestFile</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        /// <summary>
+        /// <para>The OSS object key.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>backend/detection/objects/r-0008ujvfksltf5j45n81/task-000hckiuwyau0gwn17vq.jpg</para>
+        /// </summary>
+        [NameInMap("OssKey")]
+        [Validation(Required=false)]
+        public string OssKey { get; set; }
 
     }
 

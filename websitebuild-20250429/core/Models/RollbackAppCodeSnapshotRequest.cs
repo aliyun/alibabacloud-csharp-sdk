@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class RollbackAppCodeSnapshotRequest : TeaModel {
         /// <summary>
-        /// <para>site ID</para>
+        /// <para>The site ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1067072706415168</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string SiteId { get; set; }
 
         /// <summary>
-        /// <para>Target snapshot version number</para>
+        /// <para>The target snapshot version number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1231</para>

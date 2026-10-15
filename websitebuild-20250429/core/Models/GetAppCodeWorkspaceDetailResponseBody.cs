@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppCodeWorkspaceDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>Detailed reason for access denial.</para>
+        /// <para>The detailed reason why access is denied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retry is allowed. Valid values:  </para>
+        /// <para>Specifies whether retry is allowed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false: Retry is not allowed.  </description></item>
+        /// <item><description>false: Retry is not allowed.</description></item>
         /// <item><description>true: Retry is allowed.</description></item>
         /// </list>
         /// 
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>App name.</para>
+        /// <para>The application name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>spring-cloud-b</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>Dynamic error code.</para>
+        /// <para>The dynamic error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ERROR-oo1</para>
@@ -54,9 +54,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>Dynamic error message, used to replace the <c>%s</c> placeholder in the <b>ErrMessage</b> error message.  </para>
+        /// <para>The dynamic error message. This value is used to replace the <c>%s</c> placeholder in the error message returned in the <b>ErrMessage</b> parameter.</para>
         /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the provided request parameter <b>DtsJobId</b> is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the request parameter <b>DtsJobId</b> is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>Faulty parameters</para>
+        /// <para>The error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>Application module</para>
+        /// <para>The application module.</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
@@ -90,6 +90,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             [Validation(Required=false)]
             public int? ActiveLogicalNumber { get; set; }
 
+            /// <summary>
+            /// <para>The code commit hash value.</para>
+            /// </summary>
             [NameInMap("CommitHash")]
             [Validation(Required=false)]
             public string CommitHash { get; set; }
@@ -115,7 +118,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? MaxLogicalNumber { get; set; }
 
             /// <summary>
-            /// <para>Site ID, which can be obtained by invoking the <a href="~~ListSites~~">ListSites</a> API.</para>
+            /// <para>The site ID. You can call <a href="~~ListSites~~">ListSites</a> to retrieve the site ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>865181640657408</para>
@@ -125,14 +128,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string SiteId { get; set; }
 
             /// <summary>
-            /// <para>API Guide information.</para>
+            /// <para>The operation description information.</para>
             /// </summary>
             [NameInMap("Snapshots")]
             [Validation(Required=false)]
             public List<GetAppCodeWorkspaceDetailResponseBodyModuleSnapshots> Snapshots { get; set; }
             public class GetAppCodeWorkspaceDetailResponseBodyModuleSnapshots : TeaModel {
                 /// <summary>
-                /// <para>SDK change log</para>
+                /// <para>The SDK change log.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <list type="bullet">
@@ -144,7 +147,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string ChangeLog { get; set; }
 
                 /// <summary>
-                /// <para>Creation UTC time in ISO8601 format.</para>
+                /// <para>The creation time in UTC. The time follows the ISO 8601 standard.</para>
                 /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
                 /// 
                 /// <b>Example:</b>
@@ -155,7 +158,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string GmtCreateTime { get; set; }
 
                 /// <summary>
-                /// <para>Logical value</para>
+                /// <para>The logical value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>111</para>
@@ -179,7 +182,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Error code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM.ERROR</para>
@@ -189,17 +192,17 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Abnormal message</para>
+        /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>系统异常</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Reserved parameter.</para>
+        /// <para>The reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetOssUploadPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why access is denied.</para>
+        /// <para>The detailed reason why access was denied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether a retry is allowed. Valid values:</para>
+        /// <para>Indicates whether retry is allowed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false: No retry is allowed.</description></item>
-        /// <item><description>true: A retry is allowed.</description></item>
+        /// <item><description>false: Retry is not allowed.</description></item>
+        /// <item><description>true: Retry is allowed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Policy { get; set; }
 
             /// <summary>
-            /// <para>The Security Token Service (STS) token. This parameter is null in non-STS scenarios.</para>
+            /// <para>The Security Token Service (STS) token. This value is null in non-STS scenarios.</para>
             /// 
             /// <b>Example:</b>
             /// <hr>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>系统异常</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]

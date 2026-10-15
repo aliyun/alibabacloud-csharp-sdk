@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether a retry is allowed.</para>
+        /// <para>Indicates whether retry is allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message, which is used to replace the %s variable in the ErrMessage response parameter.</para>
+        /// <para>The dynamic error message. This message is used to replace the %s variable in the ErrMessage response parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_ERROR</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// <para>The activity name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>IP网段过滤统计</para>
+                /// <para>IP segment filtering statistics</para>
                 /// </summary>
                 [NameInMap("ActivityName")]
                 [Validation(Required=false)]
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string FailReason { get; set; }
 
                 /// <summary>
-                /// <para>The issuance time.</para>
+                /// <para>The issuance time. Format: YYYY-MM-DD.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-06-01</para>
@@ -256,10 +256,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>系统异常</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]

@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string BizId { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the instance is logically deleted.</para>
+            /// <para>Indicates whether the instance is logically deleted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fase</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// <para>The end time of the event, in UNIX timestamp format.</para>
+            /// <para>The end time of the event. The value is a UNIX timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-08-23T02:14:00Z</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string GmtDelete { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the vulnerability was published, in milliseconds.</para>
+            /// <para>The timestamp when the vulnerability was published. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-01-01 00:00:00</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>The website name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>AI建站</para>
+            /// <para>AI Website Builder</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>The website configuration information.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>网站配置信息</para>
+            /// <para>Website configuration information</para>
             /// </summary>
             [NameInMap("Profile")]
             [Validation(Required=false)]
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string DeployArea { get; set; }
 
                 /// <summary>
-                /// <para>The LingXiao instance ID.</para>
+                /// <para>The Lingxiao instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12313213</para>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Slug { get; set; }
 
             /// <summary>
-            /// <para>The start time of the query. If you do not specify the start time or end time, all historical deployment records of the instance are queried.</para>
+            /// <para>The start time of the query. If you do not specify the start time or end time, all historical deployment records of the instance are queried. Specify the time in the ISO 8601 standard in the UTC (Z) time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-07-15T16:00:00Z</para>
@@ -211,14 +211,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <summary>
             /// <para>The running status of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>NotRun: not running.</description></item>
-            /// <item><description>Running: running.</description></item>
-            /// <item><description>WaitTime: waiting for TriggerTime.</description></item>
-            /// <item><description>CheckingCondition: checking branch conditions.</description></item>
-            /// <item><description>WaitResource: waiting for resources.</description></item>
-            /// <item><description>Failure: execution failed.</description></item>
-            /// <item><description>Success: execution succeeded.</description></item>
-            /// <item><description>Checking: submitted for data quality check.</description></item>
+            /// <item><description>NotRun: Not running.</description></item>
+            /// <item><description>Running: Running.</description></item>
+            /// <item><description>WaitTime: Waiting for the trigger time.</description></item>
+            /// <item><description>CheckingCondition: Checking branch conditions.</description></item>
+            /// <item><description>WaitResource: Waiting for resources.</description></item>
+            /// <item><description>Failure: Execution failed.</description></item>
+            /// <item><description>Success: Execution succeeded.</description></item>
+            /// <item><description>Checking: Submitted for data quality check.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

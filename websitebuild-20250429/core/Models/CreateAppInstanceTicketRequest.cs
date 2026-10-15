@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class CreateAppInstanceTicketRequest : TeaModel {
         /// <summary>
-        /// <para>The business ID of the customer.</para>
+        /// <para>The customer business ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WS20250801154628000001</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The client ID of the device whose access credentials need to be revoked.</para>
+        /// <para>The Client ID of the device for which you want to revoke the access credential.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d566aaf2-7c88-40a4-982f-6abef0be13c9</para>
@@ -28,6 +28,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [NameInMap("ClientId")]
         [Validation(Required=false)]
         public string ClientId { get; set; }
+
+        [NameInMap("Role")]
+        [Validation(Required=false)]
+        public string Role { get; set; }
 
     }
 

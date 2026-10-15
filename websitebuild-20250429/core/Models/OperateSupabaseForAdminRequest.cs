@@ -20,6 +20,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string BizId { get; set; }
 
+        /// <summary>
+        /// <para>The environment identifier.</para>
+        /// </summary>
         [NameInMap("Env")]
         [Validation(Required=false)]
         public string Env { get; set; }
@@ -55,7 +58,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderByClause { get; set; }
 
         /// <summary>
-        /// <para>The field by which to sort the results.</para>
+        /// <para>The column used for sorting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CreationTime</para>
@@ -65,7 +68,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderColumn { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Valid values: ASC and DESC.</para>
+        /// <para>The sort type. Valid values: ASC and DESC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DESC</para>

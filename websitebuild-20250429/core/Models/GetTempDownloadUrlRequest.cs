@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetTempDownloadUrlRequest : TeaModel {
         /// <summary>
+        /// <para>The key of the OSS object.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>backend/detection/objects/r-0008ujvfksltf5j45n81/task-000hckiuwyau0gwn17vq.jpg</para>
         /// </summary>

@@ -19,12 +19,15 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string BizId { get; set; }
 
+        /// <summary>
+        /// <para>The list of business IDs for the application instances.</para>
+        /// </summary>
         [NameInMap("BizIds")]
         [Validation(Required=false)]
         public string BizIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The start of the expiration time range.</para>
+        /// <para>The expiration start time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-12-18T14:30:00Z</para>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string EndTimeBegin { get; set; }
 
         /// <summary>
-        /// <para>The end of the expiration time range.</para>
+        /// <para>The expiration end time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-12-31T14:30:00Z</para>
@@ -65,7 +68,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query. This parameter is empty if no more results exist.</para>
+        /// <para>The token used to start the next query. This parameter is empty if no next query exists.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</para>
@@ -75,7 +78,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The field used for sorting.</para>
+        /// <para>The sort field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gmtCreated</para>
@@ -85,7 +88,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderColumn { get; set; }
 
         /// <summary>
-        /// <para>The sort type. Valid values: ASC and DESC.</para>
+        /// <para>The sort order. Valid values: ASC and DESC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DOWNGRADE</para>
@@ -115,7 +118,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The query parameter.</para>
+        /// <para>The query parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;RequestId\&quot;:\&quot;\&quot;}</para>
@@ -123,6 +126,16 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [NameInMap("Query")]
         [Validation(Required=false)]
         public string Query { get; set; }
+
+        /// <summary>
+        /// <para>The query mode. A value of CONTENT_CREATION indicates a lightweight query for the content creation site selector, which queries only published sites and does not load aggregated information such as profiles, services, and AI staff.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CONTENT_CREATION</para>
+        /// </summary>
+        [NameInMap("QueryMode")]
+        [Validation(Required=false)]
+        public string QueryMode { get; set; }
 
         /// <summary>
         /// <para>The status range.</para>

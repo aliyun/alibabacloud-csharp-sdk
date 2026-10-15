@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>The error code. The ErrorCode field is not returned if the request is successful. The ErrorCode field is returned if the request fails. For more information, see the error codes in this topic.</para>
+        /// <para>The error code. The ErrorCode field is not returned if the request is successful. If the request fails, the ErrorCode field is returned. For more information, see the error codes in this topic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -97,6 +97,16 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public SubmitMaterialTaskResponseBodyModule Module { get; set; }
         public class SubmitMaterialTaskResponseBodyModule : TeaModel {
+            /// <summary>
+            /// <para>The business group ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>xxx</para>
+            /// </summary>
+            [NameInMap("BizGroupId")]
+            [Validation(Required=false)]
+            public string BizGroupId { get; set; }
+
             /// <summary>
             /// <para>The task ID.</para>
             /// 
@@ -133,7 +143,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The root error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>系统异常</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]

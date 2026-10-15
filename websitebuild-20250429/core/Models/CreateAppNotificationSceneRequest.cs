@@ -20,6 +20,26 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
+        /// <para>The list of mobile butler delivery platform types in a JSON string array. Valid values: wechat, dingtalk, wecom, and feishu.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;feishu&quot;]</para>
+        /// </summary>
+        [NameInMap("ButlerChannelTypesJson")]
+        [Validation(Required=false)]
+        public string ButlerChannelTypesJson { get; set; }
+
+        /// <summary>
+        /// <para>The list of mobile butler notification fields in a JSON string array. This parameter is required when the butler channel is selected. A maximum of 10 fields are supported. The butler fields in JSON format.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;id&quot;,&quot;phone&quot;,&quot;name&quot;,&quot;city&quot;,&quot;message&quot;,&quot;is_deleted&quot;,&quot;updated_at&quot;,&quot;created_at&quot;,&quot;status&quot;,&quot;budget&quot;]</para>
+        /// </summary>
+        [NameInMap("ButlerFieldsJson")]
+        [Validation(Required=false)]
+        public string ButlerFieldsJson { get; set; }
+
+        /// <summary>
         /// <para>The notification channels in a JSON array string, such as [&quot;sms&quot;,&quot;email&quot;].</para>
         /// 
         /// <b>Example:</b>
@@ -73,7 +93,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The name of the scenario.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>设备能力手册</para>
+        /// <para>Device Capability Manual</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

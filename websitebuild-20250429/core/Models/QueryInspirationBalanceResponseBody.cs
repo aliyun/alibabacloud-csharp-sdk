@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class QueryInspirationBalanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why access is denied.</para>
+        /// <para>The detailed reason for the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request can be retried.</para>
+        /// <para>Specifies whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The application name. The system queries the application with this name.</para>
+        /// <para>The name of the application to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dewuApp</para>
@@ -50,10 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message, which is used to replace the <c>%s</c> placeholder in the <b>ErrMessage</b> response parameter.</para>
-        /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the request parameter <b>DtsJobId</b> is invalid.</para>
-        /// </remarks>
+        /// <para>The dynamic error message used to replace <c>%s</c> in the error message of the <b>ErrMessage</b> response parameter. If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the <b>DtsJobId</b> request parameter is invalid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_ERROR</para>
@@ -77,7 +74,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public QueryInspirationBalanceResponseBodyModule Module { get; set; }
         public class QueryInspirationBalanceResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>The remaining amount, calculated as totalQuota minus totalUsed.</para>
+            /// <para>The remaining quota, which is calculated by subtracting totalUsed from totalQuota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -86,12 +83,18 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             [Validation(Required=false)]
             public long? Remaining { get; set; }
 
+            /// <summary>
+            /// <para>The string representation of the remaining quota.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>8</para>
+            /// </summary>
             [NameInMap("RemainingStr")]
             [Validation(Required=false)]
             public string RemainingStr { get; set; }
 
             /// <summary>
-            /// <para>The total quota, which is the sum of initQuota values across all valid accounts.</para>
+            /// <para>The total quota, which is the sum of the initQuota values of all valid accounts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -100,12 +103,18 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             [Validation(Required=false)]
             public long? TotalQuota { get; set; }
 
+            /// <summary>
+            /// <para>The string representation of the total quota.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
             [NameInMap("TotalQuotaStr")]
             [Validation(Required=false)]
             public string TotalQuotaStr { get; set; }
 
             /// <summary>
-            /// <para>The total consumed amount, which is the sum of used values across all valid accounts.</para>
+            /// <para>The used quota, which is the sum of the used values of all valid accounts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -114,6 +123,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             [Validation(Required=false)]
             public long? TotalUsed { get; set; }
 
+            /// <summary>
+            /// <para>The string representation of the used quota.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("TotalUsedStr")]
             [Validation(Required=false)]
             public string TotalUsedStr { get; set; }
@@ -144,14 +159,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>系统异常</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is synchronously processed.</para>
+        /// <para>Specifies whether the request is processed synchronously.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

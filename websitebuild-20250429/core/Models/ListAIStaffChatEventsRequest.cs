@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The chat ID. This parameter is optional. If not specified, the latest chat ID is used.</para>
+        /// <para>The chat ID. This parameter is optional. If you do not specify this parameter, the latest chat ID is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20833ba4-d189-4c50-9a44-a6bcbda2c93b</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ConversationId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the last event, used for incremental retrieval.</para>
+        /// <para>The ID of the last event. This parameter is used to retrieve incremental events.</para>
         /// 
         /// <b>Example:</b>
         /// <para>event-71ece53b7d474e01b755a9b5fa5305e6</para>

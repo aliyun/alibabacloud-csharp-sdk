@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppDatabaseTableSchemasRequest : TeaModel {
         /// <summary>
+        /// <para>The business ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>WD20250703155602000001</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
+        /// <para>The table name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>default.ai_advertising_material_rec_train_v1103</para>
         /// </summary>

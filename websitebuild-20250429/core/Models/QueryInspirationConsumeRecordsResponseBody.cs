@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retry is allowed.</para>
+        /// <para>Specifies whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The application name. The application with this name is queried.</para>
+        /// <para>The name of the application to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ish-intelligence-store-platform-admin-web</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic message. This parameter is not in use. Ignore this parameter.</para>
+        /// <para>The dynamic message. This parameter is not used. Ignore this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_ERROR</para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error parameters.</para>
+        /// <para>The returned error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the deletion is successful.</para>
+        /// <para>Specifies whether the deletion is successful.</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
@@ -84,14 +84,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? CurrentPageNum { get; set; }
 
             /// <summary>
-            /// <para>The request result.</para>
+            /// <para>The request results.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public List<QueryInspirationConsumeRecordsResponseBodyModuleData> Data { get; set; }
             public class QueryInspirationConsumeRecordsResponseBodyModuleData : TeaModel {
                 /// <summary>
-                /// <para>The number of inspiration points consumed.</para>
+                /// <para>The number of consumed inspiration points.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>120</para>
@@ -100,12 +100,18 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 [Validation(Required=false)]
                 public long? Amount { get; set; }
 
+                /// <summary>
+                /// <para>The exact number of consumed inspiration points. The value is a string that supports decimal display.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>120</para>
+                /// </summary>
                 [NameInMap("AmountStr")]
                 [Validation(Required=false)]
                 public string AmountStr { get; set; }
 
                 /// <summary>
-                /// <para>The consumption time.</para>
+                /// <para>The consumption time. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-06-01 12:00:00</para>
@@ -114,6 +120,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 [Validation(Required=false)]
                 public string ConsumeTime { get; set; }
 
+                /// <summary>
+                /// <para>The consumption type.</para>
+                /// </summary>
                 [NameInMap("ConsumeType")]
                 [Validation(Required=false)]
                 public string ConsumeType { get; set; }
@@ -128,15 +137,18 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 [Validation(Required=false)]
                 public string MetaData { get; set; }
 
+                /// <summary>
+                /// <para>The unique identifier of the consumption record.</para>
+                /// </summary>
                 [NameInMap("RecordKey")]
                 [Validation(Required=false)]
                 public string RecordKey { get; set; }
 
                 /// <summary>
-                /// <para>The consumption scenario name, such as AI application development, AI creative illustration, AI video creation, or AI content creation.</para>
+                /// <para>The name of the consumption scenario, such as AI application development, AI creative image generation, AI video creation, or AI content creation.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>家装</para>
+                /// <para>Home improvement</para>
                 /// </summary>
                 [NameInMap("SceneName")]
                 [Validation(Required=false)]
@@ -152,7 +164,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public QueryInspirationConsumeRecordsResponseBodyModuleNext Next { get; set; }
             public class QueryInspirationConsumeRecordsResponseBodyModuleNext : TeaModel {
                 /// <summary>
-                /// <para>The number of inspiration points consumed.</para>
+                /// <para>The number of consumed inspiration points.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -161,12 +173,18 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 [Validation(Required=false)]
                 public long? Amount { get; set; }
 
+                /// <summary>
+                /// <para>The exact number of consumed inspiration points. The value is a string that supports decimal display.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>120</para>
+                /// </summary>
                 [NameInMap("AmountStr")]
                 [Validation(Required=false)]
                 public string AmountStr { get; set; }
 
                 /// <summary>
-                /// <para>The consumption time.</para>
+                /// <para>The consumption time. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-06-01 12:00:00</para>
@@ -175,6 +193,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 [Validation(Required=false)]
                 public string ConsumeTime { get; set; }
 
+                /// <summary>
+                /// <para>The consumption type.</para>
+                /// </summary>
                 [NameInMap("ConsumeType")]
                 [Validation(Required=false)]
                 public string ConsumeType { get; set; }
@@ -190,10 +211,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string MetaData { get; set; }
 
                 /// <summary>
-                /// <para>The consumption scenario name, such as AI application development, AI creative illustration, AI video creation, or AI content creation.</para>
+                /// <para>The name of the consumption scenario, such as AI application development, AI creative image generation, AI video creation, or AI content creation.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>家装</para>
+                /// <para>Home improvement</para>
                 /// </summary>
                 [NameInMap("SceneName")]
                 [Validation(Required=false)]
@@ -202,7 +223,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether a next page exists.</para>
+            /// <para>Specifies whether a next page exists.</para>
             /// 
             /// <b>Example:</b>
             /// <para>False</para>
@@ -212,7 +233,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? NextPage { get; set; }
 
             /// <summary>
-            /// <para>The page size.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -222,7 +243,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a previous page exists.</para>
+            /// <para>Specifies whether a previous page exists.</para>
             /// 
             /// <b>Example:</b>
             /// <para>False</para>
@@ -232,7 +253,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? PrePage { get; set; }
 
             /// <summary>
-            /// <para>In addition to pagination limits, the server processes up to 1,000 recent records for the current query. If the results exceed 1,000 records, <b>ResultLimit</b> is <b>true</b>. In this case, narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
+            /// <para>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <b>ResultLimit</b> is <b>true</b>. In this case, narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
             /// </summary>
             [NameInMap("ResultLimit")]
             [Validation(Required=false)]
@@ -281,17 +302,17 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>系统异常</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is synchronously processed.</para>
+        /// <para>Specifies whether the request is processed synchronously.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

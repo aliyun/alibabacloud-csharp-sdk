@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class BindAppDomainResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why access is denied.</para>
+        /// <para>The detailed reason why access was denied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message, which is used to replace the <b>%s</b> placeholder in the <b>ErrMessage</b> response element.</para>
+        /// <para>The dynamic error message, which is used to replace the <b>%s</b> placeholder in the <b>ErrMessage</b> response parameter.</para>
         /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the value of the <b>DtsJobId</b> request parameter is invalid.</para>
+        /// <para>For example, if <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the request parameter <b>DtsJobId</b> is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,20 +63,20 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error parameters returned.</para>
+        /// <para>The error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>The data table module. Valid values:</para>
+        /// <para>The data table module.</para>
         /// <list type="bullet">
         /// <item><description><para>ABTest: experiment data table</para>
         /// </description></item>
         /// <item><description><para>ExperimentTool: experiment tool table</para>
         /// </description></item>
-        /// <item><description><para>DataDiagnosis: data modeling diagnostics</para>
+        /// <item><description><para>DataDiagnosis: data diagnostics</para>
         /// </description></item>
         /// </list>
         /// </summary>
@@ -84,38 +84,80 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public BindAppDomainResponseBodyModule Module { get; set; }
         public class BindAppDomainResponseBodyModule : TeaModel {
+            /// <summary>
+            /// <para>The DNS conflict information. This parameter is returned when a conflict is detected during synchronous verification.</para>
+            /// </summary>
             [NameInMap("DnsConflict")]
             [Validation(Required=false)]
             public BindAppDomainResponseBodyModuleDnsConflict DnsConflict { get; set; }
             public class BindAppDomainResponseBodyModuleDnsConflict : TeaModel {
+                /// <summary>
+                /// <para>Indicates whether automatic overwrite is supported. A value of true indicates the current Alibaba Cloud account, and a value of false indicates other accounts.</para>
+                /// </summary>
                 [NameInMap("CanAutoResolve")]
                 [Validation(Required=false)]
                 public bool? CanAutoResolve { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether a conflict exists.</para>
+                /// </summary>
                 [NameInMap("HasConflict")]
                 [Validation(Required=false)]
                 public bool? HasConflict { get; set; }
 
+                /// <summary>
+                /// <para>The user-facing prompt message. Different guidance text is generated based on the scenario.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>A conflicting DNS record (A 192.0.2.1) exists for the domain name <a href="http://www.example.com">www.example.com</a>. Delete the conflicting record from your DNS provider and try again</para>
+                /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
                 public string Message { get; set; }
 
+                /// <summary>
+                /// <para>The list of conflicting DNS records. This reuses the existing AppDomainDnsRecordDTO.</para>
+                /// </summary>
                 [NameInMap("Records")]
                 [Validation(Required=false)]
                 public List<BindAppDomainResponseBodyModuleDnsConflictRecords> Records { get; set; }
                 public class BindAppDomainResponseBodyModuleDnsConflictRecords : TeaModel {
+                    /// <summary>
+                    /// <para>The host record.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>www</para>
+                    /// </summary>
                     [NameInMap("Host")]
                     [Validation(Required=false)]
                     public string Host { get; set; }
 
+                    /// <summary>
+                    /// <para>The record type.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>A</para>
+                    /// </summary>
                     [NameInMap("RecordType")]
                     [Validation(Required=false)]
                     public string RecordType { get; set; }
 
+                    /// <summary>
+                    /// <para>The status of the conflicting DNS record. A value of ENABLE indicates that the record is enabled.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>ENABLE</para>
+                    /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
                     public string Status { get; set; }
 
+                    /// <summary>
+                    /// <para>The record value.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>192.0.2.1</para>
+                    /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
                     public string Value { get; set; }
@@ -125,7 +167,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the request is successful.</para>
+            /// <para>Indicates whether the request was successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -137,7 +179,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6C6B99AC-39EC-5350-874C-204128C905E6</para>
@@ -160,14 +202,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>系统异常</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is synchronously processed.</para>
+        /// <para>Indicates whether the request is processed synchronously.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message, which replaces the <c>%s</c> placeholder in the <b>ErrMessage</b> response element.</para>
+        /// <para>The dynamic error message, which replaces the <c>%s</c> placeholder in the <b>ErrMessage</b> response parameter.</para>
         /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the value of the <b>DtsJobId</b> request parameter is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the value of the request parameter <b>DtsJobId</b> is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error parameters.</para>
+        /// <para>The error parameters returned.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string BizId { get; set; }
 
             /// <summary>
-            /// <para>The time when the database instance was created.</para>
+            /// <para>The creation time of the database instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -127,11 +127,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string DbPublicUrl { get; set; }
 
             /// <summary>
-            /// <para>The database type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>rds</description></item>
-            /// <item><description>polardb.</description></item>
-            /// </list>
+            /// <para>The database type (rds/polardb).</para>
             /// 
             /// <b>Example:</b>
             /// <para>ORACLE</para>
@@ -141,7 +137,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string DbType { get; set; }
 
             /// <summary>
-            /// <para>The additional information.</para>
+            /// <para>The extra information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;appId\&quot;:\&quot;APP_NTJAK8P11SNZDJ3M6BWC\&quot;}</para>
@@ -161,7 +157,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string InstanceCreateFinishedTime { get; set; }
 
             /// <summary>
-            /// <para>The creation status of the instance.</para>
+            /// <para>The instance creation status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1111</para>
@@ -181,7 +177,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? IsDeleted { get; set; }
 
             /// <summary>
-            /// <para>The password for accessing the ApsaraDB RDS database.</para>
+            /// <para>The access password of the RDS database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -201,7 +197,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string ServiceKey { get; set; }
 
             /// <summary>
-            /// <para>The instance status. Valid values:</para>
+            /// <para>The status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>0: Paused.</description></item>
             /// <item><description>1: Running.</description></item>
@@ -235,7 +231,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string SupabaseDashboardUserName { get; set; }
 
             /// <summary>
-            /// <para>The time when the Supabase instance was created.</para>
+            /// <para>The creation time of the Supabase instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -337,17 +333,17 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>系统异常</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter.</para>
+        /// <para>The reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

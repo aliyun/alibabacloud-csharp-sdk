@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class QueryMaterialTaskListShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the business group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xx</para>
+        /// </summary>
+        [NameInMap("BizGroupId")]
+        [Validation(Required=false)]
+        public string BizGroupId { get; set; }
+
+        /// <summary>
         /// <para>The number of entries per query.</para>
         /// <para>Valid values: 10 to 100. Default value: 20.</para>
         /// 
@@ -31,7 +41,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Sort field</para>
+        /// <para>The field used for sorting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gmtCreated</para>
@@ -41,7 +51,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderColumn { get; set; }
 
         /// <summary>
-        /// <para>Sort type ASC|DESC</para>
+        /// <para>The sort type. Valid values: ASC and DESC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DESC</para>
@@ -51,7 +61,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderType { get; set; }
 
         /// <summary>
-        /// <para>Page number. Default value: 1</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -61,7 +71,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>Page size. Default value: 10</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -71,14 +81,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Task status list</para>
+        /// <para>The list of task statuses.</para>
         /// </summary>
         [NameInMap("StatusList")]
         [Validation(Required=false)]
         public string StatusListShrink { get; set; }
 
         /// <summary>
-        /// <para>Task type list</para>
+        /// <para>The list of task types.</para>
         /// </summary>
         [NameInMap("TaskTypeList")]
         [Validation(Required=false)]

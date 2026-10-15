@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GrantPromotionOfferForPartnerRequest : TeaModel {
+        /// <summary>
+        /// <para>The activity code.</para>
+        /// </summary>
         [NameInMap("ActivityCode")]
         [Validation(Required=false)]
         public string ActivityCode { get; set; }
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string EmployeeCode { get; set; }
 
         /// <summary>
-        /// <para>The operation remarks (audit information).</para>
+        /// <para>The operation remark (audit information).</para>
         /// 
         /// <b>Example:</b>
         /// <para>hz-maven</para>

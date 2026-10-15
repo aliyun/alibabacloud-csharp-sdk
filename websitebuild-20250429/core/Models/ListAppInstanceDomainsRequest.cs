@@ -19,12 +19,28 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string BizId { get; set; }
 
+        /// <summary>
+        /// <para>The domain name keyword for fuzzy match. This parameter is optional.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.com</para>
+        /// </summary>
         [NameInMap("DomainKeyword")]
         [Validation(Required=false)]
         public string DomainKeyword { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per query.</para>
+        /// <para>The domain name management type. Valid values: CUSTOM and PLATFORM_PREFIX. If this parameter is not specified, the default value is CUSTOM.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CUSTOM</para>
+        /// </summary>
+        [NameInMap("DomainType")]
+        [Validation(Required=false)]
+        public string DomainType { get; set; }
+
+        /// <summary>
+        /// <para>The number of entries to return for a single query.</para>
         /// <para>Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +51,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query. This parameter is empty if no more results exist.</para>
+        /// <para>The token used to start the next query. If no next query is available, this value is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0l45bkwM022Dt+rOvPi/oQ==</para>
@@ -55,7 +71,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderColumn { get; set; }
 
         /// <summary>
-        /// <para>The sort type. Valid values: ASC and DESC.</para>
+        /// <para>The sort order. Valid values: ASC and DESC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BUY</para>
@@ -83,6 +99,16 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        /// <summary>
+        /// <para>The query mode for the domain name status. Valid values: BASIC and REALTIME. BASIC returns only the persisted status. REALTIME refreshes the status from external services. If this parameter is not specified, the default value is REALTIME.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>REALTIME</para>
+        /// </summary>
+        [NameInMap("StatusQueryMode")]
+        [Validation(Required=false)]
+        public string StatusQueryMode { get; set; }
 
     }
 

@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class AppMaterialTask : TeaModel {
         /// <summary>
+        /// <para>The business group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>111</para>
+        /// </summary>
+        [NameInMap("BizGroupId")]
+        [Validation(Required=false)]
+        public string BizGroupId { get; set; }
+
+        /// <summary>
         /// <para>The task completion time.</para>
         /// 
         /// <b>Example:</b>
@@ -23,7 +33,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The display format of the completion time.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1分钟前</para>
+        /// <para>1 minute ago</para>
         /// </summary>
         [NameInMap("CompleteTimeFormat")]
         [Validation(Required=false)]
@@ -33,7 +43,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The failure reason.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>参数不合规</para>
+        /// <para>Invalid parameters</para>
         /// </summary>
         [NameInMap("FailReason")]
         [Validation(Required=false)]
@@ -87,13 +97,13 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The task parameter.</para>
+        /// <para>The task parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
-        ///     &quot;brandName&quot;: &quot;品牌名称&quot;,
+        ///     &quot;brandName&quot;: &quot;Brand name&quot;,
         ///     &quot;direction&quot;: &quot;HORIZONTAL&quot;,
-        ///     &quot;userPrompt&quot;: &quot;设计要求&quot;
+        ///     &quot;userPrompt&quot;: &quot;Design requirements&quot;
         /// }</para>
         /// </summary>
         [NameInMap("TaskParam")]

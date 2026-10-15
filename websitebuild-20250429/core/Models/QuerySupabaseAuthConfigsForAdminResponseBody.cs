@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <summary>
             /// <para>The configuration value. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>cc_rule: HTTP flood mitigation rule.</para>
+            /// <item><description><para>cc_rule: HTTP flood protection rule.</para>
             /// </description></item>
             /// <item><description><para>ddos_dispatch: DDoS interaction scheduling.</para>
             /// </description></item>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>系统异常</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]

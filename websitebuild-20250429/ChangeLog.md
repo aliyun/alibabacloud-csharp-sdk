@@ -1,3 +1,13 @@
+2026-10-15 Version: 2.36.5
+- Update API BatchCheckResourceMeasure: add response parameters Body.Module.Results.DesiredTotal.
+- Update API BatchCheckResourceMeasure: add response parameters Body.Module.Results.Limit.
+- Update API BatchCheckResourceMeasure: add response parameters Body.Module.Results.UpgradeAvailable.
+- Update API CheckResourceMeasure: add request parameters DesiredTotal.
+- Update API CheckResourceMeasure: add response parameters Body.Module.DesiredTotal.
+- Update API CheckResourceMeasure: add response parameters Body.Module.Limit.
+- Update API CheckResourceMeasure: add response parameters Body.Module.UpgradeAvailable.
+
+
 2026-07-10 Version: 2.31.0
 - Support API AuthorizeAppProxyOps.
 

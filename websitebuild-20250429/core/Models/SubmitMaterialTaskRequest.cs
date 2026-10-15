@@ -10,14 +10,24 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class SubmitMaterialTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The parameters of the task.</para>
+        /// <para>The business group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxx</para>
+        /// </summary>
+        [NameInMap("BizGroupId")]
+        [Validation(Required=false)]
+        public string BizGroupId { get; set; }
+
+        /// <summary>
+        /// <para>The task parameters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
-        ///     &quot;brandName&quot;: &quot;品牌名称&quot;,
+        ///     &quot;brandName&quot;: &quot;Brand name&quot;,
         ///     &quot;direction&quot;: &quot;HORIZONTAL&quot;,
-        ///     &quot;userPrompt&quot;: &quot;设计要求&quot;
+        ///     &quot;userPrompt&quot;: &quot;Design requirements&quot;
         /// }</para>
         /// </summary>
         [NameInMap("TaskParam")]
@@ -25,7 +35,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string TaskParam { get; set; }
 
         /// <summary>
-        /// <para>The type of the task.</para>
+        /// <para>The task type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

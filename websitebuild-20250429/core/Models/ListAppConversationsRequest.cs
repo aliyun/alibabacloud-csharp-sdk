@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string EndModifyTime { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return per query.</para>
+        /// <para>The number of entries per query.</para>
         /// <para>Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class QueryInspirationAccountDetailsRequest : TeaModel {
         /// <summary>
-        /// <para>The end time of the query.</para>
+        /// <para>The end time of the query. The time is in ISO 8601 format and in the UTC (Z) time zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-07-23T16:00:00Z</para>
@@ -30,11 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderColumn { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>ASC: ascending order</description></item>
-        /// <item><description>DESC: descending order</description></item>
-        /// </list>
+        /// <para>The sort order. Valid values: ASC and DESC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BUY</para>
@@ -64,7 +60,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The source type used to filter results, such as FREE_TRIAL_GIFT, INSTANCE_GIFT, UPGRADE_GRANT, or PURCHASED.</para>
+        /// <para>The filter for the source type. Examples: FREE_TRIAL_GIFT, INSTANCE_GIFT, UPGRADE_GRANT, and PURCHASED.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MARKET_CLOUD_DREAM</para>
@@ -74,7 +70,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query.</para>
+        /// <para>The start time of the query. The time is in ISO 8601 format and in the UTC (Z) time zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-06-21T16:00:00Z</para>

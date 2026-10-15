@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>Template ID</para>
+        /// <para>The template ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>JKSVNY04LH7DRI6F</para>

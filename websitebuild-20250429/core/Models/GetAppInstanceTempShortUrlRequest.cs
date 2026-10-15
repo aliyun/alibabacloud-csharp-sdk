@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppInstanceTempShortUrlRequest : TeaModel {
         /// <summary>
-        /// <para>The business ID of the application.</para>
+        /// <para>The application business ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WD20250703155602000001</para>

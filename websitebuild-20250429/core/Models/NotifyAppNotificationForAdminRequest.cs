@@ -29,6 +29,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string Env { get; set; }
 
+        /// <summary>
+        /// <para>The notification content.</para>
+        /// </summary>
         [NameInMap("Payload")]
         [Validation(Required=false)]
         public string Payload { get; set; }

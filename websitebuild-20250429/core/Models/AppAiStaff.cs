@@ -9,20 +9,35 @@ using Tea;
 namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class AppAiStaff : TeaModel {
+        /// <summary>
+        /// <para>The employee ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>370196</para>
+        /// </summary>
         [NameInMap("StaffId")]
         [Validation(Required=false)]
         public string StaffId { get; set; }
 
+        /// <summary>
+        /// <para>The employee name.</para>
+        /// </summary>
         [NameInMap("StaffName")]
         [Validation(Required=false)]
         public string StaffName { get; set; }
 
+        /// <summary>
+        /// <para>The employee type.</para>
+        /// </summary>
         [NameInMap("StaffType")]
         [Validation(Required=false)]
         public string StaffType { get; set; }
 
         /// <summary>
-        /// <para>可能的值：unknown, init, testing, online</para>
+        /// <para>Valid values: unknown, init, testing, and online.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>online</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

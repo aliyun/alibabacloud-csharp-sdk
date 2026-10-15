@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>permission denied information</para>
+        /// <para>The access denial details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>is retry allowed</para>
+        /// <para>Indicates whether a retry is allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>App Name.</para>
+        /// <para>The application name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ish-intelligence-store-platform-admin-web</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>dynamic error Code</para>
+        /// <para>The dynamic error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ERROR-oo1</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>dynamic error message, used to replace the <c>%s</c> placeholder in the <b>ErrMessage</b> error message.  </para>
+        /// <para>The dynamic error message, which is used to replace the <c>%s</c> placeholder in the <b>ErrMessage</b> response parameter.</para>
         /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the request parameter <b>DtsJobId</b> is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the value of the request parameter <b>DtsJobId</b> is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,21 +63,21 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>returned error parameters</para>
+        /// <para>The error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>whether deletion succeeded</para>
+        /// <para>Indicates whether the deletion was successful.</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
         public GetAppTemplateResponseBodyModule Module { get; set; }
         public class GetAppTemplateResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>Application type</para>
+            /// <para>The application type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TRACE</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string AppType { get; set; }
 
             /// <summary>
-            /// <para>Business ID</para>
+            /// <para>The business ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WD20250703155602000001</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string BizId { get; set; }
 
             /// <summary>
-            /// <para>color</para>
+            /// <para>The color scheme.</para>
             /// 
             /// <b>Example:</b>
             /// <para>red</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string ColorScheme { get; set; }
 
             /// <summary>
-            /// <para>Color name</para>
+            /// <para>The color scheme name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>red</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string ColorSchemeName { get; set; }
 
             /// <summary>
-            /// <para>The actual data volume of the original table copied during DMS lockless change.</para>
+            /// <para>The actual amount of data copied from the original table during a DMS lock-free schema change.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? CopyCount { get; set; }
 
             /// <summary>
-            /// <para>User ID of the creator.</para>
+            /// <para>The user ID of the creator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>208614160512124381</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>Creation UTC time, in ISO 8601 date format.</para>
+            /// <para>The creation time in UTC. The date format follows ISO 8601.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
             /// 
             /// <b>Example:</b>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>Modify time</para>
+            /// <para>The modification time in ISO 8601 format. The time zone is UTC (Z).</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
             /// 
             /// <b>Example:</b>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string GmtModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>Primary key</para>
+            /// <para>The primary key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16257</para>
@@ -169,23 +169,23 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Industry. Default value: <b>common</b> (general industry). Valid values:</para>
+            /// <para>The industry. Default value: <b>common</b> (general industry). Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>microVideo</b>: Short video industry.</para>
+            /// <item><description><para><b>microVideo</b>: short video industry.</para>
             /// </description></item>
-            /// <item><description><para><b>common</b>: General industry.</para>
+            /// <item><description><para><b>common</b>: general industry.</para>
             /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>通用</para>
+            /// <para>common</para>
             /// </summary>
             [NameInMap("Industry")]
             [Validation(Required=false)]
             public string Industry { get; set; }
 
             /// <summary>
-            /// <para>Industry name.</para>
+            /// <para>The industry name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>indextry</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string IndustryName { get; set; }
 
             /// <summary>
-            /// <para>Last modifier</para>
+            /// <para>The last modifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>admin</para>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string LastModifier { get; set; }
 
             /// <summary>
-            /// <para>Like count.</para>
+            /// <para>The number of likes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? LikeCount { get; set; }
 
             /// <summary>
-            /// <para>Whether the current user has liked it</para>
+            /// <para>Indicates whether the current user has liked the template.</para>
             /// </summary>
             [NameInMap("Liked")]
             [Validation(Required=false)]
@@ -223,20 +223,20 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
             /// <summary>
             /// <para>&lt;props=&quot;china&quot;&gt;</para>
-            /// <para>Map of metadata for text segmentation.</para>
+            /// <para>The metadata map of the text chunk.</para>
             /// <remarks>
-            /// <para>In document-search-type knowledge bases, the <c>file_path</c> field in the metadata Map is meaningless. Do not use it in your business code.</para>
+            /// <para>The <c>file_path</c> field in the metadata map of a document search knowledge base is meaningless. Do not use it in your business code.</para>
             /// </remarks>
             /// <remarks>
-            /// <para>When retrieving a document-search-type knowledge base, if a segment contains an image, the image URL will be exposed through the <c>image_url</c> field in the metadata Map, along with a time-to-live (TTL).</para>
+            /// <para>When retrieving a document search knowledge base, if a chunk contains images, the image URL is returned in the <c>image_url</c> field of the metadata map, along with an expiration time.</para>
             /// </remarks>
             /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-            /// <para>Map of metadata for text segmentation.</para>
+            /// <para>The metadata map of the text chunk.</para>
             /// <remarks>
-            /// <para>In document-search-type knowledge bases, the <c>file_path</c> field in the metadata Map is meaningless. Do not use it in your business code.</para>
+            /// <para>The <c>file_path</c> field in the metadata map of a document search knowledge base is meaningless. Do not use it in your business code.</para>
             /// </remarks>
             /// <remarks>
-            /// <para>When retrieving a document-search-type knowledge base, if a segment contains an image, the image URL will be exposed through the <c>image_url</c> field in the metadata Map, along with a time-to-live (TTL).</para>
+            /// <para>When retrieving a document search knowledge base, if a chunk contains images, the image URL is returned in the <c>image_url</c> field of the metadata map, along with an expiration time.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Metadata { get; set; }
 
             /// <summary>
-            /// <para>Preview URL</para>
+            /// <para>The preview URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://preview-lyj.aliyuncs.com/preview/4825a3849c2e49e1b48804c7f90b766f?subSceneIds=807648">https://preview-lyj.aliyuncs.com/preview/4825a3849c2e49e1b48804c7f90b766f?subSceneIds=807648</a></para>
@@ -257,10 +257,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string PreviewUrl { get; set; }
 
             /// <summary>
-            /// <para>Edition. Valid values:</para>
+            /// <para>The product version. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>BasicVersion</b>: Basic Edition.</description></item>
-            /// <item><description><b>EnterpriseVersion</b>: Enterprise Edition.<remarks>
+            /// <item><description><b>BasicVersion</b>: Basic edition.</description></item>
+            /// <item><description><b>EnterpriseVersion</b>: Enterprise edition.<remarks>
             /// <para>This parameter is required only when ProductForm is set to IntegrationForm.</para>
             /// </remarks>
             /// </description></item>
@@ -274,7 +274,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string ProductVersion { get; set; }
 
             /// <summary>
-            /// <para>Edition Name.</para>
+            /// <para>The edition name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0.2</para>
@@ -284,7 +284,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string ProductVersionName { get; set; }
 
             /// <summary>
-            /// <para>Share count</para>
+            /// <para>The number of shares.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -294,7 +294,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? ShareCount { get; set; }
 
             /// <summary>
-            /// <para>trial, draft, live, refunded, expired, released</para>
+            /// <para>trial,draft,live,refunded,expired,released</para>
             /// 
             /// <b>Example:</b>
             /// <para>NORMAL</para>
@@ -304,7 +304,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Template ID</para>
+            /// <para>The template ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7cc17da1-b670-4be7-a6b4-0b3cdf7bf5f7</para>
@@ -314,7 +314,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string TemplateId { get; set; }
 
             /// <summary>
-            /// <para>Template Name</para>
+            /// <para>The template name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>siemProtect_All_</para>
@@ -324,7 +324,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string TemplateName { get; set; }
 
             /// <summary>
-            /// <para>application thumbnail</para>
+            /// <para>The application thumbnail URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>placeHolder</para>
@@ -334,7 +334,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string ThumbnailUrl { get; set; }
 
             /// <summary>
-            /// <para>View count.</para>
+            /// <para>The number of views.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -344,7 +344,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? ViewCount { get; set; }
 
             /// <summary>
-            /// <para>Hot word weight, an integer in the range [1, 5].<br>Common value: 4.<br>If the effect is not obvious, you can moderately increase the weight. However, if the weight is too high, it may cause negative effects and reduce the accuracy of detecting other words.</para>
+            /// <para>The weight of the hot word. Valid values: integers in the range of [1, 5].
+            /// Common value: 4.
+            /// If the effect is not obvious, increase the weight as needed. However, an excessively large weight may cause negative effects and lead to inaccurate recognition of other words.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -366,7 +368,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Error code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM.ERROR</para>
@@ -376,17 +378,17 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>abnormal message</para>
+        /// <para>The root error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>系统异常</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Reserved parameter.</para>
+        /// <para>The reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

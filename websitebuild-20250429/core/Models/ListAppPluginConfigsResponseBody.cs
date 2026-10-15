@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListAppPluginConfigsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why access was denied.</para>
+        /// <para>The details about the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>is retry allowed</para>
+        /// <para>Indicates whether retry is allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>Application Name. Query the application with this name.</para>
+        /// <para>The application name. The application with this name is queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>spring-cloud-b</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>Dynamic error code.</para>
+        /// <para>The dynamic error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ERROR-oo1</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>Dynamic error message used to replace the <c>%s</c> placeholder in the <b>ErrMessage</b> error message.  </para>
+        /// <para>The dynamic error message, which is used to replace the <c>%s</c> variable in the <b>ErrMessage</b> return parameter.</para>
         /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the request parameter <b>DtsJobId</b> is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the value of the request parameter <b>DtsJobId</b> is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,15 +63,15 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>Returned error parameters</para>
+        /// <para>The returned error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>The number of results returned per query.  </para>
-        /// <para>Valid range: 10 to 100. Default Value: 20.</para>
+        /// <para>The number of entries per query.</para>
+        /// <para>Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -81,14 +81,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>task object</para>
+        /// <para>The task object.</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
         public List<ListAppPluginConfigsResponseBodyModule> Module { get; set; }
         public class ListAppPluginConfigsResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>Business ID</para>
+            /// <para>The business ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WD20250703155602000001</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string BizId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether to display.</para>
+            /// <para>Indicates whether the item is displayed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>always</para>
@@ -108,11 +108,11 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? Display { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether scheduled delivery of resource snapshots is enabled.  </para>
-            /// <para>Valid values:  </para>
+            /// <para>Specifies whether scheduled delivery of resource snapshots is enabled.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: Enabled.  </description></item>
-            /// <item><description>false: Shutdown.</description></item>
+            /// <item><description>true: Enabled.</description></item>
+            /// <item><description>false: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -123,14 +123,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? Enabled { get; set; }
 
             /// <summary>
-            /// <para>Extension information</para>
+            /// <para>The extension information.</para>
             /// </summary>
             [NameInMap("Extend")]
             [Validation(Required=false)]
             public Dictionary<string, string> Extend { get; set; }
 
             /// <summary>
-            /// <para>Creation Time</para>
+            /// <para>The creation time. The time is in ISO 8601 format in UTC (Z).</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
             /// 
             /// <b>Example:</b>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>Updated At</para>
+            /// <para>The modification time. The time is in ISO 8601 format in UTC (Z).</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
             /// 
             /// <b>Example:</b>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string GmtModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>primary key</para>
+            /// <para>The primary key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16257</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Plugin configuration</para>
+            /// <para>The plug-in configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string PluginConfig { get; set; }
 
             /// <summary>
-            /// <para>Plugin description</para>
+            /// <para>The plug-in description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a simple test plugin</para>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string PluginDesc { get; set; }
 
             /// <summary>
-            /// <para>Plugin ID</para>
+            /// <para>The plug-in ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1bae9ceaceea432d91c7069fab0dfc02</para>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string PluginId { get; set; }
 
             /// <summary>
-            /// <para>Plugin name</para>
+            /// <para>The plug-in name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tf_testaccapigatewayplugin29311</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string PluginName { get; set; }
 
             /// <summary>
-            /// <para>Site name</para>
+            /// <para>The site name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>wkweb.cn</para>
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string SiteName { get; set; }
 
             /// <summary>
-            /// <para>User ID</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456</para>
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         }
 
         /// <summary>
-        /// <para>The token to start the next query. It is empty if there is no next query.</para>
+        /// <para>The token for the next query. This parameter is empty if no more results exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0l45bkwM022Dt+rOvPi/oQ==</para>
@@ -244,7 +244,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>error code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM.ERROR</para>
@@ -254,17 +254,17 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>abnormal message</para>
+        /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>系统异常</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>is synchronous processing enabled</para>
+        /// <para>Indicates whether the request is synchronously processed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

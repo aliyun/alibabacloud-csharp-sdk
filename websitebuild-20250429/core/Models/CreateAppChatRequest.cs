@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class CreateAppChatRequest : TeaModel {
         /// <summary>
-        /// <para>Bot ID</para>
+        /// <para>The bot ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Zero2</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BotId { get; set; }
 
         /// <summary>
-        /// <para>Chat ID to be provided when recovering a conversation after an execution break</para>
+        /// <para>The chat ID passed in to resume a conversation after execution is interrupted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3b465fe1-6f06-4899-af9f-d43d9338df25</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ChatId { get; set; }
 
         /// <summary>
-        /// <para>Session ID; required from the second turn onward in a multi-turn conversation scenario</para>
+        /// <para>The conversation ID. This parameter is required from the second round onward in multi-turn conversation scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>593fe1a2-d0b4-4fde-a2b0-78ad6a438d41</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ConversationId { get; set; }
 
         /// <summary>
-        /// <para>List of conversation messages (in JSON array format)</para>
+        /// <para>The list of conversation messages in JSON array format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[\r\n  {\r\n    \&quot;role\&quot;: \&quot;user\&quot;,\r\n    \&quot;content\&quot;: \&quot;Prove that there are only five platonic solids, namely the tetrahedron, octahedron, icosahedron, cube, and dodecahedron.\&quot;\r\n  }\r\n]</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Messages { get; set; }
 
         /// <summary>
-        /// <para>Site ID</para>
+        /// <para>The site ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>857240041851344</para>

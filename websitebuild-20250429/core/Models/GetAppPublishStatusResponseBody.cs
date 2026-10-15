@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppPublishStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why access is denied.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retry is allowed.</para>
+        /// <para>Indicates whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error parameters.</para>
+        /// <para>The returned error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
@@ -94,6 +94,13 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string CurrentStep { get; set; }
 
             /// <summary>
+            /// <para>The code of the current publish step.</para>
+            /// </summary>
+            [NameInMap("CurrentStepCode")]
+            [Validation(Required=false)]
+            public string CurrentStepCode { get; set; }
+
+            /// <summary>
             /// <para>The deployment channel.</para>
             /// 
             /// <b>Example:</b>
@@ -124,7 +131,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string ErrorStep { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the task is complete.</para>
+            /// <para>The code of the publish step where the error occurred.</para>
+            /// </summary>
+            [NameInMap("ErrorStepCode")]
+            [Validation(Required=false)]
+            public string ErrorStepCode { get; set; }
+
+            /// <summary>
+            /// <para>Indicates whether the task is completed.</para>
             /// </summary>
             [NameInMap("IsFinish")]
             [Validation(Required=false)]
@@ -135,7 +149,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <list type="bullet">
             /// <item><description><para><c>true</c>: The call is successful.</para>
             /// </description></item>
-            /// <item><description><para><c>false</c>: The call failed.</para>
+            /// <item><description><para><c>false</c>: The call fails.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -147,7 +161,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? IsSuccess { get; set; }
 
             /// <summary>
-            /// <para>The additional description.</para>
+            /// <para>The additional information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>common notify successfully.</para>
@@ -157,7 +171,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Msg { get; set; }
 
             /// <summary>
-            /// <para>The sort type. Valid values: ASC and DESC.</para>
+            /// <para>The sort order.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DESC</para>
@@ -165,6 +179,13 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             [NameInMap("OrderType")]
             [Validation(Required=false)]
             public string OrderType { get; set; }
+
+            /// <summary>
+            /// <para>The code of the publish order type.</para>
+            /// </summary>
+            [NameInMap("OrderTypeCode")]
+            [Validation(Required=false)]
+            public string OrderTypeCode { get; set; }
 
             /// <summary>
             /// <para>The task completion percentage.</para>
@@ -197,7 +218,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public long? PublishOrderId { get; set; }
 
             /// <summary>
-            /// <para>The scheduled publish time.</para>
+            /// <para>The scheduled publish time in the UTC format yyyy-MM-dd\&quot;T\&quot;HH:mm:ss.SSS\&quot;Z\&quot;.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
             /// 
             /// <b>Example:</b>
@@ -218,12 +239,22 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string SiteId { get; set; }
 
             /// <summary>
+            /// <para>The list of publish step codes.</para>
+            /// </summary>
+            [NameInMap("StepCodes")]
+            [Validation(Required=false)]
+            public List<string> StepCodes { get; set; }
+
+            /// <summary>
             /// <para>The error level. Valid values: FATAL, ERROR, WARNING, and CRITICAL.</para>
             /// </summary>
             [NameInMap("Steps")]
             [Validation(Required=false)]
             public List<string> Steps { get; set; }
 
+            /// <summary>
+            /// <para>The publish subchannel.</para>
+            /// </summary>
             [NameInMap("Subchannel")]
             [Validation(Required=false)]
             public string Subchannel { get; set; }
@@ -254,7 +285,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>系统异常</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]

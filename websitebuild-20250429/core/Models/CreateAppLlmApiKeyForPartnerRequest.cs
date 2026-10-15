@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class CreateAppLlmApiKeyForPartnerRequest : TeaModel {
         /// <summary>
-        /// <para>Business ID of the application instance</para>
+        /// <para>The business ID of the application instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WD20250814102215000001</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>Idempotent token (reserved)</para>
+        /// <para>The idempotency token. This parameter is reserved for future use.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxxx-xxxx</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Description of the API key usage</para>
+        /// <para>The description of the API key usage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Caller-defined IP address whitelist (the backend appends the system default IP segment)</para>
+        /// <para>The custom IP address whitelist defined by the invoker. The system default IP ranges are appended by the backend.</para>
         /// </summary>
         [NameInMap("IpWhiteList")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListAppPublishHistoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>Detailed reason for access denial.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>is retry allowed</para>
+        /// <para>Indicates whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>frontend application Name.</para>
+        /// <para>The name of the frontend application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>spring-cloud-b</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>dynamic error code.</para>
+        /// <para>The dynamic error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ERROR-oo1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>dynamic message, not currently used. Please ignore.</para>
+        /// <para>The dynamic message. This parameter is not used and can be ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>
@@ -60,15 +60,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>fault parameters</para>
+        /// <para>The error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>Number of results per query.  </para>
-        /// <para>Value range: 10 to 100. Default Value: 20.</para>
+        /// <para>The maximum number of entries to return for a single query. Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -78,14 +77,11 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Data Table module.  </para>
+        /// <para>The data table module. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>ABTest: experiment Data Table  </para>
-        /// </description></item>
-        /// <item><description><para>ExperimentTool: experiment tool table  </para>
-        /// </description></item>
-        /// <item><description><para>DataDiagnosis: Data Diagnosis</para>
-        /// </description></item>
+        /// <item><description>ABTest: experiment data table</description></item>
+        /// <item><description>ExperimentTool: experiment tool table</description></item>
+        /// <item><description>DataDiagnosis: data diagnostics</description></item>
         /// </list>
         /// </summary>
         [NameInMap("Module")]
@@ -93,7 +89,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public ListAppPublishHistoryResponseBodyModule Module { get; set; }
         public class ListAppPublishHistoryResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>Current publish order ID</para>
+            /// <para>The ID of the current release order.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -103,12 +99,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public long? CurrentPublishOrderId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether to display the history of applying the alert template to application groups. Valid values:</para>
+            /// <para>Specifies whether to display the history of applying alert templates to application groups. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true: Display.</para>
-            /// </description></item>
-            /// <item><description><para>false (default): Do not display.</para>
-            /// </description></item>
+            /// <item><description>true: displayed.</description></item>
+            /// <item><description>false: not displayed. Default value.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("History")]
@@ -125,12 +119,15 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 [Validation(Required=false)]
                 public string CanQuickRevert { get; set; }
 
+                /// <summary>
+                /// <para>The commit hash of the code.</para>
+                /// </summary>
                 [NameInMap("CommitHash")]
                 [Validation(Required=false)]
                 public string CommitHash { get; set; }
 
                 /// <summary>
-                /// <para>Current step.</para>
+                /// <para>The current step number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PRE_CHECK</para>
@@ -140,7 +137,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string CurrentStep { get; set; }
 
                 /// <summary>
-                /// <para>Deployment channel.</para>
+                /// <para>The code of the current release step.</para>
+                /// </summary>
+                [NameInMap("CurrentStepCode")]
+                [Validation(Required=false)]
+                public string CurrentStepCode { get; set; }
+
+                /// <summary>
+                /// <para>The deployment channel.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PC</para>
@@ -150,7 +154,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string DeployChannel { get; set; }
 
                 /// <summary>
-                /// <para>Application description.</para>
+                /// <para>The application description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PSKB</para>
@@ -160,7 +164,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Publishing procedure.</para>
+                /// <para>The release process.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>error</para>
@@ -170,17 +174,24 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string ErrorStep { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the process is complete.</para>
+                /// <para>The code of the release step where the error occurred.</para>
+                /// </summary>
+                [NameInMap("ErrorStepCode")]
+                [Validation(Required=false)]
+                public string ErrorStepCode { get; set; }
+
+                /// <summary>
+                /// <para>Indicates whether the operation is completed.</para>
                 /// </summary>
                 [NameInMap("IsFinish")]
                 [Validation(Required=false)]
                 public bool? IsFinish { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether resource allocation to the cost center succeeded.</para>
+                /// <para>Indicates whether the resource allocation for the financial unit is successful. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true indicates success.</description></item>
-                /// <item><description>false indicates failure.</description></item>
+                /// <item><description>true: successful</description></item>
+                /// <item><description>false: failed</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -191,7 +202,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public bool? IsSuccess { get; set; }
 
                 /// <summary>
-                /// <para>Error message.</para>
+                /// <para>The error message.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SUCCESS</para>
@@ -201,7 +212,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Msg { get; set; }
 
                 /// <summary>
-                /// <para>Sorting type: ASC or DESC.</para>
+                /// <para>The sort order. Valid values: ASC and DESC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DESC</para>
@@ -211,7 +222,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string OrderType { get; set; }
 
                 /// <summary>
-                /// <para>Transcoding progress.</para>
+                /// <para>The code of the release order type.</para>
+                /// </summary>
+                [NameInMap("OrderTypeCode")]
+                [Validation(Required=false)]
+                public string OrderTypeCode { get; set; }
+
+                /// <summary>
+                /// <para>The transcoding progress.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -221,7 +239,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public int? Percent { get; set; }
 
                 /// <summary>
-                /// <para>Publish number.</para>
+                /// <para>The release number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -231,7 +249,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string PublishNumber { get; set; }
 
                 /// <summary>
-                /// <para>Publish order ID.</para>
+                /// <para>The release order ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -241,7 +259,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public long? PublishOrderId { get; set; }
 
                 /// <summary>
-                /// <para>Published At.</para>
+                /// <para>The release time, in the UTC format yyyy-MM-dd\&quot;T\&quot;HH:mm:ss.SSS\&quot;Z\&quot;.</para>
                 /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
                 /// 
                 /// <b>Example:</b>
@@ -252,12 +270,22 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string PublishTime { get; set; }
 
                 /// <summary>
-                /// <para>Specific widget configuration.</para>
+                /// <para>The list of release step codes.</para>
+                /// </summary>
+                [NameInMap("StepCodes")]
+                [Validation(Required=false)]
+                public List<string> StepCodes { get; set; }
+
+                /// <summary>
+                /// <para>The specific configurations of the component.</para>
                 /// </summary>
                 [NameInMap("Steps")]
                 [Validation(Required=false)]
                 public List<string> Steps { get; set; }
 
+                /// <summary>
+                /// <para>The release subchannel.</para>
+                /// </summary>
                 [NameInMap("Subchannel")]
                 [Validation(Required=false)]
                 public string Subchannel { get; set; }
@@ -265,7 +293,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             }
 
             /// <summary>
-            /// <para>Page number. Default value is 1.</para>
+            /// <para>The page number. Default value: 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -275,7 +303,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? PageNum { get; set; }
 
             /// <summary>
-            /// <para>Paging size.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -285,7 +313,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>Total count.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -297,7 +325,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         }
 
         /// <summary>
-        /// <para>Token for the start of the next query. It is empty if there is no next query.</para>
+        /// <para>The token used to start the next query. This parameter is empty if no next query is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0l45bkwM022Dt+rOvPi/oQ==</para>
@@ -317,7 +345,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>error code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM.ERROR</para>
@@ -327,17 +355,17 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>abnormal message</para>
+        /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>系统异常</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Reserved parameter.</para>
+        /// <para>The reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

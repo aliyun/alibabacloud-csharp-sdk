@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class DeleteAppDomainRedirectRequest : TeaModel {
         /// <summary>
-        /// <para>Application instance business ID.</para>
+        /// <para>The business ID of the application instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WD20250703155602000001</para>
@@ -20,7 +20,17 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>Domain name redirect record ID.</para>
+        /// <para>aliyun.com</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="http://www.aliyun.com">www.aliyun.com</a></para>
+        /// </summary>
+        [NameInMap("DomainName")]
+        [Validation(Required=false)]
+        public string DomainName { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the domain name redirect record.</para>
         /// 
         /// <b>Example:</b>
         /// <para>803858889404426240</para>

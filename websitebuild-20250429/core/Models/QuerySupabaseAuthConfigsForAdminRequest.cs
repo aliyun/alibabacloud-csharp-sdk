@@ -31,6 +31,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string BizId { get; set; }
 
+        /// <summary>
+        /// <para>The environment identifier.</para>
+        /// </summary>
         [NameInMap("Env")]
         [Validation(Required=false)]
         public string Env { get; set; }
@@ -46,11 +49,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderColumn { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>ASC: ascending order.</description></item>
-        /// <item><description>DESC: descending order.</description></item>
-        /// </list>
+        /// <para>The sort type. Valid values: ASC and DESC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DESC</para>

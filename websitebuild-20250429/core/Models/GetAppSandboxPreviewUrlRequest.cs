@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppSandboxPreviewUrlRequest : TeaModel {
         /// <summary>
-        /// <para>session ID</para>
+        /// <para>The session ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>593fe1a2-d0b4-4fde-a2b0-78ad6a438d41</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ConversationId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to restart the application process. This parameter is optional and defaults to false.</para>
+        /// <para>Specifies whether to restart the application process. This parameter is optional. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

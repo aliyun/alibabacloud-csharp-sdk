@@ -10,27 +10,17 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ModuleResultsValue : TeaModel {
         /// <summary>
-        /// <para>是否通过检查</para>
+        /// <para>Returned only for APP_WORKSPACE quantity pre-checks. This is the final total quantity to be saved, not the increment for the current operation. The issue quantity is the sum of common issues and reputation issues, and the competitor quantity is the total number of competitors after editing. This field is empty for APP and USER checks.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>21</para>
         /// </summary>
-        [NameInMap("Passed")]
+        [NameInMap("DesiredTotal")]
         [Validation(Required=false)]
-        public bool? Passed { get; set; }
+        public long? DesiredTotal { get; set; }
 
         /// <summary>
-        /// <para>资源标识</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>InspirationTokens</para>
-        /// </summary>
-        [NameInMap("ResourceCode")]
-        [Validation(Required=false)]
-        public string ResourceCode { get; set; }
-
-        /// <summary>
-        /// <para>失败时的错误码，通过时为null</para>
+        /// <para>The error code when the check fails. This field is null when the check passes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Resource.Control.No.Usage</para>
@@ -40,14 +30,54 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>失败时的错误信息，通过时为null</para>
+        /// <para>The error message when the check fails. This field is null when the check passes.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>用量耗尽</para>
+        /// <para>Quota exhausted</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
+
+        /// <summary>
+        /// <para>Returned only for APP_WORKSPACE quantity pre-checks. This is the maximum number of issues or competitors allowed by the current commodity version, not the remaining quota. This field is empty for APP and USER checks or when the version benefits cannot be determined.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
+        [NameInMap("Limit")]
+        [Validation(Required=false)]
+        public long? Limit { get; set; }
+
+        /// <summary>
+        /// <para>Indicates whether the check is passed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("Passed")]
+        [Validation(Required=false)]
+        public bool? Passed { get; set; }
+
+        /// <summary>
+        /// <para>The resource identifier.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>InspirationTokens</para>
+        /// </summary>
+        [NameInMap("ResourceCode")]
+        [Validation(Required=false)]
+        public string ResourceCode { get; set; }
+
+        /// <summary>
+        /// <para>Indicates whether a purchasable higher version exists that can accommodate the DesiredTotal. This field is true only when the current version capacity is insufficient and a higher version meets the requirements. Otherwise, it is false. This field may be empty for APP and USER checks. This field does not indicate that an upgrade has been performed or an upgrade order has been created.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("UpgradeAvailable")]
+        [Validation(Required=false)]
+        public bool? UpgradeAvailable { get; set; }
 
     }
 

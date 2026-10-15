@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class BatchCheckResourceMeasureRequest : TeaModel {
         /// <summary>
-        /// <para>The owner ID, which can be a website ID or an Alibaba Cloud account ID.</para>
+        /// <para>The ownership ID, which can be a website ID or an Alibaba Cloud user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BelongId { get; set; }
 
         /// <summary>
-        /// <para>The type of the owner ID. Valid values: siteId and uid.</para>
+        /// <para>The type of the ownership ID, such as siteId or uid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>USER</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string EspBizId { get; set; }
 
         /// <summary>
-        /// <para>The order module information. If this parameter is left empty, the information is automatically completed.</para>
+        /// <para>The order module information. This parameter is automatically populated when it is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;siteversion&quot;:&quot;test&quot;}</para>

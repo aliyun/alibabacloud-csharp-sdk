@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ChatId { get; set; }
 
         /// <summary>
-        /// <para>The session ID.</para>
+        /// <para>The conversation ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5b7105a2-2999-430b-ba23-ba09149d5434</para>
@@ -30,14 +30,18 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ConversationId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the last event.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>event-71ece53b7d474e01b755a9b5fa5305e6</para>
+        /// <para>The last event ID.</para>
         /// </summary>
         [NameInMap("LastEventId")]
         [Validation(Required=false)]
         public int? LastEventId { get; set; }
+
+        /// <summary>
+        /// <para>The creation time of the latest message.</para>
+        /// </summary>
+        [NameInMap("LatestMessageCreateTime")]
+        [Validation(Required=false)]
+        public string LatestMessageCreateTime { get; set; }
 
     }
 

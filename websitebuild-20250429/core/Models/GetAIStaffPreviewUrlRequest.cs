@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAIStaffPreviewUrlRequest : TeaModel {
         /// <summary>
-        /// <para>session ID</para>
+        /// <para>The session ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>81bc5a34-1d8d-4ef7-a208-7401c51b054b</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ConversationId { get; set; }
 
         /// <summary>
-        /// <para>is application restart required</para>
+        /// <para>Specifies whether to restart the application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

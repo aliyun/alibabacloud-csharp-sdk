@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// <para>The activity name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>IP网段过滤统计</para>
+                /// <para>IP segment filtering statistics</para>
                 /// </summary>
                 [NameInMap("ActivityName")]
                 [Validation(Required=false)]
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public long? ConsumedQuota { get; set; }
 
                 /// <summary>
-                /// <para>The creation time.</para>
+                /// <para>The creation time. The value is in the YYYY-MM-DD HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-02-14 11:57:51</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string EligibilityConfig { get; set; }
 
                 /// <summary>
-                /// <para>The end date.</para>
+                /// <para>The end date. The value is in the YYYY-MM-DD HH:mm:ss Z format, where Z is the time zone offset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-04-22 10:18:51 +0800</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public long? RemainingQuota { get; set; }
 
                 /// <summary>
-                /// <para>The start date.</para>
+                /// <para>The start date. The value is in the ISO 8601 format with the time zone set to UTC (Z).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-05-12T16:00:00.000Z</para>
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string TouchpointConfig { get; set; }
 
                 /// <summary>
-                /// <para>The update time.</para>
+                /// <para>The update time. The value is in the ISO 8601 format with a time zone offset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-10-11T21:13:38.164526965+08:00</para>
@@ -319,14 +319,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The root error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>系统异常</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is processed synchronously.</para>
+        /// <para>Indicates whether the request is synchronously processed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

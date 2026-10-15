@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class PublishAppInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>Business ID</para>
+        /// <para>The business ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WD20250821161210000001</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>Deployment channel</para>
+        /// <para>The deployment channel.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PC</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DeployChannel { get; set; }
 
         /// <summary>
-        /// <para>Publish description</para>
+        /// <para>The publish description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CREATE_BY_NLB.nlb-jcvs5sm9l8um84zbfa</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Logical version number</para>
+        /// <para>The logical version number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>111</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? LogicalNumber { get; set; }
 
         /// <summary>
-        /// <para>Publish number</para>
+        /// <para>The publish number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string PublishNumber { get; set; }
 
         /// <summary>
-        /// <para>action</para>
+        /// <para>The action.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BUILD</para>
