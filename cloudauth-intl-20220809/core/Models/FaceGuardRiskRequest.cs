@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The device token obtained from the Face Guard SDK.</para>
+        /// <para>The device token obtained through the Face Guard SDK.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Tk9SSUQuMS*****************ZDNmNWY5NzQxOW1o</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string DeviceToken { get; set; }
 
         /// <summary>
-        /// <para>The merchant-defined unique business identifier, used for subsequent troubleshooting. The value can contain letters and digits with a maximum length of 32 characters. Make sure the value is unique.</para>
+        /// <para>The custom unique business identifier on the merchant side, used for subsequent troubleshooting. It supports a combination of letters and digits, with a maximum length of 32 characters. Ensure that the value is unique.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0c83ce0101d34eff886b1f7d1cdef67f</para>

@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The return result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public class FaceGuardRiskResponseBodyResult : TeaModel {
             /// <summary>
             /// <para>The device risk probability predicted by the Face Guard algorithm. A higher score indicates a higher device risk.</para>
-            /// <para>Value range: 0 to 100.</para>
+            /// <para>Valid values: 0 to 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -58,10 +58,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public double? GuardRiskScore { get; set; }
 
             /// <summary>
-            /// <para>The extended information in JSON format. The response is customized based on tenant requirements.</para>
+            /// <para>The extended information in JSON format. The returned content is customized based on tenant requirements.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>默认为空</para>
+            /// <para>Empty</para>
             /// </summary>
             [NameInMap("RiskExtends")]
             [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             /// <summary>
             /// <para>The device risk tags.</para>
             /// <list type="bullet">
-            /// <item><description><para>Multiple device risk tags are separated by commas (,), such as &quot;ROOT,VPN,HOOK&quot;.</para>
+            /// <item><description><para>Multiple device risk tags are separated by commas (,), such as ROOT,VPN,HOOK.</para>
             /// </description></item>
             /// <item><description><para>For more information about device risk tags and their meanings, refer to the Face Guard tag description in the official documentation.</para>
             /// </description></item>

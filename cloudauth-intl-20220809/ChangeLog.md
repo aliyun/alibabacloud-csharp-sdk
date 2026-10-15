@@ -1,3 +1,8 @@
+2026-10-15 Version: 3.20.1
+- Update API Initialize: add request parameters NeedMultiFaceCheck.
+- Update API InitializeV2: add request parameters NeedMultiFaceCheck.
+
+
 2026-09-17 Version: 3.20.0
 - Support API CredentialRecognitionIntlV2.
 - Support API CredentialSubmitIntlV2.

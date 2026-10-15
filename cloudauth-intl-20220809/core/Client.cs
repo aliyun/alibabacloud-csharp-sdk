@@ -7998,7 +7998,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Server-side API for the international Face Guard service.</para>
+        /// <para>Provides the server-side API for international Face Guard.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8056,7 +8056,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Server-side API for the international Face Guard service.</para>
+        /// <para>Provides the server-side API for international Face Guard.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8114,7 +8114,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Server-side API for the international Face Guard service.</para>
+        /// <para>Provides the server-side API for international Face Guard.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8132,7 +8132,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Server-side API for the international Face Guard service.</para>
+        /// <para>Provides the server-side API for international Face Guard.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10325,6 +10325,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["Model"] = request.Model;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedMultiFaceCheck))
+            {
+                query["NeedMultiFaceCheck"] = request.NeedMultiFaceCheck;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ocr))
             {
                 query["Ocr"] = request.Ocr;
@@ -10606,6 +10610,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
             {
                 query["Model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedMultiFaceCheck))
+            {
+                query["NeedMultiFaceCheck"] = request.NeedMultiFaceCheck;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ocr))
             {
@@ -10929,6 +10937,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["Model"] = request.Model;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedMultiFaceCheck))
+            {
+                query["NeedMultiFaceCheck"] = request.NeedMultiFaceCheck;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ocr))
             {
                 query["Ocr"] = request.Ocr;
@@ -11218,6 +11230,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
             {
                 query["Model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedMultiFaceCheck))
+            {
+                query["NeedMultiFaceCheck"] = request.NeedMultiFaceCheck;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ocr))
             {

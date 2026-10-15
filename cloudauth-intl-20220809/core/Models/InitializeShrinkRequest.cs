@@ -36,6 +36,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 
         /// <summary>
         /// <para>The automatic document classification configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;BRA01001&quot;:&quot;01&quot;,&quot;BRA01002&quot;:&quot;01,02&quot;}</para>
         /// </summary>
         [NameInMap("AutoDocPageConfig")]
         [Validation(Required=false)]
@@ -231,6 +234,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 
         /// <summary>
         /// <para>Specifies whether to enable face attribute check.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>N</para>
         /// </summary>
         [NameInMap("FaceAttributeCheck")]
         [Validation(Required=false)]
@@ -411,6 +417,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [NameInMap("Model")]
         [Validation(Required=false)]
         public string Model { get; set; }
+
+        [NameInMap("NeedMultiFaceCheck")]
+        [Validation(Required=false)]
+        public string NeedMultiFaceCheck { get; set; }
 
         /// <summary>
         /// <para>Specifies whether to enable OCR. This is an input parameter for the IDV product.</para>
@@ -656,6 +666,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 
         /// <summary>
         /// <para>Specifies whether to overwrite the existing face with the current face when MerchantUserId already exists during automatic registration. Y: overwrite. N: do not overwrite and return a message indicating that the UserId already exists.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>N</para>
         /// </summary>
         [NameInMap("UpdateFaceIfUserExists")]
         [Validation(Required=false)]
