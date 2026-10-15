@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class EcomVideoRecreationShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The input parameters for video multiplication.</para>
+        /// <para>The input parameters for video variation generation.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Input")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string InputShrink { get; set; }
 
         /// <summary>
-        /// <para>The output specifications for the final video.</para>
+        /// <para>The output specifications for the generated video.</para>
         /// </summary>
         [NameInMap("Output")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class EcomVideoRecreationRequest : TeaModel {
         /// <summary>
-        /// <para>The input parameters for video multiplication.</para>
+        /// <para>The input parameters for video variation generation.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Input")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public EcomVideoRecreationRequestInput Input { get; set; }
         public class EcomVideoRecreationRequestInput : TeaModel {
             /// <summary>
-            /// <para>The description or supplementary constraints for the target person in person replacement mode. The value must be 1 to 500 characters in length. This parameter is required if PersonReferenceImageUrls is not provided.<br>Example: The target person is an adult male. Retain the original clothing and actions.</para>
+            /// <para>The description or supplementary constraints for the target person in person replacement. The length is 1 to 500 characters. This parameter is required when PersonReferenceImageUrls is not provided.<br>Example value: The target person is an adult male, retaining the original clothing and actions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The target character is an adult male, with the original costume and movements preserved.</para>
@@ -38,28 +38,28 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string Mode { get; set; }
 
             /// <summary>
-            /// <para>The URLs of reference images for the target person in person replacement mode. You can specify 1 to 5 images, which must be of the same person. Arrange the images in the following order: facial close-up, front view, 45-degree view, side view, and back view.<br>Example: [&quot;<a href="https://example.com/person.jpg%22%5D">https://example.com/person.jpg&quot;]</a></para>
+            /// <para>The URLs of the reference images for the target person in person replacement. You can provide 1 to 5 images, which must be of the same person. We recommend that you arrange the images in the order of facial close-up, front, 45-degree angle, side, and back.<br>Example value: [&quot;<a href="https://example.com/person.jpg%22%5D">https://example.com/person.jpg&quot;]</a></para>
             /// </summary>
             [NameInMap("PersonReferenceImageUrls")]
             [Validation(Required=false)]
             public List<string> PersonReferenceImageUrls { get; set; }
 
             /// <summary>
-            /// <para>The URLs of target product images. This parameter is required for product replacement mode. You can upload 1 to 8 images for the same SKU. Use images with a clear subject, no occlusion, and a clean background.<br>Example: [&quot;<a href="https://example.com/product.png%22%5D">https://example.com/product.png&quot;]</a></para>
+            /// <para>The URLs of the target product images. This parameter is required for product replacement. You can upload 1 to 8 images for the same SKU. We recommend that the main subject is clear, unobstructed, and has a clean background.<br>Example value: [&quot;<a href="https://example.com/product.png%22%5D">https://example.com/product.png&quot;]</a></para>
             /// </summary>
             [NameInMap("ProductImageUrls")]
             [Validation(Required=false)]
             public List<string> ProductImageUrls { get; set; }
 
             /// <summary>
-            /// <para>The target product information. Specify this parameter to improve voiceover accuracy.</para>
+            /// <para>The target product information. We recommend that you specify this parameter to improve the accuracy of the voiceover.</para>
             /// </summary>
             [NameInMap("ProductInfo")]
             [Validation(Required=false)]
             public EcomVideoRecreationRequestInputProductInfo ProductInfo { get; set; }
             public class EcomVideoRecreationRequestInputProductInfo : TeaModel {
                 /// <summary>
-                /// <para>The product category.<br>Example: Womenswear/Sun-protective clothing</para>
+                /// <para>The product category.<br>Example value: Women\&quot;s clothing/Sun protection clothing.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Women\&quot;s clothing/sun protection clothing</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public string Category { get; set; }
 
                 /// <summary>
-                /// <para>The actual product information (SKU, brand, color, material, size, specifications, logo, and usage), used to constrain voiceover facts.<br>Example: Light yellow, cooling fabric, sun protection to the back of the hand, UPF50+</para>
+                /// <para>The actual product information, such as SKU, brand, color, material, size, specifications, logo, and usage instructions. This information is used to constrain the facts in the voiceover.<br>Example value: Pale moon yellow, cool-touch fabric, sun protection down to the back of the hand, UPF50+</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Light moon yellow, cool-touch fabric, sun protection extending to the back of the hand, UPF50+</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public string Detail { get; set; }
 
                 /// <summary>
-                /// <para>The name of the target product. This parameter is required for product replacement mode. Maximum length: 200 characters.<br>Example: Light yellow cooling sun-protective jacket</para>
+                /// <para>The name of the target product. This parameter is required for product replacement. The maximum length is 200 characters.<br>Example value: Pale moon yellow cool-touch sun protection clothing.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Light moon yellow cool-touch sun protection clothing</para>
@@ -91,7 +91,17 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             }
 
             /// <summary>
-            /// <para>The HTTP(S) URL of the reference video. The video duration must be 2 to 360 seconds. The URL must remain accessible during task execution. A validity period of at least 24 hours is recommended.</para>
+            /// <para>The generation mode. Default value: <c>reference</c>. Valid values: <c>reference</c> (directly references the original video) and <c>rebuild</c> (breaks down the original video before regenerating it).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>reference</para>
+            /// </summary>
+            [NameInMap("RecreateMode")]
+            [Validation(Required=false)]
+            public string RecreateMode { get; set; }
+
+            /// <summary>
+            /// <para>The HTTP(S) URL of the reference video. The duration ranges from 2 to 360 seconds. The URL must remain accessible during task execution. We recommend that the validity period is no less than 24 hours.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -104,14 +114,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The output specifications for the final video.</para>
+        /// <para>The output specifications for the generated video.</para>
         /// </summary>
         [NameInMap("Output")]
         [Validation(Required=false)]
         public EcomVideoRecreationRequestOutput Output { get; set; }
         public class EcomVideoRecreationRequestOutput : TeaModel {
             /// <summary>
-            /// <para>The target duration in seconds. Set to <c>&quot;auto&quot;</c> (default) to let the system decide. For product replacement, specify an integer from 5 to 60. For person replacement, only <c>&quot;auto&quot;</c> is supported.</para>
+            /// <para>The target duration in seconds. In <c>reference</c> mode, the input value is ignored and forced to -1, which follows the duration of the original video. In <c>rebuild</c> mode, you can pass an integer from 5 to 60, or pass -1 to indicate an automatic duration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>-1</para>

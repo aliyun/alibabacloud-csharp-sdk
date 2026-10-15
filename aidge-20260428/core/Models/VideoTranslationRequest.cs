@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class VideoTranslationRequest : TeaModel {
         /// <summary>
-        /// <para>The array of translation capabilities. Valid values: [&quot;visual&quot;].</para>
+        /// <para>The array of translation capabilities. Current valid value: [&quot;visual&quot;].</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Capabilities")]
@@ -18,7 +18,17 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public List<string> Capabilities { get; set; }
 
         /// <summary>
-        /// <para>The source language. This parameter is optional. Default value: auto, which indicates automatic detection.</para>
+        /// <para>Specifies whether to enable the visual quality check. This parameter takes effect only when Capabilities includes visual.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("EnableQualityCheck")]
+        [Validation(Required=false)]
+        public bool? EnableQualityCheck { get; set; }
+
+        /// <summary>
+        /// <para>The source language. This parameter is optional. Default value: auto, which indicates automatic recognition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -39,7 +49,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string TargetLanguage { get; set; }
 
         /// <summary>
-        /// <para>The URL of the video (MP4/MOV, ≤ 200 MB).</para>
+        /// <para>The video URL. Supported formats: MP4 and MOV. Maximum size: 200 MB.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

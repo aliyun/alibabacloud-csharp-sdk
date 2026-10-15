@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class VideoGenerationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. A value of success indicates a successful call, and a value of failed indicates a failed call.</para>
+        /// <para>The response code. A value of success indicates that the call is successful, and a value of failed indicates that the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response struct.</para>
+        /// <para>The struct information of the returned result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The metering usage information.</para>
+            /// <para>The metering and usage information.</para>
             /// </summary>
             [NameInMap("UsageMap")]
             [Validation(Required=false)]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The response message. An error message is returned if the call fails.</para>
+        /// <para>The returned message. An error message is returned when the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which uniquely identifies a single API call.</para>
+        /// <para>The request ID, which is used to identify a unique request call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>70CBEFDF-BB17-1EB3-8A21-569F3124738F</para>

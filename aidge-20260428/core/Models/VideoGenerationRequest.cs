@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public List<VideoGenerationRequestInputAssetBindings> AssetBindings { get; set; }
             public class VideoGenerationRequestInputAssetBindings : TeaModel {
                 /// <summary>
-                /// <para>The asset index.</para>
+                /// <para>The asset index, such as 0, 1, 2, or 3, which must be consistent with the number of the image URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -35,7 +35,12 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public int? AssetIndex { get; set; }
 
                 /// <summary>
-                /// <para>The asset description.</para>
+                /// <para>The description of the image. Examples:   </para>
+                /// <ol>
+                /// <item><description>Description for look_reference: Front full-body outfit reference image of the person.   </description></item>
+                /// <item><description>Description for scene_reference: Specified clothing display scene.   </description></item>
+                /// <item><description>Description for garment_reference:<br>● Front of the top;<br>● Back of the bottom;<br>● Side of the shoes.</description></item>
+                /// </ol>
                 /// 
                 /// <b>Example:</b>
                 /// <list type="bullet">
@@ -47,7 +52,12 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The asset usage.</para>
+                /// <para>Specifies the asset usage. Valid values:   </para>
+                /// <list type="bullet">
+                /// <item><description>look_reference: Corresponds to the full outfit effect image of the person wearing the clothes (overall visual).   </description></item>
+                /// <item><description>scene_reference: Corresponds to the scene reference image (usually the cover main image).   </description></item>
+                /// <item><description>garment_reference: Corresponds to all product detail images (including front, back, and side of clothes, shoes, skirts, and other partial close-ups).</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <list type="bullet">
@@ -68,7 +78,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public Dictionary<string, object> Extra { get; set; }
 
             /// <summary>
-            /// <para>The list of product image URLs (1 to 6 images). The URLs must be publicly accessible.</para>
+            /// <para>The list of product image URLs (1 to 8 images), which must be accessible over the Internet.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("Images")]
@@ -76,7 +86,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public List<string> Images { get; set; }
 
             /// <summary>
-            /// <para>The product title. A maximum of the first 60 characters are used.</para>
+            /// <para>The product title. Only the first 60 characters are used.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -96,7 +106,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public VideoGenerationRequestIntent Intent { get; set; }
         public class VideoGenerationRequestIntent : TeaModel {
             /// <summary>
-            /// <para>The distribution channel.</para>
+            /// <para>The delivery channel.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -108,10 +118,15 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string Channel { get; set; }
 
             /// <summary>
-            /// <para>The business goal. Valid values:</para>
-            /// <para>camera_motion: Camera movement mode. Generates video based on fixed 360° camera movement logic.</para>
-            /// <para>scripted_video: Scripted mode. Provides a script or prompt, and the system generates video based on the script.</para>
-            /// <para>auto_video: Unscripted mode. No script is provided. The system automatically plans the script and then generates the video.</para>
+            /// <para>Specifies the business goal. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>camera_motion: Camera movement mode. Generates videos based on a fixed 360-degree camera movement logic.</para>
+            /// </description></item>
+            /// <item><description><para>scripted_video: Scripted mode. Provides a script or prompt, and the system generates the video according to the script.</para>
+            /// </description></item>
+            /// <item><description><para>auto_video: Unscripted mode. Does not provide a script, and the system automatically plans the script and generates the video.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>auto_video</para>
@@ -152,7 +167,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public VideoGenerationRequestOutput Output { get; set; }
         public class VideoGenerationRequestOutput : TeaModel {
             /// <summary>
-            /// <para>The video duration in seconds. Currently supports integers between 5 and 15. More options will be available in the future.</para>
+            /// <para>The video duration varies by Intent.goal: auto_video supports 5 to 15 seconds, scripted_video supports 5 to 30 seconds, and camera_motion generates a fixed 10-second video and returns two 5-second videos.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -174,7 +189,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string Quality { get; set; }
 
             /// <summary>
-            /// <para>The video aspect ratio.</para>
+            /// <para>The aspect ratio varies by Intent.goal: auto_video and scripted_video only support 9:16, and camera_motion only supports 3:4.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9:16</para>

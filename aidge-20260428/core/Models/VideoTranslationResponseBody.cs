@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The submit status of the asynchronous task.</para>
+        /// <para>The submission result of the asynchronous task.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public VideoTranslationResponseBodyData Data { get; set; }
         public class VideoTranslationResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The asynchronous task ID, used for subsequent queries.</para>
+            /// <para>The ID of the asynchronous task, which is used for subsequent queries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0ea3b66e88a543658520c994f08896a0</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The description.</para>
+        /// <para>The description message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Translation processing</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request trace ID.</para>
+        /// <para>The request tracking ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>req_20260608_jkl012</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values: true: The call is successful. false: The call fails.</para>
+        /// <para>Indicates whether the call is successful. Valid values: true (successful) and false (failed).</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

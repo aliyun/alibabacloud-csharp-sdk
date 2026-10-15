@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string FormatType { get; set; }
 
         /// <summary>
-        /// <para>The intervention glossary ID. This parameter is optional. You must create the glossary separately in the console and provide its ID. If the provided glossary ID is empty, the translation results are not modified.</para>
+        /// <para>The intervention glossary ID. This parameter is optional. The glossary must be created separately in the console, and its ID must be provided. If the specified glossary ID is empty, the translation results are not modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>glossary_1</para>
@@ -40,7 +40,8 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Glossary { get; set; }
 
         /// <summary>
-        /// <para>The source language code. This parameter is optional. If you do not specify this parameter, the source language is automatically detected. You can set this parameter to auto for language detection. For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language direction mapping table</a>.</para>
+        /// <para>The source language code. If this parameter is not specified, the language is automatically detected. This parameter is optional. You can pass auto for language detection.<br>&lt;props=&quot;china&quot;&gt;For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language direction mapping</a>      </para>
+        /// <para>&lt;props=&quot;intl&quot;&gt;For supported language directions, see <a href="https://www.alibabacloud.com/help/zh/aidge/language-direction-mapping">Language direction mapping</a></para>
         /// 
         /// <b>Example:</b>
         /// <para>auto</para>
@@ -61,7 +62,8 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string SourceTextListShrink { get; set; }
 
         /// <summary>
-        /// <para>The target language code. This parameter is required. For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language direction mapping table</a>.</para>
+        /// <para>The target language code. This parameter is required.<br>&lt;props=&quot;china&quot;&gt;For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language direction mapping</a>      </para>
+        /// <para>&lt;props=&quot;intl&quot;&gt;For supported language directions, see <a href="https://www.alibabacloud.com/help/zh/aidge/language-direction-mapping">Language direction mapping</a></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,15 +74,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string TargetLanguage { get; set; }
 
         /// <summary>
-        /// <para>The business scenario identifier. You can pass in only one of the following values. After you specify this parameter, the translation engine invokes the terminology library and style strategy for the corresponding industry to produce translations that better fit the industry. If this field is not specified or is specified incorrectly, the general translation strategy is used. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>e-commerce-title: cross-border e-commerce product title translation.</description></item>
-        /// <item><description>e-commerce-description: cross-border e-commerce product description translation.</description></item>
-        /// <item><description>e-commerce-chat: cross-border e-commerce conversation translation.</description></item>
-        /// <item><description>e-commerce-cpv: cross-border e-commerce product CPV attribute translation.</description></item>
-        /// <item><description>novel: novel translation.</description></item>
-        /// <item><description>game: game translation.</description></item>
-        /// </list>
+        /// <para>The business scenario identifier. You can pass only one of the following values. When specified, the translation engine invokes the corresponding industry terminology library and style policy to produce translations that better fit the industry. If this field is not specified or is specified incorrectly, the general translation policy is used. Valid values: e-commerce-title (cross-border e-commerce product title translation), e-commerce-description (cross-border e-commerce product description translation), e-commerce-chat (cross-border e-commerce conversation translation), e-commerce-cpv (cross-border e-commerce product CPV attribute translation), novel (novel translation), game (game translation).</para>
         /// 
         /// <b>Example:</b>
         /// <para>e-commerce-title</para>

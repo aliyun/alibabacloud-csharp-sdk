@@ -3047,8 +3047,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Designed specifically for document translation. Supports translation between more than 400 language pairs (including bridged pairs) to handle multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported.
-        /// Excels in the following areas:</para>
+        /// <para>Designed specifically for document translation. Supports translation between more than 400 language pairs (including bridged pairs) to handle multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported. Excels in the following areas:</para>
         /// <list type="bullet">
         /// <item><description>Content accuracy: translation accuracy, parameter and unit accuracy.</description></item>
         /// <item><description>Structural integrity: overall layout continuity, page margin and layout restoration.</description></item>
@@ -3065,14 +3064,14 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <item><description>Structural integrity: overall layout continuity, page margin and layout restoration</description></item>
         /// </list>
         /// <h2>Common scenarios</h2>
-        /// <para>Cross-border e-commerce product manuals, contracts, agreements, business proposals, qualification documents, textbooks and courseware, and many other scenarios.</para>
+        /// <para>Cross-border e-commerce product manuals, contracts, agreements, business proposals, qualification documents, textbooks, courseware, and other scenarios.</para>
         /// <h2>Functions and features</h2>
         /// <list type="bullet">
-        /// <item><description>Supports PDF and Word formats. Supports source documents that contain multiple languages. For a detailed language list, see section 4.5.</description></item>
-        /// <item><description>Supports translation of text within images in documents, as well as complex translation scenarios such as charts and special symbols.</description></item>
+        /// <item><description>Supports PDF and Word formats. Supports source documents that contain multiple languages. For a detailed language list, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language pair mapping table</a>.</description></item>
+        /// <item><description>Supports translation of text within images in documents, as well as complex translation scenarios involving charts, special symbols, and more.</description></item>
         /// <item><description>Supports high-fidelity layout restoration after translation.</description></item>
         /// <item><description>A single PDF supports up to 100 pages. A single Word document supports up to 100 pages.</description></item>
-        /// <item><description>Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for brand name protection and similar scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</description></item>
+        /// <item><description>Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for brand name protection and similar scenarios. Simply pass the corresponding glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 glossary entries. If you need more, contact the platform for assistance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3127,8 +3126,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Designed specifically for document translation. Supports translation between more than 400 language pairs (including bridged pairs) to handle multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported.
-        /// Excels in the following areas:</para>
+        /// <para>Designed specifically for document translation. Supports translation between more than 400 language pairs (including bridged pairs) to handle multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported. Excels in the following areas:</para>
         /// <list type="bullet">
         /// <item><description>Content accuracy: translation accuracy, parameter and unit accuracy.</description></item>
         /// <item><description>Structural integrity: overall layout continuity, page margin and layout restoration.</description></item>
@@ -3145,14 +3143,14 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <item><description>Structural integrity: overall layout continuity, page margin and layout restoration</description></item>
         /// </list>
         /// <h2>Common scenarios</h2>
-        /// <para>Cross-border e-commerce product manuals, contracts, agreements, business proposals, qualification documents, textbooks and courseware, and many other scenarios.</para>
+        /// <para>Cross-border e-commerce product manuals, contracts, agreements, business proposals, qualification documents, textbooks, courseware, and other scenarios.</para>
         /// <h2>Functions and features</h2>
         /// <list type="bullet">
-        /// <item><description>Supports PDF and Word formats. Supports source documents that contain multiple languages. For a detailed language list, see section 4.5.</description></item>
-        /// <item><description>Supports translation of text within images in documents, as well as complex translation scenarios such as charts and special symbols.</description></item>
+        /// <item><description>Supports PDF and Word formats. Supports source documents that contain multiple languages. For a detailed language list, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language pair mapping table</a>.</description></item>
+        /// <item><description>Supports translation of text within images in documents, as well as complex translation scenarios involving charts, special symbols, and more.</description></item>
         /// <item><description>Supports high-fidelity layout restoration after translation.</description></item>
         /// <item><description>A single PDF supports up to 100 pages. A single Word document supports up to 100 pages.</description></item>
-        /// <item><description>Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for brand name protection and similar scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</description></item>
+        /// <item><description>Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for brand name protection and similar scenarios. Simply pass the corresponding glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 glossary entries. If you need more, contact the platform for assistance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3207,8 +3205,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Designed specifically for document translation. Supports translation between more than 400 language pairs (including bridged pairs) to handle multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported.
-        /// Excels in the following areas:</para>
+        /// <para>Designed specifically for document translation. Supports translation between more than 400 language pairs (including bridged pairs) to handle multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported. Excels in the following areas:</para>
         /// <list type="bullet">
         /// <item><description>Content accuracy: translation accuracy, parameter and unit accuracy.</description></item>
         /// <item><description>Structural integrity: overall layout continuity, page margin and layout restoration.</description></item>
@@ -3225,14 +3222,14 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <item><description>Structural integrity: overall layout continuity, page margin and layout restoration</description></item>
         /// </list>
         /// <h2>Common scenarios</h2>
-        /// <para>Cross-border e-commerce product manuals, contracts, agreements, business proposals, qualification documents, textbooks and courseware, and many other scenarios.</para>
+        /// <para>Cross-border e-commerce product manuals, contracts, agreements, business proposals, qualification documents, textbooks, courseware, and other scenarios.</para>
         /// <h2>Functions and features</h2>
         /// <list type="bullet">
-        /// <item><description>Supports PDF and Word formats. Supports source documents that contain multiple languages. For a detailed language list, see section 4.5.</description></item>
-        /// <item><description>Supports translation of text within images in documents, as well as complex translation scenarios such as charts and special symbols.</description></item>
+        /// <item><description>Supports PDF and Word formats. Supports source documents that contain multiple languages. For a detailed language list, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language pair mapping table</a>.</description></item>
+        /// <item><description>Supports translation of text within images in documents, as well as complex translation scenarios involving charts, special symbols, and more.</description></item>
         /// <item><description>Supports high-fidelity layout restoration after translation.</description></item>
         /// <item><description>A single PDF supports up to 100 pages. A single Word document supports up to 100 pages.</description></item>
-        /// <item><description>Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for brand name protection and similar scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</description></item>
+        /// <item><description>Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for brand name protection and similar scenarios. Simply pass the corresponding glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 glossary entries. If you need more, contact the platform for assistance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3251,8 +3248,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Designed specifically for document translation. Supports translation between more than 400 language pairs (including bridged pairs) to handle multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported.
-        /// Excels in the following areas:</para>
+        /// <para>Designed specifically for document translation. Supports translation between more than 400 language pairs (including bridged pairs) to handle multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported. Excels in the following areas:</para>
         /// <list type="bullet">
         /// <item><description>Content accuracy: translation accuracy, parameter and unit accuracy.</description></item>
         /// <item><description>Structural integrity: overall layout continuity, page margin and layout restoration.</description></item>
@@ -3269,14 +3265,14 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <item><description>Structural integrity: overall layout continuity, page margin and layout restoration</description></item>
         /// </list>
         /// <h2>Common scenarios</h2>
-        /// <para>Cross-border e-commerce product manuals, contracts, agreements, business proposals, qualification documents, textbooks and courseware, and many other scenarios.</para>
+        /// <para>Cross-border e-commerce product manuals, contracts, agreements, business proposals, qualification documents, textbooks, courseware, and other scenarios.</para>
         /// <h2>Functions and features</h2>
         /// <list type="bullet">
-        /// <item><description>Supports PDF and Word formats. Supports source documents that contain multiple languages. For a detailed language list, see section 4.5.</description></item>
-        /// <item><description>Supports translation of text within images in documents, as well as complex translation scenarios such as charts and special symbols.</description></item>
+        /// <item><description>Supports PDF and Word formats. Supports source documents that contain multiple languages. For a detailed language list, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language pair mapping table</a>.</description></item>
+        /// <item><description>Supports translation of text within images in documents, as well as complex translation scenarios involving charts, special symbols, and more.</description></item>
         /// <item><description>Supports high-fidelity layout restoration after translation.</description></item>
         /// <item><description>A single PDF supports up to 100 pages. A single Word document supports up to 100 pages.</description></item>
-        /// <item><description>Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for brand name protection and similar scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</description></item>
+        /// <item><description>Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for brand name protection and similar scenarios. Simply pass the corresponding glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 glossary entries. If you need more, contact the platform for assistance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3295,35 +3291,55 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>E-commerce Video Multiplication is an AI video service designed for product content production, covering video understanding, element replacement, quality verification, and result delivery. The product focuses on product and person consistency, detail restoration, conversion-oriented expression, and large-scale production. It supports targeted replacement of products or persons based on hit video templates while preserving the original actions, shot rhythm, and marketing structure to quickly generate multi-version content and reduce shooting, editing, and adaptation costs.</para>
+        /// <para>Creates an asynchronous task for e-commerce video variation generation, an AI video service for product content production that covers video understanding, element replacement, quality verification, and result delivery. The service focuses on product and person consistency, detail restoration, conversion expression, and large-scale production. It supports targeted replacement of products or persons based on popular video templates, quickly generating multiple content versions while retaining original actions, camera rhythms, and marketing structures to reduce shooting, editing, and adaptation costs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><b>Product Introduction</b></h2>
-        /// <para>E-commerce Video Multiplication is an AI video service designed for product content production, covering video understanding, element replacement, quality verification, and result delivery. The product focuses on product and person consistency, detail restoration, conversion-oriented expression, and large-scale production. It supports targeted replacement of products or persons based on hit video templates while preserving the original actions, shot rhythm, and marketing structure to quickly generate multi-version content and reduce shooting, editing, and adaptation costs.</para>
+        /// <h2><b>Product introduction</b></h2>
+        /// <para>E-commerce video variation generation is an AI video service for product content production that covers video understanding, element replacement, quality verification, and result delivery. The service focuses on product and person consistency, detail restoration, conversion expression, and large-scale production. It supports targeted replacement of products or persons based on popular video templates, quickly generating multiple content versions while retaining original actions, camera rhythms, and marketing structures to reduce shooting, editing, and adaptation costs.</para>
         /// <h2><b>Scenarios</b></h2>
         /// <list type="bullet">
-        /// <item><description><b>Video asset multiplication:</b> Use an existing e-commerce video as a template and replace only the specified product or person while preserving the original shots, rhythm, and marketing expression. This is applicable to multi-SKU, multi-model, multi-region, and multi-version asset production.</description></item>
-        /// <item><description><b>New product launch with rapid asset generation:</b> For products launched in batches, reduce the need for live shooting, studio time, post-production editing, and repetitive production. Quickly generate new product video assets to help merchants shorten the cycle from discovering a hit video to scripting and publishing new content.</description></item>
-        /// <item><description><b>Product presentation and selling point expression:</b> Applicable to apparel, beauty and personal care, food and beverages, home and daily essentials, 3C electronics, small appliances, and other products. Based on the selling point planning, presentation actions, and shot rhythm of the original video, generate presentation videos optimized for new product conversion.</description></item>
-        /// <item><description><b>Multi-selling-point and multi-version testing:</b> Quickly generate multiple versions based on different product selling points, target audiences, scripts, shots, and visual styles to support merchants in content testing and ad creative iteration.</description></item>
+        /// <item><description><b>Video asset variation generation:</b> Uses an existing e-commerce video as a template and replaces only specified products or persons in the video, preserving the original camera angles, rhythms, and marketing expressions as much as possible. This is suitable for producing assets with multiple SKUs, models, regions, and versions.</description></item>
+        /// <item><description><b>Quick asset generation for new products:</b> For newly launched products, this reduces the need for live-action shooting, studio setup, post-production editing, and repetitive production. It quickly deploys video assets for new products, helping merchants shorten the launch cycle from spotting a popular video to breaking down the script and shooting new content.</description></item>
+        /// <item><description><b>Product explanation and selling point expression:</b> Suitable for products such as apparel, beauty and personal care, food and beverage, home and daily necessities, 3C digital products, and small home appliances. It can replicate the explanation structure, display actions, and camera rhythms based on the selling points of the original video to generate explanation videos tailored for the conversion of new products.</description></item>
+        /// <item><description><b>Multi-selling point and multi-version testing:</b> Quickly generates multiple versions based on different product selling points, target audiences, scripts, camera angles, and visual styles. This supports merchants in conducting content testing and iterating on delivered assets.</description></item>
         /// </list>
-        /// <h2><b>Product Capabilities</b></h2>
-        /// <h3><b>Core capabilities</b></h3>
-        /// <para>Two replacement modes are supported:</para>
+        /// <h2><b>Feature overview</b></h2>
+        /// <h3><b>Core features</b></h3>
         /// <list type="bullet">
-        /// <item><description><b>Product replacement (product_replacement):</b> Retains the original video host identity, actions, scene, and selling structure while replacing the original product with the target product.</description></item>
-        /// <item><description><b>Person replacement (person_replacement):</b> Retains the original video product, actions, scene, and selling structure while replacing the on-screen person with the target person from a reference image or description.</description></item>
-        /// <item><description><b>Fully automated end-to-end generation with zero prompt threshold:</b> Simply provide a reference video and target product image or person image. The system automatically completes the entire pipeline including video understanding, script planning, storyboard design, first-frame generation, and video synthesis.</description></item>
-        /// <item><description><b>Product understanding and information structuring:</b> Identifies product category, appearance, material, color, structure, and key components, and combines merchant-provided titles, attributes, and selling points to generate usable video expression information.</description></item>
-        /// <item><description><b>Template video element replacement:</b> Supports replacing products or persons within the authorized scope, with configurable replacement and protection ranges to minimize changes in non-target areas.</description></item>
-        /// <item><description><b>Product subject consistency:</b> Maintains stable product shape, color, texture, pattern, packaging, and logo across different shots, angles, actions, and scenes.</description></item>
-        /// <item><description><b>Product fidelity:</b> Multi-round VL quality inspection locks product state (color, texture, structure, and print) throughout the process to prevent product feature drift.</description></item>
-        /// <item><description><b>Strength category — Apparel:</b> Faithfully restores apparel details, focusing on silhouette, wrinkles, drape, fabric texture, buttons, zippers, prints, and accessories to reduce clipping, deformation, texture loss, and detail anomalies.</description></item>
-        /// <item><description><b>Selling point script and storyboard replication:</b> Replicates the selling point planning, video structure, shot sequence, presentation actions, voiceover content, and closing style of the original video.</description></item>
-        /// <item><description><b>Commercial model adaptation:</b> Supports matching model appearance and presentation style based on product style, silhouette, target audience, and market demand.</description></item>
-        /// <item><description><b>Quality verification and result feedback:</b> Performs multi-dimensional checks on product subject, person, apparel, text, frame completeness, audio, and overall usability, and outputs result information for manual review.</description></item>
+        /// <item><description><para><b>Supports two replacement modes:</b></para>
+        /// <list type="bullet">
+        /// <item><description><para><b>Product replacement (</b><c>product_replacement</c><b>)</b>: Retains the original video host\&quot;s identity, actions, scene, and sales structure, and replaces the original product with the target product.</para>
+        /// </description></item>
+        /// <item><description><para><b>Person replacement (</b><c>person_replacement</c><b>)</b>: Retains the original product, actions, scene, and sales structure, and replaces the person on camera with the target person from a reference image or description.</para>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para><b>Supports two generation modes:</b></para>
+        /// <list type="bullet">
+        /// <item><description><para><b>Reference generation (</b><c>reference</c><b>)</b>: 1:1 replication. Uses the original video as a complete reference to automatically generate a new video with the same duration as the original video. It retains the original script, storyboard, actions, scene, and rhythm, and only performs targeted replacement of specified content such as persons or products.</para>
+        /// </description></item>
+        /// <item><description><para><b>Rebuild generation (</b><c>rebuild</c><b>)</b>: Breaks down the script, storyboard, and key elements of the original video, retains only core content such as specified persons or products, and then redesigns and generates a new video. It is not limited by the duration of the original video and supports inputting a target duration.</para>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para><b>Fully automated end-to-end generation with zero prompt engineering required</b>: Only requires the reference video and target product or person images. The system automatically completes the entire process of video understanding, script planning, storyboard design, first-frame generation, and video synthesis.</para>
+        /// </description></item>
+        /// <item><description><para><b>Product understanding and information structuring</b>: Identifies product categories, appearance, materials, colors, structures, and key components, and combines them with the titles, attributes, and selling points provided by the merchant to generate usable video expression information.</para>
+        /// </description></item>
+        /// <item><description><para><b>Template video element replacement</b>: Supports replacing products or persons within the authorized scope, and defines the replacement scope and protection scope to minimize changes in non-target areas.</para>
+        /// </description></item>
+        /// <item><description><para><b>Product subject consistency</b>: Maintains the stability of the product\&quot;s shape, color, texture, pattern, packaging, and logo as much as possible across different camera angles, perspectives, actions, and scenes.</para>
+        /// </description></item>
+        /// <item><description><para><b>Product fidelity</b>: Multi-round VL quality inspection locks the product state (color, texture, structure, print) throughout the process to prevent product feature drift.</para>
+        /// </description></item>
+        /// <item><description><para><b>Selling point script and storyboard replication</b>: Replicates the selling point planning, video structure, camera sequence, display actions, voiceover content, and ending style based on the original video.</para>
+        /// </description></item>
+        /// <item><description><para><b>Commercial model adaptation</b>: Supports matching the corresponding model image and display method based on the product style, fit, target audience, and market demand.</para>
+        /// </description></item>
+        /// <item><description><para><b>Quality verification and result feedback</b>: Performs multi-dimensional checks on the product subject, person, clothing, text, image integrity, audio, and overall usability, and outputs result information for manual review.</para>
+        /// </description></item>
         /// </list>
         /// </description>
         /// 
@@ -3380,35 +3396,55 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>E-commerce Video Multiplication is an AI video service designed for product content production, covering video understanding, element replacement, quality verification, and result delivery. The product focuses on product and person consistency, detail restoration, conversion-oriented expression, and large-scale production. It supports targeted replacement of products or persons based on hit video templates while preserving the original actions, shot rhythm, and marketing structure to quickly generate multi-version content and reduce shooting, editing, and adaptation costs.</para>
+        /// <para>Creates an asynchronous task for e-commerce video variation generation, an AI video service for product content production that covers video understanding, element replacement, quality verification, and result delivery. The service focuses on product and person consistency, detail restoration, conversion expression, and large-scale production. It supports targeted replacement of products or persons based on popular video templates, quickly generating multiple content versions while retaining original actions, camera rhythms, and marketing structures to reduce shooting, editing, and adaptation costs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><b>Product Introduction</b></h2>
-        /// <para>E-commerce Video Multiplication is an AI video service designed for product content production, covering video understanding, element replacement, quality verification, and result delivery. The product focuses on product and person consistency, detail restoration, conversion-oriented expression, and large-scale production. It supports targeted replacement of products or persons based on hit video templates while preserving the original actions, shot rhythm, and marketing structure to quickly generate multi-version content and reduce shooting, editing, and adaptation costs.</para>
+        /// <h2><b>Product introduction</b></h2>
+        /// <para>E-commerce video variation generation is an AI video service for product content production that covers video understanding, element replacement, quality verification, and result delivery. The service focuses on product and person consistency, detail restoration, conversion expression, and large-scale production. It supports targeted replacement of products or persons based on popular video templates, quickly generating multiple content versions while retaining original actions, camera rhythms, and marketing structures to reduce shooting, editing, and adaptation costs.</para>
         /// <h2><b>Scenarios</b></h2>
         /// <list type="bullet">
-        /// <item><description><b>Video asset multiplication:</b> Use an existing e-commerce video as a template and replace only the specified product or person while preserving the original shots, rhythm, and marketing expression. This is applicable to multi-SKU, multi-model, multi-region, and multi-version asset production.</description></item>
-        /// <item><description><b>New product launch with rapid asset generation:</b> For products launched in batches, reduce the need for live shooting, studio time, post-production editing, and repetitive production. Quickly generate new product video assets to help merchants shorten the cycle from discovering a hit video to scripting and publishing new content.</description></item>
-        /// <item><description><b>Product presentation and selling point expression:</b> Applicable to apparel, beauty and personal care, food and beverages, home and daily essentials, 3C electronics, small appliances, and other products. Based on the selling point planning, presentation actions, and shot rhythm of the original video, generate presentation videos optimized for new product conversion.</description></item>
-        /// <item><description><b>Multi-selling-point and multi-version testing:</b> Quickly generate multiple versions based on different product selling points, target audiences, scripts, shots, and visual styles to support merchants in content testing and ad creative iteration.</description></item>
+        /// <item><description><b>Video asset variation generation:</b> Uses an existing e-commerce video as a template and replaces only specified products or persons in the video, preserving the original camera angles, rhythms, and marketing expressions as much as possible. This is suitable for producing assets with multiple SKUs, models, regions, and versions.</description></item>
+        /// <item><description><b>Quick asset generation for new products:</b> For newly launched products, this reduces the need for live-action shooting, studio setup, post-production editing, and repetitive production. It quickly deploys video assets for new products, helping merchants shorten the launch cycle from spotting a popular video to breaking down the script and shooting new content.</description></item>
+        /// <item><description><b>Product explanation and selling point expression:</b> Suitable for products such as apparel, beauty and personal care, food and beverage, home and daily necessities, 3C digital products, and small home appliances. It can replicate the explanation structure, display actions, and camera rhythms based on the selling points of the original video to generate explanation videos tailored for the conversion of new products.</description></item>
+        /// <item><description><b>Multi-selling point and multi-version testing:</b> Quickly generates multiple versions based on different product selling points, target audiences, scripts, camera angles, and visual styles. This supports merchants in conducting content testing and iterating on delivered assets.</description></item>
         /// </list>
-        /// <h2><b>Product Capabilities</b></h2>
-        /// <h3><b>Core capabilities</b></h3>
-        /// <para>Two replacement modes are supported:</para>
+        /// <h2><b>Feature overview</b></h2>
+        /// <h3><b>Core features</b></h3>
         /// <list type="bullet">
-        /// <item><description><b>Product replacement (product_replacement):</b> Retains the original video host identity, actions, scene, and selling structure while replacing the original product with the target product.</description></item>
-        /// <item><description><b>Person replacement (person_replacement):</b> Retains the original video product, actions, scene, and selling structure while replacing the on-screen person with the target person from a reference image or description.</description></item>
-        /// <item><description><b>Fully automated end-to-end generation with zero prompt threshold:</b> Simply provide a reference video and target product image or person image. The system automatically completes the entire pipeline including video understanding, script planning, storyboard design, first-frame generation, and video synthesis.</description></item>
-        /// <item><description><b>Product understanding and information structuring:</b> Identifies product category, appearance, material, color, structure, and key components, and combines merchant-provided titles, attributes, and selling points to generate usable video expression information.</description></item>
-        /// <item><description><b>Template video element replacement:</b> Supports replacing products or persons within the authorized scope, with configurable replacement and protection ranges to minimize changes in non-target areas.</description></item>
-        /// <item><description><b>Product subject consistency:</b> Maintains stable product shape, color, texture, pattern, packaging, and logo across different shots, angles, actions, and scenes.</description></item>
-        /// <item><description><b>Product fidelity:</b> Multi-round VL quality inspection locks product state (color, texture, structure, and print) throughout the process to prevent product feature drift.</description></item>
-        /// <item><description><b>Strength category — Apparel:</b> Faithfully restores apparel details, focusing on silhouette, wrinkles, drape, fabric texture, buttons, zippers, prints, and accessories to reduce clipping, deformation, texture loss, and detail anomalies.</description></item>
-        /// <item><description><b>Selling point script and storyboard replication:</b> Replicates the selling point planning, video structure, shot sequence, presentation actions, voiceover content, and closing style of the original video.</description></item>
-        /// <item><description><b>Commercial model adaptation:</b> Supports matching model appearance and presentation style based on product style, silhouette, target audience, and market demand.</description></item>
-        /// <item><description><b>Quality verification and result feedback:</b> Performs multi-dimensional checks on product subject, person, apparel, text, frame completeness, audio, and overall usability, and outputs result information for manual review.</description></item>
+        /// <item><description><para><b>Supports two replacement modes:</b></para>
+        /// <list type="bullet">
+        /// <item><description><para><b>Product replacement (</b><c>product_replacement</c><b>)</b>: Retains the original video host\&quot;s identity, actions, scene, and sales structure, and replaces the original product with the target product.</para>
+        /// </description></item>
+        /// <item><description><para><b>Person replacement (</b><c>person_replacement</c><b>)</b>: Retains the original product, actions, scene, and sales structure, and replaces the person on camera with the target person from a reference image or description.</para>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para><b>Supports two generation modes:</b></para>
+        /// <list type="bullet">
+        /// <item><description><para><b>Reference generation (</b><c>reference</c><b>)</b>: 1:1 replication. Uses the original video as a complete reference to automatically generate a new video with the same duration as the original video. It retains the original script, storyboard, actions, scene, and rhythm, and only performs targeted replacement of specified content such as persons or products.</para>
+        /// </description></item>
+        /// <item><description><para><b>Rebuild generation (</b><c>rebuild</c><b>)</b>: Breaks down the script, storyboard, and key elements of the original video, retains only core content such as specified persons or products, and then redesigns and generates a new video. It is not limited by the duration of the original video and supports inputting a target duration.</para>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para><b>Fully automated end-to-end generation with zero prompt engineering required</b>: Only requires the reference video and target product or person images. The system automatically completes the entire process of video understanding, script planning, storyboard design, first-frame generation, and video synthesis.</para>
+        /// </description></item>
+        /// <item><description><para><b>Product understanding and information structuring</b>: Identifies product categories, appearance, materials, colors, structures, and key components, and combines them with the titles, attributes, and selling points provided by the merchant to generate usable video expression information.</para>
+        /// </description></item>
+        /// <item><description><para><b>Template video element replacement</b>: Supports replacing products or persons within the authorized scope, and defines the replacement scope and protection scope to minimize changes in non-target areas.</para>
+        /// </description></item>
+        /// <item><description><para><b>Product subject consistency</b>: Maintains the stability of the product\&quot;s shape, color, texture, pattern, packaging, and logo as much as possible across different camera angles, perspectives, actions, and scenes.</para>
+        /// </description></item>
+        /// <item><description><para><b>Product fidelity</b>: Multi-round VL quality inspection locks the product state (color, texture, structure, print) throughout the process to prevent product feature drift.</para>
+        /// </description></item>
+        /// <item><description><para><b>Selling point script and storyboard replication</b>: Replicates the selling point planning, video structure, camera sequence, display actions, voiceover content, and ending style based on the original video.</para>
+        /// </description></item>
+        /// <item><description><para><b>Commercial model adaptation</b>: Supports matching the corresponding model image and display method based on the product style, fit, target audience, and market demand.</para>
+        /// </description></item>
+        /// <item><description><para><b>Quality verification and result feedback</b>: Performs multi-dimensional checks on the product subject, person, clothing, text, image integrity, audio, and overall usability, and outputs result information for manual review.</para>
+        /// </description></item>
         /// </list>
         /// </description>
         /// 
@@ -3465,35 +3501,55 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>E-commerce Video Multiplication is an AI video service designed for product content production, covering video understanding, element replacement, quality verification, and result delivery. The product focuses on product and person consistency, detail restoration, conversion-oriented expression, and large-scale production. It supports targeted replacement of products or persons based on hit video templates while preserving the original actions, shot rhythm, and marketing structure to quickly generate multi-version content and reduce shooting, editing, and adaptation costs.</para>
+        /// <para>Creates an asynchronous task for e-commerce video variation generation, an AI video service for product content production that covers video understanding, element replacement, quality verification, and result delivery. The service focuses on product and person consistency, detail restoration, conversion expression, and large-scale production. It supports targeted replacement of products or persons based on popular video templates, quickly generating multiple content versions while retaining original actions, camera rhythms, and marketing structures to reduce shooting, editing, and adaptation costs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><b>Product Introduction</b></h2>
-        /// <para>E-commerce Video Multiplication is an AI video service designed for product content production, covering video understanding, element replacement, quality verification, and result delivery. The product focuses on product and person consistency, detail restoration, conversion-oriented expression, and large-scale production. It supports targeted replacement of products or persons based on hit video templates while preserving the original actions, shot rhythm, and marketing structure to quickly generate multi-version content and reduce shooting, editing, and adaptation costs.</para>
+        /// <h2><b>Product introduction</b></h2>
+        /// <para>E-commerce video variation generation is an AI video service for product content production that covers video understanding, element replacement, quality verification, and result delivery. The service focuses on product and person consistency, detail restoration, conversion expression, and large-scale production. It supports targeted replacement of products or persons based on popular video templates, quickly generating multiple content versions while retaining original actions, camera rhythms, and marketing structures to reduce shooting, editing, and adaptation costs.</para>
         /// <h2><b>Scenarios</b></h2>
         /// <list type="bullet">
-        /// <item><description><b>Video asset multiplication:</b> Use an existing e-commerce video as a template and replace only the specified product or person while preserving the original shots, rhythm, and marketing expression. This is applicable to multi-SKU, multi-model, multi-region, and multi-version asset production.</description></item>
-        /// <item><description><b>New product launch with rapid asset generation:</b> For products launched in batches, reduce the need for live shooting, studio time, post-production editing, and repetitive production. Quickly generate new product video assets to help merchants shorten the cycle from discovering a hit video to scripting and publishing new content.</description></item>
-        /// <item><description><b>Product presentation and selling point expression:</b> Applicable to apparel, beauty and personal care, food and beverages, home and daily essentials, 3C electronics, small appliances, and other products. Based on the selling point planning, presentation actions, and shot rhythm of the original video, generate presentation videos optimized for new product conversion.</description></item>
-        /// <item><description><b>Multi-selling-point and multi-version testing:</b> Quickly generate multiple versions based on different product selling points, target audiences, scripts, shots, and visual styles to support merchants in content testing and ad creative iteration.</description></item>
+        /// <item><description><b>Video asset variation generation:</b> Uses an existing e-commerce video as a template and replaces only specified products or persons in the video, preserving the original camera angles, rhythms, and marketing expressions as much as possible. This is suitable for producing assets with multiple SKUs, models, regions, and versions.</description></item>
+        /// <item><description><b>Quick asset generation for new products:</b> For newly launched products, this reduces the need for live-action shooting, studio setup, post-production editing, and repetitive production. It quickly deploys video assets for new products, helping merchants shorten the launch cycle from spotting a popular video to breaking down the script and shooting new content.</description></item>
+        /// <item><description><b>Product explanation and selling point expression:</b> Suitable for products such as apparel, beauty and personal care, food and beverage, home and daily necessities, 3C digital products, and small home appliances. It can replicate the explanation structure, display actions, and camera rhythms based on the selling points of the original video to generate explanation videos tailored for the conversion of new products.</description></item>
+        /// <item><description><b>Multi-selling point and multi-version testing:</b> Quickly generates multiple versions based on different product selling points, target audiences, scripts, camera angles, and visual styles. This supports merchants in conducting content testing and iterating on delivered assets.</description></item>
         /// </list>
-        /// <h2><b>Product Capabilities</b></h2>
-        /// <h3><b>Core capabilities</b></h3>
-        /// <para>Two replacement modes are supported:</para>
+        /// <h2><b>Feature overview</b></h2>
+        /// <h3><b>Core features</b></h3>
         /// <list type="bullet">
-        /// <item><description><b>Product replacement (product_replacement):</b> Retains the original video host identity, actions, scene, and selling structure while replacing the original product with the target product.</description></item>
-        /// <item><description><b>Person replacement (person_replacement):</b> Retains the original video product, actions, scene, and selling structure while replacing the on-screen person with the target person from a reference image or description.</description></item>
-        /// <item><description><b>Fully automated end-to-end generation with zero prompt threshold:</b> Simply provide a reference video and target product image or person image. The system automatically completes the entire pipeline including video understanding, script planning, storyboard design, first-frame generation, and video synthesis.</description></item>
-        /// <item><description><b>Product understanding and information structuring:</b> Identifies product category, appearance, material, color, structure, and key components, and combines merchant-provided titles, attributes, and selling points to generate usable video expression information.</description></item>
-        /// <item><description><b>Template video element replacement:</b> Supports replacing products or persons within the authorized scope, with configurable replacement and protection ranges to minimize changes in non-target areas.</description></item>
-        /// <item><description><b>Product subject consistency:</b> Maintains stable product shape, color, texture, pattern, packaging, and logo across different shots, angles, actions, and scenes.</description></item>
-        /// <item><description><b>Product fidelity:</b> Multi-round VL quality inspection locks product state (color, texture, structure, and print) throughout the process to prevent product feature drift.</description></item>
-        /// <item><description><b>Strength category — Apparel:</b> Faithfully restores apparel details, focusing on silhouette, wrinkles, drape, fabric texture, buttons, zippers, prints, and accessories to reduce clipping, deformation, texture loss, and detail anomalies.</description></item>
-        /// <item><description><b>Selling point script and storyboard replication:</b> Replicates the selling point planning, video structure, shot sequence, presentation actions, voiceover content, and closing style of the original video.</description></item>
-        /// <item><description><b>Commercial model adaptation:</b> Supports matching model appearance and presentation style based on product style, silhouette, target audience, and market demand.</description></item>
-        /// <item><description><b>Quality verification and result feedback:</b> Performs multi-dimensional checks on product subject, person, apparel, text, frame completeness, audio, and overall usability, and outputs result information for manual review.</description></item>
+        /// <item><description><para><b>Supports two replacement modes:</b></para>
+        /// <list type="bullet">
+        /// <item><description><para><b>Product replacement (</b><c>product_replacement</c><b>)</b>: Retains the original video host\&quot;s identity, actions, scene, and sales structure, and replaces the original product with the target product.</para>
+        /// </description></item>
+        /// <item><description><para><b>Person replacement (</b><c>person_replacement</c><b>)</b>: Retains the original product, actions, scene, and sales structure, and replaces the person on camera with the target person from a reference image or description.</para>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para><b>Supports two generation modes:</b></para>
+        /// <list type="bullet">
+        /// <item><description><para><b>Reference generation (</b><c>reference</c><b>)</b>: 1:1 replication. Uses the original video as a complete reference to automatically generate a new video with the same duration as the original video. It retains the original script, storyboard, actions, scene, and rhythm, and only performs targeted replacement of specified content such as persons or products.</para>
+        /// </description></item>
+        /// <item><description><para><b>Rebuild generation (</b><c>rebuild</c><b>)</b>: Breaks down the script, storyboard, and key elements of the original video, retains only core content such as specified persons or products, and then redesigns and generates a new video. It is not limited by the duration of the original video and supports inputting a target duration.</para>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para><b>Fully automated end-to-end generation with zero prompt engineering required</b>: Only requires the reference video and target product or person images. The system automatically completes the entire process of video understanding, script planning, storyboard design, first-frame generation, and video synthesis.</para>
+        /// </description></item>
+        /// <item><description><para><b>Product understanding and information structuring</b>: Identifies product categories, appearance, materials, colors, structures, and key components, and combines them with the titles, attributes, and selling points provided by the merchant to generate usable video expression information.</para>
+        /// </description></item>
+        /// <item><description><para><b>Template video element replacement</b>: Supports replacing products or persons within the authorized scope, and defines the replacement scope and protection scope to minimize changes in non-target areas.</para>
+        /// </description></item>
+        /// <item><description><para><b>Product subject consistency</b>: Maintains the stability of the product\&quot;s shape, color, texture, pattern, packaging, and logo as much as possible across different camera angles, perspectives, actions, and scenes.</para>
+        /// </description></item>
+        /// <item><description><para><b>Product fidelity</b>: Multi-round VL quality inspection locks the product state (color, texture, structure, print) throughout the process to prevent product feature drift.</para>
+        /// </description></item>
+        /// <item><description><para><b>Selling point script and storyboard replication</b>: Replicates the selling point planning, video structure, camera sequence, display actions, voiceover content, and ending style based on the original video.</para>
+        /// </description></item>
+        /// <item><description><para><b>Commercial model adaptation</b>: Supports matching the corresponding model image and display method based on the product style, fit, target audience, and market demand.</para>
+        /// </description></item>
+        /// <item><description><para><b>Quality verification and result feedback</b>: Performs multi-dimensional checks on the product subject, person, clothing, text, image integrity, audio, and overall usability, and outputs result information for manual review.</para>
+        /// </description></item>
         /// </list>
         /// </description>
         /// 
@@ -3512,35 +3568,55 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>E-commerce Video Multiplication is an AI video service designed for product content production, covering video understanding, element replacement, quality verification, and result delivery. The product focuses on product and person consistency, detail restoration, conversion-oriented expression, and large-scale production. It supports targeted replacement of products or persons based on hit video templates while preserving the original actions, shot rhythm, and marketing structure to quickly generate multi-version content and reduce shooting, editing, and adaptation costs.</para>
+        /// <para>Creates an asynchronous task for e-commerce video variation generation, an AI video service for product content production that covers video understanding, element replacement, quality verification, and result delivery. The service focuses on product and person consistency, detail restoration, conversion expression, and large-scale production. It supports targeted replacement of products or persons based on popular video templates, quickly generating multiple content versions while retaining original actions, camera rhythms, and marketing structures to reduce shooting, editing, and adaptation costs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><b>Product Introduction</b></h2>
-        /// <para>E-commerce Video Multiplication is an AI video service designed for product content production, covering video understanding, element replacement, quality verification, and result delivery. The product focuses on product and person consistency, detail restoration, conversion-oriented expression, and large-scale production. It supports targeted replacement of products or persons based on hit video templates while preserving the original actions, shot rhythm, and marketing structure to quickly generate multi-version content and reduce shooting, editing, and adaptation costs.</para>
+        /// <h2><b>Product introduction</b></h2>
+        /// <para>E-commerce video variation generation is an AI video service for product content production that covers video understanding, element replacement, quality verification, and result delivery. The service focuses on product and person consistency, detail restoration, conversion expression, and large-scale production. It supports targeted replacement of products or persons based on popular video templates, quickly generating multiple content versions while retaining original actions, camera rhythms, and marketing structures to reduce shooting, editing, and adaptation costs.</para>
         /// <h2><b>Scenarios</b></h2>
         /// <list type="bullet">
-        /// <item><description><b>Video asset multiplication:</b> Use an existing e-commerce video as a template and replace only the specified product or person while preserving the original shots, rhythm, and marketing expression. This is applicable to multi-SKU, multi-model, multi-region, and multi-version asset production.</description></item>
-        /// <item><description><b>New product launch with rapid asset generation:</b> For products launched in batches, reduce the need for live shooting, studio time, post-production editing, and repetitive production. Quickly generate new product video assets to help merchants shorten the cycle from discovering a hit video to scripting and publishing new content.</description></item>
-        /// <item><description><b>Product presentation and selling point expression:</b> Applicable to apparel, beauty and personal care, food and beverages, home and daily essentials, 3C electronics, small appliances, and other products. Based on the selling point planning, presentation actions, and shot rhythm of the original video, generate presentation videos optimized for new product conversion.</description></item>
-        /// <item><description><b>Multi-selling-point and multi-version testing:</b> Quickly generate multiple versions based on different product selling points, target audiences, scripts, shots, and visual styles to support merchants in content testing and ad creative iteration.</description></item>
+        /// <item><description><b>Video asset variation generation:</b> Uses an existing e-commerce video as a template and replaces only specified products or persons in the video, preserving the original camera angles, rhythms, and marketing expressions as much as possible. This is suitable for producing assets with multiple SKUs, models, regions, and versions.</description></item>
+        /// <item><description><b>Quick asset generation for new products:</b> For newly launched products, this reduces the need for live-action shooting, studio setup, post-production editing, and repetitive production. It quickly deploys video assets for new products, helping merchants shorten the launch cycle from spotting a popular video to breaking down the script and shooting new content.</description></item>
+        /// <item><description><b>Product explanation and selling point expression:</b> Suitable for products such as apparel, beauty and personal care, food and beverage, home and daily necessities, 3C digital products, and small home appliances. It can replicate the explanation structure, display actions, and camera rhythms based on the selling points of the original video to generate explanation videos tailored for the conversion of new products.</description></item>
+        /// <item><description><b>Multi-selling point and multi-version testing:</b> Quickly generates multiple versions based on different product selling points, target audiences, scripts, camera angles, and visual styles. This supports merchants in conducting content testing and iterating on delivered assets.</description></item>
         /// </list>
-        /// <h2><b>Product Capabilities</b></h2>
-        /// <h3><b>Core capabilities</b></h3>
-        /// <para>Two replacement modes are supported:</para>
+        /// <h2><b>Feature overview</b></h2>
+        /// <h3><b>Core features</b></h3>
         /// <list type="bullet">
-        /// <item><description><b>Product replacement (product_replacement):</b> Retains the original video host identity, actions, scene, and selling structure while replacing the original product with the target product.</description></item>
-        /// <item><description><b>Person replacement (person_replacement):</b> Retains the original video product, actions, scene, and selling structure while replacing the on-screen person with the target person from a reference image or description.</description></item>
-        /// <item><description><b>Fully automated end-to-end generation with zero prompt threshold:</b> Simply provide a reference video and target product image or person image. The system automatically completes the entire pipeline including video understanding, script planning, storyboard design, first-frame generation, and video synthesis.</description></item>
-        /// <item><description><b>Product understanding and information structuring:</b> Identifies product category, appearance, material, color, structure, and key components, and combines merchant-provided titles, attributes, and selling points to generate usable video expression information.</description></item>
-        /// <item><description><b>Template video element replacement:</b> Supports replacing products or persons within the authorized scope, with configurable replacement and protection ranges to minimize changes in non-target areas.</description></item>
-        /// <item><description><b>Product subject consistency:</b> Maintains stable product shape, color, texture, pattern, packaging, and logo across different shots, angles, actions, and scenes.</description></item>
-        /// <item><description><b>Product fidelity:</b> Multi-round VL quality inspection locks product state (color, texture, structure, and print) throughout the process to prevent product feature drift.</description></item>
-        /// <item><description><b>Strength category — Apparel:</b> Faithfully restores apparel details, focusing on silhouette, wrinkles, drape, fabric texture, buttons, zippers, prints, and accessories to reduce clipping, deformation, texture loss, and detail anomalies.</description></item>
-        /// <item><description><b>Selling point script and storyboard replication:</b> Replicates the selling point planning, video structure, shot sequence, presentation actions, voiceover content, and closing style of the original video.</description></item>
-        /// <item><description><b>Commercial model adaptation:</b> Supports matching model appearance and presentation style based on product style, silhouette, target audience, and market demand.</description></item>
-        /// <item><description><b>Quality verification and result feedback:</b> Performs multi-dimensional checks on product subject, person, apparel, text, frame completeness, audio, and overall usability, and outputs result information for manual review.</description></item>
+        /// <item><description><para><b>Supports two replacement modes:</b></para>
+        /// <list type="bullet">
+        /// <item><description><para><b>Product replacement (</b><c>product_replacement</c><b>)</b>: Retains the original video host\&quot;s identity, actions, scene, and sales structure, and replaces the original product with the target product.</para>
+        /// </description></item>
+        /// <item><description><para><b>Person replacement (</b><c>person_replacement</c><b>)</b>: Retains the original product, actions, scene, and sales structure, and replaces the person on camera with the target person from a reference image or description.</para>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para><b>Supports two generation modes:</b></para>
+        /// <list type="bullet">
+        /// <item><description><para><b>Reference generation (</b><c>reference</c><b>)</b>: 1:1 replication. Uses the original video as a complete reference to automatically generate a new video with the same duration as the original video. It retains the original script, storyboard, actions, scene, and rhythm, and only performs targeted replacement of specified content such as persons or products.</para>
+        /// </description></item>
+        /// <item><description><para><b>Rebuild generation (</b><c>rebuild</c><b>)</b>: Breaks down the script, storyboard, and key elements of the original video, retains only core content such as specified persons or products, and then redesigns and generates a new video. It is not limited by the duration of the original video and supports inputting a target duration.</para>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para><b>Fully automated end-to-end generation with zero prompt engineering required</b>: Only requires the reference video and target product or person images. The system automatically completes the entire process of video understanding, script planning, storyboard design, first-frame generation, and video synthesis.</para>
+        /// </description></item>
+        /// <item><description><para><b>Product understanding and information structuring</b>: Identifies product categories, appearance, materials, colors, structures, and key components, and combines them with the titles, attributes, and selling points provided by the merchant to generate usable video expression information.</para>
+        /// </description></item>
+        /// <item><description><para><b>Template video element replacement</b>: Supports replacing products or persons within the authorized scope, and defines the replacement scope and protection scope to minimize changes in non-target areas.</para>
+        /// </description></item>
+        /// <item><description><para><b>Product subject consistency</b>: Maintains the stability of the product\&quot;s shape, color, texture, pattern, packaging, and logo as much as possible across different camera angles, perspectives, actions, and scenes.</para>
+        /// </description></item>
+        /// <item><description><para><b>Product fidelity</b>: Multi-round VL quality inspection locks the product state (color, texture, structure, print) throughout the process to prevent product feature drift.</para>
+        /// </description></item>
+        /// <item><description><para><b>Selling point script and storyboard replication</b>: Replicates the selling point planning, video structure, camera sequence, display actions, voiceover content, and ending style based on the original video.</para>
+        /// </description></item>
+        /// <item><description><para><b>Commercial model adaptation</b>: Supports matching the corresponding model image and display method based on the product style, fit, target audience, and market demand.</para>
+        /// </description></item>
+        /// <item><description><para><b>Quality verification and result feedback</b>: Performs multi-dimensional checks on the product subject, person, clothing, text, image integrity, audio, and overall usability, and outputs result information for manual review.</para>
+        /// </description></item>
         /// </list>
         /// </description>
         /// 
@@ -5939,13 +6015,13 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and delivers superior translation accuracy for multiple minority languages compared to the Lite and Pro editions. We recommend using it for the following 12 language pairs, with more language pairs to be supported in the future.</para>
+        /// <para>Image Translation PLUS is designed specifically for e-commerce images and uses a Mixture of Experts (MOE) architecture. Compared to the Image Translation Lite and Pro editions, it delivers superior translation accuracy for multiple minority languages. We recommend using it for the following 12 language pairs, with more language pairs to be supported in the future.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product Introduction</h2>
-        /// <para>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and delivers superior translation accuracy for multiple minority languages compared to the Lite and Pro editions. We recommend using it for the following 8 language pairs, with more language pairs to be supported in the future.
+        /// <para>Image Translation PLUS is designed specifically for e-commerce images and uses a Mixture of Experts (MOE) architecture. Compared to the Image Translation Lite and Pro editions, it delivers superior translation accuracy for multiple minority languages. Use it for the following 12 language pairs. More language pairs will be supported in the future.
         /// Supported language pairs:</para>
         /// <table>
         /// <thead>
@@ -6057,7 +6133,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </description></item>
         /// <item><description><para><b>Brand name protection</b>: Allows you to choose whether to translate brand names on images. This helps protect brand name information from being translated.</para>
         /// </description></item>
-        /// <item><description><para><b>Translation intervention</b>: Allows you to customize translation results, including keeping text untranslated (ABC-ABC), specifying a translation (ABC-DEF), or removing text (ABC-empty value). This is commonly used for brand name protection and similar scenarios. Pass the corresponding intervention glossary ID when calling the API operation. This meets your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</para>
+        /// <item><description><para><b>Translation intervention</b>: Allows you to customize translation results, including keeping text untranslated (ABC→ABC), specifying a translation (ABC→DEF), or removing text (ABC→empty value). This is commonly used for brand name protection and similar scenarios. Pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -6125,13 +6201,13 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and delivers superior translation accuracy for multiple minority languages compared to the Lite and Pro editions. We recommend using it for the following 12 language pairs, with more language pairs to be supported in the future.</para>
+        /// <para>Image Translation PLUS is designed specifically for e-commerce images and uses a Mixture of Experts (MOE) architecture. Compared to the Image Translation Lite and Pro editions, it delivers superior translation accuracy for multiple minority languages. We recommend using it for the following 12 language pairs, with more language pairs to be supported in the future.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product Introduction</h2>
-        /// <para>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and delivers superior translation accuracy for multiple minority languages compared to the Lite and Pro editions. We recommend using it for the following 8 language pairs, with more language pairs to be supported in the future.
+        /// <para>Image Translation PLUS is designed specifically for e-commerce images and uses a Mixture of Experts (MOE) architecture. Compared to the Image Translation Lite and Pro editions, it delivers superior translation accuracy for multiple minority languages. Use it for the following 12 language pairs. More language pairs will be supported in the future.
         /// Supported language pairs:</para>
         /// <table>
         /// <thead>
@@ -6243,7 +6319,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </description></item>
         /// <item><description><para><b>Brand name protection</b>: Allows you to choose whether to translate brand names on images. This helps protect brand name information from being translated.</para>
         /// </description></item>
-        /// <item><description><para><b>Translation intervention</b>: Allows you to customize translation results, including keeping text untranslated (ABC-ABC), specifying a translation (ABC-DEF), or removing text (ABC-empty value). This is commonly used for brand name protection and similar scenarios. Pass the corresponding intervention glossary ID when calling the API operation. This meets your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</para>
+        /// <item><description><para><b>Translation intervention</b>: Allows you to customize translation results, including keeping text untranslated (ABC→ABC), specifying a translation (ABC→DEF), or removing text (ABC→empty value). This is commonly used for brand name protection and similar scenarios. Pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -6311,13 +6387,13 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and delivers superior translation accuracy for multiple minority languages compared to the Lite and Pro editions. We recommend using it for the following 12 language pairs, with more language pairs to be supported in the future.</para>
+        /// <para>Image Translation PLUS is designed specifically for e-commerce images and uses a Mixture of Experts (MOE) architecture. Compared to the Image Translation Lite and Pro editions, it delivers superior translation accuracy for multiple minority languages. We recommend using it for the following 12 language pairs, with more language pairs to be supported in the future.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product Introduction</h2>
-        /// <para>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and delivers superior translation accuracy for multiple minority languages compared to the Lite and Pro editions. We recommend using it for the following 8 language pairs, with more language pairs to be supported in the future.
+        /// <para>Image Translation PLUS is designed specifically for e-commerce images and uses a Mixture of Experts (MOE) architecture. Compared to the Image Translation Lite and Pro editions, it delivers superior translation accuracy for multiple minority languages. Use it for the following 12 language pairs. More language pairs will be supported in the future.
         /// Supported language pairs:</para>
         /// <table>
         /// <thead>
@@ -6429,7 +6505,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </description></item>
         /// <item><description><para><b>Brand name protection</b>: Allows you to choose whether to translate brand names on images. This helps protect brand name information from being translated.</para>
         /// </description></item>
-        /// <item><description><para><b>Translation intervention</b>: Allows you to customize translation results, including keeping text untranslated (ABC-ABC), specifying a translation (ABC-DEF), or removing text (ABC-empty value). This is commonly used for brand name protection and similar scenarios. Pass the corresponding intervention glossary ID when calling the API operation. This meets your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</para>
+        /// <item><description><para><b>Translation intervention</b>: Allows you to customize translation results, including keeping text untranslated (ABC→ABC), specifying a translation (ABC→DEF), or removing text (ABC→empty value). This is commonly used for brand name protection and similar scenarios. Pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -6449,13 +6525,13 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and delivers superior translation accuracy for multiple minority languages compared to the Lite and Pro editions. We recommend using it for the following 12 language pairs, with more language pairs to be supported in the future.</para>
+        /// <para>Image Translation PLUS is designed specifically for e-commerce images and uses a Mixture of Experts (MOE) architecture. Compared to the Image Translation Lite and Pro editions, it delivers superior translation accuracy for multiple minority languages. We recommend using it for the following 12 language pairs, with more language pairs to be supported in the future.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product Introduction</h2>
-        /// <para>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and delivers superior translation accuracy for multiple minority languages compared to the Lite and Pro editions. We recommend using it for the following 8 language pairs, with more language pairs to be supported in the future.
+        /// <para>Image Translation PLUS is designed specifically for e-commerce images and uses a Mixture of Experts (MOE) architecture. Compared to the Image Translation Lite and Pro editions, it delivers superior translation accuracy for multiple minority languages. Use it for the following 12 language pairs. More language pairs will be supported in the future.
         /// Supported language pairs:</para>
         /// <table>
         /// <thead>
@@ -6567,7 +6643,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </description></item>
         /// <item><description><para><b>Brand name protection</b>: Allows you to choose whether to translate brand names on images. This helps protect brand name information from being translated.</para>
         /// </description></item>
-        /// <item><description><para><b>Translation intervention</b>: Allows you to customize translation results, including keeping text untranslated (ABC-ABC), specifying a translation (ABC-DEF), or removing text (ABC-empty value). This is commonly used for brand name protection and similar scenarios. Pass the corresponding intervention glossary ID when calling the API operation. This meets your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</para>
+        /// <item><description><para><b>Translation intervention</b>: Allows you to customize translation results, including keeping text untranslated (ABC→ABC), specifying a translation (ABC→DEF), or removing text (ABC→empty value). This is commonly used for brand name protection and similar scenarios. Pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -6587,21 +6663,21 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Image Translation Pro is designed for e-commerce images. It integrates multimodal foundation model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. It supports more than 400 language directions (including bridged directions).</para>
+        /// <para>Translates images using the Pro edition, which is designed for e-commerce images. This edition integrates multimodal foundation model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. More than 400 language directions are supported, including bridged directions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product Introduction</h2>
-        /// <para>Image Translation Pro is designed for e-commerce images. It integrates multimodal foundation model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. It supports more than 400 language directions (including bridged directions).</para>
+        /// <para>The Image Translation Pro edition is designed for e-commerce images. It integrates multimodal foundation model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. More than 400 language directions are supported, including bridged directions.</para>
         /// <h2>Scenarios</h2>
         /// <para>E-commerce product images, marketing images, and images for various other scenarios.</para>
-        /// <h2>Features</h2>
+        /// <h2>Functions and features</h2>
         /// <list type="bullet">
-        /// <item><description><b>Product subject protection</b>: Specify whether to translate text on the product subject. This helps you protect subject information from being translated, such as embedded information like product names.</description></item>
-        /// <item><description><b>Post-translation editing</b>: Specify whether to return layout information such as text position, font, and color. This can be used for secondary editing when integrated with an image editor. The editor SDK package is not yet available. Follow platform notifications for updates.</description></item>
-        /// <item><description><b>Brand name protection</b>: Specify whether to translate brand names on images. This helps you protect brand name information from being translated.</description></item>
-        /// <item><description><b>Translation intervention</b>: Customize translation results, including do-not-translate (ABC→ABC), specified translation (ABC→DEF), and remove text (ABC→empty value). This is commonly used for brand name protection and similar scenarios. Pass the corresponding intervention glossary ID when calling the API. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.  </description></item>
+        /// <item><description><b>Product subject information protection</b>: You can choose whether to translate text on the product subject, which helps protect subject information such as embedded product names from being translated.</description></item>
+        /// <item><description><b>Post-translation editing</b>: You can choose whether to return layout information such as text position, font, and color. This information can be used for secondary editing when integrated with an image editor. The editor SDK package is not yet available. Follow platform notifications for updates.</description></item>
+        /// <item><description><b>Brand name protection</b>: You can choose whether to translate brand names on images, which helps protect brand name information from being translated.</description></item>
+        /// <item><description><b>Translation intervention</b>: You can customize translation results, including keeping text untranslated (ABC→ABC), specifying translations (ABC→DEF), or removing text (ABC→empty value). This is commonly used for brand name protection and similar scenarios. Pass the corresponding intervention glossary ID when calling the API. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.  </description></item>
         /// <item><description>&lt;props=&quot;china&quot;&gt; <b>Image editor integration</b>: For more information, see <a href="https://www.alibabacloud.com/help/en/document_detail/3042647.html">Image Translation Editor Protocol</a>.</description></item>
         /// </list>
         /// </description>
@@ -6673,21 +6749,21 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Image Translation Pro is designed for e-commerce images. It integrates multimodal foundation model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. It supports more than 400 language directions (including bridged directions).</para>
+        /// <para>Translates images using the Pro edition, which is designed for e-commerce images. This edition integrates multimodal foundation model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. More than 400 language directions are supported, including bridged directions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product Introduction</h2>
-        /// <para>Image Translation Pro is designed for e-commerce images. It integrates multimodal foundation model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. It supports more than 400 language directions (including bridged directions).</para>
+        /// <para>The Image Translation Pro edition is designed for e-commerce images. It integrates multimodal foundation model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. More than 400 language directions are supported, including bridged directions.</para>
         /// <h2>Scenarios</h2>
         /// <para>E-commerce product images, marketing images, and images for various other scenarios.</para>
-        /// <h2>Features</h2>
+        /// <h2>Functions and features</h2>
         /// <list type="bullet">
-        /// <item><description><b>Product subject protection</b>: Specify whether to translate text on the product subject. This helps you protect subject information from being translated, such as embedded information like product names.</description></item>
-        /// <item><description><b>Post-translation editing</b>: Specify whether to return layout information such as text position, font, and color. This can be used for secondary editing when integrated with an image editor. The editor SDK package is not yet available. Follow platform notifications for updates.</description></item>
-        /// <item><description><b>Brand name protection</b>: Specify whether to translate brand names on images. This helps you protect brand name information from being translated.</description></item>
-        /// <item><description><b>Translation intervention</b>: Customize translation results, including do-not-translate (ABC→ABC), specified translation (ABC→DEF), and remove text (ABC→empty value). This is commonly used for brand name protection and similar scenarios. Pass the corresponding intervention glossary ID when calling the API. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.  </description></item>
+        /// <item><description><b>Product subject information protection</b>: You can choose whether to translate text on the product subject, which helps protect subject information such as embedded product names from being translated.</description></item>
+        /// <item><description><b>Post-translation editing</b>: You can choose whether to return layout information such as text position, font, and color. This information can be used for secondary editing when integrated with an image editor. The editor SDK package is not yet available. Follow platform notifications for updates.</description></item>
+        /// <item><description><b>Brand name protection</b>: You can choose whether to translate brand names on images, which helps protect brand name information from being translated.</description></item>
+        /// <item><description><b>Translation intervention</b>: You can customize translation results, including keeping text untranslated (ABC→ABC), specifying translations (ABC→DEF), or removing text (ABC→empty value). This is commonly used for brand name protection and similar scenarios. Pass the corresponding intervention glossary ID when calling the API. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.  </description></item>
         /// <item><description>&lt;props=&quot;china&quot;&gt; <b>Image editor integration</b>: For more information, see <a href="https://www.alibabacloud.com/help/en/document_detail/3042647.html">Image Translation Editor Protocol</a>.</description></item>
         /// </list>
         /// </description>
@@ -6759,21 +6835,21 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Image Translation Pro is designed for e-commerce images. It integrates multimodal foundation model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. It supports more than 400 language directions (including bridged directions).</para>
+        /// <para>Translates images using the Pro edition, which is designed for e-commerce images. This edition integrates multimodal foundation model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. More than 400 language directions are supported, including bridged directions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product Introduction</h2>
-        /// <para>Image Translation Pro is designed for e-commerce images. It integrates multimodal foundation model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. It supports more than 400 language directions (including bridged directions).</para>
+        /// <para>The Image Translation Pro edition is designed for e-commerce images. It integrates multimodal foundation model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. More than 400 language directions are supported, including bridged directions.</para>
         /// <h2>Scenarios</h2>
         /// <para>E-commerce product images, marketing images, and images for various other scenarios.</para>
-        /// <h2>Features</h2>
+        /// <h2>Functions and features</h2>
         /// <list type="bullet">
-        /// <item><description><b>Product subject protection</b>: Specify whether to translate text on the product subject. This helps you protect subject information from being translated, such as embedded information like product names.</description></item>
-        /// <item><description><b>Post-translation editing</b>: Specify whether to return layout information such as text position, font, and color. This can be used for secondary editing when integrated with an image editor. The editor SDK package is not yet available. Follow platform notifications for updates.</description></item>
-        /// <item><description><b>Brand name protection</b>: Specify whether to translate brand names on images. This helps you protect brand name information from being translated.</description></item>
-        /// <item><description><b>Translation intervention</b>: Customize translation results, including do-not-translate (ABC→ABC), specified translation (ABC→DEF), and remove text (ABC→empty value). This is commonly used for brand name protection and similar scenarios. Pass the corresponding intervention glossary ID when calling the API. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.  </description></item>
+        /// <item><description><b>Product subject information protection</b>: You can choose whether to translate text on the product subject, which helps protect subject information such as embedded product names from being translated.</description></item>
+        /// <item><description><b>Post-translation editing</b>: You can choose whether to return layout information such as text position, font, and color. This information can be used for secondary editing when integrated with an image editor. The editor SDK package is not yet available. Follow platform notifications for updates.</description></item>
+        /// <item><description><b>Brand name protection</b>: You can choose whether to translate brand names on images, which helps protect brand name information from being translated.</description></item>
+        /// <item><description><b>Translation intervention</b>: You can customize translation results, including keeping text untranslated (ABC→ABC), specifying translations (ABC→DEF), or removing text (ABC→empty value). This is commonly used for brand name protection and similar scenarios. Pass the corresponding intervention glossary ID when calling the API. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.  </description></item>
         /// <item><description>&lt;props=&quot;china&quot;&gt; <b>Image editor integration</b>: For more information, see <a href="https://www.alibabacloud.com/help/en/document_detail/3042647.html">Image Translation Editor Protocol</a>.</description></item>
         /// </list>
         /// </description>
@@ -6793,21 +6869,21 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Image Translation Pro is designed for e-commerce images. It integrates multimodal foundation model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. It supports more than 400 language directions (including bridged directions).</para>
+        /// <para>Translates images using the Pro edition, which is designed for e-commerce images. This edition integrates multimodal foundation model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. More than 400 language directions are supported, including bridged directions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product Introduction</h2>
-        /// <para>Image Translation Pro is designed for e-commerce images. It integrates multimodal foundation model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. It supports more than 400 language directions (including bridged directions).</para>
+        /// <para>The Image Translation Pro edition is designed for e-commerce images. It integrates multimodal foundation model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. More than 400 language directions are supported, including bridged directions.</para>
         /// <h2>Scenarios</h2>
         /// <para>E-commerce product images, marketing images, and images for various other scenarios.</para>
-        /// <h2>Features</h2>
+        /// <h2>Functions and features</h2>
         /// <list type="bullet">
-        /// <item><description><b>Product subject protection</b>: Specify whether to translate text on the product subject. This helps you protect subject information from being translated, such as embedded information like product names.</description></item>
-        /// <item><description><b>Post-translation editing</b>: Specify whether to return layout information such as text position, font, and color. This can be used for secondary editing when integrated with an image editor. The editor SDK package is not yet available. Follow platform notifications for updates.</description></item>
-        /// <item><description><b>Brand name protection</b>: Specify whether to translate brand names on images. This helps you protect brand name information from being translated.</description></item>
-        /// <item><description><b>Translation intervention</b>: Customize translation results, including do-not-translate (ABC→ABC), specified translation (ABC→DEF), and remove text (ABC→empty value). This is commonly used for brand name protection and similar scenarios. Pass the corresponding intervention glossary ID when calling the API. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.  </description></item>
+        /// <item><description><b>Product subject information protection</b>: You can choose whether to translate text on the product subject, which helps protect subject information such as embedded product names from being translated.</description></item>
+        /// <item><description><b>Post-translation editing</b>: You can choose whether to return layout information such as text position, font, and color. This information can be used for secondary editing when integrated with an image editor. The editor SDK package is not yet available. Follow platform notifications for updates.</description></item>
+        /// <item><description><b>Brand name protection</b>: You can choose whether to translate brand names on images, which helps protect brand name information from being translated.</description></item>
+        /// <item><description><b>Translation intervention</b>: You can customize translation results, including keeping text untranslated (ABC→ABC), specifying translations (ABC→DEF), or removing text (ABC→empty value). This is commonly used for brand name protection and similar scenarios. Pass the corresponding intervention glossary ID when calling the API. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.  </description></item>
         /// <item><description>&lt;props=&quot;china&quot;&gt; <b>Image editor integration</b>: For more information, see <a href="https://www.alibabacloud.com/help/en/document_detail/3042647.html">Image Translation Editor Protocol</a>.</description></item>
         /// </list>
         /// </description>
@@ -6827,26 +6903,24 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Image Translation is designed specifically for e-commerce images. It supports more than 400 language directions (including bridging), accurately processes complex text layouts within images, and ensures that translated content matches the image content. This helps e-commerce platforms and developers easily achieve multilingual conversion and rendering of image content. The product also returns layer information such as text position, font, and color within images, which facilitates secondary editing of translation results through an image editor.</para>
+        /// <para>Translates text in images with support for over 400 language directions (including bridging). This product is designed specifically for e-commerce images, accurately handling complex text layouts within images and ensuring that translated content matches the image context. It helps e-commerce platforms and developers easily achieve multilingual conversion and rendering of image content. The product also returns layer information such as text position, font, and color, enabling secondary editing of translation results through an image editor.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h1>1. Product Introduction</h1>
-        /// <para>Image Translation is designed specifically for e-commerce images. It supports more than 100 language directions (including bridging), accurately processes complex text layouts within images, and ensures that translated content matches the image content. This helps e-commerce platforms and developers easily achieve multilingual conversion and rendering of image content. The product also returns layer information such as text position, font, and color within images, which facilitates secondary editing of translation results through an image editor.</para>
+        /// <para>The image translation product is designed specifically for e-commerce images, supporting over 400 language directions (including bridging). It accurately handles complex text layouts within images and ensures that translated content matches the image context, helping e-commerce platforms and developers easily achieve multilingual conversion and rendering of image content. The product also returns layer information such as text position, font, and color, enabling secondary editing of translation results through an image editor.</para>
         /// <h1>2. Common scenarios</h1>
         /// <para>E-commerce product images, marketing images, and images for various other scenarios.</para>
         /// <h1>3. Features</h1>
         /// <list type="bullet">
-        /// <item><description><para><b>Product area protection</b>: You can choose whether to translate text on the product area of an image. This helps protect product area information from being translated, such as embedded product names.</para>
+        /// <item><description><para><b>Product subject information protection</b>: Allows you to choose whether to translate text on the product subject, helping protect subject information from being translated and avoiding translation of embedded information such as product names.</para>
         /// </description></item>
-        /// <item><description><para><b>Brand name protection</b>: You can choose whether to translate brand names on images. This helps protect brand name information from being translated.</para>
+        /// <item><description><para><b>Brand name protection</b>: Allows you to choose whether to translate brand names on images, helping protect brand name information from being translated.</para>
         /// </description></item>
-        /// <item><description><para><b>Secondary editing after translation (layer information)</b>: You can choose whether to return layer information such as text position, font, and color. This information can be used to connect to an image editor for secondary editing of translation results. For the release progress of the editor SDK package, follow platform notifications.</para>
+        /// <item><description><para><b>Secondary editing after translation (layer information)</b>: Allows you to choose whether to return layer information such as text position, font, and color, which can be used to connect to an image editor for secondary editing of translation results. Follow platform notifications for updates on the editor SDK package release.</para>
         /// </description></item>
-        /// <item><description><para><b>Translation intervention</b>: You can customize translation results, including keeping text untranslated (ABC-ABC), specifying translations (ABC-DEF), or removing text (ABC-empty value). This is commonly used for scenarios such as brand name protection. Simply pass the corresponding intervention glossary ID when calling the API operation. This meets your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.  </para>
-        /// </description></item>
-        /// <item><description><para><b>Image editor integration</b>: For more information, see <a href="https://www.alibabacloud.com/help/en/document_detail/3042647.html">Image Translation editor protocol</a>.</para>
+        /// <item><description><para><b>Translation intervention support</b>: Allows you to customize translation results, including no translation (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for brand term protection and similar scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. Contact the platform if you need more.<br>&lt;props=&quot;china&quot;&gt;*   <b>Image editor integration support</b>: For more information, see <a href="https://www.alibabacloud.com/help/en/document_detail/3042647.html">Image translation editor protocol</a>.</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -6914,26 +6988,24 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Image Translation is designed specifically for e-commerce images. It supports more than 400 language directions (including bridging), accurately processes complex text layouts within images, and ensures that translated content matches the image content. This helps e-commerce platforms and developers easily achieve multilingual conversion and rendering of image content. The product also returns layer information such as text position, font, and color within images, which facilitates secondary editing of translation results through an image editor.</para>
+        /// <para>Translates text in images with support for over 400 language directions (including bridging). This product is designed specifically for e-commerce images, accurately handling complex text layouts within images and ensuring that translated content matches the image context. It helps e-commerce platforms and developers easily achieve multilingual conversion and rendering of image content. The product also returns layer information such as text position, font, and color, enabling secondary editing of translation results through an image editor.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h1>1. Product Introduction</h1>
-        /// <para>Image Translation is designed specifically for e-commerce images. It supports more than 100 language directions (including bridging), accurately processes complex text layouts within images, and ensures that translated content matches the image content. This helps e-commerce platforms and developers easily achieve multilingual conversion and rendering of image content. The product also returns layer information such as text position, font, and color within images, which facilitates secondary editing of translation results through an image editor.</para>
+        /// <para>The image translation product is designed specifically for e-commerce images, supporting over 400 language directions (including bridging). It accurately handles complex text layouts within images and ensures that translated content matches the image context, helping e-commerce platforms and developers easily achieve multilingual conversion and rendering of image content. The product also returns layer information such as text position, font, and color, enabling secondary editing of translation results through an image editor.</para>
         /// <h1>2. Common scenarios</h1>
         /// <para>E-commerce product images, marketing images, and images for various other scenarios.</para>
         /// <h1>3. Features</h1>
         /// <list type="bullet">
-        /// <item><description><para><b>Product area protection</b>: You can choose whether to translate text on the product area of an image. This helps protect product area information from being translated, such as embedded product names.</para>
+        /// <item><description><para><b>Product subject information protection</b>: Allows you to choose whether to translate text on the product subject, helping protect subject information from being translated and avoiding translation of embedded information such as product names.</para>
         /// </description></item>
-        /// <item><description><para><b>Brand name protection</b>: You can choose whether to translate brand names on images. This helps protect brand name information from being translated.</para>
+        /// <item><description><para><b>Brand name protection</b>: Allows you to choose whether to translate brand names on images, helping protect brand name information from being translated.</para>
         /// </description></item>
-        /// <item><description><para><b>Secondary editing after translation (layer information)</b>: You can choose whether to return layer information such as text position, font, and color. This information can be used to connect to an image editor for secondary editing of translation results. For the release progress of the editor SDK package, follow platform notifications.</para>
+        /// <item><description><para><b>Secondary editing after translation (layer information)</b>: Allows you to choose whether to return layer information such as text position, font, and color, which can be used to connect to an image editor for secondary editing of translation results. Follow platform notifications for updates on the editor SDK package release.</para>
         /// </description></item>
-        /// <item><description><para><b>Translation intervention</b>: You can customize translation results, including keeping text untranslated (ABC-ABC), specifying translations (ABC-DEF), or removing text (ABC-empty value). This is commonly used for scenarios such as brand name protection. Simply pass the corresponding intervention glossary ID when calling the API operation. This meets your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.  </para>
-        /// </description></item>
-        /// <item><description><para><b>Image editor integration</b>: For more information, see <a href="https://www.alibabacloud.com/help/en/document_detail/3042647.html">Image Translation editor protocol</a>.</para>
+        /// <item><description><para><b>Translation intervention support</b>: Allows you to customize translation results, including no translation (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for brand term protection and similar scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. Contact the platform if you need more.<br>&lt;props=&quot;china&quot;&gt;*   <b>Image editor integration support</b>: For more information, see <a href="https://www.alibabacloud.com/help/en/document_detail/3042647.html">Image translation editor protocol</a>.</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -7001,26 +7073,24 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Image Translation is designed specifically for e-commerce images. It supports more than 400 language directions (including bridging), accurately processes complex text layouts within images, and ensures that translated content matches the image content. This helps e-commerce platforms and developers easily achieve multilingual conversion and rendering of image content. The product also returns layer information such as text position, font, and color within images, which facilitates secondary editing of translation results through an image editor.</para>
+        /// <para>Translates text in images with support for over 400 language directions (including bridging). This product is designed specifically for e-commerce images, accurately handling complex text layouts within images and ensuring that translated content matches the image context. It helps e-commerce platforms and developers easily achieve multilingual conversion and rendering of image content. The product also returns layer information such as text position, font, and color, enabling secondary editing of translation results through an image editor.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h1>1. Product Introduction</h1>
-        /// <para>Image Translation is designed specifically for e-commerce images. It supports more than 100 language directions (including bridging), accurately processes complex text layouts within images, and ensures that translated content matches the image content. This helps e-commerce platforms and developers easily achieve multilingual conversion and rendering of image content. The product also returns layer information such as text position, font, and color within images, which facilitates secondary editing of translation results through an image editor.</para>
+        /// <para>The image translation product is designed specifically for e-commerce images, supporting over 400 language directions (including bridging). It accurately handles complex text layouts within images and ensures that translated content matches the image context, helping e-commerce platforms and developers easily achieve multilingual conversion and rendering of image content. The product also returns layer information such as text position, font, and color, enabling secondary editing of translation results through an image editor.</para>
         /// <h1>2. Common scenarios</h1>
         /// <para>E-commerce product images, marketing images, and images for various other scenarios.</para>
         /// <h1>3. Features</h1>
         /// <list type="bullet">
-        /// <item><description><para><b>Product area protection</b>: You can choose whether to translate text on the product area of an image. This helps protect product area information from being translated, such as embedded product names.</para>
+        /// <item><description><para><b>Product subject information protection</b>: Allows you to choose whether to translate text on the product subject, helping protect subject information from being translated and avoiding translation of embedded information such as product names.</para>
         /// </description></item>
-        /// <item><description><para><b>Brand name protection</b>: You can choose whether to translate brand names on images. This helps protect brand name information from being translated.</para>
+        /// <item><description><para><b>Brand name protection</b>: Allows you to choose whether to translate brand names on images, helping protect brand name information from being translated.</para>
         /// </description></item>
-        /// <item><description><para><b>Secondary editing after translation (layer information)</b>: You can choose whether to return layer information such as text position, font, and color. This information can be used to connect to an image editor for secondary editing of translation results. For the release progress of the editor SDK package, follow platform notifications.</para>
+        /// <item><description><para><b>Secondary editing after translation (layer information)</b>: Allows you to choose whether to return layer information such as text position, font, and color, which can be used to connect to an image editor for secondary editing of translation results. Follow platform notifications for updates on the editor SDK package release.</para>
         /// </description></item>
-        /// <item><description><para><b>Translation intervention</b>: You can customize translation results, including keeping text untranslated (ABC-ABC), specifying translations (ABC-DEF), or removing text (ABC-empty value). This is commonly used for scenarios such as brand name protection. Simply pass the corresponding intervention glossary ID when calling the API operation. This meets your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.  </para>
-        /// </description></item>
-        /// <item><description><para><b>Image editor integration</b>: For more information, see <a href="https://www.alibabacloud.com/help/en/document_detail/3042647.html">Image Translation editor protocol</a>.</para>
+        /// <item><description><para><b>Translation intervention support</b>: Allows you to customize translation results, including no translation (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for brand term protection and similar scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. Contact the platform if you need more.<br>&lt;props=&quot;china&quot;&gt;*   <b>Image editor integration support</b>: For more information, see <a href="https://www.alibabacloud.com/help/en/document_detail/3042647.html">Image translation editor protocol</a>.</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -7040,26 +7110,24 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Image Translation is designed specifically for e-commerce images. It supports more than 400 language directions (including bridging), accurately processes complex text layouts within images, and ensures that translated content matches the image content. This helps e-commerce platforms and developers easily achieve multilingual conversion and rendering of image content. The product also returns layer information such as text position, font, and color within images, which facilitates secondary editing of translation results through an image editor.</para>
+        /// <para>Translates text in images with support for over 400 language directions (including bridging). This product is designed specifically for e-commerce images, accurately handling complex text layouts within images and ensuring that translated content matches the image context. It helps e-commerce platforms and developers easily achieve multilingual conversion and rendering of image content. The product also returns layer information such as text position, font, and color, enabling secondary editing of translation results through an image editor.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h1>1. Product Introduction</h1>
-        /// <para>Image Translation is designed specifically for e-commerce images. It supports more than 100 language directions (including bridging), accurately processes complex text layouts within images, and ensures that translated content matches the image content. This helps e-commerce platforms and developers easily achieve multilingual conversion and rendering of image content. The product also returns layer information such as text position, font, and color within images, which facilitates secondary editing of translation results through an image editor.</para>
+        /// <para>The image translation product is designed specifically for e-commerce images, supporting over 400 language directions (including bridging). It accurately handles complex text layouts within images and ensures that translated content matches the image context, helping e-commerce platforms and developers easily achieve multilingual conversion and rendering of image content. The product also returns layer information such as text position, font, and color, enabling secondary editing of translation results through an image editor.</para>
         /// <h1>2. Common scenarios</h1>
         /// <para>E-commerce product images, marketing images, and images for various other scenarios.</para>
         /// <h1>3. Features</h1>
         /// <list type="bullet">
-        /// <item><description><para><b>Product area protection</b>: You can choose whether to translate text on the product area of an image. This helps protect product area information from being translated, such as embedded product names.</para>
+        /// <item><description><para><b>Product subject information protection</b>: Allows you to choose whether to translate text on the product subject, helping protect subject information from being translated and avoiding translation of embedded information such as product names.</para>
         /// </description></item>
-        /// <item><description><para><b>Brand name protection</b>: You can choose whether to translate brand names on images. This helps protect brand name information from being translated.</para>
+        /// <item><description><para><b>Brand name protection</b>: Allows you to choose whether to translate brand names on images, helping protect brand name information from being translated.</para>
         /// </description></item>
-        /// <item><description><para><b>Secondary editing after translation (layer information)</b>: You can choose whether to return layer information such as text position, font, and color. This information can be used to connect to an image editor for secondary editing of translation results. For the release progress of the editor SDK package, follow platform notifications.</para>
+        /// <item><description><para><b>Secondary editing after translation (layer information)</b>: Allows you to choose whether to return layer information such as text position, font, and color, which can be used to connect to an image editor for secondary editing of translation results. Follow platform notifications for updates on the editor SDK package release.</para>
         /// </description></item>
-        /// <item><description><para><b>Translation intervention</b>: You can customize translation results, including keeping text untranslated (ABC-ABC), specifying translations (ABC-DEF), or removing text (ABC-empty value). This is commonly used for scenarios such as brand name protection. Simply pass the corresponding intervention glossary ID when calling the API operation. This meets your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.  </para>
-        /// </description></item>
-        /// <item><description><para><b>Image editor integration</b>: For more information, see <a href="https://www.alibabacloud.com/help/en/document_detail/3042647.html">Image Translation editor protocol</a>.</para>
+        /// <item><description><para><b>Translation intervention support</b>: Allows you to customize translation results, including no translation (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for brand term protection and similar scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. Contact the platform if you need more.<br>&lt;props=&quot;china&quot;&gt;*   <b>Image editor integration support</b>: For more information, see <a href="https://www.alibabacloud.com/help/en/document_detail/3042647.html">Image translation editor protocol</a>.</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -7771,6 +7839,194 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Detects product displays in photos of shelves, endcaps, freezers, display tables, and dump bins by using product SKU recognition and multimodal large model grounding. It aggregates product locations by SKU and supplements the results with visible single-item grounding and short names to facilitate product location display, display inventory, and subsequent distribution verification in business systems.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <list type="bullet">
+        /// <item><description>Display product inventory: Aggregates recognized product bounding boxes by SKU for business system statistics.</description></item>
+        /// <item><description>Distribution list verification: Compares the recognized SKU list with the target list on the business side.</description></item>
+        /// <item><description>Single-item location review: Assists in checking recognition results by combining product bounding boxes and visible names.</description></item>
+        /// </list>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description>Aggregation by SKU: Aggregates multiple Boxes for the same SkuId in Products, and skuIds returns a deduplicated list of SKU codes.</description></item>
+        /// <item><description>Supplementary single-item grounding: The multimodal model individually grounds recognizable sales packages and provides confirmable short names.</description></item>
+        /// <item><description>Independent use of two result sets: Products comes from SKU recognition, and grounding comes from supplementary grounding. Grounding does not return SKU codes and does not guarantee item-by-item correspondence with Products.</description></item>
+        /// <item><description>Supports single HTTPS image input. Supplementary grounding returns up to 12 targets, each containing a category, a bounding box, and visible text of up to 24 characters. The coverage field indicates whether the grounding is complete.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MerchandisePlacementDetectionLiteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MerchandisePlacementDetectionLiteResponse
+        /// </returns>
+        public MerchandisePlacementDetectionLiteResponse MerchandisePlacementDetectionLiteWithOptions(MerchandisePlacementDetectionLiteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MerchandisePlacementDetectionLite",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MerchandisePlacementDetectionLiteResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects product displays in photos of shelves, endcaps, freezers, display tables, and dump bins by using product SKU recognition and multimodal large model grounding. It aggregates product locations by SKU and supplements the results with visible single-item grounding and short names to facilitate product location display, display inventory, and subsequent distribution verification in business systems.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <list type="bullet">
+        /// <item><description>Display product inventory: Aggregates recognized product bounding boxes by SKU for business system statistics.</description></item>
+        /// <item><description>Distribution list verification: Compares the recognized SKU list with the target list on the business side.</description></item>
+        /// <item><description>Single-item location review: Assists in checking recognition results by combining product bounding boxes and visible names.</description></item>
+        /// </list>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description>Aggregation by SKU: Aggregates multiple Boxes for the same SkuId in Products, and skuIds returns a deduplicated list of SKU codes.</description></item>
+        /// <item><description>Supplementary single-item grounding: The multimodal model individually grounds recognizable sales packages and provides confirmable short names.</description></item>
+        /// <item><description>Independent use of two result sets: Products comes from SKU recognition, and grounding comes from supplementary grounding. Grounding does not return SKU codes and does not guarantee item-by-item correspondence with Products.</description></item>
+        /// <item><description>Supports single HTTPS image input. Supplementary grounding returns up to 12 targets, each containing a category, a bounding box, and visible text of up to 24 characters. The coverage field indicates whether the grounding is complete.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MerchandisePlacementDetectionLiteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MerchandisePlacementDetectionLiteResponse
+        /// </returns>
+        public async Task<MerchandisePlacementDetectionLiteResponse> MerchandisePlacementDetectionLiteWithOptionsAsync(MerchandisePlacementDetectionLiteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MerchandisePlacementDetectionLite",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MerchandisePlacementDetectionLiteResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects product displays in photos of shelves, endcaps, freezers, display tables, and dump bins by using product SKU recognition and multimodal large model grounding. It aggregates product locations by SKU and supplements the results with visible single-item grounding and short names to facilitate product location display, display inventory, and subsequent distribution verification in business systems.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <list type="bullet">
+        /// <item><description>Display product inventory: Aggregates recognized product bounding boxes by SKU for business system statistics.</description></item>
+        /// <item><description>Distribution list verification: Compares the recognized SKU list with the target list on the business side.</description></item>
+        /// <item><description>Single-item location review: Assists in checking recognition results by combining product bounding boxes and visible names.</description></item>
+        /// </list>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description>Aggregation by SKU: Aggregates multiple Boxes for the same SkuId in Products, and skuIds returns a deduplicated list of SKU codes.</description></item>
+        /// <item><description>Supplementary single-item grounding: The multimodal model individually grounds recognizable sales packages and provides confirmable short names.</description></item>
+        /// <item><description>Independent use of two result sets: Products comes from SKU recognition, and grounding comes from supplementary grounding. Grounding does not return SKU codes and does not guarantee item-by-item correspondence with Products.</description></item>
+        /// <item><description>Supports single HTTPS image input. Supplementary grounding returns up to 12 targets, each containing a category, a bounding box, and visible text of up to 24 characters. The coverage field indicates whether the grounding is complete.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MerchandisePlacementDetectionLiteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MerchandisePlacementDetectionLiteResponse
+        /// </returns>
+        public MerchandisePlacementDetectionLiteResponse MerchandisePlacementDetectionLite(MerchandisePlacementDetectionLiteRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return MerchandisePlacementDetectionLiteWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects product displays in photos of shelves, endcaps, freezers, display tables, and dump bins by using product SKU recognition and multimodal large model grounding. It aggregates product locations by SKU and supplements the results with visible single-item grounding and short names to facilitate product location display, display inventory, and subsequent distribution verification in business systems.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <list type="bullet">
+        /// <item><description>Display product inventory: Aggregates recognized product bounding boxes by SKU for business system statistics.</description></item>
+        /// <item><description>Distribution list verification: Compares the recognized SKU list with the target list on the business side.</description></item>
+        /// <item><description>Single-item location review: Assists in checking recognition results by combining product bounding boxes and visible names.</description></item>
+        /// </list>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description>Aggregation by SKU: Aggregates multiple Boxes for the same SkuId in Products, and skuIds returns a deduplicated list of SKU codes.</description></item>
+        /// <item><description>Supplementary single-item grounding: The multimodal model individually grounds recognizable sales packages and provides confirmable short names.</description></item>
+        /// <item><description>Independent use of two result sets: Products comes from SKU recognition, and grounding comes from supplementary grounding. Grounding does not return SKU codes and does not guarantee item-by-item correspondence with Products.</description></item>
+        /// <item><description>Supports single HTTPS image input. Supplementary grounding returns up to 12 targets, each containing a category, a bounding box, and visible text of up to 24 characters. The coverage field indicates whether the grounding is complete.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MerchandisePlacementDetectionLiteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MerchandisePlacementDetectionLiteResponse
+        /// </returns>
+        public async Task<MerchandisePlacementDetectionLiteResponse> MerchandisePlacementDetectionLiteAsync(MerchandisePlacementDetectionLiteRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await MerchandisePlacementDetectionLiteWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Detects the positions and names of visible products in an image based on a dedicated visual model. The product supports default recognition rules for the Genki Forest business type and custom rules provided by the invoker. It outputs per-product positions and names, applicable to beverage display inspection and product location display.</para>
         /// </summary>
         /// 
@@ -7971,6 +8227,758 @@ namespace AlibabaCloud.SDK.Aidge20260428
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await MerchandisePlacementDetectionProWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects display price tags based on price tag recognition and multimodal large model localization, extracting product information, selling prices, original prices, and locations, while providing visible bounding boxes for paper price tags, electronic price tags, and promotional price signs for store price collection, price tag inspection, and business-side price verification.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <list type="bullet">
+        /// <item><description>Store price collection: Reads the recognized selling prices and available original prices of price tags.</description></item>
+        /// <item><description>Price execution verification: Compares the recognized prices with the business-side price list.</description></item>
+        /// <item><description>Manual price tag review: Locates paper, electronic, and promotional price tags to facilitate reviewing the original images.</description></item>
+        /// </list>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description>Structured price output: Returns the product name, code, price, and location item by item. Prices are retained as strings.</description></item>
+        /// <item><description>Multi-type price tag localization: Covers common paper price tags, electronic price tags, and promotional signs with clear selling prices.</description></item>
+        /// <item><description>Original text and location-assisted review: Prioritizes extracting clear selling prices from located text, leaving it empty if unreadable. Supplementary localization does not infer that a price tag necessarily corresponds to a specific SKU based on its location.</description></item>
+        /// <item><description>Supports single HTTPS image input. Supplementary localization returns up to 12 targets, each containing a category, a bounding box, and up to 24 characters of visible text, and indicates whether the localization is complete through coverage.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MerchandisePriceTagDetectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MerchandisePriceTagDetectionResponse
+        /// </returns>
+        public MerchandisePriceTagDetectionResponse MerchandisePriceTagDetectionWithOptions(MerchandisePriceTagDetectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MerchandisePriceTagDetection",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MerchandisePriceTagDetectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects display price tags based on price tag recognition and multimodal large model localization, extracting product information, selling prices, original prices, and locations, while providing visible bounding boxes for paper price tags, electronic price tags, and promotional price signs for store price collection, price tag inspection, and business-side price verification.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <list type="bullet">
+        /// <item><description>Store price collection: Reads the recognized selling prices and available original prices of price tags.</description></item>
+        /// <item><description>Price execution verification: Compares the recognized prices with the business-side price list.</description></item>
+        /// <item><description>Manual price tag review: Locates paper, electronic, and promotional price tags to facilitate reviewing the original images.</description></item>
+        /// </list>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description>Structured price output: Returns the product name, code, price, and location item by item. Prices are retained as strings.</description></item>
+        /// <item><description>Multi-type price tag localization: Covers common paper price tags, electronic price tags, and promotional signs with clear selling prices.</description></item>
+        /// <item><description>Original text and location-assisted review: Prioritizes extracting clear selling prices from located text, leaving it empty if unreadable. Supplementary localization does not infer that a price tag necessarily corresponds to a specific SKU based on its location.</description></item>
+        /// <item><description>Supports single HTTPS image input. Supplementary localization returns up to 12 targets, each containing a category, a bounding box, and up to 24 characters of visible text, and indicates whether the localization is complete through coverage.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MerchandisePriceTagDetectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MerchandisePriceTagDetectionResponse
+        /// </returns>
+        public async Task<MerchandisePriceTagDetectionResponse> MerchandisePriceTagDetectionWithOptionsAsync(MerchandisePriceTagDetectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MerchandisePriceTagDetection",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MerchandisePriceTagDetectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects display price tags based on price tag recognition and multimodal large model localization, extracting product information, selling prices, original prices, and locations, while providing visible bounding boxes for paper price tags, electronic price tags, and promotional price signs for store price collection, price tag inspection, and business-side price verification.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <list type="bullet">
+        /// <item><description>Store price collection: Reads the recognized selling prices and available original prices of price tags.</description></item>
+        /// <item><description>Price execution verification: Compares the recognized prices with the business-side price list.</description></item>
+        /// <item><description>Manual price tag review: Locates paper, electronic, and promotional price tags to facilitate reviewing the original images.</description></item>
+        /// </list>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description>Structured price output: Returns the product name, code, price, and location item by item. Prices are retained as strings.</description></item>
+        /// <item><description>Multi-type price tag localization: Covers common paper price tags, electronic price tags, and promotional signs with clear selling prices.</description></item>
+        /// <item><description>Original text and location-assisted review: Prioritizes extracting clear selling prices from located text, leaving it empty if unreadable. Supplementary localization does not infer that a price tag necessarily corresponds to a specific SKU based on its location.</description></item>
+        /// <item><description>Supports single HTTPS image input. Supplementary localization returns up to 12 targets, each containing a category, a bounding box, and up to 24 characters of visible text, and indicates whether the localization is complete through coverage.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MerchandisePriceTagDetectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MerchandisePriceTagDetectionResponse
+        /// </returns>
+        public MerchandisePriceTagDetectionResponse MerchandisePriceTagDetection(MerchandisePriceTagDetectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return MerchandisePriceTagDetectionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects display price tags based on price tag recognition and multimodal large model localization, extracting product information, selling prices, original prices, and locations, while providing visible bounding boxes for paper price tags, electronic price tags, and promotional price signs for store price collection, price tag inspection, and business-side price verification.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <list type="bullet">
+        /// <item><description>Store price collection: Reads the recognized selling prices and available original prices of price tags.</description></item>
+        /// <item><description>Price execution verification: Compares the recognized prices with the business-side price list.</description></item>
+        /// <item><description>Manual price tag review: Locates paper, electronic, and promotional price tags to facilitate reviewing the original images.</description></item>
+        /// </list>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description>Structured price output: Returns the product name, code, price, and location item by item. Prices are retained as strings.</description></item>
+        /// <item><description>Multi-type price tag localization: Covers common paper price tags, electronic price tags, and promotional signs with clear selling prices.</description></item>
+        /// <item><description>Original text and location-assisted review: Prioritizes extracting clear selling prices from located text, leaving it empty if unreadable. Supplementary localization does not infer that a price tag necessarily corresponds to a specific SKU based on its location.</description></item>
+        /// <item><description>Supports single HTTPS image input. Supplementary localization returns up to 12 targets, each containing a category, a bounding box, and up to 24 characters of visible text, and indicates whether the localization is complete through coverage.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MerchandisePriceTagDetectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MerchandisePriceTagDetectionResponse
+        /// </returns>
+        public async Task<MerchandisePriceTagDetectionResponse> MerchandisePriceTagDetectionAsync(MerchandisePriceTagDetectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await MerchandisePriceTagDetectionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects store displays based on display scene recognition and holistic positioning powered by multimodal large models. This product identifies display areas such as shelves, refrigerators, and floor displays, and outputs available scene names, locations, and display metrics. It also provides overall facility bounding boxes, making it suitable for display facility inspection, area visualization, and display metric verification.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <list type="bullet">
+        /// <item><description>Display facility inspection: identifies facilities such as shelves, endcaps, floor displays, upright refrigerators, and chest freezers.</description></item>
+        /// <item><description>Display metric verification: reads active metrics such as proportion, purity, and plumpness for further evaluation by business systems.</description></item>
+        /// <item><description>Display area visualization: displays area locations and overall facility bounding boxes on the original image.</description></item>
+        /// </list>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description>Scene structured output: returns scene names, center points, area contours, and active metrics.</description></item>
+        /// <item><description>Holistic facility positioning: uses one bounding box for an independent facility or floor display, which is suitable for overall area review.</description></item>
+        /// <item><description>Retains two types of coordinates: the positions in scenes retain the original normalization coordinates of the recognition service, while grounding uses 0–1000 integer bounding boxes.</description></item>
+        /// <item><description>Supports a single HTTPS image as input. The supplementary positioning returns up to 12 targets. Each target includes a category, a bounding box, and up to 24 characters of visible text, and uses coverage to indicate whether the positioning is complete.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MerchandiseSceneDetectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MerchandiseSceneDetectionResponse
+        /// </returns>
+        public MerchandiseSceneDetectionResponse MerchandiseSceneDetectionWithOptions(MerchandiseSceneDetectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MerchandiseSceneDetection",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MerchandiseSceneDetectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects store displays based on display scene recognition and holistic positioning powered by multimodal large models. This product identifies display areas such as shelves, refrigerators, and floor displays, and outputs available scene names, locations, and display metrics. It also provides overall facility bounding boxes, making it suitable for display facility inspection, area visualization, and display metric verification.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <list type="bullet">
+        /// <item><description>Display facility inspection: identifies facilities such as shelves, endcaps, floor displays, upright refrigerators, and chest freezers.</description></item>
+        /// <item><description>Display metric verification: reads active metrics such as proportion, purity, and plumpness for further evaluation by business systems.</description></item>
+        /// <item><description>Display area visualization: displays area locations and overall facility bounding boxes on the original image.</description></item>
+        /// </list>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description>Scene structured output: returns scene names, center points, area contours, and active metrics.</description></item>
+        /// <item><description>Holistic facility positioning: uses one bounding box for an independent facility or floor display, which is suitable for overall area review.</description></item>
+        /// <item><description>Retains two types of coordinates: the positions in scenes retain the original normalization coordinates of the recognition service, while grounding uses 0–1000 integer bounding boxes.</description></item>
+        /// <item><description>Supports a single HTTPS image as input. The supplementary positioning returns up to 12 targets. Each target includes a category, a bounding box, and up to 24 characters of visible text, and uses coverage to indicate whether the positioning is complete.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MerchandiseSceneDetectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MerchandiseSceneDetectionResponse
+        /// </returns>
+        public async Task<MerchandiseSceneDetectionResponse> MerchandiseSceneDetectionWithOptionsAsync(MerchandiseSceneDetectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MerchandiseSceneDetection",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MerchandiseSceneDetectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects store displays based on display scene recognition and holistic positioning powered by multimodal large models. This product identifies display areas such as shelves, refrigerators, and floor displays, and outputs available scene names, locations, and display metrics. It also provides overall facility bounding boxes, making it suitable for display facility inspection, area visualization, and display metric verification.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <list type="bullet">
+        /// <item><description>Display facility inspection: identifies facilities such as shelves, endcaps, floor displays, upright refrigerators, and chest freezers.</description></item>
+        /// <item><description>Display metric verification: reads active metrics such as proportion, purity, and plumpness for further evaluation by business systems.</description></item>
+        /// <item><description>Display area visualization: displays area locations and overall facility bounding boxes on the original image.</description></item>
+        /// </list>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description>Scene structured output: returns scene names, center points, area contours, and active metrics.</description></item>
+        /// <item><description>Holistic facility positioning: uses one bounding box for an independent facility or floor display, which is suitable for overall area review.</description></item>
+        /// <item><description>Retains two types of coordinates: the positions in scenes retain the original normalization coordinates of the recognition service, while grounding uses 0–1000 integer bounding boxes.</description></item>
+        /// <item><description>Supports a single HTTPS image as input. The supplementary positioning returns up to 12 targets. Each target includes a category, a bounding box, and up to 24 characters of visible text, and uses coverage to indicate whether the positioning is complete.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MerchandiseSceneDetectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MerchandiseSceneDetectionResponse
+        /// </returns>
+        public MerchandiseSceneDetectionResponse MerchandiseSceneDetection(MerchandiseSceneDetectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return MerchandiseSceneDetectionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects store displays based on display scene recognition and holistic positioning powered by multimodal large models. This product identifies display areas such as shelves, refrigerators, and floor displays, and outputs available scene names, locations, and display metrics. It also provides overall facility bounding boxes, making it suitable for display facility inspection, area visualization, and display metric verification.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <list type="bullet">
+        /// <item><description>Display facility inspection: identifies facilities such as shelves, endcaps, floor displays, upright refrigerators, and chest freezers.</description></item>
+        /// <item><description>Display metric verification: reads active metrics such as proportion, purity, and plumpness for further evaluation by business systems.</description></item>
+        /// <item><description>Display area visualization: displays area locations and overall facility bounding boxes on the original image.</description></item>
+        /// </list>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description>Scene structured output: returns scene names, center points, area contours, and active metrics.</description></item>
+        /// <item><description>Holistic facility positioning: uses one bounding box for an independent facility or floor display, which is suitable for overall area review.</description></item>
+        /// <item><description>Retains two types of coordinates: the positions in scenes retain the original normalization coordinates of the recognition service, while grounding uses 0–1000 integer bounding boxes.</description></item>
+        /// <item><description>Supports a single HTTPS image as input. The supplementary positioning returns up to 12 targets. Each target includes a category, a bounding box, and up to 24 characters of visible text, and uses coverage to indicate whether the positioning is complete.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MerchandiseSceneDetectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MerchandiseSceneDetectionResponse
+        /// </returns>
+        public async Task<MerchandiseSceneDetectionResponse> MerchandiseSceneDetectionAsync(MerchandiseSceneDetectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await MerchandiseSceneDetectionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Reviews images of milk powder can bottom codes by using recapture detection and multimodal large model-based element localization. The service determines whether an uploaded photo is recaptured and localizes visible milk powder products, can bottoms, and bottom code areas. It is suitable for milk powder channel inspections, can bottom code photo reviews, and manual verifications.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description>Recapture binary classification: isFake=true indicates a recapture, and false indicates a non-recapture. Element localization is performed for both results.</description></item>
+        /// <item><description>Milk powder subject and bottom code localization: Prioritizes the localization of the milk powder subject. Adds corresponding bounding boxes when the can bottom, spray code, batch code, or traceability code areas are clear.</description></item>
+        /// <item><description>Visible information output: Outputs only confirmed short names or text without guessing blurred code values. Localization results do not change the recapture conclusion.</description></item>
+        /// <item><description>Supports a single HTTPS image input. The supplementary localization returns up to 12 targets. Each target includes a category, a bounding box, and up to 24 characters of visible text. The coverage field indicates whether the localization is complete.</description></item>
+        /// </list>
+        /// <h2>Scenarios:</h2>
+        /// <list type="bullet">
+        /// <item><description>Can bottom code photo review: Determines whether a photo of a milk powder can bottom code has a recapture risk.</description></item>
+        /// <item><description>Milk powder product inspection: Localizes canned, boxed, or bagged milk powder, as well as clearly visible can bottoms and bottom codes.</description></item>
+        /// <item><description>Review result playback: Displays target bounding boxes on the original image to assist personnel in verifying the photo content.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MilkPowderCanBottomCodeRephotographyDetectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MilkPowderCanBottomCodeRephotographyDetectionResponse
+        /// </returns>
+        public MilkPowderCanBottomCodeRephotographyDetectionResponse MilkPowderCanBottomCodeRephotographyDetectionWithOptions(MilkPowderCanBottomCodeRephotographyDetectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MilkPowderCanBottomCodeRephotographyDetection",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MilkPowderCanBottomCodeRephotographyDetectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Reviews images of milk powder can bottom codes by using recapture detection and multimodal large model-based element localization. The service determines whether an uploaded photo is recaptured and localizes visible milk powder products, can bottoms, and bottom code areas. It is suitable for milk powder channel inspections, can bottom code photo reviews, and manual verifications.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description>Recapture binary classification: isFake=true indicates a recapture, and false indicates a non-recapture. Element localization is performed for both results.</description></item>
+        /// <item><description>Milk powder subject and bottom code localization: Prioritizes the localization of the milk powder subject. Adds corresponding bounding boxes when the can bottom, spray code, batch code, or traceability code areas are clear.</description></item>
+        /// <item><description>Visible information output: Outputs only confirmed short names or text without guessing blurred code values. Localization results do not change the recapture conclusion.</description></item>
+        /// <item><description>Supports a single HTTPS image input. The supplementary localization returns up to 12 targets. Each target includes a category, a bounding box, and up to 24 characters of visible text. The coverage field indicates whether the localization is complete.</description></item>
+        /// </list>
+        /// <h2>Scenarios:</h2>
+        /// <list type="bullet">
+        /// <item><description>Can bottom code photo review: Determines whether a photo of a milk powder can bottom code has a recapture risk.</description></item>
+        /// <item><description>Milk powder product inspection: Localizes canned, boxed, or bagged milk powder, as well as clearly visible can bottoms and bottom codes.</description></item>
+        /// <item><description>Review result playback: Displays target bounding boxes on the original image to assist personnel in verifying the photo content.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MilkPowderCanBottomCodeRephotographyDetectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MilkPowderCanBottomCodeRephotographyDetectionResponse
+        /// </returns>
+        public async Task<MilkPowderCanBottomCodeRephotographyDetectionResponse> MilkPowderCanBottomCodeRephotographyDetectionWithOptionsAsync(MilkPowderCanBottomCodeRephotographyDetectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MilkPowderCanBottomCodeRephotographyDetection",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MilkPowderCanBottomCodeRephotographyDetectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Reviews images of milk powder can bottom codes by using recapture detection and multimodal large model-based element localization. The service determines whether an uploaded photo is recaptured and localizes visible milk powder products, can bottoms, and bottom code areas. It is suitable for milk powder channel inspections, can bottom code photo reviews, and manual verifications.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description>Recapture binary classification: isFake=true indicates a recapture, and false indicates a non-recapture. Element localization is performed for both results.</description></item>
+        /// <item><description>Milk powder subject and bottom code localization: Prioritizes the localization of the milk powder subject. Adds corresponding bounding boxes when the can bottom, spray code, batch code, or traceability code areas are clear.</description></item>
+        /// <item><description>Visible information output: Outputs only confirmed short names or text without guessing blurred code values. Localization results do not change the recapture conclusion.</description></item>
+        /// <item><description>Supports a single HTTPS image input. The supplementary localization returns up to 12 targets. Each target includes a category, a bounding box, and up to 24 characters of visible text. The coverage field indicates whether the localization is complete.</description></item>
+        /// </list>
+        /// <h2>Scenarios:</h2>
+        /// <list type="bullet">
+        /// <item><description>Can bottom code photo review: Determines whether a photo of a milk powder can bottom code has a recapture risk.</description></item>
+        /// <item><description>Milk powder product inspection: Localizes canned, boxed, or bagged milk powder, as well as clearly visible can bottoms and bottom codes.</description></item>
+        /// <item><description>Review result playback: Displays target bounding boxes on the original image to assist personnel in verifying the photo content.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MilkPowderCanBottomCodeRephotographyDetectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MilkPowderCanBottomCodeRephotographyDetectionResponse
+        /// </returns>
+        public MilkPowderCanBottomCodeRephotographyDetectionResponse MilkPowderCanBottomCodeRephotographyDetection(MilkPowderCanBottomCodeRephotographyDetectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return MilkPowderCanBottomCodeRephotographyDetectionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Reviews images of milk powder can bottom codes by using recapture detection and multimodal large model-based element localization. The service determines whether an uploaded photo is recaptured and localizes visible milk powder products, can bottoms, and bottom code areas. It is suitable for milk powder channel inspections, can bottom code photo reviews, and manual verifications.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description>Recapture binary classification: isFake=true indicates a recapture, and false indicates a non-recapture. Element localization is performed for both results.</description></item>
+        /// <item><description>Milk powder subject and bottom code localization: Prioritizes the localization of the milk powder subject. Adds corresponding bounding boxes when the can bottom, spray code, batch code, or traceability code areas are clear.</description></item>
+        /// <item><description>Visible information output: Outputs only confirmed short names or text without guessing blurred code values. Localization results do not change the recapture conclusion.</description></item>
+        /// <item><description>Supports a single HTTPS image input. The supplementary localization returns up to 12 targets. Each target includes a category, a bounding box, and up to 24 characters of visible text. The coverage field indicates whether the localization is complete.</description></item>
+        /// </list>
+        /// <h2>Scenarios:</h2>
+        /// <list type="bullet">
+        /// <item><description>Can bottom code photo review: Determines whether a photo of a milk powder can bottom code has a recapture risk.</description></item>
+        /// <item><description>Milk powder product inspection: Localizes canned, boxed, or bagged milk powder, as well as clearly visible can bottoms and bottom codes.</description></item>
+        /// <item><description>Review result playback: Displays target bounding boxes on the original image to assist personnel in verifying the photo content.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MilkPowderCanBottomCodeRephotographyDetectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MilkPowderCanBottomCodeRephotographyDetectionResponse
+        /// </returns>
+        public async Task<MilkPowderCanBottomCodeRephotographyDetectionResponse> MilkPowderCanBottomCodeRephotographyDetectionAsync(MilkPowderCanBottomCodeRephotographyDetectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await MilkPowderCanBottomCodeRephotographyDetectionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Reviews infant formula carton code images based on recapture detection and element localization using multimodal foundation models. It targets photos of infant formula products, outer cartons, and carton codes captured during channel inspections. It determines whether images are non-recaptured, recaptured, or suspected recaptures, and localizes visible infant formula products, outer cartons, and code regions to provide a structured basis for image review and manual verification.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description>Three-state recapture detection: When photoStatus is 0, 1, or 2, it indicates non-recapture, recapture, or suspected recapture, respectively. The isFake, isSuspect, and score fields are also returned.</description></item>
+        /// <item><description>Subject and code area grounding: Prioritizes the grounding of individual milk powder products and outer boxes, and supplements clear box codes, barcodes, and QR code areas. The milk powder subject can still be grounded even if no box code is present.</description></item>
+        /// <item><description>Result coordination: Element grounding supplements visible targets without changing the recapture detection conclusion. It does not decode QR codes or provide product authenticity verification.</description></item>
+        /// <item><description>Supports a single HTTPS image as input. The supplementary grounding returns up to 12 targets. Each target includes a category, a bounding box, and up to 24 characters of visible text. The coverage field indicates whether the grounding is complete.</description></item>
+        /// </list>
+        /// <h2>Scenarios</h2>
+        /// <list type="bullet">
+        /// <item><description>Box code photo review: Checks whether milk powder outer box photos uploaded by stores or channels carry recapture risks.</description></item>
+        /// <item><description>Milk powder display inspection: Locates visible individual milk powder products, full boxes, and clear code areas in photos.</description></item>
+        /// <item><description>Suspected sample review: Filters images that require manual verification based on the suspected status, algorithm score, and bounding boxes.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MilkPowderCartonCodeRephotographyDetectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MilkPowderCartonCodeRephotographyDetectionResponse
+        /// </returns>
+        public MilkPowderCartonCodeRephotographyDetectionResponse MilkPowderCartonCodeRephotographyDetectionWithOptions(MilkPowderCartonCodeRephotographyDetectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MilkPowderCartonCodeRephotographyDetection",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MilkPowderCartonCodeRephotographyDetectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Reviews infant formula carton code images based on recapture detection and element localization using multimodal foundation models. It targets photos of infant formula products, outer cartons, and carton codes captured during channel inspections. It determines whether images are non-recaptured, recaptured, or suspected recaptures, and localizes visible infant formula products, outer cartons, and code regions to provide a structured basis for image review and manual verification.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description>Three-state recapture detection: When photoStatus is 0, 1, or 2, it indicates non-recapture, recapture, or suspected recapture, respectively. The isFake, isSuspect, and score fields are also returned.</description></item>
+        /// <item><description>Subject and code area grounding: Prioritizes the grounding of individual milk powder products and outer boxes, and supplements clear box codes, barcodes, and QR code areas. The milk powder subject can still be grounded even if no box code is present.</description></item>
+        /// <item><description>Result coordination: Element grounding supplements visible targets without changing the recapture detection conclusion. It does not decode QR codes or provide product authenticity verification.</description></item>
+        /// <item><description>Supports a single HTTPS image as input. The supplementary grounding returns up to 12 targets. Each target includes a category, a bounding box, and up to 24 characters of visible text. The coverage field indicates whether the grounding is complete.</description></item>
+        /// </list>
+        /// <h2>Scenarios</h2>
+        /// <list type="bullet">
+        /// <item><description>Box code photo review: Checks whether milk powder outer box photos uploaded by stores or channels carry recapture risks.</description></item>
+        /// <item><description>Milk powder display inspection: Locates visible individual milk powder products, full boxes, and clear code areas in photos.</description></item>
+        /// <item><description>Suspected sample review: Filters images that require manual verification based on the suspected status, algorithm score, and bounding boxes.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MilkPowderCartonCodeRephotographyDetectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MilkPowderCartonCodeRephotographyDetectionResponse
+        /// </returns>
+        public async Task<MilkPowderCartonCodeRephotographyDetectionResponse> MilkPowderCartonCodeRephotographyDetectionWithOptionsAsync(MilkPowderCartonCodeRephotographyDetectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MilkPowderCartonCodeRephotographyDetection",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MilkPowderCartonCodeRephotographyDetectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Reviews infant formula carton code images based on recapture detection and element localization using multimodal foundation models. It targets photos of infant formula products, outer cartons, and carton codes captured during channel inspections. It determines whether images are non-recaptured, recaptured, or suspected recaptures, and localizes visible infant formula products, outer cartons, and code regions to provide a structured basis for image review and manual verification.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description>Three-state recapture detection: When photoStatus is 0, 1, or 2, it indicates non-recapture, recapture, or suspected recapture, respectively. The isFake, isSuspect, and score fields are also returned.</description></item>
+        /// <item><description>Subject and code area grounding: Prioritizes the grounding of individual milk powder products and outer boxes, and supplements clear box codes, barcodes, and QR code areas. The milk powder subject can still be grounded even if no box code is present.</description></item>
+        /// <item><description>Result coordination: Element grounding supplements visible targets without changing the recapture detection conclusion. It does not decode QR codes or provide product authenticity verification.</description></item>
+        /// <item><description>Supports a single HTTPS image as input. The supplementary grounding returns up to 12 targets. Each target includes a category, a bounding box, and up to 24 characters of visible text. The coverage field indicates whether the grounding is complete.</description></item>
+        /// </list>
+        /// <h2>Scenarios</h2>
+        /// <list type="bullet">
+        /// <item><description>Box code photo review: Checks whether milk powder outer box photos uploaded by stores or channels carry recapture risks.</description></item>
+        /// <item><description>Milk powder display inspection: Locates visible individual milk powder products, full boxes, and clear code areas in photos.</description></item>
+        /// <item><description>Suspected sample review: Filters images that require manual verification based on the suspected status, algorithm score, and bounding boxes.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MilkPowderCartonCodeRephotographyDetectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MilkPowderCartonCodeRephotographyDetectionResponse
+        /// </returns>
+        public MilkPowderCartonCodeRephotographyDetectionResponse MilkPowderCartonCodeRephotographyDetection(MilkPowderCartonCodeRephotographyDetectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return MilkPowderCartonCodeRephotographyDetectionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Reviews infant formula carton code images based on recapture detection and element localization using multimodal foundation models. It targets photos of infant formula products, outer cartons, and carton codes captured during channel inspections. It determines whether images are non-recaptured, recaptured, or suspected recaptures, and localizes visible infant formula products, outer cartons, and code regions to provide a structured basis for image review and manual verification.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description>Three-state recapture detection: When photoStatus is 0, 1, or 2, it indicates non-recapture, recapture, or suspected recapture, respectively. The isFake, isSuspect, and score fields are also returned.</description></item>
+        /// <item><description>Subject and code area grounding: Prioritizes the grounding of individual milk powder products and outer boxes, and supplements clear box codes, barcodes, and QR code areas. The milk powder subject can still be grounded even if no box code is present.</description></item>
+        /// <item><description>Result coordination: Element grounding supplements visible targets without changing the recapture detection conclusion. It does not decode QR codes or provide product authenticity verification.</description></item>
+        /// <item><description>Supports a single HTTPS image as input. The supplementary grounding returns up to 12 targets. Each target includes a category, a bounding box, and up to 24 characters of visible text. The coverage field indicates whether the grounding is complete.</description></item>
+        /// </list>
+        /// <h2>Scenarios</h2>
+        /// <list type="bullet">
+        /// <item><description>Box code photo review: Checks whether milk powder outer box photos uploaded by stores or channels carry recapture risks.</description></item>
+        /// <item><description>Milk powder display inspection: Locates visible individual milk powder products, full boxes, and clear code areas in photos.</description></item>
+        /// <item><description>Suspected sample review: Filters images that require manual verification based on the suspected status, algorithm score, and bounding boxes.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MilkPowderCartonCodeRephotographyDetectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MilkPowderCartonCodeRephotographyDetectionResponse
+        /// </returns>
+        public async Task<MilkPowderCartonCodeRephotographyDetectionResponse> MilkPowderCartonCodeRephotographyDetectionAsync(MilkPowderCartonCodeRephotographyDetectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await MilkPowderCartonCodeRephotographyDetectionWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -8187,24 +9195,8 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Analyzes pet excrement images using a pet multimodal model building product. Supports uploading pet excrement images, determines by default whether excrement is present in the image, locates and performs categorization on each visible excrement area, and returns model-generated text containing the categorization results. The invoker can also optionally provide a user prompt and a system prompt to customize image analysis requirements and response format.
-        /// Applicable scenarios:</para>
-        /// <ol>
-        /// <item><description>Excrement image analysis: Upload pet excrement images for analysis using the default method.</description></item>
-        /// <item><description>Observation record organization: Combine multiple excrement images to assist in organizing visible features and observation records.</description></item>
-        /// <item><description>Custom image-text analysis: Provide a user prompt to specify the image content to focus on and the analysis requirements.</description></item>
-        /// </ol>
+        /// <para>宠物健康分析</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <ol>
-        /// <item><description>Multi-image input: image_url is a required array of HTTPS image URLs. </description></item>
-        /// <item><description>Default excrement analysis: If user_prompt is not specified or is an empty string, the system determines whether excrement is present and outputs the location, urine clump/feces category, and subcategory for each region. </description></item>
-        /// <item><description>Custom analysis: user_prompt and system_prompt are both optional. You can specify analysis requirements and system prompts separately. When submitting custom prompts, use values that comply with JSON string escaping rules.</description></item>
-        /// <item><description>Text result response: result is always a String. Even if the model text itself is JSON, it is not automatically converted to an object.</description></item>
-        /// </ol>
-        /// </description>
         /// 
         /// <param name="tmpReq">
         /// PetHealthAnalysisRequest
@@ -8259,24 +9251,8 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Analyzes pet excrement images using a pet multimodal model building product. Supports uploading pet excrement images, determines by default whether excrement is present in the image, locates and performs categorization on each visible excrement area, and returns model-generated text containing the categorization results. The invoker can also optionally provide a user prompt and a system prompt to customize image analysis requirements and response format.
-        /// Applicable scenarios:</para>
-        /// <ol>
-        /// <item><description>Excrement image analysis: Upload pet excrement images for analysis using the default method.</description></item>
-        /// <item><description>Observation record organization: Combine multiple excrement images to assist in organizing visible features and observation records.</description></item>
-        /// <item><description>Custom image-text analysis: Provide a user prompt to specify the image content to focus on and the analysis requirements.</description></item>
-        /// </ol>
+        /// <para>宠物健康分析</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <ol>
-        /// <item><description>Multi-image input: image_url is a required array of HTTPS image URLs. </description></item>
-        /// <item><description>Default excrement analysis: If user_prompt is not specified or is an empty string, the system determines whether excrement is present and outputs the location, urine clump/feces category, and subcategory for each region. </description></item>
-        /// <item><description>Custom analysis: user_prompt and system_prompt are both optional. You can specify analysis requirements and system prompts separately. When submitting custom prompts, use values that comply with JSON string escaping rules.</description></item>
-        /// <item><description>Text result response: result is always a String. Even if the model text itself is JSON, it is not automatically converted to an object.</description></item>
-        /// </ol>
-        /// </description>
         /// 
         /// <param name="tmpReq">
         /// PetHealthAnalysisRequest
@@ -8331,24 +9307,8 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Analyzes pet excrement images using a pet multimodal model building product. Supports uploading pet excrement images, determines by default whether excrement is present in the image, locates and performs categorization on each visible excrement area, and returns model-generated text containing the categorization results. The invoker can also optionally provide a user prompt and a system prompt to customize image analysis requirements and response format.
-        /// Applicable scenarios:</para>
-        /// <ol>
-        /// <item><description>Excrement image analysis: Upload pet excrement images for analysis using the default method.</description></item>
-        /// <item><description>Observation record organization: Combine multiple excrement images to assist in organizing visible features and observation records.</description></item>
-        /// <item><description>Custom image-text analysis: Provide a user prompt to specify the image content to focus on and the analysis requirements.</description></item>
-        /// </ol>
+        /// <para>宠物健康分析</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <ol>
-        /// <item><description>Multi-image input: image_url is a required array of HTTPS image URLs. </description></item>
-        /// <item><description>Default excrement analysis: If user_prompt is not specified or is an empty string, the system determines whether excrement is present and outputs the location, urine clump/feces category, and subcategory for each region. </description></item>
-        /// <item><description>Custom analysis: user_prompt and system_prompt are both optional. You can specify analysis requirements and system prompts separately. When submitting custom prompts, use values that comply with JSON string escaping rules.</description></item>
-        /// <item><description>Text result response: result is always a String. Even if the model text itself is JSON, it is not automatically converted to an object.</description></item>
-        /// </ol>
-        /// </description>
         /// 
         /// <param name="request">
         /// PetHealthAnalysisRequest
@@ -8365,24 +9325,8 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Analyzes pet excrement images using a pet multimodal model building product. Supports uploading pet excrement images, determines by default whether excrement is present in the image, locates and performs categorization on each visible excrement area, and returns model-generated text containing the categorization results. The invoker can also optionally provide a user prompt and a system prompt to customize image analysis requirements and response format.
-        /// Applicable scenarios:</para>
-        /// <ol>
-        /// <item><description>Excrement image analysis: Upload pet excrement images for analysis using the default method.</description></item>
-        /// <item><description>Observation record organization: Combine multiple excrement images to assist in organizing visible features and observation records.</description></item>
-        /// <item><description>Custom image-text analysis: Provide a user prompt to specify the image content to focus on and the analysis requirements.</description></item>
-        /// </ol>
+        /// <para>宠物健康分析</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <ol>
-        /// <item><description>Multi-image input: image_url is a required array of HTTPS image URLs. </description></item>
-        /// <item><description>Default excrement analysis: If user_prompt is not specified or is an empty string, the system determines whether excrement is present and outputs the location, urine clump/feces category, and subcategory for each region. </description></item>
-        /// <item><description>Custom analysis: user_prompt and system_prompt are both optional. You can specify analysis requirements and system prompts separately. When submitting custom prompts, use values that comply with JSON string escaping rules.</description></item>
-        /// <item><description>Text result response: result is always a String. Even if the model text itself is JSON, it is not automatically converted to an object.</description></item>
-        /// </ol>
-        /// </description>
         /// 
         /// <param name="request">
         /// PetHealthAnalysisRequest
@@ -10083,6 +11027,194 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Reviews store photos based on storefront scene recognition and multimodal large model element localization. It outputs storefront scene classifications and confidence details, and localizes storefronts, signboards, entrances, and business signs. It is applicable to store data collection, storefront photo classification, and inspection reviews.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Common scenarios</h2>
+        /// <list type="bullet">
+        /// <item><description>Storefront photo classification: Distinguishes storefront-related photos from non-storefront photos.</description></item>
+        /// <item><description>Store data verification: Localizes signboards and entrances, and extracts clear and readable short text.</description></item>
+        /// <item><description>Multi-store photo review: Localizes visible storefronts and signs of adjacent stores separately.</description></item>
+        /// </list>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description>Scene classification and details: Returns the scenes string array and classification details. Non-storefront photos are also valid classification results.</description></item>
+        /// <item><description>Storefront key element localization: Covers storefronts, signboards, store entrances, and business-related signs.</description></item>
+        /// <item><description>Readable text extraction: Extracts only clear short text. It does not infer business status based on whether the door is open or closed, and does not infer addresses or store ownership.</description></item>
+        /// <item><description>Supports single HTTPS image input. Supplementary localization returns up to 12 targets, each containing a category, a bounding box, and up to 24 characters of visible text. The coverage field indicates whether the localization is complete.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StorefrontSceneRecognitionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StorefrontSceneRecognitionResponse
+        /// </returns>
+        public StorefrontSceneRecognitionResponse StorefrontSceneRecognitionWithOptions(StorefrontSceneRecognitionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StorefrontSceneRecognition",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StorefrontSceneRecognitionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Reviews store photos based on storefront scene recognition and multimodal large model element localization. It outputs storefront scene classifications and confidence details, and localizes storefronts, signboards, entrances, and business signs. It is applicable to store data collection, storefront photo classification, and inspection reviews.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Common scenarios</h2>
+        /// <list type="bullet">
+        /// <item><description>Storefront photo classification: Distinguishes storefront-related photos from non-storefront photos.</description></item>
+        /// <item><description>Store data verification: Localizes signboards and entrances, and extracts clear and readable short text.</description></item>
+        /// <item><description>Multi-store photo review: Localizes visible storefronts and signs of adjacent stores separately.</description></item>
+        /// </list>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description>Scene classification and details: Returns the scenes string array and classification details. Non-storefront photos are also valid classification results.</description></item>
+        /// <item><description>Storefront key element localization: Covers storefronts, signboards, store entrances, and business-related signs.</description></item>
+        /// <item><description>Readable text extraction: Extracts only clear short text. It does not infer business status based on whether the door is open or closed, and does not infer addresses or store ownership.</description></item>
+        /// <item><description>Supports single HTTPS image input. Supplementary localization returns up to 12 targets, each containing a category, a bounding box, and up to 24 characters of visible text. The coverage field indicates whether the localization is complete.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StorefrontSceneRecognitionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StorefrontSceneRecognitionResponse
+        /// </returns>
+        public async Task<StorefrontSceneRecognitionResponse> StorefrontSceneRecognitionWithOptionsAsync(StorefrontSceneRecognitionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StorefrontSceneRecognition",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StorefrontSceneRecognitionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Reviews store photos based on storefront scene recognition and multimodal large model element localization. It outputs storefront scene classifications and confidence details, and localizes storefronts, signboards, entrances, and business signs. It is applicable to store data collection, storefront photo classification, and inspection reviews.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Common scenarios</h2>
+        /// <list type="bullet">
+        /// <item><description>Storefront photo classification: Distinguishes storefront-related photos from non-storefront photos.</description></item>
+        /// <item><description>Store data verification: Localizes signboards and entrances, and extracts clear and readable short text.</description></item>
+        /// <item><description>Multi-store photo review: Localizes visible storefronts and signs of adjacent stores separately.</description></item>
+        /// </list>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description>Scene classification and details: Returns the scenes string array and classification details. Non-storefront photos are also valid classification results.</description></item>
+        /// <item><description>Storefront key element localization: Covers storefronts, signboards, store entrances, and business-related signs.</description></item>
+        /// <item><description>Readable text extraction: Extracts only clear short text. It does not infer business status based on whether the door is open or closed, and does not infer addresses or store ownership.</description></item>
+        /// <item><description>Supports single HTTPS image input. Supplementary localization returns up to 12 targets, each containing a category, a bounding box, and up to 24 characters of visible text. The coverage field indicates whether the localization is complete.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StorefrontSceneRecognitionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StorefrontSceneRecognitionResponse
+        /// </returns>
+        public StorefrontSceneRecognitionResponse StorefrontSceneRecognition(StorefrontSceneRecognitionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StorefrontSceneRecognitionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Reviews store photos based on storefront scene recognition and multimodal large model element localization. It outputs storefront scene classifications and confidence details, and localizes storefronts, signboards, entrances, and business signs. It is applicable to store data collection, storefront photo classification, and inspection reviews.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Common scenarios</h2>
+        /// <list type="bullet">
+        /// <item><description>Storefront photo classification: Distinguishes storefront-related photos from non-storefront photos.</description></item>
+        /// <item><description>Store data verification: Localizes signboards and entrances, and extracts clear and readable short text.</description></item>
+        /// <item><description>Multi-store photo review: Localizes visible storefronts and signs of adjacent stores separately.</description></item>
+        /// </list>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description>Scene classification and details: Returns the scenes string array and classification details. Non-storefront photos are also valid classification results.</description></item>
+        /// <item><description>Storefront key element localization: Covers storefronts, signboards, store entrances, and business-related signs.</description></item>
+        /// <item><description>Readable text extraction: Extracts only clear short text. It does not infer business status based on whether the door is open or closed, and does not infer addresses or store ownership.</description></item>
+        /// <item><description>Supports single HTTPS image input. Supplementary localization returns up to 12 targets, each containing a category, a bounding box, and up to 24 characters of visible text. The coverage field indicates whether the localization is complete.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StorefrontSceneRecognitionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StorefrontSceneRecognitionResponse
+        /// </returns>
+        public async Task<StorefrontSceneRecognitionResponse> StorefrontSceneRecognitionAsync(StorefrontSceneRecognitionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StorefrontSceneRecognitionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Generates product detail page assets automatically based on a multimodal large language model (MLLM) and structured image-text extraction, designed for product detail page asset completion scenarios on e-commerce platforms and for brand merchants. The caller pushes product information to be queried (product ID, title, brand, main image, and shop name). The service automatically locates matching products and performs consistency verification, then extracts size information and product attributes from the matching product details, and renders them into size charts and attribute charts (SVG) that can be directly used on detail pages. The service also returns structured detail copy classifications and processing notes.</para>
         /// </summary>
         /// 
@@ -10779,27 +11911,28 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Maas-MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, with continuous optimization for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports mutual translation among more than 400 language directions (including bridged directions), especially Chinese-English, Chinese-multilingual, and English-multilingual translation. It supports language detection for 31 languages in query phrases and 35 languages in general scenarios. If you do not specify a source language, automatic language detection is performed.</para>
+        /// <para>Maas-MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, with continuous optimization for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports mutual translation among more than 400 language directions (including bridged directions), especially Chinese-English, Chinese-multilingual, and English-multilingual translation. It supports language detection for query phrases in 31 languages and general scenarios in 35 languages. If you do not specify a source language, automatic detection is performed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product Introduction</h2>
-        /// <para>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, with continuous optimization for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports mutual translation among more than 100 language directions (including bridged directions), especially Chinese-English, Chinese-multilingual, and English-multilingual translation. It supports language detection for 24 languages. If you do not specify a source language, automatic language detection is performed.</para>
+        /// <para>Maas-MT is an e-commerce translation model trained on over 1 billion\+ high-quality bilingual sentence pairs, with continuous optimization for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports mutual translation among more than 400 language directions (including bridged directions), especially Chinese-English, Chinese-multilingual, and English-multilingual translation. It supports language detection for query phrases in 31 languages and general scenarios in 35 languages. If you do not specify a source language, automatic detection is performed.</para>
         /// <h2>Common scenarios</h2>
         /// <list type="bullet">
-        /// <item><description>Product titles: Marco MT large model translation accurately translates phrases, keywords, and trending terms in product titles into the target language, improving product visibility on e-commerce platforms.</description></item>
-        /// <item><description>Product descriptions: Product descriptions are typically long with diverse and complex formatting. Marco MT large model translation supports long text translation and HTML formatting, delivering excellent translation quality and format preservation.</description></item>
-        /// <item><description>Product attributes: Product attribute terms are typically short and may contain e-commerce-specific terms such as model numbers and specifications.</description></item>
-        /// <item><description>Customer service conversations: In customer service scenarios, Marco MT optimizes issues such as missing context and typos, and supports polite expressions for certain language directions.
-        /// Marco MT large model translation can also be used for general-purpose translation scenarios such as office work, meetings, and daily conversations.</description></item>
+        /// <item><description>Product titles: Maas-MT large model translation accurately translates phrases, keywords, and trending terms in product titles into the target language, improving product visibility on e-commerce platforms.</description></item>
+        /// <item><description>Product descriptions: Product descriptions are typically long with diverse and complex formatting. Maas-MT large model translation supports long text translation and HTML formatting, delivering excellent translation quality and format preservation.</description></item>
+        /// <item><description>Product attributes: Product attribute terms are short and may contain e-commerce-specific terms such as model numbers and specifications.</description></item>
+        /// <item><description>Customer service conversations: In customer service scenarios, Maas-MT optimizes issues such as missing context and typos, and supports polite expressions for certain language directions.
+        /// Maas-MT large model translation can also be used for general-purpose translation scenarios such as office work, meetings, and daily conversations.</description></item>
         /// </list>
         /// <h2>Functions and features</h2>
         /// <list type="bullet">
-        /// <item><description><b>Supported language directions</b><br>Marco MT large model translation supports mutual translation among more than 100 languages and language detection for 24 languages. For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language direction mapping table</a>.</description></item>
-        /// <item><description><b>Ultra-low hallucination rate and high-speed inference</b><br>Marco MT large model translation is a large language model with preference alignment for translation scenarios. Compared with general-purpose large language models, it provides faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</description></item>
-        /// <item><description><b>Supported text format types</b><br>Currently, text and html text types are supported.</description></item>
-        /// <item><description><b>Translation intervention support</b><br>Custom translation results are supported, including do-not-translate (ABC→ABC), specified translation (ABC→DEF), and skip translation (ABC→empty value). This is commonly used for scenarios such as brand name protection. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</description></item>
+        /// <item><description><b>Supported language directions</b><br>Maas-MT large model translation supports mutual translation among more than 400 languages and language detection for query phrases in 31 languages and general scenarios in 35 languages.
+        /// &lt;props=&quot;china&quot;&gt;For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language direction mapping</a><br>&lt;props=&quot;intl&quot;&gt;For supported language directions, see <a href="https://www.alibabacloud.com/help/zh/aidge/language-direction-mapping">Language direction mapping</a></description></item>
+        /// <item><description><b>Ultra-low hallucination rate and high-speed inference</b><br>Maas-MT large model translation is a large language model with preference alignment for translation scenarios. Compared with general-purpose large language models, it delivers faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</description></item>
+        /// <item><description><b>Supported text format types for translation</b><br>Currently, text and html text types are supported.</description></item>
+        /// <item><description><b>Translation intervention support</b><br>Custom translation results are supported, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for scenarios such as brand name protection. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</description></item>
         /// </list>
         /// <h2>Translation quality comparison</h2>
         /// <table>
@@ -10809,7 +11942,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <th><b>Aidge translation</b></th>
         /// <th><b>Other translation product 1</b></th>
         /// <th><b>Other translation product 2</b></th>
-        /// <th><b>Aidge translation advantage</b></th>
+        /// <th><b>Aidge translation advantages</b></th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
@@ -10831,7 +11964,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <td>Sac à clés pour hommes en cuir de vache véritable, étuis à clés, pochette à fermeture éclair, porte-clés, étui à clé de voiture, porte-clés pour femmes, organisateur de portefeuille</td>
         /// <td>Porte-clés sac en cuir de vache véritable, étuis à clés en forme de seau, pochette à fermeture éclair, porte-clés auto pour voiture, étui à clés pour femmes, organisateur de clés de maison, portefeuille.</td>
         /// <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermature éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
-        /// <td>Clearer and more accurate product subject expression as &quot;key bag&quot; rather than &quot;keychain&quot;, avoiding ambiguity about the product subject in other translations</td>
+        /// <td>Clearer and more accurate product subject description. The translation correctly identifies the product as a &quot;key bag&quot; rather than a &quot;keychain&quot;, avoiding ambiguity present in other translations.</td>
         /// </tr>
         /// </tbody></table>
         /// </description>
@@ -10905,27 +12038,28 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Maas-MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, with continuous optimization for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports mutual translation among more than 400 language directions (including bridged directions), especially Chinese-English, Chinese-multilingual, and English-multilingual translation. It supports language detection for 31 languages in query phrases and 35 languages in general scenarios. If you do not specify a source language, automatic language detection is performed.</para>
+        /// <para>Maas-MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, with continuous optimization for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports mutual translation among more than 400 language directions (including bridged directions), especially Chinese-English, Chinese-multilingual, and English-multilingual translation. It supports language detection for query phrases in 31 languages and general scenarios in 35 languages. If you do not specify a source language, automatic detection is performed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product Introduction</h2>
-        /// <para>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, with continuous optimization for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports mutual translation among more than 100 language directions (including bridged directions), especially Chinese-English, Chinese-multilingual, and English-multilingual translation. It supports language detection for 24 languages. If you do not specify a source language, automatic language detection is performed.</para>
+        /// <para>Maas-MT is an e-commerce translation model trained on over 1 billion\+ high-quality bilingual sentence pairs, with continuous optimization for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports mutual translation among more than 400 language directions (including bridged directions), especially Chinese-English, Chinese-multilingual, and English-multilingual translation. It supports language detection for query phrases in 31 languages and general scenarios in 35 languages. If you do not specify a source language, automatic detection is performed.</para>
         /// <h2>Common scenarios</h2>
         /// <list type="bullet">
-        /// <item><description>Product titles: Marco MT large model translation accurately translates phrases, keywords, and trending terms in product titles into the target language, improving product visibility on e-commerce platforms.</description></item>
-        /// <item><description>Product descriptions: Product descriptions are typically long with diverse and complex formatting. Marco MT large model translation supports long text translation and HTML formatting, delivering excellent translation quality and format preservation.</description></item>
-        /// <item><description>Product attributes: Product attribute terms are typically short and may contain e-commerce-specific terms such as model numbers and specifications.</description></item>
-        /// <item><description>Customer service conversations: In customer service scenarios, Marco MT optimizes issues such as missing context and typos, and supports polite expressions for certain language directions.
-        /// Marco MT large model translation can also be used for general-purpose translation scenarios such as office work, meetings, and daily conversations.</description></item>
+        /// <item><description>Product titles: Maas-MT large model translation accurately translates phrases, keywords, and trending terms in product titles into the target language, improving product visibility on e-commerce platforms.</description></item>
+        /// <item><description>Product descriptions: Product descriptions are typically long with diverse and complex formatting. Maas-MT large model translation supports long text translation and HTML formatting, delivering excellent translation quality and format preservation.</description></item>
+        /// <item><description>Product attributes: Product attribute terms are short and may contain e-commerce-specific terms such as model numbers and specifications.</description></item>
+        /// <item><description>Customer service conversations: In customer service scenarios, Maas-MT optimizes issues such as missing context and typos, and supports polite expressions for certain language directions.
+        /// Maas-MT large model translation can also be used for general-purpose translation scenarios such as office work, meetings, and daily conversations.</description></item>
         /// </list>
         /// <h2>Functions and features</h2>
         /// <list type="bullet">
-        /// <item><description><b>Supported language directions</b><br>Marco MT large model translation supports mutual translation among more than 100 languages and language detection for 24 languages. For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language direction mapping table</a>.</description></item>
-        /// <item><description><b>Ultra-low hallucination rate and high-speed inference</b><br>Marco MT large model translation is a large language model with preference alignment for translation scenarios. Compared with general-purpose large language models, it provides faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</description></item>
-        /// <item><description><b>Supported text format types</b><br>Currently, text and html text types are supported.</description></item>
-        /// <item><description><b>Translation intervention support</b><br>Custom translation results are supported, including do-not-translate (ABC→ABC), specified translation (ABC→DEF), and skip translation (ABC→empty value). This is commonly used for scenarios such as brand name protection. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</description></item>
+        /// <item><description><b>Supported language directions</b><br>Maas-MT large model translation supports mutual translation among more than 400 languages and language detection for query phrases in 31 languages and general scenarios in 35 languages.
+        /// &lt;props=&quot;china&quot;&gt;For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language direction mapping</a><br>&lt;props=&quot;intl&quot;&gt;For supported language directions, see <a href="https://www.alibabacloud.com/help/zh/aidge/language-direction-mapping">Language direction mapping</a></description></item>
+        /// <item><description><b>Ultra-low hallucination rate and high-speed inference</b><br>Maas-MT large model translation is a large language model with preference alignment for translation scenarios. Compared with general-purpose large language models, it delivers faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</description></item>
+        /// <item><description><b>Supported text format types for translation</b><br>Currently, text and html text types are supported.</description></item>
+        /// <item><description><b>Translation intervention support</b><br>Custom translation results are supported, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for scenarios such as brand name protection. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</description></item>
         /// </list>
         /// <h2>Translation quality comparison</h2>
         /// <table>
@@ -10935,7 +12069,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <th><b>Aidge translation</b></th>
         /// <th><b>Other translation product 1</b></th>
         /// <th><b>Other translation product 2</b></th>
-        /// <th><b>Aidge translation advantage</b></th>
+        /// <th><b>Aidge translation advantages</b></th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
@@ -10957,7 +12091,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <td>Sac à clés pour hommes en cuir de vache véritable, étuis à clés, pochette à fermeture éclair, porte-clés, étui à clé de voiture, porte-clés pour femmes, organisateur de portefeuille</td>
         /// <td>Porte-clés sac en cuir de vache véritable, étuis à clés en forme de seau, pochette à fermeture éclair, porte-clés auto pour voiture, étui à clés pour femmes, organisateur de clés de maison, portefeuille.</td>
         /// <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermature éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
-        /// <td>Clearer and more accurate product subject expression as &quot;key bag&quot; rather than &quot;keychain&quot;, avoiding ambiguity about the product subject in other translations</td>
+        /// <td>Clearer and more accurate product subject description. The translation correctly identifies the product as a &quot;key bag&quot; rather than a &quot;keychain&quot;, avoiding ambiguity present in other translations.</td>
         /// </tr>
         /// </tbody></table>
         /// </description>
@@ -11031,27 +12165,28 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Maas-MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, with continuous optimization for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports mutual translation among more than 400 language directions (including bridged directions), especially Chinese-English, Chinese-multilingual, and English-multilingual translation. It supports language detection for 31 languages in query phrases and 35 languages in general scenarios. If you do not specify a source language, automatic language detection is performed.</para>
+        /// <para>Maas-MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, with continuous optimization for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports mutual translation among more than 400 language directions (including bridged directions), especially Chinese-English, Chinese-multilingual, and English-multilingual translation. It supports language detection for query phrases in 31 languages and general scenarios in 35 languages. If you do not specify a source language, automatic detection is performed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product Introduction</h2>
-        /// <para>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, with continuous optimization for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports mutual translation among more than 100 language directions (including bridged directions), especially Chinese-English, Chinese-multilingual, and English-multilingual translation. It supports language detection for 24 languages. If you do not specify a source language, automatic language detection is performed.</para>
+        /// <para>Maas-MT is an e-commerce translation model trained on over 1 billion\+ high-quality bilingual sentence pairs, with continuous optimization for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports mutual translation among more than 400 language directions (including bridged directions), especially Chinese-English, Chinese-multilingual, and English-multilingual translation. It supports language detection for query phrases in 31 languages and general scenarios in 35 languages. If you do not specify a source language, automatic detection is performed.</para>
         /// <h2>Common scenarios</h2>
         /// <list type="bullet">
-        /// <item><description>Product titles: Marco MT large model translation accurately translates phrases, keywords, and trending terms in product titles into the target language, improving product visibility on e-commerce platforms.</description></item>
-        /// <item><description>Product descriptions: Product descriptions are typically long with diverse and complex formatting. Marco MT large model translation supports long text translation and HTML formatting, delivering excellent translation quality and format preservation.</description></item>
-        /// <item><description>Product attributes: Product attribute terms are typically short and may contain e-commerce-specific terms such as model numbers and specifications.</description></item>
-        /// <item><description>Customer service conversations: In customer service scenarios, Marco MT optimizes issues such as missing context and typos, and supports polite expressions for certain language directions.
-        /// Marco MT large model translation can also be used for general-purpose translation scenarios such as office work, meetings, and daily conversations.</description></item>
+        /// <item><description>Product titles: Maas-MT large model translation accurately translates phrases, keywords, and trending terms in product titles into the target language, improving product visibility on e-commerce platforms.</description></item>
+        /// <item><description>Product descriptions: Product descriptions are typically long with diverse and complex formatting. Maas-MT large model translation supports long text translation and HTML formatting, delivering excellent translation quality and format preservation.</description></item>
+        /// <item><description>Product attributes: Product attribute terms are short and may contain e-commerce-specific terms such as model numbers and specifications.</description></item>
+        /// <item><description>Customer service conversations: In customer service scenarios, Maas-MT optimizes issues such as missing context and typos, and supports polite expressions for certain language directions.
+        /// Maas-MT large model translation can also be used for general-purpose translation scenarios such as office work, meetings, and daily conversations.</description></item>
         /// </list>
         /// <h2>Functions and features</h2>
         /// <list type="bullet">
-        /// <item><description><b>Supported language directions</b><br>Marco MT large model translation supports mutual translation among more than 100 languages and language detection for 24 languages. For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language direction mapping table</a>.</description></item>
-        /// <item><description><b>Ultra-low hallucination rate and high-speed inference</b><br>Marco MT large model translation is a large language model with preference alignment for translation scenarios. Compared with general-purpose large language models, it provides faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</description></item>
-        /// <item><description><b>Supported text format types</b><br>Currently, text and html text types are supported.</description></item>
-        /// <item><description><b>Translation intervention support</b><br>Custom translation results are supported, including do-not-translate (ABC→ABC), specified translation (ABC→DEF), and skip translation (ABC→empty value). This is commonly used for scenarios such as brand name protection. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</description></item>
+        /// <item><description><b>Supported language directions</b><br>Maas-MT large model translation supports mutual translation among more than 400 languages and language detection for query phrases in 31 languages and general scenarios in 35 languages.
+        /// &lt;props=&quot;china&quot;&gt;For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language direction mapping</a><br>&lt;props=&quot;intl&quot;&gt;For supported language directions, see <a href="https://www.alibabacloud.com/help/zh/aidge/language-direction-mapping">Language direction mapping</a></description></item>
+        /// <item><description><b>Ultra-low hallucination rate and high-speed inference</b><br>Maas-MT large model translation is a large language model with preference alignment for translation scenarios. Compared with general-purpose large language models, it delivers faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</description></item>
+        /// <item><description><b>Supported text format types for translation</b><br>Currently, text and html text types are supported.</description></item>
+        /// <item><description><b>Translation intervention support</b><br>Custom translation results are supported, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for scenarios such as brand name protection. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</description></item>
         /// </list>
         /// <h2>Translation quality comparison</h2>
         /// <table>
@@ -11061,7 +12196,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <th><b>Aidge translation</b></th>
         /// <th><b>Other translation product 1</b></th>
         /// <th><b>Other translation product 2</b></th>
-        /// <th><b>Aidge translation advantage</b></th>
+        /// <th><b>Aidge translation advantages</b></th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
@@ -11083,7 +12218,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <td>Sac à clés pour hommes en cuir de vache véritable, étuis à clés, pochette à fermeture éclair, porte-clés, étui à clé de voiture, porte-clés pour femmes, organisateur de portefeuille</td>
         /// <td>Porte-clés sac en cuir de vache véritable, étuis à clés en forme de seau, pochette à fermeture éclair, porte-clés auto pour voiture, étui à clés pour femmes, organisateur de clés de maison, portefeuille.</td>
         /// <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermature éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
-        /// <td>Clearer and more accurate product subject expression as &quot;key bag&quot; rather than &quot;keychain&quot;, avoiding ambiguity about the product subject in other translations</td>
+        /// <td>Clearer and more accurate product subject description. The translation correctly identifies the product as a &quot;key bag&quot; rather than a &quot;keychain&quot;, avoiding ambiguity present in other translations.</td>
         /// </tr>
         /// </tbody></table>
         /// </description>
@@ -11103,27 +12238,28 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Maas-MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, with continuous optimization for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports mutual translation among more than 400 language directions (including bridged directions), especially Chinese-English, Chinese-multilingual, and English-multilingual translation. It supports language detection for 31 languages in query phrases and 35 languages in general scenarios. If you do not specify a source language, automatic language detection is performed.</para>
+        /// <para>Maas-MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, with continuous optimization for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports mutual translation among more than 400 language directions (including bridged directions), especially Chinese-English, Chinese-multilingual, and English-multilingual translation. It supports language detection for query phrases in 31 languages and general scenarios in 35 languages. If you do not specify a source language, automatic detection is performed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product Introduction</h2>
-        /// <para>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, with continuous optimization for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports mutual translation among more than 100 language directions (including bridged directions), especially Chinese-English, Chinese-multilingual, and English-multilingual translation. It supports language detection for 24 languages. If you do not specify a source language, automatic language detection is performed.</para>
+        /// <para>Maas-MT is an e-commerce translation model trained on over 1 billion\+ high-quality bilingual sentence pairs, with continuous optimization for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports mutual translation among more than 400 language directions (including bridged directions), especially Chinese-English, Chinese-multilingual, and English-multilingual translation. It supports language detection for query phrases in 31 languages and general scenarios in 35 languages. If you do not specify a source language, automatic detection is performed.</para>
         /// <h2>Common scenarios</h2>
         /// <list type="bullet">
-        /// <item><description>Product titles: Marco MT large model translation accurately translates phrases, keywords, and trending terms in product titles into the target language, improving product visibility on e-commerce platforms.</description></item>
-        /// <item><description>Product descriptions: Product descriptions are typically long with diverse and complex formatting. Marco MT large model translation supports long text translation and HTML formatting, delivering excellent translation quality and format preservation.</description></item>
-        /// <item><description>Product attributes: Product attribute terms are typically short and may contain e-commerce-specific terms such as model numbers and specifications.</description></item>
-        /// <item><description>Customer service conversations: In customer service scenarios, Marco MT optimizes issues such as missing context and typos, and supports polite expressions for certain language directions.
-        /// Marco MT large model translation can also be used for general-purpose translation scenarios such as office work, meetings, and daily conversations.</description></item>
+        /// <item><description>Product titles: Maas-MT large model translation accurately translates phrases, keywords, and trending terms in product titles into the target language, improving product visibility on e-commerce platforms.</description></item>
+        /// <item><description>Product descriptions: Product descriptions are typically long with diverse and complex formatting. Maas-MT large model translation supports long text translation and HTML formatting, delivering excellent translation quality and format preservation.</description></item>
+        /// <item><description>Product attributes: Product attribute terms are short and may contain e-commerce-specific terms such as model numbers and specifications.</description></item>
+        /// <item><description>Customer service conversations: In customer service scenarios, Maas-MT optimizes issues such as missing context and typos, and supports polite expressions for certain language directions.
+        /// Maas-MT large model translation can also be used for general-purpose translation scenarios such as office work, meetings, and daily conversations.</description></item>
         /// </list>
         /// <h2>Functions and features</h2>
         /// <list type="bullet">
-        /// <item><description><b>Supported language directions</b><br>Marco MT large model translation supports mutual translation among more than 100 languages and language detection for 24 languages. For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language direction mapping table</a>.</description></item>
-        /// <item><description><b>Ultra-low hallucination rate and high-speed inference</b><br>Marco MT large model translation is a large language model with preference alignment for translation scenarios. Compared with general-purpose large language models, it provides faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</description></item>
-        /// <item><description><b>Supported text format types</b><br>Currently, text and html text types are supported.</description></item>
-        /// <item><description><b>Translation intervention support</b><br>Custom translation results are supported, including do-not-translate (ABC→ABC), specified translation (ABC→DEF), and skip translation (ABC→empty value). This is commonly used for scenarios such as brand name protection. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</description></item>
+        /// <item><description><b>Supported language directions</b><br>Maas-MT large model translation supports mutual translation among more than 400 languages and language detection for query phrases in 31 languages and general scenarios in 35 languages.
+        /// &lt;props=&quot;china&quot;&gt;For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language direction mapping</a><br>&lt;props=&quot;intl&quot;&gt;For supported language directions, see <a href="https://www.alibabacloud.com/help/zh/aidge/language-direction-mapping">Language direction mapping</a></description></item>
+        /// <item><description><b>Ultra-low hallucination rate and high-speed inference</b><br>Maas-MT large model translation is a large language model with preference alignment for translation scenarios. Compared with general-purpose large language models, it delivers faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</description></item>
+        /// <item><description><b>Supported text format types for translation</b><br>Currently, text and html text types are supported.</description></item>
+        /// <item><description><b>Translation intervention support</b><br>Custom translation results are supported, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for scenarios such as brand name protection. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</description></item>
         /// </list>
         /// <h2>Translation quality comparison</h2>
         /// <table>
@@ -11133,7 +12269,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <th><b>Aidge translation</b></th>
         /// <th><b>Other translation product 1</b></th>
         /// <th><b>Other translation product 2</b></th>
-        /// <th><b>Aidge translation advantage</b></th>
+        /// <th><b>Aidge translation advantages</b></th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
@@ -11155,7 +12291,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <td>Sac à clés pour hommes en cuir de vache véritable, étuis à clés, pochette à fermeture éclair, porte-clés, étui à clé de voiture, porte-clés pour femmes, organisateur de portefeuille</td>
         /// <td>Porte-clés sac en cuir de vache véritable, étuis à clés en forme de seau, pochette à fermeture éclair, porte-clés auto pour voiture, étui à clés pour femmes, organisateur de clés de maison, portefeuille.</td>
         /// <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermature éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
-        /// <td>Clearer and more accurate product subject expression as &quot;key bag&quot; rather than &quot;keychain&quot;, avoiding ambiguity about the product subject in other translations</td>
+        /// <td>Clearer and more accurate product subject description. The translation correctly identifies the product as a &quot;key bag&quot; rather than a &quot;keychain&quot;, avoiding ambiguity present in other translations.</td>
         /// </tr>
         /// </tbody></table>
         /// </description>
@@ -11175,30 +12311,30 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The E-commerce AI Video Generation Agent is designed for e-commerce merchants and platforms. Based on product main images, titles, selling points, and other information, it automatically generates 5–30 second product showcase short videos, helping customers efficiently produce and distribute e-commerce content. The product supports multiple resolution outputs such as 720P and 1080P, supports both quick single-product calls and multi-product batch generation, and accommodates both daily operations and large-scale product content production needs. Currently, it covers all apparel categories (tops, pants, skirts, suits, underwear, swimwear, etc.) and is gradually expanding to skincare, cosmetics, food and beverages, home appliances, and other core e-commerce categories.</para>
+        /// <para>The e-commerce AI video generation agent is designed for e-commerce merchants and platforms. Based on product main images, titles, and selling points, it automatically generates 5- to 30-second product showcase short videos to help customers efficiently produce and distribute e-commerce content. The product supports multiple resolution outputs such as 720P and 1080P. You can invoke single products quickly and generate multiple products in batches, meeting the needs of daily operations and large-scale product content production. It currently overwrites all clothing categories (tops, pants, skirts, suits, underwear, swimwear, etc.) and is gradually expanding to core e-commerce categories such as skincare, cosmetics, food and beverages, and home appliances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h1>Scenarios</h1>
         /// <list type="bullet">
-        /// <item><description>Sellers/platforms batch-generate product short videos: Supports multiple video aspect ratios and sizes (3:4, 9:16), suitable for product detail page video slots, product homepage displays, information feed placements, short video content marketing, campaign material, and other scenarios.</description></item>
-        /// <item><description>New product launches with rapid initial video material generation: When merchants have a large number of new products to list, they only need to upload product images, product titles, and other basic information to quickly generate product showcase videos, model try-on videos, voiceover explanation videos, and other content, helping merchants rapidly complete material preparation during the launch phase.</description></item>
-        /// <item><description>High-fidelity apparel display: Generates model showcase videos based on product main images that closely resemble real commercial photography, with key optimizations for silhouette accuracy, fabric texture preservation, color fidelity, and consistent detail stability. Supports common e-commerce display methods such as garment try-on, turning, walking, close-up shots, and multi-angle switching.</description></item>
-        /// <item><description>High-quality commercial photography models: Includes 20+ built-in target audience model libraries covering plus-size women, plus-size men, swimwear, youthful style, smart casual commuter, young casual, business menswear, sports and fitness, and other body types, skin tones, and ethnicities. Supports multiple commercial photography presentation methods such as standing poses, side views, walking displays, and detail close-ups.</description></item>
-        /// <item><description>Standard product explanation and other high-frequency e-commerce scenarios: Suitable for standardized product categories such as skincare, cosmetics, personal care small appliances, food and beverages, household cleaning products, and 3C digital products. Quickly generates product explanation videos based on product main images, titles, selling point information, and explanation scripts.</description></item>
-        /// <item><description>Multi-product and multi-selling-point testing to improve placement efficiency: For information feed advertising, short video placement, and content marketing scenarios, quickly generates multiple versions of video materials, enabling businesses to cost-effectively validate the conversion performance of different selling points and presentation formats, improving placement ROI.</description></item>
+        /// <item><description>Batch generation of product short videos for sellers and platforms: Supports multiple video aspect ratios and sizes (3:4, 9:16), adapting to product detail page video slots, product homepage displays, information feed placements, short video promotions, and event venue materials.</description></item>
+        /// <item><description>Quick generation of the first batch of video materials for new product launches: When merchants have a large number of new products to launch, they only need to upload basic information such as product images and titles to quickly generate product showcase videos, model wearing videos, and spoken explanation videos, helping merchants quickly complete material deployment during the launch phase.</description></item>
+        /// <item><description>High-fidelity clothing display: Generates model display videos that are closer to real commercial shooting effects based on product main images, focusing on optimizing capabilities such as pattern restoration, fabric texture retention, accurate color presentation, and stable and consistent details. It supports common e-commerce display methods such as wearing, turning, walking, close-up shots, and multi-angle switching.</description></item>
+        /// <item><description>Generation of high-quality commercial shooting models: Built-in target audience model library, covering plus-size women, plus-size men, swimwear, girl style, light mature commuting, youth casual, business menswear, sports and fitness, and other body types, skin colors, and races. It supports various commercial shooting expressions such as standing display, side display, walking display, and partial close-ups.</description></item>
+        /// <item><description>High-frequency e-commerce scenarios such as standard product explanations: Applicable to standardized product categories such as skincare, cosmetics, personal care small appliances, food and beverages, home cleaning daily necessities, and 3C digital products. It can quickly generate product explanation videos based on product main images, titles, selling point information, and explanation scripts.</description></item>
+        /// <item><description>Multi-product and multi-selling point testing to improve delivery efficiency: For information feed advertising, short video delivery, and content promotion scenarios, it can quickly generate multiple versions of video materials, making it easy for enterprises to verify the conversion effects of different selling points and presentation forms at a low cost, and improve delivery ROI.</description></item>
         /// </list>
         /// <h1>Features</h1>
         /// <list type="bullet">
-        /// <item><description>Fully automated end-to-end batch generation with zero prompt threshold: Callers only need to provide product image URLs and titles. The system automatically completes the entire process from product understanding, storyboard planning, to video generation, without manual prompt writing, template selection, or repeated parameter tuning. Built-in multi-agent capabilities for product understanding, visual quality inspection, script planning, and directing/camera movement significantly lower the barrier to use.</description></item>
-        /// <item><description>Highly stable generation with low waste rate: Uses a deterministic generation process and multi-layer quality control mechanism to output usable materials with fewer retries, reducing invalid generation and resource waste, making overall production costs more controllable.</description></item>
-        /// <item><description>E-commerce-specific product fidelity: Built-in multi-round quality inspection agents lock product state throughout video generation (for example, zippers will not be unzipped, sleeves will not be lowered, prints will not disappear). Multi-layer defense through &quot;script rewriting + explicit constraint injection + failure-aware retry&quot; ensures product consistency.</description></item>
-        /// <item><description>Reference image priority + 6-axis consistency verification: Uses a Reference-Image-First generation paradigm with the original product image as the sole visual source of truth. Automatically performs 6-dimensional VL diagnostics (color drift, pattern loss, contour deviation, structural addition/removal, model matching, stain detection), fundamentally preventing generated images from deviating from the product.</description></item>
-        /// <item><description>Flexible storyboard arrangement and duration control: Supports adjustable video duration from 5–30 seconds. The agent autonomously plans independent storyboards to showcase the product in different scenarios. Also supports fixed-scene mode for in-depth product presentation under a unified visual style.</description></item>
-        /// <item><description>Cinematic camera movement capabilities: Built-in advanced camera movement modes including bullet time, Grammy-style slow motion, 360° orbital rotation, and full-body model rotation display, achieving deterministic output through segment-level precise control.</description></item>
-        /// <item><description>Model library and customization services: Built-in multi-type model resource library. Supports merchants in specifying fixed models, customizing exclusive model personas, and long-term brand visual identity binding to ensure brand visual consistency.</description></item>
-        /// <item><description>Adapted for high-frequency e-commerce content scenarios: Supports multiple resolutions such as 720P and 1080P and multiple aspect ratios such as 3:4 and 9:16, suitable for product detail page video slots, product homepage video displays, waterfall/information feed placements, campaign materials, and new product launch and promotional video generation.</description></item>
+        /// <item><description>Fully automatic end-to-end batch generation with zero prompt threshold: Callers only need to pass in the product image URL and title, and the system automatically completes the entire process from product understanding, storyboard planning to video generation, without the need to manually write prompts, select templates, or repeatedly adjust parameters. Built-in multiple agents such as product understanding, image quality inspection, script planning, and director camera movement greatly lower the threshold for use.</description></item>
+        /// <item><description>Highly stable generation with a low waste rate: Adopts a deterministic generation process and multi-layer quality control mechanism to output usable materials with fewer retries, reducing invalid generation and resource waste, and making the overall production cost more controllable.</description></item>
+        /// <item><description>E-commerce exclusive product fidelity capability: Built-in multi-round quality inspection agent locks the product state throughout the video generation process (such as zippers will not be pulled open, sleeves will not be put down, and prints will not disappear), ensuring product consistency through multi-layer defense of script rewriting, explicit constraint injection, and failure-aware retry.</description></item>
+        /// <item><description>Reference image first + 6-axis consistency check: Adopts the Reference-Image-First generation paradigm, using the original product image as the only visual source of truth, and automatically performs 6-dimensional VL diagnosis (color drift, pattern missing, contour deviation, structure addition/reduction, model matching, dirt detection) to fundamentally eliminate the problem of generated images not looking like the product.</description></item>
+        /// <item><description>Flexible storyboard arrangement and duration control: Supports adjustable video duration of 5 to 30 seconds; the agent independently plans independent storyboards to display the product effects in different scenarios; it also supports a fixed scene mode to deeply display the product tonality under a unified visual style.</description></item>
+        /// <item><description>Cinematic camera movement capabilities: Built-in advanced camera movement modes such as bullet time, Grammy slow motion, 360° surround rotation, and model full-body rotation display, achieving deterministic output through segmented precise control.</description></item>
+        /// <item><description>Model library and customization services: Built-in multi-type model resource library, supporting merchants to specify fixed models, customize exclusive model images, and bind brand visual personas for a long time to ensure brand visual consistency.</description></item>
+        /// <item><description>Adapting to high-frequency e-commerce content scenarios: Supports multiple resolutions such as 720P and 1080P, and multiple aspect ratios such as 3:4 and 9:16, adapting to product detail page video slots, product homepage video displays, waterfall/information feed placements, event venue materials, and new product and promotional video generation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11263,30 +12399,30 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The E-commerce AI Video Generation Agent is designed for e-commerce merchants and platforms. Based on product main images, titles, selling points, and other information, it automatically generates 5–30 second product showcase short videos, helping customers efficiently produce and distribute e-commerce content. The product supports multiple resolution outputs such as 720P and 1080P, supports both quick single-product calls and multi-product batch generation, and accommodates both daily operations and large-scale product content production needs. Currently, it covers all apparel categories (tops, pants, skirts, suits, underwear, swimwear, etc.) and is gradually expanding to skincare, cosmetics, food and beverages, home appliances, and other core e-commerce categories.</para>
+        /// <para>The e-commerce AI video generation agent is designed for e-commerce merchants and platforms. Based on product main images, titles, and selling points, it automatically generates 5- to 30-second product showcase short videos to help customers efficiently produce and distribute e-commerce content. The product supports multiple resolution outputs such as 720P and 1080P. You can invoke single products quickly and generate multiple products in batches, meeting the needs of daily operations and large-scale product content production. It currently overwrites all clothing categories (tops, pants, skirts, suits, underwear, swimwear, etc.) and is gradually expanding to core e-commerce categories such as skincare, cosmetics, food and beverages, and home appliances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h1>Scenarios</h1>
         /// <list type="bullet">
-        /// <item><description>Sellers/platforms batch-generate product short videos: Supports multiple video aspect ratios and sizes (3:4, 9:16), suitable for product detail page video slots, product homepage displays, information feed placements, short video content marketing, campaign material, and other scenarios.</description></item>
-        /// <item><description>New product launches with rapid initial video material generation: When merchants have a large number of new products to list, they only need to upload product images, product titles, and other basic information to quickly generate product showcase videos, model try-on videos, voiceover explanation videos, and other content, helping merchants rapidly complete material preparation during the launch phase.</description></item>
-        /// <item><description>High-fidelity apparel display: Generates model showcase videos based on product main images that closely resemble real commercial photography, with key optimizations for silhouette accuracy, fabric texture preservation, color fidelity, and consistent detail stability. Supports common e-commerce display methods such as garment try-on, turning, walking, close-up shots, and multi-angle switching.</description></item>
-        /// <item><description>High-quality commercial photography models: Includes 20+ built-in target audience model libraries covering plus-size women, plus-size men, swimwear, youthful style, smart casual commuter, young casual, business menswear, sports and fitness, and other body types, skin tones, and ethnicities. Supports multiple commercial photography presentation methods such as standing poses, side views, walking displays, and detail close-ups.</description></item>
-        /// <item><description>Standard product explanation and other high-frequency e-commerce scenarios: Suitable for standardized product categories such as skincare, cosmetics, personal care small appliances, food and beverages, household cleaning products, and 3C digital products. Quickly generates product explanation videos based on product main images, titles, selling point information, and explanation scripts.</description></item>
-        /// <item><description>Multi-product and multi-selling-point testing to improve placement efficiency: For information feed advertising, short video placement, and content marketing scenarios, quickly generates multiple versions of video materials, enabling businesses to cost-effectively validate the conversion performance of different selling points and presentation formats, improving placement ROI.</description></item>
+        /// <item><description>Batch generation of product short videos for sellers and platforms: Supports multiple video aspect ratios and sizes (3:4, 9:16), adapting to product detail page video slots, product homepage displays, information feed placements, short video promotions, and event venue materials.</description></item>
+        /// <item><description>Quick generation of the first batch of video materials for new product launches: When merchants have a large number of new products to launch, they only need to upload basic information such as product images and titles to quickly generate product showcase videos, model wearing videos, and spoken explanation videos, helping merchants quickly complete material deployment during the launch phase.</description></item>
+        /// <item><description>High-fidelity clothing display: Generates model display videos that are closer to real commercial shooting effects based on product main images, focusing on optimizing capabilities such as pattern restoration, fabric texture retention, accurate color presentation, and stable and consistent details. It supports common e-commerce display methods such as wearing, turning, walking, close-up shots, and multi-angle switching.</description></item>
+        /// <item><description>Generation of high-quality commercial shooting models: Built-in target audience model library, covering plus-size women, plus-size men, swimwear, girl style, light mature commuting, youth casual, business menswear, sports and fitness, and other body types, skin colors, and races. It supports various commercial shooting expressions such as standing display, side display, walking display, and partial close-ups.</description></item>
+        /// <item><description>High-frequency e-commerce scenarios such as standard product explanations: Applicable to standardized product categories such as skincare, cosmetics, personal care small appliances, food and beverages, home cleaning daily necessities, and 3C digital products. It can quickly generate product explanation videos based on product main images, titles, selling point information, and explanation scripts.</description></item>
+        /// <item><description>Multi-product and multi-selling point testing to improve delivery efficiency: For information feed advertising, short video delivery, and content promotion scenarios, it can quickly generate multiple versions of video materials, making it easy for enterprises to verify the conversion effects of different selling points and presentation forms at a low cost, and improve delivery ROI.</description></item>
         /// </list>
         /// <h1>Features</h1>
         /// <list type="bullet">
-        /// <item><description>Fully automated end-to-end batch generation with zero prompt threshold: Callers only need to provide product image URLs and titles. The system automatically completes the entire process from product understanding, storyboard planning, to video generation, without manual prompt writing, template selection, or repeated parameter tuning. Built-in multi-agent capabilities for product understanding, visual quality inspection, script planning, and directing/camera movement significantly lower the barrier to use.</description></item>
-        /// <item><description>Highly stable generation with low waste rate: Uses a deterministic generation process and multi-layer quality control mechanism to output usable materials with fewer retries, reducing invalid generation and resource waste, making overall production costs more controllable.</description></item>
-        /// <item><description>E-commerce-specific product fidelity: Built-in multi-round quality inspection agents lock product state throughout video generation (for example, zippers will not be unzipped, sleeves will not be lowered, prints will not disappear). Multi-layer defense through &quot;script rewriting + explicit constraint injection + failure-aware retry&quot; ensures product consistency.</description></item>
-        /// <item><description>Reference image priority + 6-axis consistency verification: Uses a Reference-Image-First generation paradigm with the original product image as the sole visual source of truth. Automatically performs 6-dimensional VL diagnostics (color drift, pattern loss, contour deviation, structural addition/removal, model matching, stain detection), fundamentally preventing generated images from deviating from the product.</description></item>
-        /// <item><description>Flexible storyboard arrangement and duration control: Supports adjustable video duration from 5–30 seconds. The agent autonomously plans independent storyboards to showcase the product in different scenarios. Also supports fixed-scene mode for in-depth product presentation under a unified visual style.</description></item>
-        /// <item><description>Cinematic camera movement capabilities: Built-in advanced camera movement modes including bullet time, Grammy-style slow motion, 360° orbital rotation, and full-body model rotation display, achieving deterministic output through segment-level precise control.</description></item>
-        /// <item><description>Model library and customization services: Built-in multi-type model resource library. Supports merchants in specifying fixed models, customizing exclusive model personas, and long-term brand visual identity binding to ensure brand visual consistency.</description></item>
-        /// <item><description>Adapted for high-frequency e-commerce content scenarios: Supports multiple resolutions such as 720P and 1080P and multiple aspect ratios such as 3:4 and 9:16, suitable for product detail page video slots, product homepage video displays, waterfall/information feed placements, campaign materials, and new product launch and promotional video generation.</description></item>
+        /// <item><description>Fully automatic end-to-end batch generation with zero prompt threshold: Callers only need to pass in the product image URL and title, and the system automatically completes the entire process from product understanding, storyboard planning to video generation, without the need to manually write prompts, select templates, or repeatedly adjust parameters. Built-in multiple agents such as product understanding, image quality inspection, script planning, and director camera movement greatly lower the threshold for use.</description></item>
+        /// <item><description>Highly stable generation with a low waste rate: Adopts a deterministic generation process and multi-layer quality control mechanism to output usable materials with fewer retries, reducing invalid generation and resource waste, and making the overall production cost more controllable.</description></item>
+        /// <item><description>E-commerce exclusive product fidelity capability: Built-in multi-round quality inspection agent locks the product state throughout the video generation process (such as zippers will not be pulled open, sleeves will not be put down, and prints will not disappear), ensuring product consistency through multi-layer defense of script rewriting, explicit constraint injection, and failure-aware retry.</description></item>
+        /// <item><description>Reference image first + 6-axis consistency check: Adopts the Reference-Image-First generation paradigm, using the original product image as the only visual source of truth, and automatically performs 6-dimensional VL diagnosis (color drift, pattern missing, contour deviation, structure addition/reduction, model matching, dirt detection) to fundamentally eliminate the problem of generated images not looking like the product.</description></item>
+        /// <item><description>Flexible storyboard arrangement and duration control: Supports adjustable video duration of 5 to 30 seconds; the agent independently plans independent storyboards to display the product effects in different scenarios; it also supports a fixed scene mode to deeply display the product tonality under a unified visual style.</description></item>
+        /// <item><description>Cinematic camera movement capabilities: Built-in advanced camera movement modes such as bullet time, Grammy slow motion, 360° surround rotation, and model full-body rotation display, achieving deterministic output through segmented precise control.</description></item>
+        /// <item><description>Model library and customization services: Built-in multi-type model resource library, supporting merchants to specify fixed models, customize exclusive model images, and bind brand visual personas for a long time to ensure brand visual consistency.</description></item>
+        /// <item><description>Adapting to high-frequency e-commerce content scenarios: Supports multiple resolutions such as 720P and 1080P, and multiple aspect ratios such as 3:4 and 9:16, adapting to product detail page video slots, product homepage video displays, waterfall/information feed placements, event venue materials, and new product and promotional video generation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11351,30 +12487,30 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The E-commerce AI Video Generation Agent is designed for e-commerce merchants and platforms. Based on product main images, titles, selling points, and other information, it automatically generates 5–30 second product showcase short videos, helping customers efficiently produce and distribute e-commerce content. The product supports multiple resolution outputs such as 720P and 1080P, supports both quick single-product calls and multi-product batch generation, and accommodates both daily operations and large-scale product content production needs. Currently, it covers all apparel categories (tops, pants, skirts, suits, underwear, swimwear, etc.) and is gradually expanding to skincare, cosmetics, food and beverages, home appliances, and other core e-commerce categories.</para>
+        /// <para>The e-commerce AI video generation agent is designed for e-commerce merchants and platforms. Based on product main images, titles, and selling points, it automatically generates 5- to 30-second product showcase short videos to help customers efficiently produce and distribute e-commerce content. The product supports multiple resolution outputs such as 720P and 1080P. You can invoke single products quickly and generate multiple products in batches, meeting the needs of daily operations and large-scale product content production. It currently overwrites all clothing categories (tops, pants, skirts, suits, underwear, swimwear, etc.) and is gradually expanding to core e-commerce categories such as skincare, cosmetics, food and beverages, and home appliances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h1>Scenarios</h1>
         /// <list type="bullet">
-        /// <item><description>Sellers/platforms batch-generate product short videos: Supports multiple video aspect ratios and sizes (3:4, 9:16), suitable for product detail page video slots, product homepage displays, information feed placements, short video content marketing, campaign material, and other scenarios.</description></item>
-        /// <item><description>New product launches with rapid initial video material generation: When merchants have a large number of new products to list, they only need to upload product images, product titles, and other basic information to quickly generate product showcase videos, model try-on videos, voiceover explanation videos, and other content, helping merchants rapidly complete material preparation during the launch phase.</description></item>
-        /// <item><description>High-fidelity apparel display: Generates model showcase videos based on product main images that closely resemble real commercial photography, with key optimizations for silhouette accuracy, fabric texture preservation, color fidelity, and consistent detail stability. Supports common e-commerce display methods such as garment try-on, turning, walking, close-up shots, and multi-angle switching.</description></item>
-        /// <item><description>High-quality commercial photography models: Includes 20+ built-in target audience model libraries covering plus-size women, plus-size men, swimwear, youthful style, smart casual commuter, young casual, business menswear, sports and fitness, and other body types, skin tones, and ethnicities. Supports multiple commercial photography presentation methods such as standing poses, side views, walking displays, and detail close-ups.</description></item>
-        /// <item><description>Standard product explanation and other high-frequency e-commerce scenarios: Suitable for standardized product categories such as skincare, cosmetics, personal care small appliances, food and beverages, household cleaning products, and 3C digital products. Quickly generates product explanation videos based on product main images, titles, selling point information, and explanation scripts.</description></item>
-        /// <item><description>Multi-product and multi-selling-point testing to improve placement efficiency: For information feed advertising, short video placement, and content marketing scenarios, quickly generates multiple versions of video materials, enabling businesses to cost-effectively validate the conversion performance of different selling points and presentation formats, improving placement ROI.</description></item>
+        /// <item><description>Batch generation of product short videos for sellers and platforms: Supports multiple video aspect ratios and sizes (3:4, 9:16), adapting to product detail page video slots, product homepage displays, information feed placements, short video promotions, and event venue materials.</description></item>
+        /// <item><description>Quick generation of the first batch of video materials for new product launches: When merchants have a large number of new products to launch, they only need to upload basic information such as product images and titles to quickly generate product showcase videos, model wearing videos, and spoken explanation videos, helping merchants quickly complete material deployment during the launch phase.</description></item>
+        /// <item><description>High-fidelity clothing display: Generates model display videos that are closer to real commercial shooting effects based on product main images, focusing on optimizing capabilities such as pattern restoration, fabric texture retention, accurate color presentation, and stable and consistent details. It supports common e-commerce display methods such as wearing, turning, walking, close-up shots, and multi-angle switching.</description></item>
+        /// <item><description>Generation of high-quality commercial shooting models: Built-in target audience model library, covering plus-size women, plus-size men, swimwear, girl style, light mature commuting, youth casual, business menswear, sports and fitness, and other body types, skin colors, and races. It supports various commercial shooting expressions such as standing display, side display, walking display, and partial close-ups.</description></item>
+        /// <item><description>High-frequency e-commerce scenarios such as standard product explanations: Applicable to standardized product categories such as skincare, cosmetics, personal care small appliances, food and beverages, home cleaning daily necessities, and 3C digital products. It can quickly generate product explanation videos based on product main images, titles, selling point information, and explanation scripts.</description></item>
+        /// <item><description>Multi-product and multi-selling point testing to improve delivery efficiency: For information feed advertising, short video delivery, and content promotion scenarios, it can quickly generate multiple versions of video materials, making it easy for enterprises to verify the conversion effects of different selling points and presentation forms at a low cost, and improve delivery ROI.</description></item>
         /// </list>
         /// <h1>Features</h1>
         /// <list type="bullet">
-        /// <item><description>Fully automated end-to-end batch generation with zero prompt threshold: Callers only need to provide product image URLs and titles. The system automatically completes the entire process from product understanding, storyboard planning, to video generation, without manual prompt writing, template selection, or repeated parameter tuning. Built-in multi-agent capabilities for product understanding, visual quality inspection, script planning, and directing/camera movement significantly lower the barrier to use.</description></item>
-        /// <item><description>Highly stable generation with low waste rate: Uses a deterministic generation process and multi-layer quality control mechanism to output usable materials with fewer retries, reducing invalid generation and resource waste, making overall production costs more controllable.</description></item>
-        /// <item><description>E-commerce-specific product fidelity: Built-in multi-round quality inspection agents lock product state throughout video generation (for example, zippers will not be unzipped, sleeves will not be lowered, prints will not disappear). Multi-layer defense through &quot;script rewriting + explicit constraint injection + failure-aware retry&quot; ensures product consistency.</description></item>
-        /// <item><description>Reference image priority + 6-axis consistency verification: Uses a Reference-Image-First generation paradigm with the original product image as the sole visual source of truth. Automatically performs 6-dimensional VL diagnostics (color drift, pattern loss, contour deviation, structural addition/removal, model matching, stain detection), fundamentally preventing generated images from deviating from the product.</description></item>
-        /// <item><description>Flexible storyboard arrangement and duration control: Supports adjustable video duration from 5–30 seconds. The agent autonomously plans independent storyboards to showcase the product in different scenarios. Also supports fixed-scene mode for in-depth product presentation under a unified visual style.</description></item>
-        /// <item><description>Cinematic camera movement capabilities: Built-in advanced camera movement modes including bullet time, Grammy-style slow motion, 360° orbital rotation, and full-body model rotation display, achieving deterministic output through segment-level precise control.</description></item>
-        /// <item><description>Model library and customization services: Built-in multi-type model resource library. Supports merchants in specifying fixed models, customizing exclusive model personas, and long-term brand visual identity binding to ensure brand visual consistency.</description></item>
-        /// <item><description>Adapted for high-frequency e-commerce content scenarios: Supports multiple resolutions such as 720P and 1080P and multiple aspect ratios such as 3:4 and 9:16, suitable for product detail page video slots, product homepage video displays, waterfall/information feed placements, campaign materials, and new product launch and promotional video generation.</description></item>
+        /// <item><description>Fully automatic end-to-end batch generation with zero prompt threshold: Callers only need to pass in the product image URL and title, and the system automatically completes the entire process from product understanding, storyboard planning to video generation, without the need to manually write prompts, select templates, or repeatedly adjust parameters. Built-in multiple agents such as product understanding, image quality inspection, script planning, and director camera movement greatly lower the threshold for use.</description></item>
+        /// <item><description>Highly stable generation with a low waste rate: Adopts a deterministic generation process and multi-layer quality control mechanism to output usable materials with fewer retries, reducing invalid generation and resource waste, and making the overall production cost more controllable.</description></item>
+        /// <item><description>E-commerce exclusive product fidelity capability: Built-in multi-round quality inspection agent locks the product state throughout the video generation process (such as zippers will not be pulled open, sleeves will not be put down, and prints will not disappear), ensuring product consistency through multi-layer defense of script rewriting, explicit constraint injection, and failure-aware retry.</description></item>
+        /// <item><description>Reference image first + 6-axis consistency check: Adopts the Reference-Image-First generation paradigm, using the original product image as the only visual source of truth, and automatically performs 6-dimensional VL diagnosis (color drift, pattern missing, contour deviation, structure addition/reduction, model matching, dirt detection) to fundamentally eliminate the problem of generated images not looking like the product.</description></item>
+        /// <item><description>Flexible storyboard arrangement and duration control: Supports adjustable video duration of 5 to 30 seconds; the agent independently plans independent storyboards to display the product effects in different scenarios; it also supports a fixed scene mode to deeply display the product tonality under a unified visual style.</description></item>
+        /// <item><description>Cinematic camera movement capabilities: Built-in advanced camera movement modes such as bullet time, Grammy slow motion, 360° surround rotation, and model full-body rotation display, achieving deterministic output through segmented precise control.</description></item>
+        /// <item><description>Model library and customization services: Built-in multi-type model resource library, supporting merchants to specify fixed models, customize exclusive model images, and bind brand visual personas for a long time to ensure brand visual consistency.</description></item>
+        /// <item><description>Adapting to high-frequency e-commerce content scenarios: Supports multiple resolutions such as 720P and 1080P, and multiple aspect ratios such as 3:4 and 9:16, adapting to product detail page video slots, product homepage video displays, waterfall/information feed placements, event venue materials, and new product and promotional video generation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11393,30 +12529,30 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The E-commerce AI Video Generation Agent is designed for e-commerce merchants and platforms. Based on product main images, titles, selling points, and other information, it automatically generates 5–30 second product showcase short videos, helping customers efficiently produce and distribute e-commerce content. The product supports multiple resolution outputs such as 720P and 1080P, supports both quick single-product calls and multi-product batch generation, and accommodates both daily operations and large-scale product content production needs. Currently, it covers all apparel categories (tops, pants, skirts, suits, underwear, swimwear, etc.) and is gradually expanding to skincare, cosmetics, food and beverages, home appliances, and other core e-commerce categories.</para>
+        /// <para>The e-commerce AI video generation agent is designed for e-commerce merchants and platforms. Based on product main images, titles, and selling points, it automatically generates 5- to 30-second product showcase short videos to help customers efficiently produce and distribute e-commerce content. The product supports multiple resolution outputs such as 720P and 1080P. You can invoke single products quickly and generate multiple products in batches, meeting the needs of daily operations and large-scale product content production. It currently overwrites all clothing categories (tops, pants, skirts, suits, underwear, swimwear, etc.) and is gradually expanding to core e-commerce categories such as skincare, cosmetics, food and beverages, and home appliances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h1>Scenarios</h1>
         /// <list type="bullet">
-        /// <item><description>Sellers/platforms batch-generate product short videos: Supports multiple video aspect ratios and sizes (3:4, 9:16), suitable for product detail page video slots, product homepage displays, information feed placements, short video content marketing, campaign material, and other scenarios.</description></item>
-        /// <item><description>New product launches with rapid initial video material generation: When merchants have a large number of new products to list, they only need to upload product images, product titles, and other basic information to quickly generate product showcase videos, model try-on videos, voiceover explanation videos, and other content, helping merchants rapidly complete material preparation during the launch phase.</description></item>
-        /// <item><description>High-fidelity apparel display: Generates model showcase videos based on product main images that closely resemble real commercial photography, with key optimizations for silhouette accuracy, fabric texture preservation, color fidelity, and consistent detail stability. Supports common e-commerce display methods such as garment try-on, turning, walking, close-up shots, and multi-angle switching.</description></item>
-        /// <item><description>High-quality commercial photography models: Includes 20+ built-in target audience model libraries covering plus-size women, plus-size men, swimwear, youthful style, smart casual commuter, young casual, business menswear, sports and fitness, and other body types, skin tones, and ethnicities. Supports multiple commercial photography presentation methods such as standing poses, side views, walking displays, and detail close-ups.</description></item>
-        /// <item><description>Standard product explanation and other high-frequency e-commerce scenarios: Suitable for standardized product categories such as skincare, cosmetics, personal care small appliances, food and beverages, household cleaning products, and 3C digital products. Quickly generates product explanation videos based on product main images, titles, selling point information, and explanation scripts.</description></item>
-        /// <item><description>Multi-product and multi-selling-point testing to improve placement efficiency: For information feed advertising, short video placement, and content marketing scenarios, quickly generates multiple versions of video materials, enabling businesses to cost-effectively validate the conversion performance of different selling points and presentation formats, improving placement ROI.</description></item>
+        /// <item><description>Batch generation of product short videos for sellers and platforms: Supports multiple video aspect ratios and sizes (3:4, 9:16), adapting to product detail page video slots, product homepage displays, information feed placements, short video promotions, and event venue materials.</description></item>
+        /// <item><description>Quick generation of the first batch of video materials for new product launches: When merchants have a large number of new products to launch, they only need to upload basic information such as product images and titles to quickly generate product showcase videos, model wearing videos, and spoken explanation videos, helping merchants quickly complete material deployment during the launch phase.</description></item>
+        /// <item><description>High-fidelity clothing display: Generates model display videos that are closer to real commercial shooting effects based on product main images, focusing on optimizing capabilities such as pattern restoration, fabric texture retention, accurate color presentation, and stable and consistent details. It supports common e-commerce display methods such as wearing, turning, walking, close-up shots, and multi-angle switching.</description></item>
+        /// <item><description>Generation of high-quality commercial shooting models: Built-in target audience model library, covering plus-size women, plus-size men, swimwear, girl style, light mature commuting, youth casual, business menswear, sports and fitness, and other body types, skin colors, and races. It supports various commercial shooting expressions such as standing display, side display, walking display, and partial close-ups.</description></item>
+        /// <item><description>High-frequency e-commerce scenarios such as standard product explanations: Applicable to standardized product categories such as skincare, cosmetics, personal care small appliances, food and beverages, home cleaning daily necessities, and 3C digital products. It can quickly generate product explanation videos based on product main images, titles, selling point information, and explanation scripts.</description></item>
+        /// <item><description>Multi-product and multi-selling point testing to improve delivery efficiency: For information feed advertising, short video delivery, and content promotion scenarios, it can quickly generate multiple versions of video materials, making it easy for enterprises to verify the conversion effects of different selling points and presentation forms at a low cost, and improve delivery ROI.</description></item>
         /// </list>
         /// <h1>Features</h1>
         /// <list type="bullet">
-        /// <item><description>Fully automated end-to-end batch generation with zero prompt threshold: Callers only need to provide product image URLs and titles. The system automatically completes the entire process from product understanding, storyboard planning, to video generation, without manual prompt writing, template selection, or repeated parameter tuning. Built-in multi-agent capabilities for product understanding, visual quality inspection, script planning, and directing/camera movement significantly lower the barrier to use.</description></item>
-        /// <item><description>Highly stable generation with low waste rate: Uses a deterministic generation process and multi-layer quality control mechanism to output usable materials with fewer retries, reducing invalid generation and resource waste, making overall production costs more controllable.</description></item>
-        /// <item><description>E-commerce-specific product fidelity: Built-in multi-round quality inspection agents lock product state throughout video generation (for example, zippers will not be unzipped, sleeves will not be lowered, prints will not disappear). Multi-layer defense through &quot;script rewriting + explicit constraint injection + failure-aware retry&quot; ensures product consistency.</description></item>
-        /// <item><description>Reference image priority + 6-axis consistency verification: Uses a Reference-Image-First generation paradigm with the original product image as the sole visual source of truth. Automatically performs 6-dimensional VL diagnostics (color drift, pattern loss, contour deviation, structural addition/removal, model matching, stain detection), fundamentally preventing generated images from deviating from the product.</description></item>
-        /// <item><description>Flexible storyboard arrangement and duration control: Supports adjustable video duration from 5–30 seconds. The agent autonomously plans independent storyboards to showcase the product in different scenarios. Also supports fixed-scene mode for in-depth product presentation under a unified visual style.</description></item>
-        /// <item><description>Cinematic camera movement capabilities: Built-in advanced camera movement modes including bullet time, Grammy-style slow motion, 360° orbital rotation, and full-body model rotation display, achieving deterministic output through segment-level precise control.</description></item>
-        /// <item><description>Model library and customization services: Built-in multi-type model resource library. Supports merchants in specifying fixed models, customizing exclusive model personas, and long-term brand visual identity binding to ensure brand visual consistency.</description></item>
-        /// <item><description>Adapted for high-frequency e-commerce content scenarios: Supports multiple resolutions such as 720P and 1080P and multiple aspect ratios such as 3:4 and 9:16, suitable for product detail page video slots, product homepage video displays, waterfall/information feed placements, campaign materials, and new product launch and promotional video generation.</description></item>
+        /// <item><description>Fully automatic end-to-end batch generation with zero prompt threshold: Callers only need to pass in the product image URL and title, and the system automatically completes the entire process from product understanding, storyboard planning to video generation, without the need to manually write prompts, select templates, or repeatedly adjust parameters. Built-in multiple agents such as product understanding, image quality inspection, script planning, and director camera movement greatly lower the threshold for use.</description></item>
+        /// <item><description>Highly stable generation with a low waste rate: Adopts a deterministic generation process and multi-layer quality control mechanism to output usable materials with fewer retries, reducing invalid generation and resource waste, and making the overall production cost more controllable.</description></item>
+        /// <item><description>E-commerce exclusive product fidelity capability: Built-in multi-round quality inspection agent locks the product state throughout the video generation process (such as zippers will not be pulled open, sleeves will not be put down, and prints will not disappear), ensuring product consistency through multi-layer defense of script rewriting, explicit constraint injection, and failure-aware retry.</description></item>
+        /// <item><description>Reference image first + 6-axis consistency check: Adopts the Reference-Image-First generation paradigm, using the original product image as the only visual source of truth, and automatically performs 6-dimensional VL diagnosis (color drift, pattern missing, contour deviation, structure addition/reduction, model matching, dirt detection) to fundamentally eliminate the problem of generated images not looking like the product.</description></item>
+        /// <item><description>Flexible storyboard arrangement and duration control: Supports adjustable video duration of 5 to 30 seconds; the agent independently plans independent storyboards to display the product effects in different scenarios; it also supports a fixed scene mode to deeply display the product tonality under a unified visual style.</description></item>
+        /// <item><description>Cinematic camera movement capabilities: Built-in advanced camera movement modes such as bullet time, Grammy slow motion, 360° surround rotation, and model full-body rotation display, achieving deterministic output through segmented precise control.</description></item>
+        /// <item><description>Model library and customization services: Built-in multi-type model resource library, supporting merchants to specify fixed models, customize exclusive model images, and bind brand visual personas for a long time to ensure brand visual consistency.</description></item>
+        /// <item><description>Adapting to high-frequency e-commerce content scenarios: Supports multiple resolutions such as 720P and 1080P, and multiple aspect ratios such as 3:4 and 9:16, adapting to product detail page video slots, product homepage video displays, waterfall/information feed placements, event venue materials, and new product and promotional video generation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11435,23 +12571,23 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The video translation API translates embedded text (subtitles, promotional text, etc.) in video frames into a target language and erases the original text.</para>
+        /// <para>Translates embedded text in video frames, such as subtitles and selling points, into a target language and erases the original text.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>1. Product Introduction</h2>
-        /// <para>The video translation API translates embedded text (subtitles, promotional text, etc.) in video frames into a target language and erases the original text. This API is applicable to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising.
-        /// The API uses an asynchronous call mode: after you submit a translation task, you receive a <c>task_id</c>. Poll the query endpoint for the task status until the task is complete, and then retrieve the result.</para>
+        /// <h2>1. Product introduction</h2>
+        /// <para>The video translation API translates embedded text in video frames, such as subtitles and selling points, into a target language and erases the original text. It is applicable to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising.
+        /// The API uses an asynchronous call mode. After you submit a translation task, you obtain a task_id and poll the task status through the query API until the task is completed to obtain the result.</para>
         /// <h2>2. Scenarios</h2>
         /// <list type="bullet">
-        /// <item><description><para><b>Cross-border e-commerce video localization</b>: Translates promotional text in product introduction videos into the language of the target market to facilitate overseas platform promotion.</para>
+        /// <item><description><para><b>Cross-border e-commerce video localization</b>: Translates selling point text in product introduction videos into the language of the target market to facilitate promotion on overseas platforms.</para>
         /// </description></item>
         /// <item><description><para><b>International social media marketing</b>: Localizes text content in video frames with one click for platforms such as TikTok, Instagram, and YouTube to improve comprehension and conversion rates among overseas users.</para>
         /// </description></item>
-        /// <item><description><para><b>Global brand advertising</b>: Automatically generates video versions in the language of the target region to reduce manual production costs.</para>
+        /// <item><description><para><b>Global brand advertising</b>: Automatically generates video versions in the corresponding languages based on the delivery regions to reduce manual production costs.</para>
         /// </description></item>
-        /// <item><description><para><b>Training and product instructions</b>: Translates on-screen text in training courses or product demonstration videos into multiple languages for use by global teams.</para>
+        /// <item><description><para><b>Training and product instructions</b>: Translates text in video frames of training courses or product demonstration videos into multiple languages for global teams.</para>
         /// </description></item>
         /// </list>
         /// <h2>3. Features</h2>
@@ -11465,8 +12601,8 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </thead>
         /// <tbody><tr>
         /// <td>Visual translation</td>
-        /// <td><c>visual</c></td>
-        /// <td>Translates embedded text (subtitles, promotional text, etc.) in video frames into the target language and erases the original text.</td>
+        /// <td>visual</td>
+        /// <td>Translates embedded text in video frames, such as subtitles and selling points, and erases the original text.</td>
         /// </tr>
         /// </tbody></table>
         /// <h2>4. Developer guide.</h2>
@@ -11498,6 +12634,10 @@ namespace AlibabaCloud.SDK.Aidge20260428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CapabilitiesShrink))
             {
                 body["Capabilities"] = request.CapabilitiesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableQualityCheck))
+            {
+                body["EnableQualityCheck"] = request.EnableQualityCheck;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
             {
@@ -11532,23 +12672,23 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The video translation API translates embedded text (subtitles, promotional text, etc.) in video frames into a target language and erases the original text.</para>
+        /// <para>Translates embedded text in video frames, such as subtitles and selling points, into a target language and erases the original text.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>1. Product Introduction</h2>
-        /// <para>The video translation API translates embedded text (subtitles, promotional text, etc.) in video frames into a target language and erases the original text. This API is applicable to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising.
-        /// The API uses an asynchronous call mode: after you submit a translation task, you receive a <c>task_id</c>. Poll the query endpoint for the task status until the task is complete, and then retrieve the result.</para>
+        /// <h2>1. Product introduction</h2>
+        /// <para>The video translation API translates embedded text in video frames, such as subtitles and selling points, into a target language and erases the original text. It is applicable to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising.
+        /// The API uses an asynchronous call mode. After you submit a translation task, you obtain a task_id and poll the task status through the query API until the task is completed to obtain the result.</para>
         /// <h2>2. Scenarios</h2>
         /// <list type="bullet">
-        /// <item><description><para><b>Cross-border e-commerce video localization</b>: Translates promotional text in product introduction videos into the language of the target market to facilitate overseas platform promotion.</para>
+        /// <item><description><para><b>Cross-border e-commerce video localization</b>: Translates selling point text in product introduction videos into the language of the target market to facilitate promotion on overseas platforms.</para>
         /// </description></item>
         /// <item><description><para><b>International social media marketing</b>: Localizes text content in video frames with one click for platforms such as TikTok, Instagram, and YouTube to improve comprehension and conversion rates among overseas users.</para>
         /// </description></item>
-        /// <item><description><para><b>Global brand advertising</b>: Automatically generates video versions in the language of the target region to reduce manual production costs.</para>
+        /// <item><description><para><b>Global brand advertising</b>: Automatically generates video versions in the corresponding languages based on the delivery regions to reduce manual production costs.</para>
         /// </description></item>
-        /// <item><description><para><b>Training and product instructions</b>: Translates on-screen text in training courses or product demonstration videos into multiple languages for use by global teams.</para>
+        /// <item><description><para><b>Training and product instructions</b>: Translates text in video frames of training courses or product demonstration videos into multiple languages for global teams.</para>
         /// </description></item>
         /// </list>
         /// <h2>3. Features</h2>
@@ -11562,8 +12702,8 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </thead>
         /// <tbody><tr>
         /// <td>Visual translation</td>
-        /// <td><c>visual</c></td>
-        /// <td>Translates embedded text (subtitles, promotional text, etc.) in video frames into the target language and erases the original text.</td>
+        /// <td>visual</td>
+        /// <td>Translates embedded text in video frames, such as subtitles and selling points, and erases the original text.</td>
         /// </tr>
         /// </tbody></table>
         /// <h2>4. Developer guide.</h2>
@@ -11595,6 +12735,10 @@ namespace AlibabaCloud.SDK.Aidge20260428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CapabilitiesShrink))
             {
                 body["Capabilities"] = request.CapabilitiesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableQualityCheck))
+            {
+                body["EnableQualityCheck"] = request.EnableQualityCheck;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
             {
@@ -11629,23 +12773,23 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The video translation API translates embedded text (subtitles, promotional text, etc.) in video frames into a target language and erases the original text.</para>
+        /// <para>Translates embedded text in video frames, such as subtitles and selling points, into a target language and erases the original text.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>1. Product Introduction</h2>
-        /// <para>The video translation API translates embedded text (subtitles, promotional text, etc.) in video frames into a target language and erases the original text. This API is applicable to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising.
-        /// The API uses an asynchronous call mode: after you submit a translation task, you receive a <c>task_id</c>. Poll the query endpoint for the task status until the task is complete, and then retrieve the result.</para>
+        /// <h2>1. Product introduction</h2>
+        /// <para>The video translation API translates embedded text in video frames, such as subtitles and selling points, into a target language and erases the original text. It is applicable to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising.
+        /// The API uses an asynchronous call mode. After you submit a translation task, you obtain a task_id and poll the task status through the query API until the task is completed to obtain the result.</para>
         /// <h2>2. Scenarios</h2>
         /// <list type="bullet">
-        /// <item><description><para><b>Cross-border e-commerce video localization</b>: Translates promotional text in product introduction videos into the language of the target market to facilitate overseas platform promotion.</para>
+        /// <item><description><para><b>Cross-border e-commerce video localization</b>: Translates selling point text in product introduction videos into the language of the target market to facilitate promotion on overseas platforms.</para>
         /// </description></item>
         /// <item><description><para><b>International social media marketing</b>: Localizes text content in video frames with one click for platforms such as TikTok, Instagram, and YouTube to improve comprehension and conversion rates among overseas users.</para>
         /// </description></item>
-        /// <item><description><para><b>Global brand advertising</b>: Automatically generates video versions in the language of the target region to reduce manual production costs.</para>
+        /// <item><description><para><b>Global brand advertising</b>: Automatically generates video versions in the corresponding languages based on the delivery regions to reduce manual production costs.</para>
         /// </description></item>
-        /// <item><description><para><b>Training and product instructions</b>: Translates on-screen text in training courses or product demonstration videos into multiple languages for use by global teams.</para>
+        /// <item><description><para><b>Training and product instructions</b>: Translates text in video frames of training courses or product demonstration videos into multiple languages for global teams.</para>
         /// </description></item>
         /// </list>
         /// <h2>3. Features</h2>
@@ -11659,8 +12803,8 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </thead>
         /// <tbody><tr>
         /// <td>Visual translation</td>
-        /// <td><c>visual</c></td>
-        /// <td>Translates embedded text (subtitles, promotional text, etc.) in video frames into the target language and erases the original text.</td>
+        /// <td>visual</td>
+        /// <td>Translates embedded text in video frames, such as subtitles and selling points, and erases the original text.</td>
         /// </tr>
         /// </tbody></table>
         /// <h2>4. Developer guide.</h2>
@@ -11684,23 +12828,23 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The video translation API translates embedded text (subtitles, promotional text, etc.) in video frames into a target language and erases the original text.</para>
+        /// <para>Translates embedded text in video frames, such as subtitles and selling points, into a target language and erases the original text.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>1. Product Introduction</h2>
-        /// <para>The video translation API translates embedded text (subtitles, promotional text, etc.) in video frames into a target language and erases the original text. This API is applicable to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising.
-        /// The API uses an asynchronous call mode: after you submit a translation task, you receive a <c>task_id</c>. Poll the query endpoint for the task status until the task is complete, and then retrieve the result.</para>
+        /// <h2>1. Product introduction</h2>
+        /// <para>The video translation API translates embedded text in video frames, such as subtitles and selling points, into a target language and erases the original text. It is applicable to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising.
+        /// The API uses an asynchronous call mode. After you submit a translation task, you obtain a task_id and poll the task status through the query API until the task is completed to obtain the result.</para>
         /// <h2>2. Scenarios</h2>
         /// <list type="bullet">
-        /// <item><description><para><b>Cross-border e-commerce video localization</b>: Translates promotional text in product introduction videos into the language of the target market to facilitate overseas platform promotion.</para>
+        /// <item><description><para><b>Cross-border e-commerce video localization</b>: Translates selling point text in product introduction videos into the language of the target market to facilitate promotion on overseas platforms.</para>
         /// </description></item>
         /// <item><description><para><b>International social media marketing</b>: Localizes text content in video frames with one click for platforms such as TikTok, Instagram, and YouTube to improve comprehension and conversion rates among overseas users.</para>
         /// </description></item>
-        /// <item><description><para><b>Global brand advertising</b>: Automatically generates video versions in the language of the target region to reduce manual production costs.</para>
+        /// <item><description><para><b>Global brand advertising</b>: Automatically generates video versions in the corresponding languages based on the delivery regions to reduce manual production costs.</para>
         /// </description></item>
-        /// <item><description><para><b>Training and product instructions</b>: Translates on-screen text in training courses or product demonstration videos into multiple languages for use by global teams.</para>
+        /// <item><description><para><b>Training and product instructions</b>: Translates text in video frames of training courses or product demonstration videos into multiple languages for global teams.</para>
         /// </description></item>
         /// </list>
         /// <h2>3. Features</h2>
@@ -11714,8 +12858,8 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </thead>
         /// <tbody><tr>
         /// <td>Visual translation</td>
-        /// <td><c>visual</c></td>
-        /// <td>Translates embedded text (subtitles, promotional text, etc.) in video frames into the target language and erases the original text.</td>
+        /// <td>visual</td>
+        /// <td>Translates embedded text in video frames, such as subtitles and selling points, and erases the original text.</td>
         /// </tr>
         /// </tbody></table>
         /// <h2>4. Developer guide.</h2>

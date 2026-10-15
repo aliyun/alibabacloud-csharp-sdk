@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class EcomVideoRecreationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result code. A value of <c>success</c> indicates success. An error code is returned upon failure.</para>
+        /// <para>The result code. A value of <c>success</c> indicates success. If the call fails, the corresponding error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The asynchronous task submit status.</para>
+        /// <para>The submission result of the asynchronous task.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public EcomVideoRecreationResponseBodyData Data { get; set; }
         public class EcomVideoRecreationResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The asynchronous task ID used to query results with QueryAsyncTaskResult.</para>
+            /// <para>The ID of the asynchronous task, which is used to query the task result by calling QueryAsyncTaskResult.</para>
             /// 
             /// <b>Example:</b>
             /// <para>task_778fa8bd21804828a5d147050e30edac</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The response message. An error description is returned upon failure.</para>
+        /// <para>The return message. If the call fails, an error description is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Task submitted</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID, used to identify a unique call.</para>
+        /// <para>The request ID, which is used to identify a unique call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>70CBEFDF-BB17-1EB3-8A21-569F3124738F</para>

@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class PetHealthAnalysisResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -19,16 +17,11 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// <para>The asynchronous task submit status.</para>
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public PetHealthAnalysisResponseBodyData Data { get; set; }
         public class PetHealthAnalysisResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The asynchronous task ID used for QueryAsyncTaskResult queries.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>task_778fa8bd21804828a5d147050e30edac</para>
             /// </summary>
@@ -39,8 +32,6 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The response message or failure description.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>Task submitted</para>
         /// </summary>
@@ -49,8 +40,6 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>70CBEFDF-BB17-1EB3-8A21-569F3124738F</para>
         /// </summary>
@@ -59,8 +48,6 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>
