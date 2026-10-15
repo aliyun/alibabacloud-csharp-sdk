@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class ListByUserGroupIdRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the user group that you want to query. Separate multiple user groups with commas (,).</para>
+        /// <para>The IDs of the user groups to query. Separate multiple IDs with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of rows per page in a paged query.</para>
+        /// <para>The number of rows per page for a paged query.</para>
         /// <list type="bullet">
         /// <item><description>Default value: 10</description></item>
         /// <item><description>Maximum value: 1000</description></item>

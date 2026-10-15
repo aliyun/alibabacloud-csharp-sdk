@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class ListDataLevelPermissionWhiteListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D8749D65-E80A-433C-AF1B-CE9C180FF3B4</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whitelist for the specified row-level permission type.</para>
+        /// <para>The whitelist of the specified row-level or column-level permission type.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public ListDataLevelPermissionWhiteListResponseBodyResult Result { get; set; }
         public class ListDataLevelPermissionWhiteListResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Dataset ID.</para>
+            /// <para>The dataset ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7c7223ae-****-3c744528014b</para>
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string CubeId { get; set; }
 
             /// <summary>
-            /// <para>Type of dataset row and column permissions. Possible values:</para>
+            /// <para>The type of row and column permission for the dataset. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ROW_LEVEL: Row-level permission</description></item>
-            /// <item><description>COLUMN_LEVEL: Column-level permission</description></item>
+            /// <item><description>ROW_LEVEL: row-level permission</description></item>
+            /// <item><description>COLUMN_LEVEL: column-level permission</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -51,21 +51,27 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string RuleType { get; set; }
 
             /// <summary>
-            /// <para>Whitelist information.</para>
+            /// <para>The whitelist information.</para>
             /// </summary>
             [NameInMap("UsersModel")]
             [Validation(Required=false)]
             public ListDataLevelPermissionWhiteListResponseBodyResultUsersModel UsersModel { get; set; }
             public class ListDataLevelPermissionWhiteListResponseBodyResultUsersModel : TeaModel {
                 /// <summary>
-                /// <para>UserGroups.</para>
+                /// <para>The list of user group IDs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>[&quot;0d5fb19b-***-1248fc27ca51&quot;]</para>
                 /// </summary>
                 [NameInMap("UserGroups")]
                 [Validation(Required=false)]
                 public List<string> UserGroups { get; set; }
 
                 /// <summary>
-                /// <para>Users.</para>
+                /// <para>The list of Quick BI user IDs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>[&quot;4334***358&quot;]</para>
                 /// </summary>
                 [NameInMap("Users")]
                 [Validation(Required=false)]
@@ -76,10 +82,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Possible values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Request succeeded</description></item>
-        /// <item><description>false: Request failed</description></item>
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

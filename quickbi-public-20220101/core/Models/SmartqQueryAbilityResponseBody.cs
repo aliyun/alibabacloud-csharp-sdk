@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class SmartqQueryAbilityResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D787E1A3-A************2B05DF8D885</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public SmartqQueryAbilityResponseBodyResult Result { get; set; }
         public class SmartqQueryAbilityResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The recommended chart type.</para>
+            /// <para>The suggested chart type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NEW_TABLE</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string ChartType { get; set; }
 
             /// <summary>
-            /// <para>The summary.</para>
+            /// <para>The summary information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string ConclusionText { get; set; }
 
             /// <summary>
-            /// <para>The list of data that is returned only in multi-step scenarios. Each element corresponds to a set of chart data.</para>
+            /// <para>The data list returned only in multi-step scenarios. Each element corresponds to a chart dataset.</para>
             /// </summary>
             [NameInMap("DataList")]
             [Validation(Required=false)]
             public List<string> DataList { get; set; }
 
             /// <summary>
-            /// <para>The visual logical SQL statement.</para>
+            /// <para>The visualization logic SQL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>select * ****</para>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string LogicSql { get; set; }
 
             /// <summary>
-            /// <para>A list of column tuple types.</para>
+            /// <para>The list of column tuple types.</para>
             /// </summary>
             [NameInMap("MetaType")]
             [Validation(Required=false)]
             public List<SmartqQueryAbilityResponseBodyResultMetaType> MetaType { get; set; }
             public class SmartqQueryAbilityResponseBodyResultMetaType : TeaModel {
                 /// <summary>
-                /// <para>The name of the column tuple.</para>
+                /// <para>The column tuple name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Polar***STPS</para>
@@ -84,12 +84,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The type of the metadata. Valid values:</para>
+                /// <para>The metadata row or column type.</para>
                 /// <list type="bullet">
-                /// <item><description><para>Dimension</para>
-                /// </description></item>
-                /// <item><description><para>Measure</para>
-                /// </description></item>
+                /// <item><description>Dimension: dimension</description></item>
+                /// <item><description>Measure: measure</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -103,7 +101,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The type of the column tuple.</para>
+                /// <para>The column tuple type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>string</para>
@@ -115,14 +113,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             }
 
             /// <summary>
-            /// <para>An array of data value lists.</para>
+            /// <para>The array of data value lists.</para>
             /// </summary>
             [NameInMap("Values")]
             [Validation(Required=false)]
             public List<SmartqQueryAbilityResponseBodyResultValues> Values { get; set; }
             public class SmartqQueryAbilityResponseBodyResultValues : TeaModel {
                 /// <summary>
-                /// <para>The data values in a row.</para>
+                /// <para>The data values for each row.</para>
                 /// 
                 /// <b>if can be null:</b>
                 /// <c>true</c>

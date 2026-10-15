@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class GetUserGroupInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D7980306-1F08-5A88-9FE7-ECB8B9C4C0F5</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>User group information.</para>
+        /// <para>The user group information.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<GetUserGroupInfoResponseBodyResult> Result { get; set; }
         public class GetUserGroupInfoResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Creation time of the user group.</para>
+            /// <para>The time when the user group was created, in the format of YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-03-15 17:13:55</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Creator of the sub-user group. This is the UserID in Quick BI, not the UID in Alibaba Cloud.</para>
+            /// <para>The creator of the child user group. This is the UserID in Quick BI, not the UID of the Alibaba Cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>46e5374665ba4b679ee22e2a2927****</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string CreateUser { get; set; }
 
             /// <summary>
-            /// <para>Directory level of the user group.</para>
+            /// <para>The folder hierarchy of the user group.</para>
             /// </summary>
             [NameInMap("IdentifiedPath")]
             [Validation(Required=false)]
             public string IdentifiedPath { get; set; }
 
             /// <summary>
-            /// <para>Last modified time of the user group.</para>
+            /// <para>The time when the user group was last modified, in the format of YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-03-15 20:36:40</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string ModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>Modifier of the user group. This is the UserID in Quick BI, not the UID in Alibaba Cloud.</para>
+            /// <para>The user who last modified the user group. This is the UserID in Quick BI, not the UID of the Alibaba Cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>46e5374665ba4b679ee22e2a2927****</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string ModifyUser { get; set; }
 
             /// <summary>
-            /// <para>Parent user group ID.</para>
+            /// <para>The ID of the parent user group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2fe4fbd8-588f-489a-b3e1-e92c7af0****</para>
@@ -84,17 +84,17 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string ParentUsergroupId { get; set; }
 
             /// <summary>
-            /// <para>Description of the user group.</para>
+            /// <para>The description of the user group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试描述</para>
+            /// <para>Test description</para>
             /// </summary>
             [NameInMap("UsergroupDesc")]
             [Validation(Required=false)]
             public string UsergroupDesc { get; set; }
 
             /// <summary>
-            /// <para>User group ID.</para>
+            /// <para>The ID of the user group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>34fd141d-4598-4093-8c33-8e066dcb****</para>
@@ -104,10 +104,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string UsergroupId { get; set; }
 
             /// <summary>
-            /// <para>Name of the user group.</para>
+            /// <para>The name of the user group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试用户组01</para>
+            /// <para>Test user group 01</para>
             /// </summary>
             [NameInMap("UsergroupName")]
             [Validation(Required=false)]
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Possible values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: The request was successful.</description></item>
         /// <item><description>false: The request failed.</description></item>

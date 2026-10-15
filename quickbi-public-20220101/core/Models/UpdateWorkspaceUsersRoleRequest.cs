@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class UpdateWorkspaceUsersRoleRequest : TeaModel {
         /// <summary>
-        /// <para>Preset space role ID, existing roles will be overwritten. Value range:</para>
+        /// <para>The ID of the preset workspace role. Existing roles are overwritten. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>25: Space Administrator</description></item>
-        /// <item><description>26: Space Developer</description></item>
-        /// <item><description>27: Space Analyst</description></item>
-        /// <item><description>30: Space Viewer</description></item>
+        /// <item><description>25: workspace administrator</description></item>
+        /// <item><description>26: workspace developer</description></item>
+        /// <item><description>27: workspace analyst</description></item>
+        /// <item><description>30: workspace viewer</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -27,9 +27,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public long? RoleId { get; set; }
 
         /// <summary>
-        /// <para>User ID. This is the UserID for Quick BI, not the UID for Alibaba Cloud.</para>
+        /// <para>The user IDs. The IDs are Quick BI user IDs, not Alibaba Cloud UIDs.</para>
         /// <list type="bullet">
-        /// <item><description>Supports batch parameters, separate user IDs with a comma (,).</description></item>
+        /// <item><description>You can specify multiple user IDs separated by commas (,).</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string UserIds { get; set; }
 
         /// <summary>
-        /// <para>Workspace ID.</para>
+        /// <para>The workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

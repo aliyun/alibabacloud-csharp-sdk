@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class ListAccelerationOfWorkspaceRequest : TeaModel {
         /// <summary>
-        /// <para>The user ID in Quick BI. This is not your Alibaba Cloud account ID. Call the QueryUserInfoByAccount operation to obtain the user ID.</para>
+        /// <para>The user ID in Quick BI, not your Alibaba Cloud account ID. You can call the QueryUserInfoByAccount operation to obtain the user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1***************139</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string CreatorId { get; set; }
 
         /// <summary>
-        /// <para>The name of the dataset.</para>
+        /// <para>The dataset name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string CubeName { get; set; }
 
         /// <summary>
-        /// <para>The page number. If this parameter is left empty, the default value is 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,10 +40,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of rows on each page for a paged query.</para>
-        /// <list type="bullet">
-        /// <item><description>Default value: 10.</description></item>
-        /// </list>
+        /// <para>The number of rows per page for a paged query.</para>
+        /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

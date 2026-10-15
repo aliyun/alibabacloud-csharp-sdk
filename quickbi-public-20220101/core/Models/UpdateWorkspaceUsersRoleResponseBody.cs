@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class UpdateWorkspaceUsersRoleResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7AAB95D7-2E11-4FE2-94BC-858E4FC0C976</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returns the result of the interface execution.</para>
+        /// <para>The execution result of the operation.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public UpdateWorkspaceUsersRoleResponseBodyResult Result { get; set; }
         public class UpdateWorkspaceUsersRoleResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Number of users that failed to update.</para>
+            /// <para>The number of users whose roles failed to be updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? Failure { get; set; }
 
             /// <summary>
-            /// <para>Reasons for the update failures.</para>
+            /// <para>The reasons for the update failures.</para>
             /// </summary>
             [NameInMap("FailureDetail")]
             [Validation(Required=false)]
             public Dictionary<string, object> FailureDetail { get; set; }
 
             /// <summary>
-            /// <para>Number of users that were updated successfully.</para>
+            /// <para>The number of users whose roles were successfully updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? Success { get; set; }
 
             /// <summary>
-            /// <para>Modify the total number of users.</para>
+            /// <para>The total number of users to be updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -66,10 +66,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Value range:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The request was successful, some members may have been updated successfully while others failed, refer to FailureDetail in the response for reasons of failure</description></item>
-        /// <item><description>false: The request failed, no data will be persisted</description></item>
+        /// <item><description>true: The request is successful. Some members may be updated successfully while others fail. For the failure reasons, refer to FailureDetail in the response.</description></item>
+        /// <item><description>false: The request fails and no data is persisted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

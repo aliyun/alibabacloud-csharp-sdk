@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class AddWorkspaceUsersResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7AAB95D7-2E11-4FE2-94BC-858E4FC0C976</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returns the result of the API execution.</para>
+        /// <para>The execution result of the operation.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public AddWorkspaceUsersResponseBodyResult Result { get; set; }
         public class AddWorkspaceUsersResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Number of users that failed to be added.</para>
+            /// <para>The number of users that failed to be added.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? Failure { get; set; }
 
             /// <summary>
-            /// <para>Reasons for the failures.</para>
+            /// <para>The reasons for the failures.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;2046274934845893&quot; : &quot;AE0150010001: This user already exists.&quot;, &quot;1213444447906552&quot; : &quot;AE0150010001: This user already exists.&quot;}</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public Dictionary<string, object> FailureDetail { get; set; }
 
             /// <summary>
-            /// <para>Number of users that were added successfully.</para>
+            /// <para>The number of users that were added.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? Success { get; set; }
 
             /// <summary>
-            /// <para>Total number of users being added.</para>
+            /// <para>The total number of users to be added.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -69,10 +69,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Value range:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The request was successful. There may be cases where some members are added successfully and others fail. For the reasons of failure, refer to the FailureDetail in the response.</description></item>
-        /// <item><description>false: The request failed, and no data will be persisted.</description></item>
+        /// <item><description>true: The request is successful. Some members may be added successfully while others fail. For the reasons of failures, refer to FailureDetail in the response.</description></item>
+        /// <item><description>false: The request failed. No data is persisted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

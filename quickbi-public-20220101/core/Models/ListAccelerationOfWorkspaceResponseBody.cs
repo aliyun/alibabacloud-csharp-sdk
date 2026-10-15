@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The acceleration task model.</para>
+        /// <para>The acceleration task information model.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public ListAccelerationOfWorkspaceResponseBodyResult Result { get; set; }
         public class ListAccelerationOfWorkspaceResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>An array of acceleration task information.</para>
+            /// <para>The array of acceleration task information.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string CubeName { get; set; }
 
                 /// <summary>
-                /// <para>The time when acceleration was enabled.</para>
+                /// <para>The time when acceleration was enabled, in the format of YYYYMMDD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20250911 00:00:00</para>
@@ -94,20 +94,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string JobId { get; set; }
 
                 /// <summary>
-                /// <para>The status of the task. Valid values:</para>
+                /// <para>The status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>0: Pending</para>
-                /// </description></item>
-                /// <item><description><para>1: Running</para>
-                /// </description></item>
-                /// <item><description><para>2: Succeeded</para>
-                /// </description></item>
-                /// <item><description><para>3: Failed</para>
-                /// </description></item>
-                /// <item><description><para>4: Canceled</para>
-                /// </description></item>
-                /// <item><description><para>5: Warning</para>
-                /// </description></item>
+                /// <item><description>0: pending</description></item>
+                /// <item><description>1: running</description></item>
+                /// <item><description>2: completed</description></item>
+                /// <item><description>3: failed</description></item>
+                /// <item><description>4: canceled</description></item>
+                /// <item><description>5: warning</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -118,7 +112,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public int? JobStatus { get; set; }
 
                 /// <summary>
-                /// <para>The time when the task was last modified.</para>
+                /// <para>The last modification time, in the format of YYYYMMDD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20250911 00:00:00</para>
@@ -140,7 +134,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             }
 
             /// <summary>
-            /// <para>The next page. A value of NULL or 0 indicates that there is no next page.</para>
+            /// <para>The next page number. A value of NULL or 0 indicates that there is no next page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -160,7 +154,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? PageNum { get; set; }
 
             /// <summary>
-            /// <para>The number of rows per page that you set when you call the operation.</para>
+            /// <para>The number of rows per page specified in the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -170,7 +164,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The previous page. A value of NULL or 0 indicates that there is no previous page.</para>
+            /// <para>The previous page number. A value of NULL or 0 indicates that there is no previous page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -204,10 +198,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para>false: The request failed.</para>
-        /// </description></item>
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

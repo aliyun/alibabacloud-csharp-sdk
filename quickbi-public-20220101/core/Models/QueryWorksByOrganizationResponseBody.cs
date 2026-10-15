@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryWorksByOrganizationResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D787E1A3-A93C-424A-B626-C2B05DF8D885</para>
@@ -20,24 +20,24 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returns a list of all works under the organization that meet the request criteria.</para>
+        /// <para>The list of all works in the organization that match the request conditions.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public QueryWorksByOrganizationResponseBodyResult Result { get; set; }
         public class QueryWorksByOrganizationResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Details of the work list.</para>
+            /// <para>The details of the works list.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public List<QueryWorksByOrganizationResponseBodyResultData> Data { get; set; }
             public class QueryWorksByOrganizationResponseBodyResultData : TeaModel {
                 /// <summary>
-                /// <para>Third-party embedding status. Possible values:</para>
+                /// <para>The third-party embedding status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>0: Embedding not enabled</description></item>
-                /// <item><description>1: Embedding enabled</description></item>
+                /// <item><description>0: Embedding is not enabled.</description></item>
+                /// <item><description>1: Embedding is enabled.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -48,24 +48,24 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public int? Auth3rdFlag { get; set; }
 
                 /// <summary>
-                /// <para>Notes for the work.</para>
+                /// <para>The description of the work.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>备注</para>
+                /// <para>Remarks</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Directory to which the work belongs.</para>
+                /// <para>The directory to which the work belongs.</para>
                 /// </summary>
                 [NameInMap("Directory")]
                 [Validation(Required=false)]
                 public QueryWorksByOrganizationResponseBodyResultDataDirectory Directory { get; set; }
                 public class QueryWorksByOrganizationResponseBodyResultDataDirectory : TeaModel {
                     /// <summary>
-                    /// <para>ID of the directory to which it belongs.</para>
+                    /// <para>The ID of the directory.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>83d37ba6-d909-48a2-a517-f4d05c3a****</para>
@@ -75,17 +75,17 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     public string Id { get; set; }
 
                     /// <summary>
-                    /// <para>Name of the directory to which it belongs.</para>
+                    /// <para>The name of the directory.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>测试目录</para>
+                    /// <para>Test directory</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>Hierarchical structure of the directory ID, separated by『/』.</para>
+                    /// <para>The hierarchical structure of directory IDs, separated by forward slashes (/).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>83d37ba6-d909-48a2-a517-f4d05c3a****</para>
@@ -95,10 +95,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     public string PathId { get; set; }
 
                     /// <summary>
-                    /// <para>Hierarchical structure of the directory name, separated by『/』.</para>
+                    /// <para>The hierarchical structure of directory names, separated by forward slashes (/).</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>测试目录</para>
+                    /// <para>Test directory</para>
                     /// </summary>
                     [NameInMap("PathName")]
                     [Validation(Required=false)]
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 }
 
                 /// <summary>
-                /// <para>Timestamp (in milliseconds) when the work was created.</para>
+                /// <para>The timestamp when the work was created, in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1496651577000</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>Millisecond-level timestamp of the work modification.</para>
+                /// <para>The timestamp when the work was last modified, in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1572334870000</para>
@@ -127,37 +127,37 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string GmtModify { get; set; }
 
                 /// <summary>
-                /// <para>The Alibaba Cloud account name of the work modifier.</para>
+                /// <para>The Alibaba Cloud account name of the user who last modified the work.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>张三</para>
+                /// <para>John</para>
                 /// </summary>
                 [NameInMap("ModifyName")]
                 [Validation(Required=false)]
                 public string ModifyName { get; set; }
 
                 /// <summary>
-                /// <para>The UserID of the work\&quot;s owner in Quick BI.</para>
+                /// <para>The Quick BI user ID of the work owner.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>作品所属工作空间名称。</para>
+                /// <para>The name of the workspace to which the work belongs</para>
                 /// </summary>
                 [NameInMap("OwnerId")]
                 [Validation(Required=false)]
                 public string OwnerId { get; set; }
 
                 /// <summary>
-                /// <para>The Alibaba Cloud account name of the work\&quot;s owner.</para>
+                /// <para>The Alibaba Cloud account name of the work owner.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>李四</para>
+                /// <para>Jane</para>
                 /// </summary>
                 [NameInMap("OwnerName")]
                 [Validation(Required=false)]
                 public string OwnerName { get; set; }
 
                 /// <summary>
-                /// <para>Whether it is public</para>
+                /// <para>Indicates whether the work is public.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public bool? PublicFlag { get; set; }
 
                 /// <summary>
-                /// <para>The expiration date for the report to be made public</para>
+                /// <para>The expiration date for the public report, in UNIX timestamp format. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1721366354000</para>
@@ -177,16 +177,16 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public long? PublicInvalidTime { get; set; }
 
                 /// <summary>
-                /// <para>The security policy for collaborative authorization of the work. Values:</para>
+                /// <para>The security policy for collaborative authorization of the work. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>0: Private</description></item>
-                /// <item><description>12: Authorize specific members</description></item>
-                /// <item><description>1 or 11: Authorize all space members</description></item>
+                /// <item><description>0: Private.</description></item>
+                /// <item><description>12: Authorized to specified members.</description></item>
+                /// <item><description>1 or 11: Authorized to all workspace members.</description></item>
                 /// </list>
                 /// <remarks>
                 /// <list type="bullet">
-                /// <item><description>If you are using the old version of permissions, the returned value is 1.</description></item>
-                /// <item><description>If you are using the new version of permissions, the returned value is 11.</description></item>
+                /// <item><description>If you use the legacy permissions, the return value is 1.</description></item>
+                /// <item><description>If you use the new permissions, the return value is 11.</description></item>
                 /// </list>
                 /// </remarks>
                 /// 
@@ -198,12 +198,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string SecurityLevel { get; set; }
 
                 /// <summary>
-                /// <para>The status of the report. Value range:</para>
+                /// <para>The report status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>0: Unpublished</description></item>
-                /// <item><description>1: Published</description></item>
-                /// <item><description>2: Modified but not published</description></item>
-                /// <item><description>3: Offline</description></item>
+                /// <item><description>0: Unpublished.</description></item>
+                /// <item><description>1: Published.</description></item>
+                /// <item><description>2: Modified but not published.</description></item>
+                /// <item><description>3: Offline.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -217,19 +217,19 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>The name of the work.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试报表</para>
+                /// <para>Test report</para>
                 /// </summary>
                 [NameInMap("WorkName")]
                 [Validation(Required=false)]
                 public string WorkName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the work. Value range:</para>
+                /// <para>The type of the work. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>DATAPRODUCT: Data portal</description></item>
-                /// <item><description>PAGE: Dashboard</description></item>
-                /// <item><description>REPORT: Spreadsheet</description></item>
-                /// <item><description>dashboardOfflineQuery: Self-service data retrieval</description></item>
+                /// <item><description>DATAPRODUCT: data portal</description></item>
+                /// <item><description>PAGE: dashboard</description></item>
+                /// <item><description>REPORT: workbook</description></item>
+                /// <item><description>dashboardOfflineQuery: custom query</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -253,7 +253,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>The ID of the workspace to which the work belongs.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>作品修改者的阿里云账户名。</para>
+                /// <para>The Alibaba Cloud account name of the user who last modified the work</para>
                 /// </summary>
                 [NameInMap("WorkspaceId")]
                 [Validation(Required=false)]
@@ -263,7 +263,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>The name of the workspace to which the work belongs.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试工作空间</para>
+                /// <para>Test workspace</para>
                 /// </summary>
                 [NameInMap("WorkspaceName")]
                 [Validation(Required=false)]
@@ -272,7 +272,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             }
 
             /// <summary>
-            /// <para>Page number.</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -282,7 +282,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? PageNum { get; set; }
 
             /// <summary>
-            /// <para>The number of rows per page set when requesting the interface.</para>
+            /// <para>The number of rows per page specified in the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -292,7 +292,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>Total number of rows.</para>
+            /// <para>The total number of rows.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -302,7 +302,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? TotalNum { get; set; }
 
             /// <summary>
-            /// <para>Total number of pages.</para>
+            /// <para>The total number of pages.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -314,10 +314,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Possible values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Request succeeded</description></item>
-        /// <item><description>false: Request failed</description></item>
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

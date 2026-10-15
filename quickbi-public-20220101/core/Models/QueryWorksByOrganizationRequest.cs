@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryWorksByOrganizationRequest : TeaModel {
         /// <summary>
-        /// <para>Page number.</para>
+        /// <para>The page number.</para>
         /// <list type="bullet">
-        /// <item><description>Default value is 1.</description></item>
+        /// <item><description>Default value: 1.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>Number of items per page.</para>
+        /// <para>The number of rows per page.</para>
         /// <list type="bullet">
-        /// <item><description>Default value is 10.</description></item>
+        /// <item><description>Default value: 10.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,12 +36,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The status of the work to query. Possible values:</para>
+        /// <para>The status of the works to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: Unpublished</description></item>
-        /// <item><description>1: Published</description></item>
-        /// <item><description>2: Modified but not published</description></item>
-        /// <item><description>3: Offline</description></item>
+        /// <item><description>0: Unpublished.</description></item>
+        /// <item><description>1: Published.</description></item>
+        /// <item><description>2: Modified but not published.</description></item>
+        /// <item><description>3: Offline.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,10 +52,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>Third-party embedding status. Possible values:</para>
+        /// <para>The third-party embedding status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: Embedding not enabled</description></item>
-        /// <item><description>1: Embedding enabled</description></item>
+        /// <item><description>0: Embedding is not enabled.</description></item>
+        /// <item><description>1: Embedding is enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,12 +66,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public int? ThirdPartAuthFlag { get; set; }
 
         /// <summary>
-        /// <para>The type of work to query. Leave blank to query all types. Possible values:</para>
+        /// <para>The type of works to query. Leave this parameter empty to query all types. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DATAPRODUCT: Data Portal</description></item>
-        /// <item><description>PAGE: Dashboard</description></item>
-        /// <item><description>REPORT: Spreadsheet</description></item>
-        /// <item><description>dashboardOfflineQuery: Self-service Data Retrieval</description></item>
+        /// <item><description>DATAPRODUCT: data portal</description></item>
+        /// <item><description>PAGE: dashboard</description></item>
+        /// <item><description>REPORT: workbook</description></item>
+        /// <item><description>dashboardOfflineQuery: custom query</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

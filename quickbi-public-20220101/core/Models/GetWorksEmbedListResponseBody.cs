@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class GetWorksEmbedListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>38C0F*<b><b>0-415</b></b>9F1-*****422BDB65</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Array of report objects</para>
+        /// <para>The report array object.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public GetWorksEmbedListResponseBodyResult Result { get; set; }
         public class GetWorksEmbedListResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Array of reports</para>
+            /// <para>The report array.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public List<GetWorksEmbedListResponseBodyResultData> Data { get; set; }
             public class GetWorksEmbedListResponseBodyResultData : TeaModel {
                 /// <summary>
-                /// <para>Embed time</para>
+                /// <para>The time when the report was embedded, in the format of YYYY-mm-DD hh:MM:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>YYYY-mm-DD hh:MM:ss</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string EmbedTime { get; set; }
 
                 /// <summary>
-                /// <para>Report ID</para>
+                /// <para>The report ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>897ce25e-<b><b>-</b></b>-af84-d13c5610****</para>
@@ -54,17 +54,17 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string WorksId { get; set; }
 
                 /// <summary>
-                /// <para>Report name</para>
+                /// <para>The report name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试哦</para>
+                /// <para>Test</para>
                 /// </summary>
                 [NameInMap("WorksName")]
                 [Validation(Required=false)]
                 public string WorksName { get; set; }
 
                 /// <summary>
-                /// <para>Report type</para>
+                /// <para>The report type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>page</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string WorksType { get; set; }
 
                 /// <summary>
-                /// <para>Workspace ID</para>
+                /// <para>The ID of the workspace to which the report belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>87c6b145-<b><b>-43e1-9426-8f93be23</b></b></para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             }
 
             /// <summary>
-            /// <para>Page number</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public long? PageNo { get; set; }
 
             /// <summary>
-            /// <para>Number of items per page</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>Total number of items</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>18</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public long? TotalNum { get; set; }
 
             /// <summary>
-            /// <para>Total number of pages</para>
+            /// <para>The total number of pages.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         }
 
         /// <summary>
-        /// <para>Whether the request was successful</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

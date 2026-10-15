@@ -12,12 +12,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Preset workspace role ID, existing roles will be overwritten. Value range:</para>
+        /// <para>The preset workspace role ID. The existing role is overwritten. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>25: Workspace Administrator</description></item>
-        /// <item><description>26: Workspace Developer</description></item>
-        /// <item><description>27: Workspace Analyst</description></item>
-        /// <item><description>30: Workspace Viewer</description></item>
+        /// <item><description>25: workspace administrator</description></item>
+        /// <item><description>26: workspace developer</description></item>
+        /// <item><description>27: workspace analyst</description></item>
+        /// <item><description>30: workspace viewer</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public long? RoleId { get; set; }
 
         /// <summary>
-        /// <para>Multiple workspace role IDs, separated by commas. If this value is provided, it takes precedence.</para>
+        /// <para>Multiple workspace role IDs, separated by commas. If this parameter is specified, it takes precedence.</para>
         /// <remarks>
         /// <para>Notice: roleId and roleIds cannot both be empty</para>
         /// </remarks>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RoleIds { get; set; }
 
         /// <summary>
-        /// <para>Quick BI user ID.</para>
+        /// <para>The Quick BI user ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>Workspace ID.</para>
+        /// <para>The workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

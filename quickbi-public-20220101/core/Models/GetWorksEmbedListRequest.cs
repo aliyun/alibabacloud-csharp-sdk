@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class GetWorksEmbedListRequest : TeaModel {
         /// <summary>
-        /// <para>Report name (fuzzy match)</para>
+        /// <para>The report name for fuzzy match.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试数据集</para>
+        /// <para>Test dataset</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>Page number (defaults to 1 if empty)</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>Number of items per page (defaults to 10 if empty)</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Report type</para>
+        /// <para>The report type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>page, Dashboard</description></item>
-        /// <item><description>screen, Data Screen</description></item>
-        /// <item><description>report, Spreadsheet</description></item>
-        /// <item><description>ANALYSIS, Ad-hoc Analysis</description></item>
-        /// <item><description>dashboardOfflineQuery, Self-service Data Retrieval</description></item>
-        /// <item><description>dataForm, Data Entry Form</description></item>
+        /// <item><description>page: dashboard.</description></item>
+        /// <item><description>screen: data screen.</description></item>
+        /// <item><description>report: workbook.</description></item>
+        /// <item><description>ANALYSIS: ad hoc analysis.</description></item>
+        /// <item><description>dashboardOfflineQuery: self-service data retrieval.</description></item>
+        /// <item><description>dataForm: data entry form.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string WorksType { get; set; }
 
         /// <summary>
-        /// <para>Workspace ID</para>
+        /// <para>The workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>919818-<em><b>-</b></em>**-wdasd</para>

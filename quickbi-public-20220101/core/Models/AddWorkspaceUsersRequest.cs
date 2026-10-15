@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class AddWorkspaceUsersRequest : TeaModel {
         /// <summary>
-        /// <para>Preset space role ID. Value range:</para>
+        /// <para>The ID of the preset workspace role. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>25: Space Administrator</description></item>
-        /// <item><description>26: Space Developer</description></item>
-        /// <item><description>27: Space Analyst</description></item>
-        /// <item><description>30: Space Viewer</description></item>
+        /// <item><description>25: storage management administrator</description></item>
+        /// <item><description>26: workspace developer</description></item>
+        /// <item><description>27: storage analysis analyst</description></item>
+        /// <item><description>30: workspace viewer</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -27,9 +27,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public long? RoleId { get; set; }
 
         /// <summary>
-        /// <para>User ID. This is the UserID for Quick BI, not the Alibaba Cloud UID.</para>
+        /// <para>The user IDs. These are Quick BI user IDs, not Alibaba Cloud UIDs.</para>
         /// <list type="bullet">
-        /// <item><description>Supports batch parameters, with user IDs separated by commas (,).</description></item>
+        /// <item><description>You can pass multiple user IDs separated by commas (,).</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string UserIds { get; set; }
 
         /// <summary>
-        /// <para>Workspace ID.</para>
+        /// <para>The workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

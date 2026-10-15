@@ -13,16 +13,16 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <para>The keyword of the API data source name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试</para>
+        /// <para>Test</para>
         /// </summary>
         [NameInMap("KeyWord")]
         [Validation(Required=false)]
         public string KeyWord { get; set; }
 
         /// <summary>
-        /// <para>Current page number for API data source list:</para>
+        /// <para>The page number of the API data source list.</para>
         /// <list type="bullet">
-        /// <item><description>Pages start from page 1.</description></item>
+        /// <item><description>Minimum value: 1.</description></item>
         /// <item><description>Default value: 1.</description></item>
         /// </list>
         /// 
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <para>The number of rows per page in a paged query.</para>
         /// <list type="bullet">
         /// <item><description>Default value: 10.</description></item>
-        /// <item><description>Valid values: 1 to 100.</description></item>
+        /// <item><description>Maximum value: 100.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

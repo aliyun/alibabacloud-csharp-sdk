@@ -10,8 +10,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class SmartqQueryAbilityRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the dataset. To obtain the ID, navigate to \<em>\<em>Workbench\</em>\</em> &gt; \<em>\<em>Dataset\</em>\</em> in the Quick BI console. Open the dataset and find the \<c>cubeId\\</c> in the URL.</para>
-        /// <para>In multi-table scenarios, this parameter must be empty.</para>
+        /// <para>The dataset ID.</para>
+        /// <para>Navigate to Workbench &gt; Datasets, open the desired dataset, and find the cubeId in the URL.</para>
+        /// <para>In multi-table scenarios, leave this parameter empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7c7223ae-****-3c744528014b</para>
@@ -21,7 +22,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string CubeId { get; set; }
 
         /// <summary>
-        /// <para>A list of dataset IDs. The model selects one or more tables from the list to generate an answer based on the question. This parameter is required for multi-table scenarios and is not used for single-table scenarios.</para>
+        /// <para>The list of multiple dataset IDs.
+        /// The model selects one or more tables from the list based on the question to generate an answer. This parameter is required in multi-table scenarios and is not needed in single-table scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7c7****-3c744528014b,a876asd***yhashd2</para>
@@ -31,9 +33,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string MultipleCubeIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user.</para>
+        /// <para>The user ID.</para>
         /// <remarks>
-        /// <para>Notice: If you do not specify this parameter, data is queried as the organization owner by default.</para>
+        /// <para>Notice: If this parameter is not specified, data is queried as the organization owner by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>The question in text format.</para>
+        /// <para>The question text.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The query results are returned.</para>
+        /// <para>The query result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public ListApiDatasourceResponseBodyResult Result { get; set; }
         public class ListApiDatasourceResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The list of API data sources that were queried.</para>
+            /// <para>The list of API data sources.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string ApiId { get; set; }
 
                 /// <summary>
-                /// <para>The parameter configuration of the query statement in JSON format. You can customize the parameter configuration.</para>
+                /// <para>The query statement parameter settings in JSON format, which can be user-defined.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;key1&quot;:&quot;value1&quot;}</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <summary>
                 /// <para>The data volume of the API data source.</para>
                 /// <list type="bullet">
-                /// <item><description>Unit: Kbit/s</description></item>
+                /// <item><description>Unit: KB.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public float? DataSize { get; set; }
 
                 /// <summary>
-                /// <para>The last synchronization time of the API data source.</para>
+                /// <para>The last synchronization time of the API data source. Format example: YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-05-25 16:19:43</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string DateUpdateTime { get; set; }
 
                 /// <summary>
-                /// <para>The time when the quota plan was created.</para>
+                /// <para>The creation time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-05-25 16:19:43</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>The time when the optimization job was modified.</para>
+                /// <para>The modification time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-05-25 16:19:43</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>The job ID.</para>
+                /// <para>The task ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>REST_API_SYNC_0f2c3c6409be4dc0810f2a5785e816a8</para>
@@ -107,10 +107,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string JobId { get; set; }
 
                 /// <summary>
-                /// <para>The parameter configurations in the JSONArray format.</para>
+                /// <para>The parameter settings in JSONArray format.</para>
                 /// <list type="bullet">
-                /// <item><description>name: parameter name</description></item>
-                /// <item><description>value: the parameter value</description></item>
+                /// <item><description>name: the parameter name.</description></item>
+                /// <item><description>value: the parameter value.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -124,21 +124,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>The name of the API data source.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试数据源</para>
+                /// <para>TestDataSource</para>
                 /// </summary>
                 [NameInMap("ShowName")]
                 [Validation(Required=false)]
                 public string ShowName { get; set; }
 
                 /// <summary>
-                /// <para>The status of the API data source synchronization task.</para>
-                /// <para>Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>0: the to be run.</description></item>
-                /// <item><description>1: The is running.</description></item>
-                /// <item><description>2: The is successfully.</description></item>
-                /// <item><description>3: failed.</description></item>
-                /// </list>
+                /// <para>The synchronization task status of the API data source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -150,7 +143,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The page number of the returned data, used for pagination.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -160,7 +153,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? PageNum { get; set; }
 
             /// <summary>
-            /// <para>The number of rows per page set when the interface is requested.</para>
+            /// <para>The number of rows per page specified in the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

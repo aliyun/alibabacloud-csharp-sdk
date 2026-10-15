@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class IpWhiteListConfigRequest : TeaModel {
         /// <summary>
-        /// <para>Required for increase and delete operations. The IP whitelist. Separate multiple IP addresses with commas.</para>
+        /// <para>Required for add and delete operations. The IP whitelist. Separate multiple IP addresses with commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60.205.254.120</para>
@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <summary>
         /// <para>The operation type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ADD: incrementally adds entries.</description></item>
-        /// <item><description>DELETE: deletes entries.</description></item>
-        /// <item><description>QUERY: queries entries.</description></item>
+        /// <item><description>ADD: Incrementally adds entries.</description></item>
+        /// <item><description>DELETE: Deletes entries.</description></item>
+        /// <item><description>QUERY: Queries entries.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

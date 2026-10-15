@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class AddShareReportRequest : TeaModel {
         /// <summary>
-        /// <para>The scope of authorization. Valid values:</para>
+        /// <para>The authorization type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: view only</description></item>
-        /// <item><description>3: View and export</description></item>
+        /// <item><description>1: View only.</description></item>
+        /// <item><description>3: View and export.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public int? AuthPoint { get; set; }
 
         /// <summary>
-        /// <para>The validity period of the share. The value is a timestamp in milliseconds.</para>
+        /// <para>The expiration time of the sharing, in millisecond-level UNIX timestamp format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,11 +36,11 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public long? ExpireDate { get; set; }
 
         /// <summary>
-        /// <para>The ID of the person to be shared, which may be the user ID of the Quick BI or the user group ID.</para>
+        /// <para>The ID of the share recipient. The value can be a Quick BI user ID or a user group ID.</para>
         /// <list type="bullet">
-        /// <item><description>If ShareToType is 0 (user), ShareTo is the user ID.</description></item>
-        /// <item><description>When ShareToType is set to 1 (user group), ShareTo is the user group ID.</description></item>
-        /// <item><description>When ShareToType=2 (organization), ShareTo is the ID of the organization.</description></item>
+        /// <item><description>ShareToType=0 (user): ShareTo is the user ID.</description></item>
+        /// <item><description>ShareToType=1 (user group): ShareTo is the user group ID.</description></item>
+        /// <item><description>ShareToType=2 (organization): ShareTo is the organization ID.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string ShareToId { get; set; }
 
         /// <summary>
-        /// <para>The share type of the template. Valid values:</para>
+        /// <para>The sharing type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>0: user</description></item>
         /// <item><description>1: user group</description></item>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public int? ShareToType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the shared work. The works here include BI portal, dashboards, spreadsheets, and self-service access.</para>
+        /// <para>The ID of the work to share. Works include data portals, dashboards, workbooks, and ad hoc queries.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

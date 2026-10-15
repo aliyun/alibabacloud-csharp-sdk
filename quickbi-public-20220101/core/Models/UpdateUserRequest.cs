@@ -47,9 +47,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <para>Pass the parameter as a JSON array. Each array element contains the following fields:</para>
         /// <para>moduleType -- The intelligent module.</para>
         /// <list type="bullet">
-        /// <item><description>smartQAskNum -- Smart Q questions.</description></item>
+        /// <item><description>smartQAskNum -- Smart Q question count.</description></item>
         /// <item><description>smartQDevNum -- Smart Q building.</description></item>
-        /// <item><description>qreport -- Smart Q reports.</description></item>
+        /// <item><description>qreport -- Smart Q report.</description></item>
         /// <item><description>qExploreNum -- Smart Q exploration edition.</description></item>
         /// </list>
         /// <para>status -- Specifies whether to enable the module.</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <para>The nickname.</para>
         /// <list type="bullet">
         /// <item><description>Format check: The maximum length is 50 characters.</description></item>
-        /// <item><description>Special format check: Chinese characters, English characters, digits, _ \ / | () ] [</description></item>
+        /// <item><description>Special format check: Chinese characters, English letters, digits, _ \ / | () ] [</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

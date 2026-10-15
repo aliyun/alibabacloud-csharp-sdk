@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryDatasetListRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the folder.</para>
+        /// <para>The directory ID.</para>
         /// <list type="bullet">
-        /// <item><description>If you specify this parameter, all datasets in the folder are returned.</description></item>
+        /// <item><description>If this parameter is specified, all datasets in the specified directory are returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The keyword used to search for datasets by name.</para>
+        /// <para>The keyword used to search for dataset names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -35,10 +35,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <summary>
         /// <para>The page number of the dataset list.</para>
         /// <list type="bullet">
-        /// <item><description><para>Start value: 1</para>
-        /// </description></item>
-        /// <item><description><para>Default value: 1</para>
-        /// </description></item>
+        /// <item><description>Minimum value: 1</description></item>
+        /// <item><description>Default value: 1</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,12 +47,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of rows per page for a paged query.</para>
         /// <list type="bullet">
-        /// <item><description><para>Default value: 10</para>
-        /// </description></item>
-        /// <item><description><para>Maximum value: 1000</para>
-        /// </description></item>
+        /// <item><description>Default value: 10</description></item>
+        /// <item><description>Maximum value: 1000</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -67,10 +63,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <summary>
         /// <para>Specifies whether to recursively include datasets in subdirectories. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Returns all datasets in the folder specified by DirectoryId and its subdirectories.</para>
-        /// </description></item>
-        /// <item><description><para>false: Returns only the datasets in the folder specified by DirectoryId.</para>
-        /// </description></item>
+        /// <item><description>true: Returns datasets in all recursive subdirectories under the directory specified by directoryId.</description></item>
+        /// <item><description>false: Returns only datasets in the directory specified by directoryId, excluding subdirectories.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

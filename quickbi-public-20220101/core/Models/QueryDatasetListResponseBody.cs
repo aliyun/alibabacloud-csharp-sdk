@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The paged results of the dataset list. The details of the datasets are returned in the Data parameter.</para>
+        /// <para>The paginated result of the dataset list. The detailed information of the dataset list is stored in the Data response parameter.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public List<QueryDatasetListResponseBodyResultData> Data { get; set; }
             public class QueryDatasetListResponseBodyResultData : TeaModel {
                 /// <summary>
-                /// <para>The time when the dataset was created.</para>
+                /// <para>The creation time, in the yyyy-MM-dd HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-11-02 10:36:05</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The information about the data source to which the dataset belongs.</para>
+                /// <para>The data source information of the dataset.</para>
                 /// </summary>
                 [NameInMap("DataSource")]
                 [Validation(Required=false)]
@@ -113,14 +113,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The information about the folder in which the dataset is located.</para>
+                /// <para>The directory information of the dataset.</para>
                 /// </summary>
                 [NameInMap("Directory")]
                 [Validation(Required=false)]
                 public QueryDatasetListResponseBodyResultDataDirectory Directory { get; set; }
                 public class QueryDatasetListResponseBodyResultDataDirectory : TeaModel {
                     /// <summary>
-                    /// <para>The folder ID.</para>
+                    /// <para>The directory ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>schemaad8aad00-9c55-4984-a767-b4e0ec60****</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     public string Id { get; set; }
 
                     /// <summary>
-                    /// <para>The folder name.</para>
+                    /// <para>The directory name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the folder path.</para>
+                    /// <para>The ID of the directory path.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>schemaad8aad00-9c55-4984-a767-b4e0ec60****</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     public string PathId { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the folder path.</para>
+                    /// <para>The name of the directory path.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 }
 
                 /// <summary>
-                /// <para>The time when the dataset was last modified.</para>
+                /// <para>The modification time, in the yyyy-MM-dd HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-11-02 10:36:05</para>
@@ -172,12 +172,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string ModifyTime { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether extraction-based acceleration is enabled. Valid values:</para>
+                /// <para>Indicates whether extraction acceleration is enabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>true: Enabled</para>
-                /// </description></item>
-                /// <item><description><para>false: Disabled</para>
-                /// </description></item>
+                /// <item><description>true: Enabled.</description></item>
+                /// <item><description>false: Disabled.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -188,7 +186,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public bool? OpenOfflineAcceleration { get; set; }
 
                 /// <summary>
-                /// <para>The user ID of the dataset owner in Quick BI.</para>
+                /// <para>The Quick BI user ID of the dataset owner.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>136516262323****</para>
@@ -210,10 +208,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <summary>
                 /// <para>Indicates whether row-level permissions are enabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>true: Enabled</para>
-                /// </description></item>
-                /// <item><description><para>false: Disabled</para>
-                /// </description></item>
+                /// <item><description>true: Enabled.</description></item>
+                /// <item><description>false: Disabled.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -256,7 +252,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? PageNum { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page specified in the request.</para>
+            /// <para>The number of rows per page specified in the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -266,7 +262,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries.</para>
+            /// <para>The total number of rows.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -290,10 +286,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para>false: The request failed.</para>
-        /// </description></item>
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

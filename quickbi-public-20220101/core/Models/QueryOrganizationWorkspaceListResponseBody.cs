@@ -20,26 +20,24 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The paginated query results. The Data parameter contains the details of each workspace.</para>
+        /// <para>The paginated result of the workspace list. The detailed information of workspaces is stored in the Data response parameter.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public QueryOrganizationWorkspaceListResponseBodyResult Result { get; set; }
         public class QueryOrganizationWorkspaceListResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>An array of workspace objects.</para>
+            /// <para>The list of workspaces.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public List<QueryOrganizationWorkspaceListResponseBodyResultData> Data { get; set; }
             public class QueryOrganizationWorkspaceListResponseBodyResultData : TeaModel {
                 /// <summary>
-                /// <para>Whether works in the workspace can be published. Valid values:</para>
+                /// <para>Indicates whether works can be made public. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>true: Publishing is allowed.</para>
-                /// </description></item>
-                /// <item><description><para>false: Publishing is not allowed.</para>
-                /// </description></item>
+                /// <item><description>true: Public.</description></item>
+                /// <item><description>false: Not public.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -50,12 +48,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public bool? AllowPublishOperation { get; set; }
 
                 /// <summary>
-                /// <para>Whether works in the workspace can be shared. Valid values:</para>
+                /// <para>Indicates whether works can be shared with authorization. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>true: Sharing is allowed.</para>
-                /// </description></item>
-                /// <item><description><para>false: Sharing is not allowed.</para>
-                /// </description></item>
+                /// <item><description>true: Authorized.</description></item>
+                /// <item><description>false: Not authorized.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -76,7 +72,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The creator\&quot;s Quick BI user ID.</para>
+                /// <para>The Quick BI user ID of the creator.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>de4bc5f9429141cc8091cdd1c15b****</para>
@@ -86,7 +82,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string CreateUser { get; set; }
 
                 /// <summary>
-                /// <para>The creator\&quot;s Alibaba Cloud account name.</para>
+                /// <para>The Alibaba Cloud account name of the creator.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pop****@aliyun.com</para>
@@ -106,7 +102,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string ModifiedTime { get; set; }
 
                 /// <summary>
-                /// <para>The modifier\&quot;s Quick BI user ID.</para>
+                /// <para>The Quick BI user ID of the modifier.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>de4bc5f9429141cc8091cdd1c15b****</para>
@@ -116,7 +112,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string ModifyUser { get; set; }
 
                 /// <summary>
-                /// <para>The modifier\&quot;s Alibaba Cloud account name.</para>
+                /// <para>The Alibaba Cloud account name of the modifier.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pop****@aliyun.com</para>
@@ -126,7 +122,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string ModifyUserAccountName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the workspace\&quot;s organization.</para>
+                /// <para>The ID of the organization to which the workspace belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2fe4fbd8-588f-489a-b3e1-e92c7af0****</para>
@@ -136,7 +132,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string OrganizationId { get; set; }
 
                 /// <summary>
-                /// <para>The workspace owner\&quot;s Quick BI user ID.</para>
+                /// <para>The Quick BI user ID of the workspace owner.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>de4bc5f9429141cc8091cdd1c15b****</para>
@@ -146,7 +142,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// <para>The workspace owner\&quot;s Alibaba Cloud account name.</para>
+                /// <para>The Alibaba Cloud account name of the workspace owner.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pop****@aliyun.com</para>
@@ -156,7 +152,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string OwnerAccountName { get; set; }
 
                 /// <summary>
-                /// <para>The workspace owner\&quot;s Quick BI account name.</para>
+                /// <para>The Quick BI account name of the workspace owner.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -166,20 +162,30 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string RealOwnerAccountName { get; set; }
 
                 /// <summary>
-                /// <para>The workspace description.</para>
+                /// <para>The description of the workspace.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>该空间是测试空间</para>
+                /// <para>This workspace is a test workspace</para>
                 /// </summary>
                 [NameInMap("WorkspaceDescription")]
                 [Validation(Required=false)]
                 public string WorkspaceDescription { get; set; }
 
+                /// <summary>
+                /// <para>The workspace export configuration.</para>
+                /// </summary>
                 [NameInMap("WorkspaceExportConfig")]
                 [Validation(Required=false)]
                 public QueryOrganizationWorkspaceListResponseBodyResultDataWorkspaceExportConfig WorkspaceExportConfig { get; set; }
                 public class QueryOrganizationWorkspaceListResponseBodyResultDataWorkspaceExportConfig : TeaModel {
                     /// <summary>
+                    /// <para>Specifies how images are handled when exporting Excel files with formatting. This field takes effect only when configured at the organization level.
+                    /// Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>false: Image fields are not converted to images.</description></item>
+                    /// <item><description>true: Image fields can be converted to images. The option appears on the report export page, and users must manually select it to convert images.</description></item>
+                    /// </list>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
                     /// </summary>
@@ -188,6 +194,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     public bool? AllowExcelImageFile { get; set; }
 
                     /// <summary>
+                    /// <para>Specifies whether to allow exporting data as an Excel file.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
                     /// </summary>
@@ -196,6 +204,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     public bool? DataExport { get; set; }
 
                     /// <summary>
+                    /// <para>The default export type (with formatting: true. Without formatting: false).</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
                     /// </summary>
@@ -204,6 +214,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     public bool? DefaultExportType { get; set; }
 
                     /// <summary>
+                    /// <para>The master switch for export. If set to false, all export settings below do not take effect.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
                     /// </summary>
@@ -212,6 +224,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     public bool? ExportMainSwitch { get; set; }
 
                     /// <summary>
+                    /// <para>Specifies whether to allow exporting to a local device.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
                     /// </summary>
@@ -220,6 +234,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     public bool? ExportToLocal { get; set; }
 
                     /// <summary>
+                    /// <para>Specifies whether public links of works support export.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
                     /// </summary>
@@ -228,6 +244,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     public bool? ExportToPublicWork { get; set; }
 
                     /// <summary>
+                    /// <para>Specifies whether to allow exporting to a server.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
                     /// </summary>
@@ -236,6 +254,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     public bool? ExportToServer { get; set; }
 
                     /// <summary>
+                    /// <para>Specifies whether to allow exporting as an image.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
                     /// </summary>
@@ -244,6 +264,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     public bool? ImageExport { get; set; }
 
                     /// <summary>
+                    /// <para>Specifies whether to allow exporting as a PDF.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
                     /// </summary>
@@ -267,7 +289,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>The workspace name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试空间</para>
+                /// <para>Test workspace</para>
                 /// </summary>
                 [NameInMap("WorkspaceName")]
                 [Validation(Required=false)]
@@ -286,7 +308,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? PageNum { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The number of rows per page specified in the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -296,7 +318,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of workspaces.</para>
+            /// <para>The total number of rows.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -318,12 +340,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         }
 
         /// <summary>
-        /// <para>Whether the request succeeded. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The request succeeded.</para>
-        /// </description></item>
-        /// <item><description><para>false: The request failed.</para>
-        /// </description></item>
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

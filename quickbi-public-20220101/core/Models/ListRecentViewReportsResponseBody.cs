@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class ListRecentViewReportsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D787E1A3-A93C-424A-B626-C2B05DF8D885</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The query results are returned.</para>
+        /// <para>The query result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public ListRecentViewReportsResponseBodyResult Result { get; set; }
         public class ListRecentViewReportsResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Attention</para>
+            /// <para>The notice indicating that pagination parameters (such as TotalNum) returned by this API will be deprecated soon.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>当前API返回的分页参数如TotalNum等即将下线，如有使用请及时修改</para>
+            /// <para>The pagination parameters such as TotalNum returned by this API will be deprecated soon. If you are using them, modify your code promptly</para>
             /// </summary>
             [NameInMap("Attention")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public List<ListRecentViewReportsResponseBodyResultData> Data { get; set; }
             public class ListRecentViewReportsResponseBodyResultData : TeaModel {
                 /// <summary>
-                /// <para>Queries whether the user has collected the work.</para>
+                /// <para>Indicates whether the queried user has added the work to favorites.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp when the work was modified.</para>
+                /// <para>The timestamp when the work was last modified.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1640595729000</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>The query user has the editing rights of the work.</para>
+                /// <para>Indicates whether the queried user has edit permissions on the work.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public bool? HasEditAuth { get; set; }
 
                 /// <summary>
-                /// <para>The query user has the permission to view the work.</para>
+                /// <para>Indicates whether the queried user has view permissions on the work.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>The name of the work.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试报表</para>
+                /// <para>TestReport</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>The Alibaba Cloud account name of the work owner.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>李四</para>
+                /// <para>John</para>
                 /// </summary>
                 [NameInMap("OwnerName")]
                 [Validation(Required=false)]
@@ -134,12 +134,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string OwnerNum { get; set; }
 
                 /// <summary>
-                /// <para>The publication status of the work. Valid values:</para>
+                /// <para>The publish status of the work. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>0: unpublished</description></item>
-                /// <item><description>1: published</description></item>
-                /// <item><description>2: modified and saved but not published.</description></item>
-                /// <item><description>3: unpublished</description></item>
+                /// <item><description>0: Unpublished.</description></item>
+                /// <item><description>1: Published.</description></item>
+                /// <item><description>2: Modified and saved but not published.</description></item>
+                /// <item><description>3: Offline.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -162,8 +162,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <summary>
                 /// <para>The type of the work. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>DATAPRODUCT: BI portal</description></item>
-                /// <item><description>PAGE: Dashboard</description></item>
+                /// <item><description>DATAPRODUCT: data portal</description></item>
+                /// <item><description>PAGE: dashboard</description></item>
                 /// <item><description>REPORT: workbook</description></item>
                 /// </list>
                 /// 
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The number of times the work was accessed.</para>
+                /// <para>The number of times the work has been accessed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>7</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>The name of the workspace to which the work belongs.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试工作空间</para>
+                /// <para>TestWorkspace</para>
                 /// </summary>
                 [NameInMap("WorkspaceName")]
                 [Validation(Required=false)]
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -217,10 +217,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? PageNum { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The number of entries per page.</para>
             /// <list type="bullet">
             /// <item><description>Default value: 10.</description></item>
-            /// <item><description>Maximum of 100 articles</description></item>
+            /// <item><description>Maximum value: 100.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -231,7 +231,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of rows in the table.</para>
+            /// <para>The total number of rows.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -241,7 +241,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? TotalNum { get; set; }
 
             /// <summary>
-            /// <para>The total number of pages returned.</para>
+            /// <para>The total number of pages.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -253,7 +253,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: The request was successful.</description></item>
         /// <item><description>false: The request failed.</description></item>

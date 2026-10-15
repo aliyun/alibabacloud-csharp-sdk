@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public List<QueryUserListResponseBodyResultData> Data { get; set; }
             public class QueryUserListResponseBodyResultData : TeaModel {
                 /// <summary>
-                /// <para>The Alibaba Cloud account ID. For users who are not added through RAM self-service, the Alibaba Cloud ID can only be obtained after they log on.</para>
+                /// <para>The Alibaba Cloud account ID. For users who are not added through RAM self-service reading, the Alibaba Cloud account ID can be obtained only after they log on.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1355********</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string AccountName { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the user is bound to the organization administrator role. Valid values:</para>
+                /// <para>Indicates whether the organization administrator role is bound. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>true: Yes.</description></item>
                 /// <item><description>false: No.</description></item>
@@ -69,12 +69,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public bool? AdminUser { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the user is attached to the permission management administrator role. Valid values:</para>
+                /// <para>Indicates whether the permission management administrator role is attached. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>true: Yes.</description></item>
                 /// <item><description>false: No.</description></item>
                 /// </list>
-                /// <para><notice>This parameter has expired and is no longer recommended. Use the RoleIdList parameter instead.</notice></para>
+                /// <para><notice>This parameter is expired and no longer recommended. Use the RoleIdList parameter instead.</notice></para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -87,8 +87,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>The intelligent module quota of the user.</para>
                 /// <list type="bullet">
                 /// <item><description>qreport: Q report</description></item>
-                /// <item><description>qExploreNum: Q exploration edition</description></item>
-                /// <item><description>smartQAskNum: Q data inquiry</description></item>
+                /// <item><description>qExploreNum: Q explore edition</description></item>
+                /// <item><description>smartQAskNum: Q data query</description></item>
                 /// <item><description>smartQDevNum: Q builder</description></item>
                 /// </list>
                 /// </summary>
@@ -99,8 +99,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <summary>
                 /// <para>The user status. Valid values: </para>
                 /// <list type="bullet">
-                /// <item><description>false: active</description></item>
-                /// <item><description>true: inactive</description></item>
+                /// <item><description>false: activated</description></item>
+                /// <item><description>true: deactivated</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public bool? IsDeleted { get; set; }
 
                 /// <summary>
-                /// <para>The date when the member joined the organization.</para>
+                /// <para>The date when the member joined the organization. This value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1718691704000</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public long? JoinedDate { get; set; }
 
                 /// <summary>
-                /// <para>The last logon time.</para>
+                /// <para>The last logon time. This value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1718761320681</para>

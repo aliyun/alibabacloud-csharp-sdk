@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result of the API request.</para>
+        /// <para>The execution result of the operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The execution succeeded.</para>
-        /// </description></item>
-        /// <item><description><para>false: The execution failed.</para>
-        /// </description></item>
+        /// <item><description>true: The execution succeeded.</description></item>
+        /// <item><description>false: The execution failed.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("Result")]
@@ -33,14 +31,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public QueryAccelerationLogByCubeIdResponseBodyResult Result { get; set; }
         public class QueryAccelerationLogByCubeIdResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>An array of acceleration task logs.</para>
+            /// <para>The array of acceleration task logs.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public List<QueryAccelerationLogByCubeIdResponseBodyResultData> Data { get; set; }
             public class QueryAccelerationLogByCubeIdResponseBodyResultData : TeaModel {
                 /// <summary>
-                /// <para>The task duration in seconds.</para>
+                /// <para>The duration. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -70,20 +68,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string JobId { get; set; }
 
                 /// <summary>
-                /// <para>The status of the task.</para>
+                /// <para>The task status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>0: Pending</para>
-                /// </description></item>
-                /// <item><description><para>1: Running</para>
-                /// </description></item>
-                /// <item><description><para>2: Succeeded</para>
-                /// </description></item>
-                /// <item><description><para>3: Failed</para>
-                /// </description></item>
-                /// <item><description><para>4: Canceled</para>
-                /// </description></item>
-                /// <item><description><para>5: Warning</para>
-                /// </description></item>
+                /// <item><description>0: pending</description></item>
+                /// <item><description>1: running</description></item>
+                /// <item><description>2: succeeded</description></item>
+                /// <item><description>3: failed</description></item>
+                /// <item><description>4: canceled</description></item>
+                /// <item><description>5: warning</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -94,17 +86,17 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string JobStatus { get; set; }
 
                 /// <summary>
-                /// <para>The start time of the task.</para>
+                /// <para>The task start time. Format: yyyy/MM/dd HH:mm:ss. Time zone: UTC+8.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>REST_A***************6a8</para>
+                /// <para>2025/09/10 13:59:19</para>
                 /// </summary>
                 [NameInMap("JonStartDate")]
                 [Validation(Required=false)]
                 public string JonStartDate { get; set; }
 
                 /// <summary>
-                /// <para>The log content.</para>
+                /// <para>The log.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>asdav************</para>
@@ -178,12 +170,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para>false: The request failed.</para>
-        /// </description></item>
+        /// <item><description>true: The request succeeded.</description></item>
+        /// <item><description>false: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

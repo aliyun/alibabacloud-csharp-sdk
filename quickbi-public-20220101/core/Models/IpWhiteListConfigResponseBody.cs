@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The IP address whitelist.</para>
+        /// <para>The IP whitelist.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public IpWhiteListConfigResponseBodyResult Result { get; set; }
         public class IpWhiteListConfigResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The IP address whitelist array.</para>
+            /// <para>The IP whitelist array.</para>
             /// </summary>
             [NameInMap("IpWhiteList")]
             [Validation(Required=false)]
