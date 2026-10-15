@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ExportWarningRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether the baseline risks are handled. Valid values:</para>
+        /// <para>Specifies whether the baseline issues are handled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Y</b>: yes</description></item>
-        /// <item><description><b>N</b>: no</description></item>
+        /// <item><description><b>Y</b>: handled</description></item>
+        /// <item><description><b>N</b>: unhandled</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Dealed { get; set; }
 
         /// <summary>
-        /// <para>The type of the export task. Set the value to <b>hc_check_warning</b>, which indicates tasks to export baseline check results.</para>
+        /// <para>The type of the export task. Set the value to <b>hc_check_warning</b>, which indicates that baseline check results are exported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hc_check_warning</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The ID of the server group.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the IDs of server groups.</para>
+        /// <para>You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to obtain the ID of the server group.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// <para>The export method of the results for the weak password baseline check. Valid values:</para>
+        /// <para>The export method for weak password baseline check results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: exports the check results after it is masked.</description></item>
-        /// <item><description><b>1</b>: exports the check results in plaintext.</description></item>
+        /// <item><description><b>0</b>: Export weak passwords after masking.</description></item>
+        /// <item><description><b>1</b>: Export weak passwords in plaintext.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? IsCleartextPwd { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the baseline check results are aggregated and exported. Valid values:</para>
+        /// <para>Specifies whether to export a summary of the baseline check results. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: no</description></item>
         /// <item><description><b>1</b>: yes</description></item>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? IsSummaryExport { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>Specifies the language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
         /// <item><description><b>en</b>: English</description></item>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The ID of the risk item in the baseline check results. Separate multiple IDs with commas (,).</para>
+        /// <para>The IDs of the risk items in the baseline check results. Separate multiple risk item IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>123,124</para>
@@ -99,11 +99,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RiskIds { get; set; }
 
         /// <summary>
-        /// <para>The severity of the baseline check item. Separate multiple severities with commas (,). Valid values:</para>
+        /// <para>The risk levels of the baselines. Separate multiple risk levels with commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>high</b></description></item>
-        /// <item><description><b>medium</b></description></item>
-        /// <item><description><b>low</b></description></item>
+        /// <item><description><b>high</b>: high-risk</description></item>
+        /// <item><description><b>medium</b>: medium-risk</description></item>
+        /// <item><description><b>low</b>: low-risk</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RiskName { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The source IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.0.XX.XX</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The status of the check item in the baseline check results. Separate multiple statuses with commas (,). Valid values:</para>
+        /// <para>The statuses of the risk items in the baseline check results. Separate multiple status values with commas (,). Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>3</b>: passed</description></item>
         /// <item><description><b>1</b>: failed</description></item>
@@ -158,9 +158,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? StrategyId { get; set; }
 
         /// <summary>
-        /// <para>The subtypes of the baselines based on which baseline checks are performed. Separate multiple subtypes with commas (,).</para>
+        /// <para>Specifies the baseline subtypes to which the baseline check results to be exported belong. Separate multiple subtypes with commas (,).</para>
         /// <remarks>
-        /// <para>You must set the value of this parameter to the value of the <b>TypeName</b> parameter that is contained in the <b>SubTypes</b> parameter. You can call the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation to obtain the value of the TypeName parameter.</para>
+        /// <para>The value is the <b>TypeName</b> field under the <b>SubTypes</b> field returned by the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -171,9 +171,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SubTypeNames { get; set; }
 
         /// <summary>
-        /// <para>The type of the baseline based on which baseline checks are performed.</para>
+        /// <para>Specifies the baseline type to which the baseline check results to be exported belong.</para>
         /// <remarks>
-        /// <para>You must set the value of this parameter to the value of the <b>TypeName</b> parameter that is returned by calling the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation. If both the <b>TypeName</b> and <b>TypeNames</b> parameters are specified, only the <b>TypeName</b> parameter takes effect.</para>
+        /// <para>The value is the <b>TypeName</b> field returned by the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation. If both <b>TypeName</b> and <b>TypeNames</b> are specified, only <b>TypeName</b> takes effect.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -184,9 +184,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TypeName { get; set; }
 
         /// <summary>
-        /// <para>The types of the baselines based on which baseline checks are performed. Separate multiple types with commas (,).</para>
+        /// <para>Specifies the baseline types to which the baseline check results to be exported belong. Separate multiple types with commas (,).</para>
         /// <remarks>
-        /// <para>You must set the value of this parameter to the value of the <b>TypeName</b> parameter that is returned by calling the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation. If both the <b>TypeName</b> and <b>TypeNames</b> parameters are specified, only the <b>TypeName</b> parameter takes effect.</para>
+        /// <para>The value is the <b>TypeName</b> field returned by the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation. If both <b>TypeName</b> and <b>TypeNames</b> are specified, only <b>TypeName</b> takes effect.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TypeNames { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the server whose baseline check results you want to export. Separate multiple UUIDs with commas (,).</para>
+        /// <para>The UUIDs of the servers for which you want to export the baseline check results. Separate multiple UUIDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>inet-7c676676-06fa-442e-90fb-b802e****,inet-7c676676-06fa-442e-90fb-b****</para>

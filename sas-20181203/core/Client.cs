@@ -64901,7 +64901,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the version details of a purchased Security Center instance.</para>
+        /// <para>Queries the edition details of a purchased Security Center instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -64947,7 +64947,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the version details of a purchased Security Center instance.</para>
+        /// <para>Queries the edition details of a purchased Security Center instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -64993,7 +64993,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the version details of a purchased Security Center instance.</para>
+        /// <para>Queries the edition details of a purchased Security Center instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -65011,7 +65011,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the version details of a purchased Security Center instance.</para>
+        /// <para>Queries the edition details of a purchased Security Center instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -71689,12 +71689,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports detection results from various Cloud Security Center features, such as Asset Center, cloud platform configuration check, image security scan, attack analysis, and AK leakage detection, to an Excel file.</para>
+        /// <para>Exports the detection results of the Asset Center, cloud platform configuration check, image security scan, attack analysis, AccessKey leak detection, and baseline check to an Excel file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call this operation, you can call the <a href="~~DescribeExportInfo~~">DescribeExportInfo</a> operation to query the export progress and retrieve the download URL for the exported Excel file.</para>
+        /// <para>After you call this operation, you can call the <a href="~~DescribeExportInfo~~">DescribeExportInfo</a> operation to query the file export progress and obtain the download link for the exported Excel file.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -71752,12 +71752,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports detection results from various Cloud Security Center features, such as Asset Center, cloud platform configuration check, image security scan, attack analysis, and AK leakage detection, to an Excel file.</para>
+        /// <para>Exports the detection results of the Asset Center, cloud platform configuration check, image security scan, attack analysis, AccessKey leak detection, and baseline check to an Excel file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call this operation, you can call the <a href="~~DescribeExportInfo~~">DescribeExportInfo</a> operation to query the export progress and retrieve the download URL for the exported Excel file.</para>
+        /// <para>After you call this operation, you can call the <a href="~~DescribeExportInfo~~">DescribeExportInfo</a> operation to query the file export progress and obtain the download link for the exported Excel file.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -71815,12 +71815,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports detection results from various Cloud Security Center features, such as Asset Center, cloud platform configuration check, image security scan, attack analysis, and AK leakage detection, to an Excel file.</para>
+        /// <para>Exports the detection results of the Asset Center, cloud platform configuration check, image security scan, attack analysis, AccessKey leak detection, and baseline check to an Excel file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call this operation, you can call the <a href="~~DescribeExportInfo~~">DescribeExportInfo</a> operation to query the export progress and retrieve the download URL for the exported Excel file.</para>
+        /// <para>After you call this operation, you can call the <a href="~~DescribeExportInfo~~">DescribeExportInfo</a> operation to query the file export progress and obtain the download link for the exported Excel file.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -71838,12 +71838,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports detection results from various Cloud Security Center features, such as Asset Center, cloud platform configuration check, image security scan, attack analysis, and AK leakage detection, to an Excel file.</para>
+        /// <para>Exports the detection results of the Asset Center, cloud platform configuration check, image security scan, attack analysis, AccessKey leak detection, and baseline check to an Excel file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call this operation, you can call the <a href="~~DescribeExportInfo~~">DescribeExportInfo</a> operation to query the export progress and retrieve the download URL for the exported Excel file.</para>
+        /// <para>After you call this operation, you can call the <a href="~~DescribeExportInfo~~">DescribeExportInfo</a> operation to query the file export progress and obtain the download link for the exported Excel file.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -72473,8 +72473,13 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports baseline check results.</para>
+        /// <para>Exports the list of baseline check results. This operation is deprecated.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Exports the list of baseline check results. This operation is deprecated. Use <a href="~~ExportRecord~~">ExportRecord</a> instead.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ExportWarningRequest
@@ -72581,8 +72586,13 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports baseline check results.</para>
+        /// <para>Exports the list of baseline check results. This operation is deprecated.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Exports the list of baseline check results. This operation is deprecated. Use <a href="~~ExportRecord~~">ExportRecord</a> instead.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ExportWarningRequest
@@ -72689,8 +72699,13 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports baseline check results.</para>
+        /// <para>Exports the list of baseline check results. This operation is deprecated.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Exports the list of baseline check results. This operation is deprecated. Use <a href="~~ExportRecord~~">ExportRecord</a> instead.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ExportWarningRequest
@@ -72713,8 +72728,13 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports baseline check results.</para>
+        /// <para>Exports the list of baseline check results. This operation is deprecated.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Exports the list of baseline check results. This operation is deprecated. Use <a href="~~ExportRecord~~">ExportRecord</a> instead.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ExportWarningRequest
@@ -76809,7 +76829,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether the current user is qualified for the trial use of Security Center.</para>
+        /// <para>Queries whether you have trial permissions for Security Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -76855,7 +76875,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether the current user is qualified for the trial use of Security Center.</para>
+        /// <para>Queries whether you have trial permissions for Security Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -76901,7 +76921,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether the current user is qualified for the trial use of Security Center.</para>
+        /// <para>Queries whether you have trial permissions for Security Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -76919,7 +76939,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether the current user is qualified for the trial use of Security Center.</para>
+        /// <para>Queries whether you have trial permissions for Security Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
