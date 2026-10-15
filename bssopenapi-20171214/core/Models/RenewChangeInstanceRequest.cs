@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class RenewChangeInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>Ensures the idempotence of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>JASIOFKVNVIXXXXXX</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,11 +34,15 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>Module list</para>
+        /// </summary>
         [NameInMap("Parameter")]
         [Validation(Required=false)]
         public List<RenewChangeInstanceRequestParameter> Parameter { get; set; }
         public class RenewChangeInstanceRequestParameter : TeaModel {
             /// <summary>
+            /// <para>The code configuration for the Nth module property. The value of N can be an integer from 1 to 100. If you have multiple module properties, create a separate parameter for each by setting n to 1, 2, 3, and so on.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -46,6 +53,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string Code { get; set; }
 
             /// <summary>
+            /// <para>The value configuration for the nth module property. The value of n ranges from 1 to 100.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -58,6 +66,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
+        /// <para>The product code. To obtain it, call <b>QueryProductList</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,6 +77,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ProductCode { get; set; }
 
         /// <summary>
+        /// <para>Product type</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rds</para>
         /// </summary>
@@ -76,6 +87,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ProductType { get; set; }
 
         /// <summary>
+        /// <para>The subscription renewal duration, in months. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>1-9</para>
+        /// </description></item>
+        /// <item><description><para>12</para>
+        /// </description></item>
+        /// <item><description><para>24</para>
+        /// </description></item>
+        /// <item><description><para>36</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

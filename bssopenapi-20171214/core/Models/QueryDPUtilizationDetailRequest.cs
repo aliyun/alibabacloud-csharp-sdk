@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryDPUtilizationDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The code of the resource, such as ecsRi and scu_bag. If this parameter is specified, the ProdCode parameter does not take effect for the request.</para>
+        /// <para>The commodity code, such as ecsRi and scu_bag. If this parameter is specified, the ProdCode parameter does not take effect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecsRi</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string CommodityCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the deducted instance. If this parameter is not specified, the details of all instances are returned.</para>
+        /// <para>The ID of the deducted instance. If this parameter is left empty, the details of all instances are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss-123123</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string DeductedInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the YYYY-MM-DD HH:mm:ss format.</para>
+        /// <para>The end time. Format: YYYY-MM-dd HH:mm:ss.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,10 +41,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query the resource plan usage of linked accounts. Valid values:</para>
+        /// <para>Specifies whether to include the resource plan usage of member accounts in finance trusteeship. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: queries the resource plan usage of linked accounts.</description></item>
-        /// <item><description>false: does not query the resource plan usage of linked accounts.</description></item>
+        /// <item><description>true: Included.</description></item>
+        /// <item><description>false: Not included.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public bool? IncludeShare { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance to query. If this parameter is not specified, the details of all used instances are returned.</para>
+        /// <para>The instance ID for the filtered query. If this parameter is left empty, the details of all used instances are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss-123123</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The instance type of the instance.</para>
+        /// <para>The instance type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Instancetyp</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string InstanceSpec { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to retrieve the next page of results. For the first query, set the value to null. For subsequent queries, set the value to the token that is obtained from the NextToken parameter.</para>
+        /// <para>The token that specifies the start position of the query. Set this parameter to null for the first query. For subsequent queries, use the NextToken value returned in the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CAESF***zNTAw</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string LastToken { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 20. Maximum value: 300.</para>
+        /// <para>The number of entries to return per query. Default value: 20. Maximum value: 300.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>The code of the service. Example: ecs.</para>
+        /// <para>The product code, such as ecs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ProdCode { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the YYYY-MM-DD HH:mm:ss format.</para>
+        /// <para>The start time. Format: YYYY-MM-dd HH:mm:ss.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QuerySavingsPlansDiscountRequest : TeaModel {
         /// <summary>
-        /// <para>The code of the service.</para>
+        /// <para>The commodity code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string CommodityCode { get; set; }
 
         /// <summary>
-        /// <para>The cycle based on which queries are performed.</para>
+        /// <para>The query cycle.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,12 +32,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Cycle { get; set; }
 
         /// <summary>
-        /// <para>The identifier of the language.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>EN: English.</description></item>
-        /// <item><description>ZH: Chinese.</description></item>
-        /// </list>
+        /// <para>The language of the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ZH</para>
@@ -47,7 +42,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Locale { get; set; }
 
         /// <summary>
-        /// <para>The code of the pricing module.</para>
+        /// <para>The code of the module.</para>
         /// 
         /// <b>Example:</b>
         /// <para>instance_type</para>
@@ -57,7 +52,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ModuleCode { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -67,7 +62,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -77,7 +72,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The payment mode. Valid values: total: all upfront. half: half upfront. zero: no upfront.</para>
+        /// <para>The payment mode. Valid values: total: all upfront. half: partial upfront. zero: no upfront.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -88,7 +83,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string PayMode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -98,7 +93,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource.</para>
+        /// <para>The resource type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.g6</para>
@@ -107,12 +102,18 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string Spec { get; set; }
 
+        /// <summary>
+        /// <para>The commodity code of the savings plan.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>savingplan_common_public_cn</para>
+        /// </summary>
         [NameInMap("SpnCommodityCode")]
         [Validation(Required=false)]
         public string SpnCommodityCode { get; set; }
 
         /// <summary>
-        /// <para>The type of the savings plan. Valid values: ecs: Elastic Compute Service (ECS) compute type. universal: general-purpose type.</para>
+        /// <para>The type of the savings plan. Valid values: ecs: compute-optimized. universal: universal.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

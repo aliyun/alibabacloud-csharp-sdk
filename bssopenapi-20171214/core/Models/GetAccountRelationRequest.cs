@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class GetAccountRelationRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the financial relationship. Value returned by calling the AddAccountRelation operation.</para>
+        /// <para>The account linking ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? RelationId { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the request. The ID is used to mark a request and troubleshoot a problem.</para>
+        /// <para>The unique request ID, used to identify the request and facilitate troubleshooting.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>requestId</para>
+        /// <para>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -20,14 +20,18 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The data message body.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryFinancialAccountInfoResponseBodyData Data { get; set; }
         public class QueryFinancialAccountInfoResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The type of the financial account. A value of MASTER indicates that the account is a management account. A value of MEMBER indicates that the account is a member.</para>
+            /// <para>The enterprise financial account type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>MASTER: primary account.</description></item>
+            /// <item><description>MEMBER: member accounts.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>MEMBER</para>
@@ -37,7 +41,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string AccountType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the account is a financial account. A value of true indicates that the account is a financial account. A value of false indicates that the account is not a financial account.</para>
+            /// <para>Indicates whether the account is an enterprise financial account. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: The account is an enterprise financial account.</description></item>
+            /// <item><description>false: The account is not an enterprise financial account.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -47,7 +55,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public bool? IsFinancialAccount { get; set; }
 
             /// <summary>
-            /// <para>The ID of the group to which the member belongs.</para>
+            /// <para>The ID of the group to which the member accounts belong.</para>
             /// 
             /// <b>Example:</b>
             /// <para>124</para>
@@ -57,17 +65,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public long? MemberGroupId { get; set; }
 
             /// <summary>
-            /// <para>The name of the group to which the member belongs.</para>
+            /// <para>The name of the group to which the member accounts belong.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Test group</para>
+            /// <para>TestGroup</para>
             /// </summary>
             [NameInMap("MemberGroupName")]
             [Validation(Required=false)]
             public string MemberGroupName { get; set; }
 
             /// <summary>
-            /// <para>The display name of the member.</para>
+            /// <para>The display name of the member accounts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test</para>
@@ -77,7 +85,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string MemberNickName { get; set; }
 
             /// <summary>
-            /// <para>The username of the account.</para>
+            /// <para>The logon name of the account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>killortop3</para>
@@ -89,7 +97,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The message description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful!</para>
@@ -99,7 +107,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>97426BC2-792E-41F5-92B8-73C710DA7779</para>

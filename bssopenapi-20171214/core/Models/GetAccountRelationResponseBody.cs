@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class GetAccountRelationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned.</para>
+        /// <para>The request status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -27,17 +27,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public GetAccountRelationResponseBodyData Data { get; set; }
         public class GetAccountRelationResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that is used as a member.</para>
+            /// <para>The UID of the child account.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ID of the Alibaba Cloud account that is used as a member</para>
+            /// <para>Alibaba Cloud account UID of the child account</para>
             /// </summary>
             [NameInMap("ChildUserId")]
             [Validation(Required=false)]
             public long? ChildUserId { get; set; }
 
             /// <summary>
-            /// <para>The time when the financial relationship between the management account and the member was terminated.</para>
+            /// <para>The end time of the account linking, in the YYYY-MM-DD format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-01</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the financial relationship between the management account and the member was modified.</para>
+            /// <para>The update time of the account linking.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-01</para>
@@ -57,27 +57,27 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The ID of the financial relationship.</para>
+            /// <para>The account linking ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ID of the financial relationship</para>
+            /// <para>Account linking ID</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that is used as the management account.</para>
+            /// <para>The UID of the parent account.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ID of the Alibaba Cloud account that is used as the management account</para>
+            /// <para>Alibaba Cloud UID of the main account</para>
             /// </summary>
             [NameInMap("ParentUserId")]
             [Validation(Required=false)]
             public long? ParentUserId { get; set; }
 
             /// <summary>
-            /// <para>The time when the financial relationship between the management account and the member was established.</para>
+            /// <para>The start time of the account linking, in the YYYY-MM-DD format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-11-01</para>
@@ -87,26 +87,26 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the financial relationship between the management account and the member.</para>
+            /// <para>The account linking status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>RELATED [Association established]</description></item>
-            /// <item><description>CONFIRMING [To be confirmed by the other party]</description></item>
-            /// <item><description>REJECTED [Refused by the other party]</description></item>
-            /// <item><description>CONNECTION_CANCELED [Financial sub-account cancel request]</description></item>
-            /// <item><description>CONNECTION_MASTER_CANCEL [Financial master account cancel invitation]</description></item>
-            /// <item><description>CHANGE_CONFIRMING [Relationship change to be confirmed]</description></item>
-            /// <item><description>INITIAL [Initial new relationship status]</description></item>
+            /// <item><description>RELATED: linked.</description></item>
+            /// <item><description>CONFIRMING: pending confirmation from the other party.</description></item>
+            /// <item><description>REJECTED: rejected by the other party.</description></item>
+            /// <item><description>CONNECTION_CANCELED: application canceled by the child account.</description></item>
+            /// <item><description>CONNECTION_MASTER_CANCEL: invitation canceled by the main account.</description></item>
+            /// <item><description>CHANGE_CONFIRMING: pending confirmation for relationship change.</description></item>
+            /// <item><description>INITIAL: initial status of a newly created linking.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>RELATED</para>
+            /// <para>RELATED: linked</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The type of the financial relationship.</para>
+            /// <para>The account linking type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enterprise_group</para>
@@ -118,17 +118,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Message returned</para>
+        /// <para>Message</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RequestId</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class UnsubscribeBillToOSSRequest : TeaModel {
         /// <summary>
-        /// <para>The type of accounts whose bills are to be pushed if multi-tier accounts are involved. Valid values:</para>
+        /// <para>For multi-level accounts, specifies the type of bill to push. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>MA: management account.</description></item>
-        /// <item><description>ACP1: member account of a virtual network operator (VNO).</description></item>
+        /// <item><description>MA: Pushes the bill of the main account.</description></item>
+        /// <item><description>ACP1: Pushes the bill of the Partner Platform V2.0 sub-account.</description></item>
         /// </list>
         /// <para>Default value: MA.</para>
         /// 
@@ -25,14 +25,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string MultAccountRelSubscribe { get; set; }
 
         /// <summary>
-        /// <para>The type of the bill to which you want to subscribe. Valid values:</para>
+        /// <para>The subscription type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>BillingItemDetailForBillingPeriod: bills of billable items</description></item>
-        /// <item><description>InstanceDetailForBillingPeriod: bills of instances</description></item>
-        /// <item><description>BillingItemDetailMonthly: billable item-based bills summarized by billing cycle</description></item>
-        /// <item><description>InstanceDetailMonthly: instance-based bills summarized by billing cycle</description></item>
-        /// <item><description>SplitItemDetailDaily: split bills summarized by day</description></item>
-        /// <item><description>MonthBill: monthly bills in the PDF format You can subscribe to the monthly PDF bills only of the master account.</description></item>
+        /// <item><description>BillingItemDetailForBillingPeriod: billable item-level consumption details.</description></item>
+        /// <item><description>InstanceDetailForBillingPeriod: instance-level consumption details.</description></item>
+        /// <item><description>BillingItemDetailMonthly: billable item-level consumption summary by billing cycle.</description></item>
+        /// <item><description>InstanceDetailMonthly: instance-level consumption summary by billing cycle.</description></item>
+        /// <item><description>SplitItemDetailDaily: split bill summarized by day.</description></item>
+        /// <item><description>MonthBill: monthly bill in PDF format. Only MA subscriptions are supported.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

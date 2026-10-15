@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class RenewResourcePackageRequest : TeaModel {
         /// <summary>
-        /// <para>The renewal period of the resource plan.</para>
+        /// <para>The renewal duration of the resource package.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? Duration { get; set; }
 
         /// <summary>
-        /// <para>The time when the resource plan takes effect. If you leave this parameter empty, the resource plan immediately takes effect by default.</para>
-        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The time when the resource package takes effect. If you leave this parameter empty, the resource package takes effect immediately.</para>
+        /// <para>Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time zone must be UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-02-02T12:00:00Z</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string EffectiveDate { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource plan.</para>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,10 +47,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The unit of the validity period for the resource plan. Valid values:</para>
+        /// <para>The unit of the renewal duration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Month</description></item>
-        /// <item><description>Year</description></item>
+        /// <item><description><para>Month</para>
+        /// </description></item>
+        /// <item><description><para>Year</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: Month.</para>
         /// <para>This parameter is required.</para>

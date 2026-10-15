@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class CreateAgAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The attribute of the account. To view the attribute of the account, use the account to log on to the Alibaba Cloud Management Console, move the pointer over the profile picture in the upper-right corner, and then click <b>Security Settings</b>.</para>
+        /// <para>The properties of the new account. In the console, click Account Properties in the top menu bar to go to the <b>Security Settings</b> page and view the properties.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,48 +20,48 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string AccountAttr { get; set; }
 
         /// <summary>
-        /// <para>The name of the city.</para>
+        /// <para>The name of the city in English.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Beijing</para>
+        /// <para>北京</para>
         /// </summary>
         [NameInMap("CityName")]
         [Validation(Required=false)]
         public string CityName { get; set; }
 
         /// <summary>
-        /// <para>The name of the enterprise.</para>
+        /// <para>The name of the enterprise. This is the enterprise name that corresponds to the Unified Social Credit Code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Dongguan ChuangNeng Electric Appliance Co., Ltd</para>
+        /// <para>阿里云测试有限公司</para>
         /// </summary>
         [NameInMap("EnterpriseName")]
         [Validation(Required=false)]
         public string EnterpriseName { get; set; }
 
         /// <summary>
-        /// <para>The first name.</para>
+        /// <para>The first name of the user under the level 1 category.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Zhicheng</para>
+        /// <para>志成</para>
         /// </summary>
         [NameInMap("FirstName")]
         [Validation(Required=false)]
         public string FirstName { get; set; }
 
         /// <summary>
-        /// <para>The last name.</para>
-        /// <para>The last name can be up to 64 characters in length.</para>
+        /// <para>The last name of the user.</para>
+        /// <para>Maximum length: 64 characters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Wu</para>
+        /// <para>吴</para>
         /// </summary>
         [NameInMap("LastName")]
         [Validation(Required=false)]
         public string LastName { get; set; }
 
         /// <summary>
-        /// <para>The email address used to log on to the account.</para>
+        /// <para>The logon email address of the member account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string NationCode { get; set; }
 
         /// <summary>
-        /// <para>The zip code.</para>
+        /// <para>The postal code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>350000</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// <para>The name of the province. This parameter is optional.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Beijing</para>
+        /// <para>北京</para>
         /// </summary>
         [NameInMap("ProvinceName")]
         [Validation(Required=false)]

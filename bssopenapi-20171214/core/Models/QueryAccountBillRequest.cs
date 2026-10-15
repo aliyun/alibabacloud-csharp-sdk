@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryAccountBillRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the member. If you specify a value for this parameter, you can query the bills of the specified member. If you leave this parameter empty, the bills of the current account are queried by default.</para>
+        /// <para>The ID of the account that owns and actually uses the resource.</para>
         /// 
         /// <b>Example:</b>
         /// <para>122</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? BillOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The billing cycle. Format: YYYY-MM.</para>
+        /// <para>The billing date. Format: YYYY-MM.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string BillingCycle { get; set; }
 
         /// <summary>
-        /// <para>The billing date. This parameter is required only if the Granularity parameter is set to DAILY. Format: YYYY-MM-DD.</para>
+        /// <para>The billing date. This parameter is required only when you set Granularity to DAILY. Format: YYYY-MM-DD.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-06-01</para>
@@ -41,25 +41,31 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string BillingDate { get; set; }
 
         /// <summary>
-        /// <para>The granularity at which bills are queried. Valid values:</para>
+        /// <para>The granularity for querying the bill. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>MONTHLY: queries bills by month. The data queried is consistent with the data that is displayed for the specified billing cycle on the Billing Details tab of the Bill Details page in User Center.</description></item>
-        /// <item><description>DAILY: queries bills by day. The data queried is consistent with the data that is displayed for the specified day on the Billing Details tab of the Bill Details page in User Center.</description></item>
+        /// <item><description><para>MONTHLY: Queries bills on a monthly basis. Corresponds to the monthly bills in <b>Expenses &amp; Costs&#xA;</b>&gt; <b>Bills&#xA;</b>&gt; <b>Bill Details&#xA;</b>.</para>
+        /// </description></item>
+        /// <item><description><para>DAILY: Queries bills on a daily basis. Corresponds to the daily bills in <b>Expenses &amp; Costs&#xA;</b>&gt; <b>Bills&#xA;</b>&gt; <b>Bill Details&#xA;</b>.</para>
+        /// </description></item>
         /// </list>
-        /// <para>You must set the BillingDate parameter before you can set the Granularity parameter to DAILY.</para>
+        /// <remarks>
+        /// <para>If you set <c>Granularity</c> to <c>DAILY</c>, you must also specify the <c>BillingDate</c> parameter.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>Monthly</para>
+        /// <para>MONTHLY</para>
         /// </summary>
         [NameInMap("Granularity")]
         [Validation(Required=false)]
         public string Granularity { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to summarize bills based on service codes. Valid values:</para>
+        /// <para>Specifies whether to aggregate the results by product code.</para>
         /// <list type="bullet">
-        /// <item><description>true: summarizes bills based on service codes.</description></item>
-        /// <item><description>false: does not summarize bills based on service codes.</description></item>
+        /// <item><description><para>true: Results are aggregated by product code.</para>
+        /// </description></item>
+        /// <item><description><para>false: Results are not aggregated by product code.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -75,7 +81,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? OwnerID { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: 1.</para>
+        /// <para>The page number. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -85,7 +91,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 20. Maximum value: 300.</para>
+        /// <para>The number of entries per page. The default value is 20. The maximum value is 300.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -95,7 +101,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The code of the service.</para>
+        /// <para>The product code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rds</para>

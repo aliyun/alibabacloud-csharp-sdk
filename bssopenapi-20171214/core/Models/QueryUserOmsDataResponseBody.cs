@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryUserOmsDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryUserOmsDataResponseBodyData Data { get; set; }
         public class QueryUserOmsDataResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the host.</para>
+            /// <para>The host ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string HostId { get; set; }
 
             /// <summary>
-            /// <para>Indicates that the returned usage data starts from the next page. If no value is returned for this parameter or this parameter is not returned, no data can be queried.</para>
+            /// <para>The NextToken field for the start of the next page. If this field is empty or not present, it indicates that no more data is available.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NextToken</para>
@@ -46,6 +46,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             [Validation(Required=false)]
             public string Marker { get; set; }
 
+            /// <summary>
+            /// <para>The OMS data list.</para>
+            /// </summary>
             [NameInMap("OmsData")]
             [Validation(Required=false)]
             public List<Dictionary<string, object>> OmsData { get; set; }
@@ -53,7 +56,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful！</para>
@@ -63,7 +66,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6000EE23-274B-4E07-A697-FF2E999520A4</para>

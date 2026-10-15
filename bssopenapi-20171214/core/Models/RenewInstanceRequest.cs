@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The code of the service to which the instance belongs.</para>
+        /// <para>The product code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The type of the service.</para>
+        /// <para>The product type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rds</para>
@@ -56,12 +56,21 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The duration of the subscription renewal. Unit: months. Valid values:</para>
+        /// <para>The renewal period for the subscription instance. Unit: months. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1 to 9</description></item>
-        /// <item><description>12</description></item>
-        /// <item><description>24</description></item>
-        /// <item><description>36</description></item>
+        /// <item><description>1 to 9.</description></item>
+        /// <item><description><ol start="12">
+        /// <item><description></description></item>
+        /// </ol>
+        /// </description></item>
+        /// <item><description><ol start="24">
+        /// <item><description></description></item>
+        /// </ol>
+        /// </description></item>
+        /// <item><description><ol start="36">
+        /// <item><description></description></item>
+        /// </ol>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

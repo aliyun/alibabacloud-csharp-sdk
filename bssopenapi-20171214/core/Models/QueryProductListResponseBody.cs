@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryProductListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The information about all Alibaba Cloud services.</para>
+        /// <para>The Alibaba Cloud product information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryProductListResponseBodyData Data { get; set; }
         public class QueryProductListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public int? PageNum { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned on each page.</para>
+            /// <para>The number of records displayed per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -46,9 +46,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
-            /// <summary>
-            /// <para>The service definitions.</para>
-            /// </summary>
             [NameInMap("ProductList")]
             [Validation(Required=false)]
             public QueryProductListResponseBodyDataProductList ProductList { get; set; }
@@ -57,46 +54,18 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 [Validation(Required=false)]
                 public List<QueryProductListResponseBodyDataProductListProduct> Product { get; set; }
                 public class QueryProductListResponseBodyDataProductListProduct : TeaModel {
-                    /// <summary>
-                    /// <para>The code of the service.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>cdn</para>
-                    /// </summary>
                     [NameInMap("ProductCode")]
                     [Validation(Required=false)]
                     public string ProductCode { get; set; }
 
-                    /// <summary>
-                    /// <para>The name of the service.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>CDN (Pay-as-you-go)</para>
-                    /// </summary>
                     [NameInMap("ProductName")]
                     [Validation(Required=false)]
                     public string ProductName { get; set; }
 
-                    /// <summary>
-                    /// <para>The type of the service.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>CDN</para>
-                    /// </summary>
                     [NameInMap("ProductType")]
                     [Validation(Required=false)]
                     public string ProductType { get; set; }
 
-                    /// <summary>
-                    /// <para>The billing method. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>Subscription: subscription</description></item>
-                    /// <item><description>PayAsYouGo: pay-as-you-go</description></item>
-                    /// </list>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>PayAsYouGo</para>
-                    /// </summary>
                     [NameInMap("SubscriptionType")]
                     [Validation(Required=false)]
                     public string SubscriptionType { get; set; }
@@ -106,7 +75,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             }
 
             /// <summary>
-            /// <para>The total number of services.</para>
+            /// <para>The total number of product records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>449</para>
@@ -118,7 +87,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This API is not applicable for caller.</para>
@@ -128,7 +97,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>94858229-2758-4663-A7D0-99490D541F15</para>

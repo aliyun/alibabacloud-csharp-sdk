@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QuerySkuPriceListRequest : TeaModel {
         /// <summary>
-        /// <para>The code of the service.</para>
+        /// <para>The commodity code. You can call the <b>QueryCommodityList</b> operation to query the commodity code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,12 +20,18 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string CommodityCode { get; set; }
 
+        /// <summary>
+        /// <para>The language. Default value: zh (Chinese).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>en</para>
+        /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to retrieve the next page. You do not need to set this parameter if you query coverage details for the first time. The response returns a token that you can use to query coverage details of the next page. If a null value is returned for the NextPageToken parameter, no more coverage details can be queried.</para>
+        /// <para>The pagination token. Leave this parameter empty for the first page query. The query result returns a token for the next page. An empty token in the result indicates that all data has been retrieved. You can obtain the next page token from the <b>NextPageToken</b> field in the query result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>080112060a0422020800180022490a470342000000315333303332363436363336333433393636333136333338333733373333333133373336363336323634363336363337333836333636333636313336363433363332</para>
@@ -35,7 +41,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string NextPageToken { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to be returned on each page. Maximum value: 50.</para>
+        /// <para>The number of entries per page. Maximum value: 50.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +52,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The code of the pricing object.</para>
+        /// <para>The pricing entity code. You can call the <b>QueryPriceEntityList</b> operation to query the pricing entity code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +63,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string PriceEntityCode { get; set; }
 
         /// <summary>
-        /// <para>The conditions of the pricing factors.</para>
+        /// <para>The collection of pricing factor conditions. You can call the <b>QueryPriceEntityList</b> operation to query pricing factor codes and pricing factor values.</para>
         /// </summary>
         [NameInMap("PriceFactorConditionMap")]
         [Validation(Required=false)]

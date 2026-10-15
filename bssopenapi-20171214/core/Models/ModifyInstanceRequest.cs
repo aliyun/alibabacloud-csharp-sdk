@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class ModifyInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>JAKSJFHFAKJSF</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance for which you want to modify the configurations.</para>
+        /// <para>The instance ID of the instance whose configuration you want to modify.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-akjhkdsjhfskjfhd</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of configuration modifications. Valid values:</para>
+        /// <para>The type of configuration change. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Upgrade: upgrades the configurations of the instance.</description></item>
-        /// <item><description>Downgrade: downgrades the configurations of the instance.</description></item>
+        /// <item><description>Upgrade: upgrade.</description></item>
+        /// <item><description>Downgrade: downgrade.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -49,16 +49,16 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The details about the parameters.</para>
+        /// <para>The list of parameters.</para>
         /// </summary>
         [NameInMap("Parameter")]
         [Validation(Required=false)]
         public List<ModifyInstanceRequestParameter> Parameter { get; set; }
         public class ModifyInstanceRequestParameter : TeaModel {
             /// <summary>
-            /// <para>The code of the parameter n. Valid values of n: 1 to 100. Multiple parameters are concatenated in the order of n.</para>
+            /// <para>The code of the nth module property. Valid values of n: 1 to 100. If multiple module properties exist, concatenate the parameters in the format of n=1,2,3…n.</para>
             /// <remarks>
-            /// <para> Only the parameters of the attributes that you want to modify for the instance must be configured. For example, if the instance has Attribute A and Attribute B and only Attribute A must be modified, configure only the parameter of Attribute A.</para>
+            /// <para>Specify only the module properties that need to be changed. For example, if only property A needs to be changed among properties A and B, pass only the information related to property A.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The value of the parameter n. Valid values of n: 1 to 100.</para>
+            /// <para>The value of the nth module property. Valid values of n: 1 to 100.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// <para>The code of the service to which the instance belongs.</para>
+        /// <para>The product code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The type of the service to which the instance belongs.</para>
+        /// <para>The product type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rds</para>
@@ -106,8 +106,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// <summary>
         /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Subscription: subscription</description></item>
-        /// <item><description>PayAsYouGo: pay-as-you-go</description></item>
+        /// <item><description>Subscription: subscription.</description></item>
+        /// <item><description>PayAsYouGo: pay-as-you-go.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

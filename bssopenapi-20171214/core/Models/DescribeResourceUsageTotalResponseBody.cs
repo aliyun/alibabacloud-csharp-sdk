@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class DescribeResourceUsageTotalResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The queried data.</para>
+        /// <para>The data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeResourceUsageTotalResponseBodyData Data { get; set; }
         public class DescribeResourceUsageTotalResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The usage of resource plans in the specified period.</para>
+            /// <para>The usage by period.</para>
             /// </summary>
             [NameInMap("PeriodCoverage")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string Period { get; set; }
 
                 /// <summary>
-                /// <para>The usage of resource plans.</para>
+                /// <para>The usage percentage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.1</para>
@@ -56,14 +56,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             }
 
             /// <summary>
-            /// <para>The total usage of resource plans.</para>
+            /// <para>The total usage.</para>
             /// </summary>
             [NameInMap("TotalUsage")]
             [Validation(Required=false)]
             public DescribeResourceUsageTotalResponseBodyDataTotalUsage TotalUsage { get; set; }
             public class DescribeResourceUsageTotalResponseBodyDataTotalUsage : TeaModel {
                 /// <summary>
-                /// <para>The total costs of pay-as-you-go instances.</para>
+                /// <para>The total cost of pay-as-you-go instances.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>200</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public float? PostpaidCost { get; set; }
 
                 /// <summary>
-                /// <para>The total potential savings.</para>
+                /// <para>The potential total savings.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public float? PotentialSavedCost { get; set; }
 
                 /// <summary>
-                /// <para>The fee of purchased resource plans.</para>
+                /// <para>The total resource purchase cost.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public float? SavedCost { get; set; }
 
                 /// <summary>
-                /// <para>The total usage of resource plans.</para>
+                /// <para>The total usage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// <para>The returned message. If the request was successful, a success message is returned. If the request failed, an error message is returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful!</para>

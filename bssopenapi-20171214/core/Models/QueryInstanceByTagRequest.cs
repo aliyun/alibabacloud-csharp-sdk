@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryInstanceByTagRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of resources.</para>
+        /// <para>A list of resource IDs.</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Specify the savings plan instance as the type of the resource.</para>
+        /// <para>The type of the resource. Set this parameter to <c>instance</c> to query savings plan instances.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>A list of tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

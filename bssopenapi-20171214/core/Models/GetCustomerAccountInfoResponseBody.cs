@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class GetCustomerAccountInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,14 +20,18 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetCustomerAccountInfoResponseBodyData Data { get; set; }
         public class GetCustomerAccountInfoResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The type of the account. A value of 1 indicates an enterprise account. A value of 0 indicates an individual account.</para>
+            /// <para>The account type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>1: enterprise account.</description></item>
+            /// <item><description>0: individual account.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,11 +41,18 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string AccountType { get; set; }
 
             /// <summary>
-            /// <para>The business status of the customer. Valid values:</para>
-            /// <para>Freeze: The business is frozen.</para>
-            /// <para>Thaw: The business is unfrozen.</para>
-            /// <para>Trusteeship: The business is hosted.</para>
-            /// <para>TrusteeshipCancel: The business is not hosted.</para>
+            /// <para>The business type of the end user.</para>
+            /// <para>Valid values:</para>
+            /// <ol>
+            /// <item><description><para>Freeze: The user is in a frozen state.</para>
+            /// </description></item>
+            /// <item><description><para>Thaw: The user is in a thawed state.</para>
+            /// </description></item>
+            /// <item><description><para>Trusteeship: The user is in a trusteeship state.</para>
+            /// </description></item>
+            /// <item><description><para>TrusteeshipCancel: The user is in a non-trusteeship state.</para>
+            /// </description></item>
+            /// </ol>
             /// 
             /// <b>Example:</b>
             /// <para>Freeze</para>
@@ -51,9 +62,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string CreditLimitStatus { get; set; }
 
             /// <summary>
-            /// <para>The hosting status of the credit information and instances of the customer. If the credit information and instances of the customer are managed on Alibaba Cloud, Alibaba Cloud suspends a customer service upon overdue payment. Valid values:</para>
-            /// <para>FREEZE: The business of the customer is frozen.</para>
-            /// <para>TRUSTEESHIP: The business of the customer is hosted.</para>
+            /// <para>The hosting status. This parameter is provided by the credit control system and indicates whether the instance is managed by Alibaba Cloud. If the instance is managed, Alibaba Cloud handles resource suspension/resumption due to overdue payments.</para>
+            /// <para>Valid values:</para>
+            /// <ol>
+            /// <item><description><para>FREEZE: The user\&quot;s business is frozen.</para>
+            /// </description></item>
+            /// <item><description><para>TRUSTEESHIP: The user\&quot;s business is under trusteeship.</para>
+            /// </description></item>
+            /// </ol>
             /// 
             /// <b>Example:</b>
             /// <para>FREEZE</para>
@@ -63,7 +79,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string HostingStatus { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the account passes the real-name verification.</para>
+            /// <para>The real-name verification status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -73,7 +89,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public bool? IsCertified { get; set; }
 
             /// <summary>
-            /// <para>The email address of the customer.</para>
+            /// <para>The email address of the end customer.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:xxxx@aliyun.com">xxxx@aliyun.com</a></para>
@@ -83,7 +99,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string LoginEmail { get; set; }
 
             /// <summary>
-            /// <para>The ID of the management account.</para>
+            /// <para>The MPK of the parent account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1051360339779133</para>
@@ -95,7 +111,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful!</para>
@@ -105,7 +121,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>94017C56-1725-5DD9-AB41-B3BAE791D600</para>
@@ -115,7 +131,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. A value of true indicates that the call is successful. A value of false indicates that the call failed.</para>
+        /// <para>Indicates whether the call was successful. A value of true indicates that the call was completed. A value of false indicates that an error occurred.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

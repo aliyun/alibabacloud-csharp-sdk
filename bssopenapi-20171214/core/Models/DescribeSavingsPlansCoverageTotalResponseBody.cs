@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The return data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeSavingsPlansCoverageTotalResponseBodyData Data { get; set; }
         public class DescribeSavingsPlansCoverageTotalResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The coverage in different periods.</para>
+            /// <para>The coverage rate by period.</para>
             /// </summary>
             [NameInMap("PeriodCoverage")]
             [Validation(Required=false)]
             public List<DescribeSavingsPlansCoverageTotalResponseBodyDataPeriodCoverage> PeriodCoverage { get; set; }
             public class DescribeSavingsPlansCoverageTotalResponseBodyDataPeriodCoverage : TeaModel {
                 /// <summary>
-                /// <para>The coverage.</para>
+                /// <para>The coverage rate.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -44,8 +44,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public float? Percentage { get; set; }
 
                 /// <summary>
-                /// <para>The period.</para>
-                /// <para>The value is in the format of yyyyMMddHH.</para>
+                /// <para>The period. Format: yyyyMMddHH.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021071500</para>
@@ -57,14 +56,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             }
 
             /// <summary>
-            /// <para>The coverage summary.</para>
+            /// <para>The total coverage rate.</para>
             /// </summary>
             [NameInMap("TotalCoverage")]
             [Validation(Required=false)]
             public DescribeSavingsPlansCoverageTotalResponseBodyDataTotalCoverage TotalCoverage { get; set; }
             public class DescribeSavingsPlansCoverageTotalResponseBodyDataTotalCoverage : TeaModel {
                 /// <summary>
-                /// <para>The total coverage.</para>
+                /// <para>The total coverage rate.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -74,7 +73,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public float? CoveragePercentage { get; set; }
 
                 /// <summary>
-                /// <para>The total deducted amount.</para>
+                /// <para>The total offset amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -88,7 +87,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful!</para>
@@ -98,7 +97,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</para>
@@ -108,7 +107,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

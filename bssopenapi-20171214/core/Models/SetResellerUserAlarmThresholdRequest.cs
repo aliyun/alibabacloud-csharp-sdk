@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class SetResellerUserAlarmThresholdRequest : TeaModel {
         /// <summary>
+        /// <para>The list of user alert rules for this alert type. If this parameter is not specified, no alert threshold is set.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[{\&quot;denominator\&quot;:100,\&quot;numerator\&quot;:30,\&quot;thresholdType\&quot;:1}]</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string AlarmThresholds { get; set; }
 
         /// <summary>
+        /// <para>The alert type. Valid value: quota_low_balance, which indicates a low-balance alert for quotas.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

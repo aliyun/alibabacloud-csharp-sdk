@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QuerySplitItemBillRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the member. If you specify a value for this parameter, you can query the split bills of the specified member. If you leave this parameter empty, the split bills of the current account are queried by default.</para>
+        /// <para>The ID of the account that owns the resource. The resource owner is the account that actually uses the resource.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? BillOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The billing cycle, in the YYYY-MM format.</para>
+        /// <para>The billing cycle. Format: YYYY-MM.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 20. Maximum value: 300.</para>
+        /// <para>The number of entries per page. Default value: 20. Maximum value: 300.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The code of the service.</para>
+        /// <para>The product code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rds</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The type of the service.</para>
+        /// <para>The product type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rds</para>
@@ -75,7 +75,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The billing method. Valid values: Subscription: subscription PayAsYouGo: pay-as-you-go This parameter must be used together with the ProductCode parameter.</para>
+        /// <para>The subscription type. Valid values:
+        /// Subscription: subscription.
+        /// PayAsYouGo: pay-as-you-go.
+        /// Note: This parameter must be used with the ProductCode parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PayAsYouGo</para>

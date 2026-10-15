@@ -27,21 +27,24 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public DescribeResourceCoverageDetailResponseBodyData Data { get; set; }
         public class DescribeResourceCoverageDetailResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The data entries.</para>
+            /// <para>The data items.</para>
             /// </summary>
             [NameInMap("Items")]
             [Validation(Required=false)]
             public List<DescribeResourceCoverageDetailResponseBodyDataItems> Items { get; set; }
             public class DescribeResourceCoverageDetailResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>The unit that is used to measure the resources deducted from deduction plans.</para>
+                /// <para>The deduction unit.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Compute power × hour</para>
                 /// </summary>
                 [NameInMap("CapacityUnit")]
                 [Validation(Required=false)]
                 public string CapacityUnit { get; set; }
 
                 /// <summary>
-                /// <para>The code of the service.</para>
+                /// <para>The code of the product detail.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ecs</para>
@@ -51,14 +54,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string CommodityCode { get; set; }
 
                 /// <summary>
-                /// <para>The name and billing method of the service.</para>
+                /// <para>The product detail.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ECS - Pay-as-you-go</para>
                 /// </summary>
                 [NameInMap("CommodityName")]
                 [Validation(Required=false)]
                 public string CommodityName { get; set; }
 
                 /// <summary>
-                /// <para>The coverage rate of a deduction plan.</para>
+                /// <para>The coverage percentage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -68,7 +74,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public float? CoveragePercentage { get; set; }
 
                 /// <summary>
-                /// <para>The currency in which deduction plans were priced.</para>
+                /// <para>The currency.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CNY</para>
@@ -78,7 +84,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string Currency { get; set; }
 
                 /// <summary>
-                /// <para>The amount of the resources deducted from a deduction plan.</para>
+                /// <para>The deducted quantity.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -88,7 +94,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public float? DeductQuantity { get; set; }
 
                 /// <summary>
-                /// <para>The end of the time range in which the coverage details were queried.</para>
+                /// <para>The end time. Format: YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-04-01 01:00:00</para>
@@ -98,7 +104,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of a pay-as-you-go instance.</para>
+                /// <para>The pay-as-you-go instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>i-bp1d9x623987rlj0dx4xx</para>
@@ -108,7 +114,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The specifications of a deduction plan.</para>
+                /// <para>The instance type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ecs.t5-lc2m1.nano</para>
@@ -118,7 +124,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string InstanceSpec { get; set; }
 
                 /// <summary>
-                /// <para>The amount of the bill.</para>
+                /// <para>The bill amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -128,7 +134,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public float? PaymentAmount { get; set; }
 
                 /// <summary>
-                /// <para>The code of the service.</para>
+                /// <para>The product code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ecs</para>
@@ -138,7 +144,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string ProductCode { get; set; }
 
                 /// <summary>
-                /// <para>The name of the service.</para>
+                /// <para>The product name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ECS</para>
                 /// </summary>
                 [NameInMap("ProductName")]
                 [Validation(Required=false)]
@@ -146,13 +155,16 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
                 /// <summary>
                 /// <para>The region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>China (Hangzhou)</para>
                 /// </summary>
                 [NameInMap("Region")]
                 [Validation(Required=false)]
                 public string Region { get; set; }
 
                 /// <summary>
-                /// <para>The code of the region.</para>
+                /// <para>The region ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-dg-a01</para>
@@ -162,7 +174,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string RegionNo { get; set; }
 
                 /// <summary>
-                /// <para>The beginning of the time range in which the coverage details were queried.</para>
+                /// <para>The start time. Format: YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-04-01 00:00:00</para>
@@ -172,7 +184,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// <para>The total amount of resources consumed.</para>
+                /// <para>The total usage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -182,7 +194,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public float? TotalQuantity { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the account.</para>
+                /// <para>The account ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123745698925000</para>
@@ -192,7 +204,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string UserId { get; set; }
 
                 /// <summary>
-                /// <para>The username of the account.</para>
+                /// <para>The account name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="mailto:test13@test.aliyun.com">test13@test.aliyun.com</a></para>
@@ -202,7 +214,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string UserName { get; set; }
 
                 /// <summary>
-                /// <para>The code of the zone.</para>
+                /// <para>The zone ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-i</para>
@@ -213,6 +225,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
                 /// <summary>
                 /// <para>The zone.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Hangzhou Zone I</para>
                 /// </summary>
                 [NameInMap("ZoneName")]
                 [Validation(Required=false)]
@@ -231,7 +246,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>The token of the next page.</para>
+            /// <para>The token for the next page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eyJwYWdlTnVtIjoyLCJwYWdlU2l6ZSI6MTB9</para>
@@ -241,7 +256,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000</para>
@@ -253,7 +268,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful!</para>
@@ -263,7 +278,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</para>
@@ -273,7 +288,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

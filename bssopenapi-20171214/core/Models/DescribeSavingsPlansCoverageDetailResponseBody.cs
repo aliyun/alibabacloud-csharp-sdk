@@ -13,28 +13,28 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Success</para>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The return data.</para>
+        /// <para>The returned query data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeSavingsPlansCoverageDetailResponseBodyData Data { get; set; }
         public class DescribeSavingsPlansCoverageDetailResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The data entries.</para>
+            /// <para>The data items.</para>
             /// </summary>
             [NameInMap("Items")]
             [Validation(Required=false)]
             public List<DescribeSavingsPlansCoverageDetailResponseBodyDataItems> Items { get; set; }
             public class DescribeSavingsPlansCoverageDetailResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>The coverage.</para>
+                /// <para>The coverage percentage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.9</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 /// <para>The deducted amount.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>100</para>
+                /// <para>5.5</para>
                 /// </summary>
                 [NameInMap("DeductAmount")]
                 [Validation(Required=false)]
@@ -67,33 +67,35 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 /// <para>The end time.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>2021-05-05 15:00:00</para>
+                /// <para>2023-05-01 00:00:00</para>
                 /// </summary>
                 [NameInMap("EndPeriod")]
                 [Validation(Required=false)]
                 public string EndPeriod { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the instance.</para>
+                /// <para>The instance ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>spn-a1fhs54c243hP22</para>
+                /// <para>i-bp1d9x623987rlj0dx4xx</para>
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The specifications.</para>
+                /// <para>The instance type.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>7th_generation_X86_group</para>
+                /// <para>ecs.sn1ne.3xlarge</para>
                 /// </summary>
                 [NameInMap("InstanceSpec")]
                 [Validation(Required=false)]
                 public string InstanceSpec { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the owner of the deducted commodity.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1906589291020438</para>
                 /// </summary>
@@ -113,6 +115,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
                 /// <summary>
                 /// <para>The region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>China (Hangzhou)</para>
                 /// </summary>
                 [NameInMap("Region")]
                 [Validation(Required=false)]
@@ -122,7 +127,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 /// <para>The start time.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>2021-05-05 14:00:00</para>
+                /// <para>2023-04-01 00:00:00</para>
                 /// </summary>
                 [NameInMap("StartPeriod")]
                 [Validation(Required=false)]
@@ -132,27 +137,27 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 /// <para>The total expenditure.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>100</para>
+                /// <para>6.11</para>
                 /// </summary>
                 [NameInMap("TotalAmount")]
                 [Validation(Required=false)]
                 public float? TotalAmount { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the account.</para>
+                /// <para>The user ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>2831685687844416</para>
+                /// <para>1906589291020438</para>
                 /// </summary>
                 [NameInMap("UserId")]
                 [Validation(Required=false)]
                 public long? UserId { get; set; }
 
                 /// <summary>
-                /// <para>The username of the account.</para>
+                /// <para>The username.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para><a href="mailto:tester1@test.aliyun.com">tester1@test.aliyun.com</a></para>
+                /// <para><a href="mailto:xxx@test.aliyunid.com">xxx@test.aliyunid.com</a></para>
                 /// </summary>
                 [NameInMap("UserName")]
                 [Validation(Required=false)]
@@ -161,7 +166,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             }
 
             /// <summary>
-            /// <para>The token of the next page.</para>
+            /// <para>The token for the next page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eyJwYWdlTnVtIjoyLCJwYWdlU2l6ZSI6MTB9</para>
@@ -174,7 +179,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>400</para>
+            /// <para>100</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -183,7 +188,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The message returned for the API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful!</para>
@@ -193,7 +198,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</para>
@@ -203,7 +208,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful.</para>
+        /// <para>Indicates whether the API call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

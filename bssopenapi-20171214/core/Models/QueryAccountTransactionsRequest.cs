@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryAccountTransactionsRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the creation time range to query. By default, the transactions in the last month are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. Example: 2018-01-01T00:00:00Z.</para>
+        /// <para>The end time of the creation time range. If not specified, the default value is the current time. Example: 2018-01-01T00:00:00Z.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-03-06T01:55:00Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string CreateTimeEnd { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the creation time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. Example: 2018-01-01T00:00:00Z.</para>
+        /// <para>The start time of the creation time range. If not specified, the default value is one month before the current time. Example: 2018-01-01T00:00:00Z.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-03-05T01:46:09Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string CreateTimeStart { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value is 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value is 20.</para>
+        /// <para>The number of entries per page. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the order or bill.</para>
+        /// <para>The order or bill number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20200302</para>
@@ -60,18 +60,18 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RecordID { get; set; }
 
         /// <summary>
-        /// <para>The transaction channel. If you specify one of the following transaction channels for this parameter, the results for the specified transaction channel are returned. If the transaction channel that you specify does not belong to the following transaction channels, no result is returned. If you leave this parameter empty, the results for all the following transaction channels are returned by default. Valid values:</para>
+        /// <para>The transaction channel. If you specify a transaction channel, the query returns results of the corresponding type. If no results exist, an empty result is returned. If you do not specify this parameter, all types are returned by default. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>AccountBalance</description></item>
-        /// <item><description>BankTransfer</description></item>
-        /// <item><description>Alipay</description></item>
-        /// <item><description>AntCreditPay</description></item>
-        /// <item><description>OfflineRemittance</description></item>
-        /// <item><description>RegularBankCreditRefund</description></item>
-        /// <item><description>CreditCard</description></item>
-        /// <item><description>MyBankCredit</description></item>
-        /// <item><description>HuaxiaBankCInstallment</description></item>
-        /// <item><description>ApplePay</description></item>
+        /// <item><description>AccountBalance: Account balance.</description></item>
+        /// <item><description>BankTransfer: Bank transfer.</description></item>
+        /// <item><description>Alipay: Alipay.</description></item>
+        /// <item><description>AntCreditPay: Ant Credit Pay.</description></item>
+        /// <item><description>OfflineRemittance: Offline remittance.</description></item>
+        /// <item><description>RegularBankCreditRefund: Credit-based payment refund.</description></item>
+        /// <item><description>CreditCard: Credit card.</description></item>
+        /// <item><description>MyBankCredit: MYbank Credit.</description></item>
+        /// <item><description>HuaxiaBankCInstallment: Huaxia Bank installment.</description></item>
+        /// <item><description>ApplePay: Apple Pay.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string TransactionChannel { get; set; }
 
         /// <summary>
-        /// <para>The serial number of the transaction channel.</para>
+        /// <para>The payment reference No.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12342134</para>
@@ -92,10 +92,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string TransactionChannelSN { get; set; }
 
         /// <summary>
-        /// <para>The type of the transaction flow. If you specify one of the following types for this parameter, the results for the specified type are returned. If the type that you specify does not belong to the following types, no result is returned. If you leave this parameter empty, the results for the following two types are returned by default. Valid values:</para>
+        /// <para>The income and expense type. If you specify an income and expense type, the query returns results of the corresponding type. If no results exist, an empty result is returned. If you do not specify this parameter, all types are returned by default. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Income</description></item>
-        /// <item><description>Expense</description></item>
+        /// <item><description>Income: Income.</description></item>
+        /// <item><description>Expense: Expense.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string TransactionFlow { get; set; }
 
         /// <summary>
-        /// <para>The number of the transaction.</para>
+        /// <para>The transaction number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>133314076</para>
@@ -116,14 +116,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string TransactionNumber { get; set; }
 
         /// <summary>
-        /// <para>The type of the transaction. If you specify one of the following transaction types for this parameter, the results for the specified transaction type are returned. If the transaction type that you specify does not belong to the following types, no result is returned. If you leave this parameter empty, the results for all the following transaction types are returned by default. Valid values:</para>
+        /// <para>The transaction type. If you specify a transaction type, the query returns results of the corresponding type. If no results exist, an empty result is returned. If you do not specify this parameter, all types are returned by default. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Payment</description></item>
-        /// <item><description>Withdraw</description></item>
-        /// <item><description>Refund</description></item>
-        /// <item><description>Consumption</description></item>
-        /// <item><description>Transfer</description></item>
-        /// <item><description>Adjust</description></item>
+        /// <item><description>Payment: Top-up.</description></item>
+        /// <item><description>Withdraw: Withdrawal.</description></item>
+        /// <item><description>Refund: Refund.</description></item>
+        /// <item><description>Consumption: Consumption.</description></item>
+        /// <item><description>Transfer: Transfer.</description></item>
+        /// <item><description>Adjust: Adjustment.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

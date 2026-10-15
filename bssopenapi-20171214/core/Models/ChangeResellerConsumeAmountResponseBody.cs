@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class ChangeResellerConsumeAmountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code returned if the call failed. For more information, see the &quot;Error codes&quot; section of the topic.</para>
+        /// <para>The error code returned when the call fails. For more information, see Error codes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The consumption quota for the quota ledger after adjustment.</para>
+        /// <para>The consumption quota of the corresponding quota ledger after the update.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300.00</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The additional information about the call result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D6E068C3-25BC-455A-85FE-45F0B22ECB1F</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. A value of true indicates that the call is successful. A value of false indicates that the call failed.</para>
+        /// <para>Indicates whether the call was successful. A value of true indicates that the call was successful. A value of false indicates that an error occurred.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class DescribeResourceCoverageTotalRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the account for which you want to query total coverage data. If you do not set this parameter, the data of the current Alibaba Cloud account and its RAM users is queried. To query the data of a RAM user, specify the ID of the RAM user.</para>
+        /// <para>The ID of the resource ownership account. The resource ownership account is the account that actually uses the resource.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123745698925000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? BillOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The end is excluded from the time range. If you do not set this parameter, the end time is the current time. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</para>
+        /// <para>The end of the query time range. Format: yyyy-MM-dd HH:mm:ss. The query excludes this time. If this parameter is left empty, the current time is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-02 00:00:00</para>
@@ -30,7 +30,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string EndPeriod { get; set; }
 
         /// <summary>
-        /// <para>The time granularity at which total coverage data is queried. Valid values: MONTH, DAY, and HOUR.</para>
+        /// <para>The time granularity. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>MONTH: month</description></item>
+        /// <item><description>DAY: day</description></item>
+        /// <item><description>HOUR: hour</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +46,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string PeriodType { get; set; }
 
         /// <summary>
-        /// <para>The type of deduction plans whose total coverage data is queried. Valid values: RI and SCU.</para>
+        /// <para>The resource type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>RI: reserved instance</description></item>
+        /// <item><description>SCU: storage capacity unit</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +61,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The beginning is included in the time range. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</para>
+        /// <para>The start of the query time range. Format: yyyy-MM-dd HH:mm:ss. The query includes this time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryResellerAvailableQuotaResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code returned if the call fails. See the &quot;Error codes&quot; section of this topic.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The available quota balance of the user.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>300</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Data { get; set; }
 
         /// <summary>
+        /// <para>Additional information about the result.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Successful!</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the call was successful. A value of <c>true</c> indicates that the call was successful. A value of <c>false</c> indicates that the call failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

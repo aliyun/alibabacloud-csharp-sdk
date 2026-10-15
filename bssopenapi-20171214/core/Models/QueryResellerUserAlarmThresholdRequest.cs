@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryResellerUserAlarmThresholdRequest : TeaModel {
         /// <summary>
+        /// <para>The type of alert. This parameter is required. Set the value to quota_low_balance, which indicates a low quota alert.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>quota_low_balance</para>
         /// </summary>

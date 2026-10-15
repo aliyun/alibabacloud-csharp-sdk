@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryPermissionListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public QueryPermissionListResponseBodyData Data { get; set; }
         public class QueryPermissionListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the relationship expired. If no value is returned, the relationship is still valid.</para>
+            /// <para>The time when the relationship expires. If this parameter is empty, the relationship has not expired.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-03-06T15:12Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the management account.</para>
+            /// <para>The ID of the Alibaba Cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1990699401005016</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public long? MasterId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the member.</para>
+            /// <para>The ID of the member account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1851253838840762</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public List<QueryPermissionListResponseBodyDataPermissionList> PermissionList { get; set; }
             public class QueryPermissionListResponseBodyDataPermissionList : TeaModel {
                 /// <summary>
-                /// <para>The time when the permission expired. If no value is returned, the permission is still valid. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC. For example, 2016-05-23T12:00:00Z indicates that the permission expired at 20:00:00 on May 23, 2016 (UTC+8).</para>
+                /// <para>The time when the permission expires. If this parameter is empty, the permission is still valid. The time is in UTC and follows the ISO 8601 standard. The format is YYYY-MM-DDThh:mm:ssZ. For example, 2016-05-23T12:00:00Z is 20:00:00 on May 23, 2016 in UTC+8.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-03-05T15:12Z</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The code of the permission.</para>
+                /// <para>The permission code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>allow_synchronize_finance_identity</para>
@@ -84,17 +84,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string PermissionCode { get; set; }
 
                 /// <summary>
-                /// <para>The name of the permission.</para>
+                /// <para>The permission name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>The management account shares the credit control identity with the member.</para>
+                /// <para>主账号 子账号共享主账号信控身份</para>
                 /// </summary>
                 [NameInMap("PermissionName")]
                 [Validation(Required=false)]
                 public string PermissionName { get; set; }
 
                 /// <summary>
-                /// <para>The time when the permission took effect. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC. For example, 2016-05-23T12:00:00Z indicates that the permission took effect at 20:00:00 on May 23, 2016 (UTC+8).</para>
+                /// <para>The time when the permission takes effect. The time is in UTC and follows the ISO 8601 standard. The format is YYYY-MM-DDThh:mm:ssZ. For example, 2016-05-23T12:00:00Z is 20:00:00 on May 23, 2016 in UTC+8.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-03-02T15:12Z</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string RelationType { get; set; }
 
             /// <summary>
-            /// <para>The time when the relationship was established. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC. For example, 2016-05-23T12:00:00Z indicates that the relationship was established at 20:00:00 on May 23, 2016 (UTC+8).</para>
+            /// <para>The time when the relationship was established. The time is in UTC and follows the ISO 8601 standard. The format is YYYY-MM-DDThh:mm:ssZ. For example, 2016-05-23T12:00:00Z is 20:00:00 on May 23, 2016 in UTC+8.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-03-02T15:12Z</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string SetupTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the relationship took effect. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC. For example, 2016-05-23T12:00:00Z indicates that the relationship took effect at 20:00:00 on May 23, 2016 (UTC+8).</para>
+            /// <para>The time when the relationship takes effect. The time is in UTC and follows the ISO 8601 standard. The format is YYYY-MM-DDThh:mm:ssZ. For example, 2016-05-23T12:00:00Z is 20:00:00 on May 23, 2016 in UTC+8.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-03-02T15:12Z</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the relationship. For more information about valid values of this parameter, see the enumeration values of the RelationshipStatusEnum type in the following table.</para>
+            /// <para>The status of the relationship. The value is an enumeration member of RelationshipStatusEnum.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RELATED</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F6E29451-A3CD-4705-806D-0112D08F5C49</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

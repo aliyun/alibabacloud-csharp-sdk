@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class ModifyCostUnitRequest : TeaModel {
         /// <summary>
-        /// <para>The cost centers to be modified.</para>
+        /// <para>The list of financial units.</para>
         /// </summary>
         [NameInMap("UnitEntityList")]
         [Validation(Required=false)]
         public List<ModifyCostUnitRequestUnitEntityList> UnitEntityList { get; set; }
         public class ModifyCostUnitRequestUnitEntityList : TeaModel {
             /// <summary>
-            /// <para>The new name of the cost center.</para>
+            /// <para>The new name of the financial unit.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string NewUnitName { get; set; }
 
             /// <summary>
-            /// <para>The user ID of the cost center owner.</para>
+            /// <para>The user ID of the financial unit owner.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public long? OwnerUid { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cost center.</para>
+            /// <para>The ID of the financial unit.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

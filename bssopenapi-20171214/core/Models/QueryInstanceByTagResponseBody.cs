@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryInstanceByTagResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PARAM_ERROR</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>param is null</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The token that determines the start point of the query. The return value is the value of the NextToken response parameter that was returned last time the QueryInstanceByTag operation was called.</para>
+        /// <para>The token used to query the next page of results. This is the <c>NextToken</c> value returned from the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CAESEgoQCg4KCm</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The instances returned.</para>
+        /// <para>A list of instance information.</para>
         /// </summary>
         [NameInMap("TagResource")]
         [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The type of the resource. The returned resource type indicates a savings plan instance.</para>
+            /// <para>The type of the resource. <c>instance</c> indicates a savings plan instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>instance</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The tags.</para>
+            /// <para>A list of tags.</para>
             /// </summary>
             [NameInMap("Tag")]
             [Validation(Required=false)]

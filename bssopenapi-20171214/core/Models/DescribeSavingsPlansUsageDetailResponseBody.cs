@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The return data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeSavingsPlansUsageDetailResponseBodyData Data { get; set; }
         public class DescribeSavingsPlansUsageDetailResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The data entries.</para>
+            /// <para>The data items.</para>
             /// </summary>
             [NameInMap("Items")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string Currency { get; set; }
 
                 /// <summary>
-                /// <para>The used amount of the savings plan.</para>
+                /// <para>The amount spent from the savings plan, which is the used commitment.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3.94</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string EndPeriod { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the instance.</para>
+                /// <para>The instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>spn-a1fhs54c243hP22</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public float? PoolValue { get; set; }
 
                 /// <summary>
-                /// <para>The pay-as-you-go cost.</para>
+                /// <para>The standard pay-as-you-go cost.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4.2</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public float? PostpaidCost { get; set; }
 
                 /// <summary>
-                /// <para>The amount that is saved.</para>
+                /// <para>The net savings amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.08</para>
@@ -114,8 +114,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string StartPeriod { get; set; }
 
                 /// <summary>
-                /// <para>The status of the instance.</para>
-                /// <para>A value of -1 indicates that the payment is overdue. A value of 1 indicates that the instance is active.</para>
+                /// <para>The current status. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>-1: overdue payment.</description></item>
+                /// <item><description>1: active.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>-1</para>
@@ -125,14 +128,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The type of the savings plan. Valid values: universal and ECS compute.</para>
+                /// <para>The type of the savings plan, such as general-purpose or ECS compute.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>General-purpose</para>
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The usage.</para>
+                /// <para>The usage percentage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.9</para>
@@ -142,7 +148,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public float? UsagePercentage { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the account.</para>
+                /// <para>The account ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123745698925000</para>
@@ -152,7 +158,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public long? UserId { get; set; }
 
                 /// <summary>
-                /// <para>The username of the account.</para>
+                /// <para>The account name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="mailto:test13@test.aliyun.com">test13@test.aliyun.com</a></para>
@@ -164,7 +170,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             }
 
             /// <summary>
-            /// <para>The token of the next page.</para>
+            /// <para>The token for the next page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eyJwYWdlTnVtIjoyLCJwYWdlU2ldhsSI6MTB9</para>
@@ -174,7 +180,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries.</para>
+            /// <para>The total number of data records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -186,7 +192,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful!</para>
@@ -196,7 +202,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</para>
@@ -206,7 +212,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

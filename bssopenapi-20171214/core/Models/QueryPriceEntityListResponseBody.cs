@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryPriceEntityListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data that is returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryPriceEntityListResponseBodyData Data { get; set; }
         public class QueryPriceEntityListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The information about the billable items.</para>
+            /// <para>The list of pricing entities.</para>
             /// </summary>
             [NameInMap("PriceEntityInfoList")]
             [Validation(Required=false)]
             public List<QueryPriceEntityListResponseBodyDataPriceEntityInfoList> PriceEntityInfoList { get; set; }
             public class QueryPriceEntityListResponseBodyDataPriceEntityInfoList : TeaModel {
                 /// <summary>
-                /// <para>The code of the billable item.</para>
+                /// <para>The code of the pricing entity.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>instance_type</para>
@@ -44,24 +44,24 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string PriceEntityCode { get; set; }
 
                 /// <summary>
-                /// <para>The name of the billable item.</para>
+                /// <para>The name of the pricing entity.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Elastic Compute Service (ECS) instance</para>
+                /// <para>ECS Instance</para>
                 /// </summary>
                 [NameInMap("PriceEntityName")]
                 [Validation(Required=false)]
                 public string PriceEntityName { get; set; }
 
                 /// <summary>
-                /// <para>The factors of the billable item.</para>
+                /// <para>The list of pricing factors for the pricing entity.</para>
                 /// </summary>
                 [NameInMap("PriceFactorList")]
                 [Validation(Required=false)]
                 public List<QueryPriceEntityListResponseBodyDataPriceEntityInfoListPriceFactorList> PriceFactorList { get; set; }
                 public class QueryPriceEntityListResponseBodyDataPriceEntityInfoListPriceFactorList : TeaModel {
                     /// <summary>
-                    /// <para>The code of the factor.</para>
+                    /// <para>The code of the pricing factor.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vm_region_no</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                     public string PriceFactorCode { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the factor.</para>
+                    /// <para>The name of the pricing factor.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Region</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                     public string PriceFactorName { get; set; }
 
                     /// <summary>
-                    /// <para>The values of the factor.</para>
+                    /// <para>The list of pricing factor values.</para>
                     /// </summary>
                     [NameInMap("PriceFactorValueList")]
                     [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// <para>The message that is returned.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful！</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

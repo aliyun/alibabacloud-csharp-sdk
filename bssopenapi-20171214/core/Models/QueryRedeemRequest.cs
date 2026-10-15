@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryRedeemRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether the redemption coupon takes effect. Valid values:</para>
+        /// <para>Specifies whether the redemption ticket is effective. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: Effective.</description></item>
+        /// <item><description>false: Not effective.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public bool? EffectiveOrNot { get; set; }
 
         /// <summary>
-        /// <para>The end time when the redemption coupon expires. The value must be in the yyyy-MM-ddTHH:mm:ssZ format.</para>
+        /// <para>The end time of the expiration period. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2018-08-01T00:00:00Z</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ExpiryTimeEnd { get; set; }
 
         /// <summary>
-        /// <para>The start time when the redemption coupon expires. The value must be in the yyyy-MM-ddTHH:mm:ssZ format.</para>
+        /// <para>The start time of the expiration period. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2018-08-01T00:00:00Z</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ExpiryTimeStart { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page. The value cannot exceed 300.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

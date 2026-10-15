@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryCashCouponsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether the voucher takes effect. Valid values:</para>
+        /// <para>Specifies whether the voucher is valid. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The voucher takes effect.</description></item>
-        /// <item><description>false: The voucher does not take effect.</description></item>
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public bool? EffectiveOrNot { get; set; }
 
         /// <summary>
-        /// <para>The end time of the validity period of the voucher. Specify the parameter in the yyyy-MM-ddTHH:mm:ssZ format. Example: 2018-08-01T00:00:00Z.</para>
+        /// <para>The end of the expiration time range for the voucher. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2018-08-01T00:00:00Z</para>
@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ExpiryTimeEnd { get; set; }
 
         /// <summary>
-        /// <para>The start time of the validity period of the voucher. Specify the parameter in the yyyy-MM-ddTHH:mm:ssZ format. Example: 2018-08-01T00:00:00Z.</para>
+        /// <para>The start of the expiration time range for the voucher. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2018-08-01T00:00:00Z</para>
+        /// <para>2018-09-01T00:00:00Z</para>
         /// </summary>
         [NameInMap("ExpiryTimeStart")]
         [Validation(Required=false)]

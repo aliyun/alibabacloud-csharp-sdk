@@ -13,17 +13,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// <para>The billing cycle.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>202003</para>
+        /// <para>202502</para>
         /// </summary>
         [NameInMap("BillCycle")]
         [Validation(Required=false)]
         public string BillCycle { get; set; }
 
         /// <summary>
-        /// <para>The market types in invoices.</para>
-        /// <remarks>
-        /// <para> By default, this parameter is left empty. If this parameter is left empty, all market types are queried.</para>
-        /// </remarks>
+        /// <para>The list of invoicing entities to which the invoiceable objects belong.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ALIYUN</para>
@@ -33,7 +30,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public List<string> BizTypeList { get; set; }
 
         /// <summary>
-        /// <para>The maximum amount to be queried.</para>
+        /// <para>The maximum amount for the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -43,10 +40,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? EndAmount { get; set; }
 
         /// <summary>
-        /// <para>The latest time when an order is paid Specify the time in the yyyy-mm-dd hh:mm:ss format.</para>
+        /// <para>The end of the time range to query based on the successful payment time. The format is yyyy-mm-dd hh:mm:ss.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2020-02-02 15:00:00</para>
+        /// <para>2025-03-01 00:00:00</para>
         /// </summary>
         [NameInMap("EndBizTime")]
         [Validation(Required=false)]
@@ -56,14 +53,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// <para>The end of the time range to query.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2020-03-02 12:00:00</para>
+        /// <para>2025-03-01 00:00:00</para>
         /// </summary>
         [NameInMap("EndSearchTime")]
         [Validation(Required=false)]
         public string EndSearchTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the external order.</para>
+        /// <para>The order ID, bill ID, or contract ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2387432832696</para>
@@ -77,7 +74,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -87,7 +84,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page. Default value: 20. Maximum value: 300.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -97,11 +94,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The type of the sort. Valid values:</para>
+        /// <para>The sorting type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: Sort invoices by ID in descending order.</description></item>
-        /// <item><description>2: Sort invoices by invoice type in descending order, and then sort invoices of the same type by ID in descending order.</description></item>
-        /// <item><description>3: Sort invoices by invoice type in ascending order, and then sort invoices of the same type by ID in descending order.</description></item>
+        /// <item><description><para>1: sorts the results by ID in descending order.</para>
+        /// </description></item>
+        /// <item><description><para>2: sorts the results by type in descending order, and then by ID in descending order.</para>
+        /// </description></item>
+        /// <item><description><para>3: sorts the results by type in ascending order, and then by ID in descending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? SortType { get; set; }
 
         /// <summary>
-        /// <para>The minimum amount to be queried.</para>
+        /// <para>The minimum amount for the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -122,35 +122,39 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? StartAmount { get; set; }
 
         /// <summary>
-        /// <para>The earliest time when an order is paid. Specify the time in the yyyy-mm-dd hh:mm:ss format.</para>
+        /// <para>The beginning of the time range to query based on the successful payment time. The format is yyyy-mm-dd hh:mm:ss.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2020-02-02 12:00:00</para>
+        /// <para>2025-02-01 00:00:00</para>
         /// </summary>
         [NameInMap("StartBizTime")]
         [Validation(Required=false)]
         public string StartBizTime { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query.</para>
+        /// <para>The start of the time range to query.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2020-02-02 12:00:00</para>
+        /// <para>2025-02-01 00:00:00</para>
         /// </summary>
         [NameInMap("StartSearchTime")]
         [Validation(Required=false)]
         public string StartSearchTime { get; set; }
 
         /// <summary>
-        /// <para>The type of orders to be queried. Valid values:</para>
+        /// <para>The type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: the orders in which the invoiceable amount is negative.</description></item>
-        /// <item><description>2: the orders in which the invoiceable amount is positive.</description></item>
-        /// <item><description>3: the orders in which the invoiceable amount is not 0.</description></item>
-        /// <item><description>4: the orders in which the amount that has been invoiced is greater than 0.</description></item>
+        /// <item><description><para>1: queries objects with a negative invoiceable amount.</para>
+        /// </description></item>
+        /// <item><description><para>2: queries objects with a positive invoiceable amount.</para>
+        /// </description></item>
+        /// <item><description><para>3: queries all objects with a non-zero invoiceable amount.</para>
+        /// </description></item>
+        /// <item><description><para>4: queries objects with an invoiced amount greater than 0.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> By default, this parameter is left empty. If this parameter is left empty, all orders are queried.</para>
+        /// <para>If you leave this parameter empty, all objects are queried.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

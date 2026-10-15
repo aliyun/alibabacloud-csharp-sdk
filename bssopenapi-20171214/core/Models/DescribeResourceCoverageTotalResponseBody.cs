@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public DescribeResourceCoverageTotalResponseBodyData Data { get; set; }
         public class DescribeResourceCoverageTotalResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The information about the coverage rate of deduction plans within a period.</para>
+            /// <para>The coverage rate by time period.</para>
             /// </summary>
             [NameInMap("PeriodCoverage")]
             [Validation(Required=false)]
             public List<DescribeResourceCoverageTotalResponseBodyDataPeriodCoverage> PeriodCoverage { get; set; }
             public class DescribeResourceCoverageTotalResponseBodyDataPeriodCoverage : TeaModel {
                 /// <summary>
-                /// <para>The coverage rate of deduction plans within the specified period.</para>
+                /// <para>The coverage rate.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.1</para>
@@ -44,8 +44,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public float? CoveragePercentage { get; set; }
 
                 /// <summary>
-                /// <para>The period.</para>
-                /// <para>The value is in the format of yyyyMMddHH.</para>
+                /// <para>The time period. Format: yyyyMMddHH.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020110100</para>
@@ -57,21 +56,24 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             }
 
             /// <summary>
-            /// <para>The information about the total coverage data of deduction plans.</para>
+            /// <para>The total coverage rate.</para>
             /// </summary>
             [NameInMap("TotalCoverage")]
             [Validation(Required=false)]
             public DescribeResourceCoverageTotalResponseBodyDataTotalCoverage TotalCoverage { get; set; }
             public class DescribeResourceCoverageTotalResponseBodyDataTotalCoverage : TeaModel {
                 /// <summary>
-                /// <para>The unit that is used to measure the resources deducted from deduction plans.</para>
+                /// <para>The offset unit.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Computing power*hours</para>
                 /// </summary>
                 [NameInMap("CapacityUnit")]
                 [Validation(Required=false)]
                 public string CapacityUnit { get; set; }
 
                 /// <summary>
-                /// <para>The total coverage rate of deduction plans.</para>
+                /// <para>The total coverage rate.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -81,7 +83,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public float? CoveragePercentage { get; set; }
 
                 /// <summary>
-                /// <para>The total amount of the resources deducted from deduction plans.</para>
+                /// <para>The total offset amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -91,7 +93,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public float? DeductQuantity { get; set; }
 
                 /// <summary>
-                /// <para>The total amount of resources consumed.</para>
+                /// <para>The total usage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -105,7 +107,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful!</para>
@@ -115,7 +117,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</para>
@@ -125,7 +127,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

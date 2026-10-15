@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryCostUnitRequest : TeaModel {
         /// <summary>
-        /// <para>The user ID of the cost center owner.</para>
+        /// <para>The owner of the financial unit.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? OwnerUid { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. A maximum of 300 entries can be returned per page.</para>
+        /// <para>The number of entries per page. Maximum value: 300.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the parent cost center. A value of -1 indicates the root cost center.</para>
+        /// <para>The ID of the parent financial unit. A value of -1 indicates the root of the financial unit tree.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

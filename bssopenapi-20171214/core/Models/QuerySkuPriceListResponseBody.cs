@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QuerySkuPriceListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data that is returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QuerySkuPriceListResponseBodyData Data { get; set; }
         public class QuerySkuPriceListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The SKUs of the pricing object.</para>
+            /// <para>The pricing entity SKU information.</para>
             /// </summary>
             [NameInMap("SkuPricePage")]
             [Validation(Required=false)]
             public QuerySkuPriceListResponseBodyDataSkuPricePage SkuPricePage { get; set; }
             public class QuerySkuPriceListResponseBodyDataSkuPricePage : TeaModel {
                 /// <summary>
-                /// <para>The token that is used to query the next page.</para>
+                /// <para>The token for the next page.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>080112060a0422020800180022490a470342000000315333303332363436363336333433393636333136333338333733373333333133373336363336323634363336363337333836333636333636313336363433363332</para>
@@ -44,21 +44,21 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string NextPageToken { get; set; }
 
                 /// <summary>
-                /// <para>The SKUs.</para>
+                /// <para>The SKU list.</para>
                 /// </summary>
                 [NameInMap("SkuPriceList")]
                 [Validation(Required=false)]
                 public List<QuerySkuPriceListResponseBodyDataSkuPricePageSkuPriceList> SkuPriceList { get; set; }
                 public class QuerySkuPriceListResponseBodyDataSkuPricePageSkuPriceList : TeaModel {
                     /// <summary>
-                    /// <para>The prices of the SKUs.</para>
+                    /// <para>The SKU price list.</para>
                     /// </summary>
                     [NameInMap("CskuPriceList")]
                     [Validation(Required=false)]
                     public List<QuerySkuPriceListResponseBodyDataSkuPricePageSkuPriceListCskuPriceList> CskuPriceList { get; set; }
                     public class QuerySkuPriceListResponseBodyDataSkuPricePageSkuPriceListCskuPriceList : TeaModel {
                         /// <summary>
-                        /// <para>The unique code of the SKU price.</para>
+                        /// <para>The CSKU code, which is the unique price identifier.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>ac74dd7b52ae6389ddef099283fb8275</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                         public string PriceMode { get; set; }
 
                         /// <summary>
-                        /// <para>The pricing type.</para>
+                        /// <para>The price type.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>hourPrice</para>
@@ -108,24 +108,24 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                         public string PriceType { get; set; }
 
                         /// <summary>
-                        /// <para>The unit of the price.</para>
+                        /// <para>The price unit.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>USD (per unit)</para>
+                        /// <para>USD/unit</para>
                         /// </summary>
                         [NameInMap("PriceUnit")]
                         [Validation(Required=false)]
                         public string PriceUnit { get; set; }
 
                         /// <summary>
-                        /// <para>If the PriceMode parameter is set to STEP_ACCUMULATION or STEP_ARRIVE, the value of this field exists and specifies the range. If the PriceMode parameter is set to NORMAL_PRICE, the value of this field is null.</para>
+                        /// <para>This field has a value when PriceMode is STEP_ACCUMULATION or STEP_ARRIVE, specifying the range. When PriceMode is NORMAL_PRICE, this field is NULL.</para>
                         /// </summary>
                         [NameInMap("RangeList")]
                         [Validation(Required=false)]
                         public List<QuerySkuPriceListResponseBodyDataSkuPricePageSkuPriceListCskuPriceListRangeList> RangeList { get; set; }
                         public class QuerySkuPriceListResponseBodyDataSkuPricePageSkuPriceListCskuPriceListRangeList : TeaModel {
                             /// <summary>
-                            /// <para>The code of the pricing factor.</para>
+                            /// <para>The factor code.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>212fbd27866307fc79ecf06934a88b2c</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                             public string Min { get; set; }
 
                             /// <summary>
-                            /// <para>The closure type of the interval.</para>
+                            /// <para>The interval closure type.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>LORC</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                         /// <para>The usage unit.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>Count</para>
+                        /// <para>unit</para>
                         /// </summary>
                         [NameInMap("UsageUnit")]
                         [Validation(Required=false)]
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                     }
 
                     /// <summary>
-                    /// <para>The code of the SKU.</para>
+                    /// <para>sku code</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>017c15a31507bc6de22aa93777461adc</para>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                     public string SkuCode { get; set; }
 
                     /// <summary>
-                    /// <para>The values of the pricing factors.</para>
+                    /// <para>The collection of factor values. Different commodities have their own factors under pricing entities. For example, the instance_type pricing entity of the ECS commodity has factors such as <c>vm_region_no, iooptimized, vm_os_kind, instance_type</c>.</para>
                     /// </summary>
                     [NameInMap("SkuFactorMap")]
                     [Validation(Required=false)]
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// <para>The message that is returned.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful!</para>
@@ -222,7 +222,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>F5B803CF-94D8-43AF-ADB3-D819AAD30E27</para>
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

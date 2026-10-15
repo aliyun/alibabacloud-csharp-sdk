@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeInstanceBillResponseBodyData Data { get; set; }
         public class DescribeInstanceBillResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the account.</para>
+            /// <para>The account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>122</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string AccountID { get; set; }
 
             /// <summary>
-            /// <para>The name of the account.</para>
+            /// <para>The user account.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string AccountName { get; set; }
 
             /// <summary>
-            /// <para>The billing cycle in the YYYY-MM format.</para>
+            /// <para>The billing date. Format: YYYY-MM.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-03</para>
@@ -57,22 +57,22 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string BillingCycle { get; set; }
 
             /// <summary>
-            /// <para>The details of the bill.</para>
+            /// <para>The bill details.</para>
             /// </summary>
             [NameInMap("Items")]
             [Validation(Required=false)]
             public List<DescribeInstanceBillResponseBodyDataItems> Items { get; set; }
             public class DescribeInstanceBillResponseBodyDataItems : TeaModel {
-                /// <summary>
-                /// <para>The amount deducted with credit refund.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("AdjustAmount")]
                 [Validation(Required=false)]
                 public float? AdjustAmount { get; set; }
 
+                /// <summary>
+                /// <para>The amount after discount, including the payable amount after coupon deduction. Calculation rule: Amount after discount = List price - Discount amount.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("AfterDiscountAmount")]
                 [Validation(Required=false)]
                 public float? AfterDiscountAmount { get; set; }
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string BillAccountName { get; set; }
 
                 /// <summary>
-                /// <para>The billing date. This parameter is returned only if the Granularity parameter is set to DAILY. Format: YYYY-MM-DD.</para>
+                /// <para>The billing date. This parameter has a value only when Granularity is set to DAILY. Format: YYYY-MM-DD.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-03-20</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string BillingDate { get; set; }
 
                 /// <summary>
-                /// <para>The billable item. A value is returned only if the IsBillingItem parameter is set to true.</para>
+                /// <para>The billable item. This parameter has a value only when IsBillingItem is set to true.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Bandwidth</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string BillingItem { get; set; }
 
                 /// <summary>
-                /// <para>The code of the billable item.</para>
+                /// <para>The billable item code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>disk</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string BillingType { get; set; }
 
                 /// <summary>
-                /// <para>The type of business.</para>
+                /// <para>The business type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>trusteeship</para>
@@ -147,18 +147,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 [Validation(Required=false)]
                 public string BizType { get; set; }
 
-                /// <summary>
-                /// <para>The amount paid in cash. The amount deducted with credit refund is not included.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("CashAmount")]
                 [Validation(Required=false)]
                 public float? CashAmount { get; set; }
 
                 /// <summary>
-                /// <para>The code of the commodity. The code is the same as that in Cost Center.</para>
+                /// <para>The commodity code, which is the same as the product detail code in the User Center.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rds</para>
@@ -168,17 +162,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string CommodityCode { get; set; }
 
                 /// <summary>
-                /// <para>The cost center.</para>
+                /// <para>The cost unit.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Not allocated</para>
+                /// <para>Unallocated</para>
                 /// </summary>
                 [NameInMap("CostUnit")]
                 [Validation(Required=false)]
                 public string CostUnit { get; set; }
 
                 /// <summary>
-                /// <para>The type of currency. Valid values:</para>
+                /// <para>The currency. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>CNY</description></item>
                 /// <item><description>USD</description></item>
@@ -192,18 +186,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 [Validation(Required=false)]
                 public string Currency { get; set; }
 
-                /// <summary>
-                /// <para>The amount deducted with vouchers.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0.1</para>
-                /// </summary>
                 [NameInMap("DeductedByCashCoupons")]
                 [Validation(Required=false)]
                 public float? DeductedByCashCoupons { get; set; }
 
                 /// <summary>
-                /// <para>The amount deducted with coupons.</para>
+                /// <para>The coupon discount amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.1</para>
@@ -212,18 +200,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 [Validation(Required=false)]
                 public float? DeductedByCoupons { get; set; }
 
-                /// <summary>
-                /// <para>The amount deducted with prepaid cards.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0.1</para>
-                /// </summary>
                 [NameInMap("DeductedByPrepaidCard")]
                 [Validation(Required=false)]
                 public float? DeductedByPrepaidCard { get; set; }
 
                 /// <summary>
-                /// <para>The amount deducted with resource plans. This parameter is valid only when the isBillingItem parameter is set to true.</para>
+                /// <para>The amount deducted by resource plans. This parameter is valid only when isBillingItem is set to true.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.1</para>
@@ -233,17 +215,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string DeductedByResourcePackage { get; set; }
 
                 /// <summary>
-                /// <para>The configurations of the instance.</para>
+                /// <para>The detailed instance configuration.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>CPU:12</para>
+                /// <para>CPU：12</para>
                 /// </summary>
                 [NameInMap("InstanceConfig")]
                 [Validation(Required=false)]
                 public string InstanceConfig { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the instance.</para>
+                /// <para>The instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>i-dadada</para>
@@ -253,7 +235,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string InstanceID { get; set; }
 
                 /// <summary>
-                /// <para>The type of the instance.</para>
+                /// <para>The instance specifications.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ecs.sn1ne.3xlarge</para>
@@ -273,7 +255,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string InternetIP { get; set; }
 
                 /// <summary>
-                /// <para>The private IP address.</para>
+                /// <para>The internal IP address.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>192.xx.xx.xx</para>
@@ -293,12 +275,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public float? InvoiceDiscount { get; set; }
 
                 /// <summary>
-                /// <para>The type of the bill.</para>
+                /// <para>The bill type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>SubscriptionOrder: the subscription bill.</description></item>
-                /// <item><description>PayAsYouGoBill: the pay-as-you-go bill,</description></item>
-                /// <item><description>Refund: the refund.</description></item>
-                /// <item><description>Adjustment: the adjustment bill.</description></item>
+                /// <item><description>SubscriptionOrder: subscription order</description></item>
+                /// <item><description>PayAsYouGoBill: pay-as-you-go bill</description></item>
+                /// <item><description>Refund: refund</description></item>
+                /// <item><description>Adjustment: adjustment</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -309,7 +291,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string Item { get; set; }
 
                 /// <summary>
-                /// <para>The name of the project.</para>
+                /// <para>The item name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>iZ28bycvyb4Z</para>
@@ -319,7 +301,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string ItemName { get; set; }
 
                 /// <summary>
-                /// <para>The unit price of the service. This parameter is valid only when the isBillingItem parameter is set to true.</para>
+                /// <para>The unit price. This parameter is valid only when isBillingItem is set to true.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -329,7 +311,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string ListPrice { get; set; }
 
                 /// <summary>
-                /// <para>The unit of the unit price. This parameter is valid only when the isBillingItem parameter is set to true.</para>
+                /// <para>The unit of the unit price. This parameter is valid only when isBillingItem is set to true.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CNY</para>
@@ -339,7 +321,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string ListPriceUnit { get; set; }
 
                 /// <summary>
-                /// <para>The name of the instance.</para>
+                /// <para>The instance nickname.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -348,18 +330,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 [Validation(Required=false)]
                 public string NickName { get; set; }
 
-                /// <summary>
-                /// <para>The unsettled amount.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0.1</para>
-                /// </summary>
                 [NameInMap("OutstandingAmount")]
                 [Validation(Required=false)]
                 public float? OutstandingAmount { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the account that owns the resource. This parameter is returned in multi-account payment scenario.</para>
+                /// <para>The account ID of the resource owner in multi-account payment scenarios.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -368,18 +344,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 [Validation(Required=false)]
                 public string OwnerID { get; set; }
 
-                /// <summary>
-                /// <para>The amount paid in cash. The amount deducted with credit refund is not included.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0.1</para>
-                /// </summary>
                 [NameInMap("PaymentAmount")]
                 [Validation(Required=false)]
                 public float? PaymentAmount { get; set; }
 
                 /// <summary>
-                /// <para>The code of the service. The code is the same as that in Cost Center.</para>
+                /// <para>The product code, which is consistent with the product code in the bills of the User Center.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rds</para>
@@ -389,7 +359,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string PipCode { get; set; }
 
                 /// <summary>
-                /// <para>The pretax amount.</para>
+                /// <para>The payable amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.1</para>
@@ -399,7 +369,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public float? PretaxAmount { get; set; }
 
                 /// <summary>
-                /// <para>The pretax gross amount.</para>
+                /// <para>The original amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.1</para>
@@ -409,7 +379,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public float? PretaxGrossAmount { get; set; }
 
                 /// <summary>
-                /// <para>The code of the service.</para>
+                /// <para>The product code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rds</para>
@@ -419,7 +389,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string ProductCode { get; set; }
 
                 /// <summary>
-                /// <para>The details of the service.</para>
+                /// <para>The product detail.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ApsaraDB RDS</para>
@@ -429,7 +399,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string ProductDetail { get; set; }
 
                 /// <summary>
-                /// <para>The name of the service.</para>
+                /// <para>The product name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ApsaraDB RDS</para>
@@ -439,7 +409,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string ProductName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the service.</para>
+                /// <para>The product type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rds</para>
@@ -449,17 +419,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string ProductType { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the region.</para>
+                /// <para>The region.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>China (Hangzhou)</para>
+                /// <para>Hangzhou</para>
                 /// </summary>
                 [NameInMap("Region")]
                 [Validation(Required=false)]
                 public string Region { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the resource group.</para>
+                /// <para>The resource group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Default resource group</para>
@@ -482,17 +452,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 /// <para>The unit of the service duration.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Second</para>
+                /// <para>Seconds</para>
                 /// </summary>
                 [NameInMap("ServicePeriodUnit")]
                 [Validation(Required=false)]
                 public string ServicePeriodUnit { get; set; }
 
                 /// <summary>
-                /// <para>The billing method. Valid values:</para>
+                /// <para>The subscription type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Subscription: the subscription billing method.</description></item>
-                /// <item><description>PayAsYouGo: the pay-as-you-go billing method.</description></item>
+                /// <item><description>Subscription: subscription</description></item>
+                /// <item><description>PayAsYouGo: pay-as-you-go</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -503,7 +473,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string SubscriptionType { get; set; }
 
                 /// <summary>
-                /// <para>The tag of the resource.</para>
+                /// <para>The resource tag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>key:testKey value:testValue; key:testKey1 value:testValues1</para>
@@ -513,7 +483,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string Tag { get; set; }
 
                 /// <summary>
-                /// <para>The usage of the service. This parameter is valid only when the isBillingItem parameter is set to true. The usage is the total usage in all bills in the billing cycle, not the amount that you purchase. For example, if 1 GB of storage is used and bills are generated every hour, the usage is 1 GB per hour. In this case, the usage is 24 GB per day.</para>
+                /// <para>The usage.</para>
+                /// <remarks>
+                /// <para>This parameter is valid only when isBillingItem is set to true. The usage data is the sum of usage across all bills within the cycle, not the actual purchased amount. For example, if 1 GB of storage is used and billed hourly, the hourly usage is 1 GB, and the daily aggregated bill usage is 1 GB × 24 = 24 GB.</para>
+                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -523,7 +496,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string Usage { get; set; }
 
                 /// <summary>
-                /// <para>The unit of usage. This parameter is valid only when the isBillingItem parameter is set to true.</para>
+                /// <para>The usage unit. This parameter is valid only when isBillingItem is set to true.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>GB</para>
@@ -533,10 +506,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string UsageUnit { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the zone.</para>
+                /// <para>The zone.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Hangzhou Zone B</para>
+                /// <para>Hangzhou Zone 1</para>
                 /// </summary>
                 [NameInMap("Zone")]
                 [Validation(Required=false)]
@@ -545,7 +518,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             }
 
             /// <summary>
-            /// <para>The maximum number of entries returned.</para>
+            /// <para>The maximum number of records returned for the current request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -555,7 +528,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>The position where the query stopped. If this parameter is left empty, all the results are returned. If you perform another call, you must set the NextToken parameter to the value of this parameter.</para>
+            /// <para>The token that indicates the position from which the current call resumes reading. An empty value indicates that all data has been read. For the next call, set this value to the NextToken request parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CAESEgoQCg4KCm</para>
@@ -565,7 +538,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The total number of returned entries.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -577,7 +550,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful!</para>
@@ -587,7 +560,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</para>
@@ -597,7 +570,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

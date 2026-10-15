@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class InquiryPriceRefundInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             /// <para>The currency.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>CNY. CNY: Chinese Yuan. USD: United States dollar. JPY: Japanese Yen.</para>
+            /// <para>The currency of the refund amount: CNY: Chinese Yuan. USD: US Dollar. JPY: Japanese Yen</para>
             /// </summary>
             [NameInMap("Currency")]
             [Validation(Required=false)]
             public string Currency { get; set; }
 
             /// <summary>
-            /// <para>The site of the execution host.</para>
+            /// <para>The site where the execution host resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string HostId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-bp1etb69sqxgl4*******</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The refundable amount.</para>
+            /// <para>The refund amount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12.34</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The Tracing Analysis character string for the execute operation. You can provide this string to the platform for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UUID</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values: true and false.</para>
+        /// <para>Indicates whether the call is successful. A value of true indicates that the call is complete. A value of false indicates that an error occurred.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

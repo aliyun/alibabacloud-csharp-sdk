@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class ConvertChargeTypeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,12 +25,21 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration. Unit: months. This parameter is required if you switch the billing method to subscription. Valid values:</para>
+        /// <para>The subscription period in months. If you convert the billing method to subscription, specify the subscription period. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1 to 9</description></item>
-        /// <item><description>12</description></item>
-        /// <item><description>24</description></item>
-        /// <item><description>36</description></item>
+        /// <item><description>1 to 9.</description></item>
+        /// <item><description><ol start="12">
+        /// <item><description></description></item>
+        /// </ol>
+        /// </description></item>
+        /// <item><description><ol start="24">
+        /// <item><description></description></item>
+        /// </ol>
+        /// </description></item>
+        /// <item><description><ol start="36">
+        /// <item><description></description></item>
+        /// </ol>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,7 +50,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The code of the service to which the instance belongs.</para>
+        /// <para>The product code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +61,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The type of the service to which the instance belongs.</para>
+        /// <para>The product type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rds</para>
@@ -62,13 +71,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the instance. Valid values:</para>
+        /// <para>The current billing method of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Subscription: subscription</description></item>
-        /// <item><description>PayAsYouGo: pay-as-you-go</description></item>
+        /// <item><description>Subscription: subscription.</description></item>
+        /// <item><description>PayAsYouGo: pay-as-you-go.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> After the call is successful, the billing method of the instance is switched.</para>
+        /// <para>After a successful call, the resource is changed to the opposite billing method.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

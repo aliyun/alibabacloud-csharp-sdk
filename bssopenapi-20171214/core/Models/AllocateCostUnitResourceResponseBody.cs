@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class AllocateCostUnitResourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The message code. Example: success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public AllocateCostUnitResourceResponseBodyData Data { get; set; }
         public class AllocateCostUnitResourceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether resources are allocated to the specified cost center. Valid values:</para>
+            /// <para>Indicates whether the financial unit resource allocation is successful.</para>
             /// <list type="bullet">
-            /// <item><description>true: The resources are allocated to the specified cost center.</description></item>
-            /// <item><description>false: The resources fail to be allocated to the specified cost center.</description></item>
+            /// <item><description>true: The allocation succeeded.</description></item>
+            /// <item><description>false: The allocation failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public bool? IsSuccess { get; set; }
 
             /// <summary>
-            /// <para>The ID of the destination cost center.</para>
+            /// <para>The ID of the destination financial unit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32857346527</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public long? ToUnitId { get; set; }
 
             /// <summary>
-            /// <para>The user ID of the owner of the destination cost center.</para>
+            /// <para>The ID of the owner of the destination financial unit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>34857693874</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful！</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>845C629F-47A7-4F46-A470-ED5047C4C250</para>

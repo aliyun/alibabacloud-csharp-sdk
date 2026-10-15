@@ -10,21 +10,24 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class DescribeProductAmortizedCostByAmortizationPeriodRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID that is used to filter bills. You can specify multiple instance IDs to query bills of multiple instances. If you leave this parameter empty, the bills of all instances are queried by default. You can specify a maximum of 10 instance IDs.</para>
+        /// <para>The IDs of resource owners. The resource owner is the account that uses the resources.
+        /// You can specify a maximum of 10 IDs.</para>
         /// </summary>
         [NameInMap("BillOwnerIdList")]
         [Validation(Required=false)]
         public List<string> BillOwnerIdList { get; set; }
 
         /// <summary>
-        /// <para>The ID of the member that needs to settle the bill. The member ID is used to filter bills. If you specify a value for this parameter, you can query the bills of the specified member. If you leave this parameter empty, the bills of the current account and all members of the current account are queried by default. You can specify a maximum of 10 IDs.</para>
+        /// <para>The IDs of billable accounts. This parameter is used to filter bills by the RAM user who pays for the resources. If you specify this parameter, you can query the bills of the specified RAM user. If you leave this parameter empty, the bills of the current account and all its RAM users are queried.
+        /// You can specify a maximum of 10 IDs.</para>
         /// </summary>
         [NameInMap("BillUserIdList")]
         [Validation(Required=false)]
         public List<string> BillUserIdList { get; set; }
 
         /// <summary>
-        /// <para>The allocation month. Format: YYYY-MM.</para>
+        /// <para>The amortization month.
+        /// Format: YYYY-MM.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +38,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string BillingCycle { get; set; }
 
         /// <summary>
-        /// <para>The billing cycle that is used to filter bills. You can specify a maximum of 10 billing cycles.</para>
+        /// <para>The filter for billing cycle months.
+        /// You can specify a maximum of 10 elements.</para>
         /// </summary>
         [NameInMap("ConsumePeriodFilter")]
         [Validation(Required=false)]
@@ -62,7 +66,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The position from which the query starts. The parameter must be left empty or set to the value of the NextToken parameter returned from the last call. Otherwise, an error is returned. If this parameter is left empty, data is queried from the beginning.</para>
+        /// <para>The token that marks the position to start the query. If you leave this parameter empty, the query starts from the beginning. Set this parameter to the value of NextToken that is returned in the last response to query the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CAESEgoQCg4KCmdtdF9jcmVhdGUEARgBIkgKCQBwhGmPcAEAAAo7AzYAAAAxTDgwMDcxMjg3ZDJhNmM3ZDguTDgwMDAwMDAwMDAwMzE1MTIuTDgwMDcyZDMyZTJkYzg3N2U</para>
@@ -72,7 +76,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The code of the service. You can obtain the value of this parameter by calling the QueryProductList operation or the DescribeResourcePackageProduct operation.</para>
+        /// <para>The product code.
+        /// For more information about how to obtain this parameter, see QueryProductList and DescribeResourcePackageProduct.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rds</para>
@@ -82,7 +87,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The specific service resource.</para>
+        /// <para>The details of the product.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rds</para>
@@ -92,10 +97,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ProductDetail { get; set; }
 
         /// <summary>
-        /// <para>The billing method. Valid values:</para>
+        /// <para>The subscription type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Subscription: the subscription billing method</description></item>
-        /// <item><description>PayAsYouGo: the pay-as-you-go billing method</description></item>
+        /// <item><description><para>Subscription: subscription.</para>
+        /// </description></item>
+        /// <item><description><para>PayAsYouGo: pay-as-you-go.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

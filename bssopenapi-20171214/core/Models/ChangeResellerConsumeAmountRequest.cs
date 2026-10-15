@@ -10,7 +10,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class ChangeResellerConsumeAmountRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the consumption amount adjustment. Valid values: increase: The consumption amount increases because new consumption occurs. decrease: The consumption amount decreases because funds are added to the account. This parameter is required.</para>
+        /// <para>The adjustment direction of the consumption amount. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>increase: Increases the consumption amount.</description></item>
+        /// <item><description>decrease: Decreases the consumption amount for user top-ups.
+        /// This parameter is required.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +26,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string AdjustType { get; set; }
 
         /// <summary>
-        /// <para>The amount to be adjusted. Unit: CNY</para>
+        /// <para>The adjustment amount in CNY. The amount must be greater than 0.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +37,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Amount { get; set; }
 
         /// <summary>
-        /// <para>The type of the business.</para>
+        /// <para>The business type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +48,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string BusinessType { get; set; }
 
         /// <summary>
-        /// <para>The type of the currency.</para>
+        /// <para>The currency.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +59,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Currency { get; set; }
 
         /// <summary>
-        /// <para>The extended field of a message.</para>
+        /// <para>The extended message fields.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -64,7 +69,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ExtendMap { get; set; }
 
         /// <summary>
-        /// <para>The ID of the primary key for external business. The ID is used for idempotence verification.</para>
+        /// <para>The external business primary key ID used for idempotence verification.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,7 +87,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The source of the request. Specify the system name for the parameter.</para>
+        /// <para>The request source. Specify the system name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

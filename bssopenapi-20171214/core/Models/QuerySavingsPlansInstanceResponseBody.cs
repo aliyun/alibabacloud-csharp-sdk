@@ -20,25 +20,28 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The return data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QuerySavingsPlansInstanceResponseBodyData Data { get; set; }
         public class QuerySavingsPlansInstanceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The details about the instances.</para>
+            /// <para>The list of instance information.</para>
             /// </summary>
             [NameInMap("Items")]
             [Validation(Required=false)]
             public List<QuerySavingsPlansInstanceResponseBodyDataItems> Items { get; set; }
             public class QuerySavingsPlansInstanceResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>The allocation status. Valid values:</para>
+                /// <para>The allocation status.</para>
                 /// <list type="bullet">
-                /// <item><description>unallocated</description></item>
-                /// <item><description>allocated</description></item>
-                /// <item><description>beAllocated</description></item>
+                /// <item><description><para>unallocated: Not allocated.</para>
+                /// </description></item>
+                /// <item><description><para>allocated: Allocating.</para>
+                /// </description></item>
+                /// <item><description><para>beAllocated: Allocated to this account.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -49,6 +52,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string AllocationStatus { get; set; }
 
                 /// <summary>
+                /// <para>The commodity code.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>savingplan_common_public_cn</para>
                 /// </summary>
@@ -57,7 +62,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string CommodityCode { get; set; }
 
                 /// <summary>
-                /// <para>The currency. Valid values: CNY and USD.</para>
+                /// <para>The currency. Valid values: CNY: Chinese Yuan. USD: US Dollar.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CNY</para>
@@ -67,6 +72,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string Currency { get; set; }
 
                 /// <summary>
+                /// <para>For a savings plan with a monthly cycle, this is the commitment for the current cycle. Unit: CNY.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>100.0</para>
                 /// </summary>
@@ -75,6 +82,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string CurrentPoolValue { get; set; }
 
                 /// <summary>
+                /// <para>The purchased duration.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1:Year</para>
                 /// </summary>
@@ -83,6 +92,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string Cycle { get; set; }
 
                 /// <summary>
+                /// <para>The deduction cycle.
+                /// HOUR: hourly
+                /// DAY: daily
+                /// ONCE: one-time (the total amount decreases over time)</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>HOUR</para>
                 /// </summary>
@@ -91,7 +105,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string DeductCycleType { get; set; }
 
                 /// <summary>
-                /// <para>The time when the instance expires. The time is in the format of yyyy-MM-dd HH:mm:ss.</para>
+                /// <para>The expiration time of the instance. The time is in the yyyy-MM-dd HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-01-01 00:00:00</para>
@@ -101,6 +115,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string EndTime { get; set; }
 
                 /// <summary>
+                /// <para>The end timestamp.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1663135741039</para>
                 /// </summary>
@@ -109,7 +125,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public long? EndTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>The instance family information. For an instance of the Elastic Compute Service (ECS) compute type, the value indicates the ECS instance family or the ECS instance family package.</para>
+                /// <para>For a compute-optimized savings plan, this parameter indicates the corresponding instance family or instance family package.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ecs.g6</para>
@@ -129,6 +145,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
+                /// <para>The total deduction amount in the previous cycle. Unit: CNY.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>100.0</para>
                 /// </summary>
@@ -137,6 +155,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string LastBillTotalUsage { get; set; }
 
                 /// <summary>
+                /// <para>The utilization in the previous cycle.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0.8</para>
                 /// </summary>
@@ -145,11 +165,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string LastBillUtilization { get; set; }
 
                 /// <summary>
-                /// <para>The payment type. Valid values:</para>
+                /// <para>The payment type.</para>
                 /// <list type="bullet">
-                /// <item><description>total: All Upfront</description></item>
-                /// <item><description>half: Partial Upfront</description></item>
-                /// <item><description>zero: No Upfront</description></item>
+                /// <item><description><para>total: All Upfront</para>
+                /// </description></item>
+                /// <item><description><para>half: Partial Upfront</para>
+                /// </description></item>
+                /// <item><description><para>zero: No Upfront</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -160,7 +183,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string PayMode { get; set; }
 
                 /// <summary>
-                /// <para>The commitment.</para>
+                /// <para>The commitment. Unit: CNY.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.00</para>
@@ -170,7 +193,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string PoolValue { get; set; }
 
                 /// <summary>
-                /// <para>The prepaid amount.</para>
+                /// <para>The upfront payment. Unit: CNY.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8760.00</para>
@@ -190,6 +213,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string Region { get; set; }
 
                 /// <summary>
+                /// <para>For a flexible savings plan with a monthly or daily commitment, this is the remaining amount in the current cycle. Unit: CNY.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>100.0</para>
                 /// </summary>
@@ -198,10 +223,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string RestPoolValue { get; set; }
 
                 /// <summary>
-                /// <para>The type of the savings plan. Valid values:</para>
+                /// <para>The type of the savings plan.</para>
                 /// <list type="bullet">
-                /// <item><description>universal: general-purpose</description></item>
-                /// <item><description>ecs: ECS compute</description></item>
+                /// <item><description><para>unversal: general-purpose</para>
+                /// </description></item>
+                /// <item><description><para>ecs: compute-optimized</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -212,7 +239,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string SavingsType { get; set; }
 
                 /// <summary>
-                /// <para>The time when the instance takes effect. The time is in the format of yyyy-MM-dd HH:mm:ss.</para>
+                /// <para>The effective time of the instance. The time is in the yyyy-MM-dd HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-01-01 00:00:00</para>
@@ -222,6 +249,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
+                /// <para>The start timestamp.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1663135741039</para>
                 /// </summary>
@@ -230,11 +259,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public long? StartTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>The status of the instance. Valid values:</para>
+                /// <para>The current status.</para>
                 /// <list type="bullet">
-                /// <item><description>NORMAL: normal</description></item>
-                /// <item><description>LIMIT: stopped due to overdue payment</description></item>
-                /// <item><description>RELEASE: released</description></item>
+                /// <item><description><para>NORMAL: The instance is active.</para>
+                /// </description></item>
+                /// <item><description><para>LIMIT: The instance is suspended due to an overdue payment.</para>
+                /// </description></item>
+                /// <item><description><para>RELEASE: The instance is released.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -245,21 +277,27 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The details about the tags.</para>
+                /// <para>The list of tag information.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public List<QuerySavingsPlansInstanceResponseBodyDataItemsTags> Tags { get; set; }
                 public class QuerySavingsPlansInstanceResponseBodyDataItemsTags : TeaModel {
                     /// <summary>
-                    /// <para>The key of the tag.</para>
+                    /// <para>The tag key.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>标签1</para>
                     /// </summary>
                     [NameInMap("Key")]
                     [Validation(Required=false)]
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// <para>The value of the tag.</para>
+                    /// <para>The tag value.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>标签1</para>
                     /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
@@ -268,7 +306,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 }
 
                 /// <summary>
-                /// <para>The total amount that is saved.</para>
+                /// <para>The total savings. Unit: CNY.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20.00</para>
@@ -278,7 +316,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string TotalSave { get; set; }
 
                 /// <summary>
-                /// <para>The total usage.</para>
+                /// <para>The total utilization.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.0</para>
@@ -322,7 +360,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful</para>
@@ -342,7 +380,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

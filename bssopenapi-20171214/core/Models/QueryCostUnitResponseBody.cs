@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryCostUnitResponseBodyData Data { get; set; }
         public class QueryCostUnitResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The cost centers.</para>
+            /// <para>The list of financial units.</para>
             /// </summary>
             [NameInMap("CostUnitDtoList")]
             [Validation(Required=false)]
             public List<QueryCostUnitResponseBodyDataCostUnitDtoList> CostUnitDtoList { get; set; }
             public class QueryCostUnitResponseBodyDataCostUnitDtoList : TeaModel {
                 /// <summary>
-                /// <para>The user ID of the cost center owner.</para>
+                /// <para>The owner of the financial unit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2343464</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public long? OwnerUid { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the parent cost center. A value of -1 indicates the root cost center.</para>
+                /// <para>The ID of the parent financial unit. A value of -1 indicates the root of the financial unit tree.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>-1</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public long? ParentUnitId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the cost center.</para>
+                /// <para>The ID of the financial unit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>23534</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public long? UnitId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the cost center.</para>
+                /// <para>The name of the financial unit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public int? PageNum { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned on each page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of returned entries.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful!</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6000EE23-274B-4E07-A697-FF2E999520A4</para>

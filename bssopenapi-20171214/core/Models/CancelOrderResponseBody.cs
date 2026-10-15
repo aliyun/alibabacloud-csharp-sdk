@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CancelOrderResponseBodyData Data { get; set; }
         public class CancelOrderResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the host.</para>
+            /// <para>The host ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30D2285E-A848-4ECB-AA74-4954C60858A1</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

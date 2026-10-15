@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryCostUnitResourceResponseBodyData Data { get; set; }
         public class QueryCostUnitResourceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The information about the cost center.</para>
+            /// <para>The financial unit information.</para>
             /// </summary>
             [NameInMap("CostUnit")]
             [Validation(Required=false)]
             public QueryCostUnitResourceResponseBodyDataCostUnit CostUnit { get; set; }
             public class QueryCostUnitResourceResponseBodyDataCostUnit : TeaModel {
                 /// <summary>
-                /// <para>The user ID of the cost center owner.</para>
+                /// <para>The user ID of the financial unit owner.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>321432</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public long? OwnerUid { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the parent cost center. A value of -1 indicates the root cost center.</para>
+                /// <para>The ID of the parent financial unit. A value of -1 indicates the root financial unit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>23421</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public long? ParentUnitId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the cost center.</para>
+                /// <para>The ID of the financial unit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123412</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public long? UnitId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the cost center.</para>
+                /// <para>The name of the financial unit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -76,14 +76,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             }
 
             /// <summary>
-            /// <para>The statistical information about the cost center.</para>
+            /// <para>The statistics information of the financial unit.</para>
             /// </summary>
             [NameInMap("CostUnitStatisInfo")]
             [Validation(Required=false)]
             public QueryCostUnitResourceResponseBodyDataCostUnitStatisInfo CostUnitStatisInfo { get; set; }
             public class QueryCostUnitResourceResponseBodyDataCostUnitStatisInfo : TeaModel {
                 /// <summary>
-                /// <para>The number of resource instances in the cost center.</para>
+                /// <para>The number of resource instances in the current financial unit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public long? ResourceCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of resource groups in the cost center.</para>
+                /// <para>The number of resource groups in the current financial unit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public long? ResourceGroupCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of sub-cost centers in the cost center.</para>
+                /// <para>The number of sub-units in the current financial unit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public long? SubUnitCount { get; set; }
 
                 /// <summary>
-                /// <para>The total number of resource instances, including resource instances of sub-cost centers, in the cost center.</para>
+                /// <para>The total number of resource instances in the current financial unit, including those in sub-financial units.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public long? TotalResourceCount { get; set; }
 
                 /// <summary>
-                /// <para>The total number of resource groups, including resource groups of sub-cost centers, in the cost center.</para>
+                /// <para>The total number of resource groups in the current financial unit, including those in sub-financial units.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public long? TotalResourceGroupCount { get; set; }
 
                 /// <summary>
-                /// <para>The total number of the associated accounts, including associated accounts of sub-cost centers, in the cost center.</para>
+                /// <para>The total number of linked accounts in the current financial unit, including those in sub-financial units.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public long? TotalUserCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of sub-cost centers in the cost center.</para>
+                /// <para>The number of sub-units in the current financial unit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public int? PageNum { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -175,14 +175,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The resource instances.</para>
+            /// <para>The list of resource instances.</para>
             /// </summary>
             [NameInMap("ResourceInstanceDtoList")]
             [Validation(Required=false)]
             public List<QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList> ResourceInstanceDtoList { get; set; }
             public class QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList : TeaModel {
                 /// <summary>
-                /// <para>The split code of the resource.</para>
+                /// <para>The attached resource code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string ApportionCode { get; set; }
 
                 /// <summary>
-                /// <para>The split name of the resource.</para>
+                /// <para>The attached resource name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string ApportionName { get; set; }
 
                 /// <summary>
-                /// <para>The product code of the resource.</para>
+                /// <para>The commodity code of the resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rds</para>
@@ -222,7 +222,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string CommodityName { get; set; }
 
                 /// <summary>
-                /// <para>The code of the service. The code is the same as that in Cost Center.</para>
+                /// <para>The product code, which is the same as the product code in User Center bills.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rds</para>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 /// <para>The resource group to which the resource belongs.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Default Resource Group</para>
+                /// <para>Default resource group</para>
                 /// </summary>
                 [NameInMap("ResourceGroup")]
                 [Validation(Required=false)]
@@ -262,7 +262,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The custom name of the resource.</para>
+                /// <para>The custom nickname of the resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>testResource</para>
@@ -272,10 +272,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string ResourceNick { get; set; }
 
                 /// <summary>
-                /// <para>The source of the resource. Value:</para>
+                /// <para>The source of the resource. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>AUTO_ALLOCATE</description></item>
-                /// <item><description>MANUAL_ALLOCATE</description></item>
+                /// <item><description>AUTO_ALLOCATE: automatic allocation.</description></item>
+                /// <item><description>MANUAL_ALLOCATE: manual allocation.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -296,7 +296,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string ResourceStatus { get; set; }
 
                 /// <summary>
-                /// <para>The tags of the resource.</para>
+                /// <para>The tag of the resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>testResource</para>
@@ -338,7 +338,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             }
 
             /// <summary>
-            /// <para>The total number of returned entries.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -360,7 +360,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>04332CB7-9A57-4461-97E0-02821D044414</para>

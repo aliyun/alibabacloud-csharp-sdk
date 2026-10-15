@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class AllocateCostUnitResourceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the source cost center.</para>
+        /// <para>The ID of the source financial unit. This parameter is required.</para>
         /// <list type="bullet">
-        /// <item><description>A value of 0 indicates that the resources to be transferred have not been allocated to a cost center.</description></item>
-        /// <item><description>A value greater than 0 indicates the ID of an existing cost center.</description></item>
+        /// <item><description>0 indicates the unallocated financial unit ID.</description></item>
+        /// <item><description>A value greater than 0 indicates an allocated financial unit ID.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? FromUnitId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of the owner of the source cost center.</para>
+        /// <para>The ID of the owner of the source financial unit. This parameter is required.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? FromUnitUserId { get; set; }
 
         /// <summary>
-        /// <para>The resource instances to be transferred.</para>
+        /// <para>The list of resource instances.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceInstanceList")]
@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public List<AllocateCostUnitResourceRequestResourceInstanceList> ResourceInstanceList { get; set; }
         public class AllocateCostUnitResourceRequestResourceInstanceList : TeaModel {
             /// <summary>
-            /// <para>The split item of the shared instance. This parameter is required only for shared instances.</para>
+            /// <para>The attached resource type of the attached-resource-based instance. This parameter is required only for attached-resource-based product instances.</para>
             /// <list type="bullet">
-            /// <item><description>Eight cloud services support bill splitting. The commodity codes of the eight services are oss, dcdn, snapshot, vod, cdn, live, and cbwp.</description></item>
-            /// <item><description>You can obtain the split item of a shared instance by calling QueryCostUnitResource operation to obtain all resource instances within a cost center.</description></item>
+            /// <item><description>Currently, eight commodities support attached resources. Their commodity codes are oss, dcdn, snapshot, vod, cdn, live, and cbwp.</description></item>
+            /// <item><description>This attached resource field is typically obtained by calling QueryCostUnitResource to retrieve all billing instances (including attached-resource-based instances with attached resource information) under a specific financial unit (including the unallocated unit) of a user.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string ApportionCode { get; set; }
 
             /// <summary>
-            /// <para>The commodity code of the resource instance.</para>
+            /// <para>The commodity code of the billing instance. This parameter is required.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string CommodityCode { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource instance.</para>
+            /// <para>The instance ID of the billing instance. This parameter is required.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The user ID of the resource instance owner.</para>
+            /// <para>The ID of the owner of the billing instance. This parameter is required.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -93,10 +93,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// <para>The ID of the destination cost center.</para>
+        /// <para>The ID of the destination financial unit. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>A value of -1 indicates that the allocated resources are changed to unallocated.</description></item>
-        /// <item><description>A value greater than 0 indicates the ID of an existing cost center.</description></item>
+        /// <item><description>-1: moves the allocated resource to the unallocated state.</description></item>
+        /// <item><description>A value greater than 0: allocates the resource to the specified financial unit.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? ToUnitId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of the owner of the destination cost center.</para>
+        /// <para>The ID of the owner of the destination financial unit.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

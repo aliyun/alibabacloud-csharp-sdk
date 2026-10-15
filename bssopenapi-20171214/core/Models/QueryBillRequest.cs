@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryBillRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the member.</para>
+        /// <para>The ID of the resource ownership account. The resource ownership account is the account that actually uses the resource.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>
@@ -30,21 +30,15 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string BillingCycle { get; set; }
 
-        /// <summary>
-        /// <para>Specifies whether to display local currency information in bills. The parameter will be discontinued.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>false</para>
-        /// </summary>
         [NameInMap("IsDisplayLocalCurrency")]
         [Validation(Required=false)]
         public bool? IsDisplayLocalCurrency { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to filter out a bill whose pretax gross amount is 0. By default, a bill whose pretax gross amount is 0 is not filtered out. Valid values:</para>
+        /// <para>Specifies whether to filter out bills with a original price (PretaxGrossAmount) of 0. Default value: false (compatible with existing logic). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: filters out a bill whose pretax gross amount is 0.</description></item>
-        /// <item><description>false: does not filter out a bill whose pretax gross amount is 0.</description></item>
+        /// <item><description>true: filters out zero-charge bills.</description></item>
+        /// <item><description>false: does not filter out zero-charge bills.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -59,7 +53,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -69,7 +63,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 20. Maximum value: 300.</para>
+        /// <para>The number of entries per page. Default value: 20. Maximum value: 300.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -79,7 +73,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The code of the service.</para>
+        /// <para>The product code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rds</para>
@@ -89,7 +83,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The type of the service.</para>
+        /// <para>The product type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rds</para>
@@ -99,12 +93,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The billing method. Valid values:</para>
+        /// <para>The subscription type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Subscription</description></item>
         /// <item><description>PayAsYouGo</description></item>
         /// </list>
+        /// <remarks>
         /// <para>This parameter must be used together with the ProductCode parameter.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>Subscription</para>
@@ -114,7 +110,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string SubscriptionType { get; set; }
 
         /// <summary>
-        /// <para>The type of the bill. Valid values:</para>
+        /// <para>The type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>SubscriptionOrder</description></item>
         /// <item><description>PayAsYouGoBill</description></item>

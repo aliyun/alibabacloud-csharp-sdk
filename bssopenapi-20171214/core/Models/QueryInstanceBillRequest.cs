@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryInstanceBillRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the member. If you specify a value for this parameter, you can query the bills of the specified member. If you leave this parameter empty, the bills of the current account are queried by default.</para>
+        /// <para>The ID of the account that owns the resources. This account is the actual user of the resources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>122</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? BillOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The billing cycle. Format: YYYY-MM.</para>
+        /// <para>The billing cycle in YYYY-MM format. Data from the last 18 months is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string BillingCycle { get; set; }
 
         /// <summary>
-        /// <para>The billing date. This parameter is required only if the <b>Granularity</b> parameter is set to DAILY. Format: YYYY-MM-DD.</para>
+        /// <para>The billing date. This parameter is required only when the <b>Granularity</b> parameter is set to DAILY. The value must be in the YYYY-MM-DD format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-03-03</para>
@@ -41,12 +41,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string BillingDate { get; set; }
 
         /// <summary>
-        /// <para>The granularity at which bills are queried. Valid values:</para>
+        /// <para>The granularity at which to query bills. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>MONTHLY: queries bills by month. The data queried is consistent with the data that is displayed for the specified billing cycle on the Billing Details tab of the Bill Details page in User Center.</description></item>
-        /// <item><description>DAILY: queries bills by day. The data queried is consistent with the data that is displayed for the specified day on the Billing Details tab of the Bill Details page in User Center.</description></item>
+        /// <item><description><para>MONTHLY: queries bills by month. The data is consistent with the bill details on the Billing Cycle tab of the Bills page in the User Center.</para>
+        /// </description></item>
+        /// <item><description><para>DAILY: queries bills by day. The data is consistent with the bill details on the By Day tab of the Bills page in the User Center.</para>
+        /// </description></item>
         /// </list>
-        /// <para>You must set the <b>BillingDate</b> parameter before you can set the Granularity parameter to DAILY.</para>
+        /// <para>If you set this parameter to DAILY, you must also specify the <b>BillingDate</b> parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MONTHLY</para>
@@ -56,10 +58,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Granularity { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query data by billable item. Valid values:</para>
+        /// <para>Specifies whether to query data by billable item.</para>
         /// <list type="bullet">
-        /// <item><description>false: does not query data by billable item. The data queried is consistent with the data that is displayed for the specified instance on the Billing Details tab of the Bill Details page in User Center.</description></item>
-        /// <item><description>true: queries data by billable item. The data queried is consistent with the data that is displayed for the specified billable item on the Billing Details tab of the Bill Details page in User Center.</description></item>
+        /// <item><description><para>false: The data is consistent with the bill details on the Instance tab of the Bills page in the User Center.</para>
+        /// </description></item>
+        /// <item><description><para>true: The data is consistent with the bill details on the Billable Item tab of the Bills page in the User Center.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -71,10 +75,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public bool? IsBillingItem { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to filter out a bill whose pretax gross amount and pretax amount are 0. Default value: false.******** Valid values:</para>
+        /// <para>Specifies whether to filter out bills for which the pretax gross amount (<b>PretaxGrossAmount</b>) and pretax amount (<b>PretaxAmount</b>) are both 0. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false: does not filter the bill.</description></item>
-        /// <item><description>true: filters the bill.</description></item>
+        /// <item><description><para>false.</para>
+        /// </description></item>
+        /// <item><description><para>true.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -89,7 +95,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -99,7 +105,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 20. Maximum value: 300.</para>
+        /// <para>The number of entries per page. Default value: 20. Maximum value: 300.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -109,7 +115,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The code of the service.</para>
+        /// <para>The code of the product.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rds</para>
@@ -119,7 +125,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The type of the service. This parameter is required if the ProductCode parameter is set to the service code of Alibaba Cloud Marketplace.</para>
+        /// <para>The type of the product. Required when the ProductCode parameter is set to the code of an Alibaba Cloud Marketplace product.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rds</para>
@@ -129,13 +135,16 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The billing method. Valid values:</para>
+        /// <para>The subscription type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Subscription: the subscription billing method</description></item>
-        /// <item><description>PayAsYouGo: the pay-as-you-go billing method</description></item>
+        /// <item><description><para>Subscription: subscription.</para>
+        /// </description></item>
+        /// <item><description><para>PayAsYouGo: pay-as-you-go.</para>
+        /// </description></item>
         /// </list>
-        /// <para>**</para>
-        /// <para>****This parameter must be used together with the <b>ProductCode</b> parameter.</para>
+        /// <remarks>
+        /// <para>This parameter must be used with the <b>ProductCode</b> parameter.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>PayAsYouGo</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class DescribeResourceUsageDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -34,14 +34,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public List<DescribeResourceUsageDetailResponseBodyDataItems> Items { get; set; }
             public class DescribeResourceUsageDetailResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>The unit that is used to measure the resources that are deducted.</para>
+                /// <para>The deduction unit.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Compute hours</para>
                 /// </summary>
                 [NameInMap("CapacityUnit")]
                 [Validation(Required=false)]
                 public string CapacityUnit { get; set; }
 
                 /// <summary>
-                /// <para>The type of the currency.</para>
+                /// <para>The currency.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CNY</para>
@@ -51,7 +54,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string Currency { get; set; }
 
                 /// <summary>
-                /// <para>The amount of the deducted resources.</para>
+                /// <para>The deducted amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -61,7 +64,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public float? DeductQuantity { get; set; }
 
                 /// <summary>
-                /// <para>The end of the time range in which the usage details were queried.</para>
+                /// <para>The end time. Format: YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-04-01 01:00:00</para>
@@ -91,7 +94,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string InstanceSpec { get; set; }
 
                 /// <summary>
-                /// <para>The equivalent of pay-as-you-go costs.</para>
+                /// <para>The equivalent pay-as-you-go cost.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.06</para>
@@ -111,7 +114,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string PotentialSavedCost { get; set; }
 
                 /// <summary>
-                /// <para>The number of deduction plans.</para>
+                /// <para>The resource count.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -122,13 +125,16 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 
                 /// <summary>
                 /// <para>The region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>China (Hangzhou)</para>
                 /// </summary>
                 [NameInMap("Region")]
                 [Validation(Required=false)]
                 public string Region { get; set; }
 
                 /// <summary>
-                /// <para>The code of the region.</para>
+                /// <para>The region ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-dg-a01</para>
@@ -138,7 +144,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string RegionNo { get; set; }
 
                 /// <summary>
-                /// <para>The fee of the deduction plan.</para>
+                /// <para>The purchase cost of the resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -148,7 +154,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string ReservationCost { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the deduction plan.</para>
+                /// <para>The instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ecsri-bp147nnfz21225k9mpix00</para>
@@ -168,7 +174,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string SavedCost { get; set; }
 
                 /// <summary>
-                /// <para>The beginning of the time range in which the usage details were queried.</para>
+                /// <para>The start time. Format: YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-04-01 00:00:00</para>
@@ -178,7 +184,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// <para>The status of the deduction plan.</para>
+                /// <para>The status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Valid</para>
@@ -188,14 +194,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The name of the status.</para>
+                /// <para>The status name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Active</para>
                 /// </summary>
                 [NameInMap("StatusName")]
                 [Validation(Required=false)]
                 public string StatusName { get; set; }
 
                 /// <summary>
-                /// <para>The total capacity of the deduction plan.</para>
+                /// <para>The total number of resources.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -205,7 +214,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public float? TotalQuantity { get; set; }
 
                 /// <summary>
-                /// <para>The usage rate of the deduction plan.</para>
+                /// <para>The usage rate.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.5</para>
@@ -225,7 +234,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string UserId { get; set; }
 
                 /// <summary>
-                /// <para>The username of the account.</para>
+                /// <para>The account name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="mailto:test@aliyun.com">test@aliyun.com</a></para>
@@ -245,7 +254,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string Zone { get; set; }
 
                 /// <summary>
-                /// <para>The code of the zone.</para>
+                /// <para>The zone ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Hangzhou Zone I</para>
                 /// </summary>
                 [NameInMap("ZoneName")]
                 [Validation(Required=false)]
@@ -254,7 +266,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             }
 
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The maximum number of entries to return in a single request. Default value: 20. Maximum value: 300.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -264,7 +276,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+            /// <para>The token for the next page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eyJwYWdlTnVtIjoyLCJwYWdlU2l6ZSI6MTB9</para>
@@ -274,7 +286,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000</para>
@@ -286,7 +298,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful!</para>
@@ -306,7 +318,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

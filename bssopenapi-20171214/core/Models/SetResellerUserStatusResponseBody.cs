@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class SetResellerUserStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code returned if the call failed. For more information, see the &quot;Error codes&quot; section of this topic.</para>
+        /// <para>The error code returned if the call fails. For more information, see the Error codes section.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the operation was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The message returned for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful!</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. A value of true indicates that the call is successful. A value of false indicates that the call failed.</para>
+        /// <para>Indicates whether the request was successful. <c>true</c>: success. <c>false</c>: an error occurred.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

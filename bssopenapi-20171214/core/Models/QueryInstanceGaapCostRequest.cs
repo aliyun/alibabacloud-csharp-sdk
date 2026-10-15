@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryInstanceGaapCostRequest : TeaModel {
         /// <summary>
+        /// <para>The billing cycle, in the YYYY-MM format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string BillingCycle { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? PageNum { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 20. Maximum value: 100.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The product code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rds</para>
         /// </summary>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ProductCode { get; set; }
 
         /// <summary>
+        /// <para>The product type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rds</para>
         /// </summary>
@@ -52,6 +61,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ProductType { get; set; }
 
         /// <summary>
+        /// <para>The billing method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>Subscription</c>: subscription</para>
+        /// </description></item>
+        /// <item><description><para><c>PayAsYouGo</c>: pay-as-you-go</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>PayAsYouGo</para>
         /// </summary>

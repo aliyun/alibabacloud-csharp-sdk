@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of resources.</para>
+        /// <para>The list of resource IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Specify savings plan instance as the type of the resource.</para>
+        /// <para>The resource type. Set the value to instance for savings plan instances.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The list of tags. You can add 1 to 20 tags at a time.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag. You can create N tag keys at a time. Valid values of N: 1 to 20. The value of this parameter can be an empty string.</para>
+            /// <para>The tag key. An empty string is allowed.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag N. Valid values of N: 1 to 20.</para>
+            /// <para>The tag value.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

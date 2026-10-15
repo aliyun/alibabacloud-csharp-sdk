@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class CreateAgAccountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The relationship between the account that is used to call the CreateAgAccount operation and the account that is created.</para>
+        /// <para>The level 2 relationship between the master account (MPK) and the member account (PK).</para>
         /// </summary>
         [NameInMap("AgRelationDto")]
         [Validation(Required=false)]
         public CreateAgAccountResponseBodyAgRelationDto AgRelationDto { get; set; }
         public class CreateAgAccountResponseBodyAgRelationDto : TeaModel {
             /// <summary>
-            /// <para>The ID of the account that is used to call the CreateAgAccount operation.</para>
+            /// <para>The UID of the master account (MPK).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1785287436011964</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string Mpk { get; set; }
 
             /// <summary>
-            /// <para>The ID of the account that is created.</para>
+            /// <para>The UID of the member account (PK) that is managed by the master account (MPK).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1728240534507590</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string Pk { get; set; }
 
             /// <summary>
-            /// <para>The role of the account that is created.</para>
+            /// <para>The name of the RAM role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>admin-role</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string RamAdminRoleName { get; set; }
 
             /// <summary>
-            /// <para>The type of the relationship.</para>
+            /// <para>The type of the account linking relationship.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FINACE_CLOUD</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// <para>The status code returned.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>LOGIN_EMAIL_HAS_BEEN_USED</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>loginEmail=<a href="mailto:685741089H@chinaunicom.cn">685741089H@chinaunicom.cn</a>,has used</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EAE08A27-386C-579E-966D-8853EC3C5D0E</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

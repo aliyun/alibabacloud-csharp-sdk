@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryRelationListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryRelationListResponseBodyData Data { get; set; }
         public class QueryRelationListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The relationships.</para>
+            /// <para>The list of relationships.</para>
             /// </summary>
             [NameInMap("FinancialRelationInfoList")]
             [Validation(Required=false)]
             public List<QueryRelationListResponseBodyDataFinancialRelationInfoList> FinancialRelationInfoList { get; set; }
             public class QueryRelationListResponseBodyDataFinancialRelationInfoList : TeaModel {
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account.</para>
+                /// <para>The UID of the Alibaba Cloud account.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1851253838840762</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public long? AccountId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the account.</para>
+                /// <para>The logon name of the Alibaba Cloud account.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>caiwuyun_test4</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string AccountNickName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the account. Valid values: MASTER and MEMBER.</para>
+                /// <para>The type of the financial account. Valid values: MASTER and MEMBER.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MEMBER</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string AccountType { get; set; }
 
                 /// <summary>
-                /// <para>The time when the relationship became invalid. If no value is returned, the relationship is still valid.</para>
+                /// <para>The time when the relationship expires. If this parameter is empty, the relationship does not expire.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-03-08T15:12Z</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the relationship.</para>
+                /// <para>The relationship ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>51463</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public long? RelationId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the relationship. Valid values: FinancialManagement and FinancialTrusteeship.</para>
+                /// <para>The relationship type. <c>FinancialManagement</c> indicates Financial Management and <c>FinancialTrusteeship</c> indicates finance trusteeship.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FinancialManagement</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string RelationType { get; set; }
 
                 /// <summary>
-                /// <para>The time when the relationship was established. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC. Example: 2016-05-23T12:00:00Z.</para>
+                /// <para>The time when the relationship was established. The time is in UTC and follows the ISO 8601 standard in the <c>YYYY-MM-DDThh:mm:ssZ</c> format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-03-02T15:12Z</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string SetupTime { get; set; }
 
                 /// <summary>
-                /// <para>The time when the relationship became valid. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC. Example: 2016-05-23T12:00:00Z.</para>
+                /// <para>The time when the relationship takes effect. The time is in UTC and follows the ISO 8601 standard in the <c>YYYY-MM-DDThh:mm:ssZ</c> format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-03-02T15:12Z</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// <para>The state of the relationship. One of the enumeration members of the RelationshipStatusEnum data type is returned.</para>
+                /// <para>The status of the relationship. The value is an enumeration of RelationshipStatusEnum.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>RELATED</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public int? PageNum { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful!</para>

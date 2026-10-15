@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryAvailableInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The end time when the specified instance is created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The end time of the creation time range. Specify the time in the ISO 8601 standard in the UTC format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2016-05-23T12:00:00Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string CreateTimeEnd { get; set; }
 
         /// <summary>
-        /// <para>The start time when the specified instance is created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The start time of the creation time range. Specify the time in the ISO 8601 standard in the UTC format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2016-05-23T12:00:00Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string CreateTimeStart { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2016-05-23T12:00:00Z.</para>
+        /// <para>The end time of the expiration time range. Specify the time in the ISO 8601 standard in the UTC format. Example: 2016-05-23T12:00:00Z.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2016-05-23T12:00:00Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string EndTimeEnd { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2016-05-23T12:00:00Z.</para>
+        /// <para>The start time of the expiration time range. Specify the time in the ISO 8601 standard in the UTC format. Example: 2016-05-23T12:00:00Z.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2016-05-23T12:00:00Z</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string EndTimeStart { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance. Separate multiple IDs with commas (,). You can specify a maximum of 100 IDs.</para>
+        /// <para>The instance IDs. Separate multiple IDs with commas. You can specify up to 100 IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-xxxxxxxxxxxx</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page. Default value: 20. Maximum value: 300.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -84,9 +84,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The code of the service. You can query the service code by calling the <b>QueryProductList</b> operation or viewing <b>Codes of Alibaba Cloud services</b>.</para>
+        /// <para>The product code. You can call the <b>QueryProductList</b> operation to query product codes.</para>
         /// <remarks>
-        /// <para>This parameter cannot be left empty if the region is specified.</para>
+        /// <para>If the region is specified, this parameter cannot be empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The type of the service.</para>
+        /// <para>The product type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rds</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the instance resides.</para>
+        /// <para>The region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -117,11 +117,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The renewal status of the specified instance. Valid values:</para>
+        /// <para>The renewal status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>AutoRenewal: The instance is automatically renewed.</description></item>
-        /// <item><description>ManualRenewal: The instance is manually renewed.</description></item>
-        /// <item><description>NotRenewal: The instance is not renewed.</description></item>
+        /// <item><description>AutoRenewal: auto-renewal.</description></item>
+        /// <item><description>ManualRenewal: manual renewal.</description></item>
+        /// <item><description>NotRenewal: no renewal.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -132,10 +132,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RenewStatus { get; set; }
 
         /// <summary>
-        /// <para>The billing method. Valid values:</para>
+        /// <para>The subscription type.</para>
         /// <list type="bullet">
-        /// <item><description>Subscription: subscription</description></item>
-        /// <item><description>PayAsYouGo: pay-as-you-go</description></item>
+        /// <item><description>Subscription: subscription.</description></item>
+        /// <item><description>PayAsYouGo: pay-as-you-go.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

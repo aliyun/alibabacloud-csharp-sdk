@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryAvailableInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryAvailableInstancesResponseBodyData Data { get; set; }
         public class QueryAvailableInstancesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The instances returned.</para>
+            /// <para>The list of instance information.</para>
             /// </summary>
             [NameInMap("InstanceList")]
             [Validation(Required=false)]
             public List<QueryAvailableInstancesResponseBodyDataInstanceList> InstanceList { get; set; }
             public class QueryAvailableInstancesResponseBodyDataInstanceList : TeaModel {
                 /// <summary>
-                /// <para>The time when the specified instance was created.</para>
+                /// <para>The creation time. The time is in the ISO 8601 standard in the UTC format (YYYY-MM-DDTHH:mm:ssZ).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2019-09-08T16:00:00Z</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The time when the instance was expired.</para>
+                /// <para>The end time. The time is in the ISO 8601 standard in the UTC format (YYYY-MM-DDTHH:mm:ssZ).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2019-09-08T16:00:00Z</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The time when the specified instance was expected to be released.</para>
+                /// <para>The expected release time. The time is in the ISO 8601 standard in the UTC format (YYYY-MM-DDTHH:mm:ssZ).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2019-09-08T16:00:00Z</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string ExpectedReleaseTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the instance.</para>
+                /// <para>The instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1049056</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string InstanceID { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the instance owner.</para>
+                /// <para>The owner ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>325352345</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public long? OwnerId { get; set; }
 
                 /// <summary>
-                /// <para>The code of the service.</para>
+                /// <para>The product code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rds</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string ProductCode { get; set; }
 
                 /// <summary>
-                /// <para>The type of the service.</para>
+                /// <para>The product type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rds</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string ProductType { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the region in which the instance resides.</para>
+                /// <para>The region.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string Region { get; set; }
 
                 /// <summary>
-                /// <para>The time when the instance was released.</para>
+                /// <para>The release time. The time is in the ISO 8601 standard in the UTC format (YYYY-MM-DDTHH:mm:ssZ).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2019-09-08T16:00:00Z</para>
@@ -124,11 +124,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string ReleaseTime { get; set; }
 
                 /// <summary>
-                /// <para>The renewal status of the specified instance. Valid values:</para>
+                /// <para>The renewal status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>AutoRenewal: The instance is automatically renewed.</description></item>
-                /// <item><description>ManualRenewal: The instance is manually renewed.</description></item>
-                /// <item><description>NotRenewal: The instance is not renewed.</description></item>
+                /// <item><description>AutoRenewal: auto-renewal.</description></item>
+                /// <item><description>ManualRenewal: manual renewal.</description></item>
+                /// <item><description>NotRenewal: no renewal.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string RenewStatus { get; set; }
 
                 /// <summary>
-                /// <para>The number of auto-renewal cycles.</para>
+                /// <para>The number of auto-renewal epochs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -149,10 +149,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public int? RenewalDuration { get; set; }
 
                 /// <summary>
-                /// <para>The unit of the auto-renewal cycle. Valid values:</para>
+                /// <para>The unit of the auto-renewal epoch. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>M: month</description></item>
-                /// <item><description>Y: year</description></item>
+                /// <item><description>M: month.</description></item>
+                /// <item><description>Y: year.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string Seller { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the seller.</para>
+                /// <para>The seller ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123123123</para>
@@ -183,17 +183,20 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public long? SellerId { get; set; }
 
                 /// <summary>
-                /// <para>The status of the instance.</para>
+                /// <para>The status.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Creating: The instance is being created. WaitForExpire: The instance is about to expire. Normal: The instance can properly run. Expired: The instance is expired.</para>
+                /// <para>Creating - The resource is being created.
+                /// WaitForExpire - The service is about to be suspended.
+                /// Normal - Normal.
+                /// Expired - The service is suspended</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The time when the specified instance was suspended.</para>
+                /// <para>The stop time. The time is in the ISO 8601 standard in the UTC format (YYYY-MM-DDTHH:mm:ssZ).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2019-09-08T16:00:00Z</para>
@@ -203,20 +206,22 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string StopTime { get; set; }
 
                 /// <summary>
-                /// <para>The sub-status of the specified instance.</para>
+                /// <para>The sub-status.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Normal: The pay-as-you-go module can properly run. WaitForLimit: The pay-as-you-go module is about to be limited due to overdue payments. BandwidthLimited: The pay-as-you-go module is limited due to overdue payments.</para>
+                /// <para>Normal - The pay-as-you-go module is normal.
+                /// WaitForLimit - The pay-as-you-go module is about to be restricted due to overdue payments.
+                /// BandwidthLimited - The pay-as-you-go module is restricted due to overdue payments</para>
                 /// </summary>
                 [NameInMap("SubStatus")]
                 [Validation(Required=false)]
                 public string SubStatus { get; set; }
 
                 /// <summary>
-                /// <para>The billing method. Valid values:</para>
+                /// <para>The subscription type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Subscription: subscription</description></item>
-                /// <item><description>PayAsYouGo: pay-as-you-go</description></item>
+                /// <item><description>Subscription: subscription.</description></item>
+                /// <item><description>PayAsYouGo: pay-as-you-go.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -229,7 +234,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -239,7 +244,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public int? PageNum { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -249,7 +254,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of returned entries.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11</para>
@@ -261,7 +266,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful!</para>
@@ -271,7 +276,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C7C15585-8349-4C62-BEE4-5A391841B9BE</para>

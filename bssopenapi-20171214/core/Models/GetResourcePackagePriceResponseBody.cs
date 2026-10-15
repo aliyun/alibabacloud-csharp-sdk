@@ -56,9 +56,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             [Validation(Required=false)]
             public float? OriginalPrice { get; set; }
 
-            /// <summary>
-            /// <para>The details of the discount.</para>
-            /// </summary>
             [NameInMap("Promotions")]
             [Validation(Required=false)]
             public GetResourcePackagePriceResponseBodyDataPromotions Promotions { get; set; }
@@ -67,22 +64,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 [Validation(Required=false)]
                 public List<GetResourcePackagePriceResponseBodyDataPromotionsPromotion> Promotion { get; set; }
                 public class GetResourcePackagePriceResponseBodyDataPromotionsPromotion : TeaModel {
-                    /// <summary>
-                    /// <para>The ID of the promotion.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>1000680914</para>
-                    /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
                     public long? Id { get; set; }
 
-                    /// <summary>
-                    /// <para>The description of the discount.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>A discount of 17% is offered if you purchase a resource plan for six months.</para>
-                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }

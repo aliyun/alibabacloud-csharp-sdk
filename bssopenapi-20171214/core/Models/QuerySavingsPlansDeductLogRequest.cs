@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QuerySavingsPlansDeductLogRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</para>
+        /// <para>The end of the time range to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-01-05 00:00:00</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>spn-XXXXXXX</para>
@@ -30,10 +30,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the instance ID based on which the data is queried. Valid values:</para>
+        /// <para>The query type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>spn: queries data based on the ID of the savings plan instance.</description></item>
-        /// <item><description>product: queries data based on the ID of the cloud service instance.</description></item>
+        /// <item><description><para>spn: savings plan instance</para>
+        /// </description></item>
+        /// <item><description><para>product: deducted cloud service instance</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,11 +46,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The language of the return data. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>ZH: Chinese</description></item>
-        /// <item><description>EN: English</description></item>
-        /// </list>
+        /// <para>The language of the response. Default value: ZH. Valid values: \<c>ZH\\</c>: Chinese. \<c>EN\\</c>: English.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ZH</para>
@@ -58,7 +56,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Locale { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -68,7 +66,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -78,7 +76,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</para>
+        /// <para>The beginning of the time range to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-01-01 00:00:00</para>

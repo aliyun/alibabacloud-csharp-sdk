@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QuerySavingsPlansDiscountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code returned.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PARAM_ERROR</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>data</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QuerySavingsPlansDiscountResponseBodyData Data { get; set; }
         public class QuerySavingsPlansDiscountResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The IP address of the request.</para>
+            /// <para>The request IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100.104.180.109</para>
@@ -37,24 +37,24 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string HostId { get; set; }
 
             /// <summary>
-            /// <para>The information about the discounts on saving plans.</para>
+            /// <para>The list of discount information.</para>
             /// </summary>
             [NameInMap("Items")]
             [Validation(Required=false)]
             public List<QuerySavingsPlansDiscountResponseBodyDataItems> Items { get; set; }
             public class QuerySavingsPlansDiscountResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>The details of the service.</para>
+                /// <para>The product details.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Pay-as-you-go Elastic Compute Service (ECS) instance</para>
+                /// <para>云服务器ECS-按量付费</para>
                 /// </summary>
                 [NameInMap("CommodityName")]
                 [Validation(Required=false)]
                 public string CommodityName { get; set; }
 
                 /// <summary>
-                /// <para>The contracted discount.</para>
+                /// <para>The contract discount rate.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.85</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string ContractDiscountRate { get; set; }
 
                 /// <summary>
-                /// <para>The cycle based on which queries were performed.</para>
+                /// <para>The query cycle.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1:Year</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string Cycle { get; set; }
 
                 /// <summary>
-                /// <para>The discount provided by the official website.</para>
+                /// <para>The official discount rate.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.85</para>
@@ -87,18 +87,21 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 /// <para>The name of the pricing module.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Instance</para>
+                /// <para>实例</para>
                 /// </summary>
                 [NameInMap("ModuleName")]
                 [Validation(Required=false)]
                 public string ModuleName { get; set; }
 
                 /// <summary>
-                /// <para>The payment mode. Valid values:</para>
+                /// <para>The payment mode.</para>
                 /// <list type="bullet">
-                /// <item><description>total: all upfront</description></item>
-                /// <item><description>half: half upfront</description></item>
-                /// <item><description>zero: no upfront</description></item>
+                /// <item><description><para>total: All upfront</para>
+                /// </description></item>
+                /// <item><description><para>half: Partial upfront</para>
+                /// </description></item>
+                /// <item><description><para>zero: No upfront</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -109,17 +112,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string PayMode { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the region.</para>
+                /// <para>The region.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>cn-zhangjiakou-na62-a01</para>
+                /// <para>张家口</para>
                 /// </summary>
                 [NameInMap("Region")]
                 [Validation(Required=false)]
                 public string Region { get; set; }
 
                 /// <summary>
-                /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/26231.html">DescribeDBInstanceAttribute</a> operation to query the region ID of the instance.</para>
+                /// <para>The ID of the region where the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/26231.html">DescribeDBInstanceAttribute</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -129,7 +132,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string RegionCode { get; set; }
 
                 /// <summary>
-                /// <para>The type of the resource.</para>
+                /// <para>The resource type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ecs.g6</para>
@@ -153,7 +156,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This API is not applicable for caller.</para>
@@ -163,7 +166,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6000EE23-274B-4E07-A697-FF2E999520A4</para>
@@ -173,7 +176,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

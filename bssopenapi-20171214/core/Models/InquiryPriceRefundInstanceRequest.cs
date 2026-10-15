@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class InquiryPriceRefundInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required for scenarios that need idempotence. The UUID that is used to ensure the idempotence of the request.</para>
+        /// <para>Required for idempotent scenarios. A UUID-generated string. This field is used for idempotence. If the same value is passed in multiple calls, the result of the first call is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>793F021C-B589-1225-82A9-99232AEBE494</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance. This parameter is required for unsubscription scenarios.</para>
+        /// <para>Required for unsubscription scenarios. The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp1etb69sqxgl4*******</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The code of the service. This parameter is required for unsubscription scenarios.</para>
+        /// <para>Required for unsubscription scenarios. The product code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The type of the service. This parameter is required for unsubscription scenarios. Unless otherwise specified, set this parameter to an empty string.</para>
+        /// <para>Required for unsubscription scenarios. The product type. Pass an empty string (&quot;&quot;) unless otherwise specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>”“</para>

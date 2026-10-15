@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryCommodityListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NotApplicable</para>
@@ -27,14 +27,18 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public QueryCommodityListResponseBodyData Data { get; set; }
         public class QueryCommodityListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The information about the service.</para>
+            /// <para>The commodity list.</para>
             /// </summary>
             [NameInMap("CommodityList")]
             [Validation(Required=false)]
             public List<QueryCommodityListResponseBodyDataCommodityList> CommodityList { get; set; }
             public class QueryCommodityListResponseBodyDataCommodityList : TeaModel {
                 /// <summary>
-                /// <para>The payment type. Valid values: POSTPAY (pay-as-you-go) and PREPAY (subscription).</para>
+                /// <para>The billing method. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>POSTPAY: pay-as-you-go.</description></item>
+                /// <item><description>PREPAY: subscription.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>POSTPAY</para>
@@ -44,7 +48,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string ChargeType { get; set; }
 
                 /// <summary>
-                /// <para>The code of the service, which is the same as that on the Billing Management page.</para>
+                /// <para>The commodity code, which is the same as the product detail code in Billing Management.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ecs</para>
@@ -54,10 +58,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string CommodityCode { get; set; }
 
                 /// <summary>
-                /// <para>The name of the service.</para>
+                /// <para>The commodity name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>ECS (Pay-As-You-Go)</para>
+                /// <para>Elastic Compute Service (Pay-As-You-Go)</para>
                 /// </summary>
                 [NameInMap("CommodityName")]
                 [Validation(Required=false)]
@@ -68,7 +72,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The additional information about the call result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful!</para>
@@ -88,7 +92,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the information about the service was queried.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

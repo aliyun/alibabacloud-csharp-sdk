@@ -20,43 +20,61 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The return data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QuerySavingsPlansDeductLogResponseBodyData Data { get; set; }
         public class QuerySavingsPlansDeductLogResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The deduction details.</para>
+            /// <para>The list of deduction details.</para>
             /// </summary>
             [NameInMap("Items")]
             [Validation(Required=false)]
             public List<QuerySavingsPlansDeductLogResponseBodyDataItems> Items { get; set; }
             public class QuerySavingsPlansDeductLogResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>The billable item for which the fee is deducted.</para>
+                /// <para>The deducted billable item.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>云服务器配置</para>
                 /// </summary>
                 [NameInMap("BillModule")]
                 [Validation(Required=false)]
                 public string BillModule { get; set; }
 
+                /// <summary>
+                /// <para>The billing cycle.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>202312</para>
+                /// </summary>
                 [NameInMap("BillingCycle")]
                 [Validation(Required=false)]
                 public string BillingCycle { get; set; }
 
+                /// <summary>
+                /// <para>The list price of the deducted bill, in CNY.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>375.35</para>
+                /// </summary>
                 [NameInMap("BillingOfficialPrice")]
                 [Validation(Required=false)]
                 public string BillingOfficialPrice { get; set; }
 
                 /// <summary>
-                /// <para>The service for which the fee is deducted.</para>
+                /// <para>The deducted service.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>云服务器ECS-按量付费</para>
                 /// </summary>
                 [NameInMap("DeductCommodity")]
                 [Validation(Required=false)]
                 public string DeductCommodity { get; set; }
 
                 /// <summary>
-                /// <para>The deducted amount.</para>
+                /// <para>The deducted fee, in CNY.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.52</para>
@@ -66,7 +84,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string DeductFee { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the instance for which the fee is deducted.</para>
+                /// <para>The ID of the deducted cloud service instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>i-XXXXXXXXX</para>
@@ -85,12 +103,18 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 [Validation(Required=false)]
                 public string DeductRate { get; set; }
 
+                /// <summary>
+                /// <para>The list price of the deducted amount, in CNY.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>375.37</para>
+                /// </summary>
                 [NameInMap("DeductedOfficialPrice")]
                 [Validation(Required=false)]
                 public string DeductedOfficialPrice { get; set; }
 
                 /// <summary>
-                /// <para>The discount used for the current deduction.</para>
+                /// <para>The discount that is used for the deduction.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.069</para>
@@ -100,7 +124,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string DiscountRate { get; set; }
 
                 /// <summary>
-                /// <para>The end of the billing cycle for which the fee is deducted.</para>
+                /// <para>The end time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-12-01 01:00:00</para>
@@ -119,15 +143,29 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
+                /// <summary>
+                /// <para>The instance type of the deducted instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ecs.g7.xlarge</para>
+                /// </summary>
                 [NameInMap("InstanceSpec")]
                 [Validation(Required=false)]
                 public string InstanceSpec { get; set; }
 
+                /// <summary>
+                /// <para>The instance family of the deducted instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ecs.g7</para>
+                /// </summary>
                 [NameInMap("InstanceTypeFamily")]
                 [Validation(Required=false)]
                 public string InstanceTypeFamily { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the owner.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1906589291020438</para>
                 /// </summary>
@@ -135,6 +173,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 [Validation(Required=false)]
                 public long? OwnerId { get; set; }
 
+                /// <summary>
+                /// <para>The region of the deducted instance.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-shanghai-eu13-a01</para>
+                /// </summary>
                 [NameInMap("Region")]
                 [Validation(Required=false)]
                 public string Region { get; set; }
@@ -142,8 +186,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 /// <summary>
                 /// <para>The type of the savings plan. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>universal: general-purpose</description></item>
-                /// <item><description>ecs: ECS compute</description></item>
+                /// <item><description><para>universal: general-purpose</para>
+                /// </description></item>
+                /// <item><description><para>ecs: compute-optimized</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -154,7 +200,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string SavingsType { get; set; }
 
                 /// <summary>
-                /// <para>The beginning of the billing cycle for which the fee is deducted. The time is in the format of yyyy-MM-dd HH:mm:ss.</para>
+                /// <para>The start time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-12-01 00:00:00</para>
@@ -164,7 +210,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the user.</para>
+                /// <para>The user ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1906589291020438</para>
@@ -186,7 +232,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public int? PageNum { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -208,14 +254,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>请校验入参正确性</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>61293E7A-3406-4447-8620-EC88B0AA66AD</para>
@@ -225,7 +274,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DeleteCostUnitResponseBodyData Data { get; set; }
         public class DeleteCostUnitResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the call is complete.</para>
+            /// <para>Indicates whether the operation is complete.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public bool? IsSuccess { get; set; }
 
             /// <summary>
-            /// <para>The user ID of the cost center owner.</para>
+            /// <para>The ID of the owner of the financial unit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12431</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public long? OwnerUid { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cost center.</para>
+            /// <para>The ID of the new financial unit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123412343</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F5B803CF-94D8-43AF-ADB3-D819AAD30E27</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

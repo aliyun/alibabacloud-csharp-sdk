@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? Duration { get; set; }
 
         /// <summary>
-        /// <para>The time when the resource plan takes effect. If you do not specify this parameter, the resource plan immediately takes effect by default. 
-        /// When the <b>OrderType</b> is <b>BUY</b>, resource packs with the <b>EffectiveDate longer than the current time of 6 months</b> are not supported. 
+        /// <para>The time when the resource plan takes effect. If you do not specify this parameter, the resource plan immediately takes effect by default.
+        /// When the <b>OrderType</b> is <b>BUY</b>, resource packs with the <b>EffectiveDate longer than the current time of 6 months</b> are not supported.
         /// If the <b>OrderType</b> is <b>UPGRADE</b>, the <b>EffectiveDate</b> <b>must be less than or equal to</b> the actual expiration time of the upgraded instance.
         /// Specify the time in the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time must be in UTC.</para>
         /// 
@@ -46,9 +46,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// <summary>
         /// <para>The type of the order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>BUY: You place the order to purchase an instance.</description></item>
-        /// <item><description>UPGRADE: You place the order to upgrade an instance.</description></item>
-        /// <item><description>RENEW: You place the order to renew an instance.</description></item>
+        /// <item><description><para>BUY: You place the order to purchase an instance.</para>
+        /// </description></item>
+        /// <item><description><para>UPGRADE: You place the order to upgrade an instance.</para>
+        /// </description></item>
+        /// <item><description><para>RENEW: You place the order to renew an instance.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: BUY.</para>
         /// 
@@ -77,8 +80,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// <summary>
         /// <para>The unit of validity period of the resource plan. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Month</description></item>
-        /// <item><description>Year</description></item>
+        /// <item><description><para>Month</para>
+        /// </description></item>
+        /// <item><description><para>Year</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class ModifyAccountRelationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ModifyAccountRelationResponseBodyData Data { get; set; }
         public class ModifyAccountRelationResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>HostId</para>
+            /// <para>The source IP address of the request.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>HostId</para>
+            /// <para>127.0.0.1</para>
             /// </summary>
             [NameInMap("HostId")]
             [Validation(Required=false)]
@@ -39,10 +39,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Message returned</para>
+        /// <para>返回消息</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -52,14 +52,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>request_id</para>
+        /// <para>48602faf-abbe-4d46-8029-654cc5aead5d</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

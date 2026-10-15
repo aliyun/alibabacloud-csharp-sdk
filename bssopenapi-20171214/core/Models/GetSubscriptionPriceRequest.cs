@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class GetSubscriptionPriceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance for which the price is queried. This parameter is required if you upgrade an instance. You can specify this parameter to obtain the pre-upgrade configurations of the instance.</para>
+        /// <para>The ID of the instance for which you want to inquire about the price. This parameter is required in upgrade scenarios to obtain the configurations of the instance before the upgrade.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-khkjhxxxxxxxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The information about the pricing module.</para>
+        /// <para>The list of pricing modules.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ModuleList")]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public List<GetSubscriptionPriceRequestModuleList> ModuleList { get; set; }
         public class GetSubscriptionPriceRequestModuleList : TeaModel {
             /// <summary>
-            /// <para>The configurations of the Nth pricing module. Valid values of N: 1 to 50. Format: AA:aa,BB:bb. The values of AA and BB are the property IDs of the pricing module. The values of aa and bb are the property values of the pricing module.</para>
+            /// <para>The configuration of the nth pricing module. Valid values of n: 1 to 50. Format: AA:aa,BB:bb. AA and BB are the identifiers of the pricing module attributes, and aa and bb are the attribute values of the pricing module attributes.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string Config { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the Nth pricing module.</para>
+            /// <para>The identifier of the nth pricing module.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string ModuleCode { get; set; }
 
             /// <summary>
-            /// <para>The status of the pricing module. This parameter is required only if the order type is Upgrade. Valid values:</para>
+            /// <para>The change status of the pricing module for this inquiry. This parameter is required only when the order type is Upgrade. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: adds one or more instances.</description></item>
-            /// <item><description>2: modifies the configurations of an instance. In the upgrade scenario, if the configurations of the pricing module change, you must specify this value for the parameter.</description></item>
+            /// <item><description>1: add.</description></item>
+            /// <item><description>2: modify. If the configuration of the pricing module changes in an upgrade scenario, you must explicitly specify this value.</description></item>
             /// </list>
             /// <para>Default value: 1.</para>
             /// 
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public int? ModuleStatus { get; set; }
 
             /// <summary>
-            /// <para>The tag of the specified resource. This parameter is required only if you upgrade or modify the configurations of an Alibaba Cloud service. For example, if you want to modify the configurations of a disk, you can use a tag to identify the ID of the disk.</para>
+            /// <para>The identifier of the specified resource. This parameter is required only for the upgrade and configuration change of specific products. For example, if you change the configuration of a cloud disk, you can use Tag to identify the ID of the specific cloud disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>213213123</para>
@@ -77,11 +77,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// <para>The type of the order. Valid values:</para>
+        /// <para>The order type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NewOrder: purchases an instance of an Alibaba Cloud service.</description></item>
-        /// <item><description>Renewal: renews an instance of an Alibaba Cloud service.</description></item>
-        /// <item><description>Upgrade: upgrades an instance of an Alibaba Cloud service.</description></item>
+        /// <item><description>NewOrder: new purchase.</description></item>
+        /// <item><description>Renewal: renewal.</description></item>
+        /// <item><description>Upgrade: upgrade.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The code of the service. For more information about the service code, see <b>Codes of Alibaba Cloud Services</b>.</para>
+        /// <para>The product code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The type of the service. Specify the parameter based on the pricing document of the specific service.</para>
+        /// <para>The product type. Whether this parameter is required depends on the price inquiry documentation of the specific product.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? Quantity { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the instance resides.</para>
+        /// <para>The region ID of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The service duration.</para>
+        /// <para>The service period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -148,10 +148,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? ServicePeriodQuantity { get; set; }
 
         /// <summary>
-        /// <para>The unit of the service duration. Valid values:</para>
+        /// <para>The unit of the service period. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Year</description></item>
-        /// <item><description>Month</description></item>
+        /// <item><description>Year: years.</description></item>
+        /// <item><description>Month: months.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ServicePeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The billing method. Set the value to Subscription.</para>
+        /// <para>The subscription type. Valid value: Subscription (subscription).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class RenewChangeInstanceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The data that is returned.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public RenewChangeInstanceResponseBodyData Data { get; set; }
         public class RenewChangeInstanceResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The site where the host runs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100.100.64.1:8150</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string HostId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the successfully created order.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>202407022550621</para>
             /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Successful!</para>
         /// </summary>
@@ -48,7 +59,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</para>
@@ -58,6 +69,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>success=true indicates that the call was successful. success=false indicates that an error occurred.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

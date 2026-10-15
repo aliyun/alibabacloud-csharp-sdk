@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class QueryRIUtilizationDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance whose fees are deducted by using the RI. If this parameter is left empty, the usage details of all instances are queried.</para>
+        /// <para>The ID of the deducted instance. If this parameter is left empty, the details of all instances are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>jsdgfsdhgsdjh</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string DeductedInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The time when the RI expires. Specify the time in the YYYY-MM-DD HH:mm:ss format.</para>
+        /// <para>The end time. Format: YYYY-MM-DD HH:mm:ss.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The instance type of the RI.</para>
+        /// <para>The instance type corresponding to the reserved instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Instancetyp</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string InstanceSpec { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 20. Maximum value: 300.</para>
+        /// <para>The number of entries per page. Default value: 20. Maximum value: 300.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -61,10 +61,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The code of the service to which the RI is applied. Default value: ecsRi. Valid values:</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ecsRi: ECS RI.</description></item>
-        /// <item><description>scu_bag: storage capacity unit (SCU).</description></item>
+        /// <item><description>ecsRi: ECS reserved instances. This is the default value.</description></item>
+        /// <item><description>scu_bag: Storage capacity unit (SCU) plans.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RICommodityCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the RI. If this parameter is left empty, the usage details of all RIs are queried.</para>
+        /// <para>The instance ID of the reserved instance for the filtered query. If this parameter is left empty, the details of all used reserved instances are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dsudfgdsjh</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RIInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The time when the RI was created. Specify the time in the YYYY-MM-DD HH:mm:ss format.</para>
+        /// <para>The start time. Format: YYYY-MM-DD HH:mm:ss.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

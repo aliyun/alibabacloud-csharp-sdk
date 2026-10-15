@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class RelieveAccountRelationRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account that is used as the member. You must set the RelationId parameter or all of the ParentUserId, ChildUserId, and RelationType parameters.</para>
+        /// <para>The UID of the RAM user. You must specify either the RelationId parameter, or the ParentUserId, ChildUserId, and RelationType parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1512996702208737</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? ChildUserId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account that is used as the management account. You must set the RelationId parameter or all of the ParentUserId, ChildUserId, and RelationType parameters.</para>
+        /// <para>The UID of the Alibaba Cloud account. You must specify either the RelationId parameter, or the ParentUserId, ChildUserId, and RelationType parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1738376485192612</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? ParentUserId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the financial relationship between the management account and the member. You must set the RelationId parameter or all of the ParentUserId, ChildUserId, and RelationType parameters.</para>
+        /// <para>The ID of the account association. You must specify either the RelationId parameter, or the ParentUserId, ChildUserId, and RelationType parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RelationId</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? RelationId { get; set; }
 
         /// <summary>
-        /// <para>The type of the financial relationship. Set the value to enterprise_group.</para>
+        /// <para>The relationship type. Only enterprise_group is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>enterprise_group</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RelationType { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the request. The ID is used to mark a request and troubleshoot a problem.</para>
+        /// <para>The unique ID of the request. This ID is used to troubleshoot issues.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

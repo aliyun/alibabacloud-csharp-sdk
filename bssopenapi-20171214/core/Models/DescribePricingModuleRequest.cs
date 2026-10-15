@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The service code. You can query the service code by calling the <b>QueryProductList</b> operation.</para>
+        /// <para>The product code. You can call the <b>QueryProductList</b> operation to query product codes.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The type of the service. You can query the service type by calling the <b>QueryProductList</b> operation.</para>
+        /// <para>The product type. You can call the <b>QueryProductList</b> operation to query product types.</para>
+        /// <remarks>
+        /// <para>Notice: The value must be the same as the product type returned by the <b>QueryProductList</b> operation.</notice></para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>rds</para>
@@ -35,10 +38,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The billing method. Valid values:</para>
+        /// <para>The subscription type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Subscription: subscription</description></item>
-        /// <item><description>PayAsYouGo: pay-as-you-go</description></item>
+        /// <item><description>Subscription: subscription.</description></item>
+        /// <item><description>PayAsYouGo: pay-as-you-go.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
