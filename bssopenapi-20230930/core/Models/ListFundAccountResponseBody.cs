@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class ListFundAccountResponseBody : TeaModel {
         /// <summary>
-        /// <para>Data list</para>
+        /// <para>The data list.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListFundAccountResponseBodyData> Data { get; set; }
         public class ListFundAccountResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Account creation time</para>
+            /// <para>The time when the account was created. The format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-12-30 12:00:00</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string CreateDate { get; set; }
 
             /// <summary>
-            /// <para>Account ID of the MA user associated with the account</para>
+            /// <para>The account ID of the MA user corresponding to the account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1232121</para>
@@ -37,17 +37,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string FundAccountAdminAccountId { get; set; }
 
             /// <summary>
-            /// <para>Name of the MA user associated with the account</para>
+            /// <para>The username of the MA user corresponding to the account.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>云某的账户</para>
+            /// <para>Yun\&quot;s account</para>
             /// </summary>
             [NameInMap("FundAccountAdminAccountName")]
             [Validation(Required=false)]
             public string FundAccountAdminAccountName { get; set; }
 
             /// <summary>
-            /// <para>Account ID</para>
+            /// <para>The fund account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1022231</para>
@@ -57,17 +57,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string FundAccountId { get; set; }
 
             /// <summary>
-            /// <para>Account name</para>
+            /// <para>The fund account name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>云某的账户</para>
+            /// <para>Yun\&quot;s account</para>
             /// </summary>
             [NameInMap("FundAccountName")]
             [Validation(Required=false)]
             public string FundAccountName { get; set; }
 
             /// <summary>
-            /// <para>Account ID of the fund account owner</para>
+            /// <para>The account ID of the fund account owner.</para>
             /// 
             /// <b>Example:</b>
             /// <para>132123211</para>
@@ -77,10 +77,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string FundAccountOwnerAccountId { get; set; }
 
             /// <summary>
-            /// <para>Account status.
-            /// VALID: valid.
-            /// FROZEN: frozen.
-            /// CLOSED: closed.</para>
+            /// <para>The account status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>VALID: Valid.</description></item>
+            /// <item><description>FROZEN: Frozen. </description></item>
+            /// <item><description>CLOSED: Closed.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>VALID</para>
@@ -90,9 +92,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string FundAccountStatus { get; set; }
 
             /// <summary>
-            /// <para>Account type.
-            /// DIRECT_USER: Alibaba Cloud direct customer account.
-            /// RESELLER_QUOTA: ecosystem account.</para>
+            /// <para>The account type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>DIRECT_USER: Alibaba Cloud direct customer account. </description></item>
+            /// <item><description>RESELLER_QUOTA: Ecosystem account.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>DIRECT_USER</para>
@@ -102,7 +106,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string FundAccountType { get; set; }
 
             /// <summary>
-            /// <para>Level-1 marketplace</para>
+            /// <para>The primary marketplace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2684210001</para>
@@ -112,17 +116,19 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string Nbid { get; set; }
 
             /// <summary>
-            /// <para>Set of account permissions that the user has.
-            /// using: use.
-            /// manage: manage.
-            /// owner: own.</para>
+            /// <para>The set of account permissions owned by the user. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>using: Use.</description></item>
+            /// <item><description>manage: Manage.</description></item>
+            /// <item><description>owner: Own.</description></item>
+            /// </list>
             /// </summary>
             [NameInMap("Permissions")]
             [Validation(Required=false)]
             public List<string> Permissions { get; set; }
 
             /// <summary>
-            /// <para>Site</para>
+            /// <para>The site.</para>
             /// 
             /// <b>Example:</b>
             /// <para>26842</para>
@@ -134,7 +140,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         }
 
         /// <summary>
-        /// <para>Response metadata</para>
+        /// <para>The metadata of the response structure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -144,7 +150,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public object Metadata { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6000EE23-274B-4E07-A697-FF2E999520A4</para>

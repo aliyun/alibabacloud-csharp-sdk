@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public List<ListFundAccountPayRelationResponseBodyData> Data { get; set; }
         public class ListFundAccountPayRelationResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The account ID of the user associated with the payment relationship, that is, the account that uses this account for payment.</para>
+            /// <para>The account ID of the user associated with the payment relationship, which is the account that uses this account for payment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32812132121</para>
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The user name.</para>
+            /// <para>The username.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>云某的名称</para>
+            /// <para>Sample username</para>
             /// </summary>
             [NameInMap("AccountName")]
             [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string Ecid { get; set; }
 
             /// <summary>
-            /// <para>The time when the payment relationship takes effect.</para>
+            /// <para>The effective period of the payment relationship. The format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-12-01 12:00:10</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string FundAccountOwnerAccountId { get; set; }
 
             /// <summary>
-            /// <para>The time when the payment relationship expires.</para>
+            /// <para>The time when the payment relationship expires. The format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-01-01 12:12:12</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string IneffectiveTime { get; set; }
 
             /// <summary>
-            /// <para>The primary marketplace.</para>
+            /// <para>The level-1 marketplace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2684210001</para>
@@ -107,20 +107,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string Nbid { get; set; }
 
             /// <summary>
-            /// <para>The operator name.
-            /// When the operator type is aliyun_pk, the operator name is the Alibaba Cloud nickname.
-            /// When the operator type is system, the operator name is &quot;Alibaba Cloud assistant&quot;.</para>
+            /// <para>The name of the operator. If the operator type is aliyun_pk, the value is the Alibaba Cloud nickname. If the operator type is system, the value is &quot;Alibaba Cloud Support&quot;.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>云某的名称</para>
+            /// <para>Sample username</para>
             /// </summary>
             [NameInMap("OperatorName")]
             [Validation(Required=false)]
             public string OperatorName { get; set; }
 
             /// <summary>
-            /// <para>The authorized operator.
-            /// When the operator type is aliyun_pk, operatorNo is the Alibaba Cloud account ID.</para>
+            /// <para>The authorized operator. If the operator type is aliyun_pk, the value is the Alibaba Cloud account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1232343423</para>
@@ -130,9 +127,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string OperatorNo { get; set; }
 
             /// <summary>
-            /// <para>The type of the authorized operator.
-            /// aliyun_pk: user.
-            /// system: Alibaba Cloud system.</para>
+            /// <para>The type of the authorized operator. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>aliyun_pk: User.</description></item>
+            /// <item><description>system: Alibaba Cloud system.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>aliyun_pk</para>
@@ -142,7 +141,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string OperatorType { get; set; }
 
             /// <summary>
-            /// <para>The relationship type, which can be collection relationship or payment relationship.</para>
+            /// <para>The relationship type, which can be a collection relationship or a payment relationship.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PAYMENT</para>
@@ -162,9 +161,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string Site { get; set; }
 
             /// <summary>
-            /// <para>The relationship status.
-            /// valid: valid.
-            /// expired: invalid.</para>
+            /// <para>The relationship status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>valid: Valid.</description></item>
+            /// <item><description>expired: Invalid.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>valid</para>
@@ -176,7 +177,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         }
 
         /// <summary>
-        /// <para>The response metadata.</para>
+        /// <para>The metadata of the response structure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>

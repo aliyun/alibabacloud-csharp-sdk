@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class GetFundAccountTransactionDetailsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Current page number</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Data list</para>
+        /// <para>The data list.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetFundAccountTransactionDetailsResponseBodyData> Data { get; set; }
         public class GetFundAccountTransactionDetailsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Balance after the operation</para>
+            /// <para>The balance after the operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string Balance { get; set; }
 
             /// <summary>
-            /// <para>Order number or bill number</para>
+            /// <para>The order number or bill number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2323203243</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string BillNumber { get; set; }
 
             /// <summary>
-            /// <para>External transaction serial number</para>
+            /// <para>The external transaction serial number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20244389232</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string ChannelTransactionNumber { get; set; }
 
             /// <summary>
-            /// <para>Transaction amount currency</para>
+            /// <para>The currency of the transaction amount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>USD</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string Currency { get; set; }
 
             /// <summary>
-            /// <para>Enterprise entity ID</para>
+            /// <para>The enterprise entity ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>23473943</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string FundAccountEcid { get; set; }
 
             /// <summary>
-            /// <para>Account ID</para>
+            /// <para>The account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1232121</para>
@@ -87,17 +87,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public long? FundAccountId { get; set; }
 
             /// <summary>
-            /// <para>Account name</para>
+            /// <para>The account name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>云某的名称</para>
+            /// <para>Sample account name</para>
             /// </summary>
             [NameInMap("FundAccountName")]
             [Validation(Required=false)]
             public string FundAccountName { get; set; }
 
             /// <summary>
-            /// <para>Alibaba Cloud account ID of the account owner</para>
+            /// <para>The Alibaba Cloud account ID of the account owner.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32343231</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public long? FundAccountOwnerAccountId { get; set; }
 
             /// <summary>
-            /// <para>Fund type</para>
+            /// <para>The fund type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ACCT_BOOK</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string FundType { get; set; }
 
             /// <summary>
-            /// <para>Primary marketplace</para>
+            /// <para>The primary marketplace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2684210001</para>
@@ -127,17 +127,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string Nbid { get; set; }
 
             /// <summary>
-            /// <para>Remarks</para>
+            /// <para>The remark.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>订单备注</para>
+            /// <para>Order remark</para>
             /// </summary>
             [NameInMap("Remark")]
             [Validation(Required=false)]
             public string Remark { get; set; }
 
             /// <summary>
-            /// <para>Site</para>
+            /// <para>The site.</para>
             /// 
             /// <b>Example:</b>
             /// <para>26842</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string Site { get; set; }
 
             /// <summary>
-            /// <para>Corresponding transaction account, such as the Alipay top-up account or the counterparty account for transfers.</para>
+            /// <para>The corresponding transaction account, such as the Alipay top-up account or the counterparty account for a transfer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>186****3975</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string TransactionAccount { get; set; }
 
             /// <summary>
-            /// <para>Transaction amount</para>
+            /// <para>The transaction amount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -167,15 +167,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string TransactionAmount { get; set; }
 
             /// <summary>
-            /// <para>Transaction channel. If specified, the query filters by transaction channel. If not specified, all channels are queried by default.</para>
-            /// <para>User balance: ACCT_CASH.</para>
-            /// <para>Alipay: ALIPAY.</para>
-            /// <para>Alipay Zhifutong: ALIPAY_ZHIFUTONG.</para>
-            /// <para>Offline remittance: OFFLINE_REMIT.</para>
-            /// <para>Credit control quota refund: REFUND.</para>
-            /// <para>Online banking: UNION_PAY_BANK.</para>
-            /// <para>Credit card: CREDIT_CARD. (International site only)</para>
-            /// <para>PayPal: PAYPAL. (International site only)</para>
+            /// <para>The list of transaction channels. If you specify this parameter, transactions are queried by channel. If you do not specify this parameter, all channels are queried by default. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>ACCT_CASH: User balance.</description></item>
+            /// <item><description>ALIPAY: Alipay.</description></item>
+            /// <item><description>ALIPAY_ZHIFUTONG: Alipay Zhifutong.</description></item>
+            /// <item><description>OFFLINE_REMIT: Corporate remittance.</description></item>
+            /// <item><description>REFUND: Credit limit refund.</description></item>
+            /// <item><description>UNION_PAY_BANK: Online banking.</description></item>
+            /// <item><description>CREDIT_CARD: Credit card. Available only on the international site.</description></item>
+            /// <item><description>AYPAL: PayPal. Available only on the international site.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>ALIPAY</para>
@@ -185,7 +187,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string TransactionChannel { get; set; }
 
             /// <summary>
-            /// <para>Transaction direction: in/out (income/expenditure)</para>
+            /// <para>The transaction direction. Valid values: in (income) and out (expense).</para>
             /// 
             /// <b>Example:</b>
             /// <para>IN</para>
@@ -195,7 +197,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string TransactionDirection { get; set; }
 
             /// <summary>
-            /// <para>Transaction serial number</para>
+            /// <para>The transaction number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5423121</para>
@@ -205,7 +207,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public long? TransactionNumber { get; set; }
 
             /// <summary>
-            /// <para>Formatted transaction time string</para>
+            /// <para>The formatted string of the transaction time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-12-01 12:00:00</para>
@@ -215,14 +217,16 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string TransactionTime { get; set; }
 
             /// <summary>
-            /// <para>Transaction type. If a transaction type is specified, only results of that type are returned. If the specified type does not exist, the result is empty. If not specified, all types are returned by default.</para>
-            /// <para>Top-up: CHARGE.</para>
-            /// <para>Withdrawal: WITHDRAW.</para>
-            /// <para>Refund: REFUND.</para>
-            /// <para>Payment: PAY.</para>
-            /// <para>Transfer: TRANSFER.</para>
-            /// <para>Adjustment: ADJUST.</para>
-            /// <para>Order expiration refund: PAY_FAILED.</para>
+            /// <para>The transaction type. If you specify a transaction type, the query returns results of the corresponding type. If no results exist, an empty result is returned. If you do not specify this parameter, all types are returned by default. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>CHARGE: Top-up.</description></item>
+            /// <item><description>WITHDRAW: Withdrawal.</description></item>
+            /// <item><description>REFUND: Refund.</description></item>
+            /// <item><description>PAY: Payment.</description></item>
+            /// <item><description>TRANSFER: Transfer.</description></item>
+            /// <item><description>ADJUST: Adjustment.</description></item>
+            /// <item><description>PAY_FAILED: Refund for failed order.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>CHARGE</para>
@@ -234,7 +238,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         }
 
         /// <summary>
-        /// <para>Response structure metadata</para>
+        /// <para>The metadata of the response structure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -244,7 +248,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public object Metadata { get; set; }
 
         /// <summary>
-        /// <para>Page size</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -254,7 +258,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D6E068C3-25BC-455A-85FE-45F0B22ECB1F</para>
@@ -264,7 +268,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total number of records</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

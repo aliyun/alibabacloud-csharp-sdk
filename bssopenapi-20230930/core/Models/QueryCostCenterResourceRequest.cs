@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public List<QueryCostCenterResourceRequestEcIdAccountIds> EcIdAccountIds { get; set; }
         public class QueryCostCenterResourceRequestEcIdAccountIds : TeaModel {
             /// <summary>
-            /// <para>The list of account IDs to access. If this parameter is empty, all accounts under the current entity ID are selected.</para>
+            /// <para>The list of accounts to access. If this parameter is empty, all accounts under the current entity ID are selected.</para>
             /// </summary>
             [NameInMap("AccountIds")]
             [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string Nbid { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query. If this parameter is empty, no more results exist.</para>
+        /// <para>The token for the next query. An empty value indicates that no more results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CAESEgoQCg4KCmd</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the owner of the financial unit.</para>
+        /// <para>The ID of the owner account for the financial unit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567812345678</para>

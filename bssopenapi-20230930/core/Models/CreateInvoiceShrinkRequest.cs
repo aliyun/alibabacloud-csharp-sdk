@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class CreateInvoiceShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies the invoice amount. Supports up to two decimal places.</para>
+        /// <para>Specifies the invoice amount. Two decimal places are supported.</para>
         /// <list type="bullet">
-        /// <item><description>If not specified, the invoice will be issued for the total invoiceable amount of all invoiceCandidateIds.</description></item>
-        /// <item><description>If specified, the invoice will be issued for the specified amount. The specified amount cannot exceed the total invoiceable amount of all invoiceCandidateIds.</description></item>
+        /// <item><description>If left empty, the invoice is issued for the total invoiceable amount of all invoice candidate IDs.</description></item>
+        /// <item><description>If specified, the invoice is issued for the specified amount. The specified amount cannot exceed the total invoiceable amount of all invoice candidate IDs.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string Amount { get; set; }
 
         /// <summary>
-        /// <para>Enterprise and account list. If empty, the current account is queried.</para>
+        /// <para>The list of enterprises and accounts. If this parameter is left empty, the current account is queried.</para>
         /// </summary>
         [NameInMap("EcIdAccountIds")]
         [Validation(Required=false)]
         public string EcIdAccountIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>List of invoice candidate IDs.</para>
+        /// <para>The list of invoice candidate IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InvoiceCandidateIds")]
@@ -39,11 +39,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string InvoiceCandidateIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>Invoice mode.</para>
+        /// <para>The invoicing mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: Independent invoicing. Expenses of multiple accounts under the enterprise are invoiced separately for each account.</description></item>
-        /// <item><description>1: Consolidated invoicing. Expenses of multiple accounts under the enterprise are consolidated and invoiced under the invoicing entity.
-        /// If only one account is passed in the AccountIds parameter, independent invoicing is applied.</description></item>
+        /// <item><description>0: Independent invoicing. The consumption of multiple accounts under an enterprise is invoiced independently for each account.</description></item>
+        /// <item><description>1: Consolidated invoicing. The consumption of multiple accounts under an enterprise is consolidated and invoiced based on the invoicing entity.
+        /// If only one account is specified in the AccountIds request parameter, independent invoicing is applied.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -55,19 +55,19 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public int? InvoiceMode { get; set; }
 
         /// <summary>
-        /// <para>Invoice remark.</para>
+        /// <para>The invoice remark.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>备注信息</para>
+        /// <para>Remark information</para>
         /// </summary>
         [NameInMap("InvoiceRemark")]
         [Validation(Required=false)]
         public string InvoiceRemark { get; set; }
 
         /// <summary>
-        /// <para>Invoice title ID.</para>
+        /// <para>The invoice title ID.</para>
         /// <list type="bullet">
-        /// <item><description>The ID parameter returned by the ListInvoiceTitle API for the current logged-in account.</description></item>
+        /// <item><description>The ID returned by the ListInvoiceTitle operation for the current logon account.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string InvoiceTitleId { get; set; }
 
         /// <summary>
-        /// <para>Invoice type.</para>
+        /// <para>The invoice type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public int? InvoiceType { get; set; }
 
         /// <summary>
-        /// <para>Primary marketplace ID. If empty, the marketplace ID of the current user is used by default.</para>
+        /// <para>The level-1 marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2684201000001</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string Nbid { get; set; }
 
         /// <summary>
-        /// <para>List of email addresses to receive the invoice. A maximum of 3 can be specified.</para>
+        /// <para>The list of email addresses that receive the invoice. You can specify up to three email addresses.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RecipientEmails")]

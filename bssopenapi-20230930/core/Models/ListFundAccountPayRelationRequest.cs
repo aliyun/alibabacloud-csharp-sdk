@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Fund account ID.</para>
+        /// <para>The fund account ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string FundAccountId { get; set; }
 
         /// <summary>
-        /// <para>The primary marketplace ID. If this parameter is left empty, the ID of the marketplace to which the current user belongs is used by default.</para>
+        /// <para>The level-1 marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2684201000001</para>
@@ -51,9 +51,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The relationship status.
-        /// valid: valid.
-        /// expired: invalid.</para>
+        /// <para>The relationship status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>valid: Valid.</description></item>
+        /// <item><description>expired: Invalid.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>valid</para>

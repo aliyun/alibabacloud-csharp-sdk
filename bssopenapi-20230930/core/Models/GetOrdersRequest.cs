@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class GetOrdersRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range for order creation. By default, orders created within the most recent 1 hour are queried. Format: YYYY-MM-ddTHH:mm:ssZ. Time zone: UTC.</para>
+        /// <para>The end of the time range during which orders were created. By default, orders created within the last hour are queried. Specify the time in the YYYY-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2016-05-23T12:00:00Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string CreateTimeEnd { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range for order creation. By default, orders created within the most recent 1 hour are queried. Format: YYYY-MM-ddTHH:mm:ssZ. Time zone: UTC.</para>
+        /// <para>The start of the time range during which orders were created. By default, orders created within the last hour are queried. Specify the time in the YYYY-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2016-05-23T13:00:00Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string CreateTimeStart { get; set; }
 
         /// <summary>
-        /// <para>The UID of a member account in the enterprise multi-account management. Leave this parameter empty if this scenario does not apply.</para>
+        /// <para>The UID of the member accounts in the enterprise multi-account architecture. Leave this parameter empty if this scenario does not apply.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1779628988149763</para>
@@ -42,18 +42,18 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         /// <summary>
         /// <para>The order type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>New: new purchase.</description></item>
-        /// <item><description>Renew: renewal.</description></item>
-        /// <item><description>Upgrade: upgrade.</description></item>
-        /// <item><description>TempUpgrade: temporary upgrade.</description></item>
-        /// <item><description>Downgrade: downgrade.</description></item>
-        /// <item><description>Refund: refund.</description></item>
-        /// <item><description>Convert: billing method conversion.</description></item>
-        /// <item><description>ResizeDisk: cloud disk resizing.</description></item>
-        /// <item><description>CompensatoryRenew: compensatory renewal.</description></item>
-        /// <item><description>IncreaseUpgrade: bandwidth upgrade.</description></item>
-        /// <item><description>Exchange: exchange.</description></item>
-        /// <item><description>ChangeOperatingSystem: operating system change.</description></item>
+        /// <item><description>New: new purchase</description></item>
+        /// <item><description>Renew: renewal</description></item>
+        /// <item><description>Upgrade: upgrade</description></item>
+        /// <item><description>TempUpgrade: temporary upgrade</description></item>
+        /// <item><description>Downgrade: downgrade</description></item>
+        /// <item><description>Refund: refund</description></item>
+        /// <item><description>Convert: billing method change</description></item>
+        /// <item><description>ResizeDisk: disk resizing</description></item>
+        /// <item><description>CompensatoryRenew: compensatory renewal</description></item>
+        /// <item><description>IncreaseUpgrade: bandwidth upgrade</description></item>
+        /// <item><description>Exchange: exchange</description></item>
+        /// <item><description>ChangeOperatingSystem: operating system replacement</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -90,12 +90,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         /// <summary>
         /// <para>The payment status. For non-refund orders, valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Unpaid: unpaid.</description></item>
-        /// <item><description>Paid: paid.</description></item>
-        /// <item><description>Cancelled: cancelled.</description></item>
+        /// <item><description>Unpaid: unpaid</description></item>
+        /// <item><description>Paid: paid</description></item>
+        /// <item><description>Cancelled: cancelled</description></item>
         /// </list>
         /// <remarks>
-        /// <para>For refund orders, this parameter can be set to NULL.</para>
+        /// <para>For refund orders, this parameter can be NULL.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -128,8 +128,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         /// <summary>
         /// <para>The subscription type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Subscription: upfront.</description></item>
-        /// <item><description>PayAsYouGo: pay-as-you-go.</description></item>
+        /// <item><description>Subscription: subscription</description></item>
+        /// <item><description>PayAsYouGo: pay-as-you-go</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

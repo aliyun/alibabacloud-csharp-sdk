@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class QueryCostCenterResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of cost center data.</para>
+        /// <para>The data list.</para>
         /// </summary>
         [NameInMap("CostCenterDtoList")]
         [Validation(Required=false)]
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             /// <para>The name of the cost center. The name must be unique within the same account.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ResourceGroup</para>
+            /// <para>Resource group</para>
             /// </summary>
             [NameInMap("CostCenterName")]
             [Validation(Required=false)]
             public string CostCenterName { get; set; }
 
             /// <summary>
-            /// <para>The level of the cost center node.</para>
+            /// <para>The node level of the cost center.</para>
             /// 
             /// <b>Example:</b>
             /// <para>loose</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public int? Level { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user who owns the cost center.</para>
+            /// <para>The ID of the owner account for the cost center.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1314839403940987</para>
@@ -88,6 +88,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 
             /// <summary>
             /// <para>The priority of the cost center.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("Priority")]
             [Validation(Required=false)]
@@ -106,7 +109,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The metadata of the response struct.</para>
+        /// <para>The response metadata.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>

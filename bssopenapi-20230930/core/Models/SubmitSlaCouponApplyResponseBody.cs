@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class SubmitSlaCouponApplyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response struct metadata.</para>
+        /// <para>The metadata of the response structure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public object Metadata { get; set; }
 
         /// <summary>
-        /// <para>The unique request ID, which is used to identify a request and troubleshoot issues.</para>
+        /// <para>The unique identifier of the request, which is used to mark the request and facilitate troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public double? SumCoupon { get; set; }
 
         /// <summary>
-        /// <para>The end time.</para>
+        /// <para>The end time in the EEE MMM dd HH:mm:ss z yyyy format, such as Mon Apr 27 00:00:00 CST 2026.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Mon Apr 27 00:00:00 CST 2026</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string ValidEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time.</para>
+        /// <para>The start time in the EEE MMM dd HH:mm:ss z yyyy format, such as Tue Oct 27 13:15:58 CST 2026.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Tue Oct 27 13:15:58 CST 2026</para>

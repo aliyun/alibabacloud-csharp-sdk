@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class CreateInvoiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>Data list.</para>
+        /// <para>The data list.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<CreateInvoiceResponseBodyData> Data { get; set; }
         public class CreateInvoiceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Account ID.</para>
+            /// <para>The account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1990699401005016</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public long? AccountId { get; set; }
 
             /// <summary>
-            /// <para>Invoice amount.</para>
+            /// <para>The invoice amount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.01</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string Amount { get; set; }
 
             /// <summary>
-            /// <para>Error code.</para>
+            /// <para>The error code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1001</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>Invoice issuer.</para>
+            /// <para>The invoicing entity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALIYUN_SERVICE</para>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string InvoiceIssuer { get; set; }
 
             /// <summary>
-            /// <para>Error message.</para>
+            /// <para>The error message.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>不可开票</para>
+            /// <para>Not invoiceable</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         }
 
         /// <summary>
-        /// <para>Response metadata.</para>
+        /// <para>The metadata of the response structure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public object Metadata { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</para>

@@ -36,6 +36,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             [Validation(Required=false)]
             public string Amount { get; set; }
 
+            /// <summary>
+            /// <para>CertainAmount</para>
+            /// </summary>
             [NameInMap("CertainAmount")]
             [Validation(Required=false)]
             public string CertainAmount { get; set; }
@@ -74,7 +77,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             /// <para>The coupon type name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>满减券</para>
+            /// <para>Threshold discount coupon</para>
             /// </summary>
             [NameInMap("CouponTypeName")]
             [Validation(Required=false)]
@@ -91,7 +94,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string Currency { get; set; }
 
             /// <summary>
-            /// <para>The end time.</para>
+            /// <para>The end time in ISO 8601 format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-03-06T15:12Z</para>
@@ -101,14 +104,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether there is a first purchase restriction.</para>
+            /// <para>Indicates whether the coupon is limited to first-time purchases.</para>
             /// </summary>
             [NameInMap("FirstBuy")]
             [Validation(Required=false)]
             public bool? FirstBuy { get; set; }
 
             /// <summary>
-            /// <para>The coupon issuance time.</para>
+            /// <para>The time when the coupon was issued.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-03-02T15:12Z</para>
@@ -118,7 +121,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The product code list.</para>
+            /// <para>The list of product codes.</para>
             /// </summary>
             [NameInMap("ItemNames")]
             [Validation(Required=false)]
@@ -128,7 +131,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             /// <para>The amount limit.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>无订单金额限制</para>
+            /// <para>No order amount limit</para>
             /// </summary>
             [NameInMap("MoneyLimit")]
             [Validation(Required=false)]
@@ -138,7 +141,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             /// <para>The order duration limit rule.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>预付费规则：购买订单时长大于3600s才能使用</para>
+            /// <para>Subscription rule: The coupon can be used only for purchase orders with a duration greater than 3,600 seconds</para>
             /// </summary>
             [NameInMap("OrderTimeRule")]
             [Validation(Required=false)]
@@ -155,17 +158,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string RemainAmount { get; set; }
 
             /// <summary>
-            /// <para>The remarks.</para>
+            /// <para>The remark.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>新买28号</para>
+            /// <para>New purchase on the 28th</para>
             /// </summary>
             [NameInMap("Remark")]
             [Validation(Required=false)]
             public string Remark { get; set; }
 
             /// <summary>
-            /// <para>The shared account list.</para>
+            /// <para>The list of shared accounts.</para>
             /// </summary>
             [NameInMap("ShareUidList")]
             [Validation(Required=false)]
@@ -185,7 +188,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
                 /// <para>The Alibaba Cloud account.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>阿里云计算有限公司</para>
+                /// <para>Alibaba Cloud Computing Ltd</para>
                 /// </summary>
                 [NameInMap("UserNick")]
                 [Validation(Required=false)]
@@ -194,7 +197,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether to display the tag deduction button.</para>
+            /// <para>Specifies whether the tag deduction button is displayed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -217,14 +220,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             /// <para>The site name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>官网自营</para>
+            /// <para>Official website direct sales</para>
             /// </summary>
             [NameInMap("SiteName")]
             [Validation(Required=false)]
             public string SiteName { get; set; }
 
             /// <summary>
-            /// <para>The start time.</para>
+            /// <para>The start time in ISO 8601 format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-03-02T15:12Z</para>
@@ -254,7 +257,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string SuitAccount { get; set; }
 
             /// <summary>
-            /// <para>The applicable product type. Valid values: all, which indicates that the coupon is applicable to all products. white, which indicates that the coupon is applicable to specified products. black, which indicates that the coupon is not applicable to specified products.</para>
+            /// <para>The applicable product type: all for all products, white for specified applicable products, and black for specified inapplicable products.</para>
             /// 
             /// <b>Example:</b>
             /// <para>all</para>
@@ -264,7 +267,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string SuitItemType { get; set; }
 
             /// <summary>
-            /// <para>The coupon applicable scope.</para>
+            /// <para>The application scope of the coupon.</para>
             /// 
             /// <b>Example:</b>
             /// <para>UNIVERSAL</para>
@@ -274,7 +277,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string UniversalType { get; set; }
 
             /// <summary>
-            /// <para>The list of order types applicable to the coupon.</para>
+            /// <para>The list of applicable order types for the coupon.</para>
             /// </summary>
             [NameInMap("YhOrderTypes")]
             [Validation(Required=false)]
@@ -283,7 +286,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class CreateReportDefinitionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The start billing cycle for push. After a successful subscription, the system automatically pushes data from the start billing cycle to the current time. This parameter is invalid for monthly bill PDF subscriptions and does not trigger re-push of historical data. Data within the last year can be pushed.</para>
+        /// <para>The start billing cycle for data push. After the subscription is created, the system automatically pushes data from the start billing cycle to the current time. This parameter is invalid for monthly billing PDF subscriptions, and historical data is not pushed again. Data within the most recent year can be pushed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-05</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string BeginBillingCycle { get; set; }
 
         /// <summary>
-        /// <para>The response struct metadata.</para>
+        /// <para>The metadata of the response structure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public object Metadata { get; set; }
 
         /// <summary>
-        /// <para>The name of the OSS bucket for file storage.</para>
+        /// <para>The name of the OSS bucket that stores the files.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sh-bill</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string OssBucketName { get; set; }
 
         /// <summary>
-        /// <para>The UID of the OSS owner that stores the files. If you are a Bid/Reseller subscriber and need to push files to a sub-account\&quot;s OSS, specify this parameter. The account must be a sub-account of the calling account, and the AliyunConsumeDump2OSSRole permission must be granted to this account. Regular users do not need to specify this parameter. The default value is the calling account.</para>
+        /// <para>The UID of the OSS owner that stores the files. Specify this parameter if the subscription is made by a bidder or reseller and the files need to be pushed to the OSS bucket of a RAM user. The RAM user must be a subordinate account of the calling account and must be granted the AliyunConsumeDump2OSSRole permission. Regular users do not need to specify this parameter. The default value is the calling account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567812345678</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public long? OssBucketOwnerAccountId { get; set; }
 
         /// <summary>
-        /// <para>The OSS bucket storage path.</para>
+        /// <para>The storage path in the OSS bucket.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bill/</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string OssBucketPath { get; set; }
 
         /// <summary>
-        /// <para>The subscription source name.</para>
+        /// <para>The name of the subscription source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OSS</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string ReportSourceType { get; set; }
 
         /// <summary>
-        /// <para>The bill subscription task ID.</para>
+        /// <para>The ID of the billing subscription task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123123</para>
@@ -92,11 +92,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         /// <summary>
         /// <para>The subscription type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>consumeDetailBillV2: consumption details (supported only for OSS/MC subscriptions).</description></item>
-        /// <item><description>splitDetailBillV2: split details (supported only for OSS/MC subscriptions).</description></item>
-        /// <item><description>costDetailBillV2: cost details (supported only for OSS/MC subscriptions).</description></item>
-        /// <item><description>monthBillOverview: monthly bill summary (supported only for OSS/MSC_EMAIL subscriptions).</description></item>
-        /// <item><description>focus: FOCUS bill (supported only for OSS/MC subscriptions).</description></item>
+        /// <item><description>consumeDetailBillV2: consumption details. Supported only for OSS and MC subscriptions.</description></item>
+        /// <item><description>splitDetailBillV2: split details. Supported only for OSS and MC subscriptions.</description></item>
+        /// <item><description>costDetailBillV2: cost details. Supported only for OSS and MC subscriptions.</description></item>
+        /// <item><description>monthBillOverview: monthly bill overview. Supported only for OSS and MSC_EMAIL subscriptions.</description></item>
+        /// <item><description>focus: focus bills. Supported only for OSS and MC subscriptions.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The time when the subscription was created.</para>
+        /// <para>The time when the subscription was created. The format is YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-05-21 10:36:31</para>

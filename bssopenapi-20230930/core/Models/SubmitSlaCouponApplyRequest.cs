@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class SubmitSlaCouponApplyRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the damaged records. This parameter is optional.</para>
+        /// <para>Optional. The IDs of the damaged records.</para>
         /// </summary>
         [NameInMap("DamagedIds")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public List<long?> AccountIds { get; set; }
 
             /// <summary>
-            /// <para>The enterprise entity ID.</para>
+            /// <para>The ID of the enterprise entity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1501603440974415</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         }
 
         /// <summary>
-        /// <para>The claim month. This parameter is required. Format: yyyyMM.</para>
+        /// <para>Required. The application month in the yyyyMM format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public int? Month { get; set; }
 
         /// <summary>
-        /// <para>The primary marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</para>
+        /// <para>The ID of the primary marketplace. If this parameter is left empty, the marketplace ID of the current user is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2084210001</para>

@@ -1520,7 +1520,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an account transfer or revocation.</para>
+        /// <para>Creates a fund allocation or revocation for an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1586,7 +1586,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an account transfer or revocation.</para>
+        /// <para>Creates a fund allocation or revocation for an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1652,7 +1652,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an account transfer or revocation.</para>
+        /// <para>Creates a fund allocation or revocation for an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1670,7 +1670,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an account transfer or revocation.</para>
+        /// <para>Creates a fund allocation or revocation for an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1688,7 +1688,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Apply for Invoice</para>
+        /// <para>Applies for an invoice.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1776,7 +1776,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Apply for Invoice</para>
+        /// <para>Applies for an invoice.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1864,7 +1864,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Apply for Invoice</para>
+        /// <para>Applies for an invoice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1882,7 +1882,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Apply for Invoice</para>
+        /// <para>Applies for an invoice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1900,40 +1900,40 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a bill report subscription.</para>
+        /// <para>Creates a billing report subscription.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>When you call this operation, note the following items:</para>
         /// <list type="bullet">
-        /// <item><description>You can subscribe to one type of bill file at a time.</description></item>
-        /// <item><description>Except for monthly bill PDFs, after you subscribe, the system pushes a bill file that contains full detailed data from the beginning of the current month to the present day starting from the next day. Before the 4th of each month, the system pushes the full bill file for the entire previous billing cycle.</description></item>
-        /// <item><description>Monthly bill PDFs are pushed before the 4th of each month for the previous month.</description></item>
-        /// <item><description>Bill files generated on a daily basis may be delayed. Delayed bills are pushed the day after they are generated and may include bills from before the previous day that were delayed until the previous day. We recommend that you pull the full file for the previous month at the beginning of each month.<remarks>
-        /// <para>Apply for permissions by following the instructions in <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/billing-subscription">Billing subscription</a>.</para>
+        /// <item><description>You can subscribe to only one type of billing file at a time.</description></item>
+        /// <item><description>Except for monthly billing PDFs, starting from the day after the subscription is created, a billing file containing all detailed data from the beginning of the current month to the current day is pushed daily. A full billing file for the entire previous billing cycle is pushed before the 4th day of each month.</description></item>
+        /// <item><description>Monthly billing PDFs for the previous month are pushed before the 4th day of each month.</description></item>
+        /// <item><description>Billing files generated on a daily basis may be delayed. Delayed bills are pushed on the day after they are generated and may include bills that were delayed and generated on the previous day. Pull the full files for the previous month at the beginning of each month.<remarks>
+        /// <para>Apply for the billing subscription permissions as described in the documentation: <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/billing-subscription">Billing subscription</a>.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>This subscription shares the same functionality as the Expenses and Costs - Billing Subscription feature. Subscriptions are synchronized between the two.</description></item>
-        /// <item><description>When you subscribe to a directory under a bucket, make sure the directory name complies with the naming conventions:<list type="bullet">
+        /// <item><description>This subscription and the billing subscription in the Expenses and Costs console are the same feature, and subscriptions are interoperable.</description></item>
+        /// <item><description>When you subscribe to a directory under a bucket, make sure that the directory naming conventions are met:<list type="bullet">
         /// <item><description>Emojis are not allowed. Use valid UTF-8 characters.</description></item>
-        /// <item><description>Use / to separate paths and quickly create subdirectories. Do not start with / or \, and do not use consecutive / characters.</description></item>
+        /// <item><description>The forward slash (/) is used to separate paths and create subdirectories. Do not start the path with a forward slash (/) or a backslash (\), and do not use consecutive forward slashes.</description></item>
         /// <item><description>Subdirectories named .. are not allowed.</description></item>
         /// <item><description>The total length must be 1 to 254 characters.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>File names:<list type="bullet">
-        /// <item><description><para>Example: <b>consumeDetailBillV2</b> (billing item bill details)</para>
+        /// <item><description><para>Example: <b>consumeDetailBillV2</b> (billing item details)</para>
         /// <list type="bullet">
-        /// <item><description><para>Daily push file name format: <c>{Account UID}_{Sales site ID}_{Bill type}_{YYYYMM|YYYYMMDD}</c>, for example: <c>169**_2688801000001_consumeDetailBillV2_20190312</c>.</para>
+        /// <item><description><para>Format of the file name pushed daily: <c>{Account UID}_{Site ID}_{Bill type}_{YYYYMM|YYYYMMDD}</c>. Example: <c>169**_2688801000001_consumeDetailBillV2_20190312</c>.</para>
         /// </description></item>
-        /// <item><description><para>Full file name format at the beginning of the next month: <c>{Account UID}_{Sales site ID}_{Bill type}_{YYYYMM|YYYYMM}</c>, for example: <c>169**_2688801000001_consumeDetailBillV2_201903</c>.</para>
-        /// </description></item>
-        /// </list>
+        /// <item><description><para>Format of the complete file name pushed at the beginning of the next month: <c>{Account UID}_{Site ID}_{Bill type}_{YYYYMM|YYYYMM}</c>. Example: <c>169**_2688801000001_consumeDetailBillV2_201903</c>.</para>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Monthly bill PDF files are in .pdf format. All other file types are .csv files. When the data volume is large, the system automatically splits the exported bill into multiple files and compresses them into one or more zip files. The zip file name format remains the same.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Monthly billing PDF files are in the .pdf format, and other files are in the .csv format. When the data volume is large, the system automatically splits an exported bill into multiple files and compresses them into one or more ZIP files. The ZIP file names follow the same format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2036,40 +2036,40 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a bill report subscription.</para>
+        /// <para>Creates a billing report subscription.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>When you call this operation, note the following items:</para>
         /// <list type="bullet">
-        /// <item><description>You can subscribe to one type of bill file at a time.</description></item>
-        /// <item><description>Except for monthly bill PDFs, after you subscribe, the system pushes a bill file that contains full detailed data from the beginning of the current month to the present day starting from the next day. Before the 4th of each month, the system pushes the full bill file for the entire previous billing cycle.</description></item>
-        /// <item><description>Monthly bill PDFs are pushed before the 4th of each month for the previous month.</description></item>
-        /// <item><description>Bill files generated on a daily basis may be delayed. Delayed bills are pushed the day after they are generated and may include bills from before the previous day that were delayed until the previous day. We recommend that you pull the full file for the previous month at the beginning of each month.<remarks>
-        /// <para>Apply for permissions by following the instructions in <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/billing-subscription">Billing subscription</a>.</para>
+        /// <item><description>You can subscribe to only one type of billing file at a time.</description></item>
+        /// <item><description>Except for monthly billing PDFs, starting from the day after the subscription is created, a billing file containing all detailed data from the beginning of the current month to the current day is pushed daily. A full billing file for the entire previous billing cycle is pushed before the 4th day of each month.</description></item>
+        /// <item><description>Monthly billing PDFs for the previous month are pushed before the 4th day of each month.</description></item>
+        /// <item><description>Billing files generated on a daily basis may be delayed. Delayed bills are pushed on the day after they are generated and may include bills that were delayed and generated on the previous day. Pull the full files for the previous month at the beginning of each month.<remarks>
+        /// <para>Apply for the billing subscription permissions as described in the documentation: <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/billing-subscription">Billing subscription</a>.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>This subscription shares the same functionality as the Expenses and Costs - Billing Subscription feature. Subscriptions are synchronized between the two.</description></item>
-        /// <item><description>When you subscribe to a directory under a bucket, make sure the directory name complies with the naming conventions:<list type="bullet">
+        /// <item><description>This subscription and the billing subscription in the Expenses and Costs console are the same feature, and subscriptions are interoperable.</description></item>
+        /// <item><description>When you subscribe to a directory under a bucket, make sure that the directory naming conventions are met:<list type="bullet">
         /// <item><description>Emojis are not allowed. Use valid UTF-8 characters.</description></item>
-        /// <item><description>Use / to separate paths and quickly create subdirectories. Do not start with / or \, and do not use consecutive / characters.</description></item>
+        /// <item><description>The forward slash (/) is used to separate paths and create subdirectories. Do not start the path with a forward slash (/) or a backslash (\), and do not use consecutive forward slashes.</description></item>
         /// <item><description>Subdirectories named .. are not allowed.</description></item>
         /// <item><description>The total length must be 1 to 254 characters.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>File names:<list type="bullet">
-        /// <item><description><para>Example: <b>consumeDetailBillV2</b> (billing item bill details)</para>
+        /// <item><description><para>Example: <b>consumeDetailBillV2</b> (billing item details)</para>
         /// <list type="bullet">
-        /// <item><description><para>Daily push file name format: <c>{Account UID}_{Sales site ID}_{Bill type}_{YYYYMM|YYYYMMDD}</c>, for example: <c>169**_2688801000001_consumeDetailBillV2_20190312</c>.</para>
+        /// <item><description><para>Format of the file name pushed daily: <c>{Account UID}_{Site ID}_{Bill type}_{YYYYMM|YYYYMMDD}</c>. Example: <c>169**_2688801000001_consumeDetailBillV2_20190312</c>.</para>
         /// </description></item>
-        /// <item><description><para>Full file name format at the beginning of the next month: <c>{Account UID}_{Sales site ID}_{Bill type}_{YYYYMM|YYYYMM}</c>, for example: <c>169**_2688801000001_consumeDetailBillV2_201903</c>.</para>
-        /// </description></item>
-        /// </list>
+        /// <item><description><para>Format of the complete file name pushed at the beginning of the next month: <c>{Account UID}_{Site ID}_{Bill type}_{YYYYMM|YYYYMM}</c>. Example: <c>169**_2688801000001_consumeDetailBillV2_201903</c>.</para>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Monthly bill PDF files are in .pdf format. All other file types are .csv files. When the data volume is large, the system automatically splits the exported bill into multiple files and compresses them into one or more zip files. The zip file name format remains the same.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Monthly billing PDF files are in the .pdf format, and other files are in the .csv format. When the data volume is large, the system automatically splits an exported bill into multiple files and compresses them into one or more ZIP files. The ZIP file names follow the same format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2172,40 +2172,40 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a bill report subscription.</para>
+        /// <para>Creates a billing report subscription.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>When you call this operation, note the following items:</para>
         /// <list type="bullet">
-        /// <item><description>You can subscribe to one type of bill file at a time.</description></item>
-        /// <item><description>Except for monthly bill PDFs, after you subscribe, the system pushes a bill file that contains full detailed data from the beginning of the current month to the present day starting from the next day. Before the 4th of each month, the system pushes the full bill file for the entire previous billing cycle.</description></item>
-        /// <item><description>Monthly bill PDFs are pushed before the 4th of each month for the previous month.</description></item>
-        /// <item><description>Bill files generated on a daily basis may be delayed. Delayed bills are pushed the day after they are generated and may include bills from before the previous day that were delayed until the previous day. We recommend that you pull the full file for the previous month at the beginning of each month.<remarks>
-        /// <para>Apply for permissions by following the instructions in <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/billing-subscription">Billing subscription</a>.</para>
+        /// <item><description>You can subscribe to only one type of billing file at a time.</description></item>
+        /// <item><description>Except for monthly billing PDFs, starting from the day after the subscription is created, a billing file containing all detailed data from the beginning of the current month to the current day is pushed daily. A full billing file for the entire previous billing cycle is pushed before the 4th day of each month.</description></item>
+        /// <item><description>Monthly billing PDFs for the previous month are pushed before the 4th day of each month.</description></item>
+        /// <item><description>Billing files generated on a daily basis may be delayed. Delayed bills are pushed on the day after they are generated and may include bills that were delayed and generated on the previous day. Pull the full files for the previous month at the beginning of each month.<remarks>
+        /// <para>Apply for the billing subscription permissions as described in the documentation: <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/billing-subscription">Billing subscription</a>.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>This subscription shares the same functionality as the Expenses and Costs - Billing Subscription feature. Subscriptions are synchronized between the two.</description></item>
-        /// <item><description>When you subscribe to a directory under a bucket, make sure the directory name complies with the naming conventions:<list type="bullet">
+        /// <item><description>This subscription and the billing subscription in the Expenses and Costs console are the same feature, and subscriptions are interoperable.</description></item>
+        /// <item><description>When you subscribe to a directory under a bucket, make sure that the directory naming conventions are met:<list type="bullet">
         /// <item><description>Emojis are not allowed. Use valid UTF-8 characters.</description></item>
-        /// <item><description>Use / to separate paths and quickly create subdirectories. Do not start with / or \, and do not use consecutive / characters.</description></item>
+        /// <item><description>The forward slash (/) is used to separate paths and create subdirectories. Do not start the path with a forward slash (/) or a backslash (\), and do not use consecutive forward slashes.</description></item>
         /// <item><description>Subdirectories named .. are not allowed.</description></item>
         /// <item><description>The total length must be 1 to 254 characters.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>File names:<list type="bullet">
-        /// <item><description><para>Example: <b>consumeDetailBillV2</b> (billing item bill details)</para>
+        /// <item><description><para>Example: <b>consumeDetailBillV2</b> (billing item details)</para>
         /// <list type="bullet">
-        /// <item><description><para>Daily push file name format: <c>{Account UID}_{Sales site ID}_{Bill type}_{YYYYMM|YYYYMMDD}</c>, for example: <c>169**_2688801000001_consumeDetailBillV2_20190312</c>.</para>
+        /// <item><description><para>Format of the file name pushed daily: <c>{Account UID}_{Site ID}_{Bill type}_{YYYYMM|YYYYMMDD}</c>. Example: <c>169**_2688801000001_consumeDetailBillV2_20190312</c>.</para>
         /// </description></item>
-        /// <item><description><para>Full file name format at the beginning of the next month: <c>{Account UID}_{Sales site ID}_{Bill type}_{YYYYMM|YYYYMM}</c>, for example: <c>169**_2688801000001_consumeDetailBillV2_201903</c>.</para>
-        /// </description></item>
-        /// </list>
+        /// <item><description><para>Format of the complete file name pushed at the beginning of the next month: <c>{Account UID}_{Site ID}_{Bill type}_{YYYYMM|YYYYMM}</c>. Example: <c>169**_2688801000001_consumeDetailBillV2_201903</c>.</para>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Monthly bill PDF files are in .pdf format. All other file types are .csv files. When the data volume is large, the system automatically splits the exported bill into multiple files and compresses them into one or more zip files. The zip file name format remains the same.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Monthly billing PDF files are in the .pdf format, and other files are in the .csv format. When the data volume is large, the system automatically splits an exported bill into multiple files and compresses them into one or more ZIP files. The ZIP file names follow the same format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2224,40 +2224,40 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a bill report subscription.</para>
+        /// <para>Creates a billing report subscription.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>When you call this operation, note the following items:</para>
         /// <list type="bullet">
-        /// <item><description>You can subscribe to one type of bill file at a time.</description></item>
-        /// <item><description>Except for monthly bill PDFs, after you subscribe, the system pushes a bill file that contains full detailed data from the beginning of the current month to the present day starting from the next day. Before the 4th of each month, the system pushes the full bill file for the entire previous billing cycle.</description></item>
-        /// <item><description>Monthly bill PDFs are pushed before the 4th of each month for the previous month.</description></item>
-        /// <item><description>Bill files generated on a daily basis may be delayed. Delayed bills are pushed the day after they are generated and may include bills from before the previous day that were delayed until the previous day. We recommend that you pull the full file for the previous month at the beginning of each month.<remarks>
-        /// <para>Apply for permissions by following the instructions in <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/billing-subscription">Billing subscription</a>.</para>
+        /// <item><description>You can subscribe to only one type of billing file at a time.</description></item>
+        /// <item><description>Except for monthly billing PDFs, starting from the day after the subscription is created, a billing file containing all detailed data from the beginning of the current month to the current day is pushed daily. A full billing file for the entire previous billing cycle is pushed before the 4th day of each month.</description></item>
+        /// <item><description>Monthly billing PDFs for the previous month are pushed before the 4th day of each month.</description></item>
+        /// <item><description>Billing files generated on a daily basis may be delayed. Delayed bills are pushed on the day after they are generated and may include bills that were delayed and generated on the previous day. Pull the full files for the previous month at the beginning of each month.<remarks>
+        /// <para>Apply for the billing subscription permissions as described in the documentation: <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/billing-subscription">Billing subscription</a>.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>This subscription shares the same functionality as the Expenses and Costs - Billing Subscription feature. Subscriptions are synchronized between the two.</description></item>
-        /// <item><description>When you subscribe to a directory under a bucket, make sure the directory name complies with the naming conventions:<list type="bullet">
+        /// <item><description>This subscription and the billing subscription in the Expenses and Costs console are the same feature, and subscriptions are interoperable.</description></item>
+        /// <item><description>When you subscribe to a directory under a bucket, make sure that the directory naming conventions are met:<list type="bullet">
         /// <item><description>Emojis are not allowed. Use valid UTF-8 characters.</description></item>
-        /// <item><description>Use / to separate paths and quickly create subdirectories. Do not start with / or \, and do not use consecutive / characters.</description></item>
+        /// <item><description>The forward slash (/) is used to separate paths and create subdirectories. Do not start the path with a forward slash (/) or a backslash (\), and do not use consecutive forward slashes.</description></item>
         /// <item><description>Subdirectories named .. are not allowed.</description></item>
         /// <item><description>The total length must be 1 to 254 characters.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>File names:<list type="bullet">
-        /// <item><description><para>Example: <b>consumeDetailBillV2</b> (billing item bill details)</para>
+        /// <item><description><para>Example: <b>consumeDetailBillV2</b> (billing item details)</para>
         /// <list type="bullet">
-        /// <item><description><para>Daily push file name format: <c>{Account UID}_{Sales site ID}_{Bill type}_{YYYYMM|YYYYMMDD}</c>, for example: <c>169**_2688801000001_consumeDetailBillV2_20190312</c>.</para>
+        /// <item><description><para>Format of the file name pushed daily: <c>{Account UID}_{Site ID}_{Bill type}_{YYYYMM|YYYYMMDD}</c>. Example: <c>169**_2688801000001_consumeDetailBillV2_20190312</c>.</para>
         /// </description></item>
-        /// <item><description><para>Full file name format at the beginning of the next month: <c>{Account UID}_{Sales site ID}_{Bill type}_{YYYYMM|YYYYMM}</c>, for example: <c>169**_2688801000001_consumeDetailBillV2_201903</c>.</para>
-        /// </description></item>
-        /// </list>
+        /// <item><description><para>Format of the complete file name pushed at the beginning of the next month: <c>{Account UID}_{Site ID}_{Bill type}_{YYYYMM|YYYYMM}</c>. Example: <c>169**_2688801000001_consumeDetailBillV2_201903</c>.</para>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Monthly bill PDF files are in .pdf format. All other file types are .csv files. When the data volume is large, the system automatically splits the exported bill into multiple files and compresses them into one or more zip files. The zip file name format remains the same.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Monthly billing PDF files are in the .pdf format, and other files are in the .csv format. When the data volume is large, the system automatically splits an exported bill into multiple files and compresses them into one or more ZIP files. The ZIP file names follow the same format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4716,7 +4716,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query fund account transaction details</para>
+        /// <para>Queries the transaction details of a fund account.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4814,7 +4814,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query fund account transaction details</para>
+        /// <para>Queries the transaction details of a fund account.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4912,7 +4912,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query fund account transaction details</para>
+        /// <para>Queries the transaction details of a fund account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4930,7 +4930,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query fund account transaction details</para>
+        /// <para>Queries the transaction details of a fund account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4948,7 +4948,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specific order for a user or a reseller customer.</para>
+        /// <para>Queries the details of a specific order for a user or a distribution customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4998,7 +4998,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specific order for a user or a reseller customer.</para>
+        /// <para>Queries the details of a specific order for a user or a distribution customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5048,7 +5048,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specific order for a user or a reseller customer.</para>
+        /// <para>Queries the details of a specific order for a user or a distribution customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5066,7 +5066,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specific order for a user or a reseller customer.</para>
+        /// <para>Queries the details of a specific order for a user or a distribution customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5084,7 +5084,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the order list of a user or a reseller customer. By default, orders created within the most recent 1 hour are queried. To query orders over a longer time range, set the CreateTimeStart and CreateTimeEnd parameters.</para>
+        /// <para>Queries the order list of a user or a distribution customer. By default, this operation queries orders created within the last hour. To query orders within a longer time range, specify the CreateTimeStart and CreateTimeEnd parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5166,7 +5166,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the order list of a user or a reseller customer. By default, orders created within the most recent 1 hour are queried. To query orders over a longer time range, set the CreateTimeStart and CreateTimeEnd parameters.</para>
+        /// <para>Queries the order list of a user or a distribution customer. By default, this operation queries orders created within the last hour. To query orders within a longer time range, specify the CreateTimeStart and CreateTimeEnd parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5248,7 +5248,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the order list of a user or a reseller customer. By default, orders created within the most recent 1 hour are queried. To query orders over a longer time range, set the CreateTimeStart and CreateTimeEnd parameters.</para>
+        /// <para>Queries the order list of a user or a distribution customer. By default, this operation queries orders created within the last hour. To query orders within a longer time range, specify the CreateTimeStart and CreateTimeEnd parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5266,7 +5266,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the order list of a user or a reseller customer. By default, orders created within the most recent 1 hour are queried. To query orders over a longer time range, set the CreateTimeStart and CreateTimeEnd parameters.</para>
+        /// <para>Queries the order list of a user or a distribution customer. By default, this operation queries orders created within the last hour. To query orders within a longer time range, specify the CreateTimeStart and CreateTimeEnd parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5900,7 +5900,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query fund account list</para>
+        /// <para>Queries the list of fund accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5952,7 +5952,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query fund account list</para>
+        /// <para>Queries the list of fund accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6004,7 +6004,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query fund account list</para>
+        /// <para>Queries the list of fund accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6022,7 +6022,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query fund account list</para>
+        /// <para>Queries the list of fund accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6040,7 +6040,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query payment relationships of an account</para>
+        /// <para>Queries the payment relationships of an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6100,7 +6100,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query payment relationships of an account</para>
+        /// <para>Queries the payment relationships of an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6160,7 +6160,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query payment relationships of an account</para>
+        /// <para>Queries the payment relationships of an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6178,7 +6178,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query payment relationships of an account</para>
+        /// <para>Queries the payment relationships of an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6196,7 +6196,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query invoice candidate data, which can be used for invoicing.</para>
+        /// <para>Queries invoice object data that can be used for invoicing.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6304,7 +6304,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query invoice candidate data, which can be used for invoicing.</para>
+        /// <para>Queries invoice object data that can be used for invoicing.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6412,7 +6412,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query invoice candidate data, which can be used for invoicing.</para>
+        /// <para>Queries invoice object data that can be used for invoicing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6430,7 +6430,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query invoice candidate data, which can be used for invoicing.</para>
+        /// <para>Queries invoice object data that can be used for invoicing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6448,7 +6448,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of available invoice titles</para>
+        /// <para>Queries available invoice titles.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -6478,7 +6478,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of available invoice titles</para>
+        /// <para>Queries available invoice titles.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -6508,7 +6508,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of available invoice titles</para>
+        /// <para>Queries available invoice titles.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6522,7 +6522,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of available invoice titles</para>
+        /// <para>Queries available invoice titles.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6536,7 +6536,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of subscribed reports.</para>
+        /// <para>View subscribed report list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6578,7 +6578,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of subscribed reports.</para>
+        /// <para>View subscribed report list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6620,7 +6620,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of subscribed reports.</para>
+        /// <para>View subscribed report list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6638,7 +6638,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of subscribed reports.</para>
+        /// <para>View subscribed report list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7341,7 +7341,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries a parent cost center and its child cost centers.</para>
+        /// <para>Queries parent cost centers and their child cost centers.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -7414,7 +7414,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries a parent cost center and its child cost centers.</para>
+        /// <para>Queries parent cost centers and their child cost centers.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -7487,7 +7487,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries a parent cost center and its child cost centers.</para>
+        /// <para>Queries parent cost centers and their child cost centers.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7510,7 +7510,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries a parent cost center and its child cost centers.</para>
+        /// <para>Queries parent cost centers and their child cost centers.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7528,7 +7528,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of resource instances that belong to a financial unit of a user. If CostCenterId is set to 0, unallocated primary and sub-resource instances are queried.</para>
+        /// <para>Queries the resource instances associated with a financial unit. If CostCenterId is set to 0, the operation queries unassigned parent and child resource instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7592,7 +7592,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of resource instances that belong to a financial unit of a user. If CostCenterId is set to 0, unallocated primary and sub-resource instances are queried.</para>
+        /// <para>Queries the resource instances associated with a financial unit. If CostCenterId is set to 0, the operation queries unassigned parent and child resource instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7656,7 +7656,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of resource instances that belong to a financial unit of a user. If CostCenterId is set to 0, unallocated primary and sub-resource instances are queried.</para>
+        /// <para>Queries the resource instances associated with a financial unit. If CostCenterId is set to 0, the operation queries unassigned parent and child resource instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7674,7 +7674,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of resource instances that belong to a financial unit of a user. If CostCenterId is set to 0, unallocated primary and sub-resource instances are queried.</para>
+        /// <para>Queries the resource instances associated with a financial unit. If CostCenterId is set to 0, the operation queries unassigned parent and child resource instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9164,15 +9164,15 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Claims SLA compensation coupons for the last two months.</para>
+        /// <para>Claims SLA compensation coupons for the recent two months.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>Call QueryMonthlySlaList to retrieve the claimable months and records.</description></item>
+        /// <item><description>Call QueryMonthlySlaList to obtain the claimable months and records.</description></item>
         /// <item><description>Claim by month or by record.
-        /// Note: Only compensation for the last two months can be claimed. Historical compensation has been automatically issued.</description></item>
+        /// Note: You can only claim compensation for the recent two months. Historical compensation has been automatically issued.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -9229,15 +9229,15 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Claims SLA compensation coupons for the last two months.</para>
+        /// <para>Claims SLA compensation coupons for the recent two months.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>Call QueryMonthlySlaList to retrieve the claimable months and records.</description></item>
+        /// <item><description>Call QueryMonthlySlaList to obtain the claimable months and records.</description></item>
         /// <item><description>Claim by month or by record.
-        /// Note: Only compensation for the last two months can be claimed. Historical compensation has been automatically issued.</description></item>
+        /// Note: You can only claim compensation for the recent two months. Historical compensation has been automatically issued.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -9294,15 +9294,15 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Claims SLA compensation coupons for the last two months.</para>
+        /// <para>Claims SLA compensation coupons for the recent two months.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>Call QueryMonthlySlaList to retrieve the claimable months and records.</description></item>
+        /// <item><description>Call QueryMonthlySlaList to obtain the claimable months and records.</description></item>
         /// <item><description>Claim by month or by record.
-        /// Note: Only compensation for the last two months can be claimed. Historical compensation has been automatically issued.</description></item>
+        /// Note: You can only claim compensation for the recent two months. Historical compensation has been automatically issued.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -9321,15 +9321,15 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Claims SLA compensation coupons for the last two months.</para>
+        /// <para>Claims SLA compensation coupons for the recent two months.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>Call QueryMonthlySlaList to retrieve the claimable months and records.</description></item>
+        /// <item><description>Call QueryMonthlySlaList to obtain the claimable months and records.</description></item>
         /// <item><description>Claim by month or by record.
-        /// Note: Only compensation for the last two months can be claimed. Historical compensation has been automatically issued.</description></item>
+        /// Note: You can only claim compensation for the recent two months. Historical compensation has been automatically issued.</description></item>
         /// </ol>
         /// </description>
         /// 

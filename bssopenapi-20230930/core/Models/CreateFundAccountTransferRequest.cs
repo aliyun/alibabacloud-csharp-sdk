@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         /// <summary>
         /// <para>The asset type. Currently, only cash is supported. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cash: cash.</description></item>
+        /// <item><description>cash: Cash.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string FinanceType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the source account (payer account ID).</para>
+        /// <para>The ID of the source account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,14 +61,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>转账的备注</para>
+        /// <para>Remarks for the transfer</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The ID of the destination account (payee account ID).</para>
+        /// <para>The ID of the destination account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -81,8 +81,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         /// <summary>
         /// <para>The transfer type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>grant: transfer.</description></item>
-        /// <item><description>recycle: revocation.</description></item>
+        /// <item><description>grant: Allocation.</description></item>
+        /// <item><description>recycle: Revocation.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

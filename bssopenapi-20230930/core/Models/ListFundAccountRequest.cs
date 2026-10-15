@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class ListFundAccountRequest : TeaModel {
         /// <summary>
-        /// <para>Level-1 marketplace ID. If this parameter is left empty, the ID of the marketplace to which the current user belongs is used by default.</para>
+        /// <para>The ID of the primary marketplace. If this parameter is left empty, the ID of the marketplace to which the current user belongs is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2084210001</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string Nbid { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query only the active account list. Default value: false.</para>
+        /// <para>Specifies whether to query only in-use accounts. Default value: false.</para>
         /// </summary>
         [NameInMap("QueryOnlyInUse")]
         [Validation(Required=false)]
         public bool? QueryOnlyInUse { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query only the managed account list. Default value: false.</para>
+        /// <para>Specifies whether to query only managed accounts. Default value: false.</para>
         /// </summary>
         [NameInMap("QueryOnlyManage")]
         [Validation(Required=false)]

@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string CycleType { get; set; }
 
         /// <summary>
-        /// <para>The enterprise and account list. If empty, the current account is queried.</para>
+        /// <para>The list of enterprises and accounts. If this parameter is left empty, the current account is queried.</para>
         /// </summary>
         [NameInMap("EcIdAccountIds")]
         [Validation(Required=false)]
         public string EcIdAccountIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The end time.</para>
+        /// <para>The end time, specified as a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1710604800000</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The resource dimension for the query.</para>
+        /// <para>The resource dimension.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cu</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The instance tag label value of the resource plan instance.</para>
+        /// <para>The label value of the resource plan instance tag.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FR-***</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string InstanceTag { get; set; }
 
         /// <summary>
-        /// <para>The primary marketplace ID. If empty, the marketplace ID of the current user is used by default.</para>
+        /// <para>The primary marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2684202000018</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string SortField { get; set; }
 
         /// <summary>
-        /// <para>The collation for sorting.</para>
+        /// <para>The sorting collation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>asc</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string SortRule { get; set; }
 
         /// <summary>
-        /// <para>The specification.</para>
+        /// <para>The specifications.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string Spec { get; set; }
 
         /// <summary>
-        /// <para>The start time.</para>
+        /// <para>The start time, specified as a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1678939035000</para>

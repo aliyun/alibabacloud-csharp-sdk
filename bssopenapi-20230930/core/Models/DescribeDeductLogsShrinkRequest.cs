@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class DescribeDeductLogsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID for billing deduction.</para>
+        /// <para>The ID of the instance for which the billing is deducted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs-******</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string BillInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The commodity code of the deducted item.</para>
+        /// <para>The commodity code for deduction.</para>
         /// 
         /// <b>Example:</b>
         /// <para>snapshot</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string BillingCommodityCode { get; set; }
 
         /// <summary>
-        /// <para>The billing end time.</para>
+        /// <para>The billing end time. The value is a UNIX timestamp in milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public long? BillingEndTime { get; set; }
 
         /// <summary>
-        /// <para>The billing start time.</para>
+        /// <para>The billing start time. The value is a UNIX timestamp in milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,14 +62,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string CommodityCode { get; set; }
 
         /// <summary>
-        /// <para>The enterprise and account list. If this parameter is empty, the current account is queried.</para>
+        /// <para>The list of enterprises and accounts. If this parameter is left empty, the current account is queried.</para>
         /// </summary>
         [NameInMap("EcIdAccountIds")]
         [Validation(Required=false)]
         public string EcIdAccountIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The resource dimension for the query.</para>
+        /// <para>The resource dimension.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss_rc</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The primary marketplace ID. If this parameter is empty, the marketplace ID of the current user is used by default.</para>
+        /// <para>The level-1 marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2684201000001</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The list of deduction accounts.</para>
+        /// <para>The list of accounts for deduction.</para>
         /// </summary>
         [NameInMap("RelationAccountIds")]
         [Validation(Required=false)]

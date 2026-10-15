@@ -29,6 +29,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         [Validation(Required=false)]
         public string CouponNo { get; set; }
 
+        /// <summary>
+        /// <para>The list of coupon template IDs.</para>
+        /// </summary>
         [NameInMap("CouponTemplateIdList")]
         [Validation(Required=false)]
         public List<long?> CouponTemplateIdList { get; set; }
@@ -55,14 +58,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The enterprise and account list. If this parameter is left empty, the current account is queried.</para>
+        /// <para>The list of enterprises and accounts. If this parameter is left empty, the coupons of the current account are queried.</para>
         /// </summary>
         [NameInMap("EcIdAccountIds")]
         [Validation(Required=false)]
         public List<DescribeCouponRequestEcIdAccountIds> EcIdAccountIds { get; set; }
         public class DescribeCouponRequestEcIdAccountIds : TeaModel {
             /// <summary>
-            /// <para>The list of accessed accounts. If this parameter is left empty, all accounts under the current entity ID are selected.</para>
+            /// <para>The list of accounts to access. If this parameter is left empty, all accounts under the current entity ID are selected.</para>
             /// </summary>
             [NameInMap("AccountIds")]
             [Validation(Required=false)]
@@ -81,7 +84,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         }
 
         /// <summary>
-        /// <para>The effective end time.</para>
+        /// <para>The effective end time, specified as a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1708423156000</para>
@@ -91,7 +94,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public long? EffectiveEndTime { get; set; }
 
         /// <summary>
-        /// <para>The effective start time.</para>
+        /// <para>The effective start time, specified as a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1684750028000</para>
@@ -101,7 +104,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public long? EffectiveStartTime { get; set; }
 
         /// <summary>
-        /// <para>The expiration end time.</para>
+        /// <para>The expiration end time, specified as a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1708423156000</para>
@@ -111,7 +114,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public long? ExpireEndDate { get; set; }
 
         /// <summary>
-        /// <para>The expiration start time.</para>
+        /// <para>The expiration start time, specified as a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1684750028000</para>
@@ -120,16 +123,22 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         [Validation(Required=false)]
         public long? ExpireStartDate { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to include shared coupons.</para>
+        /// </summary>
         [NameInMap("IncludeShare")]
         [Validation(Required=false)]
         public bool? IncludeShare { get; set; }
 
+        /// <summary>
+        /// <para>The maximum number of entries to return for a single request.</para>
+        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The primary campaign information.</para>
+        /// <para>The first-level site information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2684201000001</para>
@@ -138,12 +147,15 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         [Validation(Required=false)]
         public string Nbid { get; set; }
 
+        /// <summary>
+        /// <para>The token for the next query. If this parameter is empty, no more pages are available.</para>
+        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -153,6 +165,9 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The product code.</para>
+        /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }

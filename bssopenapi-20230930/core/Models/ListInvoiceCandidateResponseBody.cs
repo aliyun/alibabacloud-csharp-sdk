@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The list of data entries.</para>
+        /// <para>The data list.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             /// <para>The account name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试账号</para>
+            /// <para>Test account</para>
             /// </summary>
             [NameInMap("AccountName")]
             [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string BusinessId { get; set; }
 
             /// <summary>
-            /// <para>The time when the business event occurred.</para>
+            /// <para>The time when the transaction occurred, in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-01 00:00:00</para>
@@ -100,14 +100,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             /// <para>The commodity name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>性能测试</para>
+            /// <para>Performance testing</para>
             /// </summary>
             [NameInMap("CommodityName")]
             [Validation(Required=false)]
             public string CommodityName { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time, in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-91 00:00:00</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the invoice candidate.</para>
+            /// <para>The ID of the invoicing object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12345</para>
@@ -180,14 +180,14 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             /// <para>The product name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>性能测试</para>
+            /// <para>Performance testing</para>
             /// </summary>
             [NameInMap("ProductName")]
             [Validation(Required=false)]
             public string ProductName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource owner account.</para>
+            /// <para>The resource ownership account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1990699401005016</para>
@@ -197,17 +197,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public long? ResourceOwnerAccountId { get; set; }
 
             /// <summary>
-            /// <para>The name of the resource owner account.</para>
+            /// <para>The resource ownership account name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试账号</para>
+            /// <para>Test account</para>
             /// </summary>
             [NameInMap("ResourceOwnerAccountName")]
             [Validation(Required=false)]
             public string ResourceOwnerAccountName { get; set; }
 
             /// <summary>
-            /// <para>The status of the invoice candidate.</para>
+            /// <para>The invoice object status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string TotalAmount { get; set; }
 
             /// <summary>
-            /// <para>The type of the invoice candidate.</para>
+            /// <para>The invoice object type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -239,7 +239,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         }
 
         /// <summary>
-        /// <para>The metadata of the response.</para>
+        /// <para>The response structure metadata.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
