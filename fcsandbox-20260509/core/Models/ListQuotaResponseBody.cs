@@ -19,6 +19,12 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The maximum number of records per page returned in this response.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("maxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
@@ -34,7 +40,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination token used to retrieve more results. You do not need to specify this parameter for the first request. For subsequent requests, use the token obtained from the previous response.</para>
+        /// <para>The pagination token used to retrieve more results. You do not need to specify this parameter for the first query. You can obtain the token for subsequent queries from the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qxGrXje86XMrYQ51aJMy</para>

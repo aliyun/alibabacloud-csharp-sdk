@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return.</para>
+        /// <para>The maximum number of results to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page.</para>
+        /// <para>The next page token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJNYXhSZXN1bHRzIjoxMH0=</para>

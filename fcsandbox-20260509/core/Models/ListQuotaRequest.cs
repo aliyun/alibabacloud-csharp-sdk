@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
 {
     public class ListQuotaRequest : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The maximum number of results per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token used to retrieve more results. You do not need to specify this parameter for the first request. For subsequent requests, use the token obtained from the previous response.</para>
+        /// <para>The pagination token used to retrieve more results. You do not need to specify this parameter for the first query. You can obtain the token for subsequent queries from the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Trigger_fasdatalake_deductionfee</para>

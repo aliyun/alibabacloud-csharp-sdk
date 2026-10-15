@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
 {
     public class CreateTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>The request struct.</para>
+        /// <para>The request structure.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

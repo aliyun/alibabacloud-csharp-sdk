@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
 {
     public class CreateTemplateCacheResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code. A value of 200 indicates success.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>B5AD8B54-4358-5F5B-ACAA-52F2016459C6</para>
         /// </summary>
@@ -33,6 +39,9 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The template cache object.</para>
+        /// </summary>
         [NameInMap("templateCache")]
         [Validation(Required=false)]
         public PublicTemplateCache TemplateCache { get; set; }

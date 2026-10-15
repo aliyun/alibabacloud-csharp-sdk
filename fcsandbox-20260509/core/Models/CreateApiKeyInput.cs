@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
 {
     public class CreateApiKeyInput : TeaModel {
         /// <summary>
-        /// <para>The API key name.</para>
+        /// <para>The name of the API key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dev</para>
@@ -29,10 +29,16 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [Validation(Required=false)]
         public string ExpireTime { get; set; }
 
+        /// <summary>
+        /// <para>The list of IP addresses that are blocked from using the API key.</para>
+        /// </summary>
         [NameInMap("ipBlacklist")]
         [Validation(Required=false)]
         public List<IPConfig> IpBlacklist { get; set; }
 
+        /// <summary>
+        /// <para>The list of IP addresses that are allowed to use the API key.</para>
+        /// </summary>
         [NameInMap("ipWhitelist")]
         [Validation(Required=false)]
         public List<IPConfig> IpWhitelist { get; set; }

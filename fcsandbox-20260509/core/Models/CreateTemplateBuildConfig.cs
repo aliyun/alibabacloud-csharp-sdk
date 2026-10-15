@@ -23,6 +23,13 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [Validation(Required=false)]
         public CreateTemplateEnvdInjectAction EnvdInject { get; set; }
 
+        /// <summary>
+        /// <para>The installation of clients required for storage mounting.</para>
+        /// </summary>
+        [NameInMap("installStorageClients")]
+        [Validation(Required=false)]
+        public bool? InstallStorageClients { get; set; }
+
     }
 
 }

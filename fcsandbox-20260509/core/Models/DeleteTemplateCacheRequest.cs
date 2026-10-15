@@ -10,8 +10,10 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
 {
     public class DeleteTemplateCacheRequest : TeaModel {
         /// <summary>
+        /// <para>The team ID.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>13b721e6-8cc8-5df2-af13-80316f7508af</para>
+        /// <para>team-a1b2c3d4e5f6</para>
         /// </summary>
         [NameInMap("teamID")]
         [Validation(Required=false)]

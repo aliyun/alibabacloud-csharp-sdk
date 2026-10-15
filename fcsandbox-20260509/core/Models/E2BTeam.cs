@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
 {
     public class E2BTeam : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the team name can be modified.</para>
+        /// <para>Specifies whether the team name can be modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public bool? AllowUpdateTeamName { get; set; }
 
         /// <summary>
-        /// <para>The time when the team was created.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-05-23T11:26:25Z</para>
@@ -39,16 +39,25 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>The plan used by the team.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Pro</para>
+        /// </summary>
         [NameInMap("plan")]
         [Validation(Required=false)]
         public string Plan { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether the team is read-only.</para>
+        /// </summary>
         [NameInMap("readOnly")]
         [Validation(Required=false)]
         public bool? ReadOnly { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmwxqyrgwabcd</para>
@@ -58,7 +67,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public string ResourceGroupID { get; set; }
 
         /// <summary>
-        /// <para>The status of the team.</para>
+        /// <para>The status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>active</para>

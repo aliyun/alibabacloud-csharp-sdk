@@ -399,7 +399,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模板缓存</para>
+        /// <para>Creates a template cache.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -440,7 +440,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模板缓存</para>
+        /// <para>Creates a template cache.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -481,7 +481,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模板缓存</para>
+        /// <para>Creates a template cache.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -500,7 +500,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模板缓存</para>
+        /// <para>Creates a template cache.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1135,7 +1135,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模板缓存</para>
+        /// <para>Deletes the template cache.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1181,7 +1181,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模板缓存</para>
+        /// <para>Deletes the template cache.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1227,7 +1227,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模板缓存</para>
+        /// <para>Deletes the template cache.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1246,7 +1246,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模板缓存</para>
+        /// <para>Deletes the template cache.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1395,7 +1395,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an API key.</para>
+        /// <para>Retrieves an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1435,7 +1435,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an API key.</para>
+        /// <para>Retrieves an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1475,7 +1475,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an API key.</para>
+        /// <para>Retrieves an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1494,7 +1494,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an API key.</para>
+        /// <para>Retrieves an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2791,7 +2791,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of templates.</para>
+        /// <para>Lists templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2845,7 +2845,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of templates.</para>
+        /// <para>Lists templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2899,7 +2899,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of templates.</para>
+        /// <para>Lists templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2918,7 +2918,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of templates.</para>
+        /// <para>Lists templates.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public string ApiKeyID { get; set; }
 
         /// <summary>
-        /// <para>The masked display value of the API key.</para>
+        /// <para>The display value of the API key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e2b_xxxx****xxxx</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public string ApiKeyValue { get; set; }
 
         /// <summary>
-        /// <para>The time when the API key was created.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-09-13T08:27:20Z</para>
@@ -69,16 +69,22 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [Validation(Required=false)]
         public string ExpireTime { get; set; }
 
+        /// <summary>
+        /// <para>The list of IP addresses that are prohibited from using the API key.</para>
+        /// </summary>
         [NameInMap("ipBlacklist")]
         [Validation(Required=false)]
         public List<IPConfig> IpBlacklist { get; set; }
 
+        /// <summary>
+        /// <para>The list of IP addresses that are allowed to use the API key.</para>
+        /// </summary>
         [NameInMap("ipWhitelist")]
         [Validation(Required=false)]
         public List<IPConfig> IpWhitelist { get; set; }
 
         /// <summary>
-        /// <para>The time when the API key was last used.</para>
+        /// <para>The last used time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-09-14T08:27:20Z</para>
@@ -88,7 +94,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public string LastUsedTime { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmwxqyrgwabcd</para>
@@ -97,6 +103,9 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [Validation(Required=false)]
         public string ResourceGroupID { get; set; }
 
+        /// <summary>
+        /// <para>The source of the API key.</para>
+        /// </summary>
         [NameInMap("source")]
         [Validation(Required=false)]
         public string Source { get; set; }
@@ -129,12 +138,18 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         /// <para>The name of the team.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Development Team</para>
+        /// <para>Development team</para>
         /// </summary>
         [NameInMap("teamName")]
         [Validation(Required=false)]
         public string TeamName { get; set; }
 
+        /// <summary>
+        /// <para>The plan of the team to which the API key belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Pro</para>
+        /// </summary>
         [NameInMap("teamPlan")]
         [Validation(Required=false)]
         public string TeamPlan { get; set; }

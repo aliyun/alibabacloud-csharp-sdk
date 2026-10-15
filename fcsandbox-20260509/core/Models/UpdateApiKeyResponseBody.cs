@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
 {
     public class UpdateApiKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>API Key。</para>
+        /// <para>The API key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>asdfjoY87-9IUHH</para>
@@ -29,10 +29,16 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The list of IP addresses blocked from using the API key.</para>
+        /// </summary>
         [NameInMap("ipBlacklist")]
         [Validation(Required=false)]
         public List<IPConfig> IpBlacklist { get; set; }
 
+        /// <summary>
+        /// <para>The list of IP addresses allowed to use the API key.</para>
+        /// </summary>
         [NameInMap("ipWhitelist")]
         [Validation(Required=false)]
         public List<IPConfig> IpWhitelist { get; set; }

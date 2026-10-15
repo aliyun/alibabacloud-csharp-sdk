@@ -13,12 +13,18 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Development only</para>
+        /// <para>For development only</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>The plan used by the team.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Pro</para>
+        /// </summary>
         [NameInMap("plan")]
         [Validation(Required=false)]
         public string Plan { get; set; }

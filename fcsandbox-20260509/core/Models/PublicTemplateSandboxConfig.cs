@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
 {
     public class PublicTemplateSandboxConfig : TeaModel {
         /// <summary>
-        /// <para>The ACR Enterprise instance ID.</para>
+        /// <para>The ID of the ACR Enterprise instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cri-abcd1234efgh</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public string AcrInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The sandbox generation. A value of 1 indicates the first-generation sandbox. A value of 2 indicates the second-generation sandbox.</para>
+        /// <para>The sandbox generation. A value of 1 indicates the first-generation sandbox, and a value of 2 indicates the second-generation sandbox.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -75,6 +75,13 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [NameInMap("startCommand")]
         [Validation(Required=false)]
         public string StartCommand { get; set; }
+
+        /// <summary>
+        /// <para>The list of custom build steps.</para>
+        /// </summary>
+        [NameInMap("steps")]
+        [Validation(Required=false)]
+        public List<PublicTemplateStep> Steps { get; set; }
 
     }
 

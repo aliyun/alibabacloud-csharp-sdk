@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.FCSandbox20260509.Models
 {
     public class CreateTemplateCacheRequest : TeaModel {
+        /// <summary>
+        /// <para>The request struct for creating a template cache.</para>
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public CreateTemplateCacheInput Body { get; set; }

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The time when the template was created.</para>
+        /// <para>The creation time in UTC format that complies with RFC 3339, such as 2026-08-31T12:00:00Z.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-08-31T12:00:00Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The template name.</para>
+        /// <para>The name of the template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-template</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmwxqyrgwabcd</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public PublicTemplateRuntimeConfig RuntimeConfig { get; set; }
 
         /// <summary>
-        /// <para>The template status.</para>
+        /// <para>The status of the template.</para>
         /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public string TeamID { get; set; }
 
         /// <summary>
-        /// <para>The team name.</para>
+        /// <para>The name of the team.</para>
         /// 
         /// <b>Example:</b>
         /// <para>codeclaw-localenv</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
 {
     public class DescribeApiKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The Bailian API key.</para>
+        /// <para>The Model Studio API key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>asdfjoY87-9IUHH</para>
@@ -29,10 +29,16 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The set of permissions currently in effect for the API key.</para>
+        /// </summary>
         [NameInMap("effectivePermissions")]
         [Validation(Required=false)]
         public EffectivePermissions EffectivePermissions { get; set; }
 
+        /// <summary>
+        /// <para>The list of IP addresses that are blocked from using the API key.</para>
+        /// </summary>
         [NameInMap("ipBlacklist")]
         [Validation(Required=false)]
         public List<IPConfig> IpBlacklist { get; set; }
@@ -54,6 +60,9 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The access policy configured for the API key.</para>
+        /// </summary>
         [NameInMap("permissionPolicy")]
         [Validation(Required=false)]
         public PermissionPolicy PermissionPolicy { get; set; }
