@@ -20,9 +20,19 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The service code. If specified, the PreprocessList for each library under this service dimension is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ugc_moderation_byllm_pro</para>
+        /// </summary>
+        [NameInMap("ServiceCode")]
+        [Validation(Required=false)]
+        public string ServiceCode { get; set; }
+
+        /// <summary>
         /// <para>The library code.</para>
         /// <list type="bullet">
-        /// <item><description>desensitize: desensitization library.</description></item>
+        /// <item><description>desensitize: Desensitization library</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

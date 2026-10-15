@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class UpdateServiceConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The client-generated idempotency token used to prevent duplicate operations caused by network retries. The token must be unique across requests and contain only printable ASCII characters (ASCII 32-126).</para>
+        /// <para>The client-generated idempotency token. It prevents duplicate operations caused by network retries and must be unique across different requests. Only printable ASCII characters (ASCII 32-126) are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>550e8400-e29b-41d4-a716-446655440000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. When set to true, only parameter validation and business logic checks are performed without actually creating or updating resources.</para>
+        /// <para>Specifies whether to enable dry run mode. When set to true, only parameter validation and business logic checks are performed, and resources are not actually created or updated.</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string KeywordFilterLibs { get; set; }
 
         /// <summary>
-        /// <para>The keyword hit libraries.</para>
+        /// <para>The matched keyword libraries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[]</para>
@@ -55,6 +55,16 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [NameInMap("KeywordHitLibs")]
         [Validation(Required=false)]
         public string KeywordHitLibs { get; set; }
+
+        /// <summary>
+        /// <para>The keyword library preprocessing configuration in JSON format. The format maps a libId to a list of preprocessing types, such as {&quot;libId&quot;:[&quot;fps&quot;]}. If this parameter is not passed, the configuration is not updated. An empty object {} clears all configurations. An empty array for a libId clears the configuration for that library.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;libId&quot;:[&quot;fps&quot;]}</para>
+        /// </summary>
+        [NameInMap("KeywordLibProcessConf")]
+        [Validation(Required=false)]
+        public string KeywordLibProcessConf { get; set; }
 
         /// <summary>
         /// <para>The human-machine moderation configuration.</para>
@@ -97,7 +107,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Scene { get; set; }
 
         /// <summary>
-        /// <para>The scenario configuration.</para>
+        /// <para>The scenario configuration information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>

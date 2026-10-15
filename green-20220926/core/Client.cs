@@ -9065,7 +9065,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves keyword library information.</para>
+        /// <para>Retrieves the information about a keyword library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9095,6 +9095,10 @@ namespace AlibabaCloud.SDK.Green20220926
             {
                 body["LibId"] = request.LibId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceCode))
+            {
+                body["ServiceCode"] = request.ServiceCode;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -9117,7 +9121,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves keyword library information.</para>
+        /// <para>Retrieves the information about a keyword library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9147,6 +9151,10 @@ namespace AlibabaCloud.SDK.Green20220926
             {
                 body["LibId"] = request.LibId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceCode))
+            {
+                body["ServiceCode"] = request.ServiceCode;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -9169,7 +9177,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves keyword library information.</para>
+        /// <para>Retrieves the information about a keyword library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9187,7 +9195,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves keyword library information.</para>
+        /// <para>Retrieves the information about a keyword library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13785,7 +13793,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of keyword libraries.</para>
+        /// <para>Queries a list of keyword libraries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13805,6 +13813,10 @@ namespace AlibabaCloud.SDK.Green20220926
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceCode))
+            {
+                query["ServiceCode"] = request.ServiceCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantCode))
             {
@@ -13831,7 +13843,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of keyword libraries.</para>
+        /// <para>Queries a list of keyword libraries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13851,6 +13863,10 @@ namespace AlibabaCloud.SDK.Green20220926
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceCode))
+            {
+                query["ServiceCode"] = request.ServiceCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantCode))
             {
@@ -13877,7 +13893,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of keyword libraries.</para>
+        /// <para>Queries a list of keyword libraries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13895,7 +13911,7 @@ namespace AlibabaCloud.SDK.Green20220926
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of keyword libraries.</para>
+        /// <para>Queries a list of keyword libraries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18843,6 +18859,10 @@ namespace AlibabaCloud.SDK.Green20220926
             {
                 body["KeywordHitLibs"] = request.KeywordHitLibs;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeywordLibProcessConf))
+            {
+                body["KeywordLibProcessConf"] = request.KeywordLibProcessConf;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManualMachineConfig))
             {
                 body["ManualMachineConfig"] = request.ManualMachineConfig;
@@ -18934,6 +18954,10 @@ namespace AlibabaCloud.SDK.Green20220926
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeywordHitLibs))
             {
                 body["KeywordHitLibs"] = request.KeywordHitLibs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeywordLibProcessConf))
+            {
+                body["KeywordLibProcessConf"] = request.KeywordLibProcessConf;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManualMachineConfig))
             {

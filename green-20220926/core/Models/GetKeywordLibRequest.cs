@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetKeywordLibRequest : TeaModel {
         /// <summary>
-        /// <para>The keyword library ID.</para>
+        /// <para>The ID of the keyword library.</para>
         /// 
         /// <b>Example:</b>
         /// <para>customxx_xxx</para>
@@ -30,9 +30,19 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The library code.</para>
+        /// <para>The service code. This parameter is required when you query the preprocessing configurations (PreprocessList) of the library.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ugc_moderation_byllm_pro</para>
+        /// </summary>
+        [NameInMap("ServiceCode")]
+        [Validation(Required=false)]
+        public string ServiceCode { get; set; }
+
+        /// <summary>
+        /// <para>The code of the keyword library.</para>
         /// <list type="bullet">
-        /// <item><description>desensitize: masking library</description></item>
+        /// <item><description>desensitize: Desensitization keyword library.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
