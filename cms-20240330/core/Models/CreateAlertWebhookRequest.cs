@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreateAlertWebhookRequest : TeaModel {
         /// <summary>
-        /// <para>The content type of the data. Valid values:</para>
+        /// <para>The data content type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>JSON (default)</description></item>
         /// <item><description>FORM</description></item>

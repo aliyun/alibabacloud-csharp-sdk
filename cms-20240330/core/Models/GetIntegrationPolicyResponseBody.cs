@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public GetIntegrationPolicyResponseBodyPolicy Policy { get; set; }
         public class GetIntegrationPolicyResponseBodyPolicy : TeaModel {
             /// <summary>
-            /// <para>The names of all components installed in this policy.</para>
+            /// <para>The names of all components installed in the policy.</para>
             /// </summary>
             [NameInMap("addonNames")]
             [Validation(Required=false)]
             public List<string> AddonNames { get; set; }
 
             /// <summary>
-            /// <para>The bound resource information.</para>
+            /// <para>The information about the bound resource.</para>
             /// </summary>
             [NameInMap("bindResource")]
             [Validation(Required=false)]
@@ -51,6 +51,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string ClusterType { get; set; }
 
                 /// <summary>
+                /// <para>The UID of the actual owner of the bound resource in cross-account scenarios.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>12xxxx</para>
+                /// </summary>
+                [NameInMap("entityUserId")]
+                [Validation(Required=false)]
+                public string EntityUserId { get; set; }
+
+                /// <summary>
                 /// <para>The VPC CIDR block.</para>
                 /// 
                 /// <b>Example:</b>
@@ -73,7 +83,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The umodel installation status in the container environment.</para>
+            /// <para>The installation status of umodel in the container environment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -154,7 +164,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// <para>The tag values.</para>
+                        /// <para>The tag value.</para>
                         /// </summary>
                         [NameInMap("tagValues")]
                         [Validation(Required=false)]
@@ -206,7 +216,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     }
 
                     /// <summary>
-                    /// <para>The instance IDs.</para>
+                    /// <para>The instance ID.</para>
                     /// </summary>
                     [NameInMap("instanceIds")]
                     [Validation(Required=false)]
@@ -242,7 +252,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     }
 
                     /// <summary>
-                    /// <para>The labels.</para>
+                    /// <para>The tags.</para>
                     /// </summary>
                     [NameInMap("labels")]
                     [Validation(Required=false)]
@@ -295,7 +305,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public string ResourceGroupId { get; set; }
 
                     /// <summary>
-                    /// <para>The tag values.</para>
+                    /// <para>The tag value.</para>
                     /// </summary>
                     [NameInMap("tags")]
                     [Validation(Required=false)]
@@ -333,7 +343,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 }
 
                 /// <summary>
-                /// <para>Used for querying.</para>
+                /// <para>The query.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>status: 200 AND totalTime &gt; 0.5</para>

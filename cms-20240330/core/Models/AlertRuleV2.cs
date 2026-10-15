@@ -24,24 +24,24 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public Dictionary<string, string> Annotations { get; set; }
 
         /// <summary>
-        /// <para>The Application Real-Time Monitoring Service (ARMS) integration configuration.</para>
+        /// <para>The ARMS integration configuration.</para>
         /// </summary>
         [NameInMap("armsIntegrationConfig")]
         [Validation(Required=false)]
         public ArmsIntegrationConfig ArmsIntegrationConfig { get; set; }
 
         /// <summary>
-        /// <para>The business source (read-only, such as managed_service_for_prometheus, umodel, application_insights, cloud_monitoring, or sls).</para>
+        /// <para>The business source (read-only, such as managed_service_for_prometheus / umodel / application_insights / cloud_monitoring / sls).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Sample value</para>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("bizSource")]
         [Validation(Required=false)]
         public string BizSource { get; set; }
 
         /// <summary>
-        /// <para>The detection condition configuration aggregation (Prometheus simple, UModel, APM simple, or APM composite).</para>
+        /// <para>The detection condition configuration aggregate (Prometheus simple / UModel / APM simple / APM composite).</para>
         /// </summary>
         [NameInMap("conditionConfig")]
         [Validation(Required=false)]
@@ -68,14 +68,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>The datasource config aggregation (PROMETHEUS, UMODEL, and APM share a single object, with fields selected based on type).</para>
+        /// <para>The datasource configuration aggregate (shared by PROMETHEUS / UMODEL / APM in a single object; fields are selected based on the type).</para>
         /// </summary>
         [NameInMap("datasourceConfig")]
         [Validation(Required=false)]
         public DatasourceConfigUnified DatasourceConfig { get; set; }
 
         /// <summary>
-        /// <para>The data source type (read-only, derived).</para>
+        /// <para>The datasource type (read-only, derived).</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -88,14 +88,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The display name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CPU usage alert 95%</para>
+        /// <para>CPU resource usage alert 95%</para>
         /// </summary>
         [NameInMap("displayName")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the alert rule is enabled.</para>
+        /// <para>Specifies whether the alert rule is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public Dictionary<string, string> Labels { get; set; }
 
         /// <summary>
-        /// <para>The rule manager (read-only). An empty value indicates a user-created rule. A non-empty value indicates the rule is created and managed by the corresponding cloud service.</para>
+        /// <para>The rule manager (read-only). An empty value indicates a user-created rule. A non-empty value indicates that the rule was created and managed by the corresponding cloud service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>integrationCenter</para>
@@ -122,14 +122,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ManagedBy { get; set; }
 
         /// <summary>
-        /// <para>The notification configuration aggregation (currently only DIRECT_NOTIFY, corresponding to DirectNotifyConfig).</para>
+        /// <para>The notification configuration aggregate (currently only DIRECT_NOTIFY, corresponding to DirectNotifyConfig).</para>
         /// </summary>
         [NameInMap("notifyConfig")]
         [Validation(Required=false)]
         public NotifyConfigUnified NotifyConfig { get; set; }
 
         /// <summary>
-        /// <para>The notification policy ID (read-only, derived, the first entry in the notification policy list).</para>
+        /// <para>The notification policy ID (read-only, derived from the first entry in the notification policy list).</para>
         /// 
         /// <b>Example:</b>
         /// <para>example-id-001</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para><b>[Deprecated]</b> Indicates whether the rule takes effect on all resources of this type (read-only, derived). For new integrations, use observeResourceConfig.relationType to check whether the value is ALL for equivalent semantics.</para>
+        /// <para><b>[Deprecated]</b> Specifies whether the rule applies to all resources of the resource type (read-only, derived). For new integrations, use observeResourceConfig.relationType to check whether the value is ALL for equivalent semantics.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? ObserveResourceGlobalScope { get; set; }
 
         /// <summary>
-        /// <para>The list of observable resource IDs (read-only, derived).</para>
+        /// <para>The observable resource ID list (read-only, derived).</para>
         /// </summary>
         [NameInMap("observeResourceList")]
         [Validation(Required=false)]
@@ -182,28 +182,28 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The partition key (read-only, maintained by the system for rule routing and sharding).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Sample value</para>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("partitionKey")]
         [Validation(Required=false)]
         public string PartitionKey { get; set; }
 
         /// <summary>
-        /// <para>The query configuration aggregation (PROMETHEUS_SINGLE_QUERY, UMODEL_METRICSET_QUERY, or APM_MULTI_QUERY).</para>
+        /// <para>The query configuration aggregate (PROMETHEUS_SINGLE_QUERY / UMODEL_METRICSET_QUERY / APM_MULTI_QUERY).</para>
         /// </summary>
         [NameInMap("queryConfig")]
         [Validation(Required=false)]
         public QueryConfigUnified QueryConfig { get; set; }
 
         /// <summary>
-        /// <para>The Root Cause Analysis (RCA) configuration.</para>
+        /// <para>The RCA (root cause analysis) configuration.</para>
         /// </summary>
         [NameInMap("rcaConfig")]
         [Validation(Required=false)]
         public AlertRuleRcaConfig RcaConfig { get; set; }
 
         /// <summary>
-        /// <para>The region ID (aligned with V1 AlertRule.regionId. Priority: regionId in the request body &gt; callerRegionId from the gateway).</para>
+        /// <para>The region ID (aligned with V1 AlertRule.regionId; priority: request body regionId &gt; gateway callerRegionId).</para>
         /// 
         /// <b>Example:</b>
         /// <para>example-id-001</para>
@@ -213,14 +213,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The scheduling configuration aggregation (currently only FIXED is supported).</para>
+        /// <para>The scheduling configuration aggregate (currently only FIXED is supported).</para>
         /// </summary>
         [NameInMap("scheduleConfig")]
         [Validation(Required=false)]
         public ScheduleConfigUnified ScheduleConfig { get; set; }
 
         /// <summary>
-        /// <para>The severity levels covered by this rule, comma-separated (read-only, derived. Same format as the filter.severityLevels query parameter).</para>
+        /// <para>The severity levels covered by this rule, comma-separated (read-only, derived; consistent with the filter.severityLevels query parameter format).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<ListPrometheusViewsResponseBodyPrometheusViews> PrometheusViews { get; set; }
         public class ListPrometheusViewsResponseBodyPrometheusViews : TeaModel {
             /// <summary>
-            /// <para>The instance creation time in UTC+0, in the format of yyyy-MM-ddTHH:mmZ.</para>
+            /// <para>The time when the instance was created. The time is displayed in UTC+0 in the yyyy-MM-ddTHH:mmZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-07-12T02:18:36Z</para>
@@ -50,9 +50,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The instance type:
-            /// prom-view: aggregated view of the new version.
-            /// global-view: aggregated view of the legacy version.</para>
+            /// <para>The instance type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>prom-view: new version of the aggregate view</description></item>
+            /// <item><description>global-view: legacy version of the aggregate view</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>prom-view</para>
@@ -62,7 +64,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The billing type. Currently, the fixed value is FREE.</para>
+            /// <para>The billing method. The value is fixed to FREE.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FREE</para>
@@ -72,7 +74,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PaymentType { get; set; }
 
             /// <summary>
-            /// <para>The product to which the Prometheus instance belongs (arms or cms).</para>
+            /// <para>The product to which the Prometheus instance belongs, such as ARMS or CMS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cms</para>
@@ -92,7 +94,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public int? PrometheusInstanceCount { get; set; }
 
             /// <summary>
-            /// <para>The Prometheus view ID.</para>
+            /// <para>The ID of the Prometheus view.</para>
             /// 
             /// <b>Example:</b>
             /// <para>view-xxx</para>
@@ -102,7 +104,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PrometheusViewId { get; set; }
 
             /// <summary>
-            /// <para>The Prometheus view name.</para>
+            /// <para>The name of the Prometheus view.</para>
             /// 
             /// <b>Example:</b>
             /// <para>view1</para>
@@ -122,7 +124,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The resource group ID.</para>
+            /// <para>The ID of the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-acfm3gn5i6bigbi</para>
@@ -132,7 +134,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The fixed value: PrometheusView.</para>
+            /// <para>The resource type. The value is fixed to PrometheusView.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PrometheusView</para>
@@ -142,7 +144,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The backend data storage status.</para>
+            /// <para>The status of the backend data storage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -152,7 +154,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The user ID.</para>
+            /// <para>The ID of the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123xxx</para>

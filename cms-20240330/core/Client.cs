@@ -1616,7 +1616,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cloud resource.</para>
+        /// <para>Creates a cloud resource center.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -1652,7 +1652,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cloud resource.</para>
+        /// <para>Creates a cloud resource center.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -1688,7 +1688,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cloud resource.</para>
+        /// <para>Creates a cloud resource center.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1703,7 +1703,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cloud resource.</para>
+        /// <para>Creates a cloud resource center.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5468,7 +5468,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more alert webhooks.</para>
+        /// <para>Deletes a webhook.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5520,7 +5520,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more alert webhooks.</para>
+        /// <para>Deletes a webhook.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5572,7 +5572,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more alert webhooks.</para>
+        /// <para>Deletes a webhook.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5591,7 +5591,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more alert webhooks.</para>
+        /// <para>Deletes a webhook.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5728,7 +5728,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a cloud resource.</para>
+        /// <para>Deletes the Cloud Resource Center.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -5764,7 +5764,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a cloud resource.</para>
+        /// <para>Deletes the Cloud Resource Center.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -5800,7 +5800,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a cloud resource.</para>
+        /// <para>Deletes the Cloud Resource Center.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5815,7 +5815,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a cloud resource.</para>
+        /// <para>Deletes the Cloud Resource Center.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -11070,7 +11070,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about cloud resources.</para>
+        /// <para>Queries the cloud resource center.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -11106,7 +11106,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about cloud resources.</para>
+        /// <para>Queries the cloud resource center.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -11142,7 +11142,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about cloud resources.</para>
+        /// <para>Queries the cloud resource center.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -11157,7 +11157,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about cloud resources.</para>
+        /// <para>Queries the cloud resource center.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -12448,7 +12448,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the policy information of the DDoS Access Center.</para>
+        /// <para>Queries Access Center policy information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12488,7 +12488,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the policy information of the DDoS Access Center.</para>
+        /// <para>Queries Access Center policy information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12528,7 +12528,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the policy information of the DDoS Access Center.</para>
+        /// <para>Queries Access Center policy information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12547,7 +12547,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the policy information of the DDoS Access Center.</para>
+        /// <para>Queries Access Center policy information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15952,12 +15952,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries alert robots.</para>
+        /// <para>Queries chatbots.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of alert robots under the current account. Alert robots are webhook receivers for alert notifications and support types such as DingTalk, DingTalk Cool App, Lark, Slack, and WeChat. You can filter results by robot ID, name, type, and workspace.</para>
+        /// <para>Queries the list of alert chatbots under the current account. Alert chatbots serve as webhook endpoints for alert notifications and support types such as DingTalk, DingTalk Cool App, Lark, Slack, and WeChat. You can filter the results by chatbot ID, name, type, and workspace.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -16033,12 +16033,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries alert robots.</para>
+        /// <para>Queries chatbots.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of alert robots under the current account. Alert robots are webhook receivers for alert notifications and support types such as DingTalk, DingTalk Cool App, Lark, Slack, and WeChat. You can filter results by robot ID, name, type, and workspace.</para>
+        /// <para>Queries the list of alert chatbots under the current account. Alert chatbots serve as webhook endpoints for alert notifications and support types such as DingTalk, DingTalk Cool App, Lark, Slack, and WeChat. You can filter the results by chatbot ID, name, type, and workspace.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -16114,12 +16114,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries alert robots.</para>
+        /// <para>Queries chatbots.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of alert robots under the current account. Alert robots are webhook receivers for alert notifications and support types such as DingTalk, DingTalk Cool App, Lark, Slack, and WeChat. You can filter results by robot ID, name, type, and workspace.</para>
+        /// <para>Queries the list of alert chatbots under the current account. Alert chatbots serve as webhook endpoints for alert notifications and support types such as DingTalk, DingTalk Cool App, Lark, Slack, and WeChat. You can filter the results by chatbot ID, name, type, and workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16138,12 +16138,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries alert robots.</para>
+        /// <para>Queries chatbots.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of alert robots under the current account. Alert robots are webhook receivers for alert notifications and support types such as DingTalk, DingTalk Cool App, Lark, Slack, and WeChat. You can filter results by robot ID, name, type, and workspace.</para>
+        /// <para>Queries the list of alert chatbots under the current account. Alert chatbots serve as webhook endpoints for alert notifications and support types such as DingTalk, DingTalk Cool App, Lark, Slack, and WeChat. You can filter the results by chatbot ID, name, type, and workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16676,12 +16676,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries alert contacts.</para>
+        /// <para>Queries contacts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to create an alert contact group named <c>ECS_Group</c>.</para>
+        /// <para>This topic provides an example of creating an alert contact group named <c>ECS_Group</c>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -16765,12 +16765,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries alert contacts.</para>
+        /// <para>Queries contacts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to create an alert contact group named <c>ECS_Group</c>.</para>
+        /// <para>This topic provides an example of creating an alert contact group named <c>ECS_Group</c>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -16854,12 +16854,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries alert contacts.</para>
+        /// <para>Queries contacts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to create an alert contact group named <c>ECS_Group</c>.</para>
+        /// <para>This topic provides an example of creating an alert contact group named <c>ECS_Group</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16878,12 +16878,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries alert contacts.</para>
+        /// <para>Queries contacts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to create an alert contact group named <c>ECS_Group</c>.</para>
+        /// <para>This topic provides an example of creating an alert contact group named <c>ECS_Group</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17672,12 +17672,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of access center policies.</para>
+        /// <para>Queries the list of integration center policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the integration list.</para>
+        /// <para>Queries the list of integrations.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -17781,12 +17781,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of access center policies.</para>
+        /// <para>Queries the list of integration center policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the integration list.</para>
+        /// <para>Queries the list of integrations.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -17890,12 +17890,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of access center policies.</para>
+        /// <para>Queries the list of integration center policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the integration list.</para>
+        /// <para>Queries the list of integrations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17914,12 +17914,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of access center policies.</para>
+        /// <para>Queries the list of integration center policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the integration list.</para>
+        /// <para>Queries the list of integrations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20124,12 +20124,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Prometheus view instances.</para>
+        /// <para>Queries a list of Prometheus view instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of Prometheus view instances.</para>
+        /// <para>Queries a list of Prometheus view instances.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -20217,12 +20217,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Prometheus view instances.</para>
+        /// <para>Queries a list of Prometheus view instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of Prometheus view instances.</para>
+        /// <para>Queries a list of Prometheus view instances.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -20310,12 +20310,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Prometheus view instances.</para>
+        /// <para>Queries a list of Prometheus view instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of Prometheus view instances.</para>
+        /// <para>Queries a list of Prometheus view instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20334,12 +20334,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Prometheus view instances.</para>
+        /// <para>Queries a list of Prometheus view instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of Prometheus view instances.</para>
+        /// <para>Queries a list of Prometheus view instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22099,7 +22099,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query a list of alert templates. The response shows that the alert template list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
+        /// <para>This topic provides an example of querying an alert template list. The response shows that the list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -22174,7 +22174,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query a list of alert templates. The response shows that the alert template list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
+        /// <para>This topic provides an example of querying an alert template list. The response shows that the list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -22249,7 +22249,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query a list of alert templates. The response shows that the alert template list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
+        /// <para>This topic provides an example of querying an alert template list. The response shows that the list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22273,7 +22273,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query a list of alert templates. The response shows that the alert template list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
+        /// <para>This topic provides an example of querying an alert template list. The response shows that the list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
         /// </description>
         /// 
         /// <param name="request">

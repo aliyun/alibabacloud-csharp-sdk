@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListIntegrationPoliciesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The addon name.</para>
+        /// <para>The add-on name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cs-default</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string BindResourceId { get; set; }
 
         /// <summary>
-        /// <para>The entity IDs used for filtering. Separate multiple IDs with commas (,).</para>
+        /// <para>The entity IDs used for filtering, separated by commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eg-1,eg-2,eg-3</para>
@@ -39,14 +39,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string EntityGroupIds { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>The region IDs used for region-based queries. Separate multiple region IDs with commas (,).</para>
+        /// <para>The region IDs used for the query, separated by commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing,cn-hangzhou</para>
         /// </summary>
         [NameInMap("filterRegionIds")]
         [Validation(Required=false)]
+        [Obsolete]
         public string FilterRegionIds { get; set; }
 
         /// <summary>
@@ -60,7 +63,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token used to retrieve more results. You do not need to specify this parameter for the first query. For subsequent queries, use the token obtained from the previous response.</para>
+        /// <para>The token used to retrieve more results. This parameter is not required for the first query. For subsequent queries, use the token returned in the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mvnX6zqg3P</para>
@@ -110,7 +113,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PrometheusInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The general query string.</para>
+        /// <para>The query string for general queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -130,7 +133,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("tag")]
         [Validation(Required=false)]

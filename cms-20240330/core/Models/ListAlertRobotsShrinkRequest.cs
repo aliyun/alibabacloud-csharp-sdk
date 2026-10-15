@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListAlertRobotsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The robot name. Prefix fuzzy match is supported.</para>
+        /// <para>The name of the chatbot. Prefix-based fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -40,21 +40,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The robot IDs.</para>
+        /// <para>The chatbot IDs.</para>
         /// </summary>
         [NameInMap("robotIds")]
         [Validation(Required=false)]
         public string RobotIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The robot types.</para>
+        /// <para>The chatbot types.</para>
         /// </summary>
         [NameInMap("types")]
         [Validation(Required=false)]
         public string TypesShrink { get; set; }
 
         /// <summary>
-        /// <para>The workspace name.</para>
+        /// <para>The name of the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default-cms-1423134313712421-cn-shanghai</para>

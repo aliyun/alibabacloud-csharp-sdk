@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string SlsProject { get; set; }
 
         /// <summary>
-        /// <para>The tags attached to the workspace when it is created.</para>
+        /// <para>The tags bound to the workspace when it is created.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]

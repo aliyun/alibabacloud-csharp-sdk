@@ -9,14 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListPrometheusViewsShrinkRequest : TeaModel {
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>Filters by region ID.</para>
+        /// <para>Filters the results by region ID. Currently, only a single region ID is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-zhangjiakou,cn-beijing</para>
         /// </summary>
         [NameInMap("filterRegionIds")]
         [Validation(Required=false)]
+        [Obsolete]
         public string FilterRegionIds { get; set; }
 
         /// <summary>
@@ -56,7 +59,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PrometheusViewIds { get; set; }
 
         /// <summary>
-        /// <para>The Prometheus view name.</para>
+        /// <para>The name of the Prometheus view.</para>
         /// 
         /// <b>Example:</b>
         /// <para>view1</para>
@@ -66,7 +69,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PrometheusViewName { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm3gn5i6bigbi</para>
@@ -93,7 +96,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string TagShrink { get; set; }
 
         /// <summary>
-        /// <para>The instance version: V1 or V2.</para>
+        /// <para>The instance version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>V2</para>
@@ -103,7 +106,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Version { get; set; }
 
         /// <summary>
-        /// <para>The workspace name.</para>
+        /// <para>The name of the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace-test</para>

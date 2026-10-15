@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListAlertActionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of action integration configurations.</para>
+        /// <para>The list of alert action integration configurations.</para>
         /// </summary>
         [NameInMap("alertActions")]
         [Validation(Required=false)]
         public List<ListAlertActionsResponseBodyAlertActions> AlertActions { get; set; }
         public class ListAlertActionsResponseBodyAlertActions : TeaModel {
             /// <summary>
-            /// <para>The unique IDs of the action integrations.</para>
+            /// <para>The unique identifiers of the alert action integrations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AlertActionId { get; set; }
 
             /// <summary>
-            /// <para>The name of the action integration.</para>
+            /// <para>The name of the alert action integration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testName</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public ListAlertActionsResponseBodyAlertActionsFc3Param Fc3Param { get; set; }
             public class ListAlertActionsResponseBodyAlertActionsFc3Param : TeaModel {
                 /// <summary>
-                /// <para>The function name of the Function Compute service.</para>
+                /// <para>The name of the function in Function Compute.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public ListAlertActionsResponseBodyAlertActionsFcParam FcParam { get; set; }
             public class ListAlertActionsResponseBodyAlertActionsFcParam : TeaModel {
                 /// <summary>
-                /// <para>The function name of the Function Compute service.</para>
+                /// <para>The name of the function in Function Compute.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public ListAlertActionsResponseBodyAlertActionsMnsParam MnsParam { get; set; }
             public class ListAlertActionsResponseBodyAlertActionsMnsParam : TeaModel {
                 /// <summary>
-                /// <para>The resource type of Simple Message Queue (formerly MNS).</para>
+                /// <para>The resource type in Simple Message Queue (formerly MNS).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>queue</para>
@@ -220,7 +220,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string MnsType { get; set; }
 
                 /// <summary>
-                /// <para>The resource name.</para>
+                /// <para>The name of the resource.</para>
                 /// <list type="bullet">
                 /// <item><description>If the resource type is queue, the resource name is the queue name.</description></item>
                 /// <item><description>If the resource type is topic, the resource name is the topic name.</description></item>
@@ -253,7 +253,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public ListAlertActionsResponseBodyAlertActionsPagerDutyParam PagerDutyParam { get; set; }
             public class ListAlertActionsResponseBodyAlertActionsPagerDutyParam : TeaModel {
                 /// <summary>
-                /// <para>The integration key of PagerDuty.</para>
+                /// <para>The integration key for PagerDuty.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>fsfer4543t5t65g4t4</para>
@@ -263,7 +263,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The integration webhook of PagerDuty. V1 and V2 versions are supported.</para>
+                /// <para>The integration webhook URL for PagerDuty. Both V1 and V2 are supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://events.pagerduty.com/v2/enqueue">https://events.pagerduty.com/v2/enqueue</a></para>
@@ -282,7 +282,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public ListAlertActionsResponseBodyAlertActionsSlsParam SlsParam { get; set; }
             public class ListAlertActionsResponseBodyAlertActionsSlsParam : TeaModel {
                 /// <summary>
-                /// <para>The name of the Simple Log Service Logstore.</para>
+                /// <para>The name of the Logstore in Simple Log Service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -292,7 +292,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Logstore { get; set; }
 
                 /// <summary>
-                /// <para>The name of the Simple Log Service project.</para>
+                /// <para>The name of the project in Simple Log Service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -314,7 +314,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The type of the action integration.</para>
+            /// <para>The type of the alert action integration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FC</para>

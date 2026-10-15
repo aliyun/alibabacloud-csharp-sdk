@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListIntegrationPoliciesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The maximum number of entries per page.
+        /// Default value:
+        ///     50
+        /// Maximum value:
+        ///     50</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -37,14 +41,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<ListIntegrationPoliciesResponseBodyPolicies> Policies { get; set; }
         public class ListIntegrationPoliciesResponseBodyPolicies : TeaModel {
             /// <summary>
-            /// <para>The names of all components installed in this policy.</para>
+            /// <para>The names of all add-ons installed in this policy.</para>
             /// </summary>
             [NameInMap("addonNames")]
             [Validation(Required=false)]
             public List<string> AddonNames { get; set; }
 
             /// <summary>
-            /// <para>The bound resource information.</para>
+            /// <para>The information about the bound resources.</para>
             /// </summary>
             [NameInMap("bindResource")]
             [Validation(Required=false)]
@@ -71,6 +75,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string ClusterType { get; set; }
 
                 /// <summary>
+                /// <para>The UID of the actual owner of the bound resource in cross-account scenarios.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>12xxxx</para>
+                /// </summary>
+                [NameInMap("entityUserId")]
+                [Validation(Required=false)]
+                public string EntityUserId { get; set; }
+
+                /// <summary>
                 /// <para>The VPC CIDR block.</para>
                 /// 
                 /// <b>Example:</b>
@@ -81,7 +95,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string VpcCidr { get; set; }
 
                 /// <summary>
-                /// <para>The virtual private cloud (VPC) ID.</para>
+                /// <para>The VPC ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-uf664nyle5khp5d4d7hdo</para>
@@ -93,7 +107,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The umodel installation status in the container environment.</para>
+            /// <para>The installation status of umodel in the container environment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -207,7 +221,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public string FieldKey { get; set; }
 
                         /// <summary>
-                        /// <para>The field values. Multiple values are separated by commas (,).</para>
+                        /// <para>The field values. Separate multiple values with commas (,).</para>
                         /// </summary>
                         [NameInMap("fieldValues")]
                         [Validation(Required=false)]
@@ -233,14 +247,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     public List<string> InstanceIds { get; set; }
 
                     /// <summary>
-                    /// <para>The IP match rule.</para>
+                    /// <para>The IP address matching rule.</para>
                     /// </summary>
                     [NameInMap("ipMatchRule")]
                     [Validation(Required=false)]
                     public ListIntegrationPoliciesResponseBodyPoliciesEntityGroupEntityRulesIpMatchRule IpMatchRule { get; set; }
                     public class ListIntegrationPoliciesResponseBodyPoliciesEntityGroupEntityRulesIpMatchRule : TeaModel {
                         /// <summary>
-                        /// <para>The IP CIDR block.</para>
+                        /// <para>The IP address CIDR block.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>100.100.1.0/16</para>
@@ -250,7 +264,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public string IpCidr { get; set; }
 
                         /// <summary>
-                        /// <para>The key of the IP field.</para>
+                        /// <para>The key of the IP address field.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>xxxx</para>
@@ -405,14 +419,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string FeePackage { get; set; }
 
             /// <summary>
-            /// <para>The policy network management information.</para>
+            /// <para>The network management information of the policy.</para>
             /// </summary>
             [NameInMap("managedInfo")]
             [Validation(Required=false)]
             public ListIntegrationPoliciesResponseBodyPoliciesManagedInfo ManagedInfo { get; set; }
             public class ListIntegrationPoliciesResponseBodyPoliciesManagedInfo : TeaModel {
                 /// <summary>
-                /// <para>The ENI ID of the managed probe. Example: eni-xxxx.</para>
+                /// <para>The ID of the elastic network interface (ENI) for the managed probe. Example: eni-xxxx.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>eni-12345678</para>
@@ -464,7 +478,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PolicyName { get; set; }
 
             /// <summary>
-            /// <para>The access center policy type.</para>
+            /// <para>The Access Center policy type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ECS</para>
@@ -494,7 +508,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The sub-release count.</para>
+            /// <para>The number of sub-releases.</para>
             /// </summary>
             [NameInMap("subAddonRelease")]
             [Validation(Required=false)]

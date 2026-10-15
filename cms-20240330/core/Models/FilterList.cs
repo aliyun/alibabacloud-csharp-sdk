@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The filter value. This parameter can be left empty when type is set to ALL or DISABLED.</para>
+        /// <para>The filter value, which can be empty when the type is ALL or DISABLED.</para>
         /// 
         /// <b>Example:</b>
         /// <para>prod</para>

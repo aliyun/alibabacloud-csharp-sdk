@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class DeleteAlertWebhooksShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Unique webhook identifiers.</para>
+        /// <para>The unique identifiers of the webhooks.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("webhookIds")]
