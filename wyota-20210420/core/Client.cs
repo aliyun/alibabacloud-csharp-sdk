@@ -619,6 +619,210 @@ namespace AlibabaCloud.SDK.Wyota20210420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates dedicated terminal management invitation codes for one or more users under the current Alibaba Cloud account, generates an eight-digit code for each user, and uniformly specifies the terminal group and validity period.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage notes</h2>
+        /// <list type="bullet">
+        /// <item><description>Call this operation over HTTPS POST, sign the request with an AccessKey pair or STS credentials, and grant the ecd:CreateUserInvitationCode permission. You can only create management codes for users and terminal groups that belong to the Alibaba Cloud account of the caller identity.</description></item>
+        /// <item><description>You must specify either EndUserIds or the single-user compatible parameter EndUserId. Batch requests support 1 to 100 users. An independent eight-digit management code is generated for each user. Empty items or duplicate users are not supported.</description></item>
+        /// <item><description>Users in a single request share the same TerminalGroupId and ValidityMinutes. Repeated calls can create multiple different management codes for the same user.</description></item>
+        /// <item><description>Both users and groups must already exist and belong to the current account. The group cannot be in a deleted state. After parameter and user validation passes, the entire batch is written. The system does not create codes user by user and return partial results.</description></item>
+        /// <item><description>A management code is a terminal redemption credential. Provide it to the corresponding user only through trusted channels and avoid recording the complete code in public logs.</description></item>
+        /// <item><description>The returned Data is always an array, even if only one code is created, in which case it is a single-element array. Creating a code does not mean that the terminal has completed management. A UUID and binding time are generated only after the device uses the code to complete management.</description></item>
+        /// <item><description>Status indicates only the usage status: ACTIVE means unused, and USED means used. To determine whether a code has expired, refer to the Expired field returned by the server. The EXPIRED status is not used.</description></item>
+        /// <item><description>This operation does not have a ClientToken parameter for business idempotence. Resending a creation request may generate a new management code. If you encounter uncertain results such as timeouts, check whether the code has been created before retrying unconditionally.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateUserInvitationCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserInvitationCodeResponse
+        /// </returns>
+        public CreateUserInvitationCodeResponse CreateUserInvitationCodeWithOptions(CreateUserInvitationCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                body["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserIds))
+            {
+                body["EndUserIds"] = request.EndUserIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TerminalGroupId))
+            {
+                body["TerminalGroupId"] = request.TerminalGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidityMinutes))
+            {
+                body["ValidityMinutes"] = request.ValidityMinutes;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateUserInvitationCode",
+                Version = "2021-04-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateUserInvitationCodeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates dedicated terminal management invitation codes for one or more users under the current Alibaba Cloud account, generates an eight-digit code for each user, and uniformly specifies the terminal group and validity period.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage notes</h2>
+        /// <list type="bullet">
+        /// <item><description>Call this operation over HTTPS POST, sign the request with an AccessKey pair or STS credentials, and grant the ecd:CreateUserInvitationCode permission. You can only create management codes for users and terminal groups that belong to the Alibaba Cloud account of the caller identity.</description></item>
+        /// <item><description>You must specify either EndUserIds or the single-user compatible parameter EndUserId. Batch requests support 1 to 100 users. An independent eight-digit management code is generated for each user. Empty items or duplicate users are not supported.</description></item>
+        /// <item><description>Users in a single request share the same TerminalGroupId and ValidityMinutes. Repeated calls can create multiple different management codes for the same user.</description></item>
+        /// <item><description>Both users and groups must already exist and belong to the current account. The group cannot be in a deleted state. After parameter and user validation passes, the entire batch is written. The system does not create codes user by user and return partial results.</description></item>
+        /// <item><description>A management code is a terminal redemption credential. Provide it to the corresponding user only through trusted channels and avoid recording the complete code in public logs.</description></item>
+        /// <item><description>The returned Data is always an array, even if only one code is created, in which case it is a single-element array. Creating a code does not mean that the terminal has completed management. A UUID and binding time are generated only after the device uses the code to complete management.</description></item>
+        /// <item><description>Status indicates only the usage status: ACTIVE means unused, and USED means used. To determine whether a code has expired, refer to the Expired field returned by the server. The EXPIRED status is not used.</description></item>
+        /// <item><description>This operation does not have a ClientToken parameter for business idempotence. Resending a creation request may generate a new management code. If you encounter uncertain results such as timeouts, check whether the code has been created before retrying unconditionally.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateUserInvitationCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserInvitationCodeResponse
+        /// </returns>
+        public async Task<CreateUserInvitationCodeResponse> CreateUserInvitationCodeWithOptionsAsync(CreateUserInvitationCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                body["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserIds))
+            {
+                body["EndUserIds"] = request.EndUserIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TerminalGroupId))
+            {
+                body["TerminalGroupId"] = request.TerminalGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidityMinutes))
+            {
+                body["ValidityMinutes"] = request.ValidityMinutes;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateUserInvitationCode",
+                Version = "2021-04-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateUserInvitationCodeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates dedicated terminal management invitation codes for one or more users under the current Alibaba Cloud account, generates an eight-digit code for each user, and uniformly specifies the terminal group and validity period.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage notes</h2>
+        /// <list type="bullet">
+        /// <item><description>Call this operation over HTTPS POST, sign the request with an AccessKey pair or STS credentials, and grant the ecd:CreateUserInvitationCode permission. You can only create management codes for users and terminal groups that belong to the Alibaba Cloud account of the caller identity.</description></item>
+        /// <item><description>You must specify either EndUserIds or the single-user compatible parameter EndUserId. Batch requests support 1 to 100 users. An independent eight-digit management code is generated for each user. Empty items or duplicate users are not supported.</description></item>
+        /// <item><description>Users in a single request share the same TerminalGroupId and ValidityMinutes. Repeated calls can create multiple different management codes for the same user.</description></item>
+        /// <item><description>Both users and groups must already exist and belong to the current account. The group cannot be in a deleted state. After parameter and user validation passes, the entire batch is written. The system does not create codes user by user and return partial results.</description></item>
+        /// <item><description>A management code is a terminal redemption credential. Provide it to the corresponding user only through trusted channels and avoid recording the complete code in public logs.</description></item>
+        /// <item><description>The returned Data is always an array, even if only one code is created, in which case it is a single-element array. Creating a code does not mean that the terminal has completed management. A UUID and binding time are generated only after the device uses the code to complete management.</description></item>
+        /// <item><description>Status indicates only the usage status: ACTIVE means unused, and USED means used. To determine whether a code has expired, refer to the Expired field returned by the server. The EXPIRED status is not used.</description></item>
+        /// <item><description>This operation does not have a ClientToken parameter for business idempotence. Resending a creation request may generate a new management code. If you encounter uncertain results such as timeouts, check whether the code has been created before retrying unconditionally.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateUserInvitationCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserInvitationCodeResponse
+        /// </returns>
+        public CreateUserInvitationCodeResponse CreateUserInvitationCode(CreateUserInvitationCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateUserInvitationCodeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates dedicated terminal management invitation codes for one or more users under the current Alibaba Cloud account, generates an eight-digit code for each user, and uniformly specifies the terminal group and validity period.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage notes</h2>
+        /// <list type="bullet">
+        /// <item><description>Call this operation over HTTPS POST, sign the request with an AccessKey pair or STS credentials, and grant the ecd:CreateUserInvitationCode permission. You can only create management codes for users and terminal groups that belong to the Alibaba Cloud account of the caller identity.</description></item>
+        /// <item><description>You must specify either EndUserIds or the single-user compatible parameter EndUserId. Batch requests support 1 to 100 users. An independent eight-digit management code is generated for each user. Empty items or duplicate users are not supported.</description></item>
+        /// <item><description>Users in a single request share the same TerminalGroupId and ValidityMinutes. Repeated calls can create multiple different management codes for the same user.</description></item>
+        /// <item><description>Both users and groups must already exist and belong to the current account. The group cannot be in a deleted state. After parameter and user validation passes, the entire batch is written. The system does not create codes user by user and return partial results.</description></item>
+        /// <item><description>A management code is a terminal redemption credential. Provide it to the corresponding user only through trusted channels and avoid recording the complete code in public logs.</description></item>
+        /// <item><description>The returned Data is always an array, even if only one code is created, in which case it is a single-element array. Creating a code does not mean that the terminal has completed management. A UUID and binding time are generated only after the device uses the code to complete management.</description></item>
+        /// <item><description>Status indicates only the usage status: ACTIVE means unused, and USED means used. To determine whether a code has expired, refer to the Expired field returned by the server. The EXPIRED status is not used.</description></item>
+        /// <item><description>This operation does not have a ClientToken parameter for business idempotence. Resending a creation request may generate a new management code. If you encounter uncertain results such as timeouts, check whether the code has been created before retrying unconditionally.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateUserInvitationCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserInvitationCodeResponse
+        /// </returns>
+        public async Task<CreateUserInvitationCodeResponse> CreateUserInvitationCodeAsync(CreateUserInvitationCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateUserInvitationCodeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Removes managed terminal devices by UUID.</para>
         /// </summary>
         /// 
