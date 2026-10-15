@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
 {
     public class RamAccount : TeaModel {
         /// <summary>
-        /// <para>Specifies whether the RamAccount can be bound to other resources.</para>
+        /// <para>Indicates whether the RAM user can be bound.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public bool? Bindable { get; set; }
 
         /// <summary>
-        /// <para>The display name for the RamAccount, which appears in the console.</para>
+        /// <para>The display name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test User</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier for the RamAccount.</para>
+        /// <para>The Alibaba Cloud UID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890123456</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string Uid { get; set; }
 
         /// <summary>
-        /// <para>The user name for the RamAccount.</para>
+        /// <para>The RAM username.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-user</para>

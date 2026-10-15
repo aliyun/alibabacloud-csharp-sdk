@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable AI function.</para>
+        /// <para>Specifies whether to enable the AI function.</para>
         /// </summary>
         [NameInMap("aiFunction")]
         [Validation(Required=false)]
@@ -39,8 +39,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment. Default value: true. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Automatic payment is enabled.</description></item>
-        /// <item><description>false: Only an order is generated. No payment is made.</description></item>
+        /// <item><description>true: Enables automatic payment.</description></item>
+        /// <item><description>false: Generates an order without payment.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             public string BackupName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the source cluster for the backup.</para>
+            /// <para>The ID of the source cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c-xxxxxxx</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public List<CreateInstanceRequestComponents> Components { get; set; }
         public class CreateInstanceRequestComponents : TeaModel {
             /// <summary>
-            /// <para>The number of compute units (CUs).</para>
+            /// <para>The number of CUs.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -128,14 +128,14 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             public string CuType { get; set; }
 
             /// <summary>
-            /// <para>The QueryNode data cloud disk configuration. This parameter is supported only when type is set to query.</para>
+            /// <para>The data cloud disk configuration for QueryNode. This parameter is supported only when type is set to query.</para>
             /// </summary>
             [NameInMap("dataDisk")]
             [Validation(Required=false)]
             public CreateInstanceRequestComponentsDataDisk DataDisk { get; set; }
             public class CreateInstanceRequestComponentsDataDisk : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether to enable the QueryNode data cloud disk.</para>
+                /// <para>Specifies whether to enable the data cloud disk for QueryNode.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
                 public bool? Enabled { get; set; }
 
                 /// <summary>
-                /// <para>The ESSD performance level (PL). Valid values: PL0, PL1, PL2, and PL3. If StorageClass is not specified, this parameter is used for parsing.</para>
+                /// <para>The performance level of the ESSD. Valid values: PL0, PL1, PL2, and PL3. If StorageClass is not specified, this field is used.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PL1</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
                 public string PerformanceLevel { get; set; }
 
                 /// <summary>
-                /// <para>The data cloud disk capacity. Unit: GiB.</para>
+                /// <para>The capacity of the data cloud disk, in GiB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
                 public int? Size { get; set; }
 
                 /// <summary>
-                /// <para>The StorageClass of the data cloud disk. Valid values: alicloud-disk-essd-pl0, alicloud-disk-essd-pl1, alicloud-disk-essd-pl2, and alicloud-disk-essd-pl3.</para>
+                /// <para>The storage class of the data cloud disk. Valid values: alicloud-disk-essd-pl0, alicloud-disk-essd-pl1, alicloud-disk-essd-pl2, and alicloud-disk-essd-pl3.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>alicloud-disk-essd-pl1</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             }
 
             /// <summary>
-            /// <para>The disk size type for the Query Node. Set this parameter to Large for storage-optimized instances, and to Normal for compute-optimized and other instance types.</para>
+            /// <para>The disk size type of the Query node. Set to Large for storage-optimized configurations and Normal for other configurations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Normal</para>
@@ -291,7 +291,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string KmsKeyId { get; set; }
 
         /// <summary>
-        /// <para>The number of load replicas.</para>
+        /// <para>The number of loaded replicas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -311,7 +311,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string MultiZoneMode { get; set; }
 
         /// <summary>
-        /// <para>The node type. Valid values for Milvus standalone: perf, enhanced, and cap. Default value: perf.</para>
+        /// <para>The node type. Valid values for standalone instances: perf, enhanced, and cap. Default value: perf.</para>
         /// 
         /// <b>Example:</b>
         /// <para>perf</para>
@@ -321,7 +321,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string NodeType { get; set; }
 
         /// <summary>
-        /// <para>The payment duration.</para>
+        /// <para>The subscription duration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -331,7 +331,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public int? PaymentDuration { get; set; }
 
         /// <summary>
-        /// <para>The unit of the payment duration.</para>
+        /// <para>The unit of the subscription duration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>month</para>
@@ -341,7 +341,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string PaymentDurationUnit { get; set; }
 
         /// <summary>
-        /// <para>The payment type.</para>
+        /// <para>The billing method.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -411,7 +411,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public List<CreateInstanceRequestVSwitchIds> VSwitchIds { get; set; }
         public class CreateInstanceRequestVSwitchIds : TeaModel {
             /// <summary>
-            /// <para>The vSwitch ID configuration in the zone.</para>
+            /// <para>The vSwitch ID configuration in a zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-xxx</para>
@@ -455,7 +455,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string ZoneId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>Ensures the idempotence of the request. The value is generated by the client and must be unique across requests. The value can be up to 64 ASCII characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
 {
     public class DBVersionDetail : TeaModel {
         /// <summary>
-        /// <para>The specifications supported by the version.</para>
+        /// <para>The list of specifications supported by the database version.</para>
         /// </summary>
         [NameInMap("specs")]
         [Validation(Required=false)]
         public List<DBVersionDetailSpecs> Specs { get; set; }
         public class DBVersionDetailSpecs : TeaModel {
             /// <summary>
-            /// <para>The component specifications.</para>
+            /// <para>The list of component specification configurations.</para>
             /// </summary>
             [NameInMap("componentSpecs")]
             [Validation(Required=false)]
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
                 public int? DefaultReplicas { get; set; }
 
                 /// <summary>
-                /// <para>The maximum number of replicas for the component.</para>
+                /// <para>The maximum number of replicas allowed for the component.</para>
                 /// </summary>
                 [NameInMap("maxReplicas")]
                 [Validation(Required=false)]
                 public int? MaxReplicas { get; set; }
 
                 /// <summary>
-                /// <para>The minimum number of replicas for the component.</para>
+                /// <para>The minimum number of replicas allowed for the component.</para>
                 /// </summary>
                 [NameInMap("minReplicas")]
                 [Validation(Required=false)]
@@ -52,14 +52,14 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The available specifications for the component.</para>
+                /// <para>The list of specifications supported by the component.</para>
                 /// </summary>
                 [NameInMap("specs")]
                 [Validation(Required=false)]
                 public List<string> Specs { get; set; }
 
                 /// <summary>
-                /// <para>The step size for scaling the number of replicas.</para>
+                /// <para>The step size for adjusting the number of replicas for the component.</para>
                 /// </summary>
                 [NameInMap("step")]
                 [Validation(Required=false)]
@@ -75,28 +75,28 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the high availability (HA) edition is supported.</para>
+            /// <para>Specifies whether high-availability deployment is supported.</para>
             /// </summary>
             [NameInMap("isHA")]
             [Validation(Required=false)]
             public bool? IsHA { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the Standalone edition is supported.</para>
+            /// <para>Specifies whether standalone deployment is supported.</para>
             /// </summary>
             [NameInMap("isStandalone")]
             [Validation(Required=false)]
             public bool? IsStandalone { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the Standalone Pro edition is supported.</para>
+            /// <para>Specifies whether Standalone Pro deployment is supported.</para>
             /// </summary>
             [NameInMap("isStandalonePro")]
             [Validation(Required=false)]
             public bool? IsStandalonePro { get; set; }
 
             /// <summary>
-            /// <para>The zone mode of the specification.</para>
+            /// <para>The zone deployment mode supported by the specification.</para>
             /// </summary>
             [NameInMap("zoneMode")]
             [Validation(Required=false)]
@@ -105,14 +105,14 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         }
 
         /// <summary>
-        /// <para>The status of the version.</para>
+        /// <para>The status of the database version.</para>
         /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The version number.</para>
+        /// <para>The database version.</para>
         /// </summary>
         [NameInMap("version")]
         [Validation(Required=false)]

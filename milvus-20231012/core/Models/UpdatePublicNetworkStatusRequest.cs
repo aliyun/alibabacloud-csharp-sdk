@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string Cidr { get; set; }
 
         /// <summary>
-        /// <para>The component type. Valid value:</para>
+        /// <para>The component type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Proxy</description></item>
         /// </list>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable public network access.</para>
+        /// <para>Specifies whether public network access is enabled.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

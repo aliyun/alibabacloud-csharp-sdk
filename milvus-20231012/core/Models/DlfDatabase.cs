@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
 {
     public class DlfDatabase : TeaModel {
         /// <summary>
-        /// <para>The name of the database.</para>
+        /// <para>The database name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my_database</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string DatabaseName { get; set; }
 
         /// <summary>
-        /// <para>The description of the database.</para>
+        /// <para>The database description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test database</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The number of tables in the database. Read-only.</para>
+        /// <para>The number of tables.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

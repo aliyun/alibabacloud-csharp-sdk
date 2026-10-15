@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

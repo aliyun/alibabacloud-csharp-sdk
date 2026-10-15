@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string Reason { get; set; }
 
         /// <summary>
-        /// <para>The user-defined configuration.</para>
+        /// <para>The custom configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dataCoord:\n  segment:\n    maxSize: 1024</para>
@@ -40,6 +40,25 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         [NameInMap("UserConfig")]
         [Validation(Required=false)]
         public string UserConfig { get; set; }
+
+        /// <summary>
+        /// <para>Submits the instance configurations to be updated as a JSON object.</para>
+        /// </summary>
+        [NameInMap("body")]
+        [Validation(Required=false)]
+        public ModifyInstanceConfigRequestBody Body { get; set; }
+        public class ModifyInstanceConfigRequestBody : TeaModel {
+            /// <summary>
+            /// <para>The configuration content to write to the instance, formatted as a YAML string.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>dataCoord:\n  segment:\n    maxSize: 1024</para>
+            /// </summary>
+            [NameInMap("userConfig")]
+            [Validation(Required=false)]
+            public string UserConfig { get; set; }
+
+        }
 
     }
 

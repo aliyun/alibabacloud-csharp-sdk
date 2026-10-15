@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
 {
     public class DlfTable : TeaModel {
         /// <summary>
-        /// <para>A description of the table.</para>
+        /// <para>The table description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test table</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The location of the table data, specified as an Object Storage Service (OSS) URI.</para>
+        /// <para>The table storage location.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://bucket/path</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string Location { get; set; }
 
         /// <summary>
-        /// <para>The table format, such as <c>PAIMON</c>.</para>
+        /// <para>The table format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PAIMON</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string TableName { get; set; }
 
         /// <summary>
-        /// <para>The table type. For example, <c>MANAGED</c> indicates that DLF manages the data and metadata lifecycle.</para>
+        /// <para>The table type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MANAGED</para>

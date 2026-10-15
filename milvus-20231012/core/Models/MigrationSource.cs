@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         }
 
         /// <summary>
-        /// <para>The name of the database to migrate.</para>
+        /// <para>The name of the database to be migrated.</para>
         /// </summary>
         [NameInMap("database")]
         [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public MigrationSourceEndpoint Endpoint { get; set; }
         public class MigrationSourceEndpoint : TeaModel {
             /// <summary>
-            /// <para>The endpoint address of the migration source.</para>
+            /// <para>The endpoint of the migration source.</para>
             /// </summary>
             [NameInMap("endpoint")]
             [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
 {
     public class RamBindingEntry : TeaModel {
         /// <summary>
-        /// <para>The unique identifier (UID) of the bound RAM user.</para>
+        /// <para>The bound Alibaba Cloud UID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890123456</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string BoundUid { get; set; }
 
         /// <summary>
-        /// <para>The bound RAM username.</para>
+        /// <para>The name of the bound RAM user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-user</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string BoundUserName { get; set; }
 
         /// <summary>
-        /// <para>The Milvus username.</para>
+        /// <para>The Milvus database username.</para>
         /// 
         /// <b>Example:</b>
         /// <para>root</para>

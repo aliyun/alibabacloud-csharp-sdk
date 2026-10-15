@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
 {
     public class DlfFieldSchema : TeaModel {
         /// <summary>
-        /// <para>A comment for the field.</para>
+        /// <para>The field comment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Primary key field</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The dimension of the vector field. This parameter applies only when <c>isVectorField</c> is <c>true</c>.</para>
+        /// <para>The vector dimensions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>128</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public bool? IsPrimaryKey { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the DLF field type can be mapped to a Milvus field type.</para>
+        /// <para>Indicates whether mapping is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public bool? IsVectorField { get; set; }
 
         /// <summary>
-        /// <para>The corresponding Milvus field type.</para>
+        /// <para>The Milvus field type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Int64</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public bool? Nullable { get; set; }
 
         /// <summary>
-        /// <para>The reason the DLF field type is unsupported. This field is present only when <c>isSupported</c> is <c>false</c>.</para>
+        /// <para>The reason mapping is not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Unsupported type</para>

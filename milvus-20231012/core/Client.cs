@@ -355,7 +355,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates the server role required by Milvus to access other cloud products.</para>
+        /// <para>Creates the service role required by Milvus to access other cloud products.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -391,7 +391,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates the server role required by Milvus to access other cloud products.</para>
+        /// <para>Creates the service role required by Milvus to access other cloud products.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -427,7 +427,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates the server role required by Milvus to access other cloud products.</para>
+        /// <para>Creates the service role required by Milvus to access other cloud products.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -442,7 +442,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates the server role required by Milvus to access other cloud products.</para>
+        /// <para>Creates the service role required by Milvus to access other cloud products.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1075,7 +1075,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get information about the custom configuration of each component of Milvus.</para>
+        /// <para>Retrieves the custom configuration information of each Milvus component.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1121,7 +1121,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get information about the custom configuration of each component of Milvus.</para>
+        /// <para>Retrieves the custom configuration information of each Milvus component.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1167,7 +1167,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get information about the custom configuration of each component of Milvus.</para>
+        /// <para>Retrieves the custom configuration information of each Milvus component.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1186,7 +1186,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get information about the custom configuration of each component of Milvus.</para>
+        /// <para>Retrieves the custom configuration information of each Milvus component.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1473,7 +1473,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves one or more access control list (ACL) groups.</para>
+        /// <para>Retrieves the group information and content for the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1523,7 +1523,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves one or more access control list (ACL) groups.</para>
+        /// <para>Retrieves the group information and content for the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1573,7 +1573,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves one or more access control list (ACL) groups.</para>
+        /// <para>Retrieves the group information and content for the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1592,7 +1592,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves one or more access control list (ACL) groups.</para>
+        /// <para>Retrieves the group information and content for the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1611,7 +1611,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of Milvus instances under the current account.</para>
+        /// <para>Retrieves a list of Milvus instances under the current account.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1687,7 +1687,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of Milvus instances under the current account.</para>
+        /// <para>Retrieves a list of Milvus instances under the current account.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1763,7 +1763,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of Milvus instances under the current account.</para>
+        /// <para>Retrieves a list of Milvus instances under the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1782,7 +1782,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of Milvus instances under the current account.</para>
+        /// <para>Retrieves a list of Milvus instances under the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2007,10 +2007,10 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration parameters of various Milvus components.</para>
+        /// <para>Updates the configuration parameters of Milvus components.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ModifyInstanceConfigRequest
         /// </param>
         /// <param name="headers">
@@ -2023,9 +2023,15 @@ namespace AlibabaCloud.SDK.Milvus20231012
         /// <returns>
         /// ModifyInstanceConfigResponse
         /// </returns>
-        public ModifyInstanceConfigResponse ModifyInstanceConfigWithOptions(ModifyInstanceConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ModifyInstanceConfigResponse ModifyInstanceConfigWithOptions(ModifyInstanceConfigRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyInstanceConfigShrinkRequest request = new ModifyInstanceConfigShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -2039,10 +2045,16 @@ namespace AlibabaCloud.SDK.Milvus20231012
             {
                 query["UserConfig"] = request.UserConfig;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2053,7 +2065,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ModifyInstanceConfigResponse>(CallApi(params_, req, runtime));
@@ -2061,10 +2073,10 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration parameters of various Milvus components.</para>
+        /// <para>Updates the configuration parameters of Milvus components.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ModifyInstanceConfigRequest
         /// </param>
         /// <param name="headers">
@@ -2077,9 +2089,15 @@ namespace AlibabaCloud.SDK.Milvus20231012
         /// <returns>
         /// ModifyInstanceConfigResponse
         /// </returns>
-        public async Task<ModifyInstanceConfigResponse> ModifyInstanceConfigWithOptionsAsync(ModifyInstanceConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ModifyInstanceConfigResponse> ModifyInstanceConfigWithOptionsAsync(ModifyInstanceConfigRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyInstanceConfigShrinkRequest request = new ModifyInstanceConfigShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -2093,10 +2111,16 @@ namespace AlibabaCloud.SDK.Milvus20231012
             {
                 query["UserConfig"] = request.UserConfig;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -2107,7 +2131,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ModifyInstanceConfigResponse>(await CallApiAsync(params_, req, runtime));
@@ -2115,7 +2139,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration parameters of various Milvus components.</para>
+        /// <para>Updates the configuration parameters of Milvus components.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2134,7 +2158,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration parameters of various Milvus components.</para>
+        /// <para>Updates the configuration parameters of Milvus components.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3117,7 +3141,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables public network access for a Milvus instance.</para>
+        /// <para>Enables or disables public network access for a Milvus cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3175,7 +3199,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables public network access for a Milvus instance.</para>
+        /// <para>Enables or disables public network access for a Milvus cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3233,7 +3257,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables public network access for a Milvus instance.</para>
+        /// <para>Enables or disables public network access for a Milvus cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3252,7 +3276,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables public network access for a Milvus instance.</para>
+        /// <para>Enables or disables public network access for a Milvus cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">

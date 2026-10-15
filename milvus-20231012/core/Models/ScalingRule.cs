@@ -10,21 +10,24 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
 {
     public class ScalingRule : TeaModel {
         /// <summary>
-        /// <para>The adjustment information of the scaling rule.</para>
+        /// <para>The list of target resource configurations for each component.</para>
         /// </summary>
         [NameInMap("adjustInfos")]
         [Validation(Required=false)]
         public List<ScalingRuleAdjustInfos> AdjustInfos { get; set; }
         public class ScalingRuleAdjustInfos : TeaModel {
             /// <summary>
-            /// <para>The type of the component to be adjusted.</para>
+            /// <para>index  query data proxy streaming mix_coordinator</para>
             /// </summary>
             [NameInMap("componentType")]
             [Validation(Required=false)]
             public string ComponentType { get; set; }
 
             /// <summary>
-            /// <para>The target value for the adjustment.</para>
+            /// <para>The target number of nodes for the component after the rule is executed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("targetValue")]
             [Validation(Required=false)]
@@ -33,49 +36,52 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         }
 
         /// <summary>
-        /// <para>The cron expression for the scaling schedule.</para>
+        /// <para>The scheduled execution expression of the rule.</para>
         /// </summary>
         [NameInMap("cronStr")]
         [Validation(Required=false)]
         public string CronStr { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the scaling rule is disabled.</para>
+        /// <para>Indicates whether the rule is disabled.</para>
         /// </summary>
         [NameInMap("disabled")]
         [Validation(Required=false)]
         public bool? Disabled { get; set; }
 
         /// <summary>
-        /// <para>The end time of the scaling rule. Unit: milliseconds.</para>
+        /// <para>The end time of the effective period for the rule.</para>
         /// </summary>
         [NameInMap("endTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the scaling rule.</para>
+        /// <para>The ID of the elastic scaling rule.</para>
         /// </summary>
         [NameInMap("ruleId")]
         [Validation(Required=false)]
         public string RuleId { get; set; }
 
         /// <summary>
-        /// <para>The name of the scaling rule.</para>
+        /// <para>The name of the elastic scaling rule.</para>
         /// </summary>
         [NameInMap("scalingRuleName")]
         [Validation(Required=false)]
         public string ScalingRuleName { get; set; }
 
         /// <summary>
-        /// <para>The start time of the scaling rule. Unit: milliseconds.</para>
+        /// <para>The start time of the effective period for the rule.</para>
         /// </summary>
         [NameInMap("startTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The time zone of the scaling rule.</para>
+        /// <para>The time zone used for the execution time of the rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Asia/Shanghai</para>
         /// </summary>
         [NameInMap("timeZone")]
         [Validation(Required=false)]

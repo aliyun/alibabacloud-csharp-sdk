@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
 {
     public class DlfInstance : TeaModel {
         /// <summary>
-        /// <para>The unique ID of the DLF instance.</para>
+        /// <para>The DLF instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dlf-cn-xxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the DLF instance.</para>
+        /// <para>The DLF instance name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-dlf-instance</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The type of the DLF instance.</para>
+        /// <para>The instance type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DLF_2_0</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the DLF instance is located.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The current status of the DLF instance.</para>
+        /// <para>The instance status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RUNNING</para>

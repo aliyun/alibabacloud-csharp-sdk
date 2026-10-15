@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
 {
     public class InstanceDetail : TeaModel {
         /// <summary>
-        /// <para>The automatic backup configuration.</para>
+        /// <para>The automatic backup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -46,22 +46,37 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             [Validation(Required=false)]
             public string CuType { get; set; }
 
+            /// <summary>
+            /// <para>The query node data cloud disk configuration.</para>
+            /// </summary>
             [NameInMap("dataDisk")]
             [Validation(Required=false)]
             public InstanceDetailComponentsDataDisk DataDisk { get; set; }
             public class InstanceDetailComponentsDataDisk : TeaModel {
+                /// <summary>
+                /// <para>Specifies whether to enable the data cloud disk for the query node.</para>
+                /// </summary>
                 [NameInMap("enabled")]
                 [Validation(Required=false)]
                 public bool? Enabled { get; set; }
 
+                /// <summary>
+                /// <para>The performance level of the ESSD.</para>
+                /// </summary>
                 [NameInMap("performanceLevel")]
                 [Validation(Required=false)]
                 public string PerformanceLevel { get; set; }
 
+                /// <summary>
+                /// <para>The capacity of the data cloud disk, in GiB.</para>
+                /// </summary>
                 [NameInMap("size")]
                 [Validation(Required=false)]
                 public int? Size { get; set; }
 
+                /// <summary>
+                /// <para>The storage class of the data cloud disk.</para>
+                /// </summary>
                 [NameInMap("storageClass")]
                 [Validation(Required=false)]
                 public string StorageClass { get; set; }
@@ -69,7 +84,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             }
 
             /// <summary>
-            /// <para>The disk size type for the Query Node. Set this parameter to Large for storage-optimized configurations, and to Normal for other configurations.</para>
+            /// <para>The disk size type of the query node. The value is Large for storage-optimized configurations, and Normal for other configurations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Normal</para>
@@ -78,18 +93,30 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             [Validation(Required=false)]
             public string DiskSizeType { get; set; }
 
+            /// <summary>
+            /// <para>The billing method of the component.</para>
+            /// </summary>
             [NameInMap("payType")]
             [Validation(Required=false)]
             public string PayType { get; set; }
 
+            /// <summary>
+            /// <para>The pod list of the component.</para>
+            /// </summary>
             [NameInMap("podsList")]
             [Validation(Required=false)]
             public List<InstanceDetailComponentsPodsList> PodsList { get; set; }
             public class InstanceDetailComponentsPodsList : TeaModel {
+                /// <summary>
+                /// <para>The Pod ID.</para>
+                /// </summary>
                 [NameInMap("podId")]
                 [Validation(Required=false)]
                 public string PodId { get; set; }
 
+                /// <summary>
+                /// <para>The pod name.</para>
+                /// </summary>
                 [NameInMap("podName")]
                 [Validation(Required=false)]
                 public string PodName { get; set; }
@@ -152,7 +179,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string DbVersion { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether data encryption is enabled.</para>
+        /// <para>Specifies whether data encryption is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -173,7 +200,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string ExpireTime { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether high availability is enabled.</para>
+        /// <para>Specifies whether high availability is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -203,7 +230,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>kms key Id。</para>
+        /// <para>The KMS key ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>key-xxx</para>
@@ -213,7 +240,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string KmsKeyId { get; set; }
 
         /// <summary>
-        /// <para>The multi-zone deployment mode.</para>
+        /// <para>The multi-zone mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Single</para>
@@ -233,7 +260,11 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The billing method. Valid values: PayAsYouGo: pay-as-you-go billing method. Subscription: subscription.</para>
+        /// <para>The billing method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PayAsYouGo: pay-as-you-go billing method.</description></item>
+        /// <item><description>Subscription: subscription.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>PayAsYouGo</para>
@@ -282,12 +313,12 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         /// <summary>
         /// <para>The instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>creating: Being created.</description></item>
-        /// <item><description>running: Running.</description></item>
-        /// <item><description>updating: Being upgraded. This includes specification changes, configuration changes, and public network access changes.</description></item>
-        /// <item><description>disable: Unavailable. The cluster has expired and requires renewal to reactivate.</description></item>
-        /// <item><description>deleting: Being deleted.</description></item>
-        /// <item><description>deleted: Deleted.</description></item>
+        /// <item><description>creating: The instance is being created.</description></item>
+        /// <item><description>running: The instance is running.</description></item>
+        /// <item><description>updating: The instance is being upgraded, such as cluster scaling, configuration changes, and enabling or disabling public network access.</description></item>
+        /// <item><description>disable: The instance is unavailable. The cluster has expired and must be renewed for activation.</description></item>
+        /// <item><description>deleting: The instance is being deleted.</description></item>
+        /// <item><description>deleted: The instance is deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
 {
     public class ListAclGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the access denial. Returned only for requests denied due to insufficient RAM permissions.</para>
+        /// <para>The details of the access denial. This field is returned only when access is denied due to insufficient RAM permissions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<ListAclGroupsResponseBodyData> Data { get; set; }
         public class ListAclGroupsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The CIDR blocks in the group.</para>
+            /// <para>The CIDR block.</para>
             /// </summary>
             [NameInMap("cidrs")]
             [Validation(Required=false)]
             public List<string> Cidrs { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the group\&quot;s creation.</para>
+            /// <para>The creation time in RFC 3339 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-10-17T13:53:27Z</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// <para>The group ID.</para>
+            /// <para>The audio ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>376774</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account. This parameter is read-only.</para>
+            /// <para>The ID of the current Alibaba Cloud account. This field is read-only.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50832118</para>

@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public List<ListInstancesRequestTag> Tag { get; set; }
         public class ListInstancesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key1</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value1</para>

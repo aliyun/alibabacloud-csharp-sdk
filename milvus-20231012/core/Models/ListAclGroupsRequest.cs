@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
 {
     public class ListAclGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c-123xxx</para>
