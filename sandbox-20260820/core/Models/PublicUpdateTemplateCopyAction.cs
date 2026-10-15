@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class PublicUpdateTemplateCopyAction : TeaModel {
         /// <summary>
+        /// <para>The ID of the destination ACR Enterprise instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cri-abc123</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         [Validation(Required=false)]
         public string AcrInstanceId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether image replication is enabled.</para>
+        /// </summary>
         [NameInMap("enabled")]
         [Validation(Required=false)]
         public bool? Enabled { get; set; }
 
         /// <summary>
+        /// <para>The destination image address for replication.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>registry.cn-hangzhou.aliyuncs.com/my/ns:v2</para>
         /// </summary>
@@ -29,11 +36,16 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         [Validation(Required=false)]
         public string Image { get; set; }
 
+        /// <summary>
+        /// <para>The image repository configuration.</para>
+        /// </summary>
         [NameInMap("registryConfig")]
         [Validation(Required=false)]
         public PublicUpdateTemplateRegistryConfig RegistryConfig { get; set; }
 
         /// <summary>
+        /// <para>The type of the destination repository.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>acr</para>
         /// </summary>

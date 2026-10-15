@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class CreateTemplateStep : TeaModel {
+        /// <summary>
+        /// <para>The instruction parameter list.</para>
+        /// </summary>
         [NameInMap("args")]
         [Validation(Required=false)]
         public List<string> Args { get; set; }
 
         /// <summary>
+        /// <para>The instruction type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>RUN</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class PublicUpdateTemplateRegistryNetworkConfig : TeaModel {
         /// <summary>
+        /// <para>The ID of the security group used to access the repository.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sg-bp1abc123</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the vSwitch where the repository resides.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vsw-bp1abc123</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the VPC where the repository resides.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1abc123</para>
         /// </summary>

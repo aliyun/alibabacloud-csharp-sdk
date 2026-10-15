@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class PublicUpdateTemplateRegistryAuthConfig : TeaModel {
         /// <summary>
+        /// <para>The repository password.</para>
+        /// 
         /// <b>Example:</b>
         /// <hr>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string Password { get; set; }
 
         /// <summary>
+        /// <para>The repository username.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>my-user</para>
         /// </summary>

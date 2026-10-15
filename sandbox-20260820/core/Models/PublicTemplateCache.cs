@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class PublicTemplateCache : TeaModel {
         /// <summary>
+        /// <para>The creation time in UTC.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-09-18T10:00:00Z</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string CreatedTime { get; set; }
 
         /// <summary>
+        /// <para>The digest of the cached image.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sha256:8f3c2a1b</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string ImageDigest { get; set; }
 
         /// <summary>
+        /// <para>The size of the cached image, in MB.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>512</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public int? ImageSizeMB { get; set; }
 
         /// <summary>
+        /// <para>The prefetch progress percentage.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>80</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public int? Progress { get; set; }
 
         /// <summary>
+        /// <para>The ready time in UTC.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-09-18T10:05:00Z</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string ReadyTime { get; set; }
 
         /// <summary>
+        /// <para>The cache status. Valid values: InProgress, Success, Failed, Deleting, and Evicted.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -58,14 +70,18 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>The reason for the status. This parameter is backfilled when the status is not Success.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>镜像预热任务排队中</para>
+        /// <para>The image prefetch task is queued</para>
         /// </summary>
         [NameInMap("statusReason")]
         [Validation(Required=false)]
         public string StatusReason { get; set; }
 
         /// <summary>
+        /// <para>The team ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>13b721e6-8cc8-5df2-af13-80316f7508af</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string TeamID { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier of the template.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>us7dxqaezw5uu7aa2cm5</para>
         /// </summary>

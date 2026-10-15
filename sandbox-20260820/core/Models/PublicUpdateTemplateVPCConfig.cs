@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class PublicUpdateTemplateVPCConfig : TeaModel {
         /// <summary>
+        /// <para>The ARN of the RAM role used to access VPC resources.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>acs:ram::123456789012:role/sandbox-vpc-role</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string Role { get; set; }
 
         /// <summary>
+        /// <para>The security group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sg-bp1abc123</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The list of vSwitch IDs.</para>
+        /// </summary>
         [NameInMap("vSwitchIds")]
         [Validation(Required=false)]
         public List<string> VSwitchIds { get; set; }
 
         /// <summary>
+        /// <para>VPC ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1abc123</para>
         /// </summary>

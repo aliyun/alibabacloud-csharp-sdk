@@ -10,14 +10,18 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class PublicTemplateStatusReason : TeaModel {
         /// <summary>
+        /// <para>The details of the failure reason.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>拉取源镜像失败：认证信息无效</para>
+        /// <para>Failed to pull the source image: invalid authentication information</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The identity of the failed step.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>build-context</para>
         /// </summary>

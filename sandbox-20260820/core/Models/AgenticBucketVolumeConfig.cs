@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class AgenticBucketVolumeConfig : TeaModel {
         /// <summary>
+        /// <para>The name of the AgenticBucket.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>workspace01</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string AgenticBucket { get; set; }
 
         /// <summary>
+        /// <para>The name of the OSS bucket.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sandbox-test</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string BucketName { get; set; }
 
         /// <summary>
+        /// <para>The path of the mounted OSS bucket.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>/</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string BucketPath { get; set; }
 
         /// <summary>
+        /// <para>The OSS endpoint address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://oss-cn-hangzhou.aliyuncs.com">https://oss-cn-hangzhou.aliyuncs.com</a></para>
         /// </summary>
@@ -42,6 +50,12 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string Endpoint { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether the mount directory has read-only access permissions after the OSS bucket is mounted. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Read-only.</description></item>
+        /// <item><description>false: Read and write.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

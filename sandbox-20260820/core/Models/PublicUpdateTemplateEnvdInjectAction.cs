@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class PublicUpdateTemplateEnvdInjectAction : TeaModel {
+        /// <summary>
+        /// <para>Specifies whether envd injection is enabled.</para>
+        /// </summary>
         [NameInMap("enabled")]
         [Validation(Required=false)]
         public bool? Enabled { get; set; }

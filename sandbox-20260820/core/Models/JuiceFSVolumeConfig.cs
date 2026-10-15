@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class JuiceFSVolumeConfig : TeaModel {
+        /// <summary>
+        /// <para>The additional mount parameters.</para>
+        /// </summary>
         [NameInMap("args")]
         [Validation(Required=false)]
         public List<string> Args { get; set; }
 
         /// <summary>
+        /// <para>The access point address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="http://127.0.0.1:8080">http://127.0.0.1:8080</a></para>
         /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string BaseURL { get; set; }
 
         /// <summary>
+        /// <para>The remote mount directory.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>/sandbox/workspace</para>
         /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string RemoteDir { get; set; }
 
         /// <summary>
+        /// <para>The access token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxxxx</para>
         /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string Token { get; set; }
 
         /// <summary>
+        /// <para>The JuiceFS volume name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>data</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class PublicTemplateLogConfig : TeaModel {
         /// <summary>
+        /// <para>The name of the Simple Log Service Logstore that receives sandbox runtime logs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sandbox-runtime</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string Logstore { get; set; }
 
         /// <summary>
+        /// <para>The name of the Simple Log Service project that receives sandbox runtime logs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sandbox-log-cn-hangzhou</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class Quota : TeaModel {
         /// <summary>
+        /// <para>The vCPU quota. Unit: cores.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public int? CpuCores { get; set; }
 
         /// <summary>
+        /// <para>The quota for the number of running instances.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public int? InstanceCount { get; set; }
 
         /// <summary>
+        /// <para>The memory quota. Unit: GB.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public int? MemoryGB { get; set; }
 
         /// <summary>
+        /// <para>The quota tag value, which is set to the team ID. Quotas are independently calculated based on this dimension.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7696f4cf-****</para>
         /// </summary>

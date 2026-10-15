@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class PublicUpdateTemplateSandboxConfig : TeaModel {
         /// <summary>
+        /// <para>The ID of the Container Registry Enterprise instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cri-abc123</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string AcrInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The sandbox generation. A value of 1 indicates rund, and a value of 2 indicates micro.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public int? Generation { get; set; }
 
         /// <summary>
+        /// <para>The image address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>registry.cn-hangzhou.aliyuncs.com/my/ns:v1</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string Image { get; set; }
 
         /// <summary>
+        /// <para>The operating system type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>linux</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string OsType { get; set; }
 
         /// <summary>
+        /// <para>The readiness probe command for the micro sandbox. Only the second generation supports this parameter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>/ready</para>
         /// </summary>
@@ -49,11 +59,16 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         [Validation(Required=false)]
         public string ReadyCommand { get; set; }
 
+        /// <summary>
+        /// <para>The image repository configuration.</para>
+        /// </summary>
         [NameInMap("registryConfig")]
         [Validation(Required=false)]
         public PublicUpdateTemplateRegistryConfig RegistryConfig { get; set; }
 
         /// <summary>
+        /// <para>The image repository type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>acr</para>
         /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string RegistryType { get; set; }
 
         /// <summary>
+        /// <para>The startup command for the micro sandbox. Only the second generation supports this parameter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>/start-coroutines.sh</para>
         /// </summary>

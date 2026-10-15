@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class CreateTemplateCacheInput : TeaModel {
         /// <summary>
+        /// <para>The team ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>13b721e6-8cc8-5df2-af13-80316f7508af</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public string TeamID { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier of the template.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>us7dxqaezw5uu7aa2cm5</para>
         /// </summary>

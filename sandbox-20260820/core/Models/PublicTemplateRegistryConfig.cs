@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class PublicTemplateRegistryConfig : TeaModel {
+        /// <summary>
+        /// <para>The VPC configuration used to access the image repository.</para>
+        /// </summary>
         [NameInMap("networkConfig")]
         [Validation(Required=false)]
         public PublicTemplateRegistryNetworkConfig NetworkConfig { get; set; }

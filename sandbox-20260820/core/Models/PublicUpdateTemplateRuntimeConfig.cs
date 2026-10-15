@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class PublicUpdateTemplateRuntimeConfig : TeaModel {
         /// <summary>
+        /// <para>The number of vCPUs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public float? Cpu { get; set; }
 
         /// <summary>
+        /// <para>The system cloud disk size, in MB.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>512</para>
         /// </summary>
@@ -25,15 +29,23 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         [Validation(Required=false)]
         public int? DiskSize { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether the sandbox is allowed to access the Internet.</para>
+        /// </summary>
         [NameInMap("internetAccess")]
         [Validation(Required=false)]
         public bool? InternetAccess { get; set; }
 
+        /// <summary>
+        /// <para>The log configuration.</para>
+        /// </summary>
         [NameInMap("logConfig")]
         [Validation(Required=false)]
         public PublicUpdateTemplateLogConfig LogConfig { get; set; }
 
         /// <summary>
+        /// <para>The memory size, in MB.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2048</para>
         /// </summary>
@@ -41,10 +53,16 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         [Validation(Required=false)]
         public int? MemorySize { get; set; }
 
+        /// <summary>
+        /// <para>The sandbox configuration.</para>
+        /// </summary>
         [NameInMap("sandboxConfig")]
         [Validation(Required=false)]
         public PublicUpdateTemplateSandboxConfig SandboxConfig { get; set; }
 
+        /// <summary>
+        /// <para>The VPC network configuration.</para>
+        /// </summary>
         [NameInMap("vpcConfig")]
         [Validation(Required=false)]
         public PublicUpdateTemplateVPCConfig VpcConfig { get; set; }
