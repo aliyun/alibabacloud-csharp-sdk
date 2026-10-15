@@ -4495,6 +4495,362 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Extracts the salient subject from an image, separates it from the background, and returns the subject image without the background. It also provides multiple background options and custom size options to optimize product display.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Scenarios</h1>
+        /// <list type="bullet">
+        /// <item><description><para>Supports secondary editing of materials: After the image subject is separated from the background, you can further edit the image.</para>
+        /// </description></item>
+        /// <item><description><para>Improves material processing efficiency: Quickly extracts the subjects from various material images for background replacement, which improves the production efficiency of advertising images and marketing posters.</para>
+        /// </description></item>
+        /// </list>
+        /// <h1>Features.</h1>
+        /// <h4>1. One-click precise subject recognition</h4>
+        /// <list type="bullet">
+        /// <item><description><para><b>AI-based automatic recognition</b>: Based on deep learning models, it intelligently distinguishes foreground subjects (portraits, products, objects, etc.) from the background without manual outlining.</para>
+        /// </description></item>
+        /// <item><description><para><b>Multi-scenario adaptation</b>: Supports precise segmentation in complex scenarios (such as hair, transparent objects, and fur edges) with an accuracy rate of over 95%.</para>
+        /// </description></item>
+        /// </list>
+        /// <h4>2. Intelligent edge optimization</h4>
+        /// <list type="bullet">
+        /// <item><description><b>Detail-level processing</b>: Performs automatic optimization on edge jaggies and semi-transparent areas (such as smoke and glass) to retain natural transition effects.</description></item>
+        /// </list>
+        /// <h4>3. Multi-format output and background operations</h4>
+        /// <list type="bullet">
+        /// <item><description><para><b>Transparent background export</b>: Directly generates PNG images with transparent or white backgrounds, which adapts to e-commerce and design scenarios.</para>
+        /// </description></item>
+        /// <item><description><para><b>Supports custom background colors</b></para>
+        /// </description></item>
+        /// </list>
+        /// <h1>Effect comparison</h1>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>Original image (input)</b></th>
+        /// <th><b>Result image (output)</b></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/62b39e16-5b30-469f-88cd-7f31ba790008.jpeg" alt="Main image 3.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/bfad041f-a8e0-4d6f-a2bf-999292ea9ebc.jpeg" alt="ae4cd8ce912c4d9fa171dc5217be576d_202605251928_0.5899999737739563.jpeg"></td>
+        /// </tr>
+        /// <tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/b201b356-24b8-4f98-babc-c7fe918bdc37.jpeg" alt="Main image 2.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/8b266603-e80a-42dd-9d3d-6fa9f0948e52.jpeg" alt="52033655bd054737960a87518655d935_202605251926_5.959999978542328.jpeg"></td>
+        /// </tr>
+        /// <tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/d3c0d876-42a0-4294-8ce5-2a20df2deab9.jpeg" alt="Main image 6.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/5677f55e-4fe3-4978-a676-1ce71ad604b0.jpeg" alt="abdecd31cc45450f83b33f9baf4499c6_202605251930_7.9700000286102295.jpeg"></td>
+        /// </tr>
+        /// </tbody></table>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImageMattingAsyncRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageMattingAsyncResponse
+        /// </returns>
+        public ImageMattingAsyncResponse ImageMattingAsyncWithOptions(ImageMattingAsyncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackGroundType))
+            {
+                query["BackGroundType"] = request.BackGroundType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BgColor))
+            {
+                query["BgColor"] = request.BgColor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetHeight))
+            {
+                query["TargetHeight"] = request.TargetHeight;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetWidth))
+            {
+                query["TargetWidth"] = request.TargetWidth;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImageMattingAsync",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImageMattingAsyncResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Extracts the salient subject from an image, separates it from the background, and returns the subject image without the background. It also provides multiple background options and custom size options to optimize product display.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Scenarios</h1>
+        /// <list type="bullet">
+        /// <item><description><para>Supports secondary editing of materials: After the image subject is separated from the background, you can further edit the image.</para>
+        /// </description></item>
+        /// <item><description><para>Improves material processing efficiency: Quickly extracts the subjects from various material images for background replacement, which improves the production efficiency of advertising images and marketing posters.</para>
+        /// </description></item>
+        /// </list>
+        /// <h1>Features.</h1>
+        /// <h4>1. One-click precise subject recognition</h4>
+        /// <list type="bullet">
+        /// <item><description><para><b>AI-based automatic recognition</b>: Based on deep learning models, it intelligently distinguishes foreground subjects (portraits, products, objects, etc.) from the background without manual outlining.</para>
+        /// </description></item>
+        /// <item><description><para><b>Multi-scenario adaptation</b>: Supports precise segmentation in complex scenarios (such as hair, transparent objects, and fur edges) with an accuracy rate of over 95%.</para>
+        /// </description></item>
+        /// </list>
+        /// <h4>2. Intelligent edge optimization</h4>
+        /// <list type="bullet">
+        /// <item><description><b>Detail-level processing</b>: Performs automatic optimization on edge jaggies and semi-transparent areas (such as smoke and glass) to retain natural transition effects.</description></item>
+        /// </list>
+        /// <h4>3. Multi-format output and background operations</h4>
+        /// <list type="bullet">
+        /// <item><description><para><b>Transparent background export</b>: Directly generates PNG images with transparent or white backgrounds, which adapts to e-commerce and design scenarios.</para>
+        /// </description></item>
+        /// <item><description><para><b>Supports custom background colors</b></para>
+        /// </description></item>
+        /// </list>
+        /// <h1>Effect comparison</h1>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>Original image (input)</b></th>
+        /// <th><b>Result image (output)</b></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/62b39e16-5b30-469f-88cd-7f31ba790008.jpeg" alt="Main image 3.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/bfad041f-a8e0-4d6f-a2bf-999292ea9ebc.jpeg" alt="ae4cd8ce912c4d9fa171dc5217be576d_202605251928_0.5899999737739563.jpeg"></td>
+        /// </tr>
+        /// <tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/b201b356-24b8-4f98-babc-c7fe918bdc37.jpeg" alt="Main image 2.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/8b266603-e80a-42dd-9d3d-6fa9f0948e52.jpeg" alt="52033655bd054737960a87518655d935_202605251926_5.959999978542328.jpeg"></td>
+        /// </tr>
+        /// <tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/d3c0d876-42a0-4294-8ce5-2a20df2deab9.jpeg" alt="Main image 6.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/5677f55e-4fe3-4978-a676-1ce71ad604b0.jpeg" alt="abdecd31cc45450f83b33f9baf4499c6_202605251930_7.9700000286102295.jpeg"></td>
+        /// </tr>
+        /// </tbody></table>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImageMattingAsyncRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageMattingAsyncResponse
+        /// </returns>
+        public async Task<ImageMattingAsyncResponse> ImageMattingAsyncWithOptionsAsync(ImageMattingAsyncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackGroundType))
+            {
+                query["BackGroundType"] = request.BackGroundType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BgColor))
+            {
+                query["BgColor"] = request.BgColor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetHeight))
+            {
+                query["TargetHeight"] = request.TargetHeight;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetWidth))
+            {
+                query["TargetWidth"] = request.TargetWidth;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImageMattingAsync",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImageMattingAsyncResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Extracts the salient subject from an image, separates it from the background, and returns the subject image without the background. It also provides multiple background options and custom size options to optimize product display.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Scenarios</h1>
+        /// <list type="bullet">
+        /// <item><description><para>Supports secondary editing of materials: After the image subject is separated from the background, you can further edit the image.</para>
+        /// </description></item>
+        /// <item><description><para>Improves material processing efficiency: Quickly extracts the subjects from various material images for background replacement, which improves the production efficiency of advertising images and marketing posters.</para>
+        /// </description></item>
+        /// </list>
+        /// <h1>Features.</h1>
+        /// <h4>1. One-click precise subject recognition</h4>
+        /// <list type="bullet">
+        /// <item><description><para><b>AI-based automatic recognition</b>: Based on deep learning models, it intelligently distinguishes foreground subjects (portraits, products, objects, etc.) from the background without manual outlining.</para>
+        /// </description></item>
+        /// <item><description><para><b>Multi-scenario adaptation</b>: Supports precise segmentation in complex scenarios (such as hair, transparent objects, and fur edges) with an accuracy rate of over 95%.</para>
+        /// </description></item>
+        /// </list>
+        /// <h4>2. Intelligent edge optimization</h4>
+        /// <list type="bullet">
+        /// <item><description><b>Detail-level processing</b>: Performs automatic optimization on edge jaggies and semi-transparent areas (such as smoke and glass) to retain natural transition effects.</description></item>
+        /// </list>
+        /// <h4>3. Multi-format output and background operations</h4>
+        /// <list type="bullet">
+        /// <item><description><para><b>Transparent background export</b>: Directly generates PNG images with transparent or white backgrounds, which adapts to e-commerce and design scenarios.</para>
+        /// </description></item>
+        /// <item><description><para><b>Supports custom background colors</b></para>
+        /// </description></item>
+        /// </list>
+        /// <h1>Effect comparison</h1>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>Original image (input)</b></th>
+        /// <th><b>Result image (output)</b></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/62b39e16-5b30-469f-88cd-7f31ba790008.jpeg" alt="Main image 3.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/bfad041f-a8e0-4d6f-a2bf-999292ea9ebc.jpeg" alt="ae4cd8ce912c4d9fa171dc5217be576d_202605251928_0.5899999737739563.jpeg"></td>
+        /// </tr>
+        /// <tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/b201b356-24b8-4f98-babc-c7fe918bdc37.jpeg" alt="Main image 2.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/8b266603-e80a-42dd-9d3d-6fa9f0948e52.jpeg" alt="52033655bd054737960a87518655d935_202605251926_5.959999978542328.jpeg"></td>
+        /// </tr>
+        /// <tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/d3c0d876-42a0-4294-8ce5-2a20df2deab9.jpeg" alt="Main image 6.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/5677f55e-4fe3-4978-a676-1ce71ad604b0.jpeg" alt="abdecd31cc45450f83b33f9baf4499c6_202605251930_7.9700000286102295.jpeg"></td>
+        /// </tr>
+        /// </tbody></table>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImageMattingAsyncRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageMattingAsyncResponse
+        /// </returns>
+        public ImageMattingAsyncResponse ImageMattingAsync(ImageMattingAsyncRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ImageMattingAsyncWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Extracts the salient subject from an image, separates it from the background, and returns the subject image without the background. It also provides multiple background options and custom size options to optimize product display.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Scenarios</h1>
+        /// <list type="bullet">
+        /// <item><description><para>Supports secondary editing of materials: After the image subject is separated from the background, you can further edit the image.</para>
+        /// </description></item>
+        /// <item><description><para>Improves material processing efficiency: Quickly extracts the subjects from various material images for background replacement, which improves the production efficiency of advertising images and marketing posters.</para>
+        /// </description></item>
+        /// </list>
+        /// <h1>Features.</h1>
+        /// <h4>1. One-click precise subject recognition</h4>
+        /// <list type="bullet">
+        /// <item><description><para><b>AI-based automatic recognition</b>: Based on deep learning models, it intelligently distinguishes foreground subjects (portraits, products, objects, etc.) from the background without manual outlining.</para>
+        /// </description></item>
+        /// <item><description><para><b>Multi-scenario adaptation</b>: Supports precise segmentation in complex scenarios (such as hair, transparent objects, and fur edges) with an accuracy rate of over 95%.</para>
+        /// </description></item>
+        /// </list>
+        /// <h4>2. Intelligent edge optimization</h4>
+        /// <list type="bullet">
+        /// <item><description><b>Detail-level processing</b>: Performs automatic optimization on edge jaggies and semi-transparent areas (such as smoke and glass) to retain natural transition effects.</description></item>
+        /// </list>
+        /// <h4>3. Multi-format output and background operations</h4>
+        /// <list type="bullet">
+        /// <item><description><para><b>Transparent background export</b>: Directly generates PNG images with transparent or white backgrounds, which adapts to e-commerce and design scenarios.</para>
+        /// </description></item>
+        /// <item><description><para><b>Supports custom background colors</b></para>
+        /// </description></item>
+        /// </list>
+        /// <h1>Effect comparison</h1>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>Original image (input)</b></th>
+        /// <th><b>Result image (output)</b></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/62b39e16-5b30-469f-88cd-7f31ba790008.jpeg" alt="Main image 3.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/bfad041f-a8e0-4d6f-a2bf-999292ea9ebc.jpeg" alt="ae4cd8ce912c4d9fa171dc5217be576d_202605251928_0.5899999737739563.jpeg"></td>
+        /// </tr>
+        /// <tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/b201b356-24b8-4f98-babc-c7fe918bdc37.jpeg" alt="Main image 2.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/8b266603-e80a-42dd-9d3d-6fa9f0948e52.jpeg" alt="52033655bd054737960a87518655d935_202605251926_5.959999978542328.jpeg"></td>
+        /// </tr>
+        /// <tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/d3c0d876-42a0-4294-8ce5-2a20df2deab9.jpeg" alt="Main image 6.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/a2QnV4jwexAy7O4X/img/5677f55e-4fe3-4978-a676-1ce71ad604b0.jpeg" alt="abdecd31cc45450f83b33f9baf4499c6_202605251930_7.9700000286102295.jpeg"></td>
+        /// </tr>
+        /// </tbody></table>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImageMattingAsyncRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageMattingAsyncResponse
+        /// </returns>
+        public async Task<ImageMattingAsyncResponse> ImageMattingAsyncAsync(ImageMattingAsyncRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ImageMattingAsyncWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Intelligent element recognition.</para>
         /// </summary>
         /// 
@@ -5071,6 +5427,582 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Identifies specific elements in e-commerce images. It analyzes image details to help users quickly identify elements such as text, logos, watermarks, and text-containing color blocks in the main subject and background, significantly improving the efficiency and accuracy of image filtering.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Scenarios</h1>
+        /// <ol>
+        /// <item><description>Intelligent image filtering and optimization:
+        /// Merchants and platforms can use the intelligent element recognition API to filter images and automatically identify images containing specific elements such as watermarks and logos. After filtering, they can further call the intelligent elimination API to optimize these images, improve image quality, and shorten the product release cycle.</description></item>
+        /// <item><description>Automated image processing and efficiency improvement:
+        /// Through the intelligent element recognition API, merchants and platforms can automate the image processing workflow and automatically identify and mark image elements that need to be optimized. This workflow reduces manual intervention and improves the efficiency of image processing.</description></item>
+        /// </ol>
+        /// <h1>Features</h1>
+        /// <para><b>1. Definitions of image subject, image background, text, logo, watermark, and text-containing color block: For details, see the relevant examples in the elimination documentation (reserved text link).</b></para>
+        /// <list type="bullet">
+        /// <item><description><para>Image subject: The core product area in the image.</para>
+        /// </description></item>
+        /// <item><description><para>Image background: The rest of the image other than the product subject.</para>
+        /// </description></item>
+        /// <item><description><para>Text: Horizontal, vertical, or diagonal English or Chinese text.</para>
+        /// </description></item>
+        /// <item><description><para>Logo: A logo or trademark.</para>
+        /// </description></item>
+        /// <item><description><para>Watermark: Monochrome transparent text, logos, images, URLs, or store names.</para>
+        /// </description></item>
+        /// <item><description><para>Text-containing color block: A color block containing text outside the subject.</para>
+        /// </description></item>
+        /// </list>
+        /// <para><b>2. The main features of the intelligent element recognition API include:</b></para>
+        /// <list type="bullet">
+        /// <item><description><para>Element recognition: Identifies whether elements such as text, logos, watermarks, and text-containing color blocks exist in the image subject and background.</para>
+        /// </description></item>
+        /// <item><description><para>Workflow collaboration: Used in combination with the intelligent elimination API. The intelligent element recognition API first identifies the elements to be removed, and then the intelligent elimination API effectively removes them to ensure the accuracy and efficiency of image processing.</para>
+        /// </description></item>
+        /// </list>
+        /// <para><b>3. Technical advantages:</b></para>
+        /// <list type="bullet">
+        /// <item><description><para>Synchronous batch processing: As a synchronous API, the intelligent element recognition API can process a large number of images while maintaining fast response, adapting to business needs of different scales.</para>
+        /// </description></item>
+        /// <item><description><para>Flexibility: Users can select the types of elements to be recognized as needed, including elements in the subject and non-subject areas, such as watermarks, logos, and text, to meet personalized recognition needs.</para>
+        /// </description></item>
+        /// </list>
+        /// <h1>Effect comparison</h1>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>Original image</b></th>
+        /// <th><b>Recognition result</b></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/vBPlN5j4yM2KVOdG/img/bbd3dbca-9f91-4b57-a382-2701e90c0d46.png" alt="done-image-30091469-e1be-4d31-85de-18983a358a61.png"></td>
+        /// <td>[Subject]</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <list type="bullet">
+        /// <item><description><para>Watermark: false</para>
+        /// </description></item>
+        /// <item><description><para>Logo: false</para>
+        /// </description></item>
+        /// <item><description><para>Text: false</para>
+        /// </description></item>
+        /// <item><description><para>Text-containing color block: false</para>
+        /// </description></item>
+        /// </list>
+        /// <para>[Non-subject]</para>
+        /// <list type="bullet">
+        /// <item><description><para>Watermark: false</para>
+        /// </description></item>
+        /// <item><description><para>Logo: true</para>
+        /// </description></item>
+        /// <item><description><para>Text: true</para>
+        /// </description></item>
+        /// <item><description><para>Text-containing color block: false |
+        /// | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/vBPlN5j4yM2KVOdG/img/6bcbd976-0de1-4b5e-855b-56e20a9c675c.png" alt="image-1781169602620.png"> | [Subject]</para>
+        /// </description></item>
+        /// <item><description><para>Watermark: false</para>
+        /// </description></item>
+        /// <item><description><para>Logo: false</para>
+        /// </description></item>
+        /// <item><description><para>Text: false</para>
+        /// </description></item>
+        /// <item><description><para>Text-containing color block: false</para>
+        /// </description></item>
+        /// </list>
+        /// <para>[Non-subject]</para>
+        /// <list type="bullet">
+        /// <item><description><para>Watermark: true</para>
+        /// </description></item>
+        /// <item><description><para>Logo: false</para>
+        /// </description></item>
+        /// <item><description><para>Text: true</para>
+        /// </description></item>
+        /// <item><description><para>Text-containing color block: true |</para>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ImageRecognitionAsyncRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageRecognitionAsyncResponse
+        /// </returns>
+        public ImageRecognitionAsyncResponse ImageRecognitionAsyncWithOptions(ImageRecognitionAsyncRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ImageRecognitionAsyncShrinkRequest request = new ImageRecognitionAsyncShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NonObjectDetectElements))
+            {
+                request.NonObjectDetectElementsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NonObjectDetectElements, "NonObjectDetectElements", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ObjectDetectElements))
+            {
+                request.ObjectDetectElementsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectDetectElements, "ObjectDetectElements", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NonObjectDetectElementsShrink))
+            {
+                query["NonObjectDetectElements"] = request.NonObjectDetectElementsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectDetectElementsShrink))
+            {
+                query["ObjectDetectElements"] = request.ObjectDetectElementsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnBorderPixel))
+            {
+                query["ReturnBorderPixel"] = request.ReturnBorderPixel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnCharacter))
+            {
+                query["ReturnCharacter"] = request.ReturnCharacter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnCharacterProp))
+            {
+                query["ReturnCharacterProp"] = request.ReturnCharacterProp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnProductNum))
+            {
+                query["ReturnProductNum"] = request.ReturnProductNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnProductProp))
+            {
+                query["ReturnProductProp"] = request.ReturnProductProp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImageRecognitionAsync",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImageRecognitionAsyncResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Identifies specific elements in e-commerce images. It analyzes image details to help users quickly identify elements such as text, logos, watermarks, and text-containing color blocks in the main subject and background, significantly improving the efficiency and accuracy of image filtering.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Scenarios</h1>
+        /// <ol>
+        /// <item><description>Intelligent image filtering and optimization:
+        /// Merchants and platforms can use the intelligent element recognition API to filter images and automatically identify images containing specific elements such as watermarks and logos. After filtering, they can further call the intelligent elimination API to optimize these images, improve image quality, and shorten the product release cycle.</description></item>
+        /// <item><description>Automated image processing and efficiency improvement:
+        /// Through the intelligent element recognition API, merchants and platforms can automate the image processing workflow and automatically identify and mark image elements that need to be optimized. This workflow reduces manual intervention and improves the efficiency of image processing.</description></item>
+        /// </ol>
+        /// <h1>Features</h1>
+        /// <para><b>1. Definitions of image subject, image background, text, logo, watermark, and text-containing color block: For details, see the relevant examples in the elimination documentation (reserved text link).</b></para>
+        /// <list type="bullet">
+        /// <item><description><para>Image subject: The core product area in the image.</para>
+        /// </description></item>
+        /// <item><description><para>Image background: The rest of the image other than the product subject.</para>
+        /// </description></item>
+        /// <item><description><para>Text: Horizontal, vertical, or diagonal English or Chinese text.</para>
+        /// </description></item>
+        /// <item><description><para>Logo: A logo or trademark.</para>
+        /// </description></item>
+        /// <item><description><para>Watermark: Monochrome transparent text, logos, images, URLs, or store names.</para>
+        /// </description></item>
+        /// <item><description><para>Text-containing color block: A color block containing text outside the subject.</para>
+        /// </description></item>
+        /// </list>
+        /// <para><b>2. The main features of the intelligent element recognition API include:</b></para>
+        /// <list type="bullet">
+        /// <item><description><para>Element recognition: Identifies whether elements such as text, logos, watermarks, and text-containing color blocks exist in the image subject and background.</para>
+        /// </description></item>
+        /// <item><description><para>Workflow collaboration: Used in combination with the intelligent elimination API. The intelligent element recognition API first identifies the elements to be removed, and then the intelligent elimination API effectively removes them to ensure the accuracy and efficiency of image processing.</para>
+        /// </description></item>
+        /// </list>
+        /// <para><b>3. Technical advantages:</b></para>
+        /// <list type="bullet">
+        /// <item><description><para>Synchronous batch processing: As a synchronous API, the intelligent element recognition API can process a large number of images while maintaining fast response, adapting to business needs of different scales.</para>
+        /// </description></item>
+        /// <item><description><para>Flexibility: Users can select the types of elements to be recognized as needed, including elements in the subject and non-subject areas, such as watermarks, logos, and text, to meet personalized recognition needs.</para>
+        /// </description></item>
+        /// </list>
+        /// <h1>Effect comparison</h1>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>Original image</b></th>
+        /// <th><b>Recognition result</b></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/vBPlN5j4yM2KVOdG/img/bbd3dbca-9f91-4b57-a382-2701e90c0d46.png" alt="done-image-30091469-e1be-4d31-85de-18983a358a61.png"></td>
+        /// <td>[Subject]</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <list type="bullet">
+        /// <item><description><para>Watermark: false</para>
+        /// </description></item>
+        /// <item><description><para>Logo: false</para>
+        /// </description></item>
+        /// <item><description><para>Text: false</para>
+        /// </description></item>
+        /// <item><description><para>Text-containing color block: false</para>
+        /// </description></item>
+        /// </list>
+        /// <para>[Non-subject]</para>
+        /// <list type="bullet">
+        /// <item><description><para>Watermark: false</para>
+        /// </description></item>
+        /// <item><description><para>Logo: true</para>
+        /// </description></item>
+        /// <item><description><para>Text: true</para>
+        /// </description></item>
+        /// <item><description><para>Text-containing color block: false |
+        /// | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/vBPlN5j4yM2KVOdG/img/6bcbd976-0de1-4b5e-855b-56e20a9c675c.png" alt="image-1781169602620.png"> | [Subject]</para>
+        /// </description></item>
+        /// <item><description><para>Watermark: false</para>
+        /// </description></item>
+        /// <item><description><para>Logo: false</para>
+        /// </description></item>
+        /// <item><description><para>Text: false</para>
+        /// </description></item>
+        /// <item><description><para>Text-containing color block: false</para>
+        /// </description></item>
+        /// </list>
+        /// <para>[Non-subject]</para>
+        /// <list type="bullet">
+        /// <item><description><para>Watermark: true</para>
+        /// </description></item>
+        /// <item><description><para>Logo: false</para>
+        /// </description></item>
+        /// <item><description><para>Text: true</para>
+        /// </description></item>
+        /// <item><description><para>Text-containing color block: true |</para>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ImageRecognitionAsyncRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageRecognitionAsyncResponse
+        /// </returns>
+        public async Task<ImageRecognitionAsyncResponse> ImageRecognitionAsyncWithOptionsAsync(ImageRecognitionAsyncRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ImageRecognitionAsyncShrinkRequest request = new ImageRecognitionAsyncShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NonObjectDetectElements))
+            {
+                request.NonObjectDetectElementsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NonObjectDetectElements, "NonObjectDetectElements", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ObjectDetectElements))
+            {
+                request.ObjectDetectElementsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectDetectElements, "ObjectDetectElements", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NonObjectDetectElementsShrink))
+            {
+                query["NonObjectDetectElements"] = request.NonObjectDetectElementsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectDetectElementsShrink))
+            {
+                query["ObjectDetectElements"] = request.ObjectDetectElementsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnBorderPixel))
+            {
+                query["ReturnBorderPixel"] = request.ReturnBorderPixel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnCharacter))
+            {
+                query["ReturnCharacter"] = request.ReturnCharacter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnCharacterProp))
+            {
+                query["ReturnCharacterProp"] = request.ReturnCharacterProp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnProductNum))
+            {
+                query["ReturnProductNum"] = request.ReturnProductNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnProductProp))
+            {
+                query["ReturnProductProp"] = request.ReturnProductProp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImageRecognitionAsync",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImageRecognitionAsyncResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Identifies specific elements in e-commerce images. It analyzes image details to help users quickly identify elements such as text, logos, watermarks, and text-containing color blocks in the main subject and background, significantly improving the efficiency and accuracy of image filtering.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Scenarios</h1>
+        /// <ol>
+        /// <item><description>Intelligent image filtering and optimization:
+        /// Merchants and platforms can use the intelligent element recognition API to filter images and automatically identify images containing specific elements such as watermarks and logos. After filtering, they can further call the intelligent elimination API to optimize these images, improve image quality, and shorten the product release cycle.</description></item>
+        /// <item><description>Automated image processing and efficiency improvement:
+        /// Through the intelligent element recognition API, merchants and platforms can automate the image processing workflow and automatically identify and mark image elements that need to be optimized. This workflow reduces manual intervention and improves the efficiency of image processing.</description></item>
+        /// </ol>
+        /// <h1>Features</h1>
+        /// <para><b>1. Definitions of image subject, image background, text, logo, watermark, and text-containing color block: For details, see the relevant examples in the elimination documentation (reserved text link).</b></para>
+        /// <list type="bullet">
+        /// <item><description><para>Image subject: The core product area in the image.</para>
+        /// </description></item>
+        /// <item><description><para>Image background: The rest of the image other than the product subject.</para>
+        /// </description></item>
+        /// <item><description><para>Text: Horizontal, vertical, or diagonal English or Chinese text.</para>
+        /// </description></item>
+        /// <item><description><para>Logo: A logo or trademark.</para>
+        /// </description></item>
+        /// <item><description><para>Watermark: Monochrome transparent text, logos, images, URLs, or store names.</para>
+        /// </description></item>
+        /// <item><description><para>Text-containing color block: A color block containing text outside the subject.</para>
+        /// </description></item>
+        /// </list>
+        /// <para><b>2. The main features of the intelligent element recognition API include:</b></para>
+        /// <list type="bullet">
+        /// <item><description><para>Element recognition: Identifies whether elements such as text, logos, watermarks, and text-containing color blocks exist in the image subject and background.</para>
+        /// </description></item>
+        /// <item><description><para>Workflow collaboration: Used in combination with the intelligent elimination API. The intelligent element recognition API first identifies the elements to be removed, and then the intelligent elimination API effectively removes them to ensure the accuracy and efficiency of image processing.</para>
+        /// </description></item>
+        /// </list>
+        /// <para><b>3. Technical advantages:</b></para>
+        /// <list type="bullet">
+        /// <item><description><para>Synchronous batch processing: As a synchronous API, the intelligent element recognition API can process a large number of images while maintaining fast response, adapting to business needs of different scales.</para>
+        /// </description></item>
+        /// <item><description><para>Flexibility: Users can select the types of elements to be recognized as needed, including elements in the subject and non-subject areas, such as watermarks, logos, and text, to meet personalized recognition needs.</para>
+        /// </description></item>
+        /// </list>
+        /// <h1>Effect comparison</h1>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>Original image</b></th>
+        /// <th><b>Recognition result</b></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/vBPlN5j4yM2KVOdG/img/bbd3dbca-9f91-4b57-a382-2701e90c0d46.png" alt="done-image-30091469-e1be-4d31-85de-18983a358a61.png"></td>
+        /// <td>[Subject]</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <list type="bullet">
+        /// <item><description><para>Watermark: false</para>
+        /// </description></item>
+        /// <item><description><para>Logo: false</para>
+        /// </description></item>
+        /// <item><description><para>Text: false</para>
+        /// </description></item>
+        /// <item><description><para>Text-containing color block: false</para>
+        /// </description></item>
+        /// </list>
+        /// <para>[Non-subject]</para>
+        /// <list type="bullet">
+        /// <item><description><para>Watermark: false</para>
+        /// </description></item>
+        /// <item><description><para>Logo: true</para>
+        /// </description></item>
+        /// <item><description><para>Text: true</para>
+        /// </description></item>
+        /// <item><description><para>Text-containing color block: false |
+        /// | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/vBPlN5j4yM2KVOdG/img/6bcbd976-0de1-4b5e-855b-56e20a9c675c.png" alt="image-1781169602620.png"> | [Subject]</para>
+        /// </description></item>
+        /// <item><description><para>Watermark: false</para>
+        /// </description></item>
+        /// <item><description><para>Logo: false</para>
+        /// </description></item>
+        /// <item><description><para>Text: false</para>
+        /// </description></item>
+        /// <item><description><para>Text-containing color block: false</para>
+        /// </description></item>
+        /// </list>
+        /// <para>[Non-subject]</para>
+        /// <list type="bullet">
+        /// <item><description><para>Watermark: true</para>
+        /// </description></item>
+        /// <item><description><para>Logo: false</para>
+        /// </description></item>
+        /// <item><description><para>Text: true</para>
+        /// </description></item>
+        /// <item><description><para>Text-containing color block: true |</para>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImageRecognitionAsyncRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageRecognitionAsyncResponse
+        /// </returns>
+        public ImageRecognitionAsyncResponse ImageRecognitionAsync(ImageRecognitionAsyncRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ImageRecognitionAsyncWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Identifies specific elements in e-commerce images. It analyzes image details to help users quickly identify elements such as text, logos, watermarks, and text-containing color blocks in the main subject and background, significantly improving the efficiency and accuracy of image filtering.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Scenarios</h1>
+        /// <ol>
+        /// <item><description>Intelligent image filtering and optimization:
+        /// Merchants and platforms can use the intelligent element recognition API to filter images and automatically identify images containing specific elements such as watermarks and logos. After filtering, they can further call the intelligent elimination API to optimize these images, improve image quality, and shorten the product release cycle.</description></item>
+        /// <item><description>Automated image processing and efficiency improvement:
+        /// Through the intelligent element recognition API, merchants and platforms can automate the image processing workflow and automatically identify and mark image elements that need to be optimized. This workflow reduces manual intervention and improves the efficiency of image processing.</description></item>
+        /// </ol>
+        /// <h1>Features</h1>
+        /// <para><b>1. Definitions of image subject, image background, text, logo, watermark, and text-containing color block: For details, see the relevant examples in the elimination documentation (reserved text link).</b></para>
+        /// <list type="bullet">
+        /// <item><description><para>Image subject: The core product area in the image.</para>
+        /// </description></item>
+        /// <item><description><para>Image background: The rest of the image other than the product subject.</para>
+        /// </description></item>
+        /// <item><description><para>Text: Horizontal, vertical, or diagonal English or Chinese text.</para>
+        /// </description></item>
+        /// <item><description><para>Logo: A logo or trademark.</para>
+        /// </description></item>
+        /// <item><description><para>Watermark: Monochrome transparent text, logos, images, URLs, or store names.</para>
+        /// </description></item>
+        /// <item><description><para>Text-containing color block: A color block containing text outside the subject.</para>
+        /// </description></item>
+        /// </list>
+        /// <para><b>2. The main features of the intelligent element recognition API include:</b></para>
+        /// <list type="bullet">
+        /// <item><description><para>Element recognition: Identifies whether elements such as text, logos, watermarks, and text-containing color blocks exist in the image subject and background.</para>
+        /// </description></item>
+        /// <item><description><para>Workflow collaboration: Used in combination with the intelligent elimination API. The intelligent element recognition API first identifies the elements to be removed, and then the intelligent elimination API effectively removes them to ensure the accuracy and efficiency of image processing.</para>
+        /// </description></item>
+        /// </list>
+        /// <para><b>3. Technical advantages:</b></para>
+        /// <list type="bullet">
+        /// <item><description><para>Synchronous batch processing: As a synchronous API, the intelligent element recognition API can process a large number of images while maintaining fast response, adapting to business needs of different scales.</para>
+        /// </description></item>
+        /// <item><description><para>Flexibility: Users can select the types of elements to be recognized as needed, including elements in the subject and non-subject areas, such as watermarks, logos, and text, to meet personalized recognition needs.</para>
+        /// </description></item>
+        /// </list>
+        /// <h1>Effect comparison</h1>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>Original image</b></th>
+        /// <th><b>Recognition result</b></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/vBPlN5j4yM2KVOdG/img/bbd3dbca-9f91-4b57-a382-2701e90c0d46.png" alt="done-image-30091469-e1be-4d31-85de-18983a358a61.png"></td>
+        /// <td>[Subject]</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <list type="bullet">
+        /// <item><description><para>Watermark: false</para>
+        /// </description></item>
+        /// <item><description><para>Logo: false</para>
+        /// </description></item>
+        /// <item><description><para>Text: false</para>
+        /// </description></item>
+        /// <item><description><para>Text-containing color block: false</para>
+        /// </description></item>
+        /// </list>
+        /// <para>[Non-subject]</para>
+        /// <list type="bullet">
+        /// <item><description><para>Watermark: false</para>
+        /// </description></item>
+        /// <item><description><para>Logo: true</para>
+        /// </description></item>
+        /// <item><description><para>Text: true</para>
+        /// </description></item>
+        /// <item><description><para>Text-containing color block: false |
+        /// | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/vBPlN5j4yM2KVOdG/img/6bcbd976-0de1-4b5e-855b-56e20a9c675c.png" alt="image-1781169602620.png"> | [Subject]</para>
+        /// </description></item>
+        /// <item><description><para>Watermark: false</para>
+        /// </description></item>
+        /// <item><description><para>Logo: false</para>
+        /// </description></item>
+        /// <item><description><para>Text: false</para>
+        /// </description></item>
+        /// <item><description><para>Text-containing color block: false</para>
+        /// </description></item>
+        /// </list>
+        /// <para>[Non-subject]</para>
+        /// <list type="bullet">
+        /// <item><description><para>Watermark: true</para>
+        /// </description></item>
+        /// <item><description><para>Logo: false</para>
+        /// </description></item>
+        /// <item><description><para>Text: true</para>
+        /// </description></item>
+        /// <item><description><para>Text-containing color block: true |</para>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImageRecognitionAsyncRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageRecognitionAsyncResponse
+        /// </returns>
+        public async Task<ImageRecognitionAsyncResponse> ImageRecognitionAsyncAsync(ImageRecognitionAsyncRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ImageRecognitionAsyncWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Intelligently erases unwanted elements from e-commerce images, automatically identifying and removing text, specific names, transparent text blocks, and watermarks. Supports specifying objects to erase as needed, enabling efficient and precise batch processing of images to simplify image editing workflows (synchronous/asynchronous).</para>
         /// </summary>
         /// 
@@ -5375,6 +6307,290 @@ namespace AlibabaCloud.SDK.Aidge20260428
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ImageRemovalProWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Erases text, specific names, transparent text blocks, and watermarks from e-commerce images. This feature automatically identifies these elements and allows you to specify objects to be removed, enabling efficient and accurate processing of large batches of images to simplify image editing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Efficient e-commerce image processing:</b>
+        /// Removes irrelevant visual elements to provide clearer and more focused product displays, enhancing the customer shopping experience.</description></item>
+        /// <item><description><b>Multi-platform product information synchronization:</b>
+        /// When merchants list products on different e-commerce platforms, they can quickly remove specific text and watermarks to comply with the image specifications of different platforms.</description></item>
+        /// </list>
+        /// <h2>Features</h2>
+        /// <ol>
+        /// <item><description><para>First, clarify the definitions of the image subject and the image background. In actual use, when specifying the objects to be removed, you can choose to remove them from the image subject or the image background. Both API and editor integration methods are supported to meet different types of requirements.</para>
+        /// <ol>
+        /// <item><description><para>Image subject: the core product area in the image.</para>
+        /// </description></item>
+        /// <item><description><para>Image background: the rest of the image other than the product subject.</para>
+        /// </description></item>
+        /// </ol>
+        /// </description></item>
+        /// <item><description><para>Second, the objects to be removed support the following four types: text, specific names, transparent text blocks, and watermarks. You can refer to the following examples to clarify your usage requirements and perform targeted operations:</para>
+        /// </description></item>
+        /// </ol>
+        /// <h2>Before and after</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>Original image</b></th>
+        /// <th><b>Erased image</b></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/AJdl65AyryVZyOke/img/4bd2c812-ed3c-45da-8a86-ebd29102f4b1.jpeg" alt="Main image 1 - Leopard print large capacity crossbody canvas bag.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/eff0eb1b-36df-431d-a010-3bb3b7348ff9.png" alt="image.png"></td>
+        /// </tr>
+        /// <tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/c44ac17b-3fa4-4a6f-b411-90f1062b183b.jpeg" alt="Main image 1 - Short half-cover round-tip French false nails with handle.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/af779684-4aa5-49b0-8668-34ab8bd4bcc1.png" alt="image.png"></td>
+        /// </tr>
+        /// </tbody></table>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImageRemovalProAsyncRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageRemovalProAsyncResponse
+        /// </returns>
+        public ImageRemovalProAsyncResponse ImageRemovalProAsyncWithOptions(ImageRemovalProAsyncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImageRemovalProAsync",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImageRemovalProAsyncResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Erases text, specific names, transparent text blocks, and watermarks from e-commerce images. This feature automatically identifies these elements and allows you to specify objects to be removed, enabling efficient and accurate processing of large batches of images to simplify image editing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Efficient e-commerce image processing:</b>
+        /// Removes irrelevant visual elements to provide clearer and more focused product displays, enhancing the customer shopping experience.</description></item>
+        /// <item><description><b>Multi-platform product information synchronization:</b>
+        /// When merchants list products on different e-commerce platforms, they can quickly remove specific text and watermarks to comply with the image specifications of different platforms.</description></item>
+        /// </list>
+        /// <h2>Features</h2>
+        /// <ol>
+        /// <item><description><para>First, clarify the definitions of the image subject and the image background. In actual use, when specifying the objects to be removed, you can choose to remove them from the image subject or the image background. Both API and editor integration methods are supported to meet different types of requirements.</para>
+        /// <ol>
+        /// <item><description><para>Image subject: the core product area in the image.</para>
+        /// </description></item>
+        /// <item><description><para>Image background: the rest of the image other than the product subject.</para>
+        /// </description></item>
+        /// </ol>
+        /// </description></item>
+        /// <item><description><para>Second, the objects to be removed support the following four types: text, specific names, transparent text blocks, and watermarks. You can refer to the following examples to clarify your usage requirements and perform targeted operations:</para>
+        /// </description></item>
+        /// </ol>
+        /// <h2>Before and after</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>Original image</b></th>
+        /// <th><b>Erased image</b></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/AJdl65AyryVZyOke/img/4bd2c812-ed3c-45da-8a86-ebd29102f4b1.jpeg" alt="Main image 1 - Leopard print large capacity crossbody canvas bag.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/eff0eb1b-36df-431d-a010-3bb3b7348ff9.png" alt="image.png"></td>
+        /// </tr>
+        /// <tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/c44ac17b-3fa4-4a6f-b411-90f1062b183b.jpeg" alt="Main image 1 - Short half-cover round-tip French false nails with handle.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/af779684-4aa5-49b0-8668-34ab8bd4bcc1.png" alt="image.png"></td>
+        /// </tr>
+        /// </tbody></table>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImageRemovalProAsyncRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageRemovalProAsyncResponse
+        /// </returns>
+        public async Task<ImageRemovalProAsyncResponse> ImageRemovalProAsyncWithOptionsAsync(ImageRemovalProAsyncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImageRemovalProAsync",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImageRemovalProAsyncResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Erases text, specific names, transparent text blocks, and watermarks from e-commerce images. This feature automatically identifies these elements and allows you to specify objects to be removed, enabling efficient and accurate processing of large batches of images to simplify image editing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Efficient e-commerce image processing:</b>
+        /// Removes irrelevant visual elements to provide clearer and more focused product displays, enhancing the customer shopping experience.</description></item>
+        /// <item><description><b>Multi-platform product information synchronization:</b>
+        /// When merchants list products on different e-commerce platforms, they can quickly remove specific text and watermarks to comply with the image specifications of different platforms.</description></item>
+        /// </list>
+        /// <h2>Features</h2>
+        /// <ol>
+        /// <item><description><para>First, clarify the definitions of the image subject and the image background. In actual use, when specifying the objects to be removed, you can choose to remove them from the image subject or the image background. Both API and editor integration methods are supported to meet different types of requirements.</para>
+        /// <ol>
+        /// <item><description><para>Image subject: the core product area in the image.</para>
+        /// </description></item>
+        /// <item><description><para>Image background: the rest of the image other than the product subject.</para>
+        /// </description></item>
+        /// </ol>
+        /// </description></item>
+        /// <item><description><para>Second, the objects to be removed support the following four types: text, specific names, transparent text blocks, and watermarks. You can refer to the following examples to clarify your usage requirements and perform targeted operations:</para>
+        /// </description></item>
+        /// </ol>
+        /// <h2>Before and after</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>Original image</b></th>
+        /// <th><b>Erased image</b></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/AJdl65AyryVZyOke/img/4bd2c812-ed3c-45da-8a86-ebd29102f4b1.jpeg" alt="Main image 1 - Leopard print large capacity crossbody canvas bag.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/eff0eb1b-36df-431d-a010-3bb3b7348ff9.png" alt="image.png"></td>
+        /// </tr>
+        /// <tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/c44ac17b-3fa4-4a6f-b411-90f1062b183b.jpeg" alt="Main image 1 - Short half-cover round-tip French false nails with handle.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/af779684-4aa5-49b0-8668-34ab8bd4bcc1.png" alt="image.png"></td>
+        /// </tr>
+        /// </tbody></table>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImageRemovalProAsyncRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageRemovalProAsyncResponse
+        /// </returns>
+        public ImageRemovalProAsyncResponse ImageRemovalProAsync(ImageRemovalProAsyncRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ImageRemovalProAsyncWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Erases text, specific names, transparent text blocks, and watermarks from e-commerce images. This feature automatically identifies these elements and allows you to specify objects to be removed, enabling efficient and accurate processing of large batches of images to simplify image editing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Efficient e-commerce image processing:</b>
+        /// Removes irrelevant visual elements to provide clearer and more focused product displays, enhancing the customer shopping experience.</description></item>
+        /// <item><description><b>Multi-platform product information synchronization:</b>
+        /// When merchants list products on different e-commerce platforms, they can quickly remove specific text and watermarks to comply with the image specifications of different platforms.</description></item>
+        /// </list>
+        /// <h2>Features</h2>
+        /// <ol>
+        /// <item><description><para>First, clarify the definitions of the image subject and the image background. In actual use, when specifying the objects to be removed, you can choose to remove them from the image subject or the image background. Both API and editor integration methods are supported to meet different types of requirements.</para>
+        /// <ol>
+        /// <item><description><para>Image subject: the core product area in the image.</para>
+        /// </description></item>
+        /// <item><description><para>Image background: the rest of the image other than the product subject.</para>
+        /// </description></item>
+        /// </ol>
+        /// </description></item>
+        /// <item><description><para>Second, the objects to be removed support the following four types: text, specific names, transparent text blocks, and watermarks. You can refer to the following examples to clarify your usage requirements and perform targeted operations:</para>
+        /// </description></item>
+        /// </ol>
+        /// <h2>Before and after</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>Original image</b></th>
+        /// <th><b>Erased image</b></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/AJdl65AyryVZyOke/img/4bd2c812-ed3c-45da-8a86-ebd29102f4b1.jpeg" alt="Main image 1 - Leopard print large capacity crossbody canvas bag.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/eff0eb1b-36df-431d-a010-3bb3b7348ff9.png" alt="image.png"></td>
+        /// </tr>
+        /// <tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/c44ac17b-3fa4-4a6f-b411-90f1062b183b.jpeg" alt="Main image 1 - Short half-cover round-tip French false nails with handle.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/af779684-4aa5-49b0-8668-34ab8bd4bcc1.png" alt="image.png"></td>
+        /// </tr>
+        /// </tbody></table>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImageRemovalProAsyncRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageRemovalProAsyncResponse
+        /// </returns>
+        public async Task<ImageRemovalProAsyncResponse> ImageRemovalProAsyncAsync(ImageRemovalProAsyncRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ImageRemovalProAsyncWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6011,6 +7227,614 @@ namespace AlibabaCloud.SDK.Aidge20260428
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ImageRemoveWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Provides intelligent image erasure tailored for e-commerce images by automatically identifying and removing text, specific names, transparent text blocks, and unwanted overlays, and allows you to specify objects to remove for efficient and accurate batch processing to simplify image editing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Efficient processing of e-commerce images:</b><br>Removes irrelevant visual elements to provide clearer and more focused product displays, enhancing the customer shopping experience.</description></item>
+        /// <item><description><b>Multi-platform product information synchronization:</b>
+        /// When merchants synchronize product listings across different e-commerce platforms, they can quickly remove specific text and watermarks to comply with the image specifications of different platforms.</description></item>
+        /// <item><description><b>Marketing material preparation:</b>
+        /// Merchants can easily remove original promotional information and quickly update it with the latest campaign information.<remarks>
+        /// <para>Note: Merchants or platforms can batch remove unwanted elements in images to optimize image quality. We recommend using this feature in combination with the &quot;Intelligent Recognition API&quot; (coming soon) to first filter out images containing text, specific names, transparent text blocks, and watermarks, and then use the &quot;Intelligent Erasure API&quot; for batch removal. The Intelligent Recognition API focuses on &quot;recognition&quot;, while the Intelligent Erasure API focuses on &quot;erasure&quot;. By calling them in sequence, you can maximize the erasure effect and reduce &quot;false removals&quot; and &quot;false recognitions&quot;.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// <h2>Features</h2>
+        /// <ol>
+        /// <item><description><para>First, clarify the definitions of the image subject and the image background. In actual use, when specifying the objects to remove, you can choose whether the removal scope is the image subject or the image background area. Both API and editor integration methods are supported to meet different types of needs.</para>
+        /// <ol>
+        /// <item><description><para>Image subject: the core product area in the image.</para>
+        /// </description></item>
+        /// <item><description><para>Image background: the rest of the image other than the product subject.</para>
+        /// </description></item>
+        /// </ol>
+        /// </description></item>
+        /// <item><description><para>Second, the objects to remove support the following three cases:</para>
+        /// <ol>
+        /// <item><description><para>The user selects only the type. You can select text, specific names, transparent text blocks, and watermarks. You can clarify your usage requirements through the following examples for targeted operations.</para>
+        /// </description></item>
+        /// <item><description><para>(Upgraded) Provides specified image erasure. Users can specify multiple images at a time.</para>
+        /// </description></item>
+        /// <item><description><para>(Upgraded) Provides specified text erasure. Users can specify multiple texts at a time.</para>
+        /// </description></item>
+        /// </ol>
+        /// </description></item>
+        /// </ol>
+        /// <para>Processing flow: The user provides the original image URL → OCR and VLM models detect the text or image position → The coordinates of the area to be repaired are determined → AI repairs and generates a clean image → The result image URL is returned.</para>
+        /// <h2>Effect comparison</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>Objects that can be removed from the image</b></th>
+        /// <th><b>Original image</b></th>
+        /// <th><b>Image after erasure</b></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Text</td>
+        /// <td>*   Involves the image subject area</td>
+        /// <td></td>
+        /// </tr>
+        /// </tbody></table>
+        /// <pre><c>![done-image-4a2a96c2-9ac6-4b35-b76b-a6eac303740f (1).png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/d72a7982-e761-4b45-af1e-f8f90b3f1fc3.png)
+        /// </c></pre>
+        /// <list type="bullet">
+        /// <item><description>Does not involve the image subject area</description></item>
+        /// </list>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/47428227-7523-432e-89ce-eba263e5ebda.png" alt="image.png"> | *   Involves the image subject area</para>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/d69e38e4-5657-471d-aff6-1e6a4c269455.png" alt="359ddfcf-a2b1-4e59-ae54-5e76705d0adf.png"></para>
+        /// <list type="bullet">
+        /// <item><description>Does not involve the image subject area</description></item>
+        /// </list>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/365024b4-4863-46d4-9013-bdd9408ea6b9.png" alt="c35611f8-dab4-4df2-8942-36d7375ed55f.png"> |
+        /// | Specific names | *   Involves the image subject area</para>
+        /// <pre><c>![done-image-aca80515-aca6-4f4e-9429-47c5dd6b811f.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/ac35f8bc-d527-49de-8fba-cdeb71e3b058.png)
+        /// </c></pre>
+        /// <list type="bullet">
+        /// <item><description>Does not involve the image subject area</description></item>
+        /// </list>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/2db445c8-6bdd-424e-b6a7-2ddb46e6786d.png" alt="done-image-29a89f03-964a-455e-968c-7c8d5282ebbb.png"> | *   Involves the image subject area</para>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/36ace8aa-3b3b-4b1c-81e6-b691104262f0.png" alt="fd2db0ab-1b89-4085-b91d-99f40a1aea77.png"></para>
+        /// <list type="bullet">
+        /// <item><description>Does not involve the image subject area</description></item>
+        /// </list>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/a7653a0c-d14e-4f97-9c2f-83327b43203f.png" alt="8726b148-ab74-4409-a6c1-4c50fcac3887.png"> |
+        /// | Transparent text blocks | *   Involves the image subject area</para>
+        /// <pre><c>![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/0f6068f0-168a-47bd-9fcd-c38b9e520506.png)
+        /// </c></pre>
+        /// <list type="bullet">
+        /// <item><description>Does not involve the image subject area</description></item>
+        /// </list>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/c9ac2a4c-0aa3-40ee-8855-62a262364dbe.png" alt="image.png"> | *   Involves the image subject area</para>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/06ac537f-875a-48e2-8934-a84a79dfd8ff.jpeg" alt="8e84a5d6-da8c-4e3e-a705-71a66d0c78a2.jpeg"></para>
+        /// <list type="bullet">
+        /// <item><description>Does not involve the image subject area</description></item>
+        /// </list>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/05759aef-1720-41cd-8800-f7d0801e4d95.jpeg" alt="b05173e7-2ae5-494e-99d2-7111fc966fd5.jpeg"> |
+        /// | Watermarks | *   Involves the image subject area</para>
+        /// <pre><c>![2.jpeg](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/bf1442f8-a9fa-40d3-bcb0-7a8a41b49b5d.jpeg)
+        /// </c></pre>
+        /// <list type="bullet">
+        /// <item><description>Does not involve the image subject area</description></item>
+        /// </list>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/0d68612e-845d-466f-8a4a-b85facea095b.png" alt="image.png"> | *   Involves the image subject area</para>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/621daadc-454f-41b4-9ac4-752d457034b6.jpeg" alt="b6ef803f-743f-4e61-b901-d1f68167186f.jpeg"></para>
+        /// <list type="bullet">
+        /// <item><description>Does not involve the image subject area</description></item>
+        /// </list>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/caa6994b-2f97-484d-a807-671a0dc75947.jpeg" alt="dee0c7cf-8b0d-4d6d-9677-d5f2e6099834.jpeg"> |
+        /// | Specified image element erasure (supports multiple image links) | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/9297951f-53c1-4476-8c69-5c31df3fce21.png" alt="image.png"> | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/ef3f35aa-609f-454c-bba0-dd1710c83945.png" alt="image.png"> |
+        /// | Specified text erasure (supports multiple texts) | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/c784d8be-4b4d-4972-8b99-828c742b8f03.png" alt="image.png"> | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/805423ca-bd0d-4d44-a18e-a7d7bfe88587.png" alt="image.png"> |</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ImageRemoveAsyncRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageRemoveAsyncResponse
+        /// </returns>
+        public ImageRemoveAsyncResponse ImageRemoveAsyncWithOptions(ImageRemoveAsyncRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ImageRemoveAsyncShrinkRequest request = new ImageRemoveAsyncShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NonObjectRemoveElements))
+            {
+                request.NonObjectRemoveElementsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NonObjectRemoveElements, "NonObjectRemoveElements", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ObjectRemoveElements))
+            {
+                request.ObjectRemoveElementsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectRemoveElements, "ObjectRemoveElements", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserImage))
+            {
+                request.UserImageShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserImage, "UserImage", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserText))
+            {
+                request.UserTextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserText, "UserText", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mask))
+            {
+                query["Mask"] = request.Mask;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NonObjectRemoveElementsShrink))
+            {
+                query["NonObjectRemoveElements"] = request.NonObjectRemoveElementsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectRemoveElementsShrink))
+            {
+                query["ObjectRemoveElements"] = request.ObjectRemoveElementsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Position))
+            {
+                query["Position"] = request.Position;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserImageShrink))
+            {
+                query["UserImage"] = request.UserImageShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserTextShrink))
+            {
+                query["UserText"] = request.UserTextShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImageRemoveAsync",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImageRemoveAsyncResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Provides intelligent image erasure tailored for e-commerce images by automatically identifying and removing text, specific names, transparent text blocks, and unwanted overlays, and allows you to specify objects to remove for efficient and accurate batch processing to simplify image editing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Efficient processing of e-commerce images:</b><br>Removes irrelevant visual elements to provide clearer and more focused product displays, enhancing the customer shopping experience.</description></item>
+        /// <item><description><b>Multi-platform product information synchronization:</b>
+        /// When merchants synchronize product listings across different e-commerce platforms, they can quickly remove specific text and watermarks to comply with the image specifications of different platforms.</description></item>
+        /// <item><description><b>Marketing material preparation:</b>
+        /// Merchants can easily remove original promotional information and quickly update it with the latest campaign information.<remarks>
+        /// <para>Note: Merchants or platforms can batch remove unwanted elements in images to optimize image quality. We recommend using this feature in combination with the &quot;Intelligent Recognition API&quot; (coming soon) to first filter out images containing text, specific names, transparent text blocks, and watermarks, and then use the &quot;Intelligent Erasure API&quot; for batch removal. The Intelligent Recognition API focuses on &quot;recognition&quot;, while the Intelligent Erasure API focuses on &quot;erasure&quot;. By calling them in sequence, you can maximize the erasure effect and reduce &quot;false removals&quot; and &quot;false recognitions&quot;.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// <h2>Features</h2>
+        /// <ol>
+        /// <item><description><para>First, clarify the definitions of the image subject and the image background. In actual use, when specifying the objects to remove, you can choose whether the removal scope is the image subject or the image background area. Both API and editor integration methods are supported to meet different types of needs.</para>
+        /// <ol>
+        /// <item><description><para>Image subject: the core product area in the image.</para>
+        /// </description></item>
+        /// <item><description><para>Image background: the rest of the image other than the product subject.</para>
+        /// </description></item>
+        /// </ol>
+        /// </description></item>
+        /// <item><description><para>Second, the objects to remove support the following three cases:</para>
+        /// <ol>
+        /// <item><description><para>The user selects only the type. You can select text, specific names, transparent text blocks, and watermarks. You can clarify your usage requirements through the following examples for targeted operations.</para>
+        /// </description></item>
+        /// <item><description><para>(Upgraded) Provides specified image erasure. Users can specify multiple images at a time.</para>
+        /// </description></item>
+        /// <item><description><para>(Upgraded) Provides specified text erasure. Users can specify multiple texts at a time.</para>
+        /// </description></item>
+        /// </ol>
+        /// </description></item>
+        /// </ol>
+        /// <para>Processing flow: The user provides the original image URL → OCR and VLM models detect the text or image position → The coordinates of the area to be repaired are determined → AI repairs and generates a clean image → The result image URL is returned.</para>
+        /// <h2>Effect comparison</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>Objects that can be removed from the image</b></th>
+        /// <th><b>Original image</b></th>
+        /// <th><b>Image after erasure</b></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Text</td>
+        /// <td>*   Involves the image subject area</td>
+        /// <td></td>
+        /// </tr>
+        /// </tbody></table>
+        /// <pre><c>![done-image-4a2a96c2-9ac6-4b35-b76b-a6eac303740f (1).png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/d72a7982-e761-4b45-af1e-f8f90b3f1fc3.png)
+        /// </c></pre>
+        /// <list type="bullet">
+        /// <item><description>Does not involve the image subject area</description></item>
+        /// </list>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/47428227-7523-432e-89ce-eba263e5ebda.png" alt="image.png"> | *   Involves the image subject area</para>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/d69e38e4-5657-471d-aff6-1e6a4c269455.png" alt="359ddfcf-a2b1-4e59-ae54-5e76705d0adf.png"></para>
+        /// <list type="bullet">
+        /// <item><description>Does not involve the image subject area</description></item>
+        /// </list>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/365024b4-4863-46d4-9013-bdd9408ea6b9.png" alt="c35611f8-dab4-4df2-8942-36d7375ed55f.png"> |
+        /// | Specific names | *   Involves the image subject area</para>
+        /// <pre><c>![done-image-aca80515-aca6-4f4e-9429-47c5dd6b811f.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/ac35f8bc-d527-49de-8fba-cdeb71e3b058.png)
+        /// </c></pre>
+        /// <list type="bullet">
+        /// <item><description>Does not involve the image subject area</description></item>
+        /// </list>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/2db445c8-6bdd-424e-b6a7-2ddb46e6786d.png" alt="done-image-29a89f03-964a-455e-968c-7c8d5282ebbb.png"> | *   Involves the image subject area</para>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/36ace8aa-3b3b-4b1c-81e6-b691104262f0.png" alt="fd2db0ab-1b89-4085-b91d-99f40a1aea77.png"></para>
+        /// <list type="bullet">
+        /// <item><description>Does not involve the image subject area</description></item>
+        /// </list>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/a7653a0c-d14e-4f97-9c2f-83327b43203f.png" alt="8726b148-ab74-4409-a6c1-4c50fcac3887.png"> |
+        /// | Transparent text blocks | *   Involves the image subject area</para>
+        /// <pre><c>![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/0f6068f0-168a-47bd-9fcd-c38b9e520506.png)
+        /// </c></pre>
+        /// <list type="bullet">
+        /// <item><description>Does not involve the image subject area</description></item>
+        /// </list>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/c9ac2a4c-0aa3-40ee-8855-62a262364dbe.png" alt="image.png"> | *   Involves the image subject area</para>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/06ac537f-875a-48e2-8934-a84a79dfd8ff.jpeg" alt="8e84a5d6-da8c-4e3e-a705-71a66d0c78a2.jpeg"></para>
+        /// <list type="bullet">
+        /// <item><description>Does not involve the image subject area</description></item>
+        /// </list>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/05759aef-1720-41cd-8800-f7d0801e4d95.jpeg" alt="b05173e7-2ae5-494e-99d2-7111fc966fd5.jpeg"> |
+        /// | Watermarks | *   Involves the image subject area</para>
+        /// <pre><c>![2.jpeg](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/bf1442f8-a9fa-40d3-bcb0-7a8a41b49b5d.jpeg)
+        /// </c></pre>
+        /// <list type="bullet">
+        /// <item><description>Does not involve the image subject area</description></item>
+        /// </list>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/0d68612e-845d-466f-8a4a-b85facea095b.png" alt="image.png"> | *   Involves the image subject area</para>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/621daadc-454f-41b4-9ac4-752d457034b6.jpeg" alt="b6ef803f-743f-4e61-b901-d1f68167186f.jpeg"></para>
+        /// <list type="bullet">
+        /// <item><description>Does not involve the image subject area</description></item>
+        /// </list>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/caa6994b-2f97-484d-a807-671a0dc75947.jpeg" alt="dee0c7cf-8b0d-4d6d-9677-d5f2e6099834.jpeg"> |
+        /// | Specified image element erasure (supports multiple image links) | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/9297951f-53c1-4476-8c69-5c31df3fce21.png" alt="image.png"> | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/ef3f35aa-609f-454c-bba0-dd1710c83945.png" alt="image.png"> |
+        /// | Specified text erasure (supports multiple texts) | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/c784d8be-4b4d-4972-8b99-828c742b8f03.png" alt="image.png"> | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/805423ca-bd0d-4d44-a18e-a7d7bfe88587.png" alt="image.png"> |</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ImageRemoveAsyncRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageRemoveAsyncResponse
+        /// </returns>
+        public async Task<ImageRemoveAsyncResponse> ImageRemoveAsyncWithOptionsAsync(ImageRemoveAsyncRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ImageRemoveAsyncShrinkRequest request = new ImageRemoveAsyncShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NonObjectRemoveElements))
+            {
+                request.NonObjectRemoveElementsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NonObjectRemoveElements, "NonObjectRemoveElements", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ObjectRemoveElements))
+            {
+                request.ObjectRemoveElementsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectRemoveElements, "ObjectRemoveElements", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserImage))
+            {
+                request.UserImageShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserImage, "UserImage", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserText))
+            {
+                request.UserTextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserText, "UserText", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mask))
+            {
+                query["Mask"] = request.Mask;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NonObjectRemoveElementsShrink))
+            {
+                query["NonObjectRemoveElements"] = request.NonObjectRemoveElementsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectRemoveElementsShrink))
+            {
+                query["ObjectRemoveElements"] = request.ObjectRemoveElementsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Position))
+            {
+                query["Position"] = request.Position;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserImageShrink))
+            {
+                query["UserImage"] = request.UserImageShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserTextShrink))
+            {
+                query["UserText"] = request.UserTextShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImageRemoveAsync",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImageRemoveAsyncResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Provides intelligent image erasure tailored for e-commerce images by automatically identifying and removing text, specific names, transparent text blocks, and unwanted overlays, and allows you to specify objects to remove for efficient and accurate batch processing to simplify image editing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Efficient processing of e-commerce images:</b><br>Removes irrelevant visual elements to provide clearer and more focused product displays, enhancing the customer shopping experience.</description></item>
+        /// <item><description><b>Multi-platform product information synchronization:</b>
+        /// When merchants synchronize product listings across different e-commerce platforms, they can quickly remove specific text and watermarks to comply with the image specifications of different platforms.</description></item>
+        /// <item><description><b>Marketing material preparation:</b>
+        /// Merchants can easily remove original promotional information and quickly update it with the latest campaign information.<remarks>
+        /// <para>Note: Merchants or platforms can batch remove unwanted elements in images to optimize image quality. We recommend using this feature in combination with the &quot;Intelligent Recognition API&quot; (coming soon) to first filter out images containing text, specific names, transparent text blocks, and watermarks, and then use the &quot;Intelligent Erasure API&quot; for batch removal. The Intelligent Recognition API focuses on &quot;recognition&quot;, while the Intelligent Erasure API focuses on &quot;erasure&quot;. By calling them in sequence, you can maximize the erasure effect and reduce &quot;false removals&quot; and &quot;false recognitions&quot;.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// <h2>Features</h2>
+        /// <ol>
+        /// <item><description><para>First, clarify the definitions of the image subject and the image background. In actual use, when specifying the objects to remove, you can choose whether the removal scope is the image subject or the image background area. Both API and editor integration methods are supported to meet different types of needs.</para>
+        /// <ol>
+        /// <item><description><para>Image subject: the core product area in the image.</para>
+        /// </description></item>
+        /// <item><description><para>Image background: the rest of the image other than the product subject.</para>
+        /// </description></item>
+        /// </ol>
+        /// </description></item>
+        /// <item><description><para>Second, the objects to remove support the following three cases:</para>
+        /// <ol>
+        /// <item><description><para>The user selects only the type. You can select text, specific names, transparent text blocks, and watermarks. You can clarify your usage requirements through the following examples for targeted operations.</para>
+        /// </description></item>
+        /// <item><description><para>(Upgraded) Provides specified image erasure. Users can specify multiple images at a time.</para>
+        /// </description></item>
+        /// <item><description><para>(Upgraded) Provides specified text erasure. Users can specify multiple texts at a time.</para>
+        /// </description></item>
+        /// </ol>
+        /// </description></item>
+        /// </ol>
+        /// <para>Processing flow: The user provides the original image URL → OCR and VLM models detect the text or image position → The coordinates of the area to be repaired are determined → AI repairs and generates a clean image → The result image URL is returned.</para>
+        /// <h2>Effect comparison</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>Objects that can be removed from the image</b></th>
+        /// <th><b>Original image</b></th>
+        /// <th><b>Image after erasure</b></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Text</td>
+        /// <td>*   Involves the image subject area</td>
+        /// <td></td>
+        /// </tr>
+        /// </tbody></table>
+        /// <pre><c>![done-image-4a2a96c2-9ac6-4b35-b76b-a6eac303740f (1).png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/d72a7982-e761-4b45-af1e-f8f90b3f1fc3.png)
+        /// </c></pre>
+        /// <list type="bullet">
+        /// <item><description>Does not involve the image subject area</description></item>
+        /// </list>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/47428227-7523-432e-89ce-eba263e5ebda.png" alt="image.png"> | *   Involves the image subject area</para>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/d69e38e4-5657-471d-aff6-1e6a4c269455.png" alt="359ddfcf-a2b1-4e59-ae54-5e76705d0adf.png"></para>
+        /// <list type="bullet">
+        /// <item><description>Does not involve the image subject area</description></item>
+        /// </list>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/365024b4-4863-46d4-9013-bdd9408ea6b9.png" alt="c35611f8-dab4-4df2-8942-36d7375ed55f.png"> |
+        /// | Specific names | *   Involves the image subject area</para>
+        /// <pre><c>![done-image-aca80515-aca6-4f4e-9429-47c5dd6b811f.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/ac35f8bc-d527-49de-8fba-cdeb71e3b058.png)
+        /// </c></pre>
+        /// <list type="bullet">
+        /// <item><description>Does not involve the image subject area</description></item>
+        /// </list>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/2db445c8-6bdd-424e-b6a7-2ddb46e6786d.png" alt="done-image-29a89f03-964a-455e-968c-7c8d5282ebbb.png"> | *   Involves the image subject area</para>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/36ace8aa-3b3b-4b1c-81e6-b691104262f0.png" alt="fd2db0ab-1b89-4085-b91d-99f40a1aea77.png"></para>
+        /// <list type="bullet">
+        /// <item><description>Does not involve the image subject area</description></item>
+        /// </list>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/a7653a0c-d14e-4f97-9c2f-83327b43203f.png" alt="8726b148-ab74-4409-a6c1-4c50fcac3887.png"> |
+        /// | Transparent text blocks | *   Involves the image subject area</para>
+        /// <pre><c>![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/0f6068f0-168a-47bd-9fcd-c38b9e520506.png)
+        /// </c></pre>
+        /// <list type="bullet">
+        /// <item><description>Does not involve the image subject area</description></item>
+        /// </list>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/c9ac2a4c-0aa3-40ee-8855-62a262364dbe.png" alt="image.png"> | *   Involves the image subject area</para>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/06ac537f-875a-48e2-8934-a84a79dfd8ff.jpeg" alt="8e84a5d6-da8c-4e3e-a705-71a66d0c78a2.jpeg"></para>
+        /// <list type="bullet">
+        /// <item><description>Does not involve the image subject area</description></item>
+        /// </list>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/05759aef-1720-41cd-8800-f7d0801e4d95.jpeg" alt="b05173e7-2ae5-494e-99d2-7111fc966fd5.jpeg"> |
+        /// | Watermarks | *   Involves the image subject area</para>
+        /// <pre><c>![2.jpeg](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/bf1442f8-a9fa-40d3-bcb0-7a8a41b49b5d.jpeg)
+        /// </c></pre>
+        /// <list type="bullet">
+        /// <item><description>Does not involve the image subject area</description></item>
+        /// </list>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/0d68612e-845d-466f-8a4a-b85facea095b.png" alt="image.png"> | *   Involves the image subject area</para>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/621daadc-454f-41b4-9ac4-752d457034b6.jpeg" alt="b6ef803f-743f-4e61-b901-d1f68167186f.jpeg"></para>
+        /// <list type="bullet">
+        /// <item><description>Does not involve the image subject area</description></item>
+        /// </list>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/caa6994b-2f97-484d-a807-671a0dc75947.jpeg" alt="dee0c7cf-8b0d-4d6d-9677-d5f2e6099834.jpeg"> |
+        /// | Specified image element erasure (supports multiple image links) | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/9297951f-53c1-4476-8c69-5c31df3fce21.png" alt="image.png"> | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/ef3f35aa-609f-454c-bba0-dd1710c83945.png" alt="image.png"> |
+        /// | Specified text erasure (supports multiple texts) | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/c784d8be-4b4d-4972-8b99-828c742b8f03.png" alt="image.png"> | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/805423ca-bd0d-4d44-a18e-a7d7bfe88587.png" alt="image.png"> |</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImageRemoveAsyncRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageRemoveAsyncResponse
+        /// </returns>
+        public ImageRemoveAsyncResponse ImageRemoveAsync(ImageRemoveAsyncRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ImageRemoveAsyncWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Provides intelligent image erasure tailored for e-commerce images by automatically identifying and removing text, specific names, transparent text blocks, and unwanted overlays, and allows you to specify objects to remove for efficient and accurate batch processing to simplify image editing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Efficient processing of e-commerce images:</b><br>Removes irrelevant visual elements to provide clearer and more focused product displays, enhancing the customer shopping experience.</description></item>
+        /// <item><description><b>Multi-platform product information synchronization:</b>
+        /// When merchants synchronize product listings across different e-commerce platforms, they can quickly remove specific text and watermarks to comply with the image specifications of different platforms.</description></item>
+        /// <item><description><b>Marketing material preparation:</b>
+        /// Merchants can easily remove original promotional information and quickly update it with the latest campaign information.<remarks>
+        /// <para>Note: Merchants or platforms can batch remove unwanted elements in images to optimize image quality. We recommend using this feature in combination with the &quot;Intelligent Recognition API&quot; (coming soon) to first filter out images containing text, specific names, transparent text blocks, and watermarks, and then use the &quot;Intelligent Erasure API&quot; for batch removal. The Intelligent Recognition API focuses on &quot;recognition&quot;, while the Intelligent Erasure API focuses on &quot;erasure&quot;. By calling them in sequence, you can maximize the erasure effect and reduce &quot;false removals&quot; and &quot;false recognitions&quot;.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// <h2>Features</h2>
+        /// <ol>
+        /// <item><description><para>First, clarify the definitions of the image subject and the image background. In actual use, when specifying the objects to remove, you can choose whether the removal scope is the image subject or the image background area. Both API and editor integration methods are supported to meet different types of needs.</para>
+        /// <ol>
+        /// <item><description><para>Image subject: the core product area in the image.</para>
+        /// </description></item>
+        /// <item><description><para>Image background: the rest of the image other than the product subject.</para>
+        /// </description></item>
+        /// </ol>
+        /// </description></item>
+        /// <item><description><para>Second, the objects to remove support the following three cases:</para>
+        /// <ol>
+        /// <item><description><para>The user selects only the type. You can select text, specific names, transparent text blocks, and watermarks. You can clarify your usage requirements through the following examples for targeted operations.</para>
+        /// </description></item>
+        /// <item><description><para>(Upgraded) Provides specified image erasure. Users can specify multiple images at a time.</para>
+        /// </description></item>
+        /// <item><description><para>(Upgraded) Provides specified text erasure. Users can specify multiple texts at a time.</para>
+        /// </description></item>
+        /// </ol>
+        /// </description></item>
+        /// </ol>
+        /// <para>Processing flow: The user provides the original image URL → OCR and VLM models detect the text or image position → The coordinates of the area to be repaired are determined → AI repairs and generates a clean image → The result image URL is returned.</para>
+        /// <h2>Effect comparison</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>Objects that can be removed from the image</b></th>
+        /// <th><b>Original image</b></th>
+        /// <th><b>Image after erasure</b></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>Text</td>
+        /// <td>*   Involves the image subject area</td>
+        /// <td></td>
+        /// </tr>
+        /// </tbody></table>
+        /// <pre><c>![done-image-4a2a96c2-9ac6-4b35-b76b-a6eac303740f (1).png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/d72a7982-e761-4b45-af1e-f8f90b3f1fc3.png)
+        /// </c></pre>
+        /// <list type="bullet">
+        /// <item><description>Does not involve the image subject area</description></item>
+        /// </list>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/47428227-7523-432e-89ce-eba263e5ebda.png" alt="image.png"> | *   Involves the image subject area</para>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/d69e38e4-5657-471d-aff6-1e6a4c269455.png" alt="359ddfcf-a2b1-4e59-ae54-5e76705d0adf.png"></para>
+        /// <list type="bullet">
+        /// <item><description>Does not involve the image subject area</description></item>
+        /// </list>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/365024b4-4863-46d4-9013-bdd9408ea6b9.png" alt="c35611f8-dab4-4df2-8942-36d7375ed55f.png"> |
+        /// | Specific names | *   Involves the image subject area</para>
+        /// <pre><c>![done-image-aca80515-aca6-4f4e-9429-47c5dd6b811f.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/ac35f8bc-d527-49de-8fba-cdeb71e3b058.png)
+        /// </c></pre>
+        /// <list type="bullet">
+        /// <item><description>Does not involve the image subject area</description></item>
+        /// </list>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/2db445c8-6bdd-424e-b6a7-2ddb46e6786d.png" alt="done-image-29a89f03-964a-455e-968c-7c8d5282ebbb.png"> | *   Involves the image subject area</para>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/36ace8aa-3b3b-4b1c-81e6-b691104262f0.png" alt="fd2db0ab-1b89-4085-b91d-99f40a1aea77.png"></para>
+        /// <list type="bullet">
+        /// <item><description>Does not involve the image subject area</description></item>
+        /// </list>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/a7653a0c-d14e-4f97-9c2f-83327b43203f.png" alt="8726b148-ab74-4409-a6c1-4c50fcac3887.png"> |
+        /// | Transparent text blocks | *   Involves the image subject area</para>
+        /// <pre><c>![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/0f6068f0-168a-47bd-9fcd-c38b9e520506.png)
+        /// </c></pre>
+        /// <list type="bullet">
+        /// <item><description>Does not involve the image subject area</description></item>
+        /// </list>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/c9ac2a4c-0aa3-40ee-8855-62a262364dbe.png" alt="image.png"> | *   Involves the image subject area</para>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/06ac537f-875a-48e2-8934-a84a79dfd8ff.jpeg" alt="8e84a5d6-da8c-4e3e-a705-71a66d0c78a2.jpeg"></para>
+        /// <list type="bullet">
+        /// <item><description>Does not involve the image subject area</description></item>
+        /// </list>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/05759aef-1720-41cd-8800-f7d0801e4d95.jpeg" alt="b05173e7-2ae5-494e-99d2-7111fc966fd5.jpeg"> |
+        /// | Watermarks | *   Involves the image subject area</para>
+        /// <pre><c>![2.jpeg](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/bf1442f8-a9fa-40d3-bcb0-7a8a41b49b5d.jpeg)
+        /// </c></pre>
+        /// <list type="bullet">
+        /// <item><description>Does not involve the image subject area</description></item>
+        /// </list>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/0d68612e-845d-466f-8a4a-b85facea095b.png" alt="image.png"> | *   Involves the image subject area</para>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/621daadc-454f-41b4-9ac4-752d457034b6.jpeg" alt="b6ef803f-743f-4e61-b901-d1f68167186f.jpeg"></para>
+        /// <list type="bullet">
+        /// <item><description>Does not involve the image subject area</description></item>
+        /// </list>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/caa6994b-2f97-484d-a807-671a0dc75947.jpeg" alt="dee0c7cf-8b0d-4d6d-9677-d5f2e6099834.jpeg"> |
+        /// | Specified image element erasure (supports multiple image links) | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/9297951f-53c1-4476-8c69-5c31df3fce21.png" alt="image.png"> | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/ef3f35aa-609f-454c-bba0-dd1710c83945.png" alt="image.png"> |
+        /// | Specified text erasure (supports multiple texts) | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/c784d8be-4b4d-4972-8b99-828c742b8f03.png" alt="image.png"> | <img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/805423ca-bd0d-4d44-a18e-a7d7bfe88587.png" alt="image.png"> |</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImageRemoveAsyncRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageRemoveAsyncResponse
+        /// </returns>
+        public async Task<ImageRemoveAsyncResponse> ImageRemoveAsyncAsync(ImageRemoveAsyncRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ImageRemoveAsyncWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6663,6 +8487,658 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Translates e-commerce images by using the Mixture of Experts (MOE) architecture, delivering higher translation accuracy for multiple minor languages than the Lite and Pro editions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <para>Main images and detail images for cross-border e-commerce.</para>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description><para><b>Product subject information protection</b>: Allows you to specify whether to translate the text on the product subject. This helps you protect subject information, such as embedded product names, from being translated.</para>
+        /// </description></item>
+        /// <item><description><para><b>Brand name protection</b>: Allows you to specify whether to translate brand names in the image. This helps you protect brand name information from being translated.</para>
+        /// </description></item>
+        /// <item><description><para><b>Translation intervention</b>: Allows you to customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), or omitting the translation (ABC-null). This is commonly used in scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API, which meets your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention words. If you need more, contact the platform for processing.</para>
+        /// </description></item>
+        /// </list>
+        /// <h2>Supported language pairs</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>No.</b></th>
+        /// <th><b>Source language</b></th>
+        /// <th></th>
+        /// <th><b>Target language</b></th>
+        /// <th></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td></td>
+        /// <td>Language code</td>
+        /// <td>Language name</td>
+        /// <td>Language code</td>
+        /// <td>Language name</td>
+        /// </tr>
+        /// <tr>
+        /// <td>1</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>ar</td>
+        /// <td>Arabic</td>
+        /// </tr>
+        /// <tr>
+        /// <td>2</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>id</td>
+        /// <td>Indonesian</td>
+        /// </tr>
+        /// <tr>
+        /// <td>3</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>th</td>
+        /// <td>Thai</td>
+        /// </tr>
+        /// <tr>
+        /// <td>4</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>ko</td>
+        /// <td>Korean</td>
+        /// </tr>
+        /// <tr>
+        /// <td>5</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>ja</td>
+        /// <td>Japanese</td>
+        /// </tr>
+        /// <tr>
+        /// <td>6</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>vi</td>
+        /// <td>Vietnamese</td>
+        /// </tr>
+        /// <tr>
+        /// <td>7</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>ru</td>
+        /// <td>Russian</td>
+        /// </tr>
+        /// <tr>
+        /// <td>8</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>tl</td>
+        /// <td>Filipino</td>
+        /// </tr>
+        /// <tr>
+        /// <td>9</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>es</td>
+        /// <td>Spanish</td>
+        /// </tr>
+        /// <tr>
+        /// <td>10</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>fr</td>
+        /// <td>French</td>
+        /// </tr>
+        /// <tr>
+        /// <td>11</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>de</td>
+        /// <td>German</td>
+        /// </tr>
+        /// <tr>
+        /// <td>12</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>pl</td>
+        /// <td>Polish</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h2>Preparations and call process</h2>
+        /// <para>The asynchronous API for Image Translation Plus and other capabilities share the same result retrieval process, RocketMQ subscription rules, message encryption protocol, dependency configurations, and Java consumption and decryption code.
+        /// For the asynchronous call process, subscription rules, message format and encryption protocol, and detailed integration solutions, refer to <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API call instructions</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImageTranslationPlusAsyncRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageTranslationPlusAsyncResponse
+        /// </returns>
+        public ImageTranslationPlusAsyncResponse ImageTranslationPlusAsyncWithOptions(ImageTranslationPlusAsyncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
+            {
+                query["Glossary"] = request.Glossary;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludingProductArea))
+            {
+                query["IncludingProductArea"] = request.IncludingProductArea;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            {
+                query["SourceLanguage"] = request.SourceLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            {
+                query["TargetLanguage"] = request.TargetLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslatingBrandInTheProduct))
+            {
+                query["TranslatingBrandInTheProduct"] = request.TranslatingBrandInTheProduct;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseImageEditor))
+            {
+                query["UseImageEditor"] = request.UseImageEditor;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImageTranslationPlusAsync",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImageTranslationPlusAsyncResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Translates e-commerce images by using the Mixture of Experts (MOE) architecture, delivering higher translation accuracy for multiple minor languages than the Lite and Pro editions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <para>Main images and detail images for cross-border e-commerce.</para>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description><para><b>Product subject information protection</b>: Allows you to specify whether to translate the text on the product subject. This helps you protect subject information, such as embedded product names, from being translated.</para>
+        /// </description></item>
+        /// <item><description><para><b>Brand name protection</b>: Allows you to specify whether to translate brand names in the image. This helps you protect brand name information from being translated.</para>
+        /// </description></item>
+        /// <item><description><para><b>Translation intervention</b>: Allows you to customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), or omitting the translation (ABC-null). This is commonly used in scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API, which meets your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention words. If you need more, contact the platform for processing.</para>
+        /// </description></item>
+        /// </list>
+        /// <h2>Supported language pairs</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>No.</b></th>
+        /// <th><b>Source language</b></th>
+        /// <th></th>
+        /// <th><b>Target language</b></th>
+        /// <th></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td></td>
+        /// <td>Language code</td>
+        /// <td>Language name</td>
+        /// <td>Language code</td>
+        /// <td>Language name</td>
+        /// </tr>
+        /// <tr>
+        /// <td>1</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>ar</td>
+        /// <td>Arabic</td>
+        /// </tr>
+        /// <tr>
+        /// <td>2</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>id</td>
+        /// <td>Indonesian</td>
+        /// </tr>
+        /// <tr>
+        /// <td>3</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>th</td>
+        /// <td>Thai</td>
+        /// </tr>
+        /// <tr>
+        /// <td>4</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>ko</td>
+        /// <td>Korean</td>
+        /// </tr>
+        /// <tr>
+        /// <td>5</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>ja</td>
+        /// <td>Japanese</td>
+        /// </tr>
+        /// <tr>
+        /// <td>6</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>vi</td>
+        /// <td>Vietnamese</td>
+        /// </tr>
+        /// <tr>
+        /// <td>7</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>ru</td>
+        /// <td>Russian</td>
+        /// </tr>
+        /// <tr>
+        /// <td>8</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>tl</td>
+        /// <td>Filipino</td>
+        /// </tr>
+        /// <tr>
+        /// <td>9</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>es</td>
+        /// <td>Spanish</td>
+        /// </tr>
+        /// <tr>
+        /// <td>10</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>fr</td>
+        /// <td>French</td>
+        /// </tr>
+        /// <tr>
+        /// <td>11</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>de</td>
+        /// <td>German</td>
+        /// </tr>
+        /// <tr>
+        /// <td>12</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>pl</td>
+        /// <td>Polish</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h2>Preparations and call process</h2>
+        /// <para>The asynchronous API for Image Translation Plus and other capabilities share the same result retrieval process, RocketMQ subscription rules, message encryption protocol, dependency configurations, and Java consumption and decryption code.
+        /// For the asynchronous call process, subscription rules, message format and encryption protocol, and detailed integration solutions, refer to <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API call instructions</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImageTranslationPlusAsyncRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageTranslationPlusAsyncResponse
+        /// </returns>
+        public async Task<ImageTranslationPlusAsyncResponse> ImageTranslationPlusAsyncWithOptionsAsync(ImageTranslationPlusAsyncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
+            {
+                query["Glossary"] = request.Glossary;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludingProductArea))
+            {
+                query["IncludingProductArea"] = request.IncludingProductArea;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            {
+                query["SourceLanguage"] = request.SourceLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            {
+                query["TargetLanguage"] = request.TargetLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslatingBrandInTheProduct))
+            {
+                query["TranslatingBrandInTheProduct"] = request.TranslatingBrandInTheProduct;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseImageEditor))
+            {
+                query["UseImageEditor"] = request.UseImageEditor;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImageTranslationPlusAsync",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImageTranslationPlusAsyncResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Translates e-commerce images by using the Mixture of Experts (MOE) architecture, delivering higher translation accuracy for multiple minor languages than the Lite and Pro editions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <para>Main images and detail images for cross-border e-commerce.</para>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description><para><b>Product subject information protection</b>: Allows you to specify whether to translate the text on the product subject. This helps you protect subject information, such as embedded product names, from being translated.</para>
+        /// </description></item>
+        /// <item><description><para><b>Brand name protection</b>: Allows you to specify whether to translate brand names in the image. This helps you protect brand name information from being translated.</para>
+        /// </description></item>
+        /// <item><description><para><b>Translation intervention</b>: Allows you to customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), or omitting the translation (ABC-null). This is commonly used in scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API, which meets your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention words. If you need more, contact the platform for processing.</para>
+        /// </description></item>
+        /// </list>
+        /// <h2>Supported language pairs</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>No.</b></th>
+        /// <th><b>Source language</b></th>
+        /// <th></th>
+        /// <th><b>Target language</b></th>
+        /// <th></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td></td>
+        /// <td>Language code</td>
+        /// <td>Language name</td>
+        /// <td>Language code</td>
+        /// <td>Language name</td>
+        /// </tr>
+        /// <tr>
+        /// <td>1</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>ar</td>
+        /// <td>Arabic</td>
+        /// </tr>
+        /// <tr>
+        /// <td>2</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>id</td>
+        /// <td>Indonesian</td>
+        /// </tr>
+        /// <tr>
+        /// <td>3</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>th</td>
+        /// <td>Thai</td>
+        /// </tr>
+        /// <tr>
+        /// <td>4</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>ko</td>
+        /// <td>Korean</td>
+        /// </tr>
+        /// <tr>
+        /// <td>5</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>ja</td>
+        /// <td>Japanese</td>
+        /// </tr>
+        /// <tr>
+        /// <td>6</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>vi</td>
+        /// <td>Vietnamese</td>
+        /// </tr>
+        /// <tr>
+        /// <td>7</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>ru</td>
+        /// <td>Russian</td>
+        /// </tr>
+        /// <tr>
+        /// <td>8</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>tl</td>
+        /// <td>Filipino</td>
+        /// </tr>
+        /// <tr>
+        /// <td>9</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>es</td>
+        /// <td>Spanish</td>
+        /// </tr>
+        /// <tr>
+        /// <td>10</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>fr</td>
+        /// <td>French</td>
+        /// </tr>
+        /// <tr>
+        /// <td>11</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>de</td>
+        /// <td>German</td>
+        /// </tr>
+        /// <tr>
+        /// <td>12</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>pl</td>
+        /// <td>Polish</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h2>Preparations and call process</h2>
+        /// <para>The asynchronous API for Image Translation Plus and other capabilities share the same result retrieval process, RocketMQ subscription rules, message encryption protocol, dependency configurations, and Java consumption and decryption code.
+        /// For the asynchronous call process, subscription rules, message format and encryption protocol, and detailed integration solutions, refer to <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API call instructions</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImageTranslationPlusAsyncRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageTranslationPlusAsyncResponse
+        /// </returns>
+        public ImageTranslationPlusAsyncResponse ImageTranslationPlusAsync(ImageTranslationPlusAsyncRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ImageTranslationPlusAsyncWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Translates e-commerce images by using the Mixture of Experts (MOE) architecture, delivering higher translation accuracy for multiple minor languages than the Lite and Pro editions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <para>Main images and detail images for cross-border e-commerce.</para>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description><para><b>Product subject information protection</b>: Allows you to specify whether to translate the text on the product subject. This helps you protect subject information, such as embedded product names, from being translated.</para>
+        /// </description></item>
+        /// <item><description><para><b>Brand name protection</b>: Allows you to specify whether to translate brand names in the image. This helps you protect brand name information from being translated.</para>
+        /// </description></item>
+        /// <item><description><para><b>Translation intervention</b>: Allows you to customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), or omitting the translation (ABC-null). This is commonly used in scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API, which meets your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention words. If you need more, contact the platform for processing.</para>
+        /// </description></item>
+        /// </list>
+        /// <h2>Supported language pairs</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>No.</b></th>
+        /// <th><b>Source language</b></th>
+        /// <th></th>
+        /// <th><b>Target language</b></th>
+        /// <th></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td></td>
+        /// <td>Language code</td>
+        /// <td>Language name</td>
+        /// <td>Language code</td>
+        /// <td>Language name</td>
+        /// </tr>
+        /// <tr>
+        /// <td>1</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>ar</td>
+        /// <td>Arabic</td>
+        /// </tr>
+        /// <tr>
+        /// <td>2</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>id</td>
+        /// <td>Indonesian</td>
+        /// </tr>
+        /// <tr>
+        /// <td>3</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>th</td>
+        /// <td>Thai</td>
+        /// </tr>
+        /// <tr>
+        /// <td>4</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>ko</td>
+        /// <td>Korean</td>
+        /// </tr>
+        /// <tr>
+        /// <td>5</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>ja</td>
+        /// <td>Japanese</td>
+        /// </tr>
+        /// <tr>
+        /// <td>6</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>vi</td>
+        /// <td>Vietnamese</td>
+        /// </tr>
+        /// <tr>
+        /// <td>7</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>ru</td>
+        /// <td>Russian</td>
+        /// </tr>
+        /// <tr>
+        /// <td>8</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>tl</td>
+        /// <td>Filipino</td>
+        /// </tr>
+        /// <tr>
+        /// <td>9</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>es</td>
+        /// <td>Spanish</td>
+        /// </tr>
+        /// <tr>
+        /// <td>10</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>fr</td>
+        /// <td>French</td>
+        /// </tr>
+        /// <tr>
+        /// <td>11</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>de</td>
+        /// <td>German</td>
+        /// </tr>
+        /// <tr>
+        /// <td>12</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>pl</td>
+        /// <td>Polish</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h2>Preparations and call process</h2>
+        /// <para>The asynchronous API for Image Translation Plus and other capabilities share the same result retrieval process, RocketMQ subscription rules, message encryption protocol, dependency configurations, and Java consumption and decryption code.
+        /// For the asynchronous call process, subscription rules, message format and encryption protocol, and detailed integration solutions, refer to <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API call instructions</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImageTranslationPlusAsyncRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageTranslationPlusAsyncResponse
+        /// </returns>
+        public async Task<ImageTranslationPlusAsyncResponse> ImageTranslationPlusAsyncAsync(ImageTranslationPlusAsyncRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ImageTranslationPlusAsyncWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Translates images using the Pro edition, which is designed for e-commerce images. This edition integrates multimodal foundation model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. More than 400 language directions are supported, including bridged directions.</para>
         /// </summary>
         /// 
@@ -6899,6 +9375,258 @@ namespace AlibabaCloud.SDK.Aidge20260428
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ImageTranslationProWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Translates images by using Image Translation Pro. This service is designed specifically for e-commerce images, integrates multimodal large language model technology for more accurate image understanding, significantly improves translation quality, and continuously expands and optimizes multilingual translation capabilities. It supports more than 400 language pairs, including pivot languages.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <para>E-commerce product images, marketing images, and images in various other scenarios.</para>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description><para>Product subject information protection: Allows you to specify whether to translate the text on the product subject. This helps protect the subject information, such as embedded product names, from being translated.</para>
+        /// </description></item>
+        /// <item><description><para>Post-translation editing: Allows you to specify whether to return layout information such as the position, font, and color of the text. This information can be used for secondary editing when integrated with an image editor. The SDK package for the editor is not yet available. Follow platform notifications for updates.</para>
+        /// </description></item>
+        /// <item><description><para>Brand name protection: Allows you to specify whether to translate brand names in the image. This helps protect brand name information from being translated.</para>
+        /// </description></item>
+        /// <item><description><para>Translation intervention: Allows you to customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), or omitting the translation (ABC-null). This is commonly used in scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API, which meets your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</para>
+        /// </description></item>
+        /// </list>
+        /// <h2>Preparations and call process</h2>
+        /// <para>Image Translation Pro supports both synchronous and asynchronous call methods. This topic describes the asynchronous call API. For synchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/image-translation-pro">Image Translation Pro</a>.
+        /// The asynchronous APIs for text translation and other capabilities share the result retrieval process, ApsaraMQ for RocketMQ subscription rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.
+        /// For the integration process, subscription rules, message formats and encryption protocols, and detailed integration solutions for asynchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API call instructions</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImageTranslationProAsyncRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageTranslationProAsyncResponse
+        /// </returns>
+        public ImageTranslationProAsyncResponse ImageTranslationProAsyncWithOptions(ImageTranslationProAsyncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
+            {
+                query["Glossary"] = request.Glossary;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludingProductArea))
+            {
+                query["IncludingProductArea"] = request.IncludingProductArea;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            {
+                query["SourceLanguage"] = request.SourceLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            {
+                query["TargetLanguage"] = request.TargetLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslatingBrandInTheProduct))
+            {
+                query["TranslatingBrandInTheProduct"] = request.TranslatingBrandInTheProduct;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseImageEditor))
+            {
+                query["UseImageEditor"] = request.UseImageEditor;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImageTranslationProAsync",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImageTranslationProAsyncResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Translates images by using Image Translation Pro. This service is designed specifically for e-commerce images, integrates multimodal large language model technology for more accurate image understanding, significantly improves translation quality, and continuously expands and optimizes multilingual translation capabilities. It supports more than 400 language pairs, including pivot languages.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <para>E-commerce product images, marketing images, and images in various other scenarios.</para>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description><para>Product subject information protection: Allows you to specify whether to translate the text on the product subject. This helps protect the subject information, such as embedded product names, from being translated.</para>
+        /// </description></item>
+        /// <item><description><para>Post-translation editing: Allows you to specify whether to return layout information such as the position, font, and color of the text. This information can be used for secondary editing when integrated with an image editor. The SDK package for the editor is not yet available. Follow platform notifications for updates.</para>
+        /// </description></item>
+        /// <item><description><para>Brand name protection: Allows you to specify whether to translate brand names in the image. This helps protect brand name information from being translated.</para>
+        /// </description></item>
+        /// <item><description><para>Translation intervention: Allows you to customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), or omitting the translation (ABC-null). This is commonly used in scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API, which meets your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</para>
+        /// </description></item>
+        /// </list>
+        /// <h2>Preparations and call process</h2>
+        /// <para>Image Translation Pro supports both synchronous and asynchronous call methods. This topic describes the asynchronous call API. For synchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/image-translation-pro">Image Translation Pro</a>.
+        /// The asynchronous APIs for text translation and other capabilities share the result retrieval process, ApsaraMQ for RocketMQ subscription rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.
+        /// For the integration process, subscription rules, message formats and encryption protocols, and detailed integration solutions for asynchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API call instructions</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImageTranslationProAsyncRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageTranslationProAsyncResponse
+        /// </returns>
+        public async Task<ImageTranslationProAsyncResponse> ImageTranslationProAsyncWithOptionsAsync(ImageTranslationProAsyncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
+            {
+                query["Glossary"] = request.Glossary;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludingProductArea))
+            {
+                query["IncludingProductArea"] = request.IncludingProductArea;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            {
+                query["SourceLanguage"] = request.SourceLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            {
+                query["TargetLanguage"] = request.TargetLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslatingBrandInTheProduct))
+            {
+                query["TranslatingBrandInTheProduct"] = request.TranslatingBrandInTheProduct;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseImageEditor))
+            {
+                query["UseImageEditor"] = request.UseImageEditor;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImageTranslationProAsync",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImageTranslationProAsyncResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Translates images by using Image Translation Pro. This service is designed specifically for e-commerce images, integrates multimodal large language model technology for more accurate image understanding, significantly improves translation quality, and continuously expands and optimizes multilingual translation capabilities. It supports more than 400 language pairs, including pivot languages.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <para>E-commerce product images, marketing images, and images in various other scenarios.</para>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description><para>Product subject information protection: Allows you to specify whether to translate the text on the product subject. This helps protect the subject information, such as embedded product names, from being translated.</para>
+        /// </description></item>
+        /// <item><description><para>Post-translation editing: Allows you to specify whether to return layout information such as the position, font, and color of the text. This information can be used for secondary editing when integrated with an image editor. The SDK package for the editor is not yet available. Follow platform notifications for updates.</para>
+        /// </description></item>
+        /// <item><description><para>Brand name protection: Allows you to specify whether to translate brand names in the image. This helps protect brand name information from being translated.</para>
+        /// </description></item>
+        /// <item><description><para>Translation intervention: Allows you to customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), or omitting the translation (ABC-null). This is commonly used in scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API, which meets your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</para>
+        /// </description></item>
+        /// </list>
+        /// <h2>Preparations and call process</h2>
+        /// <para>Image Translation Pro supports both synchronous and asynchronous call methods. This topic describes the asynchronous call API. For synchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/image-translation-pro">Image Translation Pro</a>.
+        /// The asynchronous APIs for text translation and other capabilities share the result retrieval process, ApsaraMQ for RocketMQ subscription rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.
+        /// For the integration process, subscription rules, message formats and encryption protocols, and detailed integration solutions for asynchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API call instructions</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImageTranslationProAsyncRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageTranslationProAsyncResponse
+        /// </returns>
+        public ImageTranslationProAsyncResponse ImageTranslationProAsync(ImageTranslationProAsyncRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ImageTranslationProAsyncWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Translates images by using Image Translation Pro. This service is designed specifically for e-commerce images, integrates multimodal large language model technology for more accurate image understanding, significantly improves translation quality, and continuously expands and optimizes multilingual translation capabilities. It supports more than 400 language pairs, including pivot languages.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <para>E-commerce product images, marketing images, and images in various other scenarios.</para>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description><para>Product subject information protection: Allows you to specify whether to translate the text on the product subject. This helps protect the subject information, such as embedded product names, from being translated.</para>
+        /// </description></item>
+        /// <item><description><para>Post-translation editing: Allows you to specify whether to return layout information such as the position, font, and color of the text. This information can be used for secondary editing when integrated with an image editor. The SDK package for the editor is not yet available. Follow platform notifications for updates.</para>
+        /// </description></item>
+        /// <item><description><para>Brand name protection: Allows you to specify whether to translate brand names in the image. This helps protect brand name information from being translated.</para>
+        /// </description></item>
+        /// <item><description><para>Translation intervention: Allows you to customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), or omitting the translation (ABC-null). This is commonly used in scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API, which meets your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</para>
+        /// </description></item>
+        /// </list>
+        /// <h2>Preparations and call process</h2>
+        /// <para>Image Translation Pro supports both synchronous and asynchronous call methods. This topic describes the asynchronous call API. For synchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/image-translation-pro">Image Translation Pro</a>.
+        /// The asynchronous APIs for text translation and other capabilities share the result retrieval process, ApsaraMQ for RocketMQ subscription rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.
+        /// For the integration process, subscription rules, message formats and encryption protocols, and detailed integration solutions for asynchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API call instructions</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImageTranslationProAsyncRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageTranslationProAsyncResponse
+        /// </returns>
+        public async Task<ImageTranslationProAsyncResponse> ImageTranslationProAsyncAsync(ImageTranslationProAsyncRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ImageTranslationProAsyncWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7143,6 +9871,266 @@ namespace AlibabaCloud.SDK.Aidge20260428
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ImageTranslationStandardWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Translates e-commerce images by supporting over 400 language pairs, including bridged pairs. Accurately processes complex text layouts within images and ensures that translated content matches the image context, helping e-commerce platforms and developers easily achieve multilingual conversion and presentation of image content. The service also returns layer information such as text position, font, and color, facilitating secondary editing of translation results in image editors.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <para>E-commerce product images, marketing images, and images for various other scenarios.</para>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description><para><b>Product subject information protection</b>: Allows you to specify whether to translate text on the product subject, protecting the subject information and preventing the translation of embedded information such as product names.</para>
+        /// </description></item>
+        /// <item><description><para><b>Brand name protection</b>: Allows you to specify whether to translate brand names in the image, protecting brand name information from being translated.</para>
+        /// </description></item>
+        /// <item><description><para><b>Secondary editing after translation (layer information)</b>: Allows you to specify whether to return layer information such as text position, font, and color. This information can be used to integrate with image editors for secondary editing of translation results. Refer to platform notifications for updates on the availability of the editor SDK.</para>
+        /// </description></item>
+        /// <item><description><para><b>Translation intervention</b>: Allows you to customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), and skipping translation (ABC-null value). This is commonly used in scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention terms. Contact the platform if you need a higher limit.</para>
+        /// </description></item>
+        /// </list>
+        /// <h2>Preparations and call process</h2>
+        /// <list type="bullet">
+        /// <item><description>Image Translation Standard Edition supports both synchronous and asynchronous call methods. This topic describes the asynchronous call API. For synchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/image-translation">Image Translation Standard Edition</a>.   </description></item>
+        /// <item><description>The asynchronous APIs for Image Translation Standard Edition and other features share the same result retrieval process, RocketMQ subscription rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.   </description></item>
+        /// <item><description>For the integration process, subscription rules, message formats and encryption protocols, and detailed integration solutions for asynchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API call instructions</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImageTranslationStandardAsyncRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageTranslationStandardAsyncResponse
+        /// </returns>
+        public ImageTranslationStandardAsyncResponse ImageTranslationStandardAsyncWithOptions(ImageTranslationStandardAsyncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
+            {
+                query["Glossary"] = request.Glossary;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludingProductArea))
+            {
+                query["IncludingProductArea"] = request.IncludingProductArea;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            {
+                query["SourceLanguage"] = request.SourceLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            {
+                query["TargetLanguage"] = request.TargetLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslatingBrandInTheProduct))
+            {
+                query["TranslatingBrandInTheProduct"] = request.TranslatingBrandInTheProduct;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseImageEditor))
+            {
+                query["UseImageEditor"] = request.UseImageEditor;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImageTranslationStandardAsync",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImageTranslationStandardAsyncResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Translates e-commerce images by supporting over 400 language pairs, including bridged pairs. Accurately processes complex text layouts within images and ensures that translated content matches the image context, helping e-commerce platforms and developers easily achieve multilingual conversion and presentation of image content. The service also returns layer information such as text position, font, and color, facilitating secondary editing of translation results in image editors.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <para>E-commerce product images, marketing images, and images for various other scenarios.</para>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description><para><b>Product subject information protection</b>: Allows you to specify whether to translate text on the product subject, protecting the subject information and preventing the translation of embedded information such as product names.</para>
+        /// </description></item>
+        /// <item><description><para><b>Brand name protection</b>: Allows you to specify whether to translate brand names in the image, protecting brand name information from being translated.</para>
+        /// </description></item>
+        /// <item><description><para><b>Secondary editing after translation (layer information)</b>: Allows you to specify whether to return layer information such as text position, font, and color. This information can be used to integrate with image editors for secondary editing of translation results. Refer to platform notifications for updates on the availability of the editor SDK.</para>
+        /// </description></item>
+        /// <item><description><para><b>Translation intervention</b>: Allows you to customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), and skipping translation (ABC-null value). This is commonly used in scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention terms. Contact the platform if you need a higher limit.</para>
+        /// </description></item>
+        /// </list>
+        /// <h2>Preparations and call process</h2>
+        /// <list type="bullet">
+        /// <item><description>Image Translation Standard Edition supports both synchronous and asynchronous call methods. This topic describes the asynchronous call API. For synchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/image-translation">Image Translation Standard Edition</a>.   </description></item>
+        /// <item><description>The asynchronous APIs for Image Translation Standard Edition and other features share the same result retrieval process, RocketMQ subscription rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.   </description></item>
+        /// <item><description>For the integration process, subscription rules, message formats and encryption protocols, and detailed integration solutions for asynchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API call instructions</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImageTranslationStandardAsyncRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageTranslationStandardAsyncResponse
+        /// </returns>
+        public async Task<ImageTranslationStandardAsyncResponse> ImageTranslationStandardAsyncWithOptionsAsync(ImageTranslationStandardAsyncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
+            {
+                query["Glossary"] = request.Glossary;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludingProductArea))
+            {
+                query["IncludingProductArea"] = request.IncludingProductArea;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            {
+                query["SourceLanguage"] = request.SourceLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            {
+                query["TargetLanguage"] = request.TargetLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslatingBrandInTheProduct))
+            {
+                query["TranslatingBrandInTheProduct"] = request.TranslatingBrandInTheProduct;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseImageEditor))
+            {
+                query["UseImageEditor"] = request.UseImageEditor;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImageTranslationStandardAsync",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImageTranslationStandardAsyncResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Translates e-commerce images by supporting over 400 language pairs, including bridged pairs. Accurately processes complex text layouts within images and ensures that translated content matches the image context, helping e-commerce platforms and developers easily achieve multilingual conversion and presentation of image content. The service also returns layer information such as text position, font, and color, facilitating secondary editing of translation results in image editors.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <para>E-commerce product images, marketing images, and images for various other scenarios.</para>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description><para><b>Product subject information protection</b>: Allows you to specify whether to translate text on the product subject, protecting the subject information and preventing the translation of embedded information such as product names.</para>
+        /// </description></item>
+        /// <item><description><para><b>Brand name protection</b>: Allows you to specify whether to translate brand names in the image, protecting brand name information from being translated.</para>
+        /// </description></item>
+        /// <item><description><para><b>Secondary editing after translation (layer information)</b>: Allows you to specify whether to return layer information such as text position, font, and color. This information can be used to integrate with image editors for secondary editing of translation results. Refer to platform notifications for updates on the availability of the editor SDK.</para>
+        /// </description></item>
+        /// <item><description><para><b>Translation intervention</b>: Allows you to customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), and skipping translation (ABC-null value). This is commonly used in scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention terms. Contact the platform if you need a higher limit.</para>
+        /// </description></item>
+        /// </list>
+        /// <h2>Preparations and call process</h2>
+        /// <list type="bullet">
+        /// <item><description>Image Translation Standard Edition supports both synchronous and asynchronous call methods. This topic describes the asynchronous call API. For synchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/image-translation">Image Translation Standard Edition</a>.   </description></item>
+        /// <item><description>The asynchronous APIs for Image Translation Standard Edition and other features share the same result retrieval process, RocketMQ subscription rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.   </description></item>
+        /// <item><description>For the integration process, subscription rules, message formats and encryption protocols, and detailed integration solutions for asynchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API call instructions</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImageTranslationStandardAsyncRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageTranslationStandardAsyncResponse
+        /// </returns>
+        public ImageTranslationStandardAsyncResponse ImageTranslationStandardAsync(ImageTranslationStandardAsyncRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ImageTranslationStandardAsyncWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Translates e-commerce images by supporting over 400 language pairs, including bridged pairs. Accurately processes complex text layouts within images and ensures that translated content matches the image context, helping e-commerce platforms and developers easily achieve multilingual conversion and presentation of image content. The service also returns layer information such as text position, font, and color, facilitating secondary editing of translation results in image editors.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <para>E-commerce product images, marketing images, and images for various other scenarios.</para>
+        /// <h2>Features</h2>
+        /// <list type="bullet">
+        /// <item><description><para><b>Product subject information protection</b>: Allows you to specify whether to translate text on the product subject, protecting the subject information and preventing the translation of embedded information such as product names.</para>
+        /// </description></item>
+        /// <item><description><para><b>Brand name protection</b>: Allows you to specify whether to translate brand names in the image, protecting brand name information from being translated.</para>
+        /// </description></item>
+        /// <item><description><para><b>Secondary editing after translation (layer information)</b>: Allows you to specify whether to return layer information such as text position, font, and color. This information can be used to integrate with image editors for secondary editing of translation results. Refer to platform notifications for updates on the availability of the editor SDK.</para>
+        /// </description></item>
+        /// <item><description><para><b>Translation intervention</b>: Allows you to customize translation results, including keeping the original text (ABC-ABC), specifying a translation (ABC-DEF), and skipping translation (ABC-null value). This is commonly used in scenarios such as brand word protection. You can implement this by passing the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention terms. Contact the platform if you need a higher limit.</para>
+        /// </description></item>
+        /// </list>
+        /// <h2>Preparations and call process</h2>
+        /// <list type="bullet">
+        /// <item><description>Image Translation Standard Edition supports both synchronous and asynchronous call methods. This topic describes the asynchronous call API. For synchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/image-translation">Image Translation Standard Edition</a>.   </description></item>
+        /// <item><description>The asynchronous APIs for Image Translation Standard Edition and other features share the same result retrieval process, RocketMQ subscription rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.   </description></item>
+        /// <item><description>For the integration process, subscription rules, message formats and encryption protocols, and detailed integration solutions for asynchronous calls, refer to <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API call instructions</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImageTranslationStandardAsyncRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageTranslationStandardAsyncResponse
+        /// </returns>
+        public async Task<ImageTranslationStandardAsyncResponse> ImageTranslationStandardAsyncAsync(ImageTranslationStandardAsyncRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ImageTranslationStandardAsyncWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -11027,6 +14015,670 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Extracts structured information such as size charts and package weight and dimensions from images by using multimodal large models in asynchronous mode.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <para>Size charts: Extracts size charts for apparel categories into text.
+        /// Package weight and dimensions: Extracts package weight and dimension information from images.</para>
+        /// <h2>Feature description</h2>
+        /// <para>The size chart extraction service is based on multimodal foundation models. It automatically recognizes size charts or package weight and dimension information in images and converts the information into structured text. Provide an image URL, and the system processes the request as an asynchronous task and returns the extracted structured data. You can specify the column names to be recognized, such as Size, Bust, and Length, by using ColumnNameList for precise targeted extraction. You can also control the output language by using the LanguageModel parameter. Valid values: cn for Chinese and en for English. If you do not specify this parameter, the original language is retained. This service is applicable to scenarios such as text conversion of size charts for apparel categories and batch structuring of package weight and dimension information for commodities.
+        /// Core capabilities: Input an image URL and optional column name configurations to output the structured data of the size chart or package weight and dimensions in the image. The API operation uses the asynchronous task mode (background: true). After you submit the task, a task ID is returned. You must poll the task to obtain the final result. This mode is suitable for processing complex images or handling large-scale calls.</para>
+        /// <h2>Example results</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Input image</th>
+        /// <th>Output result</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4jKqm0bAebrKLnw1/img/0a914347-2acb-4b94-bf07-86aab2b31279.png" alt="image.png"></td>
+        /// <td>{</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <pre><c>      &quot;SizeChart&quot;: [
+        ///         {
+        ///           &quot;尺码&quot;: {
+        ///             &quot;value&quot;: &quot;S&quot;
+        ///           },
+        ///           &quot;腰围&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 58
+        ///           },
+        ///           &quot;裙长&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 81
+        ///           },
+        ///           &quot;体重建议&quot;: {
+        ///             &quot;unit&quot;: &quot;kg&quot;,
+        ///             &quot;lower_value&quot;: 40,
+        ///             &quot;upper_value&quot;: 47.5
+        ///           }
+        ///         },
+        ///         {
+        ///           &quot;尺码&quot;: {
+        ///             &quot;value&quot;: &quot;M&quot;
+        ///           },
+        ///           &quot;腰围&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 59
+        ///           },
+        ///           &quot;裙长&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 82
+        ///           },
+        ///           &quot;体重建议&quot;: {
+        ///             &quot;unit&quot;: &quot;kg&quot;,
+        ///             &quot;lower_value&quot;: 45,
+        ///             &quot;upper_value&quot;: 52.5
+        ///           }
+        ///         },
+        ///         {
+        ///           &quot;尺码&quot;: {
+        ///             &quot;value&quot;: &quot;L&quot;
+        ///           },
+        ///           &quot;腰围&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 60
+        ///           },
+        ///           &quot;裙长&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 83
+        ///           },
+        ///           &quot;体重建议&quot;: {
+        ///             &quot;unit&quot;: &quot;kg&quot;,
+        ///             &quot;lower_value&quot;: 50,
+        ///             &quot;upper_value&quot;: 57.5
+        ///           }
+        ///         },
+        ///         {
+        ///           &quot;尺码&quot;: {
+        ///             &quot;value&quot;: &quot;XL&quot;
+        ///           },
+        ///           &quot;腰围&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 61
+        ///           },
+        ///           &quot;裙长&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 84
+        ///           },
+        ///           &quot;体重建议&quot;: {
+        ///             &quot;unit&quot;: &quot;kg&quot;,
+        ///             &quot;lower_value&quot;: 55,
+        ///             &quot;upper_value&quot;: 62.5
+        ///           }
+        ///         },
+        ///         {
+        ///           &quot;尺码&quot;: {
+        ///             &quot;value&quot;: &quot;2XL&quot;
+        ///           },
+        ///           &quot;腰围&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 62
+        ///           },
+        ///           &quot;裙长&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 85
+        ///           },
+        ///           &quot;体重建议&quot;: {
+        ///             &quot;unit&quot;: &quot;kg&quot;,
+        ///             &quot;lower_value&quot;: 60,
+        ///             &quot;upper_value&quot;: 67.5
+        ///           }
+        ///         }
+        ///       \\],
+        ///       &quot;SizeChartAttributes&quot;: [
+        ///         &quot;Size&quot;,
+        ///         &quot;Skirt length&quot;,
+        ///         &quot;Waist&quot;,
+        ///         &quot;Weight recommendation&quot;
+        ///       \\],
+        ///       &quot;IntersectionAttributes&quot;: [
+        ///         &quot;Size&quot;,
+        ///         &quot;Skirt length&quot;,
+        ///         &quot;Waist (stretched)&quot;,
+        ///         &quot;Weight recommendation&quot;
+        ///       \\]
+        /// </c></pre>
+        /// <para>} |</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// SizeChartExtractAsyncRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SizeChartExtractAsyncResponse
+        /// </returns>
+        public SizeChartExtractAsyncResponse SizeChartExtractAsyncWithOptions(SizeChartExtractAsyncRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SizeChartExtractAsyncShrinkRequest request = new SizeChartExtractAsyncShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ColumnNameList))
+            {
+                request.ColumnNameListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ColumnNameList, "ColumnNameList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColumnNameListShrink))
+            {
+                query["ColumnNameList"] = request.ColumnNameListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LanguageModel))
+            {
+                query["LanguageModel"] = request.LanguageModel;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SizeChartExtractAsync",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SizeChartExtractAsyncResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Extracts structured information such as size charts and package weight and dimensions from images by using multimodal large models in asynchronous mode.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <para>Size charts: Extracts size charts for apparel categories into text.
+        /// Package weight and dimensions: Extracts package weight and dimension information from images.</para>
+        /// <h2>Feature description</h2>
+        /// <para>The size chart extraction service is based on multimodal foundation models. It automatically recognizes size charts or package weight and dimension information in images and converts the information into structured text. Provide an image URL, and the system processes the request as an asynchronous task and returns the extracted structured data. You can specify the column names to be recognized, such as Size, Bust, and Length, by using ColumnNameList for precise targeted extraction. You can also control the output language by using the LanguageModel parameter. Valid values: cn for Chinese and en for English. If you do not specify this parameter, the original language is retained. This service is applicable to scenarios such as text conversion of size charts for apparel categories and batch structuring of package weight and dimension information for commodities.
+        /// Core capabilities: Input an image URL and optional column name configurations to output the structured data of the size chart or package weight and dimensions in the image. The API operation uses the asynchronous task mode (background: true). After you submit the task, a task ID is returned. You must poll the task to obtain the final result. This mode is suitable for processing complex images or handling large-scale calls.</para>
+        /// <h2>Example results</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Input image</th>
+        /// <th>Output result</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4jKqm0bAebrKLnw1/img/0a914347-2acb-4b94-bf07-86aab2b31279.png" alt="image.png"></td>
+        /// <td>{</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <pre><c>      &quot;SizeChart&quot;: [
+        ///         {
+        ///           &quot;尺码&quot;: {
+        ///             &quot;value&quot;: &quot;S&quot;
+        ///           },
+        ///           &quot;腰围&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 58
+        ///           },
+        ///           &quot;裙长&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 81
+        ///           },
+        ///           &quot;体重建议&quot;: {
+        ///             &quot;unit&quot;: &quot;kg&quot;,
+        ///             &quot;lower_value&quot;: 40,
+        ///             &quot;upper_value&quot;: 47.5
+        ///           }
+        ///         },
+        ///         {
+        ///           &quot;尺码&quot;: {
+        ///             &quot;value&quot;: &quot;M&quot;
+        ///           },
+        ///           &quot;腰围&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 59
+        ///           },
+        ///           &quot;裙长&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 82
+        ///           },
+        ///           &quot;体重建议&quot;: {
+        ///             &quot;unit&quot;: &quot;kg&quot;,
+        ///             &quot;lower_value&quot;: 45,
+        ///             &quot;upper_value&quot;: 52.5
+        ///           }
+        ///         },
+        ///         {
+        ///           &quot;尺码&quot;: {
+        ///             &quot;value&quot;: &quot;L&quot;
+        ///           },
+        ///           &quot;腰围&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 60
+        ///           },
+        ///           &quot;裙长&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 83
+        ///           },
+        ///           &quot;体重建议&quot;: {
+        ///             &quot;unit&quot;: &quot;kg&quot;,
+        ///             &quot;lower_value&quot;: 50,
+        ///             &quot;upper_value&quot;: 57.5
+        ///           }
+        ///         },
+        ///         {
+        ///           &quot;尺码&quot;: {
+        ///             &quot;value&quot;: &quot;XL&quot;
+        ///           },
+        ///           &quot;腰围&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 61
+        ///           },
+        ///           &quot;裙长&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 84
+        ///           },
+        ///           &quot;体重建议&quot;: {
+        ///             &quot;unit&quot;: &quot;kg&quot;,
+        ///             &quot;lower_value&quot;: 55,
+        ///             &quot;upper_value&quot;: 62.5
+        ///           }
+        ///         },
+        ///         {
+        ///           &quot;尺码&quot;: {
+        ///             &quot;value&quot;: &quot;2XL&quot;
+        ///           },
+        ///           &quot;腰围&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 62
+        ///           },
+        ///           &quot;裙长&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 85
+        ///           },
+        ///           &quot;体重建议&quot;: {
+        ///             &quot;unit&quot;: &quot;kg&quot;,
+        ///             &quot;lower_value&quot;: 60,
+        ///             &quot;upper_value&quot;: 67.5
+        ///           }
+        ///         }
+        ///       \\],
+        ///       &quot;SizeChartAttributes&quot;: [
+        ///         &quot;Size&quot;,
+        ///         &quot;Skirt length&quot;,
+        ///         &quot;Waist&quot;,
+        ///         &quot;Weight recommendation&quot;
+        ///       \\],
+        ///       &quot;IntersectionAttributes&quot;: [
+        ///         &quot;Size&quot;,
+        ///         &quot;Skirt length&quot;,
+        ///         &quot;Waist (stretched)&quot;,
+        ///         &quot;Weight recommendation&quot;
+        ///       \\]
+        /// </c></pre>
+        /// <para>} |</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// SizeChartExtractAsyncRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SizeChartExtractAsyncResponse
+        /// </returns>
+        public async Task<SizeChartExtractAsyncResponse> SizeChartExtractAsyncWithOptionsAsync(SizeChartExtractAsyncRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SizeChartExtractAsyncShrinkRequest request = new SizeChartExtractAsyncShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ColumnNameList))
+            {
+                request.ColumnNameListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ColumnNameList, "ColumnNameList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColumnNameListShrink))
+            {
+                query["ColumnNameList"] = request.ColumnNameListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LanguageModel))
+            {
+                query["LanguageModel"] = request.LanguageModel;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SizeChartExtractAsync",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SizeChartExtractAsyncResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Extracts structured information such as size charts and package weight and dimensions from images by using multimodal large models in asynchronous mode.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <para>Size charts: Extracts size charts for apparel categories into text.
+        /// Package weight and dimensions: Extracts package weight and dimension information from images.</para>
+        /// <h2>Feature description</h2>
+        /// <para>The size chart extraction service is based on multimodal foundation models. It automatically recognizes size charts or package weight and dimension information in images and converts the information into structured text. Provide an image URL, and the system processes the request as an asynchronous task and returns the extracted structured data. You can specify the column names to be recognized, such as Size, Bust, and Length, by using ColumnNameList for precise targeted extraction. You can also control the output language by using the LanguageModel parameter. Valid values: cn for Chinese and en for English. If you do not specify this parameter, the original language is retained. This service is applicable to scenarios such as text conversion of size charts for apparel categories and batch structuring of package weight and dimension information for commodities.
+        /// Core capabilities: Input an image URL and optional column name configurations to output the structured data of the size chart or package weight and dimensions in the image. The API operation uses the asynchronous task mode (background: true). After you submit the task, a task ID is returned. You must poll the task to obtain the final result. This mode is suitable for processing complex images or handling large-scale calls.</para>
+        /// <h2>Example results</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Input image</th>
+        /// <th>Output result</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4jKqm0bAebrKLnw1/img/0a914347-2acb-4b94-bf07-86aab2b31279.png" alt="image.png"></td>
+        /// <td>{</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <pre><c>      &quot;SizeChart&quot;: [
+        ///         {
+        ///           &quot;尺码&quot;: {
+        ///             &quot;value&quot;: &quot;S&quot;
+        ///           },
+        ///           &quot;腰围&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 58
+        ///           },
+        ///           &quot;裙长&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 81
+        ///           },
+        ///           &quot;体重建议&quot;: {
+        ///             &quot;unit&quot;: &quot;kg&quot;,
+        ///             &quot;lower_value&quot;: 40,
+        ///             &quot;upper_value&quot;: 47.5
+        ///           }
+        ///         },
+        ///         {
+        ///           &quot;尺码&quot;: {
+        ///             &quot;value&quot;: &quot;M&quot;
+        ///           },
+        ///           &quot;腰围&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 59
+        ///           },
+        ///           &quot;裙长&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 82
+        ///           },
+        ///           &quot;体重建议&quot;: {
+        ///             &quot;unit&quot;: &quot;kg&quot;,
+        ///             &quot;lower_value&quot;: 45,
+        ///             &quot;upper_value&quot;: 52.5
+        ///           }
+        ///         },
+        ///         {
+        ///           &quot;尺码&quot;: {
+        ///             &quot;value&quot;: &quot;L&quot;
+        ///           },
+        ///           &quot;腰围&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 60
+        ///           },
+        ///           &quot;裙长&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 83
+        ///           },
+        ///           &quot;体重建议&quot;: {
+        ///             &quot;unit&quot;: &quot;kg&quot;,
+        ///             &quot;lower_value&quot;: 50,
+        ///             &quot;upper_value&quot;: 57.5
+        ///           }
+        ///         },
+        ///         {
+        ///           &quot;尺码&quot;: {
+        ///             &quot;value&quot;: &quot;XL&quot;
+        ///           },
+        ///           &quot;腰围&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 61
+        ///           },
+        ///           &quot;裙长&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 84
+        ///           },
+        ///           &quot;体重建议&quot;: {
+        ///             &quot;unit&quot;: &quot;kg&quot;,
+        ///             &quot;lower_value&quot;: 55,
+        ///             &quot;upper_value&quot;: 62.5
+        ///           }
+        ///         },
+        ///         {
+        ///           &quot;尺码&quot;: {
+        ///             &quot;value&quot;: &quot;2XL&quot;
+        ///           },
+        ///           &quot;腰围&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 62
+        ///           },
+        ///           &quot;裙长&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 85
+        ///           },
+        ///           &quot;体重建议&quot;: {
+        ///             &quot;unit&quot;: &quot;kg&quot;,
+        ///             &quot;lower_value&quot;: 60,
+        ///             &quot;upper_value&quot;: 67.5
+        ///           }
+        ///         }
+        ///       \\],
+        ///       &quot;SizeChartAttributes&quot;: [
+        ///         &quot;Size&quot;,
+        ///         &quot;Skirt length&quot;,
+        ///         &quot;Waist&quot;,
+        ///         &quot;Weight recommendation&quot;
+        ///       \\],
+        ///       &quot;IntersectionAttributes&quot;: [
+        ///         &quot;Size&quot;,
+        ///         &quot;Skirt length&quot;,
+        ///         &quot;Waist (stretched)&quot;,
+        ///         &quot;Weight recommendation&quot;
+        ///       \\]
+        /// </c></pre>
+        /// <para>} |</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SizeChartExtractAsyncRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SizeChartExtractAsyncResponse
+        /// </returns>
+        public SizeChartExtractAsyncResponse SizeChartExtractAsync(SizeChartExtractAsyncRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SizeChartExtractAsyncWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Extracts structured information such as size charts and package weight and dimensions from images by using multimodal large models in asynchronous mode.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Scenarios</h2>
+        /// <para>Size charts: Extracts size charts for apparel categories into text.
+        /// Package weight and dimensions: Extracts package weight and dimension information from images.</para>
+        /// <h2>Feature description</h2>
+        /// <para>The size chart extraction service is based on multimodal foundation models. It automatically recognizes size charts or package weight and dimension information in images and converts the information into structured text. Provide an image URL, and the system processes the request as an asynchronous task and returns the extracted structured data. You can specify the column names to be recognized, such as Size, Bust, and Length, by using ColumnNameList for precise targeted extraction. You can also control the output language by using the LanguageModel parameter. Valid values: cn for Chinese and en for English. If you do not specify this parameter, the original language is retained. This service is applicable to scenarios such as text conversion of size charts for apparel categories and batch structuring of package weight and dimension information for commodities.
+        /// Core capabilities: Input an image URL and optional column name configurations to output the structured data of the size chart or package weight and dimensions in the image. The API operation uses the asynchronous task mode (background: true). After you submit the task, a task ID is returned. You must poll the task to obtain the final result. This mode is suitable for processing complex images or handling large-scale calls.</para>
+        /// <h2>Example results</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>Input image</th>
+        /// <th>Output result</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4jKqm0bAebrKLnw1/img/0a914347-2acb-4b94-bf07-86aab2b31279.png" alt="image.png"></td>
+        /// <td>{</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <pre><c>      &quot;SizeChart&quot;: [
+        ///         {
+        ///           &quot;尺码&quot;: {
+        ///             &quot;value&quot;: &quot;S&quot;
+        ///           },
+        ///           &quot;腰围&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 58
+        ///           },
+        ///           &quot;裙长&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 81
+        ///           },
+        ///           &quot;体重建议&quot;: {
+        ///             &quot;unit&quot;: &quot;kg&quot;,
+        ///             &quot;lower_value&quot;: 40,
+        ///             &quot;upper_value&quot;: 47.5
+        ///           }
+        ///         },
+        ///         {
+        ///           &quot;尺码&quot;: {
+        ///             &quot;value&quot;: &quot;M&quot;
+        ///           },
+        ///           &quot;腰围&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 59
+        ///           },
+        ///           &quot;裙长&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 82
+        ///           },
+        ///           &quot;体重建议&quot;: {
+        ///             &quot;unit&quot;: &quot;kg&quot;,
+        ///             &quot;lower_value&quot;: 45,
+        ///             &quot;upper_value&quot;: 52.5
+        ///           }
+        ///         },
+        ///         {
+        ///           &quot;尺码&quot;: {
+        ///             &quot;value&quot;: &quot;L&quot;
+        ///           },
+        ///           &quot;腰围&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 60
+        ///           },
+        ///           &quot;裙长&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 83
+        ///           },
+        ///           &quot;体重建议&quot;: {
+        ///             &quot;unit&quot;: &quot;kg&quot;,
+        ///             &quot;lower_value&quot;: 50,
+        ///             &quot;upper_value&quot;: 57.5
+        ///           }
+        ///         },
+        ///         {
+        ///           &quot;尺码&quot;: {
+        ///             &quot;value&quot;: &quot;XL&quot;
+        ///           },
+        ///           &quot;腰围&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 61
+        ///           },
+        ///           &quot;裙长&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 84
+        ///           },
+        ///           &quot;体重建议&quot;: {
+        ///             &quot;unit&quot;: &quot;kg&quot;,
+        ///             &quot;lower_value&quot;: 55,
+        ///             &quot;upper_value&quot;: 62.5
+        ///           }
+        ///         },
+        ///         {
+        ///           &quot;尺码&quot;: {
+        ///             &quot;value&quot;: &quot;2XL&quot;
+        ///           },
+        ///           &quot;腰围&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 62
+        ///           },
+        ///           &quot;裙长&quot;: {
+        ///             &quot;unit&quot;: &quot;CM&quot;,
+        ///             &quot;value&quot;: 85
+        ///           },
+        ///           &quot;体重建议&quot;: {
+        ///             &quot;unit&quot;: &quot;kg&quot;,
+        ///             &quot;lower_value&quot;: 60,
+        ///             &quot;upper_value&quot;: 67.5
+        ///           }
+        ///         }
+        ///       \\],
+        ///       &quot;SizeChartAttributes&quot;: [
+        ///         &quot;Size&quot;,
+        ///         &quot;Skirt length&quot;,
+        ///         &quot;Waist&quot;,
+        ///         &quot;Weight recommendation&quot;
+        ///       \\],
+        ///       &quot;IntersectionAttributes&quot;: [
+        ///         &quot;Size&quot;,
+        ///         &quot;Skirt length&quot;,
+        ///         &quot;Waist (stretched)&quot;,
+        ///         &quot;Weight recommendation&quot;
+        ///       \\]
+        /// </c></pre>
+        /// <para>} |</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SizeChartExtractAsyncRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SizeChartExtractAsyncResponse
+        /// </returns>
+        public async Task<SizeChartExtractAsyncResponse> SizeChartExtractAsyncAsync(SizeChartExtractAsyncRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SizeChartExtractAsyncWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Reviews store photos based on storefront scene recognition and multimodal large model element localization. It outputs storefront scene classifications and confidence details, and localizes storefronts, signboards, entrances, and business signs. It is applicable to store data collection, storefront photo classification, and inspection reviews.</para>
         /// </summary>
         /// 
@@ -12311,6 +15963,446 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>文本翻译异步</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>适用场景</h2>
+        /// <list type="bullet">
+        /// <item><description><para>商品标题：Maas MT大模型翻译可以将商品标题中的短语、关键词、流行词等准确翻译成目标语言，提升商品在电商平台的曝光率。</para>
+        /// </description></item>
+        /// <item><description><para>商品详描：商品详描整体文本较长、格式多样且复杂，Maas 大模型翻译支持长文本翻译和 HTML 格式，翻译效果和格式还原能力表现出色。</para>
+        /// </description></item>
+        /// <item><description><para>商品属性：商品属性词汇较短，且存在电商专有词（如型号、参数）等。</para>
+        /// </description></item>
+        /// <item><description><para>客服对话：在客服场景中，可优化“上下文缺失、打字错误“等问题，并在部分语向上支持礼貌用语。</para>
+        /// </description></item>
+        /// </list>
+        /// <para>      同时，Maas MT大模型翻译也可以用于通用场景的翻译，如办公、会议、日常对话等。</para>
+        /// <h2>功能介绍</h2>
+        /// <list type="bullet">
+        /// <item><description><para><b>超低幻觉率与高速推理</b> Maas MT大模型翻译是在翻译场景上经过偏好对齐的大语言模型，与通用大语言模型相比，翻译推理速度快，幻觉率极低，尤其适合大规模调用的场景。</para>
+        /// </description></item>
+        /// <item><description><para><b>支持翻译的文本格式类型</b> 当前支持 text 和 html 的文本类型。</para>
+        /// </description></item>
+        /// <item><description><para><b>翻译干预能力支持</b> 支持自定义翻译结果，包含不被翻译（ABC-ABC），指定翻译（ABC-DEF），不翻译（ABC-空值）。常用于品牌词保护等场景。只需调用接口时传入相应的干预词表ID，即可实现，可满足您在不同场景下的翻译需求。一般您可以上传10万条干预词，如有更多需要可以联系平台进行处理。</para>
+        /// </description></item>
+        /// <item><description><para><b>翻译效果对比</b></para>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>原文</b></th>
+        /// <th><b>Aidge译后</b></th>
+        /// <th><b>其他翻译产品1</b></th>
+        /// <th><b>其他翻译产品2</b></th>
+        /// <th><b>Aidge翻译优势</b></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>75mm 4Pin 0.38A GA81S2U 12V GTX 960 Cooling Fan for Zotac GTX960 Graphics Card Cooling Fan</td>
+        /// <td>75mm 4Pin 0.38A GA81S2U 12V GTX 960, ventilador de enfriamiento para tarjeta gráfica Zotac GTX960.</td>
+        /// <td>Ventilador de refrigeración de 75mm 4Pin 0.38A GA81S2U 12V para la tarjeta gráfica Zotac GTX960 Ventilador de enfriamiento GTX 960.</td>
+        /// <td>Ventilador de refrigeración para tarjeta gráfica Zotac GTX960, 75mm, 4 pines, 0,38A, GA81S2U, 12V, GTX 960</td>
+        /// <td>商品主体更清晰</td>
+        /// </tr>
+        /// <tr>
+        /// <td>New Arrival Classic Style Luxury Brand 6 Hands Swiss Automatic Mechanical Men\&quot;s Business Steel Watch</td>
+        /// <td>Nueva llegada, reloj mecánico automático de lujo con 6 manecillas, estilo clásico, de acero para hombres de negocios</td>
+        /// <td>Nueva Llegada Reloj De Acero de Negocios para Hombre con Mecanismo Automático Suizo y 6 Agujas de Estilo Clásico de Marca de Lujo.</td>
+        /// <td>Reloj de acero de negocios para hombre, mecánico automático suizo, marca de lujo, estilo clásico, 6 manos, nueva llegada</td>
+        /// <td>句式更完整，表述更清晰，断句更合理</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Men Key Bag Genuine Cow Leather Buckets Key Cases Pouch Zipper Keychain Auto Car Key Case Women Home Key Holder Wallet</td>
+        /// <td>Sac à clés pour hommes en cuir de vache véritable, étuis à clés, pochette à fermeture éclair, porte-clés, étui à clé de voiture, porte-clés pour femmes, organisateur de portefeuille</td>
+        /// <td>Porte-clés sac en cuir de vache véritable, étuis à clés en forme de seau, pochette à fermeture éclair, porte-clés auto pour voiture, étui à clés pour femmes, organisateur de clés de maison, portefeuille.</td>
+        /// <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermature éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
+        /// <td>产品主体表述更清晰明确，是“钥匙包”而非“钥匙扣”，其它译文容易对产品主体产生歧义</td>
+        /// </tr>
+        /// </tbody></table>
+        /// </description></item>
+        /// </list>
+        /// <h2>接入准备与调用流程</h2>
+        /// <para>文本翻译支持同步和异步两种调用方式。本文介绍异步调用接口，如需使用同步调用，请参阅<a href="https://api.aliyun.com/document/Aidge/2026-04-28/TextTranslate">《文本翻译-同步接口》</a>。
+        /// 文本翻译及其他能力的异步接口共用结果获取流程、RocketMQ 订阅规则、消息加密协议、依赖配置，以及 Java 消费与解密代码。
+        /// 异步调用的接入流程，订阅规则，消息格式与加密协议，以及详细的接入方案请参阅<a href="https://help.aliyun.com/zh/aidge/asynchronous-interface-call-instructions">异步接口调用说明</a>。</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// TextTranslateAsyncRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TextTranslateAsyncResponse
+        /// </returns>
+        public TextTranslateAsyncResponse TextTranslateAsyncWithOptions(TextTranslateAsyncRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            TextTranslateAsyncShrinkRequest request = new TextTranslateAsyncShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceTextList))
+            {
+                request.SourceTextListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceTextList, "SourceTextList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizName))
+            {
+                query["BizName"] = request.BizName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FormatType))
+            {
+                query["FormatType"] = request.FormatType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
+            {
+                query["Glossary"] = request.Glossary;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            {
+                query["SourceLanguage"] = request.SourceLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTextListShrink))
+            {
+                query["SourceTextList"] = request.SourceTextListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            {
+                query["TargetLanguage"] = request.TargetLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslateScene))
+            {
+                query["TranslateScene"] = request.TranslateScene;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TextTranslateAsync",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TextTranslateAsyncResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文本翻译异步</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>适用场景</h2>
+        /// <list type="bullet">
+        /// <item><description><para>商品标题：Maas MT大模型翻译可以将商品标题中的短语、关键词、流行词等准确翻译成目标语言，提升商品在电商平台的曝光率。</para>
+        /// </description></item>
+        /// <item><description><para>商品详描：商品详描整体文本较长、格式多样且复杂，Maas 大模型翻译支持长文本翻译和 HTML 格式，翻译效果和格式还原能力表现出色。</para>
+        /// </description></item>
+        /// <item><description><para>商品属性：商品属性词汇较短，且存在电商专有词（如型号、参数）等。</para>
+        /// </description></item>
+        /// <item><description><para>客服对话：在客服场景中，可优化“上下文缺失、打字错误“等问题，并在部分语向上支持礼貌用语。</para>
+        /// </description></item>
+        /// </list>
+        /// <para>      同时，Maas MT大模型翻译也可以用于通用场景的翻译，如办公、会议、日常对话等。</para>
+        /// <h2>功能介绍</h2>
+        /// <list type="bullet">
+        /// <item><description><para><b>超低幻觉率与高速推理</b> Maas MT大模型翻译是在翻译场景上经过偏好对齐的大语言模型，与通用大语言模型相比，翻译推理速度快，幻觉率极低，尤其适合大规模调用的场景。</para>
+        /// </description></item>
+        /// <item><description><para><b>支持翻译的文本格式类型</b> 当前支持 text 和 html 的文本类型。</para>
+        /// </description></item>
+        /// <item><description><para><b>翻译干预能力支持</b> 支持自定义翻译结果，包含不被翻译（ABC-ABC），指定翻译（ABC-DEF），不翻译（ABC-空值）。常用于品牌词保护等场景。只需调用接口时传入相应的干预词表ID，即可实现，可满足您在不同场景下的翻译需求。一般您可以上传10万条干预词，如有更多需要可以联系平台进行处理。</para>
+        /// </description></item>
+        /// <item><description><para><b>翻译效果对比</b></para>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>原文</b></th>
+        /// <th><b>Aidge译后</b></th>
+        /// <th><b>其他翻译产品1</b></th>
+        /// <th><b>其他翻译产品2</b></th>
+        /// <th><b>Aidge翻译优势</b></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>75mm 4Pin 0.38A GA81S2U 12V GTX 960 Cooling Fan for Zotac GTX960 Graphics Card Cooling Fan</td>
+        /// <td>75mm 4Pin 0.38A GA81S2U 12V GTX 960, ventilador de enfriamiento para tarjeta gráfica Zotac GTX960.</td>
+        /// <td>Ventilador de refrigeración de 75mm 4Pin 0.38A GA81S2U 12V para la tarjeta gráfica Zotac GTX960 Ventilador de enfriamiento GTX 960.</td>
+        /// <td>Ventilador de refrigeración para tarjeta gráfica Zotac GTX960, 75mm, 4 pines, 0,38A, GA81S2U, 12V, GTX 960</td>
+        /// <td>商品主体更清晰</td>
+        /// </tr>
+        /// <tr>
+        /// <td>New Arrival Classic Style Luxury Brand 6 Hands Swiss Automatic Mechanical Men\&quot;s Business Steel Watch</td>
+        /// <td>Nueva llegada, reloj mecánico automático de lujo con 6 manecillas, estilo clásico, de acero para hombres de negocios</td>
+        /// <td>Nueva Llegada Reloj De Acero de Negocios para Hombre con Mecanismo Automático Suizo y 6 Agujas de Estilo Clásico de Marca de Lujo.</td>
+        /// <td>Reloj de acero de negocios para hombre, mecánico automático suizo, marca de lujo, estilo clásico, 6 manos, nueva llegada</td>
+        /// <td>句式更完整，表述更清晰，断句更合理</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Men Key Bag Genuine Cow Leather Buckets Key Cases Pouch Zipper Keychain Auto Car Key Case Women Home Key Holder Wallet</td>
+        /// <td>Sac à clés pour hommes en cuir de vache véritable, étuis à clés, pochette à fermeture éclair, porte-clés, étui à clé de voiture, porte-clés pour femmes, organisateur de portefeuille</td>
+        /// <td>Porte-clés sac en cuir de vache véritable, étuis à clés en forme de seau, pochette à fermeture éclair, porte-clés auto pour voiture, étui à clés pour femmes, organisateur de clés de maison, portefeuille.</td>
+        /// <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermature éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
+        /// <td>产品主体表述更清晰明确，是“钥匙包”而非“钥匙扣”，其它译文容易对产品主体产生歧义</td>
+        /// </tr>
+        /// </tbody></table>
+        /// </description></item>
+        /// </list>
+        /// <h2>接入准备与调用流程</h2>
+        /// <para>文本翻译支持同步和异步两种调用方式。本文介绍异步调用接口，如需使用同步调用，请参阅<a href="https://api.aliyun.com/document/Aidge/2026-04-28/TextTranslate">《文本翻译-同步接口》</a>。
+        /// 文本翻译及其他能力的异步接口共用结果获取流程、RocketMQ 订阅规则、消息加密协议、依赖配置，以及 Java 消费与解密代码。
+        /// 异步调用的接入流程，订阅规则，消息格式与加密协议，以及详细的接入方案请参阅<a href="https://help.aliyun.com/zh/aidge/asynchronous-interface-call-instructions">异步接口调用说明</a>。</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// TextTranslateAsyncRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TextTranslateAsyncResponse
+        /// </returns>
+        public async Task<TextTranslateAsyncResponse> TextTranslateAsyncWithOptionsAsync(TextTranslateAsyncRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            TextTranslateAsyncShrinkRequest request = new TextTranslateAsyncShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceTextList))
+            {
+                request.SourceTextListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceTextList, "SourceTextList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizName))
+            {
+                query["BizName"] = request.BizName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FormatType))
+            {
+                query["FormatType"] = request.FormatType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
+            {
+                query["Glossary"] = request.Glossary;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            {
+                query["SourceLanguage"] = request.SourceLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTextListShrink))
+            {
+                query["SourceTextList"] = request.SourceTextListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            {
+                query["TargetLanguage"] = request.TargetLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslateScene))
+            {
+                query["TranslateScene"] = request.TranslateScene;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TextTranslateAsync",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TextTranslateAsyncResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文本翻译异步</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>适用场景</h2>
+        /// <list type="bullet">
+        /// <item><description><para>商品标题：Maas MT大模型翻译可以将商品标题中的短语、关键词、流行词等准确翻译成目标语言，提升商品在电商平台的曝光率。</para>
+        /// </description></item>
+        /// <item><description><para>商品详描：商品详描整体文本较长、格式多样且复杂，Maas 大模型翻译支持长文本翻译和 HTML 格式，翻译效果和格式还原能力表现出色。</para>
+        /// </description></item>
+        /// <item><description><para>商品属性：商品属性词汇较短，且存在电商专有词（如型号、参数）等。</para>
+        /// </description></item>
+        /// <item><description><para>客服对话：在客服场景中，可优化“上下文缺失、打字错误“等问题，并在部分语向上支持礼貌用语。</para>
+        /// </description></item>
+        /// </list>
+        /// <para>      同时，Maas MT大模型翻译也可以用于通用场景的翻译，如办公、会议、日常对话等。</para>
+        /// <h2>功能介绍</h2>
+        /// <list type="bullet">
+        /// <item><description><para><b>超低幻觉率与高速推理</b> Maas MT大模型翻译是在翻译场景上经过偏好对齐的大语言模型，与通用大语言模型相比，翻译推理速度快，幻觉率极低，尤其适合大规模调用的场景。</para>
+        /// </description></item>
+        /// <item><description><para><b>支持翻译的文本格式类型</b> 当前支持 text 和 html 的文本类型。</para>
+        /// </description></item>
+        /// <item><description><para><b>翻译干预能力支持</b> 支持自定义翻译结果，包含不被翻译（ABC-ABC），指定翻译（ABC-DEF），不翻译（ABC-空值）。常用于品牌词保护等场景。只需调用接口时传入相应的干预词表ID，即可实现，可满足您在不同场景下的翻译需求。一般您可以上传10万条干预词，如有更多需要可以联系平台进行处理。</para>
+        /// </description></item>
+        /// <item><description><para><b>翻译效果对比</b></para>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>原文</b></th>
+        /// <th><b>Aidge译后</b></th>
+        /// <th><b>其他翻译产品1</b></th>
+        /// <th><b>其他翻译产品2</b></th>
+        /// <th><b>Aidge翻译优势</b></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>75mm 4Pin 0.38A GA81S2U 12V GTX 960 Cooling Fan for Zotac GTX960 Graphics Card Cooling Fan</td>
+        /// <td>75mm 4Pin 0.38A GA81S2U 12V GTX 960, ventilador de enfriamiento para tarjeta gráfica Zotac GTX960.</td>
+        /// <td>Ventilador de refrigeración de 75mm 4Pin 0.38A GA81S2U 12V para la tarjeta gráfica Zotac GTX960 Ventilador de enfriamiento GTX 960.</td>
+        /// <td>Ventilador de refrigeración para tarjeta gráfica Zotac GTX960, 75mm, 4 pines, 0,38A, GA81S2U, 12V, GTX 960</td>
+        /// <td>商品主体更清晰</td>
+        /// </tr>
+        /// <tr>
+        /// <td>New Arrival Classic Style Luxury Brand 6 Hands Swiss Automatic Mechanical Men\&quot;s Business Steel Watch</td>
+        /// <td>Nueva llegada, reloj mecánico automático de lujo con 6 manecillas, estilo clásico, de acero para hombres de negocios</td>
+        /// <td>Nueva Llegada Reloj De Acero de Negocios para Hombre con Mecanismo Automático Suizo y 6 Agujas de Estilo Clásico de Marca de Lujo.</td>
+        /// <td>Reloj de acero de negocios para hombre, mecánico automático suizo, marca de lujo, estilo clásico, 6 manos, nueva llegada</td>
+        /// <td>句式更完整，表述更清晰，断句更合理</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Men Key Bag Genuine Cow Leather Buckets Key Cases Pouch Zipper Keychain Auto Car Key Case Women Home Key Holder Wallet</td>
+        /// <td>Sac à clés pour hommes en cuir de vache véritable, étuis à clés, pochette à fermeture éclair, porte-clés, étui à clé de voiture, porte-clés pour femmes, organisateur de portefeuille</td>
+        /// <td>Porte-clés sac en cuir de vache véritable, étuis à clés en forme de seau, pochette à fermeture éclair, porte-clés auto pour voiture, étui à clés pour femmes, organisateur de clés de maison, portefeuille.</td>
+        /// <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermature éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
+        /// <td>产品主体表述更清晰明确，是“钥匙包”而非“钥匙扣”，其它译文容易对产品主体产生歧义</td>
+        /// </tr>
+        /// </tbody></table>
+        /// </description></item>
+        /// </list>
+        /// <h2>接入准备与调用流程</h2>
+        /// <para>文本翻译支持同步和异步两种调用方式。本文介绍异步调用接口，如需使用同步调用，请参阅<a href="https://api.aliyun.com/document/Aidge/2026-04-28/TextTranslate">《文本翻译-同步接口》</a>。
+        /// 文本翻译及其他能力的异步接口共用结果获取流程、RocketMQ 订阅规则、消息加密协议、依赖配置，以及 Java 消费与解密代码。
+        /// 异步调用的接入流程，订阅规则，消息格式与加密协议，以及详细的接入方案请参阅<a href="https://help.aliyun.com/zh/aidge/asynchronous-interface-call-instructions">异步接口调用说明</a>。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TextTranslateAsyncRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TextTranslateAsyncResponse
+        /// </returns>
+        public TextTranslateAsyncResponse TextTranslateAsync(TextTranslateAsyncRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return TextTranslateAsyncWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文本翻译异步</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>适用场景</h2>
+        /// <list type="bullet">
+        /// <item><description><para>商品标题：Maas MT大模型翻译可以将商品标题中的短语、关键词、流行词等准确翻译成目标语言，提升商品在电商平台的曝光率。</para>
+        /// </description></item>
+        /// <item><description><para>商品详描：商品详描整体文本较长、格式多样且复杂，Maas 大模型翻译支持长文本翻译和 HTML 格式，翻译效果和格式还原能力表现出色。</para>
+        /// </description></item>
+        /// <item><description><para>商品属性：商品属性词汇较短，且存在电商专有词（如型号、参数）等。</para>
+        /// </description></item>
+        /// <item><description><para>客服对话：在客服场景中，可优化“上下文缺失、打字错误“等问题，并在部分语向上支持礼貌用语。</para>
+        /// </description></item>
+        /// </list>
+        /// <para>      同时，Maas MT大模型翻译也可以用于通用场景的翻译，如办公、会议、日常对话等。</para>
+        /// <h2>功能介绍</h2>
+        /// <list type="bullet">
+        /// <item><description><para><b>超低幻觉率与高速推理</b> Maas MT大模型翻译是在翻译场景上经过偏好对齐的大语言模型，与通用大语言模型相比，翻译推理速度快，幻觉率极低，尤其适合大规模调用的场景。</para>
+        /// </description></item>
+        /// <item><description><para><b>支持翻译的文本格式类型</b> 当前支持 text 和 html 的文本类型。</para>
+        /// </description></item>
+        /// <item><description><para><b>翻译干预能力支持</b> 支持自定义翻译结果，包含不被翻译（ABC-ABC），指定翻译（ABC-DEF），不翻译（ABC-空值）。常用于品牌词保护等场景。只需调用接口时传入相应的干预词表ID，即可实现，可满足您在不同场景下的翻译需求。一般您可以上传10万条干预词，如有更多需要可以联系平台进行处理。</para>
+        /// </description></item>
+        /// <item><description><para><b>翻译效果对比</b></para>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>原文</b></th>
+        /// <th><b>Aidge译后</b></th>
+        /// <th><b>其他翻译产品1</b></th>
+        /// <th><b>其他翻译产品2</b></th>
+        /// <th><b>Aidge翻译优势</b></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>75mm 4Pin 0.38A GA81S2U 12V GTX 960 Cooling Fan for Zotac GTX960 Graphics Card Cooling Fan</td>
+        /// <td>75mm 4Pin 0.38A GA81S2U 12V GTX 960, ventilador de enfriamiento para tarjeta gráfica Zotac GTX960.</td>
+        /// <td>Ventilador de refrigeración de 75mm 4Pin 0.38A GA81S2U 12V para la tarjeta gráfica Zotac GTX960 Ventilador de enfriamiento GTX 960.</td>
+        /// <td>Ventilador de refrigeración para tarjeta gráfica Zotac GTX960, 75mm, 4 pines, 0,38A, GA81S2U, 12V, GTX 960</td>
+        /// <td>商品主体更清晰</td>
+        /// </tr>
+        /// <tr>
+        /// <td>New Arrival Classic Style Luxury Brand 6 Hands Swiss Automatic Mechanical Men\&quot;s Business Steel Watch</td>
+        /// <td>Nueva llegada, reloj mecánico automático de lujo con 6 manecillas, estilo clásico, de acero para hombres de negocios</td>
+        /// <td>Nueva Llegada Reloj De Acero de Negocios para Hombre con Mecanismo Automático Suizo y 6 Agujas de Estilo Clásico de Marca de Lujo.</td>
+        /// <td>Reloj de acero de negocios para hombre, mecánico automático suizo, marca de lujo, estilo clásico, 6 manos, nueva llegada</td>
+        /// <td>句式更完整，表述更清晰，断句更合理</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Men Key Bag Genuine Cow Leather Buckets Key Cases Pouch Zipper Keychain Auto Car Key Case Women Home Key Holder Wallet</td>
+        /// <td>Sac à clés pour hommes en cuir de vache véritable, étuis à clés, pochette à fermeture éclair, porte-clés, étui à clé de voiture, porte-clés pour femmes, organisateur de portefeuille</td>
+        /// <td>Porte-clés sac en cuir de vache véritable, étuis à clés en forme de seau, pochette à fermeture éclair, porte-clés auto pour voiture, étui à clés pour femmes, organisateur de clés de maison, portefeuille.</td>
+        /// <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermature éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
+        /// <td>产品主体表述更清晰明确，是“钥匙包”而非“钥匙扣”，其它译文容易对产品主体产生歧义</td>
+        /// </tr>
+        /// </tbody></table>
+        /// </description></item>
+        /// </list>
+        /// <h2>接入准备与调用流程</h2>
+        /// <para>文本翻译支持同步和异步两种调用方式。本文介绍异步调用接口，如需使用同步调用，请参阅<a href="https://api.aliyun.com/document/Aidge/2026-04-28/TextTranslate">《文本翻译-同步接口》</a>。
+        /// 文本翻译及其他能力的异步接口共用结果获取流程、RocketMQ 订阅规则、消息加密协议、依赖配置，以及 Java 消费与解密代码。
+        /// 异步调用的接入流程，订阅规则，消息格式与加密协议，以及详细的接入方案请参阅<a href="https://help.aliyun.com/zh/aidge/asynchronous-interface-call-instructions">异步接口调用说明</a>。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TextTranslateAsyncRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TextTranslateAsyncResponse
+        /// </returns>
+        public async Task<TextTranslateAsyncResponse> TextTranslateAsyncAsync(TextTranslateAsyncRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await TextTranslateAsyncWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>The e-commerce AI video generation agent is designed for e-commerce merchants and platforms. Based on product main images, titles, and selling points, it automatically generates 5- to 30-second product showcase short videos to help customers efficiently produce and distribute e-commerce content. The product supports multiple resolution outputs such as 720P and 1080P. You can invoke single products quickly and generate multiple products in batches, meeting the needs of daily operations and large-scale product content production. It currently overwrites all clothing categories (tops, pants, skirts, suits, underwear, swimwear, etc.) and is gradually expanding to core e-commerce categories such as skincare, cosmetics, food and beverages, and home appliances.</para>
         /// </summary>
         /// 
@@ -12571,26 +16663,26 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Translates embedded text in video frames, such as subtitles and selling points, into a target language and erases the original text.</para>
+        /// <para>Translates embedded text, such as subtitles and selling point text, in video frames into a target language and erases the original text.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>1. Product introduction</h2>
-        /// <para>The video translation API translates embedded text in video frames, such as subtitles and selling points, into a target language and erases the original text. It is applicable to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising.
-        /// The API uses an asynchronous call mode. After you submit a translation task, you obtain a task_id and poll the task status through the query API until the task is completed to obtain the result.</para>
-        /// <h2>2. Scenarios</h2>
+        /// <h2>Product introduction</h2>
+        /// <para>The video translation API translates speech and on-screen text in videos into a target language. You can select speech and subtitle translation, on-screen text translation, or both. This API is suitable for scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising.
+        /// The API uses an asynchronous invocation mode. After you submit a translation task, you obtain a <c>TaskId</c>. You can poll the task status by using the query API until the task is completed and the results are returned.</para>
+        /// <h2>Scenarios</h2>
         /// <list type="bullet">
         /// <item><description><para><b>Cross-border e-commerce video localization</b>: Translates selling point text in product introduction videos into the language of the target market to facilitate promotion on overseas platforms.</para>
         /// </description></item>
-        /// <item><description><para><b>International social media marketing</b>: Localizes text content in video frames with one click for platforms such as TikTok, Instagram, and YouTube to improve comprehension and conversion rates among overseas users.</para>
+        /// <item><description><para><b>International social media marketing</b>: Localizes on-screen text in videos for platforms such as TikTok, Instagram, and YouTube with one click to improve comprehension and conversion rates among overseas users.</para>
         /// </description></item>
-        /// <item><description><para><b>Global brand advertising</b>: Automatically generates video versions in the corresponding languages based on the delivery regions to reduce manual production costs.</para>
+        /// <item><description><para><b>Global brand advertising</b>: Automatically generates video versions in the languages of the target regions to reduce manual production costs.</para>
         /// </description></item>
-        /// <item><description><para><b>Training and product instructions</b>: Translates text in video frames of training courses or product demonstration videos into multiple languages for global teams.</para>
+        /// <item><description><para><b>Training and product instructions</b>: Translates on-screen text in training courses or product demonstration videos into multiple languages for global teams.</para>
         /// </description></item>
         /// </list>
-        /// <h2>3. Features</h2>
+        /// <h2>Features</h2>
         /// <table>
         /// <thead>
         /// <tr>
@@ -12600,15 +16692,31 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>Visual translation</td>
-        /// <td>visual</td>
-        /// <td>Translates embedded text in video frames, such as subtitles and selling points, and erases the original text.</td>
+        /// <td>Speech and subtitle translation</td>
+        /// <td><c>speech</c></td>
+        /// <td>Translates video speech into target language dubbing. Does not remove original subtitles or add new subtitles.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>On-screen text translation</td>
+        /// <td><c>visual</c></td>
+        /// <td>Translates embedded text, such as subtitles and selling point text, in video frames and erases the original text. You can enable quality check for on-screen text processing by using the API.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Speech and subtitle translation (<c>speech</c>) generates target language dubbing based on the spoken content in the video and synthesizes it into the video. It does not remove original subtitles or add new subtitles. Original subtitles refer to the existing subtitles in the video frames that correspond to the spoken content.</td>
+        /// <td></td>
+        /// <td></td>
+        /// </tr>
+        /// <tr>
+        /// <td>On-screen text translation (<c>visual</c>) targets recognizable original text in video frames, such as titles, product selling points, and descriptive text. It can be used independently without selecting speech and subtitle translation first, and the text does not need to appear in the speech. Original subtitles within the processing scope may also be processed.</td>
+        /// <td></td>
+        /// <td></td>
+        /// </tr>
+        /// <tr>
+        /// <td>When both <c>speech</c> and <c>visual</c> are selected, the speech and subtitle translation is completed and synthesized into the video first. Then, on-screen text processing is performed on this video. The translated dubbing is retained, and a final video is output. The order of features in the array does not affect the execution order. Therefore, not processing original subtitles only means that the speech and subtitle phase does not remove or add subtitles. The subsequent on-screen text processing may still modify the original subtitles.</td>
+        /// <td></td>
+        /// <td></td>
         /// </tr>
         /// </tbody></table>
-        /// <h2>4. Developer guide.</h2>
-        /// <h3>4.1 Submit a translation task.</h3>
-        /// <h4>Request</h4>
-        /// <para><c>POST /api/v1/video/translation</c></para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -12672,26 +16780,26 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Translates embedded text in video frames, such as subtitles and selling points, into a target language and erases the original text.</para>
+        /// <para>Translates embedded text, such as subtitles and selling point text, in video frames into a target language and erases the original text.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>1. Product introduction</h2>
-        /// <para>The video translation API translates embedded text in video frames, such as subtitles and selling points, into a target language and erases the original text. It is applicable to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising.
-        /// The API uses an asynchronous call mode. After you submit a translation task, you obtain a task_id and poll the task status through the query API until the task is completed to obtain the result.</para>
-        /// <h2>2. Scenarios</h2>
+        /// <h2>Product introduction</h2>
+        /// <para>The video translation API translates speech and on-screen text in videos into a target language. You can select speech and subtitle translation, on-screen text translation, or both. This API is suitable for scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising.
+        /// The API uses an asynchronous invocation mode. After you submit a translation task, you obtain a <c>TaskId</c>. You can poll the task status by using the query API until the task is completed and the results are returned.</para>
+        /// <h2>Scenarios</h2>
         /// <list type="bullet">
         /// <item><description><para><b>Cross-border e-commerce video localization</b>: Translates selling point text in product introduction videos into the language of the target market to facilitate promotion on overseas platforms.</para>
         /// </description></item>
-        /// <item><description><para><b>International social media marketing</b>: Localizes text content in video frames with one click for platforms such as TikTok, Instagram, and YouTube to improve comprehension and conversion rates among overseas users.</para>
+        /// <item><description><para><b>International social media marketing</b>: Localizes on-screen text in videos for platforms such as TikTok, Instagram, and YouTube with one click to improve comprehension and conversion rates among overseas users.</para>
         /// </description></item>
-        /// <item><description><para><b>Global brand advertising</b>: Automatically generates video versions in the corresponding languages based on the delivery regions to reduce manual production costs.</para>
+        /// <item><description><para><b>Global brand advertising</b>: Automatically generates video versions in the languages of the target regions to reduce manual production costs.</para>
         /// </description></item>
-        /// <item><description><para><b>Training and product instructions</b>: Translates text in video frames of training courses or product demonstration videos into multiple languages for global teams.</para>
+        /// <item><description><para><b>Training and product instructions</b>: Translates on-screen text in training courses or product demonstration videos into multiple languages for global teams.</para>
         /// </description></item>
         /// </list>
-        /// <h2>3. Features</h2>
+        /// <h2>Features</h2>
         /// <table>
         /// <thead>
         /// <tr>
@@ -12701,15 +16809,31 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>Visual translation</td>
-        /// <td>visual</td>
-        /// <td>Translates embedded text in video frames, such as subtitles and selling points, and erases the original text.</td>
+        /// <td>Speech and subtitle translation</td>
+        /// <td><c>speech</c></td>
+        /// <td>Translates video speech into target language dubbing. Does not remove original subtitles or add new subtitles.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>On-screen text translation</td>
+        /// <td><c>visual</c></td>
+        /// <td>Translates embedded text, such as subtitles and selling point text, in video frames and erases the original text. You can enable quality check for on-screen text processing by using the API.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Speech and subtitle translation (<c>speech</c>) generates target language dubbing based on the spoken content in the video and synthesizes it into the video. It does not remove original subtitles or add new subtitles. Original subtitles refer to the existing subtitles in the video frames that correspond to the spoken content.</td>
+        /// <td></td>
+        /// <td></td>
+        /// </tr>
+        /// <tr>
+        /// <td>On-screen text translation (<c>visual</c>) targets recognizable original text in video frames, such as titles, product selling points, and descriptive text. It can be used independently without selecting speech and subtitle translation first, and the text does not need to appear in the speech. Original subtitles within the processing scope may also be processed.</td>
+        /// <td></td>
+        /// <td></td>
+        /// </tr>
+        /// <tr>
+        /// <td>When both <c>speech</c> and <c>visual</c> are selected, the speech and subtitle translation is completed and synthesized into the video first. Then, on-screen text processing is performed on this video. The translated dubbing is retained, and a final video is output. The order of features in the array does not affect the execution order. Therefore, not processing original subtitles only means that the speech and subtitle phase does not remove or add subtitles. The subsequent on-screen text processing may still modify the original subtitles.</td>
+        /// <td></td>
+        /// <td></td>
         /// </tr>
         /// </tbody></table>
-        /// <h2>4. Developer guide.</h2>
-        /// <h3>4.1 Submit a translation task.</h3>
-        /// <h4>Request</h4>
-        /// <para><c>POST /api/v1/video/translation</c></para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -12773,26 +16897,26 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Translates embedded text in video frames, such as subtitles and selling points, into a target language and erases the original text.</para>
+        /// <para>Translates embedded text, such as subtitles and selling point text, in video frames into a target language and erases the original text.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>1. Product introduction</h2>
-        /// <para>The video translation API translates embedded text in video frames, such as subtitles and selling points, into a target language and erases the original text. It is applicable to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising.
-        /// The API uses an asynchronous call mode. After you submit a translation task, you obtain a task_id and poll the task status through the query API until the task is completed to obtain the result.</para>
-        /// <h2>2. Scenarios</h2>
+        /// <h2>Product introduction</h2>
+        /// <para>The video translation API translates speech and on-screen text in videos into a target language. You can select speech and subtitle translation, on-screen text translation, or both. This API is suitable for scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising.
+        /// The API uses an asynchronous invocation mode. After you submit a translation task, you obtain a <c>TaskId</c>. You can poll the task status by using the query API until the task is completed and the results are returned.</para>
+        /// <h2>Scenarios</h2>
         /// <list type="bullet">
         /// <item><description><para><b>Cross-border e-commerce video localization</b>: Translates selling point text in product introduction videos into the language of the target market to facilitate promotion on overseas platforms.</para>
         /// </description></item>
-        /// <item><description><para><b>International social media marketing</b>: Localizes text content in video frames with one click for platforms such as TikTok, Instagram, and YouTube to improve comprehension and conversion rates among overseas users.</para>
+        /// <item><description><para><b>International social media marketing</b>: Localizes on-screen text in videos for platforms such as TikTok, Instagram, and YouTube with one click to improve comprehension and conversion rates among overseas users.</para>
         /// </description></item>
-        /// <item><description><para><b>Global brand advertising</b>: Automatically generates video versions in the corresponding languages based on the delivery regions to reduce manual production costs.</para>
+        /// <item><description><para><b>Global brand advertising</b>: Automatically generates video versions in the languages of the target regions to reduce manual production costs.</para>
         /// </description></item>
-        /// <item><description><para><b>Training and product instructions</b>: Translates text in video frames of training courses or product demonstration videos into multiple languages for global teams.</para>
+        /// <item><description><para><b>Training and product instructions</b>: Translates on-screen text in training courses or product demonstration videos into multiple languages for global teams.</para>
         /// </description></item>
         /// </list>
-        /// <h2>3. Features</h2>
+        /// <h2>Features</h2>
         /// <table>
         /// <thead>
         /// <tr>
@@ -12802,15 +16926,31 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>Visual translation</td>
-        /// <td>visual</td>
-        /// <td>Translates embedded text in video frames, such as subtitles and selling points, and erases the original text.</td>
+        /// <td>Speech and subtitle translation</td>
+        /// <td><c>speech</c></td>
+        /// <td>Translates video speech into target language dubbing. Does not remove original subtitles or add new subtitles.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>On-screen text translation</td>
+        /// <td><c>visual</c></td>
+        /// <td>Translates embedded text, such as subtitles and selling point text, in video frames and erases the original text. You can enable quality check for on-screen text processing by using the API.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Speech and subtitle translation (<c>speech</c>) generates target language dubbing based on the spoken content in the video and synthesizes it into the video. It does not remove original subtitles or add new subtitles. Original subtitles refer to the existing subtitles in the video frames that correspond to the spoken content.</td>
+        /// <td></td>
+        /// <td></td>
+        /// </tr>
+        /// <tr>
+        /// <td>On-screen text translation (<c>visual</c>) targets recognizable original text in video frames, such as titles, product selling points, and descriptive text. It can be used independently without selecting speech and subtitle translation first, and the text does not need to appear in the speech. Original subtitles within the processing scope may also be processed.</td>
+        /// <td></td>
+        /// <td></td>
+        /// </tr>
+        /// <tr>
+        /// <td>When both <c>speech</c> and <c>visual</c> are selected, the speech and subtitle translation is completed and synthesized into the video first. Then, on-screen text processing is performed on this video. The translated dubbing is retained, and a final video is output. The order of features in the array does not affect the execution order. Therefore, not processing original subtitles only means that the speech and subtitle phase does not remove or add subtitles. The subsequent on-screen text processing may still modify the original subtitles.</td>
+        /// <td></td>
+        /// <td></td>
         /// </tr>
         /// </tbody></table>
-        /// <h2>4. Developer guide.</h2>
-        /// <h3>4.1 Submit a translation task.</h3>
-        /// <h4>Request</h4>
-        /// <para><c>POST /api/v1/video/translation</c></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12828,26 +16968,26 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Translates embedded text in video frames, such as subtitles and selling points, into a target language and erases the original text.</para>
+        /// <para>Translates embedded text, such as subtitles and selling point text, in video frames into a target language and erases the original text.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>1. Product introduction</h2>
-        /// <para>The video translation API translates embedded text in video frames, such as subtitles and selling points, into a target language and erases the original text. It is applicable to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising.
-        /// The API uses an asynchronous call mode. After you submit a translation task, you obtain a task_id and poll the task status through the query API until the task is completed to obtain the result.</para>
-        /// <h2>2. Scenarios</h2>
+        /// <h2>Product introduction</h2>
+        /// <para>The video translation API translates speech and on-screen text in videos into a target language. You can select speech and subtitle translation, on-screen text translation, or both. This API is suitable for scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising.
+        /// The API uses an asynchronous invocation mode. After you submit a translation task, you obtain a <c>TaskId</c>. You can poll the task status by using the query API until the task is completed and the results are returned.</para>
+        /// <h2>Scenarios</h2>
         /// <list type="bullet">
         /// <item><description><para><b>Cross-border e-commerce video localization</b>: Translates selling point text in product introduction videos into the language of the target market to facilitate promotion on overseas platforms.</para>
         /// </description></item>
-        /// <item><description><para><b>International social media marketing</b>: Localizes text content in video frames with one click for platforms such as TikTok, Instagram, and YouTube to improve comprehension and conversion rates among overseas users.</para>
+        /// <item><description><para><b>International social media marketing</b>: Localizes on-screen text in videos for platforms such as TikTok, Instagram, and YouTube with one click to improve comprehension and conversion rates among overseas users.</para>
         /// </description></item>
-        /// <item><description><para><b>Global brand advertising</b>: Automatically generates video versions in the corresponding languages based on the delivery regions to reduce manual production costs.</para>
+        /// <item><description><para><b>Global brand advertising</b>: Automatically generates video versions in the languages of the target regions to reduce manual production costs.</para>
         /// </description></item>
-        /// <item><description><para><b>Training and product instructions</b>: Translates text in video frames of training courses or product demonstration videos into multiple languages for global teams.</para>
+        /// <item><description><para><b>Training and product instructions</b>: Translates on-screen text in training courses or product demonstration videos into multiple languages for global teams.</para>
         /// </description></item>
         /// </list>
-        /// <h2>3. Features</h2>
+        /// <h2>Features</h2>
         /// <table>
         /// <thead>
         /// <tr>
@@ -12857,15 +16997,31 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>Visual translation</td>
-        /// <td>visual</td>
-        /// <td>Translates embedded text in video frames, such as subtitles and selling points, and erases the original text.</td>
+        /// <td>Speech and subtitle translation</td>
+        /// <td><c>speech</c></td>
+        /// <td>Translates video speech into target language dubbing. Does not remove original subtitles or add new subtitles.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>On-screen text translation</td>
+        /// <td><c>visual</c></td>
+        /// <td>Translates embedded text, such as subtitles and selling point text, in video frames and erases the original text. You can enable quality check for on-screen text processing by using the API.</td>
+        /// </tr>
+        /// <tr>
+        /// <td>Speech and subtitle translation (<c>speech</c>) generates target language dubbing based on the spoken content in the video and synthesizes it into the video. It does not remove original subtitles or add new subtitles. Original subtitles refer to the existing subtitles in the video frames that correspond to the spoken content.</td>
+        /// <td></td>
+        /// <td></td>
+        /// </tr>
+        /// <tr>
+        /// <td>On-screen text translation (<c>visual</c>) targets recognizable original text in video frames, such as titles, product selling points, and descriptive text. It can be used independently without selecting speech and subtitle translation first, and the text does not need to appear in the speech. Original subtitles within the processing scope may also be processed.</td>
+        /// <td></td>
+        /// <td></td>
+        /// </tr>
+        /// <tr>
+        /// <td>When both <c>speech</c> and <c>visual</c> are selected, the speech and subtitle translation is completed and synthesized into the video first. Then, on-screen text processing is performed on this video. The translated dubbing is retained, and a final video is output. The order of features in the array does not affect the execution order. Therefore, not processing original subtitles only means that the speech and subtitle phase does not remove or add subtitles. The subsequent on-screen text processing may still modify the original subtitles.</td>
+        /// <td></td>
+        /// <td></td>
         /// </tr>
         /// </tbody></table>
-        /// <h2>4. Developer guide.</h2>
-        /// <h3>4.1 Submit a translation task.</h3>
-        /// <h4>Request</h4>
-        /// <para><c>POST /api/v1/video/translation</c></para>
         /// </description>
         /// 
         /// <param name="request">

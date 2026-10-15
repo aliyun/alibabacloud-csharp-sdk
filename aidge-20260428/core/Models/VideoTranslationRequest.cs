@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class VideoTranslationRequest : TeaModel {
         /// <summary>
-        /// <para>The array of translation capabilities. Current valid value: [&quot;visual&quot;].</para>
+        /// <para>The list of translation features. Valid values: <c>speech</c> and <c>visual</c>. You can select both. At least one feature is required. Duplicate values are not accepted.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Capabilities")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public List<string> Capabilities { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the visual quality check. This parameter takes effect only when Capabilities includes visual.</para>
+        /// <para>Default value: false. If <c>visual</c> is included and this parameter is explicitly set to true, the quality check for on-screen text processing is enabled. If only <c>speech</c> is selected, this parameter is ignored. No quality check is performed, no quality check fields are returned, and no errors are reported due to this parameter. Enabling the quality check may increase the waiting time. Do not enable it unless necessary.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public bool? EnableQualityCheck { get; set; }
 
         /// <summary>
-        /// <para>The source language. This parameter is optional. Default value: auto, which indicates automatic recognition.</para>
+        /// <para>The source language. For supported languages, see &quot;Supported languages&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><a href="https://example.com/video.mp4">https://example.com/video.mp4</a></para>
+        /// <para><a href="https://cdn.example.com/product-demo.mp4">https://cdn.example.com/product-demo.mp4</a></para>
         /// </summary>
         [NameInMap("VideoUrl")]
         [Validation(Required=false)]
