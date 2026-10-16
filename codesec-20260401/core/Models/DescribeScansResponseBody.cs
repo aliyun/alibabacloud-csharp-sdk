@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
 {
     public class DescribeScansResponseBody : TeaModel {
         /// <summary>
-        /// <para>The task list.</para>
+        /// <para>The list of tasks.</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
         public List<DescribeScansResponseBodyItems> Items { get; set; }
         public class DescribeScansResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The code bundle ID.</para>
+            /// <para>The ID of the code package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The user ID of the task creator.</para>
+            /// <para>The ID of the user who created the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11111</para>
@@ -47,13 +47,13 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
             public string CreatedBy { get; set; }
 
             /// <summary>
-            /// <para>The scan phase. Valid values:</para>
+            /// <para>The current scan phase. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>threat_model: Threat modeling.</description></item>
-            /// <item><description>discovery: Vulnerability discovery.</description></item>
-            /// <item><description>panel: Vulnerability review.</description></item>
-            /// <item><description>adversarial: Adversarial verification.</description></item>
-            /// <item><description>finalize: Report generation.</description></item>
+            /// <item><description>threat_model: threat modeling</description></item>
+            /// <item><description>discovery: vulnerability discovery</description></item>
+            /// <item><description>panel: vulnerability review</description></item>
+            /// <item><description>adversarial: adversarial verification</description></item>
+            /// <item><description>finalize: report compilation</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
             public string CurrentPhase { get; set; }
 
             /// <summary>
-            /// <para>The supported scan types.</para>
+            /// <para>The supported types.</para>
             /// </summary>
             [NameInMap("engineSnapshot")]
             [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
             }
 
             /// <summary>
-            /// <para>The time when the scan finished.</para>
+            /// <para>The time when the scan ended.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-07-28T03:36:31.573Z</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
             public string FinishedAt { get; set; }
 
             /// <summary>
-            /// <para>The task ID.</para>
+            /// <para>The ID of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>934</para>
@@ -115,8 +115,8 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
             /// <summary>
             /// <para>The scan type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>full: Full scan.</description></item>
-            /// <item><description>incremental: Incremental scan.</description></item>
+            /// <item><description>full: full scan</description></item>
+            /// <item><description>incremental: incremental scan</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
             public string Kind { get; set; }
 
             /// <summary>
-            /// <para>The project ID.</para>
+            /// <para>The ID of the project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>p-n72k9yrkq81ny7z</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The scan result statistics information.</para>
+            /// <para>The statistics information of the scan results.</para>
             /// </summary>
             [NameInMap("scanMetrics")]
             [Validation(Required=false)]
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
                 public long? LinesOfCode { get; set; }
 
                 /// <summary>
-                /// <para>Deprecated.</para>
+                /// <para><b>[Deprecated]</b></para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
             }
 
             /// <summary>
-            /// <para>The task progress.</para>
+            /// <para>The progress of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -206,13 +206,13 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
             public string StartedAt { get; set; }
 
             /// <summary>
-            /// <para>The task status. Valid values:</para>
+            /// <para>The status of the task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>running: Running.</description></item>
-            /// <item><description>completed: Completed.</description></item>
-            /// <item><description>failed: Failed.</description></item>
-            /// <item><description>canceling: Being canceled. </description></item>
-            /// <item><description>canceled: Canceled.</description></item>
+            /// <item><description>running: The task is running.</description></item>
+            /// <item><description>completed: The task is completed.</description></item>
+            /// <item><description>failed: The task failed.</description></item>
+            /// <item><description>canceling: The task is being canceled. </description></item>
+            /// <item><description>canceled: The task is canceled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The task name.</para>
+            /// <para>The name of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1648622222394847-ha-cn-lm64p7tby01_dsl_kb_video_1773817008236_full</para>
@@ -233,7 +233,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
             public string TaskName { get; set; }
 
             /// <summary>
-            /// <para>The time when the task was last updated.</para>
+            /// <para>The time when the task was updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-07-28T03:36:31.573Z</para>
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
             public string UpdatedAt { get; set; }
 
             /// <summary>
-            /// <para>Deprecated.</para>
+            /// <para><b>[Deprecated]</b></para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -255,7 +255,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
         }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -265,7 +265,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. An empty value indicates the last page.</para>
+        /// <para>The pagination token. An empty value indicates that the last page is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJ0IjoiMjAyNi0wNy0xNlQwNzo1MzozOC4wMjFaIiwiaSI6MTAwMDQ0OH0</para>

@@ -643,7 +643,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成 SBOM / 许可证清单的短时下载链接</para>
+        /// <para>Generates a download link for an SBOM or license manifest that includes producer metadata.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -693,7 +693,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成 SBOM / 许可证清单的短时下载链接</para>
+        /// <para>Generates a download link for an SBOM or license manifest that includes producer metadata.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -743,7 +743,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成 SBOM / 许可证清单的短时下载链接</para>
+        /// <para>Generates a download link for an SBOM or license manifest that includes producer metadata.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -762,7 +762,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成 SBOM / 许可证清单的短时下载链接</para>
+        /// <para>Generates a download link for an SBOM or license manifest that includes producer metadata.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1223,7 +1223,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists scan tasks under a specified project with pagination.</para>
+        /// <para>Queries the scan tasks of a specific project in a paginated manner.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1250,6 +1250,10 @@ namespace AlibabaCloud.SDK.CodeSec20260401
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["query"] = request.Query;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
@@ -1281,7 +1285,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists scan tasks under a specified project with pagination.</para>
+        /// <para>Queries the scan tasks of a specific project in a paginated manner.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1308,6 +1312,10 @@ namespace AlibabaCloud.SDK.CodeSec20260401
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["query"] = request.Query;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
@@ -1339,7 +1347,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists scan tasks under a specified project with pagination.</para>
+        /// <para>Queries the scan tasks of a specific project in a paginated manner.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1358,7 +1366,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists scan tasks under a specified project with pagination.</para>
+        /// <para>Queries the scan tasks of a specific project in a paginated manner.</para>
         /// </summary>
         /// 
         /// <param name="request">
