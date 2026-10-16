@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string Algorithm { get; set; }
 
         /// <summary>
-        /// <para>The ciphertext to be decrypted. The ciphertext is encoded in Base64.</para>
+        /// <para>The ciphertext to decrypt, encoded in Base64. </para>
         /// <remarks>
-        /// <para>You can generate a ciphertext by calling the <a href="https://help.aliyun.com/document_detail/148131.html">AsymmetricEncrypt</a> operation.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/148131.html">AsymmetricEncrypt</a> operation to generate the ciphertext.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,21 +35,16 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string CiphertextBlob { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the dry run feature.</para>
+        /// <para>Specifies whether to enable DryRun mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: enables the dry run feature.</para>
-        /// </description></item>
-        /// <item><description><para>false: disables the dry run feature. This is the default value.</para>
-        /// </description></item>
+        /// <item><description>true: Enabled.</description></item>
+        /// <item><description>false (default): Disabled.</description></item>
         /// </list>
-        /// <para>The dry run feature is used to test API calls, verify the permissions on the specified resources, and check the validity of the request parameters. If you enable the dry run feature, KMS always returns a failure response and the cause of the failure. The causes of the failure include the following:</para>
+        /// <para>DryRun mode is used to test API calls, verify that you have the required permissions on the relevant resources, and check whether the request parameters are configured correctly. When DryRun mode is enabled, KMS always returns a failure with a reason. The failure reasons include the following:</para>
         /// <list type="bullet">
-        /// <item><description><para>DryRunOperationError: The request would have succeeded if the DryRun parameter is not specified.</para>
-        /// </description></item>
-        /// <item><description><para>ValidationError: The specified parameter in the request is invalid.</para>
-        /// </description></item>
-        /// <item><description><para>AccessDeniedError: You are not authorized to perform this operation on the KMS resource.</para>
-        /// </description></item>
+        /// <item><description>DryRunOperationError: The request would succeed if the DryRun parameter were not specified.</description></item>
+        /// <item><description>ValidationError: A parameter specified in the request is invalid.</description></item>
+        /// <item><description>AccessDeniedError: You do not have permission to perform this operation on the KMS resource.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,9 +55,9 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string DryRun { get; set; }
 
         /// <summary>
-        /// <para>The ID of the key. You can also specify the alias or Amazon Resource Name (ARN) of the key. For more information about aliases, see <a href="https://help.aliyun.com/document_detail/480655.html">Manage aliases</a>.</para>
+        /// <para>The ID of the key. You can also specify a key alias or a key Amazon Resource Name (ARN). For more information about aliases, see <a href="https://help.aliyun.com/document_detail/480655.html">Manage key aliases</a>.</para>
         /// <remarks>
-        /// <para>When you access a key in another Alibaba Cloud account, you must specify the ARN of the key. The ARN of a key is in the <c>acs:kms:${region}:${account}:key/${keyid}</c> format.</para>
+        /// <para>To access a key that belongs to another Alibaba Cloud account, you must specify the key ARN. The key ARN format is <c>acs:kms:${region}:${account}:key/${keyid}</c>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -74,7 +69,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string KeyId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the key version. The globally unique identifier of the key version.</para>
+        /// <para>The key version ID. The globally unique identifier of the key version.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

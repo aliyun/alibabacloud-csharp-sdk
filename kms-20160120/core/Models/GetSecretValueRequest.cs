@@ -12,14 +12,14 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <summary>
         /// <para>Specifies whether to enable DryRun mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: enables DryRun mode.</description></item>
-        /// <item><description>false (default): disables DryRun mode.</description></item>
+        /// <item><description>true: Enables DryRun mode.</description></item>
+        /// <item><description>false (default): Disables DryRun mode.</description></item>
         /// </list>
-        /// <para>DryRun mode is used to test API calls and verify whether you have the required permissions on the corresponding resources and whether the request parameters are correctly configured. When DryRun mode is enabled, KMS always returns a failure and provides the failure reason. Failure reasons include:</para>
+        /// <para>DryRun mode is used to test API calls, verify whether you have the required permissions on the specified resources, and check whether the request parameters are configured correctly. When DryRun mode is enabled, KMS always returns a failure with the reason for the failure. Possible failure reasons include:</para>
         /// <list type="bullet">
-        /// <item><description>DryRunOperationError: The request would succeed without the DryRun parameter.</description></item>
-        /// <item><description>ValidationError: The parameters specified in the request are invalid.</description></item>
-        /// <item><description>AccessDeniedError: You are not authorized to perform this operation on the KMS resource.</description></item>
+        /// <item><description>DryRunOperationError: The request would succeed if the DryRun parameter were not configured.</description></item>
+        /// <item><description>ValidationError: A parameter specified in the request is invalid.</description></item>
+        /// <item><description>AccessDeniedError: You do not have permission to perform this operation on the KMS resource.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -32,11 +32,11 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <summary>
         /// <para>Specifies whether to retrieve the extended configuration of the secret. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: retrieves the extended configuration.</description></item>
-        /// <item><description>false (default): does not retrieve the extended configuration.</description></item>
+        /// <item><description>true: Retrieves the extended configuration.</description></item>
+        /// <item><description>false (default): Does not retrieve the extended configuration.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Generic secrets do not support extended configurations. This parameter is ignored if specified.</para>
+        /// <para>Generic secrets do not support extended configuration. If you set this parameter, it is ignored.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <summary>
         /// <para>The secret name or secret Alibaba Cloud Resource Name (ARN).</para>
         /// <remarks>
-        /// <para>To access a secret in another Alibaba Cloud account, you must specify the secret ARN. The format of the secret ARN is <c>acs:kms:${region}:${account}:secret/${secret-name}</c>.</para>
+        /// <para>When accessing a secret in another Alibaba Cloud account, you must enter the secret ARN. The format of the secret ARN is <c>acs:kms:${region}:${account}:secret/${secret-name}</c>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <summary>
         /// <para>The version number.</para>
         /// <remarks>
-        /// <para>ApsaraDB RDS secrets, PolarDB secrets, Redis/Tair secrets, RAM secrets, and ECS secrets do not support specifying VersionId. This parameter is ignored if specified.</para>
+        /// <para>Specifying VersionId is not supported for ApsaraDB RDS secrets, PolarDB secrets, Redis/Tair secrets, dynamic RAM secrets, or dynamic ECS secrets. If you set this parameter, it is ignored.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -82,10 +82,10 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string VersionId { get; set; }
 
         /// <summary>
-        /// <para>The version stage. Default value: ACSCurrent.</para>
-        /// <para>If you specify this parameter, the secret value of the specified version stage is returned. If you do not specify this parameter, the secret value of the ACSCurrent version stage is returned.</para>
+        /// <para>The version status. Default value: ACSCurrent.</para>
+        /// <para>If you specify this parameter, the secret value of the specified version status is returned. If you do not specify this parameter, the secret value of the ACSCurrent version status is returned.</para>
         /// <remarks>
-        /// <para>For ApsaraDB RDS secrets, PolarDB secrets, Redis/Tair secrets, RAM secrets, and ECS secrets, you can retrieve only the secret values of the ACSPrevious and ACSCurrent versions.</para>
+        /// <para>For ApsaraDB RDS secrets, PolarDB secrets, Redis/Tair secrets, dynamic RAM secrets, and dynamic ECS secrets, only the secret values corresponding to ACSPrevious and ACSCurrent can be retrieved.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

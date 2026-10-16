@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class PutSecretValueRequest : TeaModel {
         /// <summary>
-        /// <para>The secret value. The value is encrypted and stored in the specified new version.</para>
+        /// <para>The secret value. The secret value is encrypted and stored in the specified new version.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,10 +23,8 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <summary>
         /// <para>The type of the secret value. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>text (default)</para>
-        /// </description></item>
-        /// <item><description><para>binary</para>
-        /// </description></item>
+        /// <item><description>text (default)</description></item>
+        /// <item><description>binary</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,7 +37,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <summary>
         /// <para>The name or Alibaba Cloud Resource Name (ARN) of the secret.</para>
         /// <remarks>
-        /// <para>When you access a secret in another Alibaba Cloud account, you must specify the ARN of the secret. The ARN of a secret is in the format of <c>acs:kms:${region}:${account}:secret/${secret-name}</c>.</para>
+        /// <para>When you access a secret that belongs to another Alibaba Cloud account, you must specify the ARN of the secret. The ARN of a secret is in the <c>acs:kms:${region}:${account}:secret/${secret-name}</c> format.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -51,7 +49,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string SecretName { get; set; }
 
         /// <summary>
-        /// <para>The version number of the secret. The value must be unique in the secret.</para>
+        /// <para>The version ID of the secret. The version ID must be unique within the secret.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +60,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string VersionId { get; set; }
 
         /// <summary>
-        /// <para>The stage labels that are used to mark the new version. If you do not specify this parameter, KMS marks the new version with ACSCurrent.</para>
+        /// <para>The version stages that are attached to the secret version when it is stored. If you do not specify this parameter, KMS attaches ACSCurrent to the new version by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;ACSCurrent&quot;,&quot;ACSNext&quot;]</para>

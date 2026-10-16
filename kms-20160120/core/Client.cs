@@ -22,43 +22,6 @@ namespace AlibabaCloud.SDK.Kms20160120
             AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
             this._spi = gatewayClient;
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"ap-northeast-1", "kms.ap-northeast-1.aliyuncs.com"},
-                {"ap-northeast-2", "kms.ap-northeast-2.aliyuncs.com"},
-                {"ap-southeast-7", "kms.ap-southeast-7.aliyuncs.com"},
-                {"ap-southeast-6", "kms.ap-southeast-6.aliyuncs.com"},
-                {"ap-southeast-5", "kms.ap-southeast-5.aliyuncs.com"},
-                {"ap-southeast-3", "kms.ap-southeast-3.aliyuncs.com"},
-                {"ap-southeast-1", "kms.ap-southeast-1.aliyuncs.com"},
-                {"cn-hongkong", "kms.cn-hongkong.aliyuncs.com"},
-                {"cn-chengdu", "kms.cn-chengdu.aliyuncs.com"},
-                {"cn-wulanchabu", "kms.cn-wulanchabu.aliyuncs.com"},
-                {"cn-huhehaote", "kms.cn-huhehaote.aliyuncs.com"},
-                {"cn-zhangjiakou", "kms.cn-zhangjiakou.aliyuncs.com"},
-                {"cn-beijing", "kms.cn-beijing.aliyuncs.com"},
-                {"cn-qingdao", "kms.cn-qingdao.aliyuncs.com"},
-                {"cn-guangzhou", "kms.cn-guangzhou.aliyuncs.com"},
-                {"cn-heyuan", "kms.cn-heyuan.aliyuncs.com"},
-                {"cn-shenzhen", "kms.cn-shenzhen.aliyuncs.com"},
-                {"cn-shanghai", "kms.cn-shanghai.aliyuncs.com"},
-                {"cn-hangzhou", "kms.cn-hangzhou.aliyuncs.com"},
-                {"cn-fuzhou", "kms.cn-fuzhou.aliyuncs.com"},
-                {"cn-wuhan-lr", "kms.cn-wuhan-lr.aliyuncs.com"},
-                {"cn-zhengzhou-jva", "kms.cn-zhengzhou-jva.aliyuncs.com"},
-                {"na-south-1", "kms.na-south-1.aliyuncs.com"},
-                {"eu-central-1", "kms.eu-central-1.aliyuncs.com"},
-                {"eu-west-1", "kms.eu-west-1.aliyuncs.com"},
-                {"us-west-1", "kms.us-west-1.aliyuncs.com"},
-                {"us-east-1", "kms.us-east-1.aliyuncs.com"},
-                {"me-central-1", "kms.me-central-1.aliyuncs.com"},
-                {"me-east-1", "kms.me-east-1.aliyuncs.com"},
-                {"cn-heyuan-acdr-1", "kms.cn-heyuan-acdr-1.aliyuncs.com"},
-                {"cn-hangzhou-finance", "kms.cn-hangzhou-finance.aliyuncs.com"},
-                {"cn-shanghai-finance-1", "kms.cn-shanghai-finance-1.aliyuncs.com"},
-                {"cn-shenzhen-finance-1", "kms.cn-shenzhen-finance-1.aliyuncs.com"},
-                {"cn-beijing-finance-1", "kms.cn-beijing-finance-1.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("kms", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -79,27 +42,27 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Decrypts data by using the private key of an asymmetric CMK.</para>
+        /// <para>Decrypts data using an asymmetric key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Usage notes</h3>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
-        /// <item><description>This operation can be called through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
-        /// <item><description>Shared gateway: You can access KMS over the Internet or a VPC. To access KMS over the Internet, you must enable the public endpoint. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
-        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// <item><description>For details about the access policies that must be granted to a RAM user or RAM role to invoke this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>This operation can be invoked through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: Access KMS using a public endpoint or a VPC endpoint. This method requires you to enable public network access. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: Access KMS using a KMS private endpoint (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <h3>QPS limits</h3>
         /// <list type="bullet">
-        /// <item><description>If you use a shared gateway, the queries per second (QPS) limit for each Alibaba Cloud account is 200. If the QPS exceeds the limit, the API call is throttled. This can affect your business. We recommend that you plan your calls to avoid exceeding this limit.</description></item>
-        /// <item><description>If you use a dedicated gateway, the QPS limit for each Alibaba Cloud account is subject to the performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// <item><description>Calls through a shared gateway: The QPS limit for a single user is 200 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable rate.</description></item>
+        /// <item><description>Calls through a dedicated gateway: The QPS limit for a single user is determined by the performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance data</a>.</description></item>
         /// </list>
-        /// <h3>Description</h3>
-        /// <para>This operation supports only asymmetric keys for which the <b>Usage</b> parameter is set to <b>ENCRYPT/DECRYPT</b>. The following table describes the supported encryption algorithms.</para>
+        /// <h3>Details</h3>
+        /// <para>Only asymmetric keys with <b>Usage</b> set to <b>ENCRYPT/DECRYPT</b> are supported. The following table lists the supported encryption algorithms:</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -137,10 +100,10 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <td>EC_SM2</td>
         /// <td>SM2PKE</td>
         /// <td>SM2 elliptic curve public key encryption algorithm</td>
-        /// <td>Maximum 6,144</td>
+        /// <td>Up to 6144</td>
         /// </tr>
         /// <tr>
-        /// <td>This topic provides an example of how to use the asymmetric key whose ID is <c>key-hzz630494463ejqjx****</c> and version ID is <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c> to decrypt the ciphertext <c>BQKP+1zK6+ZEMxTP5qaVzcsgXtWplYBKm0NXdSnB5FzliFxE1bSiu4dnEIlca2JpeH7yz1/S6fed630H+hIH6DoM25fTLNcKj+mFB0Xnh9m2+HN59Mn4qyTfcUeadnfCXSWcGBouhXFwcdd2rJ3n337bzTf4jm659gZu3L0i6PLuxM9p7mqdwO0cKJPfGVfhnfMz+f4alMg79WB/NNyE2lyX7/qxvV49ObNrrJbKSFiz8Djocaf0IESNLMbfYI5bXjWkJlX92DQbKhibtQW8ZOJ//ZC6t0AWcUoKL6QDm/dg5koQalcleRinpB+QadFm894sLbVZ9+N4GVsv1W****==</c> using the <c>RSAES_OAEP_SHA_1</c> decryption algorithm.</td>
+        /// <td>This topic provides an example of using an asymmetric key with key ID <c>key-hzz630494463ejqjx****</c> and key version ID <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c> to decrypt the ciphertext <c>BQKP+1zK6+ZEMxTP5qaVzcsgXtWplYBKm0NXdSnB5FzliFxE1bSiu4dnEIlca2JpeH7yz1/S6fed630H+hIH6DoM25fTLNcKj+mFB0Xnh9m2+HN59Mn4qyTfcUeadnfCXSWcGBouhXFwcdd2rJ3n337bzTf4jm659gZu3L0i6PLuxM9p7mqdwO0cKJPfGVfhnfMz+f4alMg79WB/NNyE2lyX7/qxvV49ObNrrJbKSFiz8Djocaf0IESNLMbfYI5bXjWkJlX92DQbKhibtQW8ZOJ//ZC6t0AWcUoKL6QDm/dg5koQalcleRinpB+QadFm894sLbVZ9+N4GVsv1W****==</c> using the decryption algorithm <c>RSAES_OAEP_SHA_1</c>.</td>
         /// <td></td>
         /// <td></td>
         /// <td></td>
@@ -209,27 +172,27 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Decrypts data by using the private key of an asymmetric CMK.</para>
+        /// <para>Decrypts data using an asymmetric key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Usage notes</h3>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
-        /// <item><description>This operation can be called through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
-        /// <item><description>Shared gateway: You can access KMS over the Internet or a VPC. To access KMS over the Internet, you must enable the public endpoint. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
-        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// <item><description>For details about the access policies that must be granted to a RAM user or RAM role to invoke this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>This operation can be invoked through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: Access KMS using a public endpoint or a VPC endpoint. This method requires you to enable public network access. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: Access KMS using a KMS private endpoint (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <h3>QPS limits</h3>
         /// <list type="bullet">
-        /// <item><description>If you use a shared gateway, the queries per second (QPS) limit for each Alibaba Cloud account is 200. If the QPS exceeds the limit, the API call is throttled. This can affect your business. We recommend that you plan your calls to avoid exceeding this limit.</description></item>
-        /// <item><description>If you use a dedicated gateway, the QPS limit for each Alibaba Cloud account is subject to the performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// <item><description>Calls through a shared gateway: The QPS limit for a single user is 200 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable rate.</description></item>
+        /// <item><description>Calls through a dedicated gateway: The QPS limit for a single user is determined by the performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance data</a>.</description></item>
         /// </list>
-        /// <h3>Description</h3>
-        /// <para>This operation supports only asymmetric keys for which the <b>Usage</b> parameter is set to <b>ENCRYPT/DECRYPT</b>. The following table describes the supported encryption algorithms.</para>
+        /// <h3>Details</h3>
+        /// <para>Only asymmetric keys with <b>Usage</b> set to <b>ENCRYPT/DECRYPT</b> are supported. The following table lists the supported encryption algorithms:</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -267,10 +230,10 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <td>EC_SM2</td>
         /// <td>SM2PKE</td>
         /// <td>SM2 elliptic curve public key encryption algorithm</td>
-        /// <td>Maximum 6,144</td>
+        /// <td>Up to 6144</td>
         /// </tr>
         /// <tr>
-        /// <td>This topic provides an example of how to use the asymmetric key whose ID is <c>key-hzz630494463ejqjx****</c> and version ID is <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c> to decrypt the ciphertext <c>BQKP+1zK6+ZEMxTP5qaVzcsgXtWplYBKm0NXdSnB5FzliFxE1bSiu4dnEIlca2JpeH7yz1/S6fed630H+hIH6DoM25fTLNcKj+mFB0Xnh9m2+HN59Mn4qyTfcUeadnfCXSWcGBouhXFwcdd2rJ3n337bzTf4jm659gZu3L0i6PLuxM9p7mqdwO0cKJPfGVfhnfMz+f4alMg79WB/NNyE2lyX7/qxvV49ObNrrJbKSFiz8Djocaf0IESNLMbfYI5bXjWkJlX92DQbKhibtQW8ZOJ//ZC6t0AWcUoKL6QDm/dg5koQalcleRinpB+QadFm894sLbVZ9+N4GVsv1W****==</c> using the <c>RSAES_OAEP_SHA_1</c> decryption algorithm.</td>
+        /// <td>This topic provides an example of using an asymmetric key with key ID <c>key-hzz630494463ejqjx****</c> and key version ID <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c> to decrypt the ciphertext <c>BQKP+1zK6+ZEMxTP5qaVzcsgXtWplYBKm0NXdSnB5FzliFxE1bSiu4dnEIlca2JpeH7yz1/S6fed630H+hIH6DoM25fTLNcKj+mFB0Xnh9m2+HN59Mn4qyTfcUeadnfCXSWcGBouhXFwcdd2rJ3n337bzTf4jm659gZu3L0i6PLuxM9p7mqdwO0cKJPfGVfhnfMz+f4alMg79WB/NNyE2lyX7/qxvV49ObNrrJbKSFiz8Djocaf0IESNLMbfYI5bXjWkJlX92DQbKhibtQW8ZOJ//ZC6t0AWcUoKL6QDm/dg5koQalcleRinpB+QadFm894sLbVZ9+N4GVsv1W****==</c> using the decryption algorithm <c>RSAES_OAEP_SHA_1</c>.</td>
         /// <td></td>
         /// <td></td>
         /// <td></td>
@@ -339,27 +302,27 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Decrypts data by using the private key of an asymmetric CMK.</para>
+        /// <para>Decrypts data using an asymmetric key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Usage notes</h3>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
-        /// <item><description>This operation can be called through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
-        /// <item><description>Shared gateway: You can access KMS over the Internet or a VPC. To access KMS over the Internet, you must enable the public endpoint. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
-        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// <item><description>For details about the access policies that must be granted to a RAM user or RAM role to invoke this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>This operation can be invoked through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: Access KMS using a public endpoint or a VPC endpoint. This method requires you to enable public network access. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: Access KMS using a KMS private endpoint (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <h3>QPS limits</h3>
         /// <list type="bullet">
-        /// <item><description>If you use a shared gateway, the queries per second (QPS) limit for each Alibaba Cloud account is 200. If the QPS exceeds the limit, the API call is throttled. This can affect your business. We recommend that you plan your calls to avoid exceeding this limit.</description></item>
-        /// <item><description>If you use a dedicated gateway, the QPS limit for each Alibaba Cloud account is subject to the performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// <item><description>Calls through a shared gateway: The QPS limit for a single user is 200 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable rate.</description></item>
+        /// <item><description>Calls through a dedicated gateway: The QPS limit for a single user is determined by the performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance data</a>.</description></item>
         /// </list>
-        /// <h3>Description</h3>
-        /// <para>This operation supports only asymmetric keys for which the <b>Usage</b> parameter is set to <b>ENCRYPT/DECRYPT</b>. The following table describes the supported encryption algorithms.</para>
+        /// <h3>Details</h3>
+        /// <para>Only asymmetric keys with <b>Usage</b> set to <b>ENCRYPT/DECRYPT</b> are supported. The following table lists the supported encryption algorithms:</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -397,10 +360,10 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <td>EC_SM2</td>
         /// <td>SM2PKE</td>
         /// <td>SM2 elliptic curve public key encryption algorithm</td>
-        /// <td>Maximum 6,144</td>
+        /// <td>Up to 6144</td>
         /// </tr>
         /// <tr>
-        /// <td>This topic provides an example of how to use the asymmetric key whose ID is <c>key-hzz630494463ejqjx****</c> and version ID is <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c> to decrypt the ciphertext <c>BQKP+1zK6+ZEMxTP5qaVzcsgXtWplYBKm0NXdSnB5FzliFxE1bSiu4dnEIlca2JpeH7yz1/S6fed630H+hIH6DoM25fTLNcKj+mFB0Xnh9m2+HN59Mn4qyTfcUeadnfCXSWcGBouhXFwcdd2rJ3n337bzTf4jm659gZu3L0i6PLuxM9p7mqdwO0cKJPfGVfhnfMz+f4alMg79WB/NNyE2lyX7/qxvV49ObNrrJbKSFiz8Djocaf0IESNLMbfYI5bXjWkJlX92DQbKhibtQW8ZOJ//ZC6t0AWcUoKL6QDm/dg5koQalcleRinpB+QadFm894sLbVZ9+N4GVsv1W****==</c> using the <c>RSAES_OAEP_SHA_1</c> decryption algorithm.</td>
+        /// <td>This topic provides an example of using an asymmetric key with key ID <c>key-hzz630494463ejqjx****</c> and key version ID <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c> to decrypt the ciphertext <c>BQKP+1zK6+ZEMxTP5qaVzcsgXtWplYBKm0NXdSnB5FzliFxE1bSiu4dnEIlca2JpeH7yz1/S6fed630H+hIH6DoM25fTLNcKj+mFB0Xnh9m2+HN59Mn4qyTfcUeadnfCXSWcGBouhXFwcdd2rJ3n337bzTf4jm659gZu3L0i6PLuxM9p7mqdwO0cKJPfGVfhnfMz+f4alMg79WB/NNyE2lyX7/qxvV49ObNrrJbKSFiz8Djocaf0IESNLMbfYI5bXjWkJlX92DQbKhibtQW8ZOJ//ZC6t0AWcUoKL6QDm/dg5koQalcleRinpB+QadFm894sLbVZ9+N4GVsv1W****==</c> using the decryption algorithm <c>RSAES_OAEP_SHA_1</c>.</td>
         /// <td></td>
         /// <td></td>
         /// <td></td>
@@ -423,27 +386,27 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Decrypts data by using the private key of an asymmetric CMK.</para>
+        /// <para>Decrypts data using an asymmetric key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Usage notes</h3>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
-        /// <item><description>This operation can be called through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
-        /// <item><description>Shared gateway: You can access KMS over the Internet or a VPC. To access KMS over the Internet, you must enable the public endpoint. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
-        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// <item><description>For details about the access policies that must be granted to a RAM user or RAM role to invoke this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>This operation can be invoked through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: Access KMS using a public endpoint or a VPC endpoint. This method requires you to enable public network access. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: Access KMS using a KMS private endpoint (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <h3>QPS limits</h3>
         /// <list type="bullet">
-        /// <item><description>If you use a shared gateway, the queries per second (QPS) limit for each Alibaba Cloud account is 200. If the QPS exceeds the limit, the API call is throttled. This can affect your business. We recommend that you plan your calls to avoid exceeding this limit.</description></item>
-        /// <item><description>If you use a dedicated gateway, the QPS limit for each Alibaba Cloud account is subject to the performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// <item><description>Calls through a shared gateway: The QPS limit for a single user is 200 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable rate.</description></item>
+        /// <item><description>Calls through a dedicated gateway: The QPS limit for a single user is determined by the performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance data</a>.</description></item>
         /// </list>
-        /// <h3>Description</h3>
-        /// <para>This operation supports only asymmetric keys for which the <b>Usage</b> parameter is set to <b>ENCRYPT/DECRYPT</b>. The following table describes the supported encryption algorithms.</para>
+        /// <h3>Details</h3>
+        /// <para>Only asymmetric keys with <b>Usage</b> set to <b>ENCRYPT/DECRYPT</b> are supported. The following table lists the supported encryption algorithms:</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -481,10 +444,10 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <td>EC_SM2</td>
         /// <td>SM2PKE</td>
         /// <td>SM2 elliptic curve public key encryption algorithm</td>
-        /// <td>Maximum 6,144</td>
+        /// <td>Up to 6144</td>
         /// </tr>
         /// <tr>
-        /// <td>This topic provides an example of how to use the asymmetric key whose ID is <c>key-hzz630494463ejqjx****</c> and version ID is <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c> to decrypt the ciphertext <c>BQKP+1zK6+ZEMxTP5qaVzcsgXtWplYBKm0NXdSnB5FzliFxE1bSiu4dnEIlca2JpeH7yz1/S6fed630H+hIH6DoM25fTLNcKj+mFB0Xnh9m2+HN59Mn4qyTfcUeadnfCXSWcGBouhXFwcdd2rJ3n337bzTf4jm659gZu3L0i6PLuxM9p7mqdwO0cKJPfGVfhnfMz+f4alMg79WB/NNyE2lyX7/qxvV49ObNrrJbKSFiz8Djocaf0IESNLMbfYI5bXjWkJlX92DQbKhibtQW8ZOJ//ZC6t0AWcUoKL6QDm/dg5koQalcleRinpB+QadFm894sLbVZ9+N4GVsv1W****==</c> using the <c>RSAES_OAEP_SHA_1</c> decryption algorithm.</td>
+        /// <td>This topic provides an example of using an asymmetric key with key ID <c>key-hzz630494463ejqjx****</c> and key version ID <c>2ab1a983-7072-4bbc-a582-584b5bd8****</c> to decrypt the ciphertext <c>BQKP+1zK6+ZEMxTP5qaVzcsgXtWplYBKm0NXdSnB5FzliFxE1bSiu4dnEIlca2JpeH7yz1/S6fed630H+hIH6DoM25fTLNcKj+mFB0Xnh9m2+HN59Mn4qyTfcUeadnfCXSWcGBouhXFwcdd2rJ3n337bzTf4jm659gZu3L0i6PLuxM9p7mqdwO0cKJPfGVfhnfMz+f4alMg79WB/NNyE2lyX7/qxvV49ObNrrJbKSFiz8Djocaf0IESNLMbfYI5bXjWkJlX92DQbKhibtQW8ZOJ//ZC6t0AWcUoKL6QDm/dg5koQalcleRinpB+QadFm894sLbVZ9+N4GVsv1W****==</c> using the decryption algorithm <c>RSAES_OAEP_SHA_1</c>.</td>
         /// <td></td>
         /// <td></td>
         /// <td></td>
@@ -3579,20 +3542,20 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a secret and stores its initial version.</para>
+        /// <para>Creates a secret and stores the initial version of the secret.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For information about the access policy required for a Resource Access Management (RAM) user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
-        /// <item><description>Specify the secret name, the secret value for the initial version, and the version number. The initial version is marked with the ACSCurrent stage label.</description></item>
-        /// <item><description>Key Management Service (KMS) uses the key that you specify to encrypt the secret value. The key and the secret must be in the same KMS instance. The key must be a symmetric key.<remarks>
-        /// <para>KMS encrypts the secret value of each version. Metadata such as the secret name, version number, and version stage labels are not encrypted.</para>
+        /// <item><description>For details about the access policy that must be granted to a Resource Access Management (RAM) user or RAM role to invoke this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>You must specify the secret name, the secret value of the initial version, and the version ID. The status of the initial version is marked as ACSCurrent.</description></item>
+        /// <item><description>Key Management Service (KMS) uses the specified key to encrypt and protect the secret value. The key and the secret must belong to the same KMS instance, and the key must be a symmetric key.<remarks>
+        /// <para>KMS encrypts the secret value of each version. Metadata such as the secret name, version ID, and version status tags are not encrypted.</para>
         /// </remarks>
         /// </description></item>
         /// <item><description>Before you encrypt the secret value, you must have the <c>kms:GenerateDataKey</c> permission on the key.
-        /// This topic provides an example of how to create an RDS secret. The secret is named <c>mydbconninfo</c>. The <c>VersionId</c> of the initial version is <c>v1</c>. The <c>SecretData</c> is <c>{&quot;Accounts&quot;:[{&quot;AccountName&quot;:&quot;user1&quot;,&quot;AccountPassword&quot;:&quot;****&quot;}]}</c>.</description></item>
+        /// This topic provides an example of creating an ApsaraDB RDS secret named <c>mydbconninfo</c> with the initial version ID <c>VersionId</c> set to <c>v1</c> and the secret value <c>SecretData</c> set to <c>{&quot;Accounts&quot;:[{&quot;AccountName&quot;:&quot;user1&quot;,&quot;AccountPassword&quot;:&quot;****&quot;}]}</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3644,10 +3607,6 @@ namespace AlibabaCloud.SDK.Kms20160120
             {
                 query["RotationInterval"] = request.RotationInterval;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretData))
-            {
-                query["SecretData"] = request.SecretData;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretDataType))
             {
                 query["SecretDataType"] = request.SecretDataType;
@@ -3668,9 +3627,15 @@ namespace AlibabaCloud.SDK.Kms20160120
             {
                 query["VersionId"] = request.VersionId;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretData))
+            {
+                body["SecretData"] = request.SecretData;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3689,20 +3654,20 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a secret and stores its initial version.</para>
+        /// <para>Creates a secret and stores the initial version of the secret.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For information about the access policy required for a Resource Access Management (RAM) user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
-        /// <item><description>Specify the secret name, the secret value for the initial version, and the version number. The initial version is marked with the ACSCurrent stage label.</description></item>
-        /// <item><description>Key Management Service (KMS) uses the key that you specify to encrypt the secret value. The key and the secret must be in the same KMS instance. The key must be a symmetric key.<remarks>
-        /// <para>KMS encrypts the secret value of each version. Metadata such as the secret name, version number, and version stage labels are not encrypted.</para>
+        /// <item><description>For details about the access policy that must be granted to a Resource Access Management (RAM) user or RAM role to invoke this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>You must specify the secret name, the secret value of the initial version, and the version ID. The status of the initial version is marked as ACSCurrent.</description></item>
+        /// <item><description>Key Management Service (KMS) uses the specified key to encrypt and protect the secret value. The key and the secret must belong to the same KMS instance, and the key must be a symmetric key.<remarks>
+        /// <para>KMS encrypts the secret value of each version. Metadata such as the secret name, version ID, and version status tags are not encrypted.</para>
         /// </remarks>
         /// </description></item>
         /// <item><description>Before you encrypt the secret value, you must have the <c>kms:GenerateDataKey</c> permission on the key.
-        /// This topic provides an example of how to create an RDS secret. The secret is named <c>mydbconninfo</c>. The <c>VersionId</c> of the initial version is <c>v1</c>. The <c>SecretData</c> is <c>{&quot;Accounts&quot;:[{&quot;AccountName&quot;:&quot;user1&quot;,&quot;AccountPassword&quot;:&quot;****&quot;}]}</c>.</description></item>
+        /// This topic provides an example of creating an ApsaraDB RDS secret named <c>mydbconninfo</c> with the initial version ID <c>VersionId</c> set to <c>v1</c> and the secret value <c>SecretData</c> set to <c>{&quot;Accounts&quot;:[{&quot;AccountName&quot;:&quot;user1&quot;,&quot;AccountPassword&quot;:&quot;****&quot;}]}</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3754,10 +3719,6 @@ namespace AlibabaCloud.SDK.Kms20160120
             {
                 query["RotationInterval"] = request.RotationInterval;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretData))
-            {
-                query["SecretData"] = request.SecretData;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretDataType))
             {
                 query["SecretDataType"] = request.SecretDataType;
@@ -3778,9 +3739,15 @@ namespace AlibabaCloud.SDK.Kms20160120
             {
                 query["VersionId"] = request.VersionId;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretData))
+            {
+                body["SecretData"] = request.SecretData;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3799,20 +3766,20 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a secret and stores its initial version.</para>
+        /// <para>Creates a secret and stores the initial version of the secret.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For information about the access policy required for a Resource Access Management (RAM) user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
-        /// <item><description>Specify the secret name, the secret value for the initial version, and the version number. The initial version is marked with the ACSCurrent stage label.</description></item>
-        /// <item><description>Key Management Service (KMS) uses the key that you specify to encrypt the secret value. The key and the secret must be in the same KMS instance. The key must be a symmetric key.<remarks>
-        /// <para>KMS encrypts the secret value of each version. Metadata such as the secret name, version number, and version stage labels are not encrypted.</para>
+        /// <item><description>For details about the access policy that must be granted to a Resource Access Management (RAM) user or RAM role to invoke this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>You must specify the secret name, the secret value of the initial version, and the version ID. The status of the initial version is marked as ACSCurrent.</description></item>
+        /// <item><description>Key Management Service (KMS) uses the specified key to encrypt and protect the secret value. The key and the secret must belong to the same KMS instance, and the key must be a symmetric key.<remarks>
+        /// <para>KMS encrypts the secret value of each version. Metadata such as the secret name, version ID, and version status tags are not encrypted.</para>
         /// </remarks>
         /// </description></item>
         /// <item><description>Before you encrypt the secret value, you must have the <c>kms:GenerateDataKey</c> permission on the key.
-        /// This topic provides an example of how to create an RDS secret. The secret is named <c>mydbconninfo</c>. The <c>VersionId</c> of the initial version is <c>v1</c>. The <c>SecretData</c> is <c>{&quot;Accounts&quot;:[{&quot;AccountName&quot;:&quot;user1&quot;,&quot;AccountPassword&quot;:&quot;****&quot;}]}</c>.</description></item>
+        /// This topic provides an example of creating an ApsaraDB RDS secret named <c>mydbconninfo</c> with the initial version ID <c>VersionId</c> set to <c>v1</c> and the secret value <c>SecretData</c> set to <c>{&quot;Accounts&quot;:[{&quot;AccountName&quot;:&quot;user1&quot;,&quot;AccountPassword&quot;:&quot;****&quot;}]}</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3831,20 +3798,20 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a secret and stores its initial version.</para>
+        /// <para>Creates a secret and stores the initial version of the secret.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For information about the access policy required for a Resource Access Management (RAM) user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
-        /// <item><description>Specify the secret name, the secret value for the initial version, and the version number. The initial version is marked with the ACSCurrent stage label.</description></item>
-        /// <item><description>Key Management Service (KMS) uses the key that you specify to encrypt the secret value. The key and the secret must be in the same KMS instance. The key must be a symmetric key.<remarks>
-        /// <para>KMS encrypts the secret value of each version. Metadata such as the secret name, version number, and version stage labels are not encrypted.</para>
+        /// <item><description>For details about the access policy that must be granted to a Resource Access Management (RAM) user or RAM role to invoke this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>You must specify the secret name, the secret value of the initial version, and the version ID. The status of the initial version is marked as ACSCurrent.</description></item>
+        /// <item><description>Key Management Service (KMS) uses the specified key to encrypt and protect the secret value. The key and the secret must belong to the same KMS instance, and the key must be a symmetric key.<remarks>
+        /// <para>KMS encrypts the secret value of each version. Metadata such as the secret name, version ID, and version status tags are not encrypted.</para>
         /// </remarks>
         /// </description></item>
         /// <item><description>Before you encrypt the secret value, you must have the <c>kms:GenerateDataKey</c> permission on the key.
-        /// This topic provides an example of how to create an RDS secret. The secret is named <c>mydbconninfo</c>. The <c>VersionId</c> of the initial version is <c>v1</c>. The <c>SecretData</c> is <c>{&quot;Accounts&quot;:[{&quot;AccountName&quot;:&quot;user1&quot;,&quot;AccountPassword&quot;:&quot;****&quot;}]}</c>.</description></item>
+        /// This topic provides an example of creating an ApsaraDB RDS secret named <c>mydbconninfo</c> with the initial version ID <c>VersionId</c> set to <c>v1</c> and the secret value <c>SecretData</c> set to <c>{&quot;Accounts&quot;:[{&quot;AccountName&quot;:&quot;user1&quot;,&quot;AccountPassword&quot;:&quot;****&quot;}]}</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3863,24 +3830,24 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Decrypts ciphertext that was encrypted by using a CMK.</para>
+        /// <para>Decrypts ciphertext.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
-        /// <item><description>This operation can be called through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
-        /// <item><description>Shared gateway: You can access KMS over the Internet or using a VPC domain name. To use a shared gateway, you must enable Internet access. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
-        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// <item><description>For details about the access policies that Resource Access Management (RAM) users or RAM roles need to invoke this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>This operation can be invoked through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: Access KMS through public network access or a VPC endpoint. This method requires you to enable the public network switch. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: Access KMS through a KMS private endpoint (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <h3>QPS limits</h3>
         /// <list type="bullet">
-        /// <item><description>Shared gateway: The queries per second (QPS) limit for a single user for this operation is 1,000. If this limit is exceeded, API calls are throttled, which may affect your business. We recommend that you plan your calls accordingly.</description></item>
-        /// <item><description>Dedicated gateway: The QPS limit for a single user for this operation is subject to the performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// <item><description>Calls through a shared gateway: The QPS limit for a single user is 1,000 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable rate.</description></item>
+        /// <item><description>Calls through a dedicated gateway: The QPS limit for a single user is based on the performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance data</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3943,24 +3910,24 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Decrypts ciphertext that was encrypted by using a CMK.</para>
+        /// <para>Decrypts ciphertext.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
-        /// <item><description>This operation can be called through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
-        /// <item><description>Shared gateway: You can access KMS over the Internet or using a VPC domain name. To use a shared gateway, you must enable Internet access. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
-        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// <item><description>For details about the access policies that Resource Access Management (RAM) users or RAM roles need to invoke this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>This operation can be invoked through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: Access KMS through public network access or a VPC endpoint. This method requires you to enable the public network switch. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: Access KMS through a KMS private endpoint (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <h3>QPS limits</h3>
         /// <list type="bullet">
-        /// <item><description>Shared gateway: The queries per second (QPS) limit for a single user for this operation is 1,000. If this limit is exceeded, API calls are throttled, which may affect your business. We recommend that you plan your calls accordingly.</description></item>
-        /// <item><description>Dedicated gateway: The QPS limit for a single user for this operation is subject to the performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// <item><description>Calls through a shared gateway: The QPS limit for a single user is 1,000 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable rate.</description></item>
+        /// <item><description>Calls through a dedicated gateway: The QPS limit for a single user is based on the performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance data</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4023,24 +3990,24 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Decrypts ciphertext that was encrypted by using a CMK.</para>
+        /// <para>Decrypts ciphertext.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
-        /// <item><description>This operation can be called through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
-        /// <item><description>Shared gateway: You can access KMS over the Internet or using a VPC domain name. To use a shared gateway, you must enable Internet access. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
-        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// <item><description>For details about the access policies that Resource Access Management (RAM) users or RAM roles need to invoke this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>This operation can be invoked through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: Access KMS through public network access or a VPC endpoint. This method requires you to enable the public network switch. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: Access KMS through a KMS private endpoint (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <h3>QPS limits</h3>
         /// <list type="bullet">
-        /// <item><description>Shared gateway: The queries per second (QPS) limit for a single user for this operation is 1,000. If this limit is exceeded, API calls are throttled, which may affect your business. We recommend that you plan your calls accordingly.</description></item>
-        /// <item><description>Dedicated gateway: The QPS limit for a single user for this operation is subject to the performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// <item><description>Calls through a shared gateway: The QPS limit for a single user is 1,000 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable rate.</description></item>
+        /// <item><description>Calls through a dedicated gateway: The QPS limit for a single user is based on the performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance data</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4059,24 +4026,24 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Decrypts ciphertext that was encrypted by using a CMK.</para>
+        /// <para>Decrypts ciphertext.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
-        /// <item><description>This operation can be called through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
-        /// <item><description>Shared gateway: You can access KMS over the Internet or using a VPC domain name. To use a shared gateway, you must enable Internet access. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
-        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// <item><description>For details about the access policies that Resource Access Management (RAM) users or RAM roles need to invoke this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>This operation can be invoked through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: Access KMS through public network access or a VPC endpoint. This method requires you to enable the public network switch. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: Access KMS through a KMS private endpoint (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <h3>QPS limits</h3>
         /// <list type="bullet">
-        /// <item><description>Shared gateway: The queries per second (QPS) limit for a single user for this operation is 1,000. If this limit is exceeded, API calls are throttled, which may affect your business. We recommend that you plan your calls accordingly.</description></item>
-        /// <item><description>Dedicated gateway: The QPS limit for a single user for this operation is subject to the performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// <item><description>Calls through a shared gateway: The QPS limit for a single user is 1,000 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable rate.</description></item>
+        /// <item><description>Calls through a dedicated gateway: The QPS limit for a single user is based on the performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance data</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7211,36 +7178,38 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a random data key for envelope encryption. The data key is returned in both plaintext and ciphertext forms.</para>
+        /// <para>Generates a random data key (DK) for local data encryption.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For information about the permissions that are required to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
-        /// <item><description>This operation can be called using a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
-        /// <item><description>Shared gateway: You can access KMS over the Internet or a VPC. To access KMS over the Internet, you must enable the public endpoint. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
-        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// <item><description>For details about the access policies that must be granted to a Resource Access Management (RAM) user or RAM role to invoke this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>You can invoke this operation through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: Access KMS over the Internet or through a VPC endpoint. This method requires that you enable public network access. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: Access KMS through the KMS private endpoint (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <h3>QPS limits</h3>
         /// <list type="bullet">
-        /// <item><description>If you use a shared gateway to call this operation, the queries per second (QPS) limit for a single user is 1,000. If the limit is exceeded, API calls are throttled. This may affect your business. We recommend that you call this operation at a reasonable rate.</description></item>
-        /// <item><description>If you use a dedicated gateway to call this operation, the QPS limit for a single user is based on the computing performance of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// <item><description>Calls through a shared gateway: The QPS limit for a single user is 1,000 calls per second. If you exceed this limit, API calls are throttled, which may affect your business. Call this operation at a reasonable rate.</description></item>
+        /// <item><description>Calls through a dedicated gateway: The QPS limit for a single user is determined by the performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance data</a>.</description></item>
         /// </list>
-        /// <h3>Description</h3>
-        /// <para>This operation generates a random data key, encrypts the data key using the specified customer master key (CMK), and returns the plaintext and ciphertext of the data key. You can use the plaintext of the data key to encrypt data locally and outside of KMS. When you store the encrypted data, you must also store the ciphertext of the data key. You can obtain the plaintext of the data key from the Plaintext field and the ciphertext of the data key from the CiphertextBlob field in the response.
-        /// The CMK that you specify in the request is used only to encrypt the data key. It is not involved in the generation of the data key. KMS does not record or store the randomly generated data key. You are responsible for the persistence of the ciphertext of the data key.
-        /// We recommend that you perform the following steps to encrypt data locally:
-        /// 1\. Call the GenerateDataKey operation to obtain a data key for data encryption.
-        /// 2\. Use the plaintext of the data key returned in the Plaintext field of the response to encrypt data locally. Then, clear the plaintext of the data key from memory.
-        /// 3\. Store the ciphertext of the data key returned in the CiphertextBlob field of the response together with the encrypted data.
-        /// To decrypt data locally:</para>
+        /// <h3>Details</h3>
+        /// <para>This operation generates a random data key (DK), encrypts it by using the customer master key (CMK) that you specify, and returns both the plaintext and ciphertext of the DK. Use the plaintext DK to encrypt data locally outside of KMS. When you store the encrypted data, also store the ciphertext of the DK. You can retrieve the plaintext DK from the Plaintext field and the ciphertext DK from the CiphertextBlob field in the response.
+        /// The CMK specified in the request is used only to encrypt the DK and has no effect on DK generation. KMS does not record or store the randomly generated DK. You are responsible for persisting the DK ciphertext.
+        /// Use the following procedure to encrypt data locally:</para>
+        /// <ol>
+        /// <item><description>Invoke the GenerateDataKey operation to obtain a DK for data encryption.</description></item>
+        /// <item><description>Use the plaintext DK (returned in the Plaintext field of the response) to encrypt data locally, then purge the plaintext DK from memory.</description></item>
+        /// <item><description>Store the DK ciphertext (returned in the CiphertextBlob field of the response) together with the locally encrypted data.
+        /// To decrypt data locally:</description></item>
+        /// </ol>
         /// <list type="bullet">
-        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/28950.html">Decrypt</a> operation to decrypt the stored ciphertext of the data key. This operation returns the plaintext of the data key.</description></item>
-        /// <item><description>Use the plaintext of the data key to decrypt data locally. Then, clear the plaintext of the data key from memory.
-        /// This topic provides an example of how to generate a random data key for a key with the ID <c>key-hzz630494463ejqjx****</c>.</description></item>
+        /// <item><description>Invoke the <a href="https://help.aliyun.com/document_detail/28950.html">Decrypt</a> operation to decrypt the locally stored DK ciphertext. This operation returns the plaintext DK.</description></item>
+        /// <item><description>Use the plaintext DK to decrypt data locally, then purge the plaintext DK from memory.
+        /// This topic provides an example of generating a random DK for the key with the ID <c>key-hzz630494463ejqjx****</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7311,36 +7280,38 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a random data key for envelope encryption. The data key is returned in both plaintext and ciphertext forms.</para>
+        /// <para>Generates a random data key (DK) for local data encryption.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For information about the permissions that are required to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
-        /// <item><description>This operation can be called using a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
-        /// <item><description>Shared gateway: You can access KMS over the Internet or a VPC. To access KMS over the Internet, you must enable the public endpoint. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
-        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// <item><description>For details about the access policies that must be granted to a Resource Access Management (RAM) user or RAM role to invoke this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>You can invoke this operation through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: Access KMS over the Internet or through a VPC endpoint. This method requires that you enable public network access. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: Access KMS through the KMS private endpoint (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <h3>QPS limits</h3>
         /// <list type="bullet">
-        /// <item><description>If you use a shared gateway to call this operation, the queries per second (QPS) limit for a single user is 1,000. If the limit is exceeded, API calls are throttled. This may affect your business. We recommend that you call this operation at a reasonable rate.</description></item>
-        /// <item><description>If you use a dedicated gateway to call this operation, the QPS limit for a single user is based on the computing performance of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// <item><description>Calls through a shared gateway: The QPS limit for a single user is 1,000 calls per second. If you exceed this limit, API calls are throttled, which may affect your business. Call this operation at a reasonable rate.</description></item>
+        /// <item><description>Calls through a dedicated gateway: The QPS limit for a single user is determined by the performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance data</a>.</description></item>
         /// </list>
-        /// <h3>Description</h3>
-        /// <para>This operation generates a random data key, encrypts the data key using the specified customer master key (CMK), and returns the plaintext and ciphertext of the data key. You can use the plaintext of the data key to encrypt data locally and outside of KMS. When you store the encrypted data, you must also store the ciphertext of the data key. You can obtain the plaintext of the data key from the Plaintext field and the ciphertext of the data key from the CiphertextBlob field in the response.
-        /// The CMK that you specify in the request is used only to encrypt the data key. It is not involved in the generation of the data key. KMS does not record or store the randomly generated data key. You are responsible for the persistence of the ciphertext of the data key.
-        /// We recommend that you perform the following steps to encrypt data locally:
-        /// 1\. Call the GenerateDataKey operation to obtain a data key for data encryption.
-        /// 2\. Use the plaintext of the data key returned in the Plaintext field of the response to encrypt data locally. Then, clear the plaintext of the data key from memory.
-        /// 3\. Store the ciphertext of the data key returned in the CiphertextBlob field of the response together with the encrypted data.
-        /// To decrypt data locally:</para>
+        /// <h3>Details</h3>
+        /// <para>This operation generates a random data key (DK), encrypts it by using the customer master key (CMK) that you specify, and returns both the plaintext and ciphertext of the DK. Use the plaintext DK to encrypt data locally outside of KMS. When you store the encrypted data, also store the ciphertext of the DK. You can retrieve the plaintext DK from the Plaintext field and the ciphertext DK from the CiphertextBlob field in the response.
+        /// The CMK specified in the request is used only to encrypt the DK and has no effect on DK generation. KMS does not record or store the randomly generated DK. You are responsible for persisting the DK ciphertext.
+        /// Use the following procedure to encrypt data locally:</para>
+        /// <ol>
+        /// <item><description>Invoke the GenerateDataKey operation to obtain a DK for data encryption.</description></item>
+        /// <item><description>Use the plaintext DK (returned in the Plaintext field of the response) to encrypt data locally, then purge the plaintext DK from memory.</description></item>
+        /// <item><description>Store the DK ciphertext (returned in the CiphertextBlob field of the response) together with the locally encrypted data.
+        /// To decrypt data locally:</description></item>
+        /// </ol>
         /// <list type="bullet">
-        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/28950.html">Decrypt</a> operation to decrypt the stored ciphertext of the data key. This operation returns the plaintext of the data key.</description></item>
-        /// <item><description>Use the plaintext of the data key to decrypt data locally. Then, clear the plaintext of the data key from memory.
-        /// This topic provides an example of how to generate a random data key for a key with the ID <c>key-hzz630494463ejqjx****</c>.</description></item>
+        /// <item><description>Invoke the <a href="https://help.aliyun.com/document_detail/28950.html">Decrypt</a> operation to decrypt the locally stored DK ciphertext. This operation returns the plaintext DK.</description></item>
+        /// <item><description>Use the plaintext DK to decrypt data locally, then purge the plaintext DK from memory.
+        /// This topic provides an example of generating a random DK for the key with the ID <c>key-hzz630494463ejqjx****</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7411,36 +7382,38 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a random data key for envelope encryption. The data key is returned in both plaintext and ciphertext forms.</para>
+        /// <para>Generates a random data key (DK) for local data encryption.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For information about the permissions that are required to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
-        /// <item><description>This operation can be called using a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
-        /// <item><description>Shared gateway: You can access KMS over the Internet or a VPC. To access KMS over the Internet, you must enable the public endpoint. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
-        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// <item><description>For details about the access policies that must be granted to a Resource Access Management (RAM) user or RAM role to invoke this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>You can invoke this operation through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: Access KMS over the Internet or through a VPC endpoint. This method requires that you enable public network access. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: Access KMS through the KMS private endpoint (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <h3>QPS limits</h3>
         /// <list type="bullet">
-        /// <item><description>If you use a shared gateway to call this operation, the queries per second (QPS) limit for a single user is 1,000. If the limit is exceeded, API calls are throttled. This may affect your business. We recommend that you call this operation at a reasonable rate.</description></item>
-        /// <item><description>If you use a dedicated gateway to call this operation, the QPS limit for a single user is based on the computing performance of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// <item><description>Calls through a shared gateway: The QPS limit for a single user is 1,000 calls per second. If you exceed this limit, API calls are throttled, which may affect your business. Call this operation at a reasonable rate.</description></item>
+        /// <item><description>Calls through a dedicated gateway: The QPS limit for a single user is determined by the performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance data</a>.</description></item>
         /// </list>
-        /// <h3>Description</h3>
-        /// <para>This operation generates a random data key, encrypts the data key using the specified customer master key (CMK), and returns the plaintext and ciphertext of the data key. You can use the plaintext of the data key to encrypt data locally and outside of KMS. When you store the encrypted data, you must also store the ciphertext of the data key. You can obtain the plaintext of the data key from the Plaintext field and the ciphertext of the data key from the CiphertextBlob field in the response.
-        /// The CMK that you specify in the request is used only to encrypt the data key. It is not involved in the generation of the data key. KMS does not record or store the randomly generated data key. You are responsible for the persistence of the ciphertext of the data key.
-        /// We recommend that you perform the following steps to encrypt data locally:
-        /// 1\. Call the GenerateDataKey operation to obtain a data key for data encryption.
-        /// 2\. Use the plaintext of the data key returned in the Plaintext field of the response to encrypt data locally. Then, clear the plaintext of the data key from memory.
-        /// 3\. Store the ciphertext of the data key returned in the CiphertextBlob field of the response together with the encrypted data.
-        /// To decrypt data locally:</para>
+        /// <h3>Details</h3>
+        /// <para>This operation generates a random data key (DK), encrypts it by using the customer master key (CMK) that you specify, and returns both the plaintext and ciphertext of the DK. Use the plaintext DK to encrypt data locally outside of KMS. When you store the encrypted data, also store the ciphertext of the DK. You can retrieve the plaintext DK from the Plaintext field and the ciphertext DK from the CiphertextBlob field in the response.
+        /// The CMK specified in the request is used only to encrypt the DK and has no effect on DK generation. KMS does not record or store the randomly generated DK. You are responsible for persisting the DK ciphertext.
+        /// Use the following procedure to encrypt data locally:</para>
+        /// <ol>
+        /// <item><description>Invoke the GenerateDataKey operation to obtain a DK for data encryption.</description></item>
+        /// <item><description>Use the plaintext DK (returned in the Plaintext field of the response) to encrypt data locally, then purge the plaintext DK from memory.</description></item>
+        /// <item><description>Store the DK ciphertext (returned in the CiphertextBlob field of the response) together with the locally encrypted data.
+        /// To decrypt data locally:</description></item>
+        /// </ol>
         /// <list type="bullet">
-        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/28950.html">Decrypt</a> operation to decrypt the stored ciphertext of the data key. This operation returns the plaintext of the data key.</description></item>
-        /// <item><description>Use the plaintext of the data key to decrypt data locally. Then, clear the plaintext of the data key from memory.
-        /// This topic provides an example of how to generate a random data key for a key with the ID <c>key-hzz630494463ejqjx****</c>.</description></item>
+        /// <item><description>Invoke the <a href="https://help.aliyun.com/document_detail/28950.html">Decrypt</a> operation to decrypt the locally stored DK ciphertext. This operation returns the plaintext DK.</description></item>
+        /// <item><description>Use the plaintext DK to decrypt data locally, then purge the plaintext DK from memory.
+        /// This topic provides an example of generating a random DK for the key with the ID <c>key-hzz630494463ejqjx****</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7459,36 +7432,38 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a random data key for envelope encryption. The data key is returned in both plaintext and ciphertext forms.</para>
+        /// <para>Generates a random data key (DK) for local data encryption.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For information about the permissions that are required to call this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
-        /// <item><description>This operation can be called using a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
-        /// <item><description>Shared gateway: You can access KMS over the Internet or a VPC. To access KMS over the Internet, you must enable the public endpoint. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
-        /// <item><description>Dedicated gateway: You can access KMS using the private endpoint of KMS (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
+        /// <item><description>For details about the access policies that must be granted to a Resource Access Management (RAM) user or RAM role to invoke this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>You can invoke this operation through a shared gateway or a dedicated gateway. For more information, see <a href="https://help.aliyun.com/document_detail/601559.html">Alibaba Cloud SDK</a>.<list type="bullet">
+        /// <item><description>Shared gateway: Access KMS over the Internet or through a VPC endpoint. This method requires that you enable public network access. For more information, see <a href="https://help.aliyun.com/document_detail/2856718.html">Access keys in a KMS instance over the Internet</a>.</description></item>
+        /// <item><description>Dedicated gateway: Access KMS through the KMS private endpoint (<c>&lt;YOUR_KMS_INSTANCE_ID&gt;.cryptoservice.kms.aliyuncs.com</c>).</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <h3>QPS limits</h3>
         /// <list type="bullet">
-        /// <item><description>If you use a shared gateway to call this operation, the queries per second (QPS) limit for a single user is 1,000. If the limit is exceeded, API calls are throttled. This may affect your business. We recommend that you call this operation at a reasonable rate.</description></item>
-        /// <item><description>If you use a dedicated gateway to call this operation, the QPS limit for a single user is based on the computing performance of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance metrics</a>.</description></item>
+        /// <item><description>Calls through a shared gateway: The QPS limit for a single user is 1,000 calls per second. If you exceed this limit, API calls are throttled, which may affect your business. Call this operation at a reasonable rate.</description></item>
+        /// <item><description>Calls through a dedicated gateway: The QPS limit for a single user is determined by the performance specifications of your KMS instance. For more information, see <a href="https://help.aliyun.com/document_detail/480120.html">Performance data</a>.</description></item>
         /// </list>
-        /// <h3>Description</h3>
-        /// <para>This operation generates a random data key, encrypts the data key using the specified customer master key (CMK), and returns the plaintext and ciphertext of the data key. You can use the plaintext of the data key to encrypt data locally and outside of KMS. When you store the encrypted data, you must also store the ciphertext of the data key. You can obtain the plaintext of the data key from the Plaintext field and the ciphertext of the data key from the CiphertextBlob field in the response.
-        /// The CMK that you specify in the request is used only to encrypt the data key. It is not involved in the generation of the data key. KMS does not record or store the randomly generated data key. You are responsible for the persistence of the ciphertext of the data key.
-        /// We recommend that you perform the following steps to encrypt data locally:
-        /// 1\. Call the GenerateDataKey operation to obtain a data key for data encryption.
-        /// 2\. Use the plaintext of the data key returned in the Plaintext field of the response to encrypt data locally. Then, clear the plaintext of the data key from memory.
-        /// 3\. Store the ciphertext of the data key returned in the CiphertextBlob field of the response together with the encrypted data.
-        /// To decrypt data locally:</para>
+        /// <h3>Details</h3>
+        /// <para>This operation generates a random data key (DK), encrypts it by using the customer master key (CMK) that you specify, and returns both the plaintext and ciphertext of the DK. Use the plaintext DK to encrypt data locally outside of KMS. When you store the encrypted data, also store the ciphertext of the DK. You can retrieve the plaintext DK from the Plaintext field and the ciphertext DK from the CiphertextBlob field in the response.
+        /// The CMK specified in the request is used only to encrypt the DK and has no effect on DK generation. KMS does not record or store the randomly generated DK. You are responsible for persisting the DK ciphertext.
+        /// Use the following procedure to encrypt data locally:</para>
+        /// <ol>
+        /// <item><description>Invoke the GenerateDataKey operation to obtain a DK for data encryption.</description></item>
+        /// <item><description>Use the plaintext DK (returned in the Plaintext field of the response) to encrypt data locally, then purge the plaintext DK from memory.</description></item>
+        /// <item><description>Store the DK ciphertext (returned in the CiphertextBlob field of the response) together with the locally encrypted data.
+        /// To decrypt data locally:</description></item>
+        /// </ol>
         /// <list type="bullet">
-        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/28950.html">Decrypt</a> operation to decrypt the stored ciphertext of the data key. This operation returns the plaintext of the data key.</description></item>
-        /// <item><description>Use the plaintext of the data key to decrypt data locally. Then, clear the plaintext of the data key from memory.
-        /// This topic provides an example of how to generate a random data key for a key with the ID <c>key-hzz630494463ejqjx****</c>.</description></item>
+        /// <item><description>Invoke the <a href="https://help.aliyun.com/document_detail/28950.html">Decrypt</a> operation to decrypt the locally stored DK ciphertext. This operation returns the plaintext DK.</description></item>
+        /// <item><description>Use the plaintext DK to decrypt data locally, then purge the plaintext DK from memory.
+        /// This topic provides an example of generating a random DK for the key with the ID <c>key-hzz630494463ejqjx****</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9801,10 +9776,10 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For details about the access policy required for a Resource Access Management (RAM) user or RAM role to invoke this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
-        /// <item><description>If you do not specify a version number or version stage, KMS returns the secret value of the version marked as ACSCurrent by default.</description></item>
-        /// <item><description>If the secret uses a user-specified key to protect the secret value, the caller must also have the <c>kms:Decrypt</c> permission on the corresponding master key.
-        /// This topic provides an example of how to retrieve the secret value of a secret named <c>secret001</c>. The response shows that the secret value <c>SecretData</c> is <c>testdata1</c>.</description></item>
+        /// <item><description>For details about the access policy that needs to be granted to a Resource Access Management (RAM) user or RAM role to invoke this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>If you do not specify a version number or version status, KMS returns the credential value of the version marked as ACSCurrent by default.</description></item>
+        /// <item><description>If the credential uses a custom master key to protect the credential value, the caller must also have the <c>kms:Decrypt</c> permission on the corresponding master key.
+        /// This topic provides an example of retrieving the credential value of a credential named <c>secret001</c>. The response shows that the credential value <c>SecretData</c> is <c>testdata1</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9875,10 +9850,10 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For details about the access policy required for a Resource Access Management (RAM) user or RAM role to invoke this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
-        /// <item><description>If you do not specify a version number or version stage, KMS returns the secret value of the version marked as ACSCurrent by default.</description></item>
-        /// <item><description>If the secret uses a user-specified key to protect the secret value, the caller must also have the <c>kms:Decrypt</c> permission on the corresponding master key.
-        /// This topic provides an example of how to retrieve the secret value of a secret named <c>secret001</c>. The response shows that the secret value <c>SecretData</c> is <c>testdata1</c>.</description></item>
+        /// <item><description>For details about the access policy that needs to be granted to a Resource Access Management (RAM) user or RAM role to invoke this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>If you do not specify a version number or version status, KMS returns the credential value of the version marked as ACSCurrent by default.</description></item>
+        /// <item><description>If the credential uses a custom master key to protect the credential value, the caller must also have the <c>kms:Decrypt</c> permission on the corresponding master key.
+        /// This topic provides an example of retrieving the credential value of a credential named <c>secret001</c>. The response shows that the credential value <c>SecretData</c> is <c>testdata1</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9949,10 +9924,10 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For details about the access policy required for a Resource Access Management (RAM) user or RAM role to invoke this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
-        /// <item><description>If you do not specify a version number or version stage, KMS returns the secret value of the version marked as ACSCurrent by default.</description></item>
-        /// <item><description>If the secret uses a user-specified key to protect the secret value, the caller must also have the <c>kms:Decrypt</c> permission on the corresponding master key.
-        /// This topic provides an example of how to retrieve the secret value of a secret named <c>secret001</c>. The response shows that the secret value <c>SecretData</c> is <c>testdata1</c>.</description></item>
+        /// <item><description>For details about the access policy that needs to be granted to a Resource Access Management (RAM) user or RAM role to invoke this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>If you do not specify a version number or version status, KMS returns the credential value of the version marked as ACSCurrent by default.</description></item>
+        /// <item><description>If the credential uses a custom master key to protect the credential value, the caller must also have the <c>kms:Decrypt</c> permission on the corresponding master key.
+        /// This topic provides an example of retrieving the credential value of a credential named <c>secret001</c>. The response shows that the credential value <c>SecretData</c> is <c>testdata1</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9977,10 +9952,10 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For details about the access policy required for a Resource Access Management (RAM) user or RAM role to invoke this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
-        /// <item><description>If you do not specify a version number or version stage, KMS returns the secret value of the version marked as ACSCurrent by default.</description></item>
-        /// <item><description>If the secret uses a user-specified key to protect the secret value, the caller must also have the <c>kms:Decrypt</c> permission on the corresponding master key.
-        /// This topic provides an example of how to retrieve the secret value of a secret named <c>secret001</c>. The response shows that the secret value <c>SecretData</c> is <c>testdata1</c>.</description></item>
+        /// <item><description>For details about the access policy that needs to be granted to a Resource Access Management (RAM) user or RAM role to invoke this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>If you do not specify a version number or version status, KMS returns the credential value of the version marked as ACSCurrent by default.</description></item>
+        /// <item><description>If the credential uses a custom master key to protect the credential value, the caller must also have the <c>kms:Decrypt</c> permission on the corresponding master key.
+        /// This topic provides an example of retrieving the credential value of a credential named <c>secret001</c>. The response shows that the credential value <c>SecretData</c> is <c>testdata1</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12541,13 +12516,13 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this OpenAPI operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
-        /// <item><description>This operation supports only generic secrets. Each generic secret can have a maximum of 10 versions. If the number of versions exceeds the limit, KMS deletes the earliest version.</description></item>
-        /// <item><description>By default, the new secret value is marked with ACSCurrent, and the previous version that was marked with ACSCurrent is marked with ACSPrevious. You can specify the VersionStage parameter to overwrite this default behavior.</description></item>
-        /// <item><description>This operation stores a new version of a secret value. You cannot use it to modify an existing version of a secret value. You must specify a version number when you store a new version. KMS processes requests based on the following rules:<list type="bullet">
-        /// <item><description>If the version number does not exist in the secret, KMS creates a new version and stores the secret value.</description></item>
-        /// <item><description>If the version number already exists in the secret, KMS compares the secret value in the request with the stored value. If the values are the same, the request is ignored and a success message is returned. This makes the operation idempotent. If the values are different, the request is rejected.
-        /// This topic provides an example of how to store a new version of a secret value for the secret named <c>secret001</c>. The new version number (<c>VersionId</c>) is <c>v3</c> and the secret value (<c>SecretData</c>) is <c>importantdata</c>.</description></item>
+        /// <item><description>For details about the access policy that must be granted to a Resource Access Management (RAM) user or RAM role to call this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>Only generic secrets support this API operation. Each generic secret can store up to 10 secret versions. If the limit is exceeded, KMS automatically deletes the earliest secret version.</description></item>
+        /// <item><description>By default, a newly stored secret value is marked with ACSCurrent, and the previous version marked with ACSCurrent is marked with ACSPrevious. You can override this default behavior by specifying the VersionStages parameter.</description></item>
+        /// <item><description>This API operation is used to store a new version of a secret value, not to modify the secret value of an existing version. When you store a new version, you must specify a version ID. KMS performs operations based on the following rules:<list type="bullet">
+        /// <item><description>If the version ID does not exist in the secret: A new version is created and the secret value is stored.</description></item>
+        /// <item><description>If the version ID already exists in the secret: If the secret value in the request is the same as the secret value corresponding to the version ID in the secret, the request is ignored and a success response is returned (the request is idempotent). If the secret values are different, the request is rejected and a failure response is returned.
+        /// This topic provides an example of storing a new version of a secret value for the secret named <c>secret001</c>. The version ID <c>VersionId</c> of the new secret version is <c>v3</c>, and the secret value <c>SecretData</c> is <c>importantdata</c>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -12567,10 +12542,6 @@ namespace AlibabaCloud.SDK.Kms20160120
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretData))
-            {
-                query["SecretData"] = request.SecretData;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretDataType))
             {
                 query["SecretDataType"] = request.SecretDataType;
@@ -12587,9 +12558,15 @@ namespace AlibabaCloud.SDK.Kms20160120
             {
                 query["VersionStages"] = request.VersionStages;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretData))
+            {
+                body["SecretData"] = request.SecretData;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -12614,13 +12591,13 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this OpenAPI operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
-        /// <item><description>This operation supports only generic secrets. Each generic secret can have a maximum of 10 versions. If the number of versions exceeds the limit, KMS deletes the earliest version.</description></item>
-        /// <item><description>By default, the new secret value is marked with ACSCurrent, and the previous version that was marked with ACSCurrent is marked with ACSPrevious. You can specify the VersionStage parameter to overwrite this default behavior.</description></item>
-        /// <item><description>This operation stores a new version of a secret value. You cannot use it to modify an existing version of a secret value. You must specify a version number when you store a new version. KMS processes requests based on the following rules:<list type="bullet">
-        /// <item><description>If the version number does not exist in the secret, KMS creates a new version and stores the secret value.</description></item>
-        /// <item><description>If the version number already exists in the secret, KMS compares the secret value in the request with the stored value. If the values are the same, the request is ignored and a success message is returned. This makes the operation idempotent. If the values are different, the request is rejected.
-        /// This topic provides an example of how to store a new version of a secret value for the secret named <c>secret001</c>. The new version number (<c>VersionId</c>) is <c>v3</c> and the secret value (<c>SecretData</c>) is <c>importantdata</c>.</description></item>
+        /// <item><description>For details about the access policy that must be granted to a Resource Access Management (RAM) user or RAM role to call this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>Only generic secrets support this API operation. Each generic secret can store up to 10 secret versions. If the limit is exceeded, KMS automatically deletes the earliest secret version.</description></item>
+        /// <item><description>By default, a newly stored secret value is marked with ACSCurrent, and the previous version marked with ACSCurrent is marked with ACSPrevious. You can override this default behavior by specifying the VersionStages parameter.</description></item>
+        /// <item><description>This API operation is used to store a new version of a secret value, not to modify the secret value of an existing version. When you store a new version, you must specify a version ID. KMS performs operations based on the following rules:<list type="bullet">
+        /// <item><description>If the version ID does not exist in the secret: A new version is created and the secret value is stored.</description></item>
+        /// <item><description>If the version ID already exists in the secret: If the secret value in the request is the same as the secret value corresponding to the version ID in the secret, the request is ignored and a success response is returned (the request is idempotent). If the secret values are different, the request is rejected and a failure response is returned.
+        /// This topic provides an example of storing a new version of a secret value for the secret named <c>secret001</c>. The version ID <c>VersionId</c> of the new secret version is <c>v3</c>, and the secret value <c>SecretData</c> is <c>importantdata</c>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -12640,10 +12617,6 @@ namespace AlibabaCloud.SDK.Kms20160120
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretData))
-            {
-                query["SecretData"] = request.SecretData;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretDataType))
             {
                 query["SecretDataType"] = request.SecretDataType;
@@ -12660,9 +12633,15 @@ namespace AlibabaCloud.SDK.Kms20160120
             {
                 query["VersionStages"] = request.VersionStages;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretData))
+            {
+                body["SecretData"] = request.SecretData;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -12687,13 +12666,13 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this OpenAPI operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
-        /// <item><description>This operation supports only generic secrets. Each generic secret can have a maximum of 10 versions. If the number of versions exceeds the limit, KMS deletes the earliest version.</description></item>
-        /// <item><description>By default, the new secret value is marked with ACSCurrent, and the previous version that was marked with ACSCurrent is marked with ACSPrevious. You can specify the VersionStage parameter to overwrite this default behavior.</description></item>
-        /// <item><description>This operation stores a new version of a secret value. You cannot use it to modify an existing version of a secret value. You must specify a version number when you store a new version. KMS processes requests based on the following rules:<list type="bullet">
-        /// <item><description>If the version number does not exist in the secret, KMS creates a new version and stores the secret value.</description></item>
-        /// <item><description>If the version number already exists in the secret, KMS compares the secret value in the request with the stored value. If the values are the same, the request is ignored and a success message is returned. This makes the operation idempotent. If the values are different, the request is rejected.
-        /// This topic provides an example of how to store a new version of a secret value for the secret named <c>secret001</c>. The new version number (<c>VersionId</c>) is <c>v3</c> and the secret value (<c>SecretData</c>) is <c>importantdata</c>.</description></item>
+        /// <item><description>For details about the access policy that must be granted to a Resource Access Management (RAM) user or RAM role to call this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>Only generic secrets support this API operation. Each generic secret can store up to 10 secret versions. If the limit is exceeded, KMS automatically deletes the earliest secret version.</description></item>
+        /// <item><description>By default, a newly stored secret value is marked with ACSCurrent, and the previous version marked with ACSCurrent is marked with ACSPrevious. You can override this default behavior by specifying the VersionStages parameter.</description></item>
+        /// <item><description>This API operation is used to store a new version of a secret value, not to modify the secret value of an existing version. When you store a new version, you must specify a version ID. KMS performs operations based on the following rules:<list type="bullet">
+        /// <item><description>If the version ID does not exist in the secret: A new version is created and the secret value is stored.</description></item>
+        /// <item><description>If the version ID already exists in the secret: If the secret value in the request is the same as the secret value corresponding to the version ID in the secret, the request is ignored and a success response is returned (the request is idempotent). If the secret values are different, the request is rejected and a failure response is returned.
+        /// This topic provides an example of storing a new version of a secret value for the secret named <c>secret001</c>. The version ID <c>VersionId</c> of the new secret version is <c>v3</c>, and the secret value <c>SecretData</c> is <c>importantdata</c>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -12720,13 +12699,13 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For information about the access policy required for a RAM user or RAM role to call this OpenAPI operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
-        /// <item><description>This operation supports only generic secrets. Each generic secret can have a maximum of 10 versions. If the number of versions exceeds the limit, KMS deletes the earliest version.</description></item>
-        /// <item><description>By default, the new secret value is marked with ACSCurrent, and the previous version that was marked with ACSCurrent is marked with ACSPrevious. You can specify the VersionStage parameter to overwrite this default behavior.</description></item>
-        /// <item><description>This operation stores a new version of a secret value. You cannot use it to modify an existing version of a secret value. You must specify a version number when you store a new version. KMS processes requests based on the following rules:<list type="bullet">
-        /// <item><description>If the version number does not exist in the secret, KMS creates a new version and stores the secret value.</description></item>
-        /// <item><description>If the version number already exists in the secret, KMS compares the secret value in the request with the stored value. If the values are the same, the request is ignored and a success message is returned. This makes the operation idempotent. If the values are different, the request is rejected.
-        /// This topic provides an example of how to store a new version of a secret value for the secret named <c>secret001</c>. The new version number (<c>VersionId</c>) is <c>v3</c> and the secret value (<c>SecretData</c>) is <c>importantdata</c>.</description></item>
+        /// <item><description>For details about the access policy that must be granted to a Resource Access Management (RAM) user or RAM role to call this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>Only generic secrets support this API operation. Each generic secret can store up to 10 secret versions. If the limit is exceeded, KMS automatically deletes the earliest secret version.</description></item>
+        /// <item><description>By default, a newly stored secret value is marked with ACSCurrent, and the previous version marked with ACSCurrent is marked with ACSPrevious. You can override this default behavior by specifying the VersionStages parameter.</description></item>
+        /// <item><description>This API operation is used to store a new version of a secret value, not to modify the secret value of an existing version. When you store a new version, you must specify a version ID. KMS performs operations based on the following rules:<list type="bullet">
+        /// <item><description>If the version ID does not exist in the secret: A new version is created and the secret value is stored.</description></item>
+        /// <item><description>If the version ID already exists in the secret: If the secret value in the request is the same as the secret value corresponding to the version ID in the secret, the request is ignored and a success response is returned (the request is idempotent). If the secret values are different, the request is rejected and a failure response is returned.
+        /// This topic provides an example of storing a new version of a secret value for the secret named <c>secret001</c>. The version ID <c>VersionId</c> of the new secret version is <c>v3</c>, and the secret value <c>SecretData</c> is <c>importantdata</c>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
