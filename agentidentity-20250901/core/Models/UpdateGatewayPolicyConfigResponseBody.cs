@@ -9,20 +9,45 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentIdentity20250901.Models
 {
     public class UpdateGatewayPolicyConfigResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The gateway policy configuration.</para>
+        /// </summary>
         [NameInMap("GatewayPolicyConfig")]
         [Validation(Required=false)]
         public UpdateGatewayPolicyConfigResponseBodyGatewayPolicyConfig GatewayPolicyConfig { get; set; }
         public class UpdateGatewayPolicyConfigResponseBodyGatewayPolicyConfig : TeaModel {
+            /// <summary>
+            /// <para>The policy enforcement mode. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>ENFORCE: Intercepts non-compliant requests and allows compliant requests.</description></item>
+            /// <item><description>LOG_ONLY: Only logs non-compliant requests without intercepting them.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ENFORCE</para>
+            /// </summary>
             [NameInMap("EnforcementMode")]
             [Validation(Required=false)]
             public string EnforcementMode { get; set; }
 
+            /// <summary>
+            /// <para>The ARN of the policy set.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>acs:agentidentity:cn-beijing:123456:policyset/default-policy-set</para>
+            /// </summary>
             [NameInMap("PolicySetArn")]
             [Validation(Required=false)]
             public string PolicySetArn { get; set; }
 
         }
 
+        /// <summary>
+        /// <para>The unique identifier of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2A48EB1D-D645-5758-91AF-EDF8E36E257B</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

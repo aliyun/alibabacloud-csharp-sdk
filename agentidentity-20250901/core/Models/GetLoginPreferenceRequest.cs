@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentIdentity20250901.Models
 {
     public class GetLoginPreferenceRequest : TeaModel {
+        /// <summary>
+        /// <para>The name of the user pool.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>my-agent-userpool</para>
+        /// </summary>
         [NameInMap("UserPoolName")]
         [Validation(Required=false)]
         public string UserPoolName { get; set; }

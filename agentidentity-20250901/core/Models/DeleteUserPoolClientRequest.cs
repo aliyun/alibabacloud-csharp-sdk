@@ -9,10 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentIdentity20250901.Models
 {
     public class DeleteUserPoolClientRequest : TeaModel {
+        /// <summary>
+        /// <para>The name of the client to delete.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>my-web-app</para>
+        /// </summary>
         [NameInMap("ClientName")]
         [Validation(Required=false)]
         public string ClientName { get; set; }
 
+        /// <summary>
+        /// <para>The name of the user pool.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>my-agent-userpool</para>
+        /// </summary>
         [NameInMap("UserPoolName")]
         [Validation(Required=false)]
         public string UserPoolName { get; set; }

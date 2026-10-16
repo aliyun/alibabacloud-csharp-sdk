@@ -9,14 +9,32 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentIdentity20250901.Models
 {
     public class UpdateRoleRequest : TeaModel {
+        /// <summary>
+        /// <para>The new description of the role. The description must be 0 to 128 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Updated role description</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>The name of the role.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Analyst</para>
+        /// </summary>
         [NameInMap("RoleName")]
         [Validation(Required=false)]
         public string RoleName { get; set; }
 
+        /// <summary>
+        /// <para>The name of the user pool.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>my-agent-userpool</para>
+        /// </summary>
         [NameInMap("UserPoolName")]
         [Validation(Required=false)]
         public string UserPoolName { get; set; }

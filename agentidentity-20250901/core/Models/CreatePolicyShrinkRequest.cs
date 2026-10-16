@@ -9,18 +9,39 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentIdentity20250901.Models
 {
     public class CreatePolicyShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The policy definition.</para>
+        /// </summary>
         [NameInMap("Definition")]
         [Validation(Required=false)]
         public string DefinitionShrink { get; set; }
 
+        /// <summary>
+        /// <para>The description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example description</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>The name of the policy. The name must be unique within the policy set to which the policy belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rate-limit-policy</para>
+        /// </summary>
         [NameInMap("PolicyName")]
         [Validation(Required=false)]
         public string PolicyName { get; set; }
 
+        /// <summary>
+        /// <para>The name of the policy set. The name must be unique within the current Alibaba Cloud account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default-policy-set</para>
+        /// </summary>
         [NameInMap("PolicySetName")]
         [Validation(Required=false)]
         public string PolicySetName { get; set; }

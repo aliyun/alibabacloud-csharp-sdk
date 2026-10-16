@@ -167,8 +167,14 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>策略集关联网关</para>
+        /// <para>Attaches a policy set to a gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Attaches a policy set to a target gateway.
+        /// The attachment relationship is 1:1. A gateway can have only one policy set attached at a time. If you attach a policy set multiple times, the latest attachment takes effect. You can specify the policy enforcement mode by using the EnforcementMode parameter. Valid values: ENFORCE (blocks non-compliant requests) and LOG_ONLY (records non-compliant requests but allows them, which is commonly used for canary release observation).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AttachPolicySetToGatewayRequest
@@ -221,8 +227,14 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>策略集关联网关</para>
+        /// <para>Attaches a policy set to a gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Attaches a policy set to a target gateway.
+        /// The attachment relationship is 1:1. A gateway can have only one policy set attached at a time. If you attach a policy set multiple times, the latest attachment takes effect. You can specify the policy enforcement mode by using the EnforcementMode parameter. Valid values: ENFORCE (blocks non-compliant requests) and LOG_ONLY (records non-compliant requests but allows them, which is commonly used for canary release observation).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AttachPolicySetToGatewayRequest
@@ -275,8 +287,14 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>策略集关联网关</para>
+        /// <para>Attaches a policy set to a gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Attaches a policy set to a target gateway.
+        /// The attachment relationship is 1:1. A gateway can have only one policy set attached at a time. If you attach a policy set multiple times, the latest attachment takes effect. You can specify the policy enforcement mode by using the EnforcementMode parameter. Valid values: ENFORCE (blocks non-compliant requests) and LOG_ONLY (records non-compliant requests but allows them, which is commonly used for canary release observation).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AttachPolicySetToGatewayRequest
@@ -293,8 +311,14 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>策略集关联网关</para>
+        /// <para>Attaches a policy set to a gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Attaches a policy set to a target gateway.
+        /// The attachment relationship is 1:1. A gateway can have only one policy set attached at a time. If you attach a policy set multiple times, the latest attachment takes effect. You can specify the policy enforcement mode by using the EnforcementMode parameter. Valid values: ENFORCE (blocks non-compliant requests) and LOG_ONLY (records non-compliant requests but allows them, which is commonly used for canary release observation).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AttachPolicySetToGatewayRequest
@@ -311,7 +335,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个 API 密钥凭证提供商</para>
+        /// <para>Creates an API key credential provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -365,7 +389,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个 API 密钥凭证提供商</para>
+        /// <para>Creates an API key credential provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -419,7 +443,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个 API 密钥凭证提供商</para>
+        /// <para>Creates an API key credential provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -437,7 +461,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个 API 密钥凭证提供商</para>
+        /// <para>Creates an API key credential provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -455,8 +479,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建WorkloadIdentity</para>
+        /// <para>Creates a workload identity.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The response includes the plaintext client secret (ClientSecretValue). For security reasons, the plaintext secret is returned only once upon creation and cannot be retrieved later. Store it securely.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateClientSecretRequest
@@ -505,8 +534,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建WorkloadIdentity</para>
+        /// <para>Creates a workload identity.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The response includes the plaintext client secret (ClientSecretValue). For security reasons, the plaintext secret is returned only once upon creation and cannot be retrieved later. Store it securely.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateClientSecretRequest
@@ -555,8 +589,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建WorkloadIdentity</para>
+        /// <para>Creates a workload identity.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The response includes the plaintext client secret (ClientSecretValue). For security reasons, the plaintext secret is returned only once upon creation and cannot be retrieved later. Store it securely.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateClientSecretRequest
@@ -573,8 +612,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建WorkloadIdentity</para>
+        /// <para>Creates a workload identity.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The response includes the plaintext client secret (ClientSecretValue). For security reasons, the plaintext secret is returned only once upon creation and cannot be retrieved later. Store it securely.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateClientSecretRequest
@@ -747,7 +791,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 OAuth2 凭证提供商</para>
+        /// <para>Creates an OAuth 2.0 credential provider.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -819,7 +863,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 OAuth2 凭证提供商</para>
+        /// <para>Creates an OAuth 2.0 credential provider.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -891,7 +935,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 OAuth2 凭证提供商</para>
+        /// <para>Creates an OAuth 2.0 credential provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -909,7 +953,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 OAuth2 凭证提供商</para>
+        /// <para>Creates an OAuth 2.0 credential provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -927,8 +971,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个权限策略</para>
+        /// <para>Creates an access policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls the CreatePolicy operation to add a policy to an existing policy set. The policy defines specific control rules, such as throttling thresholds, admission conditions, and allow or block actions, through the Definition field. After a policy set is mounted to a gateway, requests on the gateway are evaluated and controlled based on the merged results of all policies in the policy set.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreatePolicyRequest
@@ -987,8 +1036,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个权限策略</para>
+        /// <para>Creates an access policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls the CreatePolicy operation to add a policy to an existing policy set. The policy defines specific control rules, such as throttling thresholds, admission conditions, and allow or block actions, through the Definition field. After a policy set is mounted to a gateway, requests on the gateway are evaluated and controlled based on the merged results of all policies in the policy set.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreatePolicyRequest
@@ -1047,8 +1101,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个权限策略</para>
+        /// <para>Creates an access policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls the CreatePolicy operation to add a policy to an existing policy set. The policy defines specific control rules, such as throttling thresholds, admission conditions, and allow or block actions, through the Definition field. After a policy set is mounted to a gateway, requests on the gateway are evaluated and controlled based on the merged results of all policies in the policy set.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreatePolicyRequest
@@ -1065,8 +1124,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个权限策略</para>
+        /// <para>Creates an access policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls the CreatePolicy operation to add a policy to an existing policy set. The policy defines specific control rules, such as throttling thresholds, admission conditions, and allow or block actions, through the Definition field. After a policy set is mounted to a gateway, requests on the gateway are evaluated and controlled based on the merged results of all policies in the policy set.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreatePolicyRequest
@@ -1083,8 +1147,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个权限策略集合</para>
+        /// <para>Creates an access policy set.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls CreatePolicySet to create a policy set in the current account. A policy set is a container for a group of policies. After a policy set is mounted to a gateway, all policies in the set evaluate requests to the gateway as a whole.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreatePolicySetRequest
@@ -1108,6 +1177,10 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
             {
                 body["PolicySetName"] = request.PolicySetName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourcePlatform))
+            {
+                body["SourcePlatform"] = request.SourcePlatform;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -1129,8 +1202,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个权限策略集合</para>
+        /// <para>Creates an access policy set.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls CreatePolicySet to create a policy set in the current account. A policy set is a container for a group of policies. After a policy set is mounted to a gateway, all policies in the set evaluate requests to the gateway as a whole.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreatePolicySetRequest
@@ -1154,6 +1232,10 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
             {
                 body["PolicySetName"] = request.PolicySetName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourcePlatform))
+            {
+                body["SourcePlatform"] = request.SourcePlatform;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -1175,8 +1257,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个权限策略集合</para>
+        /// <para>Creates an access policy set.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls CreatePolicySet to create a policy set in the current account. A policy set is a container for a group of policies. After a policy set is mounted to a gateway, all policies in the set evaluate requests to the gateway as a whole.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreatePolicySetRequest
@@ -1193,8 +1280,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个权限策略集合</para>
+        /// <para>Creates an access policy set.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls CreatePolicySet to create a policy set in the current account. A policy set is a container for a group of policies. After a policy set is mounted to a gateway, all policies in the set evaluate requests to the gateway as a whole.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreatePolicySetRequest
@@ -1211,8 +1303,14 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Role</para>
+        /// <para>Creates a role.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Users in a user pool can be allocated roles to enable quick authorization. Administrators can specify permissions for roles in an access policy.
+        /// When a user pool is created, the platform automatically provisions a default role, and newly created users are automatically allocated this default role. This operation creates a custom role of the Manual type, which must be explicitly allocated to users by calling CreateRoleAssignment.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRoleRequest
@@ -1261,8 +1359,14 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Role</para>
+        /// <para>Creates a role.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Users in a user pool can be allocated roles to enable quick authorization. Administrators can specify permissions for roles in an access policy.
+        /// When a user pool is created, the platform automatically provisions a default role, and newly created users are automatically allocated this default role. This operation creates a custom role of the Manual type, which must be explicitly allocated to users by calling CreateRoleAssignment.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRoleRequest
@@ -1311,8 +1415,14 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Role</para>
+        /// <para>Creates a role.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Users in a user pool can be allocated roles to enable quick authorization. Administrators can specify permissions for roles in an access policy.
+        /// When a user pool is created, the platform automatically provisions a default role, and newly created users are automatically allocated this default role. This operation creates a custom role of the Manual type, which must be explicitly allocated to users by calling CreateRoleAssignment.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRoleRequest
@@ -1329,8 +1439,14 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Role</para>
+        /// <para>Creates a role.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Users in a user pool can be allocated roles to enable quick authorization. Administrators can specify permissions for roles in an access policy.
+        /// When a user pool is created, the platform automatically provisions a default role, and newly created users are automatically allocated this default role. This operation creates a custom role of the Manual type, which must be explicitly allocated to users by calling CreateRoleAssignment.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRoleRequest
@@ -1347,8 +1463,14 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>策略集关联网关</para>
+        /// <para>Associates a policy set with a gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Users must be assigned roles to complete authorization. When a user is created through JIT, a default role is automatically assigned. Administrators can use this operation to assign additional custom roles to users.
+        /// PrincipalType currently supports only User. A single identity can have multiple role assignments.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRoleAssignmentRequest
@@ -1401,8 +1523,14 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>策略集关联网关</para>
+        /// <para>Associates a policy set with a gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Users must be assigned roles to complete authorization. When a user is created through JIT, a default role is automatically assigned. Administrators can use this operation to assign additional custom roles to users.
+        /// PrincipalType currently supports only User. A single identity can have multiple role assignments.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRoleAssignmentRequest
@@ -1455,8 +1583,14 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>策略集关联网关</para>
+        /// <para>Associates a policy set with a gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Users must be assigned roles to complete authorization. When a user is created through JIT, a default role is automatically assigned. Administrators can use this operation to assign additional custom roles to users.
+        /// PrincipalType currently supports only User. A single identity can have multiple role assignments.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRoleAssignmentRequest
@@ -1473,8 +1607,14 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>策略集关联网关</para>
+        /// <para>Associates a policy set with a gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Users must be assigned roles to complete authorization. When a user is created through JIT, a default role is automatically assigned. Administrators can use this operation to assign additional custom roles to users.
+        /// PrincipalType currently supports only User. A single identity can have multiple role assignments.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRoleAssignmentRequest
@@ -1491,8 +1631,14 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个凭证库</para>
+        /// <para>Creates a token vault.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls the CreateTokenVault operation to create a token vault within the current Alibaba Cloud account. A token vault is a container used by the AgentIdentity service to securely store sensitive credentials such as OAuth2 tokens and API keys. Each token is encrypted when it is written to the vault.
+        /// You can specify the encryption configuration when you create the vault. By default, a service-managed key (SERVICE_MANAGED_KEY) is used. For greater control over the key, you can use a customer-managed Key Management Service (KMS) key (CUSTOMER_MANAGED_KEY). To use a customer-managed key, specify the Alibaba Cloud Resource Name (ARN) of the KMS key and use the RoleArn parameter to authorize the AgentIdentity service to access the KMS key.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateTokenVaultRequest
@@ -1551,8 +1697,14 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个凭证库</para>
+        /// <para>Creates a token vault.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls the CreateTokenVault operation to create a token vault within the current Alibaba Cloud account. A token vault is a container used by the AgentIdentity service to securely store sensitive credentials such as OAuth2 tokens and API keys. Each token is encrypted when it is written to the vault.
+        /// You can specify the encryption configuration when you create the vault. By default, a service-managed key (SERVICE_MANAGED_KEY) is used. For greater control over the key, you can use a customer-managed Key Management Service (KMS) key (CUSTOMER_MANAGED_KEY). To use a customer-managed key, specify the Alibaba Cloud Resource Name (ARN) of the KMS key and use the RoleArn parameter to authorize the AgentIdentity service to access the KMS key.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateTokenVaultRequest
@@ -1611,8 +1763,14 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个凭证库</para>
+        /// <para>Creates a token vault.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls the CreateTokenVault operation to create a token vault within the current Alibaba Cloud account. A token vault is a container used by the AgentIdentity service to securely store sensitive credentials such as OAuth2 tokens and API keys. Each token is encrypted when it is written to the vault.
+        /// You can specify the encryption configuration when you create the vault. By default, a service-managed key (SERVICE_MANAGED_KEY) is used. For greater control over the key, you can use a customer-managed Key Management Service (KMS) key (CUSTOMER_MANAGED_KEY). To use a customer-managed key, specify the Alibaba Cloud Resource Name (ARN) of the KMS key and use the RoleArn parameter to authorize the AgentIdentity service to access the KMS key.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateTokenVaultRequest
@@ -1629,8 +1787,14 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个凭证库</para>
+        /// <para>Creates a token vault.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls the CreateTokenVault operation to create a token vault within the current Alibaba Cloud account. A token vault is a container used by the AgentIdentity service to securely store sensitive credentials such as OAuth2 tokens and API keys. Each token is encrypted when it is written to the vault.
+        /// You can specify the encryption configuration when you create the vault. By default, a service-managed key (SERVICE_MANAGED_KEY) is used. For greater control over the key, you can use a customer-managed Key Management Service (KMS) key (CUSTOMER_MANAGED_KEY). To use a customer-managed key, specify the Alibaba Cloud Resource Name (ARN) of the KMS key and use the RoleArn parameter to authorize the AgentIdentity service to access the KMS key.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateTokenVaultRequest
@@ -1647,8 +1811,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建用户池用户</para>
+        /// <para>Creates a user in a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a user in a specified user pool. The type of the created user is Manual, and the default status is Enabled. The username must be unique within the user pool and can contain letters, digits, underscores (_), periods (.), and hyphens (-), and must be 3 to 128 characters in length. The email address must be unique within the user pool. After the user is created, you can call the SetUserPassword operation to set a logon password for the user and call the CreateRoleAssignment operation to assign a role to the user.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUserRequest
@@ -1709,8 +1878,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建用户池用户</para>
+        /// <para>Creates a user in a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a user in a specified user pool. The type of the created user is Manual, and the default status is Enabled. The username must be unique within the user pool and can contain letters, digits, underscores (_), periods (.), and hyphens (-), and must be 3 to 128 characters in length. The email address must be unique within the user pool. After the user is created, you can call the SetUserPassword operation to set a logon password for the user and call the CreateRoleAssignment operation to assign a role to the user.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUserRequest
@@ -1771,8 +1945,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建用户池用户</para>
+        /// <para>Creates a user in a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a user in a specified user pool. The type of the created user is Manual, and the default status is Enabled. The username must be unique within the user pool and can contain letters, digits, underscores (_), periods (.), and hyphens (-), and must be 3 to 128 characters in length. The email address must be unique within the user pool. After the user is created, you can call the SetUserPassword operation to set a logon password for the user and call the CreateRoleAssignment operation to assign a role to the user.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUserRequest
@@ -1789,8 +1968,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建用户池用户</para>
+        /// <para>Creates a user in a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a user in a specified user pool. The type of the created user is Manual, and the default status is Enabled. The username must be unique within the user pool and can contain letters, digits, underscores (_), periods (.), and hyphens (-), and must be 3 to 128 characters in length. The email address must be unique within the user pool. After the user is created, you can call the SetUserPassword operation to set a logon password for the user and call the CreateRoleAssignment operation to assign a role to the user.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUserRequest
@@ -1807,8 +1991,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建UserPool</para>
+        /// <para>Creates a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A user pool is a secure and isolated user folder designed by the Agent Identity platform for the AI agent ecosystem. You can create multiple user pools under a single Alibaba Cloud account for the independent user identity management of different AI agents. When you create a user pool, you only need to specify the name (UserPoolName). The description is optional. After the user pool is created, the platform automatically generates a default role for the user pool. Users subsequently created through SAML SSO just-in-time (JIT) synchronization are automatically allocated this default role.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUserPoolRequest
@@ -1853,8 +2042,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建UserPool</para>
+        /// <para>Creates a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A user pool is a secure and isolated user folder designed by the Agent Identity platform for the AI agent ecosystem. You can create multiple user pools under a single Alibaba Cloud account for the independent user identity management of different AI agents. When you create a user pool, you only need to specify the name (UserPoolName). The description is optional. After the user pool is created, the platform automatically generates a default role for the user pool. Users subsequently created through SAML SSO just-in-time (JIT) synchronization are automatically allocated this default role.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUserPoolRequest
@@ -1899,8 +2093,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建UserPool</para>
+        /// <para>Creates a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A user pool is a secure and isolated user folder designed by the Agent Identity platform for the AI agent ecosystem. You can create multiple user pools under a single Alibaba Cloud account for the independent user identity management of different AI agents. When you create a user pool, you only need to specify the name (UserPoolName). The description is optional. After the user pool is created, the platform automatically generates a default role for the user pool. Users subsequently created through SAML SSO just-in-time (JIT) synchronization are automatically allocated this default role.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUserPoolRequest
@@ -1917,8 +2116,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建UserPool</para>
+        /// <para>Creates a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A user pool is a secure and isolated user folder designed by the Agent Identity platform for the AI agent ecosystem. You can create multiple user pools under a single Alibaba Cloud account for the independent user identity management of different AI agents. When you create a user pool, you only need to specify the name (UserPoolName). The description is optional. After the user pool is created, the platform automatically generates a default role for the user pool. Users subsequently created through SAML SSO just-in-time (JIT) synchronization are automatically allocated this default role.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUserPoolRequest
@@ -1935,8 +2139,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建WorkloadIdentity</para>
+        /// <para>Creates a WorkloadIdentity.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A client represents an application that is integrated with a user pool. When you create a client, you must specify the client name and redirect URIs. You can configure whether an application secret is required, whether to enforce Proof Key for Code Exchange (PKCE), the access token validity period, and the refresh token validity period. The application scopes are generated by the platform by default. If SecretRequired is set to true, you must call CreateClientSecret to create a client secret.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateUserPoolClientRequest
@@ -1956,6 +2165,10 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RedirectURIs))
             {
                 request.RedirectURIsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RedirectURIs, "RedirectURIs", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Scopes))
+            {
+                request.ScopesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Scopes, "Scopes", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessTokenValidity))
@@ -1977,6 +2190,10 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RefreshTokenValidity))
             {
                 body["RefreshTokenValidity"] = request.RefreshTokenValidity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScopesShrink))
+            {
+                body["Scopes"] = request.ScopesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretRequired))
             {
@@ -2007,8 +2224,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建WorkloadIdentity</para>
+        /// <para>Creates a WorkloadIdentity.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A client represents an application that is integrated with a user pool. When you create a client, you must specify the client name and redirect URIs. You can configure whether an application secret is required, whether to enforce Proof Key for Code Exchange (PKCE), the access token validity period, and the refresh token validity period. The application scopes are generated by the platform by default. If SecretRequired is set to true, you must call CreateClientSecret to create a client secret.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateUserPoolClientRequest
@@ -2028,6 +2250,10 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RedirectURIs))
             {
                 request.RedirectURIsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RedirectURIs, "RedirectURIs", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Scopes))
+            {
+                request.ScopesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Scopes, "Scopes", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessTokenValidity))
@@ -2049,6 +2275,10 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RefreshTokenValidity))
             {
                 body["RefreshTokenValidity"] = request.RefreshTokenValidity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScopesShrink))
+            {
+                body["Scopes"] = request.ScopesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretRequired))
             {
@@ -2079,8 +2309,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建WorkloadIdentity</para>
+        /// <para>Creates a WorkloadIdentity.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A client represents an application that is integrated with a user pool. When you create a client, you must specify the client name and redirect URIs. You can configure whether an application secret is required, whether to enforce Proof Key for Code Exchange (PKCE), the access token validity period, and the refresh token validity period. The application scopes are generated by the platform by default. If SecretRequired is set to true, you must call CreateClientSecret to create a client secret.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUserPoolClientRequest
@@ -2097,8 +2332,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建WorkloadIdentity</para>
+        /// <para>Creates a WorkloadIdentity.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A client represents an application that is integrated with a user pool. When you create a client, you must specify the client name and redirect URIs. You can configure whether an application secret is required, whether to enforce Proof Key for Code Exchange (PKCE), the access token validity period, and the refresh token validity period. The application scopes are generated by the platform by default. If SecretRequired is set to true, you must call CreateClientSecret to create a client secret.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUserPoolClientRequest
@@ -2115,7 +2355,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建WorkloadIdentity</para>
+        /// <para>Create a workload identity for an AI Agent to uniquely identify it.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2203,7 +2443,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建WorkloadIdentity</para>
+        /// <para>Create a workload identity for an AI Agent to uniquely identify it.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2291,7 +2531,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建WorkloadIdentity</para>
+        /// <para>Create a workload identity for an AI Agent to uniquely identify it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2309,7 +2549,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建WorkloadIdentity</para>
+        /// <para>Create a workload identity for an AI Agent to uniquely identify it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2327,7 +2567,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个 API 密钥凭证提供商</para>
+        /// <para>Deletes a specified API key credential provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2373,7 +2613,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个 API 密钥凭证提供商</para>
+        /// <para>Deletes a specified API key credential provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2419,7 +2659,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个 API 密钥凭证提供商</para>
+        /// <para>Deletes a specified API key credential provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2437,7 +2677,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个 API 密钥凭证提供商</para>
+        /// <para>Deletes a specified API key credential provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2455,8 +2695,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除IdentityProvider</para>
+        /// <para>Deletes an identity provider.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified client secret by client ID and key ID. The secret becomes invalid immediately after deletion, and all OAuth authentication flows that use this secret will fail.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteClientSecretRequest
@@ -2509,8 +2754,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除IdentityProvider</para>
+        /// <para>Deletes an identity provider.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified client secret by client ID and key ID. The secret becomes invalid immediately after deletion, and all OAuth authentication flows that use this secret will fail.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteClientSecretRequest
@@ -2563,8 +2813,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除IdentityProvider</para>
+        /// <para>Deletes an identity provider.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified client secret by client ID and key ID. The secret becomes invalid immediately after deletion, and all OAuth authentication flows that use this secret will fail.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteClientSecretRequest
@@ -2581,8 +2836,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除IdentityProvider</para>
+        /// <para>Deletes an identity provider.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified client secret by client ID and key ID. The secret becomes invalid immediately after deletion, and all OAuth authentication flows that use this secret will fail.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteClientSecretRequest
@@ -2599,7 +2859,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除IdentityProvider</para>
+        /// <para>Deletes a specified identity provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2641,7 +2901,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除IdentityProvider</para>
+        /// <para>Deletes a specified identity provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2683,7 +2943,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除IdentityProvider</para>
+        /// <para>Deletes a specified identity provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2701,7 +2961,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除IdentityProvider</para>
+        /// <para>Deletes a specified identity provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2719,7 +2979,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 OAuth2 凭证提供商</para>
+        /// <para>Deletes a specified OAuth 2.0 credential provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2765,7 +3025,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 OAuth2 凭证提供商</para>
+        /// <para>Deletes a specified OAuth 2.0 credential provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2811,7 +3071,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 OAuth2 凭证提供商</para>
+        /// <para>Deletes a specified OAuth 2.0 credential provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2829,7 +3089,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 OAuth2 凭证提供商</para>
+        /// <para>Deletes a specified OAuth 2.0 credential provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2847,8 +3107,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个权限策略</para>
+        /// <para>Deletes an access policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls DeletePolicy to remove a policy from a specified policy set. The policy becomes invalid immediately after deletion, and gateways that depend on the policy set do not need to be remounted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeletePolicyRequest
@@ -2893,8 +3158,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个权限策略</para>
+        /// <para>Deletes an access policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls DeletePolicy to remove a policy from a specified policy set. The policy becomes invalid immediately after deletion, and gateways that depend on the policy set do not need to be remounted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeletePolicyRequest
@@ -2939,8 +3209,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个权限策略</para>
+        /// <para>Deletes an access policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls DeletePolicy to remove a policy from a specified policy set. The policy becomes invalid immediately after deletion, and gateways that depend on the policy set do not need to be remounted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeletePolicyRequest
@@ -2957,8 +3232,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个权限策略</para>
+        /// <para>Deletes an access policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls DeletePolicy to remove a policy from a specified policy set. The policy becomes invalid immediately after deletion, and gateways that depend on the policy set do not need to be remounted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeletePolicyRequest
@@ -2975,8 +3255,14 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个权限策略集合</para>
+        /// <para>Deletes an access policy set.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls DeletePolicySet to delete a policy set that is no longer in use.
+        /// Before deleting the policy set, ensure that it is unmounted from all gateways (you can query this by calling ListPolicySetAttachedGateways) and contains no policies. Otherwise, the deletion fails.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeletePolicySetRequest
@@ -3017,8 +3303,14 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个权限策略集合</para>
+        /// <para>Deletes an access policy set.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls DeletePolicySet to delete a policy set that is no longer in use.
+        /// Before deleting the policy set, ensure that it is unmounted from all gateways (you can query this by calling ListPolicySetAttachedGateways) and contains no policies. Otherwise, the deletion fails.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeletePolicySetRequest
@@ -3059,8 +3351,14 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个权限策略集合</para>
+        /// <para>Deletes an access policy set.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls DeletePolicySet to delete a policy set that is no longer in use.
+        /// Before deleting the policy set, ensure that it is unmounted from all gateways (you can query this by calling ListPolicySetAttachedGateways) and contains no policies. Otherwise, the deletion fails.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeletePolicySetRequest
@@ -3077,8 +3375,14 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个权限策略集合</para>
+        /// <para>Deletes an access policy set.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls DeletePolicySet to delete a policy set that is no longer in use.
+        /// Before deleting the policy set, ensure that it is unmounted from all gateways (you can query this by calling ListPolicySetAttachedGateways) and contains no policies. Otherwise, the deletion fails.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeletePolicySetRequest
@@ -3095,8 +3399,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Role</para>
+        /// <para>Deletes a role.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before deletion, the system checks whether the role has any bound users. If role assignments exist, the deletion is rejected. You must call DeleteRoleAssignment to remove the assignments before deleting the role. Default roles (Type=Default) cannot be deleted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRoleRequest
@@ -3141,8 +3450,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Role</para>
+        /// <para>Deletes a role.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before deletion, the system checks whether the role has any bound users. If role assignments exist, the deletion is rejected. You must call DeleteRoleAssignment to remove the assignments before deleting the role. Default roles (Type=Default) cannot be deleted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRoleRequest
@@ -3187,8 +3501,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Role</para>
+        /// <para>Deletes a role.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before deletion, the system checks whether the role has any bound users. If role assignments exist, the deletion is rejected. You must call DeleteRoleAssignment to remove the assignments before deleting the role. Default roles (Type=Default) cannot be deleted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRoleRequest
@@ -3205,8 +3524,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Role</para>
+        /// <para>Deletes a role.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before deletion, the system checks whether the role has any bound users. If role assignments exist, the deletion is rejected. You must call DeleteRoleAssignment to remove the assignments before deleting the role. Default roles (Type=Default) cannot be deleted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRoleRequest
@@ -3223,8 +3547,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>网关取消关联策略集</para>
+        /// <para>Disassociates a policy set from a gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Removes the role assignment relationship between an identity and a role.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRoleAssignmentRequest
@@ -3277,8 +3606,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>网关取消关联策略集</para>
+        /// <para>Disassociates a policy set from a gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Removes the role assignment relationship between an identity and a role.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRoleAssignmentRequest
@@ -3331,8 +3665,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>网关取消关联策略集</para>
+        /// <para>Disassociates a policy set from a gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Removes the role assignment relationship between an identity and a role.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRoleAssignmentRequest
@@ -3349,8 +3688,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>网关取消关联策略集</para>
+        /// <para>Disassociates a policy set from a gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Removes the role assignment relationship between an identity and a role.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRoleAssignmentRequest
@@ -3367,8 +3711,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除WorkloadIdentity</para>
+        /// <para>Deletes a workload identity.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Cleans up expired or unused certificates after certificate rotation is complete. Before deleting the certificate, ensure that it is no longer used for SAML assertion signature verification. Otherwise, SSO logon may fail.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteSAMLIdentityProviderCertificateRequest
@@ -3413,8 +3762,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除WorkloadIdentity</para>
+        /// <para>Deletes a workload identity.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Cleans up expired or unused certificates after certificate rotation is complete. Before deleting the certificate, ensure that it is no longer used for SAML assertion signature verification. Otherwise, SSO logon may fail.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteSAMLIdentityProviderCertificateRequest
@@ -3459,8 +3813,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除WorkloadIdentity</para>
+        /// <para>Deletes a workload identity.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Cleans up expired or unused certificates after certificate rotation is complete. Before deleting the certificate, ensure that it is no longer used for SAML assertion signature verification. Otherwise, SSO logon may fail.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteSAMLIdentityProviderCertificateRequest
@@ -3477,8 +3836,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除WorkloadIdentity</para>
+        /// <para>Deletes a workload identity.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Cleans up expired or unused certificates after certificate rotation is complete. Before deleting the certificate, ensure that it is no longer used for SAML assertion signature verification. Otherwise, SSO logon may fail.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteSAMLIdentityProviderCertificateRequest
@@ -3495,8 +3859,14 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个指定的凭证库。</para>
+        /// <para>Deletes a specified token vault.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call DeleteTokenVault to delete a token vault that is no longer in use.
+        /// Before deletion, ensure that the token vault is not referenced by any credential provider. Otherwise, the deletion may cause credentials that depend on the token vault to become unavailable. This operation cannot be undone.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteTokenVaultRequest
@@ -3537,8 +3907,14 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个指定的凭证库。</para>
+        /// <para>Deletes a specified token vault.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call DeleteTokenVault to delete a token vault that is no longer in use.
+        /// Before deletion, ensure that the token vault is not referenced by any credential provider. Otherwise, the deletion may cause credentials that depend on the token vault to become unavailable. This operation cannot be undone.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteTokenVaultRequest
@@ -3579,8 +3955,14 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个指定的凭证库。</para>
+        /// <para>Deletes a specified token vault.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call DeleteTokenVault to delete a token vault that is no longer in use.
+        /// Before deletion, ensure that the token vault is not referenced by any credential provider. Otherwise, the deletion may cause credentials that depend on the token vault to become unavailable. This operation cannot be undone.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteTokenVaultRequest
@@ -3597,8 +3979,14 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个指定的凭证库。</para>
+        /// <para>Deletes a specified token vault.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call DeleteTokenVault to delete a token vault that is no longer in use.
+        /// Before deletion, ensure that the token vault is not referenced by any credential provider. Otherwise, the deletion may cause credentials that depend on the token vault to become unavailable. This operation cannot be undone.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteTokenVaultRequest
@@ -3615,8 +4003,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除User</para>
+        /// <para>Deletes a user.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deleting a user forcibly clears all role assignments of the user in the user pool. This operation is irreversible. Proceed with caution.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteUserRequest
@@ -3661,8 +4054,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除User</para>
+        /// <para>Deletes a user.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deleting a user forcibly clears all role assignments of the user in the user pool. This operation is irreversible. Proceed with caution.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteUserRequest
@@ -3707,8 +4105,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除User</para>
+        /// <para>Deletes a user.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deleting a user forcibly clears all role assignments of the user in the user pool. This operation is irreversible. Proceed with caution.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteUserRequest
@@ -3725,8 +4128,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除User</para>
+        /// <para>Deletes a user.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deleting a user forcibly clears all role assignments of the user in the user pool. This operation is irreversible. Proceed with caution.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteUserRequest
@@ -3743,8 +4151,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除UserPool</para>
+        /// <para>Deletes a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before deleting a user pool, you must clean up all resources in the user pool, including all users, roles, clients, SAML IdPs, and role assignments. Calls to this operation are rejected if the resources are not cleaned up. This operation is irreversible. Proceed with caution.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteUserPoolRequest
@@ -3785,8 +4198,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除UserPool</para>
+        /// <para>Deletes a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before deleting a user pool, you must clean up all resources in the user pool, including all users, roles, clients, SAML IdPs, and role assignments. Calls to this operation are rejected if the resources are not cleaned up. This operation is irreversible. Proceed with caution.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteUserPoolRequest
@@ -3827,8 +4245,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除UserPool</para>
+        /// <para>Deletes a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before deleting a user pool, you must clean up all resources in the user pool, including all users, roles, clients, SAML IdPs, and role assignments. Calls to this operation are rejected if the resources are not cleaned up. This operation is irreversible. Proceed with caution.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteUserPoolRequest
@@ -3845,8 +4268,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除UserPool</para>
+        /// <para>Deletes a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before deleting a user pool, you must clean up all resources in the user pool, including all users, roles, clients, SAML IdPs, and role assignments. Calls to this operation are rejected if the resources are not cleaned up. This operation is irreversible. Proceed with caution.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteUserPoolRequest
@@ -3863,8 +4291,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除WorkloadIdentity</para>
+        /// <para>Deletes a WorkloadIdentity.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deleting a client also removes all its associated client secrets. After deletion, the client can no longer be used for OAuth authentication and authorization flows. Proceed with caution.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteUserPoolClientRequest
@@ -3909,8 +4342,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除WorkloadIdentity</para>
+        /// <para>Deletes a WorkloadIdentity.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deleting a client also removes all its associated client secrets. After deletion, the client can no longer be used for OAuth authentication and authorization flows. Proceed with caution.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteUserPoolClientRequest
@@ -3955,8 +4393,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除WorkloadIdentity</para>
+        /// <para>Deletes a WorkloadIdentity.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deleting a client also removes all its associated client secrets. After deletion, the client can no longer be used for OAuth authentication and authorization flows. Proceed with caution.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteUserPoolClientRequest
@@ -3973,8 +4416,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除WorkloadIdentity</para>
+        /// <para>Deletes a WorkloadIdentity.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deleting a client also removes all its associated client secrets. After deletion, the client can no longer be used for OAuth authentication and authorization flows. Proceed with caution.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteUserPoolClientRequest
@@ -3991,7 +4439,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除WorkloadIdentity</para>
+        /// <para>Deletes a specified workload identity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4033,7 +4481,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除WorkloadIdentity</para>
+        /// <para>Deletes a specified workload identity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4075,7 +4523,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除WorkloadIdentity</para>
+        /// <para>Deletes a specified workload identity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4093,7 +4541,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除WorkloadIdentity</para>
+        /// <para>Deletes a specified workload identity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4111,8 +4559,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>网关取消关联策略集</para>
+        /// <para>Detaches a policy set from a gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Detaches a policy set from a gateway. After the policy set is detached, requests on the gateway are no longer governed by the policies in the policy set.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DetachPolicySetFromGatewayRequest
@@ -4161,8 +4614,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>网关取消关联策略集</para>
+        /// <para>Detaches a policy set from a gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Detaches a policy set from a gateway. After the policy set is detached, requests on the gateway are no longer governed by the policies in the policy set.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DetachPolicySetFromGatewayRequest
@@ -4211,8 +4669,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>网关取消关联策略集</para>
+        /// <para>Detaches a policy set from a gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Detaches a policy set from a gateway. After the policy set is detached, requests on the gateway are no longer governed by the policies in the policy set.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DetachPolicySetFromGatewayRequest
@@ -4229,8 +4692,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>网关取消关联策略集</para>
+        /// <para>Detaches a policy set from a gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Detaches a policy set from a gateway. After the policy set is detached, requests on the gateway are no longer governed by the policies in the policy set.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DetachPolicySetFromGatewayRequest
@@ -4247,7 +4715,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一个 API 密钥凭证提供商</para>
+        /// <para>Retrieves the details of a specified API key credential provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4293,7 +4761,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一个 API 密钥凭证提供商</para>
+        /// <para>Retrieves the details of a specified API key credential provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4339,7 +4807,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一个 API 密钥凭证提供商</para>
+        /// <para>Retrieves the details of a specified API key credential provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4357,7 +4825,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一个 API 密钥凭证提供商</para>
+        /// <para>Retrieves the details of a specified API key credential provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4375,8 +4843,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网关策略配置</para>
+        /// <para>Queries the gateway policy configuration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls the GetGatewayPolicyConfig operation to query the currently effective policy configuration of a gateway, including the ARN of the mounted policy set and the enforcement mode.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetGatewayPolicyConfigRequest
@@ -4421,8 +4894,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网关策略配置</para>
+        /// <para>Queries the gateway policy configuration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls the GetGatewayPolicyConfig operation to query the currently effective policy configuration of a gateway, including the ARN of the mounted policy set and the enforcement mode.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetGatewayPolicyConfigRequest
@@ -4467,8 +4945,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网关策略配置</para>
+        /// <para>Queries the gateway policy configuration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls the GetGatewayPolicyConfig operation to query the currently effective policy configuration of a gateway, including the ARN of the mounted policy set and the enforcement mode.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetGatewayPolicyConfigRequest
@@ -4485,8 +4968,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网关策略配置</para>
+        /// <para>Queries the gateway policy configuration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls the GetGatewayPolicyConfig operation to query the currently effective policy configuration of a gateway, including the ARN of the mounted policy set and the enforcement mode.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetGatewayPolicyConfigRequest
@@ -4623,8 +5111,173 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户池登录相关配置</para>
+        /// <para>查询身份源同步范围与统计（已选部门有效性 + 展开部门数/预计人数）</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>目标用户池需已配置指定类型的身份源。本接口使用已保存的身份源配置，无需传入钉钉或飞书应用密钥。
+        /// 同步范围支持 AllAuthorized 和 SelectedDepartments。未显式配置范围时默认为 AllAuthorized，表示第三方应用授权可见范围内的全部用户。SelectedDepartments 包含选中部门及其全部后代部门；人员有任一当前所属部门命中展开集合，即命中同步范围。
+        /// 本接口不修改范围、不创建人员同步任务。查询可能触发后台统计；EstimateStatus 表示范围统计状态，不是人员同步任务状态。统计结果可能复用缓存，也可能来自同一范围最近一次同步结果；跨部门重复用户可能重复计数，不应视为实时、精确去重人数。
+        /// 对应身份源未配置时返回 EntityNotExists.IdpConfiguration；目录权限或通讯录可见范围不足时，返回 DingTalkApiPermissionDenied 或 FeishuApiPermissionDenied，不会将权限问题当作部门不存在。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetIdentityProviderSyncScopeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIdentityProviderSyncScopeResponse
+        /// </returns>
+        public GetIdentityProviderSyncScopeResponse GetIdentityProviderSyncScopeWithOptions(GetIdentityProviderSyncScopeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentityProviderType))
+            {
+                body["IdentityProviderType"] = request.IdentityProviderType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserPoolName))
+            {
+                body["UserPoolName"] = request.UserPoolName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetIdentityProviderSyncScope",
+                Version = "2025-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetIdentityProviderSyncScopeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询身份源同步范围与统计（已选部门有效性 + 展开部门数/预计人数）</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>目标用户池需已配置指定类型的身份源。本接口使用已保存的身份源配置，无需传入钉钉或飞书应用密钥。
+        /// 同步范围支持 AllAuthorized 和 SelectedDepartments。未显式配置范围时默认为 AllAuthorized，表示第三方应用授权可见范围内的全部用户。SelectedDepartments 包含选中部门及其全部后代部门；人员有任一当前所属部门命中展开集合，即命中同步范围。
+        /// 本接口不修改范围、不创建人员同步任务。查询可能触发后台统计；EstimateStatus 表示范围统计状态，不是人员同步任务状态。统计结果可能复用缓存，也可能来自同一范围最近一次同步结果；跨部门重复用户可能重复计数，不应视为实时、精确去重人数。
+        /// 对应身份源未配置时返回 EntityNotExists.IdpConfiguration；目录权限或通讯录可见范围不足时，返回 DingTalkApiPermissionDenied 或 FeishuApiPermissionDenied，不会将权限问题当作部门不存在。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetIdentityProviderSyncScopeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIdentityProviderSyncScopeResponse
+        /// </returns>
+        public async Task<GetIdentityProviderSyncScopeResponse> GetIdentityProviderSyncScopeWithOptionsAsync(GetIdentityProviderSyncScopeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentityProviderType))
+            {
+                body["IdentityProviderType"] = request.IdentityProviderType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserPoolName))
+            {
+                body["UserPoolName"] = request.UserPoolName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetIdentityProviderSyncScope",
+                Version = "2025-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetIdentityProviderSyncScopeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询身份源同步范围与统计（已选部门有效性 + 展开部门数/预计人数）</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>目标用户池需已配置指定类型的身份源。本接口使用已保存的身份源配置，无需传入钉钉或飞书应用密钥。
+        /// 同步范围支持 AllAuthorized 和 SelectedDepartments。未显式配置范围时默认为 AllAuthorized，表示第三方应用授权可见范围内的全部用户。SelectedDepartments 包含选中部门及其全部后代部门；人员有任一当前所属部门命中展开集合，即命中同步范围。
+        /// 本接口不修改范围、不创建人员同步任务。查询可能触发后台统计；EstimateStatus 表示范围统计状态，不是人员同步任务状态。统计结果可能复用缓存，也可能来自同一范围最近一次同步结果；跨部门重复用户可能重复计数，不应视为实时、精确去重人数。
+        /// 对应身份源未配置时返回 EntityNotExists.IdpConfiguration；目录权限或通讯录可见范围不足时，返回 DingTalkApiPermissionDenied 或 FeishuApiPermissionDenied，不会将权限问题当作部门不存在。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetIdentityProviderSyncScopeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIdentityProviderSyncScopeResponse
+        /// </returns>
+        public GetIdentityProviderSyncScopeResponse GetIdentityProviderSyncScope(GetIdentityProviderSyncScopeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetIdentityProviderSyncScopeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询身份源同步范围与统计（已选部门有效性 + 展开部门数/预计人数）</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>目标用户池需已配置指定类型的身份源。本接口使用已保存的身份源配置，无需传入钉钉或飞书应用密钥。
+        /// 同步范围支持 AllAuthorized 和 SelectedDepartments。未显式配置范围时默认为 AllAuthorized，表示第三方应用授权可见范围内的全部用户。SelectedDepartments 包含选中部门及其全部后代部门；人员有任一当前所属部门命中展开集合，即命中同步范围。
+        /// 本接口不修改范围、不创建人员同步任务。查询可能触发后台统计；EstimateStatus 表示范围统计状态，不是人员同步任务状态。统计结果可能复用缓存，也可能来自同一范围最近一次同步结果；跨部门重复用户可能重复计数，不应视为实时、精确去重人数。
+        /// 对应身份源未配置时返回 EntityNotExists.IdpConfiguration；目录权限或通讯录可见范围不足时，返回 DingTalkApiPermissionDenied 或 FeishuApiPermissionDenied，不会将权限问题当作部门不存在。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetIdentityProviderSyncScopeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIdentityProviderSyncScopeResponse
+        /// </returns>
+        public async Task<GetIdentityProviderSyncScopeResponse> GetIdentityProviderSyncScopeAsync(GetIdentityProviderSyncScopeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetIdentityProviderSyncScopeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the logon-related configurations of a user pool.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the logon configuration and password policy of a specified user pool. The logon configuration includes preference settings such as whether to enable password logon. The password policy includes rules for password complexity, length limits, and logon failure lockouts. The password policy is read-only and does not support custom modifications.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetLoginPreferenceRequest
@@ -4665,8 +5318,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户池登录相关配置</para>
+        /// <para>Retrieves the logon-related configurations of a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the logon configuration and password policy of a specified user pool. The logon configuration includes preference settings such as whether to enable password logon. The password policy includes rules for password complexity, length limits, and logon failure lockouts. The password policy is read-only and does not support custom modifications.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetLoginPreferenceRequest
@@ -4707,8 +5365,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户池登录相关配置</para>
+        /// <para>Retrieves the logon-related configurations of a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the logon configuration and password policy of a specified user pool. The logon configuration includes preference settings such as whether to enable password logon. The password policy includes rules for password complexity, length limits, and logon failure lockouts. The password policy is read-only and does not support custom modifications.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetLoginPreferenceRequest
@@ -4725,8 +5388,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户池登录相关配置</para>
+        /// <para>Retrieves the logon-related configurations of a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the logon configuration and password policy of a specified user pool. The logon configuration includes preference settings such as whether to enable password logon. The password policy includes rules for password complexity, length limits, and logon failure lockouts. The password policy is read-only and does not support custom modifications.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetLoginPreferenceRequest
@@ -4743,7 +5411,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 OAuth2 凭证提供商</para>
+        /// <para>Retrieves the details of a specified OAuth 2.0 credential provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4789,7 +5457,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 OAuth2 凭证提供商</para>
+        /// <para>Retrieves the details of a specified OAuth 2.0 credential provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4835,7 +5503,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 OAuth2 凭证提供商</para>
+        /// <para>Retrieves the details of a specified OAuth 2.0 credential provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4853,7 +5521,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 OAuth2 凭证提供商</para>
+        /// <para>Retrieves the details of a specified OAuth 2.0 credential provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4871,8 +5539,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一个 权限策略</para>
+        /// <para>Queries an access policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls GetPolicy to retrieve the complete configuration of a single policy, including its definition, associated policy set, and creation and update times.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetPolicyRequest
@@ -4917,8 +5590,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一个 权限策略</para>
+        /// <para>Queries an access policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls GetPolicy to retrieve the complete configuration of a single policy, including its definition, associated policy set, and creation and update times.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetPolicyRequest
@@ -4963,8 +5641,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一个 权限策略</para>
+        /// <para>Queries an access policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls GetPolicy to retrieve the complete configuration of a single policy, including its definition, associated policy set, and creation and update times.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetPolicyRequest
@@ -4981,8 +5664,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一个 权限策略</para>
+        /// <para>Queries an access policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls GetPolicy to retrieve the complete configuration of a single policy, including its definition, associated policy set, and creation and update times.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetPolicyRequest
@@ -4999,8 +5687,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一个 权限策略集合</para>
+        /// <para>Queries an access policy set.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls GetPolicySet to query the complete configuration of a single policy set, including the ARN, description, creation time, and update time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetPolicySetRequest
@@ -5041,8 +5734,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一个 权限策略集合</para>
+        /// <para>Queries an access policy set.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls GetPolicySet to query the complete configuration of a single policy set, including the ARN, description, creation time, and update time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetPolicySetRequest
@@ -5083,8 +5781,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一个 权限策略集合</para>
+        /// <para>Queries an access policy set.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls GetPolicySet to query the complete configuration of a single policy set, including the ARN, description, creation time, and update time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetPolicySetRequest
@@ -5101,8 +5804,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一个 权限策略集合</para>
+        /// <para>Queries an access policy set.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls GetPolicySet to query the complete configuration of a single policy set, including the ARN, description, creation time, and update time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetPolicySetRequest
@@ -5119,8 +5827,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Role</para>
+        /// <para>Retrieves a role.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns the complete information about a specified role, including the role ID, name, description, type (Default or Manual), and creation and update times.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetRoleRequest
@@ -5165,8 +5878,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Role</para>
+        /// <para>Retrieves a role.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns the complete information about a specified role, including the role ID, name, description, type (Default or Manual), and creation and update times.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetRoleRequest
@@ -5211,8 +5929,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Role</para>
+        /// <para>Retrieves a role.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns the complete information about a specified role, including the role ID, name, description, type (Default or Manual), and creation and update times.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetRoleRequest
@@ -5229,8 +5952,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Role</para>
+        /// <para>Retrieves a role.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns the complete information about a specified role, including the role ID, name, description, type (Default or Manual), and creation and update times.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetRoleRequest
@@ -5247,8 +5975,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用</para>
+        /// <para>Creates an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns the complete configuration of the SAML IdP, including the EntityId, logon URL, X509 certificate list, and the enabling status of SSO and JIT synchronization.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSAMLIdentityProviderRequest
@@ -5289,8 +6022,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用</para>
+        /// <para>Creates an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns the complete configuration of the SAML IdP, including the EntityId, logon URL, X509 certificate list, and the enabling status of SSO and JIT synchronization.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSAMLIdentityProviderRequest
@@ -5331,8 +6069,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用</para>
+        /// <para>Creates an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns the complete configuration of the SAML IdP, including the EntityId, logon URL, X509 certificate list, and the enabling status of SSO and JIT synchronization.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSAMLIdentityProviderRequest
@@ -5349,8 +6092,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用</para>
+        /// <para>Creates an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns the complete configuration of the SAML IdP, including the EntityId, logon URL, X509 certificate list, and the enabling status of SSO and JIT synchronization.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSAMLIdentityProviderRequest
@@ -5487,8 +6235,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定的身份提供商</para>
+        /// <para>Retrieves the specified identity provider.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the SSO configuration of a specific type of identity provider in a specified user pool. Returns information such as the enabling status, synchronization callback status, and metadata of the IdP. For security reasons, sensitive fields such as appSecret, encryptKey, and verificationToken are not returned in the response.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSpecificIdentityProviderRequest
@@ -5533,8 +6286,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定的身份提供商</para>
+        /// <para>Retrieves the specified identity provider.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the SSO configuration of a specific type of identity provider in a specified user pool. Returns information such as the enabling status, synchronization callback status, and metadata of the IdP. For security reasons, sensitive fields such as appSecret, encryptKey, and verificationToken are not returned in the response.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSpecificIdentityProviderRequest
@@ -5579,8 +6337,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定的身份提供商</para>
+        /// <para>Retrieves the specified identity provider.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the SSO configuration of a specific type of identity provider in a specified user pool. Returns information such as the enabling status, synchronization callback status, and metadata of the IdP. For security reasons, sensitive fields such as appSecret, encryptKey, and verificationToken are not returned in the response.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSpecificIdentityProviderRequest
@@ -5597,8 +6360,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定的身份提供商</para>
+        /// <para>Retrieves the specified identity provider.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the SSO configuration of a specific type of identity provider in a specified user pool. Returns information such as the enabling status, synchronization callback status, and metadata of the IdP. For security reasons, sensitive fields such as appSecret, encryptKey, and verificationToken are not returned in the response.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSpecificIdentityProviderRequest
@@ -5615,8 +6383,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定凭证库的详细配置。</para>
+        /// <para>Retrieves the detailed configuration of a specified token vault.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls GetTokenVault to retrieve the complete configuration of a single token vault, including the encryption method, associated RAM role ARN, creation time, and update time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetTokenVaultRequest
@@ -5657,8 +6430,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定凭证库的详细配置。</para>
+        /// <para>Retrieves the detailed configuration of a specified token vault.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls GetTokenVault to retrieve the complete configuration of a single token vault, including the encryption method, associated RAM role ARN, creation time, and update time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetTokenVaultRequest
@@ -5699,8 +6477,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定凭证库的详细配置。</para>
+        /// <para>Retrieves the detailed configuration of a specified token vault.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls GetTokenVault to retrieve the complete configuration of a single token vault, including the encryption method, associated RAM role ARN, creation time, and update time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetTokenVaultRequest
@@ -5717,8 +6500,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定凭证库的详细配置。</para>
+        /// <para>Retrieves the detailed configuration of a specified token vault.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls GetTokenVault to retrieve the complete configuration of a single token vault, including the encryption method, associated RAM role ARN, creation time, and update time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetTokenVaultRequest
@@ -5735,8 +6523,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户</para>
+        /// <para>Retrieves a user.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns the complete information of a specified user, including the user ID, username, display name, description, and creation and update times.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUserRequest
@@ -5789,8 +6582,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户</para>
+        /// <para>Retrieves a user.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns the complete information of a specified user, including the user ID, username, display name, description, and creation and update times.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUserRequest
@@ -5843,8 +6641,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户</para>
+        /// <para>Retrieves a user.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns the complete information of a specified user, including the user ID, username, display name, description, and creation and update times.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUserRequest
@@ -5861,8 +6664,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户</para>
+        /// <para>Retrieves a user.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns the complete information of a specified user, including the user ID, username, display name, description, and creation and update times.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUserRequest
@@ -5879,8 +6687,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取UserPool</para>
+        /// <para>Retrieves a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns the complete configuration information of a specified user pool, including the user pool ID, name, description, creation time, and update time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUserPoolRequest
@@ -5921,8 +6734,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取UserPool</para>
+        /// <para>Retrieves a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns the complete configuration information of a specified user pool, including the user pool ID, name, description, creation time, and update time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUserPoolRequest
@@ -5963,8 +6781,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取UserPool</para>
+        /// <para>Retrieves a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns the complete configuration information of a specified user pool, including the user pool ID, name, description, creation time, and update time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUserPoolRequest
@@ -5981,8 +6804,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取UserPool</para>
+        /// <para>Retrieves a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns the complete configuration information of a specified user pool, including the user pool ID, name, description, creation time, and update time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUserPoolRequest
@@ -5999,8 +6827,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用</para>
+        /// <para>Creates an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns the complete configuration information of a client, including the client ID, name, redirect URIs, token validity periods, SecretRequired and EnforcePKCE settings, and default client scopes.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUserPoolClientRequest
@@ -6045,8 +6878,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用</para>
+        /// <para>Creates an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns the complete configuration information of a client, including the client ID, name, redirect URIs, token validity periods, SecretRequired and EnforcePKCE settings, and default client scopes.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUserPoolClientRequest
@@ -6091,8 +6929,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用</para>
+        /// <para>Creates an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns the complete configuration information of a client, including the client ID, name, redirect URIs, token validity periods, SecretRequired and EnforcePKCE settings, and default client scopes.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUserPoolClientRequest
@@ -6109,8 +6952,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用</para>
+        /// <para>Creates an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns the complete configuration information of a client, including the client ID, name, redirect URIs, token validity periods, SecretRequired and EnforcePKCE settings, and default client scopes.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUserPoolClientRequest
@@ -6127,8 +6975,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取UserPool</para>
+        /// <para>Retrieves the details of a synchronization task in a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the execution details of a single synchronization task in a specified user pool, including the task status, start and end times, synchronization result statistics (the number of created, updated, deleted, and unchanged users), and error messages.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUserPoolSyncJobRequest
@@ -6173,8 +7026,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取UserPool</para>
+        /// <para>Retrieves the details of a synchronization task in a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the execution details of a single synchronization task in a specified user pool, including the task status, start and end times, synchronization result statistics (the number of created, updated, deleted, and unchanged users), and error messages.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUserPoolSyncJobRequest
@@ -6219,8 +7077,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取UserPool</para>
+        /// <para>Retrieves the details of a synchronization task in a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the execution details of a single synchronization task in a specified user pool, including the task status, start and end times, synchronization result statistics (the number of created, updated, deleted, and unchanged users), and error messages.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUserPoolSyncJobRequest
@@ -6237,8 +7100,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取UserPool</para>
+        /// <para>Retrieves the details of a synchronization task in a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the execution details of a single synchronization task in a specified user pool, including the task status, start and end times, synchronization result statistics (the number of created, updated, deleted, and unchanged users), and error messages.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUserPoolSyncJobRequest
@@ -6255,7 +7123,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用</para>
+        /// <para>Queries the detailed configuration of a workload identity by name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6297,7 +7165,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用</para>
+        /// <para>Queries the detailed configuration of a workload identity by name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6339,7 +7207,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用</para>
+        /// <para>Queries the detailed configuration of a workload identity by name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6357,7 +7225,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用</para>
+        /// <para>Queries the detailed configuration of a workload identity by name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6375,7 +7243,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出 API 密钥凭证提供商</para>
+        /// <para>Lists all API key credential providers in the account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6425,7 +7293,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出 API 密钥凭证提供商</para>
+        /// <para>Lists all API key credential providers in the account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6475,7 +7343,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出 API 密钥凭证提供商</para>
+        /// <para>Lists all API key credential providers in the account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6493,7 +7361,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出 API 密钥凭证提供商</para>
+        /// <para>Lists all API key credential providers in the account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6511,8 +7379,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出IdentityProvider</para>
+        /// <para>Lists identity providers.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns summary information about all secrets of a client, including the client key ID and creation time. For security reasons, the plaintext secret (ClientSecretValue) is not returned in the list.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListClientSecretsRequest
@@ -6557,8 +7430,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出IdentityProvider</para>
+        /// <para>Lists identity providers.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns summary information about all secrets of a client, including the client key ID and creation time. For security reasons, the plaintext secret (ClientSecretValue) is not returned in the list.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListClientSecretsRequest
@@ -6603,8 +7481,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出IdentityProvider</para>
+        /// <para>Lists identity providers.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns summary information about all secrets of a client, including the client key ID and creation time. For security reasons, the plaintext secret (ClientSecretValue) is not returned in the list.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListClientSecretsRequest
@@ -6621,8 +7504,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出IdentityProvider</para>
+        /// <para>Lists identity providers.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns summary information about all secrets of a client, including the client key ID and creation time. For security reasons, the plaintext secret (ClientSecretValue) is not returned in the list.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListClientSecretsRequest
@@ -6635,6 +7523,186 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListClientSecretsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询身份源部门树（按层懒加载，供控制台勾选同步范围）</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>用户池需已配置相应身份源，且应用具有目标部门的通讯录访问权限。本接口使用已保存的身份源配置，无需传入应用密钥。
+        /// 本接口仅返回指定父部门的直属子部门，不包含父部门本身，不递归返回整棵部门树。未传父部门时，钉钉默认查询根部门1下的直属子部门，飞书默认查询根部门0下的直属子部门。部门浏览受应用授权可见范围限制，不受当前保存的同步范围限制。
+        /// 本接口不修改同步范围，不触发人员同步。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListIdentityProviderDepartmentsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIdentityProviderDepartmentsResponse
+        /// </returns>
+        public ListIdentityProviderDepartmentsResponse ListIdentityProviderDepartmentsWithOptions(ListIdentityProviderDepartmentsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentityProviderType))
+            {
+                body["IdentityProviderType"] = request.IdentityProviderType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentDepartmentId))
+            {
+                body["ParentDepartmentId"] = request.ParentDepartmentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserPoolName))
+            {
+                body["UserPoolName"] = request.UserPoolName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListIdentityProviderDepartments",
+                Version = "2025-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListIdentityProviderDepartmentsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询身份源部门树（按层懒加载，供控制台勾选同步范围）</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>用户池需已配置相应身份源，且应用具有目标部门的通讯录访问权限。本接口使用已保存的身份源配置，无需传入应用密钥。
+        /// 本接口仅返回指定父部门的直属子部门，不包含父部门本身，不递归返回整棵部门树。未传父部门时，钉钉默认查询根部门1下的直属子部门，飞书默认查询根部门0下的直属子部门。部门浏览受应用授权可见范围限制，不受当前保存的同步范围限制。
+        /// 本接口不修改同步范围，不触发人员同步。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListIdentityProviderDepartmentsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIdentityProviderDepartmentsResponse
+        /// </returns>
+        public async Task<ListIdentityProviderDepartmentsResponse> ListIdentityProviderDepartmentsWithOptionsAsync(ListIdentityProviderDepartmentsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentityProviderType))
+            {
+                body["IdentityProviderType"] = request.IdentityProviderType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentDepartmentId))
+            {
+                body["ParentDepartmentId"] = request.ParentDepartmentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserPoolName))
+            {
+                body["UserPoolName"] = request.UserPoolName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListIdentityProviderDepartments",
+                Version = "2025-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListIdentityProviderDepartmentsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询身份源部门树（按层懒加载，供控制台勾选同步范围）</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>用户池需已配置相应身份源，且应用具有目标部门的通讯录访问权限。本接口使用已保存的身份源配置，无需传入应用密钥。
+        /// 本接口仅返回指定父部门的直属子部门，不包含父部门本身，不递归返回整棵部门树。未传父部门时，钉钉默认查询根部门1下的直属子部门，飞书默认查询根部门0下的直属子部门。部门浏览受应用授权可见范围限制，不受当前保存的同步范围限制。
+        /// 本接口不修改同步范围，不触发人员同步。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListIdentityProviderDepartmentsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIdentityProviderDepartmentsResponse
+        /// </returns>
+        public ListIdentityProviderDepartmentsResponse ListIdentityProviderDepartments(ListIdentityProviderDepartmentsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListIdentityProviderDepartmentsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询身份源部门树（按层懒加载，供控制台勾选同步范围）</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>用户池需已配置相应身份源，且应用具有目标部门的通讯录访问权限。本接口使用已保存的身份源配置，无需传入应用密钥。
+        /// 本接口仅返回指定父部门的直属子部门，不包含父部门本身，不递归返回整棵部门树。未传父部门时，钉钉默认查询根部门1下的直属子部门，飞书默认查询根部门0下的直属子部门。部门浏览受应用授权可见范围限制，不受当前保存的同步范围限制。
+        /// 本接口不修改同步范围，不触发人员同步。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListIdentityProviderDepartmentsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIdentityProviderDepartmentsResponse
+        /// </returns>
+        public async Task<ListIdentityProviderDepartmentsResponse> ListIdentityProviderDepartmentsAsync(ListIdentityProviderDepartmentsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListIdentityProviderDepartmentsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6767,7 +7835,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出 OAuth2 凭证提供商</para>
+        /// <para>Lists all OAuth 2.0 credential providers in the account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6817,7 +7885,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出 OAuth2 凭证提供商</para>
+        /// <para>Lists all OAuth 2.0 credential providers in the account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6867,7 +7935,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出 OAuth2 凭证提供商</para>
+        /// <para>Lists all OAuth 2.0 credential providers in the account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6885,7 +7953,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出 OAuth2 凭证提供商</para>
+        /// <para>Lists all OAuth 2.0 credential providers in the account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7039,8 +8107,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出网关策略配置</para>
+        /// <para>Lists gateway policy configurations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls ListPolicySetAttachedGateways to query the gateways to which a specific policy set is currently attached. Call this operation before deleting a policy set to verify that no residual attachments exist.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListPolicySetAttachedGatewaysRequest
@@ -7093,8 +8166,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出网关策略配置</para>
+        /// <para>Lists gateway policy configurations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls ListPolicySetAttachedGateways to query the gateways to which a specific policy set is currently attached. Call this operation before deleting a policy set to verify that no residual attachments exist.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListPolicySetAttachedGatewaysRequest
@@ -7147,8 +8225,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出网关策略配置</para>
+        /// <para>Lists gateway policy configurations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls ListPolicySetAttachedGateways to query the gateways to which a specific policy set is currently attached. Call this operation before deleting a policy set to verify that no residual attachments exist.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListPolicySetAttachedGatewaysRequest
@@ -7165,8 +8248,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出网关策略配置</para>
+        /// <para>Lists gateway policy configurations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls ListPolicySetAttachedGateways to query the gateways to which a specific policy set is currently attached. Call this operation before deleting a policy set to verify that no residual attachments exist.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListPolicySetAttachedGatewaysRequest
@@ -7471,8 +8559,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出Roles</para>
+        /// <para>Lists roles.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns summary information about all roles in a user pool, including the default role Default and custom roles Manual. The information includes the role ID, name, description, creation time, update time, and role type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRolesRequest
@@ -7521,8 +8614,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出Roles</para>
+        /// <para>Lists roles.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns summary information about all roles in a user pool, including the default role Default and custom roles Manual. The information includes the role ID, name, description, creation time, update time, and role type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRolesRequest
@@ -7571,8 +8669,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出Roles</para>
+        /// <para>Lists roles.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns summary information about all roles in a user pool, including the default role Default and custom roles Manual. The information includes the role ID, name, description, creation time, update time, and role type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRolesRequest
@@ -7589,8 +8692,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出Roles</para>
+        /// <para>Lists roles.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns summary information about all roles in a user pool, including the default role Default and custom roles Manual. The information includes the role ID, name, description, creation time, update time, and role type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRolesRequest
@@ -7607,8 +8715,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出IdentityProvider</para>
+        /// <para>Lists identity providers.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns a list of all X.509 certificates under the SAML IdP configuration of the user pool to help administrators manage the certificate lifecycle and perform certificate rotation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSAMLIdentityProviderCertificatesRequest
@@ -7649,8 +8762,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出IdentityProvider</para>
+        /// <para>Lists identity providers.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns a list of all X.509 certificates under the SAML IdP configuration of the user pool to help administrators manage the certificate lifecycle and perform certificate rotation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSAMLIdentityProviderCertificatesRequest
@@ -7691,8 +8809,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出IdentityProvider</para>
+        /// <para>Lists identity providers.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns a list of all X.509 certificates under the SAML IdP configuration of the user pool to help administrators manage the certificate lifecycle and perform certificate rotation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSAMLIdentityProviderCertificatesRequest
@@ -7709,8 +8832,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出IdentityProvider</para>
+        /// <para>Lists identity providers.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns a list of all X.509 certificates under the SAML IdP configuration of the user pool to help administrators manage the certificate lifecycle and perform certificate rotation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSAMLIdentityProviderCertificatesRequest
@@ -7855,8 +8983,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出IdentityProvider</para>
+        /// <para>Lists identity providers.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns summary information about all clients in a user pool, including the client ID, name, redirect URIs, creation time, and configurations such as PKCE, client secret, and token validity periods.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListUserPoolClientsRequest
@@ -7905,8 +9038,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出IdentityProvider</para>
+        /// <para>Lists identity providers.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns summary information about all clients in a user pool, including the client ID, name, redirect URIs, creation time, and configurations such as PKCE, client secret, and token validity periods.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListUserPoolClientsRequest
@@ -7955,8 +9093,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出IdentityProvider</para>
+        /// <para>Lists identity providers.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns summary information about all clients in a user pool, including the client ID, name, redirect URIs, creation time, and configurations such as PKCE, client secret, and token validity periods.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListUserPoolClientsRequest
@@ -7973,8 +9116,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出IdentityProvider</para>
+        /// <para>Lists identity providers.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns summary information about all clients in a user pool, including the client ID, name, redirect URIs, creation time, and configurations such as PKCE, client secret, and token validity periods.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListUserPoolClientsRequest
@@ -8127,8 +9275,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出IdentityProvider</para>
+        /// <para>Lists identity providers.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns summary information about all user pools within the current account, including the user pool ID, name, description, and creation and update times. Supports pagination by using NextToken.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListUserPoolsRequest
@@ -8173,8 +9326,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出IdentityProvider</para>
+        /// <para>Lists identity providers.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns summary information about all user pools within the current account, including the user pool ID, name, description, and creation and update times. Supports pagination by using NextToken.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListUserPoolsRequest
@@ -8219,8 +9377,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出IdentityProvider</para>
+        /// <para>Lists identity providers.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns summary information about all user pools within the current account, including the user pool ID, name, description, and creation and update times. Supports pagination by using NextToken.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListUserPoolsRequest
@@ -8237,8 +9400,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出IdentityProvider</para>
+        /// <para>Lists identity providers.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns summary information about all user pools within the current account, including the user pool ID, name, description, and creation and update times. Supports pagination by using NextToken.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListUserPoolsRequest
@@ -8255,8 +9423,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出用户</para>
+        /// <para>Lists users.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns the summary information of all users in a user pool, including the user ID, username, display name, description, creation time, and update time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListUsersRequest
@@ -8305,8 +9478,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出用户</para>
+        /// <para>Lists users.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns the summary information of all users in a user pool, including the user ID, username, display name, description, creation time, and update time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListUsersRequest
@@ -8355,8 +9533,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出用户</para>
+        /// <para>Lists users.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns the summary information of all users in a user pool, including the user ID, username, display name, description, creation time, and update time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListUsersRequest
@@ -8373,8 +9556,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出用户</para>
+        /// <para>Lists users.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns the summary information of all users in a user pool, including the user ID, username, display name, description, creation time, and update time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListUsersRequest
@@ -8391,7 +9579,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出IdentityProvider</para>
+        /// <para>Lists workload identities with pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8437,7 +9625,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出IdentityProvider</para>
+        /// <para>Lists workload identities with pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8483,7 +9671,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出IdentityProvider</para>
+        /// <para>Lists workload identities with pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8501,7 +9689,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出IdentityProvider</para>
+        /// <para>Lists workload identities with pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8519,8 +9707,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建UserPool</para>
+        /// <para>Triggers a user synchronization task in a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates and immediately executes a user synchronization task in a specified user pool. The system pulls user data from the specified identity provider and synchronizes the data to the user pool. The task runs asynchronously. The operation completes after the task ID is returned. You can call GetUserPoolSyncJob to query the execution progress and results. Only one synchronization task can run in a user pool at a time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RunUserPoolSyncJobRequest
@@ -8569,8 +9762,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建UserPool</para>
+        /// <para>Triggers a user synchronization task in a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates and immediately executes a user synchronization task in a specified user pool. The system pulls user data from the specified identity provider and synchronizes the data to the user pool. The task runs asynchronously. The operation completes after the task ID is returned. You can call GetUserPoolSyncJob to query the execution progress and results. Only one synchronization task can run in a user pool at a time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RunUserPoolSyncJobRequest
@@ -8619,8 +9817,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建UserPool</para>
+        /// <para>Triggers a user synchronization task in a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates and immediately executes a user synchronization task in a specified user pool. The system pulls user data from the specified identity provider and synchronizes the data to the user pool. The task runs asynchronously. The operation completes after the task ID is returned. You can call GetUserPoolSyncJob to query the execution progress and results. Only one synchronization task can run in a user pool at a time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RunUserPoolSyncJobRequest
@@ -8637,8 +9840,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建UserPool</para>
+        /// <para>Triggers a user synchronization task in a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates and immediately executes a user synchronization task in a specified user pool. The system pulls user data from the specified identity provider and synchronizes the data to the user pool. The task runs asynchronously. The operation completes after the task ID is returned. You can call GetUserPoolSyncJob to query the execution progress and results. Only one synchronization task can run in a user pool at a time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RunUserPoolSyncJobRequest
@@ -8655,8 +9863,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建WorkloadIdentity</para>
+        /// <para>Creates a workload identity.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation sets or updates the core configurations of a SAML identity provider (IdP), including the IdP identifier (EntityId), logon URL (LoginURL), X.509 certificates, single sign-on (SSO) status, and Just-In-Time (JIT) user provisioning and update settings. If you specify X509Certificates, all existing certificates in the user pool are replaced. To append certificates while retaining the existing ones, use AddSAMLIdentityProviderCertificate.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SetSAMLIdentityProviderRequest
@@ -8731,8 +9944,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建WorkloadIdentity</para>
+        /// <para>Creates a workload identity.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation sets or updates the core configurations of a SAML identity provider (IdP), including the IdP identifier (EntityId), logon URL (LoginURL), X.509 certificates, single sign-on (SSO) status, and Just-In-Time (JIT) user provisioning and update settings. If you specify X509Certificates, all existing certificates in the user pool are replaced. To append certificates while retaining the existing ones, use AddSAMLIdentityProviderCertificate.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SetSAMLIdentityProviderRequest
@@ -8807,8 +10025,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建WorkloadIdentity</para>
+        /// <para>Creates a workload identity.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation sets or updates the core configurations of a SAML identity provider (IdP), including the IdP identifier (EntityId), logon URL (LoginURL), X.509 certificates, single sign-on (SSO) status, and Just-In-Time (JIT) user provisioning and update settings. If you specify X509Certificates, all existing certificates in the user pool are replaced. To append certificates while retaining the existing ones, use AddSAMLIdentityProviderCertificate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetSAMLIdentityProviderRequest
@@ -8825,8 +10048,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建WorkloadIdentity</para>
+        /// <para>Creates a workload identity.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation sets or updates the core configurations of a SAML identity provider (IdP), including the IdP identifier (EntityId), logon URL (LoginURL), X.509 certificates, single sign-on (SSO) status, and Just-In-Time (JIT) user provisioning and update settings. If you specify X509Certificates, all existing certificates in the user pool are replaced. To append certificates while retaining the existing ones, use AddSAMLIdentityProviderCertificate.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetSAMLIdentityProviderRequest
@@ -8843,8 +10071,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通用IdP配置</para>
+        /// <para>Configures the SSO settings for a specified type of identity provider in a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Configures a specific type of identity provider for a specified user pool. This operation is used to configure SSO logon and address book synchronization for non-SAML IdPs such as DingTalk. A user pool does not support enabling multiple identity providers at the same time. You must disable other enabled IdPs before enabling a new IdP.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetSpecificIdentityProviderRequest
@@ -8897,8 +10130,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通用IdP配置</para>
+        /// <para>Configures the SSO settings for a specified type of identity provider in a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Configures a specific type of identity provider for a specified user pool. This operation is used to configure SSO logon and address book synchronization for non-SAML IdPs such as DingTalk. A user pool does not support enabling multiple identity providers at the same time. You must disable other enabled IdPs before enabling a new IdP.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetSpecificIdentityProviderRequest
@@ -8951,8 +10189,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通用IdP配置</para>
+        /// <para>Configures the SSO settings for a specified type of identity provider in a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Configures a specific type of identity provider for a specified user pool. This operation is used to configure SSO logon and address book synchronization for non-SAML IdPs such as DingTalk. A user pool does not support enabling multiple identity providers at the same time. You must disable other enabled IdPs before enabling a new IdP.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetSpecificIdentityProviderRequest
@@ -8969,8 +10212,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通用IdP配置</para>
+        /// <para>Configures the SSO settings for a specified type of identity provider in a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Configures a specific type of identity provider for a specified user pool. This operation is used to configure SSO logon and address book synchronization for non-SAML IdPs such as DingTalk. A user pool does not support enabling multiple identity providers at the same time. You must disable other enabled IdPs before enabling a new IdP.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetSpecificIdentityProviderRequest
@@ -8987,8 +10235,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改用户登录密码</para>
+        /// <para>Modifies the logon password of a user.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sets or resets the logon password for a user in a specified user pool. Two methods are supported: specifying a password (Password) or generating a random password (GenerateRandomPassword). The two methods are mutually exclusive, and you must select exactly one. If you specify a password, it must meet the password policy requirements: a minimum length of 8 characters, containing at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters, and it must not contain the username. Passwords are managed independently of the user creation process and are not passed through CreateUser.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetUserPasswordRequest
@@ -9041,8 +10294,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改用户登录密码</para>
+        /// <para>Modifies the logon password of a user.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sets or resets the logon password for a user in a specified user pool. Two methods are supported: specifying a password (Password) or generating a random password (GenerateRandomPassword). The two methods are mutually exclusive, and you must select exactly one. If you specify a password, it must meet the password policy requirements: a minimum length of 8 characters, containing at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters, and it must not contain the username. Passwords are managed independently of the user creation process and are not passed through CreateUser.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetUserPasswordRequest
@@ -9095,8 +10353,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改用户登录密码</para>
+        /// <para>Modifies the logon password of a user.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sets or resets the logon password for a user in a specified user pool. Two methods are supported: specifying a password (Password) or generating a random password (GenerateRandomPassword). The two methods are mutually exclusive, and you must select exactly one. If you specify a password, it must meet the password policy requirements: a minimum length of 8 characters, containing at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters, and it must not contain the username. Passwords are managed independently of the user creation process and are not passed through CreateUser.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetUserPasswordRequest
@@ -9113,8 +10376,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改用户登录密码</para>
+        /// <para>Modifies the logon password of a user.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sets or resets the logon password for a user in a specified user pool. Two methods are supported: specifying a password (Password) or generating a random password (GenerateRandomPassword). The two methods are mutually exclusive, and you must select exactly one. If you specify a password, it must meet the password policy requirements: a minimum length of 8 characters, containing at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters, and it must not contain the username. Passwords are managed independently of the user creation process and are not passed through CreateUser.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetUserPasswordRequest
@@ -9131,7 +10399,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新一个 API 密钥凭证提供商</para>
+        /// <para>Updates an existing API key credential provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9185,7 +10453,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新一个 API 密钥凭证提供商</para>
+        /// <para>Updates an existing API key credential provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9239,7 +10507,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新一个 API 密钥凭证提供商</para>
+        /// <para>Updates an existing API key credential provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9257,7 +10525,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新一个 API 密钥凭证提供商</para>
+        /// <para>Updates an existing API key credential provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9275,8 +10543,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网关策略配置</para>
+        /// <para>Queries the gateway policy configuration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls UpdateGatewayPolicyConfig to adjust the policy enforcement mode on a gateway. Common usage: Use LOG_ONLY for observation and verification during the initial rollout of a policy. After confirming that everything is correct, switch the gateway to ENFORCE to enforce interception. This operation does not modify the attached policy set itself. To replace the policy set, call AttachPolicySetToGateway.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateGatewayPolicyConfigRequest
@@ -9325,8 +10598,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网关策略配置</para>
+        /// <para>Queries the gateway policy configuration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls UpdateGatewayPolicyConfig to adjust the policy enforcement mode on a gateway. Common usage: Use LOG_ONLY for observation and verification during the initial rollout of a policy. After confirming that everything is correct, switch the gateway to ENFORCE to enforce interception. This operation does not modify the attached policy set itself. To replace the policy set, call AttachPolicySetToGateway.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateGatewayPolicyConfigRequest
@@ -9375,8 +10653,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网关策略配置</para>
+        /// <para>Queries the gateway policy configuration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls UpdateGatewayPolicyConfig to adjust the policy enforcement mode on a gateway. Common usage: Use LOG_ONLY for observation and verification during the initial rollout of a policy. After confirming that everything is correct, switch the gateway to ENFORCE to enforce interception. This operation does not modify the attached policy set itself. To replace the policy set, call AttachPolicySetToGateway.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateGatewayPolicyConfigRequest
@@ -9393,8 +10676,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网关策略配置</para>
+        /// <para>Queries the gateway policy configuration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls UpdateGatewayPolicyConfig to adjust the policy enforcement mode on a gateway. Common usage: Use LOG_ONLY for observation and verification during the initial rollout of a policy. After confirming that everything is correct, switch the gateway to ENFORCE to enforce interception. This operation does not modify the attached policy set itself. To replace the policy set, call AttachPolicySetToGateway.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateGatewayPolicyConfigRequest
@@ -9411,7 +10699,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新IdentityProvider</para>
+        /// <para>Updates the specified identity provider.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9471,7 +10759,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新IdentityProvider</para>
+        /// <para>Updates the specified identity provider.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9531,7 +10819,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新IdentityProvider</para>
+        /// <para>Updates the specified identity provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9549,7 +10837,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新IdentityProvider</para>
+        /// <para>Updates the specified identity provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9567,8 +10855,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新用户池登录配置</para>
+        /// <para>Updates the logon configuration of a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the logon configuration of a specified user pool. Currently, only logon preferences, such as whether password logon is enabled, can be updated. The password policy cannot be modified. Specify only the fields to be updated. Unspecified fields remain unchanged.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateLoginPreferenceRequest
@@ -9629,8 +10922,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新用户池登录配置</para>
+        /// <para>Updates the logon configuration of a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the logon configuration of a specified user pool. Currently, only logon preferences, such as whether password logon is enabled, can be updated. The password policy cannot be modified. Specify only the fields to be updated. Unspecified fields remain unchanged.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateLoginPreferenceRequest
@@ -9691,8 +10989,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新用户池登录配置</para>
+        /// <para>Updates the logon configuration of a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the logon configuration of a specified user pool. Currently, only logon preferences, such as whether password logon is enabled, can be updated. The password policy cannot be modified. Specify only the fields to be updated. Unspecified fields remain unchanged.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLoginPreferenceRequest
@@ -9709,8 +11012,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新用户池登录配置</para>
+        /// <para>Updates the logon configuration of a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the logon configuration of a specified user pool. Currently, only logon preferences, such as whether password logon is enabled, can be updated. The password policy cannot be modified. Specify only the fields to be updated. Unspecified fields remain unchanged.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLoginPreferenceRequest
@@ -9727,7 +11035,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改 OAuth2 凭证提供商</para>
+        /// <para>Updates the configuration of an existing OAuth 2.0 credential provider.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9795,7 +11103,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改 OAuth2 凭证提供商</para>
+        /// <para>Updates the configuration of an existing OAuth 2.0 credential provider.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9863,7 +11171,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改 OAuth2 凭证提供商</para>
+        /// <para>Updates the configuration of an existing OAuth 2.0 credential provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9881,7 +11189,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改 OAuth2 凭证提供商</para>
+        /// <para>Updates the configuration of an existing OAuth 2.0 credential provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9899,8 +11207,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新一个权限策略</para>
+        /// <para>Updates an access policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls the UpdatePolicy operation to update the description and definition of an existing policy. The updated definition takes effect immediately for all gateways to which the policy set is mounted.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdatePolicyRequest
@@ -9959,8 +11272,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新一个权限策略</para>
+        /// <para>Updates an access policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls the UpdatePolicy operation to update the description and definition of an existing policy. The updated definition takes effect immediately for all gateways to which the policy set is mounted.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdatePolicyRequest
@@ -10019,8 +11337,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新一个权限策略</para>
+        /// <para>Updates an access policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls the UpdatePolicy operation to update the description and definition of an existing policy. The updated definition takes effect immediately for all gateways to which the policy set is mounted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdatePolicyRequest
@@ -10037,8 +11360,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新一个权限策略</para>
+        /// <para>Updates an access policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls the UpdatePolicy operation to update the description and definition of an existing policy. The updated definition takes effect immediately for all gateways to which the policy set is mounted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdatePolicyRequest
@@ -10055,8 +11383,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新一个权限策略集合</para>
+        /// <para>Updates an access policy set.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls UpdatePolicySet to update the description of an existing policy set. To modify specific policies in the policy set, use UpdatePolicy. To change the mount relationship, use AttachPolicySetToGateway or DetachPolicySetFromGateway.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdatePolicySetRequest
@@ -10101,8 +11434,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新一个权限策略集合</para>
+        /// <para>Updates an access policy set.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls UpdatePolicySet to update the description of an existing policy set. To modify specific policies in the policy set, use UpdatePolicy. To change the mount relationship, use AttachPolicySetToGateway or DetachPolicySetFromGateway.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdatePolicySetRequest
@@ -10147,8 +11485,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新一个权限策略集合</para>
+        /// <para>Updates an access policy set.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls UpdatePolicySet to update the description of an existing policy set. To modify specific policies in the policy set, use UpdatePolicy. To change the mount relationship, use AttachPolicySetToGateway or DetachPolicySetFromGateway.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdatePolicySetRequest
@@ -10165,8 +11508,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新一个权限策略集合</para>
+        /// <para>Updates an access policy set.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls UpdatePolicySet to update the description of an existing policy set. To modify specific policies in the policy set, use UpdatePolicy. To change the mount relationship, use AttachPolicySetToGateway or DetachPolicySetFromGateway.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdatePolicySetRequest
@@ -10183,8 +11531,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Role</para>
+        /// <para>Updates a role.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the Description field of a role. The RoleName field serves as a unique identifier and cannot be modified.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateRoleRequest
@@ -10233,8 +11586,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Role</para>
+        /// <para>Updates a role.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the Description field of a role. The RoleName field serves as a unique identifier and cannot be modified.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateRoleRequest
@@ -10283,8 +11641,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Role</para>
+        /// <para>Updates a role.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the Description field of a role. The RoleName field serves as a unique identifier and cannot be modified.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateRoleRequest
@@ -10301,8 +11664,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Role</para>
+        /// <para>Updates a role.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the Description field of a role. The RoleName field serves as a unique identifier and cannot be modified.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateRoleRequest
@@ -10319,8 +11687,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新凭证库。</para>
+        /// <para>Updates a token vault.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the description and role configuration of an existing token vault. Note: The encryption configuration (KeyType or KmsKeyArn) of a token vault cannot be changed after it is created.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateTokenVaultRequest
@@ -10369,8 +11742,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新凭证库。</para>
+        /// <para>Updates a token vault.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the description and role configuration of an existing token vault. Note: The encryption configuration (KeyType or KmsKeyArn) of a token vault cannot be changed after it is created.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateTokenVaultRequest
@@ -10419,8 +11797,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新凭证库。</para>
+        /// <para>Updates a token vault.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the description and role configuration of an existing token vault. Note: The encryption configuration (KeyType or KmsKeyArn) of a token vault cannot be changed after it is created.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateTokenVaultRequest
@@ -10437,8 +11820,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新凭证库。</para>
+        /// <para>Updates a token vault.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the description and role configuration of an existing token vault. Note: The encryption configuration (KeyType or KmsKeyArn) of a token vault cannot be changed after it is created.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateTokenVaultRequest
@@ -10455,8 +11843,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新用户池用户</para>
+        /// <para>Updates a user in a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the attribute information of a user in a specified user pool. Specify only the fields that you want to update. Unspecified fields remain unchanged. UserName is the user identifier and cannot be modified. You can update the display name, description, email address, and status. Email addresses must be unique within the user pool.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateUserRequest
@@ -10517,8 +11910,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新用户池用户</para>
+        /// <para>Updates a user in a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the attribute information of a user in a specified user pool. Specify only the fields that you want to update. Unspecified fields remain unchanged. UserName is the user identifier and cannot be modified. You can update the display name, description, email address, and status. Email addresses must be unique within the user pool.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateUserRequest
@@ -10579,8 +11977,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新用户池用户</para>
+        /// <para>Updates a user in a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the attribute information of a user in a specified user pool. Specify only the fields that you want to update. Unspecified fields remain unchanged. UserName is the user identifier and cannot be modified. You can update the display name, description, email address, and status. Email addresses must be unique within the user pool.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateUserRequest
@@ -10597,8 +12000,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新用户池用户</para>
+        /// <para>Updates a user in a user pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the attribute information of a user in a specified user pool. Specify only the fields that you want to update. Unspecified fields remain unchanged. UserName is the user identifier and cannot be modified. You can update the display name, description, email address, and status. Email addresses must be unique within the user pool.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateUserRequest
@@ -10743,8 +12151,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用</para>
+        /// <para>Creates an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the callback URLs (RedirectURIs), whether an application secret is required (SecretRequired), whether Proof Key for Code Exchange (PKCE) is enforced (EnforcePKCE), and the validity periods of the access token and refresh token. The client name (ClientName) serves as a unique identifier and cannot be modified.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateUserPoolClientRequest
@@ -10764,6 +12177,10 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RedirectURIs))
             {
                 request.RedirectURIsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RedirectURIs, "RedirectURIs", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Scopes))
+            {
+                request.ScopesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Scopes, "Scopes", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessTokenValidity))
@@ -10785,6 +12202,10 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RefreshTokenValidity))
             {
                 body["RefreshTokenValidity"] = request.RefreshTokenValidity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScopesShrink))
+            {
+                body["Scopes"] = request.ScopesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretRequired))
             {
@@ -10815,8 +12236,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用</para>
+        /// <para>Creates an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the callback URLs (RedirectURIs), whether an application secret is required (SecretRequired), whether Proof Key for Code Exchange (PKCE) is enforced (EnforcePKCE), and the validity periods of the access token and refresh token. The client name (ClientName) serves as a unique identifier and cannot be modified.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateUserPoolClientRequest
@@ -10836,6 +12262,10 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RedirectURIs))
             {
                 request.RedirectURIsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RedirectURIs, "RedirectURIs", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Scopes))
+            {
+                request.ScopesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Scopes, "Scopes", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessTokenValidity))
@@ -10857,6 +12287,10 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RefreshTokenValidity))
             {
                 body["RefreshTokenValidity"] = request.RefreshTokenValidity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScopesShrink))
+            {
+                body["Scopes"] = request.ScopesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretRequired))
             {
@@ -10887,8 +12321,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用</para>
+        /// <para>Creates an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the callback URLs (RedirectURIs), whether an application secret is required (SecretRequired), whether Proof Key for Code Exchange (PKCE) is enforced (EnforcePKCE), and the validity periods of the access token and refresh token. The client name (ClientName) serves as a unique identifier and cannot be modified.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateUserPoolClientRequest
@@ -10905,8 +12344,13 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用</para>
+        /// <para>Creates an application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the callback URLs (RedirectURIs), whether an application secret is required (SecretRequired), whether Proof Key for Code Exchange (PKCE) is enforced (EnforcePKCE), and the validity periods of the access token and refresh token. The client name (ClientName) serves as a unique identifier and cannot be modified.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateUserPoolClientRequest
@@ -10923,7 +12367,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用</para>
+        /// <para>Updates the specified workload identity.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10999,7 +12443,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用</para>
+        /// <para>Updates the specified workload identity.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11075,7 +12519,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用</para>
+        /// <para>Updates the specified workload identity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11093,7 +12537,7 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用</para>
+        /// <para>Updates the specified workload identity.</para>
         /// </summary>
         /// 
         /// <param name="request">

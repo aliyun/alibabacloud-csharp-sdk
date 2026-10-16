@@ -9,46 +9,118 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentIdentity20250901.Models
 {
     public class UpdateUserResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5EEF5C1D-E951-5C0D-B0BC-5FF1B626CFC6</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The user information.</para>
+        /// </summary>
         [NameInMap("User")]
         [Validation(Required=false)]
         public UpdateUserResponseBodyUser User { get; set; }
         public class UpdateUserResponseBodyUser : TeaModel {
+            /// <summary>
+            /// <para>The creation time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2026-06-25T12:57:03Z</para>
+            /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            /// <summary>
+            /// <para>The description of the user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Senior data analyst</para>
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// <para>The display name of the user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Alice Wang</para>
+            /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
+            /// <summary>
+            /// <para>The email address of the user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="mailto:alice.wang@example.com">alice.wang@example.com</a></para>
+            /// </summary>
             [NameInMap("Email")]
             [Validation(Required=false)]
             public string Email { get; set; }
 
+            /// <summary>
+            /// <para>The status of the user. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Enabled: The user is enabled.</description></item>
+            /// <item><description>Disabled: The user is disabled.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Enabled</para>
+            /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <para>The type of the user. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Manual: The user is manually created by calling an API operation.</description></item>
+            /// <item><description>JIT: The user is created by using JIT.</description></item>
+            /// <item><description>SYNC_DINGTALK: The user is synchronized from DingTalk.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Manual</para>
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
+            /// <summary>
+            /// <para>The update time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2026-06-25T12:57:03Z</para>
+            /// </summary>
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
             public string UpdateTime { get; set; }
 
+            /// <summary>
+            /// <para>The user ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>user_xxxxxxxxxxxxxxxxxxxx</para>
+            /// </summary>
             [NameInMap("UserId")]
             [Validation(Required=false)]
             public string UserId { get; set; }
 
+            /// <summary>
+            /// <para>The username.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>alice</para>
+            /// </summary>
             [NameInMap("UserName")]
             [Validation(Required=false)]
             public string UserName { get; set; }

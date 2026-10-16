@@ -9,18 +9,42 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentIdentity20250901.Models
 {
     public class DeleteRoleAssignmentRequest : TeaModel {
+        /// <summary>
+        /// <para>The name of the identity. If PrincipalType is set to User, specify the username.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>alice</para>
+        /// </summary>
         [NameInMap("PrincipalName")]
         [Validation(Required=false)]
         public string PrincipalName { get; set; }
 
+        /// <summary>
+        /// <para>The identity type. Currently, only User is supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>User</para>
+        /// </summary>
         [NameInMap("PrincipalType")]
         [Validation(Required=false)]
         public string PrincipalType { get; set; }
 
+        /// <summary>
+        /// <para>The name of the role to be removed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Analyst</para>
+        /// </summary>
         [NameInMap("RoleName")]
         [Validation(Required=false)]
         public string RoleName { get; set; }
 
+        /// <summary>
+        /// <para>The name of the user pool.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>my-agent-userpool</para>
+        /// </summary>
         [NameInMap("UserPoolName")]
         [Validation(Required=false)]
         public string UserPoolName { get; set; }

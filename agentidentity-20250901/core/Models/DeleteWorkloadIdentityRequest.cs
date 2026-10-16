@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentIdentity20250901.Models
 {
     public class DeleteWorkloadIdentityRequest : TeaModel {
+        /// <summary>
+        /// <para>The unique name of the workload identity.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>agent-101</para>
+        /// </summary>
         [NameInMap("WorkloadIdentityName")]
         [Validation(Required=false)]
         public string WorkloadIdentityName { get; set; }
