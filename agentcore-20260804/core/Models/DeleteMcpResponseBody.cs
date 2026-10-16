@@ -33,14 +33,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Request processed successfully</para>
+        /// <para>The request is processed successfully</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A1B2C3D4-E5F6-47A8-90AB-CDEF12345678</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]

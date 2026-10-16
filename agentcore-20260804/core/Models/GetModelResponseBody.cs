@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The model details.</para>
+        /// <para>The detailed information about the model.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetModelResponseBodyData Data { get; set; }
         public class GetModelResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The model capability configuration.</para>
+            /// <para>The capability configurations of the model.</para>
             /// </summary>
             [NameInMap("capabilities")]
             [Validation(Required=false)]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public bool? Document { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the model is able to invoke multiple tool calling requests in a single response.</para>
+                /// <para>Indicates whether the model supports tool calling and is able to invoke multiple tools in a single response.</para>
                 /// </summary>
                 [NameInMap("multiToolCall")]
                 [Validation(Required=false)]
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public bool? Reasoning { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the model supports streaming tool calling.</para>
+                /// <para>Indicates whether the model supports tool calling and is able to invoke tools in a streaming manner.</para>
                 /// </summary>
                 [NameInMap("streamToolCall")]
                 [Validation(Required=false)]
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ConnectionId { get; set; }
 
             /// <summary>
-            /// <para>The model context window size, in tokens. The value must be a positive integer.</para>
+            /// <para>The context window size of the model, in tokens. It must be a positive integer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>128000</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The model description, up to 255 characters.</para>
+            /// <para>The description of the model, up to 255 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>description</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of output tokens supported per model generation.</para>
+            /// <para>The maximum number of output tokens supported by the model in a single generation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>131072</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ModelId { get; set; }
 
             /// <summary>
-            /// <para>The upstream model name.</para>
+            /// <para>The name of the upstream model.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qwen-max</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ModelName { get; set; }
 
             /// <summary>
-            /// <para>The region ID to which the resource belongs.</para>
+            /// <para>The ID of the region to which the resource belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]

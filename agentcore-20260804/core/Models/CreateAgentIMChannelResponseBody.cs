@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class CreateAgentIMChannelResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. The value is SUCCESS when the request succeeds.</para>
+        /// <para>The business status code. The value is SUCCESS when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -60,12 +60,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The IM channel type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>DINGTALK: DingTalk.</description></item>
-            /// <item><description>FEISHU: Lark.</description></item>
-            /// <item><description>WECOM: WeCom.</description></item>
-            /// </list>
+            /// <para>The IM channel type. Valid values: DINGTALK (DingTalk), FEISHU (Lark), and WECOM (WeCom).</para>
             /// 
             /// <b>Example:</b>
             /// <para>DINGTALK</para>
@@ -108,14 +103,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether to enable the IM channel. Default value during creation: true.</para>
+            /// <para>Specifies whether to enable the IM channel. Default value: true.</para>
             /// </summary>
             [NameInMap("enabled")]
             [Validation(Required=false)]
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The public network access URL of the attached ServiceEndpoint.</para>
+            /// <para>The public network access address of the bound ServiceEndpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://agent.example.com">https://agent.example.com</a></para>
@@ -135,7 +130,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ImChannelId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public network address.</para>
+            /// <para>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, and must be ready and have a public network address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>se-1</para>
@@ -147,11 +142,11 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <summary>
             /// <para>The IM channel status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CREATING: Being created.</description></item>
+            /// <item><description>CREATING: Creating.</description></item>
             /// <item><description>READY: Ready.</description></item>
-            /// <item><description>UPDATING: Being updated.</description></item>
+            /// <item><description>UPDATING: Updating.</description></item>
             /// <item><description>FAILED: Failed.</description></item>
-            /// <item><description>DELETING: Being deleted.</description></item>
+            /// <item><description>DELETING: Deleting.</description></item>
             /// <item><description>DELETE_FAILED: Deletion failed.</description></item>
             /// </list>
             /// 
@@ -195,7 +190,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. The value is 200 when the request succeeds.</para>
+        /// <para>The HTTP status code. The value is 200 when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -225,7 +220,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The list of agent-team membership relationships.</para>
+        /// <para>The list of membership relationships between agents and teams.</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The team name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Default Team</para>
+            /// <para>Default team</para>
             /// </summary>
             [NameInMap("teamName")]
             [Validation(Required=false)]
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The response message. An error description is returned if the request failed.</para>
+        /// <para>The response message. Returns an error description when the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The cursor used to retrieve the next page. An empty value indicates that no more data exists.</para>
+        /// <para>The cursor used to retrieve the next page. An empty value indicates that no more data is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dXNlci1vZmZzZXQ6MTA</para>
@@ -119,14 +119,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of records that match the specified conditions.</para>
+        /// <para>The total number of records that match the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

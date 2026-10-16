@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public DeleteCustomAgentResponseBodyData Data { get; set; }
         public class DeleteCustomAgentResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The unique identifier of the custom agent. You can retrieve it from the response of CreateCustomAgent or ListCustomAgents.</para>
+            /// <para>The unique identifier of the custom agent. You can obtain it from the response of CreateCustomAgent or ListCustomAgents.</para>
             /// 
             /// <b>Example:</b>
             /// <para>agent-550e8400e29b41d4a716446655440000</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The deployment method of the agent. Custom agents are deployed and managed by the platform, and the value is MANAGED.</para>
+            /// <para>The deployment method of the agent. Custom agents are deployed and managed by the platform. The value is MANAGED.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MANAGED</para>
@@ -107,7 +107,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Runtime { get; set; }
 
             /// <summary>
-            /// <para>The overall status of the agent. Valid values: Creating: The agent is being created. Running: The agent is running. Failed: The agent failed. Updating: The agent is being updated. Deleting: The agent is being deleted. Deleted: The agent is deleted. To query the execution progress of the latest configuration, call GetCustomAgent.</para>
+            /// <para>The overall status of the agent. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Creating: The agent is being created.</description></item>
+            /// <item><description>Running: The agent is running.</description></item>
+            /// <item><description>Failed: The agent is in a failed state.</description></item>
+            /// <item><description>Updating: The agent is being updated.</description></item>
+            /// <item><description>Deleting: The agent is being deleted.</description></item>
+            /// <item><description>Deleted: The agent has been deleted.
+            /// Call GetCustomAgent to retrieve the latest configuration execution progress.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -169,7 +178,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was processed successfully. A value of true indicates that the request was processed successfully. A successful creation, update, or deletion does not mean that the background operation is complete.</para>
+        /// <para>Indicates whether the request was successful. A value of true indicates success. A successful creation, update, or deletion does not mean that the background operation is complete.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]

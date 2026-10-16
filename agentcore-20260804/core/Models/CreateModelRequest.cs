@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public CreateModelRequestBody Body { get; set; }
         public class CreateModelRequestBody : TeaModel {
             /// <summary>
-            /// <para>The model capability configuration.</para>
+            /// <para>The model capability configurations.</para>
             /// </summary>
             [NameInMap("capabilities")]
             [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public bool? Document { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the model is able to invoke multiple tools in a single response.</para>
+                /// <para>Specifies whether the model is able to invoke multiple tool calling operations in a single response.</para>
                 /// </summary>
                 [NameInMap("multiToolCall")]
                 [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public bool? Reasoning { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the model supports streaming tool calling.</para>
+                /// <para>Specifies whether the model is able to invoke tool calling in a streaming manner.</para>
                 /// </summary>
                 [NameInMap("streamToolCall")]
                 [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ConnectionId { get; set; }
 
             /// <summary>
-            /// <para>The model context window size, in tokens. The value must be a positive integer.</para>
+            /// <para>The context window size of the model, in tokens. It must be a positive integer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>128000</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of output tokens supported per model generation.</para>
+            /// <para>The maximum number of output tokens supported per generation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>131072</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The client token for idempotence. Not currently supported.</para>
+        /// <para>The client token used for idempotence. This parameter is not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>client-token-1</para>

@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class UpdateCustomAgentRequest : TeaModel {
         /// <summary>
-        /// <para>The update configuration for the custom agent. Provide at least one top-level field. Omitted top-level fields retain their original values. When providing a configuration object, specify its required subfields and include any optional configurations that you want to retain. Arrays are replaced in their entirety.</para>
+        /// <para>The update configuration for the custom agent. Provide at least one top-level field. Omitted top-level fields retain their original values. When providing a configuration object, you must specify its required subfields and include any optional configurations that you want to retain. Arrays are replaced as a whole.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public UpdateCustomAgentRequestBody Body { get; set; }
         public class UpdateCustomAgentRequestBody : TeaModel {
             /// <summary>
-            /// <para>The list of additional AgenticFS mounts. The total number of AgenticFS and OSS mounts cannot exceed 10. During creation, omitting this field or passing an empty array [] indicates no additional mounts. During an update, omitting this field retains the original value, and passing an empty array [] clears the list. You cannot pass null.</para>
+            /// <para>The list of additional AgenticFS mounts. The total number of AgenticFS and OSS mounts cannot exceed 10. If you omit this field or pass an empty array [] during creation, no additional mounts are configured. During an update, omitting this field retains the original value, and passing an empty array [] clears the list. You cannot pass null.</para>
             /// </summary>
             [NameInMap("agenticFsMounts")]
             [Validation(Required=false)]
             public List<UpdateCustomAgentRequestBodyAgenticFsMounts> AgenticFsMounts { get; set; }
             public class UpdateCustomAgentRequestBodyAgenticFsMounts : TeaModel {
                 /// <summary>
-                /// <para>The subdirectory under /mnt/agenticfs/ in the container. This field is required for each mount item. Mount targets must not be duplicated or form parent-child overrides.</para>
+                /// <para>The subdirectory under /mnt/agenticfs/ in the container. This field is required for each mount item and is validated by the backend. Mount targets cannot be duplicated or overlap in a parent-child relationship.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/mnt/agenticfs/data</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string MountPath { get; set; }
 
                 /// <summary>
-                /// <para>The existing non-empty relative directory under the access point. This field is required for each mount item. Root directories, absolute paths, and parent directory traversals are not allowed.</para>
+                /// <para>The existing non-empty relative directory under the access point. This field is required for each mount item and is validated by the backend. Root directories, absolute paths, and parent directory traversals are not allowed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>workspace/data</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Path { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the mount is read-only. A value of true indicates read-only, and false indicates read and write. If omitted, the default value is false.</para>
+                /// <para>Specifies whether the mount is read-only. A value of true indicates read-only, and false indicates read/write. If omitted, the default value is false.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public bool? ReadOnly { get; set; }
 
                 /// <summary>
-                /// <para>The domain name of the access point. This field is required for each mount item. Use the DomainName value from the NAS ListAccessPoints response. Do not include the protocol, port, or path.</para>
+                /// <para>The domain name of the access point. This field is required for each mount item and is validated by the backend. Use the DomainName value from the response of the NAS ListAccessPoints operation. Do not include the protocol, port, or path.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ap-0123456789abcdef0.0123456789-vlm36.cn-hangzhou.nas.aliyuncs.com</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The deployment artifact configuration. Currently, only ACR container images are supported. Specify the container field and the service listening port field, and omit the code field. During an update, you must specify the port field and all required fields of the container object.</para>
+            /// <para>The deployment artifact configuration. Currently, only ACR container images are supported. Specify the container field and the service listening port field. Omit the code field. During an update, you must specify all required fields for port and container.</para>
             /// </summary>
             [NameInMap("artifact")]
             [Validation(Required=false)]
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 }
 
                 /// <summary>
-                /// <para>The TCP port listened to by the agent service. Valid values: 1 to 65535.</para>
+                /// <para>The TCP port that the agent service listens on. Valid values: 1 to 65535.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The description of the agent\&quot;s purpose. The maximum length is 1,024 characters after leading and trailing whitespaces are removed. If omitted, the original value is retained. Pass null to clear the description.</para>
+            /// <para>The description of the agent purpose. The maximum length is 1,024 characters after leading and trailing whitespaces are removed. If omitted, the original value is retained. Pass null to clear the description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Custom agent that provides conversation services</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public UpdateCustomAgentRequestBodyEnvironment Environment { get; set; }
             public class UpdateCustomAgentRequestBodyEnvironment : TeaModel {
                 /// <summary>
-                /// <para>The list of environment variables. Each item includes a name and a value. This list is replaced in its entirety during an update.</para>
+                /// <para>The list of environment variables. Each item includes a name and a value. This list is replaced as a whole during an update.</para>
                 /// </summary>
                 [NameInMap("variables")]
                 [Validation(Required=false)]
@@ -289,7 +289,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Path { get; set; }
 
                 /// <summary>
-                /// <para>The port accessed for health checks. This field is required when configuring a health check. Valid values: 1 to 65535.</para>
+                /// <para>The port accessed by the health check. This field is required when configuring a health check. Valid values: 1 to 65535.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8080</para>
@@ -321,14 +321,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The log delivery configuration for the agent. You can specify the Simple Log Service project and logstore. After a successful creation or update, verify that logs are delivered properly.</para>
+            /// <para>The log delivery configuration for the agent. You can specify the Simple Log Service project and logstore. After a successful creation or update, verify whether logs are delivered properly.</para>
             /// </summary>
             [NameInMap("logging")]
             [Validation(Required=false)]
             public UpdateCustomAgentRequestBodyLogging Logging { get; set; }
             public class UpdateCustomAgentRequestBodyLogging : TeaModel {
                 /// <summary>
-                /// <para>The Simple Log Service log delivery destination. When updating this object, you must provide both the project and logstore fields, and they cannot be empty.</para>
+                /// <para>The Simple Log Service log delivery destination. When updating this object, you must provide both project and logstore, and neither can be empty.</para>
                 /// </summary>
                 [NameInMap("sls")]
                 [Validation(Required=false)]
@@ -359,7 +359,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The name of the custom agent. The length must be 1 to 128 characters after leading and trailing whitespaces are removed. The name must be unique within the same workspace. If omitted, the original value is retained. You cannot pass null or a blank name.</para>
+            /// <para>The name of the custom agent. The length is 1 to 128 characters after leading and trailing whitespaces are removed. The name must be unique within the same workspace. If omitted, the original value is retained. You cannot pass null or a blank name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-custom-agent</para>
@@ -369,7 +369,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The network access configuration for the agent. When providing this object, omitted access items are treated as allowed. The actual accessible scope is still subject to the workspace network configuration. To retain the original restrictions during an update, specify both accessInternet and accessVpc.</para>
+            /// <para>The network access configuration for the agent. When providing this object, omitted access items are treated as allowed. The actual accessible scope is still restricted by the workspace network configuration. To retain the original restrictions during an update, specify both accessInternet and accessVpc.</para>
             /// </summary>
             [NameInMap("network")]
             [Validation(Required=false)]
@@ -410,14 +410,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The list of OSS mounts. The total number of OSS and AgenticFS mounts cannot exceed 10. For each item, you must specify the bucketName, path, and mountPath fields. Mount targets must not be duplicated or overlap with each other. This list is replaced in its entirety during an update. Pass an empty array [] to clear the list.</para>
+            /// <para>The list of OSS mounts. The total number of OSS and AgenticFS mounts cannot exceed 10. For each item, you must specify bucketName, path, and mountPath. Mount targets cannot be duplicated or overlap with each other. This list is replaced as a whole during an update. Pass an empty array [] to clear the list.</para>
             /// </summary>
             [NameInMap("ossMounts")]
             [Validation(Required=false)]
             public List<UpdateCustomAgentRequestBodyOssMounts> OssMounts { get; set; }
             public class UpdateCustomAgentRequestBodyOssMounts : TeaModel {
                 /// <summary>
-                /// <para>The name of the OSS bucket. This field is required for each mount item. The name must be 3 to 63 characters in length and can contain only lowercase letters, digits, and hyphens. It cannot start or end with a hyphen.</para>
+                /// <para>The name of the OSS bucket. This field is required for each mount item. The length is 3 to 63 characters. It can contain only lowercase letters, digits, and hyphens, and cannot start or end with a hyphen.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>my-agent-data</para>
@@ -427,7 +427,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string BucketName { get; set; }
 
                 /// <summary>
-                /// <para>The subdirectory under /mnt/oss/ in the container. This field is required for each mount item. Mount targets must not be duplicated or form parent-child overrides.</para>
+                /// <para>The subdirectory under /mnt/oss/ in the container. This field is required for each mount item. Mount targets cannot be duplicated or overlap in a parent-child relationship.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/mnt/oss/train</para>
@@ -447,7 +447,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Path { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the mount is read-only. A value of true indicates read-only, and false indicates read and write. If omitted, the default value is false.</para>
+                /// <para>Specifies whether the mount is read-only. A value of true indicates read-only, and false indicates read/write. If omitted, the default value is false.</para>
                 /// </summary>
                 [NameInMap("readOnly")]
                 [Validation(Required=false)]
@@ -456,7 +456,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The list of invocation protocols supported by the agent. Each item includes the protocol type, along with optional paths and request headers. The entire list is replaced during an update.</para>
+            /// <para>The list of invocation protocols supported by the agent. Each item includes the protocol type, and optional paths and request headers. The entire list is replaced during an update.</para>
             /// </summary>
             [NameInMap("protocol")]
             [Validation(Required=false)]
@@ -528,7 +528,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string RoleArn { get; set; }
 
             /// <summary>
-            /// <para>The runtime configuration. When this object is provided, both compute and sessionPolicy must be present. To retain the original elastic policy, provide the complete hpa configuration. Omitting the top-level runtime field retains the original configuration.</para>
+            /// <para>The runtime configuration. When this object is provided, both compute and sessionPolicy must be present. To retain the original elastic policy, you must also provide the complete hpa configuration. Omitting the top-level runtime field retains the original configuration.</para>
             /// </summary>
             [NameInMap("runtime")]
             [Validation(Required=false)]
@@ -561,19 +561,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 }
 
                 /// <summary>
-                /// <para>The optional elastic policy. When runtime is provided, omitting hpa or its fields uses the default values: enabled is false, the minimum number of instances is 1, the maximum number of instances is 10, the maximum number of concurrent sessions per instance is 100, and the session idle timeout is 600 seconds. To retain the original policy during an update, provide the complete hpa configuration.</para>
+                /// <para>The optional elastic policy. When runtime is provided, if hpa or its fields are omitted, the default values are used: enabled is false, the minimum number of instances is 1, the maximum number of instances is 10, the maximum number of concurrent sessions per instance is 100, and the session idle timeout is 600 seconds. To retain the original policy during an update, you must provide the complete hpa configuration.</para>
                 /// </summary>
                 [NameInMap("hpa")]
                 [Validation(Required=false)]
                 public UpdateCustomAgentRequestBodyRuntimeHpa Hpa { get; set; }
                 public class UpdateCustomAgentRequestBodyRuntimeHpa : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether to enable elastic scaling. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>true: Enabled.</description></item>
-                    /// <item><description>false: Disabled.
-                    /// When runtime is provided, omitting this field defaults to false.</description></item>
-                    /// </list>
+                    /// <para>Specifies whether to enable elastic scaling. A value of true indicates that elastic scaling is enabled. A value of false indicates that elastic scaling is disabled. If this field is omitted when runtime is provided, the default value is false.</para>
                     /// <para>This parameter is required.</para>
                     /// </summary>
                     [NameInMap("enabled")]
@@ -581,7 +576,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public bool? Enabled { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum number of concurrent sessions for a single runtime instance. Valid values: 1 to 100. When runtime is provided, omitting this field uses the default value of 100.</para>
+                    /// <para>The maximum number of concurrent sessions for a single runtime instance. Valid values: 1 to 100. If this field is omitted when runtime is provided, the default value 100 is used.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
@@ -591,7 +586,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public int? MaxConcurrentSessionsPerSandbox { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum number of runtime instances. Valid values: 1 to 100. The value cannot be less than minSandboxCount. When runtime is provided, omitting this field uses the default value of 10.</para>
+                    /// <para>The maximum number of runtime instances. Valid values: 1 to 100. The value cannot be less than minSandboxCount. If this field is omitted when runtime is provided, the default value 10 is used.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -601,7 +596,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public int? MaxSandboxCount { get; set; }
 
                     /// <summary>
-                    /// <para>The minimum number of runtime instances. Valid values: 1 to 100. The value cannot be greater than maxSandboxCount. When runtime is provided, omitting this field uses the default value of 1.</para>
+                    /// <para>The minimum number of runtime instances. Valid values: 1 to 100. The value cannot be greater than maxSandboxCount. If this field is omitted when runtime is provided, the default value 1 is used.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -611,7 +606,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public int? MinSandboxCount { get; set; }
 
                     /// <summary>
-                    /// <para>The session idle timeout in seconds. Valid values: 60 to 86400. When runtime is provided, omitting this field uses the default value of 600.</para>
+                    /// <para>The session idle timeout in seconds. Valid values: 60 to 86400. If this field is omitted when runtime is provided, the default value 600 is used.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>600</para>
@@ -631,7 +626,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public UpdateCustomAgentRequestBodyRuntimeSessionPolicy SessionPolicy { get; set; }
                 public class UpdateCustomAgentRequestBodyRuntimeSessionPolicy : TeaModel {
                     /// <summary>
-                    /// <para>The name of the HTTP request header used by the session policy. This parameter is required when type is ISOLATED_HEADER_FIELD and must be a valid HTTP request header name. Omit this parameter for other policies.</para>
+                    /// <para>The name of the HTTP request header used by the session policy. This field is required when type is ISOLATED_HEADER_FIELD and must be a valid HTTP request header name. Omit this field for other policies.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>X-Session-Id</para>
@@ -645,8 +640,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     /// <list type="bullet">
                     /// <item><description>AFFINITY: Session affinity.</description></item>
                     /// <item><description>ISOLATED_HEADER_FIELD: Associates sessions by using the request header specified by headerName.</description></item>
-                    /// <item><description>ISOLATED_COOKIE: Not recommended.</description></item>
-                    /// <item><description>DISABLED: A compatibility option. The response returns AFFINITY.</description></item>
+                    /// <item><description>ISOLATED_COOKIE: Cookie-based session option. This value is not recommended.</description></item>
+                    /// <item><description>DISABLED: Compatibility option. The response returns AFFINITY.</description></item>
                     /// </list>
                     /// <para>This parameter is required.</para>
                     /// 

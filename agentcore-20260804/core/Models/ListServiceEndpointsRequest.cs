@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListServiceEndpointsRequest : TeaModel {
         /// <summary>
-        /// <para>Filters by target agent ID.</para>
+        /// <para>Filters the results by target agent ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>agent-123456</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string AgentId { get; set; }
 
         /// <summary>
-        /// <para>Filters by target agent version number.</para>
+        /// <para>Filters the results by target agent version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string AgentVersion { get; set; }
 
         /// <summary>
-        /// <para>Filters by collaboration component type. Valid values: MATRIX_CLIENT, MATRIX_FEDERATION, ELEMENT_WEB.</para>
+        /// <para>Filters the results by collaboration component type. Valid values: MATRIX_CLIENT, MATRIX_FEDERATION, and ELEMENT_WEB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ELEMENT_WEB</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string CollaborationComponent { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records per page. Valid values: 1 to 100. If this parameter is not specified, 20 records are returned by default.</para>
+        /// <para>The maximum number of records to return per page. Valid values: 1 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. Do not specify this parameter for the first request. For subsequent requests, set this parameter to the nextToken value returned in the previous response.</para>
+        /// <para>The cursor for querying the next page. Do not specify this parameter for the first call. For subsequent calls, specify the nextToken value returned in the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>djE6YWdlbnRjb3JlLnNlcnZpY2UtZW5kcG9pbnQubGlzdDoyMA</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Filters by the workspace resource binding ID of the target collaboration component.</para>
+        /// <para>Filters the results by the workspace resource binding ID of the target collaboration component.</para>
         /// 
         /// <b>Example:</b>
         /// <para>wrb-123456</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string ResourceBindingId { get; set; }
 
         /// <summary>
-        /// <para>Filters by service endpoint status. Valid values: CREATING, READY, UPDATING, DEGRADED, DISABLED, DELETING.</para>
+        /// <para>Filters the results by service endpoint status. Valid values: CREATING, READY, UPDATING, DEGRADED, DISABLED, and DELETING.</para>
         /// 
         /// <b>Example:</b>
         /// <para>READY</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Filters by target type. Valid values: AGENT_VERSION, TEAM_COLLABORATION.</para>
+        /// <para>Filters the results by target type. Valid values: AGENT_VERSION and TEAM_COLLABORATION.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AGENT_VERSION</para>

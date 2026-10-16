@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class CreateExternalAgentBootstrapTokenResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. The value SUCCESS is returned if the request is successful.</para>
+        /// <para>The business status code. The value is SUCCESS when the operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The bootstrap token and CMS configuration required for connecting the external agent.</para>
+        /// <para>The Bootstrap token and CMS configuration required to onboard the external agent.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AgentId { get; set; }
 
             /// <summary>
-            /// <para>The bootstrap token used for connecting the external agent.</para>
+            /// <para>The Bootstrap token used to onboard the external agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bootstrap-token</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string BootstrapToken { get; set; }
 
             /// <summary>
-            /// <para>The CMS configuration used for connecting the external agent.</para>
+            /// <para>The CMS configuration used to onboard the external agent.</para>
             /// </summary>
             [NameInMap("cms")]
             [Validation(Required=false)]
@@ -86,11 +86,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The network type for connection. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>INTERNET: public network</description></item>
-            /// <item><description>INTRANET: internal network</description></item>
-            /// </list>
+            /// <para>The network type for onboarding. Valid values: INTRANET (internal network) and INTERNET (Internet).</para>
             /// 
             /// <b>Example:</b>
             /// <para>INTERNET</para>
@@ -100,7 +96,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string NetworkType { get; set; }
 
             /// <summary>
-            /// <para>The fingerprint of the bootstrap token.</para>
+            /// <para>The fingerprint of the Bootstrap token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fingerprint</para>
@@ -122,7 +118,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. The value 200 is returned if the request is successful.</para>
+        /// <para>The HTTP status code. The value is 200 when the operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -132,7 +128,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message that indicates the result of the request.</para>
+        /// <para>The result message of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -152,7 +148,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]

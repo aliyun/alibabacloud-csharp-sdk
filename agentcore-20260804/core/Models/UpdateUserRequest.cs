@@ -17,17 +17,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public UpdateUserRequestBody Body { get; set; }
         public class UpdateUserRequestBody : TeaModel {
             /// <summary>
-            /// <para>The display name of the user. The name must be 1 to 32 characters in length. At least one of displayName, email, and note must be specified.</para>
+            /// <para>The display name of the user. The name must be 1 to 32 characters in length. You must specify at least one of the displayName, email, and note parameters.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>John</para>
+            /// <para>Zhang San</para>
             /// </summary>
             [NameInMap("displayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The email address of the user. The address can be up to 256 characters in length.</para>
+            /// <para>The email address of the user. The email address can be up to 256 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:user-01@example.com">user-01@example.com</a></para>

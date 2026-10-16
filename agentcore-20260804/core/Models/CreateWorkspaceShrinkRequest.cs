@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class CreateWorkspaceShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The request body for creating a workspace.</para>
+        /// <para>The workspace creation request body.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

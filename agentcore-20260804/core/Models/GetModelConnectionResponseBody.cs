@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class GetModelConnectionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. The value SUCCESS is returned if the request succeeds.</para>
+        /// <para>The business status code. The value is SUCCESS when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ConnectionId { get; set; }
 
             /// <summary>
-            /// <para>The time when the resource was created, in RFC 3339 UTC format.</para>
+            /// <para>The time when the resource was created. The time is in RFC 3339 UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-09T00:00:00Z</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether access credentials have been configured for the model connection.</para>
+            /// <para>Indicates whether access credentials are configured for the model connection.</para>
             /// </summary>
             [NameInMap("credentialConfigured")]
             [Validation(Required=false)]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The absolute HTTP or HTTPS address of the upstream model service. The address can be up to 1024 characters in length.</para>
+            /// <para>The absolute HTTP or HTTPS URL of the upstream model service. The URL can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://dashscope.aliyuncs.com/compatible-mode/v1">https://dashscope.aliyuncs.com/compatible-mode/v1</a></para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The model invocation protocol. Currently, only OpenAI/v1 is supported. If this parameter is not set during model connection creation, this default value is used.</para>
+            /// <para>The protocol used to invoke the model. Currently, only OpenAI/v1 is supported. If no Settings are specified during model creation, this default value is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OpenAI/v1</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>The model provider type.</para>
+            /// <para>The type of the model provider.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qwen</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ProviderType { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the resource.</para>
+            /// <para>The ID of the region to which the resource belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The resource status. Valid values:</para>
+            /// <para>The status of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Active</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The failure summary returned when the model connection fails to be published or fails to be deleted but remains in the Deleting state. This value is empty for other statuses.</para>
+            /// <para>The failure summary returned when the model connection fails to be published, or when deletion fails but the resource remains in the deleting state. This field is empty in other states.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GatewayOperationException</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string StatusReason { get; set; }
 
             /// <summary>
-            /// <para>The time when the resource was last updated, in RFC 3339 UTC format.</para>
+            /// <para>The time when the resource was last updated. The time is in RFC 3339 UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-09T00:00:00Z</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. The value 200 is returned if the request succeeds.</para>
+        /// <para>The HTTP status code. The value is 200 when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request processing result message.</para>
+        /// <para>The message about the request processing result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]

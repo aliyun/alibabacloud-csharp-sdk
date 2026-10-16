@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class GetAgentSpecImportFileUrlResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetAgentSpecImportFileUrlResponseBodyData Data { get; set; }
         public class GetAgentSpecImportFileUrlResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The Content-Type to use for the OSS PUT request.</para>
+            /// <para>The Content-Type used for the OSS PUT request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>application/zip</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string OssObjectName { get; set; }
 
             /// <summary>
-            /// <para>The OSS pre-signed upload URL.</para>
+            /// <para>The OSS presigned upload URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com/artifacts/example.zip">https://example.com/artifacts/example.zip</a></para>

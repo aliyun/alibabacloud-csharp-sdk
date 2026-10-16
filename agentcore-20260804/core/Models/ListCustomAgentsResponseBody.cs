@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public List<ListCustomAgentsResponseBodyItems> Items { get; set; }
         public class ListCustomAgentsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The unique identifier of the custom agent. You can obtain the value from the response of CreateCustomAgent or ListCustomAgents.</para>
+            /// <para>The unique identifier of the custom agent. You can obtain this value from the response of CreateCustomAgent or ListCustomAgents.</para>
             /// 
             /// <b>Example:</b>
             /// <para>agent-550e8400e29b41d4a716446655440000</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreateMode { get; set; }
 
             /// <summary>
-            /// <para>The time when the agent was created. The time is displayed in ISO 8601 format. The trailing Z indicates the UTC time zone. Fractional seconds may be included.</para>
+            /// <para>The time when the agent was created. The time is in ISO 8601 format. The trailing Z indicates the UTC time zone. Fractional seconds may be included.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-10T06:00:00Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The deployment method of the agent. Custom agents are deployed and managed by the platform. The value is MANAGED.</para>
+            /// <para>The deployment method of the agent. Custom agents are deployed and managed by the platform. The value is MANAGED for custom agents.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MANAGED</para>
@@ -77,10 +77,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string DeployType { get; set; }
 
             /// <summary>
-            /// <para>The description of the agent\&quot;s purpose.</para>
+            /// <para>The description of the agent.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Custom agent that provides conversation services</para>
+            /// <para>Custom agent that provides conversational services</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public List<ListCustomAgentsResponseBodyItemsProtocolPaths> Paths { get; set; }
                 public class ListCustomAgentsResponseBodyItemsProtocolPaths : TeaModel {
                     /// <summary>
-                    /// <para>The description of the purpose of the current API path.</para>
+                    /// <para>The description of the current API path.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>AG-UI conversation API</para>
@@ -151,7 +151,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 }
 
                 /// <summary>
-                /// <para>The invoke Protocol Type. Valid values: agui: AG-UI protocol. openai-chat-completion: OpenAI Chat Completions compatible protocol. custom: custom protocol.</para>
+                /// <para>The invocation protocol type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>agui: AG-UI protocol.</description></item>
+                /// <item><description>openai-chat-completion: OpenAI Chat Completions compatible protocol.</description></item>
+                /// <item><description>custom: Custom protocol.</description></item>
+                /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -174,7 +179,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Runtime { get; set; }
 
             /// <summary>
-            /// <para>The overall status of the agent. Valid values: Creating: The agent is being created. Running: The agent is running. Failed: The agent failed to run. Updating: The agent is being updated. Deleting: The agent is being deleted. Deleted: The agent is deleted. To query the execution progress of the latest configuration, call GetCustomAgent.</para>
+            /// <para>The overall status of the agent. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Creating: The agent is being created.</description></item>
+            /// <item><description>Running: The agent is running.</description></item>
+            /// <item><description>Failed: The agent failed.</description></item>
+            /// <item><description>Updating: The agent is being updated.</description></item>
+            /// <item><description>Deleting: The agent is being deleted.</description></item>
+            /// <item><description>Deleted: The agent is deleted.
+            /// To check the execution progress of the latest configuration, call GetCustomAgent.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -184,7 +198,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the agent was last updated. The time is displayed in ISO 8601 format. The trailing Z indicates the UTC time zone. Fractional seconds may be included.</para>
+            /// <para>The time when the agent was last updated. The time is in ISO 8601 format. The trailing Z indicates the UTC time zone. Fractional seconds may be included.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-10T06:05:00Z</para>
@@ -226,7 +240,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The opaque token used to query the next page. An empty value indicates that there are no more pages. Pass the token as is in subsequent requests.</para>
+        /// <para>The opaque token used to query the next page. If this value is empty, no more pages are available. Pass this value as is in subsequent requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>djE6YWdlbnRjb3JlLmFnZW50Lmxpc3QuY3VzdG9tOjIw</para>
@@ -236,7 +250,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the request. You can use the ID to locate and troubleshoot issues.</para>
+        /// <para>The unique identifier of the request. You can use this ID to locate and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>550E8400-E29B-41D4-A716-446655440000</para>
@@ -246,7 +260,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was processed successfully. true indicates that the request was processed successfully. A successful creation, update, or deletion does not mean that the background operation is complete.</para>
+        /// <para>Indicates whether the request was processed successfully. A value of true indicates that the request was processed successfully. A successful creation, update, or deletion does not indicate that the background operation is complete.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]

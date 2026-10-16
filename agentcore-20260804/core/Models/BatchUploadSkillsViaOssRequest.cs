@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string OssObjectName { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to overwrite an existing Skill. Default value: false.</para>
+            /// <para>Specifies whether to overwrite existing skills. Default value: false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>

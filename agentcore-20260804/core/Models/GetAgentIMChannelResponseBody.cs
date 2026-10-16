@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class GetAgentIMChannelResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. The value SUCCESS is returned if the request succeeds.</para>
+        /// <para>The business status code. The value is SUCCESS if the request succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -60,12 +60,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The IM channel type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>DINGTALK: DingTalk.</description></item>
-            /// <item><description>FEISHU: Lark.</description></item>
-            /// <item><description>WECOM: WeCom.</description></item>
-            /// </list>
+            /// <para>The IM channel type. Valid values: DINGTALK (DingTalk), FEISHU (Lark), and WECOM (WeCom).</para>
             /// 
             /// <b>Example:</b>
             /// <para>DINGTALK</para>
@@ -85,7 +80,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The channel credential summary. Only non-sensitive fields and the names of configured secret fields are returned. Secret values are not returned.</para>
+            /// <para>The channel credential summary. Only non-sensitive fields and configured secret field names are returned. Secret values are not returned.</para>
             /// </summary>
             [NameInMap("credentialSummary")]
             [Validation(Required=false)]
@@ -108,14 +103,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the IM channel is enabled. Default value upon creation: true.</para>
+            /// <para>Specifies whether the IM channel is enabled. The default value is true upon creation.</para>
             /// </summary>
             [NameInMap("enabled")]
             [Validation(Required=false)]
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The public network access URL of the attached ServiceEndpoint.</para>
+            /// <para>The public network access URL of the attached service endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://agent.example.com">https://agent.example.com</a></para>
@@ -135,7 +130,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ImChannelId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the associated ServiceEndpoint. The endpoint must belong to the specified agent and its current version, and must be ready with a public access URL.</para>
+            /// <para>The ID of the bound service endpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public endpoint URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>se-1</para>
@@ -145,15 +140,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ServiceEndpointId { get; set; }
 
             /// <summary>
-            /// <para>The IM channel status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>CREATING: The channel is being created.</description></item>
-            /// <item><description>READY: The channel is ready.</description></item>
-            /// <item><description>UPDATING: The channel is being updated.</description></item>
-            /// <item><description>FAILED: The channel creation or update failed.</description></item>
-            /// <item><description>DELETING: The channel is being deleted.</description></item>
-            /// <item><description>DELETE_FAILED: The channel deletion failed.</description></item>
-            /// </list>
+            /// <para>The IM channel status. Valid values: CREATING (Creating), READY (Ready), UPDATING (Updating), FAILED (Failed), DELETING (Deleting), and DELETE_FAILED (Deletion failed).</para>
             /// 
             /// <b>Example:</b>
             /// <para>READY</para>
@@ -163,7 +150,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The reason for the current IM channel status.</para>
+            /// <para>The reason for the current status of the IM channel.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AppFlow creation failed</para>
@@ -195,7 +182,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. The value 200 is returned if the request succeeds.</para>
+        /// <para>The HTTP status code. The value is 200 if the request succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -205,7 +192,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request processing result message.</para>
+        /// <para>The result message of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -225,7 +212,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]

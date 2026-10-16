@@ -10,11 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class CreateExternalAgentBootstrapTokenRequest : TeaModel {
         /// <summary>
-        /// <para>The network type for connection. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>INTERNET: public network</description></item>
-        /// <item><description>INTRANET: internal network</description></item>
-        /// </list>
+        /// <para>The network type for onboarding. Valid values: INTRANET (internal network) and INTERNET (Internet).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class GetWorkspaceAgenticFsMountRamAuthorizeUrlRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the target NAS AccessPoint. This parameter corresponds to the server and fileSystemId parameters.</para>
+        /// <para>The ID of the target NAS access point. This parameter corresponds to the server and fileSystemId parameters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string AccessPointId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the NAS file system to which the target AccessPoint belongs. This parameter corresponds to the server and accessPointId parameters.</para>
+        /// <para>The ID of the NAS file system to which the target access point belongs. This parameter corresponds to the server and accessPointId parameters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The domain name of the target AccessPoint, obtained from the DomainName field of the NAS ListAccessPoints operation. Do not include the protocol, port, or path.</para>
+        /// <para>The domain name of the target access point. Obtain this value from the DomainName field in the NAS ListAccessPoints response. Do not include the protocol, port, or path.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

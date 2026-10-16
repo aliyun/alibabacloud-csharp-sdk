@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string BasedOnVersion { get; set; }
 
             /// <summary>
-            /// <para>The version number of the draft. If this parameter is not specified, the version number is automatically incremented.</para>
+            /// <para>Specifies the draft version number. If you do not specify this parameter, the version number is automatically incremented.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.0.0</para>

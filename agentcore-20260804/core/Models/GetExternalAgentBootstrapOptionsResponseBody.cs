@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class GetExternalAgentBootstrapOptionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. The value SUCCESS is returned if the request succeeds.</para>
+        /// <para>The business status code. The value is SUCCESS when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The network access information available for the external agent.</para>
+        /// <para>The access network information available for the external agent.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -37,25 +37,21 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AgentId { get; set; }
 
             /// <summary>
-            /// <para>The list of available network access options.</para>
+            /// <para>The list of available access networks.</para>
             /// </summary>
             [NameInMap("networkOptions")]
             [Validation(Required=false)]
             public List<GetExternalAgentBootstrapOptionsResponseBodyDataNetworkOptions> NetworkOptions { get; set; }
             public class GetExternalAgentBootstrapOptionsResponseBodyDataNetworkOptions : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the network access type is available.</para>
+                /// <para>Indicates whether the access network is available.</para>
                 /// </summary>
                 [NameInMap("available")]
                 [Validation(Required=false)]
                 public bool? Available { get; set; }
 
                 /// <summary>
-                /// <para>The network type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>INTRANET: internal network.</description></item>
-                /// <item><description>INTERNET: public network.</description></item>
-                /// </list>
+                /// <para>The access network type. Valid values: INTRANET (internal network) and INTERNET (public network).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>INTERNET</para>
@@ -79,7 +75,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. The value 200 is returned if the request succeeds.</para>
+        /// <para>The HTTP status code. The value is 200 when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -89,7 +85,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The result message of the request.</para>
+        /// <para>The request processing result message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -109,7 +105,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]

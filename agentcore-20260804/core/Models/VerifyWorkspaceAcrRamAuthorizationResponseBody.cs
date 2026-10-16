@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public VerifyWorkspaceAcrRamAuthorizationResponseBodyData Data { get; set; }
         public class VerifyWorkspaceAcrRamAuthorizationResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ACR Enterprise instance ID.</para>
+            /// <para>The ID of the ACR Enterprise instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cri-1234567890abcdef</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AcrInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The policy attachment status for the target repository.</para>
+            /// <para>The current attachment status of the policy for the target repository.</para>
             /// 
             /// <b>Example:</b>
             /// <para>UNAUTHORIZED</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AuthorizationStatus { get; set; }
 
             /// <summary>
-            /// <para>The prerequisite status for access. This is not the Secret Ready status.</para>
+            /// <para>The access prerequisite status. This does not indicate that the secret is ready.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ELIGIBLE</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ReasonCode { get; set; }
 
             /// <summary>
-            /// <para>The human-readable reason. This field is omitted when no reason exists.</para>
+            /// <para>The user-readable reason message. This field is omitted when no reason exists.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Authorize the Workspace role for this ACR instance.</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ReasonMessage { get; set; }
 
             /// <summary>
-            /// <para>The shared role name selected by the backend. This value is not editable on the frontend.</para>
+            /// <para>The name of the shared role selected by the backend. This field is not editable on the frontend.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AliyunAgentCoreWorkspace-ws-1234567890abcdef12345</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

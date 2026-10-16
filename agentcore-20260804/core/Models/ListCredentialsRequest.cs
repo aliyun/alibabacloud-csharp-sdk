@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The fuzzy match filter condition for credential names.</para>
+        /// <para>The filter condition for fuzzy matching by credential name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>model</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string NameLike { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. Do not specify this parameter for the first request. For subsequent requests, set this parameter to the nextToken value returned in the previous response.</para>
+        /// <para>The cursor used to query the next page. Do not specify this parameter in the first call. For subsequent calls, specify the nextToken returned in the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

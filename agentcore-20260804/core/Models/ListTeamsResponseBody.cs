@@ -64,11 +64,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string AgentName { get; set; }
 
                 /// <summary>
-                /// <para>The role of the agent in the team. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>LEADER</description></item>
-                /// <item><description>WORKER</description></item>
-                /// </list>
+                /// <para>The role of the agent in the team. Valid values: LEADER, WORKER.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>WORKER</para>
@@ -80,7 +76,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The creation time in UTC, formatted according to RFC 3339.</para>
+            /// <para>The creation time in RFC 3339 UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -93,14 +89,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The team description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>A team responsible for intelligent customer service</para>
+            /// <para>The team responsible for intelligent customer service</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The team name. The name can contain only lowercase letters, digits, and hyphens (-). It must start and end with a lowercase letter or digit. The name must be 1 to 128 characters in length.</para>
+            /// <para>The team name. It can contain only lowercase letters, digits, and hyphens. It must start and end with a lowercase letter or a digit, and must be 1 to 128 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>team-01</para>
@@ -110,15 +106,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The team status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Creating</description></item>
-            /// <item><description>Active</description></item>
-            /// <item><description>Updating</description></item>
-            /// <item><description>Deleting</description></item>
-            /// <item><description>Failed</description></item>
-            /// <item><description>Deleted</description></item>
-            /// </list>
+            /// <para>The team status. Valid values: Creating, Active, Updating, Deleting, Failed, and Deleted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Active</para>
@@ -138,7 +126,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string TeamId { get; set; }
 
             /// <summary>
-            /// <para>The time of the last modification in UTC, formatted according to RFC 3339.</para>
+            /// <para>The time of the last modification in RFC 3339 UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -155,12 +143,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public List<ListTeamsResponseBodyItemsUsers> Users { get; set; }
             public class ListTeamsResponseBodyItemsUsers : TeaModel {
                 /// <summary>
-                /// <para>The role of the user in the team. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>ADMIN</description></item>
-                /// <item><description>MEMBER</description></item>
-                /// </list>
-                /// <para>Each team must have exactly one ADMIN.</para>
+                /// <para>The role of the user in the team. Valid values: ADMIN, MEMBER. Each team must have exactly one ADMIN.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ADMIN</para>
@@ -204,7 +187,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records per page that took effect for this query.</para>
+        /// <para>The maximum number of records per page applied to this query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -214,7 +197,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The response message. An error description is returned if the request failed.</para>
+        /// <para>The response message. An error description is returned if the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -224,7 +207,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. This value is empty if no more pages are available.</para>
+        /// <para>The pagination token for the next page. This parameter is empty if no next page exists.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dGVhbS1vZmZzZXQ6MTA</para>
@@ -244,14 +227,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of teams that match the query conditions.</para>
+        /// <para>The total number of teams that meet the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>42</para>

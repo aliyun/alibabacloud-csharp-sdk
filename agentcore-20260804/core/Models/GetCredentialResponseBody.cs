@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The creation time in UTC, formatted according to RFC 3339.</para>
+            /// <para>The creation time in UTC format compliant with RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CredentialId { get; set; }
 
             /// <summary>
-            /// <para>The masked content of the credential. When credentialType is apiKey, the value of apiKey is returned as asterisks (*) of equal length.</para>
+            /// <para>The masked result of the credential content. When credentialType is apiKey, the value of apiKey is returned as asterisks (*) of the same length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;apiKey&quot;:&quot;****************&quot;}</para>
@@ -96,17 +96,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CredentialType { get; set; }
 
             /// <summary>
-            /// <para>The credential description, up to 256 characters in length.</para>
+            /// <para>The credential description, which cannot exceed 256 characters in length.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>API Key used to call model services in the production environment</para>
+            /// <para>API key used for calling model services in the production environment</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The credential name. The name must be unique within the workspace and can contain only letters, digits, periods (.), underscores (_), and hyphens (-). The name must be 3 to 128 characters in length and cannot use runtime reserved names.</para>
+            /// <para>The credential name. It must be unique within the workspace, contain only letters, digits, periods (.), underscores (_), and hyphens (-), be 3 to 128 characters in length, and cannot use runtime reserved names.</para>
             /// 
             /// <b>Example:</b>
             /// <para>model-api-key</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The region ID where the resource resides.</para>
+            /// <para>The region ID of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>Each item contains resourceType, resourceId, and resourceName. If the resource has been deleted, resourceName is empty.</para>
+            /// <para>Each item includes resourceType, resourceId, and resourceName. If the resource is deleted, resourceName is empty.</para>
             /// </summary>
             [NameInMap("resourceRefs")]
             [Validation(Required=false)]
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The resource name. This value is empty if the resource has been deleted.</para>
+                /// <para>The resource name. This field is empty if the resource is deleted.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>my-agent</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The scope of resources to which the credential applies.</para>
+            /// <para>The application scope of the credential resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALL</para>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ResourceScope { get; set; }
 
             /// <summary>
-            /// <para>The time of the last modification in UTC, formatted according to RFC 3339.</para>
+            /// <para>The time of the last modification in UTC format compliant with RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]

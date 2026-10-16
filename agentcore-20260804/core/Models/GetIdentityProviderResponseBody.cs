@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public GetIdentityProviderResponseBodyData Data { get; set; }
         public class GetIdentityProviderResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The creation time in UTC, formatted according to RFC 3339.</para>
+            /// <para>The creation time in RFC 3339 UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The event subscription callback URL. Configure this URL in the external identity provider application to receive organization change events. An empty string is returned if the user pool has not been activated.</para>
+            /// <para>The event subscription callback URL. You must configure this URL in the application of the external identity provider to receive organization change events. An empty string is returned if the user pool is not activated.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://auth.cn-hangzhou.agentteams.aliyuncs.com/roa/dingtalk/event/up-123456">http://auth.cn-hangzhou.agentteams.aliyuncs.com/roa/dingtalk/event/up-123456</a></para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string EventSubscriptionCallbackUrl { get; set; }
 
             /// <summary>
-            /// <para>The type of the external identity provider. Valid values: DingTalk, Feishu.</para>
+            /// <para>The type of the external identity provider. Valid values: DingTalk and Feishu.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DingTalk</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string IdentityProviderType { get; set; }
 
             /// <summary>
-            /// <para>The logon callback URL. Configure this URL in the external identity provider application. An empty string is returned if the user pool has not been activated.</para>
+            /// <para>The logon callback URL. You must configure this URL in the application of the external identity provider. An empty string is returned if the user pool is not activated.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://signin-cn-hangzhou.aliyunagentid.com/up-123456/dingtalk/callback">https://signin-cn-hangzhou.aliyunagentid.com/up-123456/dingtalk/callback</a></para>
@@ -67,21 +67,21 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string LoginCallbackUrl { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether workspace users are allowed to log on through this external identity provider.</para>
+            /// <para>Specifies whether workspace users are allowed to log on through this external identity provider.</para>
             /// </summary>
             [NameInMap("loginEnabled")]
             [Validation(Required=false)]
             public bool? LoginEnabled { get; set; }
 
             /// <summary>
-            /// <para>The application configuration of the external identity provider. Application secret configurations are not returned.</para>
+            /// <para>The application configurations of the external identity provider. Application secret configurations are not returned.</para>
             /// </summary>
             [NameInMap("metadata")]
             [Validation(Required=false)]
             public GetIdentityProviderResponseBodyDataMetadata Metadata { get; set; }
             public class GetIdentityProviderResponseBodyDataMetadata : TeaModel {
                 /// <summary>
-                /// <para>The App ID of the Lark application. Required when the binding type is Feishu.</para>
+                /// <para>The App ID of the Lark application. This parameter is required when the binding type is Feishu.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cli_exampleappid01</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string AppId { get; set; }
 
                 /// <summary>
-                /// <para>The AppKey of the DingTalk application. Required when the binding type is DingTalk.</para>
+                /// <para>The AppKey of the DingTalk application. This parameter is required when the binding type is DingTalk.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dingexampleappkey01</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string AppKey { get; set; }
 
                 /// <summary>
-                /// <para>The CorpId of the DingTalk enterprise. Required when the binding type is DingTalk.</para>
+                /// <para>The CorpId of the DingTalk enterprise. This parameter is required when the binding type is DingTalk.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dingexamplecorpid01</para>
@@ -115,15 +115,15 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <summary>
             /// <para>The status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CONFIGURED: The configuration has been accepted and is waiting for user pool activation.</description></item>
+            /// <item><description>CONFIGURED: The configuration is accepted and waiting for the user pool to be activated.</description></item>
             /// <item><description>SYNCING: Organization members are being synchronized.</description></item>
-            /// <item><description>SYNCED: Organization member synchronization is complete.</description></item>
-            /// <item><description>READY: The binding is active.</description></item>
-            /// <item><description>SYNC_FAILED: Organization member synchronization failed.</description></item>
+            /// <item><description>SYNCED: Organization members are synchronized.</description></item>
+            /// <item><description>READY: The binding is in effect.</description></item>
+            /// <item><description>SYNC_FAILED: Failed to synchronize organization members.</description></item>
             /// <item><description>UPDATING: The configuration is being updated.</description></item>
-            /// <item><description>UPDATE_FAILED: The configuration update failed.</description></item>
-            /// <item><description>DISCONNECTING: The binding is being removed.</description></item>
-            /// <item><description>DISCONNECT_FAILED: The unbinding failed.</description></item>
+            /// <item><description>UPDATE_FAILED: Failed to update the configuration.</description></item>
+            /// <item><description>DISCONNECTING: The binding is being disconnected.</description></item>
+            /// <item><description>DISCONNECT_FAILED: Failed to disconnect the binding.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -134,14 +134,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether organization member synchronization is enabled. When enabled, the external identity provider synchronizes organization members as workspace users.</para>
+            /// <para>Specifies whether organization member synchronization is enabled. After this feature is enabled, organization members are synchronized as workspace users by this external identity provider.</para>
             /// </summary>
             [NameInMap("syncEnabled")]
             [Validation(Required=false)]
             public bool? SyncEnabled { get; set; }
 
             /// <summary>
-            /// <para>The time of the last modification in UTC, formatted according to RFC 3339.</para>
+            /// <para>The time of the last update in RFC 3339 UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The response message. An error description is returned if the request failed.</para>
+        /// <para>The response message. An error description is returned if the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]

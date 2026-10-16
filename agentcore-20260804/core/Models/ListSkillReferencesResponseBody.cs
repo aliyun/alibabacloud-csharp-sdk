@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListSkillReferencesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The skill reference relationship data returned by the paged query. The data is returned with paging.</para>
+        /// <para>The skill reference relationship data returned by the paging query.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public List<ListSkillReferencesResponseBodyDataPageItems> PageItems { get; set; }
             public class ListSkillReferencesResponseBodyDataPageItems : TeaModel {
                 /// <summary>
-                /// <para>The ID of the referencing entity (the identifier of the Agent or AgentSpec).</para>
+                /// <para>The ID of the referencing entity, which is the identifier of the agent or agent spec.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>agent-1234567890abcdef</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string SelectorType { get; set; }
 
                 /// <summary>
-                /// <para>The reference selector value, such as latest, a named label, HEAD, or a specific version.</para>
+                /// <para>The reference selector value. Valid values: latest, a named label, HEAD, or a specific version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>HEAD</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string SkillName { get; set; }
 
                 /// <summary>
-                /// <para>The workspace ID to which the reference belongs.</para>
+                /// <para>The ID of the workspace to which the reference belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ws-1234567890abcdef</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public int? PagesAvailable { get; set; }
 
             /// <summary>
-            /// <para>The total number of reference relationships that match the filter conditions.</para>
+            /// <para>The total number of reference relationships that meet the conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The request ID, which is used for troubleshooting.</para>
+        /// <para>The request ID used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5C6D9E10-1234-5678-9ABC-DEF012345678</para>

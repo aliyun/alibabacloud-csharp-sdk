@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public UpdateCredentialRequestBody Body { get; set; }
         public class UpdateCredentialRequestBody : TeaModel {
             /// <summary>
-            /// <para>The new credential content. The value is a JSON string. If credentialType is set to apiKey, only the apiKey field can be included, and the value cannot be empty. At least one of credentialMetadata and description must be specified.</para>
+            /// <para>The new credential content, which is a JSON string. If credentialType is apiKey, this parameter can only contain the apiKey field, and the value cannot be empty. You must specify at least one of credentialMetadata and description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;apiKey&quot;:&quot;sk-example-value&quot;}</para>
@@ -27,17 +27,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CredentialMetadata { get; set; }
 
             /// <summary>
-            /// <para>The new credential description. The description can be up to 256 characters in length. At least one of description and credentialMetadata must be specified.</para>
+            /// <para>The new credential description, which can be up to 256 characters in length. You must specify at least one of credentialMetadata and description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>API Key used for calling model services in the production environment</para>
+            /// <para>API key used to call model services in the production environment</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>This parameter is required and must be a non-empty array when resourceScope is set to SPECIFIED. Each item contains resourceType and resourceId. resourceName is optional.</para>
+            /// <para>If resourceScope is SPECIFIED, this parameter must be a non-empty array. Each item must include resourceType and resourceId. resourceName is optional.</para>
             /// </summary>
             [NameInMap("resourceRefs")]
             [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The resource name. This value is empty if the resource has been deleted.</para>
+                /// <para>The resource name. This parameter is empty if the resource is deleted.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>my-agent</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>ALL indicates all resources. SPECIFIED indicates that the credential applies only to the resources specified in resourceRefs.</para>
+            /// <para>The application scope of the credential resources. A value of ALL indicates all resources. A value of SPECIFIED indicates only the resources specified by resourceRefs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALL</para>

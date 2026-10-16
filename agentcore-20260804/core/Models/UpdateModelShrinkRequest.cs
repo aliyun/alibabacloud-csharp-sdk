@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class UpdateModelShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The model update request body. At least one non-null parameter must be provided among description, contextSize, maxTokens, and capabilities.</para>
+        /// <para>The model update request body. You must specify at least one non-null parameter among description, contextSize, maxTokens, and capabilities.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public string BodyShrink { get; set; }
 
         /// <summary>
-        /// <para>The client token for idempotency. Not currently supported.</para>
+        /// <para>The client token used for idempotence. This parameter is not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>client-token-1</para>

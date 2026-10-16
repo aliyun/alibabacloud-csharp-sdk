@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AgentSpecName { get; set; }
 
             /// <summary>
-            /// <para>The draft version number. If not specified, the default value is 0.0.1.</para>
+            /// <para>Specifies the draft version number. If not specified, the default value is 0.0.1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0.1</para>

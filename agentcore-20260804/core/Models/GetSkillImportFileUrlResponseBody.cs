@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class GetSkillImportFileUrlResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetSkillImportFileUrlResponseBodyData Data { get; set; }
         public class GetSkillImportFileUrlResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The Content-Type of the upload file.</para>
+            /// <para>The Content-Type of the uploaded file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>application/zip</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ContentType { get; set; }
 
             /// <summary>
-            /// <para>The maximum file size allowed for upload, in bytes.</para>
+            /// <para>The maximum allowed file size for upload, in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10485760</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string OssObjectName { get; set; }
 
             /// <summary>
-            /// <para>The OSS pre-signed upload URL.</para>
+            /// <para>The OSS presigned upload URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com/artifacts/example.zip">https://example.com/artifacts/example.zip</a></para>

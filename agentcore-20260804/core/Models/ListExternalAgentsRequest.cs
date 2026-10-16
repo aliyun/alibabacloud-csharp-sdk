@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. You do not need to specify this parameter for the first request. For subsequent requests, use the nextToken value returned in the previous response.</para>
+        /// <para>The pagination token. You do not need to specify this parameter for the first call. For subsequent calls, use the nextToken value returned in the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>next-token-1</para>

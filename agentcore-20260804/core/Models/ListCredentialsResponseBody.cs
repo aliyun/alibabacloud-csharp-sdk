@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The list of credentials.</para>
+        /// <para>The credential list.</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
         public List<ListCredentialsResponseBodyItems> Items { get; set; }
         public class ListCredentialsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The number of agents bound to this credential.</para>
+            /// <para>The number of agents bound to the credential.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public int? BoundAgentsCounts { get; set; }
 
             /// <summary>
-            /// <para>The creation time in UTC, formatted according to RFC 3339.</para>
+            /// <para>The creation time in UTC format compliant with RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CredentialId { get; set; }
 
             /// <summary>
-            /// <para>The masked content of the credential. When credentialType is apiKey, the apiKey value is returned as asterisks (*) of equal length.</para>
+            /// <para>The masked credential content. When credentialType is apiKey, the apiKey value is returned as asterisks (*) of the same length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;apiKey&quot;:&quot;****************&quot;}</para>
@@ -87,17 +87,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CredentialType { get; set; }
 
             /// <summary>
-            /// <para>The credential description. The description can be up to 256 characters in length.</para>
+            /// <para>The credential description, which cannot exceed 256 characters in length.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>API Key used for calling model services in the production environment</para>
+            /// <para>API key used to call model services in the production environment</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The credential name. The name must be unique within the workspace and can contain only letters, digits, periods (.), underscores (_), and hyphens (-). The name must be 3 to 128 characters in length and cannot use runtime reserved names.</para>
+            /// <para>The credential name. It must be unique within the workspace, contain only letters, digits, periods, underscores, and hyphens, and be 3 to 128 characters in length. Runtime reserved names cannot be used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>model-api-key</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The region ID where the resource resides.</para>
+            /// <para>The region ID of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The resource name. This value is empty if the resource has been deleted.</para>
+                /// <para>The resource name. It is empty if the resource has been deleted.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>my-agent</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The resource scope of the credential.</para>
+            /// <para>The application scope of the credential resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALL</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ResourceScope { get; set; }
 
             /// <summary>
-            /// <para>The time of the last modification in UTC, formatted according to RFC 3339.</para>
+            /// <para>The time of the last modification in UTC format compliant with RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records per page that takes effect for this query.</para>
+        /// <para>The maximum number of records per page that takes effect in this query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. This value is empty if there is no next page.</para>
+        /// <para>The cursor for the next page. It is empty if there is no next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -228,14 +228,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of credentials that match the query conditions.</para>
+        /// <para>The total number of credentials that meet the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>42</para>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public ResetUserPasswordRequestBody Body { get; set; }
         public class ResetUserPasswordRequestBody : TeaModel {
             /// <summary>
-            /// <para>The user ID. At least one of agentCoreUserId and username must be specified. If both are specified, agentCoreUserId takes precedence.</para>
+            /// <para>The user ID. You must specify at least one of agentCoreUserId and username. If both are specified, agentCoreUserId takes precedence.</para>
             /// 
             /// <b>Example:</b>
             /// <para>usr-123456</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AgentCoreUserId { get; set; }
 
             /// <summary>
-            /// <para>The new password after the reset. The password must be 8 to 32 characters in length and must contain uppercase letters, lowercase letters, digits, and special characters. The password cannot contain the username. If this parameter is not specified, the server generates a random password.</para>
+            /// <para>The new password. The password must be 8 to 32 characters in length and must contain uppercase letters, lowercase letters, digits, and special characters. It cannot contain the username. If you do not specify this parameter, the server generates a random password.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Example@2026</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Password { get; set; }
 
             /// <summary>
-            /// <para>The username. At least one of username and agentCoreUserId must be specified.</para>
+            /// <para>The username. You must specify at least one of agentCoreUserId and username.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user-01</para>

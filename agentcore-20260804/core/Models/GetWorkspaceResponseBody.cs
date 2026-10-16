@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string BucketName { get; set; }
 
             /// <summary>
-            /// <para>The time when the workspace was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-06T03:56:56Z</para>
@@ -67,12 +67,22 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The workspace network configuration.</para>
+            /// <para>The network configuration of the workspace.</para>
             /// </summary>
             [NameInMap("networkConfiguration")]
             [Validation(Required=false)]
             public GetWorkspaceResponseBodyDataNetworkConfiguration NetworkConfiguration { get; set; }
             public class GetWorkspaceResponseBodyDataNetworkConfiguration : TeaModel {
+                /// <summary>
+                /// <para>Returns the target configuration value. Updating indicates that the change is still being executed, and UpdateFailed indicates that the current change failed. This setting only controls the use of the platform public egress for the latest versions of managed and custom agents. It does not control fixed historical versions, model or MCP proxy egress, or the public egress of the user VPC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
+                [NameInMap("publicEgressEnabled")]
+                [Validation(Required=false)]
+                public bool? PublicEgressEnabled { get; set; }
+
                 /// <summary>
                 /// <para>The public egress IP address of the workspace.</para>
                 /// 
@@ -84,7 +94,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string PublicEgressIp { get; set; }
 
                 /// <summary>
-                /// <para>The user VPC network configuration.</para>
+                /// <para>Returns the target configuration value. Updating indicates that the change is in progress, and UpdateFailed indicates that the change failed. When disabled, the public ingress for all agent endpoints in the workspace is closed. When re-enabled, the original public ingress is restored. INNER_DIRECT and user VPC ingress are not affected. Collaboration and Element Web ingress are not controlled by this setting.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
+                [NameInMap("publicIngressEnabled")]
+                [Validation(Required=false)]
+                public bool? PublicIngressEnabled { get; set; }
+
+                /// <summary>
+                /// <para>The VPC network configuration of the user.</para>
                 /// </summary>
                 [NameInMap("vpc")]
                 [Validation(Required=false)]
@@ -108,7 +128,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public List<string> VSwitchIds { get; set; }
 
                     /// <summary>
-                    /// <para>The user VPC ID.</para>
+                    /// <para>The VPC ID of the user.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vpc-bp1234567890</para>
@@ -152,7 +172,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string StatusReason { get; set; }
 
             /// <summary>
-            /// <para>The workspace storage type.</para>
+            /// <para>The storage type of the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PRIVATE</para>
@@ -214,7 +234,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

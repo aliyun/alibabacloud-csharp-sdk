@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class CreateModelResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. The value SUCCESS indicates success.</para>
+        /// <para>The business status code. A value of SUCCESS indicates a successful request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public CreateModelResponseBodyData Data { get; set; }
         public class CreateModelResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The model capability configuration.</para>
+            /// <para>The model capability configurations.</para>
             /// </summary>
             [NameInMap("capabilities")]
             [Validation(Required=false)]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public bool? Document { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the model is able to invoke multiple tools in a single response.</para>
+                /// <para>Specifies whether the model is able to invoke multiple tool calling operations in a single response.</para>
                 /// </summary>
                 [NameInMap("multiToolCall")]
                 [Validation(Required=false)]
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public bool? Reasoning { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the model supports streaming tool calling.</para>
+                /// <para>Specifies whether the model is able to invoke tool calling in a streaming manner.</para>
                 /// </summary>
                 [NameInMap("streamToolCall")]
                 [Validation(Required=false)]
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ConnectionId { get; set; }
 
             /// <summary>
-            /// <para>The model context window size, in tokens. The value must be a positive integer.</para>
+            /// <para>The context window size of the model, in tokens. It must be a positive integer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>128000</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? ContextSize { get; set; }
 
             /// <summary>
-            /// <para>The resource creation time in RFC 3339 UTC format.</para>
+            /// <para>The time when the resource was created, in RFC 3339 UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-09T00:00:00Z</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of output tokens supported per model generation.</para>
+            /// <para>The maximum number of output tokens supported per generation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>131072</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ModelName { get; set; }
 
             /// <summary>
-            /// <para>The resource last update time in RFC 3339 UTC format.</para>
+            /// <para>The time when the resource was last updated, in RFC 3339 UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-09T00:00:00Z</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. The value 200 indicates success.</para>
+        /// <para>The HTTP status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request processing result message.</para>
+        /// <para>The message about the request processing result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]

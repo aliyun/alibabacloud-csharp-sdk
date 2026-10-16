@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token used to retrieve the next page.</para>
+        /// <para>The cursor used to query the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d29ya3NwYWNlLW9mZnNldDoyMA</para>

@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The list of workspaces.</para>
+        /// <para>The workspace list.</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
         public List<ListWorkspacesResponseBodyItems> Items { get; set; }
         public class ListWorkspacesResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The time when the workspace was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-06T03:56:56Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the workspace.</para>
+            /// <para>The workspace name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>production-agents</para>
@@ -64,7 +64,27 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public ListWorkspacesResponseBodyItemsNetworkConfiguration NetworkConfiguration { get; set; }
             public class ListWorkspacesResponseBodyItemsNetworkConfiguration : TeaModel {
                 /// <summary>
-                /// <para>The VPC network configuration of the user.</para>
+                /// <para>Returns the target configuration value. Updating indicates that the change is still in progress, and UpdateFailed indicates that the current change failed. This setting only controls whether the latest versions of managed and custom agents use the public network egress of the platform. It does not control fixed historical versions, model or MCP proxy egresses, or the public network egress of the user VPC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
+                [NameInMap("publicEgressEnabled")]
+                [Validation(Required=false)]
+                public bool? PublicEgressEnabled { get; set; }
+
+                /// <summary>
+                /// <para>Returns the target configuration value. Updating indicates that the change is in progress, and UpdateFailed indicates that the change failed. After this setting is disabled, the public network ingress for all agent endpoints in the workspace is closed. After it is re-enabled, the original public network ingress is restored. INNER_DIRECT and user VPC ingress are not affected. Collaboration and Element Web ingress are not controlled by this setting.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
+                [NameInMap("publicIngressEnabled")]
+                [Validation(Required=false)]
+                public bool? PublicIngressEnabled { get; set; }
+
+                /// <summary>
+                /// <para>The network configuration of the user VPC.</para>
                 /// </summary>
                 [NameInMap("vpc")]
                 [Validation(Required=false)]
@@ -102,7 +122,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The region ID of the workspace.</para>
+            /// <para>The ID of the region where the workspace resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -112,13 +132,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The workspace status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Initializing</description></item>
-            /// <item><description>Initialized</description></item>
-            /// <item><description>Deleting</description></item>
-            /// <item><description>Deleted.</description></item>
-            /// </list>
+            /// <para>The workspace status. Valid values: Initializing, Initialized, Deleting, and Deleted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Initialized</para>
@@ -150,7 +164,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records per page used in this request.</para>
+        /// <para>The maximum number of records per page used for this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -170,7 +184,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. This parameter is empty if no more pages are available.</para>
+        /// <para>The cursor for the next page. This parameter is empty if there is no next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d29ya3NwYWNlLW9mZnNldDo0MA</para>
@@ -190,7 +204,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -200,7 +214,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of workspaces that match the query conditions.</para>
+        /// <para>The total number of workspaces that meet the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>42</para>

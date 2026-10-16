@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public UpdateAgentIMChannelRequestBody Body { get; set; }
         public class UpdateAgentIMChannelRequestBody : TeaModel {
             /// <summary>
-            /// <para>The channel behavior configuration. When specified, the entire configuration is replaced. An empty object restores default values.</para>
+            /// <para>The channel behavior configuration. This configuration is fully replaced when passed. An empty object indicates that the default values are restored.</para>
             /// </summary>
             [NameInMap("channelConfig")]
             [Validation(Required=false)]
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether to enable the IM channel. Default value upon creation: true.</para>
+            /// <para>Specifies whether to enable the IM channel. Default value: true.</para>
             /// </summary>
             [NameInMap("enabled")]
             [Validation(Required=false)]
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public endpoint.</para>
+            /// <para>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, and must be ready and have a public endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>se-1</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The reserved idempotency token. The backend does not provide persistent idempotency guarantees in the current phase.</para>
+        /// <para>The reserved idempotence token. The backend does not provide persistent idempotence guarantees in the current phase.</para>
         /// 
         /// <b>Example:</b>
         /// <para>client-token-1</para>

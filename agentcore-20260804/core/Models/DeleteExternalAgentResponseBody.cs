@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class DeleteExternalAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. The value SUCCESS is returned if the request is successful.</para>
+        /// <para>The business status code. The value is SUCCESS if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The description of the external agent.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>A code review agent running in the user environment</para>
+            /// <para>Code review agent running in the user environment</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -107,15 +107,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Runtime { get; set; }
 
             /// <summary>
-            /// <para>The status of the external agent. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Creating: The agent is being created.</description></item>
-            /// <item><description>Running: The agent is running.</description></item>
-            /// <item><description>Failed: The agent has failed.</description></item>
-            /// <item><description>Updating: The agent is being updated.</description></item>
-            /// <item><description>Deleting: The agent is being deleted.</description></item>
-            /// <item><description>Deleted: The agent has been deleted.</description></item>
-            /// </list>
+            /// <para>The status of the external agent. Valid values: Creating, Running, Failed, Updating, Deleting, and Deleted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -147,7 +139,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. The value 200 is returned if the request is successful.</para>
+        /// <para>The HTTP status code. The value is 200 if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -157,7 +149,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned for the request processing result.</para>
+        /// <para>The message about the request processing result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -177,7 +169,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]

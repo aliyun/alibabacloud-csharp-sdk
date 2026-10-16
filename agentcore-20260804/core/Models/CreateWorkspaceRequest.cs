@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class CreateWorkspaceRequest : TeaModel {
         /// <summary>
-        /// <para>The request body for creating a workspace.</para>
+        /// <para>The workspace creation request body.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public CreateWorkspaceRequestBody Body { get; set; }
         public class CreateWorkspaceRequestBody : TeaModel {
             /// <summary>
-            /// <para>The workspace name.</para>
+            /// <para>The name of the workspace.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -35,15 +35,34 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public CreateWorkspaceRequestBodyNetworkConfiguration NetworkConfiguration { get; set; }
             public class CreateWorkspaceRequestBodyNetworkConfiguration : TeaModel {
                 /// <summary>
-                /// <para>The VPC network configuration of the user.</para>
-                /// <para>This parameter is required.</para>
+                /// <para>Specifies whether to allow public outbound access from the platform. If this parameter is not specified, the default value is true. This setting only controls whether the latest versions of managed and custom agents use the public outbound endpoint of the platform. It does not affect fixed historical versions, model or MCP proxy endpoints, or the public outbound endpoint of the user VPC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
+                [NameInMap("publicEgressEnabled")]
+                [Validation(Required=false)]
+                public bool? PublicEgressEnabled { get; set; }
+
+                /// <summary>
+                /// <para>Specifies whether to allow public inbound access. If this parameter is not specified, the default value is true. If disabled, the public inbound endpoints of all agent endpoints in the workspace are closed, and the original public inbound endpoints are restored when re-enabled. INNER_DIRECT and user VPC endpoints are not affected. Collaboration and Element Web endpoints are not controlled by this parameter.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
+                [NameInMap("publicIngressEnabled")]
+                [Validation(Required=false)]
+                public bool? PublicIngressEnabled { get; set; }
+
+                /// <summary>
+                /// <para>The user VPC network configuration.</para>
                 /// </summary>
                 [NameInMap("vpc")]
                 [Validation(Required=false)]
                 public CreateWorkspaceRequestBodyNetworkConfigurationVpc Vpc { get; set; }
                 public class CreateWorkspaceRequestBodyNetworkConfigurationVpc : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether to enable VPC networking.</para>
+                    /// <para>Specifies whether to enable the VPC network.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -53,14 +72,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public bool? Enabled { get; set; }
 
                     /// <summary>
-                    /// <para>The list of vSwitch IDs. When VPC networking is enabled, at least one vSwitch must be included, and all vSwitches must belong to the VPC specified by VpcId.</para>
+                    /// <para>The list of vSwitch IDs. When the VPC network is enabled, the list must contain at least one vSwitch, and all vSwitches must belong to the VPC specified by VpcId.</para>
                     /// </summary>
                     [NameInMap("vSwitchIds")]
                     [Validation(Required=false)]
                     public List<string> VSwitchIds { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the user VPC.</para>
+                    /// <para>The user VPC ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vpc-bp1234567890</para>
@@ -74,11 +93,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The storage type of the workspace. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>PLATFORM: Platform-managed storage.</description></item>
-            /// <item><description>PRIVATE: User-owned private OSS storage.</description></item>
-            /// </list>
+            /// <para>The workspace storage type. PLATFORM indicates platform-managed storage, and PRIVATE indicates user private OSS storage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PRIVATE</para>

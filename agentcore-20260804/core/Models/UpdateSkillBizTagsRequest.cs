@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public UpdateSkillBizTagsRequestBody Body { get; set; }
         public class UpdateSkillBizTagsRequestBody : TeaModel {
             /// <summary>
-            /// <para>The business tags as a JSON array string.</para>
+            /// <para>The JSON array string of business tags.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

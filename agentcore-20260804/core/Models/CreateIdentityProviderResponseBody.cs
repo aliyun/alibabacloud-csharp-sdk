@@ -27,11 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public CreateIdentityProviderResponseBodyData Data { get; set; }
         public class CreateIdentityProviderResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The type of the external identity provider. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>DingTalk</description></item>
-            /// <item><description>Feishu</description></item>
-            /// </list>
+            /// <para>The type of the external identity provider. Valid values: DingTalk and Feishu.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DingTalk</para>
@@ -41,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string IdentityProviderType { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether workspace users are allowed to log on through this external identity provider.</para>
+            /// <para>Specifies whether workspace users can log on through the external identity provider.</para>
             /// </summary>
             [NameInMap("loginEnabled")]
             [Validation(Required=false)]
@@ -50,14 +46,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <summary>
             /// <para>The binding status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CONFIGURED: The configuration has been accepted and is waiting for user pool provisioning.</description></item>
+            /// <item><description>CONFIGURED: The configuration is accepted, and the system is waiting to activate the user pool.</description></item>
             /// <item><description>SYNCING: Organization members are being synchronized.</description></item>
-            /// <item><description>SYNCED: Organization member synchronization is complete.</description></item>
-            /// <item><description>READY: The binding is active.</description></item>
+            /// <item><description>SYNCED: Organization member synchronization is completed.</description></item>
+            /// <item><description>READY: The binding is in effect.</description></item>
             /// <item><description>SYNC_FAILED: Organization member synchronization failed.</description></item>
             /// <item><description>UPDATING: The configuration is being updated.</description></item>
             /// <item><description>UPDATE_FAILED: The configuration update failed.</description></item>
-            /// <item><description>DISCONNECTING: The binding is being removed.</description></item>
+            /// <item><description>DISCONNECTING: The unbinding is in progress.</description></item>
             /// <item><description>DISCONNECT_FAILED: The unbinding failed.</description></item>
             /// </list>
             /// 
@@ -69,7 +65,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable organization member synchronization. After this feature is enabled, the external identity provider synchronizes organization members as workspace users.</para>
+            /// <para>Specifies whether to enable organization member synchronization. If enabled, organization members are synchronized to workspace users from the external identity provider.</para>
             /// </summary>
             [NameInMap("syncEnabled")]
             [Validation(Required=false)]
@@ -98,7 +94,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The response message. An error description is returned if the request failed.</para>
+        /// <para>The response message. If the request fails, an error description is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -118,7 +114,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]

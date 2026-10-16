@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The absolute HTTP or HTTPS address of the upstream model service. The address can be up to 1024 characters in length.</para>
+            /// <para>The absolute HTTP or HTTPS URL of the upstream model service. The URL can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://dashscope.aliyuncs.com/compatible-mode/v1">https://dashscope.aliyuncs.com/compatible-mode/v1</a></para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Endpoint { get; set; }
 
             /// <summary>
-            /// <para>The model connection name. The name must be 1 to 128 non-whitespace characters in length.</para>
+            /// <para>The name of the model connection. The name must be 1 to 128 non-whitespace characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>name</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The model invocation protocol. Currently, only OpenAI/v1 is supported. If not specified in Settings when the model connection is created, this default value is used.</para>
+            /// <para>The model invoke protocol. Currently, only OpenAI/v1 is supported. If the Settings are not specified during model creation, this default value is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OpenAI/v1</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The client token used for idempotence. Not currently supported.</para>
+        /// <para>The client token used for idempotence. This parameter is not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>client-token-1</para>

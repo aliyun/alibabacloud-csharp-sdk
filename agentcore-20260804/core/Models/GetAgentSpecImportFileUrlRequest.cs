@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class GetAgentSpecImportFileUrlRequest : TeaModel {
         /// <summary>
-        /// <para>The Content-Type of the file to upload. The client must use the same value from the response when performing the PUT request.</para>
+        /// <para>The Content-Type of the uploaded file. The client must use the same value in the PUT request as the one returned in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>application/zip</para>

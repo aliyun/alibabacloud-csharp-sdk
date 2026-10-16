@@ -17,11 +17,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public CreateIdentityProviderRequestBody Body { get; set; }
         public class CreateIdentityProviderRequestBody : TeaModel {
             /// <summary>
-            /// <para>The type of the external identity provider. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>DingTalk</description></item>
-            /// <item><description>Feishu</description></item>
-            /// </list>
+            /// <para>The type of the external identity provider. Valid values: DingTalk and Feishu.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -32,14 +28,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string IdentityProviderType { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether workspace users are allowed to log on through this external identity provider.</para>
+            /// <para>Specifies whether workspace users can log on through the external identity provider.</para>
             /// </summary>
             [NameInMap("loginEnabled")]
             [Validation(Required=false)]
             public bool? LoginEnabled { get; set; }
 
             /// <summary>
-            /// <para>The application configuration of the external identity provider. When binding DingTalk, you must provide appKey, appSecret, and corpId. When binding Lark, you must provide appId and appSecret.</para>
+            /// <para>The application configuration for the external identity provider. When you bind DingTalk, you must provide appKey, appSecret, and corpId. When you bind Feishu, you must provide appId and appSecret.</para>
             /// </summary>
             [NameInMap("metadata")]
             [Validation(Required=false)]
@@ -66,7 +62,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string AppKey { get; set; }
 
                 /// <summary>
-                /// <para>Required. The secret of the external identity provider application. This parameter is write-only and is not returned by query operations.</para>
+                /// <para>Required. The application secret of the external identity provider. This parameter is used only for write operations and is not returned by query operations.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example-app-secret</para>
@@ -86,7 +82,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string CorpId { get; set; }
 
                 /// <summary>
-                /// <para>The data encryption key for event subscriptions. The value must be the same as the one configured in the external identity provider application. This parameter is write-only and is not returned by query operations.</para>
+                /// <para>The data encryption key for event subscriptions. The value must be the same as the one configured in the external identity provider application. This parameter is used only for write operations and is not returned by query operations.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example-encrypt-key</para>
@@ -96,7 +92,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string EncryptKey { get; set; }
 
                 /// <summary>
-                /// <para>The verification token for event subscriptions. The value must be the same as the one configured in the external identity provider application. This parameter is write-only and is not returned by query operations.</para>
+                /// <para>The verification token for event subscriptions. The value must be the same as the one configured in the external identity provider application. This parameter is used only for write operations and is not returned by query operations.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example-verification-token</para>
@@ -108,7 +104,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether to enable organization member synchronization. After this feature is enabled, the external identity provider synchronizes organization members as workspace users.</para>
+            /// <para>Specifies whether to enable organization member synchronization. If enabled, organization members are synchronized to workspace users from the external identity provider.</para>
             /// </summary>
             [NameInMap("syncEnabled")]
             [Validation(Required=false)]

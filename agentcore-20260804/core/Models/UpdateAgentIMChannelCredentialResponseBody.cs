@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class UpdateAgentIMChannelCredentialResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. The value is SUCCESS if the request succeeds.</para>
+        /// <para>The business status code. The value is SUCCESS when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The summary of the updated IM channel credential.</para>
+        /// <para>The summary of the updated IM channel credentials.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public UpdateAgentIMChannelCredentialResponseBodyData Data { get; set; }
         public class UpdateAgentIMChannelCredentialResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of configured secret field names. Secret values are not included.</para>
+            /// <para>The list of configured secret field names, excluding the secret values.</para>
             /// </summary>
             [NameInMap("configuredSecretFields")]
             [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. The value is 200 if the request succeeds.</para>
+        /// <para>The HTTP status code. The value is 200 when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The result message of the request.</para>
+        /// <para>The message indicating the request processing result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]

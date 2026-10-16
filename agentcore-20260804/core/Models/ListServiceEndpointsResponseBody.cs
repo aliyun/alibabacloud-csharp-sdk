@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public List<ListServiceEndpointsResponseBodyItemsAccessUrls> AccessUrls { get; set; }
             public class ListServiceEndpointsResponseBodyItemsAccessUrls : TeaModel {
                 /// <summary>
-                /// <para>The access URL type. Valid values: INTERNET, VPC.</para>
+                /// <para>The access URL type. Valid values: INTERNET and VPC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>INTERNET</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string AccessType { get; set; }
 
                 /// <summary>
-                /// <para>The access URL status. Valid values: CREATING, READY, DEGRADED.</para>
+                /// <para>The access URL status. Valid values: CREATING, READY, and DEGRADED.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>READY</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The reason for the access URL status. A specific reason is returned when the status is abnormal.</para>
+                /// <para>The reason for the access URL status. The specific reason is returned when the status is abnormal.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ServiceEndpoint.Provider.Unavailable: no provider for the target type</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public ListServiceEndpointsResponseBodyItemsAuthentication Authentication { get; set; }
             public class ListServiceEndpointsResponseBodyItemsAuthentication : TeaModel {
                 /// <summary>
-                /// <para>The authentication method. NONE indicates that no authentication is required. API_KEY indicates that authentication is performed by passing an API key through the x-api-key request header.</para>
+                /// <para>The authentication method. NONE indicates that no authentication is required. API_KEY indicates that authentication is performed by passing an API key in the x-api-key request header.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>API_KEY</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The creation time in UTC, formatted in RFC 3339.</para>
+            /// <para>The creation time in UTC format compliant with RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The service endpoint type. DEFAULT indicates a default endpoint created and maintained by the platform. NAMED indicates a named endpoint explicitly created by the user.</para>
+            /// <para>The service endpoint type. DEFAULT indicates a default endpoint created and maintained by the platform. NAMED indicates a named endpoint explicitly created by a user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NAMED</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string EndpointType { get; set; }
 
             /// <summary>
-            /// <para>The service endpoint name. The name is unique within the workspace and is 1 to 128 characters in length.</para>
+            /// <para>The service endpoint name. The name must be unique within the workspace and 1 to 128 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-agent-endpoint</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ServiceEndpointId { get; set; }
 
             /// <summary>
-            /// <para>The service endpoint status. Valid values: CREATING, READY, UPDATING, DEGRADED, DISABLED, DELETING.</para>
+            /// <para>The service endpoint status. Valid values: CREATING, READY, UPDATING, DEGRADED, DISABLED, and DELETING.</para>
             /// 
             /// <b>Example:</b>
             /// <para>READY</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The reason for the service endpoint status. A specific reason is returned when the status is abnormal.</para>
+            /// <para>The reason for the service endpoint status. The specific reason is returned when the status is abnormal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ServiceEndpoint.Provider.Unavailable: no provider for the target type</para>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public ListServiceEndpointsResponseBodyItemsTarget Target { get; set; }
             public class ListServiceEndpointsResponseBodyItemsTarget : TeaModel {
                 /// <summary>
-                /// <para>The target agent ID. Returned when the target type is AGENT_VERSION.</para>
+                /// <para>The target agent ID. This parameter is returned when the target type is AGENT_VERSION.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>agent-123456</para>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string AgentId { get; set; }
 
                 /// <summary>
-                /// <para>The target agent version number. Returned when the target type is AGENT_VERSION.</para>
+                /// <para>The target agent version. This parameter is returned when the target type is AGENT_VERSION.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>v1</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string AgentVersion { get; set; }
 
                 /// <summary>
-                /// <para>The collaboration component type. Returned when the target type is TEAM_COLLABORATION.</para>
+                /// <para>The collaboration component type. This parameter is returned when the target type is TEAM_COLLABORATION.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ELEMENT_WEB</para>
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string CollaborationComponent { get; set; }
 
                 /// <summary>
-                /// <para>The workspace resource binding ID associated with the target collaboration component. Returned when the target type is TEAM_COLLABORATION.</para>
+                /// <para>The workspace resource binding ID associated with the target collaboration component. This parameter is returned when the target type is TEAM_COLLABORATION.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>wrb-123456</para>
@@ -222,7 +222,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string ResourceBindingId { get; set; }
 
                 /// <summary>
-                /// <para>The target type. Valid values: AGENT_VERSION, TEAM_COLLABORATION.</para>
+                /// <para>The target type. Valid values: AGENT_VERSION and TEAM_COLLABORATION.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AGENT_VERSION</para>
@@ -234,7 +234,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The time of the last modification in UTC, formatted in RFC 3339.</para>
+            /// <para>The last update time in UTC format compliant with RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -256,7 +256,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records per page that takes effect for this query.</para>
+        /// <para>The maximum number of records per page that takes effect in this query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -276,7 +276,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. This value is empty when no more pages are available.</para>
+        /// <para>The cursor for the next page. This parameter is empty if no next page exists.</para>
         /// 
         /// <b>Example:</b>
         /// <para>djE6YWdlbnRjb3JlLnNlcnZpY2UtZW5kcG9pbnQubGlzdDoyMA</para>
@@ -296,14 +296,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of service endpoints that match the query conditions.</para>
+        /// <para>The total number of service endpoints that meet the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>42</para>

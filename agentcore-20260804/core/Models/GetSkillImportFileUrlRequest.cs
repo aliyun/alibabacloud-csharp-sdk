@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class GetSkillImportFileUrlRequest : TeaModel {
         /// <summary>
-        /// <para>The Content-Type of the upload file. Default value: application/zip.</para>
+        /// <para>The Content-Type of the uploaded file. Default value: application/zip.</para>
         /// 
         /// <b>Example:</b>
         /// <para>application/zip</para>

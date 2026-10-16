@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>A sample description that explains the purpose of the resource</para>
+            /// <para>A sample description used to explain the purpose of the resource</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? DownloadCount { get; set; }
 
             /// <summary>
-            /// <para>The version that is currently being edited.</para>
+            /// <para>The version currently being edited.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0.0</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string EditingVersion { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the AgentSpec is enabled.</para>
+            /// <para>Indicates whether it is enabled.</para>
             /// </summary>
             [NameInMap("enable")]
             [Validation(Required=false)]
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public int? OnlineCnt { get; set; }
 
             /// <summary>
-            /// <para>The version that is currently under review.</para>
+            /// <para>The version currently under review.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0.0</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Scope { get; set; }
 
             /// <summary>
-            /// <para>The update time. This value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1787671022000</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public List<GetAgentSpecResponseBodyDataVersions> Versions { get; set; }
             public class GetAgentSpecResponseBodyDataVersions : TeaModel {
                 /// <summary>
-                /// <para>The version author.</para>
+                /// <para>The author of the version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>alice</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Author { get; set; }
 
                 /// <summary>
-                /// <para>The creation time. This value is a UNIX timestamp in milliseconds.</para>
+                /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1787671022000</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>A sample description that explains the purpose of the resource</para>
+                /// <para>A sample description used to explain the purpose of the resource</para>
                 /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The update time. This value is a UNIX timestamp in milliseconds.</para>
+                /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1787671022000</para>

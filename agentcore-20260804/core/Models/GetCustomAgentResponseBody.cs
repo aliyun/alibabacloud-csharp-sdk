@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public List<GetCustomAgentResponseBodyDataAgenticFsMounts> AgenticFsMounts { get; set; }
             public class GetCustomAgentResponseBodyDataAgenticFsMounts : TeaModel {
                 /// <summary>
-                /// <para>The AgenticFS mount directory in the container, which is located under /mnt/agenticfs/.</para>
+                /// <para>The AgenticFS mount directory in the container, located under /mnt/agenticfs/.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/mnt/agenticfs/data</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string MountPath { get; set; }
 
                 /// <summary>
-                /// <para>The relative directory in the mounted AccessPoint.</para>
+                /// <para>The relative directory within the mounted access point.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>workspace/data</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Path { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the mount is read-only. A value of true indicates a read-only mount. A value of false indicates a read-write mount.</para>
+                /// <para>Specifies whether the mount is read-only. A value of true indicates a read-only mount, and a value of false indicates a read-write mount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public bool? ReadOnly { get; set; }
 
                 /// <summary>
-                /// <para>The AgenticFS AccessPoint domain name used for the mount.</para>
+                /// <para>The AgenticFS access point domain name used for the mount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ap-0123456789abcdef0.0123456789-vlm36.cn-hangzhou.nas.aliyuncs.com</para>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 }
 
                 /// <summary>
-                /// <para>The TCP port listened to by the agent service.</para>
+                /// <para>The TCP port listened on by the agent service.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreateMode { get; set; }
 
             /// <summary>
-            /// <para>The time when the agent was created. The time is in ISO 8601 format. The trailing Z indicates the UTC time zone. Fractional seconds may be included.</para>
+            /// <para>The creation time of the agent. The time is in ISO 8601 format. The trailing Z indicates the UTC time zone. Fractional seconds may be included.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-10T06:00:00Z</para>
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The deployment method of the agent. Custom agents are deployed and managed by the platform. The value is MANAGED for custom agents.</para>
+            /// <para>The deployment method of the agent. Custom agents are deployed and managed by the platform, and the value is MANAGED.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MANAGED</para>
@@ -302,7 +302,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The HTTP health check configuration of the agent. This field is empty if no health check is configured.</para>
+            /// <para>The HTTP health check configuration of the agent. This field is empty if not configured.</para>
             /// </summary>
             [NameInMap("healthCheck")]
             [Validation(Required=false)]
@@ -329,7 +329,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public int? IntervalSeconds { get; set; }
 
                 /// <summary>
-                /// <para>The HTTP Health Check Path.</para>
+                /// <para>The HTTP health check path.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/healthz</para>
@@ -378,7 +378,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public GetCustomAgentResponseBodyDataLatestExecutionError LatestExecutionError { get; set; }
             public class GetCustomAgentResponseBodyDataLatestExecutionError : TeaModel {
                 /// <summary>
-                /// <para>The reason code for the waiting or execution failure of the latest configuration. This code is used to determine the subsequent processing method.</para>
+                /// <para>The cause code for the waiting or execution failure of the latest configuration. This code is used to determine the subsequent handling method.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AgentExecutionFailed</para>
@@ -388,7 +388,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The description of the reason why the latest configuration failed to execute or is waiting. Check the code and retryable fields to determine what to do next.</para>
+                /// <para>The reason why the latest configuration is pending or failed to execute. Determine what to do next based on the code and retryable fields.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Agent execution failed. Check the configuration and resubmit</para>
@@ -398,7 +398,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Message { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the system automatically retries. A value of true indicates that you can query again later. A value of false indicates that you must check and fix the configuration based on the reason, and then resubmit the agent.</para>
+                /// <para>Specifies whether automatic retries are performed. If the value is true, you can query again later. If the value is false, check and fix the configuration based on the cause, and then resubmit.</para>
                 /// </summary>
                 [NameInMap("retryable")]
                 [Validation(Required=false)]
@@ -407,7 +407,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The latest configuration version number. Updates with the same configuration may retain the original version number. This field does not indicate that the configuration has taken effect.</para>
+            /// <para>The current latest configuration version number. Updates with the same configuration may retain the original version number. This field does not indicate that the configuration has taken effect.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -417,14 +417,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? LatestSpecVersion { get; set; }
 
             /// <summary>
-            /// <para>The execution status corresponding to the latestSpecVersion field. Valid values:</para>
+            /// <para>The execution status corresponding to latestSpecVersion. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>pending: waiting for execution</description></item>
-            /// <item><description>processing: executing</description></item>
-            /// <item><description>waiting_retry: waiting for a retry</description></item>
-            /// <item><description>succeeded: executed successfully</description></item>
-            /// <item><description>failed: execution failed</description></item>
-            /// <item><description>superseded: superseded by a subsequent version</description></item>
+            /// <item><description>pending: Waiting for execution.</description></item>
+            /// <item><description>processing: Executing.</description></item>
+            /// <item><description>waiting_retry: Waiting for a retry.</description></item>
+            /// <item><description>succeeded: Executed successfully.</description></item>
+            /// <item><description>failed: Execution failed.</description></item>
+            /// <item><description>superseded: Superseded by a subsequent version.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -483,21 +483,21 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The network access configuration of the agent. The actual access scope is also limited by the workspace network configuration.</para>
+            /// <para>The network access configuration of the agent. The actual access scope is also restricted by the workspace network configuration.</para>
             /// </summary>
             [NameInMap("network")]
             [Validation(Required=false)]
             public GetCustomAgentResponseBodyDataNetwork Network { get; set; }
             public class GetCustomAgentResponseBodyDataNetwork : TeaModel {
                 /// <summary>
-                /// <para>The Internet access configuration of the agent. If this field is not configured, Internet access is allowed on the agent side, but is still limited by the workspace configuration.</para>
+                /// <para>The Internet access configuration of the agent. If this field is not configured, Internet access is allowed on the agent side but is still restricted by the workspace.</para>
                 /// </summary>
                 [NameInMap("accessInternet")]
                 [Validation(Required=false)]
                 public GetCustomAgentResponseBodyDataNetworkAccessInternet AccessInternet { get; set; }
                 public class GetCustomAgentResponseBodyDataNetworkAccessInternet : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether Internet access is allowed on the agent side. The actual access is still limited by the workspace configuration.</para>
+                    /// <para>Specifies whether Internet access is allowed on the agent side. The actual access is still restricted by the workspace.</para>
                     /// </summary>
                     [NameInMap("enabled")]
                     [Validation(Required=false)]
@@ -506,14 +506,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 }
 
                 /// <summary>
-                /// <para>The user VPC access configuration of the agent. If this field is not configured, user VPC access is allowed on the agent side, but is still limited by the workspace configuration.</para>
+                /// <para>The user VPC access configuration of the agent. If this field is not configured, user VPC access is allowed on the agent side but is still restricted by the workspace.</para>
                 /// </summary>
                 [NameInMap("accessVpc")]
                 [Validation(Required=false)]
                 public GetCustomAgentResponseBodyDataNetworkAccessVpc AccessVpc { get; set; }
                 public class GetCustomAgentResponseBodyDataNetworkAccessVpc : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether access to the user VPC configured for the workspace is allowed on the agent side. The actual access is still limited by the workspace configuration.</para>
+                    /// <para>Specifies whether access to the user VPC configured for the workspace is allowed on the agent side. The actual access is still restricted by the workspace.</para>
                     /// </summary>
                     [NameInMap("enabled")]
                     [Validation(Required=false)]
@@ -541,7 +541,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string BucketName { get; set; }
 
                 /// <summary>
-                /// <para>The OSS mount directory in the container, which is located under /mnt/oss/.</para>
+                /// <para>The OSS mount directory in the container, located under /mnt/oss/.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/mnt/oss/train</para>
@@ -561,7 +561,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Path { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the mount is read-only. A value of true indicates a read-only mount. A value of false indicates a read-write mount.</para>
+                /// <para>Specifies whether the mount is read-only. A value of true indicates a read-only mount, and a value of false indicates a read-write mount.</para>
                 /// </summary>
                 [NameInMap("readOnly")]
                 [Validation(Required=false)]
@@ -591,7 +591,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public List<GetCustomAgentResponseBodyDataProtocolPaths> Paths { get; set; }
                 public class GetCustomAgentResponseBodyDataProtocolPaths : TeaModel {
                     /// <summary>
-                    /// <para>The purpose description of the current API path.</para>
+                    /// <para>The usage description of the current API path.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>AG-UI conversation API</para>
@@ -734,7 +734,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public int? MinSandboxCount { get; set; }
 
                     /// <summary>
-                    /// <para>The configured session idle timeout limit in seconds.</para>
+                    /// <para>The configured session idle timeout limit, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>600</para>
@@ -767,9 +767,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     /// <para>The session policy type. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>AFFINITY: Session affinity.</description></item>
-                    /// <item><description>ISOLATED_HEADER_FIELD: Associates sessions by using the request header specified in headerName.</description></item>
-                    /// <item><description>ISOLATED_COOKIE: Not recommended.
-                    /// The compatible value DISABLED in requests is returned as AFFINITY.</description></item>
+                    /// <item><description>ISOLATED_HEADER_FIELD: Uses the request header specified by headerName to associate sessions.</description></item>
+                    /// <item><description>ISOLATED_COOKIE: Cookie-based session isolation. Not recommended.
+                    /// Note: The compatible value DISABLED in a request is returned as AFFINITY.</description></item>
                     /// </list>
                     /// <para>This parameter is required.</para>
                     /// 
@@ -785,7 +785,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The count of instances by runtime phase. Keys include PENDING (creating or initializing), RUNNING (running), HIBERNATING (hibernating), HIBERNATED (hibernated), RESUMING (resuming), TERMINATING (terminating), and FAILED (failed). Only phases that actually occur are returned. Missing keys are treated as 0.</para>
+            /// <para>The counts by runtime instance phase. Keys include PENDING (creating or initializing), RUNNING (running), HIBERNATING (hibernating), HIBERNATED (hibernated), RESUMING (resuming), TERMINATING (terminating), and FAILED (failed). Only phases that actually occur are returned. Missing keys are treated as 0.</para>
             /// </summary>
             [NameInMap("sandboxPhaseCounts")]
             [Validation(Required=false)]
@@ -794,12 +794,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <summary>
             /// <para>The overall status of the agent. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Creating: Creating.</description></item>
-            /// <item><description>Running: Running.</description></item>
-            /// <item><description>Failed: Failed.</description></item>
-            /// <item><description>Updating: Updating.</description></item>
-            /// <item><description>Deleting: Deleting.</description></item>
-            /// <item><description>Deleted: Deleted.
+            /// <item><description>Creating: The agent is being created.</description></item>
+            /// <item><description>Running: The agent is running.</description></item>
+            /// <item><description>Failed: The agent failed.</description></item>
+            /// <item><description>Updating: The agent is being updated.</description></item>
+            /// <item><description>Deleting: The agent is being deleted.</description></item>
+            /// <item><description>Deleted: The agent is deleted.
             /// To check the execution progress of the latest configuration, query latestVersionStatus.</description></item>
             /// </list>
             /// 
@@ -811,7 +811,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The last update time of the agent in ISO 8601 format. The trailing Z indicates the UTC time zone. Fractional seconds may be included.</para>
+            /// <para>The time when the agent was last updated. The time is in ISO 8601 format. A trailing Z indicates the UTC time zone. Fractional seconds may be included.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-10T06:05:00Z</para>
@@ -843,7 +843,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The description of the request processing result. The value is success when the request is successful.</para>
+        /// <para>The result message of the request. The value is success when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -863,7 +863,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was processed successfully. A value of true indicates that the request was processed successfully. A successful creation, update, or deletion does not mean that the background operation is complete.</para>
+        /// <para>Indicates whether the request was processed successfully. A value of true indicates success. Note that a successful creation, update, or deletion response does not mean that the background operation is complete.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]

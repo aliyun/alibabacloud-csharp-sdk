@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public List<ListIdentityProvidersResponseBodyItems> Items { get; set; }
         public class ListIdentityProvidersResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The creation time in UTC, formatted according to RFC 3339.</para>
+            /// <para>The creation time in UTC format that complies with RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The event subscription callback URL. Configure this URL in the external identity provider application to receive organization change events. An empty string is returned if the user pool has not been activated.</para>
+            /// <para>The callback URL for event subscription. You must configure this URL in the application of the external identity provider to receive organization change events. An empty string is returned if the user pool is not activated.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://auth.cn-hangzhou.agentteams.aliyuncs.com/roa/dingtalk/event/up-123456">http://auth.cn-hangzhou.agentteams.aliyuncs.com/roa/dingtalk/event/up-123456</a></para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string EventSubscriptionCallbackUrl { get; set; }
 
             /// <summary>
-            /// <para>The type of the external identity provider. Valid values: DingTalk, Feishu.</para>
+            /// <para>The type of the external identity provider. Valid values: DingTalk and Feishu.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DingTalk</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string IdentityProviderType { get; set; }
 
             /// <summary>
-            /// <para>The logon callback URL. Configure this URL in the external identity provider application. An empty string is returned if the user pool has not been activated.</para>
+            /// <para>The login callback URL. You must configure this URL in the application of the external identity provider. An empty string is returned if the user pool is not activated.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://signin-cn-hangzhou.aliyunagentid.com/up-123456/dingtalk/callback">https://signin-cn-hangzhou.aliyunagentid.com/up-123456/dingtalk/callback</a></para>
@@ -77,14 +77,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string LoginCallbackUrl { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether workspace users are allowed to log on through this external identity provider.</para>
+            /// <para>Indicates whether workspace users are allowed to log on through the external identity provider.</para>
             /// </summary>
             [NameInMap("loginEnabled")]
             [Validation(Required=false)]
             public bool? LoginEnabled { get; set; }
 
             /// <summary>
-            /// <para>The application configuration of the external identity provider. Application secret configurations are not returned.</para>
+            /// <para>The application configurations of the external identity provider. Application secret configurations are not returned.</para>
             /// </summary>
             [NameInMap("metadata")]
             [Validation(Required=false)]
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string AppKey { get; set; }
 
                 /// <summary>
-                /// <para>The CorpId of the DingTalk organization. This parameter is required when the binding type is DingTalk.</para>
+                /// <para>The CorpId of the DingTalk enterprise. This parameter is required when the binding type is DingTalk.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dingexamplecorpid01</para>
@@ -123,7 +123,18 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The binding status. Valid values: CONFIGURED (The configuration has been accepted and the user pool is pending activation.), SYNCING (Organization members are being synchronized.), SYNCED (Organization member synchronization is complete.), READY (The binding is active.), SYNC_FAILED (Organization member synchronization failed.), UPDATING (The configuration is being updated.), UPDATE_FAILED (The configuration update failed.), DISCONNECTING (The binding is being removed.), DISCONNECT_FAILED (The unbinding failed.).</para>
+            /// <para>The binding status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>CONFIGURED: The configuration is accepted and the system is waiting for the user pool to be activated.</description></item>
+            /// <item><description>SYNCING: Organization members are being synchronized.</description></item>
+            /// <item><description>SYNCED: Organization members are synchronized.</description></item>
+            /// <item><description>READY: The binding is effective.</description></item>
+            /// <item><description>SYNC_FAILED: The synchronization of organization members failed.</description></item>
+            /// <item><description>UPDATING: The configuration is being updated.</description></item>
+            /// <item><description>UPDATE_FAILED: The configuration update failed.</description></item>
+            /// <item><description>DISCONNECTING: The binding is being removed.</description></item>
+            /// <item><description>DISCONNECT_FAILED: The unbinding failed.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>READY</para>
@@ -133,14 +144,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether organization member synchronization is enabled. When enabled, the external identity provider synchronizes organization members as workspace users.</para>
+            /// <para>Indicates whether organization member synchronization is enabled. After this feature is enabled, organization members are synchronized as workspace users by the external identity provider.</para>
             /// </summary>
             [NameInMap("syncEnabled")]
             [Validation(Required=false)]
             public bool? SyncEnabled { get; set; }
 
             /// <summary>
-            /// <para>The time of the last modification in UTC, formatted according to RFC 3339.</para>
+            /// <para>The time of the last update in UTC format that complies with RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -162,7 +173,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records per page that took effect for this query.</para>
+        /// <para>The maximum number of records per page that takes effect for the current query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -172,7 +183,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The response message. An error description is returned if the request failed.</para>
+        /// <para>The response message. An error description is returned if the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -182,7 +193,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. This parameter is empty if no more pages are available.</para>
+        /// <para>The cursor for the next page. This parameter is empty if no next page exists.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aWRlbnRpdHktcHJvdmlkZXItb2Zmc2V0OjEw</para>
@@ -202,14 +213,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of external identity providers that match the query conditions.</para>
+        /// <para>The total number of external identity providers that meet the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>42</para>

@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AgentCoreUserId { get; set; }
 
             /// <summary>
-            /// <para>The authentication method of the user. password indicates local password authentication within the workspace. dingtalk and feishu indicate that the user is synchronized and authenticated by the corresponding external identity provider.</para>
+            /// <para>The authentication method of the user. A value of password indicates that local password authentication in the workspace is used. A value of dingtalk or feishu indicates that the user is synchronized and authenticated by the corresponding external identity provider.</para>
             /// 
             /// <b>Example:</b>
             /// <para>password</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AuthMethod { get; set; }
 
             /// <summary>
-            /// <para>The creation time in UTC, formatted in RFC 3339.</para>
+            /// <para>The creation time, in UTC and RFC 3339 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -57,17 +57,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The display name of the user. The name is 1 to 32 characters in length.</para>
+            /// <para>The display name of the user. The name must be 1 to 32 characters in length.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>John</para>
+            /// <para>Zhang San</para>
             /// </summary>
             [NameInMap("displayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The email address of the user. The address can be up to 256 characters in length.</para>
+            /// <para>The email address of the user. The email address can be up to 256 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:user-01@example.com">user-01@example.com</a></para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Email { get; set; }
 
             /// <summary>
-            /// <para>The username. The name must be unique within the workspace and can contain only lowercase letters, digits, and hyphens (-). It must start and end with a lowercase letter or digit and be 1 to 32 characters in length.</para>
+            /// <para>The username. The username must be unique within the workspace, can contain only lowercase letters, digits, and hyphens, must start and end with a lowercase letter or a digit, and must be 1 to 32 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user-01</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time of the last modification in UTC, formatted in RFC 3339.</para>
+            /// <para>The time of the last update, in UTC and RFC 3339 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
