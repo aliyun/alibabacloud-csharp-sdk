@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the role.</para>
+        /// <para>The role information.</para>
         /// </summary>
         [NameInMap("Role")]
         [Validation(Required=false)]
         public CreateRoleResponseBodyRole Role { get; set; }
         public class CreateRoleResponseBodyRole : TeaModel {
             /// <summary>
-            /// <para>The Alibaba Cloud Resource Name (ARN) of the role.</para>
+            /// <para>The resource descriptor of the role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:ram::123456789012****:role/ECSAdmin</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string Arn { get; set; }
 
             /// <summary>
-            /// <para>The document of the policy in which the entity that can assume the role is specified.</para>
+            /// <para>The content of the access policy for assuming the role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{ \&quot;Statement\&quot;: [ { \&quot;Action\&quot;: \&quot;sts:AssumeRole\&quot;, \&quot;Effect\&quot;: \&quot;Allow\&quot;, \&quot;Principal\&quot;: { \&quot;RAM\&quot;: \&quot;acs:ram::12345678901234****:root\&quot; } } ], \&quot;Version\&quot;: \&quot;1\&quot; }</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string AssumeRolePolicyDocument { get; set; }
 
             /// <summary>
-            /// <para>The time when the role was created.</para>
+            /// <para>The time when the role was created. The time is in RFC 3339 UTC format, indicated by Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-01-23T12:33:18Z</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             /// <para>The description of the role.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ECS administrator</para>
+            /// <para>ECS management role</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string RoleName { get; set; }
 
             /// <summary>
-            /// <para>The name of the role after authorization.</para>
+            /// <para>The name of the authorized role.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:ECSAdmin@role.123456.onaliyunservice.com">ECSAdmin@role.123456.onaliyunservice.com</a></para>

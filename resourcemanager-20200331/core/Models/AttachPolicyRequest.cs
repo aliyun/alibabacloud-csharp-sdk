@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class AttachPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the permission policy.</para>
-        /// <para>The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</para>
+        /// <para>Policy Name of the access policy.</para>
+        /// <para>Policy Name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,10 +22,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string PolicyName { get; set; }
 
         /// <summary>
-        /// <para>The type of the permission policy. Valid values:</para>
+        /// <para>The type of the access policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Custom</description></item>
-        /// <item><description>System</description></item>
+        /// <item><description>Custom: custom access policy.</description></item>
+        /// <item><description>System: system access policy.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string PolicyType { get; set; }
 
         /// <summary>
-        /// <para>The name of the object to which you want to attach the permission policy.</para>
+        /// <para>The name of the authorization object. The format varies based on the object type:</para>
         /// <list type="bullet">
-        /// <item><description>If you want to attach the permission policy to a RAM user, specify the name in the @.onaliyun.com format. indicates the name of the RAM user, and indicates the alias of the Alibaba Cloud account to which the RAM user belongs.</description></item>
-        /// <item><description>If you want to attach the permission policy to a RAM user group, specify the name in the @group..onaliyun.com format. indicates the name of the RAM user group, and indicates the alias of the Alibaba Cloud account to which the RAM user group belongs.</description></item>
-        /// <item><description>If you want to attach the permission policy to a RAM role, specify the name in the @role..onaliyunservice.com format. indicates the name of the RAM role, and indicates the alias of the Alibaba Cloud account to which the RAM role belongs.</description></item>
+        /// <item><description>Resource Access Management (RAM) user: <UserName>@<AccountAlias>.onaliyun.com, where <UserName> is the RAM username and <AccountAlias> is the account alias.</description></item>
+        /// <item><description>RAM user group: <GroupName>@group.<AccountAlias>.onaliyun.com, where <GroupName> is the RAM user group name and <AccountAlias> is the account alias.</description></item>
+        /// <item><description>RAM role: <RoleName>@role.<AccountAlias>.onaliyunservice.com, where <RoleName> is the RAM role name and <AccountAlias> is the account alias.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> The alias of an Alibaba Cloud account is a part of the default domain name. You can call the <a href="https://help.aliyun.com/document_detail/186720.html">GetDefaultDomain</a> operation to obtain the alias of an Alibaba Cloud account.</para>
+        /// <para>The account alias is part of the default domain name. Invoke <a href="https://help.aliyun.com/document_detail/186720.html">GetDefaultDomain</a> to obtain the account alias.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -56,11 +56,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string PrincipalName { get; set; }
 
         /// <summary>
-        /// <para>The type of the object to which you want to attach the permission policy. Valid values:</para>
+        /// <para>The authorization object type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>IMSUser: RAM user</description></item>
-        /// <item><description>IMSGroup: RAM user group</description></item>
-        /// <item><description>ServiceRole: RAM role</description></item>
+        /// <item><description>IMSUser: Resource Access Management (RAM) user.</description></item>
+        /// <item><description>IMSGroup: RAM user group.</description></item>
+        /// <item><description>ServiceRole: RAM role.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -72,10 +72,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string PrincipalType { get; set; }
 
         /// <summary>
-        /// <para>The effective scope of the permission policy. Valid values:</para>
+        /// <para>The authorization scope. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ID of a resource group: indicates that the permission policy takes effect for the resources in the resource group.</description></item>
-        /// <item><description>ID of the Alibaba Cloud account to which the authorized object belongs: indicates that the permission policy takes effect for the resources within the Alibaba Cloud account.</description></item>
+        /// <item><description>Resource group ID: The permissions take effect within the specified resource group.</description></item>
+        /// <item><description>Alibaba Cloud account ID: The ID of the Alibaba Cloud account to which the principal belongs. The permissions take effect within the Alibaba Cloud account.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

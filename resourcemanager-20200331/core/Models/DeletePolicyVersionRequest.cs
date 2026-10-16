@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class DeletePolicyVersionRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the permission policy.</para>
-        /// <para>The name must be 1 to 128 characters in length and can contain letters, digits, and hyphen (-).</para>
+        /// <para>Policy Name of the access policy.</para>
+        /// <para>Policy Name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string PolicyName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the policy version.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/159982.html">ListPolicyVersions</a> operation to query the ID.</para>
+        /// <para>The ID of the access policy version.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/159982.html">ListPolicyVersions</a> to query access policy version IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

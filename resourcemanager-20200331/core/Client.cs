@@ -39,13 +39,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Accepts an invitation.</para>
+        /// <para>Accepts an invitation by the invited Alibaba Cloud account by calling AcceptHandshake.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After an invited Alibaba Cloud account joins a resource directory, it becomes a member of the resource directory. By default, the name of the invited Alibaba Cloud account is used as the display name of the account in the resource directory.
-        /// This topic provides an example on how to call the API operation to accept the invitation <c>h-Ih8IuPfvV0t0****</c> that is initiated to invite the Alibaba Cloud account <c>177242285274****</c> to join the resource directory <c>rd-3G****</c>.</para>
+        /// <para>After the invited Alibaba Cloud account successfully joins a resource directory, the account becomes a member of the resource directory. The resource directory uses the name of the invited Alibaba Cloud account as the display name and account name of the member by default.
+        /// This topic provides an example on how the invited Alibaba Cloud account <c>177242285274****</c> accepts an invitation from the resource directory <c>rd-3G****</c>. The handshake ID is <c>h-Ih8IuPfvV0t0****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -87,13 +87,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Accepts an invitation.</para>
+        /// <para>Accepts an invitation by the invited Alibaba Cloud account by calling AcceptHandshake.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After an invited Alibaba Cloud account joins a resource directory, it becomes a member of the resource directory. By default, the name of the invited Alibaba Cloud account is used as the display name of the account in the resource directory.
-        /// This topic provides an example on how to call the API operation to accept the invitation <c>h-Ih8IuPfvV0t0****</c> that is initiated to invite the Alibaba Cloud account <c>177242285274****</c> to join the resource directory <c>rd-3G****</c>.</para>
+        /// <para>After the invited Alibaba Cloud account successfully joins a resource directory, the account becomes a member of the resource directory. The resource directory uses the name of the invited Alibaba Cloud account as the display name and account name of the member by default.
+        /// This topic provides an example on how the invited Alibaba Cloud account <c>177242285274****</c> accepts an invitation from the resource directory <c>rd-3G****</c>. The handshake ID is <c>h-Ih8IuPfvV0t0****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -135,13 +135,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Accepts an invitation.</para>
+        /// <para>Accepts an invitation by the invited Alibaba Cloud account by calling AcceptHandshake.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After an invited Alibaba Cloud account joins a resource directory, it becomes a member of the resource directory. By default, the name of the invited Alibaba Cloud account is used as the display name of the account in the resource directory.
-        /// This topic provides an example on how to call the API operation to accept the invitation <c>h-Ih8IuPfvV0t0****</c> that is initiated to invite the Alibaba Cloud account <c>177242285274****</c> to join the resource directory <c>rd-3G****</c>.</para>
+        /// <para>After the invited Alibaba Cloud account successfully joins a resource directory, the account becomes a member of the resource directory. The resource directory uses the name of the invited Alibaba Cloud account as the display name and account name of the member by default.
+        /// This topic provides an example on how the invited Alibaba Cloud account <c>177242285274****</c> accepts an invitation from the resource directory <c>rd-3G****</c>. The handshake ID is <c>h-Ih8IuPfvV0t0****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -159,13 +159,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Accepts an invitation.</para>
+        /// <para>Accepts an invitation by the invited Alibaba Cloud account by calling AcceptHandshake.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After an invited Alibaba Cloud account joins a resource directory, it becomes a member of the resource directory. By default, the name of the invited Alibaba Cloud account is used as the display name of the account in the resource directory.
-        /// This topic provides an example on how to call the API operation to accept the invitation <c>h-Ih8IuPfvV0t0****</c> that is initiated to invite the Alibaba Cloud account <c>177242285274****</c> to join the resource directory <c>rd-3G****</c>.</para>
+        /// <para>After the invited Alibaba Cloud account successfully joins a resource directory, the account becomes a member of the resource directory. The resource directory uses the name of the invited Alibaba Cloud account as the display name and account name of the member by default.
+        /// This topic provides an example on how the invited Alibaba Cloud account <c>177242285274****</c> accepts an invitation from the resource directory <c>rd-3G****</c>. The handshake ID is <c>h-Ih8IuPfvV0t0****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -183,16 +183,16 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches an access control policy.</para>
+        /// <para>Attaches a control policy to a specified target.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you attach an access control policy, the operations performed on resources by using members are limited by the policy. Make sure that the attached policy meets your expectations. Otherwise, your business may be affected.
-        /// By default, the system access control policy FullAliyunAccess is attached to each folder and member.
-        /// The access control policy that is attached to a folder also applies to all its subfolders and all members in the subfolders.
-        /// A maximum of 10 access control policies can be attached to a folder or member.
-        /// This topic provides an example on how to call the API operation to attach the custom access control policy <c>cp-jExXAqIYkwHN****</c> to the folder <c>fd-ZDNPiT****</c>.</para>
+        /// <para>After the control policy is attached, the resource folder or member immediately becomes subject to the control policy. Make sure that the result of the attach operation is as expected to avoid affecting your business.
+        /// The system attaches the system policy FullAliyunAccess to resource folders and members by default.
+        /// A control policy takes effect on the entire node to which it is attached. A control policy attached to a parent resource folder also takes effect on its child resource folders and members.
+        /// Each node (resource folder or member) can have a maximum of 10 control policies attached.
+        /// This topic provides an example on how to attach the custom policy <c>cp-jExXAqIYkwHN****</c> to the resource folder <c>fd-ZDNPiT****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -238,16 +238,16 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches an access control policy.</para>
+        /// <para>Attaches a control policy to a specified target.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you attach an access control policy, the operations performed on resources by using members are limited by the policy. Make sure that the attached policy meets your expectations. Otherwise, your business may be affected.
-        /// By default, the system access control policy FullAliyunAccess is attached to each folder and member.
-        /// The access control policy that is attached to a folder also applies to all its subfolders and all members in the subfolders.
-        /// A maximum of 10 access control policies can be attached to a folder or member.
-        /// This topic provides an example on how to call the API operation to attach the custom access control policy <c>cp-jExXAqIYkwHN****</c> to the folder <c>fd-ZDNPiT****</c>.</para>
+        /// <para>After the control policy is attached, the resource folder or member immediately becomes subject to the control policy. Make sure that the result of the attach operation is as expected to avoid affecting your business.
+        /// The system attaches the system policy FullAliyunAccess to resource folders and members by default.
+        /// A control policy takes effect on the entire node to which it is attached. A control policy attached to a parent resource folder also takes effect on its child resource folders and members.
+        /// Each node (resource folder or member) can have a maximum of 10 control policies attached.
+        /// This topic provides an example on how to attach the custom policy <c>cp-jExXAqIYkwHN****</c> to the resource folder <c>fd-ZDNPiT****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -293,16 +293,16 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches an access control policy.</para>
+        /// <para>Attaches a control policy to a specified target.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you attach an access control policy, the operations performed on resources by using members are limited by the policy. Make sure that the attached policy meets your expectations. Otherwise, your business may be affected.
-        /// By default, the system access control policy FullAliyunAccess is attached to each folder and member.
-        /// The access control policy that is attached to a folder also applies to all its subfolders and all members in the subfolders.
-        /// A maximum of 10 access control policies can be attached to a folder or member.
-        /// This topic provides an example on how to call the API operation to attach the custom access control policy <c>cp-jExXAqIYkwHN****</c> to the folder <c>fd-ZDNPiT****</c>.</para>
+        /// <para>After the control policy is attached, the resource folder or member immediately becomes subject to the control policy. Make sure that the result of the attach operation is as expected to avoid affecting your business.
+        /// The system attaches the system policy FullAliyunAccess to resource folders and members by default.
+        /// A control policy takes effect on the entire node to which it is attached. A control policy attached to a parent resource folder also takes effect on its child resource folders and members.
+        /// Each node (resource folder or member) can have a maximum of 10 control policies attached.
+        /// This topic provides an example on how to attach the custom policy <c>cp-jExXAqIYkwHN****</c> to the resource folder <c>fd-ZDNPiT****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -320,16 +320,16 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches an access control policy.</para>
+        /// <para>Attaches a control policy to a specified target.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you attach an access control policy, the operations performed on resources by using members are limited by the policy. Make sure that the attached policy meets your expectations. Otherwise, your business may be affected.
-        /// By default, the system access control policy FullAliyunAccess is attached to each folder and member.
-        /// The access control policy that is attached to a folder also applies to all its subfolders and all members in the subfolders.
-        /// A maximum of 10 access control policies can be attached to a folder or member.
-        /// This topic provides an example on how to call the API operation to attach the custom access control policy <c>cp-jExXAqIYkwHN****</c> to the folder <c>fd-ZDNPiT****</c>.</para>
+        /// <para>After the control policy is attached, the resource folder or member immediately becomes subject to the control policy. Make sure that the result of the attach operation is as expected to avoid affecting your business.
+        /// The system attaches the system policy FullAliyunAccess to resource folders and members by default.
+        /// A control policy takes effect on the entire node to which it is attached. A control policy attached to a parent resource folder also takes effect on its child resource folders and members.
+        /// Each node (resource folder or member) can have a maximum of 10 control policies attached.
+        /// This topic provides an example on how to attach the custom policy <c>cp-jExXAqIYkwHN****</c> to the resource folder <c>fd-ZDNPiT****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -347,13 +347,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches a permission policy to an object, which can be a RAM user, RAM user group, or RAM role. After you attach a permission policy to an object, the object has the operation permissions on the resources in a specific resource group or within a specific Alibaba Cloud account.</para>
+        /// <para>Invokes AttachPolicy to add an access policy to an authorization object (a Resource Access Management (RAM) user, RAM user group, or RAM role), which is authorization. After the authorization is complete, the authorized object obtains access permissions on resources within the specified resource group or Alibaba Cloud account.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the policy <c>AdministratorAccess</c> is attached to the RAM user <c>alice@demo.onaliyun.com</c> and takes effect only for resources in the <c>rg-9gLOoK****</c> resource group.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// AttachPolicyRequest
@@ -410,13 +405,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches a permission policy to an object, which can be a RAM user, RAM user group, or RAM role. After you attach a permission policy to an object, the object has the operation permissions on the resources in a specific resource group or within a specific Alibaba Cloud account.</para>
+        /// <para>Invokes AttachPolicy to add an access policy to an authorization object (a Resource Access Management (RAM) user, RAM user group, or RAM role), which is authorization. After the authorization is complete, the authorized object obtains access permissions on resources within the specified resource group or Alibaba Cloud account.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the policy <c>AdministratorAccess</c> is attached to the RAM user <c>alice@demo.onaliyun.com</c> and takes effect only for resources in the <c>rg-9gLOoK****</c> resource group.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// AttachPolicyRequest
@@ -473,13 +463,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches a permission policy to an object, which can be a RAM user, RAM user group, or RAM role. After you attach a permission policy to an object, the object has the operation permissions on the resources in a specific resource group or within a specific Alibaba Cloud account.</para>
+        /// <para>Invokes AttachPolicy to add an access policy to an authorization object (a Resource Access Management (RAM) user, RAM user group, or RAM role), which is authorization. After the authorization is complete, the authorized object obtains access permissions on resources within the specified resource group or Alibaba Cloud account.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the policy <c>AdministratorAccess</c> is attached to the RAM user <c>alice@demo.onaliyun.com</c> and takes effect only for resources in the <c>rg-9gLOoK****</c> resource group.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// AttachPolicyRequest
@@ -496,13 +481,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches a permission policy to an object, which can be a RAM user, RAM user group, or RAM role. After you attach a permission policy to an object, the object has the operation permissions on the resources in a specific resource group or within a specific Alibaba Cloud account.</para>
+        /// <para>Invokes AttachPolicy to add an access policy to an authorization object (a Resource Access Management (RAM) user, RAM user group, or RAM role), which is authorization. After the authorization is complete, the authorized object obtains access permissions on resources within the specified resource group or Alibaba Cloud account.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the policy <c>AdministratorAccess</c> is attached to the RAM user <c>alice@demo.onaliyun.com</c> and takes effect only for resources in the <c>rg-9gLOoK****</c> resource group.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// AttachPolicyRequest
@@ -519,14 +499,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a mobile phone number to a member of the resource account type in a resource directory for security purposes.</para>
+        /// <para>Sets a secure phone number for a member of the resource account type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation only to bind a mobile phone number to a member of the resource account type. You cannot call this API operation to change the mobile phone number that is bound to a member of the resource account type.
-        /// To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this API operation.
-        /// This topic provides an example on how to call the API operation to bind a mobile phone number to the member <c>138660628348****</c> for security purposes.</para>
+        /// <para>This API operation is used only to set a secure phone number for a resource account for the first time. It cannot be used to modify an existing secure phone number.
+        /// To ensure that the system can record the specific author of management operations, use a Resource Access Management (RAM) user or RAM role under the management account that has the resource folder management permission (AliyunResourceDirectoryFullAccess) to invoke this API operation.
+        /// This topic provides an example of how to set a secure phone number for the member <c>138660628348****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -576,14 +556,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a mobile phone number to a member of the resource account type in a resource directory for security purposes.</para>
+        /// <para>Sets a secure phone number for a member of the resource account type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation only to bind a mobile phone number to a member of the resource account type. You cannot call this API operation to change the mobile phone number that is bound to a member of the resource account type.
-        /// To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this API operation.
-        /// This topic provides an example on how to call the API operation to bind a mobile phone number to the member <c>138660628348****</c> for security purposes.</para>
+        /// <para>This API operation is used only to set a secure phone number for a resource account for the first time. It cannot be used to modify an existing secure phone number.
+        /// To ensure that the system can record the specific author of management operations, use a Resource Access Management (RAM) user or RAM role under the management account that has the resource folder management permission (AliyunResourceDirectoryFullAccess) to invoke this API operation.
+        /// This topic provides an example of how to set a secure phone number for the member <c>138660628348****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -633,14 +613,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a mobile phone number to a member of the resource account type in a resource directory for security purposes.</para>
+        /// <para>Sets a secure phone number for a member of the resource account type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation only to bind a mobile phone number to a member of the resource account type. You cannot call this API operation to change the mobile phone number that is bound to a member of the resource account type.
-        /// To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this API operation.
-        /// This topic provides an example on how to call the API operation to bind a mobile phone number to the member <c>138660628348****</c> for security purposes.</para>
+        /// <para>This API operation is used only to set a secure phone number for a resource account for the first time. It cannot be used to modify an existing secure phone number.
+        /// To ensure that the system can record the specific author of management operations, use a Resource Access Management (RAM) user or RAM role under the management account that has the resource folder management permission (AliyunResourceDirectoryFullAccess) to invoke this API operation.
+        /// This topic provides an example of how to set a secure phone number for the member <c>138660628348****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -658,14 +638,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a mobile phone number to a member of the resource account type in a resource directory for security purposes.</para>
+        /// <para>Sets a secure phone number for a member of the resource account type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation only to bind a mobile phone number to a member of the resource account type. You cannot call this API operation to change the mobile phone number that is bound to a member of the resource account type.
-        /// To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this API operation.
-        /// This topic provides an example on how to call the API operation to bind a mobile phone number to the member <c>138660628348****</c> for security purposes.</para>
+        /// <para>This API operation is used only to set a secure phone number for a resource account for the first time. It cannot be used to modify an existing secure phone number.
+        /// To ensure that the system can record the specific author of management operations, use a Resource Access Management (RAM) user or RAM role under the management account that has the resource folder management permission (AliyunResourceDirectoryFullAccess) to invoke this API operation.
+        /// This topic provides an example of how to set a secure phone number for the member <c>138660628348****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -683,7 +663,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the email address change of a member.</para>
+        /// <para>Cancels the modification of a member account email address.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -725,7 +705,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the email address change of a member.</para>
+        /// <para>Cancels the modification of a member account email address.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -767,7 +747,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the email address change of a member.</para>
+        /// <para>Cancels the modification of a member account email address.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -785,7 +765,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the email address change of a member.</para>
+        /// <para>Cancels the modification of a member account email address.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -803,7 +783,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the creation of a cloud account.</para>
+        /// <para>Cancels the creation of a member of the cloud account type in a resource directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -845,7 +825,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the creation of a cloud account.</para>
+        /// <para>Cancels the creation of a member of the cloud account type in a resource directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -887,7 +867,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the creation of a cloud account.</para>
+        /// <para>Cancels the creation of a member of the cloud account type in a resource directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -905,7 +885,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the creation of a cloud account.</para>
+        /// <para>Cancels the creation of a member of the cloud account type in a resource directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -923,12 +903,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels an invitation.</para>
+        /// <para>Cancels a handshake.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to call the API operation to cancel the invitation whose ID is <c>h-ycm4rp****</c>.</para>
+        /// <para>This topic provides an example on how to cancel the handshake whose ID is <c>h-ycm4rp****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -970,12 +950,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels an invitation.</para>
+        /// <para>Cancels a handshake.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to call the API operation to cancel the invitation whose ID is <c>h-ycm4rp****</c>.</para>
+        /// <para>This topic provides an example on how to cancel the handshake whose ID is <c>h-ycm4rp****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1017,12 +997,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels an invitation.</para>
+        /// <para>Cancels a handshake.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to call the API operation to cancel the invitation whose ID is <c>h-ycm4rp****</c>.</para>
+        /// <para>This topic provides an example on how to cancel the handshake whose ID is <c>h-ycm4rp****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1040,12 +1020,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels an invitation.</para>
+        /// <para>Cancels a handshake.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to call the API operation to cancel the invitation whose ID is <c>h-ycm4rp****</c>.</para>
+        /// <para>This topic provides an example on how to cancel the handshake whose ID is <c>h-ycm4rp****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1063,7 +1043,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the upgrade from a resource account to a cloud account.</para>
+        /// <para>Cancels the upgrade of a resource directory resource account to an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1105,7 +1085,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the upgrade from a resource account to a cloud account.</para>
+        /// <para>Cancels the upgrade of a resource directory resource account to an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1147,7 +1127,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the upgrade from a resource account to a cloud account.</para>
+        /// <para>Cancels the upgrade of a resource directory resource account to an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1165,7 +1145,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the upgrade from a resource account to a cloud account.</para>
+        /// <para>Cancels the upgrade of a resource directory resource account to an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1183,7 +1163,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the email address that is bound to a member.</para>
+        /// <para>Modifies the email address of a member account by calling ChangeAccountEmail.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1229,7 +1209,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the email address that is bound to a member.</para>
+        /// <para>Modifies the email address of a member account by calling ChangeAccountEmail.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1275,7 +1255,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the email address that is bound to a member.</para>
+        /// <para>Modifies the email address of a member account by calling ChangeAccountEmail.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1293,7 +1273,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the email address that is bound to a member.</para>
+        /// <para>Modifies the email address of a member account by calling ChangeAccountEmail.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1311,13 +1291,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a member deletion check.</para>
+        /// <para>Calls CheckAccountDelete to perform a member account deletion check task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you delete a member, you must call this API operation to check whether the member can be deleted.
-        /// This topic provides an example on how to call the API operation to perform a deletion check on the member whose ID is <c>179855839641****</c>.</para>
+        /// <para>Before deleting a member account, call this API to perform a pre-deletion condition check on the target member account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1359,13 +1338,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a member deletion check.</para>
+        /// <para>Calls CheckAccountDelete to perform a member account deletion check task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you delete a member, you must call this API operation to check whether the member can be deleted.
-        /// This topic provides an example on how to call the API operation to perform a deletion check on the member whose ID is <c>179855839641****</c>.</para>
+        /// <para>Before deleting a member account, call this API to perform a pre-deletion condition check on the target member account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1407,13 +1385,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a member deletion check.</para>
+        /// <para>Calls CheckAccountDelete to perform a member account deletion check task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you delete a member, you must call this API operation to check whether the member can be deleted.
-        /// This topic provides an example on how to call the API operation to perform a deletion check on the member whose ID is <c>179855839641****</c>.</para>
+        /// <para>Before deleting a member account, call this API to perform a pre-deletion condition check on the target member account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1431,13 +1408,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a member deletion check.</para>
+        /// <para>Calls CheckAccountDelete to perform a member account deletion check task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you delete a member, you must call this API operation to check whether the member can be deleted.
-        /// This topic provides an example on how to call the API operation to perform a deletion check on the member whose ID is <c>179855839641****</c>.</para>
+        /// <para>Before deleting a member account, call this API to perform a pre-deletion condition check on the target member account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1455,12 +1431,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a transfer rule. Custom transfer rules and transfer rules for associated resources are supported.</para>
+        /// <para>Creates an automatic allocation rule by calling CreateAutoGroupingRule. Two types are supported: custom allocation rules and attached-resource allocation rules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create up to 10 custom transfer rules. Each custom transfer rule can contain up to 10 content records.</para>
+        /// <para>You can create up to 10 custom allocation rules, and each custom allocation rule supports up to 10 rule content entries.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1546,12 +1522,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a transfer rule. Custom transfer rules and transfer rules for associated resources are supported.</para>
+        /// <para>Creates an automatic allocation rule by calling CreateAutoGroupingRule. Two types are supported: custom allocation rules and attached-resource allocation rules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create up to 10 custom transfer rules. Each custom transfer rule can contain up to 10 content records.</para>
+        /// <para>You can create up to 10 custom allocation rules, and each custom allocation rule supports up to 10 rule content entries.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1637,12 +1613,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a transfer rule. Custom transfer rules and transfer rules for associated resources are supported.</para>
+        /// <para>Creates an automatic allocation rule by calling CreateAutoGroupingRule. Two types are supported: custom allocation rules and attached-resource allocation rules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create up to 10 custom transfer rules. Each custom transfer rule can contain up to 10 content records.</para>
+        /// <para>You can create up to 10 custom allocation rules, and each custom allocation rule supports up to 10 rule content entries.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1660,12 +1636,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a transfer rule. Custom transfer rules and transfer rules for associated resources are supported.</para>
+        /// <para>Creates an automatic allocation rule by calling CreateAutoGroupingRule. Two types are supported: custom allocation rules and attached-resource allocation rules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create up to 10 custom transfer rules. Each custom transfer rule can contain up to 10 content records.</para>
+        /// <para>You can create up to 10 custom allocation rules, and each custom allocation rule supports up to 10 rule content entries.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1683,18 +1659,18 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cloud account.</para>
+        /// <para>Creates a member of the cloud account type in a resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A resource directory supports two types of member accounts: resource accounts and cloud accounts.</para>
+        /// <para>A resource directory contains two types of members: resource accounts and cloud accounts. </para>
         /// <list type="bullet">
-        /// <item><description>Resource account (recommended): A resource account is only used as a resource container and fully depends on a resource directory. Such member accounts are secure and easy-to-create. For more information about how to create a resource account, see <a href="https://help.aliyun.com/document_detail/159392.html">CreateResourceAccount</a>.<remarks>
-        /// <para> A resource account can be upgraded to a cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/159395.html">PromoteResourceAccount</a> .</para>
+        /// <item><description>Resource account (recommended): A resource account serves only as a resource container and fully depends on the resource directory. It is a more secure account type that is easier to create. To create a resource account type member, see <a href="https://help.aliyun.com/document_detail/159392.html">CreateResourceAccount</a>. <remarks>
+        /// <para>A resource account can also be upgraded to a cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/159395.html">PromoteResourceAccount</a>.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>Cloud account: A cloud account has all the features of an Alibaba Cloud account, including root permissions.</description></item>
+        /// <item><description>Cloud account: A cloud account has all the features of an Alibaba Cloud account, including root logon access.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1749,18 +1725,18 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cloud account.</para>
+        /// <para>Creates a member of the cloud account type in a resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A resource directory supports two types of member accounts: resource accounts and cloud accounts.</para>
+        /// <para>A resource directory contains two types of members: resource accounts and cloud accounts. </para>
         /// <list type="bullet">
-        /// <item><description>Resource account (recommended): A resource account is only used as a resource container and fully depends on a resource directory. Such member accounts are secure and easy-to-create. For more information about how to create a resource account, see <a href="https://help.aliyun.com/document_detail/159392.html">CreateResourceAccount</a>.<remarks>
-        /// <para> A resource account can be upgraded to a cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/159395.html">PromoteResourceAccount</a> .</para>
+        /// <item><description>Resource account (recommended): A resource account serves only as a resource container and fully depends on the resource directory. It is a more secure account type that is easier to create. To create a resource account type member, see <a href="https://help.aliyun.com/document_detail/159392.html">CreateResourceAccount</a>. <remarks>
+        /// <para>A resource account can also be upgraded to a cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/159395.html">PromoteResourceAccount</a>.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>Cloud account: A cloud account has all the features of an Alibaba Cloud account, including root permissions.</description></item>
+        /// <item><description>Cloud account: A cloud account has all the features of an Alibaba Cloud account, including root logon access.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1815,18 +1791,18 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cloud account.</para>
+        /// <para>Creates a member of the cloud account type in a resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A resource directory supports two types of member accounts: resource accounts and cloud accounts.</para>
+        /// <para>A resource directory contains two types of members: resource accounts and cloud accounts. </para>
         /// <list type="bullet">
-        /// <item><description>Resource account (recommended): A resource account is only used as a resource container and fully depends on a resource directory. Such member accounts are secure and easy-to-create. For more information about how to create a resource account, see <a href="https://help.aliyun.com/document_detail/159392.html">CreateResourceAccount</a>.<remarks>
-        /// <para> A resource account can be upgraded to a cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/159395.html">PromoteResourceAccount</a> .</para>
+        /// <item><description>Resource account (recommended): A resource account serves only as a resource container and fully depends on the resource directory. It is a more secure account type that is easier to create. To create a resource account type member, see <a href="https://help.aliyun.com/document_detail/159392.html">CreateResourceAccount</a>. <remarks>
+        /// <para>A resource account can also be upgraded to a cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/159395.html">PromoteResourceAccount</a>.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>Cloud account: A cloud account has all the features of an Alibaba Cloud account, including root permissions.</description></item>
+        /// <item><description>Cloud account: A cloud account has all the features of an Alibaba Cloud account, including root logon access.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1845,18 +1821,18 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cloud account.</para>
+        /// <para>Creates a member of the cloud account type in a resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A resource directory supports two types of member accounts: resource accounts and cloud accounts.</para>
+        /// <para>A resource directory contains two types of members: resource accounts and cloud accounts. </para>
         /// <list type="bullet">
-        /// <item><description>Resource account (recommended): A resource account is only used as a resource container and fully depends on a resource directory. Such member accounts are secure and easy-to-create. For more information about how to create a resource account, see <a href="https://help.aliyun.com/document_detail/159392.html">CreateResourceAccount</a>.<remarks>
-        /// <para> A resource account can be upgraded to a cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/159395.html">PromoteResourceAccount</a> .</para>
+        /// <item><description>Resource account (recommended): A resource account serves only as a resource container and fully depends on the resource directory. It is a more secure account type that is easier to create. To create a resource account type member, see <a href="https://help.aliyun.com/document_detail/159392.html">CreateResourceAccount</a>. <remarks>
+        /// <para>A resource account can also be upgraded to a cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/159395.html">PromoteResourceAccount</a>.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>Cloud account: A cloud account has all the features of an Alibaba Cloud account, including root permissions.</description></item>
+        /// <item><description>Cloud account: A cloud account has all the features of an Alibaba Cloud account, including root logon access.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1875,12 +1851,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom access control policy.</para>
+        /// <para>Calls CreateControlPolicy to create a custom control policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to call the API operation to create a custom access control policy named <c>ExampleControlPolicy</c>. This access control policy is used to prohibit modifications to the ResourceDirectoryAccountAccessRole role and the permissions of the role.</para>
+        /// <para>This topic provides an example on how to create a control policy named <c>ExampleControlPolicy</c> that prohibits modifications to the ResourceDirectoryAccountAccessRole role and its permissions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1934,12 +1910,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom access control policy.</para>
+        /// <para>Calls CreateControlPolicy to create a custom control policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to call the API operation to create a custom access control policy named <c>ExampleControlPolicy</c>. This access control policy is used to prohibit modifications to the ResourceDirectoryAccountAccessRole role and the permissions of the role.</para>
+        /// <para>This topic provides an example on how to create a control policy named <c>ExampleControlPolicy</c> that prohibits modifications to the ResourceDirectoryAccountAccessRole role and its permissions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1993,12 +1969,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom access control policy.</para>
+        /// <para>Calls CreateControlPolicy to create a custom control policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to call the API operation to create a custom access control policy named <c>ExampleControlPolicy</c>. This access control policy is used to prohibit modifications to the ResourceDirectoryAccountAccessRole role and the permissions of the role.</para>
+        /// <para>This topic provides an example on how to create a control policy named <c>ExampleControlPolicy</c> that prohibits modifications to the ResourceDirectoryAccountAccessRole role and its permissions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2016,12 +1992,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom access control policy.</para>
+        /// <para>Calls CreateControlPolicy to create a custom control policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to call the API operation to create a custom access control policy named <c>ExampleControlPolicy</c>. This access control policy is used to prohibit modifications to the ResourceDirectoryAccountAccessRole role and the permissions of the role.</para>
+        /// <para>This topic provides an example on how to create a control policy named <c>ExampleControlPolicy</c> that prohibits modifications to the ResourceDirectoryAccountAccessRole role and its permissions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2039,14 +2015,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a folder.</para>
+        /// <para>Creates a resource folder by calling CreateFolder.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> A maximum of five levels of folders can be created under the root folder.
-        /// In this example, a folder named <c>rdFolder</c> is created under the root folder.</para>
+        /// <para>You can create a maximum of five levels of resource folders.
+        /// This topic provides an example of how to create a resource folder named <c>rdFolder</c> under the Root folder.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -2093,14 +2069,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a folder.</para>
+        /// <para>Creates a resource folder by calling CreateFolder.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> A maximum of five levels of folders can be created under the root folder.
-        /// In this example, a folder named <c>rdFolder</c> is created under the root folder.</para>
+        /// <para>You can create a maximum of five levels of resource folders.
+        /// This topic provides an example of how to create a resource folder named <c>rdFolder</c> under the Root folder.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -2147,14 +2123,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a folder.</para>
+        /// <para>Creates a resource folder by calling CreateFolder.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> A maximum of five levels of folders can be created under the root folder.
-        /// In this example, a folder named <c>rdFolder</c> is created under the root folder.</para>
+        /// <para>You can create a maximum of five levels of resource folders.
+        /// This topic provides an example of how to create a resource folder named <c>rdFolder</c> under the Root folder.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -2173,14 +2149,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a folder.</para>
+        /// <para>Creates a resource folder by calling CreateFolder.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> A maximum of five levels of folders can be created under the root folder.
-        /// In this example, a folder named <c>rdFolder</c> is created under the root folder.</para>
+        /// <para>You can create a maximum of five levels of resource folders.
+        /// This topic provides an example of how to create a resource folder named <c>rdFolder</c> under the Root folder.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -2199,7 +2175,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a permission policy.</para>
+        /// <para>Creates an access policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2249,7 +2225,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a permission policy.</para>
+        /// <para>Creates an access policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2299,7 +2275,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a permission policy.</para>
+        /// <para>Creates an access policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2317,7 +2293,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a permission policy.</para>
+        /// <para>Creates an access policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2335,7 +2311,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a version for a permission policy.</para>
+        /// <para>Creates a version of an access policy by calling CreatePolicyVersion.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2385,7 +2361,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a version for a permission policy.</para>
+        /// <para>Creates a version of an access policy by calling CreatePolicyVersion.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2435,7 +2411,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a version for a permission policy.</para>
+        /// <para>Creates a version of an access policy by calling CreatePolicyVersion.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2453,7 +2429,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a version for a permission policy.</para>
+        /// <para>Creates a version of an access policy by calling CreatePolicyVersion.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2471,12 +2447,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a member of the resource account type.</para>
+        /// <para>Creates a member of the resource account type by calling CreateResourceAccount.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A member serves as a container for resources and is also an organizational unit in a resource directory. A member indicates a project or application. The resources of different members are isolated.</para>
+        /// <para>In a resource directory, a member serves as a resource container and is a resource grouping unit. A member typically represents a project or application. Resources in each member are physically isolated from resources in other members.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2538,12 +2514,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a member of the resource account type.</para>
+        /// <para>Creates a member of the resource account type by calling CreateResourceAccount.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A member serves as a container for resources and is also an organizational unit in a resource directory. A member indicates a project or application. The resources of different members are isolated.</para>
+        /// <para>In a resource directory, a member serves as a resource container and is a resource grouping unit. A member typically represents a project or application. Resources in each member are physically isolated from resources in other members.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2605,12 +2581,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a member of the resource account type.</para>
+        /// <para>Creates a member of the resource account type by calling CreateResourceAccount.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A member serves as a container for resources and is also an organizational unit in a resource directory. A member indicates a project or application. The resources of different members are isolated.</para>
+        /// <para>In a resource directory, a member serves as a resource container and is a resource grouping unit. A member typically represents a project or application. Resources in each member are physically isolated from resources in other members.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2628,12 +2604,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a member of the resource account type.</para>
+        /// <para>Creates a member of the resource account type by calling CreateResourceAccount.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A member serves as a container for resources and is also an organizational unit in a resource directory. A member indicates a project or application. The resources of different members are isolated.</para>
+        /// <para>In a resource directory, a member serves as a resource container and is a resource grouping unit. A member typically represents a project or application. Resources in each member are physically isolated from resources in other members.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2657,7 +2633,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>A maximum of 30 resource groups can be created within an Alibaba Cloud account.</para>
+        /// <para>You can create a maximum of 30 resource groups within an Alibaba Cloud account.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -2714,7 +2690,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>A maximum of 30 resource groups can be created within an Alibaba Cloud account.</para>
+        /// <para>You can create a maximum of 30 resource groups within an Alibaba Cloud account.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -2771,7 +2747,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>A maximum of 30 resource groups can be created within an Alibaba Cloud account.</para>
+        /// <para>You can create a maximum of 30 resource groups within an Alibaba Cloud account.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -2796,7 +2772,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>A maximum of 30 resource groups can be created within an Alibaba Cloud account.</para>
+        /// <para>You can create a maximum of 30 resource groups within an Alibaba Cloud account.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -2815,7 +2791,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a RAM role.</para>
+        /// <para>Creates a role by calling CreateRole.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2869,7 +2845,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a RAM role.</para>
+        /// <para>Creates a role by calling CreateRole.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2923,7 +2899,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a RAM role.</para>
+        /// <para>Creates a role by calling CreateRole.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2941,7 +2917,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a RAM role.</para>
+        /// <para>Creates a role by calling CreateRole.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3095,7 +3071,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rejects an invitation.</para>
+        /// <para>Declines a handshake invitation by the invited Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3137,7 +3113,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rejects an invitation.</para>
+        /// <para>Declines a handshake invitation by the invited Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3179,7 +3155,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rejects an invitation.</para>
+        /// <para>Declines a handshake invitation by the invited Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3197,7 +3173,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rejects an invitation.</para>
+        /// <para>Declines a handshake invitation by the invited Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3215,13 +3191,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a member of the resource account type.</para>
+        /// <para>Deletes a member of the resource account type by calling DeleteAccount.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you delete a member, we recommend that you call the <a href="https://help.aliyun.com/document_detail/448542.html">CheckAccountDelete</a> and <a href="https://help.aliyun.com/document_detail/448775.html">GetAccountDeletionCheckResult</a> operations to check whether the member meets deletion requirements. You can call the DeleteAccount operation to delete only members that meet the deletion requirements.
-        /// After you submit a deletion request for a member, you can call the <a href="https://help.aliyun.com/document_detail/449001.html">GetAccountDeletionStatus</a> operation to query the deletion status of the member. After a member is deleted, the resources and data within the member are deleted, and you can no longer use the member to log on to the Alibaba Cloud Management Console. In addition, the member cannot be recovered. Proceed with caution. For more information about how to delete a member, see <a href="https://help.aliyun.com/document_detail/446078.html">Delete a member of the resource account type</a>.</para>
+        /// <para>Before deleting a member, call <a href="https://help.aliyun.com/document_detail/448542.html">CheckAccountDelete</a> and <a href="https://help.aliyun.com/document_detail/448775.html">GetAccountDeletionCheckResult</a> to perform a pre-deletion check on the member. Only members that meet the deletion conditions can be successfully deleted by calling DeleteAccount.
+        /// After you successfully submit a member deletion request, you can call <a href="https://help.aliyun.com/document_detail/449001.html">GetAccountDeletionStatus</a> to query the deletion status. Once a member is deleted, all resources and data in the member are deleted. You can no longer log on to or use the member, and the data cannot be recovered. Proceed with caution. For more information about member deletion, see <a href="https://help.aliyun.com/document_detail/446078.html">Delete a member of the resource account type</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -3273,13 +3249,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a member of the resource account type.</para>
+        /// <para>Deletes a member of the resource account type by calling DeleteAccount.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you delete a member, we recommend that you call the <a href="https://help.aliyun.com/document_detail/448542.html">CheckAccountDelete</a> and <a href="https://help.aliyun.com/document_detail/448775.html">GetAccountDeletionCheckResult</a> operations to check whether the member meets deletion requirements. You can call the DeleteAccount operation to delete only members that meet the deletion requirements.
-        /// After you submit a deletion request for a member, you can call the <a href="https://help.aliyun.com/document_detail/449001.html">GetAccountDeletionStatus</a> operation to query the deletion status of the member. After a member is deleted, the resources and data within the member are deleted, and you can no longer use the member to log on to the Alibaba Cloud Management Console. In addition, the member cannot be recovered. Proceed with caution. For more information about how to delete a member, see <a href="https://help.aliyun.com/document_detail/446078.html">Delete a member of the resource account type</a>.</para>
+        /// <para>Before deleting a member, call <a href="https://help.aliyun.com/document_detail/448542.html">CheckAccountDelete</a> and <a href="https://help.aliyun.com/document_detail/448775.html">GetAccountDeletionCheckResult</a> to perform a pre-deletion check on the member. Only members that meet the deletion conditions can be successfully deleted by calling DeleteAccount.
+        /// After you successfully submit a member deletion request, you can call <a href="https://help.aliyun.com/document_detail/449001.html">GetAccountDeletionStatus</a> to query the deletion status. Once a member is deleted, all resources and data in the member are deleted. You can no longer log on to or use the member, and the data cannot be recovered. Proceed with caution. For more information about member deletion, see <a href="https://help.aliyun.com/document_detail/446078.html">Delete a member of the resource account type</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -3331,13 +3307,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a member of the resource account type.</para>
+        /// <para>Deletes a member of the resource account type by calling DeleteAccount.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you delete a member, we recommend that you call the <a href="https://help.aliyun.com/document_detail/448542.html">CheckAccountDelete</a> and <a href="https://help.aliyun.com/document_detail/448775.html">GetAccountDeletionCheckResult</a> operations to check whether the member meets deletion requirements. You can call the DeleteAccount operation to delete only members that meet the deletion requirements.
-        /// After you submit a deletion request for a member, you can call the <a href="https://help.aliyun.com/document_detail/449001.html">GetAccountDeletionStatus</a> operation to query the deletion status of the member. After a member is deleted, the resources and data within the member are deleted, and you can no longer use the member to log on to the Alibaba Cloud Management Console. In addition, the member cannot be recovered. Proceed with caution. For more information about how to delete a member, see <a href="https://help.aliyun.com/document_detail/446078.html">Delete a member of the resource account type</a>.</para>
+        /// <para>Before deleting a member, call <a href="https://help.aliyun.com/document_detail/448542.html">CheckAccountDelete</a> and <a href="https://help.aliyun.com/document_detail/448775.html">GetAccountDeletionCheckResult</a> to perform a pre-deletion check on the member. Only members that meet the deletion conditions can be successfully deleted by calling DeleteAccount.
+        /// After you successfully submit a member deletion request, you can call <a href="https://help.aliyun.com/document_detail/449001.html">GetAccountDeletionStatus</a> to query the deletion status. Once a member is deleted, all resources and data in the member are deleted. You can no longer log on to or use the member, and the data cannot be recovered. Proceed with caution. For more information about member deletion, see <a href="https://help.aliyun.com/document_detail/446078.html">Delete a member of the resource account type</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3355,13 +3331,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a member of the resource account type.</para>
+        /// <para>Deletes a member of the resource account type by calling DeleteAccount.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you delete a member, we recommend that you call the <a href="https://help.aliyun.com/document_detail/448542.html">CheckAccountDelete</a> and <a href="https://help.aliyun.com/document_detail/448775.html">GetAccountDeletionCheckResult</a> operations to check whether the member meets deletion requirements. You can call the DeleteAccount operation to delete only members that meet the deletion requirements.
-        /// After you submit a deletion request for a member, you can call the <a href="https://help.aliyun.com/document_detail/449001.html">GetAccountDeletionStatus</a> operation to query the deletion status of the member. After a member is deleted, the resources and data within the member are deleted, and you can no longer use the member to log on to the Alibaba Cloud Management Console. In addition, the member cannot be recovered. Proceed with caution. For more information about how to delete a member, see <a href="https://help.aliyun.com/document_detail/446078.html">Delete a member of the resource account type</a>.</para>
+        /// <para>Before deleting a member, call <a href="https://help.aliyun.com/document_detail/448542.html">CheckAccountDelete</a> and <a href="https://help.aliyun.com/document_detail/448775.html">GetAccountDeletionCheckResult</a> to perform a pre-deletion check on the member. Only members that meet the deletion conditions can be successfully deleted by calling DeleteAccount.
+        /// After you successfully submit a member deletion request, you can call <a href="https://help.aliyun.com/document_detail/449001.html">GetAccountDeletionStatus</a> to query the deletion status. Once a member is deleted, all resources and data in the member are deleted. You can no longer log on to or use the member, and the data cannot be recovered. Proceed with caution. For more information about member deletion, see <a href="https://help.aliyun.com/document_detail/446078.html">Delete a member of the resource account type</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3379,7 +3355,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a transfer rule.</para>
+        /// <para>Deletes an automatic group transfer rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3421,7 +3397,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a transfer rule.</para>
+        /// <para>Deletes an automatic group transfer rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3463,7 +3439,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a transfer rule.</para>
+        /// <para>Deletes an automatic group transfer rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3481,7 +3457,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a transfer rule.</para>
+        /// <para>Deletes an automatic group transfer rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3504,8 +3480,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you want to delete a custom control policy that is attached to folders or member accounts, you must call the <a href="https://help.aliyun.com/document_detail/208331.html">DetachControlPolicy</a> operation to detach the policy before you delete it.
-        /// In this example, the custom control policy <c>cp-SImPt8GCEwiq****</c> is deleted.</para>
+        /// <para>To delete a custom control policy that is attached to a resource folder or member accounts, invoke <a href="https://help.aliyun.com/document_detail/208331.html">DetachControlPolicy</a> to detach the policy first.
+        /// This topic provides an example on how to delete the custom control policy cp-SImPt8GCEwiq****.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3552,8 +3528,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you want to delete a custom control policy that is attached to folders or member accounts, you must call the <a href="https://help.aliyun.com/document_detail/208331.html">DetachControlPolicy</a> operation to detach the policy before you delete it.
-        /// In this example, the custom control policy <c>cp-SImPt8GCEwiq****</c> is deleted.</para>
+        /// <para>To delete a custom control policy that is attached to a resource folder or member accounts, invoke <a href="https://help.aliyun.com/document_detail/208331.html">DetachControlPolicy</a> to detach the policy first.
+        /// This topic provides an example on how to delete the custom control policy cp-SImPt8GCEwiq****.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3600,8 +3576,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you want to delete a custom control policy that is attached to folders or member accounts, you must call the <a href="https://help.aliyun.com/document_detail/208331.html">DetachControlPolicy</a> operation to detach the policy before you delete it.
-        /// In this example, the custom control policy <c>cp-SImPt8GCEwiq****</c> is deleted.</para>
+        /// <para>To delete a custom control policy that is attached to a resource folder or member accounts, invoke <a href="https://help.aliyun.com/document_detail/208331.html">DetachControlPolicy</a> to detach the policy first.
+        /// This topic provides an example on how to delete the custom control policy cp-SImPt8GCEwiq****.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3624,8 +3600,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you want to delete a custom control policy that is attached to folders or member accounts, you must call the <a href="https://help.aliyun.com/document_detail/208331.html">DetachControlPolicy</a> operation to detach the policy before you delete it.
-        /// In this example, the custom control policy <c>cp-SImPt8GCEwiq****</c> is deleted.</para>
+        /// <para>To delete a custom control policy that is attached to a resource folder or member accounts, invoke <a href="https://help.aliyun.com/document_detail/208331.html">DetachControlPolicy</a> to detach the policy first.
+        /// This topic provides an example on how to delete the custom control policy cp-SImPt8GCEwiq****.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3649,7 +3625,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> Before you delete a folder, make sure that the folder does not contain any member accounts or child folders.</para>
+        /// <para>Before deleting a folder, make sure that the folder does not contain any member accounts or subfolders.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3698,7 +3674,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> Before you delete a folder, make sure that the folder does not contain any member accounts or child folders.</para>
+        /// <para>Before deleting a folder, make sure that the folder does not contain any member accounts or subfolders.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3747,7 +3723,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> Before you delete a folder, make sure that the folder does not contain any member accounts or child folders.</para>
+        /// <para>Before deleting a folder, make sure that the folder does not contain any member accounts or subfolders.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3772,7 +3748,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> Before you delete a folder, make sure that the folder does not contain any member accounts or child folders.</para>
+        /// <para>Before deleting a folder, make sure that the folder does not contain any member accounts or subfolders.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3791,17 +3767,17 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a permission policy.</para>
+        /// <para>Deletes a specified access policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Before you delete a permission policy, you must delete its all non-default versions. For information about how to delete a policy version, see <a href="https://help.aliyun.com/document_detail/159041.html">DeletePolicyVersion</a>.</description></item>
-        /// <item><description>Before you delete a permission policy, you must make sure that the policy is not attached to a RAM user, a RAM user group, or a RAM role. For information about how to detach a policy, see <a href="https://help.aliyun.com/document_detail/159168.html">DetachPolicy</a>.</description></item>
+        /// <item><description>Before deleting an access policy, delete all non-default versions of the policy. For information about how to delete a policy version, see <a href="https://help.aliyun.com/document_detail/159041.html">DeletePolicyVersion</a>.</description></item>
+        /// <item><description>Before deleting an access policy, make sure that the policy is not referenced, meaning it is not attached to any Resource Access Management (RAM) user, user group, or RAM role. For information about how to remove an authorization, see <a href="https://help.aliyun.com/document_detail/159168.html">DetachPolicy</a>.</description></item>
         /// </list>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -3843,17 +3819,17 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a permission policy.</para>
+        /// <para>Deletes a specified access policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Before you delete a permission policy, you must delete its all non-default versions. For information about how to delete a policy version, see <a href="https://help.aliyun.com/document_detail/159041.html">DeletePolicyVersion</a>.</description></item>
-        /// <item><description>Before you delete a permission policy, you must make sure that the policy is not attached to a RAM user, a RAM user group, or a RAM role. For information about how to detach a policy, see <a href="https://help.aliyun.com/document_detail/159168.html">DetachPolicy</a>.</description></item>
+        /// <item><description>Before deleting an access policy, delete all non-default versions of the policy. For information about how to delete a policy version, see <a href="https://help.aliyun.com/document_detail/159041.html">DeletePolicyVersion</a>.</description></item>
+        /// <item><description>Before deleting an access policy, make sure that the policy is not referenced, meaning it is not attached to any Resource Access Management (RAM) user, user group, or RAM role. For information about how to remove an authorization, see <a href="https://help.aliyun.com/document_detail/159168.html">DetachPolicy</a>.</description></item>
         /// </list>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -3895,17 +3871,17 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a permission policy.</para>
+        /// <para>Deletes a specified access policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Before you delete a permission policy, you must delete its all non-default versions. For information about how to delete a policy version, see <a href="https://help.aliyun.com/document_detail/159041.html">DeletePolicyVersion</a>.</description></item>
-        /// <item><description>Before you delete a permission policy, you must make sure that the policy is not attached to a RAM user, a RAM user group, or a RAM role. For information about how to detach a policy, see <a href="https://help.aliyun.com/document_detail/159168.html">DetachPolicy</a>.</description></item>
+        /// <item><description>Before deleting an access policy, delete all non-default versions of the policy. For information about how to delete a policy version, see <a href="https://help.aliyun.com/document_detail/159041.html">DeletePolicyVersion</a>.</description></item>
+        /// <item><description>Before deleting an access policy, make sure that the policy is not referenced, meaning it is not attached to any Resource Access Management (RAM) user, user group, or RAM role. For information about how to remove an authorization, see <a href="https://help.aliyun.com/document_detail/159168.html">DetachPolicy</a>.</description></item>
         /// </list>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -3923,17 +3899,17 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a permission policy.</para>
+        /// <para>Deletes a specified access policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Before you delete a permission policy, you must delete its all non-default versions. For information about how to delete a policy version, see <a href="https://help.aliyun.com/document_detail/159041.html">DeletePolicyVersion</a>.</description></item>
-        /// <item><description>Before you delete a permission policy, you must make sure that the policy is not attached to a RAM user, a RAM user group, or a RAM role. For information about how to detach a policy, see <a href="https://help.aliyun.com/document_detail/159168.html">DetachPolicy</a>.</description></item>
+        /// <item><description>Before deleting an access policy, delete all non-default versions of the policy. For information about how to delete a policy version, see <a href="https://help.aliyun.com/document_detail/159041.html">DeletePolicyVersion</a>.</description></item>
+        /// <item><description>Before deleting an access policy, make sure that the policy is not referenced, meaning it is not attached to any Resource Access Management (RAM) user, user group, or RAM role. For information about how to remove an authorization, see <a href="https://help.aliyun.com/document_detail/159168.html">DetachPolicy</a>.</description></item>
         /// </list>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -3951,13 +3927,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a version of a permission policy.</para>
+        /// <para>Deletes a version of an access policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> The default version of a policy cannot be deleted.</para>
+        /// <para>The default version of an access policy cannot be deleted.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4004,13 +3980,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a version of a permission policy.</para>
+        /// <para>Deletes a version of an access policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> The default version of a policy cannot be deleted.</para>
+        /// <para>The default version of an access policy cannot be deleted.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4057,13 +4033,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a version of a permission policy.</para>
+        /// <para>Deletes a version of an access policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> The default version of a policy cannot be deleted.</para>
+        /// <para>The default version of an access policy cannot be deleted.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4082,13 +4058,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a version of a permission policy.</para>
+        /// <para>Deletes a version of an access policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> The default version of a policy cannot be deleted.</para>
+        /// <para>The default version of an access policy cannot be deleted.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4113,8 +4089,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> Before you delete a resource group, you must delete all the resources in it.
-        /// In this example, the resource group whose ID is <c>rg-9gLOoK****</c> is deleted.</para>
+        /// <para>Before you delete a resource group, delete all resources in the resource group.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4163,8 +4138,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> Before you delete a resource group, you must delete all the resources in it.
-        /// In this example, the resource group whose ID is <c>rg-9gLOoK****</c> is deleted.</para>
+        /// <para>Before you delete a resource group, delete all resources in the resource group.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4213,8 +4187,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> Before you delete a resource group, you must delete all the resources in it.
-        /// In this example, the resource group whose ID is <c>rg-9gLOoK****</c> is deleted.</para>
+        /// <para>Before you delete a resource group, delete all resources in the resource group.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4239,8 +4212,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> Before you delete a resource group, you must delete all the resources in it.
-        /// In this example, the resource group whose ID is <c>rg-9gLOoK****</c> is deleted.</para>
+        /// <para>Before you delete a resource group, delete all resources in the resource group.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4259,7 +4231,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a RAM role.</para>
+        /// <para>Deletes a role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4301,7 +4273,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a RAM role.</para>
+        /// <para>Deletes a role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4343,7 +4315,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a RAM role.</para>
+        /// <para>Deletes a role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4361,7 +4333,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a RAM role.</para>
+        /// <para>Deletes a role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4499,14 +4471,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a delegated administrator account for a trusted service.</para>
+        /// <para>Calls the DeregisterDelegatedAdministrator operation to remove the delegated administrator account of a trusted service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> If the delegated administrator account that you want to remove has historical management tasks in the related trusted service, the trusted service may be affected after the delegated administrator account is removed. Therefore, proceed with caution.
-        /// This topic provides an example on how to call the API operation to remove the delegated administrator account <c>181761095690****</c> for Cloud Firewall.</para>
+        /// <para>If the delegated administrator account being removed has historical management tasks in the trusted service, the removal may affect the normal use of the trusted service. Carefully consider the potential impact before performing the removal.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4553,14 +4524,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a delegated administrator account for a trusted service.</para>
+        /// <para>Calls the DeregisterDelegatedAdministrator operation to remove the delegated administrator account of a trusted service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> If the delegated administrator account that you want to remove has historical management tasks in the related trusted service, the trusted service may be affected after the delegated administrator account is removed. Therefore, proceed with caution.
-        /// This topic provides an example on how to call the API operation to remove the delegated administrator account <c>181761095690****</c> for Cloud Firewall.</para>
+        /// <para>If the delegated administrator account being removed has historical management tasks in the trusted service, the removal may affect the normal use of the trusted service. Carefully consider the potential impact before performing the removal.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4607,14 +4577,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a delegated administrator account for a trusted service.</para>
+        /// <para>Calls the DeregisterDelegatedAdministrator operation to remove the delegated administrator account of a trusted service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> If the delegated administrator account that you want to remove has historical management tasks in the related trusted service, the trusted service may be affected after the delegated administrator account is removed. Therefore, proceed with caution.
-        /// This topic provides an example on how to call the API operation to remove the delegated administrator account <c>181761095690****</c> for Cloud Firewall.</para>
+        /// <para>If the delegated administrator account being removed has historical management tasks in the trusted service, the removal may affect the normal use of the trusted service. Carefully consider the potential impact before performing the removal.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4633,14 +4602,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a delegated administrator account for a trusted service.</para>
+        /// <para>Calls the DeregisterDelegatedAdministrator operation to remove the delegated administrator account of a trusted service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> If the delegated administrator account that you want to remove has historical management tasks in the related trusted service, the trusted service may be affected after the delegated administrator account is removed. Therefore, proceed with caution.
-        /// This topic provides an example on how to call the API operation to remove the delegated administrator account <c>181761095690****</c> for Cloud Firewall.</para>
+        /// <para>If the delegated administrator account being removed has historical management tasks in the trusted service, the removal may affect the normal use of the trusted service. Carefully consider the potential impact before performing the removal.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4659,21 +4627,18 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a resource directory. This operation cannot be undone. Therefore, exercise caution when you perform it.</para>
+        /// <para>Closes a resource directory by calling DestroyResourceDirectory. This operation is irreversible. Proceed with caution.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you disable a resource directory, make sure that the following requirements are met:</para>
+        /// <para>Before closing a resource directory, make sure that you have completed the following operations:</para>
         /// <list type="bullet">
-        /// <item><description>All member accounts must be removed from the resource directory. For more information about how to remove a member account, see <a href="https://help.aliyun.com/document_detail/159431.html">RemoveCloudAccount</a>.</description></item>
-        /// <item><description>All folders except the root folder must be deleted from the resource directory. For more information about how to delete a folder, see <a href="https://help.aliyun.com/document_detail/159432.html">DeleteFolder</a>.</description></item>
+        /// <item><description>All members in the resource directory have been removed. For information about how to remove a member, see <a href="https://help.aliyun.com/document_detail/159431.html">RemoveCloudAccount</a>.</description></item>
+        /// <item><description>All folders except the Root folder in the resource directory have been deleted. For information about how to delete a folder, see <a href="https://help.aliyun.com/document_detail/159432.html">DeleteFolder</a>.</description></item>
         /// </list>
         /// </description>
         /// 
-        /// <param name="request">
-        /// DestroyResourceDirectoryRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -4701,21 +4666,18 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a resource directory. This operation cannot be undone. Therefore, exercise caution when you perform it.</para>
+        /// <para>Closes a resource directory by calling DestroyResourceDirectory. This operation is irreversible. Proceed with caution.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you disable a resource directory, make sure that the following requirements are met:</para>
+        /// <para>Before closing a resource directory, make sure that you have completed the following operations:</para>
         /// <list type="bullet">
-        /// <item><description>All member accounts must be removed from the resource directory. For more information about how to remove a member account, see <a href="https://help.aliyun.com/document_detail/159431.html">RemoveCloudAccount</a>.</description></item>
-        /// <item><description>All folders except the root folder must be deleted from the resource directory. For more information about how to delete a folder, see <a href="https://help.aliyun.com/document_detail/159432.html">DeleteFolder</a>.</description></item>
+        /// <item><description>All members in the resource directory have been removed. For information about how to remove a member, see <a href="https://help.aliyun.com/document_detail/159431.html">RemoveCloudAccount</a>.</description></item>
+        /// <item><description>All folders except the Root folder in the resource directory have been deleted. For information about how to delete a folder, see <a href="https://help.aliyun.com/document_detail/159432.html">DeleteFolder</a>.</description></item>
         /// </list>
         /// </description>
         /// 
-        /// <param name="request">
-        /// DestroyResourceDirectoryRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -4743,15 +4705,15 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a resource directory. This operation cannot be undone. Therefore, exercise caution when you perform it.</para>
+        /// <para>Closes a resource directory by calling DestroyResourceDirectory. This operation is irreversible. Proceed with caution.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you disable a resource directory, make sure that the following requirements are met:</para>
+        /// <para>Before closing a resource directory, make sure that you have completed the following operations:</para>
         /// <list type="bullet">
-        /// <item><description>All member accounts must be removed from the resource directory. For more information about how to remove a member account, see <a href="https://help.aliyun.com/document_detail/159431.html">RemoveCloudAccount</a>.</description></item>
-        /// <item><description>All folders except the root folder must be deleted from the resource directory. For more information about how to delete a folder, see <a href="https://help.aliyun.com/document_detail/159432.html">DeleteFolder</a>.</description></item>
+        /// <item><description>All members in the resource directory have been removed. For information about how to remove a member, see <a href="https://help.aliyun.com/document_detail/159431.html">RemoveCloudAccount</a>.</description></item>
+        /// <item><description>All folders except the Root folder in the resource directory have been deleted. For information about how to delete a folder, see <a href="https://help.aliyun.com/document_detail/159432.html">DeleteFolder</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4766,15 +4728,15 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a resource directory. This operation cannot be undone. Therefore, exercise caution when you perform it.</para>
+        /// <para>Closes a resource directory by calling DestroyResourceDirectory. This operation is irreversible. Proceed with caution.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you disable a resource directory, make sure that the following requirements are met:</para>
+        /// <para>Before closing a resource directory, make sure that you have completed the following operations:</para>
         /// <list type="bullet">
-        /// <item><description>All member accounts must be removed from the resource directory. For more information about how to remove a member account, see <a href="https://help.aliyun.com/document_detail/159431.html">RemoveCloudAccount</a>.</description></item>
-        /// <item><description>All folders except the root folder must be deleted from the resource directory. For more information about how to delete a folder, see <a href="https://help.aliyun.com/document_detail/159432.html">DeleteFolder</a>.</description></item>
+        /// <item><description>All members in the resource directory have been removed. For information about how to remove a member, see <a href="https://help.aliyun.com/document_detail/159431.html">RemoveCloudAccount</a>.</description></item>
+        /// <item><description>All folders except the Root folder in the resource directory have been deleted. For information about how to delete a folder, see <a href="https://help.aliyun.com/document_detail/159432.html">DeleteFolder</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4789,14 +4751,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches an access control policy.</para>
+        /// <para>Detaches a control policy from a resource folder or member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you detach an access control policy, the operations performed on resources by using members are not limited by the policy. Make sure that the detached policy meets your expectations. Otherwise, your business may be affected.
-        /// Both the system and custom access control policies can be detached. If an object has only one access control policy attached, the policy cannot be detached.
-        /// This topic provides an example on how to call the API operation to detach the custom control policy <c>cp-jExXAqIYkwHN****</c> from the folder <c>fd-ZDNPiT****</c>.</para>
+        /// <para>After the control policy is detached, the resource folder or member that was previously associated with the policy immediately loses the governance enforced by the policy. Make sure that the result of the detach operation is as expected to avoid impact on your business.
+        /// Both system policies and custom control policies can be detached. However, the last control policy associated with a resource folder or member cannot be detached.
+        /// This topic provides an example on how to detach the custom policy <c>cp-jExXAqIYkwHN****</c> from the resource folder <c>fd-ZDNPiT****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4842,14 +4804,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches an access control policy.</para>
+        /// <para>Detaches a control policy from a resource folder or member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you detach an access control policy, the operations performed on resources by using members are not limited by the policy. Make sure that the detached policy meets your expectations. Otherwise, your business may be affected.
-        /// Both the system and custom access control policies can be detached. If an object has only one access control policy attached, the policy cannot be detached.
-        /// This topic provides an example on how to call the API operation to detach the custom control policy <c>cp-jExXAqIYkwHN****</c> from the folder <c>fd-ZDNPiT****</c>.</para>
+        /// <para>After the control policy is detached, the resource folder or member that was previously associated with the policy immediately loses the governance enforced by the policy. Make sure that the result of the detach operation is as expected to avoid impact on your business.
+        /// Both system policies and custom control policies can be detached. However, the last control policy associated with a resource folder or member cannot be detached.
+        /// This topic provides an example on how to detach the custom policy <c>cp-jExXAqIYkwHN****</c> from the resource folder <c>fd-ZDNPiT****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4895,14 +4857,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches an access control policy.</para>
+        /// <para>Detaches a control policy from a resource folder or member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you detach an access control policy, the operations performed on resources by using members are not limited by the policy. Make sure that the detached policy meets your expectations. Otherwise, your business may be affected.
-        /// Both the system and custom access control policies can be detached. If an object has only one access control policy attached, the policy cannot be detached.
-        /// This topic provides an example on how to call the API operation to detach the custom control policy <c>cp-jExXAqIYkwHN****</c> from the folder <c>fd-ZDNPiT****</c>.</para>
+        /// <para>After the control policy is detached, the resource folder or member that was previously associated with the policy immediately loses the governance enforced by the policy. Make sure that the result of the detach operation is as expected to avoid impact on your business.
+        /// Both system policies and custom control policies can be detached. However, the last control policy associated with a resource folder or member cannot be detached.
+        /// This topic provides an example on how to detach the custom policy <c>cp-jExXAqIYkwHN****</c> from the resource folder <c>fd-ZDNPiT****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4920,14 +4882,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches an access control policy.</para>
+        /// <para>Detaches a control policy from a resource folder or member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you detach an access control policy, the operations performed on resources by using members are not limited by the policy. Make sure that the detached policy meets your expectations. Otherwise, your business may be affected.
-        /// Both the system and custom access control policies can be detached. If an object has only one access control policy attached, the policy cannot be detached.
-        /// This topic provides an example on how to call the API operation to detach the custom control policy <c>cp-jExXAqIYkwHN****</c> from the folder <c>fd-ZDNPiT****</c>.</para>
+        /// <para>After the control policy is detached, the resource folder or member that was previously associated with the policy immediately loses the governance enforced by the policy. Make sure that the result of the detach operation is as expected to avoid impact on your business.
+        /// Both system policies and custom control policies can be detached. However, the last control policy associated with a resource folder or member cannot be detached.
+        /// This topic provides an example on how to detach the custom policy <c>cp-jExXAqIYkwHN****</c> from the resource folder <c>fd-ZDNPiT****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4945,7 +4907,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches a permission policy from an object. After you detach a policy from an object, the object does not have the operation permissions on the current resource group or the resources within the current account.</para>
+        /// <para>Detaches an access policy from a specified identity. After the policy is detached, the identity loses the permissions to manage resources in the specified resource group or Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5003,7 +4965,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches a permission policy from an object. After you detach a policy from an object, the object does not have the operation permissions on the current resource group or the resources within the current account.</para>
+        /// <para>Detaches an access policy from a specified identity. After the policy is detached, the identity loses the permissions to manage resources in the specified resource group or Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5061,7 +5023,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches a permission policy from an object. After you detach a policy from an object, the object does not have the operation permissions on the current resource group or the resources within the current account.</para>
+        /// <para>Detaches an access policy from a specified identity. After the policy is detached, the identity loses the permissions to manage resources in the specified resource group or Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5079,7 +5041,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches a permission policy from an object. After you detach a policy from an object, the object does not have the operation permissions on the current resource group or the resources within the current account.</para>
+        /// <para>Detaches an access policy from a specified identity. After the policy is detached, the identity loses the permissions to manage resources in the specified resource group or Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5097,12 +5059,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the Transfer Associated Resources feature.</para>
+        /// <para>Disables the attached-resource allocation feature for associated resources.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DisableAssociatedTransferRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -5130,12 +5089,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the Transfer Associated Resources feature.</para>
+        /// <para>Disables the attached-resource allocation feature for associated resources.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DisableAssociatedTransferRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -5163,7 +5119,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the Transfer Associated Resources feature.</para>
+        /// <para>Disables the attached-resource allocation feature for associated resources.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5177,7 +5133,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the Transfer Associated Resources feature.</para>
+        /// <para>Disables the attached-resource allocation feature for associated resources.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5191,12 +5147,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the Automatic Resource Transfer feature. After the feature is disabled, existing custom transfer rules and existing transfer rules for associated resources are deleted. However, existing relationships between resources and resource groups are not affected. If you still want to use this feature, you can enable it again 1 minute later.</para>
+        /// <para>Disables automatic resource group transfer. After this feature is disabled, the custom condition rules and attached-resource transfer rules that have been configured are deleted. The resource groups of existing resources are not affected. If needed, you can re-enable this feature 1 minute after disabling it.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DisableAutoGroupingRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -5224,12 +5177,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the Automatic Resource Transfer feature. After the feature is disabled, existing custom transfer rules and existing transfer rules for associated resources are deleted. However, existing relationships between resources and resource groups are not affected. If you still want to use this feature, you can enable it again 1 minute later.</para>
+        /// <para>Disables automatic resource group transfer. After this feature is disabled, the custom condition rules and attached-resource transfer rules that have been configured are deleted. The resource groups of existing resources are not affected. If needed, you can re-enable this feature 1 minute after disabling it.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DisableAutoGroupingRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -5257,7 +5207,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the Automatic Resource Transfer feature. After the feature is disabled, existing custom transfer rules and existing transfer rules for associated resources are deleted. However, existing relationships between resources and resource groups are not affected. If you still want to use this feature, you can enable it again 1 minute later.</para>
+        /// <para>Disables automatic resource group transfer. After this feature is disabled, the custom condition rules and attached-resource transfer rules that have been configured are deleted. The resource groups of existing resources are not affected. If needed, you can re-enable this feature 1 minute after disabling it.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5271,7 +5221,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the Automatic Resource Transfer feature. After the feature is disabled, existing custom transfer rules and existing transfer rules for associated resources are deleted. However, existing relationships between resources and resource groups are not affected. If you still want to use this feature, you can enable it again 1 minute later.</para>
+        /// <para>Disables automatic resource group transfer. After this feature is disabled, the custom condition rules and attached-resource transfer rules that have been configured are deleted. The resource groups of existing resources are not affected. If needed, you can re-enable this feature 1 minute after disabling it.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5285,20 +5235,17 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the Control Policy feature.</para>
+        /// <para>Disables the control policy feature.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you disable the Control Policy feature, the system automatically detaches all control policies that are attached to folders and member accounts. The system does not delete these control policies, but you cannot attach them to folders or member accounts again.</para>
+        /// <para>After you disable the control policy feature, all control policies that are attached to resource folders and member accounts are automatically detached. However, the control policies are not deleted. They cannot be attached to any target nodes.</para>
         /// <remarks>
-        /// <para> If you disable the Control Policy feature, the permissions of all folders and member accounts in a resource directory are affected. You must proceed with caution.</para>
+        /// <para>Disabling the control policy feature affects the permissions of resource folders and member accounts in the entire resource directory. Proceed with caution.</para>
         /// </remarks>
         /// </description>
         /// 
-        /// <param name="request">
-        /// DisableControlPolicyRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -5326,20 +5273,17 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the Control Policy feature.</para>
+        /// <para>Disables the control policy feature.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you disable the Control Policy feature, the system automatically detaches all control policies that are attached to folders and member accounts. The system does not delete these control policies, but you cannot attach them to folders or member accounts again.</para>
+        /// <para>After you disable the control policy feature, all control policies that are attached to resource folders and member accounts are automatically detached. However, the control policies are not deleted. They cannot be attached to any target nodes.</para>
         /// <remarks>
-        /// <para> If you disable the Control Policy feature, the permissions of all folders and member accounts in a resource directory are affected. You must proceed with caution.</para>
+        /// <para>Disabling the control policy feature affects the permissions of resource folders and member accounts in the entire resource directory. Proceed with caution.</para>
         /// </remarks>
         /// </description>
         /// 
-        /// <param name="request">
-        /// DisableControlPolicyRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -5367,14 +5311,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the Control Policy feature.</para>
+        /// <para>Disables the control policy feature.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you disable the Control Policy feature, the system automatically detaches all control policies that are attached to folders and member accounts. The system does not delete these control policies, but you cannot attach them to folders or member accounts again.</para>
+        /// <para>After you disable the control policy feature, all control policies that are attached to resource folders and member accounts are automatically detached. However, the control policies are not deleted. They cannot be attached to any target nodes.</para>
         /// <remarks>
-        /// <para> If you disable the Control Policy feature, the permissions of all folders and member accounts in a resource directory are affected. You must proceed with caution.</para>
+        /// <para>Disabling the control policy feature affects the permissions of resource folders and member accounts in the entire resource directory. Proceed with caution.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -5389,14 +5333,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the Control Policy feature.</para>
+        /// <para>Disables the control policy feature.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you disable the Control Policy feature, the system automatically detaches all control policies that are attached to folders and member accounts. The system does not delete these control policies, but you cannot attach them to folders or member accounts again.</para>
+        /// <para>After you disable the control policy feature, all control policies that are attached to resource folders and member accounts are automatically detached. However, the control policies are not deleted. They cannot be attached to any target nodes.</para>
         /// <remarks>
-        /// <para> If you disable the Control Policy feature, the permissions of all folders and member accounts in a resource directory are affected. You must proceed with caution.</para>
+        /// <para>Disabling the control policy feature affects the permissions of resource folders and member accounts in the entire resource directory. Proceed with caution.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -5411,12 +5355,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables group event notification.</para>
+        /// <para>Disables a resource group event notification that is currently enabled. If the notification is already disabled, the error code <c>UnsupportedOperation.RepeatDisableResourceGroupNotification</c> is returned. You can call <c>EnableResourceGroupNotification</c> to enable the notification first.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DisableResourceGroupNotificationRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -5444,12 +5385,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables group event notification.</para>
+        /// <para>Disables a resource group event notification that is currently enabled. If the notification is already disabled, the error code <c>UnsupportedOperation.RepeatDisableResourceGroupNotification</c> is returned. You can call <c>EnableResourceGroupNotification</c> to enable the notification first.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DisableResourceGroupNotificationRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -5477,7 +5415,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables group event notification.</para>
+        /// <para>Disables a resource group event notification that is currently enabled. If the notification is already disabled, the error code <c>UnsupportedOperation.RepeatDisableResourceGroupNotification</c> is returned. You can call <c>EnableResourceGroupNotification</c> to enable the notification first.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5491,7 +5429,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables group event notification.</para>
+        /// <para>Disables a resource group event notification that is currently enabled. If the notification is already disabled, the error code <c>UnsupportedOperation.RepeatDisableResourceGroupNotification</c> is returned. You can call <c>EnableResourceGroupNotification</c> to enable the notification first.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5505,12 +5443,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the Transfer Associated Resources feature.</para>
+        /// <para>Enables the attached-resource allocation feature for resource group transfers.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// EnableAssociatedTransferRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -5538,12 +5473,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the Transfer Associated Resources feature.</para>
+        /// <para>Enables the attached-resource allocation feature for resource group transfers.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// EnableAssociatedTransferRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -5571,7 +5503,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the Transfer Associated Resources feature.</para>
+        /// <para>Enables the attached-resource allocation feature for resource group transfers.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5585,7 +5517,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the Transfer Associated Resources feature.</para>
+        /// <para>Enables the attached-resource allocation feature for resource group transfers.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5599,12 +5531,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the Automatic Resource Transfer feature. After the feature is enabled, you can create, update, delete, and query transfer rules.</para>
+        /// <para>Enables automatic grouping. After automatic grouping is enabled, you can create, update, delete, and query automatic grouping rules.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// EnableAutoGroupingRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -5632,12 +5561,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the Automatic Resource Transfer feature. After the feature is enabled, you can create, update, delete, and query transfer rules.</para>
+        /// <para>Enables automatic grouping. After automatic grouping is enabled, you can create, update, delete, and query automatic grouping rules.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// EnableAutoGroupingRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -5665,7 +5591,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the Automatic Resource Transfer feature. After the feature is enabled, you can create, update, delete, and query transfer rules.</para>
+        /// <para>Enables automatic grouping. After automatic grouping is enabled, you can create, update, delete, and query automatic grouping rules.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5679,7 +5605,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the Automatic Resource Transfer feature. After the feature is enabled, you can create, update, delete, and query transfer rules.</para>
+        /// <para>Enables automatic grouping. After automatic grouping is enabled, you can create, update, delete, and query automatic grouping rules.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5693,17 +5619,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the Control Policy feature.</para>
+        /// <para>Enables the control policy feature by calling EnableControlPolicy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The Control Policy feature allows you to manage the permission boundaries of the folders or member accounts in a resource directory in a centralized manner. This feature is implemented based on the resource directory. You can use this feature to develop common or dedicated rules for access control. The Control Policy feature does not grant permissions but only defines permission boundaries. A member account in a resource directory can be used to access resources only after it is granted the required permissions by using the Resource Access Management (RAM) service. For more information, see <a href="https://help.aliyun.com/document_detail/178671.html">Overview of the Control Policy feature</a>.</para>
+        /// <para>A resource directory control policy is an access control policy based on the resource structure (resource folders or member accounts). It allows you to centrally manage the access permissions border for resource access at each level of the resource directory and establish overall or localized access control principles for your enterprise. Control policies define only the access permissions border and do not actually grant permissions. You must also set permissions by using Resource Access Management (RAM) in a member account before the corresponding identity can have access permissions to resources. For more information, see <a href="https://help.aliyun.com/document_detail/178671.html">Overview of control policies</a>.</para>
         /// </description>
         /// 
-        /// <param name="request">
-        /// EnableControlPolicyRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -5731,17 +5654,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the Control Policy feature.</para>
+        /// <para>Enables the control policy feature by calling EnableControlPolicy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The Control Policy feature allows you to manage the permission boundaries of the folders or member accounts in a resource directory in a centralized manner. This feature is implemented based on the resource directory. You can use this feature to develop common or dedicated rules for access control. The Control Policy feature does not grant permissions but only defines permission boundaries. A member account in a resource directory can be used to access resources only after it is granted the required permissions by using the Resource Access Management (RAM) service. For more information, see <a href="https://help.aliyun.com/document_detail/178671.html">Overview of the Control Policy feature</a>.</para>
+        /// <para>A resource directory control policy is an access control policy based on the resource structure (resource folders or member accounts). It allows you to centrally manage the access permissions border for resource access at each level of the resource directory and establish overall or localized access control principles for your enterprise. Control policies define only the access permissions border and do not actually grant permissions. You must also set permissions by using Resource Access Management (RAM) in a member account before the corresponding identity can have access permissions to resources. For more information, see <a href="https://help.aliyun.com/document_detail/178671.html">Overview of control policies</a>.</para>
         /// </description>
         /// 
-        /// <param name="request">
-        /// EnableControlPolicyRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -5769,12 +5689,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the Control Policy feature.</para>
+        /// <para>Enables the control policy feature by calling EnableControlPolicy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The Control Policy feature allows you to manage the permission boundaries of the folders or member accounts in a resource directory in a centralized manner. This feature is implemented based on the resource directory. You can use this feature to develop common or dedicated rules for access control. The Control Policy feature does not grant permissions but only defines permission boundaries. A member account in a resource directory can be used to access resources only after it is granted the required permissions by using the Resource Access Management (RAM) service. For more information, see <a href="https://help.aliyun.com/document_detail/178671.html">Overview of the Control Policy feature</a>.</para>
+        /// <para>A resource directory control policy is an access control policy based on the resource structure (resource folders or member accounts). It allows you to centrally manage the access permissions border for resource access at each level of the resource directory and establish overall or localized access control principles for your enterprise. Control policies define only the access permissions border and do not actually grant permissions. You must also set permissions by using Resource Access Management (RAM) in a member account before the corresponding identity can have access permissions to resources. For more information, see <a href="https://help.aliyun.com/document_detail/178671.html">Overview of control policies</a>.</para>
         /// </description>
         /// 
         /// <returns>
@@ -5788,12 +5708,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the Control Policy feature.</para>
+        /// <para>Enables the control policy feature by calling EnableControlPolicy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The Control Policy feature allows you to manage the permission boundaries of the folders or member accounts in a resource directory in a centralized manner. This feature is implemented based on the resource directory. You can use this feature to develop common or dedicated rules for access control. The Control Policy feature does not grant permissions but only defines permission boundaries. A member account in a resource directory can be used to access resources only after it is granted the required permissions by using the Resource Access Management (RAM) service. For more information, see <a href="https://help.aliyun.com/document_detail/178671.html">Overview of the Control Policy feature</a>.</para>
+        /// <para>A resource directory control policy is an access control policy based on the resource structure (resource folders or member accounts). It allows you to centrally manage the access permissions border for resource access at each level of the resource directory and establish overall or localized access control principles for your enterprise. Control policies define only the access permissions border and do not actually grant permissions. You must also set permissions by using Resource Access Management (RAM) in a member account before the corresponding identity can have access permissions to resources. For more information, see <a href="https://help.aliyun.com/document_detail/178671.html">Overview of control policies</a>.</para>
         /// </description>
         /// 
         /// <returns>
@@ -5812,8 +5732,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use the current account or a newly created account to enable a resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/111215.html">Enable a resource directory</a>.
-        /// In this example, the current account is used to enable a resource directory.</para>
+        /// <para>You can enable a resource directory by using the current logon account or by creating a new management account. For more information, refer to <a href="https://help.aliyun.com/document_detail/111215.html">Enable a resource directory</a>.
+        /// This topic provides an example of how to enable a resource directory by using the current logon account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5872,8 +5792,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use the current account or a newly created account to enable a resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/111215.html">Enable a resource directory</a>.
-        /// In this example, the current account is used to enable a resource directory.</para>
+        /// <para>You can enable a resource directory by using the current logon account or by creating a new management account. For more information, refer to <a href="https://help.aliyun.com/document_detail/111215.html">Enable a resource directory</a>.
+        /// This topic provides an example of how to enable a resource directory by using the current logon account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5932,8 +5852,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use the current account or a newly created account to enable a resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/111215.html">Enable a resource directory</a>.
-        /// In this example, the current account is used to enable a resource directory.</para>
+        /// <para>You can enable a resource directory by using the current logon account or by creating a new management account. For more information, refer to <a href="https://help.aliyun.com/document_detail/111215.html">Enable a resource directory</a>.
+        /// This topic provides an example of how to enable a resource directory by using the current logon account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5956,8 +5876,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use the current account or a newly created account to enable a resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/111215.html">Enable a resource directory</a>.
-        /// In this example, the current account is used to enable a resource directory.</para>
+        /// <para>You can enable a resource directory by using the current logon account or by creating a new management account. For more information, refer to <a href="https://help.aliyun.com/document_detail/111215.html">Enable a resource directory</a>.
+        /// This topic provides an example of how to enable a resource directory by using the current logon account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5975,12 +5895,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables group event notification.</para>
+        /// <para>Enables resource group event notifications by calling EnableResourceGroupNotification.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// EnableResourceGroupNotificationRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -6008,12 +5925,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables group event notification.</para>
+        /// <para>Enables resource group event notifications by calling EnableResourceGroupNotification.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// EnableResourceGroupNotificationRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -6041,7 +5955,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables group event notification.</para>
+        /// <para>Enables resource group event notifications by calling EnableResourceGroupNotification.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6055,7 +5969,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables group event notification.</para>
+        /// <para>Enables resource group event notifications by calling EnableResourceGroupNotification.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6069,13 +5983,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a member.</para>
+        /// <para>Calls GetAccount to retrieve member account information.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the information of the member whose Alibaba Cloud account ID is <c>181761095690****</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// GetAccountRequest
@@ -6120,13 +6029,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a member.</para>
+        /// <para>Calls GetAccount to retrieve member account information.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the information of the member whose Alibaba Cloud account ID is <c>181761095690****</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// GetAccountRequest
@@ -6171,13 +6075,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a member.</para>
+        /// <para>Calls GetAccount to retrieve member account information.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the information of the member whose Alibaba Cloud account ID is <c>181761095690****</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// GetAccountRequest
@@ -6194,13 +6093,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a member.</para>
+        /// <para>Calls GetAccount to retrieve member account information.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the information of the member whose Alibaba Cloud account ID is <c>181761095690****</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// GetAccountRequest
@@ -6217,13 +6111,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the result of a member deletion check.</para>
+        /// <para>Queries the result of a member deletion check by calling GetAccountDeletionCheckResult.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call the <a href="https://help.aliyun.com/document_detail/448542.html">CheckAccountDelete</a> operation to perform a member deletion check, you can call the GetAccountDeletionCheckResult operation to query the check result. If the check result shows that the member meets deletion requirements, you can delete the member. Otherwise, you need to first modify the items that do not meet requirements.
-        /// This topic provides an example on how to call the API operation to query the result of the deletion check for the member whose ID is <c>179855839641****</c>. The response shows that the member does not meet deletion requirements.</para>
+        /// <para>After you call <a href="https://help.aliyun.com/document_detail/448542.html">CheckAccountDelete</a> to perform a member deletion check task, you can call GetAccountDeletionCheckResult to query the result of the member deletion check. If the deletion check requirements are met, the member account can be deleted. Otherwise, manually handle the non-compliant items until all requirements are met.
+        /// This topic provides an example on how to query the deletion check result of the member account <c>179855839641****</c> that you want to delete. The response shows that the member account does not meet the deletion requirements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6265,13 +6159,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the result of a member deletion check.</para>
+        /// <para>Queries the result of a member deletion check by calling GetAccountDeletionCheckResult.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call the <a href="https://help.aliyun.com/document_detail/448542.html">CheckAccountDelete</a> operation to perform a member deletion check, you can call the GetAccountDeletionCheckResult operation to query the check result. If the check result shows that the member meets deletion requirements, you can delete the member. Otherwise, you need to first modify the items that do not meet requirements.
-        /// This topic provides an example on how to call the API operation to query the result of the deletion check for the member whose ID is <c>179855839641****</c>. The response shows that the member does not meet deletion requirements.</para>
+        /// <para>After you call <a href="https://help.aliyun.com/document_detail/448542.html">CheckAccountDelete</a> to perform a member deletion check task, you can call GetAccountDeletionCheckResult to query the result of the member deletion check. If the deletion check requirements are met, the member account can be deleted. Otherwise, manually handle the non-compliant items until all requirements are met.
+        /// This topic provides an example on how to query the deletion check result of the member account <c>179855839641****</c> that you want to delete. The response shows that the member account does not meet the deletion requirements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6313,13 +6207,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the result of a member deletion check.</para>
+        /// <para>Queries the result of a member deletion check by calling GetAccountDeletionCheckResult.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call the <a href="https://help.aliyun.com/document_detail/448542.html">CheckAccountDelete</a> operation to perform a member deletion check, you can call the GetAccountDeletionCheckResult operation to query the check result. If the check result shows that the member meets deletion requirements, you can delete the member. Otherwise, you need to first modify the items that do not meet requirements.
-        /// This topic provides an example on how to call the API operation to query the result of the deletion check for the member whose ID is <c>179855839641****</c>. The response shows that the member does not meet deletion requirements.</para>
+        /// <para>After you call <a href="https://help.aliyun.com/document_detail/448542.html">CheckAccountDelete</a> to perform a member deletion check task, you can call GetAccountDeletionCheckResult to query the result of the member deletion check. If the deletion check requirements are met, the member account can be deleted. Otherwise, manually handle the non-compliant items until all requirements are met.
+        /// This topic provides an example on how to query the deletion check result of the member account <c>179855839641****</c> that you want to delete. The response shows that the member account does not meet the deletion requirements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6337,13 +6231,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the result of a member deletion check.</para>
+        /// <para>Queries the result of a member deletion check by calling GetAccountDeletionCheckResult.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call the <a href="https://help.aliyun.com/document_detail/448542.html">CheckAccountDelete</a> operation to perform a member deletion check, you can call the GetAccountDeletionCheckResult operation to query the check result. If the check result shows that the member meets deletion requirements, you can delete the member. Otherwise, you need to first modify the items that do not meet requirements.
-        /// This topic provides an example on how to call the API operation to query the result of the deletion check for the member whose ID is <c>179855839641****</c>. The response shows that the member does not meet deletion requirements.</para>
+        /// <para>After you call <a href="https://help.aliyun.com/document_detail/448542.html">CheckAccountDelete</a> to perform a member deletion check task, you can call GetAccountDeletionCheckResult to query the result of the member deletion check. If the deletion check requirements are met, the member account can be deleted. Otherwise, manually handle the non-compliant items until all requirements are met.
+        /// This topic provides an example on how to query the deletion check result of the member account <c>179855839641****</c> that you want to delete. The response shows that the member account does not meet the deletion requirements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6361,12 +6255,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取账号删除状态</para>
+        /// <para>Queries the deletion status of a member account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the deletion status of the member whose Alibaba Cloud account ID is <c>169946124551****</c>. The response shows that the member is deleted.</para>
+        /// <para>This topic provides an example on how to query the deletion status of the member account <c>169946124551****</c>. The response shows that the member account has been successfully deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6408,12 +6302,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取账号删除状态</para>
+        /// <para>Queries the deletion status of a member account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the deletion status of the member whose Alibaba Cloud account ID is <c>169946124551****</c>. The response shows that the member is deleted.</para>
+        /// <para>This topic provides an example on how to query the deletion status of the member account <c>169946124551****</c>. The response shows that the member account has been successfully deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6455,12 +6349,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取账号删除状态</para>
+        /// <para>Queries the deletion status of a member account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the deletion status of the member whose Alibaba Cloud account ID is <c>169946124551****</c>. The response shows that the member is deleted.</para>
+        /// <para>This topic provides an example on how to query the deletion status of the member account <c>169946124551****</c>. The response shows that the member account has been successfully deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6478,12 +6372,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取账号删除状态</para>
+        /// <para>Queries the deletion status of a member account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the deletion status of the member whose Alibaba Cloud account ID is <c>169946124551****</c>. The response shows that the member is deleted.</para>
+        /// <para>This topic provides an example on how to query the deletion status of the member account <c>169946124551****</c>. The response shows that the member account has been successfully deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6501,7 +6395,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a transfer rule.</para>
+        /// <para>Queries the information about an automatic resource group transfer rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6543,7 +6437,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a transfer rule.</para>
+        /// <para>Queries the information about an automatic resource group transfer rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6585,7 +6479,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a transfer rule.</para>
+        /// <para>Queries the information about an automatic resource group transfer rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6603,7 +6497,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a transfer rule.</para>
+        /// <para>Queries the information about an automatic resource group transfer rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6621,12 +6515,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of the Automatic Resource Transfer feature.</para>
+        /// <para>Queries the status of automatic resource group transfer settings by calling GetAutoGroupingStatus.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetAutoGroupingStatusRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -6654,12 +6545,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of the Automatic Resource Transfer feature.</para>
+        /// <para>Queries the status of automatic resource group transfer settings by calling GetAutoGroupingStatus.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetAutoGroupingStatusRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -6687,7 +6575,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of the Automatic Resource Transfer feature.</para>
+        /// <para>Queries the status of automatic resource group transfer settings by calling GetAutoGroupingStatus.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6701,7 +6589,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of the Automatic Resource Transfer feature.</para>
+        /// <para>Queries the status of automatic resource group transfer settings by calling GetAutoGroupingStatus.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6715,12 +6603,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an access control policy.</para>
+        /// <para>Queries the details of a control policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the details of the access control policy whose ID is <c>cp-SImPt8GCEwiq****</c>.</para>
+        /// <para>This topic provides an example on how to query the details of the control policy whose ID is <c>cp-SImPt8GCEwiq****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6766,12 +6654,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an access control policy.</para>
+        /// <para>Queries the details of a control policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the details of the access control policy whose ID is <c>cp-SImPt8GCEwiq****</c>.</para>
+        /// <para>This topic provides an example on how to query the details of the control policy whose ID is <c>cp-SImPt8GCEwiq****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6817,12 +6705,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an access control policy.</para>
+        /// <para>Queries the details of a control policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the details of the access control policy whose ID is <c>cp-SImPt8GCEwiq****</c>.</para>
+        /// <para>This topic provides an example on how to query the details of the control policy whose ID is <c>cp-SImPt8GCEwiq****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6840,12 +6728,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an access control policy.</para>
+        /// <para>Queries the details of a control policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the details of the access control policy whose ID is <c>cp-SImPt8GCEwiq****</c>.</para>
+        /// <para>This topic provides an example on how to query the details of the control policy whose ID is <c>cp-SImPt8GCEwiq****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6863,12 +6751,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of the Control Policy feature.</para>
+        /// <para>Queries the enabling status of the control policy feature.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetControlPolicyEnablementStatusRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -6896,12 +6781,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of the Control Policy feature.</para>
+        /// <para>Queries the enabling status of the control policy feature.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetControlPolicyEnablementStatusRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -6929,7 +6811,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of the Control Policy feature.</para>
+        /// <para>Queries the enabling status of the control policy feature.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6943,7 +6825,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of the Control Policy feature.</para>
+        /// <para>Queries the enabling status of the control policy feature.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6957,13 +6839,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a folder.</para>
+        /// <para>Calls GetFolder to retrieve the information about a folder.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the information of the folder <c>fd-Jyl5U7****</c> is queried.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// GetFolderRequest
@@ -7004,13 +6881,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a folder.</para>
+        /// <para>Calls GetFolder to retrieve the information about a folder.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the information of the folder <c>fd-Jyl5U7****</c> is queried.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// GetFolderRequest
@@ -7051,13 +6923,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a folder.</para>
+        /// <para>Calls GetFolder to retrieve the information about a folder.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the information of the folder <c>fd-Jyl5U7****</c> is queried.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// GetFolderRequest
@@ -7074,13 +6941,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a folder.</para>
+        /// <para>Calls GetFolder to retrieve the information about a folder.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the information of the folder <c>fd-Jyl5U7****</c> is queried.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// GetFolderRequest
@@ -7097,12 +6959,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of an invitation.</para>
+        /// <para>Retrieves handshake information by calling GetHandshake.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In this example, the information of the invitation whose ID is <c>h-ycm4rp****</c> is queried.</para>
+        /// <para>This topic provides an example on how to retrieve the information about the handshake whose ID is <c>h-ycm4rp****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7144,12 +7006,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of an invitation.</para>
+        /// <para>Retrieves handshake information by calling GetHandshake.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In this example, the information of the invitation whose ID is <c>h-ycm4rp****</c> is queried.</para>
+        /// <para>This topic provides an example on how to retrieve the information about the handshake whose ID is <c>h-ycm4rp****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7191,12 +7053,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of an invitation.</para>
+        /// <para>Retrieves handshake information by calling GetHandshake.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In this example, the information of the invitation whose ID is <c>h-ycm4rp****</c> is queried.</para>
+        /// <para>This topic provides an example on how to retrieve the information about the handshake whose ID is <c>h-ycm4rp****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7214,12 +7076,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of an invitation.</para>
+        /// <para>Retrieves handshake information by calling GetHandshake.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In this example, the information of the invitation whose ID is <c>h-ycm4rp****</c> is queried.</para>
+        /// <para>This topic provides an example on how to retrieve the information about the handshake whose ID is <c>h-ycm4rp****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7237,7 +7099,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a settlement account.</para>
+        /// <para>Retrieves the billing account information of a member account by calling GetPayerForAccount.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7279,7 +7141,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a settlement account.</para>
+        /// <para>Retrieves the billing account information of a member account by calling GetPayerForAccount.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7321,7 +7183,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a settlement account.</para>
+        /// <para>Retrieves the billing account information of a member account by calling GetPayerForAccount.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7339,7 +7201,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a settlement account.</para>
+        /// <para>Retrieves the billing account information of a member account by calling GetPayerForAccount.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7357,7 +7219,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a permission policy.</para>
+        /// <para>Retrieves information about a specified access policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7407,7 +7269,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a permission policy.</para>
+        /// <para>Retrieves information about a specified access policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7457,7 +7319,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a permission policy.</para>
+        /// <para>Retrieves information about a specified access policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7475,7 +7337,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a permission policy.</para>
+        /// <para>Retrieves information about a specified access policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7493,7 +7355,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a version of a permission policy.</para>
+        /// <para>Retrieves a version of an access policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7543,7 +7405,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a version of a permission policy.</para>
+        /// <para>Retrieves a version of an access policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7593,7 +7455,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a version of a permission policy.</para>
+        /// <para>Retrieves a version of an access policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7611,7 +7473,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a version of a permission policy.</para>
+        /// <para>Retrieves a version of an access policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7629,17 +7491,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a resource directory. If you use a management account to call this API operation, the system returns the information of the resource directory that is enabled by using the management account. If you use a member to call this operation, the system returns the information of</para>
+        /// <para>Queries resource directory information. When called by a management account, returns the details of the resource directory created by the management account. When called by a member, returns the details of the resource directory to which the member belongs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to use a management account to call the API operation to query the information of the resource directory that is enabled by using the management account.</para>
+        /// <para>This topic provides an example of how to use a management account to query the details of the resource directory created by the management account.</para>
         /// </description>
         /// 
-        /// <param name="request">
-        /// GetResourceDirectoryRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -7667,17 +7526,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a resource directory. If you use a management account to call this API operation, the system returns the information of the resource directory that is enabled by using the management account. If you use a member to call this operation, the system returns the information of</para>
+        /// <para>Queries resource directory information. When called by a management account, returns the details of the resource directory created by the management account. When called by a member, returns the details of the resource directory to which the member belongs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to use a management account to call the API operation to query the information of the resource directory that is enabled by using the management account.</para>
+        /// <para>This topic provides an example of how to use a management account to query the details of the resource directory created by the management account.</para>
         /// </description>
         /// 
-        /// <param name="request">
-        /// GetResourceDirectoryRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -7705,12 +7561,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a resource directory. If you use a management account to call this API operation, the system returns the information of the resource directory that is enabled by using the management account. If you use a member to call this operation, the system returns the information of</para>
+        /// <para>Queries resource directory information. When called by a management account, returns the details of the resource directory created by the management account. When called by a member, returns the details of the resource directory to which the member belongs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to use a management account to call the API operation to query the information of the resource directory that is enabled by using the management account.</para>
+        /// <para>This topic provides an example of how to use a management account to query the details of the resource directory created by the management account.</para>
         /// </description>
         /// 
         /// <returns>
@@ -7724,12 +7580,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a resource directory. If you use a management account to call this API operation, the system returns the information of the resource directory that is enabled by using the management account. If you use a member to call this operation, the system returns the information of</para>
+        /// <para>Queries resource directory information. When called by a management account, returns the details of the resource directory created by the management account. When called by a member, returns the details of the resource directory to which the member belongs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to use a management account to call the API operation to query the information of the resource directory that is enabled by using the management account.</para>
+        /// <para>This topic provides an example of how to use a management account to query the details of the resource directory created by the management account.</para>
         /// </description>
         /// 
         /// <returns>
@@ -7743,7 +7599,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a resource group.</para>
+        /// <para>Queries the information about a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7789,7 +7645,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a resource group.</para>
+        /// <para>Queries the information about a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7835,7 +7691,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a resource group.</para>
+        /// <para>Queries the information about a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7853,7 +7709,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a resource group.</para>
+        /// <para>Queries the information about a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7871,12 +7727,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of a resource group administrator.</para>
+        /// <para>Queries the administrator settings of a resource group.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetResourceGroupAdminSettingRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -7904,12 +7757,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of a resource group administrator.</para>
+        /// <para>Queries the administrator settings of a resource group.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetResourceGroupAdminSettingRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -7937,7 +7787,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of a resource group administrator.</para>
+        /// <para>Queries the administrator settings of a resource group.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7951,7 +7801,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of a resource group administrator.</para>
+        /// <para>Queries the administrator settings of a resource group.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7965,12 +7815,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the notification settings of a resource group.</para>
+        /// <para>Queries the notification settings of a resource group by calling GetResourceGroupNotificationSetting.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetResourceGroupNotificationSettingRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -7998,12 +7845,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the notification settings of a resource group.</para>
+        /// <para>Queries the notification settings of a resource group by calling GetResourceGroupNotificationSetting.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetResourceGroupNotificationSettingRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -8031,7 +7875,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the notification settings of a resource group.</para>
+        /// <para>Queries the notification settings of a resource group by calling GetResourceGroupNotificationSetting.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -8045,7 +7889,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the notification settings of a resource group.</para>
+        /// <para>Queries the notification settings of a resource group by calling GetResourceGroupNotificationSetting.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -8059,7 +7903,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of resources in a visible resource group.</para>
+        /// <para>Queries the resource count in visible resource groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8113,7 +7957,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of resources in a visible resource group.</para>
+        /// <para>Queries the resource count in visible resource groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8167,7 +8011,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of resources in a visible resource group.</para>
+        /// <para>Queries the resource count in visible resource groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8185,7 +8029,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of resources in a visible resource group.</para>
+        /// <para>Queries the resource count in visible resource groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8203,7 +8047,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a RAM role.</para>
+        /// <para>Queries the information about a role by calling GetRole.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8249,7 +8093,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a RAM role.</para>
+        /// <para>Queries the information about a role by calling GetRole.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8295,7 +8139,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a RAM role.</para>
+        /// <para>Queries the information about a role by calling GetRole.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8313,7 +8157,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a RAM role.</para>
+        /// <para>Queries the information about a role by calling GetRole.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8331,7 +8175,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of the task that is used to delete a service-linked role.</para>
+        /// <para>Queries the status of a task that deletes a service-linked role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8373,7 +8217,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of the task that is used to delete a service-linked role.</para>
+        /// <para>Queries the status of a task that deletes a service-linked role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8415,7 +8259,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of the task that is used to delete a service-linked role.</para>
+        /// <para>Queries the status of a task that deletes a service-linked role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8433,7 +8277,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of the task that is used to delete a service-linked role.</para>
+        /// <para>Queries the status of a task that deletes a service-linked role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8451,22 +8295,19 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a resource directory. After you enable a resource directory, the system automatically creates a root folder and sets the current account as the enterprise management account of the resource directory. The enterprise management account has all administrative permissions on this resource direc</para>
+        /// <para>Calls InitResourceDirectory to enable a resource directory. After you enable a resource directory, the system creates a Root folder and sets the current account as the management account. The management account has all permissions to manage the resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>An account can be used to enable a resource directory only after it passes enterprise real-name verification. An account that only passed individual real-name verification cannot be used to enable a resource directory.</description></item>
-        /// <item><description>We recommend that you only use the enterprise management account as the administrator of the resource directory. Do not use the enterprise management account to purchase cloud resources.</description></item>
+        /// <item><description>Use an account that has passed enterprise real-name verification to enable a resource directory. An account that has passed only individual real-name verification cannot enable a resource directory.</description></item>
+        /// <item><description>Use the management account only as the administrator of the resource directory. Do not purchase cloud service resources with the management account.</description></item>
         /// </list>
+        /// </remarks>
         /// </description>
         /// 
-        /// <param name="request">
-        /// InitResourceDirectoryRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -8494,22 +8335,19 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a resource directory. After you enable a resource directory, the system automatically creates a root folder and sets the current account as the enterprise management account of the resource directory. The enterprise management account has all administrative permissions on this resource direc</para>
+        /// <para>Calls InitResourceDirectory to enable a resource directory. After you enable a resource directory, the system creates a Root folder and sets the current account as the management account. The management account has all permissions to manage the resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>An account can be used to enable a resource directory only after it passes enterprise real-name verification. An account that only passed individual real-name verification cannot be used to enable a resource directory.</description></item>
-        /// <item><description>We recommend that you only use the enterprise management account as the administrator of the resource directory. Do not use the enterprise management account to purchase cloud resources.</description></item>
+        /// <item><description>Use an account that has passed enterprise real-name verification to enable a resource directory. An account that has passed only individual real-name verification cannot enable a resource directory.</description></item>
+        /// <item><description>Use the management account only as the administrator of the resource directory. Do not purchase cloud service resources with the management account.</description></item>
         /// </list>
+        /// </remarks>
         /// </description>
         /// 
-        /// <param name="request">
-        /// InitResourceDirectoryRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -8537,17 +8375,17 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a resource directory. After you enable a resource directory, the system automatically creates a root folder and sets the current account as the enterprise management account of the resource directory. The enterprise management account has all administrative permissions on this resource direc</para>
+        /// <para>Calls InitResourceDirectory to enable a resource directory. After you enable a resource directory, the system creates a Root folder and sets the current account as the management account. The management account has all permissions to manage the resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>An account can be used to enable a resource directory only after it passes enterprise real-name verification. An account that only passed individual real-name verification cannot be used to enable a resource directory.</description></item>
-        /// <item><description>We recommend that you only use the enterprise management account as the administrator of the resource directory. Do not use the enterprise management account to purchase cloud resources.</description></item>
+        /// <item><description>Use an account that has passed enterprise real-name verification to enable a resource directory. An account that has passed only individual real-name verification cannot enable a resource directory.</description></item>
+        /// <item><description>Use the management account only as the administrator of the resource directory. Do not purchase cloud service resources with the management account.</description></item>
         /// </list>
+        /// </remarks>
         /// </description>
         /// 
         /// <returns>
@@ -8561,17 +8399,17 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a resource directory. After you enable a resource directory, the system automatically creates a root folder and sets the current account as the enterprise management account of the resource directory. The enterprise management account has all administrative permissions on this resource direc</para>
+        /// <para>Calls InitResourceDirectory to enable a resource directory. After you enable a resource directory, the system creates a Root folder and sets the current account as the management account. The management account has all permissions to manage the resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>An account can be used to enable a resource directory only after it passes enterprise real-name verification. An account that only passed individual real-name verification cannot be used to enable a resource directory.</description></item>
-        /// <item><description>We recommend that you only use the enterprise management account as the administrator of the resource directory. Do not use the enterprise management account to purchase cloud resources.</description></item>
+        /// <item><description>Use an account that has passed enterprise real-name verification to enable a resource directory. An account that has passed only individual real-name verification cannot enable a resource directory.</description></item>
+        /// <item><description>Use the management account only as the administrator of the resource directory. Do not purchase cloud service resources with the management account.</description></item>
         /// </list>
+        /// </remarks>
         /// </description>
         /// 
         /// <returns>
@@ -8585,12 +8423,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invites an account to join a resource directory.</para>
+        /// <para>Invites an external account to join a resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to call the API operation to invite the account <c>someone@example.com</c> to join a resource directory.</para>
+        /// <para>This topic provides an example on how to invite the external account <c>someone@example.com</c> to join a resource directory.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8644,12 +8482,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invites an account to join a resource directory.</para>
+        /// <para>Invites an external account to join a resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to call the API operation to invite the account <c>someone@example.com</c> to join a resource directory.</para>
+        /// <para>This topic provides an example on how to invite the external account <c>someone@example.com</c> to join a resource directory.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8703,12 +8541,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invites an account to join a resource directory.</para>
+        /// <para>Invites an external account to join a resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to call the API operation to invite the account <c>someone@example.com</c> to join a resource directory.</para>
+        /// <para>This topic provides an example on how to invite the external account <c>someone@example.com</c> to join a resource directory.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8726,12 +8564,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invites an account to join a resource directory.</para>
+        /// <para>Invites an external account to join a resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to call the API operation to invite the account <c>someone@example.com</c> to join a resource directory.</para>
+        /// <para>This topic provides an example on how to invite the external account <c>someone@example.com</c> to join a resource directory.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8749,12 +8587,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all the members in a resource directory.</para>
+        /// <para>Queries the list of all member accounts in a resource directory by calling ListAccounts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use only the management account of a resource directory or a delegated administrator account of a trusted service to call this operation.</para>
+        /// <para>The management account of the resource directory and the delegated administrator accounts of trusted services can call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8808,12 +8646,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all the members in a resource directory.</para>
+        /// <para>Queries the list of all member accounts in a resource directory by calling ListAccounts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use only the management account of a resource directory or a delegated administrator account of a trusted service to call this operation.</para>
+        /// <para>The management account of the resource directory and the delegated administrator accounts of trusted services can call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8867,12 +8705,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all the members in a resource directory.</para>
+        /// <para>Queries the list of all member accounts in a resource directory by calling ListAccounts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use only the management account of a resource directory or a delegated administrator account of a trusted service to call this operation.</para>
+        /// <para>The management account of the resource directory and the delegated administrator accounts of trusted services can call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8890,12 +8728,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all the members in a resource directory.</para>
+        /// <para>Queries the list of all member accounts in a resource directory by calling ListAccounts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use only the management account of a resource directory or a delegated administrator account of a trusted service to call this operation.</para>
+        /// <para>The management account of the resource directory and the delegated administrator accounts of trusted services can call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8913,7 +8751,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of members in a folder.</para>
+        /// <para>Queries the list of member accounts in a resource folder by calling ListAccountsForParent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8975,7 +8813,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of members in a folder.</para>
+        /// <para>Queries the list of member accounts in a resource folder by calling ListAccountsForParent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9037,7 +8875,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of members in a folder.</para>
+        /// <para>Queries the list of member accounts in a resource folder by calling ListAccountsForParent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9055,7 +8893,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of members in a folder.</para>
+        /// <para>Queries the list of member accounts in a resource folder by calling ListAccountsForParent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9073,7 +8911,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of all the parent folders of a specified folder. The system returns the information of the folders based on their top-down hierarchy.</para>
+        /// <para>Queries information about all parent folders of a specified folder. The results are displayed in order from top to bottom.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9115,7 +8953,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of all the parent folders of a specified folder. The system returns the information of the folders based on their top-down hierarchy.</para>
+        /// <para>Queries information about all parent folders of a specified folder. The results are displayed in order from top to bottom.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9157,7 +8995,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of all the parent folders of a specified folder. The system returns the information of the folders based on their top-down hierarchy.</para>
+        /// <para>Queries information about all parent folders of a specified folder. The results are displayed in order from top to bottom.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9175,7 +9013,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of all the parent folders of a specified folder. The system returns the information of the folders based on their top-down hierarchy.</para>
+        /// <para>Queries information about all parent folders of a specified folder. The results are displayed in order from top to bottom.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9193,12 +9031,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the settings of the Transfer Associated Resources feature.</para>
+        /// <para>Retrieves the settings of the associated resource group transfer feature.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListAssociatedTransferSettingRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -9226,12 +9061,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the settings of the Transfer Associated Resources feature.</para>
+        /// <para>Retrieves the settings of the associated resource group transfer feature.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListAssociatedTransferSettingRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -9259,7 +9091,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the settings of the Transfer Associated Resources feature.</para>
+        /// <para>Retrieves the settings of the associated resource group transfer feature.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -9273,7 +9105,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the settings of the Transfer Associated Resources feature.</para>
+        /// <para>Retrieves the settings of the associated resource group transfer feature.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -9287,7 +9119,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of automatic grouping remediation records.</para>
+        /// <para>Lists auto-grouping remediation records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9361,7 +9193,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of automatic grouping remediation records.</para>
+        /// <para>Lists auto-grouping remediation records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9435,7 +9267,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of automatic grouping remediation records.</para>
+        /// <para>Lists auto-grouping remediation records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9453,7 +9285,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of automatic grouping remediation records.</para>
+        /// <para>Lists auto-grouping remediation records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9471,7 +9303,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of transfer rules.</para>
+        /// <para>Queries the list of automatic group transfer rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9529,7 +9361,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of transfer rules.</para>
+        /// <para>Queries the list of automatic group transfer rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9587,7 +9419,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of transfer rules.</para>
+        /// <para>Queries the list of automatic group transfer rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9605,7 +9437,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of transfer rules.</para>
+        /// <para>Queries the list of automatic group transfer rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9623,13 +9455,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries access control policies.</para>
+        /// <para>Queries a list of control policies.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the system access control policies within a resource directory. The response shows that the resource directory has only one system access control policy. The policy is named <c>FullAliyunAccess</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListControlPoliciesRequest
@@ -9682,13 +9509,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries access control policies.</para>
+        /// <para>Queries a list of control policies.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the system access control policies within a resource directory. The response shows that the resource directory has only one system access control policy. The policy is named <c>FullAliyunAccess</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListControlPoliciesRequest
@@ -9741,13 +9563,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries access control policies.</para>
+        /// <para>Queries a list of control policies.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the system access control policies within a resource directory. The response shows that the resource directory has only one system access control policy. The policy is named <c>FullAliyunAccess</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListControlPoliciesRequest
@@ -9764,13 +9581,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries access control policies.</para>
+        /// <para>Queries a list of control policies.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the system access control policies within a resource directory. The response shows that the resource directory has only one system access control policy. The policy is named <c>FullAliyunAccess</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListControlPoliciesRequest
@@ -9787,12 +9599,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the access control policies that are attached to a folder or member.</para>
+        /// <para>Queries the list of control policies attached to a resource folder or member account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the access control policies that are attached to the folder <c>fd-ZDNPiT****</c>.</para>
+        /// <para>This topic provides an example on how to query the list of control policies attached to the resource folder <c>fd-ZDNPiT****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9838,12 +9650,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the access control policies that are attached to a folder or member.</para>
+        /// <para>Queries the list of control policies attached to a resource folder or member account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the access control policies that are attached to the folder <c>fd-ZDNPiT****</c>.</para>
+        /// <para>This topic provides an example on how to query the list of control policies attached to the resource folder <c>fd-ZDNPiT****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9889,12 +9701,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the access control policies that are attached to a folder or member.</para>
+        /// <para>Queries the list of control policies attached to a resource folder or member account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the access control policies that are attached to the folder <c>fd-ZDNPiT****</c>.</para>
+        /// <para>This topic provides an example on how to query the list of control policies attached to the resource folder <c>fd-ZDNPiT****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9912,12 +9724,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the access control policies that are attached to a folder or member.</para>
+        /// <para>Queries the list of control policies attached to a resource folder or member account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the access control policies that are attached to the folder <c>fd-ZDNPiT****</c>.</para>
+        /// <para>This topic provides an example on how to query the list of control policies attached to the resource folder <c>fd-ZDNPiT****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9935,13 +9747,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries delegated administrator accounts.</para>
+        /// <para>Queries the list of delegated administrator accounts for a trusted service.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query all delegated administrator accounts in a resource directory. The response shows that two delegated administrator accounts for Cloud Firewall exist in the resource directory.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListDelegatedAdministratorsRequest
@@ -9990,13 +9797,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries delegated administrator accounts.</para>
+        /// <para>Queries the list of delegated administrator accounts for a trusted service.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query all delegated administrator accounts in a resource directory. The response shows that two delegated administrator accounts for Cloud Firewall exist in the resource directory.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListDelegatedAdministratorsRequest
@@ -10045,13 +9847,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries delegated administrator accounts.</para>
+        /// <para>Queries the list of delegated administrator accounts for a trusted service.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query all delegated administrator accounts in a resource directory. The response shows that two delegated administrator accounts for Cloud Firewall exist in the resource directory.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListDelegatedAdministratorsRequest
@@ -10068,13 +9865,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries delegated administrator accounts.</para>
+        /// <para>Queries the list of delegated administrator accounts for a trusted service.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query all delegated administrator accounts in a resource directory. The response shows that two delegated administrator accounts for Cloud Firewall exist in the resource directory.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListDelegatedAdministratorsRequest
@@ -10091,13 +9883,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trusted services for which a member is specified as a delegated administrator account.</para>
+        /// <para>Queries the trusted services for which a specified member is set as a delegated administrator account.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the trusted services for which the member <c>138660628348****</c> is specified as a delegated administrator account. The response shows that the member is specified as a delegated administrator account of Cloud Firewall.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListDelegatedServicesForAccountRequest
@@ -10138,13 +9925,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trusted services for which a member is specified as a delegated administrator account.</para>
+        /// <para>Queries the trusted services for which a specified member is set as a delegated administrator account.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the trusted services for which the member <c>138660628348****</c> is specified as a delegated administrator account. The response shows that the member is specified as a delegated administrator account of Cloud Firewall.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListDelegatedServicesForAccountRequest
@@ -10185,13 +9967,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trusted services for which a member is specified as a delegated administrator account.</para>
+        /// <para>Queries the trusted services for which a specified member is set as a delegated administrator account.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the trusted services for which the member <c>138660628348****</c> is specified as a delegated administrator account. The response shows that the member is specified as a delegated administrator account of Cloud Firewall.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListDelegatedServicesForAccountRequest
@@ -10208,13 +9985,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trusted services for which a member is specified as a delegated administrator account.</para>
+        /// <para>Queries the trusted services for which a specified member is set as a delegated administrator account.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the trusted services for which the member <c>138660628348****</c> is specified as a delegated administrator account. The response shows that the member is specified as a delegated administrator account of Cloud Firewall.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListDelegatedServicesForAccountRequest
@@ -10231,13 +10003,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of all subfolders of a folder.</para>
+        /// <para>Queries the subfolders of a specified folder.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> You can view the information of only the first-level subfolders of a folder.</para>
+        /// <para>You can query only the subfolders at the next level of the specified folder. You cannot query subfolders at deeper levels.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10292,13 +10064,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of all subfolders of a folder.</para>
+        /// <para>Queries the subfolders of a specified folder.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> You can view the information of only the first-level subfolders of a folder.</para>
+        /// <para>You can query only the subfolders at the next level of the specified folder. You cannot query subfolders at deeper levels.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10353,13 +10125,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of all subfolders of a folder.</para>
+        /// <para>Queries the subfolders of a specified folder.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> You can view the information of only the first-level subfolders of a folder.</para>
+        /// <para>You can query only the subfolders at the next level of the specified folder. You cannot query subfolders at deeper levels.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10378,13 +10150,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of all subfolders of a folder.</para>
+        /// <para>Queries the subfolders of a specified folder.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> You can view the information of only the first-level subfolders of a folder.</para>
+        /// <para>You can query only the subfolders at the next level of the specified folder. You cannot query subfolders at deeper levels.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10403,12 +10175,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the invitations that are associated with an account.</para>
+        /// <para>Queries the invitation records under the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the invitations that are associated with the management account <c>172841235500****</c>. The response shows that two invitations are associated with the management account.</para>
+        /// <para>This topic provides an example on how to query the invitation records of the current management account <c>172841235500****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10454,12 +10226,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the invitations that are associated with an account.</para>
+        /// <para>Queries the invitation records under the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the invitations that are associated with the management account <c>172841235500****</c>. The response shows that two invitations are associated with the management account.</para>
+        /// <para>This topic provides an example on how to query the invitation records of the current management account <c>172841235500****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10505,12 +10277,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the invitations that are associated with an account.</para>
+        /// <para>Queries the invitation records under the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the invitations that are associated with the management account <c>172841235500****</c>. The response shows that two invitations are associated with the management account.</para>
+        /// <para>This topic provides an example on how to query the invitation records of the current management account <c>172841235500****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10528,12 +10300,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the invitations that are associated with an account.</para>
+        /// <para>Queries the invitation records under the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the invitations that are associated with the management account <c>172841235500****</c>. The response shows that two invitations are associated with the management account.</para>
+        /// <para>This topic provides an example on how to query the invitation records of the current management account <c>172841235500****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10551,7 +10323,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries invitations in a resource directory.</para>
+        /// <para>Queries all invitations in a resource directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10597,7 +10369,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries invitations in a resource directory.</para>
+        /// <para>Queries all invitations in a resource directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10643,7 +10415,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries invitations in a resource directory.</para>
+        /// <para>Queries all invitations in a resource directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10661,7 +10433,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries invitations in a resource directory.</para>
+        /// <para>Queries all invitations in a resource directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10679,7 +10451,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of permission policies.</para>
+        /// <para>Calls ListPolicies to query a list of access policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10733,7 +10505,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of permission policies.</para>
+        /// <para>Calls ListPolicies to query a list of access policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10787,7 +10559,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of permission policies.</para>
+        /// <para>Calls ListPolicies to query a list of access policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10805,7 +10577,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of permission policies.</para>
+        /// <para>Calls ListPolicies to query a list of access policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10823,16 +10595,16 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries policy attachment records.</para>
+        /// <para>Queries the list of policy attachments by calling ListPolicyAttachments.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can view the following information:</para>
+        /// <para>You can query the following information:</para>
         /// <list type="bullet">
-        /// <item><description>Policy attachment records within an Alibaba Cloud account or a resource group</description></item>
-        /// <item><description>Permission policies attached to RAM users, RAM user groups, or RAM roles</description></item>
-        /// <item><description>RAM users, RAM user groups, or RAM roles to which permission policies are attached within an Alibaba Cloud account or a resource group</description></item>
+        /// <item><description>All authorization records under an Alibaba Cloud account or a resource group.</description></item>
+        /// <item><description>All access policies granted to a Resource Access Management (RAM) user, RAM user group, or RAM role.</description></item>
+        /// <item><description>RAM users, RAM user groups, and RAM roles that have a specific permission under an Alibaba Cloud account or a resource group.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10903,16 +10675,16 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries policy attachment records.</para>
+        /// <para>Queries the list of policy attachments by calling ListPolicyAttachments.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can view the following information:</para>
+        /// <para>You can query the following information:</para>
         /// <list type="bullet">
-        /// <item><description>Policy attachment records within an Alibaba Cloud account or a resource group</description></item>
-        /// <item><description>Permission policies attached to RAM users, RAM user groups, or RAM roles</description></item>
-        /// <item><description>RAM users, RAM user groups, or RAM roles to which permission policies are attached within an Alibaba Cloud account or a resource group</description></item>
+        /// <item><description>All authorization records under an Alibaba Cloud account or a resource group.</description></item>
+        /// <item><description>All access policies granted to a Resource Access Management (RAM) user, RAM user group, or RAM role.</description></item>
+        /// <item><description>RAM users, RAM user groups, and RAM roles that have a specific permission under an Alibaba Cloud account or a resource group.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10983,16 +10755,16 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries policy attachment records.</para>
+        /// <para>Queries the list of policy attachments by calling ListPolicyAttachments.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can view the following information:</para>
+        /// <para>You can query the following information:</para>
         /// <list type="bullet">
-        /// <item><description>Policy attachment records within an Alibaba Cloud account or a resource group</description></item>
-        /// <item><description>Permission policies attached to RAM users, RAM user groups, or RAM roles</description></item>
-        /// <item><description>RAM users, RAM user groups, or RAM roles to which permission policies are attached within an Alibaba Cloud account or a resource group</description></item>
+        /// <item><description>All authorization records under an Alibaba Cloud account or a resource group.</description></item>
+        /// <item><description>All access policies granted to a Resource Access Management (RAM) user, RAM user group, or RAM role.</description></item>
+        /// <item><description>RAM users, RAM user groups, and RAM roles that have a specific permission under an Alibaba Cloud account or a resource group.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11011,16 +10783,16 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries policy attachment records.</para>
+        /// <para>Queries the list of policy attachments by calling ListPolicyAttachments.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can view the following information:</para>
+        /// <para>You can query the following information:</para>
         /// <list type="bullet">
-        /// <item><description>Policy attachment records within an Alibaba Cloud account or a resource group</description></item>
-        /// <item><description>Permission policies attached to RAM users, RAM user groups, or RAM roles</description></item>
-        /// <item><description>RAM users, RAM user groups, or RAM roles to which permission policies are attached within an Alibaba Cloud account or a resource group</description></item>
+        /// <item><description>All authorization records under an Alibaba Cloud account or a resource group.</description></item>
+        /// <item><description>All access policies granted to a Resource Access Management (RAM) user, RAM user group, or RAM role.</description></item>
+        /// <item><description>RAM users, RAM user groups, and RAM roles that have a specific permission under an Alibaba Cloud account or a resource group.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11039,7 +10811,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of versions of a policy.</para>
+        /// <para>Queries the versions of an access policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11085,7 +10857,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of versions of a policy.</para>
+        /// <para>Queries the versions of an access policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11131,7 +10903,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of versions of a policy.</para>
+        /// <para>Queries the versions of an access policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11149,7 +10921,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of versions of a policy.</para>
+        /// <para>Queries the versions of an access policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11167,7 +10939,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether a specific resource type or a given cloud service supports resource group events.</para>
+        /// <para>Lists the capability items of resource groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11217,7 +10989,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether a specific resource type or a given cloud service supports resource group events.</para>
+        /// <para>Lists the capability items of resource groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11267,7 +11039,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether a specific resource type or a given cloud service supports resource group events.</para>
+        /// <para>Lists the capability items of resource groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11285,7 +11057,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether a specific resource type or a given cloud service supports resource group events.</para>
+        /// <para>Lists the capability items of resource groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11303,13 +11075,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries resource groups.</para>
+        /// <para>Queries the list of resource groups.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query all resource groups within the current account. You can also call this API operation to query a specific resource group based on the status, ID, identifier, or display name of the resource group.
-        /// This topic provides an example on how to call the API operation to query the basic information about the resource groups <c>rg-1hSBH2****</c> and <c>rg-9gLOoK****</c> within the current account.</para>
+        /// <para>You can call this operation to query all resource groups under the current account. You can also filter resource groups by resource group status, resource group ID, resource group identifier, or resource group display name.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11383,13 +11154,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries resource groups.</para>
+        /// <para>Queries the list of resource groups.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query all resource groups within the current account. You can also call this API operation to query a specific resource group based on the status, ID, identifier, or display name of the resource group.
-        /// This topic provides an example on how to call the API operation to query the basic information about the resource groups <c>rg-1hSBH2****</c> and <c>rg-9gLOoK****</c> within the current account.</para>
+        /// <para>You can call this operation to query all resource groups under the current account. You can also filter resource groups by resource group status, resource group ID, resource group identifier, or resource group display name.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11463,13 +11233,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries resource groups.</para>
+        /// <para>Queries the list of resource groups.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query all resource groups within the current account. You can also call this API operation to query a specific resource group based on the status, ID, identifier, or display name of the resource group.
-        /// This topic provides an example on how to call the API operation to query the basic information about the resource groups <c>rg-1hSBH2****</c> and <c>rg-9gLOoK****</c> within the current account.</para>
+        /// <para>You can call this operation to query all resource groups under the current account. You can also filter resource groups by resource group status, resource group ID, resource group identifier, or resource group display name.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11487,13 +11256,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries resource groups.</para>
+        /// <para>Queries the list of resource groups.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query all resource groups within the current account. You can also call this API operation to query a specific resource group based on the status, ID, identifier, or display name of the resource group.
-        /// This topic provides an example on how to call the API operation to query the basic information about the resource groups <c>rg-1hSBH2****</c> and <c>rg-9gLOoK****</c> within the current account.</para>
+        /// <para>You can call this operation to query all resource groups under the current account. You can also filter resource groups by resource group status, resource group ID, resource group identifier, or resource group display name.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11511,7 +11279,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries resource groups and their user authorization information.</para>
+        /// <para>Lists resource groups along with user authorization details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11589,7 +11357,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries resource groups and their user authorization information.</para>
+        /// <para>Lists resource groups along with user authorization details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11667,7 +11435,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries resource groups and their user authorization information.</para>
+        /// <para>Lists resource groups along with user authorization details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11685,7 +11453,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries resource groups and their user authorization information.</para>
+        /// <para>Lists resource groups along with user authorization details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11703,14 +11471,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries resources that can be accessed by the current account in resource groups.</para>
+        /// <para>Queries the resources in the resource groups accessible to the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> You can use a RAM role that is not associated with a session policy to call this API operation.
-        /// This topic provides an example on how to call the API operation to query resources that can be accessed by the current account in resource groups. The response shows that the current account can access only the Elastic Compute Service (ECS) instance <c>i-23v38****</c> in the resource group <c>rg-uPJpP****</c>.</para>
+        /// <para>This API can be called by assuming a RAM role, but session policies for the role are not supported.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -11728,6 +11495,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Count))
+            {
+                query["Count"] = request.Count;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -11781,14 +11552,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries resources that can be accessed by the current account in resource groups.</para>
+        /// <para>Queries the resources in the resource groups accessible to the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> You can use a RAM role that is not associated with a session policy to call this API operation.
-        /// This topic provides an example on how to call the API operation to query resources that can be accessed by the current account in resource groups. The response shows that the current account can access only the Elastic Compute Service (ECS) instance <c>i-23v38****</c> in the resource group <c>rg-uPJpP****</c>.</para>
+        /// <para>This API can be called by assuming a RAM role, but session policies for the role are not supported.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -11806,6 +11576,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Count))
+            {
+                query["Count"] = request.Count;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -11859,14 +11633,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries resources that can be accessed by the current account in resource groups.</para>
+        /// <para>Queries the resources in the resource groups accessible to the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> You can use a RAM role that is not associated with a session policy to call this API operation.
-        /// This topic provides an example on how to call the API operation to query resources that can be accessed by the current account in resource groups. The response shows that the current account can access only the Elastic Compute Service (ECS) instance <c>i-23v38****</c> in the resource group <c>rg-uPJpP****</c>.</para>
+        /// <para>This API can be called by assuming a RAM role, but session policies for the role are not supported.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -11885,14 +11658,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries resources that can be accessed by the current account in resource groups.</para>
+        /// <para>Queries the resources in the resource groups accessible to the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> You can use a RAM role that is not associated with a session policy to call this API operation.
-        /// This topic provides an example on how to call the API operation to query resources that can be accessed by the current account in resource groups. The response shows that the current account can access only the Elastic Compute Service (ECS) instance <c>i-23v38****</c> in the resource group <c>rg-uPJpP****</c>.</para>
+        /// <para>This API can be called by assuming a RAM role, but session policies for the role are not supported.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -11911,7 +11683,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of RAM roles.</para>
+        /// <para>Queries the list of roles by calling ListRoles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11961,7 +11733,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of RAM roles.</para>
+        /// <para>Queries the list of roles by calling ListRoles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12011,7 +11783,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of RAM roles.</para>
+        /// <para>Queries the list of roles by calling ListRoles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12029,7 +11801,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of RAM roles.</para>
+        /// <para>Queries the list of roles by calling ListRoles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12047,13 +11819,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tag keys.</para>
+        /// <para>Queries the tag key list of resource directory member accounts by calling ListTagKeys.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query tag keys. The response shows that the custom tag key team exists.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListTagKeysRequest
@@ -12106,13 +11873,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tag keys.</para>
+        /// <para>Queries the tag key list of resource directory member accounts by calling ListTagKeys.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query tag keys. The response shows that the custom tag key team exists.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListTagKeysRequest
@@ -12165,13 +11927,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tag keys.</para>
+        /// <para>Queries the tag key list of resource directory member accounts by calling ListTagKeys.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query tag keys. The response shows that the custom tag key team exists.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListTagKeysRequest
@@ -12188,13 +11945,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tag keys.</para>
+        /// <para>Queries the tag key list of resource directory member accounts by calling ListTagKeys.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query tag keys. The response shows that the custom tag key team exists.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListTagKeysRequest
@@ -12211,13 +11963,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags that are added to resource groups or the members in a resource directory.</para>
+        /// <para>Queries the tags that are attached to a resource group or a resource directory member.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the tags that are added to the resource group with an ID of <c>rg-aekz6bre2uq****</c>. The response shows that only the <c>k1:v1</c> tag is added to the resource group.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListTagResourcesRequest
@@ -12274,13 +12021,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags that are added to resource groups or the members in a resource directory.</para>
+        /// <para>Queries the tags that are attached to a resource group or a resource directory member.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the tags that are added to the resource group with an ID of <c>rg-aekz6bre2uq****</c>. The response shows that only the <c>k1:v1</c> tag is added to the resource group.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListTagResourcesRequest
@@ -12337,13 +12079,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags that are added to resource groups or the members in a resource directory.</para>
+        /// <para>Queries the tags that are attached to a resource group or a resource directory member.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the tags that are added to the resource group with an ID of <c>rg-aekz6bre2uq****</c>. The response shows that only the <c>k1:v1</c> tag is added to the resource group.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListTagResourcesRequest
@@ -12360,13 +12097,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags that are added to resource groups or the members in a resource directory.</para>
+        /// <para>Queries the tags that are attached to a resource group or a resource directory member.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the tags that are added to the resource group with an ID of <c>rg-aekz6bre2uq****</c>. The response shows that only the <c>k1:v1</c> tag is added to the resource group.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListTagResourcesRequest
@@ -12383,12 +12115,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tag values of a tag key.</para>
+        /// <para>Queries the tag values of a specified tag key by calling ListTagValues.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the tag values of the tag key k1. The response shows that the tag value of the tag key k1 is v1.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>This topic provides an example on how to query the tag values of the tag key k1. The response shows that the tag value corresponding to the tag key k1 is v1.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12446,12 +12179,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tag values of a tag key.</para>
+        /// <para>Queries the tag values of a specified tag key by calling ListTagValues.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the tag values of the tag key k1. The response shows that the tag value of the tag key k1 is v1.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>This topic provides an example on how to query the tag values of the tag key k1. The response shows that the tag value corresponding to the tag key k1 is v1.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12509,12 +12243,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tag values of a tag key.</para>
+        /// <para>Queries the tag values of a specified tag key by calling ListTagValues.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the tag values of the tag key k1. The response shows that the tag value of the tag key k1 is v1.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>This topic provides an example on how to query the tag values of the tag key k1. The response shows that the tag value corresponding to the tag key k1 is v1.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12532,12 +12267,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tag values of a tag key.</para>
+        /// <para>Queries the tag values of a specified tag key by calling ListTagValues.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the tag values of the tag key k1. The response shows that the tag value of the tag key k1 is v1.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>This topic provides an example on how to query the tag values of the tag key k1. The response shows that the tag value corresponding to the tag key k1 is v1.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12555,13 +12291,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the objects to which a specific control policy is attached.</para>
+        /// <para>Queries the nodes to which a control policy is attached.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the folders or member accounts to which the control policy <c>cp-jExXAqIYkwHN****</c> is attached are queried. The returned result shows that the control policy is attached to the folder <c>fd-ZDNPiT****</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListTargetAttachmentsForControlPolicyRequest
@@ -12610,13 +12341,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the objects to which a specific control policy is attached.</para>
+        /// <para>Queries the nodes to which a control policy is attached.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the folders or member accounts to which the control policy <c>cp-jExXAqIYkwHN****</c> is attached are queried. The returned result shows that the control policy is attached to the folder <c>fd-ZDNPiT****</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListTargetAttachmentsForControlPolicyRequest
@@ -12665,13 +12391,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the objects to which a specific control policy is attached.</para>
+        /// <para>Queries the nodes to which a control policy is attached.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the folders or member accounts to which the control policy <c>cp-jExXAqIYkwHN****</c> is attached are queried. The returned result shows that the control policy is attached to the folder <c>fd-ZDNPiT****</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListTargetAttachmentsForControlPolicyRequest
@@ -12688,13 +12409,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the objects to which a specific control policy is attached.</para>
+        /// <para>Queries the nodes to which a control policy is attached.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the folders or member accounts to which the control policy <c>cp-jExXAqIYkwHN****</c> is attached are queried. The returned result shows that the control policy is attached to the folder <c>fd-ZDNPiT****</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListTargetAttachmentsForControlPolicyRequest
@@ -12711,14 +12427,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trusted services that are enabled within an enterprise management account or delegated administrator account.</para>
+        /// <para>Queries the list of trusted services enabled by the management account or a delegated administrator account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> Only an enterprise management account or delegated administrator account can be used to call this operation.
-        /// In this example, the trusted services that are enabled within an enterprise management account are queried. The returned result shows that the trusted services Cloud Config and ActionTrail are enabled within the enterprise management account.</para>
+        /// <para>This operation can be called only by the management account or a delegated administrator account.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -12769,14 +12484,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trusted services that are enabled within an enterprise management account or delegated administrator account.</para>
+        /// <para>Queries the list of trusted services enabled by the management account or a delegated administrator account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> Only an enterprise management account or delegated administrator account can be used to call this operation.
-        /// In this example, the trusted services that are enabled within an enterprise management account are queried. The returned result shows that the trusted services Cloud Config and ActionTrail are enabled within the enterprise management account.</para>
+        /// <para>This operation can be called only by the management account or a delegated administrator account.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -12827,14 +12541,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trusted services that are enabled within an enterprise management account or delegated administrator account.</para>
+        /// <para>Queries the list of trusted services enabled by the management account or a delegated administrator account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> Only an enterprise management account or delegated administrator account can be used to call this operation.
-        /// In this example, the trusted services that are enabled within an enterprise management account are queried. The returned result shows that the trusted services Cloud Config and ActionTrail are enabled within the enterprise management account.</para>
+        /// <para>This operation can be called only by the management account or a delegated administrator account.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -12853,14 +12566,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trusted services that are enabled within an enterprise management account or delegated administrator account.</para>
+        /// <para>Queries the list of trusted services enabled by the management account or a delegated administrator account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> Only an enterprise management account or delegated administrator account can be used to call this operation.
-        /// In this example, the trusted services that are enabled within an enterprise management account are queried. The returned result shows that the trusted services Cloud Config and ActionTrail are enabled within the enterprise management account.</para>
+        /// <para>This operation can be called only by the management account or a delegated administrator account.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -12879,7 +12591,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the events of resource groups.</para>
+        /// <para>Queries resource group events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12949,7 +12661,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the events of resource groups.</para>
+        /// <para>Queries resource group events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13019,7 +12731,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the events of resource groups.</para>
+        /// <para>Queries resource group events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13037,7 +12749,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the events of resource groups.</para>
+        /// <para>Queries resource group events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13055,7 +12767,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves a member account from a folder to another.</para>
+        /// <para>Moves a member to another folder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13101,7 +12813,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves a member account from a folder to another.</para>
+        /// <para>Moves a member to another folder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13147,7 +12859,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves a member account from a folder to another.</para>
+        /// <para>Moves a member to another folder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13165,7 +12877,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves a member account from a folder to another.</para>
+        /// <para>Moves a member to another folder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13183,13 +12895,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves resources from one resource group to another. You can move multiple resources that reside in different regions, are used by different Alibaba Cloud services, or belong to different resource groups.</para>
+        /// <para>Calls MoveResources to move resources from one resource group to another.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about Alibaba Cloud services whose resources can be moved between resource groups, see the <b>Supported by the API</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Alibaba Cloud services that support resource groups</a>.
-        /// In this example, two virtual private clouds (VPCs) <c>vpc-bp1sig0mjktx5ewx1****</c> and <c>vpc-bp1visxm225pv49dz****</c> that reside in different regions and belong to different resource groups are moved to the resource group <c>rg-aekzmeobk5w****</c>.</para>
+        /// <para>Supports batch transfer of resources across regions, cloud services, and resource groups.
+        /// For cloud services that support resource group transfer, see the <b>API</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13235,13 +12947,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves resources from one resource group to another. You can move multiple resources that reside in different regions, are used by different Alibaba Cloud services, or belong to different resource groups.</para>
+        /// <para>Calls MoveResources to move resources from one resource group to another.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about Alibaba Cloud services whose resources can be moved between resource groups, see the <b>Supported by the API</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Alibaba Cloud services that support resource groups</a>.
-        /// In this example, two virtual private clouds (VPCs) <c>vpc-bp1sig0mjktx5ewx1****</c> and <c>vpc-bp1visxm225pv49dz****</c> that reside in different regions and belong to different resource groups are moved to the resource group <c>rg-aekzmeobk5w****</c>.</para>
+        /// <para>Supports batch transfer of resources across regions, cloud services, and resource groups.
+        /// For cloud services that support resource group transfer, see the <b>API</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13287,13 +12999,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves resources from one resource group to another. You can move multiple resources that reside in different regions, are used by different Alibaba Cloud services, or belong to different resource groups.</para>
+        /// <para>Calls MoveResources to move resources from one resource group to another.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about Alibaba Cloud services whose resources can be moved between resource groups, see the <b>Supported by the API</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Alibaba Cloud services that support resource groups</a>.
-        /// In this example, two virtual private clouds (VPCs) <c>vpc-bp1sig0mjktx5ewx1****</c> and <c>vpc-bp1visxm225pv49dz****</c> that reside in different regions and belong to different resource groups are moved to the resource group <c>rg-aekzmeobk5w****</c>.</para>
+        /// <para>Supports batch transfer of resources across regions, cloud services, and resource groups.
+        /// For cloud services that support resource group transfer, see the <b>API</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13311,13 +13023,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves resources from one resource group to another. You can move multiple resources that reside in different regions, are used by different Alibaba Cloud services, or belong to different resource groups.</para>
+        /// <para>Calls MoveResources to move resources from one resource group to another.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about Alibaba Cloud services whose resources can be moved between resource groups, see the <b>Supported by the API</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Alibaba Cloud services that support resource groups</a>.
-        /// In this example, two virtual private clouds (VPCs) <c>vpc-bp1sig0mjktx5ewx1****</c> and <c>vpc-bp1visxm225pv49dz****</c> that reside in different regions and belong to different resource groups are moved to the resource group <c>rg-aekzmeobk5w****</c>.</para>
+        /// <para>Supports batch transfer of resources across regions, cloud services, and resource groups.
+        /// For cloud services that support resource group transfer, see the <b>API</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13335,7 +13047,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades a resource account to a cloud account.</para>
+        /// <para>Upgrades a resource account to an Alibaba Cloud account. This is an asynchronous operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13381,7 +13093,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades a resource account to a cloud account.</para>
+        /// <para>Upgrades a resource account to an Alibaba Cloud account. This is an asynchronous operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13427,7 +13139,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades a resource account to a cloud account.</para>
+        /// <para>Upgrades a resource account to an Alibaba Cloud account. This is an asynchronous operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13445,7 +13157,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades a resource account to a cloud account.</para>
+        /// <para>Upgrades a resource account to an Alibaba Cloud account. This is an asynchronous operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13463,18 +13175,17 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specifies a member in a resource directory as a delegated administrator account of a trusted service.</para>
+        /// <para>Sets a member account in a resource directory as a delegated administrator account for a trusted service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The delegated administrator account can be used to access the information of the resource directory and view the structure and members of the resource directory. The delegated administrator account can also be used to perform service-related management operations in the trusted service on behalf of the management account of the resource directory.
-        /// When you call this operation, you must take note of the following limits:</para>
+        /// <para>After the settings are complete, the delegated administrator account is granted authorization to access the organizational information of the resource directory, which provides visibility into the organization members and structure. The delegated administrator account executes service-related management operations on behalf of the management account in the specified trusted service.
+        /// Limits:</para>
         /// <list type="bullet">
-        /// <item><description>Only some trusted services support delegated administrator accounts. For more information, see <a href="https://help.aliyun.com/document_detail/208133.html">Supported trusted services</a>.</description></item>
-        /// <item><description>Only the management account of a resource directory or an authorized RAM user or RAM role of the management account can be used to call this operation.</description></item>
-        /// <item><description>The number of delegated administrator accounts that are allowed for a trusted service is defined by the trusted service.
-        /// This topic provides an example on how to call the API operation to specify the member <c>181761095690****</c> as a delegated administrator account of Cloud Firewall.</description></item>
+        /// <item><description>Only some trusted services support the delegated administrator feature. For more information, see <a href="https://help.aliyun.com/document_detail/208133.html">Supported trusted services</a>.</description></item>
+        /// <item><description>Only the management account of the resource directory and authorized Resource Access Management (RAM) users and RAM roles under the management account can invoke this API operation.</description></item>
+        /// <item><description>The maximum number of delegated administrator accounts that can be added is defined by each trusted service.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13521,18 +13232,17 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specifies a member in a resource directory as a delegated administrator account of a trusted service.</para>
+        /// <para>Sets a member account in a resource directory as a delegated administrator account for a trusted service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The delegated administrator account can be used to access the information of the resource directory and view the structure and members of the resource directory. The delegated administrator account can also be used to perform service-related management operations in the trusted service on behalf of the management account of the resource directory.
-        /// When you call this operation, you must take note of the following limits:</para>
+        /// <para>After the settings are complete, the delegated administrator account is granted authorization to access the organizational information of the resource directory, which provides visibility into the organization members and structure. The delegated administrator account executes service-related management operations on behalf of the management account in the specified trusted service.
+        /// Limits:</para>
         /// <list type="bullet">
-        /// <item><description>Only some trusted services support delegated administrator accounts. For more information, see <a href="https://help.aliyun.com/document_detail/208133.html">Supported trusted services</a>.</description></item>
-        /// <item><description>Only the management account of a resource directory or an authorized RAM user or RAM role of the management account can be used to call this operation.</description></item>
-        /// <item><description>The number of delegated administrator accounts that are allowed for a trusted service is defined by the trusted service.
-        /// This topic provides an example on how to call the API operation to specify the member <c>181761095690****</c> as a delegated administrator account of Cloud Firewall.</description></item>
+        /// <item><description>Only some trusted services support the delegated administrator feature. For more information, see <a href="https://help.aliyun.com/document_detail/208133.html">Supported trusted services</a>.</description></item>
+        /// <item><description>Only the management account of the resource directory and authorized Resource Access Management (RAM) users and RAM roles under the management account can invoke this API operation.</description></item>
+        /// <item><description>The maximum number of delegated administrator accounts that can be added is defined by each trusted service.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13579,18 +13289,17 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specifies a member in a resource directory as a delegated administrator account of a trusted service.</para>
+        /// <para>Sets a member account in a resource directory as a delegated administrator account for a trusted service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The delegated administrator account can be used to access the information of the resource directory and view the structure and members of the resource directory. The delegated administrator account can also be used to perform service-related management operations in the trusted service on behalf of the management account of the resource directory.
-        /// When you call this operation, you must take note of the following limits:</para>
+        /// <para>After the settings are complete, the delegated administrator account is granted authorization to access the organizational information of the resource directory, which provides visibility into the organization members and structure. The delegated administrator account executes service-related management operations on behalf of the management account in the specified trusted service.
+        /// Limits:</para>
         /// <list type="bullet">
-        /// <item><description>Only some trusted services support delegated administrator accounts. For more information, see <a href="https://help.aliyun.com/document_detail/208133.html">Supported trusted services</a>.</description></item>
-        /// <item><description>Only the management account of a resource directory or an authorized RAM user or RAM role of the management account can be used to call this operation.</description></item>
-        /// <item><description>The number of delegated administrator accounts that are allowed for a trusted service is defined by the trusted service.
-        /// This topic provides an example on how to call the API operation to specify the member <c>181761095690****</c> as a delegated administrator account of Cloud Firewall.</description></item>
+        /// <item><description>Only some trusted services support the delegated administrator feature. For more information, see <a href="https://help.aliyun.com/document_detail/208133.html">Supported trusted services</a>.</description></item>
+        /// <item><description>Only the management account of the resource directory and authorized Resource Access Management (RAM) users and RAM roles under the management account can invoke this API operation.</description></item>
+        /// <item><description>The maximum number of delegated administrator accounts that can be added is defined by each trusted service.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13609,18 +13318,17 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specifies a member in a resource directory as a delegated administrator account of a trusted service.</para>
+        /// <para>Sets a member account in a resource directory as a delegated administrator account for a trusted service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The delegated administrator account can be used to access the information of the resource directory and view the structure and members of the resource directory. The delegated administrator account can also be used to perform service-related management operations in the trusted service on behalf of the management account of the resource directory.
-        /// When you call this operation, you must take note of the following limits:</para>
+        /// <para>After the settings are complete, the delegated administrator account is granted authorization to access the organizational information of the resource directory, which provides visibility into the organization members and structure. The delegated administrator account executes service-related management operations on behalf of the management account in the specified trusted service.
+        /// Limits:</para>
         /// <list type="bullet">
-        /// <item><description>Only some trusted services support delegated administrator accounts. For more information, see <a href="https://help.aliyun.com/document_detail/208133.html">Supported trusted services</a>.</description></item>
-        /// <item><description>Only the management account of a resource directory or an authorized RAM user or RAM role of the management account can be used to call this operation.</description></item>
-        /// <item><description>The number of delegated administrator accounts that are allowed for a trusted service is defined by the trusted service.
-        /// This topic provides an example on how to call the API operation to specify the member <c>181761095690****</c> as a delegated administrator account of Cloud Firewall.</description></item>
+        /// <item><description>Only some trusted services support the delegated administrator feature. For more information, see <a href="https://help.aliyun.com/document_detail/208133.html">Supported trusted services</a>.</description></item>
+        /// <item><description>Only the management account of the resource directory and authorized Resource Access Management (RAM) users and RAM roles under the management account can invoke this API operation.</description></item>
+        /// <item><description>The maximum number of delegated administrator accounts that can be added is defined by each trusted service.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13639,13 +13347,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a member of the cloud account type. After you remove a member of the cloud account type, the member is no longer managed by the management account of the resource directory to which the member belonged.</para>
+        /// <para>Removes a member of the cloud account type. After the member is removed, it exists as an independent Alibaba Cloud account and is no longer managed by the management account of the resource directory.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the API operation to remove the member <c>177242285274****</c> from a resource directory.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// RemoveCloudAccountRequest
@@ -13686,13 +13389,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a member of the cloud account type. After you remove a member of the cloud account type, the member is no longer managed by the management account of the resource directory to which the member belonged.</para>
+        /// <para>Removes a member of the cloud account type. After the member is removed, it exists as an independent Alibaba Cloud account and is no longer managed by the management account of the resource directory.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the API operation to remove the member <c>177242285274****</c> from a resource directory.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// RemoveCloudAccountRequest
@@ -13733,13 +13431,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a member of the cloud account type. After you remove a member of the cloud account type, the member is no longer managed by the management account of the resource directory to which the member belonged.</para>
+        /// <para>Removes a member of the cloud account type. After the member is removed, it exists as an independent Alibaba Cloud account and is no longer managed by the management account of the resource directory.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the API operation to remove the member <c>177242285274****</c> from a resource directory.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// RemoveCloudAccountRequest
@@ -13756,13 +13449,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a member of the cloud account type. After you remove a member of the cloud account type, the member is no longer managed by the management account of the resource directory to which the member belonged.</para>
+        /// <para>Removes a member of the cloud account type. After the member is removed, it exists as an independent Alibaba Cloud account and is no longer managed by the management account of the resource directory.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the API operation to remove the member <c>177242285274****</c> from a resource directory.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// RemoveCloudAccountRequest
@@ -13779,7 +13467,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resends an email that is used to confirm the creation of a cloud account.</para>
+        /// <para>Resends the confirmation email for creating a cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13821,7 +13509,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resends an email that is used to confirm the creation of a cloud account.</para>
+        /// <para>Resends the confirmation email for creating a cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13863,7 +13551,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resends an email that is used to confirm the creation of a cloud account.</para>
+        /// <para>Resends the confirmation email for creating a cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13881,7 +13569,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resends an email that is used to confirm the creation of a cloud account.</para>
+        /// <para>Resends the confirmation email for creating a cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13899,7 +13587,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resends an email that is used to confirm the upgrade from a resource account to a cloud account.</para>
+        /// <para>Resends the confirmation email for upgrading a resource account to a cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13941,7 +13629,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resends an email that is used to confirm the upgrade from a resource account to a cloud account.</para>
+        /// <para>Resends the confirmation email for upgrading a resource account to a cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13983,7 +13671,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resends an email that is used to confirm the upgrade from a resource account to a cloud account.</para>
+        /// <para>Resends the confirmation email for upgrading a resource account to a cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14001,7 +13689,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resends an email that is used to confirm the upgrade from a resource account to a cloud account.</para>
+        /// <para>Resends the confirmation email for upgrading a resource account to a cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14019,7 +13707,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resends a verification email for the email address change of a member.</para>
+        /// <para>Resends the confirmation email for changing the email address of a member account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14061,7 +13749,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resends a verification email for the email address change of a member.</para>
+        /// <para>Resends the confirmation email for changing the email address of a member account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14103,7 +13791,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resends a verification email for the email address change of a member.</para>
+        /// <para>Resends the confirmation email for changing the email address of a member account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14121,7 +13809,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resends a verification email for the email address change of a member.</para>
+        /// <para>Resends the confirmation email for changing the email address of a member account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14139,13 +13827,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a verification code to the mobile phone number that you want to bind to a resource account in a resource directory for security purposes.</para>
+        /// <para>Sends a verification code to a secure phone number when you set the secure phone number for a member of the resource account type by calling SendVerificationCodeForBindSecureMobilePhone.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this operation.
-        /// In this example, a verification code is sent to the mobile phone number that you want to bind to the resource account <c>138660628348****</c>.</para>
+        /// <para>To ensure that the system can record the specific operator of management operations, use a Resource Access Management (RAM) user or RAM role under the management account that has the resource directory management permission (AliyunResourceDirectoryFullAccess) to call this API operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14191,13 +13878,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a verification code to the mobile phone number that you want to bind to a resource account in a resource directory for security purposes.</para>
+        /// <para>Sends a verification code to a secure phone number when you set the secure phone number for a member of the resource account type by calling SendVerificationCodeForBindSecureMobilePhone.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this operation.
-        /// In this example, a verification code is sent to the mobile phone number that you want to bind to the resource account <c>138660628348****</c>.</para>
+        /// <para>To ensure that the system can record the specific operator of management operations, use a Resource Access Management (RAM) user or RAM role under the management account that has the resource directory management permission (AliyunResourceDirectoryFullAccess) to call this API operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14243,13 +13929,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a verification code to the mobile phone number that you want to bind to a resource account in a resource directory for security purposes.</para>
+        /// <para>Sends a verification code to a secure phone number when you set the secure phone number for a member of the resource account type by calling SendVerificationCodeForBindSecureMobilePhone.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this operation.
-        /// In this example, a verification code is sent to the mobile phone number that you want to bind to the resource account <c>138660628348****</c>.</para>
+        /// <para>To ensure that the system can record the specific operator of management operations, use a Resource Access Management (RAM) user or RAM role under the management account that has the resource directory management permission (AliyunResourceDirectoryFullAccess) to call this API operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14267,13 +13952,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a verification code to the mobile phone number that you want to bind to a resource account in a resource directory for security purposes.</para>
+        /// <para>Sends a verification code to a secure phone number when you set the secure phone number for a member of the resource account type by calling SendVerificationCodeForBindSecureMobilePhone.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this operation.
-        /// In this example, a verification code is sent to the mobile phone number that you want to bind to the resource account <c>138660628348****</c>.</para>
+        /// <para>To ensure that the system can record the specific operator of management operations, use a Resource Access Management (RAM) user or RAM role under the management account that has the resource directory management permission (AliyunResourceDirectoryFullAccess) to call this API operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14291,12 +13975,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a verification code to the mobile phone number bound to a newly created account when you use the account to enable a resource directory.</para>
+        /// <para>Sends a verification code to the secure phone number of a new management account when you call SendVerificationCodeForEnableRD to enable a resource directory by creating a new management account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Each Alibaba Cloud account can be used to send a maximum of 100 verification codes per day.</para>
+        /// <para>Each Alibaba Cloud account can send up to 100 verification codes per day.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14338,12 +14022,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a verification code to the mobile phone number bound to a newly created account when you use the account to enable a resource directory.</para>
+        /// <para>Sends a verification code to the secure phone number of a new management account when you call SendVerificationCodeForEnableRD to enable a resource directory by creating a new management account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Each Alibaba Cloud account can be used to send a maximum of 100 verification codes per day.</para>
+        /// <para>Each Alibaba Cloud account can send up to 100 verification codes per day.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14385,12 +14069,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a verification code to the mobile phone number bound to a newly created account when you use the account to enable a resource directory.</para>
+        /// <para>Sends a verification code to the secure phone number of a new management account when you call SendVerificationCodeForEnableRD to enable a resource directory by creating a new management account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Each Alibaba Cloud account can be used to send a maximum of 100 verification codes per day.</para>
+        /// <para>Each Alibaba Cloud account can send up to 100 verification codes per day.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14408,12 +14092,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a verification code to the mobile phone number bound to a newly created account when you use the account to enable a resource directory.</para>
+        /// <para>Sends a verification code to the secure phone number of a new management account when you call SendVerificationCodeForEnableRD to enable a resource directory by creating a new management account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Each Alibaba Cloud account can be used to send a maximum of 100 verification codes per day.</para>
+        /// <para>Each Alibaba Cloud account can send up to 100 verification codes per day.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14431,7 +14115,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets a default version for a permission policy.</para>
+        /// <para>Sets the default version of an access policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14477,7 +14161,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets a default version for a permission policy.</para>
+        /// <para>Sets the default version of an access policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14523,7 +14207,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets a default version for a permission policy.</para>
+        /// <para>Sets the default version of an access policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14541,7 +14225,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets a default version for a permission policy.</para>
+        /// <para>Sets the default version of an access policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14559,12 +14243,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the member deletion feature.</para>
+        /// <para>Enables or disables the member deletion permission by calling SetMemberDeletionPermission.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Members of the resource account type can be deleted only after the member deletion feature is enabled.</para>
+        /// <para>You can delete members of the resource account type only after the member deletion permission is enabled.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14606,12 +14290,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the member deletion feature.</para>
+        /// <para>Enables or disables the member deletion permission by calling SetMemberDeletionPermission.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Members of the resource account type can be deleted only after the member deletion feature is enabled.</para>
+        /// <para>You can delete members of the resource account type only after the member deletion permission is enabled.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14653,12 +14337,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the member deletion feature.</para>
+        /// <para>Enables or disables the member deletion permission by calling SetMemberDeletionPermission.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Members of the resource account type can be deleted only after the member deletion feature is enabled.</para>
+        /// <para>You can delete members of the resource account type only after the member deletion permission is enabled.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14676,12 +14360,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the member deletion feature.</para>
+        /// <para>Enables or disables the member deletion permission by calling SetMemberDeletionPermission.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Members of the resource account type can be deleted only after the member deletion feature is enabled.</para>
+        /// <para>You can delete members of the resource account type only after the member deletion permission is enabled.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14699,13 +14383,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to resource groups or the members in a resource directory.</para>
+        /// <para>Attaches labels to resource groups or member accounts of a resource directory.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the API operation to add the tag <c>k1:v1</c> to the resource group with an ID of <c>rg-aekz6bre2uq****</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// TagResourcesRequest
@@ -14754,13 +14433,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to resource groups or the members in a resource directory.</para>
+        /// <para>Attaches labels to resource groups or member accounts of a resource directory.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the API operation to add the tag <c>k1:v1</c> to the resource group with an ID of <c>rg-aekz6bre2uq****</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// TagResourcesRequest
@@ -14809,13 +14483,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to resource groups or the members in a resource directory.</para>
+        /// <para>Attaches labels to resource groups or member accounts of a resource directory.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the API operation to add the tag <c>k1:v1</c> to the resource group with an ID of <c>rg-aekz6bre2uq****</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// TagResourcesRequest
@@ -14832,13 +14501,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to resource groups or the members in a resource directory.</para>
+        /// <para>Attaches labels to resource groups or member accounts of a resource directory.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the API operation to add the tag <c>k1:v1</c> to the resource group with an ID of <c>rg-aekz6bre2uq****</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// TagResourcesRequest
@@ -14855,13 +14519,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from resource groups or the members in a resource directory.</para>
+        /// <para>Unbinds tags from resource groups or resource directory members.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the API operation to remove the tag whose tag key is <c>k1</c> from the resource group whose ID is <c>rg-aek2dpwyrfr****</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// UntagResourcesRequest
@@ -14914,13 +14573,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from resource groups or the members in a resource directory.</para>
+        /// <para>Unbinds tags from resource groups or resource directory members.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the API operation to remove the tag whose tag key is <c>k1</c> from the resource group whose ID is <c>rg-aek2dpwyrfr****</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// UntagResourcesRequest
@@ -14973,13 +14627,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from resource groups or the members in a resource directory.</para>
+        /// <para>Unbinds tags from resource groups or resource directory members.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the API operation to remove the tag whose tag key is <c>k1</c> from the resource group whose ID is <c>rg-aek2dpwyrfr****</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// UntagResourcesRequest
@@ -14996,13 +14645,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from resource groups or the members in a resource directory.</para>
+        /// <para>Unbinds tags from resource groups or resource directory members.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to call the API operation to remove the tag whose tag key is <c>k1</c> from the resource group whose ID is <c>rg-aek2dpwyrfr****</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// UntagResourcesRequest
@@ -15019,16 +14663,16 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the display name of a member, or switches the type of a member.</para>
+        /// <para>Modifies the name of a member or switches the member type by calling UpdateAccount.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this operation.</para>
+        /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>Before you switch the type of a member from resource account to cloud account, make sure that specific conditions are met. For more information about the conditions, see <a href="https://help.aliyun.com/document_detail/111233.html">Switch a resource account to a cloud account</a>.</description></item>
-        /// <item><description>Before you switch the type of a member from cloud account to resource account, make sure that specific conditions are met. For more information about the conditions, see <a href="https://help.aliyun.com/document_detail/209980.html">Switch a cloud account to a resource account</a>.
-        /// This example provides an example on how to call the API operation to change the display name of the member <c>12323344****</c> to <c>admin</c>.</description></item>
+        /// <item><description>To ensure that the system can record the specific operator of management operations, use a Resource Access Management (RAM) user or RAM role under the management account that has the resource folder management permission (AliyunResourceDirectoryFullAccess) to invoke this API operation.</description></item>
+        /// <item><description>For the conditions that must be met to switch a resource account to a cloud account, see <a href="https://help.aliyun.com/document_detail/111233.html">Switch a resource account to a cloud account</a>.</description></item>
+        /// <item><description>For the conditions that must be met to switch a cloud account to a resource account, see <a href="https://help.aliyun.com/document_detail/209980.html">Switch a cloud account to a resource account</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15079,16 +14723,16 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the display name of a member, or switches the type of a member.</para>
+        /// <para>Modifies the name of a member or switches the member type by calling UpdateAccount.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this operation.</para>
+        /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>Before you switch the type of a member from resource account to cloud account, make sure that specific conditions are met. For more information about the conditions, see <a href="https://help.aliyun.com/document_detail/111233.html">Switch a resource account to a cloud account</a>.</description></item>
-        /// <item><description>Before you switch the type of a member from cloud account to resource account, make sure that specific conditions are met. For more information about the conditions, see <a href="https://help.aliyun.com/document_detail/209980.html">Switch a cloud account to a resource account</a>.
-        /// This example provides an example on how to call the API operation to change the display name of the member <c>12323344****</c> to <c>admin</c>.</description></item>
+        /// <item><description>To ensure that the system can record the specific operator of management operations, use a Resource Access Management (RAM) user or RAM role under the management account that has the resource folder management permission (AliyunResourceDirectoryFullAccess) to invoke this API operation.</description></item>
+        /// <item><description>For the conditions that must be met to switch a resource account to a cloud account, see <a href="https://help.aliyun.com/document_detail/111233.html">Switch a resource account to a cloud account</a>.</description></item>
+        /// <item><description>For the conditions that must be met to switch a cloud account to a resource account, see <a href="https://help.aliyun.com/document_detail/209980.html">Switch a cloud account to a resource account</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15139,16 +14783,16 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the display name of a member, or switches the type of a member.</para>
+        /// <para>Modifies the name of a member or switches the member type by calling UpdateAccount.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this operation.</para>
+        /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>Before you switch the type of a member from resource account to cloud account, make sure that specific conditions are met. For more information about the conditions, see <a href="https://help.aliyun.com/document_detail/111233.html">Switch a resource account to a cloud account</a>.</description></item>
-        /// <item><description>Before you switch the type of a member from cloud account to resource account, make sure that specific conditions are met. For more information about the conditions, see <a href="https://help.aliyun.com/document_detail/209980.html">Switch a cloud account to a resource account</a>.
-        /// This example provides an example on how to call the API operation to change the display name of the member <c>12323344****</c> to <c>admin</c>.</description></item>
+        /// <item><description>To ensure that the system can record the specific operator of management operations, use a Resource Access Management (RAM) user or RAM role under the management account that has the resource folder management permission (AliyunResourceDirectoryFullAccess) to invoke this API operation.</description></item>
+        /// <item><description>For the conditions that must be met to switch a resource account to a cloud account, see <a href="https://help.aliyun.com/document_detail/111233.html">Switch a resource account to a cloud account</a>.</description></item>
+        /// <item><description>For the conditions that must be met to switch a cloud account to a resource account, see <a href="https://help.aliyun.com/document_detail/209980.html">Switch a cloud account to a resource account</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15167,16 +14811,16 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the display name of a member, or switches the type of a member.</para>
+        /// <para>Modifies the name of a member or switches the member type by calling UpdateAccount.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this operation.</para>
+        /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>Before you switch the type of a member from resource account to cloud account, make sure that specific conditions are met. For more information about the conditions, see <a href="https://help.aliyun.com/document_detail/111233.html">Switch a resource account to a cloud account</a>.</description></item>
-        /// <item><description>Before you switch the type of a member from cloud account to resource account, make sure that specific conditions are met. For more information about the conditions, see <a href="https://help.aliyun.com/document_detail/209980.html">Switch a cloud account to a resource account</a>.
-        /// This example provides an example on how to call the API operation to change the display name of the member <c>12323344****</c> to <c>admin</c>.</description></item>
+        /// <item><description>To ensure that the system can record the specific operator of management operations, use a Resource Access Management (RAM) user or RAM role under the management account that has the resource folder management permission (AliyunResourceDirectoryFullAccess) to invoke this API operation.</description></item>
+        /// <item><description>For the conditions that must be met to switch a resource account to a cloud account, see <a href="https://help.aliyun.com/document_detail/111233.html">Switch a resource account to a cloud account</a>.</description></item>
+        /// <item><description>For the conditions that must be met to switch a cloud account to a resource account, see <a href="https://help.aliyun.com/document_detail/209980.html">Switch a cloud account to a resource account</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15195,12 +14839,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the settings of the Transfer Associated Resources feature.</para>
+        /// <para>Updates the settings of the associated resource group transfer feature by calling UpdateAssociatedTransferSetting.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the resources that support the Transfer Associated Resources feature, see <a href="https://help.aliyun.com/document_detail/606232.html">Use the Transfer Associated Resources feature</a>.</para>
+        /// <para>For cloud resources that support the attached-resource allocation feature, see <a href="https://help.aliyun.com/document_detail/606232.html">Attached-resource allocation</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15246,12 +14890,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the settings of the Transfer Associated Resources feature.</para>
+        /// <para>Updates the settings of the associated resource group transfer feature by calling UpdateAssociatedTransferSetting.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the resources that support the Transfer Associated Resources feature, see <a href="https://help.aliyun.com/document_detail/606232.html">Use the Transfer Associated Resources feature</a>.</para>
+        /// <para>For cloud resources that support the attached-resource allocation feature, see <a href="https://help.aliyun.com/document_detail/606232.html">Attached-resource allocation</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15297,12 +14941,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the settings of the Transfer Associated Resources feature.</para>
+        /// <para>Updates the settings of the associated resource group transfer feature by calling UpdateAssociatedTransferSetting.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the resources that support the Transfer Associated Resources feature, see <a href="https://help.aliyun.com/document_detail/606232.html">Use the Transfer Associated Resources feature</a>.</para>
+        /// <para>For cloud resources that support the attached-resource allocation feature, see <a href="https://help.aliyun.com/document_detail/606232.html">Attached-resource allocation</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15320,12 +14964,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the settings of the Transfer Associated Resources feature.</para>
+        /// <para>Updates the settings of the associated resource group transfer feature by calling UpdateAssociatedTransferSetting.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the resources that support the Transfer Associated Resources feature, see <a href="https://help.aliyun.com/document_detail/606232.html">Use the Transfer Associated Resources feature</a>.</para>
+        /// <para>For cloud resources that support the attached-resource allocation feature, see <a href="https://help.aliyun.com/document_detail/606232.html">Attached-resource allocation</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15343,7 +14987,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of the Automatic Resource Transfer feature. You can update only the configuration of the Transfer Existing Associated Resources feature.</para>
+        /// <para>Calls UpdateAutoGroupingConfig to update the automatic group transfer settings. Currently, only the setting for whether to enable existing associated resources to follow the group transfer task is supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15385,7 +15029,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of the Automatic Resource Transfer feature. You can update only the configuration of the Transfer Existing Associated Resources feature.</para>
+        /// <para>Calls UpdateAutoGroupingConfig to update the automatic group transfer settings. Currently, only the setting for whether to enable existing associated resources to follow the group transfer task is supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15427,7 +15071,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of the Automatic Resource Transfer feature. You can update only the configuration of the Transfer Existing Associated Resources feature.</para>
+        /// <para>Calls UpdateAutoGroupingConfig to update the automatic group transfer settings. Currently, only the setting for whether to enable existing associated resources to follow the group transfer task is supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15445,7 +15089,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of the Automatic Resource Transfer feature. You can update only the configuration of the Transfer Existing Associated Resources feature.</para>
+        /// <para>Calls UpdateAutoGroupingConfig to update the automatic group transfer settings. Currently, only the setting for whether to enable existing associated resources to follow the group transfer task is supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15463,7 +15107,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a transfer rule.</para>
+        /// <para>Updates an automatic resource group transfer rule by calling UpdateAutoGroupingRule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15549,7 +15193,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a transfer rule.</para>
+        /// <para>Updates an automatic resource group transfer rule by calling UpdateAutoGroupingRule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15635,7 +15279,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a transfer rule.</para>
+        /// <para>Updates an automatic resource group transfer rule by calling UpdateAutoGroupingRule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15653,7 +15297,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a transfer rule.</para>
+        /// <para>Updates an automatic resource group transfer rule by calling UpdateAutoGroupingRule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15671,12 +15315,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a custom access control policy.</para>
+        /// <para>Modifies a custom control policy by calling UpdateControlPolicy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In this example, the name of the access control policy whose ID is <c>cp-jExXAqIYkwHN****</c> is changed to <c>NewControlPolicy</c>.</para>
+        /// <para>This topic provides an example on how to modify the name of the control policy <c>cp-jExXAqIYkwHN****</c> to <c>NewControlPolicy</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15730,12 +15374,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a custom access control policy.</para>
+        /// <para>Modifies a custom control policy by calling UpdateControlPolicy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In this example, the name of the access control policy whose ID is <c>cp-jExXAqIYkwHN****</c> is changed to <c>NewControlPolicy</c>.</para>
+        /// <para>This topic provides an example on how to modify the name of the control policy <c>cp-jExXAqIYkwHN****</c> to <c>NewControlPolicy</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15789,12 +15433,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a custom access control policy.</para>
+        /// <para>Modifies a custom control policy by calling UpdateControlPolicy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In this example, the name of the access control policy whose ID is <c>cp-jExXAqIYkwHN****</c> is changed to <c>NewControlPolicy</c>.</para>
+        /// <para>This topic provides an example on how to modify the name of the control policy <c>cp-jExXAqIYkwHN****</c> to <c>NewControlPolicy</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15812,12 +15456,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a custom access control policy.</para>
+        /// <para>Modifies a custom control policy by calling UpdateControlPolicy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In this example, the name of the access control policy whose ID is <c>cp-jExXAqIYkwHN****</c> is changed to <c>NewControlPolicy</c>.</para>
+        /// <para>This topic provides an example on how to modify the name of the control policy <c>cp-jExXAqIYkwHN****</c> to <c>NewControlPolicy</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15835,7 +15479,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the name of a folder.</para>
+        /// <para>Modifies the name of a folder by calling UpdateFolder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15881,7 +15525,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the name of a folder.</para>
+        /// <para>Modifies the name of a folder by calling UpdateFolder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15927,7 +15571,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the name of a folder.</para>
+        /// <para>Modifies the name of a folder by calling UpdateFolder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15945,7 +15589,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the name of a folder.</para>
+        /// <para>Modifies the name of a folder by calling UpdateFolder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15963,13 +15607,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the basic information of a resource group.</para>
+        /// <para>Modifies the display name of a resource group.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the display name of the resource group <c>rg-9gLOoK****</c> is changed to <c>project</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// UpdateResourceGroupRequest
@@ -16014,13 +15653,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the basic information of a resource group.</para>
+        /// <para>Modifies the display name of a resource group.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the display name of the resource group <c>rg-9gLOoK****</c> is changed to <c>project</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// UpdateResourceGroupRequest
@@ -16065,13 +15699,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the basic information of a resource group.</para>
+        /// <para>Modifies the display name of a resource group.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the display name of the resource group <c>rg-9gLOoK****</c> is changed to <c>project</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// UpdateResourceGroupRequest
@@ -16088,13 +15717,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the basic information of a resource group.</para>
+        /// <para>Modifies the display name of a resource group.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the display name of the resource group <c>rg-9gLOoK****</c> is changed to <c>project</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// UpdateResourceGroupRequest
@@ -16111,7 +15735,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configurations of a resource group administrator.</para>
+        /// <para>Updates the administrator settings of a resource group by calling UpdateResourceGroupAdminSetting.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16153,7 +15777,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configurations of a resource group administrator.</para>
+        /// <para>Updates the administrator settings of a resource group by calling UpdateResourceGroupAdminSetting.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16195,7 +15819,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configurations of a resource group administrator.</para>
+        /// <para>Updates the administrator settings of a resource group by calling UpdateResourceGroupAdminSetting.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16213,7 +15837,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configurations of a resource group administrator.</para>
+        /// <para>Updates the administrator settings of a resource group by calling UpdateResourceGroupAdminSetting.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16231,13 +15855,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about a Resource Access Management (RAM) role.</para>
+        /// <para>Updates the information of a RAM role.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the description of the RAM role <c>ECSAdmin</c> is updated to <c>ECS administrator</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// UpdateRoleRequest
@@ -16290,13 +15909,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about a Resource Access Management (RAM) role.</para>
+        /// <para>Updates the information of a RAM role.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the description of the RAM role <c>ECSAdmin</c> is updated to <c>ECS administrator</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// UpdateRoleRequest
@@ -16349,13 +15963,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about a Resource Access Management (RAM) role.</para>
+        /// <para>Updates the information of a RAM role.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the description of the RAM role <c>ECSAdmin</c> is updated to <c>ECS administrator</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// UpdateRoleRequest
@@ -16372,13 +15981,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about a Resource Access Management (RAM) role.</para>
+        /// <para>Updates the information of a RAM role.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>In this example, the description of the RAM role <c>ECSAdmin</c> is updated to <c>ECS administrator</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// UpdateRoleRequest

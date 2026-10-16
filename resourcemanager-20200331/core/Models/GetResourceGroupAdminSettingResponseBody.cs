@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class GetResourceGroupAdminSettingResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether enable the Use Creator as Administrator feature.</para>
+        /// <para>Indicates whether the resource group creator is set as the resource group administrator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

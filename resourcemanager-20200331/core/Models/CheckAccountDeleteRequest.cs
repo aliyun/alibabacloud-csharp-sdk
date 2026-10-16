@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class CheckAccountDeleteRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the member that you want to delete.</para>
+        /// <para>The ID of the member account to be deleted.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

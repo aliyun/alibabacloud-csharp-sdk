@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class CreateRoleRequest : TeaModel {
         /// <summary>
-        /// <para>The document of the policy that specifies</para>
-        /// <para>one or more trusted entities to assume the role. The trusted entities can be Alibaba Cloud accounts, Alibaba Cloud services, or identity providers (IdPs).</para>
+        /// <para>The content of the access policy for assuming the role.</para>
+        /// <para>Specifies one or more entities that are allowed to assume the role. The trusted entity can be an Alibaba Cloud account, an Alibaba Cloud service, or an identity provider.</para>
         /// <remarks>
-        /// <para> RAM users cannot assume the RAM roles of trusted Alibaba Cloud services.</para>
+        /// <para>A Resource Access Management (RAM) user cannot assume a RAM role whose trusted entity is an Alibaba Cloud service.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         /// <para>The description must be 1 to 1,024 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ECS administrator</para>
+        /// <para>ECS management role</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         /// <summary>
         /// <para>The maximum session duration of the role.</para>
         /// <para>Valid values: 3600 to 43200. Unit: seconds. Default value: 3600.</para>
-        /// <para>If you do not specify this parameter, the default value is used.</para>
+        /// <para>If this parameter is left empty, the default value is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 
         /// <summary>
         /// <para>The name of the role.</para>
-        /// <para>The name must be 1 to 64 characters in length, and can contain letters, digits, periods (.), and hyphens (-).</para>
+        /// <para>The name must be 1 to 64 characters in length and can contain letters, digits, periods (.), and hyphens (-).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

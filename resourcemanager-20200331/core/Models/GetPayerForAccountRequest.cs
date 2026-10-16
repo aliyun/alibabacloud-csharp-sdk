@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class GetPayerForAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the account.</para>
+        /// <para>The ID of the member account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

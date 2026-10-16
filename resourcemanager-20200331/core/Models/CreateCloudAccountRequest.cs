@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class CreateCloudAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The display name of the member account.</para>
+        /// <para>The member name.</para>
         /// <para>The name must be 2 to 50 characters in length and can contain letters, digits, underscores (_), periods (.), and hyphens (-).</para>
-        /// <para>The name must be unique in the current resource directory.</para>
+        /// <para>The member name must be unique within the resource directory.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string ParentFolderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the settlement account. If you do not specify this parameter, the current account is used for settlement.</para>
+        /// <para>The ID of the settlement account. If this parameter is left empty, the current account is used for settlement.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12323344****</para>

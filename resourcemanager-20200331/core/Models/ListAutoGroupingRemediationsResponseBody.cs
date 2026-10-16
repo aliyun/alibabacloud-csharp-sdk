@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>The token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TGlzdFJlc291cm****</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string RemediationId { get; set; }
 
             /// <summary>
-            /// <para>The remediation time.</para>
+            /// <para>The remediation time. The format is YYYY-MM-DD HH:mm:ss without a time zone identifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-01-01 00:00:00</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 
             /// <summary>
             /// <para>The resource type.</para>
-            /// <para>You can obtain the resource type from the <b>Resource type</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</para>
+            /// <para>You can obtain the resource type from the <b>Resource Type</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>instance</para>
@@ -89,8 +89,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud service.</para>
-            /// <para>You can obtain the ID from the <b>Service code</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</para>
+            /// <para>The cloud service ID.</para>
+            /// <para>You can obtain the cloud service ID from the <b>Cloud Service Code</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecs</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string Service { get; set; }
 
             /// <summary>
-            /// <para>The information about the new resource group.</para>
+            /// <para>The information about the target resource group for remediation.</para>
             /// </summary>
             [NameInMap("TargetResourceGroupInfo")]
             [Validation(Required=false)]

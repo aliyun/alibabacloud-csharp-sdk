@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>06950264-3f0d-4ca9-82dd-6ee7a3d33d6b</para>
+        /// <para>06950264-3f0d-4ca9-82dd-6ee7a3d3****</para>
         /// </summary>
         [NameInMap("RecordId")]
         [Validation(Required=false)]

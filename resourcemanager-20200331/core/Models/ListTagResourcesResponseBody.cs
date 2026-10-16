@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the next query is required.</para>
+        /// <para>Indicates whether the <c>NextToken</c> parameter is returned for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the value of this parameter is empty (<c>&quot;NextToken&quot;: &quot;&quot;</c>), all results are returned, and the next query is not required.</description></item>
-        /// <item><description>If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.</description></item>
+        /// <item><description>If <c>NextToken</c> is empty, which is displayed as <c>&quot;NextToken&quot;: &quot;&quot;</c>, no next query exists.</description></item>
+        /// <item><description>If <c>NextToken</c> is returned with a value, the value is the token that is used to start the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8054B059-6B36-53BF-AA45-B8C9A0ED05AB</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public List<ListTagResourcesResponseBodyTagResources> TagResources { get; set; }
         public class ListTagResourcesResponseBodyTagResources : TeaModel {
             /// <summary>
-            /// <para>The ID of the resource group or member.</para>
+            /// <para>The resource group ID or resource directory member ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-aekz6bre2uq****</para>
@@ -51,10 +51,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The type of the object whose tags are queried. Valid values:</para>
+            /// <para>The resource type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>resourcegroup: resource group</description></item>
-            /// <item><description>Account: member</description></item>
+            /// <item><description>resourcegroup: resource group.</description></item>
+            /// <item><description>Account: resource directory member.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

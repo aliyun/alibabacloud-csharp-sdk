@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class GetAutoGroupingRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the rule.</para>
+        /// <para>The rule ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

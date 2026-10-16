@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class DetachControlPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the access control policy.</para>
+        /// <para>The ID of the control policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,11 +21,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string PolicyId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the object from which you want to detach the access control policy. Access control policies can be attached to the following objects:</para>
+        /// <para>The ID of the target node. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Root folder</description></item>
-        /// <item><description>Subfolders of the Root folder</description></item>
-        /// <item><description>Members</description></item>
+        /// <item><description>Root ID: detaches the control policy from the Root resource folder.</description></item>
+        /// <item><description>Resource folder ID: detaches the control policy from a resource folder.</description></item>
+        /// <item><description>Member ID: detaches the control policy from a member.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

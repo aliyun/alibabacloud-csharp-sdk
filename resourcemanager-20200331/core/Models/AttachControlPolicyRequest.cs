@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class AttachControlPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the access control policy.</para>
+        /// <para>The ID of the control policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,11 +21,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string PolicyId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the object to which you want to attach the access control policy. Access control policies can be attached to the following objects:</para>
+        /// <para>The target node. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Root folder</description></item>
-        /// <item><description>Subfolders of the Root folder</description></item>
-        /// <item><description>Members</description></item>
+        /// <item><description>Root ID: attaches the control policy to the Root resource folder.</description></item>
+        /// <item><description>Resource folder ID: attaches the control policy to a resource folder.</description></item>
+        /// <item><description>Member ID: attaches the control policy to a member.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

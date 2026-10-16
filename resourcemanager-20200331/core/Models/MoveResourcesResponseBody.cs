@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class MoveResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C00B89D3-3247-11DE-95D8-A7C01FB0AB4F</para>
@@ -20,16 +20,16 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned results.</para>
+        /// <para>The response results.</para>
         /// </summary>
         [NameInMap("Responses")]
         [Validation(Required=false)]
         public List<MoveResourcesResponseBodyResponses> Responses { get; set; }
         public class MoveResourcesResponseBodyResponses : TeaModel {
             /// <summary>
-            /// <para>The error code returned.</para>
+            /// <para>The error code.</para>
             /// <remarks>
-            /// <para> This parameter is returned if the resource failed to be moved.</para>
+            /// <para>This parameter is returned only when the resource transfer fails.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -40,13 +40,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The error message returned.</para>
+            /// <para>The error message.</para>
             /// <remarks>
-            /// <para> This parameter is returned if the resource failed to be moved.</para>
+            /// <para>This parameter is returned only when the resource transfer fails.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>No permissions</para>
+            /// <para>No permission</para>
             /// </summary>
             [NameInMap("ErrorMsg")]
             [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the request.</para>
+            /// <para>The request ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>C00B89D3-3247-11DE-95D8-A7C01FB0AB4F</para>
@@ -73,40 +73,40 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string RequestId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource.</para>
+            /// <para>The resource ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>vpc-bp1sig0mjktx5ewx1****</para>
+            /// <para>i-23v38****</para>
             /// </summary>
             [NameInMap("ResourceId")]
             [Validation(Required=false)]
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The type of the resource.</para>
+            /// <para>The resource type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>vpc</para>
+            /// <para>instance</para>
             /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud service.</para>
+            /// <para>The cloud service code.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>vpc</para>
+            /// <para>ecs</para>
             /// </summary>
             [NameInMap("Service")]
             [Validation(Required=false)]
             public string Service { get; set; }
 
             /// <summary>
-            /// <para>The status of the move task. Valid values:</para>
+            /// <para>The status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>SUCCESS</description></item>
-            /// <item><description>FAIL</description></item>
+            /// <item><description>SUCCESS: Succeeded.</description></item>
+            /// <item><description>FAIL: Failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

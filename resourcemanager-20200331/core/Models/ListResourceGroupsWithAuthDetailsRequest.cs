@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListResourceGroupsWithAuthDetailsRequest : TeaModel {
         /// <summary>
-        /// <para>The display name of the resource group. This parameter specifies a filter condition for the query. Fuzzy search is supported.</para>
-        /// <para>The display name can be a maximum of 50 characters in length.</para>
+        /// <para>The display name of the resource group. This parameter is used as a filter condition. Fuzzy match is supported.</para>
+        /// <para>The name can be up to 50 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TestRG-BVT1</para>
@@ -21,14 +21,16 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the information of tags. Valid values:</para>
+        /// <para>Specifies whether to return tag information. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false (default)</description></item>
-        /// <item><description>true</description></item>
-        /// </list>
+        /// <item><description><para>false (default): Does not return tag information.</para>
+        /// </description></item>
+        /// <item><description><para>true: Returns tag information.</para>
         /// <remarks>
-        /// <para> If you set a tag filter condition, the tag information is returned regardless of the <c>IncludeTags</c> value.</para>
+        /// <para>If you specify tag-based filter conditions, tag information is always returned regardless of the value of <c>IncludeTags</c>.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -38,8 +40,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public bool? IncludeTags { get; set; }
 
         /// <summary>
-        /// <para>The identifier of the resource group. This parameter specifies a filter condition for the query. Fuzzy search is supported.</para>
-        /// <para>The identifier can be a maximum of 50 characters in length and can contain letters, digits, and hyphens (-).</para>
+        /// <para>The unique identifier of the resource group. This parameter is used as a filter condition. Fuzzy match is supported.</para>
+        /// <para>The identifier can be up to 50 characters in length and can contain letters, digits, and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>prod-rg</para>
@@ -49,7 +51,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -59,7 +61,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -69,14 +71,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the resource groups that you want to query.</para>
+        /// <para>The list of resource group IDs.</para>
         /// </summary>
         [NameInMap("ResourceGroupIds")]
         [Validation(Required=false)]
         public List<string> ResourceGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the resource resides.</para>
+        /// <para>The region ID of the resource.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shenzhen</para>
@@ -86,7 +88,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string ResourceRegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource types.</para>
+        /// <para>The list of resource types.</para>
         /// </summary>
         [NameInMap("ResourceTypes")]
         [Validation(Required=false)]
@@ -94,7 +96,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public class ListResourceGroupsWithAuthDetailsRequestResourceTypes : TeaModel {
             /// <summary>
             /// <para>The resource type.</para>
-            /// <para>You can obtain the resource type from the <b>Resource type</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</para>
+            /// <para>You can obtain the resource type from the <b>Resource Type</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>instance</para>
@@ -104,8 +106,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string ResourceTypeCode { get; set; }
 
             /// <summary>
-            /// <para>The service code.</para>
-            /// <para>You can obtain the code from the <b>Service code</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</para>
+            /// <para>The cloud service code.</para>
+            /// <para>You can obtain the cloud service code from the <b>Cloud Service Code</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecs</para>
@@ -117,11 +119,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         }
 
         /// <summary>
-        /// <para>The status of the resource group. This parameter specifies a filter condition for the query. Valid values:</para>
+        /// <para>The status of the resource group. This parameter is used as a filter condition. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Creating: The resource group is being created.</description></item>
-        /// <item><description>OK: The resource group is created.</description></item>
-        /// <item><description>PendingDelete: The resource group is waiting to be deleted.</description></item>
+        /// <item><description>Creating: Being created.</description></item>
+        /// <item><description>OK: Created.</description></item>
+        /// <item><description>PendingDelete: Pending deletion.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

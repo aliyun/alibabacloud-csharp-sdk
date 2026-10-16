@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the RAM role.</para>
+        /// <para>The information of the RAM role.</para>
         /// </summary>
         [NameInMap("Role")]
         [Validation(Required=false)]
         public UpdateRoleResponseBodyRole Role { get; set; }
         public class UpdateRoleResponseBodyRole : TeaModel {
             /// <summary>
-            /// <para>The Alibaba Cloud Resource Name (ARN) of the RAM role.</para>
+            /// <para>The resource descriptor of the RAM role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:ram::123456789012****:role/ECSAdmin</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string AssumeRolePolicyDocument { get; set; }
 
             /// <summary>
-            /// <para>The time when the RAM role was created.</para>
+            /// <para>The time when the RAM role was created. The time is in RFC 3339 UTC format, indicated by Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-01-23T12:33:18Z</para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             /// <para>The description of the RAM role.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ECS administrator</para>
+            /// <para>ECS management role</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The maximum session time of the RAM role.</para>
+            /// <para>The maximum session duration of the RAM role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3600</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string RoleName { get; set; }
 
             /// <summary>
-            /// <para>The name of the RAM role after authorization.</para>
+            /// <para>The name of the authorized RAM role.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:ECSAdmin@role.123456.onaliyunservice.com">ECSAdmin@role.123456.onaliyunservice.com</a></para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string RolePrincipalName { get; set; }
 
             /// <summary>
-            /// <para>The time when the RAM role was updated.</para>
+            /// <para>The time when the RAM role was last updated. The time is in RFC 3339 UTC format, indicated by Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2016-01-23T12:33:18Z</para>

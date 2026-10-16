@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class GetServiceLinkedRoleDeletionStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The cause for the failure of the deletion task.</para>
+        /// <para>The reason why the deletion task failed.</para>
         /// </summary>
         [NameInMap("Reason")]
         [Validation(Required=false)]
         public GetServiceLinkedRoleDeletionStatusResponseBodyReason Reason { get; set; }
         public class GetServiceLinkedRoleDeletionStatusResponseBodyReason : TeaModel {
             /// <summary>
-            /// <para>The failure information.</para>
+            /// <para>The error message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Service-Linked Role acs:ram::196813227629****:role/aliyunserviceroleforhdr cannot be deleted as it is in use by hdr.aliyuncs.com.</para>
@@ -65,13 +65,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the task.</para>
+        /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SUCCEEDED</description></item>
-        /// <item><description>IN_PROGRESS</description></item>
-        /// <item><description>FAILED</description></item>
-        /// <item><description>NOT_STARTED</description></item>
-        /// <item><description>INTERNAL_ERROR</description></item>
+        /// <item><description>SUCCEEDED: The deletion was successful.</description></item>
+        /// <item><description>IN_PROGRESS: The deletion is in progress.</description></item>
+        /// <item><description>FAILED: The deletion failed.</description></item>
+        /// <item><description>NOT_STARTED: The deletion has not started.</description></item>
+        /// <item><description>INTERNAL_ERROR: An internal error occurred.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

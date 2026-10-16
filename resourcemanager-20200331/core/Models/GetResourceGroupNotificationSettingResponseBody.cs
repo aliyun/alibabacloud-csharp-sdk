@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the group event notification is enabled.</para>
+        /// <para>Indicates whether group event notification is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

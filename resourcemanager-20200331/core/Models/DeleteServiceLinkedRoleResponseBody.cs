@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class DeleteServiceLinkedRoleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the deletion task.</para>
+        /// <para>The deletion task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>task/acs-service-role/polardb.aliyuncs.com/AliyunServiceRoleForPolarDB/64c4f9cc-fac2-4692-ae1b-804ae4b9****</para>

@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListFoldersForParentRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return.</para>
-        /// <para>Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number.</para>
+        /// <para>Minimum value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// <para>Valid values: 1 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 
         /// <summary>
         /// <para>The ID of the parent folder.</para>
-        /// <para>If you leave this parameter empty, the information of the first-level subfolders of the Root folder is queried.</para>
+        /// <para>If you leave this parameter empty, the subfolders at the next level of the Root folder are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-b1****</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string ParentFolderId { get; set; }
 
         /// <summary>
-        /// <para>The keyword used for the query, such as a folder name.</para>
+        /// <para>The query keyword, such as a folder name.</para>
         /// <para>Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>

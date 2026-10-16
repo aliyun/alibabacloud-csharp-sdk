@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class BindSecureMobilePhoneRequest : TeaModel {
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the member.</para>
+        /// <para>The member ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,11 +21,16 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string AccountId { get; set; }
 
         /// <summary>
-        /// <para>The mobile phone number that you want to bind to the member for security purposes.</para>
-        /// <para>The mobile phone number you specify must be the same as the mobile phone number that you specify when you call the <a href="https://help.aliyun.com/document_detail/372556.html">SendVerificationCodeForBindSecureMobilePhone</a> operation to obtain a verification code.</para>
-        /// <para>Specify the mobile phone number in the \<Country code>-\<Mobile phone number> format.</para>
+        /// <para>The secure phone number.</para>
+        /// <para>The phone number must be the same as the one that you specified when you called <a href="https://help.aliyun.com/document_detail/372556.html">SendVerificationCodeForBindSecureMobilePhone</a> to authenticate and obtain the verification code.</para>
+        /// <para>Format: <Country code>-<Phone number>.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <remarks>
-        /// <para> Mobile phone numbers in the <c>86-&lt;Mobile phone number&gt;</c> format in the Chinese mainland are not supported.</para>
+        /// <para>Only the Chinese mainland phone numbers in the <c>86-&lt;Phone number&gt;</c> format are supported.</para>
+        /// </remarks>
+        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+        /// <remarks>
+        /// <para>The Chinese mainland phone numbers in the <c>86-&lt;Phone number&gt;</c> format are not supported.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -38,7 +43,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 
         /// <summary>
         /// <para>The verification code.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/372556.html">SendVerificationCodeForBindSecureMobilePhone</a> operation to obtain the verification code.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/372556.html">SendVerificationCodeForBindSecureMobilePhone</a> to obtain the verification code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class GetRoleRequest : TeaModel {
         /// <summary>
-        /// <para>The language in which you want to return the description of the role. Valid values:</para>
+        /// <para>The language type. The role description is returned in the specified language. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>en: English</description></item>
-        /// <item><description>zh-CN: Chinese</description></item>
-        /// <item><description>ja: Japanese</description></item>
+        /// <item><description>en: English.</description></item>
+        /// <item><description>zh-CN: Chinese.</description></item>
+        /// <item><description>ja: Japanese.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,8 +25,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The name of the role.</para>
-        /// <para>The name must be 1 to 64 characters in length, and can contain letters, digits, periods (.), and hyphens (-).</para>
+        /// <para>The role name.</para>
+        /// <para>The name must be 1 to 64 characters in length and can contain letters, digits, periods (.), and hyphens (-).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

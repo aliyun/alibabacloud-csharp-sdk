@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class GetAccountDeletionStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The deletion status of the member.</para>
+        /// <para>The deletion status of the member account.</para>
         /// </summary>
         [NameInMap("RdAccountDeletionStatus")]
         [Validation(Required=false)]
         public GetAccountDeletionStatusResponseBodyRdAccountDeletionStatus RdAccountDeletionStatus { get; set; }
         public class GetAccountDeletionStatusResponseBodyRdAccountDeletionStatus : TeaModel {
             /// <summary>
-            /// <para>The Alibaba Cloud account ID of the member.</para>
+            /// <para>The ID of the member account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>169946124551****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The start time of the deletion.</para>
+            /// <para>The time when the deletion started, in RFC 3339 format with a UTC offset of +08:00.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-08-23T17:05:30+08:00</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The end time of the deletion.</para>
+            /// <para>The time when the deletion ended, in RFC 3339 format with a UTC offset of +08:00.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -48,10 +48,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string DeletionTime { get; set; }
 
             /// <summary>
-            /// <para>The type of the deletion. Valid values:</para>
+            /// <para>The deletion type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: direct deletion. If the member does not have pay-as-you-go resources that are purchased within the previous 30 days, the system directly deletes the member.</description></item>
-            /// <item><description>1: deletion with a silence period. If the member has pay-as-you-go resources that are purchased within the previous 30 days, the member enters a silence period. The system starts to delete the member until the silence period ends. For more information about the silence period, see <a href="https://help.aliyun.com/document_detail/446079.html">What is the silence period for member deletion?</a></description></item>
+            /// <item><description>0: direct deletion. If the member account has no pay-as-you-go resources in the last 30 days, the system directly deletes the member account.</description></item>
+            /// <item><description>1: cool-down period deletion. If the member account has pay-as-you-go resources in the last 30 days, the member account enters a cool-down period. The system starts to delete the member account after the cool-down period ends. For more information about the cool-down period, see <a href="https://help.aliyun.com/document_detail/446079.html">What is the cool-down period for member account deletion</a>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string DeletionType { get; set; }
 
             /// <summary>
-            /// <para>The reasons why the member fails to be deleted.</para>
+            /// <para>The reasons for the deletion failure.</para>
             /// </summary>
             [NameInMap("FailReasonList")]
             [Validation(Required=false)]
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The name of the cloud service to which the check item belongs.</para>
+                /// <para>The service name of the cloud service to which the check item belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Others</para>
@@ -93,11 +93,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             /// <summary>
             /// <para>The status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Success: The member is deleted.</description></item>
-            /// <item><description>Checking: A deletion check is being performed for the member.</description></item>
-            /// <item><description>Deleting: The member is being deleted.</description></item>
-            /// <item><description>CheckFailed: The deletion check for the member fails.</description></item>
-            /// <item><description>DeleteFailed: The member fails to be deleted.</description></item>
+            /// <item><description>Success: The member account is deleted.</description></item>
+            /// <item><description>Checking: The check is in progress.</description></item>
+            /// <item><description>Deleting: The deletion is in progress.</description></item>
+            /// <item><description>CheckFailed: The check failed.</description></item>
+            /// <item><description>DeleteFailed: The deletion failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8AA43293-7C8F-5730-8F2D-7F864EC092C5</para>

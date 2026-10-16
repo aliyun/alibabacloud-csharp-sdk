@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ResendCreateCloudAccountEmailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information of the member account.</para>
+        /// <para>The member account information.</para>
         /// </summary>
         [NameInMap("Account")]
         [Validation(Required=false)]
         public ResendCreateCloudAccountEmailResponseBodyAccount Account { get; set; }
         public class ResendCreateCloudAccountEmailResponseBodyAccount : TeaModel {
             /// <summary>
-            /// <para>The ID of the account.</para>
+            /// <para>The account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12323344****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The name of the account.</para>
+            /// <para>The account name.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:someone@example.com">someone@example.com</a></para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the folder.</para>
+            /// <para>The ID of the resource folder.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fd-bVaRIG****</para>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string FolderId { get; set; }
 
             /// <summary>
-            /// <para>The way in which the member account joined the resource directory. Valid values:</para>
+            /// <para>The method used by the member account to join the resource directory. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>invited: The member account is invited to join the resource directory.</description></item>
-            /// <item><description>created: The member account is directly created in the resource directory.</description></item>
+            /// <item><description>invited: Invited.</description></item>
+            /// <item><description>created: Created.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string JoinMethod { get; set; }
 
             /// <summary>
-            /// <para>The time when the member account joined the resource directory.</para>
+            /// <para>The time when the member account joined the resource directory. The time is displayed in UTC, as specified by RFC 3339, with Z indicating UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-01-23T12:33:18Z</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string JoinTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the member account was modified.</para>
+            /// <para>The time when the member account was last modified. The time is displayed in UTC, as specified by RFC 3339, with Z indicating UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-01-23T12:33:18Z</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             /// <para>The account record ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>16950264-3f0d-4ca9-82dd-6ee7a3d33d6b</para>
+            /// <para>16950264-3f0d-4ca9-82dd-6ee7a3d3****</para>
             /// </summary>
             [NameInMap("RecordId")]
             [Validation(Required=false)]
@@ -111,20 +111,20 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string ResourceDirectoryId { get; set; }
 
             /// <summary>
-            /// <para>The status of the member account. Valid values:</para>
+            /// <para>The join status of the member account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CreateSuccess: The member account is created.</description></item>
-            /// <item><description>CreateVerifying: The creation of the member account is under confirmation.</description></item>
-            /// <item><description>CreateFailed: The member account failed to be created.</description></item>
-            /// <item><description>CreateExpired: The creation of the member account expired.</description></item>
-            /// <item><description>CreateCancelled: The creation of the member account is canceled.</description></item>
-            /// <item><description>PromoteVerifying: The upgrade of the member account is under confirmation.</description></item>
-            /// <item><description>PromoteFailed: The member account failed to be upgraded.</description></item>
-            /// <item><description>PromoteExpired: The upgrade of the member account expired.</description></item>
-            /// <item><description>PromoteCancelled: The upgrade of the member account is canceled.</description></item>
-            /// <item><description>PromoteSuccess: The member account is upgraded.</description></item>
-            /// <item><description>InviteSuccess: The owner of the member account accepted the invitation.</description></item>
-            /// <item><description>Removed: The member account is removed from the resource directory.</description></item>
+            /// <item><description>CreateSuccess: Created.</description></item>
+            /// <item><description>CreateVerifying: Pending creation confirmation.</description></item>
+            /// <item><description>CreateFailed: Creation failed.</description></item>
+            /// <item><description>CreateExpired: Creation expired.</description></item>
+            /// <item><description>CreateCancelled: Creation canceled.</description></item>
+            /// <item><description>PromoteVerifying: Pending upgrade confirmation.</description></item>
+            /// <item><description>PromoteFailed: Upgrade failed.</description></item>
+            /// <item><description>PromoteExpired: Upgrade expired.</description></item>
+            /// <item><description>PromoteCancelled: Upgrade canceled.</description></item>
+            /// <item><description>PromoteSuccess: Upgraded.</description></item>
+            /// <item><description>InviteSuccess: Invited.</description></item>
+            /// <item><description>Removed: Removed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The type of the member account. The value CloudAccount indicates that the member account is a cloud account.</para>
+            /// <para>The type of the member account. The value CloudAccount indicates a cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CloudAccount</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9B34724D-54B0-4A51-B34D-4512372FE1BE</para>

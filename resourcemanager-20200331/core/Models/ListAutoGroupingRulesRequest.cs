@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListAutoGroupingRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries to return for a single request. Valid values: 1 to 50.</para>
+        /// <para>The maximum number of entries to return in a single request. Valid values: 1 to 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>If the response is truncated, you can use NextToken to send another request to retrieve the content after the current truncation point.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TGlzdFJlc291cm****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the rule.</para>
+        /// <para>The rule ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gr-acfo******hy6a</para>
@@ -40,20 +40,20 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string RuleId { get; set; }
 
         /// <summary>
-        /// <para>The name of the rule.</para>
+        /// <para>The rule name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Custom Transfer Rule for Online Resources of Project A</para>
+        /// <para>Auto group transfer rule for Project A online resources</para>
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The type of the rule. Valid values:</para>
+        /// <para>The rule type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>custom_condition: custom transfer rule</description></item>
-        /// <item><description>associated_transfer: transfer rule for associated resources</description></item>
+        /// <item><description>custom_condition: custom rule-based group transfer.</description></item>
+        /// <item><description>associated_transfer: attached-resource allocation group transfer.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

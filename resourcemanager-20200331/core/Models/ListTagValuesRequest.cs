@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListTagValuesRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries to return for a single request.</para>
+        /// <para>The maximum number of entries to return in a single request.</para>
         /// <para>Valid values: 1 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 
         /// <summary>
         /// <para>The resource type.</para>
-        /// <para>The value Account indicates the members of the resource directory.</para>
+        /// <para>Set the value to Account, which indicates a member of a resource directory.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tag key. This parameter specifies a filter condition for the query.</para>
+        /// <para>The tag key that is used as a filter condition for the query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string TagKey { get; set; }
 
         /// <summary>
-        /// <para>The tag value for a fuzzy query.</para>
+        /// <para>The tag value for fuzzy match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v1</para>

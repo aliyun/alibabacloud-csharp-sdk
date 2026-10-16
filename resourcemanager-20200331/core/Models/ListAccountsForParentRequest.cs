@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListAccountsForParentRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to return the information of tags. Valid values:</para>
-        /// <para>false (default value)</para>
-        /// <para>true</para>
+        /// <para>Specifies whether to return tag information. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>false (default): Does not return tag information.</description></item>
+        /// <item><description>true: Returns tag information.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -22,8 +24,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public bool? IncludeTags { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
-        /// <para>Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number.</para>
+        /// <para>Minimum value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -33,7 +35,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// <para>Valid values: 1 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the folder.</para>
+        /// <para>The ID of the resource folder.</para>
         /// 
         /// <b>Example:</b>
         /// <para>fd-bVaRIG****</para>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string ParentFolderId { get; set; }
 
         /// <summary>
-        /// <para>The keyword used for the query, such as the display name of a member.</para>
+        /// <para>The query keyword, such as the member name.</para>
         /// <para>Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
@@ -65,14 +67,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string QueryKeyword { get; set; }
 
         /// <summary>
-        /// <para>The tag key and value.</para>
+        /// <para>The tags used to filter member accounts.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListAccountsForParentRequestTag> Tag { get; set; }
         public class ListAccountsForParentRequestTag : TeaModel {
             /// <summary>
-            /// <para>A tag key.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tag_key</para>
@@ -82,7 +84,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>A tag value.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tag_value</para>

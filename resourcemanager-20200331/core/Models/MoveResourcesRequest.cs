@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class MoveResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the resource group to which you want to move the resources.</para>
+        /// <para>The ID of the destination resource group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The resources that you want to move.</para>
+        /// <para>The list of resources to move.</para>
         /// <remarks>
-        /// <para> You can move a maximum of 10 resources at a time. If you want to move more than 10 resources, move them in batches.</para>
+        /// <para>A maximum of 10 resources can be moved at a time. Move resources in batches if you have more than 10.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -42,30 +42,32 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource.</para>
+            /// <para>The resource ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>vpc-bp1sig0mjktx5ewx1****</para>
+            /// <para>i-23v38****</para>
             /// </summary>
             [NameInMap("ResourceId")]
             [Validation(Required=false)]
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The type of the resource.</para>
+            /// <para>The resource type.</para>
+            /// <para>You can obtain the value from the <b>Resource Type</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>vpc</para>
+            /// <para>instance</para>
             /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud service to which the resource belongs.</para>
+            /// <para>The cloud service code.</para>
+            /// <para>You can obtain the value from the <b>Cloud Service Code</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>vpc</para>
+            /// <para>ecs</para>
             /// </summary>
             [NameInMap("Service")]
             [Validation(Required=false)]

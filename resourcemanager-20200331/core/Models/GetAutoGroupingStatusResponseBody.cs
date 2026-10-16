@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class GetAutoGroupingStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the Transfer Existing Associated Resources feature is enabled. Valid values:</para>
+        /// <para>Indicates whether the attached-resource allocation for existing resources is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: Enabled.</description></item>
+        /// <item><description>false: Not enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,12 +24,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public bool? EnableExistedResourcesTransfer { get; set; }
 
         /// <summary>
-        /// <para>The status of the Automatic Resource Transfer feature. Valid values:</para>
+        /// <para>The status of automatic resource group transfer. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Enabling: The feature is being enabled.</description></item>
-        /// <item><description>Enable: The feature is enabled.</description></item>
-        /// <item><description>Partial_Enable: The transfer of associated resources is enabled, but custom transfer rule-based resource transfer is disabled. You can call the <a href="https://help.aliyun.com/document_detail/2870380.html">EnableAutoGrouping</a> operation to enable custom transfer rule-based resource transfer.</description></item>
-        /// <item><description>Disable: The feature is disabled.</description></item>
+        /// <item><description>Enabling: Being enabled.</description></item>
+        /// <item><description>Enable: Enabled.</description></item>
+        /// <item><description>Partial_Enable: Attached-resource allocation is enabled, but custom condition-based resource group transfer is not enabled. To enable custom condition-based resource group transfer, call <a href="~~EnableAutoGrouping~~">EnableAutoGrouping</a>.</description></item>
+        /// <item><description>Disable: Not enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class GetResourceGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2D69A58F-345C-4FDE-88E4-BF5189484043</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information of the resource group.</para>
+        /// <para>The resource group information.</para>
         /// </summary>
         [NameInMap("ResourceGroup")]
         [Validation(Required=false)]
         public GetResourceGroupResponseBodyResourceGroup ResourceGroup { get; set; }
         public class GetResourceGroupResponseBodyResourceGroup : TeaModel {
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the resource group belongs.</para>
+            /// <para>The Alibaba Cloud account ID to which the resource group belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456789****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The time when the resource group was created. The time is displayed in UTC.</para>
+            /// <para>The time when the resource group was created (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-01-23T12:33:18Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group.</para>
+            /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-9gLOoK****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the resource group.</para>
+            /// <para>The unique identifier of the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-project</para>

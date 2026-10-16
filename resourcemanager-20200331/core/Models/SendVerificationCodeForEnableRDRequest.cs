@@ -10,10 +10,15 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class SendVerificationCodeForEnableRDRequest : TeaModel {
         /// <summary>
-        /// <para>The mobile phone number that is bound to the newly created account. If you leave this parameter empty, the mobile phone number that is bound to the current account is used.</para>
-        /// <para>Specify the mobile phone number in the <c>&lt;Country code&gt;-&lt;Mobile phone number&gt;</c> format.</para>
+        /// <para>The secure phone number of the new management account. If you leave this parameter empty, the secure phone number of the current logon account is used.</para>
+        /// <para>Format: <c>&lt;Country code&gt;-&lt;Phone number&gt;</c>.</para>
+        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
         /// <remarks>
-        /// <para> Mobile phone numbers in the <c>86-&lt;Mobile phone number&gt;</c> format in the Chinese mainland are not supported.</para>
+        /// <para>Phone numbers in the <c>86-&lt;Phone number&gt;</c> format from the Chinese mainland are not supported.</para>
+        /// </remarks>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
+        /// <remarks>
+        /// <para>Only phone numbers in the <c>86-&lt;Phone number&gt;</c> format from the Chinese mainland are supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class MoveAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the account you want to move.</para>
+        /// <para>The ID of the account to be moved.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

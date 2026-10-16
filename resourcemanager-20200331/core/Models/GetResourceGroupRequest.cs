@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class GetResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to return the information of tags. Valid values:</para>
+        /// <para>Specifies whether to return tag information. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false (default value)</description></item>
-        /// <item><description>true</description></item>
+        /// <item><description>false (default): does not return tag information.</description></item>
+        /// <item><description>true: returns tag information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,8 +24,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public bool? IncludeTags { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to obtain the ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> to query resource group IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

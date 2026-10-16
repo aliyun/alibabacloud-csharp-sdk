@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class UpdateAssociatedTransferSettingRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable the Transfer Existing Associated Resources feature. Valid values:</para>
+        /// <para>Specifies whether to start the task for transferring existing associated resources to the resource group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false</description></item>
-        /// <item><description>true</description></item>
+        /// <item><description>false: Does not start the task for transferring existing associated resources to the resource group.</description></item>
+        /// <item><description>true: Starts the task for transferring existing associated resources to the resource group.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,15 +24,15 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string EnableExistingResourcesTransfer { get; set; }
 
         /// <summary>
-        /// <para>The settings of transfer rules.</para>
+        /// <para>The rule settings of the associated resource group transfer feature.</para>
         /// </summary>
         [NameInMap("RuleSettings")]
         [Validation(Required=false)]
         public List<UpdateAssociatedTransferSettingRequestRuleSettings> RuleSettings { get; set; }
         public class UpdateAssociatedTransferSettingRequestRuleSettings : TeaModel {
             /// <summary>
-            /// <para>The type of the associated resource.</para>
-            /// <para>You can obtain the resource type from the <b>Resource type</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</para>
+            /// <para>The resource type of the associated resource.</para>
+            /// <para>You can obtain the resource type from the <b>Resource Type</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>disk</para>
@@ -42,8 +42,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string AssociatedResourceType { get; set; }
 
             /// <summary>
-            /// <para>The service code of the associated resource.</para>
-            /// <para>You can obtain the service code from the <b>Service code</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</para>
+            /// <para>The cloud service code of the associated resource.</para>
+            /// <para>You can obtain the cloud service code from the <b>Cloud Service Code</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecs</para>
@@ -53,8 +53,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string AssociatedService { get; set; }
 
             /// <summary>
-            /// <para>The type of the primary resource.</para>
-            /// <para>You can obtain the resource type from the <b>Resource type</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</para>
+            /// <para>The resource type of the master resource.</para>
+            /// <para>You can obtain the resource type from the <b>Resource Type</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>instance</para>
@@ -64,8 +64,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string MasterResourceType { get; set; }
 
             /// <summary>
-            /// <para>The service code of the primary resource.</para>
-            /// <para>You can obtain the service code from the <b>Service code</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</para>
+            /// <para>The cloud service code of the master resource.</para>
+            /// <para>You can obtain the cloud service code from the <b>Cloud Service Code</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecs</para>
@@ -75,10 +75,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string MasterService { get; set; }
 
             /// <summary>
-            /// <para>The status of the Transfer Associated Resources feature. Valid values:</para>
+            /// <para>The enabling status of the associated resource group transfer feature. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Enable: enabled</description></item>
-            /// <item><description>Disable: disabled</description></item>
+            /// <item><description>Enable: Enabled.</description></item>
+            /// <item><description>Disable: Disabled.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 

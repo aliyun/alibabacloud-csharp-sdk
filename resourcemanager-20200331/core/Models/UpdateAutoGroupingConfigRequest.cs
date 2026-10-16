@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class UpdateAutoGroupingConfigRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable the Transfer Existing Associated Resources feature. Valid values:</para>
+        /// <para>Specifies whether to enable existing associated resources to follow the group transfer task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false</description></item>
-        /// <item><description>true</description></item>
+        /// <item><description>false: Existing associated resources do not follow the group transfer task.</description></item>
+        /// <item><description>true: Existing associated resources follow the group transfer task.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

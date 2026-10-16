@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string NewDisplayName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to obtain the ID.</para>
+        /// <para>The resource group ID.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> to obtain the resource group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

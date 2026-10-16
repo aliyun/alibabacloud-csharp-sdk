@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The numbers of the resources.</para>
+        /// <para>The resource count.</para>
         /// </summary>
         [NameInMap("ResourceCounts")]
         [Validation(Required=false)]
         public List<GetResourceGroupResourceCountsResponseBodyResourceCounts> ResourceCounts { get; set; }
         public class GetResourceGroupResourceCountsResponseBodyResourceCounts : TeaModel {
             /// <summary>
-            /// <para>The number of the resources.</para>
+            /// <para>The resource count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public long? Count { get; set; }
 
             /// <summary>
-            /// <para>The dimension by which resources are queried.</para>
+            /// <para>The grouping dimension for resource count statistics.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ResourceGroupId</para>

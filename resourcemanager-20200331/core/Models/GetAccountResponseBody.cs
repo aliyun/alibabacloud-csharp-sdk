@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class GetAccountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information of the member.</para>
+        /// <para>The member account information.</para>
         /// </summary>
         [NameInMap("Account")]
         [Validation(Required=false)]
         public GetAccountResponseBodyAccount Account { get; set; }
         public class GetAccountResponseBodyAccount : TeaModel {
             /// <summary>
-            /// <para>The Alibaba Cloud account ID of the member.</para>
+            /// <para>The member account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>181761095690****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The Alibaba Cloud account name of the member.</para>
+            /// <para>The name of the account.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:someone@example.com">someone@example.com</a></para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string AccountName { get; set; }
 
             /// <summary>
-            /// <para>The display name of the member.</para>
+            /// <para>The display name of the member account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>admin</para>
@@ -47,13 +47,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The status of the modification for the email address bound to the member. Valid values:</para>
+            /// <para>The email status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>WAIT_MODIFY: in progress</description></item>
-            /// <item><description>CANCELLED: canceled</description></item>
-            /// <item><description>EXPIRED: expired</description></item>
+            /// <item><description>Empty: No email modification record exists.</description></item>
+            /// <item><description>WAIT_MODIFY: The modification is in progress.</description></item>
+            /// <item><description>CANCELLED: The modification is canceled.</description></item>
+            /// <item><description>EXPIRED: The modification has expired.</description></item>
             /// </list>
-            /// <para>If the value of this parameter is empty, no modification is performed for the email address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WAIT_MODIFY</para>
@@ -83,10 +83,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string IdentityInformation { get; set; }
 
             /// <summary>
-            /// <para>The way in which the member joins the resource directory. Valid values:</para>
+            /// <para>The method used by the member account to join the resource directory. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>invited: The member is invited to join the resource directory.</description></item>
-            /// <item><description>created: The member is directly created in the resource directory.</description></item>
+            /// <item><description>invited: Invited.</description></item>
+            /// <item><description>created: Created.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string JoinMethod { get; set; }
 
             /// <summary>
-            /// <para>The time when the member joined the resource directory.</para>
+            /// <para>The time when the member account joined the resource directory. The time is displayed in UTC, as specified by RFC 3339, with Z indicating UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-01-23T12:33:18Z</para>
@@ -107,14 +107,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string JoinTime { get; set; }
 
             /// <summary>
-            /// <para>The location of the member in the resource directory.</para>
+            /// <para>The location of the member account in the resource directory.</para>
             /// </summary>
             [NameInMap("Location")]
             [Validation(Required=false)]
             public string Location { get; set; }
 
             /// <summary>
-            /// <para>The time when the member was modified.</para>
+            /// <para>The time when the member account was last modified. The time is displayed in UTC, as specified by RFC 3339, with Z indicating UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-01-23T12:33:18Z</para>
@@ -134,22 +134,22 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string ResourceDirectoryId { get; set; }
 
             /// <summary>
-            /// <para>The path of the member in the resource directory.</para>
+            /// <para>The path ID (RDPath) of the member account in the resource directory.</para>
             /// </summary>
             [NameInMap("ResourceDirectoryPath")]
             [Validation(Required=false)]
             public string ResourceDirectoryPath { get; set; }
 
             /// <summary>
-            /// <para>The status of the member. Valid values:</para>
+            /// <para>The join status of the member account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CreateSuccess: The member is created.</description></item>
-            /// <item><description>PromoteVerifying: The upgrade of the member is being confirmed.</description></item>
-            /// <item><description>PromoteFailed: The upgrade of the member fails.</description></item>
-            /// <item><description>PromoteExpired: The upgrade of the member expires.</description></item>
-            /// <item><description>PromoteCancelled: The upgrade of the member is canceled.</description></item>
-            /// <item><description>PromoteSuccess: The member is upgraded.</description></item>
-            /// <item><description>InviteSuccess: The member accepts the invitation.</description></item>
+            /// <item><description>CreateSuccess: Created.</description></item>
+            /// <item><description>PromoteVerifying: Upgrade is being confirmed.</description></item>
+            /// <item><description>PromoteFailed: Upgrade failed.</description></item>
+            /// <item><description>PromoteExpired: Upgrade expired.</description></item>
+            /// <item><description>PromoteCancelled: Upgrade canceled.</description></item>
+            /// <item><description>PromoteSuccess: Upgrade succeeded.</description></item>
+            /// <item><description>InviteSuccess: Invitation succeeded.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -160,14 +160,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tags that are added to the member.</para>
+            /// <para>The tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<GetAccountResponseBodyAccountTags> Tags { get; set; }
             public class GetAccountResponseBodyAccountTags : TeaModel {
                 /// <summary>
-                /// <para>A tag key.</para>
+                /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>tag_key</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>A tag value.</para>
+                /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>tag_value</para>
@@ -189,10 +189,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             }
 
             /// <summary>
-            /// <para>The type of the member. Valid values:</para>
+            /// <para>The type of the member account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CloudAccount: cloud account</description></item>
-            /// <item><description>ResourceAccount: resource account</description></item>
+            /// <item><description>CloudAccount: Cloud account.</description></item>
+            /// <item><description>ResourceAccount: Resource account.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9B34724D-54B0-4A51-B34D-4512372FE1BE</para>

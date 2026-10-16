@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class InitResourceDirectoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CD76D376-2517-4924-92C5-DBC52262F93A</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information of the resource directory.</para>
+        /// <para>The resource directory information.</para>
         /// </summary>
         [NameInMap("ResourceDirectory")]
         [Validation(Required=false)]
         public InitResourceDirectoryResponseBodyResourceDirectory ResourceDirectory { get; set; }
         public class InitResourceDirectoryResponseBodyResourceDirectory : TeaModel {
             /// <summary>
-            /// <para>The time when the resource directory was enabled.</para>
+            /// <para>The time when the resource directory was enabled. The time is displayed in UTC in RFC 3339 format, indicated by Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-02-18T15:32:10.473Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the enterprise management account.</para>
+            /// <para>The ID of the management account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172841235500****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string MasterAccountId { get; set; }
 
             /// <summary>
-            /// <para>The name of the enterprise management account.</para>
+            /// <para>The name of the management account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aliyun-****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string ResourceDirectoryId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the root folder.</para>
+            /// <para>The ID of the Root folder.</para>
             /// 
             /// <b>Example:</b>
             /// <para>r-Zo****</para>

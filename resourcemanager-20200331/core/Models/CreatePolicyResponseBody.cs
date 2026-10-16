@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class CreatePolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the permission policy.</para>
+        /// <para>The access policy information.</para>
         /// </summary>
         [NameInMap("Policy")]
         [Validation(Required=false)]
         public CreatePolicyResponseBodyPolicy Policy { get; set; }
         public class CreatePolicyResponseBodyPolicy : TeaModel {
             /// <summary>
-            /// <para>The time when the permission policy was created.</para>
+            /// <para>The time when the access policy was created. The time is in RFC 3339 UTC format, indicated by Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-01-23T12:33:18Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string CreateDate { get; set; }
 
             /// <summary>
-            /// <para>The version number of the permission policy. Default value: v1.</para>
+            /// <para>The version number of the access policy. Default value: v1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v1</para>
@@ -37,17 +37,17 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string DefaultVersion { get; set; }
 
             /// <summary>
-            /// <para>The description of the permission policy.</para>
+            /// <para>The description of the access policy.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>OSS administrator</para>
+            /// <para>OSS administrator permissions</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The name of the permission policy.</para>
+            /// <para>The Policy Name of the access policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OSS-Administrator</para>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string PolicyName { get; set; }
 
             /// <summary>
-            /// <para>The type of the permission policy. Valid values:</para>
+            /// <para>The type of the access policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Custom</description></item>
-            /// <item><description>System</description></item>
+            /// <item><description>Custom: custom policy.</description></item>
+            /// <item><description>System: system policy.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

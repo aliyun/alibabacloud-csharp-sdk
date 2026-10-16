@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class CreateResourceAccountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the member.</para>
+        /// <para>The member information.</para>
         /// </summary>
         [NameInMap("Account")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The Alibaba Cloud account ID of the member.</para>
+            /// <para>The name of the account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alice@rd-3g****.aliyunid.com</para>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string FolderId { get; set; }
 
             /// <summary>
-            /// <para>The way in which the member joins the resource directory. Valid values:</para>
+            /// <para>The method used by the member to join the resource directory. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>invited: The member is invited to join the resource directory.</description></item>
-            /// <item><description>created: The member is directly created in the resource directory.</description></item>
+            /// <item><description>invited: invited.</description></item>
+            /// <item><description>created: created.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string JoinMethod { get; set; }
 
             /// <summary>
-            /// <para>The time when the member joined the resource directory. The time is displayed in UTC.</para>
+            /// <para>The time when the member joined the resource directory (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-12-31T03:37:39.456Z</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string JoinTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the member was modified. The time is displayed in UTC.</para>
+            /// <para>The time when the member was last modified (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-12-31T03:37:39.456Z</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string ResourceDirectoryId { get; set; }
 
             /// <summary>
-            /// <para>The status of the member. The value CreateSuccess indicates that the member is created.</para>
+            /// <para>The join status of the member. The value CreateSuccess indicates that the member is created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CreateSuccess</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The type of the member. The value ResourceAccount indicates that the member is a resource account.</para>
+            /// <para>The type of the member. The value ResourceAccount indicates a resource account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ResourceAccount</para>

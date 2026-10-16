@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class CreatePolicyVersionRequest : TeaModel {
         /// <summary>
-        /// <para>The document of the permission policy.</para>
-        /// <para>The document must be 1 to 6,144 characters in length.</para>
+        /// <para>The content of the access policy.</para>
+        /// <para>The content must be 1 to 6,144 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string PolicyDocument { get; set; }
 
         /// <summary>
-        /// <para>The name of the permission policy.</para>
-        /// <para>The name must be 1 to 128 characters in length and can contain letters, digits, and hyphen (-).</para>
+        /// <para>Policy Name of the access policy.</para>
+        /// <para>Policy Name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,10 +34,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string PolicyName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to set the policy version as the default version.</para>
+        /// <para>Specifies whether to set the version as the default access policy version.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false (default)</description></item>
-        /// <item><description>true</description></item>
+        /// <item><description>false (default): The version is not set as the default access policy version.</description></item>
+        /// <item><description>true: The version is set as the default access policy version.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

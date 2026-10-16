@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class EnableResourceDirectoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EC2FE94D-A4A2-51A1-A493-5C273A36C46A</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information of the resource directory.</para>
+        /// <para>The resource directory information.</para>
         /// </summary>
         [NameInMap("ResourceDirectory")]
         [Validation(Required=false)]
         public EnableResourceDirectoryResponseBodyResourceDirectory ResourceDirectory { get; set; }
         public class EnableResourceDirectoryResponseBodyResourceDirectory : TeaModel {
             /// <summary>
-            /// <para>The time when the resource directory was enabled.</para>
+            /// <para>The time when the resource directory was enabled. The time is displayed in UTC in RFC 3339 format, indicated by Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-08T02:15:31.744Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string ResourceDirectoryId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Root folder.</para>
+            /// <para>The ID of the root folder.</para>
             /// 
             /// <b>Example:</b>
             /// <para>r-G9****</para>

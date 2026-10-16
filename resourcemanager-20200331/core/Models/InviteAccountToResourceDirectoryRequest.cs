@@ -10,25 +10,25 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class InviteAccountToResourceDirectoryRequest : TeaModel {
         /// <summary>
-        /// <para>The comment on the invitation.</para>
-        /// <para>The comment can be up to 1,024 characters in length.</para>
+        /// <para>The remarks.</para>
+        /// <para>Maximum length: 1024 characters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Welcome</para>
+        /// <para>Welcome to join</para>
         /// </summary>
         [NameInMap("Note")]
         [Validation(Required=false)]
         public string Note { get; set; }
 
         /// <summary>
-        /// <para>The tag key and value.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<InviteAccountToResourceDirectoryRequestTag> Tag { get; set; }
         public class InviteAccountToResourceDirectoryRequestTag : TeaModel {
             /// <summary>
-            /// <para>A tag key.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>k1</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>A tag value.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         }
 
         /// <summary>
-        /// <para>The ID or logon email address of the account that you want to invite.</para>
+        /// <para>The ID or logon email address of the account that is invited.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,10 +61,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string TargetEntity { get; set; }
 
         /// <summary>
-        /// <para>The type of the account. Valid values:</para>
+        /// <para>The type of the account that is invited. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Account: indicates the ID of the account.</description></item>
-        /// <item><description>Email: indicates the logon email address of the account.</description></item>
+        /// <item><description>Account: account ID.</description></item>
+        /// <item><description>Email: logon email address of the account.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

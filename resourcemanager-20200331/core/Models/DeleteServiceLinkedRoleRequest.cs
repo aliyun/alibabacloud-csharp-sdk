@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class DeleteServiceLinkedRoleRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the role.</para>
+        /// <para>The role name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

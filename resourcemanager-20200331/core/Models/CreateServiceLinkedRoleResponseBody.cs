@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the role.</para>
+        /// <para>The role information.</para>
         /// </summary>
         [NameInMap("Role")]
         [Validation(Required=false)]
         public CreateServiceLinkedRoleResponseBodyRole Role { get; set; }
         public class CreateServiceLinkedRoleResponseBodyRole : TeaModel {
             /// <summary>
-            /// <para>The Alibaba Cloud Resource Name (ARN) of the role.</para>
+            /// <para>The resource descriptor of the role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:ram::177242285274****:role/aliyunserviceroleforpolardb</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string Arn { get; set; }
 
             /// <summary>
-            /// <para>The document of the trust policy for the role.</para>
+            /// <para>The trust policy of the role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;Statement\&quot;:[{\&quot;Action\&quot;:\&quot;sts:AssumeRole\&quot;,\&quot;Effect\&quot;:\&quot;Allow\&quot;,\&quot;Principal\&quot;:{\&quot;Service\&quot;:[\&quot;polardb.aliyuncs.com\&quot;]}}],\&quot;Version\&quot;:\&quot;1\&quot;}</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string AssumeRolePolicyDocument { get; set; }
 
             /// <summary>
-            /// <para>The time when the role was created. The time is displayed in UTC.</para>
+            /// <para>The time when the role was created (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-06-30T08:14:16Z</para>
@@ -69,8 +69,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             /// <summary>
             /// <para>Indicates whether the role is a service-linked role. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description>true: The role is a service-linked role.</description></item>
+            /// <item><description>false: The role is not a service-linked role.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public bool? IsServiceLinkedRole { get; set; }
 
             /// <summary>
-            /// <para>The ID of the role.</para>
+            /// <para>The role ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32833240981067****</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string RoleId { get; set; }
 
             /// <summary>
-            /// <para>The name of the role.</para>
+            /// <para>The role name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AliyunServiceRoleForPolarDB</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string RoleName { get; set; }
 
             /// <summary>
-            /// <para>The role name that uses a domain name as the suffix.</para>
+            /// <para>The role name with the domain name suffix.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:AliyunServiceRoleForPolarDB@role.test.onaliyunservice.com">AliyunServiceRoleForPolarDB@role.test.onaliyunservice.com</a></para>

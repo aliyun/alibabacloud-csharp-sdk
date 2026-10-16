@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class RegisterDelegatedAdministratorRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the member in the resource directory.</para>
+        /// <para>The UID of a member account in the resource directory.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

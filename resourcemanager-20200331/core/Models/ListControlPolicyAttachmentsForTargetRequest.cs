@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListControlPolicyAttachmentsForTargetRequest : TeaModel {
         /// <summary>
-        /// <para>The language in which you want to return the descriptions of the access control policies. Valid values:</para>
+        /// <para>The language in which the control policy descriptions are returned. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh-CN (default value): Chinese</description></item>
-        /// <item><description>en: English</description></item>
-        /// <item><description>ja: Japanese</description></item>
+        /// <item><description>zh-CN (default): Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
+        /// <item><description>ja: Japanese.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is valid only for system access control policies.</para>
+        /// <para>This parameter is valid only for system control policies.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -28,11 +28,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The ID of the object whose access control policies you want to query. Access control policies can be attached to the following objects:</para>
+        /// <para>The target node. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Root folder</description></item>
-        /// <item><description>Subfolders of the Root folder</description></item>
-        /// <item><description>Members</description></item>
+        /// <item><description>Root ID: queries the control policies attached to the Root node.</description></item>
+        /// <item><description>Resource folder ID: queries the control policies attached to a resource folder.</description></item>
+        /// <item><description>Member ID: queries the control policies attached to a member.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

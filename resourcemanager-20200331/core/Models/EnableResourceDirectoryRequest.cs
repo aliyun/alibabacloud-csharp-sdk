@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class EnableResourceDirectoryRequest : TeaModel {
         /// <summary>
-        /// <para>The mode in which you enable a resource directory. Valid values:</para>
+        /// <para>The method used to enable the resource directory. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CurrentAccount: indicates that the current account is used to enable a resource directory.</description></item>
-        /// <item><description>NewManagementAccount: indicates that a newly created account is used to enable a resource directory. If you select this mode, you must configure the <c>MAName</c>, <c>MASecureMobilePhone</c>, and <c>VerificationCode</c> parameters.</description></item>
+        /// <item><description>CurrentAccount: enables the resource directory by using the current logon account.</description></item>
+        /// <item><description>NewManagementAccount: enables the resource directory by creating a new management account. If you select this method, you must configure <c>MAName</c>, <c>MASecureMobilePhone</c>, and <c>VerificationCode</c>.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,8 +25,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string EnableMode { get; set; }
 
         /// <summary>
-        /// <para>The name of the newly created account.</para>
-        /// <para>Specify the name in the <c>&lt;Prefix&gt;@rdadmin.aliyunid.com</c> format. The prefix can contain letters, digits, and special characters but cannot contain consecutive special characters. The prefix must start with a letter or digit and end with a letter or digit. Valid special characters include underscores (_), periods (.), and hyphens (-). The prefix must be 2 to 50 characters in length.</para>
+        /// <para>The name of the new management account.</para>
+        /// <para>Format: <c>&lt;Prefix&gt;@rdadmin.aliyunid.com</c>. The prefix can contain letters, digits, and the special characters <c>_.-</c>. The prefix must start and end with a letter or digit, and cannot contain consecutive special characters. The prefix must be 2 to 50 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:user01@rdadmin.aliyunid.com">user01@rdadmin.aliyunid.com</a></para>
@@ -36,11 +36,16 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string MAName { get; set; }
 
         /// <summary>
-        /// <para>The mobile phone number that is bound to the newly created account.</para>
-        /// <para>If you leave this parameter empty, the mobile phone number that is bound to the current account is used. The mobile phone number you specify must be the same as the mobile phone number that you specify when you call the <a href="https://help.aliyun.com/document_detail/364248.html">SendVerificationCodeForEnableRD</a> operation to obtain a verification code.</para>
-        /// <para>Specify the mobile phone number in the <c>&lt;Country code&gt;-&lt;Mobile phone number&gt;</c> format.</para>
+        /// <para>The secure phone number of the new management account.</para>
+        /// <para>If you leave this parameter empty, the secure phone number of the current logon account is used. The phone number must be the same as the one used to authenticate and obtain the verification code in <a href="https://help.aliyun.com/document_detail/364248.html">SendVerificationCodeForEnableRD</a>.</para>
+        /// <para>Format: <c>&lt;Country code&gt;-&lt;Phone number&gt;</c>.</para>
+        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
         /// <remarks>
-        /// <para> Mobile phone numbers in the <c>86-&lt;Mobile phone number&gt;</c> format in the Chinese mainland are not supported.</para>
+        /// <para>Phone numbers from the Chinese mainland in the format <c>86-&lt;Phone number&gt;</c> are not supported.</para>
+        /// </remarks>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
+        /// <remarks>
+        /// <para>Only phone numbers from the Chinese mainland in the format <c>86-&lt;Phone number&gt;</c> are supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -52,7 +57,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 
         /// <summary>
         /// <para>The verification code.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/364248.html">SendVerificationCodeForEnableRD</a> operation to obtain the verification code.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/364248.html">SendVerificationCodeForEnableRD</a> to obtain the verification code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>

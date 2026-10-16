@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class UpdateResourceGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information of the resource group.</para>
+        /// <para>The resource group information.</para>
         /// </summary>
         [NameInMap("ResourceGroup")]
         [Validation(Required=false)]
         public UpdateResourceGroupResponseBodyResourceGroup ResourceGroup { get; set; }
         public class UpdateResourceGroupResponseBodyResourceGroup : TeaModel {
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the resource group belongs.</para>
+            /// <para>The Alibaba Cloud account ID to which the resource group belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456789****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The time when the resource group was created. The time is displayed in UTC.</para>
+            /// <para>The time when the resource group was created (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-01-23T12:33:18+08:00</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group.</para>
+            /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-9gLOoK****</para>

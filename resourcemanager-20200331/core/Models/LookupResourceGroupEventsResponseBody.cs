@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class LookupResourceGroupEventsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried events.</para>
+        /// <para>The list of events.</para>
         /// </summary>
         [NameInMap("Events")]
         [Validation(Required=false)]
         public List<LookupResourceGroupEventsResponseBodyEvents> Events { get; set; }
         public class LookupResourceGroupEventsResponseBodyEvents : TeaModel {
             /// <summary>
-            /// <para>The type of the resource change event.</para>
+            /// <para>The change type of the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Add</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string ChangeType { get; set; }
 
             /// <summary>
-            /// <para>The time when the event was triggered.</para>
+            /// <para>The event time in RFC 3339 UTC format, indicated by Z for UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-12-04T18:35:17Z</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 
             /// <summary>
             /// <para>The resource type.</para>
-            /// <para>You can obtain the resource type from the <b>Resource type</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</para>
+            /// <para>You can obtain the value from the <b>Resource Type</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>instance</para>
@@ -88,8 +88,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The service code.</para>
-            /// <para>You can obtain the code from the <b>Service code</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</para>
+            /// <para>The cloud service code.</para>
+            /// <para>You can obtain the value from the <b>Cloud Service Code</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecs</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             }
 
             /// <summary>
-            /// <para>The destination resource group.</para>
+            /// <para>The target resource group.</para>
             /// </summary>
             [NameInMap("TargetResourceGroupInfo")]
             [Validation(Required=false)]
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The pagination token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TGlzdFJlc291cm****</para>

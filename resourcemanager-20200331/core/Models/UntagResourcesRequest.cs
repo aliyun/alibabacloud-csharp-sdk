@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to remove all tags from the specified resource groups or members. Valid values:</para>
+        /// <para>Specifies whether to unbind all tags from the specified resource group or resource directory member. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false (default value)</description></item>
-        /// <item><description>true</description></item>
+        /// <item><description>false (default): No.</description></item>
+        /// <item><description>true: Yes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,8 +24,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public bool? All { get; set; }
 
         /// <summary>
-        /// <para>The ID of a resource group or member.</para>
-        /// <para>You can specify a maximum of 50 IDs.</para>
+        /// <para>The ID of the resource group or resource directory member.</para>
+        /// <para>You can specify up to 50 IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -33,13 +33,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the objects from which you want to remove tags. Valid values:</para>
+        /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ResourceGroup: resource group. This is the default value.</description></item>
-        /// <item><description>Account: member.</description></item>
+        /// <item><description>ResourceGroup (default): Unbinds tags from a resource group.</description></item>
+        /// <item><description>Account: Unbinds tags from a resource directory member.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is required if you remove tags from members in a resource directory.</para>
+        /// <para>This parameter is required when you unbind tags from a resource directory member.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>A tag key.</para>
-        /// <para>You can specify a maximum of 20 tag keys.</para>
+        /// <para>The tag key.</para>
+        /// <para>You can unbind up to 20 tag keys.</para>
         /// <remarks>
-        /// <para> If you set the <c>All</c> parameter to <c>true</c>, you do not need to configure this parameter.</para>
+        /// <para>If the <c>All</c> parameter for unbinding all tags is set to <c>true</c>, you do not need to specify tag keys.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("TagKey")]

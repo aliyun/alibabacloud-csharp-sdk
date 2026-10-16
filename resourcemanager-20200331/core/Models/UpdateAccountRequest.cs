@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class UpdateAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account that corresponds to the member.</para>
+        /// <para>The ID of the member.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,11 +23,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         /// <summary>
         /// <para>The new type of the member. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ResourceAccount: resource account</description></item>
-        /// <item><description>CloudAccount: cloud account</description></item>
+        /// <item><description>ResourceAccount: switches the specified cloud account to a resource account.</description></item>
+        /// <item><description>CloudAccount: switches the specified resource account to a cloud account.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can configure either the <c>NewDisplayName</c> or <c>NewAccountType</c> parameter.</para>
+        /// <para>Set either NewDisplayName or NewAccountType. You cannot set both of them at the same time.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -38,9 +38,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string NewAccountType { get; set; }
 
         /// <summary>
-        /// <para>The new display name of the member.</para>
+        /// <para>The new name of the member.</para>
         /// <remarks>
-        /// <para> You can configure either the <c>NewDisplayName</c> or <c>NewAccountType</c> parameter.</para>
+        /// <para>Set either NewDisplayName or NewAccountType. You cannot set both of them at the same time.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

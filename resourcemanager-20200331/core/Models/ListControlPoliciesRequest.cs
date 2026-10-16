@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListControlPoliciesRequest : TeaModel {
         /// <summary>
-        /// <para>The language in which you want to return the descriptions of the access control policies. Valid values:</para>
+        /// <para>The language in which you want the description of the control policy to be returned. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh-CN (default value): Chinese</description></item>
-        /// <item><description>en: English</description></item>
-        /// <item><description>ja: Japanese</description></item>
+        /// <item><description>zh-CN (default): Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
+        /// <item><description>ja: Japanese.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is valid only for system access control policies.</para>
+        /// <para>This parameter is valid only for system control policies.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -28,8 +28,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. </para>
-        /// <para>Page start from page 1. Default value: 1.</para>
+        /// <para>The page number.</para>
+        /// <para>Minimum value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. </para>
+        /// <para>The number of entries per page.</para>
         /// <para>Valid values: 1 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The type of the access control policy. Valid values:</para>
+        /// <para>The type of the control policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>System: system access control policy</description></item>
-        /// <item><description>Custom: custom access control policy</description></item>
+        /// <item><description>System: system control policy.</description></item>
+        /// <item><description>Custom: custom control policy.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

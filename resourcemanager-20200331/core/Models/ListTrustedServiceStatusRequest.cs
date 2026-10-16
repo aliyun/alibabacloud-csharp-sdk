@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListTrustedServiceStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the enterprise management account or delegated administrator account.</para>
+        /// <para>The management account or delegated administrator account. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If you set this parameter to the ID of an enterprise management account, the trusted services that are enabled within the enterprise management account are queried. The default value of this parameter is the ID of an enterprise management account.</description></item>
-        /// <item><description>If you set this parameter to the ID of a delegated administrator account, the trusted services that are enabled within the delegated administrator account are queried.</description></item>
+        /// <item><description>Management account (default): Queries the list of trusted services enabled by the management account.</description></item>
+        /// <item><description>Delegated administrator account: Queries the list of trusted services enabled by the delegated administrator account.</description></item>
         /// </list>
-        /// <para>For more information about trusted services and delegated administrator accounts, see <a href="https://help.aliyun.com/document_detail/208133.html">Overview of trusted services</a> and <a href="https://help.aliyun.com/document_detail/208117.html">Delegated administrator accounts</a>.</para>
+        /// <para>For more information about trusted services and delegated administrator accounts, see <a href="https://help.aliyun.com/document_detail/208133.html">Overview of trusted services</a> and <a href="https://help.aliyun.com/document_detail/208117.html">Manage delegated administrator accounts</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>177242285274****</para>
@@ -25,8 +25,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string AdminAccountId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
-        /// <para>Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number.</para>
+        /// <para>Minimum value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// <para>Valid values: 1 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>

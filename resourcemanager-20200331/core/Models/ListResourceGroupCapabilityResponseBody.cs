@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListResourceGroupCapabilityResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether a specific resource type or cloud service supports resource group events.</para>
+        /// <para>The list of capability items.</para>
         /// </summary>
         [NameInMap("Capabilities")]
         [Validation(Required=false)]
         public List<ListResourceGroupCapabilityResponseBodyCapabilities> Capabilities { get; set; }
         public class ListResourceGroupCapabilityResponseBodyCapabilities : TeaModel {
             /// <summary>
+            /// <para>The resource center resource type code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ACS::ECS::Instance</para>
             /// </summary>
@@ -26,7 +28,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 
             /// <summary>
             /// <para>The resource type.</para>
-            /// <para>You can obtain the resource type from the <b>Resource type</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</para>
+            /// <para>You can obtain the resource type from the <b>Resource Type</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>instance</para>
@@ -36,8 +38,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The service code.</para>
-            /// <para>You can obtain the code from the <b>Service code</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</para>
+            /// <para>The cloud service code.</para>
+            /// <para>You can obtain the cloud service code from the <b>Cloud Service Code</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecs</para>
@@ -47,7 +49,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string Service { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a specific resource type or cloud service supports resource group events.</para>
+            /// <para>Specifies whether resource group events are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListResourceGroupsWithAuthDetailsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The authorization details for resource groups.</para>
+        /// <para>The list of authorization details for resource groups.</para>
         /// </summary>
         [NameInMap("AuthDetails")]
         [Validation(Required=false)]
         public List<ListResourceGroupsWithAuthDetailsResponseBodyAuthDetails> AuthDetails { get; set; }
         public class ListResourceGroupsWithAuthDetailsResponseBodyAuthDetails : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the user has account-level authorization for this resource type.</para>
+            /// <para>Indicates whether the user has account-level authorization for the resource type.</para>
             /// </summary>
             [NameInMap("AccountScopeAuth")]
             [Validation(Required=false)]
             public bool? AccountScopeAuth { get; set; }
 
             /// <summary>
-            /// <para>The permission details for the resource groups on the specified resource types.</para>
+            /// <para>The permissions of resource groups on the resource type.</para>
             /// </summary>
             [NameInMap("AuthOfResourceGroups")]
             [Validation(Required=false)]
             public List<ListResourceGroupsWithAuthDetailsResponseBodyAuthDetailsAuthOfResourceGroups> AuthOfResourceGroups { get; set; }
             public class ListResourceGroupsWithAuthDetailsResponseBodyAuthDetailsAuthOfResourceGroups : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the user has permissions on the resource group for the specified resource type.</para>
+                /// <para>Indicates whether the resource group has permissions.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 
             /// <summary>
             /// <para>The resource type.</para>
-            /// <para>You can obtain the resource type from the <b>Resource type</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</para>
+            /// <para>You can obtain the resource type from the <b>Resource Type</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>instance</para>
@@ -64,8 +64,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud service.</para>
-            /// <para>You can obtain the ID from the <b>Service code</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</para>
+            /// <para>The cloud service ID.</para>
+            /// <para>You can obtain the cloud service ID from the <b>Cloud Service Code</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecs</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The response parameters.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4141780B-4E3D-5D2A-A8F4-44D6D34F****</para>
@@ -107,14 +107,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information of the resource groups.</para>
+        /// <para>The list of resource groups.</para>
         /// </summary>
         [NameInMap("ResourceGroups")]
         [Validation(Required=false)]
         public List<ListResourceGroupsWithAuthDetailsResponseBodyResourceGroups> ResourceGroups { get; set; }
         public class ListResourceGroupsWithAuthDetailsResponseBodyResourceGroups : TeaModel {
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the resource group belongs.</para>
+            /// <para>The Alibaba Cloud account ID to which the resource group belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456789****</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The time when the resource group was created. The time is displayed in UTC.</para>
+            /// <para>The time when the resource group was created (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-01-23T12:33:18Z</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The ID of your Alibaba Cloud resource group.</para>
+            /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-9gLOoK****</para>
@@ -166,9 +166,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             /// <summary>
             /// <para>The status of the resource group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Creating: The resource group is being created.</description></item>
-            /// <item><description>OK: The resource group is created.</description></item>
-            /// <item><description>PendingDelete: The resource group is waiting to be deleted.</description></item>
+            /// <item><description>Creating: Being created.</description></item>
+            /// <item><description>OK: Created.</description></item>
+            /// <item><description>PendingDelete: Pending deletion.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tags.</para>
+            /// <para>The list of tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

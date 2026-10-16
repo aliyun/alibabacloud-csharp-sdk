@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class EnableControlPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status of the Control Policy feature. Valid values:</para>
+        /// <para>The status of the control policy feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Enabled: The Control Policy feature is enabled.</description></item>
-        /// <item><description>PendingEnable: The Control Policy feature is being enabled.</description></item>
-        /// <item><description>Disabled: The Control Policy feature is disabled.</description></item>
-        /// <item><description>PendingDisable: The Control Policy feature is being disabled.</description></item>
+        /// <item><description>Enabled: Enabled.</description></item>
+        /// <item><description>PendingEnable: Being enabled.</description></item>
+        /// <item><description>Disabled: Disabled.</description></item>
+        /// <item><description>PendingDisable: Being disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string EnablementStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8CE7BD95-EFFA-4911-A1E0-BD4412697FEB</para>

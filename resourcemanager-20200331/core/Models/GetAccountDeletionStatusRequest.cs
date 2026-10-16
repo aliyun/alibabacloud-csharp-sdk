@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class GetAccountDeletionStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the member.</para>
+        /// <para>The ID of the member account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

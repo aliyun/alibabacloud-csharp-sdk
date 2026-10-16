@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class CreateAutoGroupingRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of regions to be excluded. Separate multiple IDs with commas (,).</para>
+        /// <para>The region IDs to exclude. Separate multiple region IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing,cn-guangzhou</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string ExcludeRegionIdsScope { get; set; }
 
         /// <summary>
-        /// <para>The IDs of resource groups to be excluded. Separate multiple IDs with commas (,).</para>
+        /// <para>The resource group IDs to exclude. Separate multiple resource group IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aekz<b><b><b>zj2oi,rg-aekz</b></b></b>r62ua</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string ExcludeResourceGroupIdsScope { get; set; }
 
         /// <summary>
-        /// <para>The IDs of resources to be excluded. Separate multiple IDs with commas (,).</para>
+        /// <para>The resource IDs to exclude. Separate multiple resource IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-uf6p******4h784y,rmq-cn-******ny0y</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string ExcludeResourceIdsScope { get; set; }
 
         /// <summary>
-        /// <para>The resource types to be excluded. Separate multiple resource types with commas (,).</para>
+        /// <para>The resource types to exclude. Separate multiple resource types with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>mse.cluster,slb.loadbalancer</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string ExcludeResourceTypesScope { get; set; }
 
         /// <summary>
-        /// <para>The IDs of regions. Separate multiple IDs with commas (,).</para>
+        /// <para>The scope of region IDs. Separate multiple region IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou,cn-shanghai</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string RegionIdsScope { get; set; }
 
         /// <summary>
-        /// <para>The IDs of resource groups. Separate multiple IDs with commas (,).</para>
+        /// <para>The scope of resource group IDs. Separate multiple resource group IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aekz<b><b><b>4b5ea,rg-aek2</b></b></b>fxykq</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string ResourceGroupIdsScope { get; set; }
 
         /// <summary>
-        /// <para>The IDs of resources. Separate multiple IDs with commas (,).</para>
+        /// <para>The scope of resource IDs. Separate multiple resource IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-2zee<b><b><b>ym49kfmwis,vpc-5ts6</b></b></b>fnw493g849a</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string ResourceIdsScope { get; set; }
 
         /// <summary>
-        /// <para>The resource types. Separate multiple resource types with commas (,).</para>
+        /// <para>The scope of resource types. Separate multiple resource types with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>rds.dbinstance,oss.bucket</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string ResourceTypesScope { get; set; }
 
         /// <summary>
-        /// <para>The content records of the rule.</para>
+        /// <para>The list of rule content entries.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RuleContents")]
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public List<CreateAutoGroupingRuleRequestRuleContents> RuleContents { get; set; }
         public class CreateAutoGroupingRuleRequestRuleContents : TeaModel {
             /// <summary>
-            /// <para>The condition for the range of resources to be automatically transferred.</para>
+            /// <para>The scope condition for automatic allocation. Specifies the scope of resources to be automatically allocated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;children&quot;:[{&quot;desired&quot;:&quot;{\&quot;env\&quot;:\&quot;online\&quot;, \&quot;project\&quot;:\&quot;A\&quot;}&quot;,&quot;featurePath&quot;:&quot;$.tags&quot;,&quot;featureSource&quot;:&quot;RESOURCE&quot;,&quot;operator&quot;:&quot;TagMatchAll&quot;}],&quot;operator&quot;:&quot;and&quot;}</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string AutoGroupingScopeCondition { get; set; }
 
             /// <summary>
-            /// <para>The condition for the destination resource group.</para>
+            /// <para>The target resource group condition. Specifies the target resource group for automatic allocation.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -121,31 +121,31 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         }
 
         /// <summary>
-        /// <para>The description of the rule.</para>
+        /// <para>The rule description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Transfer resources to which the {&quot;env&quot;: &quot;online&quot;} and {&quot;project&quot;: &quot;A&quot;} tags are added to the resource group rg-aek2********qcy.</para>
+        /// <para>Move resources with tags {&quot;env&quot;: &quot;online&quot;} and {&quot;project&quot;: &quot;A&quot;} to resource group rg-aek2********qcy</para>
         /// </summary>
         [NameInMap("RuleDesc")]
         [Validation(Required=false)]
         public string RuleDesc { get; set; }
 
         /// <summary>
-        /// <para>The name of the rule.</para>
+        /// <para>The rule name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Custom Transfer Rule for Online Resources of Project A</para>
+        /// <para>Auto allocation rule for Project A online resources</para>
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The type of the rule. Valid values:</para>
+        /// <para>The rule type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>custom_condition: custom transfer rule</description></item>
-        /// <item><description>associated_transfer: transfer rule for associated resources</description></item>
+        /// <item><description>custom_condition: custom allocation rule.</description></item>
+        /// <item><description>associated_transfer: attached-resource allocation rule.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

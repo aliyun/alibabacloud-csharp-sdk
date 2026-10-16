@@ -10,8 +10,19 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListResourcesRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to query the total number of resources. Default value: true. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Queries the total number of resources and returns the result in the TotalCount parameter.</description></item>
+        /// <item><description>false: Does not query the total number of resources. The TotalCount parameter returns -1, and the resources are still paginated based on the PageNumber and PageSize parameters.</description></item>
+        /// </list>
+        /// </summary>
+        [NameInMap("Count")]
+        [Validation(Required=false)]
+        public bool? Count { get; set; }
+
+        /// <summary>
         /// <para>The page number.</para>
-        /// <para>Pages start from page 1. Default value: 1.</para>
+        /// <para>Minimum value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -63,7 +74,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 
         /// <summary>
         /// <para>The resource type.</para>
-        /// <para>For more information about the supported resource types, see the <b>Resource type</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</para>
+        /// <para>You can obtain the resource type from the <b>Resource Type</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>instance</para>
@@ -73,9 +84,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The resource types. A maximum of 50 resource types are supported.</para>
+        /// <para>The list of resource types. A maximum of 50 resource types are supported.</para>
         /// <remarks>
-        /// <para> If you configure <c>ResourceTypes</c>, you must configure both <c>Service</c> and <c>ResourceType</c>. Otherwise, the configured Service or ResourceType does not take effect.</para>
+        /// <para>If you configure the Settings for ResourceTypes, the Service and ResourceType request parameter specified separately do not take effect.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("ResourceTypes")]
@@ -85,9 +96,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             /// <summary>
             /// <para>The resource type.</para>
             /// <para>Valid values of N: 1 to 50.</para>
-            /// <para>For more information about the supported resource types, see the <b>Resource type</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</para>
+            /// <para>You can obtain the resource type from the <b>Resource Type</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
             /// <remarks>
-            /// <para> You must configure both <c>Service</c> and <c>ResourceType</c> in <c>ResourceTypes</c>. Otherwise, the two parameters do not take effect.</para>
+            /// <para>The Service and ResourceType parameters in ResourceTypes must be specified at the same time. Otherwise, they do not take effect.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -98,11 +109,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud service.</para>
+            /// <para>The code of the cloud service.</para>
             /// <para>Valid values of N: 1 to 50.</para>
-            /// <para>You can obtain the ID from the <b>Service code</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</para>
+            /// <para>You can obtain the code from the <b>Cloud Service Code</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
             /// <remarks>
-            /// <para> You must configure both <c>Service</c> and <c>ResourceType</c> in <c>ResourceTypes</c>. Otherwise, the two parameters do not take effect.</para>
+            /// <para>The Service and ResourceType parameters in ResourceTypes must be specified at the same time. Otherwise, they do not take effect.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -115,8 +126,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud service.</para>
-        /// <para>You can obtain the ID from the <b>Service code</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</para>
+        /// <para>The code of the cloud service.</para>
+        /// <para>You can obtain the code from the <b>Cloud Service Code</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Cloud services that support resource groups</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs</para>

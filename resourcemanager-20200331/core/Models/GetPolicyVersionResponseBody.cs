@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class GetPolicyVersionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the policy version.</para>
+        /// <para>The version information of the access policy.</para>
         /// </summary>
         [NameInMap("PolicyVersion")]
         [Validation(Required=false)]
         public GetPolicyVersionResponseBodyPolicyVersion PolicyVersion { get; set; }
         public class GetPolicyVersionResponseBodyPolicyVersion : TeaModel {
             /// <summary>
-            /// <para>The time when the policy version was created.</para>
+            /// <para>The time when the access policy version was created. The time is in RFC 3339 UTC format, indicated by Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-01-23T12:33:18Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string CreateDate { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the policy version is the default version.</para>
+            /// <para>Indicates whether the version is the default version of the access policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public bool? IsDefaultVersion { get; set; }
 
             /// <summary>
-            /// <para>The document of the permission policy.</para>
+            /// <para>The content of the access policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{ \&quot;Statement\&quot;: [{ \&quot;Action\&quot;: [\&quot;oss:<em>\&quot;], \&quot;Effect\&quot;: \&quot;Allow\&quot;, \&quot;Resource\&quot;: [\&quot;acs:oss:</em>:<em>:</em>\&quot;]}], \&quot;Version\&quot;: \&quot;1\&quot;}</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string PolicyDocument { get; set; }
 
             /// <summary>
-            /// <para>The ID of the policy version.</para>
+            /// <para>The ID of the access policy version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v3</para>

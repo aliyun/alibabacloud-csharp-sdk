@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class SendVerificationCodeForBindSecureMobilePhoneRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the resource account.</para>
+        /// <para>The account ID of the member.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,15 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string AccountId { get; set; }
 
         /// <summary>
-        /// <para>The mobile phone number that you want to bind to the resource account.</para>
-        /// <para>Specify the mobile phone number in the \<Country code>-\<Mobile phone number> format.</para>
+        /// <para>The secure phone number.</para>
+        /// <para>Format: <Country code>-<Phone number>.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <remarks>
-        /// <para> Mobile phone numbers in the <c>86-&lt;Mobile phone number&gt;</c> format in the Chinese mainland are not supported.</para>
+        /// <para>Only phone numbers in the Chinese mainland in the format of <c>86-&lt;Phone number&gt;</c> are supported.</para>
+        /// </remarks>
+        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+        /// <remarks>
+        /// <para>Phone numbers in the Chinese mainland in the format of <c>86-&lt;Phone number&gt;</c> are not supported.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

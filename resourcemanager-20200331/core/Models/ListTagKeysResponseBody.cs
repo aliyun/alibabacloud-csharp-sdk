@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListTagKeysResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the next query is required.</para>
+        /// <para>Indicates whether a next query token is available. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the value of this parameter is empty (<c>&quot;NextToken&quot;: &quot;&quot;</c>), all results are returned, and the next query is not required.</description></item>
-        /// <item><description>If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.</description></item>
+        /// <item><description>If NextToken is empty, that is, <c>&quot;NextToken&quot;: &quot;&quot;</c>, no additional results exist.</description></item>
+        /// <item><description>If NextToken has a value, the value is the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DC09A6AA-2713-4E10-A2E9-E6C5C43A8842</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information of the tag keys.</para>
+        /// <para>The tag key information.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

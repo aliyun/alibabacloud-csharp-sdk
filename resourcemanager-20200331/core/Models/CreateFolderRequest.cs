@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class CreateFolderRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the folder.</para>
-        /// <para>The name must be 1 to 24 characters in length and can contain letters, digits, underscores (_), periods (.),and hyphens (-).</para>
+        /// <para>The name of the resource folder.</para>
+        /// <para>The name must be 1 to 24 characters in length and can contain letters, digits, underscores (_), periods (.), and hyphens (-).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

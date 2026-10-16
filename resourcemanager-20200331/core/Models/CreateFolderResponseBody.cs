@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class CreateFolderResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information of the folder.</para>
+        /// <para>The information about the resource folder.</para>
         /// </summary>
         [NameInMap("Folder")]
         [Validation(Required=false)]
         public CreateFolderResponseBodyFolder Folder { get; set; }
         public class CreateFolderResponseBodyFolder : TeaModel {
             /// <summary>
-            /// <para>The time when the folder was created.</para>
+            /// <para>The time when the resource folder was created. The time is displayed in UTC in RFC 3339 format, indicated by Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-02-19T09:34:50.757Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the folder.</para>
+            /// <para>The ID of the resource folder.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fd-u8B321****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string FolderId { get; set; }
 
             /// <summary>
-            /// <para>The name of the folder.</para>
+            /// <para>The name of the resource folder.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rdFolder</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C2CBCA30-C8DD-423E-B4AD-4FB694C9180C</para>

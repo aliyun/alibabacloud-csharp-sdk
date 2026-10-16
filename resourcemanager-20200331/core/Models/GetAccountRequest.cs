@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class GetAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the member.</para>
+        /// <para>The member account ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string AccountId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the information of tags. Valid values:</para>
+        /// <para>Specifies whether to return tag information. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false (default value)</description></item>
-        /// <item><description>true</description></item>
+        /// <item><description>false (default): Does not return tag information.</description></item>
+        /// <item><description>true: Returns tag information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

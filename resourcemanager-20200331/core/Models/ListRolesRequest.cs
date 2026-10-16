@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListRolesRequest : TeaModel {
         /// <summary>
-        /// <para>The language in which you want to return the descriptions of the RAM roles. Valid values:</para>
+        /// <para>The language type. The role description is returned in the specified language. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>en: English</description></item>
-        /// <item><description>zh-CN: Chinese</description></item>
-        /// <item><description>ja: Japanese</description></item>
+        /// <item><description>en: English.</description></item>
+        /// <item><description>zh-CN: Chinese.</description></item>
+        /// <item><description>ja: Japanese.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 
         /// <summary>
         /// <para>The page number.</para>
-        /// <para>Pages start from page 1. Default value: 1.</para>
+        /// <para>Minimum value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

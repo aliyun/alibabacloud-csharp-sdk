@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information of the resource group.</para>
+        /// <para>The resource group information.</para>
         /// </summary>
         [NameInMap("ResourceGroup")]
         [Validation(Required=false)]
         public CreateResourceGroupResponseBodyResourceGroup ResourceGroup { get; set; }
         public class CreateResourceGroupResponseBodyResourceGroup : TeaModel {
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the resource group belongs.</para>
+            /// <para>The Alibaba Cloud account ID to which the resource group belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>151266687691****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The time when the resource group was created. The time is displayed in UTC.</para>
+            /// <para>The time when the resource group was created (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-06-05T14:39:13+08:00</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group.</para>
+            /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-9gLOoK****</para>
@@ -76,9 +76,6 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
-            /// <summary>
-            /// <para>The status of the resource group in all regions.</para>
-            /// </summary>
             [NameInMap("RegionStatuses")]
             [Validation(Required=false)]
             public CreateResourceGroupResponseBodyResourceGroupRegionStatuses RegionStatuses { get; set; }
@@ -87,26 +84,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                 [Validation(Required=false)]
                 public List<CreateResourceGroupResponseBodyResourceGroupRegionStatusesRegionStatus> RegionStatus { get; set; }
                 public class CreateResourceGroupResponseBodyResourceGroupRegionStatusesRegionStatus : TeaModel {
-                    /// <summary>
-                    /// <para>The region ID.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>cn-qingdao</para>
-                    /// </summary>
                     [NameInMap("RegionId")]
                     [Validation(Required=false)]
                     public string RegionId { get; set; }
 
-                    /// <summary>
-                    /// <para>The status of the resource group. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>Creating: The resource group is being created.</description></item>
-                    /// <item><description>OK: The resource group is created.</description></item>
-                    /// </list>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>Creating</para>
-                    /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
                     public string Status { get; set; }
@@ -118,8 +99,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             /// <summary>
             /// <para>The status of the resource group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Creating: The resource group is being created.</description></item>
-            /// <item><description>OK: The resource group is created.</description></item>
+            /// <item><description>Creating: Being created.</description></item>
+            /// <item><description>OK: Created.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

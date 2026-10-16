@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class GetPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the permission policy.</para>
+        /// <para>The access policy information.</para>
         /// </summary>
         [NameInMap("Policy")]
         [Validation(Required=false)]
         public GetPolicyResponseBodyPolicy Policy { get; set; }
         public class GetPolicyResponseBodyPolicy : TeaModel {
             /// <summary>
-            /// <para>The number of references to the permission policy.</para>
+            /// <para>The number of references.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public int? AttachmentCount { get; set; }
 
             /// <summary>
-            /// <para>The time when the permission policy was created.</para>
+            /// <para>The time when the access policy was created. The time is in RFC 3339 UTC format, indicated by Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-01-23T12:33:18Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string CreateDate { get; set; }
 
             /// <summary>
-            /// <para>The default version of the permission policy.</para>
+            /// <para>The default version of the access policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v1</para>
@@ -47,17 +47,17 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string DefaultVersion { get; set; }
 
             /// <summary>
-            /// <para>The description of the permission policy.</para>
+            /// <para>The description of the access policy.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>OSS administrator</para>
+            /// <para>OSS administrator permissions</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The document of the permission policy.</para>
+            /// <para>The content of the access policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{ &quot;Statement&quot;: [{ &quot;Action&quot;: [&quot;oss:<em>&quot;], &quot;Effect&quot;: &quot;Allow&quot;, &quot;Resource&quot;: [&quot;acs:oss:</em>:<em>:</em>&quot;]}], &quot;Version&quot;: &quot;1&quot;}</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string PolicyDocument { get; set; }
 
             /// <summary>
-            /// <para>The name of the permission policy.</para>
+            /// <para>The Policy Name of the access policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OSS-Administrator</para>
@@ -77,10 +77,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string PolicyName { get; set; }
 
             /// <summary>
-            /// <para>The type of the permission policy. Valid values:</para>
+            /// <para>The type of the access policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Custom</description></item>
-            /// <item><description>System</description></item>
+            /// <item><description>Custom: custom policy.</description></item>
+            /// <item><description>System: system policy.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string PolicyType { get; set; }
 
             /// <summary>
-            /// <para>The time when the permission policy was updated.</para>
+            /// <para>The time when the access policy was last updated. The time is in RFC 3339 UTC format, indicated by Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2016-01-23T12:33:18Z</para>

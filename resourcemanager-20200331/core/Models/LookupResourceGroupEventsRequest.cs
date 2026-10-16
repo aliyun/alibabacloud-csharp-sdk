@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class LookupResourceGroupEventsRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. The time is displayed in UTC.</para>
+        /// <para>The end time of the event. The format is YYYY-MM-DD HH:mm:ss and does not include a time zone identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-11-30 23:43:16</para>
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string EventCategory { get; set; }
 
         /// <summary>
-        /// <para>The attributes used for advanced search.</para>
+        /// <para>The lookup attributes.</para>
         /// </summary>
         [NameInMap("LookupAttributes")]
         [Validation(Required=false)]
         public List<LookupResourceGroupEventsRequestLookupAttributes> LookupAttributes { get; set; }
         public class LookupResourceGroupEventsRequestLookupAttributes : TeaModel {
             /// <summary>
-            /// <para>The key of the attribute.</para>
+            /// <para>The key of the lookup attribute.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the attribute.</para>
+            /// <para>The value of the lookup attribute.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The pagination token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TGlzdFJlc291cm****</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The time is displayed in UTC.</para>
+        /// <para>The start time of the event. The format is YYYY-MM-DD HH:mm:ss and does not include a time zone identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-11-30 23:43:16</para>
