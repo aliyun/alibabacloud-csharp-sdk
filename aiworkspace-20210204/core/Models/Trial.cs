@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
     public class Trial : TeaModel {
         /// <summary>
         /// <para>Accessibility</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PRIVATE</para>
         /// </summary>
         [NameInMap("Accessibility")]
         [Validation(Required=false)]
@@ -28,6 +31,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         /// <summary>
         /// <para>GmtCreateTime</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2021-01-30T12:51:33.028Z</para>
         /// </summary>
         [NameInMap("GmtCreateTime")]
         [Validation(Required=false)]
@@ -35,6 +41,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         /// <summary>
         /// <para>GmtModifiedTime</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2021-01-30T12:51:33.028Z</para>
         /// </summary>
         [NameInMap("GmtModifiedTime")]
         [Validation(Required=false)]
@@ -49,6 +58,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         /// <summary>
         /// <para>Name</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testrun</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -56,6 +68,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         /// <summary>
         /// <para>OwnerId</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1631044****3440</para>
         /// </summary>
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
@@ -63,6 +78,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         /// <summary>
         /// <para>SourceId</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>train9s0afvjkf</para>
         /// </summary>
         [NameInMap("SourceId")]
         [Validation(Required=false)]
@@ -70,6 +88,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         /// <summary>
         /// <para>SourceType</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>TrainingService</para>
         /// </summary>
         [NameInMap("SourceType")]
         [Validation(Required=false)]
@@ -94,6 +115,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         /// <summary>
         /// <para>WorkspaceId</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>145883</para>
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]

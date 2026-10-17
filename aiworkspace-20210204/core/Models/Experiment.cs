@@ -54,21 +54,21 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtModifiedTime { get; set; }
 
         /// <summary>
-        /// <para>The list of labels for the experiment.</para>
+        /// <para>The list of experiment labels.</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public List<ExperimentLabel> Labels { get; set; }
 
         /// <summary>
-        /// <para>LatestRun</para>
+        /// <para>The information about the latest run associated with the experiment.</para>
         /// </summary>
         [NameInMap("LatestRun")]
         [Validation(Required=false)]
         public Run LatestRun { get; set; }
 
         /// <summary>
-        /// <para>The name of the experiment.</para>
+        /// <para>The experiment name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exp-test</para>
@@ -79,6 +79,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         /// <summary>
         /// <para>The Alibaba Cloud account ID of the experiment owner.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1631044****3440</para>
         /// </summary>
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
@@ -86,6 +89,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         /// <summary>
         /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0C6835C5-A424-5AFB-ACC2-F1E3CA1ABF7C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -93,6 +99,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         /// <summary>
         /// <para>The default OSS storage path for TensorBoard logs of each trial in the experiment.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>oss://test-bucket.oss-cn-hangzhou.aliyuncs.com/tensorboard/</para>
         /// </summary>
         [NameInMap("TensorboardLogUri")]
         [Validation(Required=false)]
@@ -100,6 +109,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         /// <summary>
         /// <para>The user ID of the experiment creator.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1557702098******</para>
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]

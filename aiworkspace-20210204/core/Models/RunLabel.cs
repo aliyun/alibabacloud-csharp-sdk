@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class RunLabel : TeaModel {
         /// <summary>
-        /// <para>Time when the label was created</para>
+        /// <para>The creation time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2023-12-27T03:30:04Z</para>
         /// </summary>
         [NameInMap("GmtCreateTime")]
         [Validation(Required=false)]
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>Time when the label was last modified</para>
+        /// <para>The modification time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2023-12-27T03:30:04Z</para>
         /// </summary>
         [NameInMap("GmtModifiedTime")]
         [Validation(Required=false)]
         public string GmtModifiedTime { get; set; }
 
         /// <summary>
-        /// <para>Key of the label</para>
+        /// <para>The tag key.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +41,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>ID of the Run that owns this label</para>
+        /// <para>The associated Run ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>run-1qJhzJ2YXgX****</para>
@@ -45,7 +51,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RunId { get; set; }
 
         /// <summary>
-        /// <para>Value of the label</para>
+        /// <para>The tag value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

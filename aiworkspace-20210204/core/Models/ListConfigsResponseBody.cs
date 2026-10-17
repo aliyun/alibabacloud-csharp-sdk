@@ -27,13 +27,13 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string ConfigId { get; set; }
 
             /// <summary>
-            /// <para>The key of the configuration item. The following keys are supported:</para>
+            /// <para>The key of the configuration item. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>tempStoragePath: the temporary storage path. This ConfigKey can be used only when CategoryName is set to CommonResourceConfig.</description></item>
-            /// <item><description>isAutoRecycle: the automatic recycling configuration. This ConfigKey can be used only when CategoryName is set to DLCAutoRecycle.</description></item>
-            /// <item><description>priorityConfig: the priority configuration. This ConfigKey can be used only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</description></item>
-            /// <item><description>quotaMaximumDuration: the maximum runtime duration configuration for DLC jobs in a quota. This ConfigKey can be used only when CategoryName is set to QuotaMaximumDuration.</description></item>
-            /// <item><description>predefinedTags: the preset tags for the workspace. Resources that are created must include these tags.</description></item>
+            /// <item><description>tempStoragePath: Temporary storage path. This key is allowed only when CategoryName is set to CommonResourceConfig.</description></item>
+            /// <item><description>isAutoRecycle: Automatic revoke configuration. This key is allowed only when CategoryName is set to DLCAutoRecycle.</description></item>
+            /// <item><description>priorityConfig: Priority configuration. This key is allowed only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</description></item>
+            /// <item><description>quotaMaximumDuration: Maximum runtime configuration of DLC nodes for a quota. This key is allowed only when CategoryName is set to QuotaMaximumDuration.</description></item>
+            /// <item><description>predefinedTags: Preset labels for the workspace. Resources created must have these labels.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The UTC time when the configuration item was last modified.</para>
+            /// <para>The UTC time when the configuration item was modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-07-28T03:44:10.000Z</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned entries.</para>
+        /// <para>The total number of returned items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>

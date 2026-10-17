@@ -12,20 +12,23 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <summary>
         /// <para>The metric name.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>loss</para>
         /// </summary>
         [NameInMap("Key")]
         [Validation(Required=false)]
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The step when the metric was recorded.</para>
+        /// <para>The step count at which the metric is generated.</para>
         /// </summary>
         [NameInMap("Step")]
         [Validation(Required=false)]
         public long? Step { get; set; }
 
         /// <summary>
-        /// <para>The timestamp when the metric was recorded.</para>
+        /// <para>The timestamp at which the metric is generated.</para>
         /// </summary>
         [NameInMap("Timestamp")]
         [Validation(Required=false)]

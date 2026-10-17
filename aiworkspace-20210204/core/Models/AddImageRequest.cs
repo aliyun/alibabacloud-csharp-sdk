@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <summary>
         /// <para>The visibility of the image. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PUBLIC: All members in the current workspace can access the image.</description></item>
-        /// <item><description>PRIVATE: Only the creator can access the image.</description></item>
+        /// <item><description>PUBLIC: All members in the current workspace can manage the image.</description></item>
+        /// <item><description>PRIVATE: Only the creator can manage the image.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The image ID. If you do not specify this parameter, the system automatically generates one. The format is image- followed by 18 uppercase or lowercase letters or digits.</para>
+        /// <para>The ID of the image. If you do not specify this parameter, the system automatically generates an image ID.
+        /// The format is image- followed by 18 uppercase or lowercase letters or digits.</para>
         /// 
         /// <b>Example:</b>
         /// <para>image-k83*****cv</para>
@@ -44,7 +45,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The image URI, which can be duplicated. For information about how to view the image URI, see <a href="https://help.aliyun.com/document_detail/449118.html">ListImage</a>.</para>
+        /// <para>The URI of the image. The URI can be duplicated. For more information about how to view the image URI, see <a href="https://help.aliyun.com/document_detail/449118.html">ListImage</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,8 +56,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ImageUri { get; set; }
 
         /// <summary>
-        /// <para>The image labels. This is an array in which each item contains a key field and a value field.
-        /// Official images have the following label: system.official=true
+        /// <para>The labels of the image. This parameter is an array, and each item in the array contains the key and value fields.
+        /// Official images have the following label: system.official=true.
         /// The following keys are supported:</para>
         /// <list type="bullet">
         /// <item><description>system.chipType</description></item>
@@ -106,7 +107,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         }
 
         /// <summary>
-        /// <para>The image name. Naming rules:</para>
+        /// <para>The name of the image. The naming rules are as follows:</para>
         /// <list type="bullet">
         /// <item><description>The name must be 1 to 50 characters in length.</description></item>
         /// <item><description>The name can contain lowercase letters, digits, and hyphens (-), and must start with a letter.</description></item>
@@ -122,7 +123,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The image size, in GB.</para>
+        /// <para>The size of the image. Unit: GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -132,7 +133,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? Size { get; set; }
 
         /// <summary>
-        /// <para>The image source ID. If the image source type is Build, the source ID corresponds to the image build ID.</para>
+        /// <para>The source ID of the image. If the source type of the image is Build, the source ID is the image build ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>build-****ks92</para>
@@ -142,10 +143,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>The image source type. Valid values:</para>
+        /// <para>The source type of the image. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Import: import.</description></item>
-        /// <item><description>Build: generate.</description></item>
+        /// <item><description>Import: The image is imported.</description></item>
+        /// <item><description>Build: The image is built.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -157,13 +158,16 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         /// <summary>
         /// <para>The user ID (UID) of the image creator.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1611******3000</para>
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace to which the image belongs. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
+        /// <para>The ID of the workspace to which the image belongs. For more information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15******45</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class Run : TeaModel {
         /// <summary>
-        /// <para>The visibility of the run.</para>
+        /// <para>The accessibility.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PRIVATE</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ExperimentId { get; set; }
 
         /// <summary>
-        /// <para>The time when the run was created.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-30T12:51:33.028Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the run was last modified.</para>
+        /// <para>The modification time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-30T12:51:33.028Z</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public List<RunMetric> Metrics { get; set; }
 
         /// <summary>
-        /// <para>Name</para>
+        /// <para>The name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testrun</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the owner\&quot;s root account.</para>
+        /// <para>The Alibaba Cloud account ID of the owner.</para>
         /// 
         /// <b>Example:</b>
         /// <para>163104*****3440</para>
@@ -132,6 +132,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         /// <summary>
         /// <para>The ID of the owner.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1557702098******</para>
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]
