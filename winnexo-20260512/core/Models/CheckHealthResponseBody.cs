@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The name of the currently effective digital employee. This value is empty if not configured.</para>
+        /// <para>The name of the currently effective digital employee. This field is empty if not configured.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pcitc-magent</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DigitalEmployeeName { get; set; }
 
         /// <summary>
-        /// <para>The description of the status code.</para>
+        /// <para>The status code description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ok</para>
