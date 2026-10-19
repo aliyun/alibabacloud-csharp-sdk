@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class AllocateDBInstanceSrvNetworkAddressRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of a mongos or shard node in a sharded cluster instance.</para>
+        /// <para>The ID of the Mongos or shard node in a sharded cluster instance.</para>
         /// <remarks>
-        /// <para>This parameter is not currently required.</para>
+        /// <para>You do not need to specify this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -50,16 +50,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of SRV connection string to enable.</para>
+        /// <para>The type of the SRV address to apply for. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>vpc</c>: SRV connection string for the VPC.</para>
-        /// </description></item>
-        /// <item><description><para><c>public</c>: Public SRV connection string.</para>
+        /// <item><description><b>vpc</b>: VPC SRV address.</description></item>
+        /// <item><description><b>public</b>: Public SRV address.<remarks>
+        /// <para>The default is the private SRV address.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para>The default is the VPC connection string.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>vpc</para>

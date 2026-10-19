@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeAccountsRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the account. Set the value to <b>root</b>.</para>
+        /// <para>The account name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>root</para>
@@ -18,6 +18,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
+
+        /// <summary>
+        /// <para>The account type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>normal</para>
+        /// </summary>
+        [NameInMap("CharacterType")]
+        [Validation(Required=false)]
+        public string CharacterType { get; set; }
 
         /// <summary>
         /// <para>The instance ID.</para>
@@ -29,6 +39,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
+
+        /// <summary>
+        /// <para>The database to which the account belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>admin</para>
+        /// </summary>
+        [NameInMap("DBName")]
+        [Validation(Required=false)]
+        public string DBName { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]

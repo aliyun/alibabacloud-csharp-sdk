@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of records per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of instances returned.</para>
+        /// <para>The number of instances in the query result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

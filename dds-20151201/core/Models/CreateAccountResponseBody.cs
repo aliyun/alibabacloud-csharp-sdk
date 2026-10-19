@@ -19,6 +19,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The task ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123456</para>
+        /// </summary>
+        [NameInMap("TaskId")]
+        [Validation(Required=false)]
+        public int? TaskId { get; set; }
+
     }
 
 }

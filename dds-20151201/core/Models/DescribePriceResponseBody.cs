@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribePriceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of order information.</para>
+        /// <para>The order information list.</para>
         /// </summary>
         [NameInMap("Order")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a contract promotion is matched.</para>
+            /// <para>Indicates whether a contract discount is applied.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -105,14 +105,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string Currency { get; set; }
 
             /// <summary>
-            /// <para>Information about the price reduction.</para>
+            /// <para>The price reduction information.</para>
             /// </summary>
             [NameInMap("DepreciateInfo")]
             [Validation(Required=false)]
             public DescribePriceResponseBodyOrderDepreciateInfo DepreciateInfo { get; set; }
             public class DescribePriceResponseBodyOrderDepreciateInfo : TeaModel {
                 /// <summary>
-                /// <para>The price reduction percentage.</para>
+                /// <para>The price reduction ratio.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30%</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public double? CheapRate { get; set; }
 
                 /// <summary>
-                /// <para>The total price after the price reduction.</para>
+                /// <para>The total price on the official website after the price reduction.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>9*</para>
@@ -132,14 +132,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public double? CheapStandAmount { get; set; }
 
                 /// <summary>
-                /// <para>The contract promotion.</para>
+                /// <para>The contract discount.</para>
                 /// </summary>
                 [NameInMap("ContractActivity")]
                 [Validation(Required=false)]
                 public DescribePriceResponseBodyOrderDepreciateInfoContractActivity ContractActivity { get; set; }
                 public class DescribePriceResponseBodyOrderDepreciateInfoContractActivity : TeaModel {
                     /// <summary>
-                    /// <para>The promotion ID.</para>
+                    /// <para>The activity ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>41120065996xxxxx</para>
@@ -149,17 +149,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                     public long? ActivityId { get; set; }
 
                     /// <summary>
-                    /// <para>The promotion name.</para>
+                    /// <para>The activity name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>合同优惠_整单_xxx折</para>
+                    /// <para>Contract discount_entire order_xxx% off</para>
                     /// </summary>
                     [NameInMap("ActivityName")]
                     [Validation(Required=false)]
                     public string ActivityName { get; set; }
 
                     /// <summary>
-                    /// <para>The price after the discount.</para>
+                    /// <para>The price after discount.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>20522.4</para>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 }
 
                 /// <summary>
-                /// <para>The price difference discount. This is displayed in the total price of the order.</para>
+                /// <para>The price difference discount (displayed in the total order price).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>**</para>
@@ -231,7 +231,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string DifferentialName { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether a contract promotion is matched.</para>
+                /// <para>Indicates whether a contract discount is applied.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -241,7 +241,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public bool? IsContractActivity { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether to show the price reduction.</para>
+                /// <para>Indicates whether the price reduction margin is displayed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -261,7 +261,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public double? ListPrice { get; set; }
 
                 /// <summary>
-                /// <para>The monthly price.</para>
+                /// <para>The equivalent monthly price.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>**</para>
@@ -271,7 +271,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public double? MonthPrice { get; set; }
 
                 /// <summary>
-                /// <para>The original total price.</para>
+                /// <para>The original total price on the official website.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12*</para>
@@ -293,7 +293,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string DiscountAmount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a contract promotion is matched.</para>
+            /// <para>Indicates whether a contract discount is applied.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -303,7 +303,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public bool? IsContractActivity { get; set; }
 
             /// <summary>
-            /// <para>The order information.</para>
+            /// <para>The order message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;&quot;</para>
@@ -316,7 +316,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <para>The list of promotion information.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>&quot;[{\&quot;activityCategory\&quot;:\&quot;discount\&quot;,\&quot;activityExtInfo\&quot;:{\&quot;noUseYouhuiquan\&quot;:\&quot;true\&quot;,\&quot;activityId\&quot;:\&quot;191156098xxxx\&quot;,\&quot;activityExtraAttr\&quot;:\&quot;{\\\&quot;forbiddenCpsProfit\\\&quot;:\\\&quot;true\\\&quot;,\\\&quot;forbiddenCouponsRestricted\\\&quot;:\\\&quot;true\\\&quot;,\\\&quot;forbiddenAmbassadorProfit\\\&quot;:\\\&quot;true\\\&quot;}\&quot;,\&quot;isActivityIdFromWanHuaTong\&quot;:\&quot;true\&quot;,\&quot;isContractActivity\&quot;:\&quot;false\&quot;},\&quot;canPromFee\&quot;:906130,\&quot;optionCode\&quot;:\&quot;wanhua_activity\&quot;,\&quot;promotionName\&quot;:\&quot;FY24--MongoDB 副本集--首购--1年*折--ft首购权益\&quot;,\&quot;promotionOptionNo\&quot;:\&quot;19115609882xxxx\&quot;,\&quot;promotionRuleIdList\&quot;:[2091xxxx],\&quot;selected\&quot;:true,\&quot;targetArticleItemCodes\&quot;:[]},{\&quot;activityCategory\&quot;:\&quot;discount\&quot;,\&quot;activityExtInfo\&quot;:{\&quot;activityId\&quot;:\&quot;1018040010xxxxx\&quot;,\&quot;wanHuaOrderExpireSec\&quot;:\&quot;604800\&quot;,\&quot;isActivityIdFromWanHuaTong\&quot;:\&quot;true\&quot;,\&quot;isContractActivity\&quot;:\&quot;false\&quot;},\&quot;canPromFee\&quot;:339799,\&quot;optionCode\&quot;:\&quot;wanhua_activity\&quot;,\&quot;promotionName\&quot;:\&quot;FY24--MongoDB年付折扣\&quot;,\&quot;promotionOptionNo\&quot;:\&quot;10180400107xxxxx\&quot;,\&quot;promotionRuleIdList\&quot;:[xxxxx],\&quot;selected\&quot;:false,\&quot;targetArticleItemCodes\&quot;:[]}]&quot;</para>
+            /// <para>&quot;[{\&quot;activityCategory\&quot;:\&quot;discount\&quot;,\&quot;activityExtInfo\&quot;:{\&quot;noUseYouhuiquan\&quot;:\&quot;true\&quot;,\&quot;activityId\&quot;:\&quot;191156098xxxx\&quot;,\&quot;activityExtraAttr\&quot;:\&quot;{\\\&quot;forbiddenCpsProfit\\\&quot;:\\\&quot;true\\\&quot;,\\\&quot;forbiddenCouponsRestricted\\\&quot;:\\\&quot;true\\\&quot;,\\\&quot;forbiddenAmbassadorProfit\\\&quot;:\\\&quot;true\\\&quot;}\&quot;,\&quot;isActivityIdFromWanHuaTong\&quot;:\&quot;true\&quot;,\&quot;isContractActivity\&quot;:\&quot;false\&quot;},\&quot;canPromFee\&quot;:906130,\&quot;optionCode\&quot;:\&quot;wanhua_activity\&quot;,\&quot;promotionName\&quot;:\&quot;FY24--MongoDB replica set--first purchase--1-year * discount--ft first purchase benefit\&quot;,\&quot;promotionOptionNo\&quot;:\&quot;19115609882xxxx\&quot;,\&quot;promotionRuleIdList\&quot;:[2091xxxx],\&quot;selected\&quot;:true,\&quot;targetArticleItemCodes\&quot;:[]},{\&quot;activityCategory\&quot;:\&quot;discount\&quot;,\&quot;activityExtInfo\&quot;:{\&quot;activityId\&quot;:\&quot;1018040010xxxxx\&quot;,\&quot;wanHuaOrderExpireSec\&quot;:\&quot;604800\&quot;,\&quot;isActivityIdFromWanHuaTong\&quot;:\&quot;true\&quot;,\&quot;isContractActivity\&quot;:\&quot;false\&quot;},\&quot;canPromFee\&quot;:339799,\&quot;optionCode\&quot;:\&quot;wanhua_activity\&quot;,\&quot;promotionName\&quot;:\&quot;FY24--MongoDB annual discount\&quot;,\&quot;promotionOptionNo\&quot;:\&quot;10180400107xxxxx\&quot;,\&quot;promotionRuleIdList\&quot;:[xxxxx],\&quot;selected\&quot;:false,\&quot;targetArticleItemCodes\&quot;:[]}]&quot;</para>
             /// </summary>
             [NameInMap("OptionalPromotions")]
             [Validation(Required=false)]
@@ -336,7 +336,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <para>The matched promotions.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>[{\&quot;finalPromFee\&quot;:90xxx,\&quot;optionCode\&quot;:\&quot;wanhua_activity\&quot;,\&quot;promType\&quot;:\&quot;discount\&quot;,\&quot;promotionId\&quot;:2091xxxx,\&quot;promotionName\&quot;:\&quot;新用户购买云数据库 MongoDB 副本集1年享*折优惠，限1台\&quot;}]&quot;</para>
+            /// <para>[{\&quot;finalPromFee\&quot;:90xxx,\&quot;optionCode\&quot;:\&quot;wanhua_activity\&quot;,\&quot;promType\&quot;:\&quot;discount\&quot;,\&quot;promotionId\&quot;:2091xxxx,\&quot;promotionName\&quot;:\&quot;New users purchasing ApsaraDB for MongoDB replica set for 1 year enjoy * discount, limited to 1 instance\&quot;}]&quot;</para>
             /// </summary>
             [NameInMap("PromDetailList")]
             [Validation(Required=false)]
@@ -353,7 +353,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether to show the discount information.</para>
+            /// <para>Indicates whether the discount information is displayed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -363,7 +363,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public bool? ShowDiscountInfo { get; set; }
 
             /// <summary>
-            /// <para>The discount price.</para>
+            /// <para>The discounted price.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -373,7 +373,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public double? StandDiscountPrice { get; set; }
 
             /// <summary>
-            /// <para>The discount price.</para>
+            /// <para>The standard discounted price.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -383,7 +383,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public double? StandPrice { get; set; }
 
             /// <summary>
-            /// <para>The aggregate price of the order.</para>
+            /// <para>The aggregated price of the order.</para>
             /// 
             /// <b>Example:</b>
             /// <para>483.14</para>
@@ -407,7 +407,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The order parameters.</para>
         /// <remarks>
-        /// <para>This parameter is returned only when <b>OrderParamOut</b> is set to <b>true</b>.</para>
+        /// <para>This parameter is returned only when the <b>OrderParamOut</b> parameter is set to <b>true</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

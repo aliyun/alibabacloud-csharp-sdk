@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class MigrateAvailableZoneRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>If the instance is deployed in a VPC, you must specify the <b>Vswitch</b> parameter.</para>
+        /// <para>If the network type of the instance is VPC, you must also specify the <b>Vswitch</b> parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,12 +24,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The time when the instance is migrated to the destination zone. Valid values:</para>
+        /// <para>The effective time for migrating the zone. The instance must be active. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Immediately</b>: The instance is immediately migrated to the destination zone.</para>
-        /// </description></item>
-        /// <item><description><para><b>MaintainTime</b>: The instance is migrated to the destination zone during the maintenance window of the instance.</para>
-        /// </description></item>
+        /// <item><description><b>Immediately</b>: Takes effect immediately.</description></item>
+        /// <item><description><b>MaintainTime</b>: Takes effect during the maintenance window of the instance.</description></item>
         /// </list>
         /// <para>Default value: <b>Immediately</b>.</para>
         /// 
@@ -41,7 +39,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string EffectiveTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the destination hidden zone.</para>
+        /// <para>The ID of destination secondary zone 2.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai-n</para>
@@ -67,7 +65,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the destination secondary zone.</para>
+        /// <para>The ID of destination secondary zone 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-h</para>
@@ -79,7 +77,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The ID of the vSwitch in the destination zone.</para>
         /// <remarks>
-        /// <para>If the instance is deployed in a VPC, you must specify this parameter.</para>
+        /// <para>This parameter is required when the network type of the instance is VPC.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -92,13 +90,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The ID of the destination zone.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>The source zone and the destination zone belong to the same region.</para>
-        /// </description></item>
-        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the zone ID.</para>
-        /// </description></item>
+        /// <item><description>The destination zone and the current zone of the instance are in the same region.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query zone IDs.</description></item>
         /// </list>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

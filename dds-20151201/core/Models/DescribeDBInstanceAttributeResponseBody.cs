@@ -141,6 +141,22 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 [Validation(Required=false)]
                 public string DisasterRecoveryInfo { get; set; }
 
+                [NameInMap("EbsBandwidth")]
+                [Validation(Required=false)]
+                public int? EbsBandwidth { get; set; }
+
+                [NameInMap("EbsIOPS")]
+                [Validation(Required=false)]
+                public int? EbsIOPS { get; set; }
+
+                [NameInMap("EcsBandwidth")]
+                [Validation(Required=false)]
+                public int? EcsBandwidth { get; set; }
+
+                [NameInMap("EcsIOPS")]
+                [Validation(Required=false)]
+                public int? EcsIOPS { get; set; }
+
                 [NameInMap("Encrypted")]
                 [Validation(Required=false)]
                 public bool? Encrypted { get; set; }
@@ -385,6 +401,22 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                         [Validation(Required=false)]
                         public string CurrentKernelVersion { get; set; }
 
+                        [NameInMap("EbsBandwidth")]
+                        [Validation(Required=false)]
+                        public int? EbsBandwidth { get; set; }
+
+                        [NameInMap("EbsIOPS")]
+                        [Validation(Required=false)]
+                        public int? EbsIOPS { get; set; }
+
+                        [NameInMap("EcsBandwidth")]
+                        [Validation(Required=false)]
+                        public int? EcsBandwidth { get; set; }
+
+                        [NameInMap("EcsIOPS")]
+                        [Validation(Required=false)]
+                        public int? EcsIOPS { get; set; }
+
                         [NameInMap("LockMode")]
                         [Validation(Required=false)]
                         public string LockMode { get; set; }
@@ -530,7 +562,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A935A8EE-A6CC-53DE-98BA-20ABAA7E632B</para>

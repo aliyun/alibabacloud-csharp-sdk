@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyActiveOperationMaintenanceConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The day of the cycle.</para>
+        /// <para>The list of days in the O&amp;M cycle, separated by commas (,).</para>
         /// <list type="bullet">
-        /// <item><description><para>If CycleType is set to Month, enter a number from 1 to 28 to specify the day of the month. Use a comma (,) to separate multiple days.</para>
-        /// </description></item>
-        /// <item><description><para>If CycleType is set to Week, enter a number from 1 to 7 to specify the day of the week. Use a comma (,) to separate multiple days.</para>
-        /// </description></item>
+        /// <item><description>If CycleType is set to Month, each item is an integer from 1 to 28, which represents a day of the month.</description></item>
+        /// <item><description>If CycleType is set to Week, each item is an integer from 1 to 7, which represents a day of the week.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,12 +24,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string CycleTime { get; set; }
 
         /// <summary>
-        /// <para>The cycle type.</para>
+        /// <para>The cycle type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Month: monthly</para>
-        /// </description></item>
-        /// <item><description><para>Week: weekly</para>
-        /// </description></item>
+        /// <item><description>Month: Monthly.</description></item>
+        /// <item><description>Week: Weekly.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,7 +38,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string CycleType { get; set; }
 
         /// <summary>
-        /// <para>The end time of the O\&amp;M window for the instance. The time is in the HH:mmZ format and is in UTC.</para>
+        /// <para>The end time of the instance O&amp;M window. The time is in the HH:mmZ format and in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22:00Z</para>
@@ -52,7 +48,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string MaintainEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time of the O\&amp;M window for the instance. The time is in the HH:mmZ format and is in UTC.</para>
+        /// <para>The start time of the instance O&amp;M window. The time is in the HH:mmZ format and in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>21:00Z</para>
@@ -78,12 +74,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the configuration is enabled.</para>
+        /// <para>Specifies whether the configuration takes effect. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para>1: enabled</para>
-        /// </description></item>
-        /// <item><description><para>2: disabled</para>
-        /// </description></item>
+        /// <item><description>1: Effective. </description></item>
+        /// <item><description>2: Invalid.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

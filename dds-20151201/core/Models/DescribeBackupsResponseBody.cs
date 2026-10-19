@@ -100,14 +100,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page. Valid values:</para>
+        /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>30</b> (Default)</para>
-        /// </description></item>
-        /// <item><description><para><b>50</b></para>
-        /// </description></item>
-        /// <item><description><para><b>100</b></para>
-        /// </description></item>
+        /// <item><description><b>30</b> (default)</description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

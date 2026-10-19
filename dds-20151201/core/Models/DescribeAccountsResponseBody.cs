@@ -37,6 +37,42 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 [Validation(Required=false)]
                 public string DBInstanceId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>admin</para>
+                /// </summary>
+                [NameInMap("DBName")]
+                [Validation(Required=false)]
+                public string DBName { get; set; }
+
+                [NameInMap("Roles")]
+                [Validation(Required=false)]
+                public DescribeAccountsResponseBodyAccountsAccountRoles Roles { get; set; }
+                public class DescribeAccountsResponseBodyAccountsAccountRoles : TeaModel {
+                    [NameInMap("Role")]
+                    [Validation(Required=false)]
+                    public List<DescribeAccountsResponseBodyAccountsAccountRolesRole> Role { get; set; }
+                    public class DescribeAccountsResponseBodyAccountsAccountRolesRole : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>admin</para>
+                        /// </summary>
+                        [NameInMap("DBName")]
+                        [Validation(Required=false)]
+                        public string DBName { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>read</para>
+                        /// </summary>
+                        [NameInMap("Role")]
+                        [Validation(Required=false)]
+                        public string Role { get; set; }
+
+                    }
+
+                }
+
             }
 
         }

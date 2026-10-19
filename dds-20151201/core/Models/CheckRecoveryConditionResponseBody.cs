@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class CheckRecoveryConditionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance ID</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dds-bp1378****</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the data of the instance can be restored. Valid values:</para>
+        /// <para>Indicates whether the restoration conditions are met. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The data of the instance can be restored.</description></item>
-        /// <item><description><b>false</b>: The data of the instance cannot be restored.</description></item>
+        /// <item><description><b>true</b>: The conditions are met.</description></item>
+        /// <item><description><b>false</b>: The conditions are not met.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

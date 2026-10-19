@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DeleteNodeRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCzxxxxxxxxxx</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the shard or mongos node that you want to delete. You can call the <a href="https://help.aliyun.com/document_detail/61923.html">DescribeDBInstanceAttribute</a> operation to query node IDs.</para>
+        /// <para>The ID of the shard or mongos node to be deleted. You can call the <a href="https://help.aliyun.com/document_detail/61923.html">DescribeDBInstanceAttribute</a> operation to query the node ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

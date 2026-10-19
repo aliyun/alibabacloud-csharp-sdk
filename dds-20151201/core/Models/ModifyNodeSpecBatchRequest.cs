@@ -10,17 +10,18 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyNodeSpecBatchRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to automatically align the primary node to the primary zone after operations such as configuration changes for a multi-zone instance. If you choose not to align the node, one primary/secondary switchover (transient connection) is prevented. Default value: true.</para>
+        /// </summary>
+        [NameInMap("AlignPrimaryZone")]
+        [Validation(Required=false)]
+        public bool? AlignPrimaryZone { get; set; }
+
+        /// <summary>
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Automatic payment is enabled. Make sure that your account has a sufficient balance.</description></item>
-        /// </list>
-        /// <para>&lt;props=&quot;china&quot;&gt;</para>
-        /// <list type="bullet">
-        /// <item><description><b>false</b>: Manual payment is enabled. Log on to the ApsaraDB for MongoDB console. In the upper-right corner, choose <b>Expenses</b> &gt; <b>Expenses and Costs</b>. In the navigation pane on the left, choose <b>Subscription Orders</b> &gt; <b>My Orders</b>. On the <b>Product Orders</b> tab, find the target order and pay for it.</description></item>
-        /// </list>
-        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-        /// <list type="bullet">
-        /// <item><description><b>false</b>: Manual payment is enabled. Log on to the ApsaraDB for MongoDB console. In the upper-right corner, choose <b>Expenses</b> &gt; <b>Expenses and Costs</b>. In the navigation pane on the left, click <b>Order Management</b>. On the <b>Product Orders</b> page, find the target order and pay for it.</description></item>
+        /// <item><description><b>true</b>: enables automatic payment. Make sure that your account has sufficient balance.
+        /// &lt;props=&quot;china&quot;&gt;- <b>false</b>: disables automatic payment. You can log on to the ApsaraDB for MongoDB console, choose <b>Expenses</b> &gt; <b>Expenses and Costs</b> in the upper-right corner, choose <b>Orders</b> &gt; <b>My Orders</b> in the left-side navigation pane, and then find the target order on the <b>Orders</b> tab to complete the payment.
+        /// &lt;props=&quot;intl&quot;&gt;- <b>false</b>: disables automatic payment. You can log on to the ApsaraDB for MongoDB console, choose <b>Expenses</b> &gt; <b>Expenses and Costs</b> in the upper-right corner, click <b>Order Management</b> in the left-side navigation pane, and then find the target order on the <b>Orders</b> page to complete the payment.</description></item>
         /// </list>
         /// <para>Default value: <b>true</b>.</para>
         /// 
@@ -42,7 +43,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// <para>A client token. It is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the token, but you must ensure that it is unique among different requests. The token can contain a maximum of 64 ASCII characters and cannot contain non-ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -54,10 +55,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>Specifies whether to use a coupon. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>default</b> or <b>null</b> (default): A coupon is used.</para>
-        /// </description></item>
-        /// <item><description><para><b>youhuiquan_promotion_option_id_for_blank</b>: A coupon is not used.</para>
-        /// </description></item>
+        /// <item><description><b>default</b> or <b>null</b>: uses a coupon. This is the default value.</description></item>
+        /// <item><description><b>youhuiquan_promotion_option_id_for_blank</b>: does not use a coupon.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,7 +67,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string CouponNo { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance for which you want to change configurations.</para>
+        /// <para>The instance ID of the instance whose configurations you want to modify.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -81,17 +80,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The effective period of the configuration change. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Immediately</b>: The change takes effect immediately.</para>
-        /// </description></item>
-        /// <item><description><para><b>MaintainTime</b>: The change takes effect during the maintenance window of the instance.</para>
-        /// </description></item>
+        /// <item><description><b>Immediately</b>: The configuration change takes effect immediately.</description></item>
+        /// <item><description><b>MaintainTime</b>: The configuration change takes effect during the maintenance window of the instance.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/62008.html">ModifyDBInstanceMaintainTime</a> operation to change the maintenance window of an instance.</para>
-        /// </description></item>
-        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to view the maintenance window of an instance.</para>
-        /// </description></item>
+        /// <item><description>You can invoke the <a href="https://help.aliyun.com/document_detail/62008.html">ModifyDBInstanceMaintainTime</a> operation to modify the maintenance window of the instance.</description></item>
+        /// <item><description>You can invoke the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to view the maintenance window of the instance.</description></item>
         /// </list>
         /// </remarks>
         /// <para>Default value: <b>Immediately</b>.</para>
@@ -104,7 +99,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string EffectiveTime { get; set; }
 
         /// <summary>
-        /// <para>The instance types of the Mongos and shard nodes that you want to change. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</para>
+        /// <para>The specifications of the Mongos or shard nodes to be modified. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -115,12 +110,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string NodesInfo { get; set; }
 
         /// <summary>
-        /// <para>The type of configuration change. Valid values:</para>
+        /// <para>The type of the configuration change. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>UPGRADE</b>: Upgrades the instance configuration.</para>
-        /// </description></item>
-        /// <item><description><para><b>DOWNGRADE</b>: Downgrades the instance configuration.</para>
-        /// </description></item>
+        /// <item><description><b>UPGRADE</b>: upgrades the configurations.</description></item>
+        /// <item><description><b>DOWNGRADE</b>: downgrades the configurations.</description></item>
         /// </list>
         /// <remarks>
         /// <para>This parameter is available only when the billing method of the instance is subscription.</para>
@@ -142,7 +135,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query available regions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -160,18 +153,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The destination zone of the hidden node for a configuration change that involves a zone migration.</para>
+        /// <para>The destination zone of the hidden node when you migrate the instance across zones and change its configurations at the same time.</para>
         /// <remarks>
-        /// <para>Notice: </para>
+        /// <para>Notice: This parameter is supported only for cloud disk instances.</notice>
+        /// Notice: The value of this parameter cannot be the same as the value of the TargetZoneId or TargetSecondaryZoneId parameter.</notice></para>
         /// </remarks>
-        /// <para>This parameter applies only to instances that use disks.</para>
-        /// <remarks>
-        /// <para>Notice: </para>
-        /// </remarks>
-        /// <para>The value of this parameter cannot be the same as the value of the TargetZoneId or TargetSecondaryZoneId parameter.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter is required only for a configuration change that involves a zone migration.</description></item>
+        /// <item><description>You must specify this parameter only when you migrate the instance across zones and change its configurations at the same time.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -183,18 +172,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string TargetHiddenZoneId { get; set; }
 
         /// <summary>
-        /// <para>The destination zone of the secondary node for a configuration change that involves a zone migration.</para>
+        /// <para>The destination zone of the secondary node when you migrate the instance across zones and change its configurations at the same time.</para>
         /// <remarks>
-        /// <para>Notice: </para>
-        /// </remarks>
-        /// <para>This parameter applies only to instances that use disks.</para>
-        /// <remarks>
-        /// <para>Notice: </para>
-        /// </remarks>
-        /// <para>The value of this parameter cannot be the same as the value of the TargetZoneId or TargetHiddenZoneId parameter.</para>
-        /// <remarks>
+        /// <para>Notice: This parameter is supported only for cloud disk instances.</notice>
+        /// Notice: The value of this parameter cannot be the same as the value of the TargetZoneId or TargetHiddenZoneId parameter.</notice></para>
         /// <list type="bullet">
-        /// <item><description>This parameter is required only for a configuration change that involves a zone migration.</description></item>
+        /// <item><description>You must specify this parameter only when you migrate the instance across zones and change its configurations at the same time.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -206,14 +189,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string TargetSecondaryZoneId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the destination virtual switch for a configuration change that involves a zone migration.</para>
+        /// <para>The ID of the destination vSwitch when you migrate the instance across zones and change its configurations at the same time.</para>
         /// <remarks>
-        /// <para>Notice: </para>
-        /// </remarks>
-        /// <para>This parameter applies only to instances that use disks.</para>
-        /// <remarks>
+        /// <para>Notice: This parameter is supported only for cloud disk instances.</notice></para>
         /// <list type="bullet">
-        /// <item><description>This parameter is required only for a configuration change that involves a zone migration.</description></item>
+        /// <item><description>You must specify this parameter only when you migrate the instance across zones and change its configurations at the same time.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -225,18 +205,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string TargetVswitchId { get; set; }
 
         /// <summary>
-        /// <para>The destination zone of the primary node for a configuration change that involves a zone migration.</para>
+        /// <para>The destination zone of the primary node when you migrate the instance across zones and change its configurations at the same time.</para>
         /// <remarks>
-        /// <para>Notice: </para>
-        /// </remarks>
-        /// <para>This parameter applies only to instances that use disks.</para>
-        /// <remarks>
-        /// <para>Notice: </para>
-        /// </remarks>
-        /// <para>The value of this parameter cannot be the same as the value of the TargetSecondaryZoneId or TargetHiddenZoneId parameter.</para>
-        /// <remarks>
+        /// <para>Notice: This parameter is supported only for cloud disk instances.</notice>
+        /// Notice: The value of this parameter cannot be the same as the value of the TargetSecondaryZoneId or TargetHiddenZoneId parameter.</notice></para>
         /// <list type="bullet">
-        /// <item><description>This parameter is required only for a configuration change that involves a zone migration.</description></item>
+        /// <item><description>You must specify this parameter only when you migrate the instance across zones and change its configurations at the same time.</description></item>
         /// </list>
         /// </remarks>
         /// 

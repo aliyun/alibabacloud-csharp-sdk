@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyDBInstanceNetExpireTimeRequest : TeaModel {
         /// <summary>
-        /// <para>The retention period of the classic network endpoint of the instance. Valid values: <b>14</b>, <b>30</b>, <b>60</b>, and <b>120</b>. Unit: day.</para>
+        /// <para>Sets the retention period of the original classic network endpoint. Valid values: <b>14</b>, <b>30</b>, <b>60</b>, and <b>120</b>. Unit: days.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

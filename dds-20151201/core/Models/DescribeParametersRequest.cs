@@ -10,14 +10,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeParametersRequest : TeaModel {
         /// <summary>
-        /// <para>The role of the instance. Valid values:</para>
+        /// <para>The role type of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>db: a shard node.</para>
-        /// </description></item>
-        /// <item><description><para>cs: a Configserver node.</para>
-        /// </description></item>
-        /// <item><description><para>mongos: a mongos node.</para>
-        /// </description></item>
+        /// <item><description>db: shard role</description></item>
+        /// <item><description>cs: config server role</description></item>
+        /// <item><description>mongos: mongos role</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -30,7 +27,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>If you set this parameter to the ID of a sharded cluster instance, you must also specify the <b>NodeId</b> parameter.</para>
+        /// <para>If you specify the ID of a sharded cluster instance for this parameter, you must also specify the <b>NodeId</b> parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -42,7 +39,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The parameter that is available in the future.</para>
+        /// <para>The extended parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>terrform</para>
@@ -52,9 +49,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ExtraParam { get; set; }
 
         /// <summary>
-        /// <para>The ID of the mongos or shard node in the specified sharded cluster instance.</para>
+        /// <para>Instance ID of the mongos or shard node in the sharded cluster instance.</para>
         /// <remarks>
-        /// <para>This parameter is valid when the <b>DBInstanceId</b> parameter is set to the ID of a sharded cluster instance.</para>
+        /// <para>This parameter is available only when the <b>DBInstanceId</b> parameter is set to instance ID of a sharded cluster instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether an SLR is created.</para>
+        /// <para>Indicates whether the service-linked role <a href="https://help.aliyun.com/document_detail/384051.html">AliyunServiceRoleForMongoDB</a> has been created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

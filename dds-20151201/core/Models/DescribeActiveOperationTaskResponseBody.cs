@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public List<DescribeActiveOperationTaskResponseBodyItems> Items { get; set; }
         public class DescribeActiveOperationTaskResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The time when the task was created. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The time when the O&amp;M task was created. The format is <c>yyyy-MM-ddTHH:mm:ssZ</c> (UTC time).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-11-06T13:11:08Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string CreatedTime { get; set; }
 
             /// <summary>
-            /// <para>The database type of the instance.</para>
+            /// <para>The database type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mongodb</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string DbType { get; set; }
 
             /// <summary>
-            /// <para>The deadline before which the time to preform the task can be modified. The time in UTC is displayed in the yyyy-MM-ddTHH:mm:ssZ format.</para>
+            /// <para>The latest time within the adjustable range for the execution time of the O&amp;M task. The format is <c>yyyy-MM-ddTHH:mm:ssZ</c> (UTC time).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-03-29T13:59:59Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string InsName { get; set; }
 
             /// <summary>
-            /// <para>The time when the task was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The time when the O&amp;M task was modified. The format is <c>yyyy-MM-ddTHH:mm:ssZ</c> (UTC time).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-02-24T08:18:53Z</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string ModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The required preparation period between the task start time and the switchover time. The time is displayed in the HH:mm:ss format.</para>
+            /// <para>The preparation time required between the start time and the switchover time of the O&amp;M task. The format is HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>14:00:00</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string PrepareInterval { get; set; }
 
             /// <summary>
-            /// <para>The region of the instance.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The result information.</para>
+            /// <para>The execution result information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;&quot;</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string ResultInfo { get; set; }
 
             /// <summary>
-            /// <para>The time when the task was preformed. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The execution time of the O&amp;M task. The format is <c>yyyy-MM-ddTHH:mm:ssZ</c> (UTC time).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-03-20T02:40:00Z</para>
@@ -117,20 +117,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The state of the task. Valid values:</para>
+            /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>2: The task is waiting for users to specify a switchover time.</para>
-            /// </description></item>
-            /// <item><description><para>3: The task is waiting to be performed.</para>
-            /// </description></item>
-            /// <item><description><para>4: The task is being performed. If the task is in this state, the ModifyActiveOperationTask operation cannot be called to modify the scheduled switchover time.</para>
-            /// </description></item>
-            /// <item><description><para>5: The task is performed.</para>
-            /// </description></item>
-            /// <item><description><para>6: The task fails.</para>
-            /// </description></item>
-            /// <item><description><para>7: The task is canceled.</para>
-            /// </description></item>
+            /// <item><description>2: Waiting for the user to specify a time.</description></item>
+            /// <item><description>3: Waiting to be processed.</description></item>
+            /// <item><description>4: Processing. After the task enters this state, the scheduled switchover time cannot be modified.</description></item>
+            /// <item><description>5: Succeeded.</description></item>
+            /// <item><description>6: Failed.</description></item>
+            /// <item><description>7: Canceled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -141,7 +135,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the system performs the switchover operation. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The switchover time of the O&amp;M task. The format is <c>yyyy-MM-ddTHH:mm:ssZ</c> (UTC time).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-11-06T14:11:08Z</para>
@@ -161,16 +155,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string TaskParams { get; set; }
 
             /// <summary>
-            /// <para>The type of the task. Valid values:</para>
+            /// <para>The task type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>rds_apsaradb_ha: master-replica switchover</para>
-            /// </description></item>
-            /// <item><description><para>rds_apsaradb_transfer: instance migration</para>
-            /// </description></item>
-            /// <item><description><para>rds_apsaradb_upgrade: minor version update</para>
-            /// </description></item>
-            /// <item><description><para>all: all types</para>
-            /// </description></item>
+            /// <item><description>rds_apsaradb_ha: primary/secondary node switch.</description></item>
+            /// <item><description>rds_apsaradb_transfer: instance migration.</description></item>
+            /// <item><description>rds_apsaradb_upgrade: minor version update.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -183,7 +172,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -193,7 +182,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries returned per page. Default value: 30.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -213,7 +202,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned entries.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

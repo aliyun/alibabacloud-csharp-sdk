@@ -10,13 +10,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeActiveOperationTaskRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to return the historical tasks.</para>
-        /// <para>Default value: 0. Valid values:</para>
+        /// <para>Specifies whether to return historical tasks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: returns the current task.</para>
-        /// </description></item>
-        /// <item><description><para>1: returns the historical tasks.</para>
-        /// </description></item>
+        /// <item><description>0: returns current tasks. This is the default value.</description></item>
+        /// <item><description>1: returns historical tasks.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +32,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. The value must be an integer that is greater than 0. Default value: 1.</para>
+        /// <para>The page number. The value must be greater than 0 and not exceed the maximum value of the Integer data type. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -45,7 +42,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Specify a value greater than 10. Default value: 30.</para>
+        /// <para>The maximum number of entries to return on each page. The value must be greater than 10. Default value: 30.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -55,7 +52,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the product.</para>
+        /// <para>The product ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MongoDB</para>
@@ -65,10 +62,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ProductId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance.</para>
-        /// <remarks>
-        /// <para>If you set the Region parameter to <b>all</b>, all tasks created within your Alibaba Cloud account are queried. In this case, you must set the <b>taskType</b> parameter to <b>all</b>.</para>
-        /// </remarks>
+        /// <para>The ID of the region to which the pending events belong. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query region IDs. If you set this parameter to all, all tasks under the current account are queried, and the TaskType parameter must also be set to all.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -87,15 +81,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of the task. Valid values:</para>
+        /// <para>The task type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>rds_apsaradb_ha: master-replica switchover</para>
-        /// </description></item>
-        /// <item><description><para>rds_apsaradb_transfer: instance migration</para>
-        /// </description></item>
-        /// <item><description><para>rds_apsaradb_upgrade: minor version update</para>
-        /// </description></item>
+        /// <item><description>rds_apsaradb_ha: primary/secondary node switch.</description></item>
+        /// <item><description>rds_apsaradb_transfer: instance migration.</description></item>
+        /// <item><description>rds_apsaradb_upgrade: minor version update.</description></item>
         /// </list>
+        /// <para>You can obtain the valid values from the <a href="https://help.aliyun.com/document_detail/2639186.html">DescribeHistoryTasks</a> operation.</para>
+        /// <para>If you set this parameter to all, all tasks under the current account are queried, and the Region parameter must also be set to all.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

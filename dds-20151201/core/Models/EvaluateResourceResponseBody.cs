@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class EvaluateResourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether resources are available in the current region. Valid values:</para>
+        /// <para>Indicates whether sufficient resources are available in the current region. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>1</b>: Resources are sufficient.</para>
-        /// </description></item>
-        /// <item><description><para><b>0</b>: Resources are insufficient.</para>
-        /// </description></item>
+        /// <item><description><b>1</b>: Sufficient resources are available.</description></item>
+        /// <item><description><b>0</b>: Insufficient resources are available.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceAvailable { get; set; }
 
         /// <summary>
-        /// <para>The database engine. The value is fixed to MongoDB.</para>
+        /// <para>The database engine. The value is fixed as MongoDB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MongoDB</para>

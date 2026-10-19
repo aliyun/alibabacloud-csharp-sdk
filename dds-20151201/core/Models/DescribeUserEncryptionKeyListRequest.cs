@@ -37,13 +37,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud Resource Name (ARN) of the RAM role. Format: <c>acs:ram::$accountID:role/$roleName</c>. The default value is <c>acs:ram::$accountID:role/aliyunrdsinstanceencryptiondefaultrole</c>.</para>
+        /// <para>The Alibaba Cloud Resource Name (ARN) of the specified role. Format: <c>acs:ram::$accountID:role/$roleName </c>. Default value: <c>acs:ram::$accountID:role/aliyunrdsinstanceencryptiondefaultrole</c>.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para><c>$accountID</c>: The ID of your Alibaba Cloud account. To view the ID, log on to the Alibaba Cloud Management Console, move the pointer over your profile picture in the upper-right corner, and then click Security Settings.</para>
-        /// </description></item>
-        /// <item><description><para><c>$roleName</c>: The name of the RAM role. To view the role name, log on to the RAM console. In the navigation pane on the left, click RAM Role Management. Find the role name in the RAM Role Name list.</para>
-        /// </description></item>
+        /// <item><description><c>$accountID</c>: the Alibaba Cloud account ID. You can log on to the Alibaba Cloud Management Console, move the mouse over the profile picture in the upper-right corner, and click Security Settings to view it.</description></item>
+        /// <item><description><c>$roleName</c>: the name of the RAM role. You can log on to the Resource Access Management (RAM) console, click RAM Roles in the left-side navigation pane, and view the name in the RAM role name list.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -55,7 +53,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RoleARN { get; set; }
 
         /// <summary>
-        /// <para>The ID of the destination region. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query available regions.</para>
+        /// <para>The target zone ID. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query available zones.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>

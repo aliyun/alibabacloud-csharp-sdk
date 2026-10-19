@@ -69,6 +69,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>admin</para>
+        /// </summary>
+        [NameInMap("DBName")]
+        [Validation(Required=false)]
+        public string DBName { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }

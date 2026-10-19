@@ -10,14 +10,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class CheckCloudResourceAuthorizedResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether KMS keys are authorized to ApsaraDB for MongoDB instances. Valid values:</para>
+        /// <para>The authorization status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>0</b>: KMS keys are not authorized.</para>
-        /// </description></item>
-        /// <item><description><para><b>1</b>: KMS keys are authorized.</para>
-        /// </description></item>
-        /// <item><description><para><b>2</b>: KMS is not enabled.</para>
-        /// </description></item>
+        /// <item><description><b>0</b>: Not authorized.</description></item>
+        /// <item><description><b>1</b>: Authorized.</description></item>
+        /// <item><description><b>2</b>: The user has not enabled KMS.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,7 +25,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? AuthorizationState { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A0181AC4-F186-46ED-87CA-100C70B86729</para>
@@ -38,9 +35,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The role information of the authorized Alibaba Resource Name (ARN).</para>
+        /// <para>The information about the role that is authorized to access Alibaba Cloud resources.</para>
         /// <remarks>
-        /// <para>This parameter is returned only when the value of the <b>AuthorizationState</b> parameter is <b>1</b>.</para>
+        /// <para>The response includes this parameter only when the return value of <b>AuthorizationState</b> is <b>1</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

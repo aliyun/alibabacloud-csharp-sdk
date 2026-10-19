@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class CreateNodeBatchResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the added mongos or shard node.</para>
+        /// <para>The ID of the added Mongos or shard node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-bp18f7d6b6a7****</para>

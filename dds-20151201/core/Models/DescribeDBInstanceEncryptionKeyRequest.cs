@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The custom key for the instance. You can call the <a href="https://help.aliyun.com/document_detail/151729.html">DescribeUserEncryptionKeyList</a> operation to query the list of custom keys for an ApsaraDB for MongoDB instance.</para>
+        /// <para>The custom encryption key of the instance. You can call <a href="https://help.aliyun.com/document_detail/151729.html">DescribeUserEncryptionKeyList</a> to query the custom keys of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2axxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</para>
@@ -29,6 +29,20 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("EncryptionKey")]
         [Validation(Required=false)]
         public string EncryptionKey { get; set; }
+
+        /// <summary>
+        /// <para>The key scenario to query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>TDE: Queries transparent data encryption key information.</description></item>
+        /// <item><description>CloudDisk: Queries cloud disk encryption key information.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>TDE</para>
+        /// </summary>
+        [NameInMap("EncryptionType")]
+        [Validation(Required=false)]
+        public string EncryptionType { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]

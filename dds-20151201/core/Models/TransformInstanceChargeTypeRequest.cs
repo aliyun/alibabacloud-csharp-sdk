@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class TransformInstanceChargeTypeRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable automatic payment. Valid values:</para>
+        /// <para>Specifies whether automatic payment is enabled for the order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b></para>
-        /// </description></item>
-        /// <item><description><para><b>false</b></para>
-        /// </description></item>
+        /// <item><description><b>true</b>: enables automatic payment for the order.</description></item>
+        /// <item><description><b>false</b>: requires manual payment for the order.</description></item>
         /// </list>
         /// <remarks>
         /// <para>Default value: <b>true</b>.</para>
@@ -29,12 +27,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
+        /// <para>Specifies whether to enable auto-renewal upon expiration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b></para>
-        /// </description></item>
-        /// <item><description><para><b>false</b></para>
-        /// </description></item>
+        /// <item><description><b>true</b>: enables auto-renewal.</description></item>
+        /// <item><description><b>false</b>: disables auto-renewal.</description></item>
         /// </list>
         /// <remarks>
         /// <para>Default value: <b>false</b>.</para>
@@ -48,7 +44,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The business information. This is an additional parameter.</para>
+        /// <para>The additional parameter for business information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{“ActivityId&quot;:&quot;000000000&quot;}</para>
@@ -60,10 +56,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The billing method of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>PrePaid:</b> subscription.</para>
-        /// </description></item>
-        /// <item><description><para><b>PostPaid:</b> pay-as-you-go.</para>
-        /// </description></item>
+        /// <item><description><b>PrePaid</b>: subscription.</description></item>
+        /// <item><description><b>PostPaid</b>: pay-as-you-go.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -75,7 +69,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The coupon code. Default value: <c>youhuiquan_promotion_option_id_for_blank</c>.</para>
+        /// <para>Specifies whether to use a coupon. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>default</b> or <b>null</b> (default): uses a coupon.</description></item>
+        /// <item><description><b>youhuiquan_promotion_option_id_for_blank</b>: does not use a coupon.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -85,7 +83,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string CouponNo { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -104,7 +102,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration of the instance. Unit: months. Valid values: <b>1, 2, 3, 4, 5, 6, 7, 8, 9</b>\<em>\</em>\<em>\</em>, <b>12</b>, <b>24</b>, and <b>36</b>.</para>
+        /// <para>The subscription duration. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>If PricingCycle is set to Month: <b>1</b> to <b>9</b>.</para>
+        /// </description></item>
+        /// <item><description><para>If PricingCycle is set to Year: <b>1</b>, <b>2</b>, <b>3</b>, and <b>5</b>.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -116,10 +120,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The unit of the subscription duration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Month</b>: month.</para>
-        /// </description></item>
-        /// <item><description><para><b>Year</b>: year.</para>
-        /// </description></item>
+        /// <item><description><b>Month</b>: months.</description></item>
+        /// <item><description><b>Year</b>: years.</description></item>
         /// </list>
         /// <para>Default value: Month.</para>
         /// 

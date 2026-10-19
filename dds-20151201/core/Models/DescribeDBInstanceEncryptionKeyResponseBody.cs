@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string Creator { get; set; }
 
         /// <summary>
-        /// <para>The scheduled time when the key for the instance will be deleted. If the parameter is left empty, the key will not be deleted.</para>
+        /// <para>The scheduled deletion time of the instance key. If this value is empty, the key is not automatically deleted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-07-06T18:22:03Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DeleteDate { get; set; }
 
         /// <summary>
-        /// <para>The description of the key for the instance.</para>
+        /// <para>The description of the instance key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>key description example</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The key for the instance.</para>
+        /// <para>The instance key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2axxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</para>
@@ -50,12 +50,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string EncryptionKey { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the key for the instance is enabled. Valid values:</para>
+        /// <para>The status of the instance key. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Enabled</b></para>
-        /// </description></item>
-        /// <item><description><para><b>Disabled</b></para>
-        /// </description></item>
+        /// <item><description><b>Enabled</b>: The instance key is available.</description></item>
+        /// <item><description><b>Disabled</b>: The instance key is unavailable.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,7 +64,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string EncryptionKeyStatus { get; set; }
 
         /// <summary>
-        /// <para>The purpose of the key for the instance.</para>
+        /// <para>The purpose of the instance key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENCRYPT/DECRYPT</para>
@@ -76,7 +74,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string KeyUsage { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the key for the instance. The time is displayed in UTC. If the parameter is left empty, the key for the instance will not expire.</para>
+        /// <para>The expiration time of the key (UTC). If this value is empty, the key does not expire.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-07-06T18:22:03Z</para>
@@ -86,7 +84,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string MaterialExpireTime { get; set; }
 
         /// <summary>
-        /// <para>The source of the key for the instance.</para>
+        /// <para>The source of the instance key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Aliyun_KMS</para>
@@ -96,7 +94,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string Origin { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>783C2062-A2D3-4EA8-88AD-E43F990C23BB</para>

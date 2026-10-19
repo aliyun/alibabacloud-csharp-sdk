@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries on the current page.</para>
+        /// <para>The maximum number of records on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>40</para>

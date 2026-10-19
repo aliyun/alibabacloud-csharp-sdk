@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeDBInstanceAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The database engine. Valid value: <b>MongoDB</b>.</para>
+        /// <para>The database engine. Set the value to <b>MongoDB</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MongoDB</para>
@@ -31,12 +31,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the instance has been deleted. Valid values:</para>
+        /// <para>Specifies whether the instance is deleted. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para><b>false</b>: The instance is running normally. Query information about a running instance.</para>
-        /// </description></item>
-        /// <item><description><para><b>true</b>: The instance has been deleted. Query information about a deleted instance.</para>
-        /// </description></item>
+        /// <item><description><b>false</b>: The instance is running. Queries the information of a running instance.</description></item>
+        /// <item><description><b>true</b>: The instance is deleted. Queries the information of a deleted instance.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,9 +53,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information about a resource group</a>.</para>
+        /// <para>The resource group ID. For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</para>
         /// <remarks>
-        /// <para>This parameter is supported only on Alibaba Cloud China Website (www\.aliyun.com).</para>
+        /// <para>This parameter is supported only on the China site.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

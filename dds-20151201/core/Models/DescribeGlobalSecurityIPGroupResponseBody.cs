@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeGlobalSecurityIPGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The global IP whitelist templates.</para>
+        /// <para>The list of global IP whitelist templates.</para>
         /// </summary>
         [NameInMap("GlobalSecurityIPGroup")]
         [Validation(Required=false)]
         public List<DescribeGlobalSecurityIPGroupResponseBodyGlobalSecurityIPGroup> GlobalSecurityIPGroup { get; set; }
         public class DescribeGlobalSecurityIPGroupResponseBodyGlobalSecurityIPGroup : TeaModel {
             /// <summary>
-            /// <para>The instances associated with the global whitelist template.</para>
+            /// <para>The list of instances bound to the global IP whitelist template.</para>
             /// </summary>
             [NameInMap("DBInstances")]
             [Validation(Required=false)]
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <summary>
             /// <para>The IP addresses in the whitelist template.</para>
             /// <remarks>
-            /// <para>Separate multiple IP addresses with commas (,). You can create up to 1,000 IP addresses or CIDR blocks for all IP address whitelists.</para>
+            /// <para>Separate multiple IP addresses with commas (,). A maximum of 1,000 IP addresses or CIDR blocks can be added to all IP whitelists in total.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string GlobalSecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the instance.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// <para>The unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.</para>
+        /// <para>The unique ID of the request. If you encounter any issues, provide this request ID to the support team for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>72651AF9-7897-41A7-8B67-6C15C7F26A0A</para>

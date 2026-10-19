@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class TransformInstanceChargeTypeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The order ID.</para>
+        /// <para>The ID of the order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>21084641369****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D8F1D721-6439-4257-A89C-F1E8E9C9****</para>

@@ -21,31 +21,23 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcibly enable SSL encryption for connections. Valid values:</para>
+        /// <para>Specifies whether to force Secure Sockets Layer (SSL) encryption for connections. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>1</b>: Forcibly enable SSL encryption.</para>
-        /// </description></item>
-        /// <item><description><para><b>0</b>: Do not forcibly enable SSL encryption.</para>
-        /// </description></item>
+        /// <item><description><b>1</b>: Forces Secure Sockets Layer (SSL) encryption.</description></item>
+        /// <item><description><b>0</b>: Does not force Secure Sockets Layer (SSL) encryption.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>Forced SSL encryption is supported only for MongoDB 7.0 and 8.0 instances that use cloud disks and meet the following minor engine version requirements:</para>
-        /// </description></item>
-        /// <item><description><list type="bullet">
-        /// <item><description>For version 7.0, the minor engine version must be 8.0.13 or later.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><list type="bullet">
-        /// <item><description>For version 8.0, the minor engine version must be 9.0.5 or later.</description></item>
+        /// <item><description>Forced Secure Sockets Layer (SSL) encryption applies only to MongoDB 7.0 and 8.0 instances that use cloud disks and meet the following minor engine version requirements:<list type="bullet">
+        /// <item><description>MongoDB 7.0: The minor engine version must be 8.0.13 or later.</description></item>
+        /// <item><description>MongoDB 8.0: The minor engine version must be 9.0.5 or later.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// </remarks>
         /// <remarks>
-        /// <para>Warning: </para>
+        /// <para>Warning: After you enable forced Secure Sockets Layer (SSL) encryption, you cannot connect to the instance by using non-SSL connections.</warning></para>
         /// </remarks>
-        /// <para>After you enable forced SSL encryption, only SSL connections to the instance are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -73,12 +65,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The operation to perform on the SSL feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Open</b>: Enable SSL encryption.</para>
-        /// </description></item>
-        /// <item><description><para><b>Close</b>: Disable SSL encryption.</para>
-        /// </description></item>
-        /// <item><description><para><b>Update</b>: Update the SSL certificate.</para>
-        /// </description></item>
+        /// <item><description><b>Open</b>: Enables Secure Sockets Layer (SSL) encryption.</description></item>
+        /// <item><description><b>Close</b>: Disables Secure Sockets Layer (SSL) encryption.</description></item>
+        /// <item><description><b>Update</b>: Updates the SSL certificate.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -90,11 +79,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string SSLAction { get; set; }
 
         /// <summary>
-        /// <para>The time to modify the SSL configuration of the MongoDB instance. Valid values:</para>
+        /// <para>The time when the SSL configuration of the MongoDB instance is modified. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: Modify immediately.</para>
+        /// <item><description><para>0: Modifies the configuration immediately.</para>
         /// </description></item>
-        /// <item><description><para>1: Modify within the maintenance window.</para>
+        /// <item><description><para>1: Modifies the configuration within the O&amp;M window.</para>
         /// </description></item>
         /// </list>
         /// 

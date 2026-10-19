@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// <para>The database engine of the instance. Default value: <b>mongodb</b>.</para>
+        /// <para>The database engine. Default value: <b>mongodb</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mongodb</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The database engine version of the instance.</para>
+        /// <para>The database engine version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4.0</para>

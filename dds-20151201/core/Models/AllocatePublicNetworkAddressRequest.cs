@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class AllocatePublicNetworkAddressRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance</para>
+        /// <para>The instance ID.</para>
         /// <remarks>
         /// <para>If you set this parameter to the ID of a sharded cluster instance, you must also specify the <b>NodeId</b> parameter.</para>
         /// </remarks>
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the mongos, shard, or Configserver node in the sharded cluster instance. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to view the ID of the mongos, shard, or Configserver node.</para>
+        /// <para>Instance ID of the Mongos, shard, or ConfigServer node in the sharded cluster instance. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query instance ID of the Mongos, shard, or ConfigServer node.</para>
         /// <remarks>
-        /// <para>This parameter is required only when you specify the <b>DBInstanceId</b> parameter to the ID of a sharded cluster instance.</para>
+        /// <para>This parameter is required if <b>DBInstanceId</b> is set to instance ID of a sharded cluster instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

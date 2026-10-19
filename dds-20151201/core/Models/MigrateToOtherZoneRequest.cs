@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class MigrateToOtherZoneRequest : TeaModel {
         /// <summary>
-        /// <para>The time when the instance is migrated to the destination zone. Valid values:</para>
+        /// <para>The effective period for the zone migration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Immediately</b> (default): The instance is migrated immediately.</para>
-        /// </description></item>
-        /// <item><description><para><b>MaintainTime</b>: The instance is migrated during its maintenance window.</para>
-        /// </description></item>
+        /// <item><description><b>Immediately</b> (default): The migration becomes active immediately.</description></item>
+        /// <item><description><b>MaintainTime</b>: The migration becomes active within the O&amp;M window of the instance.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,9 +24,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string EffectiveTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>If the network type of the instance is VPC, you must specify the <b>Vswitch</b> parameter .</para>
+        /// <para>If the network type of the instance is VPC, you must also specify the <b>VSwitchId</b> parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -58,7 +56,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The ID of the vSwitch in the destination zone.</para>
         /// <remarks>
-        /// <para>This parameter is valid and required only when the network type of the instance is VPC.</para>
+        /// <para>This parameter is available and required only when the network type of the instance is VPC.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -69,13 +67,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the destination zone to which you want to migrate the ApsaraDB for MongoDB instance.</para>
+        /// <para>The ID of the destination zone.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>The destination and source zones must be in one region.</para>
-        /// </description></item>
-        /// <item><description><para>You can call <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> to query the zone IDs.</para>
-        /// </description></item>
+        /// <item><description>The destination zone must be in the same region as the current zone of the instance.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query zone IDs.</description></item>
         /// </list>
         /// </remarks>
         /// <para>This parameter is required.</para>

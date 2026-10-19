@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of a shard or Mongos node in a sharded cluster instance.</para>
+        /// <para>The ID of the shard or mongos node in the sharded cluster instance.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter for a sharded cluster instance, the entire instance is restarted.</para>
+        /// <para>If you do not specify this parameter for a sharded cluster instance, the entire sharded cluster instance is restarted.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -45,6 +45,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to restart mongos nodes in parallel. This parameter takes effect only when you restart multiple mongos nodes at a time.</para>
+        /// </summary>
+        [NameInMap("ParallelRestartMongos")]
+        [Validation(Required=false)]
+        public bool? ParallelRestartMongos { get; set; }
+
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
@@ -54,12 +61,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The time to restart the instance. Valid values:</para>
+        /// <para>The time when the instance is restarted. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: The instance is restarted immediately.</para>
-        /// </description></item>
-        /// <item><description><para>1: The instance is restarted within the maintenance window.</para>
-        /// </description></item>
+        /// <item><description>0: Immediately.</description></item>
+        /// <item><description>1: Within the O&amp;M window.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

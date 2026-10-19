@@ -10,17 +10,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class AllocateNodePrivateNetworkAddressRequest : TeaModel {
         /// <summary>
-        /// <para>The username of the account.</para>
+        /// <para>The username.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>The username must be 4 to 16 characters in length and can contain lowercase letters, digits, and underscores (_). The username must start with a lowercase letter.</para>
-        /// </description></item>
-        /// <item><description><para>You must configure the account and password only when you apply for the endpoint of a shard or Configserver node for the first time. The account and password are required for all shard and Configserver nodes.</para>
-        /// </description></item>
-        /// <item><description><para>The permissions of this account are fixed to read-only.</para>
-        /// </description></item>
+        /// <item><description>The username must start with a lowercase letter and be 4 to 16 characters in length. It can contain lowercase letters, digits, and underscores (_).</description></item>
+        /// <item><description>You need to set the username and password only when you apply for an endpoint for a shard or Configserver node for the first time. All shard and Configserver nodes use the username and password set during the first application.</description></item>
+        /// <item><description>The account has fixed read-only permissions.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>shardcsaccount</para>
@@ -30,12 +27,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The password for the account.</para>
+        /// <para>The password.</para>
         /// <list type="bullet">
-        /// <item><description><para>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include <c>! # $ % ^ &amp; * ( ) _ + - =</c></para>
-        /// </description></item>
-        /// <item><description><para>The password must be 8 to 32 characters in length.</para>
-        /// </description></item>
+        /// <item><description>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include <c>!#$%^&amp;*()_+-=</c>.</description></item>
+        /// <item><description>The password must be 8 to 32 characters in length.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,7 +41,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string AccountPassword { get; set; }
 
         /// <summary>
-        /// <para>The ID of the sharded cluster instance.</para>
+        /// <para>The instance ID of the sharded cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -87,7 +82,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the zone to which the instance belongs.</para>
+        /// <para>The zone ID of the instance.</para>
         /// <remarks>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the zone ID of the instance.</para>
         /// </remarks>

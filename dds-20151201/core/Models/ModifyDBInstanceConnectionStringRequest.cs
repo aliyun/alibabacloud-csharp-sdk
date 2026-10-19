@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyDBInstanceConnectionStringRequest : TeaModel {
         /// <summary>
-        /// <para>The current connection address—the address to modify.</para>
+        /// <para>The current endpoint, which is the endpoint to be modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>s-bpxxxxxxxx.mongodb.rds.aliyuncs.com</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string CurrentConnectionString { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <remarks>
         /// <para>If you specify the ID of a sharded cluster instance, you must also specify the <b>NodeId</b> parameter.</para>
         /// </remarks>
@@ -38,6 +38,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public bool? ForceModifySuffix { get; set; }
 
         /// <summary>
+        /// <para>The network type of the connection string when only the port number is modified.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vpc</para>
         /// </summary>
@@ -46,19 +48,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string NetworkType { get; set; }
 
         /// <summary>
-        /// <para>The new connection address. It must meet these requirements:</para>
+        /// <para>The new endpoint. The endpoint must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description><para>Start with a lowercase letter.</para>
-        /// </description></item>
-        /// <item><description><para>End with a lowercase letter or digit.</para>
-        /// </description></item>
-        /// <item><description><para>Contain only lowercase letters, digits, and hyphens (-).</para>
-        /// </description></item>
-        /// <item><description><para>Be 8 to 63 characters long.</para>
-        /// </description></item>
+        /// <item><description>It must start with a lowercase letter.</description></item>
+        /// <item><description>It must end with a lowercase letter or a digit.</description></item>
+        /// <item><description>It can contain only lowercase letters, digits, and hyphens (-).</description></item>
+        /// <item><description>It must be 8 to 63 characters in length.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Specify only the prefix of the connection address. You cannot change any part beyond the prefix.</para>
+        /// <para>Specify only the prefix of the endpoint. The remaining part cannot be modified.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -69,9 +67,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string NewConnectionString { get; set; }
 
         /// <summary>
-        /// <para>The new port number. Valid values are from 1000 to 65535.</para>
+        /// <para>The new port. Valid values: 1000 to 65535.</para>
         /// <remarks>
-        /// <para>This parameter is valid only when <b>DBInstanceId</b> specifies the ID of a cloud disk instance.</para>
+        /// <para>This parameter is active only when the <b>DBInstanceId</b> parameter is set to a cloud disk instance ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -82,9 +80,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? NewPort { get; set; }
 
         /// <summary>
-        /// <para>The ID of a Mongos node in a sharded cluster instance. You can specify only one Mongos node ID per call.</para>
+        /// <para>Instance ID of the Mongos node in the sharded cluster instance. You can specify only one Mongos node ID in each call.</para>
         /// <remarks>
-        /// <para>This parameter is valid only when <b>DBInstanceId</b> specifies the ID of a sharded cluster instance.</para>
+        /// <para>This parameter is valid only when the <b>DBInstanceId</b> parameter is set to instance ID of a sharded cluster instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -102,6 +100,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to modify only port numbers. If you modify only port numbers, batch modification is supported.</para>
+        /// </summary>
         [NameInMap("PortModifyOnly")]
         [Validation(Required=false)]
         public bool? PortModifyOnly { get; set; }

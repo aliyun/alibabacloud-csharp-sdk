@@ -10,23 +10,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class CreateNodeRequest : TeaModel {
         /// <summary>
-        /// <para>The account name. The name must meet the following requirements:</para>
+        /// <para>The username. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Starts with a lowercase letter.</para>
-        /// </description></item>
-        /// <item><description><para>Consists of lowercase letters, digits, and underscores (_).</para>
-        /// </description></item>
-        /// <item><description><para>Is 4 to 16 characters in length.</para>
-        /// </description></item>
+        /// <item><description>The username must start with a lowercase letter.</description></item>
+        /// <item><description>The username can contain lowercase letters, digits, and underscores (_).</description></item>
+        /// <item><description>The username must be 4 to 16 characters in length.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>Keywords of ApsaraDB for MongoDB cannot be used as the account name.</para>
-        /// </description></item>
-        /// <item><description><para>The account has read-only permissions.</para>
-        /// </description></item>
-        /// <item><description><para>You must set the account name and password only when you enable a public endpoint for a shard node for the first time. These parameters are not required on subsequent requests.</para>
-        /// </description></item>
+        /// <item><description>ApsaraDB for MongoDB does not support using keywords as usernames.</description></item>
+        /// <item><description>The permissions of the account are fixed to read-only.</description></item>
+        /// <item><description>When you apply for a direct connection endpoint for the shard node for the first time, you must set the username and password. You do not need to set them again for subsequent applications.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -38,17 +32,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The password for the account. The password must meet the following requirements:</para>
+        /// <para>The password of the account. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Must contain characters from at least three of the following categories: uppercase letters, lowercase letters, digits, and special characters.</para>
-        /// </description></item>
-        /// <item><description><para>Special characters include <c>!@#$%^&amp;*()_+-=</c>.</para>
-        /// </description></item>
-        /// <item><description><para>Is 8 to 32 characters in length.</para>
-        /// </description></item>
+        /// <item><description>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</description></item>
+        /// <item><description>Special characters include !@#$%^&amp;*()_+-=.</description></item>
+        /// <item><description>The password must be 8 to 32 characters in length.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>ApsaraDB for MongoDB does not support resetting the account password for shard nodes.</para>
+        /// <para>ApsaraDB for MongoDB does not support resetting the password of the account for the shard node.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -61,18 +52,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: (Default) Enables automatic payment. Ensure that your account has a sufficient balance.</description></item>
-        /// </list>
-        /// <para>&lt;props=&quot;china&quot;&gt;</para>
-        /// <list type="bullet">
-        /// <item><description><b>false</b>: Disables automatic payment. In this case, you must manually pay for the node. To do so, log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose <b>Billing</b> &gt; <b>Billing Management</b>. In the left-side navigation pane, choose <b>Subscription Orders</b> &gt; <b>My Orders</b>. On the <b>Product Orders</b> tab, find the order and complete the payment.</description></item>
-        /// </list>
-        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-        /// <list type="bullet">
-        /// <item><description><b>false</b>: Disables automatic payment. In this case, you must manually pay for the node. To do so, log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose <b>Billing</b> &gt; <b>Billing Management</b>. In the left-side navigation pane, click <b>Order Management</b>. On the <b>Product Orders</b> page, find the order and complete the payment.</description></item>
+        /// <item><description><b>true</b>: enables automatic payment. This is the default value. Make sure that your account has sufficient balance.
+        /// &lt;props=&quot;china&quot;&gt;- <b>false</b>: disables automatic payment. You can log on to the ApsaraDB for MongoDB console, choose <b>Expenses</b> &gt; <b>Expenses and Costs</b> in the upper-right corner, choose <b>Subscription Orders</b> &gt; <b>My Orders</b> in the left-side navigation pane, and then pay for the order on the <b>Orders</b> tab.
+        /// &lt;props=&quot;intl&quot;&gt;- <b>false</b>: disables automatic payment. You can log on to the ApsaraDB for MongoDB console, choose <b>Expenses</b> &gt; <b>Expenses and Costs</b> in the upper-right corner, click <b>Order Management</b> in the left-side navigation pane, and then pay for the order on the <b>Orders</b> page.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is required for subscription instances.</para>
+        /// <para>This parameter is required when the billing method is subscription.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -83,7 +68,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>Additional business information.</para>
+        /// <para>The additional parameter that contains business information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{“ActivityId&quot;:&quot;000000000&quot;}</para>
@@ -93,7 +78,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// <para>A client-generated token to ensure request idempotence. The token must be unique across requests, contain only ASCII characters, and not exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -105,10 +90,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>Specifies whether to use a coupon. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>default</b> or <b>null</b>: (Default) An available coupon is automatically applied.</para>
-        /// </description></item>
-        /// <item><description><para><b>youhuiquan_promotion_option_id_for_blank</b>: No coupon is used.</para>
-        /// </description></item>
+        /// <item><description><b>default</b> or <b>null</b>: uses a coupon. This is the default value.</description></item>
+        /// <item><description><b>youhuiquan_promotion_option_id_for_blank</b>: does not use a coupon.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -119,7 +102,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string CouponNo { get; set; }
 
         /// <summary>
-        /// <para>The ID of the sharded cluster instance.</para>
+        /// <para>The instance ID of the sharded cluster instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -130,7 +113,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The instance type of the shard or mongos node. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</para>
+        /// <para>The instance type of the shard node or mongos node. For more information about instance types, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -141,10 +124,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string NodeClass { get; set; }
 
         /// <summary>
-        /// <para>The storage space of the node. Unit: GB.</para>
-        /// <para>The valid values of this parameter vary based on the storage type of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</para>
+        /// <para>The disk space of the node. Unit: GB.</para>
+        /// <para>The valid values vary based on the storage type. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</para>
         /// <remarks>
-        /// <para>This parameter is required when the node type is <b>shard</b>.</para>
+        /// <para>This parameter is required when the node type is <b>Shard</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -157,10 +140,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The node type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>shard</b>: A shard node.</para>
-        /// </description></item>
-        /// <item><description><para><b>mongos</b>: A mongos node.</para>
-        /// </description></item>
+        /// <item><description><b>shard</b>: shard node.</description></item>
+        /// <item><description><b>mongos</b>: mongos node.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -180,10 +161,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of read-only nodes in a shard node.</para>
-        /// <para>Valid values: <b>0</b> to <b>5</b>. The default value is <b>0</b>.</para>
+        /// <para>The number of read-only nodes in the shard node.</para>
+        /// <para>Valid values: <b>0</b> to <b>5</b>. Default value: <b>0</b>.</para>
         /// <remarks>
-        /// <para>This parameter is available only on the China site (aliyun.com).</para>
+        /// <para>This parameter is supported only on the Alibaba Cloud China site.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -214,12 +195,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? SearchStorage { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable a public endpoint for the shard node. Valid values:</para>
+        /// <para>Specifies whether to apply for a direct connection endpoint for the shard node. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Enables a public endpoint for the shard node.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: (Default) Does not enable a public endpoint for the shard node.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: applies for a direct connection endpoint for the shard node.</description></item>
+        /// <item><description><b>false</b>: does not apply for a direct connection endpoint for the shard node. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,21 +10,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class CreateBackupRequest : TeaModel {
         /// <summary>
-        /// <para>The backup method. Valid values:</para>
+        /// <para>The backup method of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Snapshot</b>: A snapshot backup.</para>
-        /// </description></item>
-        /// <item><description><para><b>Logical</b>: A logical backup.</para>
-        /// </description></item>
-        /// <item><description><para><b>Physical</b> (default): A physical backup.</para>
-        /// </description></item>
+        /// <item><description><b>Snapshot</b>: snapshot backup</description></item>
+        /// <item><description><b>Logical</b>: logical backup</description></item>
+        /// <item><description><b>Physical</b>: physical backup (default)</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>Instances with cloud disks support only snapshot backups.</para>
-        /// </description></item>
-        /// <item><description><para>This parameter applies only to replica set and sharded cluster instances. This parameter is not required for standalone instances, which use snapshot backups.</para>
-        /// </description></item>
+        /// <item><description>Cloud disk instances support only snapshot backup.</description></item>
+        /// <item><description>Only replica set and sharded cluster instances support selecting the backup method. You do not need to specify this parameter for standalone instances. The backup method is fixed to snapshot backup.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -36,14 +31,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string BackupMethod { get; set; }
 
         /// <summary>
-        /// <para>The backup retention period in days. This parameter applies only to replica set and sharded cluster instances that use cloud disks.</para>
+        /// <para>The retention period of the backup. This parameter is applicable only to replica set and sharded cluster instances with cloud disks.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the retention period from the default backup policy is used. You can set this parameter to one of the following values:</para>
+        /// <para>If you do not specify this parameter, the default backup policy applies. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para>A value from 7 to 730</para>
-        /// </description></item>
-        /// <item><description><para>-1 (permanent retention)</para>
-        /// </description></item>
+        /// <item><description>7 to 730: 7 to 730 days</description></item>
+        /// <item><description>-1: long-term retention</description></item>
         /// </list>
         /// </remarks>
         /// 

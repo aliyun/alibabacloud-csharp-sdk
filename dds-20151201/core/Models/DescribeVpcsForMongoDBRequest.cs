@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be an integer greater than 0. The default value is <b>1</b>.</para>
+        /// <para>The page number. Valid values: an integer greater than 0 and up to the maximum value of the Integer data type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. The value must be an integer greater than 0. The default value is <b>50</b>.</para>
+        /// <para>The number of entries per page. Valid values: an integer greater than 0 and up to the maximum value of the Integer data type. Default value: <b>50</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

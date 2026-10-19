@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>If you set this parameter to the ID of a sharded cluster instance, you must also specify the <b>NodeId</b> parameter.</para>
+        /// <para>If you specify a sharded cluster instance ID for this parameter, you must also specify the <b>NodeId</b> parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database. By default, all databases are queried.</para>
+        /// <para>The name of the database. The default value is all databases.</para>
         /// 
         /// <b>Example:</b>
         /// <para>database****</para>
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string Database { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The end time must be later than the start time. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</para>
         /// <remarks>
-        /// <para>The time range between the start time and the end time cannot exceed 24 hours. Otherwise, the operation fails.</para>
+        /// <para>The time range between the end time and the start time cannot exceed 24 hours. If the time range exceeds 24 hours, the call fails.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -48,15 +48,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The format of the returned audit records. Valid values:</para>
+        /// <para>The display format of the returned audit records. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>File</b>: Triggers the generation of an audit log file. If you set this parameter to File, only common parameters are returned.</para>
-        /// </description></item>
-        /// <item><description><para><b>Stream</b> (default): Returns a data stream.</para>
-        /// </description></item>
+        /// <item><description><b>File</b>: Triggers the generation of an audit log file. If you set this parameter to this value, only common parameters are returned.</description></item>
+        /// <item><description><b>Stream</b> (default): Returns a data stream.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>The <b>File</b> parameter is deprecated.</para>
+        /// <para>The <b>File</b> value is deprecated.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -67,7 +65,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string Form { get; set; }
 
         /// <summary>
-        /// <para>The logical operator for the keyword search. The default value is and.</para>
+        /// <para>The logical operator for keyword search. The default value is and.</para>
         /// 
         /// <b>Example:</b>
         /// <para>and</para>
@@ -77,9 +75,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string LogicalOperator { get; set; }
 
         /// <summary>
-        /// <para>The ID of a Mongos node or a shard node in the sharded cluster instance.</para>
+        /// <para>Instance ID of a mongos node or shard node in the sharded cluster instance.</para>
         /// <remarks>
-        /// <para>This parameter is available only when <b>DBInstanceId</b> is set to the ID of a sharded cluster instance.</para>
+        /// <para>This parameter is available only when <b>DBInstanceId</b> is set to instance ID of a sharded cluster instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -90,12 +88,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>The order in which to sort the returned audit log entries by time. Valid values:</para>
+        /// <para>The order in which the queried slow logs are sorted by time. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>asc</b>: Sorts the entries in ascending order.</para>
-        /// </description></item>
-        /// <item><description><para><b>desc</b>: Sorts the entries in descending order.</para>
-        /// </description></item>
+        /// <item><description><b>asc</b>: sorts results in ascending order by time.</description></item>
+        /// <item><description><b>desc</b>: sorts results in descending order by time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -114,7 +110,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number to return. The value must be greater than 0 and must not exceed the maximum value of the integer data type. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be greater than 0 and cannot exceed the maximum value of the Integer type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -124,7 +120,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: <b>30</b> (default), <b>50</b>, and <b>100</b>.</para>
+        /// <para>The number of records per page. Valid values: <b>30</b> (default), <b>50</b>, and <b>100</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -134,7 +130,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The keywords for the query. You can specify up to 10 keywords. Separate multiple keywords with spaces.</para>
+        /// <para>The keywords to query. Separate multiple keywords with spaces. You can specify a maximum of 10 keywords.</para>
         /// 
         /// <b>Example:</b>
         /// <para>slow</para>
@@ -152,7 +148,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -163,7 +159,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The database account. By default, all accounts are queried.</para>
+        /// <para>The database account. The default value is all accounts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

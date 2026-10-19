@@ -10,17 +10,18 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyDBInstanceSpecRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to automatically align the primary node to the primary zone for a multi-zone instance after operations such as configuration changes. If you choose not to align the node, one primary/secondary switchover (transient disconnection) is avoided. Default value: true (aligned).</para>
+        /// </summary>
+        [NameInMap("AlignPrimaryZone")]
+        [Validation(Required=false)]
+        public bool? AlignPrimaryZone { get; set; }
+
+        /// <summary>
         /// <para>Specifies whether to enable automatic payment for the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables automatic payment. Make sure that your account has a sufficient balance. This is the default value.</description></item>
-        /// </list>
-        /// <para>&lt;props=&quot;china&quot;&gt;</para>
-        /// <list type="bullet">
-        /// <item><description><b>false</b>: disables automatic payment. You can log on to the ApsaraDB for MongoDB console to pay for the instance. In the upper-right corner of the page, choose <b>Billing Management</b> &gt; <b>Billing Management</b>. In the left-side navigation pane, choose <b>Orders</b> &gt; <b>My Orders</b>. On the <b>Product Orders</b> tab, find the order and complete the payment.</description></item>
-        /// </list>
-        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-        /// <list type="bullet">
-        /// <item><description><b>false</b>: disables automatic payment. You can log on to the ApsaraDB for MongoDB console to pay for the instance. In the upper-right corner of the page, choose <b>Billing Management</b> &gt; <b>Billing Management</b>. In the left-side navigation pane, click <b>Orders</b>. On the <b>Product Orders</b> page, find the order and complete the payment.</description></item>
+        /// <item><description><b>true</b>: enables automatic payment. This is the default value. Make sure that your account has sufficient balance.
+        /// &lt;props=&quot;china&quot;&gt;- <b>false</b>: disables automatic payment. You must manually pay for the order in the console. Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose <b>Expenses</b> &gt; <b>Expenses and Costs</b>. In the left-side navigation pane, choose <b>Orders</b> &gt; <b>My Orders</b>. On the <b>Orders</b> tab, find the order and complete the payment.
+        /// &lt;props=&quot;intl&quot;&gt;- <b>false</b>: disables automatic payment. You must manually pay for the order in the console. Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose <b>Expenses</b> &gt; <b>Expenses and Costs</b>. In the left-side navigation pane, click <b>Order Management</b>. On the <b>Orders</b> page, find the order and complete the payment.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -43,10 +44,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>Specifies whether to use a coupon. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>default</b> or <b>null</b> (default): A coupon is used.</para>
-        /// </description></item>
-        /// <item><description><para><b>youhuiquan_promotion_option_id_for_blank</b>: No coupon is used.</para>
-        /// </description></item>
+        /// <item><description><b>default</b> or <b>null</b>: uses a coupon. This is the default value.</description></item>
+        /// <item><description><b>youhuiquan_promotion_option_id_for_blank</b>: does not use a coupon.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,15 +56,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string CouponNo { get; set; }
 
         /// <summary>
-        /// <para>The instance type. &lt;props=&quot;intl&quot;&gt;For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>. You can also call the <a href="https://help.aliyun.com/document_detail/149719.html">DescribeAvailableResource</a> operation to query instance types.&lt;props=&quot;china&quot;&gt;</para>
+        /// <para>The instance type. &lt;props=&quot;intl&quot;&gt;<ph>For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>. You can also call the <a href="https://help.aliyun.com/document_detail/149719.html">DescribeAvailableResource</a> operation to query instance types.</ph>
+        /// &lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description><para>For a standalone instance or a replica set instance, this parameter specifies the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>. You can also call the <a href="https://help.aliyun.com/document_detail/149719.html">DescribeAvailableResource</a> operation to query the instance types of standalone and replica set instances.</para>
-        /// </description></item>
-        /// <item><description><para>For a serverless instance, this parameter specifies the computing capacity of the instance. Valid values: 100 to 8000.</para>
-        /// </description></item>
+        /// <item><description>For standalone instances and replica set instances, this parameter specifies the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>. You can also call the <a href="https://help.aliyun.com/document_detail/149719.html">DescribeAvailableResource</a> operation to query the instance types of standalone instances and replica set instances.</description></item>
+        /// <item><description>For serverless instances, this parameter specifies the compute specifications of the instance. Valid values: 100 to 8000.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>You must configure one of the <b>DBInstanceStorage</b> and DBInstanceClass parameters.</para>
+        /// <para>You must specify at least one of the <b>DBInstanceClass</b> and <b>DBInstanceStorage</b> parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -87,20 +85,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The storage capacity of the instance. &lt;props=&quot;intl&quot;&gt;The value must be an integer that is greater than or equal to 10. The value increases in increments of 10. Unit: GB. The values that can be specified for this parameter are subject to the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</para>
+        /// <para>Instance storage space of the instance. &lt;props=&quot;intl&quot;&gt;<ph>Valid values: 10 to 3000. Unit: GB. The step size is 10 GB. The valid values are subject to the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</ph></para>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description><para>The storage capacity of a standalone instance or a replica set instance must be a multiple of 10. The valid values are 10 to 3000. Unit: GB. The values that can be specified for this parameter are subject to the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</para>
-        /// </description></item>
-        /// <item><description><para>The storage capacity of a serverless instance must be a multiple of 1. The valid values are 1 to 100. Unit: GB.</para>
-        /// </description></item>
+        /// <item><description>For standalone instances and replica set instances, valid values are 10 to 3000. Unit: GB. The step size is 10 GB. The valid values are subject to the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</description></item>
+        /// <item><description>For serverless instances, valid values are 1 to 100. Unit: GB. The step size is 1 GB.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>You must configure one of the <b>DBInstanceClass</b> and DBInstanceStorage parameters.</para>
-        /// </description></item>
-        /// <item><description><para>You cannot decrease the storage capacity of an instance.</para>
-        /// </description></item>
+        /// <item><description>You must specify at least one of the <b>DBInstanceStorage</b> and <b>DBInstanceClass</b> parameters.</description></item>
+        /// <item><description>You cannot downgrade instance storage space.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -112,12 +106,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceStorage { get; set; }
 
         /// <summary>
-        /// <para>The effective time of the configuration change. Valid values:</para>
+        /// <para>The time when the configuration change takes effect. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Immediately</b>: The configuration change immediately takes effect. This is the default value.</para>
-        /// </description></item>
-        /// <item><description><para><b>MaintainTime</b>: The configuration change takes effect during the maintenance window of the instance.</para>
-        /// </description></item>
+        /// <item><description><b>Immediately</b>: takes effect immediately. This is the default value.</description></item>
+        /// <item><description><b>MaintainTime</b>: takes effect during the maintenance window of the instance.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -128,12 +120,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string EffectiveTime { get; set; }
 
         /// <summary>
-        /// <para>Additional parameters. Valid values:</para>
+        /// <para>The additional parameter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>async</b>: The result is returned after the specification change order is created.</para>
-        /// </description></item>
-        /// <item><description><para><b>sync</b>: The result is returned after the instance specification change is delivered.</para>
-        /// </description></item>
+        /// <item><description><b>async</b>: returns the result after the configuration change order is created.</description></item>
+        /// <item><description><b>sync</b>: returns the result when the configuration change is delivered after the order is created.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -144,15 +134,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ExtraParam { get; set; }
 
         /// <summary>
-        /// <para>The specification change type. Valid values:</para>
+        /// <para>The type of configuration change. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>UPGRADE</b>: upgrades the specifications. This is the default value.</para>
-        /// </description></item>
-        /// <item><description><para><b>DOWNGRADE</b>: downgrades the specifications.</para>
-        /// </description></item>
+        /// <item><description><b>UPGRADE</b>: upgrades the configurations. This is the default value.</description></item>
+        /// <item><description><b>DOWNGRADE</b>: downgrades the configurations.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is available only for subscription instances.</para>
+        /// <para>You can specify this parameter only when the instance uses the subscription billing method.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -172,9 +160,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         /// <summary>
         /// <para>The number of read-only nodes. Valid values: <b>0</b> to <b>5</b>.</para>
-        /// <para>If the network type of the instance is set to only <b>classic network</b> and <b>VPC</b>, you need to enable public access or release the classic network endpoint before you can change the <b>number of read-only nodes</b>.</para>
+        /// <para>If the instance is connected only over the <b>classic network</b> and a <b>VPC</b>, you must enable Internet access or release the classic network before you can change the <b>number of read-only nodes</b>.</para>
         /// <remarks>
-        /// <para>You can log on to the ApsaraDB for MongoDB console and go to the <b>Database Connections</b> page to view the network types that have been enabled.</para>
+        /// <para>You can log on to the ApsaraDB for MongoDB console and view the enabled network types on the <b>Database Connections</b> page.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -187,15 +175,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The number of nodes in the instance. Default value: 3.</para>
         /// <list type="bullet">
-        /// <item><description><para>Valid values for replica set instances: <b>3</b>, <b>5</b>, and <b>7</b>.</para>
-        /// </description></item>
-        /// <item><description><para>The value for standalone instances is fixed at <b>1</b>.</para>
-        /// </description></item>
-        /// <item><description><para>The value for replica set instances with shared storage (available only in the China site) is fixed at <b>2</b>.</para>
-        /// </description></item>
+        /// <item><description>For a replica set instance, valid values are <b>3</b>, <b>5</b>, and <b>7</b>.</description></item>
+        /// <item><description>For a standalone instance, the value is fixed to <b>1</b>.</description></item>
+        /// <item><description>For a replica set instance that uses shared storage (supported only on the Alibaba Cloud China site), the value is fixed to <b>2</b>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is not required for serverless instances (available only in the China site).</para>
+        /// <para>You do not need to specify this parameter for a serverless instance (supported only on the Alibaba Cloud China site).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -214,7 +199,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The specifications of the Search node to be changed.</para>
+        /// <para>The specifications of the search node for the configuration change.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mdb.shard.2x.xlarge.d</para>
@@ -224,7 +209,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string SearchNodeClass { get; set; }
 
         /// <summary>
-        /// <para>The number of Search nodes to be changed.</para>
+        /// <para>The number of search nodes for the configuration change.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -234,7 +219,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? SearchNodeCount { get; set; }
 
         /// <summary>
-        /// <para>The capacity of the Search node to be changed.</para>
+        /// <para>The storage capacity of the search node for the configuration change.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -244,21 +229,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? SearchNodeStorage { get; set; }
 
         /// <summary>
-        /// <para>The destination zone for the hidden node when you change the specifications and migrate the instance across zones.</para>
+        /// <para>The destination zone for the hidden node when you cloud disk instance across zones and change its configurations at the same time.</para>
         /// <remarks>
-        /// <para>Notice: This parameter applies only to cloud disk instances.
-        /// Notice: The value of this parameter cannot be the same as the value of the TargetZoneId or TargetSecondaryZoneId parameter.</para>
+        /// <para>Notice: This parameter is supported only for instances that use cloud disks.</notice>
+        /// Notice: The value of this parameter cannot be the same as the value of the TargetZoneId or TargetSecondaryZoneId parameter.</notice></para>
         /// </remarks>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>You must specify this parameter only when you change the specifications and migrate the instance across zones.</para>
-        /// </description></item>
-        /// <item><description><para>This parameter is available only for multi-zone migration.</para>
-        /// </description></item>
-        /// <item><description><para>The destination zone and the current zone must be in the same region.</para>
-        /// </description></item>
-        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query zone IDs.</para>
-        /// </description></item>
+        /// <item><description>You must specify this parameter only when you cloud disk instance across zones and change its configurations at the same time.</description></item>
+        /// <item><description>This parameter is available only for multi-zone migration.</description></item>
+        /// <item><description>The destination zone and the current zone of the instance must be in the same region.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query zone IDs.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -270,21 +251,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string TargetHiddenZoneId { get; set; }
 
         /// <summary>
-        /// <para>The destination secondary zone for the secondary node when you change the specifications and migrate the instance across zones.</para>
+        /// <para>The destination zone for the secondary node when you cloud disk instance across zones and change its configurations at the same time.</para>
         /// <remarks>
-        /// <para>Notice: This parameter applies only to cloud disk instances.
-        /// Notice: The value of this parameter cannot be the same as the value of the TargetZoneId or TargetHiddenZoneId parameter.</para>
-        /// </remarks>
-        /// <remarks>
+        /// <para>Notice: This parameter is supported only for instances that use cloud disks.</notice>
+        /// Notice: The value of this parameter cannot be the same as the value of the TargetZoneId or TargetHiddenZoneId parameter.</notice></para>
         /// <list type="bullet">
-        /// <item><description><para>You must specify this parameter only when you change the specifications and migrate the instance across zones.</para>
-        /// </description></item>
-        /// <item><description><para>This parameter is available only for multi-zone migration.</para>
-        /// </description></item>
-        /// <item><description><para>The destination zone and the current zone must be in the same region.</para>
-        /// </description></item>
-        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query zone IDs.</para>
-        /// </description></item>
+        /// <item><description>You must specify this parameter only when you cloud disk instance across zones and change its configurations at the same time.</description></item>
+        /// <item><description>This parameter is available only for multi-zone migration.</description></item>
+        /// <item><description>The destination zone and the current zone of the instance must be in the same region.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query zone IDs.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -296,13 +271,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string TargetSecondaryZoneId { get; set; }
 
         /// <summary>
-        /// <para>The destination vSwitch ID when you change the specifications and migrate the instance across zones.</para>
+        /// <para>The ID of the destination vSwitch when you cloud disk instance across zones and change its configurations at the same time.</para>
         /// <remarks>
-        /// <para>Notice: This parameter applies only to cloud disk instances.</para>
-        /// </remarks>
-        /// <remarks>
+        /// <para>Notice: This parameter is supported only for instances that use cloud disks.</notice></para>
         /// <list type="bullet">
-        /// <item><description>You must specify this parameter only when you change the specifications and migrate the instance across zones.</description></item>
+        /// <item><description>You must specify this parameter only when you cloud disk instance across zones and change its configurations at the same time.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -314,19 +287,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string TargetVswitchId { get; set; }
 
         /// <summary>
-        /// <para>The destination zone to which you want to migrate the instance when you change the specifications and migrate the instance across zones.</para>
+        /// <para>The destination zone for instance migration when you migrate the instance across zones and change its configurations at the same time.</para>
         /// <remarks>
-        /// <para>Notice: This parameter applies only to cloud disk instances.
-        /// Notice: The value of this parameter cannot be the same as the value of the TargetSecondaryZoneId or TargetHiddenZoneId parameter.</para>
-        /// </remarks>
-        /// <remarks>
+        /// <para>Notice: This parameter is supported only for cloud disk instances.</notice>
+        /// Notice: The value of this parameter cannot be the same as the value of the TargetSecondaryZoneId or TargetHiddenZoneId parameter.</notice></para>
         /// <list type="bullet">
-        /// <item><description><para>You must specify this parameter only when you change the specifications and migrate the instance across zones.</para>
-        /// </description></item>
-        /// <item><description><para>The destination zone and the current zone must be in the same region.</para>
-        /// </description></item>
-        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query zone IDs.</para>
-        /// </description></item>
+        /// <item><description>You must specify this parameter only when you migrate the instance across zones and change its configurations at the same time.</description></item>
+        /// <item><description>The destination zone and the current zone of the instance must be in the same region.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query zone IDs.</description></item>
         /// </list>
         /// </remarks>
         /// 

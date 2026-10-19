@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class CreateGlobalSecurityIPGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IP whitelist templates.</para>
+        /// <para>The list of IP whitelist templates.</para>
         /// </summary>
         [NameInMap("GlobalSecurityIPGroup")]
         [Validation(Required=false)]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <summary>
             /// <para>The IP addresses in the whitelist template.</para>
             /// <remarks>
-            /// <para>Separate multiple IP addresses with commas (,). You can create up to 1,000 IP addresses or CIDR blocks for all IP address whitelists.</para>
+            /// <para>Separate multiple IP addresses with commas (,). A maximum of 1,000 IP addresses or CIDR blocks can be added to all IP whitelists in total.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <summary>
             /// <para>The name of the IP whitelist template. The name must meet the following requirements:</para>
             /// <list type="bullet">
-            /// <item><description><para>It can contain lowercase letters, digits, and underscores (_).</para>
+            /// <item><description><para>It can contain only lowercase letters, digits, and underscores (_).</para>
             /// </description></item>
-            /// <item><description><para>It must start with a letter and end with a letter or digit.</para>
+            /// <item><description><para>It must start with a letter and end with a letter or a digit.</para>
             /// </description></item>
             /// <item><description><para>It must be 2 to 120 characters in length.</para>
             /// </description></item>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string GlobalSecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the instance.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>

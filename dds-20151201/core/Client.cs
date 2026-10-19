@@ -80,19 +80,19 @@ namespace AlibabaCloud.SDK.Dds20151201
                 {"cn-zhengzhou-nebula-1", "mongodb.aliyuncs.com"},
                 {"eu-west-1-oxs", "mongodb.aliyuncs.com"},
                 {"rus-west-1-pop", "mongodb.aliyuncs.com"},
-                {"us-southeast-1", "mongodb.us-southeast-1.aliyuncs.com"},
-                {"na-south-1", "mongodb.na-south-1.aliyuncs.com"},
-                {"me-central-1", "mongodb.me-central-1.aliyuncs.com"},
-                {"cn-zhongwei", "mongodb.cn-zhongwei.aliyuncs.com"},
                 {"cn-zhengzhou-jva", "mongodb.cn-zhengzhou-jva.aliyuncs.com"},
-                {"cn-wulanchabu-gic-1", "mongodb.cn-wulanchabu-gic-1.aliyuncs.com"},
                 {"cn-wuhan-lr", "mongodb.cn-wuhan-lr.aliyuncs.com"},
                 {"cn-nanjing", "mongodb.cn-nanjing.aliyuncs.com"},
-                {"cn-fuzhou", "mongodb.cn-fuzhou.aliyuncs.com"},
-                {"ap-southeast-8", "mongodb.ap-southeast-8.aliyuncs.com"},
-                {"ap-southeast-7", "mongodb.ap-southeast-7.aliyuncs.com"},
-                {"ap-southeast-6", "mongodb.ap-southeast-6.aliyuncs.com"},
                 {"ap-northeast-2", "mongodb.ap-northeast-2.aliyuncs.com"},
+                {"cn-fuzhou", "mongodb.cn-fuzhou.aliyuncs.com"},
+                {"ap-southeast-6", "mongodb.ap-southeast-6.aliyuncs.com"},
+                {"ap-southeast-7", "mongodb.ap-southeast-7.aliyuncs.com"},
+                {"us-southeast-1", "mongodb.us-southeast-1.aliyuncs.com"},
+                {"sa-east-1", "mongodb.sa-east-1.aliyuncs.com"},
+                {"na-south-1", "mongodb.na-south-1.aliyuncs.com"},
+                {"me-central-1", "mongodb.me-central-1.aliyuncs.com"},
+                {"cn-heyuan-acdr-1", "mongodb.cn-heyuan-acdr-1.aliyuncs.com"},
+                {"cn-wulanchabu-gic-1", "mongodb.cn-wulanchabu-gic-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("dds", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -114,12 +114,12 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for an SRV connection string for an ApsaraDB for MongoDB instance.</para>
+        /// <para>Applies for an SRV address for an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Applicable only to cloud disk-based replica set and sharded cluster instances.</para>
+        /// <para>This operation applies only to replica set instances and sharded cluster instances that use cloud disks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -185,12 +185,12 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for an SRV connection string for an ApsaraDB for MongoDB instance.</para>
+        /// <para>Applies for an SRV address for an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Applicable only to cloud disk-based replica set and sharded cluster instances.</para>
+        /// <para>This operation applies only to replica set instances and sharded cluster instances that use cloud disks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -256,12 +256,12 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for an SRV connection string for an ApsaraDB for MongoDB instance.</para>
+        /// <para>Applies for an SRV address for an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Applicable only to cloud disk-based replica set and sharded cluster instances.</para>
+        /// <para>This operation applies only to replica set instances and sharded cluster instances that use cloud disks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -279,12 +279,12 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for an SRV connection string for an ApsaraDB for MongoDB instance.</para>
+        /// <para>Applies for an SRV address for an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Applicable only to cloud disk-based replica set and sharded cluster instances.</para>
+        /// <para>This operation applies only to replica set instances and sharded cluster instances that use cloud disks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -302,14 +302,14 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for an internal endpoint for a shard or Configserver node in an ApsaraDB for MongoDB sharded cluster instance.</para>
+        /// <para>Applies for an internal network endpoint for a shard or ConfigServer node of an ApsaraDB for MongoDB database sharded cluster instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is applicable only to sharded cluster instances. For more information, see <a href="https://help.aliyun.com/document_detail/134037.html">Apply for an endpoint for a shard or Configserver node</a>.</para>
+        /// <para>This operation applies only to sharded cluster instances. For more details, see <a href="https://help.aliyun.com/document_detail/134037.html">Apply for an endpoint for a shard or ConfigServer node</a>.</para>
         /// <remarks>
-        /// <para>The allocated endpoints can be used only for internal access. To gain Internet access, you must call the <a href="https://help.aliyun.com/document_detail/67602.html">AllocatePublicNetworkAddress</a> operation to apply for public endpoints.</para>
+        /// <para>The allocated endpoint supports only internal network access. If you require public network access, invoke the <a href="https://help.aliyun.com/document_detail/67602.html">AllocatePublicNetworkAddress</a> operation to apply for a public endpoint.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -384,14 +384,14 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for an internal endpoint for a shard or Configserver node in an ApsaraDB for MongoDB sharded cluster instance.</para>
+        /// <para>Applies for an internal network endpoint for a shard or ConfigServer node of an ApsaraDB for MongoDB database sharded cluster instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is applicable only to sharded cluster instances. For more information, see <a href="https://help.aliyun.com/document_detail/134037.html">Apply for an endpoint for a shard or Configserver node</a>.</para>
+        /// <para>This operation applies only to sharded cluster instances. For more details, see <a href="https://help.aliyun.com/document_detail/134037.html">Apply for an endpoint for a shard or ConfigServer node</a>.</para>
         /// <remarks>
-        /// <para>The allocated endpoints can be used only for internal access. To gain Internet access, you must call the <a href="https://help.aliyun.com/document_detail/67602.html">AllocatePublicNetworkAddress</a> operation to apply for public endpoints.</para>
+        /// <para>The allocated endpoint supports only internal network access. If you require public network access, invoke the <a href="https://help.aliyun.com/document_detail/67602.html">AllocatePublicNetworkAddress</a> operation to apply for a public endpoint.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -466,14 +466,14 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for an internal endpoint for a shard or Configserver node in an ApsaraDB for MongoDB sharded cluster instance.</para>
+        /// <para>Applies for an internal network endpoint for a shard or ConfigServer node of an ApsaraDB for MongoDB database sharded cluster instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is applicable only to sharded cluster instances. For more information, see <a href="https://help.aliyun.com/document_detail/134037.html">Apply for an endpoint for a shard or Configserver node</a>.</para>
+        /// <para>This operation applies only to sharded cluster instances. For more details, see <a href="https://help.aliyun.com/document_detail/134037.html">Apply for an endpoint for a shard or ConfigServer node</a>.</para>
         /// <remarks>
-        /// <para>The allocated endpoints can be used only for internal access. To gain Internet access, you must call the <a href="https://help.aliyun.com/document_detail/67602.html">AllocatePublicNetworkAddress</a> operation to apply for public endpoints.</para>
+        /// <para>The allocated endpoint supports only internal network access. If you require public network access, invoke the <a href="https://help.aliyun.com/document_detail/67602.html">AllocatePublicNetworkAddress</a> operation to apply for a public endpoint.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -492,14 +492,14 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for an internal endpoint for a shard or Configserver node in an ApsaraDB for MongoDB sharded cluster instance.</para>
+        /// <para>Applies for an internal network endpoint for a shard or ConfigServer node of an ApsaraDB for MongoDB database sharded cluster instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is applicable only to sharded cluster instances. For more information, see <a href="https://help.aliyun.com/document_detail/134037.html">Apply for an endpoint for a shard or Configserver node</a>.</para>
+        /// <para>This operation applies only to sharded cluster instances. For more details, see <a href="https://help.aliyun.com/document_detail/134037.html">Apply for an endpoint for a shard or ConfigServer node</a>.</para>
         /// <remarks>
-        /// <para>The allocated endpoints can be used only for internal access. To gain Internet access, you must call the <a href="https://help.aliyun.com/document_detail/67602.html">AllocatePublicNetworkAddress</a> operation to apply for public endpoints.</para>
+        /// <para>The allocated endpoint supports only internal network access. If you require public network access, invoke the <a href="https://help.aliyun.com/document_detail/67602.html">AllocatePublicNetworkAddress</a> operation to apply for a public endpoint.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -518,7 +518,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Allocates a public endpoint to an instance.</para>
+        /// <para>Allocates a public endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -580,7 +580,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Allocates a public endpoint to an instance.</para>
+        /// <para>Allocates a public endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -642,7 +642,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Allocates a public endpoint to an instance.</para>
+        /// <para>Allocates a public endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -660,7 +660,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Allocates a public endpoint to an instance.</para>
+        /// <para>Allocates a public endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -678,16 +678,16 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels Operations and Maintenance (O&amp;M) events in a batch.</para>
+        /// <para>Cancels multiple O&amp;M events in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>An O\&amp;M event cannot be canceled in the following scenarios:</para>
+        /// <para>Scenarios where O&amp;M events cannot be canceled:</para>
         /// <list type="bullet">
-        /// <item><description>The event is not cancelable if the value of the AllowCancel parameter is 0.</description></item>
-        /// <item><description>The scheduled start time of the O\&amp;M event has passed.</description></item>
-        /// <item><description>The status of the O\&amp;M event is not Pending if the value of the Status parameter is not 3.</description></item>
+        /// <item><description>The event cannot be canceled (AllowCancel is 0).</description></item>
+        /// <item><description>The current time is later than the start time of the O&amp;M event.</description></item>
+        /// <item><description>The status of the O&amp;M event is not Pending Execution (Status is not 3).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -750,16 +750,16 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels Operations and Maintenance (O&amp;M) events in a batch.</para>
+        /// <para>Cancels multiple O&amp;M events in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>An O\&amp;M event cannot be canceled in the following scenarios:</para>
+        /// <para>Scenarios where O&amp;M events cannot be canceled:</para>
         /// <list type="bullet">
-        /// <item><description>The event is not cancelable if the value of the AllowCancel parameter is 0.</description></item>
-        /// <item><description>The scheduled start time of the O\&amp;M event has passed.</description></item>
-        /// <item><description>The status of the O\&amp;M event is not Pending if the value of the Status parameter is not 3.</description></item>
+        /// <item><description>The event cannot be canceled (AllowCancel is 0).</description></item>
+        /// <item><description>The current time is later than the start time of the O&amp;M event.</description></item>
+        /// <item><description>The status of the O&amp;M event is not Pending Execution (Status is not 3).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -822,16 +822,16 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels Operations and Maintenance (O&amp;M) events in a batch.</para>
+        /// <para>Cancels multiple O&amp;M events in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>An O\&amp;M event cannot be canceled in the following scenarios:</para>
+        /// <para>Scenarios where O&amp;M events cannot be canceled:</para>
         /// <list type="bullet">
-        /// <item><description>The event is not cancelable if the value of the AllowCancel parameter is 0.</description></item>
-        /// <item><description>The scheduled start time of the O\&amp;M event has passed.</description></item>
-        /// <item><description>The status of the O\&amp;M event is not Pending if the value of the Status parameter is not 3.</description></item>
+        /// <item><description>The event cannot be canceled (AllowCancel is 0).</description></item>
+        /// <item><description>The current time is later than the start time of the O&amp;M event.</description></item>
+        /// <item><description>The status of the O&amp;M event is not Pending Execution (Status is not 3).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -850,16 +850,16 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels Operations and Maintenance (O&amp;M) events in a batch.</para>
+        /// <para>Cancels multiple O&amp;M events in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>An O\&amp;M event cannot be canceled in the following scenarios:</para>
+        /// <para>Scenarios where O&amp;M events cannot be canceled:</para>
         /// <list type="bullet">
-        /// <item><description>The event is not cancelable if the value of the AllowCancel parameter is 0.</description></item>
-        /// <item><description>The scheduled start time of the O\&amp;M event has passed.</description></item>
-        /// <item><description>The status of the O\&amp;M event is not Pending if the value of the Status parameter is not 3.</description></item>
+        /// <item><description>The event cannot be canceled (AllowCancel is 0).</description></item>
+        /// <item><description>The current time is later than the start time of the O&amp;M event.</description></item>
+        /// <item><description>The status of the O&amp;M event is not Pending Execution (Status is not 3).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -878,12 +878,12 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether Key Management Service (KMS) keys are authorized to an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries whether a Key Management Service (KMS) key is authorized for a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you enable Transparent Data Encryption (TDE) by calling the <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a> operation, you can call this operation to check whether KMS keys are authorized to ApsaraDB for MongoDB instances.</para>
+        /// <para>Before you invoke the <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a> operation to enable transparent data encryption (TDE), invoke this operation to query the authorization of the KMS key for the MongoDB instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -945,12 +945,12 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether Key Management Service (KMS) keys are authorized to an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries whether a Key Management Service (KMS) key is authorized for a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you enable Transparent Data Encryption (TDE) by calling the <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a> operation, you can call this operation to check whether KMS keys are authorized to ApsaraDB for MongoDB instances.</para>
+        /// <para>Before you invoke the <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a> operation to enable transparent data encryption (TDE), invoke this operation to query the authorization of the KMS key for the MongoDB instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1012,12 +1012,12 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether Key Management Service (KMS) keys are authorized to an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries whether a Key Management Service (KMS) key is authorized for a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you enable Transparent Data Encryption (TDE) by calling the <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a> operation, you can call this operation to check whether KMS keys are authorized to ApsaraDB for MongoDB instances.</para>
+        /// <para>Before you invoke the <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a> operation to enable transparent data encryption (TDE), invoke this operation to query the authorization of the KMS key for the MongoDB instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1035,12 +1035,12 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether Key Management Service (KMS) keys are authorized to an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries whether a Key Management Service (KMS) key is authorized for a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you enable Transparent Data Encryption (TDE) by calling the <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a> operation, you can call this operation to check whether KMS keys are authorized to ApsaraDB for MongoDB instances.</para>
+        /// <para>Before you invoke the <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a> operation to enable transparent data encryption (TDE), invoke this operation to query the authorization of the KMS key for the MongoDB instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1058,14 +1058,14 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether the data of an ApsaraDB for MongoDB instance can be restored.</para>
+        /// <para>Checks whether a MongoDB instance meets the conditions for data restoration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is applicable to replica set instances and sharded cluster instances.</para>
+        /// <para>This operation is applicable to replica set instances or sharded cluster instances.</para>
         /// <remarks>
-        /// <para> After you call this operation to confirm that the data of the instance can be restored, you can call the <a href="https://help.aliyun.com/document_detail/61763.html">CreateDBInstance</a> operation to restore data to a new instance.</para>
+        /// <para>After you call this operation to confirm that the conditions for data restoration are met, you can call the <a href="https://help.aliyun.com/document_detail/61763.html">CreateDBInstance</a> operation to restore data to a new instance.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1164,14 +1164,14 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether the data of an ApsaraDB for MongoDB instance can be restored.</para>
+        /// <para>Checks whether a MongoDB instance meets the conditions for data restoration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is applicable to replica set instances and sharded cluster instances.</para>
+        /// <para>This operation is applicable to replica set instances or sharded cluster instances.</para>
         /// <remarks>
-        /// <para> After you call this operation to confirm that the data of the instance can be restored, you can call the <a href="https://help.aliyun.com/document_detail/61763.html">CreateDBInstance</a> operation to restore data to a new instance.</para>
+        /// <para>After you call this operation to confirm that the conditions for data restoration are met, you can call the <a href="https://help.aliyun.com/document_detail/61763.html">CreateDBInstance</a> operation to restore data to a new instance.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1270,14 +1270,14 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether the data of an ApsaraDB for MongoDB instance can be restored.</para>
+        /// <para>Checks whether a MongoDB instance meets the conditions for data restoration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is applicable to replica set instances and sharded cluster instances.</para>
+        /// <para>This operation is applicable to replica set instances or sharded cluster instances.</para>
         /// <remarks>
-        /// <para> After you call this operation to confirm that the data of the instance can be restored, you can call the <a href="https://help.aliyun.com/document_detail/61763.html">CreateDBInstance</a> operation to restore data to a new instance.</para>
+        /// <para>After you call this operation to confirm that the conditions for data restoration are met, you can call the <a href="https://help.aliyun.com/document_detail/61763.html">CreateDBInstance</a> operation to restore data to a new instance.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1296,14 +1296,14 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether the data of an ApsaraDB for MongoDB instance can be restored.</para>
+        /// <para>Checks whether a MongoDB instance meets the conditions for data restoration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is applicable to replica set instances and sharded cluster instances.</para>
+        /// <para>This operation is applicable to replica set instances or sharded cluster instances.</para>
         /// <remarks>
-        /// <para> After you call this operation to confirm that the data of the instance can be restored, you can call the <a href="https://help.aliyun.com/document_detail/61763.html">CreateDBInstance</a> operation to restore data to a new instance.</para>
+        /// <para>After you call this operation to confirm that the conditions for data restoration are met, you can call the <a href="https://help.aliyun.com/document_detail/61763.html">CreateDBInstance</a> operation to restore data to a new instance.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1322,7 +1322,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a service-linked role (SLR) is created for an instance.</para>
+        /// <para>Queries whether a service-linked role (SLR) has been created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1372,7 +1372,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a service-linked role (SLR) is created for an instance.</para>
+        /// <para>Queries whether a service-linked role (SLR) has been created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1422,7 +1422,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a service-linked role (SLR) is created for an instance.</para>
+        /// <para>Queries whether a service-linked role (SLR) has been created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1440,7 +1440,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a service-linked role (SLR) is created for an instance.</para>
+        /// <para>Queries whether a service-linked role (SLR) has been created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1458,14 +1458,14 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an account that is granted read-only permissions for shard nodes in an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.</para>
+        /// <para>Creates a read-only shard account for an ApsaraDB for MongoDB sharded cluster instance with cloud disks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can create an account for shard nodes only in an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.</description></item>
-        /// <item><description>The account is granted read-only permissions.</description></item>
+        /// <item><description>Shard accounts can be created only for ApsaraDB for MongoDB sharded cluster instances with cloud disks.</description></item>
+        /// <item><description>Shard accounts are granted fixed read-only permissions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1483,6 +1483,10 @@ namespace AlibabaCloud.SDK.Dds20151201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountDescription))
+            {
+                query["AccountDescription"] = request.AccountDescription;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountName))
             {
                 query["AccountName"] = request.AccountName;
@@ -1499,6 +1503,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["DBInstanceId"] = request.DBInstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBName))
+            {
+                query["DBName"] = request.DBName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -1514,6 +1522,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Roles))
+            {
+                query["Roles"] = request.Roles;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1536,14 +1548,14 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an account that is granted read-only permissions for shard nodes in an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.</para>
+        /// <para>Creates a read-only shard account for an ApsaraDB for MongoDB sharded cluster instance with cloud disks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can create an account for shard nodes only in an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.</description></item>
-        /// <item><description>The account is granted read-only permissions.</description></item>
+        /// <item><description>Shard accounts can be created only for ApsaraDB for MongoDB sharded cluster instances with cloud disks.</description></item>
+        /// <item><description>Shard accounts are granted fixed read-only permissions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1561,6 +1573,10 @@ namespace AlibabaCloud.SDK.Dds20151201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountDescription))
+            {
+                query["AccountDescription"] = request.AccountDescription;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountName))
             {
                 query["AccountName"] = request.AccountName;
@@ -1577,6 +1593,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["DBInstanceId"] = request.DBInstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBName))
+            {
+                query["DBName"] = request.DBName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -1592,6 +1612,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Roles))
+            {
+                query["Roles"] = request.Roles;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1614,14 +1638,14 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an account that is granted read-only permissions for shard nodes in an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.</para>
+        /// <para>Creates a read-only shard account for an ApsaraDB for MongoDB sharded cluster instance with cloud disks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can create an account for shard nodes only in an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.</description></item>
-        /// <item><description>The account is granted read-only permissions.</description></item>
+        /// <item><description>Shard accounts can be created only for ApsaraDB for MongoDB sharded cluster instances with cloud disks.</description></item>
+        /// <item><description>Shard accounts are granted fixed read-only permissions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1640,14 +1664,14 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an account that is granted read-only permissions for shard nodes in an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.</para>
+        /// <para>Creates a read-only shard account for an ApsaraDB for MongoDB sharded cluster instance with cloud disks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can create an account for shard nodes only in an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.</description></item>
-        /// <item><description>The account is granted read-only permissions.</description></item>
+        /// <item><description>Shard accounts can be created only for ApsaraDB for MongoDB sharded cluster instances with cloud disks.</description></item>
+        /// <item><description>Shard accounts are granted fixed read-only permissions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1666,12 +1690,12 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a backup for a MongoDB instance.</para>
+        /// <para>Creates a backup for an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The instance must be in the Running state.</para>
+        /// <para>The instance status must be running when you invoke the CreateBackup operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1737,12 +1761,12 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a backup for a MongoDB instance.</para>
+        /// <para>Creates a backup for an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The instance must be in the Running state.</para>
+        /// <para>The instance status must be running when you invoke the CreateBackup operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1808,12 +1832,12 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a backup for a MongoDB instance.</para>
+        /// <para>Creates a backup for an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The instance must be in the Running state.</para>
+        /// <para>The instance status must be running when you invoke the CreateBackup operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1831,12 +1855,12 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a backup for a MongoDB instance.</para>
+        /// <para>Creates a backup for an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The instance must be in the Running state.</para>
+        /// <para>The instance status must be running when you invoke the CreateBackup operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1859,9 +1883,9 @@ namespace AlibabaCloud.SDK.Dds20151201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
-        /// For more information about the instance types of ApsaraDB for MongoDB, see <a href="">Instance types</a>.
-        /// To create a sharded cluster instance, call the <a href="">CreateShardingDBInstance</a> operation.</para>
+        /// <para>Before using this operation, make sure you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
+        /// For information about instance specifications, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance specifications</a>.
+        /// To create a sharded cluster instance, call the <a href="https://help.aliyun.com/document_detail/61884.html">CreateShardingDBInstance</a> operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2068,9 +2092,9 @@ namespace AlibabaCloud.SDK.Dds20151201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
-        /// For more information about the instance types of ApsaraDB for MongoDB, see <a href="">Instance types</a>.
-        /// To create a sharded cluster instance, call the <a href="">CreateShardingDBInstance</a> operation.</para>
+        /// <para>Before using this operation, make sure you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
+        /// For information about instance specifications, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance specifications</a>.
+        /// To create a sharded cluster instance, call the <a href="https://help.aliyun.com/document_detail/61884.html">CreateShardingDBInstance</a> operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2277,9 +2301,9 @@ namespace AlibabaCloud.SDK.Dds20151201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
-        /// For more information about the instance types of ApsaraDB for MongoDB, see <a href="">Instance types</a>.
-        /// To create a sharded cluster instance, call the <a href="">CreateShardingDBInstance</a> operation.</para>
+        /// <para>Before using this operation, make sure you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
+        /// For information about instance specifications, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance specifications</a>.
+        /// To create a sharded cluster instance, call the <a href="https://help.aliyun.com/document_detail/61884.html">CreateShardingDBInstance</a> operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2302,9 +2326,9 @@ namespace AlibabaCloud.SDK.Dds20151201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
-        /// For more information about the instance types of ApsaraDB for MongoDB, see <a href="">Instance types</a>.
-        /// To create a sharded cluster instance, call the <a href="">CreateShardingDBInstance</a> operation.</para>
+        /// <para>Before using this operation, make sure you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
+        /// For information about instance specifications, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance specifications</a>.
+        /// To create a sharded cluster instance, call the <a href="https://help.aliyun.com/document_detail/61884.html">CreateShardingDBInstance</a> operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2503,8 +2527,8 @@ namespace AlibabaCloud.SDK.Dds20151201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, ensure you are familiar with the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
-        /// This operation applies only to sharded cluster instances.</para>
+        /// <para>Before calling this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
+        /// This operation is applicable only to sharded cluster instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2623,8 +2647,8 @@ namespace AlibabaCloud.SDK.Dds20151201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, ensure you are familiar with the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
-        /// This operation applies only to sharded cluster instances.</para>
+        /// <para>Before calling this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
+        /// This operation is applicable only to sharded cluster instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2743,8 +2767,8 @@ namespace AlibabaCloud.SDK.Dds20151201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, ensure you are familiar with the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
-        /// This operation applies only to sharded cluster instances.</para>
+        /// <para>Before calling this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
+        /// This operation is applicable only to sharded cluster instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2767,8 +2791,8 @@ namespace AlibabaCloud.SDK.Dds20151201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, ensure you are familiar with the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
-        /// This operation applies only to sharded cluster instances.</para>
+        /// <para>Before calling this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
+        /// This operation is applicable only to sharded cluster instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2786,13 +2810,13 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch adds mongos or shard nodes for a sharded cluster instance.</para>
+        /// <para>Adds multiple Mongos or shard nodes to an ApsaraDB for MongoDB sharded cluster instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
-        /// This operation is applicable only to sharded cluster instances.</para>
+        /// <para>Make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB before you call this operation.
+        /// This operation is applicable only to ApsaraDB for MongoDB sharded cluster instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2886,13 +2910,13 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch adds mongos or shard nodes for a sharded cluster instance.</para>
+        /// <para>Adds multiple Mongos or shard nodes to an ApsaraDB for MongoDB sharded cluster instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
-        /// This operation is applicable only to sharded cluster instances.</para>
+        /// <para>Make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB before you call this operation.
+        /// This operation is applicable only to ApsaraDB for MongoDB sharded cluster instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2986,13 +3010,13 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch adds mongos or shard nodes for a sharded cluster instance.</para>
+        /// <para>Adds multiple Mongos or shard nodes to an ApsaraDB for MongoDB sharded cluster instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
-        /// This operation is applicable only to sharded cluster instances.</para>
+        /// <para>Make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB before you call this operation.
+        /// This operation is applicable only to ApsaraDB for MongoDB sharded cluster instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3010,13 +3034,13 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch adds mongos or shard nodes for a sharded cluster instance.</para>
+        /// <para>Adds multiple Mongos or shard nodes to an ApsaraDB for MongoDB sharded cluster instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
-        /// This operation is applicable only to sharded cluster instances.</para>
+        /// <para>Make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB before you call this operation.
+        /// This operation is applicable only to ApsaraDB for MongoDB sharded cluster instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3194,15 +3218,15 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or clones a MongoDB sharded cluster instance.</para>
+        /// <para>Creates or clones an ApsaraDB for MongoDB sharded cluster instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.</description></item>
-        /// <item><description>For more information about the instance types of ApsaraDB for MongoDB, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</description></item>
-        /// <item><description>To create a standalone or replica set instance, you can call the <a href="https://help.aliyun.com/document_detail/61763.html">CreateDBInstance</a> operation.</description></item>
+        /// <item><description>Before calling this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.</description></item>
+        /// <item><description>For more information about the specifications of ApsaraDB for MongoDB instances, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance specifications</a>.</description></item>
+        /// <item><description>To create a standalone instance or a replica set instance, call the <a href="https://help.aliyun.com/document_detail/61763.html">CreateDBInstance</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3393,15 +3417,15 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or clones a MongoDB sharded cluster instance.</para>
+        /// <para>Creates or clones an ApsaraDB for MongoDB sharded cluster instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.</description></item>
-        /// <item><description>For more information about the instance types of ApsaraDB for MongoDB, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</description></item>
-        /// <item><description>To create a standalone or replica set instance, you can call the <a href="https://help.aliyun.com/document_detail/61763.html">CreateDBInstance</a> operation.</description></item>
+        /// <item><description>Before calling this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.</description></item>
+        /// <item><description>For more information about the specifications of ApsaraDB for MongoDB instances, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance specifications</a>.</description></item>
+        /// <item><description>To create a standalone instance or a replica set instance, call the <a href="https://help.aliyun.com/document_detail/61763.html">CreateDBInstance</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3592,15 +3616,15 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or clones a MongoDB sharded cluster instance.</para>
+        /// <para>Creates or clones an ApsaraDB for MongoDB sharded cluster instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.</description></item>
-        /// <item><description>For more information about the instance types of ApsaraDB for MongoDB, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</description></item>
-        /// <item><description>To create a standalone or replica set instance, you can call the <a href="https://help.aliyun.com/document_detail/61763.html">CreateDBInstance</a> operation.</description></item>
+        /// <item><description>Before calling this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.</description></item>
+        /// <item><description>For more information about the specifications of ApsaraDB for MongoDB instances, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance specifications</a>.</description></item>
+        /// <item><description>To create a standalone instance or a replica set instance, call the <a href="https://help.aliyun.com/document_detail/61763.html">CreateDBInstance</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3619,15 +3643,15 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or clones a MongoDB sharded cluster instance.</para>
+        /// <para>Creates or clones an ApsaraDB for MongoDB sharded cluster instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.</description></item>
-        /// <item><description>For more information about the instance types of ApsaraDB for MongoDB, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</description></item>
-        /// <item><description>To create a standalone or replica set instance, you can call the <a href="https://help.aliyun.com/document_detail/61763.html">CreateDBInstance</a> operation.</description></item>
+        /// <item><description>Before calling this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.</description></item>
+        /// <item><description>For more information about the specifications of ApsaraDB for MongoDB instances, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance specifications</a>.</description></item>
+        /// <item><description>To create a standalone instance or a replica set instance, call the <a href="https://help.aliyun.com/document_detail/61763.html">CreateDBInstance</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3651,8 +3675,8 @@ namespace AlibabaCloud.SDK.Dds20151201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete only manual backups.
-        /// This operation supports only MongoDB instances that use cloud disks.</para>
+        /// <para>Only manual backups can be deleted.
+        /// Only MongoDB instances with cloud disks are supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3719,8 +3743,8 @@ namespace AlibabaCloud.SDK.Dds20151201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete only manual backups.
-        /// This operation supports only MongoDB instances that use cloud disks.</para>
+        /// <para>Only manual backups can be deleted.
+        /// Only MongoDB instances with cloud disks are supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3787,8 +3811,8 @@ namespace AlibabaCloud.SDK.Dds20151201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete only manual backups.
-        /// This operation supports only MongoDB instances that use cloud disks.</para>
+        /// <para>Only manual backups can be deleted.
+        /// Only MongoDB instances with cloud disks are supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3811,8 +3835,8 @@ namespace AlibabaCloud.SDK.Dds20151201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete only manual backups.
-        /// This operation supports only MongoDB instances that use cloud disks.</para>
+        /// <para>Only manual backups can be deleted.
+        /// Only MongoDB instances with cloud disks are supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4219,12 +4243,12 @@ namespace AlibabaCloud.SDK.Dds20151201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that the instance meets the following requirements:</para>
+        /// <para>When you invoke this operation, the instance must meet the following requirements: </para>
         /// <list type="bullet">
-        /// <item><description>The instance is in the Running state.</description></item>
+        /// <item><description>The instance status is Running.</description></item>
         /// <item><description>The instance is a sharded cluster instance.</description></item>
         /// <item><description>The billing method of the instance is pay-as-you-go.</description></item>
-        /// <item><description>The number of the shard or mongos nodes in the instance is greater than two.</description></item>
+        /// <item><description>The number of shard or mongos nodes in the instance is greater than 2.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4296,12 +4320,12 @@ namespace AlibabaCloud.SDK.Dds20151201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that the instance meets the following requirements:</para>
+        /// <para>When you invoke this operation, the instance must meet the following requirements: </para>
         /// <list type="bullet">
-        /// <item><description>The instance is in the Running state.</description></item>
+        /// <item><description>The instance status is Running.</description></item>
         /// <item><description>The instance is a sharded cluster instance.</description></item>
         /// <item><description>The billing method of the instance is pay-as-you-go.</description></item>
-        /// <item><description>The number of the shard or mongos nodes in the instance is greater than two.</description></item>
+        /// <item><description>The number of shard or mongos nodes in the instance is greater than 2.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4373,12 +4397,12 @@ namespace AlibabaCloud.SDK.Dds20151201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that the instance meets the following requirements:</para>
+        /// <para>When you invoke this operation, the instance must meet the following requirements: </para>
         /// <list type="bullet">
-        /// <item><description>The instance is in the Running state.</description></item>
+        /// <item><description>The instance status is Running.</description></item>
         /// <item><description>The instance is a sharded cluster instance.</description></item>
         /// <item><description>The billing method of the instance is pay-as-you-go.</description></item>
-        /// <item><description>The number of the shard or mongos nodes in the instance is greater than two.</description></item>
+        /// <item><description>The number of shard or mongos nodes in the instance is greater than 2.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4402,12 +4426,12 @@ namespace AlibabaCloud.SDK.Dds20151201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that the instance meets the following requirements:</para>
+        /// <para>When you invoke this operation, the instance must meet the following requirements: </para>
         /// <list type="bullet">
-        /// <item><description>The instance is in the Running state.</description></item>
+        /// <item><description>The instance status is Running.</description></item>
         /// <item><description>The instance is a sharded cluster instance.</description></item>
         /// <item><description>The billing method of the instance is pay-as-you-go.</description></item>
-        /// <item><description>The number of the shard or mongos nodes in the instance is greater than two.</description></item>
+        /// <item><description>The number of shard or mongos nodes in the instance is greater than 2.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4426,7 +4450,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the database accounts of an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the database account information of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4447,9 +4471,17 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["AccountName"] = request.AccountName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CharacterType))
+            {
+                query["CharacterType"] = request.CharacterType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
             {
                 query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBName))
+            {
+                query["DBName"] = request.DBName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -4488,7 +4520,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the database accounts of an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the database account information of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4509,9 +4541,17 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["AccountName"] = request.AccountName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CharacterType))
+            {
+                query["CharacterType"] = request.CharacterType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
             {
                 query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBName))
+            {
+                query["DBName"] = request.DBName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -4550,7 +4590,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the database accounts of an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the database account information of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4568,7 +4608,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the database accounts of an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the database account information of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4730,7 +4770,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about tasks of an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the details of O&amp;M tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4808,7 +4848,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about tasks of an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the details of O&amp;M tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4886,7 +4926,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about tasks of an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the details of O&amp;M tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4904,7 +4944,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about tasks of an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the details of O&amp;M tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5654,6 +5694,286 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries advanced backup policies.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries advanced backup policies. This operation is supported only for cloud disk replica set and cloud disk sharded cluster instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAdvancedBackupPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAdvancedBackupPolicyResponse
+        /// </returns>
+        public DescribeAdvancedBackupPolicyResponse DescribeAdvancedBackupPolicyWithOptions(DescribeAdvancedBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAdvancedBackupPolicy",
+                Version = "2015-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAdvancedBackupPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries advanced backup policies.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries advanced backup policies. This operation is supported only for cloud disk replica set and cloud disk sharded cluster instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAdvancedBackupPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAdvancedBackupPolicyResponse
+        /// </returns>
+        public async Task<DescribeAdvancedBackupPolicyResponse> DescribeAdvancedBackupPolicyWithOptionsAsync(DescribeAdvancedBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAdvancedBackupPolicy",
+                Version = "2015-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAdvancedBackupPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries advanced backup policies.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries advanced backup policies. This operation is supported only for cloud disk replica set and cloud disk sharded cluster instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAdvancedBackupPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAdvancedBackupPolicyResponse
+        /// </returns>
+        public DescribeAdvancedBackupPolicyResponse DescribeAdvancedBackupPolicy(DescribeAdvancedBackupPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeAdvancedBackupPolicyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries advanced backup policies.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries advanced backup policies. This operation is supported only for cloud disk replica set and cloud disk sharded cluster instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAdvancedBackupPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAdvancedBackupPolicyResponse
+        /// </returns>
+        public async Task<DescribeAdvancedBackupPolicyResponse> DescribeAdvancedBackupPolicyAsync(DescribeAdvancedBackupPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeAdvancedBackupPolicyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether advanced backup is enabled.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries whether advanced backup is enabled. This operation supports only cloud disk replica set instances and cloud disk sharded cluster instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAdvancedBackupStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAdvancedBackupStatusResponse
+        /// </returns>
+        public DescribeAdvancedBackupStatusResponse DescribeAdvancedBackupStatusWithOptions(DescribeAdvancedBackupStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAdvancedBackupStatus",
+                Version = "2015-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAdvancedBackupStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether advanced backup is enabled.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries whether advanced backup is enabled. This operation supports only cloud disk replica set instances and cloud disk sharded cluster instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAdvancedBackupStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAdvancedBackupStatusResponse
+        /// </returns>
+        public async Task<DescribeAdvancedBackupStatusResponse> DescribeAdvancedBackupStatusWithOptionsAsync(DescribeAdvancedBackupStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAdvancedBackupStatus",
+                Version = "2015-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAdvancedBackupStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether advanced backup is enabled.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries whether advanced backup is enabled. This operation supports only cloud disk replica set instances and cloud disk sharded cluster instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAdvancedBackupStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAdvancedBackupStatusResponse
+        /// </returns>
+        public DescribeAdvancedBackupStatusResponse DescribeAdvancedBackupStatus(DescribeAdvancedBackupStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeAdvancedBackupStatusWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether advanced backup is enabled.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries whether advanced backup is enabled. This operation supports only cloud disk replica set instances and cloud disk sharded cluster instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAdvancedBackupStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAdvancedBackupStatusResponse
+        /// </returns>
+        public async Task<DescribeAdvancedBackupStatusResponse> DescribeAdvancedBackupStatusAsync(DescribeAdvancedBackupStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeAdvancedBackupStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the audit log types collected for a MongoDB instance.</para>
         /// </summary>
         /// 
@@ -6038,15 +6358,15 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries audit log entries for a MongoDB instance.</para>
+        /// <para>Queries the audit logs of a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>When you call this operation, ensure that the audit log feature of the instance is enabled. Otherwise, the operation returns an empty audit log.</description></item>
-        /// <item><description>This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.</description></item>
-        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// <item><description>The audit log feature must be enabled for the instance before you call this operation. Otherwise, the returned audit log content is empty.</description></item>
+        /// <item><description>This operation applies to instances of the <b>General-purpose local disk</b> and <b>Dedicated local disk</b> specification types.</description></item>
+        /// <item><description>This operation can be called up to 30 times per minute. Calls that exceed this limit are throttled. Do not call this operation at a high frequency. If high-frequency calls are required, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6149,15 +6469,15 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries audit log entries for a MongoDB instance.</para>
+        /// <para>Queries the audit logs of a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>When you call this operation, ensure that the audit log feature of the instance is enabled. Otherwise, the operation returns an empty audit log.</description></item>
-        /// <item><description>This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.</description></item>
-        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// <item><description>The audit log feature must be enabled for the instance before you call this operation. Otherwise, the returned audit log content is empty.</description></item>
+        /// <item><description>This operation applies to instances of the <b>General-purpose local disk</b> and <b>Dedicated local disk</b> specification types.</description></item>
+        /// <item><description>This operation can be called up to 30 times per minute. Calls that exceed this limit are throttled. Do not call this operation at a high frequency. If high-frequency calls are required, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6260,15 +6580,15 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries audit log entries for a MongoDB instance.</para>
+        /// <para>Queries the audit logs of a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>When you call this operation, ensure that the audit log feature of the instance is enabled. Otherwise, the operation returns an empty audit log.</description></item>
-        /// <item><description>This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.</description></item>
-        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// <item><description>The audit log feature must be enabled for the instance before you call this operation. Otherwise, the returned audit log content is empty.</description></item>
+        /// <item><description>This operation applies to instances of the <b>General-purpose local disk</b> and <b>Dedicated local disk</b> specification types.</description></item>
+        /// <item><description>This operation can be called up to 30 times per minute. Calls that exceed this limit are throttled. Do not call this operation at a high frequency. If high-frequency calls are required, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6287,15 +6607,15 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries audit log entries for a MongoDB instance.</para>
+        /// <para>Queries the audit logs of a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>When you call this operation, ensure that the audit log feature of the instance is enabled. Otherwise, the operation returns an empty audit log.</description></item>
-        /// <item><description>This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.</description></item>
-        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// <item><description>The audit log feature must be enabled for the instance before you call this operation. Otherwise, the returned audit log content is empty.</description></item>
+        /// <item><description>This operation applies to instances of the <b>General-purpose local disk</b> and <b>Dedicated local disk</b> specification types.</description></item>
+        /// <item><description>This operation can be called up to 30 times per minute. Calls that exceed this limit are throttled. Do not call this operation at a high frequency. If high-frequency calls are required, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7750,7 +8070,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backups of a MongoDB instance.</para>
+        /// <para>Queries the backup list of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7848,7 +8168,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backups of a MongoDB instance.</para>
+        /// <para>Queries the backup list of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7946,7 +8266,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backups of a MongoDB instance.</para>
+        /// <para>Queries the backup list of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7964,7 +8284,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backups of a MongoDB instance.</para>
+        /// <para>Queries the backup list of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8686,7 +9006,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the information of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8760,7 +9080,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the information of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8834,7 +9154,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the information of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8852,7 +9172,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the information of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8870,12 +9190,12 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the encryption key of a MongoDB instance.</para>
+        /// <para>Queries the details of a specific key for a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call the DescribeDBInstanceEncryptionKey operation, the instance must have transparent data encryption (TDE) enabled in BYOK mode. You can call the <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a> operation to enable TDE.</para>
+        /// <para>When you invoke the DescribeDBInstanceEncryptionKey operation, transparent data encryption (TDE) must be enabled for the instance by using Bring Your Own Key (BYOK). You can invoke <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a> to enable TDE.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8899,6 +9219,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptionKey))
             {
                 query["EncryptionKey"] = request.EncryptionKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptionType))
+            {
+                query["EncryptionType"] = request.EncryptionType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -8937,12 +9261,12 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the encryption key of a MongoDB instance.</para>
+        /// <para>Queries the details of a specific key for a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call the DescribeDBInstanceEncryptionKey operation, the instance must have transparent data encryption (TDE) enabled in BYOK mode. You can call the <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a> operation to enable TDE.</para>
+        /// <para>When you invoke the DescribeDBInstanceEncryptionKey operation, transparent data encryption (TDE) must be enabled for the instance by using Bring Your Own Key (BYOK). You can invoke <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a> to enable TDE.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8966,6 +9290,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptionKey))
             {
                 query["EncryptionKey"] = request.EncryptionKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptionType))
+            {
+                query["EncryptionType"] = request.EncryptionType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -9004,12 +9332,12 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the encryption key of a MongoDB instance.</para>
+        /// <para>Queries the details of a specific key for a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call the DescribeDBInstanceEncryptionKey operation, the instance must have transparent data encryption (TDE) enabled in BYOK mode. You can call the <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a> operation to enable TDE.</para>
+        /// <para>When you invoke the DescribeDBInstanceEncryptionKey operation, transparent data encryption (TDE) must be enabled for the instance by using Bring Your Own Key (BYOK). You can invoke <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a> to enable TDE.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9027,12 +9355,12 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the encryption key of a MongoDB instance.</para>
+        /// <para>Queries the details of a specific key for a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call the DescribeDBInstanceEncryptionKey operation, the instance must have transparent data encryption (TDE) enabled in BYOK mode. You can call the <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a> operation to enable TDE.</para>
+        /// <para>When you invoke the DescribeDBInstanceEncryptionKey operation, transparent data encryption (TDE) must be enabled for the instance by using Bring Your Own Key (BYOK). You can invoke <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a> to enable TDE.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10187,8 +10515,8 @@ namespace AlibabaCloud.SDK.Dds20151201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;By default, this operation queries a list of replica set instances, which includes standalone instances. If you do not specify the <b>DBInstanceType</b> request parameter, the default value is <b>replicate</b>. To query a list of sharded cluster instances, set <b>DBInstanceType</b> to <b>sharding</b>. To query a list of serverless instances, set <b>DBInstanceType</b> to <b>serverless</b>.
-        /// &lt;props=&quot;intl&quot;&gt;By default, this operation queries a list of replica set instances, which includes standalone instances. If you do not specify the <b>DBInstanceType</b> request parameter, the default value is <b>replicate</b>. To query a list of sharded cluster instances, set <b>DBInstanceType</b> to <b>sharding</b>.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;By default, this operation queries the list of replica set instances (including single-node instances). If the request parameter <b>DBInstanceType</b> is not specified, the default value of this parameter is <b>replicate</b>. To query the list of sharded cluster instances, set <b>DBInstanceType</b> to <b>sharding</b>. To query the list of Serverless instances, set <b>DBInstanceType</b> to <b>serverless</b>.
+        /// &lt;props=&quot;intl&quot;&gt;By default, this operation queries the list of replica set instances (including single-node instances). If the request parameter <b>DBInstanceType</b> is not specified, the default value of this parameter is <b>replicate</b>. To query the list of sharded cluster instances, set <b>DBInstanceType</b> to <b>sharding</b>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10335,8 +10663,8 @@ namespace AlibabaCloud.SDK.Dds20151201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;By default, this operation queries a list of replica set instances, which includes standalone instances. If you do not specify the <b>DBInstanceType</b> request parameter, the default value is <b>replicate</b>. To query a list of sharded cluster instances, set <b>DBInstanceType</b> to <b>sharding</b>. To query a list of serverless instances, set <b>DBInstanceType</b> to <b>serverless</b>.
-        /// &lt;props=&quot;intl&quot;&gt;By default, this operation queries a list of replica set instances, which includes standalone instances. If you do not specify the <b>DBInstanceType</b> request parameter, the default value is <b>replicate</b>. To query a list of sharded cluster instances, set <b>DBInstanceType</b> to <b>sharding</b>.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;By default, this operation queries the list of replica set instances (including single-node instances). If the request parameter <b>DBInstanceType</b> is not specified, the default value of this parameter is <b>replicate</b>. To query the list of sharded cluster instances, set <b>DBInstanceType</b> to <b>sharding</b>. To query the list of Serverless instances, set <b>DBInstanceType</b> to <b>serverless</b>.
+        /// &lt;props=&quot;intl&quot;&gt;By default, this operation queries the list of replica set instances (including single-node instances). If the request parameter <b>DBInstanceType</b> is not specified, the default value of this parameter is <b>replicate</b>. To query the list of sharded cluster instances, set <b>DBInstanceType</b> to <b>sharding</b>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10483,8 +10811,8 @@ namespace AlibabaCloud.SDK.Dds20151201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;By default, this operation queries a list of replica set instances, which includes standalone instances. If you do not specify the <b>DBInstanceType</b> request parameter, the default value is <b>replicate</b>. To query a list of sharded cluster instances, set <b>DBInstanceType</b> to <b>sharding</b>. To query a list of serverless instances, set <b>DBInstanceType</b> to <b>serverless</b>.
-        /// &lt;props=&quot;intl&quot;&gt;By default, this operation queries a list of replica set instances, which includes standalone instances. If you do not specify the <b>DBInstanceType</b> request parameter, the default value is <b>replicate</b>. To query a list of sharded cluster instances, set <b>DBInstanceType</b> to <b>sharding</b>.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;By default, this operation queries the list of replica set instances (including single-node instances). If the request parameter <b>DBInstanceType</b> is not specified, the default value of this parameter is <b>replicate</b>. To query the list of sharded cluster instances, set <b>DBInstanceType</b> to <b>sharding</b>. To query the list of Serverless instances, set <b>DBInstanceType</b> to <b>serverless</b>.
+        /// &lt;props=&quot;intl&quot;&gt;By default, this operation queries the list of replica set instances (including single-node instances). If the request parameter <b>DBInstanceType</b> is not specified, the default value of this parameter is <b>replicate</b>. To query the list of sharded cluster instances, set <b>DBInstanceType</b> to <b>sharding</b>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10507,8 +10835,8 @@ namespace AlibabaCloud.SDK.Dds20151201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;By default, this operation queries a list of replica set instances, which includes standalone instances. If you do not specify the <b>DBInstanceType</b> request parameter, the default value is <b>replicate</b>. To query a list of sharded cluster instances, set <b>DBInstanceType</b> to <b>sharding</b>. To query a list of serverless instances, set <b>DBInstanceType</b> to <b>serverless</b>.
-        /// &lt;props=&quot;intl&quot;&gt;By default, this operation queries a list of replica set instances, which includes standalone instances. If you do not specify the <b>DBInstanceType</b> request parameter, the default value is <b>replicate</b>. To query a list of sharded cluster instances, set <b>DBInstanceType</b> to <b>sharding</b>.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;By default, this operation queries the list of replica set instances (including single-node instances). If the request parameter <b>DBInstanceType</b> is not specified, the default value of this parameter is <b>replicate</b>. To query the list of sharded cluster instances, set <b>DBInstanceType</b> to <b>sharding</b>. To query the list of Serverless instances, set <b>DBInstanceType</b> to <b>serverless</b>.
+        /// &lt;props=&quot;intl&quot;&gt;By default, this operation queries the list of replica set instances (including single-node instances). If the request parameter <b>DBInstanceType</b> is not specified, the default value of this parameter is <b>replicate</b>. To query the list of sharded cluster instances, set <b>DBInstanceType</b> to <b>sharding</b>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10806,14 +11134,14 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries error log entries for a MongoDB instance.</para>
+        /// <para>Queries the error logs of a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.</description></item>
-        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// <item><description>This operation applies to instances of the <b>General-purpose Local Disk</b> and <b>Dedicated Local Disk</b> specification types.</description></item>
+        /// <item><description>This operation is limited to 30 calls per minute. Exceeding this limit triggers throttling. Do not call this operation at a high frequency. For high-frequency access, use Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10912,14 +11240,14 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries error log entries for a MongoDB instance.</para>
+        /// <para>Queries the error logs of a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.</description></item>
-        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// <item><description>This operation applies to instances of the <b>General-purpose Local Disk</b> and <b>Dedicated Local Disk</b> specification types.</description></item>
+        /// <item><description>This operation is limited to 30 calls per minute. Exceeding this limit triggers throttling. Do not call this operation at a high frequency. For high-frequency access, use Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11018,14 +11346,14 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries error log entries for a MongoDB instance.</para>
+        /// <para>Queries the error logs of a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.</description></item>
-        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// <item><description>This operation applies to instances of the <b>General-purpose Local Disk</b> and <b>Dedicated Local Disk</b> specification types.</description></item>
+        /// <item><description>This operation is limited to 30 calls per minute. Exceeding this limit triggers throttling. Do not call this operation at a high frequency. For high-frequency access, use Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11044,14 +11372,14 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries error log entries for a MongoDB instance.</para>
+        /// <para>Queries the error logs of a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation is applicable only to <b>general-purpose local-disk</b> and <b>dedicated local-disk</b> instances.</description></item>
-        /// <item><description>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// <item><description>This operation applies to instances of the <b>General-purpose Local Disk</b> and <b>Dedicated Local Disk</b> specification types.</description></item>
+        /// <item><description>This operation is limited to 30 calls per minute. Exceeding this limit triggers throttling. Do not call this operation at a high frequency. For high-frequency access, use Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11070,7 +11398,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the global IP whitelist template of an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the global IP whitelist templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11108,7 +11436,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the global IP whitelist template of an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the global IP whitelist templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11146,7 +11474,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the global IP whitelist template of an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the global IP whitelist templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11164,7 +11492,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the global IP whitelist template of an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the global IP whitelist templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12178,7 +12506,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the release notes of the minor versions of an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the release notes of minor engine versions for a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12236,7 +12564,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the release notes of the minor versions of an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the release notes of minor engine versions for a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12294,7 +12622,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the release notes of the minor versions of an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the release notes of minor engine versions for a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12312,7 +12640,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the release notes of the minor versions of an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the release notes of minor engine versions for a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13046,7 +13374,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the parameter settings of an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the parameter settings of a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13116,7 +13444,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the parameter settings of an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the parameter settings of a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13186,7 +13514,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the parameter settings of an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the parameter settings of a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13204,7 +13532,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the parameter settings of an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the parameter settings of a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13222,7 +13550,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query prices.</para>
+        /// <para>Queries pricing information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13312,7 +13640,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query prices.</para>
+        /// <para>Queries pricing information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13402,7 +13730,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query prices.</para>
+        /// <para>Queries pricing information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13420,7 +13748,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query prices.</para>
+        /// <para>Queries pricing information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14354,7 +14682,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries ApsaraDB for MongoDB instances whose backups are restored within seven days.</para>
+        /// <para>Queries the backup and restoration instances of a MongoDB instance within the last 7 days.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14424,7 +14752,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries ApsaraDB for MongoDB instances whose backups are restored within seven days.</para>
+        /// <para>Queries the backup and restoration instances of a MongoDB instance within the last 7 days.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14494,7 +14822,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries ApsaraDB for MongoDB instances whose backups are restored within seven days.</para>
+        /// <para>Queries the backup and restoration instances of a MongoDB instance within the last 7 days.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14512,7 +14840,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries ApsaraDB for MongoDB instances whose backups are restored within seven days.</para>
+        /// <para>Queries the backup and restoration instances of a MongoDB instance within the last 7 days.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14682,14 +15010,14 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the role and zone of each node in an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the roles and zones of each node in a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
         /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/123825.html">View the zone of a node</a>.
-        /// This operation is applicable to replica set instances and sharded cluster instances, but cannot be performed on standalone instances.</para>
+        /// This operation is applicable to replica set instances and sharded cluster instances. Standalone instances are not supported.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -14748,14 +15076,14 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the role and zone of each node in an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the roles and zones of each node in a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
         /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/123825.html">View the zone of a node</a>.
-        /// This operation is applicable to replica set instances and sharded cluster instances, but cannot be performed on standalone instances.</para>
+        /// This operation is applicable to replica set instances and sharded cluster instances. Standalone instances are not supported.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -14814,14 +15142,14 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the role and zone of each node in an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the roles and zones of each node in a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
         /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/123825.html">View the zone of a node</a>.
-        /// This operation is applicable to replica set instances and sharded cluster instances, but cannot be performed on standalone instances.</para>
+        /// This operation is applicable to replica set instances and sharded cluster instances. Standalone instances are not supported.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -14840,14 +15168,14 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the role and zone of each node in an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the roles and zones of each node in a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
         /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/123825.html">View the zone of a node</a>.
-        /// This operation is applicable to replica set instances and sharded cluster instances, but cannot be performed on standalone instances.</para>
+        /// This operation is applicable to replica set instances and sharded cluster instances. Standalone instances are not supported.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -14866,14 +15194,14 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View the running logs for a MongoDB instance.</para>
+        /// <para>Queries the running logs of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This API is for instances with the following specification types: <b>general-purpose local disk</b>, <b>dedicated local disk</b>, and <b>cloud disk</b>.</description></item>
-        /// <item><description>This API is limited to 30 calls per minute. Exceeding this limit triggers rate limiting, so avoid high-frequency calls. For high-frequency operations, use Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage Logstore</a>.</description></item>
+        /// <item><description>This operation is applicable to instances of the <b>shared local disk</b>, <b>dedicated local disk</b>, and <b>cloud disk</b> specification types.</description></item>
+        /// <item><description>This operation is limited to 30 calls per minute. If this limit is exceeded, the calls are throttled. Do not call this operation at a high frequency. If you need to call this operation at a high frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14980,14 +15308,14 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View the running logs for a MongoDB instance.</para>
+        /// <para>Queries the running logs of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This API is for instances with the following specification types: <b>general-purpose local disk</b>, <b>dedicated local disk</b>, and <b>cloud disk</b>.</description></item>
-        /// <item><description>This API is limited to 30 calls per minute. Exceeding this limit triggers rate limiting, so avoid high-frequency calls. For high-frequency operations, use Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage Logstore</a>.</description></item>
+        /// <item><description>This operation is applicable to instances of the <b>shared local disk</b>, <b>dedicated local disk</b>, and <b>cloud disk</b> specification types.</description></item>
+        /// <item><description>This operation is limited to 30 calls per minute. If this limit is exceeded, the calls are throttled. Do not call this operation at a high frequency. If you need to call this operation at a high frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15094,14 +15422,14 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View the running logs for a MongoDB instance.</para>
+        /// <para>Queries the running logs of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This API is for instances with the following specification types: <b>general-purpose local disk</b>, <b>dedicated local disk</b>, and <b>cloud disk</b>.</description></item>
-        /// <item><description>This API is limited to 30 calls per minute. Exceeding this limit triggers rate limiting, so avoid high-frequency calls. For high-frequency operations, use Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage Logstore</a>.</description></item>
+        /// <item><description>This operation is applicable to instances of the <b>shared local disk</b>, <b>dedicated local disk</b>, and <b>cloud disk</b> specification types.</description></item>
+        /// <item><description>This operation is limited to 30 calls per minute. If this limit is exceeded, the calls are throttled. Do not call this operation at a high frequency. If you need to call this operation at a high frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15120,14 +15448,14 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View the running logs for a MongoDB instance.</para>
+        /// <para>Queries the running logs of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This API is for instances with the following specification types: <b>general-purpose local disk</b>, <b>dedicated local disk</b>, and <b>cloud disk</b>.</description></item>
-        /// <item><description>This API is limited to 30 calls per minute. Exceeding this limit triggers rate limiting, so avoid high-frequency calls. For high-frequency operations, use Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage Logstore</a>.</description></item>
+        /// <item><description>This operation is applicable to instances of the <b>shared local disk</b>, <b>dedicated local disk</b>, and <b>cloud disk</b> specification types.</description></item>
+        /// <item><description>This operation is limited to 30 calls per minute. If this limit is exceeded, the calls are throttled. Do not call this operation at a high frequency. If you need to call this operation at a high frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16086,12 +16414,12 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the custom keys for an instance.</para>
+        /// <para>Queries the custom key list of an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use the custom keys returned by this operation to enable transparent data encryption (TDE). For more information, see <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a>.</para>
+        /// <para>You can use the custom keys obtained by calling DescribeUserEncryptionKeyList to enable transparent data encryption (TDE). For more information, see <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16157,12 +16485,12 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the custom keys for an instance.</para>
+        /// <para>Queries the custom key list of an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use the custom keys returned by this operation to enable transparent data encryption (TDE). For more information, see <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a>.</para>
+        /// <para>You can use the custom keys obtained by calling DescribeUserEncryptionKeyList to enable transparent data encryption (TDE). For more information, see <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16228,12 +16556,12 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the custom keys for an instance.</para>
+        /// <para>Queries the custom key list of an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use the custom keys returned by this operation to enable transparent data encryption (TDE). For more information, see <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a>.</para>
+        /// <para>You can use the custom keys obtained by calling DescribeUserEncryptionKeyList to enable transparent data encryption (TDE). For more information, see <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16251,12 +16579,12 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the custom keys for an instance.</para>
+        /// <para>Queries the custom key list of an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use the custom keys returned by this operation to enable transparent data encryption (TDE). For more information, see <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a>.</para>
+        /// <para>You can use the custom keys obtained by calling DescribeUserEncryptionKeyList to enable transparent data encryption (TDE). For more information, see <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16274,7 +16602,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of VPCs.</para>
+        /// <para>Retrieves a paginated list of VPCs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16348,7 +16676,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of VPCs.</para>
+        /// <para>Retrieves a paginated list of VPCs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16422,7 +16750,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of VPCs.</para>
+        /// <para>Retrieves a paginated list of VPCs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16440,7 +16768,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of VPCs.</para>
+        /// <para>Retrieves a paginated list of VPCs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16682,14 +17010,14 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Evaluate resource availability before purchasing a new instance or changing the configuration of an existing instance.</para>
+        /// <para>Evaluates whether sufficient resources are available before you create an instance or change the specifications of an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Evaluate resource availability for MongoDB replica set instances and sharded cluster instances. Supported scenarios include purchasing a new instance, changing an instance configuration, and adding nodes to a sharded cluster.</para>
+        /// <para>This operation evaluates resources for ApsaraDB for MongoDB replica set and sharded cluster instances. It supports resource evaluation for creating replica set and sharded cluster instances, changing instance specifications, and adding nodes to sharded cluster instances.</para>
         /// <remarks>
-        /// <para>You can call this operation up to 200 times per minute. Calls that exceed this limit are subject to traffic throttling.</para>
+        /// <para>You can call this operation up to 200 times per minute. Exceeding this limit triggers throttling.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -16784,14 +17112,14 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Evaluate resource availability before purchasing a new instance or changing the configuration of an existing instance.</para>
+        /// <para>Evaluates whether sufficient resources are available before you create an instance or change the specifications of an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Evaluate resource availability for MongoDB replica set instances and sharded cluster instances. Supported scenarios include purchasing a new instance, changing an instance configuration, and adding nodes to a sharded cluster.</para>
+        /// <para>This operation evaluates resources for ApsaraDB for MongoDB replica set and sharded cluster instances. It supports resource evaluation for creating replica set and sharded cluster instances, changing instance specifications, and adding nodes to sharded cluster instances.</para>
         /// <remarks>
-        /// <para>You can call this operation up to 200 times per minute. Calls that exceed this limit are subject to traffic throttling.</para>
+        /// <para>You can call this operation up to 200 times per minute. Exceeding this limit triggers throttling.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -16886,14 +17214,14 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Evaluate resource availability before purchasing a new instance or changing the configuration of an existing instance.</para>
+        /// <para>Evaluates whether sufficient resources are available before you create an instance or change the specifications of an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Evaluate resource availability for MongoDB replica set instances and sharded cluster instances. Supported scenarios include purchasing a new instance, changing an instance configuration, and adding nodes to a sharded cluster.</para>
+        /// <para>This operation evaluates resources for ApsaraDB for MongoDB replica set and sharded cluster instances. It supports resource evaluation for creating replica set and sharded cluster instances, changing instance specifications, and adding nodes to sharded cluster instances.</para>
         /// <remarks>
-        /// <para>You can call this operation up to 200 times per minute. Calls that exceed this limit are subject to traffic throttling.</para>
+        /// <para>You can call this operation up to 200 times per minute. Exceeding this limit triggers throttling.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -16912,14 +17240,14 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Evaluate resource availability before purchasing a new instance or changing the configuration of an existing instance.</para>
+        /// <para>Evaluates whether sufficient resources are available before you create an instance or change the specifications of an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Evaluate resource availability for MongoDB replica set instances and sharded cluster instances. Supported scenarios include purchasing a new instance, changing an instance configuration, and adding nodes to a sharded cluster.</para>
+        /// <para>This operation evaluates resources for ApsaraDB for MongoDB replica set and sharded cluster instances. It supports resource evaluation for creating replica set and sharded cluster instances, changing instance specifications, and adding nodes to sharded cluster instances.</para>
         /// <remarks>
-        /// <para>You can call this operation up to 200 times per minute. Calls that exceed this limit are subject to traffic throttling.</para>
+        /// <para>You can call this operation up to 200 times per minute. Exceeding this limit triggers throttling.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -17122,17 +17450,16 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates an ApsaraDB for MongoDB instance to a specific zone.</para>
+        /// <para>Migrates the zone of a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation is available only for replica set instances that run MongoDB 4.2 or earlier and sharded cluster instances.</description></item>
-        /// <item><description>If you have applied for a public endpoint for the ApsaraDB for MongoDB instance, you must call the <a href="https://help.aliyun.com/document_detail/67604.html">ReleasePublicNetworkAddress</a> operation to release the public endpoint before you call the MigrateAvailableZone operation.</description></item>
-        /// <item><description>Transparent data encryption (TDE) is disabled for the ApsaraDB for MongoDB instance.</description></item>
-        /// <item><description>The source zone and the destination zone belong to the same region.</description></item>
-        /// <item><description>A vSwitch is created in the destination zone. This prerequisite must be met if the instance resides in a virtual private cloud (VPC). For more information about how to create a vSwitch, see <a href="https://help.aliyun.com/document_detail/65387.html">Work with vSwitches</a>.</description></item>
+        /// <item><description>The MigrateAvailableZone operation does not support standalone instances. It is applicable to active cloud disk instances and local disk instances.</description></item>
+        /// <item><description>The transparent data encryption (TDE) feature is not enabled for the instance.</description></item>
+        /// <item><description>The destination zone and the current zone of the instance are in the same region.</description></item>
+        /// <item><description>If the instance is deployed in a VPC, make sure that a vSwitch is created in the destination zone before you migrate the zone. For more information, see <a href="https://help.aliyun.com/document_detail/65387.html">Create a vSwitch</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17211,17 +17538,16 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates an ApsaraDB for MongoDB instance to a specific zone.</para>
+        /// <para>Migrates the zone of a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation is available only for replica set instances that run MongoDB 4.2 or earlier and sharded cluster instances.</description></item>
-        /// <item><description>If you have applied for a public endpoint for the ApsaraDB for MongoDB instance, you must call the <a href="https://help.aliyun.com/document_detail/67604.html">ReleasePublicNetworkAddress</a> operation to release the public endpoint before you call the MigrateAvailableZone operation.</description></item>
-        /// <item><description>Transparent data encryption (TDE) is disabled for the ApsaraDB for MongoDB instance.</description></item>
-        /// <item><description>The source zone and the destination zone belong to the same region.</description></item>
-        /// <item><description>A vSwitch is created in the destination zone. This prerequisite must be met if the instance resides in a virtual private cloud (VPC). For more information about how to create a vSwitch, see <a href="https://help.aliyun.com/document_detail/65387.html">Work with vSwitches</a>.</description></item>
+        /// <item><description>The MigrateAvailableZone operation does not support standalone instances. It is applicable to active cloud disk instances and local disk instances.</description></item>
+        /// <item><description>The transparent data encryption (TDE) feature is not enabled for the instance.</description></item>
+        /// <item><description>The destination zone and the current zone of the instance are in the same region.</description></item>
+        /// <item><description>If the instance is deployed in a VPC, make sure that a vSwitch is created in the destination zone before you migrate the zone. For more information, see <a href="https://help.aliyun.com/document_detail/65387.html">Create a vSwitch</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17300,17 +17626,16 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates an ApsaraDB for MongoDB instance to a specific zone.</para>
+        /// <para>Migrates the zone of a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation is available only for replica set instances that run MongoDB 4.2 or earlier and sharded cluster instances.</description></item>
-        /// <item><description>If you have applied for a public endpoint for the ApsaraDB for MongoDB instance, you must call the <a href="https://help.aliyun.com/document_detail/67604.html">ReleasePublicNetworkAddress</a> operation to release the public endpoint before you call the MigrateAvailableZone operation.</description></item>
-        /// <item><description>Transparent data encryption (TDE) is disabled for the ApsaraDB for MongoDB instance.</description></item>
-        /// <item><description>The source zone and the destination zone belong to the same region.</description></item>
-        /// <item><description>A vSwitch is created in the destination zone. This prerequisite must be met if the instance resides in a virtual private cloud (VPC). For more information about how to create a vSwitch, see <a href="https://help.aliyun.com/document_detail/65387.html">Work with vSwitches</a>.</description></item>
+        /// <item><description>The MigrateAvailableZone operation does not support standalone instances. It is applicable to active cloud disk instances and local disk instances.</description></item>
+        /// <item><description>The transparent data encryption (TDE) feature is not enabled for the instance.</description></item>
+        /// <item><description>The destination zone and the current zone of the instance are in the same region.</description></item>
+        /// <item><description>If the instance is deployed in a VPC, make sure that a vSwitch is created in the destination zone before you migrate the zone. For more information, see <a href="https://help.aliyun.com/document_detail/65387.html">Create a vSwitch</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17329,17 +17654,16 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates an ApsaraDB for MongoDB instance to a specific zone.</para>
+        /// <para>Migrates the zone of a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation is available only for replica set instances that run MongoDB 4.2 or earlier and sharded cluster instances.</description></item>
-        /// <item><description>If you have applied for a public endpoint for the ApsaraDB for MongoDB instance, you must call the <a href="https://help.aliyun.com/document_detail/67604.html">ReleasePublicNetworkAddress</a> operation to release the public endpoint before you call the MigrateAvailableZone operation.</description></item>
-        /// <item><description>Transparent data encryption (TDE) is disabled for the ApsaraDB for MongoDB instance.</description></item>
-        /// <item><description>The source zone and the destination zone belong to the same region.</description></item>
-        /// <item><description>A vSwitch is created in the destination zone. This prerequisite must be met if the instance resides in a virtual private cloud (VPC). For more information about how to create a vSwitch, see <a href="https://help.aliyun.com/document_detail/65387.html">Work with vSwitches</a>.</description></item>
+        /// <item><description>The MigrateAvailableZone operation does not support standalone instances. It is applicable to active cloud disk instances and local disk instances.</description></item>
+        /// <item><description>The transparent data encryption (TDE) feature is not enabled for the instance.</description></item>
+        /// <item><description>The destination zone and the current zone of the instance are in the same region.</description></item>
+        /// <item><description>If the instance is deployed in a VPC, make sure that a vSwitch is created in the destination zone before you migrate the zone. For more information, see <a href="https://help.aliyun.com/document_detail/65387.html">Create a vSwitch</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17358,15 +17682,17 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates an ApsaraDB for MongoDB instance to another zone.</para>
+        /// <para>Migrates a MongoDB instance to another zone.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is applicable only to replica set instances, but not to standalone instances or sharded cluster instances.</para>
-        /// <remarks>
-        /// <para>If you have applied for a public endpoint of the instance, you must first call the <a href="https://help.aliyun.com/document_detail/67604.html">ReleasePublicNetworkAddress</a> operation to release the public endpoint.</para>
-        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>This operation is applicable to replica set instances. Standalone instances and sharded cluster instances are not supported.</description></item>
+        /// <item><description>Transparent Data Encryption (TDE) is not enabled for the instance.</description></item>
+        /// <item><description>The destination zone and the current zone of the instance must be in the same region.</description></item>
+        /// <item><description>If the instance is deployed in a virtual private cloud (VPC), make sure that a vSwitch is created in the destination zone before you migrate the instance. For more information, see <a href="https://help.aliyun.com/document_detail/65387.html">Create a vSwitch</a>.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -17436,15 +17762,17 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates an ApsaraDB for MongoDB instance to another zone.</para>
+        /// <para>Migrates a MongoDB instance to another zone.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is applicable only to replica set instances, but not to standalone instances or sharded cluster instances.</para>
-        /// <remarks>
-        /// <para>If you have applied for a public endpoint of the instance, you must first call the <a href="https://help.aliyun.com/document_detail/67604.html">ReleasePublicNetworkAddress</a> operation to release the public endpoint.</para>
-        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>This operation is applicable to replica set instances. Standalone instances and sharded cluster instances are not supported.</description></item>
+        /// <item><description>Transparent Data Encryption (TDE) is not enabled for the instance.</description></item>
+        /// <item><description>The destination zone and the current zone of the instance must be in the same region.</description></item>
+        /// <item><description>If the instance is deployed in a virtual private cloud (VPC), make sure that a vSwitch is created in the destination zone before you migrate the instance. For more information, see <a href="https://help.aliyun.com/document_detail/65387.html">Create a vSwitch</a>.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -17514,15 +17842,17 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates an ApsaraDB for MongoDB instance to another zone.</para>
+        /// <para>Migrates a MongoDB instance to another zone.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is applicable only to replica set instances, but not to standalone instances or sharded cluster instances.</para>
-        /// <remarks>
-        /// <para>If you have applied for a public endpoint of the instance, you must first call the <a href="https://help.aliyun.com/document_detail/67604.html">ReleasePublicNetworkAddress</a> operation to release the public endpoint.</para>
-        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>This operation is applicable to replica set instances. Standalone instances and sharded cluster instances are not supported.</description></item>
+        /// <item><description>Transparent Data Encryption (TDE) is not enabled for the instance.</description></item>
+        /// <item><description>The destination zone and the current zone of the instance must be in the same region.</description></item>
+        /// <item><description>If the instance is deployed in a virtual private cloud (VPC), make sure that a vSwitch is created in the destination zone before you migrate the instance. For more information, see <a href="https://help.aliyun.com/document_detail/65387.html">Create a vSwitch</a>.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -17540,15 +17870,17 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates an ApsaraDB for MongoDB instance to another zone.</para>
+        /// <para>Migrates a MongoDB instance to another zone.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is applicable only to replica set instances, but not to standalone instances or sharded cluster instances.</para>
-        /// <remarks>
-        /// <para>If you have applied for a public endpoint of the instance, you must first call the <a href="https://help.aliyun.com/document_detail/67604.html">ReleasePublicNetworkAddress</a> operation to release the public endpoint.</para>
-        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>This operation is applicable to replica set instances. Standalone instances and sharded cluster instances are not supported.</description></item>
+        /// <item><description>Transparent Data Encryption (TDE) is not enabled for the instance.</description></item>
+        /// <item><description>The destination zone and the current zone of the instance must be in the same region.</description></item>
+        /// <item><description>If the instance is deployed in a virtual private cloud (VPC), make sure that a vSwitch is created in the destination zone before you migrate the instance. For more information, see <a href="https://help.aliyun.com/document_detail/65387.html">Create a vSwitch</a>.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -17603,6 +17935,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
             {
                 query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBName))
+            {
+                query["DBName"] = request.DBName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -17678,6 +18014,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
             {
                 query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBName))
+            {
+                query["DBName"] = request.DBName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -17762,7 +18102,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the Operations and Maintenance (O&amp;M) task configuration for a MongoDB instance.</para>
+        /// <para>Modifies the O&amp;M task configuration of a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17836,7 +18176,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the Operations and Maintenance (O&amp;M) task configuration for a MongoDB instance.</para>
+        /// <para>Modifies the O&amp;M task configuration of a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17910,7 +18250,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the Operations and Maintenance (O&amp;M) task configuration for a MongoDB instance.</para>
+        /// <para>Modifies the O&amp;M task configuration of a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17928,7 +18268,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the Operations and Maintenance (O&amp;M) task configuration for a MongoDB instance.</para>
+        /// <para>Modifies the O&amp;M task configuration of a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17946,7 +18286,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the switching time of scheduled O\\\\\\&amp;M tasks for an ApsaraDB for MongoDB instance.</para>
+        /// <para>Modifies the switchover time of scheduled O&amp;M tasks for an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18016,7 +18356,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the switching time of scheduled O\\\\\\&amp;M tasks for an ApsaraDB for MongoDB instance.</para>
+        /// <para>Modifies the switchover time of scheduled O&amp;M tasks for an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18086,7 +18426,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the switching time of scheduled O\\\\\\&amp;M tasks for an ApsaraDB for MongoDB instance.</para>
+        /// <para>Modifies the switchover time of scheduled O&amp;M tasks for an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18104,7 +18444,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the switching time of scheduled O\\\\\\&amp;M tasks for an ApsaraDB for MongoDB instance.</para>
+        /// <para>Modifies the switchover time of scheduled O&amp;M tasks for an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18118,6 +18458,346 @@ namespace AlibabaCloud.SDK.Dds20151201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyActiveOperationTasksWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the advanced backup policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Geo-redundancy applies only to cloud disk replica set and cloud disk sharded instances.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ModifyAdvancedBackupPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAdvancedBackupPolicyResponse
+        /// </returns>
+        public ModifyAdvancedBackupPolicyResponse ModifyAdvancedBackupPolicyWithOptions(ModifyAdvancedBackupPolicyRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyAdvancedBackupPolicyShrinkRequest request = new ModifyAdvancedBackupPolicyShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AdvancedBackupDataPolicies))
+            {
+                request.AdvancedBackupDataPoliciesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AdvancedBackupDataPolicies, "AdvancedBackupDataPolicies", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AdvancedBackupLogPolicies))
+            {
+                request.AdvancedBackupLogPoliciesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AdvancedBackupLogPolicies, "AdvancedBackupLogPolicies", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdvancedBackupDataPoliciesShrink))
+            {
+                query["AdvancedBackupDataPolicies"] = request.AdvancedBackupDataPoliciesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdvancedBackupLogPoliciesShrink))
+            {
+                query["AdvancedBackupLogPolicies"] = request.AdvancedBackupLogPoliciesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupRetentionPolicyOnClusterDeletion))
+            {
+                query["BackupRetentionPolicyOnClusterDeletion"] = request.BackupRetentionPolicyOnClusterDeletion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreferredBackupTime))
+            {
+                query["PreferredBackupTime"] = request.PreferredBackupTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnapshotBackupType))
+            {
+                query["SnapshotBackupType"] = request.SnapshotBackupType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyAdvancedBackupPolicy",
+                Version = "2015-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyAdvancedBackupPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the advanced backup policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Geo-redundancy applies only to cloud disk replica set and cloud disk sharded instances.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ModifyAdvancedBackupPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAdvancedBackupPolicyResponse
+        /// </returns>
+        public async Task<ModifyAdvancedBackupPolicyResponse> ModifyAdvancedBackupPolicyWithOptionsAsync(ModifyAdvancedBackupPolicyRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyAdvancedBackupPolicyShrinkRequest request = new ModifyAdvancedBackupPolicyShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AdvancedBackupDataPolicies))
+            {
+                request.AdvancedBackupDataPoliciesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AdvancedBackupDataPolicies, "AdvancedBackupDataPolicies", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AdvancedBackupLogPolicies))
+            {
+                request.AdvancedBackupLogPoliciesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AdvancedBackupLogPolicies, "AdvancedBackupLogPolicies", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdvancedBackupDataPoliciesShrink))
+            {
+                query["AdvancedBackupDataPolicies"] = request.AdvancedBackupDataPoliciesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdvancedBackupLogPoliciesShrink))
+            {
+                query["AdvancedBackupLogPolicies"] = request.AdvancedBackupLogPoliciesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupRetentionPolicyOnClusterDeletion))
+            {
+                query["BackupRetentionPolicyOnClusterDeletion"] = request.BackupRetentionPolicyOnClusterDeletion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreferredBackupTime))
+            {
+                query["PreferredBackupTime"] = request.PreferredBackupTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnapshotBackupType))
+            {
+                query["SnapshotBackupType"] = request.SnapshotBackupType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyAdvancedBackupPolicy",
+                Version = "2015-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyAdvancedBackupPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the advanced backup policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Geo-redundancy applies only to cloud disk replica set and cloud disk sharded instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAdvancedBackupPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAdvancedBackupPolicyResponse
+        /// </returns>
+        public ModifyAdvancedBackupPolicyResponse ModifyAdvancedBackupPolicy(ModifyAdvancedBackupPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyAdvancedBackupPolicyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the advanced backup policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Geo-redundancy applies only to cloud disk replica set and cloud disk sharded instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAdvancedBackupPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAdvancedBackupPolicyResponse
+        /// </returns>
+        public async Task<ModifyAdvancedBackupPolicyResponse> ModifyAdvancedBackupPolicyAsync(ModifyAdvancedBackupPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyAdvancedBackupPolicyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables advanced backup.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enables advanced backup. This feature is supported only for cloud disk replica set and sharded cluster instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAdvancedBackupStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAdvancedBackupStatusResponse
+        /// </returns>
+        public ModifyAdvancedBackupStatusResponse ModifyAdvancedBackupStatusWithOptions(ModifyAdvancedBackupStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyAdvancedBackupStatus",
+                Version = "2015-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyAdvancedBackupStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables advanced backup.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enables advanced backup. This feature is supported only for cloud disk replica set and sharded cluster instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAdvancedBackupStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAdvancedBackupStatusResponse
+        /// </returns>
+        public async Task<ModifyAdvancedBackupStatusResponse> ModifyAdvancedBackupStatusWithOptionsAsync(ModifyAdvancedBackupStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyAdvancedBackupStatus",
+                Version = "2015-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyAdvancedBackupStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables advanced backup.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enables advanced backup. This feature is supported only for cloud disk replica set and sharded cluster instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAdvancedBackupStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAdvancedBackupStatusResponse
+        /// </returns>
+        public ModifyAdvancedBackupStatusResponse ModifyAdvancedBackupStatus(ModifyAdvancedBackupStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyAdvancedBackupStatusWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables advanced backup.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enables advanced backup. This feature is supported only for cloud disk replica set and sharded cluster instances.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAdvancedBackupStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAdvancedBackupStatusResponse
+        /// </returns>
+        public async Task<ModifyAdvancedBackupStatusResponse> ModifyAdvancedBackupStatusAsync(ModifyAdvancedBackupStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyAdvancedBackupStatusWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -18322,13 +19002,13 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the audit log for a MongoDB instance, or modifies the log retention period.</para>
+        /// <para>Settings the audit log switch or log storage duration for an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 30 times per minute. The system throttles calls that exceed this limit. Avoid calling this operation frequently. If you need to make frequent calls, use Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage Logstore</a>.</description></item>
+        /// <item><description>This operation is limited to 30 calls per minute. If this limit is exceeded, the request is throttled. Do not call this operation at a high frequency. For high-frequency calls, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18407,13 +19087,13 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the audit log for a MongoDB instance, or modifies the log retention period.</para>
+        /// <para>Settings the audit log switch or log storage duration for an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 30 times per minute. The system throttles calls that exceed this limit. Avoid calling this operation frequently. If you need to make frequent calls, use Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage Logstore</a>.</description></item>
+        /// <item><description>This operation is limited to 30 calls per minute. If this limit is exceeded, the request is throttled. Do not call this operation at a high frequency. For high-frequency calls, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18492,13 +19172,13 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the audit log for a MongoDB instance, or modifies the log retention period.</para>
+        /// <para>Settings the audit log switch or log storage duration for an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 30 times per minute. The system throttles calls that exceed this limit. Avoid calling this operation frequently. If you need to make frequent calls, use Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage Logstore</a>.</description></item>
+        /// <item><description>This operation is limited to 30 calls per minute. If this limit is exceeded, the request is throttled. Do not call this operation at a high frequency. For high-frequency calls, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18517,13 +19197,13 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the audit log for a MongoDB instance, or modifies the log retention period.</para>
+        /// <para>Settings the audit log switch or log storage duration for an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 30 times per minute. The system throttles calls that exceed this limit. Avoid calling this operation frequently. If you need to make frequent calls, use Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage Logstore</a>.</description></item>
+        /// <item><description>This operation is limited to 30 calls per minute. If this limit is exceeded, the request is throttled. Do not call this operation at a high frequency. For high-frequency calls, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18739,7 +19419,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Geo-redundancy is available only for replica set instances and sharded cluster instances that use cloud disks.</para>
+        /// <para>Cross-region backup is applicable only to replica set and sharded cluster instances that use cloud disks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18882,7 +19562,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Geo-redundancy is available only for replica set instances and sharded cluster instances that use cloud disks.</para>
+        /// <para>Cross-region backup is applicable only to replica set and sharded cluster instances that use cloud disks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19025,7 +19705,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Geo-redundancy is available only for replica set instances and sharded cluster instances that use cloud disks.</para>
+        /// <para>Cross-region backup is applicable only to replica set and sharded cluster instances that use cloud disks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19048,7 +19728,7 @@ namespace AlibabaCloud.SDK.Dds20151201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Geo-redundancy is available only for replica set instances and sharded cluster instances that use cloud disks.</para>
+        /// <para>Cross-region backup is applicable only to replica set and sharded cluster instances that use cloud disks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19414,15 +20094,15 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the connection address and port of a MongoDB instance.</para>
+        /// <para>Modifies the endpoint and port of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can modify the connection address and port for the following instance types:</para>
+        /// <para>The instance types that support modifying the endpoint and port are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>You can modify the connection address and port for instances that use local disks or cloud disks.</description></item>
-        /// <item><description>For sharded cluster instances, you can modify only the connection address of Mongos nodes.</description></item>
+        /// <item><description>You can modify the endpoints of instances with local disks and cloud disks.</description></item>
+        /// <item><description>For sharded cluster instances, you can modify only the endpoints of Mongos nodes.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19509,15 +20189,15 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the connection address and port of a MongoDB instance.</para>
+        /// <para>Modifies the endpoint and port of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can modify the connection address and port for the following instance types:</para>
+        /// <para>The instance types that support modifying the endpoint and port are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>You can modify the connection address and port for instances that use local disks or cloud disks.</description></item>
-        /// <item><description>For sharded cluster instances, you can modify only the connection address of Mongos nodes.</description></item>
+        /// <item><description>You can modify the endpoints of instances with local disks and cloud disks.</description></item>
+        /// <item><description>For sharded cluster instances, you can modify only the endpoints of Mongos nodes.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19604,15 +20284,15 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the connection address and port of a MongoDB instance.</para>
+        /// <para>Modifies the endpoint and port of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can modify the connection address and port for the following instance types:</para>
+        /// <para>The instance types that support modifying the endpoint and port are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>You can modify the connection address and port for instances that use local disks or cloud disks.</description></item>
-        /// <item><description>For sharded cluster instances, you can modify only the connection address of Mongos nodes.</description></item>
+        /// <item><description>You can modify the endpoints of instances with local disks and cloud disks.</description></item>
+        /// <item><description>For sharded cluster instances, you can modify only the endpoints of Mongos nodes.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19631,15 +20311,15 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the connection address and port of a MongoDB instance.</para>
+        /// <para>Modifies the endpoint and port of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can modify the connection address and port for the following instance types:</para>
+        /// <para>The instance types that support modifying the endpoint and port are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>You can modify the connection address and port for instances that use local disks or cloud disks.</description></item>
-        /// <item><description>For sharded cluster instances, you can modify only the connection address of Mongos nodes.</description></item>
+        /// <item><description>You can modify the endpoints of instances with local disks and cloud disks.</description></item>
+        /// <item><description>For sharded cluster instances, you can modify only the endpoints of Mongos nodes.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20430,16 +21110,16 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Extends the retention period of the classic network endpoint of an ApsaraDB for MongoDB instance.</para>
+        /// <para>Extends the classic network retention period for a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that the instance meets the following requirements:</para>
+        /// <para>When you call this operation, the instance must meet the following conditions:</para>
         /// <list type="bullet">
         /// <item><description>The instance is in the Running state.</description></item>
-        /// <item><description>The network of the instance is in hybrid access mode.<remarks>
-        /// <para>This operation is supported by replica set instances and sharded cluster instances. This operation is not supported by standalone instances.</para>
+        /// <item><description>The network type of the instance is hybrid access mode.<remarks>
+        /// <para>This operation is applicable to replica set instances and sharded cluster instances. Standalone instances are not supported.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -20508,16 +21188,16 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Extends the retention period of the classic network endpoint of an ApsaraDB for MongoDB instance.</para>
+        /// <para>Extends the classic network retention period for a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that the instance meets the following requirements:</para>
+        /// <para>When you call this operation, the instance must meet the following conditions:</para>
         /// <list type="bullet">
         /// <item><description>The instance is in the Running state.</description></item>
-        /// <item><description>The network of the instance is in hybrid access mode.<remarks>
-        /// <para>This operation is supported by replica set instances and sharded cluster instances. This operation is not supported by standalone instances.</para>
+        /// <item><description>The network type of the instance is hybrid access mode.<remarks>
+        /// <para>This operation is applicable to replica set instances and sharded cluster instances. Standalone instances are not supported.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -20586,16 +21266,16 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Extends the retention period of the classic network endpoint of an ApsaraDB for MongoDB instance.</para>
+        /// <para>Extends the classic network retention period for a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that the instance meets the following requirements:</para>
+        /// <para>When you call this operation, the instance must meet the following conditions:</para>
         /// <list type="bullet">
         /// <item><description>The instance is in the Running state.</description></item>
-        /// <item><description>The network of the instance is in hybrid access mode.<remarks>
-        /// <para>This operation is supported by replica set instances and sharded cluster instances. This operation is not supported by standalone instances.</para>
+        /// <item><description>The network type of the instance is hybrid access mode.<remarks>
+        /// <para>This operation is applicable to replica set instances and sharded cluster instances. Standalone instances are not supported.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -20616,16 +21296,16 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Extends the retention period of the classic network endpoint of an ApsaraDB for MongoDB instance.</para>
+        /// <para>Extends the classic network retention period for a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that the instance meets the following requirements:</para>
+        /// <para>When you call this operation, the instance must meet the following conditions:</para>
         /// <list type="bullet">
         /// <item><description>The instance is in the Running state.</description></item>
-        /// <item><description>The network of the instance is in hybrid access mode.<remarks>
-        /// <para>This operation is supported by replica set instances and sharded cluster instances. This operation is not supported by standalone instances.</para>
+        /// <item><description>The network type of the instance is hybrid access mode.<remarks>
+        /// <para>This operation is applicable to replica set instances and sharded cluster instances. Standalone instances are not supported.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -20883,13 +21563,13 @@ namespace AlibabaCloud.SDK.Dds20151201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call the ModifyDBInstanceSSL operation, make sure that the instance meets the following requirements:</para>
+        /// <para>When you call the ModifyDBInstanceSSL operation, the instance must meet the following conditions: </para>
         /// <list type="bullet">
-        /// <item><description>The instance is in the running state.</description></item>
-        /// <item><description>The instance is a replica set instance or a sharded cluster instance.<list type="bullet">
-        /// <item><description>The replica set instance is version 3.4 or later.</description></item>
-        /// <item><description>The sharded cluster instance uses enhanced solid-state drives (ESSDs).<remarks>
-        /// <para>Enabling, updating, or disabling SSL restarts the instance. We recommend that you perform these operations during off-peak hours.</para>
+        /// <item><description>The instance is in the Running state.</description></item>
+        /// <item><description>The instance is a replica set or sharded cluster instance.<list type="bullet">
+        /// <item><description>The MongoDB version of a replica set instance must be 3.4 or later.</description></item>
+        /// <item><description>The storage mode of a sharded cluster instance must be ESSD cloud disk.<remarks>
+        /// <para>When you enable, update, or disable SSL, the instance restarts once. Perform this operation during off-peak hours.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -20969,13 +21649,13 @@ namespace AlibabaCloud.SDK.Dds20151201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call the ModifyDBInstanceSSL operation, make sure that the instance meets the following requirements:</para>
+        /// <para>When you call the ModifyDBInstanceSSL operation, the instance must meet the following conditions: </para>
         /// <list type="bullet">
-        /// <item><description>The instance is in the running state.</description></item>
-        /// <item><description>The instance is a replica set instance or a sharded cluster instance.<list type="bullet">
-        /// <item><description>The replica set instance is version 3.4 or later.</description></item>
-        /// <item><description>The sharded cluster instance uses enhanced solid-state drives (ESSDs).<remarks>
-        /// <para>Enabling, updating, or disabling SSL restarts the instance. We recommend that you perform these operations during off-peak hours.</para>
+        /// <item><description>The instance is in the Running state.</description></item>
+        /// <item><description>The instance is a replica set or sharded cluster instance.<list type="bullet">
+        /// <item><description>The MongoDB version of a replica set instance must be 3.4 or later.</description></item>
+        /// <item><description>The storage mode of a sharded cluster instance must be ESSD cloud disk.<remarks>
+        /// <para>When you enable, update, or disable SSL, the instance restarts once. Perform this operation during off-peak hours.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -21055,13 +21735,13 @@ namespace AlibabaCloud.SDK.Dds20151201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call the ModifyDBInstanceSSL operation, make sure that the instance meets the following requirements:</para>
+        /// <para>When you call the ModifyDBInstanceSSL operation, the instance must meet the following conditions: </para>
         /// <list type="bullet">
-        /// <item><description>The instance is in the running state.</description></item>
-        /// <item><description>The instance is a replica set instance or a sharded cluster instance.<list type="bullet">
-        /// <item><description>The replica set instance is version 3.4 or later.</description></item>
-        /// <item><description>The sharded cluster instance uses enhanced solid-state drives (ESSDs).<remarks>
-        /// <para>Enabling, updating, or disabling SSL restarts the instance. We recommend that you perform these operations during off-peak hours.</para>
+        /// <item><description>The instance is in the Running state.</description></item>
+        /// <item><description>The instance is a replica set or sharded cluster instance.<list type="bullet">
+        /// <item><description>The MongoDB version of a replica set instance must be 3.4 or later.</description></item>
+        /// <item><description>The storage mode of a sharded cluster instance must be ESSD cloud disk.<remarks>
+        /// <para>When you enable, update, or disable SSL, the instance restarts once. Perform this operation during off-peak hours.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -21089,13 +21769,13 @@ namespace AlibabaCloud.SDK.Dds20151201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call the ModifyDBInstanceSSL operation, make sure that the instance meets the following requirements:</para>
+        /// <para>When you call the ModifyDBInstanceSSL operation, the instance must meet the following conditions: </para>
         /// <list type="bullet">
-        /// <item><description>The instance is in the running state.</description></item>
-        /// <item><description>The instance is a replica set instance or a sharded cluster instance.<list type="bullet">
-        /// <item><description>The replica set instance is version 3.4 or later.</description></item>
-        /// <item><description>The sharded cluster instance uses enhanced solid-state drives (ESSDs).<remarks>
-        /// <para>Enabling, updating, or disabling SSL restarts the instance. We recommend that you perform these operations during off-peak hours.</para>
+        /// <item><description>The instance is in the Running state.</description></item>
+        /// <item><description>The instance is a replica set or sharded cluster instance.<list type="bullet">
+        /// <item><description>The MongoDB version of a replica set instance must be 3.4 or later.</description></item>
+        /// <item><description>The storage mode of a sharded cluster instance must be ESSD cloud disk.<remarks>
+        /// <para>When you enable, update, or disable SSL, the instance restarts once. Perform this operation during off-peak hours.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -21118,13 +21798,13 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the instance type or storage space for ApsaraDB for MongoDB standalone, replica set, or serverless instances. Serverless instances are exclusive to the Alibaba Cloud China website.</para>
+        /// <para>Modifies the specifications or storage space of ApsaraDB for MongoDB standalone instances, replica set instances, and serverless instances. Serverless instances are supported only on the Alibaba Cloud China site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure you understand the billing method and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
-        /// This operation applies only to ApsaraDB for MongoDB&lt;props=&quot;china&quot;&gt; standalone instances, replica set instances, and Serverless instances&lt;props=&quot;intl&quot;&gt; standalone instances and replica set instances. To change the configuration of a sharded cluster instance, call the <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a>, <a href="https://help.aliyun.com/document_detail/61911.html">CreateNode</a>, <a href="https://help.aliyun.com/document_detail/61922.html">DeleteNode</a>, or <a href="https://help.aliyun.com/document_detail/61816.html">ModifyNodeSpecBatch</a> operations.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
+        /// This operation is applicable only to ApsaraDB for MongoDB &lt;props=&quot;china&quot;&gt;<ph>standalone instances, replica set instances, and serverless instances</ph>&lt;props=&quot;intl&quot;&gt;<ph>standalone instances and replica set instances</ph>. To modify the configurations of a sharded cluster instance, call the <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a>, <a href="https://help.aliyun.com/document_detail/61911.html">CreateNode</a>, <a href="https://help.aliyun.com/document_detail/61922.html">DeleteNode</a>, or <a href="https://help.aliyun.com/document_detail/61816.html">ModifyNodeSpecBatch</a> operation based on your business requirements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21141,6 +21821,10 @@ namespace AlibabaCloud.SDK.Dds20151201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlignPrimaryZone))
+            {
+                query["AlignPrimaryZone"] = request.AlignPrimaryZone;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
             {
                 query["AutoPay"] = request.AutoPay;
@@ -21250,13 +21934,13 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the instance type or storage space for ApsaraDB for MongoDB standalone, replica set, or serverless instances. Serverless instances are exclusive to the Alibaba Cloud China website.</para>
+        /// <para>Modifies the specifications or storage space of ApsaraDB for MongoDB standalone instances, replica set instances, and serverless instances. Serverless instances are supported only on the Alibaba Cloud China site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure you understand the billing method and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
-        /// This operation applies only to ApsaraDB for MongoDB&lt;props=&quot;china&quot;&gt; standalone instances, replica set instances, and Serverless instances&lt;props=&quot;intl&quot;&gt; standalone instances and replica set instances. To change the configuration of a sharded cluster instance, call the <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a>, <a href="https://help.aliyun.com/document_detail/61911.html">CreateNode</a>, <a href="https://help.aliyun.com/document_detail/61922.html">DeleteNode</a>, or <a href="https://help.aliyun.com/document_detail/61816.html">ModifyNodeSpecBatch</a> operations.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
+        /// This operation is applicable only to ApsaraDB for MongoDB &lt;props=&quot;china&quot;&gt;<ph>standalone instances, replica set instances, and serverless instances</ph>&lt;props=&quot;intl&quot;&gt;<ph>standalone instances and replica set instances</ph>. To modify the configurations of a sharded cluster instance, call the <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a>, <a href="https://help.aliyun.com/document_detail/61911.html">CreateNode</a>, <a href="https://help.aliyun.com/document_detail/61922.html">DeleteNode</a>, or <a href="https://help.aliyun.com/document_detail/61816.html">ModifyNodeSpecBatch</a> operation based on your business requirements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21273,6 +21957,10 @@ namespace AlibabaCloud.SDK.Dds20151201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlignPrimaryZone))
+            {
+                query["AlignPrimaryZone"] = request.AlignPrimaryZone;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
             {
                 query["AutoPay"] = request.AutoPay;
@@ -21382,13 +22070,13 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the instance type or storage space for ApsaraDB for MongoDB standalone, replica set, or serverless instances. Serverless instances are exclusive to the Alibaba Cloud China website.</para>
+        /// <para>Modifies the specifications or storage space of ApsaraDB for MongoDB standalone instances, replica set instances, and serverless instances. Serverless instances are supported only on the Alibaba Cloud China site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure you understand the billing method and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
-        /// This operation applies only to ApsaraDB for MongoDB&lt;props=&quot;china&quot;&gt; standalone instances, replica set instances, and Serverless instances&lt;props=&quot;intl&quot;&gt; standalone instances and replica set instances. To change the configuration of a sharded cluster instance, call the <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a>, <a href="https://help.aliyun.com/document_detail/61911.html">CreateNode</a>, <a href="https://help.aliyun.com/document_detail/61922.html">DeleteNode</a>, or <a href="https://help.aliyun.com/document_detail/61816.html">ModifyNodeSpecBatch</a> operations.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
+        /// This operation is applicable only to ApsaraDB for MongoDB &lt;props=&quot;china&quot;&gt;<ph>standalone instances, replica set instances, and serverless instances</ph>&lt;props=&quot;intl&quot;&gt;<ph>standalone instances and replica set instances</ph>. To modify the configurations of a sharded cluster instance, call the <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a>, <a href="https://help.aliyun.com/document_detail/61911.html">CreateNode</a>, <a href="https://help.aliyun.com/document_detail/61922.html">DeleteNode</a>, or <a href="https://help.aliyun.com/document_detail/61816.html">ModifyNodeSpecBatch</a> operation based on your business requirements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21406,13 +22094,13 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the instance type or storage space for ApsaraDB for MongoDB standalone, replica set, or serverless instances. Serverless instances are exclusive to the Alibaba Cloud China website.</para>
+        /// <para>Modifies the specifications or storage space of ApsaraDB for MongoDB standalone instances, replica set instances, and serverless instances. Serverless instances are supported only on the Alibaba Cloud China site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure you understand the billing method and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
-        /// This operation applies only to ApsaraDB for MongoDB&lt;props=&quot;china&quot;&gt; standalone instances, replica set instances, and Serverless instances&lt;props=&quot;intl&quot;&gt; standalone instances and replica set instances. To change the configuration of a sharded cluster instance, call the <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a>, <a href="https://help.aliyun.com/document_detail/61911.html">CreateNode</a>, <a href="https://help.aliyun.com/document_detail/61922.html">DeleteNode</a>, or <a href="https://help.aliyun.com/document_detail/61816.html">ModifyNodeSpecBatch</a> operations.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
+        /// This operation is applicable only to ApsaraDB for MongoDB &lt;props=&quot;china&quot;&gt;<ph>standalone instances, replica set instances, and serverless instances</ph>&lt;props=&quot;intl&quot;&gt;<ph>standalone instances and replica set instances</ph>. To modify the configurations of a sharded cluster instance, call the <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a>, <a href="https://help.aliyun.com/document_detail/61911.html">CreateNode</a>, <a href="https://help.aliyun.com/document_detail/61922.html">DeleteNode</a>, or <a href="https://help.aliyun.com/document_detail/61816.html">ModifyNodeSpecBatch</a> operation based on your business requirements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21435,16 +22123,16 @@ namespace AlibabaCloud.SDK.Dds20151201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Transparent Data Encryption (TDE) provides real-time I/O encryption and decryption for data files. Data is encrypted before it is written to a disk and decrypted when it is read from the disk into memory. For more information, see <a href="https://help.aliyun.com/document_detail/131048.html">Configure TDE</a>.</para>
+        /// <para>Transparent Data Encryption (TDE) performs real-time I/O encryption and decryption on data files. Data is encrypted before it is written to the disk and decrypted when it is read from the disk into the memory. For more information, see <a href="https://help.aliyun.com/document_detail/131048.html">Configure TDE</a>.</para>
         /// <remarks>
         /// <para>You cannot disable TDE after it is enabled.
-        /// Before you call this operation, make sure that the instance meets the following requirements:</para>
+        /// When you call this operation, the instance must meet the following requirements:</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description>The instance is a replica set instance or a sharded cluster instance.</description></item>
-        /// <item><description>The instance uses the WiredTiger storage engine.</description></item>
-        /// <item><description>The instance uses local disks.</description></item>
-        /// <item><description>The instance runs MongoDB 4.0 or 4.2. If the instance runs an earlier version, you must upgrade the database version by calling the <a href="https://help.aliyun.com/document_detail/67608.html">UpgradeDBInstanceEngineVersion</a> operation.</description></item>
+        /// <item><description>The storage engine of the instance is WiredTiger.</description></item>
+        /// <item><description>The storage type of the instance is local disk.</description></item>
+        /// <item><description>The database version of the instance is 4.0 or 4.2. If the database version is earlier than 4.0, you can call the <a href="https://help.aliyun.com/document_detail/67608.html">UpgradeDBInstanceEngineVersion</a> operation to upgrade the database version.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21528,16 +22216,16 @@ namespace AlibabaCloud.SDK.Dds20151201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Transparent Data Encryption (TDE) provides real-time I/O encryption and decryption for data files. Data is encrypted before it is written to a disk and decrypted when it is read from the disk into memory. For more information, see <a href="https://help.aliyun.com/document_detail/131048.html">Configure TDE</a>.</para>
+        /// <para>Transparent Data Encryption (TDE) performs real-time I/O encryption and decryption on data files. Data is encrypted before it is written to the disk and decrypted when it is read from the disk into the memory. For more information, see <a href="https://help.aliyun.com/document_detail/131048.html">Configure TDE</a>.</para>
         /// <remarks>
         /// <para>You cannot disable TDE after it is enabled.
-        /// Before you call this operation, make sure that the instance meets the following requirements:</para>
+        /// When you call this operation, the instance must meet the following requirements:</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description>The instance is a replica set instance or a sharded cluster instance.</description></item>
-        /// <item><description>The instance uses the WiredTiger storage engine.</description></item>
-        /// <item><description>The instance uses local disks.</description></item>
-        /// <item><description>The instance runs MongoDB 4.0 or 4.2. If the instance runs an earlier version, you must upgrade the database version by calling the <a href="https://help.aliyun.com/document_detail/67608.html">UpgradeDBInstanceEngineVersion</a> operation.</description></item>
+        /// <item><description>The storage engine of the instance is WiredTiger.</description></item>
+        /// <item><description>The storage type of the instance is local disk.</description></item>
+        /// <item><description>The database version of the instance is 4.0 or 4.2. If the database version is earlier than 4.0, you can call the <a href="https://help.aliyun.com/document_detail/67608.html">UpgradeDBInstanceEngineVersion</a> operation to upgrade the database version.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21621,16 +22309,16 @@ namespace AlibabaCloud.SDK.Dds20151201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Transparent Data Encryption (TDE) provides real-time I/O encryption and decryption for data files. Data is encrypted before it is written to a disk and decrypted when it is read from the disk into memory. For more information, see <a href="https://help.aliyun.com/document_detail/131048.html">Configure TDE</a>.</para>
+        /// <para>Transparent Data Encryption (TDE) performs real-time I/O encryption and decryption on data files. Data is encrypted before it is written to the disk and decrypted when it is read from the disk into the memory. For more information, see <a href="https://help.aliyun.com/document_detail/131048.html">Configure TDE</a>.</para>
         /// <remarks>
         /// <para>You cannot disable TDE after it is enabled.
-        /// Before you call this operation, make sure that the instance meets the following requirements:</para>
+        /// When you call this operation, the instance must meet the following requirements:</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description>The instance is a replica set instance or a sharded cluster instance.</description></item>
-        /// <item><description>The instance uses the WiredTiger storage engine.</description></item>
-        /// <item><description>The instance uses local disks.</description></item>
-        /// <item><description>The instance runs MongoDB 4.0 or 4.2. If the instance runs an earlier version, you must upgrade the database version by calling the <a href="https://help.aliyun.com/document_detail/67608.html">UpgradeDBInstanceEngineVersion</a> operation.</description></item>
+        /// <item><description>The storage engine of the instance is WiredTiger.</description></item>
+        /// <item><description>The storage type of the instance is local disk.</description></item>
+        /// <item><description>The database version of the instance is 4.0 or 4.2. If the database version is earlier than 4.0, you can call the <a href="https://help.aliyun.com/document_detail/67608.html">UpgradeDBInstanceEngineVersion</a> operation to upgrade the database version.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21654,16 +22342,16 @@ namespace AlibabaCloud.SDK.Dds20151201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Transparent Data Encryption (TDE) provides real-time I/O encryption and decryption for data files. Data is encrypted before it is written to a disk and decrypted when it is read from the disk into memory. For more information, see <a href="https://help.aliyun.com/document_detail/131048.html">Configure TDE</a>.</para>
+        /// <para>Transparent Data Encryption (TDE) performs real-time I/O encryption and decryption on data files. Data is encrypted before it is written to the disk and decrypted when it is read from the disk into the memory. For more information, see <a href="https://help.aliyun.com/document_detail/131048.html">Configure TDE</a>.</para>
         /// <remarks>
         /// <para>You cannot disable TDE after it is enabled.
-        /// Before you call this operation, make sure that the instance meets the following requirements:</para>
+        /// When you call this operation, the instance must meet the following requirements:</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description>The instance is a replica set instance or a sharded cluster instance.</description></item>
-        /// <item><description>The instance uses the WiredTiger storage engine.</description></item>
-        /// <item><description>The instance uses local disks.</description></item>
-        /// <item><description>The instance runs MongoDB 4.0 or 4.2. If the instance runs an earlier version, you must upgrade the database version by calling the <a href="https://help.aliyun.com/document_detail/67608.html">UpgradeDBInstanceEngineVersion</a> operation.</description></item>
+        /// <item><description>The storage engine of the instance is WiredTiger.</description></item>
+        /// <item><description>The storage type of the instance is local disk.</description></item>
+        /// <item><description>The database version of the instance is 4.0 or 4.2. If the database version is earlier than 4.0, you can call the <a href="https://help.aliyun.com/document_detail/67608.html">UpgradeDBInstanceEngineVersion</a> operation to upgrade the database version.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22618,12 +23306,12 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the instance type and storage space of a node in a MongoDB sharded cluster instance.</para>
+        /// <para>Modifies the specifications and storage space of nodes in a MongoDB sharded cluster instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of MongoDB.</para>
+        /// <para>Make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB before you call this operation.</para>
         /// <remarks>
         /// <para>This operation is applicable only to sharded cluster instances.</para>
         /// </remarks>
@@ -22643,6 +23331,10 @@ namespace AlibabaCloud.SDK.Dds20151201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlignPrimaryZone))
+            {
+                query["AlignPrimaryZone"] = request.AlignPrimaryZone;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
             {
                 query["AutoPay"] = request.AutoPay;
@@ -22748,12 +23440,12 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the instance type and storage space of a node in a MongoDB sharded cluster instance.</para>
+        /// <para>Modifies the specifications and storage space of nodes in a MongoDB sharded cluster instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of MongoDB.</para>
+        /// <para>Make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB before you call this operation.</para>
         /// <remarks>
         /// <para>This operation is applicable only to sharded cluster instances.</para>
         /// </remarks>
@@ -22773,6 +23465,10 @@ namespace AlibabaCloud.SDK.Dds20151201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlignPrimaryZone))
+            {
+                query["AlignPrimaryZone"] = request.AlignPrimaryZone;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
             {
                 query["AutoPay"] = request.AutoPay;
@@ -22878,12 +23574,12 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the instance type and storage space of a node in a MongoDB sharded cluster instance.</para>
+        /// <para>Modifies the specifications and storage space of nodes in a MongoDB sharded cluster instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of MongoDB.</para>
+        /// <para>Make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB before you call this operation.</para>
         /// <remarks>
         /// <para>This operation is applicable only to sharded cluster instances.</para>
         /// </remarks>
@@ -22904,12 +23600,12 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the instance type and storage space of a node in a MongoDB sharded cluster instance.</para>
+        /// <para>Modifies the specifications and storage space of nodes in a MongoDB sharded cluster instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of MongoDB.</para>
+        /// <para>Make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB before you call this operation.</para>
         /// <remarks>
         /// <para>This operation is applicable only to sharded cluster instances.</para>
         /// </remarks>
@@ -22930,14 +23626,15 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the configuration of one or more Mongos or shard nodes in an ApsaraDB for MongoDB sharded cluster instance.</para>
+        /// <para>Modifies the configurations of one or more Mongos or shard nodes in an ApsaraDB for MongoDB sharded cluster instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, ensure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
-        /// This operation applies only to ApsaraDB for MongoDB sharded cluster instances.
-        /// When you upgrade or downgrade multiple sharded cluster instances in a batch, the target instance types are subject to certain constraints. For example, if you expand storage capacity, the target capacity must be greater than or equal to the current capacity. If the instances have different instance types, the system randomly selects the instance type of one instance and applies its constraints to the entire batch. This may cause the upgrade or downgrade to fail. If you cannot upgrade or downgrade instances in a batch, you can use the ModifyNodeSpec operation to change the configuration of a single sharded cluster instance.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
+        ///  This operation is applicable only to ApsaraDB for MongoDB sharded cluster instances.
+        /// When you perform batch upgrade or decrease the quota on multiple sharded cluster instances, the target specifications are subject to certain constraints. For example, for storage capacity expansion, the target capacity must be greater than or equal to the current capacity. If the specifications of multiple sharded cluster instances are inconsistent, the system randomly selects the specifications of one sharded cluster instance to construct the constraints, which may cause the upgrade or decrease the quota to fail.
+        /// If the batch upgrade or decrease the quota process is not Normal, we recommend that you use the ModifyNodeSpec operation to perform an Upgrade/Downgrade on a single sharded cluster instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22954,6 +23651,10 @@ namespace AlibabaCloud.SDK.Dds20151201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlignPrimaryZone))
+            {
+                query["AlignPrimaryZone"] = request.AlignPrimaryZone;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
             {
                 query["AutoPay"] = request.AutoPay;
@@ -23043,14 +23744,15 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the configuration of one or more Mongos or shard nodes in an ApsaraDB for MongoDB sharded cluster instance.</para>
+        /// <para>Modifies the configurations of one or more Mongos or shard nodes in an ApsaraDB for MongoDB sharded cluster instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, ensure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
-        /// This operation applies only to ApsaraDB for MongoDB sharded cluster instances.
-        /// When you upgrade or downgrade multiple sharded cluster instances in a batch, the target instance types are subject to certain constraints. For example, if you expand storage capacity, the target capacity must be greater than or equal to the current capacity. If the instances have different instance types, the system randomly selects the instance type of one instance and applies its constraints to the entire batch. This may cause the upgrade or downgrade to fail. If you cannot upgrade or downgrade instances in a batch, you can use the ModifyNodeSpec operation to change the configuration of a single sharded cluster instance.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
+        ///  This operation is applicable only to ApsaraDB for MongoDB sharded cluster instances.
+        /// When you perform batch upgrade or decrease the quota on multiple sharded cluster instances, the target specifications are subject to certain constraints. For example, for storage capacity expansion, the target capacity must be greater than or equal to the current capacity. If the specifications of multiple sharded cluster instances are inconsistent, the system randomly selects the specifications of one sharded cluster instance to construct the constraints, which may cause the upgrade or decrease the quota to fail.
+        /// If the batch upgrade or decrease the quota process is not Normal, we recommend that you use the ModifyNodeSpec operation to perform an Upgrade/Downgrade on a single sharded cluster instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23067,6 +23769,10 @@ namespace AlibabaCloud.SDK.Dds20151201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlignPrimaryZone))
+            {
+                query["AlignPrimaryZone"] = request.AlignPrimaryZone;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
             {
                 query["AutoPay"] = request.AutoPay;
@@ -23156,14 +23862,15 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the configuration of one or more Mongos or shard nodes in an ApsaraDB for MongoDB sharded cluster instance.</para>
+        /// <para>Modifies the configurations of one or more Mongos or shard nodes in an ApsaraDB for MongoDB sharded cluster instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, ensure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
-        /// This operation applies only to ApsaraDB for MongoDB sharded cluster instances.
-        /// When you upgrade or downgrade multiple sharded cluster instances in a batch, the target instance types are subject to certain constraints. For example, if you expand storage capacity, the target capacity must be greater than or equal to the current capacity. If the instances have different instance types, the system randomly selects the instance type of one instance and applies its constraints to the entire batch. This may cause the upgrade or downgrade to fail. If you cannot upgrade or downgrade instances in a batch, you can use the ModifyNodeSpec operation to change the configuration of a single sharded cluster instance.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
+        ///  This operation is applicable only to ApsaraDB for MongoDB sharded cluster instances.
+        /// When you perform batch upgrade or decrease the quota on multiple sharded cluster instances, the target specifications are subject to certain constraints. For example, for storage capacity expansion, the target capacity must be greater than or equal to the current capacity. If the specifications of multiple sharded cluster instances are inconsistent, the system randomly selects the specifications of one sharded cluster instance to construct the constraints, which may cause the upgrade or decrease the quota to fail.
+        /// If the batch upgrade or decrease the quota process is not Normal, we recommend that you use the ModifyNodeSpec operation to perform an Upgrade/Downgrade on a single sharded cluster instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23181,14 +23888,15 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the configuration of one or more Mongos or shard nodes in an ApsaraDB for MongoDB sharded cluster instance.</para>
+        /// <para>Modifies the configurations of one or more Mongos or shard nodes in an ApsaraDB for MongoDB sharded cluster instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, ensure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
-        /// This operation applies only to ApsaraDB for MongoDB sharded cluster instances.
-        /// When you upgrade or downgrade multiple sharded cluster instances in a batch, the target instance types are subject to certain constraints. For example, if you expand storage capacity, the target capacity must be greater than or equal to the current capacity. If the instances have different instance types, the system randomly selects the instance type of one instance and applies its constraints to the entire batch. This may cause the upgrade or downgrade to fail. If you cannot upgrade or downgrade instances in a batch, you can use the ModifyNodeSpec operation to change the configuration of a single sharded cluster instance.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
+        ///  This operation is applicable only to ApsaraDB for MongoDB sharded cluster instances.
+        /// When you perform batch upgrade or decrease the quota on multiple sharded cluster instances, the target specifications are subject to certain constraints. For example, for storage capacity expansion, the target capacity must be greater than or equal to the current capacity. If the specifications of multiple sharded cluster instances are inconsistent, the system randomly selects the specifications of one sharded cluster instance to construct the constraints, which may cause the upgrade or decrease the quota to fail.
+        /// If the batch upgrade or decrease the quota process is not Normal, we recommend that you use the ModifyNodeSpec operation to perform an Upgrade/Downgrade on a single sharded cluster instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23806,7 +24514,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the IP address whitelist of an ApsaraDB for MongoDB instance.</para>
+        /// <para>Modifies the IP whitelist of a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23823,9 +24531,17 @@ namespace AlibabaCloud.SDK.Dds20151201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
             {
                 query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModifyMode))
             {
@@ -23880,7 +24596,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the IP address whitelist of an ApsaraDB for MongoDB instance.</para>
+        /// <para>Modifies the IP whitelist of a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23897,9 +24613,17 @@ namespace AlibabaCloud.SDK.Dds20151201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
             {
                 query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModifyMode))
             {
@@ -23954,7 +24678,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the IP address whitelist of an ApsaraDB for MongoDB instance.</para>
+        /// <para>Modifies the IP whitelist of a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23972,7 +24696,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the IP address whitelist of an ApsaraDB for MongoDB instance.</para>
+        /// <para>Modifies the IP whitelist of a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24999,6 +25723,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["DBInstanceId"] = request.DBInstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBName))
+            {
+                query["DBName"] = request.DBName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -25068,6 +25796,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
             {
                 query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBName))
+            {
+                query["DBName"] = request.DBName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -25142,12 +25874,12 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts an ApsaraDB for MongoDB instance.</para>
+        /// <para>Restarts a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to restart an instance. You can also restart a shard or Mongos node in a sharded cluster instance.</para>
+        /// <para>You can call this operation to restart an instance, or a specific shard or mongos node in a sharded cluster instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25184,6 +25916,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParallelRestartMongos))
+            {
+                query["ParallelRestartMongos"] = request.ParallelRestartMongos;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
@@ -25217,12 +25953,12 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts an ApsaraDB for MongoDB instance.</para>
+        /// <para>Restarts a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to restart an instance. You can also restart a shard or Mongos node in a sharded cluster instance.</para>
+        /// <para>You can call this operation to restart an instance, or a specific shard or mongos node in a sharded cluster instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25259,6 +25995,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParallelRestartMongos))
+            {
+                query["ParallelRestartMongos"] = request.ParallelRestartMongos;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
@@ -25292,12 +26032,12 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts an ApsaraDB for MongoDB instance.</para>
+        /// <para>Restarts a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to restart an instance. You can also restart a shard or Mongos node in a sharded cluster instance.</para>
+        /// <para>You can call this operation to restart an instance, or a specific shard or mongos node in a sharded cluster instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25315,12 +26055,12 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts an ApsaraDB for MongoDB instance.</para>
+        /// <para>Restarts a MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to restart an instance. You can also restart a shard or Mongos node in a sharded cluster instance.</para>
+        /// <para>You can call this operation to restart an instance, or a specific shard or mongos node in a sharded cluster instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25338,15 +26078,15 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts a single node of a MongoDB instance.</para>
+        /// <para>Restarts a single node of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Limitations:</para>
+        /// <para>Limits:</para>
         /// <list type="bullet">
-        /// <item><description>The instance must be in the Running state.</description></item>
-        /// <item><description>The instance must be a standard replica set instance or a sharded cluster instance.</description></item>
+        /// <item><description>The instance is in the running state.</description></item>
+        /// <item><description>The instance is a standard replica set or sharded cluster instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25417,15 +26157,15 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts a single node of a MongoDB instance.</para>
+        /// <para>Restarts a single node of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Limitations:</para>
+        /// <para>Limits:</para>
         /// <list type="bullet">
-        /// <item><description>The instance must be in the Running state.</description></item>
-        /// <item><description>The instance must be a standard replica set instance or a sharded cluster instance.</description></item>
+        /// <item><description>The instance is in the running state.</description></item>
+        /// <item><description>The instance is a standard replica set or sharded cluster instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25496,15 +26236,15 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts a single node of a MongoDB instance.</para>
+        /// <para>Restarts a single node of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Limitations:</para>
+        /// <para>Limits:</para>
         /// <list type="bullet">
-        /// <item><description>The instance must be in the Running state.</description></item>
-        /// <item><description>The instance must be a standard replica set instance or a sharded cluster instance.</description></item>
+        /// <item><description>The instance is in the running state.</description></item>
+        /// <item><description>The instance is a standard replica set or sharded cluster instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25523,15 +26263,15 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts a single node of a MongoDB instance.</para>
+        /// <para>Restarts a single node of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Limitations:</para>
+        /// <para>Limits:</para>
         /// <list type="bullet">
-        /// <item><description>The instance must be in the Running state.</description></item>
-        /// <item><description>The instance must be a standard replica set instance or a sharded cluster instance.</description></item>
+        /// <item><description>The instance is in the running state.</description></item>
+        /// <item><description>The instance is a standard replica set or sharded cluster instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26186,18 +26926,18 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of an instance from pay-as-you-go to subscription or from subscription to pay-as-you-go.</para>
+        /// <para>Transforms the billing method of an ApsaraDB for MongoDB database instance by converting a pay-as-you-go instance to an upfront subscription instance or a subscription instance to a pay-as-you-go instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB
-        /// Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:</para>
+        /// <para>Ensure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB before you call this operation.
+        /// When you call this operation, the instance must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The instance is in the Running state.</description></item>
-        /// <item><description>Your instance has no unpaid billing method change orders.</description></item>
-        /// <item><description>The instance type is available for purchase. For more information about unavailable instance types, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.<remarks>
-        /// <para>To change the billing method of an instance whose instance type is no longer available to purchase, call the <a href="https://help.aliyun.com/document_detail/61816.html">ModifyDBInstanceSpec</a> or <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a> operation to change the instance type first.</para>
+        /// <item><description>The instance status is Running.</description></item>
+        /// <item><description>The instance does not have unpaid orders for billing method transform.</description></item>
+        /// <item><description>The instance type is not a legacy instance type (an instance type that is no longer available). For more information about legacy instance types, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.<remarks>
+        /// <para>To change the billing method of an instance of a legacy instance type, call the <a href="https://help.aliyun.com/document_detail/61816.html">ModifyDBInstanceSpec</a> or <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a> operation to change the instance type first.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -26286,18 +27026,18 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of an instance from pay-as-you-go to subscription or from subscription to pay-as-you-go.</para>
+        /// <para>Transforms the billing method of an ApsaraDB for MongoDB database instance by converting a pay-as-you-go instance to an upfront subscription instance or a subscription instance to a pay-as-you-go instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB
-        /// Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:</para>
+        /// <para>Ensure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB before you call this operation.
+        /// When you call this operation, the instance must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The instance is in the Running state.</description></item>
-        /// <item><description>Your instance has no unpaid billing method change orders.</description></item>
-        /// <item><description>The instance type is available for purchase. For more information about unavailable instance types, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.<remarks>
-        /// <para>To change the billing method of an instance whose instance type is no longer available to purchase, call the <a href="https://help.aliyun.com/document_detail/61816.html">ModifyDBInstanceSpec</a> or <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a> operation to change the instance type first.</para>
+        /// <item><description>The instance status is Running.</description></item>
+        /// <item><description>The instance does not have unpaid orders for billing method transform.</description></item>
+        /// <item><description>The instance type is not a legacy instance type (an instance type that is no longer available). For more information about legacy instance types, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.<remarks>
+        /// <para>To change the billing method of an instance of a legacy instance type, call the <a href="https://help.aliyun.com/document_detail/61816.html">ModifyDBInstanceSpec</a> or <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a> operation to change the instance type first.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -26386,18 +27126,18 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of an instance from pay-as-you-go to subscription or from subscription to pay-as-you-go.</para>
+        /// <para>Transforms the billing method of an ApsaraDB for MongoDB database instance by converting a pay-as-you-go instance to an upfront subscription instance or a subscription instance to a pay-as-you-go instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB
-        /// Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:</para>
+        /// <para>Ensure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB before you call this operation.
+        /// When you call this operation, the instance must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The instance is in the Running state.</description></item>
-        /// <item><description>Your instance has no unpaid billing method change orders.</description></item>
-        /// <item><description>The instance type is available for purchase. For more information about unavailable instance types, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.<remarks>
-        /// <para>To change the billing method of an instance whose instance type is no longer available to purchase, call the <a href="https://help.aliyun.com/document_detail/61816.html">ModifyDBInstanceSpec</a> or <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a> operation to change the instance type first.</para>
+        /// <item><description>The instance status is Running.</description></item>
+        /// <item><description>The instance does not have unpaid orders for billing method transform.</description></item>
+        /// <item><description>The instance type is not a legacy instance type (an instance type that is no longer available). For more information about legacy instance types, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.<remarks>
+        /// <para>To change the billing method of an instance of a legacy instance type, call the <a href="https://help.aliyun.com/document_detail/61816.html">ModifyDBInstanceSpec</a> or <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a> operation to change the instance type first.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -26418,18 +27158,18 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of an instance from pay-as-you-go to subscription or from subscription to pay-as-you-go.</para>
+        /// <para>Transforms the billing method of an ApsaraDB for MongoDB database instance by converting a pay-as-you-go instance to an upfront subscription instance or a subscription instance to a pay-as-you-go instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB
-        /// Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:</para>
+        /// <para>Ensure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB before you call this operation.
+        /// When you call this operation, the instance must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The instance is in the Running state.</description></item>
-        /// <item><description>Your instance has no unpaid billing method change orders.</description></item>
-        /// <item><description>The instance type is available for purchase. For more information about unavailable instance types, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.<remarks>
-        /// <para>To change the billing method of an instance whose instance type is no longer available to purchase, call the <a href="https://help.aliyun.com/document_detail/61816.html">ModifyDBInstanceSpec</a> or <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a> operation to change the instance type first.</para>
+        /// <item><description>The instance status is Running.</description></item>
+        /// <item><description>The instance does not have unpaid orders for billing method transform.</description></item>
+        /// <item><description>The instance type is not a legacy instance type (an instance type that is no longer available). For more information about legacy instance types, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.<remarks>
+        /// <para>To change the billing method of an instance of a legacy instance type, call the <a href="https://help.aliyun.com/document_detail/61816.html">ModifyDBInstanceSpec</a> or <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a> operation to change the instance type first.</para>
         /// </remarks>
         /// </description></item>
         /// </list>

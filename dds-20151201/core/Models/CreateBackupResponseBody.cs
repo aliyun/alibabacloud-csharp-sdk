@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class CreateBackupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The backup ID.</para>
+        /// <para>The ID of the backup.</para>
         /// <remarks>
-        /// <para>This parameter is deprecated. To obtain the backup ID, call the <a href="https://help.aliyun.com/document_detail/468441.html">DescribeBackups</a> operation.</para>
+        /// <para><b>[Deprecated]</b> This parameter will be deprecated soon. To obtain the backup ID, call the <a href="https://help.aliyun.com/document_detail/468441.html">DescribeBackups</a> operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string BackupId { get; set; }
 
         /// <summary>
-        /// <para>The backup job ID.</para>
+        /// <para>The ID of the backup job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>775051</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string BackupJobId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7016B12F-7F64-40A4-BAFF-013F02AC82FC</para>

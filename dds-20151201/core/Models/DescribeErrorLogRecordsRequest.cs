@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeErrorLogRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>If you set this parameter to the ID of a sharded cluster instance, you must also specify the <b>NodeId</b> parameter.</para>
+        /// <para>If you specify a sharded cluster instance ID for this parameter, you must also specify the <b>NodeId</b> parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The end time must be later than the start time and within 24 hours from the start time. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</para>
+        /// <para>The end time of the query. The end time must be later than the start time, and the interval between the end time and the start time cannot exceed one day. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,13 +45,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The logical relationship between multiple keywords. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>or</b></para>
-        /// </description></item>
-        /// <item><description><para><b>and</b> (default value)</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The logical operator for keyword search. Default value: and.</para>
         /// 
         /// <b>Example:</b>
         /// <para>and</para>
@@ -61,9 +55,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string LogicalOperator { get; set; }
 
         /// <summary>
-        /// <para>The ID of the mongos node or shard node whose error logs you want to query in the instance. If the instance is a sharded cluster instance, you must specify this parameter.</para>
+        /// <para>The ID of a mongos node or shard node in the sharded cluster instance.</para>
         /// <remarks>
-        /// <para>This parameter is valid only when <b>DBInstanceId</b> is set to the ID of a sharded cluster instance.</para>
+        /// <para>This parameter is available only when the <b>DBInstanceId</b> parameter is set to a sharded cluster instance ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -82,7 +76,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. The value must be an integer that is greater than 0. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -92,7 +86,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: <b>30</b> to <b>100</b>.</para>
+        /// <para>The number of entries per page. Valid values: <b>30</b> to <b>100</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -102,7 +96,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The keywords used for query. You can enter up to 10 keywords at a time. If you enter multiple keywords, separate the keywords with spaces.</para>
+        /// <para>The keywords to search for. Separate multiple keywords with spaces. You can specify a maximum of 10 keywords.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test test1</para>
@@ -112,7 +106,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string QueryKeywords { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</para>
+        /// <para>The resource group ID. For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmyiu4ekp****</para>
@@ -130,15 +124,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The role of the node whose error logs you want to query in the instance. Valid values:</para>
+        /// <para>The role of the node in the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>primary</b></para>
-        /// </description></item>
-        /// <item><description><para><b>secondary</b></para>
-        /// </description></item>
+        /// <item><description><b>primary</b>: primary node.</description></item>
+        /// <item><description><b>secondary</b>: secondary node.</description></item>
+        /// <item><description><b>search</b>: search node.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you set the <b>NodeId</b> parameter to the ID of a mongos node, the RoleType parameter must be set to <b>primary</b>.</para>
+        /// <para>If the <b>NodeId</b> parameter is set to a mongos node ID, this parameter can only be set to <b>primary</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -149,7 +142,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RoleType { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</para>
+        /// <para>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

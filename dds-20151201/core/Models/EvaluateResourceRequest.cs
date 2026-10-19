@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The instance type.</para>
         /// <remarks>
-        /// <para>This parameter is required when you evaluate resources for a replica set instance. For details about instance types, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</para>
+        /// <para>This parameter is required when you evaluate resources for a replica set instance. For more information about instance types, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. This parameter is required when you evaluate resources for an instance upgrade or downgrade.</para>
+        /// <para>The instance ID. This parameter is required when you evaluate resources for changing instance specifications.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dds-bp14bf67a76d****</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The number of read-only nodes in the instance. Valid values: <b>1</b> to <b>5</b>.</para>
         /// <remarks>
-        /// <para>This parameter is not required for standalone instances&lt;props=&quot;china&quot;&gt; and Serverless instances.</para>
+        /// <para>This parameter is not required for standalone instances<ph props ="china"> or serverless instances</ph>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ReadonlyReplicas { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region. For more information, see <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a>.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> to query available regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -88,16 +88,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The number of nodes in the instance.</para>
         /// <list type="bullet">
-        /// <item><description><para>Set the value to <b>1</b> for a standalone instance.</para>
+        /// <item><description><para>For a standalone instance, set the value to <b>1</b>.</para>
         /// </description></item>
-        /// <item><description><para>Set the value to <b>2</b> for an instance that uses shared storage.</para>
+        /// <item><description><para>For an instance with shared storage, set the value to <b>2</b>.</para>
         /// </description></item>
         /// <item><description><para>For a replica set instance, valid values are <b>3</b>, <b>5</b>, and <b>7</b>.</para>
         /// </description></item>
         /// </list>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <remarks>
-        /// <para>This parameter is not required for Serverless instances.</para>
+        /// <para>This parameter is not required for serverless instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -116,8 +116,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The shard information of the sharded cluster. This parameter is required when you evaluate resources for a sharded cluster instance.</para>
-        /// <para>To evaluate resources for a new sharded cluster instance, specify the instance type for each shard in a JSON string. Example:</para>
+        /// <para>The shard information of the sharded cluster instance. This parameter is required when you evaluate resources for a sharded cluster instance.</para>
+        /// <para>When you evaluate resources for a new sharded cluster instance, you must specify the specifications of each shard in a JSON-formatted character string. Example:</para>
         /// <pre><c>{
         ///      &quot;ConfigSvrs&quot;:
         ///          [{&quot;Storage&quot;:20,&quot;DBInstanceClass&quot;:&quot;dds.cs.mid&quot;}],
@@ -127,30 +127,23 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         ///          [{&quot;Storage&quot;:50,&quot;DBInstanceClass&quot;:&quot;dds.shard.standard&quot;},{&quot;Storage&quot;:50,&quot;DBInstanceClass&quot;:&quot;dds.shard.standard&quot;},   {&quot;Storage&quot;:50,&quot;DBInstanceClass&quot;:&quot;dds.shard.standard&quot;}]
         ///  }
         /// </c></pre>
-        /// <para>The parameters in the example are described as follows:</para>
+        /// <para>The parameter descriptions in the example are as follows:</para>
         /// <list type="bullet">
-        /// <item><description><para>ConfigSvrs: The ConfigServer nodes.</para>
-        /// </description></item>
-        /// <item><description><para>Mongos: The Mongos nodes.</para>
-        /// </description></item>
-        /// <item><description><para>Shards: The shard nodes.</para>
-        /// </description></item>
-        /// <item><description><para>Storage: The storage space of the target shard.</para>
-        /// </description></item>
-        /// <item><description><para>DBInstanceClass: The instance type of the target shard. For details about instance types, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</para>
-        /// </description></item>
+        /// <item><description>ConfigSvrs: the Configserver nodes.</description></item>
+        /// <item><description>Mongos: the mongos nodes.</description></item>
+        /// <item><description>Shards: the shard nodes.</description></item>
+        /// <item><description>Storage: the storage capacity of the target shard.</description></item>
+        /// <item><description>DBInstanceClass: the instance type of the target shard. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</description></item>
         /// </list>
-        /// <para>To evaluate resources for upgrading or downgrading a sharded cluster instance, specify only the node information in a JSON string. Example:</para>
+        /// <para>When you evaluate resources for upgrading or downgrading a sharded cluster instance, you only need to specify the node information in a JSON-formatted character string. Example:</para>
         /// <pre><c>{
         ///      &quot;NodeId&quot;: &quot;d-bp147c4d9ca7****&quot;, &quot;NodeClass&quot;: &quot;dds.shard.standard&quot;
         /// } 
         /// </c></pre>
-        /// <para>The parameters in the example are described as follows:</para>
+        /// <para>The parameter descriptions in the example are as follows:</para>
         /// <list type="bullet">
-        /// <item><description><para>NodeId: The ID of the target node.</para>
-        /// </description></item>
-        /// <item><description><para>NodeClass: The instance type of the target node. For details about instance types, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</para>
-        /// </description></item>
+        /// <item><description>NodeId: the ID of the target node.</description></item>
+        /// <item><description>NodeClass: the instance type of the target node. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -161,9 +154,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ShardsInfo { get; set; }
 
         /// <summary>
-        /// <para>The storage space of the replica set. Unit: GB.</para>
+        /// <para>The storage capacity of the replica set instance. Unit: GB.</para>
         /// <remarks>
-        /// <para>This parameter is required if the instance uses cloud disks.</para>
+        /// <para>This parameter is required when the instance uses cloud disks.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -174,7 +167,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string Storage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the zone. For more information, see <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a>.</para>
+        /// <para>The zone ID. You can call <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> to query available zones.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

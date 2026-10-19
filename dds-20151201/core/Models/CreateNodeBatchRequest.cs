@@ -10,23 +10,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class CreateNodeBatchRequest : TeaModel {
         /// <summary>
-        /// <para>The username of the account. The username must meet the following requirements:</para>
+        /// <para>The name of the account. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>The username starts with a lowercase letter.</para>
-        /// </description></item>
-        /// <item><description><para>The username contains lowercase letters, digits, and underscores (_).</para>
-        /// </description></item>
-        /// <item><description><para>The username is 4 to 16 characters in length.</para>
-        /// </description></item>
+        /// <item><description>The name must start with a lowercase letter.</description></item>
+        /// <item><description>The name can contain lowercase letters, digits, and underscores (_).</description></item>
+        /// <item><description>The name must be 4 to 16 characters in length.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>Keywords cannot be used as account usernames.</para>
-        /// </description></item>
-        /// <item><description><para>The permissions of this account are fixed at read-only.</para>
-        /// </description></item>
-        /// <item><description><para>The username and password are required to be set only when you apply for an endpoint for the shard node for the first time.</para>
-        /// </description></item>
+        /// <item><description>ApsaraDB for MongoDB does not support using keywords as account names.</description></item>
+        /// <item><description>The permissions of the account are fixed to read-only.</description></item>
+        /// <item><description>When you apply for a direct connection endpoint for a shard node for the first time, you must set the account name and password. You do not need to set them again for subsequent applications.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -38,17 +32,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The password of the account. The password must meet the following requirements:</para>
+        /// <para>The password of the account. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>The password contains at least three of the following character types: uppercase letters, lowercase letters, digits, and specific special characters.</para>
-        /// </description></item>
-        /// <item><description><para>These special characters include ! @ # $ % ^ &amp; \* ( ) _ + - =</para>
-        /// </description></item>
-        /// <item><description><para>The password is 8 to 32 characters in length.</para>
-        /// </description></item>
+        /// <item><description>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</description></item>
+        /// <item><description>Special characters include !@#$%^&amp;*()_+-=.</description></item>
+        /// <item><description>The password must be 8 to 32 characters in length.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>The account password of the shard node cannot be reset.</para>
+        /// <para>ApsaraDB for MongoDB does not support resetting the password of the account for a shard node.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -59,12 +50,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string AccountPassword { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable automatic payment. Default value: true. Valid values:</para>
+        /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: enables automatic payment. Make sure that you have sufficient balance within your account.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: disables automatic payment. In this case, you must manually pay for the instance. You can perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose <b>Expenses</b> &gt; <b>Orders</b>. On the Orders page, find the order and complete the payment.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: (Default) Automatic payment is enabled. Make sure that your account has sufficient balance.</description></item>
+        /// <item><description><b>false</b>: Manual payment is enabled. For more information, see <a href="https://help.aliyun.com/document_detail/85052.html">Manually renew a subscription instance</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -85,7 +74,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and can be up to 64 ASCII characters in length. The value cannot contain non-ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -95,12 +84,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use coupons. Default value: null. Valid values:</para>
+        /// <para>Specifies whether to use a coupon. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>default</b> or <b>null</b>: uses coupons.</para>
-        /// </description></item>
-        /// <item><description><para><b>youhuiquan_promotion_option_id_for_blank</b>: does not use coupons.</para>
-        /// </description></item>
+        /// <item><description><b>default</b> or <b>null</b>: (Default) A coupon is used.</description></item>
+        /// <item><description><b>youhuiquan_promotion_option_id_for_blank</b>: No coupon is used.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -111,7 +98,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string CouponNo { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance for which you want to add nodes.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -124,10 +111,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The source of the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>OpenApi</b>: ApsaraDB for MongoDB API</para>
-        /// </description></item>
-        /// <item><description><para><b>mongo_buy</b>: ApsaraDB for MongoDB console</para>
-        /// </description></item>
+        /// <item><description><b>OpenApi</b>: OpenAPI.</description></item>
+        /// <item><description><b>mongo_buy</b>: The console.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -138,9 +123,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string FromApp { get; set; }
 
         /// <summary>
-        /// <para>The specifications of the mongos or shard node that you want to add. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</para>
+        /// <para>The specifications of the Mongos or shard nodes to be added. For more information about the specifications, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance specifications</a>.</para>
         /// <remarks>
-        /// <para>Up to 32 mongos or shard nodes are supported for each sharded cluster instance.</para>
+        /// <para>By default, a sharded cluster instance supports up to 32 Mongos nodes and 32 shard nodes.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -168,12 +153,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to apply for an endpoint for the shard node. Default value: false. Valid values:</para>
+        /// <para>Specifies whether to apply for a direct connection endpoint for the shard node. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: applies for an endpoint for the shard node.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: does not apply for an endpoint for the shard node.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Applies for a direct connection endpoint for the shard node.</description></item>
+        /// <item><description><b>false</b>: (Default) Does not apply for a direct connection endpoint for the shard node.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

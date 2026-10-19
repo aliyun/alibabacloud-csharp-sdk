@@ -21,12 +21,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The instance type.</para>
+        /// <para>The instance type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>replicate: replica set instance</para>
-        /// </description></item>
-        /// <item><description><para>sharding: sharded cluster instance</para>
-        /// </description></item>
+        /// <item><description>replicate: replica set instance</description></item>
+        /// <item><description>sharding: sharded cluster instance</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,7 +55,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The region where the instance is located.</para>
+        /// <para>The region where the instance is deployed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>

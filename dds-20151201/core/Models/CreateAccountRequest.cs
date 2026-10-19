@@ -10,7 +10,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class CreateAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the database account. The name must be 4 to 16 characters in length. It can contain lowercase letters, digits, and underscores (_). It must start with a lowercase letter. The account is granted read-only permissions.</para>
+        /// <para>The description of the account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
+        [NameInMap("AccountDescription")]
+        [Validation(Required=false)]
+        public string AccountDescription { get; set; }
+
+        /// <summary>
+        /// <para>The account name. The name must be 4 to 16 characters in length and can contain lowercase letters, digits, and underscores (_). It must start with a lowercase letter. The account has read-only permissions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +31,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The password of the database account. The password must be 8 to 32 characters in length. It can contain at least three types of the following characters: uppercase letters, lowercase letters, digits, and special characters. Special characters include ! # $ % ^ &amp; \* ( ) _ + - =</para>
+        /// <para>The account password. The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include ! @ # $ % ^ &amp; * ( ) _ + - =</para>
+        /// <remarks>
+        /// <para>For information about how to handle special characters, see <a href="https://help.aliyun.com/document_detail/471568.html">What do I do if a connection fails because the username or password in the connection string contains special characters?</a></para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,17 +45,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string AccountPassword { get; set; }
 
         /// <summary>
-        /// <para>The type of the account that you want to create. Valid values:</para>
+        /// <para>The type of the account to be created. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>db</b> (default): shard account (available)</para>
-        /// </description></item>
-        /// <item><description><para><b>cs</b>: ConfigServer account</para>
-        /// </description></item>
-        /// <item><description><para><b>normal</b>: replica set account</para>
-        /// </description></item>
+        /// <item><description><b>db</b>: shard account. This is the default value.</description></item>
+        /// <item><description><b>cs</b>: Configserver account.</description></item>
+        /// <item><description><b>normal</b>: replica set account.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>You can set this parameter only to <b>db</b>.</para>
+        /// <para>Currently, only <b>db</b> accounts are supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -53,7 +63,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string CharacterType { get; set; }
 
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,6 +72,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
+
+        /// <summary>
+        /// <para>The database to which the account belongs. This is the database where the account is created or on which the account operates. Default value: admin. The name must be 1 to 63 characters in length and cannot contain /, \, ., spaces, double quotation marks (&quot;), or $. The name cannot be local.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>admin</para>
+        /// </summary>
+        [NameInMap("DBName")]
+        [Validation(Required=false)]
+        public string DBName { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -78,6 +98,35 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
+
+        /// <summary>
+        /// <para>The list of authorized roles for the account.</para>
+        /// </summary>
+        [NameInMap("Roles")]
+        [Validation(Required=false)]
+        public List<CreateAccountRequestRoles> Roles { get; set; }
+        public class CreateAccountRequestRoles : TeaModel {
+            /// <summary>
+            /// <para>The authorized database.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>admin</para>
+            /// </summary>
+            [NameInMap("DBName")]
+            [Validation(Required=false)]
+            public string DBName { get; set; }
+
+            /// <summary>
+            /// <para>The granted permissions.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>read</para>
+            /// </summary>
+            [NameInMap("Role")]
+            [Validation(Required=false)]
+            public string Role { get; set; }
+
+        }
 
     }
 

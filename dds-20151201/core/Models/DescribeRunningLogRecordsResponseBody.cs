@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeRunningLogRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The database engine.</para>
+        /// <para>The engine type of the current database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MongoDB</para>

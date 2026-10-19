@@ -12,10 +12,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The billing method of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>PrePaid</b>: subscription.</para>
-        /// </description></item>
-        /// <item><description><para><b>PostPaid</b>: pay-as-you-go.</para>
-        /// </description></item>
+        /// <item><description><b>PrePaid</b>: subscription.</description></item>
+        /// <item><description><b>PostPaid</b>: pay-as-you-go.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,7 +34,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ConnectionDomain { get; set; }
 
         /// <summary>
-        /// <para>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</para>
+        /// <para>The instance specification. For more information about valid values, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance specifications</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dds.mongo.mid</para>
@@ -48,16 +46,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The instance name. The name must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description><para>It must start with a Chinese character or a letter.</para>
-        /// </description></item>
-        /// <item><description><para>It can contain digits, Chinese characters, letters, underscores (_), and hyphens (-).</para>
-        /// </description></item>
-        /// <item><description><para>It must be 2 to 256 characters in length.</para>
-        /// </description></item>
+        /// <item><description>It must start with a Chinese character or a letter.</description></item>
+        /// <item><description>It can contain digits, Chinese characters, letters, underscores (_), and hyphens (-).</description></item>
+        /// <item><description>It must be 2 to 256 characters in length.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>Test database</para>
+        /// <para>TestDatabase</para>
         /// </summary>
         [NameInMap("DBInstanceDescription")]
         [Validation(Required=false)]
@@ -74,7 +69,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The instance status. For more information, see <a href="https://help.aliyun.com/document_detail/63870.html">Instance states</a>.</para>
+        /// <para>The instance status. For more details about valid values, see <a href="https://help.aliyun.com/document_detail/63870.html">Instance status table</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -84,16 +79,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceStatus { get; set; }
 
         /// <summary>
-        /// <para>The instance architecture. Valid values:</para>
+        /// <para>The instance type. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para><b>sharding</b>: sharded cluster instance.</para>
-        /// </description></item>
-        /// <item><description><para><b>replicate</b>: replica set or standalone instance. This is the default value.</para>
-        /// </description></item>
-        /// </list>
-        /// <para>&lt;props=&quot;china&quot;&gt;</para>
-        /// <list type="bullet">
-        /// <item><description><b>serverless</b>: serverless instance.</description></item>
+        /// <item><description><b>sharding</b>: sharded cluster instance.</description></item>
+        /// <item><description><b>replicate</b>: default value. Replica set instance or single-node instance.
+        ///  &lt;props=&quot;china&quot;&gt;</description></item>
+        /// <item><description><b>serverless</b>: Serverless instance.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -104,14 +95,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceType { get; set; }
 
         /// <summary>
-        /// <para>Filters instances by type. Valid values:</para>
+        /// <para>Specifies whether to filter standard or test instances.</para>
         /// <ol>
-        /// <item><description><para>customized: standalone instances and DBFS instances.</para>
-        /// </description></item>
-        /// <item><description><para>standard: standard instances, which include replica set and sharded cluster instances.</para>
-        /// </description></item>
-        /// <item><description><para>default: all instances.</para>
-        /// </description></item>
+        /// <item><description>Single-node instances and DBFS instances: customized</description></item>
+        /// <item><description>Standard instances (replica set and sharded cluster): standard</description></item>
+        /// <item><description>Default (displays all instances): default</description></item>
         /// </ol>
         /// 
         /// <b>Example:</b>
@@ -134,20 +122,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The database engine version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>7.0</b></para>
-        /// </description></item>
-        /// <item><description><para><b>6.0</b></para>
-        /// </description></item>
-        /// <item><description><para><b>5.0</b></para>
-        /// </description></item>
-        /// <item><description><para><b>4.4</b></para>
-        /// </description></item>
-        /// <item><description><para><b>4.2</b></para>
-        /// </description></item>
-        /// <item><description><para><b>4.0</b></para>
-        /// </description></item>
-        /// <item><description><para><b>3.4</b></para>
-        /// </description></item>
+        /// <item><description><b>7.0</b></description></item>
+        /// <item><description><b>6.0</b></description></item>
+        /// <item><description><b>5.0</b></description></item>
+        /// <item><description><b>4.4</b></description></item>
+        /// <item><description><b>4.2</b></description></item>
+        /// <item><description><b>4.0</b></description></item>
+        /// <item><description><b>3.4</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -158,7 +139,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the instance. The time is in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. This parameter is used to filter instances that expire on or before the specified time.</para>
+        /// <para>The expiration time of the instance in the yyyy-MM-ddTHH:mm:ssZ format (UTC). This parameter is used to filter instances whose expiration time is earlier than or equal to the specified time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-12-26T16:00:00Z</para>
@@ -170,10 +151,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The expiration status of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The instance is expired.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The instance is not expired.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: expired.</description></item>
+        /// <item><description><b>false</b>: not expired.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -186,10 +165,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The network type of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Classic</b>: classic network.</para>
-        /// </description></item>
-        /// <item><description><para><b>VPC</b>: virtual private cloud (VPC).</para>
-        /// </description></item>
+        /// <item><description><b>Classic</b>: classic network.</description></item>
+        /// <item><description><b>VPC</b>: VPC.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -208,7 +185,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be greater than 0 and no greater than the maximum value of the integer data type. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -218,14 +195,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values:</para>
+        /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>30</b> (default)</para>
-        /// </description></item>
-        /// <item><description><para><b>50</b></para>
-        /// </description></item>
-        /// <item><description><para><b>100</b></para>
-        /// </description></item>
+        /// <item><description><b>30</b> (default)</description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -248,12 +222,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The number of nodes in the replica set instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>3</b></para>
-        /// </description></item>
-        /// <item><description><para><b>5</b></para>
-        /// </description></item>
-        /// <item><description><para><b>7</b></para>
-        /// </description></item>
+        /// <item><description><b>3</b></description></item>
+        /// <item><description><b>5</b></description></item>
+        /// <item><description><b>7</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -282,21 +253,18 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tags of the instance.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeDBInstancesRequestTag> Tag { get; set; }
         public class DescribeDBInstancesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N. The value of N must be in the range of <b>1</b> to <b>20</b>.</para>
+            /// <para>The tag key of the instance. Valid values of N: <b>1</b> to <b>20</b>.</para>
             /// <list type="bullet">
-            /// <item><description><para>The tag key cannot start with <c>aliyun</c>, <c>acs:</c>, <c>http://</c>, or <c>https://</c>.</para>
-            /// </description></item>
-            /// <item><description><para>The tag key can be up to 64 characters in length.</para>
-            /// </description></item>
-            /// <item><description><para>The tag key cannot be an empty string.</para>
-            /// </description></item>
+            /// <item><description>The tag key cannot start with <c>aliyun</c>, <c>acs:</c>, <c>http://</c>, or <c>https://</c>.</description></item>
+            /// <item><description>The tag key can be up to 64 characters in length.</description></item>
+            /// <item><description>The tag key cannot be an empty string.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -307,14 +275,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N. The value of N must be in the range of <b>1</b> to <b>20</b>.</para>
+            /// <para>The tag value of the instance. Valid values of N: <b>1</b> to <b>20</b>.</para>
             /// <list type="bullet">
-            /// <item><description><para>The tag value cannot start with <c>aliyun</c>, <c>acs</c>:, <c>http://</c>, or <c>https://</c>.</para>
-            /// </description></item>
-            /// <item><description><para>The tag value can be up to 128 characters in length.</para>
-            /// </description></item>
-            /// <item><description><para>The tag value can be an empty string.</para>
-            /// </description></item>
+            /// <item><description>The tag value cannot start with <c>aliyun</c>, <c>acs:</c>, <c>http://</c>, or <c>https://</c>.</description></item>
+            /// <item><description>The tag value can be up to 128 characters in length.</description></item>
+            /// <item><description>The tag value can be an empty string.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyDBInstanceTDERequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,22 +22,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         /// <summary>
         /// <para>The ID of the custom key.
-        /// Custom keys are supported only in the following regions. In other regions, the default key is used.</para>
+        /// Custom keys are supported only in the following regions. In other regions, the default key is used for encryption.</para>
         /// <list type="bullet">
-        /// <item><description><para>Singapore (ap-southeast-1)</para>
-        /// </description></item>
-        /// <item><description><para>Hangzhou (cn-hangzhou)</para>
-        /// </description></item>
-        /// <item><description><para>Shanghai (cn-shanghai)</para>
-        /// </description></item>
-        /// <item><description><para>Beijing (cn-beijing)</para>
-        /// </description></item>
-        /// <item><description><para>Shenzhen (cn-shenzhen)</para>
-        /// </description></item>
-        /// <item><description><para>Hong Kong (cn-hongkong)</para>
-        /// </description></item>
-        /// <item><description><para>Malaysia (ap-southeast-3)</para>
-        /// </description></item>
+        /// <item><description>Singapore (ap-southeast-1)</description></item>
+        /// <item><description>Hangzhou (cn-hangzhou)</description></item>
+        /// <item><description>Shanghai (cn-shanghai)</description></item>
+        /// <item><description>Beijing (cn-beijing)</description></item>
+        /// <item><description>Shenzhen (cn-shenzhen)</description></item>
+        /// <item><description>Hong Kong (China) (cn-hongkong)</description></item>
+        /// <item><description>Malaysia (ap-southeast-3)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,9 +41,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string EncryptionKey { get; set; }
 
         /// <summary>
-        /// <para>The encryption method. Set the value to <b>aes-256-cbc</b>.</para>
+        /// <para>The encryption method. Valid values: <b>aes-256-cbc</b>.</para>
         /// <remarks>
-        /// <para>This parameter is available only when <b>TDEStatus</b> is set to <b>enabled</b>.</para>
+        /// <para>This parameter is available only when the <b>TDEStatus</b> parameter is set to <b>enabled</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -77,13 +70,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud Resource Name (ARN) of the RAM role. The format is <c>acs:ram::$accountID:role/$roleName </c>.</para>
+        /// <para>The ARN of the specified role. Format: <c>acs:ram::$accountID:role/$roleName</c>.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para><c>$accountID</c>: The ID of your Alibaba Cloud account. To view the ID, log on to the Alibaba Cloud Management Console, move the pointer over your profile picture in the upper-right corner, and then click Security Settings.</para>
-        /// </description></item>
-        /// <item><description><para><c>$roleName</c>: The name of the RAM role. To view the name, log on to the RAM console, click RAM Role Management in the navigation pane on the left, and then view the role name in the RAM Role Name list.</para>
-        /// </description></item>
+        /// <item><description><c>$accountID</c>: the ID of the Alibaba Cloud account. You can view the ID by logging on to the Alibaba Cloud Management Console, moving the pointer over the profile picture in the upper-right corner, and clicking Security Settings.</description></item>
+        /// <item><description><c>$roleName</c>: the name of the RAM role. You can view the name by logging on to the Resource Access Management (RAM) console, clicking RAM Roles in the left-side navigation pane, and viewing the RAM role name list.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -95,11 +86,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RoleARN { get; set; }
 
         /// <summary>
-        /// <para>Specifies when to enable TDE. Valid values:</para>
+        /// <para>The time to modify the Transparent Data Encryption (TDE) status of the MongoDB instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: Enables TDE immediately.</para>
+        /// <item><description><para>0: immediately.</para>
         /// </description></item>
-        /// <item><description><para>1: Enables TDE during the maintenance window.</para>
+        /// <item><description><para>1: within the O&amp;M window.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -111,9 +102,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string SwitchMode { get; set; }
 
         /// <summary>
-        /// <para>The TDE status. Set the value to <b>enabled</b> to enable TDE.</para>
+        /// <para>The TDE status. Valid values: <b>enabled</b>, which indicates that TDE is enabled.</para>
         /// <remarks>
-        /// <para>You cannot disable TDE after you enable it. Enable this feature with caution.</para>
+        /// <para>You cannot disable TDE after it is enabled. Proceed with caution.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

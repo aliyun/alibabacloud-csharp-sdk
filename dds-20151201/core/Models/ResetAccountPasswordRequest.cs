@@ -64,6 +64,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// <para>账号所在库（账号建在/操作于哪个库），缺省 admin；规则：长度1~63，禁 /、\、.、空格、&quot;、$，禁 local</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>admin</para>
+        /// </summary>
+        [NameInMap("DBName")]
+        [Validation(Required=false)]
+        public string DBName { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }

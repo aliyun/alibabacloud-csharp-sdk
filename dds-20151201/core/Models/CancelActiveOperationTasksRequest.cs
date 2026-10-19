@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class CancelActiveOperationTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the O\&amp;M events to cancel. Separate multiple IDs with commas (,).</para>
+        /// <para>The IDs of the O&amp;M events to be canceled in batches. Separate multiple IDs with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

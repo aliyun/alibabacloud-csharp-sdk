@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the shard node.</para>
+        /// <para>The shard node ID.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter applies only to sharded cluster instances.</description></item>
+        /// <item><description>This parameter is available only when you create a role tag for a shard node of a sharded cluster instance.</description></item>
         /// </list>
         /// </remarks>
         /// 

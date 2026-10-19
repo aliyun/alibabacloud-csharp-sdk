@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public List<DescribeVpcsForMongoDBResponseBodyVpcs> Vpcs { get; set; }
         public class DescribeVpcsForMongoDBResponseBodyVpcs : TeaModel {
             /// <summary>
-            /// <para>This parameter is deprecated. No value is returned.</para>
+            /// <para><b>[Deprecated]</b> This parameter is deprecated and no value is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string AliUid { get; set; }
 
             /// <summary>
-            /// <para>This parameter is deprecated. No value is returned.</para>
+            /// <para><b>[Deprecated]</b> This parameter is deprecated and no value is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string CidrBlock { get; set; }
 
             /// <summary>
-            /// <para>This parameter is deprecated. No value is returned.</para>
+            /// <para><b>[Deprecated]</b> This parameter is deprecated and no value is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>This parameter is deprecated. No value is returned.</para>
+            /// <para><b>[Deprecated]</b> This parameter is deprecated and no value is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -104,11 +104,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the VPC is the default one. Valid values:</para>
+            /// <para>Indicates whether the VPC is the default VPC. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: The VPC is the default one.</para>
+            /// <item><description><para><b>true</b>: Yes.</para>
             /// </description></item>
-            /// <item><description><para><b>false</b>: The VPC is not the default one.</para>
+            /// <item><description><para><b>false</b>: No.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string RegionNo { get; set; }
 
             /// <summary>
-            /// <para>The status of the VPC. A value of <b>Available</b> indicates that the VPC is active.</para>
+            /// <para>The status of the VPC. <b>Available</b> indicates that the VPC is available.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Available</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string CidrBlock { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is deprecated. No value is returned.</para>
+                /// <para><b>[Deprecated]</b> This parameter is deprecated and no value is returned.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>null</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is deprecated. No value is returned.</para>
+                /// <para><b>[Deprecated]</b> This parameter is deprecated and no value is returned.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>null</para>
@@ -176,10 +176,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// <para>Indicates whether the vSwitch is the default vSwitch. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>true</b>: The vSwitch is the default vSwitch.</para>
-                /// </description></item>
-                /// <item><description><para><b>false</b>: The vSwitch is not the default vSwitch.</para>
-                /// </description></item>
+                /// <item><description><b>true</b>: The vSwitch is the default vSwitch.</description></item>
+                /// <item><description><b>false</b>: The vSwitch is not the default vSwitch.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -190,7 +188,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public bool? IsDefault { get; set; }
 
                 /// <summary>
-                /// <para>The zone to which the vSwitch belongs.</para>
+                /// <para>The active zone to which the vSwitch belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-i</para>
@@ -200,7 +198,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string IzNo { get; set; }
 
                 /// <summary>
-                /// <para>The status of the vSwitch. A value of <b>Available</b> indicates that the vSwitch is active.</para>
+                /// <para>The status of the vSwitch. <b>Available</b> indicates that the vSwitch is active.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Available</para>
