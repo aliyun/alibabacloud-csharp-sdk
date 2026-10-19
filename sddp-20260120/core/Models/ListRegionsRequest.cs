@@ -10,25 +10,21 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
 {
     public class ListRegionsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to filter regions by assets that have audit enabled. A value of true indicates that audit is enabled. A value of false indicates that audit is not enabled. If you do not specify this parameter, this filter condition is not applied.</para>
+        /// <para>Specifies whether to filter regions by assets with auditing enabled. Valid values: true: Enabled. false: Disabled. If you do not specify this parameter, this filter condition is not applied.</para>
         /// </summary>
         [NameInMap("Audited")]
         [Validation(Required=false)]
         public bool? Audited { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to filter regions by assets that have detection enabled. A value of true indicates that detection is enabled. A value of false indicates that detection is not enabled. If you do not specify this parameter, this filter condition is not applied.</para>
+        /// <para>Specifies whether to filter regions by assets with detection enabled. Valid values: true: Enabled. false: Disabled. If you do not specify this parameter, this filter condition is not applied.</para>
         /// </summary>
         [NameInMap("Identified")]
         [Validation(Required=false)]
         public bool? Identified { get; set; }
 
         /// <summary>
-        /// <para>The language of the response description. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>zh: Chinese.</description></item>
-        /// <item><description>en: English.</description></item>
-        /// </list>
+        /// <para>The language of the response. Valid values: zh: Chinese. en: English.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -36,6 +32,13 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to retrieve all regions.</para>
+        /// </summary>
+        [NameInMap("LoadAll")]
+        [Validation(Required=false)]
+        public bool? LoadAll { get; set; }
 
     }
 

@@ -3151,13 +3151,13 @@ namespace AlibabaCloud.SDK.Sddp20260120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the regions where assets reside.</para>
+        /// <para>Queries the regions where assets are located.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of regions where the current account has assets. You can use the returned region IDs as the RegionId parameter for subsequent region-specific API operations. You can filter regions by whether audit or detection is enabled. The returned region list is not equivalent to the full list of regions supported by all Alibaba Cloud services.
-        /// The parameter examples are provided only to illustrate the format. Replace them with the actual region IDs, resource identifiers, and configuration values obtained from your account.</para>
+        /// <para>Queries the list of regions where the assets owned by the current account are located. You can use this list to select the RegionId for subsequent region-specific API operations. You can filter the regions based on whether auditing or detection is enabled. The returned region list is not the same as the list of all regions supported by Alibaba Cloud services.
+        /// The parameter examples are for format illustration only. When you call this operation, replace them with the regions, resource identifiers, and configuration values queried from the current account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3186,6 +3186,10 @@ namespace AlibabaCloud.SDK.Sddp20260120
             {
                 query["Lang"] = request.Lang;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadAll))
+            {
+                query["LoadAll"] = request.LoadAll;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -3207,13 +3211,13 @@ namespace AlibabaCloud.SDK.Sddp20260120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the regions where assets reside.</para>
+        /// <para>Queries the regions where assets are located.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of regions where the current account has assets. You can use the returned region IDs as the RegionId parameter for subsequent region-specific API operations. You can filter regions by whether audit or detection is enabled. The returned region list is not equivalent to the full list of regions supported by all Alibaba Cloud services.
-        /// The parameter examples are provided only to illustrate the format. Replace them with the actual region IDs, resource identifiers, and configuration values obtained from your account.</para>
+        /// <para>Queries the list of regions where the assets owned by the current account are located. You can use this list to select the RegionId for subsequent region-specific API operations. You can filter the regions based on whether auditing or detection is enabled. The returned region list is not the same as the list of all regions supported by Alibaba Cloud services.
+        /// The parameter examples are for format illustration only. When you call this operation, replace them with the regions, resource identifiers, and configuration values queried from the current account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3242,6 +3246,10 @@ namespace AlibabaCloud.SDK.Sddp20260120
             {
                 query["Lang"] = request.Lang;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadAll))
+            {
+                query["LoadAll"] = request.LoadAll;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -3263,13 +3271,13 @@ namespace AlibabaCloud.SDK.Sddp20260120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the regions where assets reside.</para>
+        /// <para>Queries the regions where assets are located.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of regions where the current account has assets. You can use the returned region IDs as the RegionId parameter for subsequent region-specific API operations. You can filter regions by whether audit or detection is enabled. The returned region list is not equivalent to the full list of regions supported by all Alibaba Cloud services.
-        /// The parameter examples are provided only to illustrate the format. Replace them with the actual region IDs, resource identifiers, and configuration values obtained from your account.</para>
+        /// <para>Queries the list of regions where the assets owned by the current account are located. You can use this list to select the RegionId for subsequent region-specific API operations. You can filter the regions based on whether auditing or detection is enabled. The returned region list is not the same as the list of all regions supported by Alibaba Cloud services.
+        /// The parameter examples are for format illustration only. When you call this operation, replace them with the regions, resource identifiers, and configuration values queried from the current account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3287,13 +3295,13 @@ namespace AlibabaCloud.SDK.Sddp20260120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the regions where assets reside.</para>
+        /// <para>Queries the regions where assets are located.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of regions where the current account has assets. You can use the returned region IDs as the RegionId parameter for subsequent region-specific API operations. You can filter regions by whether audit or detection is enabled. The returned region list is not equivalent to the full list of regions supported by all Alibaba Cloud services.
-        /// The parameter examples are provided only to illustrate the format. Replace them with the actual region IDs, resource identifiers, and configuration values obtained from your account.</para>
+        /// <para>Queries the list of regions where the assets owned by the current account are located. You can use this list to select the RegionId for subsequent region-specific API operations. You can filter the regions based on whether auditing or detection is enabled. The returned region list is not the same as the list of all regions supported by Alibaba Cloud services.
+        /// The parameter examples are for format illustration only. When you call this operation, replace them with the regions, resource identifiers, and configuration values queried from the current account.</para>
         /// </description>
         /// 
         /// <param name="request">
