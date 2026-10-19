@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeNetworkAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the network.</para>
+        /// <para>The network ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

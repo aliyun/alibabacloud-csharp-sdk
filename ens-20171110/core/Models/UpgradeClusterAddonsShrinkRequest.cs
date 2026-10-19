@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class UpgradeClusterAddonsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The component information.</para>
+        /// <para>The add-on information.</para>
         /// </summary>
         [NameInMap("Addons")]
         [Validation(Required=false)]

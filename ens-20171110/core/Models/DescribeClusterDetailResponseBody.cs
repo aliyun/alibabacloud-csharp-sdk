@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public object Config { get; set; }
 
         /// <summary>
-        /// <para>The CIDR block for pods.</para>
+        /// <para>The pod CIDR block.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.20.0.0/16</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public DescribeClusterDetailResponseBodyControlPlaneConfig ControlPlaneConfig { get; set; }
         public class DescribeClusterDetailResponseBodyControlPlaneConfig : TeaModel {
             /// <summary>
-            /// <para>The container runtime type.</para>
+            /// <para>The runtime type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>containerd</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string ContainerRuntime { get; set; }
 
             /// <summary>
-            /// <para>The image ID of the control plane virtual machine.</para>
+            /// <para>The ID of the control plane virtual machine image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>m-5ul335umat4e2y9ynwi84p3f9</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>The node instance type.</para>
+            /// <para>The instance type of the node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ens.esk.sn1.medium</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public long? Size { get; set; }
 
             /// <summary>
-            /// <para>The system cloud disk type of the node.</para>
+            /// <para>The system cloud disk category of the node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_efficiency</para>
@@ -148,15 +148,23 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         }
 
+        /// <summary>
+        /// <para>The control plane metadata.</para>
+        /// </summary>
         [NameInMap("ControlPlaneMeta")]
         [Validation(Required=false)]
         public DescribeClusterDetailResponseBodyControlPlaneMeta ControlPlaneMeta { get; set; }
         public class DescribeClusterDetailResponseBodyControlPlaneMeta : TeaModel {
+            /// <summary>
+            /// <para>The master node information.</para>
+            /// </summary>
             [NameInMap("MasterInstances")]
             [Validation(Required=false)]
             public List<DescribeClusterDetailResponseBodyControlPlaneMetaMasterInstances> MasterInstances { get; set; }
             public class DescribeClusterDetailResponseBodyControlPlaneMetaMasterInstances : TeaModel {
                 /// <summary>
+                /// <para>The instance ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>i-573utia8wbecrbgsm6o8fx132</para>
                 /// </summary>
@@ -165,6 +173,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
+                /// <para>The instance IP address.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10.10.0.2</para>
                 /// </summary>
@@ -173,6 +183,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string Ip { get; set; }
 
                 /// <summary>
+                /// <para>The node name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>i-573utia8wbecrbgsm6o8fx132</para>
                 /// </summary>
@@ -182,11 +194,16 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
             }
 
+            /// <summary>
+            /// <para>The API server address.</para>
+            /// </summary>
             [NameInMap("MasterUrl")]
             [Validation(Required=false)]
             public DescribeClusterDetailResponseBodyControlPlaneMetaMasterUrl MasterUrl { get; set; }
             public class DescribeClusterDetailResponseBodyControlPlaneMetaMasterUrl : TeaModel {
                 /// <summary>
+                /// <para>The private endpoint of the API server.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://10.0.0.1:6443">https://10.0.0.1:6443</a></para>
                 /// </summary>
@@ -195,6 +212,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string PrivateUrl { get; set; }
 
                 /// <summary>
+                /// <para>The public address of the API server.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://0.0.0.0:6443">https://0.0.0.0:6443</a></para>
                 /// </summary>
@@ -207,6 +226,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
+        /// <para>The time when the cluster was created.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2025-04-07T09:57:26+08:00</para>
         /// </summary>
@@ -225,6 +246,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
+        /// <para>The ISP information.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>unicom</para>
         /// </summary>
@@ -233,7 +256,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Isp { get; set; }
 
         /// <summary>
-        /// <para>The authentication token for cluster access.</para>
+        /// <para>The authentication token for joining the cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxx.yyy</para>
@@ -243,7 +266,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string JoinToken { get; set; }
 
         /// <summary>
-        /// <para>The cluster version, which is consistent with the Kubernetes community baseline version. We recommend that you select the latest version. If you do not specify this parameter, the latest version is used by default.</para>
+        /// <para>The cluster version, which aligns with the Kubernetes community baseline version. Select the latest version. If not specified, the latest version is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.32.1.aliyunedge.1</para>
@@ -253,7 +276,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string KubernetesVersion { get; set; }
 
         /// <summary>
-        /// <para>The CLB instance ID of the API server.</para>
+        /// <para>The ID of the Classic Load Balancer (CLB) instance for the API server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lb-5snthcyu1x10g7tywj7iu****</para>
@@ -273,6 +296,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The ID of the NAT gateway.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>nat-5tawjw5j7sgd2deujxuk0****</para>
         /// </summary>
@@ -280,11 +305,16 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string NatGatewayId { get; set; }
 
+        /// <summary>
+        /// <para>The number of nodes in the cluster.</para>
+        /// </summary>
         [NameInMap("NodeCount")]
         [Validation(Required=false)]
         public DescribeClusterDetailResponseBodyNodeCount NodeCount { get; set; }
         public class DescribeClusterDetailResponseBodyNodeCount : TeaModel {
             /// <summary>
+            /// <para>The number of ready nodes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -293,6 +323,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public int? Ready { get; set; }
 
             /// <summary>
+            /// <para>The total number of nodes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -302,11 +334,16 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         }
 
+        /// <summary>
+        /// <para>The pod status information of the cluster.</para>
+        /// </summary>
         [NameInMap("PodStatus")]
         [Validation(Required=false)]
         public DescribeClusterDetailResponseBodyPodStatus PodStatus { get; set; }
         public class DescribeClusterDetailResponseBodyPodStatus : TeaModel {
             /// <summary>
+            /// <para>The number of pods in the Running state.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -315,6 +352,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public int? Running { get; set; }
 
             /// <summary>
+            /// <para>The total number of pods.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -325,7 +364,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The vSwitch IDs for pods.</para>
+        /// <para>The pod vSwitch IDs.</para>
         /// </summary>
         [NameInMap("PodVswitchIds")]
         [Validation(Required=false)]
@@ -342,7 +381,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public bool? PublicAccess { get; set; }
 
         /// <summary>
-        /// <para>Id of the request。</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</para>
@@ -352,7 +391,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The CIDR block for services.</para>
+        /// <para>The service CIDR block.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.19.0.0/20</para>
@@ -362,12 +401,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ServiceCidr { get; set; }
 
         /// <summary>
-        /// <para>The cluster status. Valid values:</para>
+        /// <para>The cluster state. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>initial</b>: Being created.</description></item>
+        /// <item><description><b>initial</b>: Creating.</description></item>
         /// <item><description><b>failed</b>: Creation failed.</description></item>
         /// <item><description><b>running</b>: Running.</description></item>
-        /// <item><description><b>deleting</b>: Being released.</description></item>
+        /// <item><description><b>deleting</b>: Releasing.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -388,7 +427,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch IDs of the cluster nodes.</para>
+        /// <para>The vSwitch IDs where the cluster nodes reside.</para>
         /// </summary>
         [NameInMap("VswitchIds")]
         [Validation(Required=false)]

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string CidrBlock { get; set; }
 
         /// <summary>
-        /// <para>The time when the vSwitch was created. This value uses UTC and follows the yyyy-MM-ddTHH:mm:ssZ format.</para>
+        /// <para>The creation time. The time is displayed in UTC in the yyyy-MM-ddTHH:mm:ssZ format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-06-01T00:00:00Z</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ENS edge zone.</para>
+        /// <para>The ENS edge zone ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-xian-unicom</para>
@@ -80,6 +80,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
+        /// <para>The IPv6 CIDR block of the vSwitch.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2408:XXXX:0:a600::/110</para>
         /// </summary>
@@ -108,7 +110,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The ID of the network.</para>
+        /// <para>The network ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>n-257gqcdfvx6n****</para>
@@ -128,7 +130,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C0003****2A8</para>
@@ -140,12 +142,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The status of the vSwitch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Pending: The vSwitch is being configured.</para>
-        /// </description></item>
-        /// <item><description><para>Available: The vSwitch is active.</para>
-        /// </description></item>
-        /// <item><description><para>Releasing: The vSwitch is being released.</para>
-        /// </description></item>
+        /// <item><description>Pending: The vSwitch is being configured.</description></item>
+        /// <item><description>Available: The vSwitch is available.</description></item>
+        /// <item><description>Releasing: The vSwitch is being released.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -156,7 +155,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch.</para>
+        /// <para>The vSwitch ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-5****</para>
@@ -166,7 +165,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The name of the vSwitch.</para>
+        /// <para>The vSwitch name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test-switch</para>

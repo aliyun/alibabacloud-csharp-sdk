@@ -10,14 +10,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateNetworkRequest : TeaModel {
         /// <summary>
-        /// <para>The CIDR block of the network. You can use one of the following CIDR blocks or their subsets:</para>
+        /// <para>The CIDR block of the network. You can use one of the following CIDR blocks or their subsets as the CIDR block of the network:</para>
         /// <list type="bullet">
-        /// <item><description><para>10.0.0.0/8 (default).</para>
-        /// </description></item>
-        /// <item><description><para>172.16.0.0/12.</para>
-        /// </description></item>
-        /// <item><description><para>192.168.0.0/16.</para>
-        /// </description></item>
+        /// <item><description>10.0.0.0/8 (default).</description></item>
+        /// <item><description>172.16.0.0/12.</description></item>
+        /// <item><description>192.168.0.0/16.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -29,8 +26,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string CidrBlock { get; set; }
 
         /// <summary>
-        /// <para>A description of the network.</para>
-        /// <para>Must be 2 to 256 characters long, start with a letter or a Chinese character, and cannot start with http\:// or https\://.</para>
+        /// <para>The description of the network.</para>
+        /// <para>The description must be 2 to 256 characters in length, and must start with a letter or a Chinese character. It cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>this is my first network</para>
@@ -39,12 +36,22 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable IPv6. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>false (default): disables IPv6.</description></item>
+        /// <item><description>true: enables IPv6.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("EnableIpv6")]
         [Validation(Required=false)]
         public bool? EnableIpv6 { get; set; }
 
         /// <summary>
-        /// <para>The node ID of ENS.</para>
+        /// <para>The ID of the ENS edge zone.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,6 +62,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
+        /// <para>The ISP of the IPv6 address. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>cmcc</description></item>
+        /// <item><description>telecom</description></item>
+        /// <item><description>unicom</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>telecom</para>
         /// </summary>
@@ -63,14 +77,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Ipv6Isp { get; set; }
 
         /// <summary>
-        /// <para>The network name. Follow these naming rules:</para>
+        /// <para>The name of the network. The name must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description><para>Must be 2 to 128 characters long, using English or Chinese characters.</para>
-        /// </description></item>
-        /// <item><description><para>Must start with a letter or a Chinese character. Cannot start with http\:// or https\://.</para>
-        /// </description></item>
-        /// <item><description><para>Can contain digits, colons (:), underscores (_), or hyphens (-).</para>
-        /// </description></item>
+        /// <item><description>The name must be 2 to 128 characters in length.</description></item>
+        /// <item><description>The name must start with a letter or a Chinese character, and cannot start with http:// or https://.</description></item>
+        /// <item><description>The name can contain digits, colons (:), underscores (_), and hyphens (-).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -81,21 +92,18 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NetworkName { get; set; }
 
         /// <summary>
-        /// <para>Resource tags.</para>
+        /// <para>The resource tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateNetworkRequestTag> Tag { get; set; }
         public class CreateNetworkRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key for the instance. N ranges from <b>1</b> to <b>20</b>.</para>
+            /// <para>The key of tag N of the instance. Valid values of N: <b>1</b> to <b>20</b>.</para>
             /// <list type="bullet">
-            /// <item><description><para>Cannot start with <c>aliyun</c>, <c>acs:</c>, <c>http://</c>, or <c>https://</c>.</para>
-            /// </description></item>
-            /// <item><description><para>Supports up to 64 characters.</para>
-            /// </description></item>
-            /// <item><description><para>Cannot be an empty string.</para>
-            /// </description></item>
+            /// <item><description>The key cannot start with <c>aliyun</c>, <c>acs:</c>, <c>http://</c>, or <c>https://</c>.</description></item>
+            /// <item><description>The key can be up to 64 characters in length.</description></item>
+            /// <item><description>The key cannot be an empty string.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -106,7 +114,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value for the resource. N ranges from 1 to 20. This value can be an empty string once provided. It supports up to 128 characters, cannot start with acs:, and cannot contain http\:// or https\://.</para>
+            /// <para>The value of tag N of the resource. Valid values of N: 1 to 20. The value can be an empty string. The value can be up to 128 characters in length, and cannot start with acs: or contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tagValue</para>

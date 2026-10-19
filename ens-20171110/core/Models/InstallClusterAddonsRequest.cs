@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class InstallClusterAddonsRequest : TeaModel {
         /// <summary>
-        /// <para>The component information.</para>
+        /// <para>The add-on information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Addons")]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             }
 
             /// <summary>
-            /// <para>The plug-in name.</para>
+            /// <para>The add-on name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>edge-csi-lite</para>

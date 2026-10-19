@@ -1121,6 +1121,182 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Adds a secondary CIDR block to a network.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The maximum number of secondary CIDR blocks that you can add to a network is as follows:</para>
+        /// <list type="bullet">
+        /// <item><description>A network supports up to five secondary IPv4 CIDR blocks.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AssociateNetworkCidrBlockRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateNetworkCidrBlockResponse
+        /// </returns>
+        public AssociateNetworkCidrBlockResponse AssociateNetworkCidrBlockWithOptions(AssociateNetworkCidrBlockRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersion))
+            {
+                query["IpVersion"] = request.IpVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6Isp))
+            {
+                query["Ipv6Isp"] = request.Ipv6Isp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkId))
+            {
+                query["NetworkId"] = request.NetworkId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecondaryCidrBlock))
+            {
+                query["SecondaryCidrBlock"] = request.SecondaryCidrBlock;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AssociateNetworkCidrBlock",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AssociateNetworkCidrBlockResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a secondary CIDR block to a network.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The maximum number of secondary CIDR blocks that you can add to a network is as follows:</para>
+        /// <list type="bullet">
+        /// <item><description>A network supports up to five secondary IPv4 CIDR blocks.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AssociateNetworkCidrBlockRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateNetworkCidrBlockResponse
+        /// </returns>
+        public async Task<AssociateNetworkCidrBlockResponse> AssociateNetworkCidrBlockWithOptionsAsync(AssociateNetworkCidrBlockRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersion))
+            {
+                query["IpVersion"] = request.IpVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6Isp))
+            {
+                query["Ipv6Isp"] = request.Ipv6Isp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkId))
+            {
+                query["NetworkId"] = request.NetworkId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecondaryCidrBlock))
+            {
+                query["SecondaryCidrBlock"] = request.SecondaryCidrBlock;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AssociateNetworkCidrBlock",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AssociateNetworkCidrBlockResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a secondary CIDR block to a network.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The maximum number of secondary CIDR blocks that you can add to a network is as follows:</para>
+        /// <list type="bullet">
+        /// <item><description>A network supports up to five secondary IPv4 CIDR blocks.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AssociateNetworkCidrBlockRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateNetworkCidrBlockResponse
+        /// </returns>
+        public AssociateNetworkCidrBlockResponse AssociateNetworkCidrBlock(AssociateNetworkCidrBlockRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AssociateNetworkCidrBlockWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a secondary CIDR block to a network.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The maximum number of secondary CIDR blocks that you can add to a network is as follows:</para>
+        /// <list type="bullet">
+        /// <item><description>A network supports up to five secondary IPv4 CIDR blocks.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AssociateNetworkCidrBlockRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateNetworkCidrBlockResponse
+        /// </returns>
+        public async Task<AssociateNetworkCidrBlockResponse> AssociateNetworkCidrBlockAsync(AssociateNetworkCidrBlockRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AssociateNetworkCidrBlockWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Attaches a disk to an Edge Node Service (ENS) instance.</para>
         /// </summary>
         /// 
@@ -3927,8 +4103,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Single-user call frequency: 10 calls per second.</description></item>
-        /// <item><description>Creating a cluster is an asynchronous operation. After the API call returns, wait 10 to 20 minutes for the cluster to finish initialization. During this process, call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
+        /// <item><description>Rate limit per user: 10 calls per second.</description></item>
+        /// <item><description>Cluster creation is an asynchronous operation. After you call this operation, you must wait 10 to 20 minutes for the cluster to be initialized. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4047,8 +4223,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Single-user call frequency: 10 calls per second.</description></item>
-        /// <item><description>Creating a cluster is an asynchronous operation. After the API call returns, wait 10 to 20 minutes for the cluster to finish initialization. During this process, call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
+        /// <item><description>Rate limit per user: 10 calls per second.</description></item>
+        /// <item><description>Cluster creation is an asynchronous operation. After you call this operation, you must wait 10 to 20 minutes for the cluster to be initialized. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4167,8 +4343,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Single-user call frequency: 10 calls per second.</description></item>
-        /// <item><description>Creating a cluster is an asynchronous operation. After the API call returns, wait 10 to 20 minutes for the cluster to finish initialization. During this process, call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
+        /// <item><description>Rate limit per user: 10 calls per second.</description></item>
+        /// <item><description>Cluster creation is an asynchronous operation. After you call this operation, you must wait 10 to 20 minutes for the cluster to be initialized. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4193,8 +4369,8 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Single-user call frequency: 10 calls per second.</description></item>
-        /// <item><description>Creating a cluster is an asynchronous operation. After the API call returns, wait 10 to 20 minutes for the cluster to finish initialization. During this process, call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
+        /// <item><description>Rate limit per user: 10 calls per second.</description></item>
+        /// <item><description>Cluster creation is an asynchronous operation. After you call this operation, you must wait 10 to 20 minutes for the cluster to be initialized. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8389,14 +8565,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call CreateNetwork to create a virtual private cloud (VPC).</para>
+        /// <para>Creates a VPC.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>API call frequency: 100 calls per second.</description></item>
-        /// <item><description>Per-user call frequency: 5 calls per second.</description></item>
+        /// <item><description>API rate limit: 100 calls per second.</description></item>
+        /// <item><description>Rate limit per user: 5 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8463,14 +8639,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call CreateNetwork to create a virtual private cloud (VPC).</para>
+        /// <para>Creates a VPC.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>API call frequency: 100 calls per second.</description></item>
-        /// <item><description>Per-user call frequency: 5 calls per second.</description></item>
+        /// <item><description>API rate limit: 100 calls per second.</description></item>
+        /// <item><description>Rate limit per user: 5 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8537,14 +8713,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call CreateNetwork to create a virtual private cloud (VPC).</para>
+        /// <para>Creates a VPC.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>API call frequency: 100 calls per second.</description></item>
-        /// <item><description>Per-user call frequency: 5 calls per second.</description></item>
+        /// <item><description>API rate limit: 100 calls per second.</description></item>
+        /// <item><description>Rate limit per user: 5 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8563,14 +8739,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call CreateNetwork to create a virtual private cloud (VPC).</para>
+        /// <para>Creates a VPC.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>API call frequency: 100 calls per second.</description></item>
-        /// <item><description>Per-user call frequency: 5 calls per second.</description></item>
+        /// <item><description>API rate limit: 100 calls per second.</description></item>
+        /// <item><description>Rate limit per user: 5 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10177,7 +10353,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a VSwitch.</para>
+        /// <para>Creates a vSwitch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10243,7 +10419,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a VSwitch.</para>
+        /// <para>Creates a vSwitch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10309,7 +10485,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a VSwitch.</para>
+        /// <para>Creates a vSwitch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10327,7 +10503,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a VSwitch.</para>
+        /// <para>Creates a vSwitch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11029,14 +11205,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DeleteClusterNodePool operation to delete a node pool that you no longer need. When you delete a node pool, all pods on its nodes are also deleted. This action may trigger descheduling. If the pods cannot be rescheduled, your services may be affected. Before you delete the node pool, ensure that the cluster has sufficient resources for rescheduling.</para>
+        /// <para>Deletes an unused node pool. When a node pool is deleted, all pods on the nodes in the node pool are deleted. This may trigger rescheduling. If rescheduling fails, your services may be affected. Make sure that the cluster has sufficient resources for rescheduling.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Each user is limited to 10 calls per second.</description></item>
-        /// <item><description>Cluster creation is an asynchronous operation. After the API call is successful, wait 10 to 20 minutes for the cluster to initialize. During this time, you can call the DescribeClustersV1 operation to check the cluster status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster\&quot;s kubeconfig file.</description></item>
+        /// <item><description>Call frequency per user: 10 calls per second.</description></item>
+        /// <item><description>Creating a cluster is an asynchronous operation. After the API call returns, wait 10 to 20 minutes for the cluster initialization to complete. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11083,14 +11259,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DeleteClusterNodePool operation to delete a node pool that you no longer need. When you delete a node pool, all pods on its nodes are also deleted. This action may trigger descheduling. If the pods cannot be rescheduled, your services may be affected. Before you delete the node pool, ensure that the cluster has sufficient resources for rescheduling.</para>
+        /// <para>Deletes an unused node pool. When a node pool is deleted, all pods on the nodes in the node pool are deleted. This may trigger rescheduling. If rescheduling fails, your services may be affected. Make sure that the cluster has sufficient resources for rescheduling.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Each user is limited to 10 calls per second.</description></item>
-        /// <item><description>Cluster creation is an asynchronous operation. After the API call is successful, wait 10 to 20 minutes for the cluster to initialize. During this time, you can call the DescribeClustersV1 operation to check the cluster status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster\&quot;s kubeconfig file.</description></item>
+        /// <item><description>Call frequency per user: 10 calls per second.</description></item>
+        /// <item><description>Creating a cluster is an asynchronous operation. After the API call returns, wait 10 to 20 minutes for the cluster initialization to complete. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11137,14 +11313,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DeleteClusterNodePool operation to delete a node pool that you no longer need. When you delete a node pool, all pods on its nodes are also deleted. This action may trigger descheduling. If the pods cannot be rescheduled, your services may be affected. Before you delete the node pool, ensure that the cluster has sufficient resources for rescheduling.</para>
+        /// <para>Deletes an unused node pool. When a node pool is deleted, all pods on the nodes in the node pool are deleted. This may trigger rescheduling. If rescheduling fails, your services may be affected. Make sure that the cluster has sufficient resources for rescheduling.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Each user is limited to 10 calls per second.</description></item>
-        /// <item><description>Cluster creation is an asynchronous operation. After the API call is successful, wait 10 to 20 minutes for the cluster to initialize. During this time, you can call the DescribeClustersV1 operation to check the cluster status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster\&quot;s kubeconfig file.</description></item>
+        /// <item><description>Call frequency per user: 10 calls per second.</description></item>
+        /// <item><description>Creating a cluster is an asynchronous operation. After the API call returns, wait 10 to 20 minutes for the cluster initialization to complete. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11163,14 +11339,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DeleteClusterNodePool operation to delete a node pool that you no longer need. When you delete a node pool, all pods on its nodes are also deleted. This action may trigger descheduling. If the pods cannot be rescheduled, your services may be affected. Before you delete the node pool, ensure that the cluster has sufficient resources for rescheduling.</para>
+        /// <para>Deletes an unused node pool. When a node pool is deleted, all pods on the nodes in the node pool are deleted. This may trigger rescheduling. If rescheduling fails, your services may be affected. Make sure that the cluster has sufficient resources for rescheduling.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Each user is limited to 10 calls per second.</description></item>
-        /// <item><description>Cluster creation is an asynchronous operation. After the API call is successful, wait 10 to 20 minutes for the cluster to initialize. During this time, you can call the DescribeClustersV1 operation to check the cluster status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster\&quot;s kubeconfig file.</description></item>
+        /// <item><description>Call frequency per user: 10 calls per second.</description></item>
+        /// <item><description>Creating a cluster is an asynchronous operation. After the API call returns, wait 10 to 20 minutes for the cluster initialization to complete. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17099,7 +17275,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Per-user call frequency: 100 calls per second.</description></item>
+        /// <item><description>Rate limit per user: 100 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17148,7 +17324,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Per-user call frequency: 100 calls per second.</description></item>
+        /// <item><description>Rate limit per user: 100 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17197,7 +17373,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Per-user call frequency: 100 calls per second.</description></item>
+        /// <item><description>Rate limit per user: 100 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17222,7 +17398,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Per-user call frequency: 100 calls per second.</description></item>
+        /// <item><description>Rate limit per user: 100 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17725,13 +17901,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>A kubeconfig file contains the credentials required for a client to access an Elastic Container instance on Kubernetes (ECK) cluster. The file includes identity and authentication data for accessing the destination cluster. To manage a cluster using kubectl, you must first connect to the cluster with its kubeconfig file. You can call the DescribeClusterUserKubeconfig operation to query the kubeconfig file for a specific cluster.</para>
+        /// <para>Retrieves the KubeConfig of a specified cluster. KubeConfig is used to configure access credentials for an ECK cluster on the client side, including identity and authentication data for accessing the target cluster. When you use kubectl for cluster management, you must first connect to the cluster by using KubeConfig. You can invoke the DescribeClusterUserKubeconfig operation to query the KubeConfig of the specified cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>A single user is limited to 100 calls per second.</description></item>
+        /// <item><description>Rate limit per user: 100 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17778,13 +17954,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>A kubeconfig file contains the credentials required for a client to access an Elastic Container instance on Kubernetes (ECK) cluster. The file includes identity and authentication data for accessing the destination cluster. To manage a cluster using kubectl, you must first connect to the cluster with its kubeconfig file. You can call the DescribeClusterUserKubeconfig operation to query the kubeconfig file for a specific cluster.</para>
+        /// <para>Retrieves the KubeConfig of a specified cluster. KubeConfig is used to configure access credentials for an ECK cluster on the client side, including identity and authentication data for accessing the target cluster. When you use kubectl for cluster management, you must first connect to the cluster by using KubeConfig. You can invoke the DescribeClusterUserKubeconfig operation to query the KubeConfig of the specified cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>A single user is limited to 100 calls per second.</description></item>
+        /// <item><description>Rate limit per user: 100 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17831,13 +18007,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>A kubeconfig file contains the credentials required for a client to access an Elastic Container instance on Kubernetes (ECK) cluster. The file includes identity and authentication data for accessing the destination cluster. To manage a cluster using kubectl, you must first connect to the cluster with its kubeconfig file. You can call the DescribeClusterUserKubeconfig operation to query the kubeconfig file for a specific cluster.</para>
+        /// <para>Retrieves the KubeConfig of a specified cluster. KubeConfig is used to configure access credentials for an ECK cluster on the client side, including identity and authentication data for accessing the target cluster. When you use kubectl for cluster management, you must first connect to the cluster by using KubeConfig. You can invoke the DescribeClusterUserKubeconfig operation to query the KubeConfig of the specified cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>A single user is limited to 100 calls per second.</description></item>
+        /// <item><description>Rate limit per user: 100 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17856,13 +18032,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>A kubeconfig file contains the credentials required for a client to access an Elastic Container instance on Kubernetes (ECK) cluster. The file includes identity and authentication data for accessing the destination cluster. To manage a cluster using kubectl, you must first connect to the cluster with its kubeconfig file. You can call the DescribeClusterUserKubeconfig operation to query the kubeconfig file for a specific cluster.</para>
+        /// <para>Retrieves the KubeConfig of a specified cluster. KubeConfig is used to configure access credentials for an ECK cluster on the client side, including identity and authentication data for accessing the target cluster. When you use kubectl for cluster management, you must first connect to the cluster by using KubeConfig. You can invoke the DescribeClusterUserKubeconfig operation to query the KubeConfig of the specified cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>A single user is limited to 100 calls per second.</description></item>
+        /// <item><description>Rate limit per user: 100 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -27185,14 +27361,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Use DescribeNetworkAttribute to query the configuration of a specific network.</para>
+        /// <para>Queries the configuration information of a specified network.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>API rate limit: 100 calls/sec.</description></item>
-        /// <item><description>Per-user rate limit: 10 calls/sec.</description></item>
+        /// <item><description>API call rate: 100 calls per second.</description></item>
+        /// <item><description>Call rate per user: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -27235,14 +27411,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Use DescribeNetworkAttribute to query the configuration of a specific network.</para>
+        /// <para>Queries the configuration information of a specified network.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>API rate limit: 100 calls/sec.</description></item>
-        /// <item><description>Per-user rate limit: 10 calls/sec.</description></item>
+        /// <item><description>API call rate: 100 calls per second.</description></item>
+        /// <item><description>Call rate per user: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -27285,14 +27461,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Use DescribeNetworkAttribute to query the configuration of a specific network.</para>
+        /// <para>Queries the configuration information of a specified network.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>API rate limit: 100 calls/sec.</description></item>
-        /// <item><description>Per-user rate limit: 10 calls/sec.</description></item>
+        /// <item><description>API call rate: 100 calls per second.</description></item>
+        /// <item><description>Call rate per user: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -27311,14 +27487,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Use DescribeNetworkAttribute to query the configuration of a specific network.</para>
+        /// <para>Queries the configuration information of a specified network.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>API rate limit: 100 calls/sec.</description></item>
-        /// <item><description>Per-user rate limit: 10 calls/sec.</description></item>
+        /// <item><description>API call rate: 100 calls per second.</description></item>
+        /// <item><description>Call rate per user: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -27729,14 +27905,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call DescribeNetworks to retrieve a list of networks.</para>
+        /// <para>Queries a list of networks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>API call frequency: 100 calls per second.</description></item>
-        /// <item><description>Per-user call frequency: 10 calls per second.</description></item>
+        /// <item><description>API call rate: 100 calls per second.</description></item>
+        /// <item><description>Call rate per user: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -27803,14 +27979,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call DescribeNetworks to retrieve a list of networks.</para>
+        /// <para>Queries a list of networks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>API call frequency: 100 calls per second.</description></item>
-        /// <item><description>Per-user call frequency: 10 calls per second.</description></item>
+        /// <item><description>API call rate: 100 calls per second.</description></item>
+        /// <item><description>Call rate per user: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -27877,14 +28053,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call DescribeNetworks to retrieve a list of networks.</para>
+        /// <para>Queries a list of networks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>API call frequency: 100 calls per second.</description></item>
-        /// <item><description>Per-user call frequency: 10 calls per second.</description></item>
+        /// <item><description>API call rate: 100 calls per second.</description></item>
+        /// <item><description>Call rate per user: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -27903,14 +28079,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call DescribeNetworks to retrieve a list of networks.</para>
+        /// <para>Queries a list of networks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>API call frequency: 100 calls per second.</description></item>
-        /// <item><description>Per-user call frequency: 10 calls per second.</description></item>
+        /// <item><description>API call rate: 100 calls per second.</description></item>
+        /// <item><description>Call rate per user: 10 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31257,7 +31433,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the DescribeVSwitchAttributes operation to query the configuration of a specified vSwitch.</para>
+        /// <para>Queries the configuration information of a specified vSwitch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31299,7 +31475,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the DescribeVSwitchAttributes operation to query the configuration of a specified vSwitch.</para>
+        /// <para>Queries the configuration information of a specified vSwitch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31341,7 +31517,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the DescribeVSwitchAttributes operation to query the configuration of a specified vSwitch.</para>
+        /// <para>Queries the configuration information of a specified vSwitch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31359,7 +31535,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the DescribeVSwitchAttributes operation to query the configuration of a specified vSwitch.</para>
+        /// <para>Queries the configuration information of a specified vSwitch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31377,7 +31553,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the DescribeVSwitches operation to retrieve information about VSwitches. You use VSwitches to configure private networks.</para>
+        /// <para>Queries information about vSwitches available for networking. Internal networks are organized by vSwitch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31451,7 +31627,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the DescribeVSwitches operation to retrieve information about VSwitches. You use VSwitches to configure private networks.</para>
+        /// <para>Queries information about vSwitches available for networking. Internal networks are organized by vSwitch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31525,7 +31701,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the DescribeVSwitches operation to retrieve information about VSwitches. You use VSwitches to configure private networks.</para>
+        /// <para>Queries information about vSwitches available for networking. Internal networks are organized by vSwitch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31543,7 +31719,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the DescribeVSwitches operation to retrieve information about VSwitches. You use VSwitches to configure private networks.</para>
+        /// <para>Queries information about vSwitches available for networking. Internal networks are organized by vSwitch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34525,14 +34701,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>To enhance the capabilities of Kubernetes, Edge Kubernetes (ECK) clusters support a variety of components, such as managed core components, applications, logging and monitoring, networking, storage, and security components. You can call the InstallClusterAddons operation to install components by specifying their names and versions.</para>
+        /// <para>Installs components in an ECK cluster to enhance Kubernetes capabilities. ECK clusters support various components, such as managed core components, as well as application, logging and monitoring, networking, storage, and security components. You can call the InstallClusterAddons operation to install components by specifying the component name and version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The call frequency for a single user is limited to 10 calls per second.</description></item>
-        /// <item><description>Cluster creation is an asynchronous operation. After the API call returns, the cluster requires 10 to 20 minutes to complete initialization. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
+        /// <item><description>The rate limit is 10 calls per second per user.</description></item>
+        /// <item><description>Cluster creation is an asynchronous operation. After the API call returns, wait 10 to 20 minutes for the cluster initialization to complete. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -34585,14 +34761,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>To enhance the capabilities of Kubernetes, Edge Kubernetes (ECK) clusters support a variety of components, such as managed core components, applications, logging and monitoring, networking, storage, and security components. You can call the InstallClusterAddons operation to install components by specifying their names and versions.</para>
+        /// <para>Installs components in an ECK cluster to enhance Kubernetes capabilities. ECK clusters support various components, such as managed core components, as well as application, logging and monitoring, networking, storage, and security components. You can call the InstallClusterAddons operation to install components by specifying the component name and version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The call frequency for a single user is limited to 10 calls per second.</description></item>
-        /// <item><description>Cluster creation is an asynchronous operation. After the API call returns, the cluster requires 10 to 20 minutes to complete initialization. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
+        /// <item><description>The rate limit is 10 calls per second per user.</description></item>
+        /// <item><description>Cluster creation is an asynchronous operation. After the API call returns, wait 10 to 20 minutes for the cluster initialization to complete. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -34645,14 +34821,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>To enhance the capabilities of Kubernetes, Edge Kubernetes (ECK) clusters support a variety of components, such as managed core components, applications, logging and monitoring, networking, storage, and security components. You can call the InstallClusterAddons operation to install components by specifying their names and versions.</para>
+        /// <para>Installs components in an ECK cluster to enhance Kubernetes capabilities. ECK clusters support various components, such as managed core components, as well as application, logging and monitoring, networking, storage, and security components. You can call the InstallClusterAddons operation to install components by specifying the component name and version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The call frequency for a single user is limited to 10 calls per second.</description></item>
-        /// <item><description>Cluster creation is an asynchronous operation. After the API call returns, the cluster requires 10 to 20 minutes to complete initialization. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
+        /// <item><description>The rate limit is 10 calls per second per user.</description></item>
+        /// <item><description>Cluster creation is an asynchronous operation. After the API call returns, wait 10 to 20 minutes for the cluster initialization to complete. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -34671,14 +34847,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>To enhance the capabilities of Kubernetes, Edge Kubernetes (ECK) clusters support a variety of components, such as managed core components, applications, logging and monitoring, networking, storage, and security components. You can call the InstallClusterAddons operation to install components by specifying their names and versions.</para>
+        /// <para>Installs components in an ECK cluster to enhance Kubernetes capabilities. ECK clusters support various components, such as managed core components, as well as application, logging and monitoring, networking, storage, and security components. You can call the InstallClusterAddons operation to install components by specifying the component name and version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The call frequency for a single user is limited to 10 calls per second.</description></item>
-        /// <item><description>Cluster creation is an asynchronous operation. After the API call returns, the cluster requires 10 to 20 minutes to complete initialization. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
+        /// <item><description>The rate limit is 10 calls per second per user.</description></item>
+        /// <item><description>Cluster creation is an asynchronous operation. After the API call returns, wait 10 to 20 minutes for the cluster initialization to complete. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -35597,7 +35773,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details about cluster components.</para>
+        /// <para>Queries the details of cluster components.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -35627,7 +35803,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details about cluster components.</para>
+        /// <para>Queries the details of cluster components.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -35657,7 +35833,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details about cluster components.</para>
+        /// <para>Queries the details of cluster components.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -35671,7 +35847,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details about cluster components.</para>
+        /// <para>Queries the details of cluster components.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -36989,14 +37165,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the node configurations in a cluster node pool, such as kubelet configurations and node rotation configurations. Modifying node configurations changes node configurations and restarts kubelet in batches, which may affect node operations and workload execution. Perform this operation during off-peak hours.</para>
+        /// <para>Modifies the node configuration in a cluster node pool, such as kubelet configurations and node rotation configurations. Modifying node configurations changes the configurations in batches and restarts kubelet, which may affect node and workload operations. Perform this operation during off-peak hours.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Single-user call frequency: 10 calls per second.</description></item>
-        /// <item><description>Creating a cluster is an asynchronous operation. After the API call returns, wait 10 to 20 minutes for the cluster to finish initialization. During this process, call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
+        /// <item><description>Rate limit per user: 10 calls per second.</description></item>
+        /// <item><description>Cluster creation is an asynchronous operation. After you call the API operation, you must wait 10 to 20 minutes for the cluster initialization to complete. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -37065,14 +37241,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the node configurations in a cluster node pool, such as kubelet configurations and node rotation configurations. Modifying node configurations changes node configurations and restarts kubelet in batches, which may affect node operations and workload execution. Perform this operation during off-peak hours.</para>
+        /// <para>Modifies the node configuration in a cluster node pool, such as kubelet configurations and node rotation configurations. Modifying node configurations changes the configurations in batches and restarts kubelet, which may affect node and workload operations. Perform this operation during off-peak hours.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Single-user call frequency: 10 calls per second.</description></item>
-        /// <item><description>Creating a cluster is an asynchronous operation. After the API call returns, wait 10 to 20 minutes for the cluster to finish initialization. During this process, call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
+        /// <item><description>Rate limit per user: 10 calls per second.</description></item>
+        /// <item><description>Cluster creation is an asynchronous operation. After you call the API operation, you must wait 10 to 20 minutes for the cluster initialization to complete. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -37141,14 +37317,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the node configurations in a cluster node pool, such as kubelet configurations and node rotation configurations. Modifying node configurations changes node configurations and restarts kubelet in batches, which may affect node operations and workload execution. Perform this operation during off-peak hours.</para>
+        /// <para>Modifies the node configuration in a cluster node pool, such as kubelet configurations and node rotation configurations. Modifying node configurations changes the configurations in batches and restarts kubelet, which may affect node and workload operations. Perform this operation during off-peak hours.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Single-user call frequency: 10 calls per second.</description></item>
-        /// <item><description>Creating a cluster is an asynchronous operation. After the API call returns, wait 10 to 20 minutes for the cluster to finish initialization. During this process, call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
+        /// <item><description>Rate limit per user: 10 calls per second.</description></item>
+        /// <item><description>Cluster creation is an asynchronous operation. After you call the API operation, you must wait 10 to 20 minutes for the cluster initialization to complete. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -37167,14 +37343,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the node configurations in a cluster node pool, such as kubelet configurations and node rotation configurations. Modifying node configurations changes node configurations and restarts kubelet in batches, which may affect node operations and workload execution. Perform this operation during off-peak hours.</para>
+        /// <para>Modifies the node configuration in a cluster node pool, such as kubelet configurations and node rotation configurations. Modifying node configurations changes the configurations in batches and restarts kubelet, which may affect node and workload operations. Perform this operation during off-peak hours.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Single-user call frequency: 10 calls per second.</description></item>
-        /// <item><description>Creating a cluster is an asynchronous operation. After the API call returns, wait 10 to 20 minutes for the cluster to finish initialization. During this process, call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
+        /// <item><description>Rate limit per user: 10 calls per second.</description></item>
+        /// <item><description>Cluster creation is an asynchronous operation. After you call the API operation, you must wait 10 to 20 minutes for the cluster initialization to complete. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -40293,14 +40469,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call ModifyVSwitchAttribute to modify network information.</para>
+        /// <para>Modifies the attributes of a vSwitch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>API call frequency: 100 calls per second.</description></item>
-        /// <item><description>Per-user call frequency: 5 calls per second.</description></item>
+        /// <item><description>API rate limit: 100 calls per second.</description></item>
+        /// <item><description>Rate limit per user: 5 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -40359,14 +40535,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call ModifyVSwitchAttribute to modify network information.</para>
+        /// <para>Modifies the attributes of a vSwitch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>API call frequency: 100 calls per second.</description></item>
-        /// <item><description>Per-user call frequency: 5 calls per second.</description></item>
+        /// <item><description>API rate limit: 100 calls per second.</description></item>
+        /// <item><description>Rate limit per user: 5 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -40425,14 +40601,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call ModifyVSwitchAttribute to modify network information.</para>
+        /// <para>Modifies the attributes of a vSwitch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>API call frequency: 100 calls per second.</description></item>
-        /// <item><description>Per-user call frequency: 5 calls per second.</description></item>
+        /// <item><description>API rate limit: 100 calls per second.</description></item>
+        /// <item><description>Rate limit per user: 5 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -40451,14 +40627,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call ModifyVSwitchAttribute to modify network information.</para>
+        /// <para>Modifies the attributes of a vSwitch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>API call frequency: 100 calls per second.</description></item>
-        /// <item><description>Per-user call frequency: 5 calls per second.</description></item>
+        /// <item><description>API rate limit: 100 calls per second.</description></item>
+        /// <item><description>Rate limit per user: 5 calls per second.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -50397,6 +50573,162 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes a secondary CIDR block from a network.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before deleting a secondary CIDR block from a network, delete the vSwitches created in the secondary CIDR block.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UnassociateNetworkCidrBlockRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnassociateNetworkCidrBlockResponse
+        /// </returns>
+        public UnassociateNetworkCidrBlockResponse UnassociateNetworkCidrBlockWithOptions(UnassociateNetworkCidrBlockRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6CidrBlock))
+            {
+                query["Ipv6CidrBlock"] = request.Ipv6CidrBlock;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkId))
+            {
+                query["NetworkId"] = request.NetworkId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecondaryCidrBlock))
+            {
+                query["SecondaryCidrBlock"] = request.SecondaryCidrBlock;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UnassociateNetworkCidrBlock",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UnassociateNetworkCidrBlockResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a secondary CIDR block from a network.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before deleting a secondary CIDR block from a network, delete the vSwitches created in the secondary CIDR block.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UnassociateNetworkCidrBlockRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnassociateNetworkCidrBlockResponse
+        /// </returns>
+        public async Task<UnassociateNetworkCidrBlockResponse> UnassociateNetworkCidrBlockWithOptionsAsync(UnassociateNetworkCidrBlockRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6CidrBlock))
+            {
+                query["Ipv6CidrBlock"] = request.Ipv6CidrBlock;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkId))
+            {
+                query["NetworkId"] = request.NetworkId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecondaryCidrBlock))
+            {
+                query["SecondaryCidrBlock"] = request.SecondaryCidrBlock;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UnassociateNetworkCidrBlock",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UnassociateNetworkCidrBlockResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a secondary CIDR block from a network.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before deleting a secondary CIDR block from a network, delete the vSwitches created in the secondary CIDR block.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UnassociateNetworkCidrBlockRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnassociateNetworkCidrBlockResponse
+        /// </returns>
+        public UnassociateNetworkCidrBlockResponse UnassociateNetworkCidrBlock(UnassociateNetworkCidrBlockRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UnassociateNetworkCidrBlockWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a secondary CIDR block from a network.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before deleting a secondary CIDR block from a network, delete the vSwitches created in the secondary CIDR block.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UnassociateNetworkCidrBlockRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnassociateNetworkCidrBlockResponse
+        /// </returns>
+        public async Task<UnassociateNetworkCidrBlockResponse> UnassociateNetworkCidrBlockAsync(UnassociateNetworkCidrBlockRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UnassociateNetworkCidrBlockWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Calls UnloadRegionSDG to delete preloaded data.</para>
         /// </summary>
         /// 
@@ -51405,14 +51737,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the UpgradeClusterAddons operation to upgrade cluster component instances.</para>
+        /// <para>Upgrades the versions of cluster add-on instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Each user can call this operation up to 10 times per second.</description></item>
-        /// <item><description>Creating a cluster is an asynchronous operation. After calling the operation, wait 10 to 20 minutes for the cluster to initialize. During this time, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
+        /// <item><description>The maximum call frequency per user is 10 calls per second.</description></item>
+        /// <item><description>Creating a cluster is an asynchronous operation. After the API call returns, you must wait 10 to 20 minutes for the cluster initialization to complete. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -51465,14 +51797,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the UpgradeClusterAddons operation to upgrade cluster component instances.</para>
+        /// <para>Upgrades the versions of cluster add-on instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Each user can call this operation up to 10 times per second.</description></item>
-        /// <item><description>Creating a cluster is an asynchronous operation. After calling the operation, wait 10 to 20 minutes for the cluster to initialize. During this time, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
+        /// <item><description>The maximum call frequency per user is 10 calls per second.</description></item>
+        /// <item><description>Creating a cluster is an asynchronous operation. After the API call returns, you must wait 10 to 20 minutes for the cluster initialization to complete. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -51525,14 +51857,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the UpgradeClusterAddons operation to upgrade cluster component instances.</para>
+        /// <para>Upgrades the versions of cluster add-on instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Each user can call this operation up to 10 times per second.</description></item>
-        /// <item><description>Creating a cluster is an asynchronous operation. After calling the operation, wait 10 to 20 minutes for the cluster to initialize. During this time, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
+        /// <item><description>The maximum call frequency per user is 10 calls per second.</description></item>
+        /// <item><description>Creating a cluster is an asynchronous operation. After the API call returns, you must wait 10 to 20 minutes for the cluster initialization to complete. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -51551,14 +51883,14 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the UpgradeClusterAddons operation to upgrade cluster component instances.</para>
+        /// <para>Upgrades the versions of cluster add-on instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Each user can call this operation up to 10 times per second.</description></item>
-        /// <item><description>Creating a cluster is an asynchronous operation. After calling the operation, wait 10 to 20 minutes for the cluster to initialize. During this time, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
+        /// <item><description>The maximum call frequency per user is 10 calls per second.</description></item>
+        /// <item><description>Creating a cluster is an asynchronous operation. After the API call returns, you must wait 10 to 20 minutes for the cluster initialization to complete. During this process, you can call the DescribeClustersV1 operation to query the cluster creation status. After the cluster is created, you can call the DescribeClusterUserKubeconfig operation to obtain the cluster certificate.</description></item>
         /// </list>
         /// </description>
         /// 

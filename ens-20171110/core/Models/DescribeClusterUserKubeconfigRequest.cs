@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use the internal access address. The default value is false.</para>
+        /// <para>Specifies whether the internal-facing access address of the private network is used. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

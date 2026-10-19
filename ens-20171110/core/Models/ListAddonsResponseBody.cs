@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ListAddonsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of component information.</para>
+        /// <para>The list of component information.</para>
         /// </summary>
         [NameInMap("Addons")]
         [Validation(Required=false)]
         public List<ListAddonsResponseBodyAddons> Addons { get; set; }
         public class ListAddonsResponseBodyAddons : TeaModel {
             /// <summary>
-            /// <para>Indicates whether to automatically clean up associated cloud resources.</para>
+            /// <para>Indicates whether associated cloud resources are automatically cleaned up.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public bool? CleanupCloudResources { get; set; }
 
             /// <summary>
-            /// <para>The schemas for the custom parameters of the component.</para>
+            /// <para>The list of schemas for custom parameters of the component.</para>
             /// </summary>
             [NameInMap("ConfigSchema")]
             [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string ConfigVersion { get; set; }
 
                 /// <summary>
-                /// <para>The name of the component.</para>
+                /// <para>The component name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>edge-csi-lite</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             }
 
             /// <summary>
-            /// <para>The name of the component.</para>
+            /// <para>The component name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>edge-csi-lite</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The version of the component.</para>
+            /// <para>The component version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v2</para>

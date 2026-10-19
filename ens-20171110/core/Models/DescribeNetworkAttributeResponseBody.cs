@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
-        /// <para>The time at which the network was created. The time is in UTC and is formatted as yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// <para>The creation time. The time is displayed in UTC in the yyyy-MM-ddTHH:mm:ssZ format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-06-01T00:00:00Z</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ENS node.</para>
+        /// <para>The ENS edge zone ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -248,10 +248,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <summary>
         /// <para>The status of the network. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Pending: The network is being configured.</para>
-        /// </description></item>
-        /// <item><description><para>Available: The network is ready for use.</para>
-        /// </description></item>
+        /// <item><description>Pending: Configuring.</description></item>
+        /// <item><description>Available: Available.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

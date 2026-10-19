@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class ModifyClusterNodePoolRequest : TeaModel {
         /// <summary>
         /// <para>The cluster ID.</para>
-        /// <para>Only ECK cluster IDs with the eck- prefix are supported. You can obtain the ID by calling the DescribeClustersV1 operation. Serverless cluster IDs returned by the DescribeCluster operation are not supported. The cluster must be in the running state. After creation, it typically takes 10 to 20 minutes to complete initialization.</para>
+        /// <para>Only ECK cluster IDs with the eck- prefix are supported. You can obtain the ID by calling the DescribeClustersV1 operation. Serverless cluster IDs returned by the DescribeCluster operation are not supported. The cluster must be in the running state. After creation, it usually takes 10 to 20 minutes to complete initialization.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public ModifyClusterNodePoolRequestKubernetesConfig KubernetesConfig { get; set; }
         public class ModifyClusterNodePoolRequestKubernetesConfig : TeaModel {
             /// <summary>
-            /// <para>The script to run after instance creation but before joining the cluster. The content must be Base64-encoded.</para>
+            /// <para>The script to be executed after the instance is created and before it joins the cluster. The content must be Base64-encoded.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ZWNobyBvawo=</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string PreUserData { get; set; }
 
             /// <summary>
-            /// <para>The script to run after instance creation and after joining the cluster. The content must be Base64-encoded.</para>
+            /// <para>The script to be executed after the instance is created and after it joins the cluster. The content must be Base64-encoded.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ZWNobyBvawo=</para>
@@ -59,6 +59,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public ModifyClusterNodePoolRequestNodepoolInfo NodepoolInfo { get; set; }
         public class ModifyClusterNodePoolRequestNodepoolInfo : TeaModel {
             /// <summary>
+            /// <para>The name of the node pool.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test1</para>
             /// </summary>
@@ -67,7 +69,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The node pool ID.</para>
+            /// <para>The ID of the node pool.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -94,7 +96,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public List<ModifyClusterNodePoolRequestScalingGroupDataDisks> DataDisks { get; set; }
             public class ModifyClusterNodePoolRequestScalingGroupDataDisks : TeaModel {
                 /// <summary>
-                /// <para>The data cloud disk type.</para>
+                /// <para>The category of the data cloud disk.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cloud_efficiency</para>
@@ -104,7 +106,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public string Category { get; set; }
 
                 /// <summary>
-                /// <para>The data cloud disk size.</para>
+                /// <para>The size of the data cloud disk.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>40</para>
@@ -116,7 +118,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             }
 
             /// <summary>
-            /// <para>The instance image ID.</para>
+            /// <para>The ID of the instance image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>m-68bysm5a8gkm7oik7ngacf0in</para>
@@ -126,7 +128,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>The instance billing type.</para>
+            /// <para>The billing method of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PostPaid</para>
@@ -143,7 +145,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public List<string> InstanceTypes { get; set; }
 
             /// <summary>
-            /// <para>The instance key pair. This parameter is mutually exclusive with password.</para>
+            /// <para>The name of the instance key pair. This parameter and Password are mutually exclusive.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tf-testAcc</para>
@@ -153,7 +155,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string KeyPairName { get; set; }
 
             /// <summary>
-            /// <para>The instance password. This parameter is mutually exclusive with key_pair_name.</para>
+            /// <para>The instance password. This parameter and key_pair_name are mutually exclusive.</para>
             /// 
             /// <b>Example:</b>
             /// <para>@AN5Ejx1YyzzK</para>
@@ -163,7 +165,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Password { get; set; }
 
             /// <summary>
-            /// <para>The system cloud disk type.</para>
+            /// <para>The category of the system cloud disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_efficiency</para>
@@ -173,7 +175,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string SystemDiskCategory { get; set; }
 
             /// <summary>
-            /// <para>The system cloud disk size.</para>
+            /// <para>The size of the system cloud disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -183,7 +185,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public int? SystemDiskSize { get; set; }
 
             /// <summary>
-            /// <para>The vSwitches used by instances.</para>
+            /// <para>The vSwitches used by the instances.</para>
             /// </summary>
             [NameInMap("VswitchIds")]
             [Validation(Required=false)]

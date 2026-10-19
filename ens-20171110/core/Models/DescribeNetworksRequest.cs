@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeNetworksRequest : TeaModel {
         /// <summary>
-        /// <para>ENS node ID.</para>
+        /// <para>The ENS edge zone ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing-telecom</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// <para>Array of ENS edge zone IDs. Array length: 1–100.</para>
+        /// <para>The array of ENS edge zone IDs. Array length: 1 to 100.</para>
         /// </summary>
         [NameInMap("EnsRegionIds")]
         [Validation(Required=false)]
         public List<string> EnsRegionIds { get; set; }
 
         /// <summary>
-        /// <para>Network ID.</para>
+        /// <para>The network ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>n-5***</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NetworkId { get; set; }
 
         /// <summary>
-        /// <para>Array of network IDs. Array length: 1–100.</para>
+        /// <para>The array of network IDs. Array length: 1 to 100.</para>
         /// </summary>
         [NameInMap("NetworkIds")]
         [Validation(Required=false)]
         public List<string> NetworkIds { get; set; }
 
         /// <summary>
-        /// <para>Network name.</para>
+        /// <para>The network name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string NetworkName { get; set; }
 
         /// <summary>
-        /// <para>Page number. Default value: <b>1</b>.</para>
+        /// <para>The page number of the list. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Number of entries per page in a paged query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page in a paging query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
