@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string NoticeCountDetail { get; set; }
 
         /// <summary>
-        /// <para>The details of certificate brand products.</para>
+        /// <para>The product details of certificate brands.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string ProductCountList { get; set; }
 
         /// <summary>
-        /// <para>The acceleration gateway forwarding quota.</para>
+        /// <para>The forwarding quota of the acceleration gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{TotalCount=116900, RemainCount=90448, AutoPay=0, AutoPayCount=5000, UsedCount=26452}</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string ProxyCountDetail { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>08F45EA0-66A7-4504-9B31-3589F5CE308D</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of domain names bound to certificates.</para>
+        /// <para>The total number of domain names bound to the certificates.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{TotalCount=573, RemainCount=243, FreeQuota=10, UsedCount=330}</para>

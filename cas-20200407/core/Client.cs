@@ -5870,9 +5870,9 @@ namespace AlibabaCloud.SDK.Cas20200407
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the number of CA certificates (including root CA certificates and subordinate CA certificates) that you have created.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation as needed.</para>
+        /// <para>This operation queries the number of CA certificates that you have created, including root CA certificates and subordinate CA certificates.</para>
+        /// <h2>Rate limit</h2>
+        /// <para>The rate limit for this operation is 10 queries per second (QPS) per user. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5911,9 +5911,9 @@ namespace AlibabaCloud.SDK.Cas20200407
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the number of CA certificates (including root CA certificates and subordinate CA certificates) that you have created.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation as needed.</para>
+        /// <para>This operation queries the number of CA certificates that you have created, including root CA certificates and subordinate CA certificates.</para>
+        /// <h2>Rate limit</h2>
+        /// <para>The rate limit for this operation is 10 queries per second (QPS) per user. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5952,9 +5952,9 @@ namespace AlibabaCloud.SDK.Cas20200407
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the number of CA certificates (including root CA certificates and subordinate CA certificates) that you have created.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation as needed.</para>
+        /// <para>This operation queries the number of CA certificates that you have created, including root CA certificates and subordinate CA certificates.</para>
+        /// <h2>Rate limit</h2>
+        /// <para>The rate limit for this operation is 10 queries per second (QPS) per user. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5977,9 +5977,9 @@ namespace AlibabaCloud.SDK.Cas20200407
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the number of CA certificates (including root CA certificates and subordinate CA certificates) that you have created.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation as needed.</para>
+        /// <para>This operation queries the number of CA certificates that you have created, including root CA certificates and subordinate CA certificates.</para>
+        /// <h2>Rate limit</h2>
+        /// <para>The rate limit for this operation is 10 queries per second (QPS) per user. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8685,8 +8685,13 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of deployment tasks after you create a deployment task.</para>
+        /// <para>Queries the list of deployment tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After a task is created, it is in the editing state. You must call the UpdateDeploymentJobStatus operation to change the state to pending. Otherwise, the task will not be executed.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDeploymentJobRequest
@@ -8702,9 +8707,17 @@ namespace AlibabaCloud.SDK.Cas20200407
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertId))
+            {
+                query["CertId"] = request.CertId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
             {
                 query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobType))
             {
@@ -8739,8 +8752,13 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of deployment tasks after you create a deployment task.</para>
+        /// <para>Queries the list of deployment tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After a task is created, it is in the editing state. You must call the UpdateDeploymentJobStatus operation to change the state to pending. Otherwise, the task will not be executed.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDeploymentJobRequest
@@ -8756,9 +8774,17 @@ namespace AlibabaCloud.SDK.Cas20200407
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertId))
+            {
+                query["CertId"] = request.CertId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
             {
                 query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobType))
             {
@@ -8793,8 +8819,13 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of deployment tasks after you create a deployment task.</para>
+        /// <para>Queries the list of deployment tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After a task is created, it is in the editing state. You must call the UpdateDeploymentJobStatus operation to change the state to pending. Otherwise, the task will not be executed.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDeploymentJobRequest
@@ -8811,8 +8842,13 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of deployment tasks after you create a deployment task.</para>
+        /// <para>Queries the list of deployment tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After a task is created, it is in the editing state. You must call the UpdateDeploymentJobStatus operation to change the state to pending. Otherwise, the task will not be executed.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDeploymentJobRequest

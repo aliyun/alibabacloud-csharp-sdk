@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The data returned by the API.</para>
+        /// <para>The data returned in the response.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string CertDomain { get; set; }
 
             /// <summary>
-            /// <para>The certificate type. Valid values:</para>
+            /// <para>The certificate type.</para>
             /// <list type="bullet">
             /// <item><description><b>upload</b>: uploaded certificate</description></item>
             /// <item><description><b>buy</b>: purchased certificate</description></item>
@@ -52,10 +52,20 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string CertType { get; set; }
 
             /// <summary>
-            /// <para>The deletion flag. This parameter has no practical significance. Valid values:</para>
+            /// <para>The list of SSL certificates.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[{\&quot;Type\&quot;: \&quot;Server\&quot;, \&quot;Id\&quot;: \&quot;22803164-cn-hangzhou\&quot;}]</para>
+            /// </summary>
+            [NameInMap("Certificates")]
+            [Validation(Required=false)]
+            public object Certificates { get; set; }
+
+            /// <summary>
+            /// <para>The deletion flag. This field has no practical meaning.</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: not deleted.</description></item>
-            /// <item><description><b>1</b>: deleted.</description></item>
+            /// <item><description><b>0</b>: not deleted</description></item>
+            /// <item><description><b>1</b>: deleted</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -66,7 +76,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public int? Del { get; set; }
 
             /// <summary>
-            /// <para>The end time of the deployment task execution, in UNIX timestamp format (seconds).</para>
+            /// <para>The end time of the deployment task execution. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1606482979000</para>
@@ -76,7 +86,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the deployment task was created, in UNIX timestamp format (seconds).</para>
+            /// <para>The creation time of the deployment task. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1624343180000</para>
@@ -86,7 +96,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The time when the deployment task was last modified, in UNIX timestamp format (seconds).</para>
+            /// <para>The last modification time of the deployment task. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1606482979000</para>
@@ -96,7 +106,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The deployment task ID. You can use this ID to query the deployment task details and status.</para>
+            /// <para>The deployment task ID. You can use this ID to query the details and status of the deployment task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>19975</para>
@@ -116,10 +126,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The task type. Valid values:</para>
+            /// <para>The task type.</para>
             /// <list type="bullet">
-            /// <item><description><b>cloud</b>: multi-cloud deployment task.</description></item>
-            /// <item><description><b>user</b>: cloud service deployment task (excluding ECS instances).</description></item>
+            /// <item><description><b>cloud</b>: multi-cloud deployment task</description></item>
+            /// <item><description><b>user</b>: cloud service deployment task (excluding ECS instances)</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -150,10 +160,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string ProductName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the task contains a rollback worker. For example, if a cloud service in the task has been rolled back, the value <b>1</b> is returned. Valid values:</para>
+            /// <para>Indicates whether the task contains a rollback worker. For example, if a cloud service in the task has been rolled back, the value <b>1</b> is returned.</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: does not contain a rollback worker.</description></item>
-            /// <item><description><b>1</b>: contains a rollback worker.</description></item>
+            /// <item><description><b>0</b>: The task does not contain a rollback worker.</description></item>
+            /// <item><description><b>1</b>: The task contains a rollback worker.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -164,7 +174,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public int? Rollback { get; set; }
 
             /// <summary>
-            /// <para>The scheduled time of the task, in UNIX timestamp format (seconds).</para>
+            /// <para>The scheduling time of the task. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1606482979000</para>
@@ -174,7 +184,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string ScheduleTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of the deployment task execution, in UNIX timestamp format (seconds).</para>
+            /// <para>The start time of the deployment task execution. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1606482979000</para>
@@ -184,14 +194,14 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The deployment task status. Valid values:</para>
+            /// <para>The deployment task status.</para>
             /// <list type="bullet">
-            /// <item><description><b>pending</b>: pending execution.</description></item>
-            /// <item><description><b>editing</b>: being edited.</description></item>
-            /// <item><description><b>scheduling</b>: being scheduled.</description></item>
-            /// <item><description><b>processing</b>: being deployed.</description></item>
-            /// <item><description><b>error</b>: deployment failed.</description></item>
-            /// <item><description><b>success</b>: deployment succeeded.</description></item>
+            /// <item><description><b>pending</b>: pending</description></item>
+            /// <item><description><b>editing</b>: editing</description></item>
+            /// <item><description><b>scheduling</b>: scheduling</description></item>
+            /// <item><description><b>processing</b>: deploying</description></item>
+            /// <item><description><b>error</b>: deployment failed</description></item>
+            /// <item><description><b>success</b>: deployment successful</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -214,7 +224,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         }
 
         /// <summary>
-        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The request ID. This ID is generated by Alibaba Cloud for the request and can be used to troubleshoot and locate issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345678-1234-1234-1234-123456789ABC</para>
@@ -224,7 +234,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of deployment tasks per page. Default value: <b>50</b>.</para>
+        /// <para>The number of deployment tasks returned on each page. Default value: <b>50</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -234,7 +244,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public int? ShowSize { get; set; }
 
         /// <summary>
-        /// <para>The total number of deployment tasks returned.</para>
+        /// <para>The total number of deployment tasks queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
