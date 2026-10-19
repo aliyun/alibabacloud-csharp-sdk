@@ -11,6 +11,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
     public class DescribeAuditRecordsResponseBody : TeaModel {
         /// <summary>
         /// <para>The end time of the query.</para>
+        /// <para>The time is in the YYYY-MM-DDTHH:mm:ssZ format and displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-03-25T12:10:00Z</para>
@@ -78,7 +79,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number of the page to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -88,7 +89,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries returned per page.</para>
+        /// <para>The maximum number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -109,6 +110,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// <para>The start time of the query.</para>
+        /// <para>The time is in the YYYY-MM-DDTHH:mm:ssZ format and displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-03-24T12:10:00Z</para>
@@ -118,7 +120,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned entries.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22222</para>

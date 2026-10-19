@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CancelActiveOperationTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IDs of O\&amp;M events that are canceled at a time. Separate multiple IDs with commas (,).</para>
+        /// <para>The IDs of the canceled O&amp;M events. Multiple IDs are separated by commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1508850,1508310,1507849,1506274</para>

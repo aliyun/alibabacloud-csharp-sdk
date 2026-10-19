@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <list type="bullet">
         /// <item><description><b>cluster</b>: Cluster Edition.</description></item>
         /// <item><description><b>standard</b>: Standard Edition.</description></item>
-        /// <item><description><b>rwsplit</b>: read/write splitting edition.</description></item>
+        /// <item><description><b>rwsplit</b>: read/write splitting Edition.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The resource group ID.</para>
         /// <remarks>
-        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation or use the console to obtain the resource group ID. Related operations, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation or use the console to obtain the resource group ID. Related operations: see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

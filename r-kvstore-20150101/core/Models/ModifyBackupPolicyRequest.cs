@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyBackupPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The number of days for which you want to retain data backup files. Valid values: 7 to 730. Default value: 7.</para>
+        /// <para>The number of days for which data backups are retained. Default value: 7. Valid values: 7 to 730.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? BackupRetentionPeriod { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the data flashback feature for the instance. Valid values:</para>
+        /// <para>Specifies whether to enable the data flashback feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: enables the data flashback feature. You must also enable append-only file (AOF) persistence by setting <c>appendonly</c> to <c>yes</c> in the parameter settings of the instance. Then, you can use the data flashback feature.</description></item>
-        /// <item><description><b>0</b> (default): disables the data flashback feature.</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> This parameter is available only for Tair (Enterprise Edition) DRAM-based and persistent memory-optimized instances. For more information, see <a href="https://help.aliyun.com/document_detail/148479.html">Data flashback</a>.</para>
+        /// <item><description><b>1</b>: Enabled. Make sure that append-only file (AOF) persistence is enabled in the parameter settings of the instance (<c>appendonly</c> is set to <c>yes</c>). The data flashback feature is available only after AOF persistence is enabled.</description></item>
+        /// <item><description><b>0</b>: Disabled. This is the default value.<remarks>
+        /// <para>This parameter is supported only by Tair (Enterprise Edition) memory-optimized and persistent memory-optimized instances. For more information, see <a href="https://help.aliyun.com/document_detail/148479.html">Data flashback</a>.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? EnableBackupLog { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The days of the week to back up data. Valid values:</para>
+        /// <para>The backup cycle. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Monday</b></description></item>
         /// <item><description><b>Tuesday</b></description></item>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <item><description><b>Sunday</b></description></item>
         /// </list>
         /// <remarks>
-        /// <para>Separate multiple options with commas (,).</para>
+        /// <para>You can specify multiple values. Separate them with commas (,).</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -79,9 +79,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string PreferredBackupPeriod { get; set; }
 
         /// <summary>
-        /// <para>The time range to back up data. Specify the time in the <em>HH:mm</em>Z-<em>HH:mm</em>Z format. The time is displayed in UTC.</para>
+        /// <para>The backup time. Specify the time in the <i>HH:mm</i>Z-<i>HH:mm</i>Z format (UTC).</para>
         /// <remarks>
-        /// <para>The beginning and end of the time range must be on the hour. The duration must be an hour.</para>
+        /// <para>The time must be on the hour, and the interval must be 1 hour.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

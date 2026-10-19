@@ -10,15 +10,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CreateGlobalDistributeCacheRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies when to perform the operation. Valid values:</para>
+        /// <para>The time when the operation is executed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Immediately</b>: Performs the operation immediately.</para>
-        /// </description></item>
-        /// <item><description><para><b>MaintainTime</b>: Performs the operation during the maintenance window. This is the default value.</para>
-        /// </description></item>
+        /// <item><description><b>Immediately</b>: Executes the operation immediately.</description></item>
+        /// <item><description><b>MaintainTime</b>: Executes the operation during the maintenance window. This is the default value.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to change the maintenance window of the instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of the instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -39,7 +37,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The ID of the resource group.</para>
         /// <remarks>
-        /// <para>This is a system parameter. You do not need to specify it.</para>
+        /// <para>You do not need to specify this system parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -64,7 +62,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the source instance.</para>
+        /// <para>The instance ID to be transformed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

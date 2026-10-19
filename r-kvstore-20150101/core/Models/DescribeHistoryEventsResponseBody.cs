@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeHistoryEventsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of events.</para>
+        /// <para>The list of events.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeHistoryEventsResponseBodyItems> Items { get; set; }
         public class DescribeHistoryEventsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The data returned.</para>
+            /// <para>The data overview.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public DescribeHistoryEventsResponseBodyItemsData Data { get; set; }
             public class DescribeHistoryEventsResponseBodyItemsData : TeaModel {
                 /// <summary>
-                /// <para>The cloud service type of the application group. Valid values:</para>
+                /// <para>The type of the cloud service for the application group. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>web</b>: web application.</description></item>
-                /// <item><description><b>native</b>: local application.</description></item>
+                /// <item><description><b>web</b>: Web applications.</description></item>
+                /// <item><description><b>native</b>: Native applications.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string CmsProduct { get; set; }
 
                 /// <summary>
-                /// <para>The database type.</para>
+                /// <para>The type of the database.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>redis</para>
@@ -68,7 +68,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string DetailReason { get; set; }
 
                 /// <summary>
-                /// <para>The time when the alert was closed.</para>
+                /// <para>The end time of the alert.</para>
+                /// <para>Specify the time in the YYYY-MM-DDTHH:mm:ssZ format. The time must be in UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-03-06T11:46:01Z</para>
@@ -78,12 +79,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The system event category. Valid values:</para>
+                /// <para>The category of the system event. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Exception</b>: abnormal events</description></item>
-                /// <item><description><b>Optimize</b>: optimization events.</description></item>
-                /// <item><description><b>Notification</b>: notification events.</description></item>
-                /// <item><description><b>Maintenance</b>: scheduled maintenance events.</description></item>
+                /// <item><description><b>Exception</b>: Exception events.</description></item>
+                /// <item><description><b>Optimize</b>: Optimization events.</description></item>
+                /// <item><description><b>Notification</b>: Notification events.</description></item>
+                /// <item><description><b>Maintenance</b>: Scheduled O&amp;M events.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -94,7 +95,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string EventCategory { get; set; }
 
                 /// <summary>
-                /// <para>The event code.</para>
+                /// <para>The code of the event.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ENT000014</para>
@@ -104,7 +105,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string EventCode { get; set; }
 
                 /// <summary>
-                /// <para>The event details.</para>
+                /// <para>The details of the event.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xxxxx</para>
@@ -124,7 +125,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string EventId { get; set; }
 
                 /// <summary>
-                /// <para>The event impact.</para>
+                /// <para>The impact overview of the event.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xxxxx</para>
@@ -134,11 +135,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string EventImpact { get; set; }
 
                 /// <summary>
-                /// <para>The level of the event. Valid values:</para>
+                /// <para>The event level. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>INFO</b></description></item>
-                /// <item><description><b>WARN</b></description></item>
-                /// <item><description><b>CRITICAL</b></description></item>
+                /// <item><description><b>INFO</b>: Information.</description></item>
+                /// <item><description><b>WARN</b>: Warning.</description></item>
+                /// <item><description><b>CRITICAL</b>: Critical.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -149,7 +150,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string EventLevel { get; set; }
 
                 /// <summary>
-                /// <para>The event source.</para>
+                /// <para>The source of the event operation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xxxxx</para>
@@ -161,12 +162,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <summary>
                 /// <para>The status of the event. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Inquiring</b></description></item>
-                /// <item><description><b>Scheduled</b></description></item>
-                /// <item><description><b>Running</b></description></item>
-                /// <item><description><b>Succeed</b></description></item>
-                /// <item><description><b>Failed</b></description></item>
-                /// <item><description><b>Canceled</b></description></item>
+                /// <item><description><b>Inquiring</b>: Inquiring.</description></item>
+                /// <item><description><b>Scheduled</b>: Scheduled.</description></item>
+                /// <item><description><b>Running</b>: Running.</description></item>
+                /// <item><description><b>Succeed</b>: Succeeded.</description></item>
+                /// <item><description><b>Failed</b>: Failed.</description></item>
+                /// <item><description><b>Canceled</b>: Canceled.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -177,18 +178,18 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string EventStatus { get; set; }
 
                 /// <summary>
-                /// <para>The type of the system event. Valid values:</para>
+                /// <para>The system event type. Valid values: </para>
                 /// <list type="bullet">
-                /// <item><description><b>SystemMaintenance.Reboot</b>: The instance was restarted due to system maintenance.</description></item>
-                /// <item><description><b>SystemMaintenance.Redeploy</b>: The instance was redeployed due to system maintenance.</description></item>
-                /// <item><description><b>SystemFailure.Reboot</b>: The instance was restarted due to system failures.</description></item>
-                /// <item><description><b>SystemFailure.Redeploy</b>: The instance was redeployed due to system failures.</description></item>
-                /// <item><description><b>SystemFailure.Delete</b>: The instance was released due to an instance creation failure.</description></item>
-                /// <item><description><b>InstanceFailure.Reboot</b>: The instance was restarted due to an instance error.</description></item>
-                /// <item><description><b>InstanceExpiration.Stop</b>: The subscription instance was stopped due to expiration.</description></item>
-                /// <item><description><b>InstanceExpiration.Delete</b>: The subscription instance was released due to expiration.</description></item>
+                /// <item><description><b>SystemMaintenance.Reboot</b>: The instance is restarted due to system maintenance.</description></item>
+                /// <item><description><b>SystemMaintenance.Redeploy</b>: Redeployment of the instance due to system maintenance.</description></item>
+                /// <item><description><b>SystemFailure.Reboot</b>: The instance is restarted due to a system fault.</description></item>
+                /// <item><description><b>SystemFailure.Redeploy</b>: Redeployment of the instance due to a system fault.</description></item>
+                /// <item><description><b>SystemFailure.Delete</b>: The instance is released due to a failed creation.</description></item>
+                /// <item><description><b>InstanceFailure.Reboot</b>: The instance is restarted due to an instance fault.</description></item>
+                /// <item><description><b>InstanceExpiration.Stop</b>: The subscription instance is stopped due to expiration.</description></item>
+                /// <item><description><b>InstanceExpiration.Delete</b>: The subscription instance is released due to expiration.</description></item>
                 /// <item><description><b>AccountUnbalanced.Stop</b>: The pay-as-you-go instance is stopped due to an overdue payment.</description></item>
-                /// <item><description><b>AccountUnbalanced.Delete</b>: The pay-as-you-go instance was released due to an overdue payment.</description></item>
+                /// <item><description><b>AccountUnbalanced.Delete</b>: The pay-as-you-go instance is released due to an overdue payment.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -199,7 +200,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string EventType { get; set; }
 
                 /// <summary>
-                /// <para>The time when the event was created.</para>
+                /// <para>The creation time of the event.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-12-13 05:34:23</para>
@@ -209,7 +210,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string GmtCreated { get; set; }
 
                 /// <summary>
-                /// <para>The time when the event was updated.</para>
+                /// <para>The update time of the event.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-03-05 10:41:59</para>
@@ -219,7 +220,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>The status of the event. Valid values:</para>
+                /// <para>The handling status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>done</para>
@@ -239,7 +240,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public int? HasLifeCycle { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the instance.</para>
+                /// <para>The instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>r-bp15kjsoovqjam****</para>
@@ -249,7 +250,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The instance name.</para>
+                /// <para>The name of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>normandy</para>
@@ -261,8 +262,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <summary>
                 /// <para>Indicates whether the event is closed. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: closed.</description></item>
-                /// <item><description><b>1</b>: not closed.</description></item>
+                /// <item><description><b>0</b>: Closed.</description></item>
+                /// <item><description><b>1</b>: Open.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -293,11 +294,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The resource type of the instance. Valid values:</para>
+                /// <para>The type of the resource. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Instance</b>: instance resources.</description></item>
-                /// <item><description><b>Host</b>: host resources.</description></item>
-                /// <item><description><b>User</b>: user resources.</description></item>
+                /// <item><description><b>Instance</b>: Instance resources.</description></item>
+                /// <item><description><b>Host</b>: Host resources.</description></item>
+                /// <item><description><b>User</b>: User resources.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -318,7 +319,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>The start time of the event.</para>
+                /// <para>The start time.</para>
+                /// <para>Specify the time in the YYYY-MM-DDTHH:mmZ format. The time must be in UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-09-30T21:13Z</para>
@@ -328,7 +330,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the user to which the resources belong.</para>
+                /// <para>The ID of the user to which the resource belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>15532817595*****</para>
@@ -350,7 +352,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The region ID.</para>
+            /// <para>The region.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hanghzou</para>
@@ -370,7 +372,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The database engine version.</para>
+            /// <para>The database version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8.0</para>
@@ -390,7 +392,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string Subject { get; set; }
 
             /// <summary>
-            /// <para>The amount of time that has elapsed from the start time of the query. Unit: seconds.</para>
+            /// <para>The running duration of the query task. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1734919325126</para>
@@ -400,7 +402,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string Time { get; set; }
 
             /// <summary>
-            /// <para>The type of the event.</para>
+            /// <para>The event type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>host</para>
@@ -422,7 +424,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -432,7 +434,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>27B911BF-4E17-5F8A-A932-79DF2D3F****</para>
@@ -442,7 +444,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned events.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>430</para>

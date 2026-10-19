@@ -20,9 +20,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        /// <summary>
-        /// <para>The network type.</para>
-        /// </summary>
         [NameInMap("NetType")]
         [Validation(Required=false)]
         public string NetType { get; set; }

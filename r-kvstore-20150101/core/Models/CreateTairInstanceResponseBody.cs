@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CreateTairInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum bandwidth in MB/s.</para>
+        /// <para>The maximum bandwidth of the instance. Unit: MB/s.</para>
         /// 
         /// <b>Example:</b>
         /// <para>96</para>
@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The charge type. Valid values:</para>
+        /// <para>The billing method of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>PrePaid</b>: prepaid.</para>
-        /// </description></item>
-        /// <item><description><para><b>PostPaid</b>: pay-as-you-go.</para>
-        /// </description></item>
+        /// <item><description><b>PrePaid</b>: subscription.</description></item>
+        /// <item><description><b>PostPaid</b>: pay-as-you-go.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,7 +34,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The detailed configuration of the instance, returned as a JSON string. For parameter details, see <a href="https://help.aliyun.com/document_detail/43885.html">Configuration parameters</a>.</para>
+        /// <para>The detailed configurations of the instance, in the format of a JSON character string. For more information about the parameters, see Parameter settings description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;EvictionPolicy\&quot;:\&quot;volatile-lru\&quot;,\&quot;hash-max-ziplist-entries\&quot;:512,\&quot;zset-max-ziplist-entries\&quot;:128,\&quot;list-max-ziplist-entries\&quot;:512,\&quot;list-max-ziplist-value\&quot;:64,\&quot;zset-max-ziplist-value\&quot;:64,\&quot;set-max-intset-entries\&quot;:512,\&quot;hash-max-ziplist-value\&quot;:64}</para>
@@ -46,7 +44,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The internal connection address.</para>
+        /// <para>The internal network connection endpoint of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-bp13ac3d047b****.tairpena.rds.aliyuncs.com</para>
@@ -56,7 +54,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ConnectionDomain { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of connections.</para>
+        /// <para>The maximum number of connections supported by the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -78,7 +76,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The instance name.</para>
         /// <remarks>
-        /// <para>This parameter is returned only when the <b>InstanceName</b> parameter is specified in the request.</para>
+        /// <para>This parameter is returned only when the <b>InstanceName</b> request parameter is specified.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -89,7 +87,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The instance status. The value is always <b>Creating</b>.</para>
+        /// <para>The current status of the instance. The value is fixed as <b>Creating</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Creating</para>
@@ -109,7 +107,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OrderId { get; set; }
 
         /// <summary>
-        /// <para>The instance port.</para>
+        /// <para>The port number of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6379</para>
@@ -119,7 +117,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? Port { get; set; }
 
         /// <summary>
-        /// <para>The theoretical maximum number of read and write operations per second (QPS) for the instance.</para>
+        /// <para>The maximum number of read and write operations processed per second. Unit: operations per second. This value is the theoretical maximum for the current instance type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100000</para>
@@ -159,7 +157,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The availability zone ID.</para>
+        /// <para>The zone ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-h</para>

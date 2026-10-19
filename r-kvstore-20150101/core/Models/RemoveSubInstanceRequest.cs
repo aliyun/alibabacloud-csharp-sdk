@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class RemoveSubInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>Instance ID.</para>
+        /// <para>Instance ID of the child instance in the distributed instance. You can call the <a href="https://help.aliyun.com/document_detail/473780.html">DescribeGlobalDistributeCache</a> operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

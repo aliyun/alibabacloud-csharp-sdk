@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeParameterGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the parameter template.</para>
+        /// <para>The parameter template object.</para>
         /// </summary>
         [NameInMap("ParameterGroup")]
         [Validation(Required=false)]
         public DescribeParameterGroupResponseBodyParameterGroup ParameterGroup { get; set; }
         public class DescribeParameterGroupResponseBodyParameterGroup : TeaModel {
             /// <summary>
-            /// <para>The service category. Valid values:</para>
+            /// <para>The product category. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Redis Open-Source Edition</description></item>
-            /// <item><description><b>1</b>: Tair (Enterprise Edition)</description></item>
+            /// <item><description><b>0</b>: Redis Community Edition.</description></item>
+            /// <item><description><b>1</b>: Tair (Enterprise Edition).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,12 +41,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string Created { get; set; }
 
             /// <summary>
-            /// <para>The engine type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><em>redis</em>: Redis or Tair DRAM-based instance</description></item>
-            /// <item><description><em>tair_pena</em>: Tair persistent memory-optimized instance</description></item>
-            /// <item><description><em>tair_pdb</em>: Tair ESSD-based instance</description></item>
-            /// </list>
+            /// <para>The engine of the parameter template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>redis</para>
@@ -56,7 +51,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string Engine { get; set; }
 
             /// <summary>
-            /// <para>The compatible engine version.</para>
+            /// <para>The engine-compatible version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5.0</para>
@@ -76,7 +71,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string Modified { get; set; }
 
             /// <summary>
-            /// <para>The parameter template ID, which is globally unique.</para>
+            /// <para>The globally unique ID of the parameter template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sys-001*****</para>
@@ -93,7 +88,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public List<DescribeParameterGroupResponseBodyParameterGroupParamGroupsDetails> ParamGroupsDetails { get; set; }
             public class DescribeParameterGroupResponseBodyParameterGroupParamGroupsDetails : TeaModel {
                 /// <summary>
-                /// <para>The name of the parameter.</para>
+                /// <para>The parameter name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>timeout</para>
@@ -103,7 +98,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string ParamName { get; set; }
 
                 /// <summary>
-                /// <para>The value of the parameter.</para>
+                /// <para>The parameter value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>

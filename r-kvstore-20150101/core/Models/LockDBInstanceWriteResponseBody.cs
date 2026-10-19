@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The reason why write operations on the instance are locked.</para>
+        /// <para>The reason for locking the instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>锁定写操作测试。</para>
+        /// <para>Lock write operation test</para>
         /// </summary>
         [NameInMap("LockReason")]
         [Validation(Required=false)]

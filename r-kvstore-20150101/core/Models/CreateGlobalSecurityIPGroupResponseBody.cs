@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CreateGlobalSecurityIPGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the global IP whitelist template.</para>
+        /// <para>The information about the global IP address whitelist template.</para>
         /// </summary>
         [NameInMap("GlobalSecurityIPGroup")]
         [Validation(Required=false)]
         public List<CreateGlobalSecurityIPGroupResponseBodyGlobalSecurityIPGroup> GlobalSecurityIPGroup { get; set; }
         public class CreateGlobalSecurityIPGroupResponseBodyGlobalSecurityIPGroup : TeaModel {
             /// <summary>
-            /// <para>The IP addresses in the IP whitelist template.</para>
+            /// <para>The IP addresses in the whitelist template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.0.1,10.10.10.10,172.16.0.1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string GIpList { get; set; }
 
             /// <summary>
-            /// <para>The name of the IP whitelist template.</para>
+            /// <para>The name of the IP address whitelist template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_123</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string GlobalIgName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the IP whitelist template.</para>
+            /// <para>The ID of the IP address whitelist template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>g-sdgwqyp4f5j1x3qk****</para>

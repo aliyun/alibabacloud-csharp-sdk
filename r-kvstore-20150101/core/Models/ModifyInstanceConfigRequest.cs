@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The Sentinel compatibility mode. This parameter applies to non-cluster instances. Valid values:</para>
+        /// <para>The Sentinel compatibility mode, which applies to non-cluster instances. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>no</b> (default): disabled.</description></item>
         /// <item><description><b>yes</b>: enabled.<remarks>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ParamNoLooseSentinelPasswordFreeAccess { get; set; }
 
         /// <summary>
-        /// <para>After Sentinel mode and the ParamNoLooseSentinelPasswordFreeAccess parameter are enabled, use this parameter to add additional password-free commands (empty by default).</para>
+        /// <para>After Sentinel mode and the ParamNoLooseSentinelPasswordFreeAccess parameter are enabled, you can use this parameter to add additional password-free commands (empty by default).</para>
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>After this parameter is set, the specified commands can be run without a password on any connection. Proceed with caution.</description></item>
@@ -89,10 +89,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ParamNoLooseSentinelPasswordFreeCommands { get; set; }
 
         /// <summary>
-        /// <para>The synchronization pattern. Valid values:</para>
+        /// <para>The synchronization mode. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>async</b> (default): asynchronous</description></item>
-        /// <item><description><b>semisync</b>: semi-synchronous.</description></item>
+        /// <item><description><b>semisync</b>: semi-synchronous</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -103,11 +103,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ParamReplMode { get; set; }
 
         /// <summary>
-        /// <para>The degradation threshold for semi-synchronous mode. This parameter is supported only in semi-synchronous mode. Unit: ms. Valid values: 10 to 60000. Default value: 500.</para>
+        /// <para>The degradation threshold for semi-synchronous mode. This parameter can be configured only for semi-synchronous mode. Unit: ms. Valid values: 10 to 60000. Default value: 500.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>When the synchronization latency exceeds this threshold, the synchronous mode automatically transforms to asynchronous. When the latency is eliminated, the synchronous mode automatically transforms back to semi-synchronous.</description></item>
-        /// <item><description>This parameter is supported only by Tair Enterprise instances. This feature is in public preview.</description></item>
+        /// <item><description>When the synchronization latency exceeds this threshold, the synchronization mode automatically switches to asynchronous. When the synchronization latency is eliminated, the synchronization mode automatically switches back to semi-synchronous.</description></item>
+        /// <item><description>Only Tair Enterprise instances are supported. This feature is in public preview.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ParamSemisyncReplTimeout { get; set; }
 
         /// <summary>
-        /// <para>The Sentinel compatibility mode. This parameter applies to instances that use the proxy connection mode in cluster architecture or instances that use the read/write splitting architecture. Valid values:</para>
+        /// <para>The Sentinel compatibility mode, which applies to instances in cluster architecture with proxy connection mode or read/write splitting architecture. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b> (default): disabled.</description></item>
         /// <item><description><b>1</b>: enabled.<remarks>

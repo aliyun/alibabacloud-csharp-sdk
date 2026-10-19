@@ -10,6 +10,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CreateInspectionTaskRequest : TeaModel {
         /// <summary>
+        /// <para>The end time of the inspection time range.</para>
+        /// <para>The time is in the YYYY-MM-DDTHH:mm:ssZ format and in UTC.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-07-29T06:59:26Z</para>
         /// </summary>
@@ -18,6 +21,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The specified inspection items. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>RESOURCE_USAGE</description></item>
+        /// <item><description>BIGKEY</description></item>
+        /// <item><description>HOTKEY</description></item>
+        /// <item><description>PERFORMANCE_METRICS</description></item>
+        /// <item><description>SLOWLOG</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +39,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InspectionItems { get; set; }
 
         /// <summary>
+        /// <para>The ID of the assistant instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +50,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The list of associated instance IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +61,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceIds { get; set; }
 
         /// <summary>
+        /// <para>The language of the report.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh-CN</para>
         /// </summary>
@@ -56,6 +71,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ReportLanguage { get; set; }
 
         /// <summary>
+        /// <para>The start time of the inspection time range.</para>
+        /// <para>The time is in the YYYY-MM-DDTHH:mm:ssZ format and in UTC.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-07-29T05:59:26Z</para>
         /// </summary>

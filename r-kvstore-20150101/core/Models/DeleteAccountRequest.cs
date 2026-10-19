@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DeleteAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The username of the account. You can call the <a href="https://help.aliyun.com/document_detail/473816.html">DescribeAccounts</a> operation to query the username of the account.</para>
+        /// <para>The account name. You can call <a href="https://help.aliyun.com/document_detail/473816.html">DescribeAccounts</a> to query the account name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

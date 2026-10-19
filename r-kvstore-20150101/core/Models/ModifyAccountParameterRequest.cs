@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyAccountParameterRequest : TeaModel {
         /// <summary>
+        /// <para>The account name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string AccountName { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The account parameters to modify, in JSON format. The modified values overwrite the original values. For example, if you want to modify only the access-db-id parameter to 1, pass in {&quot;access-db-id&quot;:&quot;1&quot;}.
+        /// Only two parameters are supported: access-db-id (accessible DB ID) and cu-limit (CU Limit).</para>
+        /// <remarks>
+        /// <para>Notice: Currently, only Tair Serverless KV instances are supported.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

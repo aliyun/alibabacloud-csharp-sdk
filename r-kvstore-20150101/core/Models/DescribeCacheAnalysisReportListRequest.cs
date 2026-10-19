@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeCacheAnalysisReportListRequest : TeaModel {
         /// <summary>
-        /// <para>The time range to query. Default value: 7. Unit: days.</para>
+        /// <para>The number of days within which analysis results are queried. By default, analysis results of the last 7 days are queried.</para>
         /// <remarks>
-        /// <para>If daily automatic analysis has not started and manual analysis is not performed, no records are returned.</para>
+        /// <para>If the automatic analysis for the current day has not started when you query and no manual analysis task has been initiated, no records exist for the current day.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? Days { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the child node in the cluster instance.</para>
+        /// <para>The child node ID of a cluster instance.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the analysis results of all child nodes in the instance are returned.</para>
+        /// <para>If you do not specify this parameter, the analysis results of all child nodes are returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The number of entries to return on each page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>.</para>
         /// <remarks>
-        /// <para>The default value is <b>30</b>.</para>
+        /// <para>Default value: <b>30</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

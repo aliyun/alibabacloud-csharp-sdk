@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The token required to obtain more results. If a query does not return all results, in the next query, you can provide the token returned by the previous query to obtain more results.</para>
+        /// <para>The token used to start the next query. If a query does not return all results, you can pass the token returned from the previous query in subsequent queries to continue the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>212db86sca4384811e0b5e8707ec2****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>47A514A1-4B77-4E30-B4C5-2A880650****</para>

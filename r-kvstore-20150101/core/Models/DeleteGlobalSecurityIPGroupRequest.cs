@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DeleteGlobalSecurityIPGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the global IP whitelist template. The name must meet the following requirements:</para>
+        /// <para>The name of the IP whitelist template. The name must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The name can contain lowercase letters, digits, and underscores (_).</description></item>
-        /// <item><description>The name must start with a letter and end with a letter or a digit.</description></item>
-        /// <item><description>The name must be 2 to 120 characters in length.</description></item>
+        /// <item><description><para>The name can contain lowercase letters, digits, and underscores (_).</para>
+        /// </description></item>
+        /// <item><description><para>The name must start with a letter and end with a letter or digit.</para>
+        /// </description></item>
+        /// <item><description><para>The name must be 2 to 120 characters in length.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,7 +58,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmyiu4e******</para>

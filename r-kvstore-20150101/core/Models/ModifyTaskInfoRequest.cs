@@ -10,16 +10,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyTaskInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The JSON-formatted parameters related to the action. Set this parameter to <c>{&quot;recoverMode&quot;: &quot;xxx&quot;, &quot;recoverTime&quot;: &quot;xxx&quot;}</c> if the <b>TaskAction</b> parameter is set to <b>modifySwitchTime</b>.</para>
+        /// <para>The parameters related to the action, in JSON format.
+        /// If <b>TaskAction</b> is set to <b>modifySwitchTime</b>, the ActionParams value is <c>{&quot;recoverMode&quot;: &quot;xxx&quot;, &quot;recoverTime&quot;: &quot;xxx&quot;}</c>.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>recoverMode</b>: specifies the restoration mode for the task. Valid values:</para>
+        /// <item><description><para><b>recoverMode</b> specifies the task recovery mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>timePoint</b>: performs the task at the specified point in time.</description></item>
-        /// <item><description><b>immediate</b>: performs the task immediately.</description></item>
-        /// <item><description><b>maintainTime</b>: performs the task within the maintenance window.</description></item>
+        /// <item><description><b>imePoint</b>: Execute at a specified point in time.</description></item>
+        /// <item><description><b>immediate</b>: Execute immediately.</description></item>
+        /// <item><description><b>maintainTime</b>: Execute during the O&amp;M window.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>recoverTime</b>: specifies the point in time for restoration. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. This parameter is required if the <b>recoverMode</b> parameter is set to <b>timePoint</b>.</para>
+        /// <item><description><para><b>recoverTime</b> specifies the point in time, in UTC+0, in the yyyy-MM-ddTHH:mm:ssZ format. This parameter is required when <b>recoverMode</b> is set to <b>timePoint</b>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -31,7 +32,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ActionParams { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the instance is deployed.</para>
+        /// <para>The region ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +55,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The name of the current step.</para>
+        /// <para>The name of the current execution step. You can call <a href="https://help.aliyun.com/document_detail/2400077.html">DescribeHistoryTasks</a> to query the current execution step of a specified node ID. A common value is <b>do_pause</b>, which indicates waiting for the preset time to execute.</para>
         /// 
         /// <b>Example:</b>
         /// <para>do_pause</para>
@@ -64,7 +65,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string StepName { get; set; }
 
         /// <summary>
-        /// <para>The action name. Set the value to <b>modifySwitchTime</b>. The value specifies that you want to change the switching time or restoration time.</para>
+        /// <para>The operation name. Currently, the valid value is <b>modifySwitchTime</b>, which indicates modifying the switchover time or recovery time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>modifySwitchTime</para>
@@ -74,7 +75,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string TaskAction { get; set; }
 
         /// <summary>
-        /// <para>The task ID. Separate multiple task IDs with commas (,). You can specify up to 30 task IDs.</para>
+        /// <para>The node ID. To specify multiple IDs, separate them with commas (,). You can specify up to 30 IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

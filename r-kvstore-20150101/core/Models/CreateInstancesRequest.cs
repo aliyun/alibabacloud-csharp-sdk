@@ -10,10 +10,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CreateInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable automatic payment. Valid values:
-        /// \* <b>true</b>: Enables automatic payment. This is the default value.
-        /// \* <b>false</b>: Disables automatic payment. You must go to the console to complete the payment. In the top navigation bar, choose <b>Expenses</b> &gt; <b>Renewal Management</b>. In the navigation pane on the left, click <b>Or*er Management</b> &gt; <b>My Or*ers</b>, find the or*er, and then complete the payment.
-        /// \&gt; This parameter is valid only when <b>ChargeType</b> is set to <b>PrePaid</b> in <b>Instances</b>.</para>
+        /// <para>Specifies whether to enable automatic payment. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: enables automatic payment. This is the default value.</description></item>
+        /// <item><description><b>false</b>: disables automatic payment. You must manually pay for the order. In the top navigation bar of the console, choose <b>Billing</b> &gt; <b>Renewal Management</b>. In the left-side navigation pane, choose <b>Order Management</b> &gt; <b>My Orders</b>, find the order, and then complete the payment.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter is available only when the <b>ChargeType</b> parameter in the <b>Instances</b> array is set to <b>PrePaid</b>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -23,10 +27,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal for the instance. Valid values:
-        /// \* <b>true</b>: Enables auto-renewal.
-        /// \* <b>false</b>: Disables auto-renewal. This is the default value.
-        /// \&gt; This parameter is valid only when <b>ChargeType</b> is set to <b>PrePaid</b> in <b>Instances</b>.</para>
+        /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: enables auto-renewal.</description></item>
+        /// <item><description><b>false</b>: disables auto-renewal. This is the default value.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter is available only when the <b>ChargeType</b> parameter in the <b>Instances</b> array is set to <b>PrePaid</b>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -36,7 +44,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>Additional business information.</para>
+        /// <para>The extended business information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>000000000</para>
@@ -46,7 +54,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// <para>The coupon code. The default value is <c>youhuiquan_promotion_option_id_for_blank</c>.</para>
+        /// <para>The coupon code. Default value: <c>youhuiquan_promotion_option_id_for_blank</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>youhuiquan_promotion_option_id_for_blank</para>
@@ -56,7 +64,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string CouponNo { get; set; }
 
         /// <summary>
-        /// <para>The Redis-compatible engine version for the instance. Valid values: <b>4.0</b> and <b>5.0</b>. The default value is <b>5.0</b>.</para>
+        /// <para>The Redis-compatible engine version of the instance. Valid values: <b>4.0</b> and <b>5.0</b>.</para>
+        /// <remarks>
+        /// <para>Default value: <b>5.0</b>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>5.0</para>
@@ -66,7 +77,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the new instances, specified in JSON format. For more information, see the details of the Instances parameter.</para>
+        /// <para>The configuration information of the new instances. The value must be in JSON format. For more information, see the supplementary description of the Instances parameter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -97,10 +108,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to rebuild an instance from the recycle bin. Valid values:
-        /// \* <b>true</b>: Rebuilds the instance.
-        /// \* <b>false</b>: Does not rebuild the instance. This is the default value.
-        /// \&gt; This parameter is valid only when <b>SrcDBInstanceId</b> is specified in <b>Instances</b>.</para>
+        /// <para>Specifies whether to rebuild and restore the source instance from the recycle bin. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: yes.</description></item>
+        /// <item><description><b>false</b>: no. This is the default value.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter is available only when the <b>SrcDBInstanceId</b> parameter is specified in the <b>Instances</b> array.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -110,7 +125,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public bool? RebuildInstance { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-resourcegroupid1</para>
@@ -132,7 +147,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>A client-generated token to ensure request idempotence. The value must be unique across requests, case-sensitive, and up to 64 ASCII characters long.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token is case-sensitive and can be up to 64 ASCII characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>

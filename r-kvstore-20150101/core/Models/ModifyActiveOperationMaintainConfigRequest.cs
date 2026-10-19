@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyActiveOperationMaintainConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The days of the cycle.</para>
+        /// <para>The cycle time.</para>
         /// <list type="bullet">
-        /// <item><description><para>If <c>CycleType</c> is <c>Month</c>, specify the days of the month (1 to 28). Separate multiple days with a comma (,).</para>
-        /// </description></item>
-        /// <item><description><para>If <c>CycleType</c> is <c>Week</c>, specify the days of the week (1 to 7). Separate multiple days with a comma (,).</para>
-        /// </description></item>
+        /// <item><description>If CycleType is set to Month, the value is a number from 1 to 28, which indicates the day of the month. Multiple values are separated by commas (,). If the configuration does not take effect, the value is 0.</description></item>
+        /// <item><description>If CycleType is set to Week, the value is a number from 1 to 7, which indicates the day of the week. Multiple values are separated by commas (,). If the configuration does not take effect, the value is 0.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,12 +24,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string CycleTime { get; set; }
 
         /// <summary>
-        /// <para>The cycle type of the maintenance window. Valid values:</para>
+        /// <para>The cycle type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>Month</c></para>
-        /// </description></item>
-        /// <item><description><para><c>Week</c></para>
-        /// </description></item>
+        /// <item><description>Month: Monthly.</description></item>
+        /// <item><description>Week: Weekly.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,7 +38,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string CycleType { get; set; }
 
         /// <summary>
-        /// <para>The end time of the maintenance window, specified in <em>HH:mm:ss</em>Z format (UTC time).</para>
+        /// <para>The end time of the O&amp;M time window. The time is in the HH:mm:ssZ format (UTC time).</para>
         /// 
         /// <b>Example:</b>
         /// <para>20:00:00Z</para>
@@ -52,7 +48,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string MaintainEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time of the maintenance window, specified in <em>HH:mm:ss</em>Z format (UTC time).</para>
+        /// <para>The start time of the O&amp;M time window. The time is in the <i>HH:mm:ss</i>Z format (UTC time).</para>
         /// 
         /// <b>Example:</b>
         /// <para>16:00:00Z</para>
@@ -82,12 +78,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the configuration is enabled. Valid values:</para>
+        /// <para>Specifies whether the configuration takes effect. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>1: enabled</para>
-        /// </description></item>
-        /// <item><description><para>2: disabled</para>
-        /// </description></item>
+        /// <item><description>1: Effective.</description></item>
+        /// <item><description>2: Ineffective.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

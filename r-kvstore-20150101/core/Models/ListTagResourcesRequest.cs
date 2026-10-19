@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The token used to start the next query to retrieve more results.</para>
+        /// <para>The token used to start the next query to return more results.</para>
         /// <remarks>
-        /// <para>This parameter is not required in the first query. If not all results are returned in one query, you can specify the <b>NextToken</b> value returned for the query to perform the next query.</para>
+        /// <para>You do not need to provide this parameter for the first query. If a query does not return all results, you can pass the <b>NextToken</b> value returned from the previous query in subsequent queries to continue the query.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -42,10 +42,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the instances.</para>
+        /// <para>The list of instance IDs.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You must specify this parameter or the <b>Tag</b> parameter.</description></item>
+        /// <item><description>You must specify at least one of this parameter and the <b>Tag</b> parameter.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -76,14 +76,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags of the instance. You must specify this parameter or the <b>ResourceId</b> parameter.</para>
+        /// <para>The tag information of the instance. You must specify at least one of this parameter and the <b>ResourceId</b> parameter.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The keys of the tags associated with the instances you want to query.</para>
+            /// <para>The key of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>demokey</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The values of the tags associated with the instances you want to query.</para>
+            /// <para>The value of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>demovalue</para>

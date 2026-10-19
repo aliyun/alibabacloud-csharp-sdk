@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: Automatic payment is enabled. This is the default value.</description></item>
-        /// <item><description><b>false</b>: Automatic payment is disabled. If you set this parameter to <b>false</b>, you must manually renew the instance before the instance expires in the console. For details, see <a href="https://help.aliyun.com/document_detail/26352.html">Manual renewal</a>.</description></item>
+        /// <item><description><b>false</b>: Manual payment is enabled. If this parameter is set to <b>false</b>, you must manually renew the instance in the console before the instance expires. For more information, refer to <a href="https://help.aliyun.com/document_detail/26352.html">Manual renewal</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -54,10 +54,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string CouponNo { get; set; }
 
         /// <summary>
-        /// <para>The time when the specification change takes effect. Valid values:</para>
+        /// <para>The time when the modification takes effect. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Immediately</b>: The specification change takes effect immediately. This is the default value.</description></item>
-        /// <item><description><b>MaintainTime</b>: The specification change takes effect during the maintenance window of the instance. You can call <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> to modify the maintenance window.</description></item>
+        /// <item><description><b>Immediately</b>: The modification takes effect immediately. This is the default value.</description></item>
+        /// <item><description><b>MaintainTime</b>: The modification takes effect during the maintenance window of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,8 +70,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>Specifies whether to enable forced transmission. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): Before the specification change, the system checks the current minor engine version of the instance. If the minor engine version is too old, an error is returned. You must upgrade the minor engine version and retry.</description></item>
-        /// <item><description><b>true</b>: Skips the check and directly executes the specification change operation.</description></item>
+        /// <item><description><b>false</b> (default): Before the specification change, the system checks the current minor engine version of the instance. If the minor engine version is too low, an error is reported. You must upgrade the minor engine version and retry.</description></item>
+        /// <item><description><b>true</b>: The check is skipped, and the system directly executes the specification change.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,10 +82,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public bool? ForceTrans { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcibly change the specifications. Valid values:</para>
+        /// <para>Specifies whether to forcibly modify the specifications. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b>: does not forcibly change the specifications.</description></item>
-        /// <item><description><b>true</b>: forcibly changes the specifications. This is the default value.</description></item>
+        /// <item><description><b>false</b>: No.</description></item>
+        /// <item><description><b>true</b>: Yes. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -96,9 +96,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public bool? ForceUpgrade { get; set; }
 
         /// <summary>
-        /// <para>The new instance type. You can call <a href="https://help.aliyun.com/document_detail/473765.html">DescribeAvailableResource</a> to query the instance types available for specification changes in the zone where the instance resides.</para>
+        /// <para>The instance type code after the modification. You can call the <a href="https://help.aliyun.com/document_detail/473765.html">DescribeAvailableResource</a> operation to query the instance types available for modification in the zone to which the instance belongs.</para>
         /// <remarks>
-        /// <para>For more information about instance types, see <a href="https://help.aliyun.com/document_detail/26350.html">Instance type navigation</a>.</para>
+        /// <para>For more information about instance types, refer to <a href="https://help.aliyun.com/document_detail/26350.html">Instance type overview</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceClass { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> to query the instance ID.</para>
+        /// <para>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -120,9 +120,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The major engine version for upgrading a classic instance. Valid values: <b>2.8</b>, <b>4.0</b>, and <b>5.0</b>.</para>
+        /// <para>The major engine version to which you want to upgrade a classic instance. Valid values: <b>2.8</b>, <b>4.0</b>, and <b>5.0</b>.</para>
         /// <remarks>
-        /// <para>When you upgrade the version, the <b>InstanceClass</b> parameter is required. This indicates that this operation supports version upgrades only when the instance specifications are also changed. To upgrade only the instance version, call <a href="https://help.aliyun.com/document_detail/473776.html">ModifyInstanceMajorVersion</a>.</para>
+        /// <para>When you upgrade the major engine version, the <b>InstanceClass</b> parameter is required. This indicates that this operation only supports upgrading the major engine version when you update the instance specifications. If you only need to upgrade the major engine version, call the <a href="https://help.aliyun.com/document_detail/473776.html">ModifyInstanceMajorVersion</a> operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -135,11 +135,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The node type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>MASTER_SLAVE</b>: high availability (dual-replica)</description></item>
-        /// <item><description><b>STAND_ALONE</b>: single replica</description></item>
+        /// <item><description><b>MASTER_SLAVE</b>: high-availability (dual-replica)</description></item>
+        /// <item><description><b>STAND_ALONE</b>: single-replica</description></item>
         /// <item><description><b>double</b>: dual-replica</description></item>
-        /// <item><description><b>single</b>: single replica<remarks>
-        /// <para>For cloud-native instances, select <b>MASTER_SLAVE</b> or <b>STAND_ALONE</b>. For classic instances, select <b>double</b> or <b>single</b>.</para>
+        /// <item><description><b>single</b>: single-replica<remarks>
+        /// <para>Select <b>MASTER_SLAVE</b> or <b>STAND_ALONE</b> for cloud-native instances, and select <b>double</b> or <b>single</b> for classic instances.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -152,15 +152,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string NodeType { get; set; }
 
         /// <summary>
-        /// <para>The type of specification change. This parameter is required when you change the specifications of a subscription instance. Valid values:</para>
+        /// <para>The modification type. This parameter is required when you modify the specifications of a subscription instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>UPGRADE</b>: Upgrade. This is the default value.</description></item>
-        /// <item><description><b>DOWNGRADE</b>: Downgrade.</description></item>
+        /// <item><description><b>UPGRADE</b>: Upgrades the configurations. This is the default value.</description></item>
+        /// <item><description><b>DOWNGRADE</b>: Downgrades the configurations.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You must set this parameter to <b>DOWNGRADE</b> when you downgrade a subscription instance.</description></item>
-        /// <item><description>If the price of the target instance type is higher than that of the current instance type, the change is an upgrade. Otherwise, the change is a downgrade. For example, the price of the read/write splitting 8 GB edition (5 read-only nodes) is higher than that of the 16 GB cluster edition. Changing from the latter to the former is an upgrade.</description></item>
+        /// <item><description>When you downgrade the configurations of a subscription instance, you must set this parameter to <b>DOWNGRADE</b>.</description></item>
+        /// <item><description>If the price of the target instance type is higher than that of the current instance type, the configurations are upgraded. Otherwise, the configurations are downgraded. For example, the price of the 8 GB read/write splitting edition (5 read-only nodes) is higher than that of the 16 GB cluster edition. Changing the instance type from the latter to the former is considered an upgrade.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -180,14 +180,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of read-only nodes in the primary zone. This parameter is applicable only to cloud-native read/write splitting instances.</para>
+        /// <para>The number of read-only nodes in the primary zone. This parameter applies only when you create a cloud-native read/write splitting instance.</para>
         /// <list type="bullet">
-        /// <item><description>For standard architecture instances, valid values are 0 to 9. A value of 0 indicates that read/write splitting is shutdown and the instance is switched to the standard architecture.</description></item>
-        /// <item><description>For cluster architecture instances, valid values are 1 to 4, which specifies the number of read-only nodes per data shard.<remarks>
-        /// <para>For multi-zone instances, you can use this parameter together with the SlaveReadOnlyCount parameter to specify the number of read-only nodes in the primary and secondary zones.</para>
+        /// <item><description>If the instance uses the standard architecture, valid values are 0 to 9. A value of 0 indicates the shutdown of read/write splitting and an instance switchover to the standard architecture.</description></item>
+        /// <item><description>If the instance uses the cluster architecture, valid values are 1 to 4, which indicates the number of read-only nodes per shard.<remarks>
+        /// <para>If you create a multi-zone instance, you can use this parameter and the SlaveReadOnlyCount parameter to specify the number of read-only nodes in the primary and secondary zones.</para>
         /// <list type="bullet">
-        /// <item><description>For standard architecture instances, the sum of this parameter and SlaveReadOnlyCount cannot exceed 9.</description></item>
-        /// <item><description>For cluster architecture instances, the sum of this parameter and SlaveReadOnlyCount cannot exceed 4.</description></item>
+        /// <item><description>If the instance uses the standard architecture, the sum of this parameter and SlaveReadOnlyCount cannot be greater than 9.</description></item>
+        /// <item><description>If the instance uses the cluster architecture, the sum of this parameter and SlaveReadOnlyCount cannot be greater than 4.</description></item>
         /// </list>
         /// </remarks>
         /// </description></item>
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? ReadOnlyCount { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> to query available regions. Use this parameter to specify the region of the instance whose specifications you want to change.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the region ID. Use this parameter to specify the region of the instance that you want to modify.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -211,9 +211,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The number of replica nodes in the primary zone. This parameter is applicable only to cloud-native cluster multi-replica instances. You can use this parameter to specify a custom number of replica nodes. Valid values: 1 to 4.</para>
+        /// <para>The number of secondary nodes in the primary zone. This parameter applies only to cloud-native multi-replica cluster instances. You can use this parameter to specify a custom number of secondary nodes. Valid values: 1 to 4.</para>
         /// <remarks>
-        /// <para>For multi-zone instances, you can use this parameter together with the SlaveReplicaCount parameter to specify the number of replica nodes in the primary and secondary zones. The sum of this parameter and the SlaveReplicaCount parameter cannot exceed 4.</para>
+        /// <para>If the instance is deployed across multiple zones, you can use this parameter and the SlaveReplicaCount parameter to specify the number of secondary nodes in the primary and secondary zones. The sum of this parameter and the SlaveReplicaCount parameter cannot exceed 4.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -232,9 +232,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The secondary zone ID. This parameter is required when you change the specifications of a single-zone instance and migrate it to a multi-zone deployment. You can call <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> to query available zones.</para>
+        /// <para>The ID of the secondary zone. This parameter is required when you modify the specifications of a single-zone instance and migrate it to multiple zones. You can call the <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> operation to query the zone ID.</para>
         /// <remarks>
-        /// <para>The value of this parameter must be different from the value of the ZoneId parameter. Do not set this parameter to the ID of a multi-zone.</para>
+        /// <para>The value of this parameter cannot be the same as the value of the ZoneId parameter, and you cannot specify the ID of a multi-zone deployment.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -249,11 +249,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The number of shards. This parameter is applicable only to cloud-native cluster instances. You can use this parameter to specify a custom number of shards.</para>
+        /// <para>The number of shards. This parameter applies only to cloud-native cluster instances. You can use this parameter to specify a custom number of shards.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>To change a cloud-native cluster instance to a standard architecture, set ShardCount to 1 and set the instance type to a standard instance type.</description></item>
-        /// <item><description>To change a cloud-native standard instance to a cluster architecture, set ShardCount to a value greater than 1 and set the instance type to a cluster instance type.</description></item>
+        /// <item><description>To change a cloud-native cluster instance to a standard instance, you must explicitly set ShardCount to 1 and specify a standard instance type.</description></item>
+        /// <item><description>To change a cloud-native standard instance to a cluster instance, you must explicitly set ShardCount to a value greater than 1 and specify a cluster instance type.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -275,7 +275,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? SlaveReadOnlyCount { get; set; }
 
         /// <summary>
-        /// <para>The number of replica nodes in the secondary zone.</para>
+        /// <para>The number of secondary nodes in the secondary zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -285,7 +285,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? SlaveReplicaCount { get; set; }
 
         /// <summary>
-        /// <para>The source of the request. This parameter is used only for internal maintenance and does not need to be specified.</para>
+        /// <para>The source of the call. This parameter is used only for internal maintenance and does not need to be specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SDK</para>
@@ -295,9 +295,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SourceBiz { get; set; }
 
         /// <summary>
-        /// <para>The storage capacity of a cloud disk instance. The valid values vary based on the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/2527111.html">Cloud disk-based instance types</a>.</para>
+        /// <para>The storage capacity of the disk instance. The value range varies based on the instance type. For more information, refer to <a href="https://help.aliyun.com/document_detail/2527111.html">Disk instance types</a>.</para>
         /// <remarks>
-        /// <para>This parameter is required only when <b>InstanceType</b> is set to <b>tair_essd</b> and you are creating a Tair ESSD-based cloud disk instance. For Tair SSD-based cloud disk instances, the storage capacity is a fixed value based on the instance type, and you do not need to specify this parameter.</para>
+        /// <para>This parameter is required only when <b>InstanceType</b> is set to <b>tair_essd</b> and you create a Tair ESSD instance. When you create a Tair SSD instance, the capacity field is defined as different fixed values based on different instance types, and you do not need to specify this field.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -310,7 +310,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The storage type. Valid values: <b>essd_pl1</b>, <b>essd_pl2</b>, and <b>essd_pl3</b>.</para>
         /// <remarks>
-        /// <para>This parameter is required only when <b>InstanceType</b> is set to <b>tair_essd</b> and the instance is a Tair ESSD-based cloud disk instance.</para>
+        /// <para>This parameter is required only when <b>InstanceType</b> is set to <b>tair_essd</b> and the instance is a Tair ESSD instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeCacheAnalysisReportResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of the large keys.</para>
+        /// <para>The list of big keys.</para>
         /// </summary>
         [NameInMap("BigKeys")]
         [Validation(Required=false)]
         public List<Dictionary<string, object>> BigKeys { get; set; }
 
         /// <summary>
-        /// <para>Details of the hotkeys.</para>
+        /// <para>The list of hot keys.</para>
         /// <remarks>
-        /// <para>This parameter is not returned because Tair (Redis OSS-compatible) does not support hotkey analytics.</para>
+        /// <para>Hot key analysis is not supported. No value is returned.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("HotKeys")]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public List<Dictionary<string, object>> HotKeys { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A057C066-C3F5-4CC9-9FE4-A8D8B0DC****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries returned across all pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>160</para>

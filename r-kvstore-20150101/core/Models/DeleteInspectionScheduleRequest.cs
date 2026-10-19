@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DeleteInspectionScheduleRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID of the AI assistant.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The scheduling ID of the timed scheduling.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>scheduleId-202604141xxxx</para>
         /// </summary>

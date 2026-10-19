@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class FlushExpireKeysRequest : TeaModel {
         /// <summary>
-        /// <para>The time when you want to delete the expired keys. Default value: Immediately. Valid values:</para>
+        /// <para>The execution time. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Immediately</b>: deletes the keys immediately.</description></item>
-        /// <item><description><b>MaintainTime</b>: deletes the keys during the maintenance window.</description></item>
+        /// <item><description><b>Immediately</b>: Executes the operation immediately. This is the default value.</description></item>
+        /// <item><description><b>MaintainTime</b>: Executes the operation during the maintenance window.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of an instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of the instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string EffectiveTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,12 +10,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class RenewInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable automatic payment. Default value: true. Valid values:</para>
+        /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables automatic payment.</description></item>
+        /// <item><description><b>true</b>: enables automatic payment. This is the default value.</description></item>
         /// <item><description><b>false</b>: disables automatic payment.</description></item>
         /// </list>
-        /// <para>If you select false, you must choose <b>Expenses</b> &gt; <b>Renewal Management</b> in the top navigation bar. In the left-side navigation pane, click <b>Orders</b>. Find the specified order and pay for it.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;If you set this parameter to false, you must log on to the console, choose <b>Billing</b> &gt; <b>Renewal Management</b> in the top navigation bar, and then choose <b>Order Management</b> &gt; <b>My Orders</b> in the left-side navigation pane to find and pay for the order.</para>
+        /// <para>&lt;props=&quot;intl&quot;&gt;If you set this parameter to false, you must log on to the console, choose <b>Billing</b> &gt; <b>Renewal Management</b> in the top navigation bar, and then click <b>Order Management</b> in the left-side navigation pane to find and pay for the order.</para>
+        /// <para>&lt;props=&quot;partner&quot;&gt;If you set this parameter to false, you must log on to the console, choose <b>Billing</b> &gt; <b>Renewal Management</b> in the top navigation bar, and then click <b>Order Management</b> in the left-side navigation pane to find and pay for the order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -25,10 +27,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal for the instance. Valid values:</para>
+        /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables auto-renewal. The instance is renewed based on the specified renewal duration. For example, if you set the renewal duration to three months, you are charged for three months of service each time the instance is automatically renewed.</description></item>
-        /// <item><description><b>false</b> (default): disables auto-renewal.</description></item>
+        /// <item><description><b>true</b>: enables auto-renewal. The instance is renewed for the specified period. For example, if you set the renewal period to 3 months, the instance is automatically renewed for 3 months each time.</description></item>
+        /// <item><description><b>false</b>: disables auto-renewal. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,7 +41,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The ID of the promotional event or business information.</para>
+        /// <para>The activity ID and business information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>000000000</para>
@@ -49,10 +51,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// <para>The storage capacity of the instance. Unit: MB. When you renew the instance, you can specify this parameter to change specifications of the instance.</para>
-        /// <remarks>
-        /// <para>To change the specifications when you renew the instance, you must specify at least one of the <c>Capacity</c> and <c>InstanceClass</c> parameters.</para>
-        /// </remarks>
+        /// <para><b>[Deprecated]</b> You cannot change the storage capacity when you renew an instance. By default, the renewal order is placed based on the current specifications.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -64,7 +63,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string Capacity { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token is case-sensitive. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token is case-sensitive and can be up to 64 ASCII characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.6823317918435086</para>
@@ -84,7 +83,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string CouponNo { get; set; }
 
         /// <summary>
-        /// <para>The source of the request. The default value is <b>OpenAPI</b> and cannot be changed.</para>
+        /// <para>The source of the request. Default value: <b>OpenAPI</b>. You do not need to manually specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OpenAPI</para>
@@ -94,10 +93,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string FromApp { get; set; }
 
         /// <summary>
-        /// <para>The instance type code. For more information, see <a href="https://help.aliyun.com/document_detail/26350.html">Instance specifications overview</a>. When you renew the instance, you can specify this parameter to change specifications of the instance.</para>
-        /// <remarks>
-        /// <para>To change the specifications when you renew the instance, you must specify at least one of the <c>Capacity</c> and <c>InstanceClass</c> parameters.</para>
-        /// </remarks>
+        /// <para><b>[Deprecated]</b> You cannot change the instance type when you renew an instance. By default, the renewal order is placed based on the current specifications.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -109,7 +105,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceClass { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -128,7 +124,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The renewal period. Valid values: <b>1</b>, 2, 3, 4, 5, 6, 7, 8, <b>9</b>, <b>12</b>, <b>24</b>, and <b>36</b>. Unit: months.</para>
+        /// <para>The renewal period. Unit: months. Valid values: <b>1</b> to <b>9</b>, <b>12</b>, <b>24</b>, and <b>36</b>.</para>
+        /// <remarks>
+        /// <para>For example, if an instance expires in 3 months and you renew it for 3 months, the instance will expire in 6 months after the renewal.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CancelInspectionTaskResponseBody : TeaModel {
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2BE6E619-A657-42E3-AD2D-18F8428A****</para>
         /// </summary>

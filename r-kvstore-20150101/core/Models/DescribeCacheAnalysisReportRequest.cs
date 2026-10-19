@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeCacheAnalysisReportRequest : TeaModel {
         /// <summary>
-        /// <para>The type of analytics. Set the value to <b>BigKey</b>.</para>
+        /// <para>The analysis type. Set the value to <b>BigKey</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string AnalysisType { get; set; }
 
         /// <summary>
-        /// <para>The date to query. You can query the report for one day each time. Specify the date in the <em>yyyy-MM-dd</em>Z format. The time must be in UTC.</para>
+        /// <para>The date to query. You can query the offline full key analysis results for one day at a time. The format is <i>yyyy-MM-dd</i>Z (UTC time).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string Date { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,9 +43,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the child node in the cluster instance.</para>
+        /// <para>The ID of the child node in a cluster instance.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the analysis results of all child nodes in the instance are returned.</para>
+        /// <para>This parameter is required for cluster instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The number of the page to return.</para>
         /// <remarks>
-        /// <para>If the parameter value exceeds the maximum number of the returned pages, an empty large key list is returned.</para>
+        /// <para>If the value is greater than the maximum number of pages in the returned result, the returned big key results are empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The number of entries to return on each page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>.</para>
         /// <remarks>
-        /// <para>The default value is <b>30</b>.</para>
+        /// <para>Default value: <b>30</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

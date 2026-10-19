@@ -10,20 +10,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyEventInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The parameters for the action, in JSON format. For example: <c>{&quot;recoverMode&quot;: &quot;xxx&quot;, &quot;recoverTime&quot;: &quot;xxx&quot;}</c>.</para>
+        /// <para>The parameters related to the action in JSON format.
+        /// When <b>TaskAction</b> is set to <b>modifySwitchTime</b>, set this parameter to <c>{&quot;recoverMode&quot;: &quot;xxx&quot;, &quot;recoverTime&quot;: &quot;xxx&quot;}</c>.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>recoverMode</b>: The recovery mode. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>timePoint</b>: Executes the task at the time specified by <c>recoverTime</c>.</para>
-        /// </description></item>
-        /// <item><description><para><b>immediate</b>: Executes the task immediately.</para>
-        /// </description></item>
-        /// <item><description><para><b>maintainTime</b>: Executes the task during the maintenance window.</para>
-        /// </description></item>
+        /// <item><description><b>recoverMode</b>: the task recovery mode. Valid values:<list type="bullet">
+        /// <item><description><b>imePoint</b>: executes the task at a specified point in time.</description></item>
+        /// <item><description><b>immediate</b>: executes the task immediately.</description></item>
+        /// <item><description><b>maintainTime</b>: executes the task during the O&amp;M window.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>recoverTime</b>: The time to execute the task. This parameter is required when <b>recoverMode</b> is set to <b>timePoint</b>. Specify the time in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in UTC.</para>
-        /// </description></item>
+        /// <item><description><b>recoverTime</b>: the specified point in time in UTC. The format is yyyy-MM-ddTHH:mm:ssZ. This parameter is required when <b>recoverMode</b> is set to <b>timePoint</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,12 +30,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ActionParams { get; set; }
 
         /// <summary>
-        /// <para>The action to perform on the event. Valid values:</para>
+        /// <para>The action to process the event. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>archive</b>: Archives the event.</para>
-        /// </description></item>
-        /// <item><description><para><b>undo</b>: Cancels processing for the event.</para>
-        /// </description></item>
+        /// <item><description><b>archive</b>: Archives the event.</description></item>
+        /// <item><description><b>undo</b>: Does not process the event.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,7 +44,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string EventAction { get; set; }
 
         /// <summary>
-        /// <para>The ID of the event. You can specify up to 20 event IDs. Separate multiple IDs with commas.</para>
+        /// <para>The event IDs. Separate multiple IDs with commas. A maximum of 20 IDs are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,7 +55,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string EventId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

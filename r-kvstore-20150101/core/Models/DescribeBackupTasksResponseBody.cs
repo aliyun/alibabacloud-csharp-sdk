@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeBackupTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The following parameters are no longer used. Ignore the parameters.</para>
+        /// <para><b>[Deprecated]</b> This group of parameters is deprecated. Ignore these parameters.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public DescribeBackupTasksResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
         public class DescribeBackupTasksResponseBodyAccessDeniedDetail : TeaModel {
             /// <summary>
-            /// <para>This parameter is no longer used. Ignore this parameter.</para>
+            /// <para>Same as above.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>This parameter is no longer used. Ignore this parameter.</para>
+            /// <para>Same as above.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
-            /// <para>This parameter is no longer used. Ignore this parameter.</para>
+            /// <para>Same as above.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>This parameter is no longer used. Ignore this parameter.</para>
+            /// <para>Same as above.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>This parameter is no longer used. Ignore this parameter.</para>
+            /// <para>Same as above.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>This parameter is no longer used. Ignore this parameter.</para>
+            /// <para>Same as above.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string NoPermissionType { get; set; }
 
             /// <summary>
-            /// <para>This parameter is no longer used. Ignore this parameter.</para>
+            /// <para>Same as above.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -120,14 +120,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public long? BackupJobID { get; set; }
 
             /// <summary>
-            /// <para>The state of the backup task. Valid values:</para>
+            /// <para>The status of the backup task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>NoStart</b>: The backup task is not started.</description></item>
-            /// <item><description><b>Preparing</b>: The backup task is being prepared.</description></item>
-            /// <item><description><b>Waiting</b>: The backup task is pending.</description></item>
-            /// <item><description><b>Uploading</b>: The system is uploading the backup file.</description></item>
-            /// <item><description><b>Checking</b>: The system is checking the uploaded backup file.</description></item>
-            /// <item><description><b>Finished</b>: The backup task is completed.</description></item>
+            /// <item><description><b>NoStart</b>: not started</description></item>
+            /// <item><description><b>Preparing</b>: preparing</description></item>
+            /// <item><description><b>Waiting</b>: waiting</description></item>
+            /// <item><description><b>Uploading</b>: uploading</description></item>
+            /// <item><description><b>Checking</b>: checking</description></item>
+            /// <item><description><b>Finished</b>: completed</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -140,8 +140,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <summary>
             /// <para>The backup mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Automated</b>: automatic backup</description></item>
-            /// <item><description><b>Manual</b>: manual backup</description></item>
+            /// <item><description><b>Automated</b>: automatic backup.</description></item>
+            /// <item><description><b>Manual</b>: manual backup.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string NodeId { get; set; }
 
             /// <summary>
-            /// <para>The progress of the backup task in percentage.</para>
+            /// <para>The progress percentage of the backup task. This parameter is not recommended. Refer to the <b>Progress</b> parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string Process { get; set; }
 
             /// <summary>
-            /// <para>The backup progress.</para>
+            /// <para>The progress percentage of the backup. Valid values: 0 to 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>27</para>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string Progress { get; set; }
 
             /// <summary>
-            /// <para>The start time of the backup task. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The start time of the backup task. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-01-05T19:24:00Z</para>
@@ -194,8 +194,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <summary>
             /// <para>The type of the backup task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>TempBackupTask</b>: The backup task was manually performed.</description></item>
-            /// <item><description><b>NormalBackupTask</b>: The backup task was automatically performed.</description></item>
+            /// <item><description><b>TempBackupTask</b>: temporary backup task, which indicates a manual backup.</description></item>
+            /// <item><description><b>NormalBackupTask</b>: normal backup task, which indicates an automatic backup.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BB73740C-23E2-4392-9DA4-2660C74C****</para>

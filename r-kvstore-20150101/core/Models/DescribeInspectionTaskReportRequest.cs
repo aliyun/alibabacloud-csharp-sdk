@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeInspectionTaskReportRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the inspection instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>r-bp19f4f6994813xxx</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InspectionInsId { get; set; }
 
         /// <summary>
+        /// <para>The assistant instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,6 +35,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
+        /// <para>The task ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

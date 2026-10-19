@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeInstanceSSLResponseBody : TeaModel {
         /// <summary>
-        /// <para>The common name of the CA certificate. The default value is the internal endpoint of the instance.</para>
+        /// <para>The common name of the CA certificate. The default value is the internal network endpoint of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-bp1zxszhcgatnx****.redis.rds.aliyuncs.com</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string CertDownloadURL { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-bp1zxszhcgatnx****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>02260F96-913E-4655-9BA5-A3651CAF****</para>
@@ -52,8 +52,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The status of the TLS (SSL) encryption feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enable</b>: SSL encryption is enabled.</description></item>
-        /// <item><description><b>Disable</b>: SSL encryption is disabled.</description></item>
+        /// <item><description><b>Enable</b>: Enabled.</description></item>
+        /// <item><description><b>Disable</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SSLEnabled { get; set; }
 
         /// <summary>
-        /// <para>The time when the CA certificate expires.</para>
+        /// <para>The expiration time of the CA certificate.</para>
+        /// <para>The time is displayed in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-08-05T09:05:53Z</para>

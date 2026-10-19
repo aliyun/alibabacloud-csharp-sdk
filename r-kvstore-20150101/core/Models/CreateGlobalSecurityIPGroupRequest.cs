@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CreateGlobalSecurityIPGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The IP addresses in the IP whitelist template.</para>
+        /// <para>The IP addresses in the whitelist template.</para>
         /// <remarks>
-        /// <para> Separate multiple IP addresses with commas (,). The maximum number of IP addresses is 1,000.</para>
+        /// <para>Separate multiple IP addresses with commas (,). IP addresses cannot be duplicated. You can add up to 1,000 IP addresses.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string GIpList { get; set; }
 
         /// <summary>
-        /// <para>The name of the IP whitelist template. The name must meet the following requirements:</para>
+        /// <para>The name of the IP address whitelist template. The name must meet the following requirements:</para>
         /// <list type="bullet">
         /// <item><description>The name can contain lowercase letters, digits, and underscores (_).</description></item>
         /// <item><description>The name must start with a letter and end with a letter or digit.</description></item>

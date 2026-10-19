@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeAuditRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>The username of the account. If you do not specify this parameter, all accounts of the instance are queried.</para>
+        /// <para>The name of the account. If you do not specify this parameter, the audit logs of all accounts are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>demo</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The name of the database in the instance. If you do not specify this parameter, all databases are queried. Valid values: 0 to 255. 0 specifies database 0.</para>
+        /// <para>The database in the instance. If you do not specify this parameter, the audit logs of all databases are queried. Valid values: 0 to 255. For example, 0 indicates database 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string DatabaseName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The end time must be later than the start time. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</para>
         /// <remarks>
-        /// <para>We recommend that you specify a time range of 10 minutes or less because audit logs contain a great number of entries. Do not specify a time range that is longer than one day.</para>
+        /// <para>Because audit logs contain a large number of entries, specify a time range of up to 10 minutes and a maximum of 1 day.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the client. If you do not specify this parameter, this call applies to all clients.</para>
+        /// <para>The IP address of the client. If you do not specify this parameter, the audit logs of all IP addresses are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>127.0.0.1</para>
@@ -65,15 +65,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the node in the instance. You can set this parameter to query the monitoring data of a specified node.</para>
+        /// <para>The ID of the node in the instance. Specify this parameter to query the monitoring information of a specific node.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter is available only for read/write splitting and cluster instances.</para>
-        /// </description></item>
-        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/473786.html">DescribeLogicInstanceTopology</a> operation to query node IDs.</para>
-        /// </description></item>
+        /// <item><description>This parameter is available only when the instance uses the read/write splitting or cluster architecture.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/473786.html">DescribeLogicInstanceTopology</a> operation to query the node ID.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>r-bp1zxszhcgatnx****-db-0</para>
@@ -91,7 +89,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number of the page to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -101,7 +99,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The maximum number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -111,9 +109,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The keyword based on which the audit logs are queried. You can specify a command as a keyword to query logs. By default, all commands are queried.</para>
+        /// <para>The keyword used to query audit logs based on a specific command. By default, the audit logs of all executed commands are queried.</para>
         /// <remarks>
-        /// <para>You can specify only a single keyword in each call.</para>
+        /// <para>You can specify only one keyword.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -136,7 +134,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

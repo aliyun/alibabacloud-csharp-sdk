@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyAccountPasswordRequest : TeaModel {
         /// <summary>
-        /// <para>The username of the account for which you want to change the password. You can call the <a href="https://help.aliyun.com/document_detail/473816.html">DescribeAccounts</a> operation to query the username of the account.</para>
+        /// <para>The name of the account whose password you want to modify. You can call <a href="https://help.aliyun.com/document_detail/473816.html">DescribeAccounts</a> to query the account name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The new password to be set for the account. The password must be 8 to 32 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and specific special characters. These special characters include <c>! @ # $ % ^ &amp; * ( ) _ + - =</c></para>
+        /// <para>The new password to set for the account. The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include <c>!@#$%^&amp;*()_+-=</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,9 +43,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string NewAccountPassword { get; set; }
 
         /// <summary>
-        /// <para>The current password of the account.</para>
+        /// <para>The original password of the account.</para>
         /// <remarks>
-        /// <para>If you forget your password, you can call the <a href="https://help.aliyun.com/document_detail/473815.html">ResetAccountPassword</a> operation to reset your password.</para>
+        /// <para>If you forget the password of the account, you can call <a href="https://help.aliyun.com/document_detail/473815.html">ResetAccountPassword</a> to reset the password.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>This parameter is used only for internal maintenance. You do not need to specify this parameter.</para>
+        /// <para>This parameter is used only for internal maintenance purposes. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SDK</para>

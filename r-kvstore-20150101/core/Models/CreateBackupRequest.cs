@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CreateBackupRequest : TeaModel {
         /// <summary>
-        /// <para>The expiration period of this manual backup, in days. Valid values range from 7 to 730. If you specify -1, the backup data will not expire during the instance lifetime. If you do not specify a value (default), the expiration period follows the current automatic backup policy.</para>
+        /// <para>The retention period of this manual backup. Valid values: 7 to 730. Unit: days. If you set this parameter to -1, the manual backup does not expire within the instance lifetime. If you do not specify this parameter, the retention period is the same as that of the current automatic backup policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? BackupRetentionPeriod { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

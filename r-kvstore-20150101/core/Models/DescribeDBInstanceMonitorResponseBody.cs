@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeDBInstanceMonitorResponseBody : TeaModel {
         /// <summary>
-        /// <para>The collection frequency of the monitoring data. Unit: second.</para>
+        /// <para>The collection granularity of monitoring data, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

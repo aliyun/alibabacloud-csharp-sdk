@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeParameterGroupSupportParamRequest : TeaModel {
         /// <summary>
-        /// <para>The service category. Valid values:</para>
+        /// <para>The product category. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>standard</b>: ApsaraDB for Redis Community Edition</description></item>
-        /// <item><description><b>enterprise</b>: ApsaraDB for Redis Enhanced Edition (Tair)</description></item>
+        /// <item><description><b>standard</b>: ApsaraDB for Redis Community Edition.</description></item>
+        /// <item><description><b>enterprise</b>: Tair (Redis Enterprise Edition).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,9 +26,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The engine type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>redis</b>: ApsaraDB for Redis Community Edition instance or Tair DRAM-based instance</description></item>
-        /// <item><description><b>tair_pena</b>: Tair persistent memory-optimized instance</description></item>
-        /// <item><description><b>tair_pdb</b>: Tair ESSD/SSD-based instance</description></item>
+        /// <item><description><b>redis</b>: ApsaraDB for Redis Community Edition or Tair memory-optimized instances.</description></item>
+        /// <item><description><b>tair_pena</b>: Tair persistent memory-optimized instances.</description></item>
+        /// <item><description><b>tair_pdb</b>: Tair cloud-native (ESSD/SSD) instances.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,12 +39,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string EngineType { get; set; }
 
         /// <summary>
-        /// <para>The compatible engine version. Valid values:</para>
+        /// <para>The compatible version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>For ApsaraDB for Redis Community Edition instances, set the parameter to <b>5.0</b>, <b>6.0</b>, or <b>7.0</b>.</description></item>
-        /// <item><description>For Tair DRAM-based instances that are compatible with Redis 5.0 or Redis 6.0, set the parameter to <b>5.0</b> or <b>6.0</b>.</description></item>
-        /// <item><description>For Tair persistent memory-optimized instances that are compatible with Redis 6.0, set the parameter to <b>1.0</b>.</description></item>
-        /// <item><description>For Tair ESSD-based instances that are compatible with Redis 6.0, set the parameter to <b>1.0</b>. For Tair SSD-based instances that are compatible with Redis 6.0, set the parameter to <b>2.0</b>.</description></item>
+        /// <item><description>ApsaraDB for Redis Community Edition supports <b>5.0</b>, <b>6.0</b>, and <b>7.0</b>.</description></item>
+        /// <item><description>Tair memory-optimized instances are compatible with Redis 5.0 and Redis 6.0 protocols. Set this parameter to <b>5.0</b> or <b>6.0</b>.</description></item>
+        /// <item><description>Tair persistent memory-optimized instances are compatible with the Redis 6.0 protocol. Set this parameter to <b>1.0</b>.</description></item>
+        /// <item><description>Tair cloud-native (ESSD/SSD) instances are compatible with the Redis 6.0 protocol. To create a parameter template for ESSD-based instances, set this parameter to <b>1.0</b>. To create a parameter template for SSD-based instances, set this parameter to <b>2.0</b>.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

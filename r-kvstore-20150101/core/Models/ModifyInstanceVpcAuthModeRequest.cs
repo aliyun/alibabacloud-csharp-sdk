@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyInstanceVpcAuthModeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,13 +41,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to disable password-free access. Valid values:</para>
+        /// <para>The authentication mode in a VPC. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Open</b>: disables password-free access.</description></item>
-        /// <item><description><b>Close</b>: enables password-free access.</description></item>
+        /// <item><description><b>Open</b>: Uses password authentication.</description></item>
+        /// <item><description><b>Close</b>: Disables password authentication and enables password-free access.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> Default value: <b>Open</b>.</para>
+        /// <para>Default value: <b>Open</b>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

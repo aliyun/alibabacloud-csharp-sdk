@@ -12,10 +12,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The architecture of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/86132.html">Architecture overview</a>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>logic</b>: cluster or read/write splitting architecture.</description></item>
-        /// <item><description><b>normal</b>: standard architecture (primary/secondary).</description></item>
+        /// <item><description><b>logic</b>: cluster or read/write splitting architecture</description></item>
+        /// <item><description><b>normal</b>: standard architecture (primary/secondary)</description></item>
         /// </list>
-        /// <para>&lt;props=&quot;china&quot;&gt;If <b>EngineVersion</b> is set to <b>6.0</b>, this parameter does not support the value <b>logic</b>.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;When <b>EngineVersion</b> is set to <b>6.0</b>, this parameter does not support the <b>logic</b> value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string CharacterType { get; set; }
 
         /// <summary>
-        /// <para>The database type. Set the value to <b>Redis</b>.</para>
+        /// <para>The database engine. Set the value to <b>Redis</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The major version of the instance. Valid values: <b>4.0</b>, <b>5.0</b>, <b>6.0</b>, and <b>7.0</b>.</para>
+        /// <para>The major engine version of the instance. Valid values: <b>4.0</b>, <b>5.0</b>, <b>6.0</b>, and <b>7.0</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to obtain the instance ID.</para>
+        /// <para>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-bp1zxszhcgatnx****</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The parameter category.</para>
+        /// <para>Specifies whether to query the account parameter template. Set the value to <b>account</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>account</para>
@@ -76,9 +76,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ParameterCategory { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. You can invoke the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to obtain the resource group ID.</para>
+        /// <para>The ID of the resource group. You can invoke the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the ID of the resource group.</para>
         /// <remarks>
-        /// <para>You can also obtain the resource group ID in the console. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</para>
+        /// <para>You can also obtain the resource group ID in the console. For related operations, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

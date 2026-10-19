@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyParameterGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The service category. Valid values:</para>
+        /// <para>The product category. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>standard</b>: Redis Open-Source Edition</description></item>
-        /// <item><description><b>enterprise</b>: Tair (Enterprise Edition)</description></item>
+        /// <item><description><b>standard</b>: Redis Community Edition.</description></item>
+        /// <item><description><b>enterprise</b>: Tair (Enhanced Edition).</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The description of the parameter template. The description must be 0 to 200 characters in length.</para>
+        /// <para>The description of the parameter template. The description can be up to 200 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ParameterGroupDesc { get; set; }
 
         /// <summary>
-        /// <para>The parameter template ID.</para>
+        /// <para>The ID of the parameter template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,10 +54,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ParameterGroupId { get; set; }
 
         /// <summary>
-        /// <para>The new name of the parameter template. The name must meet the following requirements:</para>
+        /// <para>The name of the parameter template. The name must meet the following requirements:</para>
         /// <list type="bullet">
         /// <item><description>The name can contain letters, digits, and underscores (_). It must start with a letter and cannot contain Chinese characters.</description></item>
-        /// <item><description>The name can be 8 to 64 characters in length.</description></item>
+        /// <item><description>The name must be 8 to 64 characters in length.<remarks>
+        /// <para>This parameter is required. If you do not want to change the name of the parameter template, specify the original name.</para>
+        /// </remarks>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -69,9 +72,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ParameterGroupName { get; set; }
 
         /// <summary>
-        /// <para>A JSON-formatted object that specifies the parameter-value pairs. Format: {&quot;Parameter 1&quot;:&quot;Value 1&quot;,&quot;Parameter 2&quot;:&quot;Value 2&quot;...}. The specified value overwrites the original content.</para>
+        /// <para>The parameters and their values in JSON format: {&quot;Parameter1&quot;:&quot;Value1&quot;,&quot;Parameter2&quot;:&quot;Value2&quot;,...}. The specified values overwrite the existing values.</para>
         /// <remarks>
-        /// <para> The parameters that can be added for different editions are displayed in the console.</para>
+        /// <para>The parameters that can be added vary by version. Refer to the console for details.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -83,7 +86,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string Parameters { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The ID of the region where the instance resides. You can call the <a href="https://help.aliyun.com/document_detail/473779.html">DescribeInstanceAttribute</a> operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-zhangjiakou</para>

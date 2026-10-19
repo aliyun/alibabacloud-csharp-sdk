@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyParameterGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The parameter template ID.</para>
+        /// <para>The ID of the parameter template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testGroupName</para>

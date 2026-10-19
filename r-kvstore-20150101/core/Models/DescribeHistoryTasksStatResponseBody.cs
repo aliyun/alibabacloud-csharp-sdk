@@ -17,15 +17,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public List<DescribeHistoryTasksStatResponseBodyItems> Items { get; set; }
         public class DescribeHistoryTasksStatResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The task state.</para>
+            /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Scheduled</b></description></item>
-            /// <item><description><b>Running</b></description></item>
-            /// <item><description><b>Succeed</b></description></item>
-            /// <item><description><b>Failed</b></description></item>
-            /// <item><description><b>Cancelling</b></description></item>
-            /// <item><description><b>Canceled</b></description></item>
-            /// <item><description><b>Waiting</b></description></item>
+            /// <item><description><b>Scheduled</b>: Waiting to be executed.</description></item>
+            /// <item><description><b>Running</b>: Running.</description></item>
+            /// <item><description><b>Succeed</b>: Succeeded.</description></item>
+            /// <item><description><b>Failed</b>: Failed.</description></item>
+            /// <item><description><b>Cancelling</b>: Being stopped.</description></item>
+            /// <item><description><b>Canceled</b>: Stopped.</description></item>
+            /// <item><description><b>Waiting</b>: Waiting for the scheduled time.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

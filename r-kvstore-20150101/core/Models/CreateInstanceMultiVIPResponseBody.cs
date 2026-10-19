@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CreateInstanceMultiVIPResponseBody : TeaModel {
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>52D901ED-E0A5-42FB-B9DB-39C295C3****</para>
         /// </summary>

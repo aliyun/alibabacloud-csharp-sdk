@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeDedicatedClusterInstanceListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the instances.</para>
+        /// <para>The list of instance information.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<DescribeDedicatedClusterInstanceListResponseBodyInstances> Instances { get; set; }
         public class DescribeDedicatedClusterInstanceListResponseBodyInstances : TeaModel {
             /// <summary>
-            /// <para>The default bandwidth of the instance. Unit: Mbit/s.</para>
+            /// <para>The default bandwidth of the instance. Unit: MB/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>24</para>
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public long? BandWidth { get; set; }
 
             /// <summary>
-            /// <para>The architecture of the instance. Valid values:</para>
+            /// <para>The architecture type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>logic</b>: cluster</description></item>
-            /// <item><description><b>normal</b>: standard</description></item>
+            /// <item><description><b>logic</b>: Cluster architecture.</description></item>
+            /// <item><description><b>normal</b>: Standard architecture.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string CharacterType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the dedicated cluster to which the instance belongs.</para>
+            /// <para>The dedicated cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dhg-rx71fc5ndh9o****</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The name of the dedicated cluster to which the instance belongs.</para>
+            /// <para>The dedicated cluster name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testname</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// <para>The private endpoint of the instance.</para>
+            /// <para>The direct connection endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>r-t4ncdi1dgi0ja8****.redis.hangzhou.rds.aliyuncs.com</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string ConnectionDomain { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The time when the instance was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-05-06T07:09:40Z</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The current bandwidth of the instance, which is the sum of the default bandwidth and any extra bandwidth that is purchased. Unit: Mbit/s.</para>
+            /// <para>The current bandwidth of the instance. Unit: MB/s. The value is the sum of the default bandwidth and the increased bandwidth.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public long? CurrentBandWidth { get; set; }
 
             /// <summary>
-            /// <para>An internal parameter used for the maintenance and management of instances.</para>
+            /// <para>An internal parameter used for instance maintenance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4652****</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string CustomId { get; set; }
 
             /// <summary>
-            /// <para>The database engine. The return value is <b>redis</b>.</para>
+            /// <para>The database engine. The value is fixed as <b>redis</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>redis</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string Engine { get; set; }
 
             /// <summary>
-            /// <para>The database engine version of the instance. The return value is <b>5.0</b>.</para>
+            /// <para>The database engine version. The value is fixed as <b>5.0</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5.0</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string InstanceClass { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>r-bp1e7vl6ygf1yq****</para>
@@ -151,14 +151,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>Details about the nodes.</para>
+            /// <para>The list of node information.</para>
             /// </summary>
             [NameInMap("InstanceNodeList")]
             [Validation(Required=false)]
             public List<DescribeDedicatedClusterInstanceListResponseBodyInstancesInstanceNodeList> InstanceNodeList { get; set; }
             public class DescribeDedicatedClusterInstanceListResponseBodyInstancesInstanceNodeList : TeaModel {
                 /// <summary>
-                /// <para>The ID of the host in the dedicated cluster.</para>
+                /// <para>The host ID in the dedicated cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ch-bp13vf0y9gx3c****</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string DedicatedHostName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the instance.</para>
+                /// <para>The instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>r-bp1e7vl6ygf1yq****</para>
@@ -200,9 +200,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <summary>
                 /// <para>The node type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>db</b>: data node.</description></item>
-                /// <item><description><b>proxy</b>: proxy node.</description></item>
-                /// <item><description><b>normal</b>: regular node. This value is returned when the instance runs in the standard architecture.</description></item>
+                /// <item><description><b>db</b>: Data node.</description></item>
+                /// <item><description><b>proxy</b>: Proxy node.</description></item>
+                /// <item><description><b>normal</b>: Regular node. This value is returned for instances that use the standard architecture.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string NodeType { get; set; }
 
                 /// <summary>
-                /// <para>The port number that is used to connect to the node.</para>
+                /// <para>The port of the node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3001</para>
@@ -223,10 +223,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// <para>The role of the node. Valid values:</para>
+                /// <para>The node role. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>master</b>: master node</description></item>
-                /// <item><description><b>slave</b>: replica node</description></item>
+                /// <item><description><b>master</b>: Primary node.</description></item>
+                /// <item><description><b>slave</b>: Secondary node.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string Role { get; set; }
 
                 /// <summary>
-                /// <para>The zone ID of the node.</para>
+                /// <para>The zone to which the node belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-h</para>
@@ -249,23 +249,23 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             }
 
             /// <summary>
-            /// <para>The state of the instance. Valid values:</para>
+            /// <para>The instance status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Normal</b>: The instance is normal.</description></item>
-            /// <item><description><b>Creating</b>: The instance is being created.</description></item>
-            /// <item><description><b>Changing</b>: The configurations of the instance are being changed.</description></item>
-            /// <item><description><b>Inactive</b>: The instance is disabled.</description></item>
-            /// <item><description><b>Flushing</b>: The instance is being released.</description></item>
-            /// <item><description><b>Released</b>: The instance is released.</description></item>
-            /// <item><description><b>Transforming</b>: The billing method of the instance is being changed.</description></item>
-            /// <item><description><b>Unavailable</b>: The instance is unavailable.</description></item>
-            /// <item><description><b>Error</b>: The instance failed to be created.</description></item>
-            /// <item><description><b>Migrating</b>: The instance is being migrated.</description></item>
-            /// <item><description><b>BackupRecovering</b>: The instance is being restored from a backup.</description></item>
-            /// <item><description><b>MinorVersionUpgrading</b>: The minor version of the instance is being updated.</description></item>
-            /// <item><description><b>NetworkModifying</b>: The network type of the instance is being changed.</description></item>
-            /// <item><description><b>SSLModifying</b>: The SSL configurations of the instance are being changed.</description></item>
-            /// <item><description><b>MajorVersionUpgrading</b>: The major version of the instance is being upgraded. The instance remains accessible during the upgrade.</description></item>
+            /// <item><description><b>Normal</b>: Normal.</description></item>
+            /// <item><description><b>Creating</b>: Creating.</description></item>
+            /// <item><description><b>Changing</b>: Changing.</description></item>
+            /// <item><description><b>Inactive</b>: Disabled.</description></item>
+            /// <item><description><b>Flushing</b>: Purge in progress.</description></item>
+            /// <item><description><b>Released</b>: Released.</description></item>
+            /// <item><description><b>Transforming</b>: Transforming.</description></item>
+            /// <item><description><b>Unavailable</b>: Unavailable.</description></item>
+            /// <item><description><b>Error</b>: Creation failed.</description></item>
+            /// <item><description><b>Migrating</b>: Migrating.</description></item>
+            /// <item><description><b>BackupRecovering</b>: Restoring from backup.</description></item>
+            /// <item><description><b>MinorVersionUpgrading</b>: Minor version upgrade in progress.</description></item>
+            /// <item><description><b>NetworkModifying</b>: Changing the network.</description></item>
+            /// <item><description><b>SSLModifying</b>: Changing SSL configurations.</description></item>
+            /// <item><description><b>MajorVersionUpgrading</b>: Major engine version upgrade in progress. The instance remains accessible.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -276,7 +276,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string InstanceStatus { get; set; }
 
             /// <summary>
-            /// <para>The end time of the maintenance window. The time is in the <em>HH:mm</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The end time of the maintenance window. The time is in the <i>HH:mm</i>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>17:00Z</para>
@@ -286,7 +286,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string MaintainEndTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of the maintenance window. The time is in the <em>HH:mm</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The start time of the maintenance window. The time is in the <i>HH:mm</i>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16:00Z</para>
@@ -298,13 +298,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <summary>
             /// <para>The number of proxy nodes.</para>
             /// <remarks>
-            /// </remarks>
             /// <list type="bullet">
-            /// <item><description><para>If the return value is <b>0</b>, the proxy mode is disabled for the instance. If the return value is an integer greater than <b>0</b>, such as <b>1</b>, the proxy mode is enabled for the instance.</para>
-            /// </description></item>
-            /// <item><description><para>This parameter is returned only when the instance is a <a href="https://help.aliyun.com/document_detail/52228.html">cluster</a> instance.</para>
-            /// </description></item>
+            /// <item><description>A value of <b>0</b> indicates that the proxy mode is disabled for the instance. A value greater than <b>0</b> (such as <b>1</b>) indicates that the proxy mode is enabled for the instance.</description></item>
+            /// <item><description>This parameter is returned only when the instance uses the <a href="https://help.aliyun.com/document_detail/52228.html">cluster architecture</a>.</description></item>
             /// </list>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -314,7 +312,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public int? ProxyCount { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -324,9 +322,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The number of shards.</para>
+            /// <para>The number of data shards.</para>
             /// <remarks>
-            /// <para> This parameter is returned only when the instance is a <a href="https://help.aliyun.com/document_detail/52228.html">cluster</a> instance.</para>
+            /// <para>This parameter is returned only when the instance uses the <a href="https://help.aliyun.com/document_detail/52228.html">cluster architecture</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -337,7 +335,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public int? ShardCount { get; set; }
 
             /// <summary>
-            /// <para>The storage type of the instance. The return value is LOCAL_SSD, which indicates <a href="https://help.aliyun.com/document_detail/122389.html">enhanced SSDs (ESSDs)</a>.</para>
+            /// <para>The storage type. The value is fixed as LOCAL_SSD (<a href="https://help.aliyun.com/document_detail/122389.html">ESSD cloud disk (standard SSD)</a>).</para>
             /// 
             /// <b>Example:</b>
             /// <para>LOCAL_SSD</para>
@@ -379,7 +377,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -389,7 +387,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25</para>
@@ -399,7 +397,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>712CCF2A-16BD-411B-93F7-E978BEF2****</para>
@@ -409,7 +407,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeTagsRequest : TeaModel {
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>The token used to start the next query to return more results.</para>
         /// <remarks>
-        /// <para>This parameter is not required for the first request. If not all results are returned in one query, you can specify the token that is obtained from the previous query as the value of <b>NextToken</b>.</para>
+        /// <para>You do not need to provide this parameter for the first query. If a single query does not return all results, you can pass the <b>NextToken</b> value returned in the previous response to continue the query.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Valid values: <b>INSTANCE</b> or <b>instance</b>.</para>
+        /// <para>The resource type. Valid values: <b>INSTANCE</b> and <b>instance</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>INSTANCE</para>

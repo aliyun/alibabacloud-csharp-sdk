@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string CurrentConnectionString { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,8 +34,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The network type of the endpoint. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Private</b>: internal network</description></item>
-        /// <item><description><b>Public</b>: Internet</description></item>
+        /// <item><description><b>Private</b>: virtual private cloud (VPC).</description></item>
+        /// <item><description><b>Public</b>: Internet.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,9 +46,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string IPType { get; set; }
 
         /// <summary>
-        /// <para>The prefix of the new endpoint. Specify the endpoint in the <c>&lt;prefix&gt;.redis.rds.aliyuncs.com</c> format. The prefix must be 8 to 40 characters in length and can contain lowercase letters and digits. It must start with a lowercase letter.</para>
+        /// <para>The prefix of the new endpoint. The endpoint of the instance is in the format of <c>&lt;prefix&gt;.redis.rds.aliyuncs.com</c>. The prefix must start with a lowercase letter and can contain lowercase letters and digits. The prefix must be 8 to 40 characters in length.</para>
         /// <remarks>
-        /// <para> You must specify one of the <b>NewConnectionString</b> and <b>Port</b> parameters.</para>
+        /// <para>You must specify at least one of the request parameters <b>NewConnectionString</b> and <b>Port</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -67,9 +67,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The port number of the instance. Valid values: <b>1024</b> to <b>65535</b>.</para>
+        /// <para>The service port number of the instance. Valid values: <b>1</b> to <b>65535</b>.</para>
         /// <remarks>
-        /// <para> You must specify one of the <b>NewConnectionString</b> and <b>Port</b> parameters.</para>
+        /// <para>You must specify at least one of the request parameters <b>NewConnectionString</b> and <b>Port</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

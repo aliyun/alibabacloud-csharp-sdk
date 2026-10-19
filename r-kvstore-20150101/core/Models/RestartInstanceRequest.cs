@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class RestartInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The time when you want to restart the instance. Default value: Immediately. Valid values:</para>
+        /// <para>The time when the instance is restarted. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Immediately</b>: immediately restarts the instance.</description></item>
-        /// <item><description><b>MaintainTime</b>: restarts the instance during the maintenance window.</description></item>
+        /// <item><description><b>Immediately</b>: The instance is restarted immediately. This is the default value.</description></item>
+        /// <item><description><b>MaintainTime</b>: The instance is restarted during the maintenance window.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string EffectiveTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,13 +55,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to update to the latest minor version when the instance is restarted. Valid values:</para>
+        /// <para>Specifies whether to upgrade the minor version to the latest version when the instance is restarted. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: updates the minor version.</description></item>
-        /// <item><description><b>false</b>: does not update the minor version.</description></item>
+        /// <item><description><b>true</b>: Upgrades the minor version.</description></item>
+        /// <item><description><b>false</b>: Does not upgrade the minor version.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>The default value is <b>true</b>.</para>
+        /// <para>Default value: <b>true</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

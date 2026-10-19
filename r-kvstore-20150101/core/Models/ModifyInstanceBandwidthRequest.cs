@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyInstanceBandwidthRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the ID of the instance.</para>
+        /// <para>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,9 +41,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The total expected bandwidth of the instance.</para>
+        /// <para>The total target bandwidth value of the instance.</para>
         /// <remarks>
-        /// <para>If the instance is a cluster instance, the TargetIntranetBandwidth must be divisible by the number of shards in the instance. This operation is not supported for read/write splitting instances.</para>
+        /// <para>Notice:  If the instance is a Cluster Edition instance, the total target bandwidth value must be evenly divisible by the number of shards. This operation is not supported for new-architecture read/write splitting instances.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class AddShardingNodeRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
+        /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables auto-renewal. Make sure that your account has sufficient balance.</description></item>
-        /// <item><description><b>false</b>: disables auto-renewal. You must manually renew the instance in the console before the instance expires. For more information, see <a href="https://help.aliyun.com/document_detail/26352.html">Instance renewal</a>.</description></item>
+        /// <item><description><b>true</b>: Automatic payment is enabled. Make sure that your account has sufficient balance.</description></item>
+        /// <item><description><b>false</b>: Automatic payment is disabled. You must manually complete the payment in the console. For more information, see <a href="https://help.aliyun.com/document_detail/26352.html">Manual renewal</a>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> Default value: <b>true</b>.</para>
+        /// <para>Default value: <b>true</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>The business information. This is an additional parameter.</para>
+        /// <para>The additional parameter for business information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>000000000</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// <para>The ID of the coupon.</para>
+        /// <para>The coupon code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>youhuiquan_promotion_option_id_for_blank</para>
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string CouponNo { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable forced transmission during a configuration change. Valid values:</para>
+        /// <para>Specifies whether to enable forced transmission. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): Before the configuration change, the system checks the minor version of the instance. If the minor version of the instance is outdated, an error is reported. You must update the minor version of the instance and try again.</description></item>
-        /// <item><description><b>true</b>: The system skips the version check and directly performs the configuration change.</description></item>
+        /// <item><description><b>false</b> (default): Before the Upgrade/Downgrade, the system checks the current minor engine version of the instance. If the minor engine version is outdated, an error is returned. You must upgrade the minor engine version and retry.</description></item>
+        /// <item><description><b>true</b>: Skips the check and directly executes the Upgrade/Downgrade operation.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public bool? ForceTrans { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -92,9 +92,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The number of data shards that you want to add. Default value: <b>1</b>.</para>
+        /// <para>The number of shards to add. Default value: <b>1</b>.</para>
         /// <remarks>
-        /// <para> The instance can contain 2 to 256 data shards. You can add up to 64 data shards at a time. Make sure that the number of shards does not exceed this limit.</para>
+        /// <para>The minimum total number of shards for an instance is 2. You can add up to 64 shards in a single operation, and the total number of shards for an instance cannot exceed 256. Make sure that the number of shards does not exceed this limit.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? ShardCount { get; set; }
 
         /// <summary>
-        /// <para>The source of the operation. This parameter is used only for internal maintenance. You do not need to specify this parameter.</para>
+        /// <para>The request source. This parameter is used only for internal maintenance and does not need to be specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SDK</para>
@@ -115,7 +115,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SourceBiz { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch ID. You can specify a different vSwitch within the same virtual private cloud (VPC). In this case, the new data shards are created in the specified vSwitch. If you do not specify this parameter, the new data shards are created in the original vSwitch.</para>
+        /// <para>The ID of a different vSwitch within the same VPC. The new data shards are created under the specified vSwitch.
+        /// If you leave this parameter empty, the new data shards are created under the original vSwitch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-bp1e7clcw529l773d****</para>

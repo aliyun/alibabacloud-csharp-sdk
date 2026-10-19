@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CheckCloudResourceAuthorizedRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the ID of the instance.</para>
+        /// <para>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,15 +37,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role that you want to attach to your Tair (Redis OSS-compatible) instance. The ARN must be in the format of <c>acs:ram::$accountID:role/$roleName</c>. After the role is attached, your Tair (Redis OSS-compatible) instance can use KMS.</para>
+        /// <para>The global resource descriptor Alibaba Cloud Resource Name (ARN) of the role to be authorized. After the role is granted authorization, the related KMS can be used. Format: <c>acs:ram::$accountID:role/$roleName</c>.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para><c>$accountID</c>: the ID of the Alibaba Cloud account. To view the account ID, log on to the Alibaba Cloud console, move the pointer over your profile picture in the upper-right corner of the page, and then click <b>Security Settings</b>.</para>
-        /// </description></item>
-        /// <item><description><para><c>$roleName</c>: the name of the RAM role. Replace $roleName with <b>AliyunRdsInstanceEncryptionDefaultRole</b>.</para>
-        /// </description></item>
+        /// <item><description><c>$accountID</c>: the ID of the Alibaba Cloud account. Log on to the Alibaba Cloud Management Console, move the mouse pointer over the profile picture in the upper-right corner, and then click <b>Security Settings</b> to view the account ID.</description></item>
+        /// <item><description><c>$roleName</c>: the name of the RAM role. Set this value to <b>AliyunRdsInstanceEncryptionDefaultRole</b>.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::123456789012****:role/AliyunRdsInstanceEncryptionDefaultRole</para>

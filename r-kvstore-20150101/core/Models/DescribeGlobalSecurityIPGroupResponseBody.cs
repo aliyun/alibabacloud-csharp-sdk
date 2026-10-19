@@ -10,23 +10,23 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeGlobalSecurityIPGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array of global IP whitelist templates.</para>
+        /// <para>The IP whitelist template information.</para>
         /// </summary>
         [NameInMap("GlobalSecurityIPGroup")]
         [Validation(Required=false)]
         public List<DescribeGlobalSecurityIPGroupResponseBodyGlobalSecurityIPGroup> GlobalSecurityIPGroup { get; set; }
         public class DescribeGlobalSecurityIPGroupResponseBodyGlobalSecurityIPGroup : TeaModel {
             /// <summary>
-            /// <para>An array of instance IDs that are associated with the global IP whitelist template.</para>
+            /// <para>The instance IDs associated with the IP whitelist template.</para>
             /// </summary>
             [NameInMap("DBInstances")]
             [Validation(Required=false)]
             public List<string> DBInstances { get; set; }
 
             /// <summary>
-            /// <para>The IP addresses in the global IP whitelist template.</para>
+            /// <para>The IP addresses in the whitelist template.</para>
             /// <remarks>
-            /// <para>Separate multiple IP addresses with a comma.</para>
+            /// <para>Separate multiple IP addresses with commas (,).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string GIpList { get; set; }
 
             /// <summary>
-            /// <para>The name of the global IP whitelist template.</para>
+            /// <para>The name of the IP whitelist template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_123</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string GlobalIgName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the global IP whitelist template.</para>
+            /// <para>The ID of the IP whitelist template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>g-zsldxfiwjmti0kcm****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string GlobalSecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>

@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? Port { get; set; }
 
         /// <summary>
-        /// <para>The queries per second (QPS). This value is the theoretical maximum for the current instance specifications.</para>
+        /// <para>The queries per second (QPS). This value is the theoretical value for the current instance specification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100000</para>

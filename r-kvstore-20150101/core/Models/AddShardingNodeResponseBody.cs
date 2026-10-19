@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class AddShardingNodeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IDs of the data shards.</para>
+        /// <para>The list of data shard node IDs.</para>
         /// </summary>
         [NameInMap("NodeIds")]
         [Validation(Required=false)]
         public List<string> NodeIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the order.</para>
+        /// <para>The order ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20741011111111</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OrderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B79C1A90-495B-4E99-A2AA-A4DB13B8****</para>

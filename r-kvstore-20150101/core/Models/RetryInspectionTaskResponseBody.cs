@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class RetryInspectionTaskResponseBody : TeaModel {
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>794120D1-E0CF-4713-BAE4-EBAEA04506AF</para>
         /// </summary>

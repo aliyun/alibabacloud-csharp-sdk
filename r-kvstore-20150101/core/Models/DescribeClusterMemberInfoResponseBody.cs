@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeClusterMemberInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about data nodes in the cluster instance.</para>
+        /// <para>The list of data node information for the cluster instance.</para>
         /// </summary>
         [NameInMap("ClusterChildren")]
         [Validation(Required=false)]
         public List<DescribeClusterMemberInfoResponseBodyClusterChildren> ClusterChildren { get; set; }
         public class DescribeClusterMemberInfoResponseBodyClusterChildren : TeaModel {
             /// <summary>
-            /// <para>The maximum bandwidth of the node. Unit: MB/s.</para>
+            /// <para>The bandwidth of the node. Unit: MB/s.</para>
             /// <remarks>
-            /// <para>This parameter is returned only if the return value of <b>Service</b> is <b>redis</b>, which indicates a data node.</para>
+            /// <para>This parameter is returned only when the <b>Service</b> parameter is set to <b>redis</b>, which indicates that the node is a data node.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public long? BandWidth { get; set; }
 
             /// <summary>
-            /// <para>The retention period of binlogs.</para>
+            /// <para>The number of days for which binary logs are retained.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public int? BinlogRetentionDays { get; set; }
 
             /// <summary>
-            /// <para>The type of workload. The return value is <b>ALIYUN</b>.</para>
+            /// <para>The business type. The value is fixed as <b>ALIYUN</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALIYUN</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string BizType { get; set; }
 
             /// <summary>
-            /// <para>The maximum memory capacity per data node. Unit: MB.</para>
+            /// <para>The maximum memory capacity of a single data node. Unit: MB.</para>
             /// <remarks>
-            /// <para>This parameter is returned only if the return value of <b>Service</b> is <b>redis</b>, which indicates a data node.</para>
+            /// <para>This parameter is returned only when the <b>Service</b> parameter is set to <b>redis</b>, which indicates that the node is a data node.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public long? Capacity { get; set; }
 
             /// <summary>
-            /// <para>The specifications of the data node. For more information, see <a href="https://help.aliyun.com/document_detail/164477.html">Community Edition instances that use cloud disks</a>.</para>
+            /// <para>The specifications of the data node. For more information, see <a href="https://help.aliyun.com/document_detail/164477.html">Cloud-native instance specifications</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>redis.shard.small.ce</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string ClassCode { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of connections supported by the data node.</para>
+            /// <para>The maximum number of connections for the data node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20000</para>
@@ -83,7 +83,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public long? Connections { get; set; }
 
             /// <summary>
-            /// <para>The current bandwidth of the data node, which is the sum of the default bandwidth and any extra bandwidth that is purchased. Unit: Mbit/s.</para>
+            /// <para>The current bandwidth of the node. Unit: MB/s. The value is the sum of the default bandwidth and the increased bandwidth of the node.</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;This parameter is returned only when the instance is created in a dedicated cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -93,9 +94,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public long? CurrentBandWidth { get; set; }
 
             /// <summary>
-            /// <para>The storage capacity of the <a href="https://help.aliyun.com/document_detail/122389.html">enhanced SSD (ESSD)</a> that is used by the data node. Unit: MB.</para>
+            /// <para>The storage space of the <a href="https://help.aliyun.com/document_detail/122389.html">ESSD cloud disk</a> for the data node. Unit: MB.</para>
             /// <remarks>
-            /// <para>The ESSD is used only to store system operating data, such as Persistent Memory (PMEM). It is not used as a medium to write and read data.</para>
+            /// <para>The ESSD cloud disk is used only for system operations, such as data persistence, and is not used as a medium for data access.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -106,7 +107,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public int? DiskSizeMB { get; set; }
 
             /// <summary>
-            /// <para>The ID of the replica set in the node.</para>
+            /// <para>The replica set ID of the node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>501791111</para>
@@ -116,7 +117,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The name of the data node.</para>
+            /// <para>The name of the node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>r-bp1zxszhcgatnx****-db-0</para>
@@ -126,7 +127,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The number of replica nodes.</para>
+            /// <para>The number of child nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -148,8 +149,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <summary>
             /// <para>The node type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>redis</b>: data node</description></item>
-            /// <item><description><b>redis_cs</b>: config server</description></item>
+            /// <item><description><b>redis</b>: data node.</description></item>
+            /// <item><description><b>redis_cs</b>: configuration server node.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -170,7 +171,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string ServiceVersion { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user.</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2****_176498472570****</para>
@@ -182,7 +183,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2D9F3768-EDA9-4811-943E-42C8006E****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class SwitchInstanceHARequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> to query the instance ID.</para>
+        /// <para>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data shard node. You can call <a href="https://help.aliyun.com/document_detail/473782.html">DescribeRoleZoneInfo</a> to obtain the CustinsId parameter. Separate multiple data shard node IDs with commas (,). To specify all nodes, enter <c>all</c>.</para>
+        /// <para>The ID of the data shard node. You can call the <a href="https://help.aliyun.com/document_detail/473782.html">DescribeRoleZoneInfo</a> operation to obtain the CustinsId parameter. Separate multiple data shard node IDs with commas (,). To specify all nodes, enter <c>all</c>.</para>
         /// <remarks>
         /// <para>This parameter is available and required only when the instance uses the cluster or read/write splitting architecture.</para>
         /// </remarks>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The node ID of the original MASTER node in the shard.</para>
+        /// <para>The ID of the original primary node of the shard.</para>
         /// 
         /// <b>Example:</b>
         /// <para>52717408</para>
@@ -66,11 +66,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The execution time. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: immediately. This is the default value.</description></item>
-        /// <item><description><b>1</b>: during the maintenance window.</description></item>
+        /// <item><description><b>0</b>: executes the operation immediately. This is the default value.</description></item>
+        /// <item><description><b>1</b>: executes the operation within the maintenance window.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> to modify the maintenance window of the instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of the instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -83,11 +83,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The switchover mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ReliabilityPriority (default)</b>: Reliability is prioritized. The primary/secondary switchover is performed only when primary/secondary synchronization has no latency, which prevents data loss. In scenarios with heavy write workloads and persistent synchronization latency, this mode may cause the primary/secondary switchover to fail.</description></item>
-        /// <item><description><b>AvailablePriority</b>: Availability is prioritized. The primary/secondary switchover is performed immediately regardless of primary/secondary latency, which may cause minor data loss.</description></item>
+        /// <item><description><b>ReliabilityPriority</b> (default): prioritizes reliability. The primary/secondary switchover is performed only when there is no synchronization latency between the primary and secondary nodes, ensuring no data loss. In scenarios with a large write volume and continuous synchronization latency, this mode may cause the switchover to fail.</description></item>
+        /// <item><description><b>AvailablePriority</b>: prioritizes availability. The primary/secondary switchover is performed immediately regardless of the synchronization latency between the primary and secondary nodes, which may result in a small amount of data loss.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Evaluate your business requirements for data integrity and service availability before selecting a switchover mode.</para>
+        /// <para>Select a switchover mode based on your business requirements for data and services.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SwitchType { get; set; }
 
         /// <summary>
-        /// <para>The node ID of the target MASTER node after the switchover.</para>
+        /// <para>The ID of the target primary node after the switchover.</para>
         /// 
         /// <b>Example:</b>
         /// <para>52717403</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string TargetNodeId { get; set; }
 
         /// <summary>
-        /// <para>The shard name of the instance.</para>
+        /// <para>The name of the instance shard.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-2zegk3jyxxxwixfo6c-db-1</para>

@@ -12,10 +12,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Automatic payment. This is the default value.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Manual payment. In the console, choose <b>Billing Management</b> &gt; <b>Renewal Management</b> in the top navigation bar. In the navigation pane on the left, click *<em>Or\</em>\<em>rs</em>* &gt; *<em>My Or\</em>\<em>rs</em>* to find and pay for the or\*er.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: enables automatic payment. This is the default value.</description></item>
+        /// <item><description><b>false</b>: disables automatic payment. You must manually pay for the order. To pay for the order, choose <b>Billing</b> &gt; <b>Renewals</b> in the top navigation bar of the console, and then choose <b>Order Management</b> &gt; <b>My Orders</b> in the left-side navigation pane to find and pay for the order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,12 +24,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal for the instance. Valid values:</para>
+        /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Auto-renewal is enabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b> (default): Auto-renewal is disabled.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: enables auto-renewal.</description></item>
+        /// <item><description><b>false</b>: disables auto-renewal. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,9 +38,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The auto-renewal period, in months. Valid values: <b>1</b>, <b>2</b>, <b>3</b>, <b>6</b>, and <b>12</b>.</para>
+        /// <para>The auto-renewal epoch. Unit: months. Valid values: <b>1</b>, <b>2</b>, <b>3</b>, <b>6</b>, and <b>12</b>.</para>
         /// <remarks>
-        /// <para>This parameter is required when the <b>AutoRenew</b> parameter is set to <b>true</b>.</para>
+        /// <para>This parameter is required only when the <b>AutoRenew</b> parameter is set to <b>true</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -55,12 +51,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? AutoRenewPeriod { get; set; }
 
         /// <summary>
-        /// <para>The target billing method. Valid values:</para>
+        /// <para>The billing method to which you want to switch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>PrePaid</b>: subscription. If you set this parameter to this value, you must also specify the <b>Period</b> parameter.</para>
-        /// </description></item>
-        /// <item><description><para><b>PostPaid</b>: pay-as-you-go.</para>
-        /// </description></item>
+        /// <item><description><b>PrePaid</b>: subscription. If you set this parameter to PrePaid, you must also specify the <b>Period</b> parameter.</description></item>
+        /// <item><description><b>PostPaid</b>: pay-as-you-go.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -71,15 +65,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
-        /// <summary>
-        /// <para>The coupon ID.</para>
-        /// </summary>
         [NameInMap("CouponNo")]
         [Validation(Required=false)]
         public string CouponNo { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query instance IDs.</para>
+        /// <para>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -98,7 +89,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration, in months. Valid values: <b>1</b> to <b>9</b>, <b>12</b>, <b>24</b>, and <b>36</b>.</para>
+        /// <para>The subscription duration. Unit: months. Valid values: <b>1</b> to <b>9</b>, <b>12</b>, <b>24</b>, and <b>36</b>.</para>
         /// <remarks>
         /// <para>This parameter is available and required only when the <b>ChargeType</b> parameter is set to <b>PrePaid</b>.</para>
         /// </remarks>

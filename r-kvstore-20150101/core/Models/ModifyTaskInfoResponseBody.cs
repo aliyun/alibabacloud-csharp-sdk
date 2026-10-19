@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyTaskInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code returned if a task fails.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mst.errorcode.success.errormessage</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the failed task. This parameter is returned if a task fails.</para>
+        /// <para>The ID of the failed node. The first failed node ID is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-0mqaj5hnyofczv****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of completed tasks.</para>
+        /// <para>The number of successful nodes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

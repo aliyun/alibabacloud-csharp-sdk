@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CreateGlobalDistributeCacheResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the distributed instance.</para>
+        /// <para>The distributed instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gr-8vbzg1y6m****t38p</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string GlobalInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-8vb6ffc5****4ec4</para>

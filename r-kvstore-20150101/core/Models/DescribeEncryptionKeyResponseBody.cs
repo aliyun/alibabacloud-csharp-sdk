@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeEncryptionKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account that is used to create the custom key.</para>
+        /// <para>The Alibaba Cloud account ID of the key creator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>17649847********</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string Creator { get; set; }
 
         /// <summary>
-        /// <para>The time when the custom key is expected to be deleted. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+        /// <para>The estimated time when the key is to be deleted. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
         /// <remarks>
-        /// <para>If the return value is an empty string, the custom key cannot be automatically deleted.</para>
+        /// <para>If this parameter is empty, the key will not be automatically deleted.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string DeleteDate { get; set; }
 
         /// <summary>
-        /// <para>The description of the custom key. By default, an empty string is returned.</para>
+        /// <para>The description of the key. By default, this parameter is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testkey</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the custom key.</para>
+        /// <para>The key ID of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ad463061-992d-4195-8a94-ed63********</para>
@@ -53,10 +53,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string EncryptionKey { get; set; }
 
         /// <summary>
-        /// <para>The state of the custom key. Valid values:</para>
+        /// <para>The status of the key. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enabled</b>: The custom key is available.</description></item>
-        /// <item><description><b>Disabled</b>: The custom key is unavailable.</description></item>
+        /// <item><description><b>Enabled</b>: The key is available.</description></item>
+        /// <item><description><b>Disabled</b>: The key is unavailable.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string EncryptionName { get; set; }
 
         /// <summary>
-        /// <para>The purpose of the custom key. A value of <c>ENCRYPT/DECRYPT</c> indicates encryption and decryption.</para>
+        /// <para>The purpose of the key. The return value <c>ENCRYPT/DECRYPT</c> indicates that the key is used for encryption and decryption.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENCRYPT/DECRYPT</para>
@@ -87,9 +87,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string KeyUsage { get; set; }
 
         /// <summary>
-        /// <para>The time when the custom key expires. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+        /// <para>The expiration time of the key. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
         /// <remarks>
-        /// <para>If the return value is an empty string, the custom key does not expire.</para>
+        /// <para>If this parameter is empty, the key does not expire.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string MaterialExpireTime { get; set; }
 
         /// <summary>
-        /// <para>The source of the custom key. A value of <b>Aliyun_KMS</b> indicates <a href="https://help.aliyun.com/document_detail/28935.html">Key Management Service (KMS)</a> of Alibaba Cloud.</para>
+        /// <para>The source of the key material. The return value is <b>Aliyun_KMS</b>, which indicates Alibaba Cloud <a href="https://help.aliyun.com/document_detail/28935.html">Key Management Service (KMS)</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Aliyun_KMS</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string Origin { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9A931CE5-C926-5E09-B0EC-6299C4A6****</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role to which you want to grant permissions.</para>
+        /// <para>The global resource descriptor ARN (Alibaba Cloud Resource Name) of the role to be granted authorization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::123456789012****:role/AliyunRdsInstanceEncryptionDefaultRole</para>

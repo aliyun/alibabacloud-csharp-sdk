@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CreateTairKVCacheVNodeRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically complete the payment. The value must be <b>true</b>.</para>
+        /// <para>Specifies whether to enable automatic payment. Set the value to <b>true</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -22,10 +22,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Enables auto-renewal.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b> (default): Disables auto-renewal.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: enables auto-renewal.</description></item>
+        /// <item><description><b>false</b> (default): disables auto-renewal.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,7 +34,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The auto-renewal period, in months. Valid values: <b>1</b>, <b>2</b>, <b>3</b>, <b>6</b>, and <b>12</b>.</para>
+        /// <para>The auto-renewal epoch. Unit: months. Valid values: <b>1</b>, <b>2</b>, <b>3</b>, <b>6</b>, and <b>12</b>.</para>
         /// <remarks>
         /// <para>This parameter is required when the <b>AutoRenew</b> parameter is set to <b>true</b>.</para>
         /// </remarks>
@@ -49,12 +47,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string AutoRenewPeriod { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use a coupon. Valid values:</para>
+        /// <para>Specifies whether to use a voucher. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Use a coupon.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b> (default): Do not use a coupon.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: uses a voucher.</description></item>
+        /// <item><description><b>false</b> (default): does not use a voucher.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,7 +61,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public bool? AutoUseCoupon { get; set; }
 
         /// <summary>
-        /// <para>Additional business information, such as a promotion ID.</para>
+        /// <para>The extended information, such as the campaign ID and business information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>000000000</para>
@@ -75,9 +71,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// <para>The billing method for the instance. Valid value:</para>
+        /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PrePaid</b>: Subscription. If you specify this value, you must also specify the <b>Period</b> parameter.</description></item>
+        /// <item><description><b>PrePaid</b>: subscription. If you set this parameter to PrePaid, you must also specify the <b>Period</b> parameter.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -88,7 +84,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>A client-generated token that ensures request idempotence. This token must be unique across requests, is case-sensitive, and cannot exceed 64 ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must ensure that the token is unique among different requests. The token is case-sensitive and can be up to 64 ASCII characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -119,12 +115,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string CouponNo { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run on the instance creation request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Performs a dry run and does not create the instance. The system checks the request parameters, request format, business limits, and available inventory. If the check fails, the system returns the corresponding error. If the check passes, the system returns the <c>DryRunOperation</c> error code.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b> (default): Sends a normal request. If the check passes, the system creates the instance.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: performs a dry run without creating the instance. The system checks the request parameters, request format, service limits, and available resources. If the request fails the dry run, the system returns an error. If the request passes the dry run, the system returns the <c>DryRunOperation</c> error code.</description></item>
+        /// <item><description><b>false</b> (default): sends the request. If the request passes the dry run, the instance is created.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -134,15 +128,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
-        /// <summary>
-        /// <para>This parameter is no longer used.</para>
-        /// </summary>
         [NameInMap("ElasticTimeRange")]
         [Validation(Required=false)]
         public string ElasticTimeRange { get; set; }
 
         /// <summary>
-        /// <para>The instance specification.</para>
+        /// <para>The instance type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -153,7 +144,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceClass { get; set; }
 
         /// <summary>
-        /// <para>The name of the new instance. The name must be 2 to 80 characters long and must start with a letter (case-insensitive) or a Chinese character. Spaces and the following special characters are not supported: <c>@/:=”&lt;&gt;{[]}</c>.</para>
+        /// <para>The name of the new instance. The name must be 2 to 80 characters in length and start with a letter or a Chinese character. It cannot contain spaces or the following special characters: <c>@/:=”&lt;&gt;{[]}</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vnodetest</para>
@@ -171,7 +162,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The subscription period in months. Valid values: <b>1</b> to <b>9</b>, <b>12</b>, <b>24</b>, and <b>36</b>.</para>
+        /// <para>The subscription duration. Unit: months. Valid values: <b>1</b> to <b>9</b>, <b>12</b>, <b>24</b>, and <b>36</b>.</para>
         /// <remarks>
         /// <para>This parameter is required when the <b>ChargeType</b> parameter is set to <b>PrePaid</b>.</para>
         /// </remarks>
@@ -184,7 +175,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where you want to create the instance.</para>
+        /// <para>The region ID. Specifies the region where you want to create the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -195,13 +186,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the instance will belong.</para>
+        /// <para>The ID of the destination resource group.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation or view resource group IDs in the console. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information about a resource group</a>.</para>
-        /// </description></item>
-        /// <item><description><para>Before changing the resource group of an instance, call the <a href="158866">ListResources</a> API to view the current resource group of the instance.</para>
-        /// </description></item>
+        /// <item><description>You can invoke the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation or go to the console to obtain the resource group ID list. For related operations, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</description></item>
+        /// <item><description>Before you change the resource group to which the instance belongs, you can invoke the <a href="https://help.aliyun.com/document_detail/158866.html">ListResources</a> operation to view the current resource group of the instance.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -225,14 +214,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The tags to add to the instance. You can specify a maximum of five tags.</para>
+        /// <para>The tag information of the instance.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateTairKVCacheVNodeRequestTag> Tag { get; set; }
         public class CreateTairKVCacheVNodeRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key.</para>
+            /// <para>The tag key. A tag key and a tag value form a tag key-value pair.</para>
             /// <remarks>
             /// <para>You can specify up to 5 tag key-value pairs at a time.</para>
             /// </remarks>
@@ -247,7 +236,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <summary>
             /// <para>The tag value.</para>
             /// <remarks>
-            /// <para><b>N</b> represents the index of a tag, starting from 1. For example, <b>Tag.1.Value</b> is the value of the first tag.</para>
+            /// <para><b>N</b> specifies the sequence number of the tag. For example, <b>Tag.1.Value</b> specifies the value of the first tag, and <b>Tag.2.Value</b> specifies the value of the second tag.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -260,16 +249,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// <para>This parameter is no longer used.</para>
+        /// <b>Example:</b>
+        /// <para>fixed</para>
         /// </summary>
         [NameInMap("VNodeType")]
         [Validation(Required=false)]
         public string VNodeType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch for the instance. The vSwitch must belong to the VPC that is associated with the specified virtual cluster. You can call the <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> operation to obtain the vSwitch ID.</para>
+        /// <para>The vSwitch ID of the instance. The vSwitch must belong to the VPC associated with the specified VCluster virtual cluster. You can call the <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> operation of the VPC API to query the vSwitch ID.</para>
         /// <remarks>
-        /// <para>The vSwitch must be in the same zone as the instance.</para>
+        /// <para>The zone of the vSwitch must be the same as the zone of the instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -281,7 +271,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual cluster that hosts the VNode.</para>
+        /// <para>The instance ID of the VCluster virtual cluster where the VNode resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -292,7 +282,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string VkName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the zone where you want to create the instance.</para>
+        /// <para>The zone ID. Specifies the zone where you want to create the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

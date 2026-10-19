@@ -12,10 +12,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The network type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>CLASSIC</b>: Classic Network.</para>
-        /// </description></item>
-        /// <item><description><para><b>VPC</b>: VPC.</para>
-        /// </description></item>
+        /// <item><description><b>CLASSIC</b>: classic network.</description></item>
+        /// <item><description><b>VPC</b>: virtual private cloud (VPC).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,9 +23,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string InstanceNetworkType { get; set; }
 
-        /// <summary>
-        /// <para>Details about the instance\&quot;s network connections.</para>
-        /// </summary>
         [NameInMap("NetInfoItems")]
         [Validation(Required=false)]
         public DescribeDBInstanceNetInfoResponseBodyNetInfoItems NetInfoItems { get; set; }

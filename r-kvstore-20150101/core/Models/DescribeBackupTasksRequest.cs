@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The ID of the backup task.</para>
         /// <remarks>
-        /// <para> If you call the <a href="https://help.aliyun.com/document_detail/473819.html">CreateBackup</a> operation to perform a manual backup task, you can set this parameter to the returned backup ID to query the backup progress of the task.</para>
+        /// <para>If you called the <a href="https://help.aliyun.com/document_detail/473819.html">CreateBackup</a> operation to perform a manual backup, you can pass the returned backup ID to query the backup progress.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string BackupJobId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query instance IDs.</para>
+        /// <para>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,12 +36,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The backup mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Automated</b>: automatic backup. You can call the <a href="https://help.aliyun.com/document_detail/473822.html">DescribeBackupPolicy</a> operation to query the automatic backup policy.</description></item>
-        /// <item><description><b>Manual</b>: manual backup.</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> By default, the information about backup tasks in both modes is returned.</para>
+        /// <item><description><b>Automated</b>: automated backup. You can call the <a href="https://help.aliyun.com/document_detail/473822.html">DescribeBackupPolicy</a> operation to query the automatic backup policy.</description></item>
+        /// <item><description><b>Manual</b>: manual backup.<remarks>
+        /// <para>By default, task information for all backup modes is returned.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Manual</para>

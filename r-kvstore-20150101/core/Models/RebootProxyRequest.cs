@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the proxy nodes that you want to restart or rebuild. Separate multiple IDs with commas (,).</para>
+        /// <para>The IDs of the proxy nodes to operate. Separate multiple IDs with commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90310144,90310144</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ProxyList { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the hosts on which the proxy nodes are deployed. Separate multiple IDs with commas (,).</para>
+        /// <para>The IDs of the hosts on which the proxy nodes to operate reside. Separate multiple IDs with commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>36912280,36912282</para>
@@ -49,10 +49,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ProxyNodeList { get; set; }
 
         /// <summary>
-        /// <para>The type of operation that you want to perform. Valid values:</para>
+        /// <para>The operation type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>reboot</b>: restarts the proxy node.</description></item>
-        /// <item><description><b>rebuild</b>: rebuilds the proxy node.</description></item>
+        /// <item><description><para><b>reboot</b>: Restarts the proxy node in place.</para>
+        /// </description></item>
+        /// <item><description><para><b>rebuild</b>: Rebuilds the proxy node.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

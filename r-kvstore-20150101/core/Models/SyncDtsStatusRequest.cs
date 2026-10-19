@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class SyncDtsStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,10 +51,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>Disables configuration changes for the instance. Valid values:</para>
+        /// <para>Specifies whether to restrict specification changes on the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: does not disable configuration changes.</description></item>
-        /// <item><description><b>1</b>: disables configuration changes. In this case, if you attempt to modify the configurations of the instance, the system informs you that the operation cannot be performed.</description></item>
+        /// <item><description><b>0</b>: Unrestricted.</description></item>
+        /// <item><description><b>1</b>: Restricted. Users are prompted when they perform a specification change.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,9 +65,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DTS instance. You can view the ID in the <a href="https://dts.console.aliyun.com/">DTS console</a>.</para>
+        /// <para>Instance ID of the DTS instance. You can log on to the <a href="https://dts.console.aliyun.com/">DTS console</a> to view instance ID.</para>
         /// <remarks>
-        /// <para> A Tair (Redis OSS-compatible) instance may be involved in multiple data migration or synchronization tasks. If you want to cancel the restriction on the instance, you can specify this parameter to prevent repeated operation calls.</para>
+        /// <para>An instance may be involved in multiple DTS migration or synchronization tasks simultaneously. To remove the specification change restrictions on the instance, pass this parameter to avoid calling this operation multiple times.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

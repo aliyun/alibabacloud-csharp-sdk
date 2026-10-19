@@ -10,15 +10,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DeleteShardingNodeRequest : TeaModel {
         /// <summary>
-        /// <para>The time when you want to delete the proxy nodes for instance in the proxy mode. Valid values:</para>
+        /// <para>The time when the proxy deletion takes effect if proxy nodes are deleted when you delete shards from a cluster instance in proxy mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>0 or Immediately</b> (default): immediately delete the proxy nodes.</para>
-        /// </description></item>
-        /// <item><description><para><b>1 or MaintainTime</b>: delete the proxy nodes during the maintenance window.</para>
-        /// </description></item>
+        /// <item><description><b>0 or Immediately</b>: Takes effect immediately. This is the default value.</description></item>
+        /// <item><description><b>1 or MaintainTime</b>: Takes effect during the maintenance window.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of an instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of the instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -29,12 +27,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string EffectiveTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable forced transmission during a configuration change. Valid values:</para>
+        /// <para>Specifies whether to enable forced migration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>false</b> (default): Before the configuration change, the system checks the minor version of the instance. If the minor version of the instance is outdated, an error is reported. You must update the minor version of the instance and try again.</para>
-        /// </description></item>
-        /// <item><description><para><b>true</b>: The system skips the version check and directly performs the configuration change.</para>
-        /// </description></item>
+        /// <item><description><b>false</b> (default): Before the upgrade/downgrade, the system checks the current minor engine version of the instance. If the kernel version is too low, an error is reported. You must upgrade the minor engine version and retry.</description></item>
+        /// <item><description><b>true</b>: Skips the checks and directly executes the upgrade/downgrade operation.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,7 +41,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public bool? ForceTrans { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,9 +54,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The ID of the data shard that you want to remove. You can specify multiple IDs at a time. Separate multiple IDs with commas (,).</para>
+        /// <para>The ID of the data shard node to be deleted. To specify multiple shard node IDs, separate them with commas (,).</para>
         /// <remarks>
-        /// <para>If you specify both the NodeId and ShardCount parameters, the system prioritizes the NodeId parameter.</para>
+        /// <para>If both the NodeId and ShardCount parameters are specified, the NodeId parameter takes precedence.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -92,9 +88,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The number of data shards that you want to remove. Shard removal starts from the end of the shard list.</para>
+        /// <para>The number of shards to be deleted. The system deletes the specified number of shard nodes starting from the end.</para>
         /// <remarks>
-        /// <para>For example, the instance has the following data shards: db-0, db-1, db-2, db-3, and db-4. In this case, if you set this parameter to 2, db-3 and db-4 are removed.</para>
+        /// <para>For example, if an instance has five shard nodes: db-0, db-1, db-2, db-3, and db-4, and you set this parameter to 2, the db-3 and db-4 nodes are deleted.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -37,14 +37,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable TLS (SSL) encryption. Valid values:</para>
+        /// <para>Modifies the TLS (SSL) settings. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Disable</b>: disables SSL encryption.</para>
-        /// </description></item>
-        /// <item><description><para><b>Enable</b>: enables SSL encryption.</para>
-        /// </description></item>
-        /// <item><description><para><b>Update</b>: updates the SSL certificate.</para>
-        /// </description></item>
+        /// <item><description><b>Disable</b>: Disables TLS (SSL).</description></item>
+        /// <item><description><b>Enable</b>: Enables TLS (SSL).</description></item>
+        /// <item><description><b>Update</b>: Updates the certificate.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

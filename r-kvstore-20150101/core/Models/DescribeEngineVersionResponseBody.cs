@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeEngineVersionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The latest minor version to which the instance can be updated.</para>
+        /// <para>The information about the latest minor version to which the instance can be upgraded.</para>
         /// </summary>
         [NameInMap("DBLatestMinorVersion")]
         [Validation(Required=false)]
         public DescribeEngineVersionResponseBodyDBLatestMinorVersion DBLatestMinorVersion { get; set; }
         public class DescribeEngineVersionResponseBodyDBLatestMinorVersion : TeaModel {
             /// <summary>
-            /// <para>The version update level. Valid values:</para>
+            /// <para>The importance level of the version change. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: regular</description></item>
-            /// <item><description><b>1</b>: recommended</description></item>
-            /// <item><description><b>2</b>: critical</description></item>
+            /// <item><description><b>0</b>: Normal.</description></item>
+            /// <item><description><b>1</b>: Important.</description></item>
+            /// <item><description><b>2</b>: Critical.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string MinorVersion { get; set; }
 
             /// <summary>
-            /// <para>The version update path from the current minor version to the latest minor version of the instance, which is consistent with the version documentation. For more detailed information, you can directly refer to the release notes.</para>
+            /// <para>The version evolution path from the current minor version of the instance to the latest minor version. This is consistent with the version documentation. You can refer to the version release notes for more detailed information.</para>
             /// </summary>
             [NameInMap("VersionRelease")]
             [Validation(Required=false)]
@@ -81,11 +81,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 }
 
                 /// <summary>
-                /// <para>The version update level, which indicates how strongly the update is recommended. Valid values:</para>
+                /// <para>The importance level of the version upgrade (recommended upgrade level). Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>0: regular</description></item>
-                /// <item><description>1: recommended</description></item>
-                /// <item><description>2: critical</description></item>
+                /// <item><description>0: Normal.</description></item>
+                /// <item><description>1: Important.</description></item>
+                /// <item><description>2: Critical.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -100,23 +100,23 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// <para>The release notes for the minor version of the instance, including the release date, minor version number, release type such as new feature, and description.</para>
+        /// <para>The update notes for the minor version of the instance, including the release time, minor version number, type (such as new feature), and detailed description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;releaseInfo\&quot;:{\&quot;createTime\&quot;:\&quot;2021-07-27\&quot;,\&quot;level\&quot;:1,\&quot;releaseVersion\&quot;:\&quot;0.5.4\&quot;,\&quot;releaseNote\&quot;:\&quot;功能更新：增强稳定性。\&quot;}],\&quot;versionChangesLevel\&quot;:2}</para>
+        /// <para>{\&quot;releaseInfo\&quot;:{\&quot;createTime\&quot;:\&quot;2021-07-27\&quot;,\&quot;level\&quot;:1,\&quot;releaseVersion\&quot;:\&quot;0.5.4\&quot;,\&quot;releaseNote\&quot;:\&quot;Feature update: Enhanced stability.\&quot;}],\&quot;versionChangesLevel\&quot;:2}</para>
         /// </summary>
         [NameInMap("DBVersionRelease")]
         [Validation(Required=false)]
         public string DBVersionRelease { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the instance major version can be upgraded. Valid values:</para>
+        /// <para>Indicates whether the major version of the instance can be upgraded. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: The major version can be upgraded.</description></item>
-        /// <item><description><b>false</b>: The major version is the latest version and cannot be upgraded.</description></item>
+        /// <item><description><b>false</b>: The major version cannot be upgraded, usually because it is already the latest version.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> To upgrade the major version, call the <a href="https://help.aliyun.com/document_detail/473776.html">ModifyInstanceMajorVersion</a> operation.</para>
+        /// <para>To upgrade the major version, call the <a href="https://help.aliyun.com/document_detail/473776.html">ModifyInstanceMajorVersion</a> operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -127,13 +127,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public bool? EnableUpgradeMajorVersion { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the instance minor version can be updated. Valid values:</para>
+        /// <para>Indicates whether the minor version of the instance can be upgraded. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The minor version can be updated.</description></item>
-        /// <item><description><b>false</b>: The minor version is the latest version and cannot be updated.</description></item>
+        /// <item><description><b>true</b>: The minor version can be upgraded.</description></item>
+        /// <item><description><b>false</b>: The minor version is already the latest and cannot be upgraded.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> To update the minor version, call the <a href="https://help.aliyun.com/document_detail/473777.html">ModifyInstanceMinorVersion</a> operation.</para>
+        /// <para>To upgrade the minor version, call the <a href="https://help.aliyun.com/document_detail/473777.html">ModifyInstanceMinorVersion</a> operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public bool? EnableUpgradeMinorVersion { get; set; }
 
         /// <summary>
-        /// <para>The database engine. Valid values: <b>redis</b> and <b>memcache</b>.</para>
+        /// <para>The database engine type. Valid values: <b>redis</b> and <b>memcache</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>redis</para>
@@ -154,10 +154,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether automatic minor version update is enabled. Valid values:</para>
+        /// <para>Indicates whether automatic minor version upgrade is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Automatic minor version update is disabled.</description></item>
-        /// <item><description><b>1</b>: Automatic minor version update is enabled.</description></item>
+        /// <item><description><b>0</b>: Disabled.</description></item>
+        /// <item><description><b>1</b>: Enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -168,10 +168,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string IsAutoUpgradeOpen { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the instance uses the latest minor version. Valid values:</para>
+        /// <para>Indicates whether the minor version of the instance is the latest. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: Yes.</description></item>
+        /// <item><description><b>false</b>: No.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -182,10 +182,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public bool? IsLatestVersion { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether Transport Layer Security (TLS) is enabled. Valid values:</para>
+        /// <para>Indicates whether the new TLS version is supported. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: TLS is enabled.</description></item>
-        /// <item><description><b>0</b>: TLS is disabled.</description></item>
+        /// <item><description><b>1</b>: Enabled.</description></item>
+        /// <item><description><b>0</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -196,10 +196,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string IsNewSSLMode { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the NGLB mode is enabled. Valid values:</para>
+        /// <para>Indicates whether NGLB mode is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: The NGLB mode is disabled.</description></item>
-        /// <item><description><b>1</b>: The NGLB mode is enabled.</description></item>
+        /// <item><description><b>0</b>: Disabled.</description></item>
+        /// <item><description><b>1</b>: Enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string IsOpenNGLB { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the instance runs a Redis version.</para>
+        /// <para>Indicates whether the instance is a Redis-compatible version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -222,8 +222,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>Indicates whether SSL is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: SSL is enabled.</description></item>
-        /// <item><description><b>0</b>: TLS is disabled.</description></item>
+        /// <item><description><b>1</b>: Enabled.</description></item>
+        /// <item><description><b>0</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -254,18 +254,18 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string MinorVersion { get; set; }
 
         /// <summary>
-        /// <para>The latest minor version to which the proxy node can be updated.</para>
+        /// <para>The information about the latest minor version to which the proxy node can be upgraded.</para>
         /// </summary>
         [NameInMap("ProxyLatestMinorVersion")]
         [Validation(Required=false)]
         public DescribeEngineVersionResponseBodyProxyLatestMinorVersion ProxyLatestMinorVersion { get; set; }
         public class DescribeEngineVersionResponseBodyProxyLatestMinorVersion : TeaModel {
             /// <summary>
-            /// <para>The version update level. Valid values:</para>
+            /// <para>The importance level of the version change. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: regular</description></item>
-            /// <item><description><b>1</b>: recommended</description></item>
-            /// <item><description><b>2</b>: critical</description></item>
+            /// <item><description><b>0</b>: Normal.</description></item>
+            /// <item><description><b>1</b>: Important.</description></item>
+            /// <item><description><b>2</b>: Critical.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -286,7 +286,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string MinorVersion { get; set; }
 
             /// <summary>
-            /// <para>The version update path from the current minor version to the latest minor version of the instance, which is consistent with the version documentation. For more detailed information, you can directly refer to the release notes.</para>
+            /// <para>The version evolution path from the current minor version of the instance to the latest minor version. This is consistent with the version documentation. You can refer to the version release notes for more detailed information.</para>
             /// </summary>
             [NameInMap("VersionRelease")]
             [Validation(Required=false)]
@@ -325,11 +325,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 }
 
                 /// <summary>
-                /// <para>The version update level, which indicates how strongly the update is recommended. Valid values:</para>
+                /// <para>The importance level of the version upgrade (recommended upgrade level). Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>0: regular</description></item>
-                /// <item><description>1: recommended</description></item>
-                /// <item><description>2: critical</description></item>
+                /// <item><description>0: Normal.</description></item>
+                /// <item><description>1: Important.</description></item>
+                /// <item><description>2: Critical.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -346,7 +346,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The current minor version of the proxy node.</para>
         /// <remarks>
-        /// <para> This parameter is returned only for cluster and read/write splitting instances.</para>
+        /// <para>This parameter is returned only for instances of the cluster or read/write splitting architecture.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -357,20 +357,20 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ProxyMinorVersion { get; set; }
 
         /// <summary>
-        /// <para>The release notes for the minor version of proxy nodes. The release notes include the release date, minor version number, release type such as new feature, and description.</para>
+        /// <para>The update notes for the minor version of the proxy node, including the release time, minor version number, type (such as new feature), and detailed description.</para>
         /// <remarks>
-        /// <para> This parameter is returned only for cluster and read/write splitting instances.</para>
+        /// <para>This parameter is returned only for instances of the cluster or read/write splitting architecture.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;releaseInfo\&quot;:[{\&quot;createTime\&quot;:\&quot;2021-06-08\&quot;,\&quot;level\&quot;:0,\&quot;releaseVersion\&quot;:\&quot;6.6.2\&quot;,\&quot;releaseNote\&quot;:\&quot;新特性：增加对部分内部命令的支持。\&quot;}],\&quot;versionChangesLevel\&quot;:2}</para>
+        /// <para>{\&quot;releaseInfo\&quot;:[{\&quot;createTime\&quot;:\&quot;2021-06-08\&quot;,\&quot;level\&quot;:0,\&quot;releaseVersion\&quot;:\&quot;6.6.2\&quot;,\&quot;releaseNote\&quot;:\&quot;New feature: Added support for some internal commands.\&quot;}],\&quot;versionChangesLevel\&quot;:2}</para>
         /// </summary>
         [NameInMap("ProxyVersionRelease")]
         [Validation(Required=false)]
         public string ProxyVersionRelease { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A52974D1-9D57-4805-86CC-92E6EDE8****</para>

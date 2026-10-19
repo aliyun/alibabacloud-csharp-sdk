@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeTagsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination token to use in the next request to get the next page. If this field is empty, there are no more results.</para>
+        /// <para>The token used to start the next query.</para>
         /// <remarks>
-        /// <para>If not all results are returned in one query, this parameter is returned. You can pass in the returned value of this parameter for the next query.</para>
+        /// <para>This parameter is returned if a single query does not return all results. You can pass the value of this parameter in a subsequent query to continue the query.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,14 +33,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details of the tags.</para>
+        /// <para>The tag information.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<DescribeTagsResponseBodyTags> Tags { get; set; }
         public class DescribeTagsResponseBodyTags : TeaModel {
             /// <summary>
-            /// <para>The key of the tag.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>size</para>

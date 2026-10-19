@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyActiveOperationTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the O\&amp;M task. Separate multiple IDs with commas (,).</para>
+        /// <para>The O&amp;M task IDs, separated by commas (,).</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/473865.html">DescribeActiveOperationTask</a> operation to query the ID of an O\&amp;M task.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/473865.html">DescribeActiveOperationTask</a> to obtain the O&amp;M task IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The scheduled switchover time to be specified. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The scheduled switchover time to set. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
         /// <remarks>
-        /// <para>The time cannot be later than the latest operation time. You can call the <a href="https://help.aliyun.com/document_detail/473865.html">DescribeActiveOperationTask</a> operation to obtain the latest operation time, which is the value of the <b>Deadline</b> parameter in the response.</para>
+        /// <para>The time cannot be later than the latest operation time. You can call <a href="https://help.aliyun.com/document_detail/473865.html">DescribeActiveOperationTask</a> and check the value of the <b>Deadline</b> response parameter to obtain the latest operation time.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

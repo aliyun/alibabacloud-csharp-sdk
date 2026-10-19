@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeParameterGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of parameter templates.</para>
+        /// <para>The parameter templates.</para>
         /// </summary>
         [NameInMap("ParameterGroups")]
         [Validation(Required=false)]
@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <summary>
             /// <para>The product category. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Redis Community Edition</description></item>
-            /// <item><description><b>1</b>: Tair (Enhanced Edition)</description></item>
+            /// <item><description><b>0</b>: open-source Redis.</description></item>
+            /// <item><description><b>1</b>: Tair (Enterprise Edition).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public long? Category { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the parameter template.</para>
+            /// <para>The time when the parameter template was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-04-18 16:32:45</para>
@@ -43,9 +43,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <summary>
             /// <para>The engine type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>redis</b>: Redis Community Edition or Tair (Enhanced Edition) in-memory type.</description></item>
-            /// <item><description><b>tair_pena</b>: Tair (Enhanced Edition) persistent memory type.</description></item>
-            /// <item><description><b>tair_pdb</b>: Tair (Enhanced Edition) cloud disk type.</description></item>
+            /// <item><description><b>redis</b>: open-source Redis or Tair (Memory-optimized).</description></item>
+            /// <item><description><b>tair_pena</b>: Tair (Persistent Memory-optimized).</description></item>
+            /// <item><description><b>tair_pdb</b>: Tair (Disk-optimized).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string Engine { get; set; }
 
             /// <summary>
-            /// <para>The engine-compatible version.</para>
+            /// <para>The compatible engine version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string EngineVersion { get; set; }
 
             /// <summary>
-            /// <para>The most recent modification time of the parameter template.</para>
+            /// <para>The time when the parameter template was last modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-04-18 16:32:45</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string Modified { get; set; }
 
             /// <summary>
-            /// <para>The parameter template ID.</para>
+            /// <para>The ID of the parameter template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test01</para>

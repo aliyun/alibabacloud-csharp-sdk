@@ -13,10 +13,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <para>Specifies whether to remove all tags from the instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: removes all tags from the instance.</description></item>
-        /// <item><description><b>false</b> (default): does not remove all tags from the instance.</description></item>
+        /// <item><description><b>false</b>: does not remove all tags from the instance. This is the default value.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you specify both this parameter and the <b>TagKey.N</b> parameter, this parameter does not take effect.</para>
+        /// <para>If both <b>TagKey.N</b> and this parameter are specified, this parameter does not take effect.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the instances.</para>
+        /// <para>The list of instance IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Set the value to <b>INSTANCE</b>.</para>
+        /// <para>The resource type. Valid value: <b>INSTANCE</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

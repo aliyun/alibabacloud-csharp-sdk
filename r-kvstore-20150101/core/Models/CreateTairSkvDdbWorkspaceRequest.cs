@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CreateTairSkvDdbWorkspaceRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the token is unique among different requests. The token is case-sensitive and can contain up to 64 ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token is case-sensitive and can be up to 64 ASCII characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz**</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The instance name. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. The name cannot contain the following characters: @ / : = &quot; &lt; &gt; { } or spaces.</para>
+        /// <para>The instance name. The name must be 2 to 128 characters in length and start with a letter or a Chinese character. It cannot contain spaces or the following special characters: @, /, :, =, &quot;, &lt;, &gt;, {, and }.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apitest</para>
@@ -49,10 +49,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The password of the instance. The password must meet the following requirements:</para>
+        /// <para>The instance password. The password must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The password is 8 to 32 characters in length.</description></item>
-        /// <item><description>The password contains at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Supported special characters are <c>!@#$%^&amp;*()_+-=</c>.</description></item>
+        /// <item><description>The password must be 8 to 32 characters in length.</description></item>
+        /// <item><description>The password must contain at least three of the following character types: uppercase letters, lowercase letters, special characters, and digits. Supported special characters include <c>!@#$%^&amp;*()_+-=</c>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? Port { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> to query available regions. Use this parameter to specify the region in which to create the instance.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the most recent region list. Use this parameter to specify the region where you want to create the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-resourcegroupid1</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The zone ID. You can call <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> to query available zones.</para>
+        /// <para>The zone ID. You can call the <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> operation to query the most recent zone list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

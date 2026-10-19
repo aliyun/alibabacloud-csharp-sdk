@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyInstanceAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The new name of the instance. The name must be 2 to 80 characters in length. The name must start with a letter and cannot contain spaces and the following special characters: <c>@ / : = &quot; &lt; &gt; { [ ] }</c></para>
+        /// <para>The new instance name. The name must be 2 to 80 characters in length and must start with an uppercase letter, a lowercase letter, or a Chinese character. The name cannot contain spaces or the following special characters: <c>@/:=&quot;&lt;&gt;{[]}</c></para>
         /// 
         /// <b>Example:</b>
         /// <para>newinstancename</para>
@@ -31,13 +31,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para><a href="https://help.aliyun.com/document_detail/165005.html">Specifies whether to enable release protection for the instance.</a> Valid values:</para>
+        /// <para>The <a href="https://help.aliyun.com/document_detail/165005.html">release protection status</a> of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables release protection.</description></item>
-        /// <item><description><b>false</b>: disables release protection.</description></item>
+        /// <item><description><b>true</b>: Enabled.</description></item>
+        /// <item><description><b>false</b>: Disabled.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is available only for pay-as-you-go instances.</para>
+        /// <para>This parameter is supported only for pay-as-you-go instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -48,9 +48,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public bool? InstanceReleaseProtection { get; set; }
 
         /// <summary>
-        /// <para>The new password for the default account. The default account is named after the instance ID. Example: r-bp10noxlhcoim2\<em>\</em>\<em>\</em>.</para>
+        /// <para>The new password of the default account. The default account is named after the instance ID (for example, r-bp10noxlhcoim2****).</para>
         /// <remarks>
-        /// <para>The password must be 8 to 32 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. These special characters include <c>! @ # $ % ^ &amp; * ( ) _ + - =</c></para>
+        /// <para>The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters (<c>!@#$%^&amp;*()_+-=</c>).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

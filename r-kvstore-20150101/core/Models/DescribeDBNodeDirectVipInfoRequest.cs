@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeDBNodeDirectVipInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The instance ID. Only cloud-native instances are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

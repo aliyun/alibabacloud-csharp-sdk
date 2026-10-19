@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeInstanceTDEStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5D622714-AEDD-4609-9167-F5DDD3D1****</para>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <para>Indicates whether TDE is enabled. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Enabled</b>: TDE is enabled.</description></item>
-        /// <item><description><b>Disable</b>: TDE is disabled.</description></item>
+        /// <item><description><b>Disabled</b>: TDE is disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

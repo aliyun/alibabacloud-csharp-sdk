@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeInstancesOverviewResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of instances.</para>
+        /// <para>The array of instances.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <list type="bullet">
             /// <item><description><b>cluster</b>: Cluster Edition.</description></item>
             /// <item><description><b>standard</b>: Standard Edition.</description></item>
-            /// <item><description><b>rwsplit</b>: read/write splitting edition.</description></item>
+            /// <item><description><b>rwsplit</b>: read/write splitting Edition.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string NodeType { get; set; }
 
             /// <summary>
-            /// <para>The private IP address of the instance in a VPC. The IP address may change. Use ConnectionDomain (internal endpoint) to connect to the instance.</para>
+            /// <para>The private IP address of the instance in a VPC. The IP address may change. Use ConnectionDomain (the internal endpoint) to connect to the instance.</para>
             /// <remarks>
             /// <list type="bullet">
             /// <item><description>This parameter is not returned if the network type of the instance is classic network.</description></item>

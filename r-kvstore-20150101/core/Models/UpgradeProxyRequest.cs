@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the proxy nodes that you want to update. Separate multiple IDs with commas (,). This parameter is valid only for Redis Open-Source Edition classic instances.</para>
+        /// <para>The IDs of the proxy nodes to upgrade, separated by commas (,). This parameter is valid only for Classic Edition instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-bp1vgja77wl7pb****-proxy-0</para>
@@ -51,13 +51,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The time to execute the specification change. Valid values:</para>
+        /// <para>The time when the upgrade is performed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Immediately</b> (default): immediately executes the change.</description></item>
-        /// <item><description><b>MaintainTime</b>: executes the change during the maintenance window of the instance.</description></item>
+        /// <item><description><b>Immediately</b>: The upgrade is immediately performed. This is the default value.</description></item>
+        /// <item><description><b>MaintainTime</b>: The upgrade is performed within the O&amp;M window of the instance.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/61000.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of an instance.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> to modify the O&amp;M window of a Redis instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

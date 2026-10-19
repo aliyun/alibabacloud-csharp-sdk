@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeHistoryTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried task objects.</para>
+        /// <para>The list of task objects.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeHistoryTasksResponseBodyItems> Items { get; set; }
         public class DescribeHistoryTasksResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>A set of allowed actions that can be taken on the task. The system matches the current step name and status of the task to the available actions specified by ActionInfo. If no matching action is found, the current status of the task does not support any action. Example:</para>
+            /// <para>The allowed operation information. When used, the operation Action is matched based on currentStepName and status in this information. If no Action is matched, the task does not support operations in its current state. Example:</para>
             /// <pre><c>{&quot;steps&quot;: [
             ///     {
-            ///       &quot;step_name&quot;: &quot;exec_task&quot;, // The name of the step, which matches CurrentStepName.
-            ///       &quot;action_info&quot;: {    // The actions supported for this step.
-            ///         &quot;Waiting&quot;: [      // The status, which matches Status.
-            ///           &quot;modifySwitchTime&quot; // The action. Multiple actions are supported.
+            ///       &quot;step_name&quot;: &quot;exec_task&quot;, // Step name, matched with currentStepName
+            ///       &quot;action_info&quot;: {    // Operations supported by the step
+            ///         &quot;Waiting&quot;: [      // Status, matched with status
+            ///           &quot;modifySwitchTime&quot; // Operation Action, may have multiple values, indicating multiple supported operations
             ///         ]
             ///       }
             ///     },
             ///     {
-            ///       &quot;step_name&quot;: &quot;init_task&quot;, // The name of the step.
-            ///       &quot;action_info&quot;: {    // The actions supported for this step.
-            ///         &quot;Running&quot;: [      // The status.
-            ///           &quot;cancel&quot;,       // The action.
+            ///       &quot;step_name&quot;: &quot;init_task&quot;, // Step name
+            ///       &quot;action_info&quot;: {    // Operations supported by the step
+            ///         &quot;Running&quot;: [      // Status
+            ///           &quot;cancel&quot;,       // Operation
             ///           &quot;pause&quot;
             ///         ]
             ///       }
@@ -39,11 +39,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             ///   ]
             /// }
             /// </c></pre>
-            /// <para>The system may support the following actions:</para>
+            /// <para>Operations that the system may support: </para>
             /// <list type="bullet">
-            /// <item><description><b>retry</b></description></item>
-            /// <item><description><b>cancel</b></description></item>
-            /// <item><description><b>modifySwitchTime</b>: changes the switching or restoration time.</description></item>
+            /// <item><description><b>retry</b>: Retry.</description></item>
+            /// <item><description><b>cancel</b>: Cancel.</description></item>
+            /// <item><description><b>modifySwitchTime</b>: Modify the switchover time or recovery time.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string ActionInfo { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user who made the request. If CallerSource is set to User, CallerUid indicates the unique ID (UID) of the user.</para>
+            /// <para>The request user ID. When callerSource is User, this value represents the user UID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>141345906006****</para>
@@ -64,10 +64,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string CallerSource { get; set; }
 
             /// <summary>
-            /// <para>The request source. Valid values:</para>
+            /// <para>The request source. Valid values: </para>
             /// <list type="bullet">
-            /// <item><description><b>System</b></description></item>
-            /// <item><description><b>User</b></description></item>
+            /// <item><description><b>System</b>: Automatically initiated by the system.</description></item>
+            /// <item><description><b>User</b>: Initiated by a user.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string CallerUid { get; set; }
 
             /// <summary>
-            /// <para>The name of the current step. If this parameter is left empty, the task is not started.</para>
+            /// <para>The name of the current step being executed. An empty value indicates that the task has not started.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exec_task</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string CurrentStepName { get; set; }
 
             /// <summary>
-            /// <para>The database type. The return value is redis.</para>
+            /// <para>The database type. The value is fixed as redis.</para>
             /// 
             /// <b>Example:</b>
             /// <para>redis</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string DbType { get; set; }
 
             /// <summary>
-            /// <para>The end time of the task. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The end time of the task in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-02-03T12:06:17Z</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The instance type. The return value is Instance.</para>
+            /// <para>The instance type. The value is fixed as Instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Instance</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The product. The return value is kvstore.</para>
+            /// <para>The product. The value is fixed as kvstore.</para>
             /// 
             /// <b>Example:</b>
             /// <para>kvstore</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string Product { get; set; }
 
             /// <summary>
-            /// <para>The task progress. Valid values: 0 to 100.</para>
+            /// <para>The current progress. Valid values: 0 to 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>79.0</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The estimated amount of time remaining to complete the task. Unit: seconds. A value of 0 indicates that the task is completed.</para>
+            /// <para>The estimated remaining execution time. Unit: seconds. A value of 0 indicates that the execution is complete.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public int? RemainTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of the task. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The start time of the task in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-02-03T11:31:03Z</para>
@@ -198,15 +198,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The task status.</para>
+            /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Scheduled</b></description></item>
-            /// <item><description><b>Running</b></description></item>
-            /// <item><description><b>Succeed</b></description></item>
-            /// <item><description><b>Failed</b></description></item>
-            /// <item><description><b>Cancelling</b></description></item>
-            /// <item><description><b>Canceled</b></description></item>
-            /// <item><description><b>Waiting</b></description></item>
+            /// <item><description><b>Scheduled</b>: Waiting for execution.</description></item>
+            /// <item><description><b>Running</b>: Running.</description></item>
+            /// <item><description><b>Succeed</b>: Succeeded.</description></item>
+            /// <item><description><b>Failed</b>: Failed.</description></item>
+            /// <item><description><b>Cancelling</b>: Being stopped.</description></item>
+            /// <item><description><b>Canceled</b>: Stopped.</description></item>
+            /// <item><description><b>Waiting</b>: Waiting for the scheduled time.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The task details. The details vary based on the task type.</para>
+            /// <para>The task details. Different task types correspond to different outputs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;callerUid\&quot;:\&quot;test\&quot;}</para>
@@ -237,15 +237,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The task type.</para>
+            /// <para>The task type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ModifyInsSpec</b></description></item>
-            /// <item><description><b>DeleteInsNode</b></description></item>
-            /// <item><description><b>AddInsNode</b></description></item>
-            /// <item><description><b>HaSwitch</b></description></item>
-            /// <item><description><b>RestartIns</b></description></item>
-            /// <item><description><b>CreateIns</b></description></item>
-            /// <item><description><b>ModifyInsConfig</b></description></item>
+            /// <item><description><b>ModifyInsSpec</b>: Specification change or migration.</description></item>
+            /// <item><description><b>DeleteInsNode</b>: Shard deletion.</description></item>
+            /// <item><description><b>AddInsNode</b>: Shard addition.</description></item>
+            /// <item><description><b>HaSwitch</b>: Primary/secondary switchover.</description></item>
+            /// <item><description><b>RestartIns</b>: Instance restart.</description></item>
+            /// <item><description><b>CreateIns</b>: Instance creation.</description></item>
+            /// <item><description><b>ModifyInsConfig</b>: Configuration change.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -256,7 +256,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string TaskType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user to which the resources belong.</para>
+            /// <para>The user ID of the resource owner.</para>
             /// 
             /// <b>Example:</b>
             /// <para>141345906006****</para>
@@ -268,7 +268,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -278,7 +278,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries returned per page.</para>
+        /// <para>The maximum number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -298,7 +298,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of tasks that meet these constraints without taking pagination into account.</para>
+        /// <para>The total number of tasks that meet the query conditions, regardless of pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

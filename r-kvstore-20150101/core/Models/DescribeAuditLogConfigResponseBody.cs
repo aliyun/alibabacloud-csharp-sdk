@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeAuditLogConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the audit log feature is enabled. Valid values:</para>
+        /// <para>Indicates whether audit logging is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enabled</description></item>
-        /// <item><description><b>false</b>: disabled</description></item>
+        /// <item><description><b>true</b>: Enabled.</description></item>
+        /// <item><description><b>false</b>: Disabled.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/473829.html">ModifyAuditLogConfig</a> operation to enable or disable the audit log feature for a Tair (Redis OSS-compatible) instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/473829.html">ModifyAuditLogConfig</a> operation to enable or disable audit logging for the instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string DbAudit { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2BE6E619-A657-42E3-AD2D-18F8428A****</para>

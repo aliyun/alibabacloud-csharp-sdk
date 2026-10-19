@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeGlobalDistributeCacheRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the distributed instance.</para>
+        /// <para>The distributed instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gr-bp14rkqrhac****</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. The value must be an integer that is greater than <b>0</b>. Default value: <b>1</b>.</para>
+        /// <para>The page number. Set the value to a number that is greater than <b>0</b> and does not exceed the maximum value of the Integer data type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return each page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the child instance that is attached to the distributed instance.</para>
+        /// <para>The child instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gr-bp1zcjlobkyrq****</para>

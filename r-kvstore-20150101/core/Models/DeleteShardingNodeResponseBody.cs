@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DeleteShardingNodeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the order. On the Orders page in the Billing Management console, you can obtain the details of the order based on the order ID.</para>
+        /// <para>The order ID. You can use this order ID to obtain the detailed information about the order in the Orders section of the User Center.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22179******0904</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5D622714-AEDD-4609-9167-F5DDD3D1****</para>

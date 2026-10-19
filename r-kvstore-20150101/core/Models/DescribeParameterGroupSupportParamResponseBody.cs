@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The parameters.</para>
+        /// <para>The list of parameters.</para>
         /// </summary>
         [NameInMap("ResourceList")]
         [Validation(Required=false)]
         public List<DescribeParameterGroupSupportParamResponseBodyResourceList> ResourceList { get; set; }
         public class DescribeParameterGroupSupportParamResponseBodyResourceList : TeaModel {
             /// <summary>
-            /// <para>The service category.</para>
+            /// <para>The product category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>standard</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string DbType { get; set; }
 
             /// <summary>
-            /// <para>The engine version.</para>
+            /// <para>The compatible engine version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5.0</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string DbVersion { get; set; }
 
             /// <summary>
-            /// <para>The name of the parameter.</para>
+            /// <para>The configurable parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rt_threshold_ms</para>

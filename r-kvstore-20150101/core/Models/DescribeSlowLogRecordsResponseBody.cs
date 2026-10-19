@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeSlowLogRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The database engine that the instance runs.</para>
+        /// <para>The database engine.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Redis</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-bp10n********</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>686BB8A6-BBA5-47E5-8A75-D2ADE433****</para>
@@ -119,6 +119,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// <para>The start time of the query.</para>
+        /// <para>The time is in the YYYY-MM-DDTHH:mmZ format and displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-03-10T14:00Z</para>
@@ -128,7 +129,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned log entries.</para>
+        /// <para>The total number of log entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

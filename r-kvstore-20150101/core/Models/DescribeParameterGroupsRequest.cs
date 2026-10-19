@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The engine type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>redis</b>: Redis Community Edition or Tair (Enhanced Edition) in-memory type.</description></item>
-        /// <item><description><b>tair_pena</b>: Tair (Enhanced Edition) persistent memory type.</description></item>
-        /// <item><description><b>tair_pdb</b>: Tair (Enhanced Edition) cloud disk type (ESSD/SSD).</description></item>
+        /// <item><description><b>redis</b>: open-source Redis or Tair (Memory-optimized).</description></item>
+        /// <item><description><b>tair_pena</b>: Tair (Persistent Memory-optimized).</description></item>
+        /// <item><description><b>tair_pdb</b>: Tair (Disk-optimized, ESSD/SSD).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,6 +24,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string DbType { get; set; }
 
+        /// <summary>
+        /// <para>The compatible engine version.</para>
+        /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
@@ -37,7 +40,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> to query the region ID.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

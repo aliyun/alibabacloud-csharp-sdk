@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyActiveOperationTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the O\&amp;M task. IDs are separated by commas (,).</para>
+        /// <para>The O&amp;M task IDs, separated by commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>11111,22222</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string Ids { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5D622714-AEDD-4609-9167-F5DDD3D1****</para>

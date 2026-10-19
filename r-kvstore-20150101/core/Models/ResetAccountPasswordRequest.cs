@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ResetAccountPasswordRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the account. You can call the <a href="~~DescribeAccounts~~">DescribeAccounts</a> operation to obtain the name of the account.</para>
+        /// <para>The account name. You can call <a href="https://help.aliyun.com/document_detail/473816.html">DescribeAccounts</a> to query the account name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The new password for the account. The password must be 8 to 32 characters in length. It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include <c>!@ # $ % ^ &amp; * ( ) _ + - =</c></para>
+        /// <para>The new password. The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported: <c>!@#$%^&amp;*()_+-=</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

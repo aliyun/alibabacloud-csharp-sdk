@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeClusterBackupListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The backup sets of the instance. A backup contains the backup sets of all shards in the instance.</para>
+        /// <para>The list of cluster backup sets. A cluster backup set contains the backup sets of all nodes in the cluster.</para>
         /// </summary>
         [NameInMap("ClusterBackups")]
         [Validation(Required=false)]
         public List<DescribeClusterBackupListResponseBodyClusterBackups> ClusterBackups { get; set; }
         public class DescribeClusterBackupListResponseBodyClusterBackups : TeaModel {
             /// <summary>
-            /// <para>The backup sets of all shards in the instance.</para>
+            /// <para>The collection of backup sets for all child nodes under a single cluster backup set.</para>
             /// </summary>
             [NameInMap("Backups")]
             [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string BackupDownloadURL { get; set; }
 
                 /// <summary>
-                /// <para>The end time of the backup. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+                /// <para>The end time of the backup. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format and displayed in UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-01-09T17:21:57</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <summary>
                 /// <para>The internal download URL of the backup file.</para>
                 /// <remarks>
-                /// <para> You can use this URL to download the backup file from an Elastic Compute Service (ECS) instance that is connected to the Tair (Redis OSS-compatible) instance. The ECS instance must reside in the same virtual private cloud (VPC) as the Tair (Redis OSS-compatible) instance.</para>
+                /// <para>You can use this URL to download the backup file from an ECS instance that is connected to the current instance. Both instances must reside in the same VPC.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string BackupIntranetDownloadURL { get; set; }
 
                 /// <summary>
-                /// <para>The name of the backup.</para>
+                /// <para>The backup name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hins100322105_data_20240110012135.rdb</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string BackupSize { get; set; }
 
                 /// <summary>
-                /// <para>The start time of the backup. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+                /// <para>The start time of the backup. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format and displayed in UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-01-09T17:21:30Z</para>
@@ -97,10 +97,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string BackupStartTime { get; set; }
 
                 /// <summary>
-                /// <para>The status of the backup. Valid values:</para>
+                /// <para>The backup status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>OK</b></description></item>
-                /// <item><description><b>ERROR</b></description></item>
+                /// <item><description><b>OK</b>: The backup is successful.</description></item>
+                /// <item><description><b>ERROR</b>: The backup failed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string BackupStatus { get; set; }
 
                 /// <summary>
-                /// <para>The database engine. The return value is <b>redis</b>.</para>
+                /// <para>The database engine type. The value is fixed as <b>redis</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>redis</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public DescribeClusterBackupListResponseBodyClusterBackupsBackupsExtraInfo ExtraInfo { get; set; }
                 public class DescribeClusterBackupListResponseBodyClusterBackupsBackupsExtraInfo : TeaModel {
                     /// <summary>
-                    /// <para>The engine version.</para>
+                    /// <para>The database engine version.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>5.0</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 }
 
                 /// <summary>
-                /// <para>The instance name.</para>
+                /// <para>The name of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>r-bp1y4is8svonly****-db-0</para>
@@ -152,8 +152,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 /// <summary>
                 /// <para>Indicates whether the backup set is available. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: unavailable</description></item>
-                /// <item><description><b>1</b>: available</description></item>
+                /// <item><description><b>0</b>: unavailable.</description></item>
+                /// <item><description><b>1</b>: available.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 public string IsAvail { get; set; }
 
                 /// <summary>
-                /// <para>This parameter does not take effect. Ignore this parameter.</para>
+                /// <para>This parameter is not in effect. Ignore this parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>null</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             }
 
             /// <summary>
-            /// <para>The end time of the backup.</para>
+            /// <para>The end time of the cluster backup. The time is in the YYYY-MM-DDTHH:mm:ssZ format and displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-10T17:21:55Z</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string ClusterBackupEndTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the backup set.</para>
+            /// <para>The cluster backup set ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cb-zmdqj2m3xyxjtdt0</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string ClusterBackupId { get; set; }
 
             /// <summary>
-            /// <para>The backup mode.</para>
+            /// <para>The cluster backup mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Automated</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string ClusterBackupMode { get; set; }
 
             /// <summary>
-            /// <para>The size of the backup set.</para>
+            /// <para>The size of the cluster backup set.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2048</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string ClusterBackupSize { get; set; }
 
             /// <summary>
-            /// <para>The start time of the backup.</para>
+            /// <para>The start time of the cluster backup. The time is in the YYYY-MM-DDTHH:mm:ssZ format and displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-10T17:21:25Z</para>
@@ -226,11 +226,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string ClusterBackupStartTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the backup set.</para>
+            /// <para>The status of the cluster backup set. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>OK</description></item>
-            /// <item><description>RUNNING</description></item>
-            /// <item><description>Failed</description></item>
+            /// <item><description>OK: The backup is successful.</description></item>
+            /// <item><description>RUNNING: The backup is in progress.</description></item>
+            /// <item><description>Other values: The backup failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -241,7 +241,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string ClusterBackupStatus { get; set; }
 
             /// <summary>
-            /// <para>The time-to-live (TTL) of the backup set, in the format yyyy-MM-ddTHH:mmZ (UTC time).</para>
+            /// <para>The expiration time of the backup set. The time is in the yyyy-MM-ddTHH:mmZ format and displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-01T21:51:22Z</para>
@@ -251,7 +251,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string ExpectExpireTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the backup set is valid. A value of 0 indicates that shard-level backups failed or have not been completed.</para>
+            /// <para>Indicates whether the cluster backup set is valid. The value is 0 if the backup sets of child nodes are incomplete or failed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -261,7 +261,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public int? IsAvail { get; set; }
 
             /// <summary>
-            /// <para>The backup progress. The system displays only the progress of running backup tasks.</para>
+            /// <para>The backup progress. This parameter is returned only for backups that are in progress.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100%</para>
@@ -271,7 +271,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string Progress { get; set; }
 
             /// <summary>
-            /// <para>The memory size of a single shard during a full backup. Unit: MB.</para>
+            /// <para>The memory size of a single DB node when the full backup is created. Unit: MB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024</para>
@@ -283,7 +283,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// <para>This parameter does not take effect. Ignore this parameter.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The free backup quota of the instance. Unit: bytes. The free quota is equal to the default memory capacity of the instance type. For more information, see the notice on backup commercialization. Full backups and log backups share this free quota. When you change the instance type, the free quota of the instance changes accordingly.
+        /// &lt;props=&quot;intl&quot;&gt;This parameter is not in effect. Ignore this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100000</para>
@@ -293,9 +294,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? FreeSize { get; set; }
 
         /// <summary>
-        /// <para>The size of the full backup file of the instance. Unit: bytes. Full backups originate from scheduled backups, manual backups, and backups generated during cache analysis.</para>
+        /// <para>The size of full backup files for the current instance. Unit: bytes. Full backups are generated from daily scheduled backups, manual backups, and backups generated during cache analysis.</para>
         /// <remarks>
-        /// <para> The value of this parameter is independent of the number and size of returned backup sets. Instead, it represents the size of all valid full backups of the instance.</para>
+        /// <para>This value is independent of the number and size of backup sets returned in the current request. It represents the total size of all valid full backups for the instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -306,9 +307,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? FullStorageSize { get; set; }
 
         /// <summary>
-        /// <para>The size of the log backup file of the instance. Unit: bytes. This parameter is valid only when flashback is enabled.</para>
+        /// <para>The size of the instance log backup files for the current instance. Unit: bytes. This value is valid only when the flashback feature is enabled.</para>
         /// <remarks>
-        /// <para> The value of this parameter is independent of the number and size of returned backup sets. Instead, it represents the size of all valid log backups of the instance.</para>
+        /// <para>This value is independent of the number and size of backup sets in the current response. It represents the total size of all valid instance log backups for the current instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -319,7 +320,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? LogStorageSize { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries returned.</para>
+        /// <para>The maximum number of records returned by the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -329,7 +330,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number, which is the same as the request parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -339,7 +340,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries returned per page.</para>
+        /// <para>The maximum number of records per page, which is the same as the request parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

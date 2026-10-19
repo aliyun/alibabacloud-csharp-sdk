@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class GrantAccountPrivilegeRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the account. You can call the <a href="~~DescribeAccounts~~">DescribeAccounts</a> operation to obtain the name of the account.</para>
+        /// <para>The account name. You can call <a href="https://help.aliyun.com/document_detail/473816.html">DescribeAccounts</a> to obtain the account name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The permissions of the account. Default value: RoleReadWrite. Valid values:</para>
+        /// <para>The permissions of the account. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>RoleReadOnly: The account has the read-only permissions.</description></item>
-        /// <item><description>RoleReadWrite: The account has the read and write permissions.</description></item>
+        /// <item><description>RoleReadOnly: read-only permissions.</description></item>
+        /// <item><description>RoleReadWrite: read and write permissions. This is the default value.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

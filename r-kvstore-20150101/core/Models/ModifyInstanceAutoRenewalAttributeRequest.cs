@@ -12,11 +12,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: Enabled.</description></item>
+        /// <item><description><b>false</b>: Disabled.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> The default value is <b>false</b>.</para>
+        /// <para>Default value: <b>false</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance. Separate multiple instance IDs with commas (,).</para>
+        /// <para>The instance ID. Separate multiple instance IDs with commas (,).</para>
         /// <remarks>
         /// <para>You can specify up to 30 instance IDs.</para>
         /// </remarks>
@@ -41,9 +41,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The auto-renewal period. Valid values: <b>1</b> to <b>12</b>. Unit: months. When the instance is about to expire, the instance is automatically renewed based on the number of months specified by this parameter.</para>
+        /// <para>The auto-renewal cycle. Valid values: <b>1</b> to <b>12</b>. Unit: months. When the instance is about to expire, the system automatically renews the instance for the specified duration.</para>
         /// <remarks>
-        /// <para>This parameter is available and required only if the <b>AutoRenew</b> parameter is set to <b>true</b>.</para>
+        /// <para>This parameter is available and required only when <b>AutoRenew</b> is set to <b>true</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The service. Set the value to kvstore.</para>
+        /// <para>The product. Set the value to kvstore.</para>
         /// 
         /// <b>Example:</b>
         /// <para>kvstore</para>

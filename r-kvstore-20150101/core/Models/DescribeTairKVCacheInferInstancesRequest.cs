@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The billing method of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PrePaid</b>: subscription.</description></item>
-        /// <item><description><b>PostPaid</b>: pay-as-you-go.</description></item>
+        /// <item><description><b>PrePaid</b>: Subscription.</description></item>
+        /// <item><description><b>PostPaid</b>: Pay-as-you-go.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The expiration status of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: expired.</description></item>
-        /// <item><description><b>false</b>: not expired.</description></item>
+        /// <item><description><b>true</b>: Expired.</description></item>
+        /// <item><description><b>false</b>: Not expired.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,9 +48,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceClass { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the instances that you want to query.</para>
+        /// <para>The IDs of the instances to query.</para>
         /// <remarks>
-        /// <para>To specify multiple instance IDs, separate them with commas (,). You can specify up to 30 instance IDs in a single request.</para>
+        /// <para>If you specify multiple instance IDs, separate them with commas (,). You can specify up to 30 instance IDs in a single request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -64,10 +64,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <para>The instance status. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Normal</b>: Normal.</description></item>
-        /// <item><description><b>Creating</b>: The instance is being created.</description></item>
+        /// <item><description><b>Creating</b>: Creating.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>For more information about instance statuses, see <a href="https://help.aliyun.com/document_detail/200740.html">Instance states and impacts</a>.</para>
+        /// <para>For more information about instance statuses, see <a href="https://help.aliyun.com/document_detail/200740.html">Instance statuses and impacts</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The network type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VPC</b>: virtual private cloud (VPC). This is the default value.</description></item>
+        /// <item><description><b>VPC</b>: Virtual Private Cloud (VPC). This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value starts from 1. Default value: 1.</para>
+        /// <para>The page number of the instance list. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The private IP address in the VPC. This parameter is deprecated.</para>
+        /// <para><b>[Deprecated]</b> The private IP address of the VPC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.16.49.***</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The keyword used for fuzzy search by instance name or instance ID.</para>
+        /// <para>The search keyword. You can use this parameter to perform a fuzzy search by instance name or instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apitest</para>
@@ -179,9 +179,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public List<DescribeTairKVCacheInferInstancesRequestTag> Tag { get; set; }
         public class DescribeTairKVCacheInferInstancesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag. The key and value of a tag form a key-value pair.</para>
+            /// <para>The tag key. A tag key and a tag value form a key-value pair.</para>
             /// <remarks>
-            /// <para>You can specify up to 5 key-value pairs of tags in a single request.</para>
+            /// <para>You can specify up to 5 tag key-value pairs in a single request.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>The tag value.</para>
             /// <remarks>
             /// <para><b>N</b> specifies the sequence number of the tag. For example, <b>Tag.1.Value</b> specifies the value of the first tag, and <b>Tag.2.Value</b> specifies the value of the second tag.</para>
             /// </remarks>

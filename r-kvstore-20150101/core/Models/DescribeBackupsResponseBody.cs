@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeBackupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>This parameter is deprecated.</para>
+        /// <para>This group of parameters is deprecated. Ignore it.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public DescribeBackupsResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
         public class DescribeBackupsResponseBodyAccessDeniedDetail : TeaModel {
             /// <summary>
-            /// <para>This parameter is deprecated.</para>
+            /// <para>See the preceding description.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>This parameter is deprecated.</para>
+            /// <para>See the preceding description.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
-            /// <para>This parameter is deprecated.</para>
+            /// <para>See the preceding description.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>This parameter is deprecated.</para>
+            /// <para>See the preceding description.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>This parameter is deprecated.</para>
+            /// <para>See the preceding description.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>This parameter is deprecated.</para>
+            /// <para>See the preceding description.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string NoPermissionType { get; set; }
 
             /// <summary>
-            /// <para>This parameter is deprecated.</para>
+            /// <para>See the preceding description.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -102,9 +102,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         }
 
-        /// <summary>
-        /// <para>Details about the backup sets.</para>
-        /// </summary>
         [NameInMap("Backups")]
         [Validation(Required=false)]
         public DescribeBackupsResponseBodyBackups Backups { get; set; }
@@ -182,8 +179,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// <para>&lt;props=&quot;china&quot;&gt;The free backup quota for the instance, in bytes. The free quota is equal to the default memory size of the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/2664017.html">Changes to the free backup quota policy</a>.
-        /// Full backups and log backups share this free quota. When the instance type is changed, the free quota also changes.
+        /// <para>&lt;props=&quot;china&quot;&gt;The free backup quota for the instance. Unit: bytes. The free quota is equal to the default memory capacity of the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/2664017.html">Notice on backup commercialization</a>.
+        /// Full backups and log backups share this free quota. When you change the instance type, the free quota of the instance changes accordingly.
         /// &lt;props=&quot;intl&quot;&gt;This parameter is not in effect. Ignore this parameter.</para>
         /// 
         /// <b>Example:</b>
@@ -194,9 +191,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? FreeSize { get; set; }
 
         /// <summary>
-        /// <para>The total size of full backups for the instance, in bytes. Full backups are generated from scheduled daily backups, manual backups, or cache analysis.</para>
+        /// <para>The size of full backup files for the current instance. Unit: bytes. Full backups include daily scheduled backups, manual backups, and backups generated during cache analysis.</para>
         /// <remarks>
-        /// <para>This value represents the total size of all valid full backups for the instance, regardless of the backup sets returned in this request.</para>
+        /// <para>This value is independent of the number and size of backup sets returned in the current response. It represents the total size of all valid full backups for the instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -207,9 +204,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? FullStorageSize { get; set; }
 
         /// <summary>
-        /// <para>The total size of log backups for the instance, in bytes. This parameter is returned only if flashback is enabled.</para>
+        /// <para>The size of instance log backup files for the current instance. Unit: bytes. This value is valid only when the flashback feature is enabled.</para>
         /// <remarks>
-        /// <para>This value represents the total size of all valid log backups for the instance, regardless of the backup sets returned in this request.</para>
+        /// <para>This value is independent of the number and size of backup sets returned in the current response. It represents the total size of all valid instance log backups for the instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -230,7 +227,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The maximum number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -250,7 +247,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of backup sets.</para>
+        /// <para>The total number of backups.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

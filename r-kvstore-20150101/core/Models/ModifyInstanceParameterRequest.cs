@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyInstanceParameterRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The parameter template ID.</para>
         /// <remarks>
-        /// <para>You can view the list of parameter templates in the target region, including the parameter template ID, through the DescribeParameterGroups interface.</para>
+        /// <para>You can call the DescribeParameterGroups operation to query the list of parameter templates in the target region, including parameter template IDs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ParameterGroupId { get; set; }
 
         /// <summary>
-        /// <para>The information about parameters.</para>
+        /// <para>The parameter information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;hz&quot;: &quot;50&quot;}</para>

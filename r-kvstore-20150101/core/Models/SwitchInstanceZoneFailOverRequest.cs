@@ -21,11 +21,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The duration for which the fault lasts. Unit: minutes.</para>
-        /// <para>Valid values:</para>
+        /// <para>The duration of the simulated failure. Unit: minutes.
+        /// Valid values:</para>
         /// <list type="bullet">
         /// <item><description>5</description></item>
         /// <item><description>10</description></item>
+        /// <item><description>30</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,7 +37,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SiteFaultTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the destination zone.</para>
+        /// <para>The target zone ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-j</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyInspectionScheduleResponseBody : TeaModel {
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AD7E16AA-6B23-43BF-979C-07D957FB****</para>
         /// </summary>

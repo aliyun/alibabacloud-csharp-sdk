@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DestroyInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance in the recycle bin.</para>
+        /// <para>The instance ID of the instance to revoke from the recycle bin.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

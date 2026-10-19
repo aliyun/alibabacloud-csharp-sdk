@@ -35,6 +35,34 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 [Validation(Required=false)]
                 public long? Connections { get; set; }
 
+                [NameInMap("GlobalSecondaryIndexList")]
+                [Validation(Required=false)]
+                public DescribeTairSkvDdbTableResponseBodyTablesTableGlobalSecondaryIndexList GlobalSecondaryIndexList { get; set; }
+                public class DescribeTairSkvDdbTableResponseBodyTablesTableGlobalSecondaryIndexList : TeaModel {
+                    [NameInMap("GlobalSecondaryIndex")]
+                    [Validation(Required=false)]
+                    public List<DescribeTairSkvDdbTableResponseBodyTablesTableGlobalSecondaryIndexListGlobalSecondaryIndex> GlobalSecondaryIndex { get; set; }
+                    public class DescribeTairSkvDdbTableResponseBodyTablesTableGlobalSecondaryIndexListGlobalSecondaryIndex : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>tt-gsi-xxxxxxxxx</para>
+                        /// </summary>
+                        [NameInMap("GsiId")]
+                        [Validation(Required=false)]
+                        public string GsiId { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>indexKey1</para>
+                        /// </summary>
+                        [NameInMap("IndexName")]
+                        [Validation(Required=false)]
+                        public string IndexName { get; set; }
+
+                    }
+
+                }
+
                 [NameInMap("TableId")]
                 [Validation(Required=false)]
                 public string TableId { get; set; }

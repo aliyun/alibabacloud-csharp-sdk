@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeParameterTemplatesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The database type. The return value is fixed as <b>Redis</b>.</para>
+        /// <para>The database engine. The value is always <b>Redis</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>redis</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The major version of the instance.</para>
+        /// <para>The major engine version of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5.0</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9DA28D8E-514D-4F12-ADED-70A9C818****</para>

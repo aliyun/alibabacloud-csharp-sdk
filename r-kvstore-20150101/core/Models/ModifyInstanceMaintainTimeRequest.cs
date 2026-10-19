@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyInstanceMaintainTimeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the maintenance window. The time is in the <em>HH:mm</em>Z format. The time is displayed in UTC. For example, if you want the maintenance window to end at 2:00 (UTC+8), set this parameter to <c>18:00Z</c>.</para>
+        /// <para>The end time of the maintenance window. Specify the time in the <i>HH:mm</i>Z format in UTC. For example, to set the end time to 02:00 (UTC+8), specify <c>18:00Z</c>.</para>
         /// <remarks>
-        /// <para> The interval between the start time and the end time cannot be less than 1 hour.</para>
+        /// <para>The interval between the start time and end time must be at least 1 hour.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string MaintainEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time of the maintenance window. The time is in the <em>HH:mm</em>Z format. The time is displayed in UTC. For example, if you want the maintenance to start at 1:00 (UTC+8), set this parameter to <c>17:00Z</c>. After you call the API operation, you can view the actual time in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/55252.html">Set a maintenance window</a>.</para>
+        /// <para>The start time of the maintenance window. Specify the time in the <i>HH:mm</i>Z format in UTC. For example, to set the start time to 01:00 (UTC+8), specify <c>17:00Z</c>. After you call this operation, you can view the actual time in the console. For more information, see <a href="https://help.aliyun.com/document_detail/55252.html">Set a maintenance window</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

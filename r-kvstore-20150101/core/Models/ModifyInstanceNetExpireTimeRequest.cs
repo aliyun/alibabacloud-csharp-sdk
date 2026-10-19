@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyInstanceNetExpireTimeRequest : TeaModel {
         /// <summary>
-        /// <para>The extension period to retain the classic network endpoint of the instance. Unit: days. Valid values: <b>14</b>, <b>30</b>, <b>60</b>, and <b>120</b>.</para>
+        /// <para>The extended retention period of the classic network endpoint. Valid values: <b>14</b>, <b>30</b>, <b>60</b>, and <b>120</b>. Unit: days.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? ClassicExpiredDays { get; set; }
 
         /// <summary>
-        /// <para>The endpoint of the classic network.</para>
+        /// <para>The classic network endpoint of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ConnectionString { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

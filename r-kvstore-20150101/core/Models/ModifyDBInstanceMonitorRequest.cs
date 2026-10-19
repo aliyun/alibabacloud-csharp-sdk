@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class ModifyDBInstanceMonitorRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The ID of the Tair instance. This operation is used only to modify the monitoring collection granularity of a Tair instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated. The monitoring granularity is fixed at 60 seconds.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated and uses a fixed value of 60.</para>
+        /// <para>The collection granularity of monitoring data. Unit: seconds. Default value: 60.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

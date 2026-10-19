@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <para>The node ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
