@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records on the current page.</para>
+        /// <para>The number of entries on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query.</para>
+        /// <para>The number of entries per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -64,14 +64,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public List<string> Captions { get; set; }
 
             /// <summary>
-            /// <para>The list of Docling source document structured element references associated with the shard. You can use these references to precisely locate original document elements.</para>
+            /// <para>The list of structured element references in the Docling source document associated with the shard, which can be used to precisely locate the original elements.</para>
             /// </summary>
             [NameInMap("DocItems")]
             [Validation(Required=false)]
             public List<string> DocItems { get; set; }
 
             /// <summary>
-            /// <para>The chain of section headings to which the shard belongs.</para>
+            /// <para>The section heading chain to which the shard belongs.</para>
             /// </summary>
             [NameInMap("Headings")]
             [Validation(Required=false)]
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public int? DocumentIndex { get; set; }
 
                 /// <summary>
-                /// <para>The unique ID of the image resource.</para>
+                /// <para>The unique identifier of the image resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>document-0/pictures/1</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string ItemRef { get; set; }
 
                 /// <summary>
-                /// <para>The media type of the image resource.</para>
+                /// <para>The MIME type of the image resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>image/png</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

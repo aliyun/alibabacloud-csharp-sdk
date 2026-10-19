@@ -22,12 +22,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Auto-renewal is enabled.</description></item>
-        /// <item><description><b>false</b>: Auto-renewal is not enabled.</description></item>
+        /// <item><description><b>true</b>: enables auto-renewal.</description></item>
+        /// <item><description><b>false</b>: disables auto-renewal.</description></item>
         /// </list>
         /// <para>Default value: <b>false</b>.</para>
         /// <remarks>
-        /// <para>This parameter takes effect only when <b>PayType</b> is set to <b>Prepaid</b>.</para>
+        /// <para>This parameter takes effect only when the <b>PayType</b> parameter is set to <b>Prepaid</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -40,8 +40,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>Specifies whether to automatically use coupons. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true (default): Use coupons.</description></item>
-        /// <item><description>false: Do not use coupons.</description></item>
+        /// <item><description>true (default): uses coupons.</description></item>
+        /// <item><description>false: does not use coupons.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,6 +50,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("AutoUseCoupon")]
         [Validation(Required=false)]
         public bool? AutoUseCoupon { get; set; }
+
+        /// <summary>
+        /// <para>The initial model capacity of the instance. The value must be a positive integer. A capacity unit of 1000 is equivalent to one L20N equivalent card.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4000</para>
+        /// </summary>
+        [NameInMap("Capacity")]
+        [Validation(Required=false)]
+        public long? Capacity { get; set; }
 
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -66,7 +76,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string CreatePublicEndpoint { get; set; }
 
         /// <summary>
-        /// <para>The cluster description. Fuzzy match is supported.</para>
+        /// <para>The description of the cluster. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -76,7 +86,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterDescription { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the PolarDB instance on which the application depends.</para>
+        /// <para>The PolarDB instance ID on which the application depends.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-******************</para>
@@ -116,7 +126,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string InferenceEngine { get; set; }
 
         /// <summary>
-        /// <para>The ACK cluster ID.</para>
+        /// <para>The ID of the ACK cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxxxxxxxxxxxxxxxxxxxxx</para>
@@ -136,7 +146,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string KubeConfig { get; set; }
 
         /// <summary>
-        /// <para>The Kubernetes cluster management mode.</para>
+        /// <para>The management mode of the Kubernetes cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>self_k8s</para>
@@ -176,7 +186,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ManagementMode { get; set; }
 
         /// <summary>
-        /// <para>The model name.</para>
+        /// <para>The name of the model.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Qwen3-30B-A3B</para>
@@ -229,10 +239,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required to pass parameter when <b>PayType</b> is set to <b>Prepaid</b>. Specifies the unit of the upfront payment duration for the subscription cluster. </para>
+        /// <para>If the billing method is <b>Prepaid</b>, you must pass parameter. Specifies the upfront cluster as yearly or monthly. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><b>Year</b>: The subscription duration is measured in years.</description></item>
-        /// <item><description><b>Month</b>: The subscription duration is measured in months.</description></item>
+        /// <item><description><b>Year</b>: yearly. The unit is year.</description></item>
+        /// <item><description><b>Month</b>: monthly. The unit is month.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -243,7 +253,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// <para>The coupon code. If this parameter is not specified, the default coupon is used.</para>
+        /// <para>The coupon code. If you do not specify this parameter, the default coupon is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>727xxxxxx934</para>
@@ -272,7 +282,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The security group ID.</para>
+        /// <para>The ID of the security group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sg-bp**************</para>
@@ -302,14 +312,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string StorageType { get; set; }
 
         /// <summary>
-        /// <para>The pay-as-you-go time intervals.</para>
+        /// <para>The pay-as-you-go time ranges.</para>
         /// </summary>
         [NameInMap("TimeSlices")]
         [Validation(Required=false)]
         public List<CreateAIDBClusterRequestTimeSlices> TimeSlices { get; set; }
         public class CreateAIDBClusterRequestTimeSlices : TeaModel {
             /// <summary>
-            /// <para>The start time of the task. The time is in the <c>YYYY-MM-DDThh:mm:ssZ</c> format (UTC).</para>
+            /// <para>The start time of the task. Specify the time in the <c>YYYY-MM-DDThh:mm:ssZ</c> format. The time must be in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1758729600</para>
@@ -319,7 +329,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? BeginTime { get; set; }
 
             /// <summary>
-            /// <para>The end time of the query. The end time must be later than the start time. The time is in the <c>YYYY-MM-DDThh:mmZ</c> format (UTC).</para>
+            /// <para>The end time of the query. The end time must be later than the start time. Specify the time in the <c>YYYY-MM-DDThh:mmZ</c> format. The time must be in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1758733200</para>
@@ -331,10 +341,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>This parameter is required when <b>PayType</b> is set to <b>Prepaid</b>.</para>
+        /// <para>The subscription duration. This parameter is required when the billing method is set to <b>Prepaid</b>.</para>
         /// <list type="bullet">
-        /// <item><description>If <b>Period</b> is set to <b>Month</b>, the valid values of <b>UsedTime</b> are integers in the range of <c>[1-9]</c>.</description></item>
-        /// <item><description>If <b>Period</b> is set to <b>Year</b>, the valid values of <b>UsedTime</b> are integers in the range of <c>[1-3]</c>.</description></item>
+        /// <item><description>If <b>Period</b> is set to <b>Month</b>, the value of <b>UsedTime</b> is an integer ranging from <c>1</c> to <c>9</c>.</description></item>
+        /// <item><description>If <b>Period</b> is set to <b>Year</b>, the value of <b>UsedTime</b> is an integer ranging from <c>1</c> to <c>3</c>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -345,7 +355,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string UsedTime { get; set; }
 
         /// <summary>
-        /// <para>The VPC ID.</para>
+        /// <para>The ID of the virtual private cloud (VPC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -356,7 +366,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string VPCId { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch ID.</para>
+        /// <para>The ID of the vSwitch.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

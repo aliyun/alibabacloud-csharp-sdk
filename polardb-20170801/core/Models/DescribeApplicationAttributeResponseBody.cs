@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ComponentClass { get; set; }
 
             /// <summary>
-            /// <para>The description of the application subcomponent specifications.</para>
+            /// <para>The description of the specifications for the application subcomponent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2C4GB</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ComponentClassDescription { get; set; }
 
             /// <summary>
-            /// <para>The subcomponent ID.</para>
+            /// <para>The ID of the subcomponent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pac-*******************</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? ComponentReplica { get; set; }
 
             /// <summary>
-            /// <para>The replica group name of the application subcomponent.</para>
+            /// <para>The name of the replica group for the application subcomponent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The security group ID.</para>
+                /// <para>The ID of the security group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sg-*******************</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string SecurityGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The security group name.</para>
+                /// <para>The name of the security group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MyGroupName</para>
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             }
 
             /// <summary>
-            /// <para>The component status. The valid values are the same as the application status.</para>
+            /// <para>The status of the component. The valid values are the same as those of the application status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Activated</para>
@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public DescribeApplicationAttributeResponseBodyComponentsTopology Topology { get; set; }
             public class DescribeApplicationAttributeResponseBodyComponentsTopology : TeaModel {
                 /// <summary>
-                /// <para>The list of topology child node IDs or child node subcomponent types for the current application subcomponent.</para>
+                /// <para>The list of topology child node IDs for the current application subcomponent, or the list of subcomponent types of the child nodes.</para>
                 /// </summary>
                 [NameInMap("Children")]
                 [Validation(Required=false)]
@@ -274,7 +274,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string Layer { get; set; }
 
                 /// <summary>
-                /// <para>The list of topology parent node IDs or parent node subcomponent types for the current application subcomponent.</para>
+                /// <para>The list of topology parent node IDs for the current application subcomponent, or the list of subcomponent types of the parent nodes.</para>
                 /// </summary>
                 [NameInMap("Parents")]
                 [Validation(Required=false)]
@@ -306,7 +306,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The application description.</para>
+        /// <para>The description of the application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myapp</para>
@@ -316,14 +316,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The NAT mapping: the list of DNAT mapping entries.</para>
+        /// <para>The list of DNAT mapping entries for NAT mapping.</para>
         /// </summary>
         [NameInMap("DnatMappings")]
         [Validation(Required=false)]
         public List<DescribeApplicationAttributeResponseBodyDnatMappings> DnatMappings { get; set; }
         public class DescribeApplicationAttributeResponseBodyDnatMappings : TeaModel {
             /// <summary>
-            /// <para>The access address in the NatIp:FrontPort format. It can be directly used on the office network.</para>
+            /// <para>The access address in the NatIp:FrontPort format, which can be directly used on the office network.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.64.0.10:10001</para>
@@ -343,7 +343,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public int? BackendPort { get; set; }
 
             /// <summary>
-            /// <para>The DNAT entry ID.</para>
+            /// <para>The ID of the DNAT entry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fwd-xxx</para>
@@ -363,7 +363,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public int? FrontPort { get; set; }
 
             /// <summary>
-            /// <para>The port name. Valid values: webui, hermesagent, dashboard, and ssh.</para>
+            /// <para>The name of the port. Valid values: webui, hermesagent, dashboard, and ssh.</para>
             /// 
             /// <b>Example:</b>
             /// <para>webui</para>
@@ -373,7 +373,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string PortName { get; set; }
 
             /// <summary>
-            /// <para>The entry status.</para>
+            /// <para>The status of the entry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Available</para>
@@ -406,7 +406,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// <para>The endpoint ID.</para>
+            /// <para>The ID of the endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pa-**************</para>
@@ -426,10 +426,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string IP { get; set; }
 
             /// <summary>
-            /// <para>The endpoint type. Valid values:</para>
+            /// <para>The type of the endpoint. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Private: VPC address.</description></item>
-            /// <item><description>Public: Internet address.</description></item>
+            /// <item><description>Public: public network address.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -450,7 +450,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Port { get; set; }
 
             /// <summary>
-            /// <para>The port description.</para>
+            /// <para>The description of the port.</para>
             /// 
             /// <b>Example:</b>
             /// <para>kong_http</para>
@@ -506,8 +506,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The lock mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Unlock: Unlocked.</description></item>
-        /// <item><description>Lock: Locked.</description></item>
+        /// <item><description>Unlock: The application is not locked.</description></item>
+        /// <item><description>Lock: The application is locked.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -547,7 +547,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public DescribeApplicationAttributeResponseBodyMemApplicationAttribute MemApplicationAttribute { get; set; }
         public class DescribeApplicationAttributeResponseBodyMemApplicationAttribute : TeaModel {
             /// <summary>
-            /// <para>The database name.</para>
+            /// <para>The name of the database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-database-name</para>
@@ -557,7 +557,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DbName { get; set; }
 
             /// <summary>
-            /// <para>The embedder model name.</para>
+            /// <para>The name of the embedder model.</para>
             /// 
             /// <b>Example:</b>
             /// <para>text-embedding-v4</para>
@@ -577,7 +577,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GraphLlmModelName { get; set; }
 
             /// <summary>
-            /// <para>The LLM model name.</para>
+            /// <para>The name of the LLM model.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qwen3-max</para>
@@ -587,7 +587,27 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string LlmModelName { get; set; }
 
             /// <summary>
-            /// <para>The project name, which corresponds to the schema where project data is stored in the database.</para>
+            /// <para>The active memory type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>MULTIMODAL_TEXT</para>
+            /// </summary>
+            [NameInMap("MemoryType")]
+            [Validation(Required=false)]
+            public string MemoryType { get; set; }
+
+            /// <summary>
+            /// <para>Indicates whether the multimodal feature is enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("MultimodalEnabled")]
+            [Validation(Required=false)]
+            public bool? MultimodalEnabled { get; set; }
+
+            /// <summary>
+            /// <para>The name of the project, which corresponds to the schema in the database where project data is stored.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-project-name</para>
@@ -597,7 +617,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ProjectName { get; set; }
 
             /// <summary>
-            /// <para>The reranker model name.</para>
+            /// <para>The name of the reranker model.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qwen3-rerank</para>
@@ -665,6 +685,43 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string UserName { get; set; }
 
+            /// <summary>
+            /// <para>The current dimensions of the VisualEmbedder.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2560</para>
+            /// </summary>
+            [NameInMap("VisualEmbedderDimensions")]
+            [Validation(Required=false)]
+            public int? VisualEmbedderDimensions { get; set; }
+
+            /// <summary>
+            /// <para>The current VisualEmbedder model.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>qwen3.7-text-embedding</para>
+            /// </summary>
+            [NameInMap("VisualEmbedderModelName")]
+            [Validation(Required=false)]
+            public string VisualEmbedderModelName { get; set; }
+
+            /// <summary>
+            /// <para>The currently enabled understanding modalities.</para>
+            /// </summary>
+            [NameInMap("VisualLlmModalities")]
+            [Validation(Required=false)]
+            public List<string> VisualLlmModalities { get; set; }
+
+            /// <summary>
+            /// <para>The current VisualLLM model.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>qwen3.6-flash</para>
+            /// </summary>
+            [NameInMap("VisualLlmModelName")]
+            [Validation(Required=false)]
+            public string VisualLlmModelName { get; set; }
+
         }
 
         /// <summary>
@@ -688,7 +745,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string NatGatewayId { get; set; }
 
         /// <summary>
-        /// <para>The SNAT IP address bound to the vSwitch where the application resides for NAT mapping. This parameter refers to customer-managed SNAT entries that are discovered and returned in real time by the control plane, and is independent of the Internet NAT gateway SNAT.</para>
+        /// <para>The SNAT IP address bound to the vSwitch where the application resides for NAT mapping. This refers to customer-managed SNAT entries that are discovered and returned in real time by the control plane, and is independent of the Internet NAT gateway SNAT.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.64.0.20</para>
@@ -708,7 +765,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The attributes of the PolarClaw application.</para>
+        /// <para>The PolarClaw application attributes.</para>
         /// </summary>
         [NameInMap("PolarClawApplicationAttribute")]
         [Validation(Required=false)]
@@ -786,7 +843,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The attributes of the PolarClaw SaaS application.</para>
+        /// <para>The PolarClaw SaaS application attributes.</para>
         /// </summary>
         [NameInMap("PolarClawSaaSApplicationAttribute")]
         [Validation(Required=false)]
@@ -879,7 +936,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The security group ID.</para>
+            /// <para>The ID of the security group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sg-**************</para>
@@ -889,7 +946,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>The security group name.</para>
+            /// <para>The name of the security group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MyGroupName</para>
@@ -992,9 +1049,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <item><description>ClassChanging: The application specifications are being changed.</description></item>
         /// <item><description>Transing: The application is being migrated.</description></item>
         /// <item><description>MinorVersionUpgrading: The minor version of the application is being upgraded.</description></item>
-        /// <item><description>NetCreating: The endpoint is being created.</description></item>
-        /// <item><description>NetDeleting: The endpoint is being deleted.</description></item>
-        /// <item><description>NetModifying: The endpoint is being modified.</description></item>
+        /// <item><description>NetCreating: The endpoint of the application is being created.</description></item>
+        /// <item><description>NetDeleting: The endpoint of the application is being deleted.</description></item>
+        /// <item><description>NetModifying: The endpoint of the application is being modified.</description></item>
         /// <item><description>Restarting: The application is being restarted.</description></item>
         /// <item><description>Locking: The application is being locked.</description></item>
         /// <item><description>Locked: The application is locked.</description></item>
@@ -1059,7 +1116,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether an upgrade is available.</para>
+        /// <para>Specifies whether an upgrade is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

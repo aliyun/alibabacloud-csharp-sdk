@@ -5238,6 +5238,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["AutoUseCoupon"] = request.AutoUseCoupon;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Capacity))
+            {
+                query["Capacity"] = request.Capacity;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -5415,6 +5419,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoUseCoupon))
             {
                 query["AutoUseCoupon"] = request.AutoUseCoupon;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Capacity))
+            {
+                query["Capacity"] = request.Capacity;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -17741,7 +17749,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom model registration from an AI cluster.</para>
+        /// <para>Deletes a custom model registration for an AI cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17758,10 +17766,6 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
-            {
-                query["DBClusterId"] = request.DBClusterId;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelName))
             {
                 query["ModelName"] = request.ModelName;
@@ -17791,7 +17795,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom model registration from an AI cluster.</para>
+        /// <para>Deletes a custom model registration for an AI cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17808,10 +17812,6 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
-            {
-                query["DBClusterId"] = request.DBClusterId;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelName))
             {
                 query["ModelName"] = request.ModelName;
@@ -17841,7 +17841,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom model registration from an AI cluster.</para>
+        /// <para>Deletes a custom model registration for an AI cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17859,7 +17859,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom model registration from an AI cluster.</para>
+        /// <para>Deletes a custom model registration for an AI cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32621,7 +32621,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of models in an AI cluster.</para>
+        /// <para>Retrieves a list of models in an AI cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32671,7 +32671,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of models in an AI cluster.</para>
+        /// <para>Retrieves a list of models in an AI cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32721,7 +32721,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of models in an AI cluster.</para>
+        /// <para>Retrieves a list of models in an AI cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32739,7 +32739,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of models in an AI cluster.</para>
+        /// <para>Retrieves a list of models in an AI cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45701,7 +45701,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the result of a single-round knowledge base question answering task.</para>
+        /// <para>Queries the single-turn Q&amp;A results of a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45751,7 +45751,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the result of a single-round knowledge base question answering task.</para>
+        /// <para>Queries the single-turn Q&amp;A results of a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45801,7 +45801,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the result of a single-round knowledge base question answering task.</para>
+        /// <para>Queries the single-turn Q&amp;A results of a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45819,7 +45819,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the result of a single-round knowledge base question answering task.</para>
+        /// <para>Queries the single-turn Q&amp;A results of a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -75648,7 +75648,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <para>Registers a custom model for an AI cluster.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// RegisterAIDBClusterCustomModelRequest
         /// </param>
         /// <param name="runtime">
@@ -75658,10 +75658,24 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <returns>
         /// RegisterAIDBClusterCustomModelResponse
         /// </returns>
-        public RegisterAIDBClusterCustomModelResponse RegisterAIDBClusterCustomModelWithOptions(RegisterAIDBClusterCustomModelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public RegisterAIDBClusterCustomModelResponse RegisterAIDBClusterCustomModelWithOptions(RegisterAIDBClusterCustomModelRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RegisterAIDBClusterCustomModelShrinkRequest request = new RegisterAIDBClusterCustomModelShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ContainerEnv))
+            {
+                request.ContainerEnvShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ContainerEnv, "ContainerEnv", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ModelParams))
+            {
+                request.ModelParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ModelParams, "ModelParams", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContainerEnvShrink))
+            {
+                query["ContainerEnv"] = request.ContainerEnvShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomOssBucketName))
             {
                 query["CustomOssBucketName"] = request.CustomOssBucketName;
@@ -75670,21 +75684,45 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["CustomOssBucketPath"] = request.CustomOssBucketPath;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceClass))
             {
-                query["DBClusterId"] = request.DBClusterId;
+                query["DBInstanceClass"] = request.DBInstanceClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectCommand))
+            {
+                query["DirectCommand"] = request.DirectCommand;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayModelName))
             {
                 query["DisplayModelName"] = request.DisplayModelName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageName))
+            {
+                query["ImageName"] = request.ImageName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InferenceEngine))
+            {
+                query["InferenceEngine"] = request.InferenceEngine;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelName))
             {
                 query["ModelName"] = request.ModelName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelParamsShrink))
+            {
+                query["ModelParams"] = request.ModelParamsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegistryPassword))
+            {
+                query["RegistryPassword"] = request.RegistryPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegistryUsername))
+            {
+                query["RegistryUsername"] = request.RegistryUsername;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -75710,7 +75748,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <para>Registers a custom model for an AI cluster.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// RegisterAIDBClusterCustomModelRequest
         /// </param>
         /// <param name="runtime">
@@ -75720,10 +75758,24 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <returns>
         /// RegisterAIDBClusterCustomModelResponse
         /// </returns>
-        public async Task<RegisterAIDBClusterCustomModelResponse> RegisterAIDBClusterCustomModelWithOptionsAsync(RegisterAIDBClusterCustomModelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<RegisterAIDBClusterCustomModelResponse> RegisterAIDBClusterCustomModelWithOptionsAsync(RegisterAIDBClusterCustomModelRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RegisterAIDBClusterCustomModelShrinkRequest request = new RegisterAIDBClusterCustomModelShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ContainerEnv))
+            {
+                request.ContainerEnvShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ContainerEnv, "ContainerEnv", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ModelParams))
+            {
+                request.ModelParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ModelParams, "ModelParams", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContainerEnvShrink))
+            {
+                query["ContainerEnv"] = request.ContainerEnvShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomOssBucketName))
             {
                 query["CustomOssBucketName"] = request.CustomOssBucketName;
@@ -75732,21 +75784,45 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["CustomOssBucketPath"] = request.CustomOssBucketPath;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceClass))
             {
-                query["DBClusterId"] = request.DBClusterId;
+                query["DBInstanceClass"] = request.DBInstanceClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectCommand))
+            {
+                query["DirectCommand"] = request.DirectCommand;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayModelName))
             {
                 query["DisplayModelName"] = request.DisplayModelName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageName))
+            {
+                query["ImageName"] = request.ImageName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InferenceEngine))
+            {
+                query["InferenceEngine"] = request.InferenceEngine;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelName))
             {
                 query["ModelName"] = request.ModelName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelParamsShrink))
+            {
+                query["ModelParams"] = request.ModelParamsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegistryPassword))
+            {
+                query["RegistryPassword"] = request.RegistryPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegistryUsername))
+            {
+                query["RegistryUsername"] = request.RegistryUsername;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -77701,6 +77777,150 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Adjusts the model capacity of an AI cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResizeAIDBClusterModelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResizeAIDBClusterModelResponse
+        /// </returns>
+        public ResizeAIDBClusterModelResponse ResizeAIDBClusterModelWithOptions(ResizeAIDBClusterModelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetCapacity))
+            {
+                query["TargetCapacity"] = request.TargetCapacity;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResizeAIDBClusterModel",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResizeAIDBClusterModelResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adjusts the model capacity of an AI cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResizeAIDBClusterModelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResizeAIDBClusterModelResponse
+        /// </returns>
+        public async Task<ResizeAIDBClusterModelResponse> ResizeAIDBClusterModelWithOptionsAsync(ResizeAIDBClusterModelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetCapacity))
+            {
+                query["TargetCapacity"] = request.TargetCapacity;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResizeAIDBClusterModel",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResizeAIDBClusterModelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adjusts the model capacity of an AI cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResizeAIDBClusterModelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResizeAIDBClusterModelResponse
+        /// </returns>
+        public ResizeAIDBClusterModelResponse ResizeAIDBClusterModel(ResizeAIDBClusterModelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ResizeAIDBClusterModelWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adjusts the model capacity of an AI cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResizeAIDBClusterModelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResizeAIDBClusterModelResponse
+        /// </returns>
+        public async Task<ResizeAIDBClusterModelResponse> ResizeAIDBClusterModelAsync(ResizeAIDBClusterModelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ResizeAIDBClusterModelWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Restarts an AI cluster.</para>
         /// </summary>
         /// 
@@ -78645,7 +78865,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information from a knowledge base.</para>
+        /// <para>Searches a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -78707,7 +78927,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information from a knowledge base.</para>
+        /// <para>Searches a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -78769,7 +78989,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information from a knowledge base.</para>
+        /// <para>Searches a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -78787,7 +79007,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information from a knowledge base.</para>
+        /// <para>Searches a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">

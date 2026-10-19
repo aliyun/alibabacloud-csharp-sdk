@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The database engine version.</para>
+        /// <para>The DPI engine version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3.0</para>
@@ -37,7 +37,27 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<DescribeAvailableModelsResponseBodyItems> Items { get; set; }
         public class DescribeAvailableModelsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The custom model registration key.</para>
+            /// <para>The container startup environment variables registered for the custom model.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;HF_HOME&quot;:&quot;/cache/hf&quot;}</para>
+            /// </summary>
+            [NameInMap("ContainerEnv")]
+            [Validation(Required=false)]
+            public Dictionary<string, string> ContainerEnv { get; set; }
+
+            /// <summary>
+            /// <para>The source image address registered by the customer.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>registry.example.com/customer/model:v1</para>
+            /// </summary>
+            [NameInMap("CustomImageSource")]
+            [Validation(Required=false)]
+            public string CustomImageSource { get; set; }
+
+            /// <summary>
+            /// <para>The registration key of the custom model.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Qwen3-32B</para>
@@ -45,6 +65,26 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [NameInMap("CustomModelName")]
             [Validation(Required=false)]
             public string CustomModelName { get; set; }
+
+            /// <summary>
+            /// <para>The deployment specifications registered for the custom model.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>polardb.gpu.gn8is.4xlarge</para>
+            /// </summary>
+            [NameInMap("DBInstanceClass")]
+            [Validation(Required=false)]
+            public string DBInstanceClass { get; set; }
+
+            /// <summary>
+            /// <para>The direct startup command registered for the custom model.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>python -m vllm.entrypoints.openai.api_server</para>
+            /// </summary>
+            [NameInMap("DirectCommand")]
+            [Validation(Required=false)]
+            public string DirectCommand { get; set; }
 
             /// <summary>
             /// <para>The display name of the model.</para>
@@ -57,7 +97,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DisplayModelName { get; set; }
 
             /// <summary>
-            /// <para>The last modified time of the registration.</para>
+            /// <para>The time when the registration was last modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-09-07 20:57:20</para>
@@ -67,7 +107,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The supported GPU types.</para>
+            /// <para>The supported GPU models.</para>
             /// </summary>
             [NameInMap("GpuRequired")]
             [Validation(Required=false)]
@@ -96,7 +136,37 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             }
 
             /// <summary>
-            /// <para>The minimum number of CPUs.</para>
+            /// <para>The image import status. Valid values: Importing, Available, and Failed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Available</para>
+            /// </summary>
+            [NameInMap("ImageImportStatus")]
+            [Validation(Required=false)]
+            public string ImageImportStatus { get; set; }
+
+            /// <summary>
+            /// <para>The model service image address registered by the customer.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>registry.example.com/customer/model:v1</para>
+            /// </summary>
+            [NameInMap("ImageName")]
+            [Validation(Required=false)]
+            public string ImageName { get; set; }
+
+            /// <summary>
+            /// <para>The inference engine registered for the custom model.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vllm</para>
+            /// </summary>
+            [NameInMap("InferenceEngine")]
+            [Validation(Required=false)]
+            public string InferenceEngine { get; set; }
+
+            /// <summary>
+            /// <para>The minimum CPU requirement.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -106,7 +176,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? MinimumCpu { get; set; }
 
             /// <summary>
-            /// <para>The minimum memory size.</para>
+            /// <para>The minimum memory requirement.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16384</para>
@@ -124,6 +194,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [NameInMap("ModelName")]
             [Validation(Required=false)]
             public string ModelName { get; set; }
+
+            /// <summary>
+            /// <para>The startup parameters registered for the custom model.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;--max-model-len&quot;:&quot;32768&quot;}</para>
+            /// </summary>
+            [NameInMap("ModelParams")]
+            [Validation(Required=false)]
+            public Dictionary<string, string> ModelParams { get; set; }
 
             /// <summary>
             /// <para>The model series.</para>
@@ -162,6 +242,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public List<string> SupportedGpuModels { get; set; }
 
+            /// <summary>
+            /// <para>The model fine-tuning architecture.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>swift</para>
+            /// </summary>
             [NameInMap("TuneArch")]
             [Validation(Required=false)]
             public string TuneArch { get; set; }

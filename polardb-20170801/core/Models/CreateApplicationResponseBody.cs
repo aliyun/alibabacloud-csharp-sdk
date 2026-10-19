@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The application description.</para>
+        /// <para>The application remarks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myapp</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The generated order ID.</para>
+        /// <para>The ID of the generated order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2148126708*****</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the resources are sufficient. This parameter is returned only when DryRun is set to true.</para>
+        /// <para>Indicates whether the required resources are available. This parameter is returned only when DryRun is set to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

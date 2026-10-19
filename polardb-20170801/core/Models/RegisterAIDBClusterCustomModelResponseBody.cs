@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class RegisterAIDBClusterCustomModelResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the registration is newly created. A value of false indicates that an existing registration was updated.</para>
+        /// <para>Indicates whether a new registration is created. A value of false indicates that an existing registration is updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? Created { get; set; }
 
         /// <summary>
-        /// <para>The display name and initial client-facing invocation name.</para>
+        /// <para>The display name and the initial invocation name for clients.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-qwen3</para>
@@ -28,6 +28,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("DisplayModelName")]
         [Validation(Required=false)]
         public string DisplayModelName { get; set; }
+
+        /// <summary>
+        /// <para>The image import status. The initial value is Importing after an image is registered.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Importing</para>
+        /// </summary>
+        [NameInMap("ImageImportStatus")]
+        [Validation(Required=false)]
+        public string ImageImportStatus { get; set; }
 
         /// <summary>
         /// <para>The model registration ID.</para>

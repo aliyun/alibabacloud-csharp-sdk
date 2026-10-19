@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string KubeType { get; set; }
 
         /// <summary>
-        /// <para>The model type. Valid values: custom or public. If this parameter is not specified, all models are returned.</para>
+        /// <para>The model type. Valid values: custom and public. If you do not specify this parameter, all models are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>custom</para>

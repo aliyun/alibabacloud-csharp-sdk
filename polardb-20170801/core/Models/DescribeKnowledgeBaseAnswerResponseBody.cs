@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AgentId { get; set; }
 
         /// <summary>
-        /// <para>The answer content.</para>
+        /// <para>The content of the answer.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The financial report summary is as follows: ******</para>
+        /// <para>The content of the financial report is summarized as follows: ******</para>
         /// </summary>
         [NameInMap("Answer")]
         [Validation(Required=false)]
         public string Answer { get; set; }
 
         /// <summary>
-        /// <para>The cumulative number of tokens generated for completion.</para>
+        /// <para>The cumulative number of completion tokens generated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3935</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ErrorType { get; set; }
 
         /// <summary>
-        /// <para>The large language model ID.</para>
+        /// <para>The ID of the large language model.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OO1A6p8B******_xPUC</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string LLMModelId { get; set; }
 
         /// <summary>
-        /// <para>The cumulative number of tokens consumed by the prompt.</para>
+        /// <para>The cumulative number of prompt tokens consumed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2459</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PromptTokens { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the Q&amp;A task.</para>
+        /// <para>The unique identifier of the Q&amp;A task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>R3BGbnBqcXN******.2a5a23c9-******-179970533d30</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<DescribeKnowledgeBaseAnswerResponseBodySources> Sources { get; set; }
         public class DescribeKnowledgeBaseAnswerResponseBodySources : TeaModel {
             /// <summary>
-            /// <para>The chunk metadata.</para>
+            /// <para>The shard metadata.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -130,14 +130,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <para>The file name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>FinancialReport.pdf</para>
+            /// <para>Financial_Report.pdf</para>
             /// </summary>
             [NameInMap("FileName")]
             [Validation(Required=false)]
             public string FileName { get; set; }
 
             /// <summary>
-            /// <para>The list of image resources associated with the referenced chunk in the Q&amp;A.</para>
+            /// <para>The list of image resources associated with the shard referenced in the Q&amp;A.</para>
             /// </summary>
             [NameInMap("ImageResources")]
             [Validation(Required=false)]
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public int? DocumentIndex { get; set; }
 
                 /// <summary>
-                /// <para>The unique ID of the image resource.</para>
+                /// <para>The unique identifier of the image resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>document-0/pictures/1</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string ItemRef { get; set; }
 
                 /// <summary>
-                /// <para>The media type of the image resource.</para>
+                /// <para>The MIME type of the image resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>image/png</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             }
 
             /// <summary>
-            /// <para>The unique ID of the knowledge base.</para>
+            /// <para>The unique identifier of the knowledge base.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pkb-xxxxx</para>
@@ -216,24 +216,24 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public Dictionary<string, object> Metadata { get; set; }
 
             /// <summary>
-            /// <para>The list of page numbers to which the chunk belongs.</para>
+            /// <para>The list of page numbers to which the shard belongs.</para>
             /// </summary>
             [NameInMap("PageNumbers")]
             [Validation(Required=false)]
             public List<int?> PageNumbers { get; set; }
 
             /// <summary>
-            /// <para>The chunk content.</para>
+            /// <para>The shard content.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>FinancialReport</para>
+            /// <para>Financial report</para>
             /// </summary>
             [NameInMap("ShardContent")]
             [Validation(Required=false)]
             public string ShardContent { get; set; }
 
             /// <summary>
-            /// <para>The chunk ID.</para>
+            /// <para>The shard ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -267,8 +267,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The status of the Q&amp;A task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>RUNNING: In progress.</description></item>
-        /// <item><description>COMPLETED: Completed.</description></item>
+        /// <item><description>RUNNING: The task is in progress.</description></item>
+        /// <item><description>COMPLETED: The task is completed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
