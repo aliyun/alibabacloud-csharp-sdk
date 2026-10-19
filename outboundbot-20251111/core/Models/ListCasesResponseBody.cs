@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The paged data.</para>
+        /// <para>The paginated data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListCasesResponseBodyData Data { get; set; }
         public class ListCasesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of cases.</para>
+            /// <para>The case list.</para>
             /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
             public List<ListCasesResponseBodyDataList> List { get; set; }
             public class ListCasesResponseBodyDataList : TeaModel {
                 /// <summary>
-                /// <para>The number of dial attempts.</para>
+                /// <para>The number of call attempts.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string CaseId { get; set; }
 
                 /// <summary>
-                /// <para>The time when the case was created.</para>
+                /// <para>The creation time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-07-27T11:25:15+08:00</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                     public List<string> CandidateValues { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the item is collected.</para>
+                    /// <para>Indicates whether the label is collected.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                     /// <para>The description of the label.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Description content</para>
+                    /// <para>Sample description</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
@@ -191,14 +191,14 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                     /// <para>The name of the label.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>软包装企业打电话_20251022_165548</para>
+                    /// <para>Flexible packaging enterprise call_20251022_165548</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The system label.</para>
+                    /// <para>Indicates whether the label is a system label.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 }
 
                 /// <summary>
-                /// <para>The time of the last dial attempt.</para>
+                /// <para>The time of the last call attempt.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1786960840667</para>
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string PhoneNumber { get; set; }
 
                 /// <summary>
-                /// <para>The priority of the case.</para>
+                /// <para>The priority.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Daily</para>
@@ -283,7 +283,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 /// <para>The name of the script.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Scenario Name</para>
+                /// <para>Sample scenario name</para>
                 /// </summary>
                 [NameInMap("ScriptName")]
                 [Validation(Required=false)]
@@ -300,7 +300,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string SessionId { get; set; }
 
                 /// <summary>
-                /// <para>The case state.</para>
+                /// <para>The case status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Executing</para>
@@ -310,7 +310,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string State { get; set; }
 
                 /// <summary>
-                /// <para>The talk time.</para>
+                /// <para>The call duration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -318,6 +318,16 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 [NameInMap("TalkTime")]
                 [Validation(Required=false)]
                 public long? TalkTime { get; set; }
+
+                /// <summary>
+                /// <para>The number of dialogue turns.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("TalkTurns")]
+                [Validation(Required=false)]
+                public int? TalkTurns { get; set; }
 
             }
 
@@ -374,7 +384,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pass-through parameters.</para>
+        /// <para>The pass-through parameter.</para>
         /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
@@ -391,7 +401,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

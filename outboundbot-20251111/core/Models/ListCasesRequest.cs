@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public List<string> DispositionReasons { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the version is a draft version.</para>
+        /// <para>Specifies whether it is a draft version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The label search condition.</para>
+        /// <para>The label search criteria.</para>
         /// </summary>
         [NameInMap("LabelSearch")]
         [Validation(Required=false)]
@@ -231,7 +231,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The list of case states.</para>
+        /// <para>The list of case statuses.</para>
         /// </summary>
         [NameInMap("States")]
         [Validation(Required=false)]
