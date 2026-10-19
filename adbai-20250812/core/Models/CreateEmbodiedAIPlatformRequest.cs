@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ontology count.</para>
+        /// <para>The device count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// <para>The node specifications of the head node.</para>
+            /// <para>The head node specifications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xlarge</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
                 public string AllocateUnit { get; set; }
 
                 /// <summary>
-                /// <para>The name of the worker group.</para>
+                /// <para>The worker group name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
                 public string WorkerDiskCapacity { get; set; }
 
                 /// <summary>
-                /// <para>The node specifications of the worker node.</para>
+                /// <para>The worker node specifications.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xlarge</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
                 public string WorkerSpecName { get; set; }
 
                 /// <summary>
-                /// <para>The resource type of the worker node.</para>
+                /// <para>The worker node resource type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CPU</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
             public long? CpuAcu { get; set; }
 
             /// <summary>
-            /// <para>The list of GPU model specifications to purchase.</para>
+            /// <para>The list of GPU model types to purchase.</para>
             /// </summary>
             [NameInMap("GpuSpecs")]
             [Validation(Required=false)]
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
                 public CreateEmbodiedAIPlatformRequestRayTrainConfigTerminalConfigAcrConfig AcrConfig { get; set; }
                 public class CreateEmbodiedAIPlatformRequestRayTrainConfigTerminalConfigAcrConfig : TeaModel {
                     /// <summary>
-                    /// <para>The instance ID of the image repository.</para>
+                    /// <para>The image repository instance ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cri-***</para>
@@ -236,14 +236,14 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
                     public string InstanceId { get; set; }
 
                     /// <summary>
-                    /// <para>The list of namespaces.</para>
+                    /// <para>The namespace list.</para>
                     /// </summary>
                     [NameInMap("Namespaces")]
                     [Validation(Required=false)]
                     public List<string> Namespaces { get; set; }
 
                     /// <summary>
-                    /// <para>The address of the image repository instance.</para>
+                    /// <para>The image repository instance address.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>example-vpc.example-region.cr.aliyuncs.com</para>
@@ -273,7 +273,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The webserver specification of the platform.</para>
+        /// <para>The Webserver specification of the platform.</para>
         /// 
         /// <b>Example:</b>
         /// <para>large</para>

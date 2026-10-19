@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
 {
     public class ModifyEmbodiedAIPlatformShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The ID of the cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,14 +20,20 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// <para>The total number of devices.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("DeviceCount")]
         [Validation(Required=false)]
         public string DeviceCount { get; set; }
 
         /// <summary>
-        /// <para>The name of the embodied intelligence multimodal data platform.</para>
+        /// <para>The name of the embodied AI multimodal data platform.</para>
         /// <remarks>
-        /// <para>The name can contain lowercase letters, digits, and underscores (_). It must start with a letter and end with a letter or digit. The name can be up to 16 characters in length.</para>
+        /// <para>The name must be 1 to 16 characters in length and can contain lowercase letters, digits, and underscores (_). It must start with a letter and end with a letter or digit.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,12 +45,15 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public string PlatformName { get; set; }
 
         /// <summary>
-        /// <para>The Ray specification information of the platform.</para>
+        /// <para>The Ray specifications of the platform.</para>
         /// </summary>
         [NameInMap("RayConfig")]
         [Validation(Required=false)]
         public string RayConfigShrink { get; set; }
 
+        /// <summary>
+        /// <para>The configuration of development and training resources.</para>
+        /// </summary>
         [NameInMap("RayTrainConfig")]
         [Validation(Required=false)]
         public string RayTrainConfigShrink { get; set; }

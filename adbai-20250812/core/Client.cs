@@ -403,12 +403,12 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an AnalyticDB multimodal knowledge base.</para>
+        /// <para>Creates an AnalyticDB for MySQL multimodal knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates an AnalyticDB multimodal knowledge base.</para>
+        /// <para>Creates an AnalyticDB for MySQL multimodal knowledge base.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -436,6 +436,10 @@ namespace AlibabaCloud.SDK.ADBAI20250812
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbClusterAcu))
             {
                 query["DbClusterAcu"] = request.DbClusterAcu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LakeStorageBucketName))
             {
@@ -486,12 +490,12 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an AnalyticDB multimodal knowledge base.</para>
+        /// <para>Creates an AnalyticDB for MySQL multimodal knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates an AnalyticDB multimodal knowledge base.</para>
+        /// <para>Creates an AnalyticDB for MySQL multimodal knowledge base.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -519,6 +523,10 @@ namespace AlibabaCloud.SDK.ADBAI20250812
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbClusterAcu))
             {
                 query["DbClusterAcu"] = request.DbClusterAcu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LakeStorageBucketName))
             {
@@ -569,12 +577,12 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an AnalyticDB multimodal knowledge base.</para>
+        /// <para>Creates an AnalyticDB for MySQL multimodal knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates an AnalyticDB multimodal knowledge base.</para>
+        /// <para>Creates an AnalyticDB for MySQL multimodal knowledge base.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -592,12 +600,12 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an AnalyticDB multimodal knowledge base.</para>
+        /// <para>Creates an AnalyticDB for MySQL multimodal knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates an AnalyticDB multimodal knowledge base.</para>
+        /// <para>Creates an AnalyticDB for MySQL multimodal knowledge base.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1043,12 +1051,12 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries multi-turn conversations for instance kernel diagnostics.</para>
+        /// <para>Retrieves multi-turn conversations for instance kernel diagnostics.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries multi-turn conversations for instance kernel diagnostics.</para>
+        /// <para>Retrieves multi-turn conversations for instance kernel diagnostics.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1106,12 +1114,12 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries multi-turn conversations for instance kernel diagnostics.</para>
+        /// <para>Retrieves multi-turn conversations for instance kernel diagnostics.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries multi-turn conversations for instance kernel diagnostics.</para>
+        /// <para>Retrieves multi-turn conversations for instance kernel diagnostics.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1169,12 +1177,12 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries multi-turn conversations for instance kernel diagnostics.</para>
+        /// <para>Retrieves multi-turn conversations for instance kernel diagnostics.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries multi-turn conversations for instance kernel diagnostics.</para>
+        /// <para>Retrieves multi-turn conversations for instance kernel diagnostics.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1192,12 +1200,12 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries multi-turn conversations for instance kernel diagnostics.</para>
+        /// <para>Retrieves multi-turn conversations for instance kernel diagnostics.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries multi-turn conversations for instance kernel diagnostics.</para>
+        /// <para>Retrieves multi-turn conversations for instance kernel diagnostics.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1563,7 +1571,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resource usage information of an embodied intelligence platform.</para>
+        /// <para>Queries the resource usage information of the Embodied platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1621,7 +1629,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resource usage information of an embodied intelligence platform.</para>
+        /// <para>Queries the resource usage information of the Embodied platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1679,7 +1687,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resource usage information of an embodied intelligence platform.</para>
+        /// <para>Queries the resource usage information of the Embodied platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1697,7 +1705,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resource usage information of an embodied intelligence platform.</para>
+        /// <para>Queries the resource usage information of the Embodied platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2007,7 +2015,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the specifications of an embodied intelligence platform.</para>
+        /// <para>Modifies the specifications of the embodied AI platform.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2083,7 +2091,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the specifications of an embodied intelligence platform.</para>
+        /// <para>Modifies the specifications of the embodied AI platform.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2159,7 +2167,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the specifications of an embodied intelligence platform.</para>
+        /// <para>Modifies the specifications of the embodied AI platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2177,7 +2185,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the specifications of an embodied intelligence platform.</para>
+        /// <para>Modifies the specifications of the embodied AI platform.</para>
         /// </summary>
         /// 
         /// <param name="request">

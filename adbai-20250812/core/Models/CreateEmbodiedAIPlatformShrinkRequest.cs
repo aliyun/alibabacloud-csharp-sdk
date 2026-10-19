@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ontology count.</para>
+        /// <para>The device count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The webserver specification of the platform.</para>
+        /// <para>The Webserver specification of the platform.</para>
         /// 
         /// <b>Example:</b>
         /// <para>large</para>

@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
             public DescribeChatMessageResponseBodyContentData Data { get; set; }
             public class DescribeChatMessageResponseBodyContentData : TeaModel {
                 /// <summary>
-                /// <para>The ID of the data API operation that is called.</para>
+                /// <para>The ID of the invoked data API.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>call_e0e9ee423c7e4ba88d058fd6</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
                 public string CallId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the data API operation that is called.</para>
+                /// <para>The name of the invoked data API.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>describeScalingRecommendation</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The output of the data API operation that is called.</para>
+                /// <para>The output of the invoked data API.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[{&quot;type&quot;: &quot;text&quot;, &quot;text&quot;: &quot;Skill not found: instance_health_inspection&quot;}]</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         }
 
         /// <summary>
-        /// <para>The creation time.</para>
+        /// <para>The creation time, in ISO 8601 format and UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-03-18T02:01:56Z</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public DescribeChatMessageResponseBodyData Data { get; set; }
         public class DescribeChatMessageResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The parameters of the data API operation that is called.</para>
+            /// <para>The parameters of the invoked data API.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;instanceName&quot;: &quot;amv-bp1b9y9xhvpzm9p0&quot;, &quot;pageNumber&quot;: 1, &quot;pageSize&quot;: 10}</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
             public string Arguments { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data API operation that is called.</para>
+            /// <para>The ID of the invoked data API.</para>
             /// 
             /// <b>Example:</b>
             /// <para>call_1891f1689bc44ab292aadff3</para>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
             public string CallId { get; set; }
 
             /// <summary>
-            /// <para>The name of the data API operation that is called.</para>
+            /// <para>The name of the invoked data API.</para>
             /// 
             /// <b>Example:</b>
             /// <para>describeScalingRecommendation</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The output of the data API operation that is called.</para>
+            /// <para>The output of the invoked data API.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{&quot;type&quot;: &quot;text&quot;, &quot;text&quot;: &quot;Skill not found: instance_health_inspection&quot;}]</para>

@@ -9,22 +9,49 @@ using Tea;
 namespace AlibabaCloud.SDK.ADBAI20250812.Models
 {
     public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The number of ACUs for each component of the Embodied platform.</para>
+        /// </summary>
         [NameInMap("AcuDetails")]
         [Validation(Required=false)]
         public GetEmbodiedAIPlatformResourceUsageInfoResponseBodyAcuDetails AcuDetails { get; set; }
         public class GetEmbodiedAIPlatformResourceUsageInfoResponseBodyAcuDetails : TeaModel {
+            /// <summary>
+            /// <para>The number of ACUs for the EAP web server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("EapWebserverACUCount")]
             [Validation(Required=false)]
             public double? EapWebserverACUCount { get; set; }
 
+            /// <summary>
+            /// <para>The number of ACUs for the Ray head node.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("RayHeadACUCount")]
             [Validation(Required=false)]
             public double? RayHeadACUCount { get; set; }
 
+            /// <summary>
+            /// <para>The number of ACUs for the Ray worker node.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("RayWorkerACUCount")]
             [Validation(Required=false)]
             public double? RayWorkerACUCount { get; set; }
 
+            /// <summary>
+            /// <para>The total number of ACUs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("TotalACUCount")]
             [Validation(Required=false)]
             public double? TotalACUCount { get; set; }
@@ -32,7 +59,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         }
 
         /// <summary>
-        /// <para>The GPU usage details.</para>
+        /// <para>The GPU usage.</para>
         /// </summary>
         [NameInMap("GpuDetails")]
         [Validation(Required=false)]
@@ -59,7 +86,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
             public string GpuModel { get; set; }
 
             /// <summary>
-            /// <para>The number of GPUs of this model currently in use.</para>
+            /// <para>The current number of GPUs in use for this model.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -71,7 +98,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of embodiments that can be registered.</para>
+        /// <para>The maximum number of registered devices.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -81,7 +108,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public long? MaxRegisteredDevices { get; set; }
 
         /// <summary>
-        /// <para>The number of registered embodiments.</para>
+        /// <para>The number of registered devices.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -108,7 +135,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public GetEmbodiedAIPlatformResourceUsageInfoResponseBodySlbTraffic SlbTraffic { get; set; }
         public class GetEmbodiedAIPlatformResourceUsageInfoResponseBodySlbTraffic : TeaModel {
             /// <summary>
-            /// <para>The upstream bandwidth traffic over the public network. Unit: bytes.</para>
+            /// <para>The inbound Internet traffic, in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -118,7 +145,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
             public long? TotalBytesIn { get; set; }
 
             /// <summary>
-            /// <para>The downstream bandwidth traffic over the public network. Unit: bytes.</para>
+            /// <para>The outbound Internet traffic, in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -144,7 +171,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
             public GetEmbodiedAIPlatformResourceUsageInfoResponseBodyStorageUsageNas Nas { get; set; }
             public class GetEmbodiedAIPlatformResourceUsageInfoResponseBodyStorageUsageNas : TeaModel {
                 /// <summary>
-                /// <para>The NAS standard storage usage. Unit: bytes.</para>
+                /// <para>The NAS standard storage usage, in bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -163,7 +190,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
             public GetEmbodiedAIPlatformResourceUsageInfoResponseBodyStorageUsageOss Oss { get; set; }
             public class GetEmbodiedAIPlatformResourceUsageInfoResponseBodyStorageUsageOss : TeaModel {
                 /// <summary>
-                /// <para>The OSS standard storage usage. Unit: bytes.</para>
+                /// <para>The OSS standard storage usage, in bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>

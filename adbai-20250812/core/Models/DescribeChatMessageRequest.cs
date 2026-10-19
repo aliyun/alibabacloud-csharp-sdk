@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
 {
     public class DescribeChatMessageRequest : TeaModel {
         /// <summary>
-        /// <para>The question statement submitted by the user.</para>
+        /// <para>The question asked by the user.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>How to set reasonable annual plan goals?</para>
+        /// <para>How to set reasonable annual planning goals?</para>
         /// </summary>
         [NameInMap("Query")]
         [Validation(Required=false)]
