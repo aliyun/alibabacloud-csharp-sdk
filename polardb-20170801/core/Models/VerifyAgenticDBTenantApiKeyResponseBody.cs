@@ -47,6 +47,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <item><description>Expired: The API key has expired.</description></item>
         /// <item><description>Revoked: The API key has been revoked.</description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>NotFound</para>
         /// </summary>
         [NameInMap("Reason")]
         [Validation(Required=false)]

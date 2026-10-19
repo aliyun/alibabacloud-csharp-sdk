@@ -193,6 +193,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public double? SimilarityScore { get; set; }
 
+            /// <summary>
+            /// <para>The URI of the source document.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="https://example.com/source.pdf">https://example.com/source.pdf</a></para>
+            /// </summary>
+            [NameInMap("SourceUri")]
+            [Validation(Required=false)]
+            public string SourceUri { get; set; }
+
         }
 
     }
