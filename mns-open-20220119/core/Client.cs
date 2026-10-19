@@ -19,38 +19,6 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"us-west-1", "mns-open.us-west-1.aliyuncs.com"},
-                {"us-east-1", "mns-open.us-east-1.aliyuncs.com"},
-                {"me-east-1", "mns-open.me-east-1.aliyuncs.com"},
-                {"me-central-1", "mns-open.me-central-1.aliyuncs.com"},
-                {"eu-west-1", "mns-open.eu-west-1.aliyuncs.com"},
-                {"eu-central-1", "mns-open.eu-central-1.aliyuncs.com"},
-                {"cn-zhengzhou-jva", "mns-open.cn-zhengzhou-jva.aliyuncs.com"},
-                {"cn-zhangjiakou", "mns-open.cn-zhangjiakou.aliyuncs.com"},
-                {"cn-wulanchabu", "mns-open.cn-wulanchabu.aliyuncs.com"},
-                {"cn-shenzhen-finance-1", "mns-open.cn-shenzhen-finance-1.aliyuncs.com"},
-                {"cn-shenzhen", "mns-open.cn-shenzhen.aliyuncs.com"},
-                {"cn-shanghai-finance-1", "mns-open.cn-shanghai-finance-1.aliyuncs.com"},
-                {"cn-shanghai", "mns-open.cn-shanghai.aliyuncs.com"},
-                {"cn-qingdao", "mns-open.cn-qingdao.aliyuncs.com"},
-                {"cn-huhehaote", "mns-open.cn-huhehaote.aliyuncs.com"},
-                {"cn-hongkong", "mns-open.cn-hongkong.aliyuncs.com"},
-                {"cn-heyuan-acdr-1", "mns-open.cn-heyuan-acdr-1.aliyuncs.com"},
-                {"cn-heyuan", "mns-open.cn-heyuan.aliyuncs.com"},
-                {"cn-hangzhou-finance", "mns-open.cn-hangzhou-finance.aliyuncs.com"},
-                {"cn-hangzhou", "mns-open.cn-hangzhou.aliyuncs.com"},
-                {"cn-guangzhou", "mns-open.cn-guangzhou.aliyuncs.com"},
-                {"cn-chengdu", "mns-open.cn-chengdu.aliyuncs.com"},
-                {"cn-beijing", "mns-open.cn-beijing.aliyuncs.com"},
-                {"ap-southeast-7", "mns-open.ap-southeast-7.aliyuncs.com"},
-                {"ap-southeast-5", "mns-open.ap-southeast-5.aliyuncs.com"},
-                {"ap-southeast-3", "mns-open.ap-southeast-3.aliyuncs.com"},
-                {"ap-southeast-1", "mns-open.ap-southeast-1.aliyuncs.com"},
-                {"ap-northeast-2", "mns-open.ap-northeast-2.aliyuncs.com"},
-                {"ap-northeast-1", "mns-open.ap-northeast-1.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("mns-open", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -431,7 +399,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a queue.</para>
+        /// <para>Calls the CreateQueue operation to create a queue.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -539,7 +507,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a queue.</para>
+        /// <para>Calls the CreateQueue operation to create a queue.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -647,7 +615,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a queue.</para>
+        /// <para>Calls the CreateQueue operation to create a queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -665,7 +633,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a queue.</para>
+        /// <para>Calls the CreateQueue operation to create a queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1583,7 +1551,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of an endpoint.</para>
+        /// <para>Retrieves the attributes of an endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1625,7 +1593,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of an endpoint.</para>
+        /// <para>Retrieves the attributes of an endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1667,7 +1635,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of an endpoint.</para>
+        /// <para>Retrieves the attributes of an endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1685,7 +1653,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of an endpoint.</para>
+        /// <para>Retrieves the attributes of an endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1831,7 +1799,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the attributes of a created queue.</para>
+        /// <para>Retrieves the attributes of a specified queue.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1839,19 +1807,19 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         /// <remarks>
         /// <para>Warning: </para>
         /// </remarks>
-        /// <para>For optimization of service performance, Simple Message Queue (formerly MNS) will offline the return values of the following fields (the default value will be 0):
+        /// <para>To optimize service performance, Simple Message Queue will soon deprecate the return values of the following fields, which will default to 0:
         ///     - ActiveMessages
         ///     - InactiveMessages
         ///     - DelayMessages 
         ///   </para>
-        ///   <para>Use the following alternatives to obtain replacement solutions:</para>
+        ///   <para>Use the following methods to obtain alternatives:</para>
         ///   <list type="bullet">
-        ///     <item><description>Use the CloudMonitor OpenAPI to retrieve queue monitoring metrics. For more information, see <a href="https://api.aliyun.com/api/Cms/2019-01-01/DescribeMetricLast?RegionId=ap-southeast-1&params={%22Namespace%22:%22acs_smq%22,%22MetricName%22:%22NumberOfMessagesVisible%22}&tab=DEBUG">CloudMonitor OpenAPI documentation</a></description></item>
-        ///     <item><description> <a href="https://cloudmonitornext.console.aliyun.com/metric-meta/acs_smq/smq/all?spm=5176.2020520111.0.0.5d0c66102s05T4">CloudMonitor monitoring metrics documentation</a>. The mapping between deprecated fields and monitoring metrics:
+        ///     <item><description>Use the CloudMonitor OpenAPI to retrieve queue metrics. For more information, see <a href="https://api.aliyun.com/api/Cms/2019-01-01/DescribeMetricLast?RegionId=cn-hangzhou&params={%22Namespace%22:%22acs_smq%22,%22MetricName%22:%22NumberOfMessagesVisible%22}&tab=DEBUG">CloudMonitor OpenAPI documentation</a>.</description></item>
+        ///     <item><description><a href="https://cloudmonitornext.console.aliyun.com/metric-meta/acs_smq/smq/all?spm=5176.2020520111.0.0.5d0c66102s05T4">CloudMonitor metrics documentation</a>. The mapping of deprecated fields to alternative metrics is as follows:
         ///       <list type="bullet">
-        ///         <item><description>ActiveMessages → monitoring metric NumberOfMessagesVisible</description></item>
-        ///         <item><description>InactiveMessages → monitoring metric NumberOfMessagesInvisible</description></item>
-        ///         <item><description>DelayMessages → monitoring metric NumberOfMessagesDelayed</description></item>
+        ///         <item><description>ActiveMessages → CloudMonitor metric NumberOfMessagesVisible</description></item>
+        ///         <item><description>InactiveMessages → CloudMonitor metric NumberOfMessagesInvisible</description></item>
+        ///         <item><description>DelayMessages → CloudMonitor metric NumberOfMessagesDelayed</description></item>
         ///       </list>
         ///     </description></item>
         ///   </list>
@@ -1901,7 +1869,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the attributes of a created queue.</para>
+        /// <para>Retrieves the attributes of a specified queue.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1909,19 +1877,19 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         /// <remarks>
         /// <para>Warning: </para>
         /// </remarks>
-        /// <para>For optimization of service performance, Simple Message Queue (formerly MNS) will offline the return values of the following fields (the default value will be 0):
+        /// <para>To optimize service performance, Simple Message Queue will soon deprecate the return values of the following fields, which will default to 0:
         ///     - ActiveMessages
         ///     - InactiveMessages
         ///     - DelayMessages 
         ///   </para>
-        ///   <para>Use the following alternatives to obtain replacement solutions:</para>
+        ///   <para>Use the following methods to obtain alternatives:</para>
         ///   <list type="bullet">
-        ///     <item><description>Use the CloudMonitor OpenAPI to retrieve queue monitoring metrics. For more information, see <a href="https://api.aliyun.com/api/Cms/2019-01-01/DescribeMetricLast?RegionId=ap-southeast-1&params={%22Namespace%22:%22acs_smq%22,%22MetricName%22:%22NumberOfMessagesVisible%22}&tab=DEBUG">CloudMonitor OpenAPI documentation</a></description></item>
-        ///     <item><description> <a href="https://cloudmonitornext.console.aliyun.com/metric-meta/acs_smq/smq/all?spm=5176.2020520111.0.0.5d0c66102s05T4">CloudMonitor monitoring metrics documentation</a>. The mapping between deprecated fields and monitoring metrics:
+        ///     <item><description>Use the CloudMonitor OpenAPI to retrieve queue metrics. For more information, see <a href="https://api.aliyun.com/api/Cms/2019-01-01/DescribeMetricLast?RegionId=cn-hangzhou&params={%22Namespace%22:%22acs_smq%22,%22MetricName%22:%22NumberOfMessagesVisible%22}&tab=DEBUG">CloudMonitor OpenAPI documentation</a>.</description></item>
+        ///     <item><description><a href="https://cloudmonitornext.console.aliyun.com/metric-meta/acs_smq/smq/all?spm=5176.2020520111.0.0.5d0c66102s05T4">CloudMonitor metrics documentation</a>. The mapping of deprecated fields to alternative metrics is as follows:
         ///       <list type="bullet">
-        ///         <item><description>ActiveMessages → monitoring metric NumberOfMessagesVisible</description></item>
-        ///         <item><description>InactiveMessages → monitoring metric NumberOfMessagesInvisible</description></item>
-        ///         <item><description>DelayMessages → monitoring metric NumberOfMessagesDelayed</description></item>
+        ///         <item><description>ActiveMessages → CloudMonitor metric NumberOfMessagesVisible</description></item>
+        ///         <item><description>InactiveMessages → CloudMonitor metric NumberOfMessagesInvisible</description></item>
+        ///         <item><description>DelayMessages → CloudMonitor metric NumberOfMessagesDelayed</description></item>
         ///       </list>
         ///     </description></item>
         ///   </list>
@@ -1971,7 +1939,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the attributes of a created queue.</para>
+        /// <para>Retrieves the attributes of a specified queue.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1979,19 +1947,19 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         /// <remarks>
         /// <para>Warning: </para>
         /// </remarks>
-        /// <para>For optimization of service performance, Simple Message Queue (formerly MNS) will offline the return values of the following fields (the default value will be 0):
+        /// <para>To optimize service performance, Simple Message Queue will soon deprecate the return values of the following fields, which will default to 0:
         ///     - ActiveMessages
         ///     - InactiveMessages
         ///     - DelayMessages 
         ///   </para>
-        ///   <para>Use the following alternatives to obtain replacement solutions:</para>
+        ///   <para>Use the following methods to obtain alternatives:</para>
         ///   <list type="bullet">
-        ///     <item><description>Use the CloudMonitor OpenAPI to retrieve queue monitoring metrics. For more information, see <a href="https://api.aliyun.com/api/Cms/2019-01-01/DescribeMetricLast?RegionId=ap-southeast-1&params={%22Namespace%22:%22acs_smq%22,%22MetricName%22:%22NumberOfMessagesVisible%22}&tab=DEBUG">CloudMonitor OpenAPI documentation</a></description></item>
-        ///     <item><description> <a href="https://cloudmonitornext.console.aliyun.com/metric-meta/acs_smq/smq/all?spm=5176.2020520111.0.0.5d0c66102s05T4">CloudMonitor monitoring metrics documentation</a>. The mapping between deprecated fields and monitoring metrics:
+        ///     <item><description>Use the CloudMonitor OpenAPI to retrieve queue metrics. For more information, see <a href="https://api.aliyun.com/api/Cms/2019-01-01/DescribeMetricLast?RegionId=cn-hangzhou&params={%22Namespace%22:%22acs_smq%22,%22MetricName%22:%22NumberOfMessagesVisible%22}&tab=DEBUG">CloudMonitor OpenAPI documentation</a>.</description></item>
+        ///     <item><description><a href="https://cloudmonitornext.console.aliyun.com/metric-meta/acs_smq/smq/all?spm=5176.2020520111.0.0.5d0c66102s05T4">CloudMonitor metrics documentation</a>. The mapping of deprecated fields to alternative metrics is as follows:
         ///       <list type="bullet">
-        ///         <item><description>ActiveMessages → monitoring metric NumberOfMessagesVisible</description></item>
-        ///         <item><description>InactiveMessages → monitoring metric NumberOfMessagesInvisible</description></item>
-        ///         <item><description>DelayMessages → monitoring metric NumberOfMessagesDelayed</description></item>
+        ///         <item><description>ActiveMessages → CloudMonitor metric NumberOfMessagesVisible</description></item>
+        ///         <item><description>InactiveMessages → CloudMonitor metric NumberOfMessagesInvisible</description></item>
+        ///         <item><description>DelayMessages → CloudMonitor metric NumberOfMessagesDelayed</description></item>
         ///       </list>
         ///     </description></item>
         ///   </list>
@@ -2013,7 +1981,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the attributes of a created queue.</para>
+        /// <para>Retrieves the attributes of a specified queue.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2021,19 +1989,19 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         /// <remarks>
         /// <para>Warning: </para>
         /// </remarks>
-        /// <para>For optimization of service performance, Simple Message Queue (formerly MNS) will offline the return values of the following fields (the default value will be 0):
+        /// <para>To optimize service performance, Simple Message Queue will soon deprecate the return values of the following fields, which will default to 0:
         ///     - ActiveMessages
         ///     - InactiveMessages
         ///     - DelayMessages 
         ///   </para>
-        ///   <para>Use the following alternatives to obtain replacement solutions:</para>
+        ///   <para>Use the following methods to obtain alternatives:</para>
         ///   <list type="bullet">
-        ///     <item><description>Use the CloudMonitor OpenAPI to retrieve queue monitoring metrics. For more information, see <a href="https://api.aliyun.com/api/Cms/2019-01-01/DescribeMetricLast?RegionId=ap-southeast-1&params={%22Namespace%22:%22acs_smq%22,%22MetricName%22:%22NumberOfMessagesVisible%22}&tab=DEBUG">CloudMonitor OpenAPI documentation</a></description></item>
-        ///     <item><description> <a href="https://cloudmonitornext.console.aliyun.com/metric-meta/acs_smq/smq/all?spm=5176.2020520111.0.0.5d0c66102s05T4">CloudMonitor monitoring metrics documentation</a>. The mapping between deprecated fields and monitoring metrics:
+        ///     <item><description>Use the CloudMonitor OpenAPI to retrieve queue metrics. For more information, see <a href="https://api.aliyun.com/api/Cms/2019-01-01/DescribeMetricLast?RegionId=cn-hangzhou&params={%22Namespace%22:%22acs_smq%22,%22MetricName%22:%22NumberOfMessagesVisible%22}&tab=DEBUG">CloudMonitor OpenAPI documentation</a>.</description></item>
+        ///     <item><description><a href="https://cloudmonitornext.console.aliyun.com/metric-meta/acs_smq/smq/all?spm=5176.2020520111.0.0.5d0c66102s05T4">CloudMonitor metrics documentation</a>. The mapping of deprecated fields to alternative metrics is as follows:
         ///       <list type="bullet">
-        ///         <item><description>ActiveMessages → monitoring metric NumberOfMessagesVisible</description></item>
-        ///         <item><description>InactiveMessages → monitoring metric NumberOfMessagesInvisible</description></item>
-        ///         <item><description>DelayMessages → monitoring metric NumberOfMessagesDelayed</description></item>
+        ///         <item><description>ActiveMessages → CloudMonitor metric NumberOfMessagesVisible</description></item>
+        ///         <item><description>InactiveMessages → CloudMonitor metric NumberOfMessagesInvisible</description></item>
+        ///         <item><description>DelayMessages → CloudMonitor metric NumberOfMessagesDelayed</description></item>
         ///       </list>
         ///     </description></item>
         ///   </list>
@@ -2055,7 +2023,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the properties of a subscription.</para>
+        /// <para>Retrieves the attributes of a subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2101,7 +2069,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the properties of a subscription.</para>
+        /// <para>Retrieves the attributes of a subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2147,7 +2115,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the properties of a subscription.</para>
+        /// <para>Retrieves the attributes of a subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2165,7 +2133,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the properties of a subscription.</para>
+        /// <para>Retrieves the attributes of a subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2183,7 +2151,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of a topic.</para>
+        /// <para>Retrieves the attributes of a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2229,7 +2197,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of a topic.</para>
+        /// <para>Retrieves the attributes of a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2275,7 +2243,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of a topic.</para>
+        /// <para>Retrieves the attributes of a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2293,7 +2261,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of a topic.</para>
+        /// <para>Retrieves the attributes of a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2819,7 +2787,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of topics under an Alibaba Cloud account with paginated results.</para>
+        /// <para>Queries the topics under an Alibaba Cloud account. The query results can be paginated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2877,7 +2845,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of topics under an Alibaba Cloud account with paginated results.</para>
+        /// <para>Queries the topics under an Alibaba Cloud account. The query results can be paginated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2935,7 +2903,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of topics under an Alibaba Cloud account with paginated results.</para>
+        /// <para>Queries the topics under an Alibaba Cloud account. The query results can be paginated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2953,7 +2921,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of topics under an Alibaba Cloud account with paginated results.</para>
+        /// <para>Queries the topics under an Alibaba Cloud account. The query results can be paginated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3119,7 +3087,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SetAccountAttributes</para>
+        /// <para>Sets the user log configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3177,7 +3145,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SetAccountAttributes</para>
+        /// <para>Sets the user log configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3235,7 +3203,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SetAccountAttributes</para>
+        /// <para>Sets the user log configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3253,7 +3221,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SetAccountAttributes</para>
+        /// <para>Sets the user log configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3271,7 +3239,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the SetQueueAttributes operation to modify queue attributes.</para>
+        /// <para>Modifies the attributes of a queue by calling the SetQueueAttributes operation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3371,7 +3339,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the SetQueueAttributes operation to modify queue attributes.</para>
+        /// <para>Modifies the attributes of a queue by calling the SetQueueAttributes operation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3471,7 +3439,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the SetQueueAttributes operation to modify queue attributes.</para>
+        /// <para>Modifies the attributes of a queue by calling the SetQueueAttributes operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3489,7 +3457,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the SetQueueAttributes operation to modify queue attributes.</para>
+        /// <para>Modifies the attributes of a queue by calling the SetQueueAttributes operation.</para>
         /// </summary>
         /// 
         /// <param name="request">

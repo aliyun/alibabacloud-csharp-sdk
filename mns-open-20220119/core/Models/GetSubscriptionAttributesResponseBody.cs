@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public GetSubscriptionAttributesResponseBodyData Data { get; set; }
         public class GetSubscriptionAttributesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the subscription was created. The value is a UNIX timestamp that represents the number of seconds that have elapsed since 00:00:00 on January 1, 1970.</para>
+            /// <para>The time when the subscription was created. The value is a UNIX timestamp in seconds in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1449554806</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             public GetSubscriptionAttributesResponseBodyDataDlqPolicy DlqPolicy { get; set; }
             public class GetSubscriptionAttributesResponseBodyDataDlqPolicy : TeaModel {
                 /// <summary>
-                /// <para>The target queue to which dead-letter messages are delivered.</para>
+                /// <para>The destination queue for dead-letter message delivery.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>deadLetterTargetQueue</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             }
 
             /// <summary>
-            /// <para>The endpoint of the subscription.</para>
+            /// <para>The endpoint address of the subscription.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://example.com">http://example.com</a></para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             public string Endpoint { get; set; }
 
             /// <summary>
-            /// <para>The tag used for message filtering. Only messages that have a matching tag are pushed.</para>
+            /// <para>The tag used for message filtering in the subscription. Only messages with matching tags are pushed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>important</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             public string FilterTag { get; set; }
 
             /// <summary>
-            /// <para>The time when the subscription properties were last modified. The value is a UNIX timestamp that represents the number of seconds that have elapsed since 00:00:00 on January 1, 1970.</para>
+            /// <para>The time when the subscription attributes were last modified. The value is a UNIX timestamp in seconds in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1449554962</para>
@@ -96,8 +96,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             public long? LastModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The format of the message content that is pushed to an endpoint.
-            /// Valid values:</para>
+            /// <para>The format of the message content pushed to the endpoint. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>XML</para>
             /// </description></item>
@@ -115,7 +114,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             public string NotifyContentFormat { get; set; }
 
             /// <summary>
-            /// <para>The retry policy that is used when a message fails to be pushed to an endpoint. Valid values:</para>
+            /// <para>The retry strategy used when an error occurs while pushing messages to the endpoint. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>BACKOFF_RETRY: backoff retry.</para>
             /// </description></item>
@@ -140,14 +139,29 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             [Validation(Required=false)]
             public string SubscriptionName { get; set; }
 
+            /// <summary>
+            /// <para>The throttling policy.</para>
+            /// </summary>
             [NameInMap("TenantRateLimitPolicy")]
             [Validation(Required=false)]
             public GetSubscriptionAttributesResponseBodyDataTenantRateLimitPolicy TenantRateLimitPolicy { get; set; }
             public class GetSubscriptionAttributesResponseBodyDataTenantRateLimitPolicy : TeaModel {
+                /// <summary>
+                /// <para>Indicates whether throttling is enabled. Valid values: true or false.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
                 [NameInMap("Enabled")]
                 [Validation(Required=false)]
                 public bool? Enabled { get; set; }
 
+                /// <summary>
+                /// <para>The maximum number of messages received per second.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("MaxReceivesPerSecond")]
                 [Validation(Required=false)]
                 public int? MaxReceivesPerSecond { get; set; }
@@ -155,7 +169,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             }
 
             /// <summary>
-            /// <para>The name of the topic to which the subscription belongs.</para>
+            /// <para>The name of the subscribed topic.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MyTopic</para>
@@ -165,7 +179,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             public string TopicName { get; set; }
 
             /// <summary>
-            /// <para>The AccountId of the owner of the topic to which the subscription belongs.</para>
+            /// <para>The account ID of the owner of the subscribed topic.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456789098****</para>
@@ -207,7 +221,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -34,8 +34,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             public List<ListQueueResponseBodyDataPageData> PageData { get; set; }
             public class ListQueueResponseBodyDataPageData : TeaModel {
                 /// <summary>
-                /// <para>The approximate total number of messages in the Active state in this queue.</para>
-                /// <para>This field will default to 0 in the future and is not recommended. Use CloudMonitor API to retrieve this metric instead.</para>
+                /// <para>The approximate total number of messages in the Active state in the queue. This parameter is deprecated and will default to 0 in the future. Use CloudMonitor API operations to obtain this metric.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -45,7 +44,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 public long? ActiveMessages { get; set; }
 
                 /// <summary>
-                /// <para>The time when the queue was created. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+                /// <para>The time when the queue was created. The value is a UNIX timestamp in seconds in UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1250700999</para>
@@ -55,8 +54,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The approximate total number of messages in the Delayed state in this queue.</para>
-                /// <para>This field will default to 0 in the future and is not recommended. Use CloudMonitor API to retrieve this metric instead.</para>
+                /// <para>The approximate total number of messages in the Delayed state in the queue. This parameter is deprecated and will default to 0 in the future. Use CloudMonitor API operations to obtain this metric.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -66,7 +64,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 public long? DelayMessages { get; set; }
 
                 /// <summary>
-                /// <para>The delay period after which all messages sent to this queue become consumable. Unit: seconds.</para>
+                /// <para>The delay time for all messages sent to the queue. Messages sent to the queue can be consumed only after the delay time specified by this parameter elapses. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30</para>
@@ -83,7 +81,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 public ListQueueResponseBodyDataPageDataDlqPolicy DlqPolicy { get; set; }
                 public class ListQueueResponseBodyDataPageDataDlqPolicy : TeaModel {
                     /// <summary>
-                    /// <para>The target queue for dead-letter message delivery.</para>
+                    /// <para>The destination queue for dead-letter message delivery.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>deadLetterTargetQueue</para>
@@ -103,7 +101,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                     public bool? Enabled { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum number of times a message can be delivered.</para>
+                    /// <para>The maximum number of delivery attempts for a message.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>3</para>
@@ -114,17 +112,28 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
 
                 }
 
+                /// <summary>
+                /// <para>Indicates whether server-side encryption is enabled. Valid values: true or false.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("EnableSSE")]
                 [Validation(Required=false)]
                 public bool? EnableSSE { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether server-side encryption is enabled.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("EncryptionEnabled")]
                 [Validation(Required=false)]
                 public bool? EncryptionEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The approximate total number of messages in the Inactive state in this queue.</para>
-                /// <para>This field will default to 0 in the future and is not recommended. Use CloudMonitor API to retrieve this metric instead.</para>
+                /// <para>The approximate total number of messages in the Inactive state in the queue. This parameter is deprecated and will default to 0 in the future. Use CloudMonitor API operations to obtain this metric.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -133,12 +142,18 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 [Validation(Required=false)]
                 public long? InactiveMessages { get; set; }
 
+                /// <summary>
+                /// <para>The KMS key ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>key-xxx</para>
+                /// </summary>
                 [NameInMap("KmsKeyId")]
                 [Validation(Required=false)]
                 public string KmsKeyId { get; set; }
 
                 /// <summary>
-                /// <para>The most recent time when the queue attributes were modified. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+                /// <para>The time when the queue attributes were last modified. The value is a UNIX timestamp in seconds in UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1250700999</para>
@@ -148,11 +163,11 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 public long? LastModifyTime { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the log management feature is enabled.</para>
+                /// <para>Indicates whether the log management feature is enabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>True: Enabled.</para>
+                /// <item><description><para>True: enabled</para>
                 /// </description></item>
-                /// <item><description><para>False: Disabled.</para>
+                /// <item><description><para>False: disabled</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -164,7 +179,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 public bool? LoggingEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The maximum size of a message body that can be sent to this queue. Unit: bytes.</para>
+                /// <para>The maximum size of the message body sent to the queue. Unit: bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>65536</para>
@@ -174,7 +189,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 public long? MaximumMessageSize { get; set; }
 
                 /// <summary>
-                /// <para>The maximum period for which a message can be retained in this queue. After the specified period elapses since a message is sent to the queue, the message is deleted regardless of whether it has been consumed. Unit: seconds.</para>
+                /// <para>The maximum retention period of messages in the queue. Messages are deleted after the specified retention period elapses, regardless of whether they have been consumed. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>65536</para>
@@ -184,7 +199,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 public long? MessageRetentionPeriod { get; set; }
 
                 /// <summary>
-                /// <para>The maximum wait time for a ReceiveMessage request when the queue is empty. Unit: seconds.</para>
+                /// <para>The maximum waiting time for a ReceiveMessage request when the queue is empty. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -217,10 +232,22 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 [Validation(Required=false)]
                 public string QueueType { get; set; }
 
+                /// <summary>
+                /// <para>The server-side encryption algorithm. Currently, only AES-256-GCM is supported. If this parameter is not specified, the default algorithm is used.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>AES-256-GCM</para>
+                /// </summary>
                 [NameInMap("SseAlgorithm")]
                 [Validation(Required=false)]
                 public string SseAlgorithm { get; set; }
 
+                /// <summary>
+                /// <para>The server-side encryption method. Valid values: SMQ or KMS.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>KMS</para>
+                /// </summary>
                 [NameInMap("SseType")]
                 [Validation(Required=false)]
                 public string SseType { get; set; }
@@ -233,7 +260,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 public List<ListQueueResponseBodyDataPageDataTags> Tags { get; set; }
                 public class ListQueueResponseBodyDataPageDataTags : TeaModel {
                     /// <summary>
-                    /// <para>The key of the tag.</para>
+                    /// <para>The tag key.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>tag1</para>
@@ -243,7 +270,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                     public string TagKey { get; set; }
 
                     /// <summary>
-                    /// <para>The value of the tag.</para>
+                    /// <para>The tag value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
@@ -255,9 +282,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 }
 
                 /// <summary>
-                /// <para>The duration for which a message stays in the Inactive state after it is consumed from the queue.</para>
-                /// <para>Valid values: 1 to 43200. Unit: seconds.</para>
-                /// <para>Default value: 30.</para>
+                /// <para>The duration during which a message remains in the Inactive state after it is consumed from the queue. Valid values: 1 to 43200. Unit: seconds. Default value: 30.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>60</para>
@@ -279,7 +304,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             public long? PageNum { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of entries returned per page.</para>
+            /// <para>The number of entries returned on each page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -341,7 +366,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the response.</para>
+        /// <para>The response status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -351,7 +376,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

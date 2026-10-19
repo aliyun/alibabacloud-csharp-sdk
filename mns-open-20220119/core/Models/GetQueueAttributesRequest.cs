@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public List<GetQueueAttributesRequestTag> Tag { get; set; }
         public class GetQueueAttributesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tag1</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>

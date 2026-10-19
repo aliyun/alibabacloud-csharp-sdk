@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             /// <para>The response message.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>无</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]

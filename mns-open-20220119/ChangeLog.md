@@ -1,3 +1,6 @@
+2026-10-19 Version: 1.4.1
+- Generated csharp 2022-01-19 for Mns-open.
+
 2026-07-29 Version: 1.4.0
 - Support API GetAccountAttributes.
 - Support API SetAccountAttributes.

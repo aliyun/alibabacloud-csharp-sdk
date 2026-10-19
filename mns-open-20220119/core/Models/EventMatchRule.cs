@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
     public class EventMatchRule : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to match.</para>
+        /// <para>Indicates whether the rule is matched.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public bool? MatchState { get; set; }
 
         /// <summary>
-        /// <para>The full name to match.</para>
+        /// <para>The full name matching rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testBucket/folder1/file1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The prefix to match.</para>
+        /// <para>The prefix matching rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testBucket/prefix1xxx</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string Prefix { get; set; }
 
         /// <summary>
-        /// <para>The suffix to match.</para>
+        /// <para>The suffix matching rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>suffix/xxxx.test</para>

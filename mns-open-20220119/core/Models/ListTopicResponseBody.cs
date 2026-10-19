@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             public List<ListTopicResponseBodyDataPageData> PageData { get; set; }
             public class ListTopicResponseBodyDataPageData : TeaModel {
                 /// <summary>
-                /// <para>The time when the subscription was created. The value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+                /// <para>The time when the topic was created. The value is a UTC UNIX timestamp in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1449554962</para>
@@ -43,20 +43,38 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
 
+                /// <summary>
+                /// <para>Specifies whether server-side encryption is enabled. Valid values: true and false.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("EnableSSE")]
                 [Validation(Required=false)]
                 public bool? EnableSSE { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether server-side encryption is enabled.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("EncryptionEnabled")]
                 [Validation(Required=false)]
                 public bool? EncryptionEnabled { get; set; }
 
+                /// <summary>
+                /// <para>The KMS key ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>key-xxx</para>
+                /// </summary>
                 [NameInMap("KmsKeyId")]
                 [Validation(Required=false)]
                 public string KmsKeyId { get; set; }
 
                 /// <summary>
-                /// <para>The time when the subscription attributes were last modified. The value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+                /// <para>The time when the topic attributes were last modified. The value is a UTC UNIX timestamp in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1449554962</para>
@@ -66,12 +84,10 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 public long? LastModifyTime { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the Log Management feature is enabled. Valid values:</para>
+                /// <para>Indicates whether the log management feature is enabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>True: Enabled.</para>
-                /// </description></item>
-                /// <item><description><para>False: Disabled.</para>
-                /// </description></item>
+                /// <item><description>True: enabled</description></item>
+                /// <item><description>False: disabled</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -82,7 +98,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 public bool? LoggingEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The maximum length of the message body sent to the topic. Unit: bytes.</para>
+                /// <para>The maximum length of the message body that can be sent to the topic. Unit: bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>65536</para>
@@ -102,7 +118,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 public long? MessageCount { get; set; }
 
                 /// <summary>
-                /// <para>The maximum duration for which a message is retained in the topic. After the time specified by this parameter elapses since the message is sent to the topic, the message is deleted regardless of whether it has been successfully pushed to the user. Unit: seconds.</para>
+                /// <para>The maximum retention period of messages in the topic. After the specified period elapses from the time a message is sent to the topic, the message is deleted regardless of whether it is successfully pushed to users. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>86400</para>
@@ -111,10 +127,22 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 [Validation(Required=false)]
                 public long? MessageRetentionPeriod { get; set; }
 
+                /// <summary>
+                /// <para>The server-side encryption algorithm. Currently, AES-256-GCM is supported. If this parameter is not specified, the default algorithm is used.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>AES-256-GCM</para>
+                /// </summary>
                 [NameInMap("SseAlgorithm")]
                 [Validation(Required=false)]
                 public string SseAlgorithm { get; set; }
 
+                /// <summary>
+                /// <para>The server-side encryption method. Valid values: SMQ and KMS.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>KMS</para>
+                /// </summary>
                 [NameInMap("SseType")]
                 [Validation(Required=false)]
                 public string SseType { get; set; }
@@ -205,7 +233,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             public long? PageNum { get; set; }
 
             /// <summary>
-            /// <para>The number of results returned per page.</para>
+            /// <para>The number of entries returned on each page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -257,7 +285,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

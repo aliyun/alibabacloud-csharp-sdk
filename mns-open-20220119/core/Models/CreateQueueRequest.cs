@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
     public class CreateQueueRequest : TeaModel {
         /// <summary>
-        /// <para>The delay period for all messages sent to the queue. A message sent to the queue can be consumed only after the delay period specified by this parameter elapses. Unit: seconds.</para>
-        /// <para>Valid values: 0 to 604800.</para>
-        /// <para>Default value: 0.</para>
+        /// <para>The delay period for all messages sent to the queue. A message sent to the queue can be consumed only after the delay period specified by this parameter elapses.
+        /// Valid values: 0 to 604800. Unit: seconds.
+        /// Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public CreateQueueRequestDlqPolicy DlqPolicy { get; set; }
         public class CreateQueueRequestDlqPolicy : TeaModel {
             /// <summary>
-            /// <para>The target queue for dead-letter message delivery.</para>
+            /// <para>The target queue to which dead-letter messages are delivered.</para>
             /// 
             /// <b>Example:</b>
             /// <para>deadLetterQueue</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to enable the log management feature. Valid values:</para>
+        /// <para>Specifies whether to enable the Log Management feature. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>true: Enabled.</para>
         /// </description></item>
@@ -86,9 +86,9 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string KmsKeyId { get; set; }
 
         /// <summary>
-        /// <para>The maximum size of a message body that can be sent to the queue. Unit: bytes.</para>
-        /// <para>Valid values: 1024 to 65536.</para>
-        /// <para>Default value: 65536.</para>
+        /// <para>The maximum size of a message body that can be sent to the queue.
+        /// Valid values: 1024 to 65536. Unit: bytes.
+        /// Default value: 65536.</para>
         /// 
         /// <b>Example:</b>
         /// <para>65536</para>
@@ -98,9 +98,9 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public long? MaximumMessageSize { get; set; }
 
         /// <summary>
-        /// <para>The maximum duration for which a message is retained in the queue. After the specified duration elapses from the time the message is sent to the queue, the message is deleted regardless of whether it has been consumed. Unit: seconds.</para>
-        /// <para>Valid values: 60 to 604800.</para>
-        /// <para>Default value: 345600.</para>
+        /// <para>The maximum duration for which a message is retained in the queue. After the specified duration elapses since a message is sent to the queue, the message is deleted regardless of whether it has been consumed.
+        /// Valid values: 60 to 604800. Unit: seconds.
+        /// Default value: 345600.</para>
         /// 
         /// <b>Example:</b>
         /// <para>345600</para>
@@ -110,9 +110,9 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public long? MessageRetentionPeriod { get; set; }
 
         /// <summary>
-        /// <para>The maximum wait time for a ReceiveMessage request when the queue is empty. Unit: seconds.</para>
-        /// <para>Valid values: 0 to 30.</para>
-        /// <para>Default value: 0.</para>
+        /// <para>The maximum duration for which a ReceiveMessage request waits when the queue has no messages.
+        /// Valid values: 0 to 30. Unit: seconds.
+        /// Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -184,14 +184,14 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         }
 
         /// <summary>
-        /// <para>The rate limiting policy.</para>
+        /// <para>The throttling policy.</para>
         /// </summary>
         [NameInMap("TenantRateLimitPolicy")]
         [Validation(Required=false)]
         public CreateQueueRequestTenantRateLimitPolicy TenantRateLimitPolicy { get; set; }
         public class CreateQueueRequestTenantRateLimitPolicy : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable rate limiting. Valid values:</para>
+            /// <para>Specifies whether to enable throttling. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true</description></item>
             /// <item><description>false</description></item>
@@ -217,9 +217,9 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         }
 
         /// <summary>
-        /// <para>The duration for which a consumed message stays in the Inactive state after it is changed from the Active state. Unit: seconds.</para>
-        /// <para>Valid values: 1 to 43200.</para>
-        /// <para>Default value: 30.</para>
+        /// <para>The duration for which a message stays in the Inactive state after it is consumed from the queue and changes from the Active state to the Inactive state.
+        /// Valid values: 1 to 43200. Unit: seconds.
+        /// Default value: 30.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>

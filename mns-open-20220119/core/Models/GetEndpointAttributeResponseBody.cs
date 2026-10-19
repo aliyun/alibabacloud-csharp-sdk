@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             public List<GetEndpointAttributeResponseBodyDataCidrList> CidrList { get; set; }
             public class GetEndpointAttributeResponseBodyDataCidrList : TeaModel {
                 /// <summary>
-                /// <para>The access control list (ACL) policy. Valid value:</para>
+                /// <para>The ACL policy. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>allow</b>: The endpoint allows access from the specified CIDR block. This is the only supported value.</description></item>
+                /// <item><description><b>allow</b>: The endpoint allows access from the corresponding CIDR block. Currently, only allow is supported.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
                 public string Cidr { get; set; }
 
                 /// <summary>
-                /// <para>The time when the CIDR block was created.</para>
+                /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1701951224000</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the response.</para>
+        /// <para>The response status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

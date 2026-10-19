@@ -10,9 +10,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
     public class ListTopicRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the results to return.
-        /// Valid values: 1 to 100000000.
-        /// If you set this parameter to a value less than 1, the system uses 1 by default. If you set this parameter to a value greater than 100000000, the system uses 100000000 by default.</para>
+        /// <para>The page number of the returned results. Valid values: 1 to 100000000. If the specified value is less than 1, the system defaults to 1. If the specified value is greater than 100000000, the system defaults to 100000000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -22,9 +20,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public long? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of results to return on each page.
-        /// Valid values: 10 to 50.
-        /// If you set this parameter to a value less than 10, the system uses 10 by default. If you set this parameter to a value greater than 50, the system uses 50 by default.</para>
+        /// <para>The number of entries to return on each page. Valid values: 10 to 50. If the specified value is less than 10, the system defaults to 10. If the specified value is greater than 50, the system defaults to 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
