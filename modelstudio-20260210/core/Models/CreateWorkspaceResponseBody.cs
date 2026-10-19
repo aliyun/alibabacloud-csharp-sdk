@@ -52,8 +52,8 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Successful.</description></item>
-        /// <item><description>false: Failed.</description></item>
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The business workspace information.</para>
+        /// <para>The workspace information.</para>
         /// </summary>
         [NameInMap("workspace")]
         [Validation(Required=false)]
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string ServiceSite { get; set; }
 
             /// <summary>
-            /// <para>The business workspace ID.</para>
+            /// <para>The workspace ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ws-ac3ef438bec22dc5</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string WorkspaceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the business workspace.</para>
+            /// <para>The workspace name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>

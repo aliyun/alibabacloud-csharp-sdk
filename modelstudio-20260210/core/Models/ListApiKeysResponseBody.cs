@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 {
     public class ListApiKeysResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of API keys.</para>
+        /// <para>The list of API Keys.</para>
         /// </summary>
         [NameInMap("apiKeys")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public long? ApiKeyId { get; set; }
 
             /// <summary>
-            /// <para>The value of the API key.</para>
+            /// <para>The value of the API Key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sk-ws-djI.8O7d*****2aICctnid4u4</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                     public List<string> AccessibleModels { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether access to all models with inference permissions in the workspace is allowed.</para>
+                    /// <para>Indicates whether all models with inference permissions granted in the workspace are accessible.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 }
 
                 /// <summary>
-                /// <para>All: all permissions. Custom: custom permissions.</para>
+                /// <para>All: full permissions. Custom: custom permissions.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Custom</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the API key is disabled. Valid values:</para>
+            /// <para>Indicates whether the API Key is disabled.</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: Active.</description></item>
             /// <item><description><b>1</b>: Disabled.</description></item>
@@ -143,6 +143,8 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string WorkspaceId { get; set; }
 
             /// <summary>
+            /// <para>The workspace name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>workspace_test</para>
             /// </summary>
@@ -213,7 +215,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call was successful. Valid values:</para>
+        /// <para>Indicates whether the API call was successful.</para>
         /// <list type="bullet">
         /// <item><description>true: Successful.</description></item>
         /// <item><description>false: Failed.</description></item>

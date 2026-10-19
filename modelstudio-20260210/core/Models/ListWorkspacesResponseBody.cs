@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination token used to retrieve more results. You do not need to specify this parameter for the first request. For subsequent requests, use the token returned in the previous response.</para>
+        /// <para>The token used to retrieve additional results. You do not need to provide this parameter for the first request. Obtain the token for subsequent requests from the response of the previous request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TbB1IsZUSR4iE</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The list of business workspaces.</para>
+        /// <para>The list of workspaces.</para>
         /// </summary>
         [NameInMap("workspaces")]
         [Validation(Required=false)]
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The service deployment scope. For more information, see <a href="https://www.alibabacloud.com/help/zh/model-studio/regions/">documentation</a>.</para>
+            /// <para>The service deployment scope. For details, <a href="https://www.alibabacloud.com/help/zh/model-studio/regions/">view the documentation</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>global</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string ServiceSite { get; set; }
 
             /// <summary>
-            /// <para>The business workspace ID.</para>
+            /// <para>The workspace ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ws-0759e7b7ea7f585b</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string WorkspaceId { get; set; }
 
             /// <summary>
-            /// <para>The business workspace name.</para>
+            /// <para>The workspace name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>

@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string Model { get; set; }
 
             /// <summary>
-            /// <para>The model throttling configuration for the current user account.</para>
+            /// <para>The model throttling for the current user account.</para>
             /// </summary>
             [NameInMap("modelLimit")]
             [Validation(Required=false)]
             public ListModelLimitsResponseBodyLimitsModelLimit ModelLimit { get; set; }
             public class ListModelLimitsResponseBodyLimitsModelLimit : TeaModel {
                 /// <summary>
-                /// <para>The maximum concurrency.</para>
+                /// <para>The maximum number of concurrent requests.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 public long? AsyncUserConcurrencyLimit { get; set; }
 
                 /// <summary>
-                /// <para>The queue size.</para>
+                /// <para>The number of queued requests.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 public long? RequestLimit { get; set; }
 
                 /// <summary>
-                /// <para>The time period for request throttling, in seconds.</para>
+                /// <para>The time period for request throttling. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 public string UsageLimitField { get; set; }
 
                 /// <summary>
-                /// <para>The time period for usage throttling, in seconds.</para>
+                /// <para>The time period for usage throttling. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -146,14 +146,24 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The custom model throttling configuration for the current workspace.</para>
+            /// <para>The workspace ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ws_123xxx</para>
+            /// </summary>
+            [NameInMap("workspaceId")]
+            [Validation(Required=false)]
+            public string WorkspaceId { get; set; }
+
+            /// <summary>
+            /// <para>The custom model throttling for the current workspace.</para>
             /// </summary>
             [NameInMap("workspaceLimit")]
             [Validation(Required=false)]
             public ListModelLimitsResponseBodyLimitsWorkspaceLimit WorkspaceLimit { get; set; }
             public class ListModelLimitsResponseBodyLimitsWorkspaceLimit : TeaModel {
                 /// <summary>
-                /// <para>The maximum concurrency.</para>
+                /// <para>The maximum number of concurrent requests.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -163,7 +173,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 public long? AsyncUserConcurrencyLimit { get; set; }
 
                 /// <summary>
-                /// <para>The queue size.</para>
+                /// <para>The number of queued requests.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -183,7 +193,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 public long? RequestLimit { get; set; }
 
                 /// <summary>
-                /// <para>The time period for request throttling, in seconds.</para>
+                /// <para>The time period for request throttling. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -213,7 +223,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 public string UsageLimitField { get; set; }
 
                 /// <summary>
-                /// <para>The time period for usage throttling, in seconds.</para>
+                /// <para>The time period for usage throttling. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -227,7 +237,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records returned in a single request.</para>
+        /// <para>The maximum number of records to return in a single call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -257,7 +267,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call was successful.</para>
+        /// <para>Indicates whether the API call succeeded.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("modelstudio", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -955,7 +955,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a business workspace.</para>
+        /// <para>Creates a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1005,7 +1005,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a business workspace.</para>
+        /// <para>Creates a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1055,7 +1055,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a business workspace.</para>
+        /// <para>Creates a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1074,7 +1074,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a business workspace.</para>
+        /// <para>Creates a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3101,7 +3101,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of API key information for authentication credentials.</para>
+        /// <para>Retrieves a list of API Key authentication credentials.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3171,7 +3171,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of API key information for authentication credentials.</para>
+        /// <para>Retrieves a list of API Key authentication credentials.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3241,7 +3241,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of API key information for authentication credentials.</para>
+        /// <para>Retrieves a list of API Key authentication credentials.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3260,7 +3260,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of API key information for authentication credentials.</para>
+        /// <para>Retrieves a list of API Key authentication credentials.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3279,7 +3279,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries model throttling configurations for a workspace.</para>
+        /// <para>Queries model throttling for a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3341,7 +3341,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries model throttling configurations for a workspace.</para>
+        /// <para>Queries model throttling for a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3403,7 +3403,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries model throttling configurations for a workspace.</para>
+        /// <para>Queries model throttling for a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3422,7 +3422,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries model throttling configurations for a workspace.</para>
+        /// <para>Queries model throttling for a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4193,7 +4193,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of business workspaces.</para>
+        /// <para>Retrieves the list of workspaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4251,7 +4251,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of business workspaces.</para>
+        /// <para>Retrieves the list of workspaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4309,7 +4309,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of business workspaces.</para>
+        /// <para>Retrieves the list of workspaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4328,7 +4328,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of business workspaces.</para>
+        /// <para>Retrieves the list of workspaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5029,7 +5029,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits the information of an authentication credential API key.</para>
+        /// <para>Edits the information of an API Key authentication credential.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5081,7 +5081,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits the information of an authentication credential API key.</para>
+        /// <para>Edits the information of an API Key authentication credential.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5133,7 +5133,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits the information of an authentication credential API key.</para>
+        /// <para>Edits the information of an API Key authentication credential.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5152,7 +5152,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits the information of an authentication credential API key.</para>
+        /// <para>Edits the information of an API Key authentication credential.</para>
         /// </summary>
         /// 
         /// <param name="request">

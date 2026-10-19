@@ -177,6 +177,14 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                     [Validation(Required=false)]
                     public string PriceUnit { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>standard</para>
+                    /// </summary>
+                    [NameInMap("timeBand")]
+                    [Validation(Required=false)]
+                    public string TimeBand { get; set; }
+
                 }
 
                 /// <summary>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 {
     public class UpdateApiKeyRequest : TeaModel {
         /// <summary>
-        /// <para>The API key permission settings.</para>
+        /// <para>The API Key permission settings.</para>
         /// <remarks>
-        /// <para>Do not fill in this section or fill it in completely for each UpdateApiKey operation. Otherwise, the configuration may not match your expectations.</para>
+        /// <para>Do not specify this parameter or specify it completely for each UpdateApiKey operation. Otherwise, the configuration may not match your expectations.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("auth")]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 /// <summary>
                 /// <para>The list of accessible models.</para>
                 /// <remarks>
-                /// <para>Notice: The content takes effect only when allowAllModels is set to false.</para>
+                /// <para>Notice: The specified content takes effect only when allowAllModels is set to false.</para>
                 /// </remarks>
                 /// </summary>
                 [NameInMap("accessibleModels")]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 public List<string> AccessibleModels { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to allow access to all models with granted inference permissions in the workspace. Valid values:</para>
+                /// <para>Specifies whether all models with inference permissions in the workspace are accessible. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>true</description></item>
                 /// <item><description>false</description></item>
@@ -62,9 +62,9 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             }
 
             /// <summary>
-            /// <para>Valid values:</para>
+            /// <para>The permission type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>All: all permissions.</description></item>
+            /// <item><description>All: full permissions.</description></item>
             /// <item><description>Custom: custom permissions.</description></item>
             /// </list>
             /// 

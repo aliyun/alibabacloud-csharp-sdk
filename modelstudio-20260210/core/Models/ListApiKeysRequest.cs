@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 {
     public class ListApiKeysRequest : TeaModel {
         /// <summary>
-        /// <para>The API key ID for exact match.</para>
+        /// <para>The API Key ID for exact match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3076140</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The field by which to sort results. Valid values:</para>
+        /// <para>The field by which to sort the results. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>apiKeyId (default)</para>
         /// </description></item>

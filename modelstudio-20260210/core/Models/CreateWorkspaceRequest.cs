@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 {
     public class CreateWorkspaceRequest : TeaModel {
         /// <summary>
+        /// <para>The service deployment scope (the deployment scope for services that depend on GPU resources, such as inference, training, and deployment). The Beijing and Singapore regions are not supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>global</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string ServiceSite { get; set; }
 
         /// <summary>
-        /// <para>The name of the business workspace.</para>
+        /// <para>The workspace name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

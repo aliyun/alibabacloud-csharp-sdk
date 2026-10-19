@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 public List<string> AccessIps { get; set; }
 
                 /// <summary>
-                /// <para>The model access scope.</para>
+                /// <para>The model access scope. If configured, only the selected models can be called.</para>
                 /// </summary>
                 [NameInMap("modelAccessScope")]
                 [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                     public List<string> AccessibleModels { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether all models with granted inference permissions in the workspace can be accessed. Valid values:</para>
+                    /// <para>Indicates whether all models with inference permissions granted in the specified workspace are accessible. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>true</description></item>
                     /// <item><description>false</description></item>
@@ -81,7 +81,11 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
                 }
 
                 /// <summary>
-                /// <para>All: all permissions. Custom: custom permissions.</para>
+                /// <para>The permission type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>All: all permissions.</description></item>
+                /// <item><description>Custom: custom permissions.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Custom</para>
@@ -127,7 +131,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public int? Disabled { get; set; }
 
             /// <summary>
-            /// <para>The time when the API key was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1774338222000</para>
@@ -147,6 +151,8 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string WorkspaceId { get; set; }
 
             /// <summary>
+            /// <para>The workspace name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>workspace_test</para>
             /// </summary>
@@ -197,10 +203,10 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The request was successful.</description></item>
-        /// <item><description>false: The request failed.</description></item>
+        /// <item><description>true: Succeeded.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
