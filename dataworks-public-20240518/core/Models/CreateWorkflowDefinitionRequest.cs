@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateWorkflowDefinitionRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace settings page to obtain the workspace ID.</para>
+        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Configuration page to obtain the workspace ID. You can also call the ListProjects operation to query the workspace ID of the current tenant.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,15 +21,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The FlowSpec information that describes the workflow. For more information about the specification, see <a href="https://github.com/aliyun/alibabacloud-dataworks-tool-dflow">FlowSpec</a>.</para>
+        /// <para>The FlowSpec information that describes the workflow. For more information about the specifications, see <a href="https://github.com/aliyun/alibabacloud-dataworks-tool-dflow">FlowSpec</a>.</para>
         /// <remarks>
-        /// <para>How to quickly obtain a FlowSpec template?</para>
+        /// <para>How do I quickly obtain a FlowSpec template?</para>
         /// <list type="bullet">
-        /// <item><description>Open a workflow in Data Studio, and then click &quot;Show Spec&quot; in the upper-right corner to obtain the FlowSpec description of the current workflow. You can use this FlowSpec description to quickly build a template that meets your requirements.</description></item>
+        /// <item><description>Open a workflow in DataStudio and click Show Spec in the upper-right corner to obtain the FlowSpec description for the current workflow. You can quickly build a compliant template based on this FlowSpec description.</description></item>
         /// </list>
         /// </remarks>
         /// <remarks>
-        /// <para>&lt;notice&gt;This operation only supports creating a workflow. Internal nodes described in FlowSpec are not created.&gt;&lt;/notice&gt;</para>
+        /// <para>Notice: This operation only supports creating workflows. Internal nodes described in the FlowSpec are not created.</notice></para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

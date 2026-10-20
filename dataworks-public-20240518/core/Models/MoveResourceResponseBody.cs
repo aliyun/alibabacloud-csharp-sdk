@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class MoveResourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. You can use the ID to troubleshoot errors.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F332BED4-DD73-5972-A9C2-642BA6CFXXXX</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call is successful.</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
+        /// <item><description><para>true: The call is successful.</para>
         /// </description></item>
-        /// <item><description><para>false</para>
+        /// <item><description><para>false: The call fails.</para>
         /// </description></item>
         /// </list>
         /// 

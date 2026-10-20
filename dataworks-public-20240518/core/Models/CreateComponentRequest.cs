@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateComponentRequest : TeaModel {
         /// <summary>
-        /// <para>A reserved field.</para>
+        /// <para>The reserved field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1AFAE64E-D1BE-432B-A9****</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The FlowSpec information that describes the workflow. For more information about the specification, see <a href="https://github.com/aliyun/alibabacloud-dataworks-tool-dflow/">FlowSpec</a>.</para>
+        /// <para>The FlowSpec information that describes the workflow. For more information about the specifications, see <a href="https://github.com/aliyun/alibabacloud-dataworks-tool-dflow/">FlowSpec</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

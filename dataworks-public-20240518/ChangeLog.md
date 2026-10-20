@@ -1,3 +1,6 @@
+2026-10-20 Version: 6.10.1
+- Generated csharp 2024-05-18 for dataworks-public.
+
 2026-10-20 Version: 6.10.0
 - Support API CreateCalendar.
 - Support API DeleteCalendar.

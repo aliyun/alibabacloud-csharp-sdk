@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class MoveResourceRequest : TeaModel {
         /// <summary>
-        /// <para>The unique identifier of the Data Studio file resource.</para>
+        /// <para>The unique identifier of the data development file resource.</para>
         /// <remarks>
-        /// <para>This field is of the Long type in SDK versions prior to 8.0.0, and of the String type in SDK versions 8.0.0 and later. This change does not affect normal SDK usage; the parameter will still be returned according to the type defined in the SDK. However, compilation failures may occur due to the type change only when upgrading the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
+        /// <para>Notice: Before SDK version 8.0.0, this field is of the Long type. In SDK version 8.0.0 and later, this field is of the String type. <b>This change does not affect the normal use of the SDK. The parameter is still returned based on the type defined in the SDK</b>. The type change may cause project compilation failures only when you upgrade the SDK across version 8.0.0. In this case, you must manually correct the data type.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,8 +24,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The destination path, without the file resource name.</para>
-        /// <para>For example, to move <c>math.py</c> to <c>root/demo/math.py</c>, set this parameter to <c>root/demo</c>.</para>
+        /// <para>The destination path for the move operation. Do not include the file resource name in the path.</para>
+        /// <para>For example, to change the path of the math.py file to root/demo/math.py, set this parameter to root/demo.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,8 +36,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Path { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace configuration page to obtain the ID.</para>
-        /// <para>You can use this parameter to specify the DataWorks workspace on which you want to perform the API operation.</para>
+        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Management page to obtain the workspace ID.</para>
+        /// <para>This parameter specifies the DataWorks workspace for this API operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
