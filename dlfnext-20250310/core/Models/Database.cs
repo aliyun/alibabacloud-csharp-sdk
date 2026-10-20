@@ -76,10 +76,22 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string Owner { get; set; }
 
+        /// <summary>
+        /// <para>The status of the database.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>active</para>
+        /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// <para>The number of tables in the database.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("tableCount")]
         [Validation(Required=false)]
         public long? TableCount { get; set; }

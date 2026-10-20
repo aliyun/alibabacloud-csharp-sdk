@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class TableSummary : TeaModel {
         /// <summary>
-        /// <para>The timestamp, in milliseconds, indicating when the table was created.</para>
+        /// <para>The table creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1744970111419</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>The name of the database.</para>
+        /// <para>The database name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string DatabaseName { get; set; }
 
         /// <summary>
-        /// <para>The generation date of the storage summary.</para>
+        /// <para>The update date of the storage overview data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-06-01</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string GeneratedDate { get; set; }
 
         /// <summary>
-        /// <para>The timestamp, in milliseconds, indicating when the table data was last accessed.</para>
+        /// <para>The last data access time of the table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1744970111419</para>
@@ -49,12 +49,28 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public long? LastAccessTime { get; set; }
 
+        /// <summary>
+        /// <para>The last requester.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acs:ram::[accountId]:root</para>
+        /// </summary>
         [NameInMap("lastRequester")]
         [Validation(Required=false)]
         public string LastRequester { get; set; }
 
         /// <summary>
-        /// <para>The total size of data files in the Archive storage class, in bytes.</para>
+        /// <para>The storage size of the latest snapshot, in bytes.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1024</para>
+        /// </summary>
+        [NameInMap("latestSnapshotDataSizeInBytes")]
+        [Validation(Required=false)]
+        public long? LatestSnapshotDataSizeInBytes { get; set; }
+
+        /// <summary>
+        /// <para>The storage size of archive data files.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10240</para>
@@ -64,7 +80,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? ObjTypeArchiveSize { get; set; }
 
         /// <summary>
-        /// <para>The total size of data files in the Cold Archive storage class, in bytes.</para>
+        /// <para>The storage size of cold archive data files.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10240</para>
@@ -74,7 +90,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? ObjTypeColdArchiveSize { get; set; }
 
         /// <summary>
-        /// <para>The total size of data files in the Infrequent Access storage class, in bytes.</para>
+        /// <para>The storage size of infrequent access data files.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10240</para>
@@ -84,7 +100,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? ObjTypeIaSize { get; set; }
 
         /// <summary>
-        /// <para>The total size of data files in the Standard storage class, in bytes.</para>
+        /// <para>The storage size of standard data files.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10240</para>
@@ -94,7 +110,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? ObjTypeStandardSize { get; set; }
 
         /// <summary>
-        /// <para>The total number of partitions in the table.</para>
+        /// <para>The total number of partitions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -104,7 +120,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? PartitionCount { get; set; }
 
         /// <summary>
-        /// <para>The storage location of the table.</para>
+        /// <para>The storage location.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://clg-xxxx/db-xxxx/tbl-xxxx</para>
@@ -120,19 +136,28 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public Dictionary<string, string> StorageActionParams { get; set; }
 
+        /// <summary>
+        /// <para>The storage class transition time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1767491579459</para>
+        /// </summary>
         [NameInMap("storageActionTimestamp")]
         [Validation(Required=false)]
         public long? StorageActionTimestamp { get; set; }
 
         /// <summary>
         /// <para>The storage class.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>STANDARD</para>
         /// </summary>
         [NameInMap("storageClass")]
         [Validation(Required=false)]
         public string StorageClass { get; set; }
 
         /// <summary>
-        /// <para>The name of the table.</para>
+        /// <para>The table name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>table1</para>
@@ -141,33 +166,48 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string TableName { get; set; }
 
+        /// <summary>
+        /// <para>The top requester of the day.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acs:ram::[accountId]:root</para>
+        /// </summary>
         [NameInMap("topRequester")]
         [Validation(Required=false)]
         public string TopRequester { get; set; }
 
         /// <summary>
-        /// <para>Total file access count.</para>
+        /// <para>The total number of file accesses.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("totalFileAccessNum")]
         [Validation(Required=false)]
         public long? TotalFileAccessNum { get; set; }
 
         /// <summary>
-        /// <para>Total file access count over the last 30 days.</para>
+        /// <para>The total number of file accesses in the last 7 days.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("totalFileAccessNum30d")]
         [Validation(Required=false)]
         public long? TotalFileAccessNum30d { get; set; }
 
         /// <summary>
-        /// <para>Total file access count over the last 7 days.</para>
+        /// <para>The total number of file accesses in the last 30 days.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("totalFileAccessNum7d")]
         [Validation(Required=false)]
         public long? TotalFileAccessNum7d { get; set; }
 
         /// <summary>
-        /// <para>The total number of files in the table.</para>
+        /// <para>The total number of table files.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -177,7 +217,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? TotalFileCount { get; set; }
 
         /// <summary>
-        /// <para>The total storage capacity of the table, in bytes.</para>
+        /// <para>The table storage capacity, in bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1024</para>
@@ -187,7 +227,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? TotalFileSizeInBytes { get; set; }
 
         /// <summary>
-        /// <para>The total number of metadata files.</para>
+        /// <para>The number of metadata files.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -197,7 +237,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? TotalMetaFileCount { get; set; }
 
         /// <summary>
-        /// <para>The total size of metadata files, in bytes.</para>
+        /// <para>The storage size of metadata files.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10240</para>
@@ -207,7 +247,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? TotalMetaSizeInBytes { get; set; }
 
         /// <summary>
-        /// <para>The number of Standard or Infrequent Access partitions unaccessed in the last 180 days.</para>
+        /// <para>The number of standard or infrequent access partitions that have not been accessed in the last 180 days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -217,7 +257,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? UnaccessedStdIaPartitionCount180d { get; set; }
 
         /// <summary>
-        /// <para>The number of Standard partitions unaccessed in the last 30 days.</para>
+        /// <para>The number of standard storage partitions that have not been accessed in the last 30 days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -228,6 +268,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 
         /// <summary>
         /// <para>The update time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1764555981383</para>
         /// </summary>
         [NameInMap("updatedAt")]
         [Validation(Required=false)]

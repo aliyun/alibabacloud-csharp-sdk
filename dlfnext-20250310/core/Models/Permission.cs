@@ -19,18 +19,30 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string Access { get; set; }
 
+        /// <summary>
+        /// <para>The column masking transformation rules mapped by column name. The key is the column name, and the value is the corresponding masking transformation configuration.</para>
+        /// </summary>
         [NameInMap("columnMasking")]
         [Validation(Required=false)]
         public Dictionary<string, ColumnMask> ColumnMasking { get; set; }
 
+        /// <summary>
+        /// <para>The custom columns.</para>
+        /// </summary>
         [NameInMap("columns")]
         [Validation(Required=false)]
         public PermissionColumns Columns { get; set; }
         public class PermissionColumns : TeaModel {
+            /// <summary>
+            /// <para>The list of included column names.</para>
+            /// </summary>
             [NameInMap("columnNames")]
             [Validation(Required=false)]
             public List<string> ColumnNames { get; set; }
 
+            /// <summary>
+            /// <para>The list of excluded column names.</para>
+            /// </summary>
             [NameInMap("excludedColumnNames")]
             [Validation(Required=false)]
             public List<string> ExcludedColumnNames { get; set; }
@@ -47,10 +59,22 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string Database { get; set; }
 
+        /// <summary>
+        /// <para>The expiration time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1762398431157</para>
+        /// </summary>
         [NameInMap("expireTime")]
         [Validation(Required=false)]
         public string ExpireTime { get; set; }
 
+        /// <summary>
+        /// <para>The function name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>function_name</para>
+        /// </summary>
         [NameInMap("function")]
         [Validation(Required=false)]
         public string Function { get; set; }
@@ -75,6 +99,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// <para>The row filter.</para>
+        /// </summary>
         [NameInMap("rowFilter")]
         [Validation(Required=false)]
         public RowFilter RowFilter { get; set; }
@@ -89,6 +116,12 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string Table { get; set; }
 
+        /// <summary>
+        /// <para>The view name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>view_name</para>
+        /// </summary>
         [NameInMap("view")]
         [Validation(Required=false)]
         public string View { get; set; }

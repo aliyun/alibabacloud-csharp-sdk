@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class GetCatalogSummaryTrendRequest : TeaModel {
         /// <summary>
-        /// <para>The end date, in yyyy-MM-dd format.</para>
+        /// <para>The end date in the yyyy-MM-dd format. The result includes the end date.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>The start date, in yyyy-MM-dd format.</para>
+        /// <para>The start date in the yyyy-MM-dd format. The result includes the start date.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

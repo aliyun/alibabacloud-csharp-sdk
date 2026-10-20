@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class ListPartitionSummariesRequest : TeaModel {
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page of results. If the response does not include this token, pass an empty string (&quot;&quot;).</para>
+        /// <para>The pagination token used to retrieve the next page of data. If it is not provided in the response, pass an empty string (&quot;&quot;) or an empty character (\&quot;\&quot;).</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>

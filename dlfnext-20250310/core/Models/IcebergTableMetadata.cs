@@ -10,25 +10,28 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class IcebergTableMetadata : TeaModel {
         /// <summary>
-        /// <para>The latest snapshot of the Iceberg table.</para>
+        /// <para>The latest Iceberg snapshot.</para>
         /// </summary>
         [NameInMap("currentSnapshot")]
         [Validation(Required=false)]
         public IcebergSnapshot CurrentSnapshot { get; set; }
 
         /// <summary>
-        /// <para>The fields.</para>
+        /// <para>The column fields.</para>
         /// </summary>
         [NameInMap("fields")]
         [Validation(Required=false)]
         public List<IcebergNestedField> Fields { get; set; }
 
+        /// <summary>
+        /// <para>The list of field IDs for the Iceberg identifier fields. The array elements are the integer IDs of the identifier fields in the Iceberg schema.</para>
+        /// </summary>
         [NameInMap("identifierFieldIds")]
         [Validation(Required=false)]
         public List<int?> IdentifierFieldIds { get; set; }
 
         /// <summary>
-        /// <para>The partition fields.</para>
+        /// <para>The list of partition fields.</para>
         /// </summary>
         [NameInMap("partitionFields")]
         [Validation(Required=false)]

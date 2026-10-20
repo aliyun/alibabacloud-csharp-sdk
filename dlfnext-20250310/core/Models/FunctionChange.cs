@@ -9,12 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class FunctionChange : TeaModel {
+        /// <summary>
+        /// <para>The change type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>setOption</para>
+        /// </summary>
         [NameInMap("action")]
         [Validation(Required=false)]
         public string Action { get; set; }
 
         /// <summary>
         /// <para>required in UpdateFunctionComment</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Function configuration update</para>
         /// </summary>
         [NameInMap("comment")]
         [Validation(Required=false)]
@@ -29,6 +38,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 
         /// <summary>
         /// <para>required in SetFunctionOption/RemoveFunctionOption</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>namespaceSchema</para>
         /// </summary>
         [NameInMap("key")]
         [Validation(Required=false)]
@@ -36,6 +48,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 
         /// <summary>
         /// <para>required in AddDefinition/UpdateDefinition/DropDefinition</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>my_function</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
@@ -43,6 +58,9 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 
         /// <summary>
         /// <para>required in SetFunctionOption</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>IDC_MOVE</para>
         /// </summary>
         [NameInMap("value")]
         [Validation(Required=false)]

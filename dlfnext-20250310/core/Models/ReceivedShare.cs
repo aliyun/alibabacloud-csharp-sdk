@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string CatalogName { get; set; }
 
         /// <summary>
-        /// <para>The comment of the share.</para>
+        /// <para>The comment on the share.</para>
         /// 
         /// <b>Example:</b>
         /// <para>demo</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>The creator of the share.</para>
+        /// <para>The creator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::[accountId]:root</para>
@@ -49,6 +49,12 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string CreatedBy { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether write operations are allowed on the shared resources.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("enableWrite")]
         [Validation(Required=false)]
         public bool? EnableWrite { get; set; }
@@ -64,7 +70,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The provider\&quot;s account ID.</para>
+        /// <para>The account ID of the provider.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1111</para>
@@ -104,7 +110,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? UpdatedAt { get; set; }
 
         /// <summary>
-        /// <para>The user who last updated the share.</para>
+        /// <para>The updater.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::[accountId]:root</para>

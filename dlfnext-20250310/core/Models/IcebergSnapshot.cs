@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class IcebergSnapshot : TeaModel {
         /// <summary>
-        /// <para>Number of added rows.</para>
+        /// <para>The number of added rows.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? AddedRows { get; set; }
 
         /// <summary>
-        /// <para>The snapshot ID.</para>
+        /// <para>id</para>
         /// 
         /// <b>Example:</b>
         /// <para>2443368274334000657</para>
@@ -29,6 +29,12 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public long? Id { get; set; }
 
+        /// <summary>
+        /// <para>The string representation of the snapshot ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2443368274334000657</para>
+        /// </summary>
         [NameInMap("idString")]
         [Validation(Required=false)]
         public string IdString { get; set; }
@@ -44,7 +50,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string Operation { get; set; }
 
         /// <summary>
-        /// <para>Parent ID.</para>
+        /// <para>The parent ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -53,6 +59,12 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public long? ParentId { get; set; }
 
+        /// <summary>
+        /// <para>The string representation of the parent snapshot ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("parentIdString")]
         [Validation(Required=false)]
         public string ParentIdString { get; set; }

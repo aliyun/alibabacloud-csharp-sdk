@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class GetTableSummaryRequest : TeaModel {
         /// <summary>
-        /// <para>The storage summary date.</para>
+        /// <para>The date of the storage overview, in the YYYY-MM-DD format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-10-08</para>

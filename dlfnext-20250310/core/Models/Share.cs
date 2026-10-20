@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class Share : TeaModel {
         /// <summary>
-        /// <para>The comment for the share.</para>
+        /// <para>The comment information of the share.</para>
         /// 
         /// <b>Example:</b>
         /// <para>demo</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The time when the share was created.</para>
+        /// <para>The creation time of the share.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1744970111419</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>The user who created the share.</para>
+        /// <para>The creator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::[accountId]:root</para>
@@ -39,12 +39,18 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string CreatedBy { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether write operations are allowed on shared resources.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("enableWrite")]
         [Validation(Required=false)]
         public bool? EnableWrite { get; set; }
 
         /// <summary>
-        /// <para>The resource descriptor of the share owner.</para>
+        /// <para>The owner of the share.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::[accountId]:root</para>
@@ -54,7 +60,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The provider\&quot;s account ID.</para>
+        /// <para>The account ID of the provider.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1111</para>
@@ -84,7 +90,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string ShareName { get; set; }
 
         /// <summary>
-        /// <para>The time when the share was last updated.</para>
+        /// <para>The update time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1744970111419</para>
@@ -94,7 +100,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? UpdatedAt { get; set; }
 
         /// <summary>
-        /// <para>The user who last updated the share.</para>
+        /// <para>The updater.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::[accountId]:root</para>

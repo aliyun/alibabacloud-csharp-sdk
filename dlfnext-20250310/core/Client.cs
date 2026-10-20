@@ -2503,7 +2503,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a data lake data catalog. The deletion fails unless the following conditions are met: all tables and self-managed databases under the catalog have been deleted, and the databases and tables have been deleted for at least 24 hours.</para>
+        /// <para>Deletes a DLF catalog. The deletion fails unless the following conditions are met: all tables and databases under the catalog have been deleted, and the databases and tables have been deleted for at least 24 hours.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2539,7 +2539,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a data lake data catalog. The deletion fails unless the following conditions are met: all tables and self-managed databases under the catalog have been deleted, and the databases and tables have been deleted for at least 24 hours.</para>
+        /// <para>Deletes a DLF catalog. The deletion fails unless the following conditions are met: all tables and databases under the catalog have been deleted, and the databases and tables have been deleted for at least 24 hours.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2575,7 +2575,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a data lake data catalog. The deletion fails unless the following conditions are met: all tables and self-managed databases under the catalog have been deleted, and the databases and tables have been deleted for at least 24 hours.</para>
+        /// <para>Deletes a DLF catalog. The deletion fails unless the following conditions are met: all tables and databases under the catalog have been deleted, and the databases and tables have been deleted for at least 24 hours.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2590,7 +2590,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a data lake data catalog. The deletion fails unless the following conditions are met: all tables and self-managed databases under the catalog have been deleted, and the databases and tables have been deleted for at least 24 hours.</para>
+        /// <para>Deletes a DLF catalog. The deletion fails unless the following conditions are met: all tables and databases under the catalog have been deleted, and the databases and tables have been deleted for at least 24 hours.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3013,7 +3013,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a data catalog.</para>
+        /// <para>Retrieves the details of a catalog.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3049,7 +3049,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a data catalog.</para>
+        /// <para>Retrieves the details of a catalog.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3085,7 +3085,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a data catalog.</para>
+        /// <para>Retrieves the details of a catalog.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3100,7 +3100,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a data catalog.</para>
+        /// <para>Retrieves the details of a catalog.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3115,7 +3115,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a data catalog.</para>
+        /// <para>Retrieves the details of a catalog.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3151,7 +3151,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a data catalog.</para>
+        /// <para>Retrieves the details of a catalog.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3187,7 +3187,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a data catalog.</para>
+        /// <para>Retrieves the details of a catalog.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3202,7 +3202,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a data catalog.</para>
+        /// <para>Retrieves the details of a catalog.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3485,7 +3485,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the storage overview trend for a catalog.</para>
+        /// <para>Retrieves the storage overview trends of the data catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3535,7 +3535,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the storage overview trend for a catalog.</para>
+        /// <para>Retrieves the storage overview trends of the data catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3585,7 +3585,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the storage overview trend for a catalog.</para>
+        /// <para>Retrieves the storage overview trends of the data catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3604,7 +3604,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the storage overview trend for a catalog.</para>
+        /// <para>Retrieves the storage overview trends of the data catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3827,7 +3827,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can view an inventory overview.</para>
+        /// <para>Retrieves the database storage overview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3873,7 +3873,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can view an inventory overview.</para>
+        /// <para>Retrieves the database storage overview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3919,7 +3919,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can view an inventory overview.</para>
+        /// <para>Retrieves the database storage overview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3938,7 +3938,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can view an inventory overview.</para>
+        /// <para>Retrieves the database storage overview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5021,7 +5021,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the storage summary for a table.</para>
+        /// <para>Retrieves the table storage overview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5067,7 +5067,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the storage summary for a table.</para>
+        /// <para>Retrieves the table storage overview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5113,7 +5113,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the storage summary for a table.</para>
+        /// <para>Retrieves the table storage overview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5132,7 +5132,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the storage summary for a table.</para>
+        /// <para>Retrieves the table storage overview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5651,7 +5651,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of data catalogs.</para>
+        /// <para>Queries the list of catalogs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5705,7 +5705,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of data catalogs.</para>
+        /// <para>Queries the list of catalogs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5759,7 +5759,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of data catalogs.</para>
+        /// <para>Queries the list of catalogs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5778,7 +5778,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of data catalogs.</para>
+        /// <para>Queries the list of catalogs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5797,8 +5797,13 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists databases in a data lake with paged query support.</para>
+        /// <para>Queries the list of databases in the data lake by using a paged query with paging.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation returns the DLF data access role and KMS key policy authorization statements required to configure BYOK SSE KMS. The customer master key is configured at the catalog level by using oss.sse.kms.key-id. When you create a table, you can enable SSE KMS for the table by setting the table property oss.sse.kms.enabled to true. Tables with KMS encryption enabled and tables without encryption can coexist in the same catalog.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDatabaseDetailsRequest
@@ -5855,8 +5860,13 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists databases in a data lake with paged query support.</para>
+        /// <para>Queries the list of databases in the data lake by using a paged query with paging.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation returns the DLF data access role and KMS key policy authorization statements required to configure BYOK SSE KMS. The customer master key is configured at the catalog level by using oss.sse.kms.key-id. When you create a table, you can enable SSE KMS for the table by setting the table property oss.sse.kms.enabled to true. Tables with KMS encryption enabled and tables without encryption can coexist in the same catalog.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDatabaseDetailsRequest
@@ -5913,8 +5923,13 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists databases in a data lake with paged query support.</para>
+        /// <para>Queries the list of databases in the data lake by using a paged query with paging.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation returns the DLF data access role and KMS key policy authorization statements required to configure BYOK SSE KMS. The customer master key is configured at the catalog level by using oss.sse.kms.key-id. When you create a table, you can enable SSE KMS for the table by setting the table property oss.sse.kms.enabled to true. Tables with KMS encryption enabled and tables without encryption can coexist in the same catalog.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDatabaseDetailsRequest
@@ -5932,8 +5947,13 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists databases in a data lake with paged query support.</para>
+        /// <para>Queries the list of databases in the data lake by using a paged query with paging.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation returns the DLF data access role and KMS key policy authorization statements required to configure BYOK SSE KMS. The customer master key is configured at the catalog level by using oss.sse.kms.key-id. When you create a table, you can enable SSE KMS for the table by setting the table property oss.sse.kms.enabled to true. Tables with KMS encryption enabled and tables without encryption can coexist in the same catalog.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDatabaseDetailsRequest
@@ -6673,7 +6693,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves storage overview for partitions.</para>
+        /// <para>Retrieves the partition storage overview list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6727,7 +6747,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves storage overview for partitions.</para>
+        /// <para>Retrieves the partition storage overview list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6781,7 +6801,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves storage overview for partitions.</para>
+        /// <para>Retrieves the partition storage overview list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6800,7 +6820,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves storage overview for partitions.</para>
+        /// <para>Retrieves the partition storage overview list.</para>
         /// </summary>
         /// 
         /// <param name="request">

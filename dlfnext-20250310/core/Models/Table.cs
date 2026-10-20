@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class Table : TeaModel {
         /// <summary>
-        /// <para>The time when the table was created.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1741266704867</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>The creator of the table.</para>
+        /// <para>The creator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::[accountId]:root</para>
@@ -29,12 +29,15 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string CreatedBy { get; set; }
 
+        /// <summary>
+        /// <para>The Iceberg table metadata.</para>
+        /// </summary>
         [NameInMap("icebergTableMetadata")]
         [Validation(Required=false)]
         public IcebergTableMetadata IcebergTableMetadata { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the table.</para>
+        /// <para>The table UUID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the table is an external table.</para>
+        /// <para>Specifies whether the table is an external table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public bool? IsExternal { get; set; }
 
         /// <summary>
-        /// <para>The name of the table.</para>
+        /// <para>The table name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>table_test</para>
@@ -64,7 +67,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The owner of the table.</para>
+        /// <para>The table owner.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::[accountId]:root</para>
@@ -74,7 +77,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The path of the table.</para>
+        /// <para>The table path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://clg-paimon-xxx/db-xxx/tbl-xxxx</para>
@@ -91,7 +94,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public Schema Schema { get; set; }
 
         /// <summary>
-        /// <para>The ID of the table schema.</para>
+        /// <para>The table schema ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -100,28 +103,58 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public long? SchemaId { get; set; }
 
+        /// <summary>
+        /// <para>The table status. A value of active indicates that the table is normal. A value of retained indicates that the table is soft-deleted but still retained in the recycle bin. A value of releasing indicates that the table is about to be permanently purged.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>active</para>
+        /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// <para>The storage class transition status.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
+        /// </summary>
         [NameInMap("storageAction")]
         [Validation(Required=false)]
         public string StorageAction { get; set; }
 
+        /// <summary>
+        /// <para>The storage class transition time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1764556155852</para>
+        /// </summary>
         [NameInMap("storageActionTimestamp")]
         [Validation(Required=false)]
         public long? StorageActionTimestamp { get; set; }
 
+        /// <summary>
+        /// <para>The storage class.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>STANDARD</para>
+        /// </summary>
         [NameInMap("storageClass")]
         [Validation(Required=false)]
         public string StorageClass { get; set; }
 
+        /// <summary>
+        /// <para>The type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PAIMON</para>
+        /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The time when the table was last updated.</para>
+        /// <para>The update time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1741266704867</para>
@@ -131,7 +164,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? UpdatedAt { get; set; }
 
         /// <summary>
-        /// <para>The user who last updated the table.</para>
+        /// <para>The updater.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::[accountId]:root</para>

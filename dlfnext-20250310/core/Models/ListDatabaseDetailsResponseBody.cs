@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public List<Database> DatabaseDetails { get; set; }
 
         /// <summary>
-        /// <para>The pagination token used to retrieve the next page of results. A value of null indicates that the current page is the last page.</para>
+        /// <para>The pagination token used to retrieve the next page of results. A null value indicates that the current query returns the last page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E8ABEB1C3DB893D16576269017992F57</para>

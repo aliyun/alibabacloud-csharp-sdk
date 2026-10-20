@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class UntagResourcesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to remove all tags from the resources. This parameter and TagKey are mutually exclusive.</para>
+        /// <para>Specifies whether to delete all tags from the resources. This parameter and the TagKey parameter are mutually exclusive.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("all")]
         [Validation(Required=false)]
         public bool? All { get; set; }
 
         /// <summary>
-        /// <para>The list of data catalog IDs from which to remove tags. The value is a JSON array. Maximum: 50.</para>
+        /// <para>The list of resource IDs. You can specify up to 50 resource IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,18 +31,18 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string ResourceIdShrink { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Valid value: CATALOGRESOURCE.</para>
+        /// <para>The resource type. Valid value: catalog.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CATALOGRESOURCE</para>
+        /// <para>catalog</para>
         /// </summary>
         [NameInMap("resourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The list of tag keys to remove. The value is a JSON array. This parameter and All are mutually exclusive.</para>
+        /// <para>The list of tag keys. This parameter and the All parameter are mutually exclusive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;team&quot;]</para>

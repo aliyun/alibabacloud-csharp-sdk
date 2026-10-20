@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class TagResource : TeaModel {
         /// <summary>
-        /// <para>The resource ID, which is the data catalog ID.</para>
+        /// <para>The resource ID, which is the catalog ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>clg-paimon-0424965be0c240acb4159688c9e2c4b6</para>

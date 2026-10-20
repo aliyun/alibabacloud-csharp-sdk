@@ -10,40 +10,58 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class FunctionDefinition : TeaModel {
         /// <summary>
-        /// <para>Required in FileFunctionDefinition.</para>
+        /// <para>required in FileFunctionDefinition</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>com.aliyun.pai.flinkjob.udf.CtrKV</para>
         /// </summary>
         [NameInMap("className")]
         [Validation(Required=false)]
         public string ClassName { get; set; }
 
         /// <summary>
-        /// <para>Required in SQLFunctionDefinition and LambdaFunctionDefinition.</para>
+        /// <para>required in SQLFunctionDefinition/LambdaFunctionDefinition</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("definition")]
         [Validation(Required=false)]
         public string Definition { get; set; }
 
         /// <summary>
-        /// <para>Required in FileFunctionDefinition.</para>
+        /// <para>required in FileFunctionDefinition</para>
         /// </summary>
         [NameInMap("fileResources")]
         [Validation(Required=false)]
         public List<FunctionFileResource> FileResources { get; set; }
 
         /// <summary>
-        /// <para>Required in FileFunctionDefinition.</para>
+        /// <para>required in FileFunctionDefinition</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>function_name</para>
         /// </summary>
         [NameInMap("functionName")]
         [Validation(Required=false)]
         public string FunctionName { get; set; }
 
         /// <summary>
-        /// <para>Required in LambdaFunctionDefinition and FileFunctionDefinition.</para>
+        /// <para>required in LambdaFunctionDefinition/FileFunctionDefinition</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zh-CN</para>
         /// </summary>
         [NameInMap("language")]
         [Validation(Required=false)]
         public string Language { get; set; }
 
+        /// <summary>
+        /// <para>The type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PAIMON</para>
+        /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]
         public string Type { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class FunctionFileResource : TeaModel {
         /// <summary>
-        /// <para>Resource type</para>
+        /// <para>The resource type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>JAR</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>Resource path</para>
+        /// <para>The resource path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://tmp/SimpleUdf.jar</para>
