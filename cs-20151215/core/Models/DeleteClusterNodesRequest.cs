@@ -1,19 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DeleteClusterNodesRequest : TeaModel {
+    public class DeleteClusterNodesRequest : Darabonba.Model {
         /// <summary>
-        /// <para>Whether to automatically drain Pods on the node. Valid values:</para>
+        /// <para>Specifies whether to automatically drain Pods on the nodes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: Automatically drain Pods on the node.</description></item>
-        /// <item><description><c>false</c>: Do not automatically drain Pods on the node.</description></item>
+        /// <item><description><c>true</c>: Automatically drains Pods on the nodes.</description></item>
+        /// <item><description><c>false</c>: Does not automatically drain Pods on the nodes.</description></item>
         /// </list>
         /// <para>Default value: <c>false</c>.</para>
         /// 
@@ -25,7 +26,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? DrainNode { get; set; }
 
         /// <summary>
-        /// <para>List of nodes to remove. The node names must be the names of the nodes in the cluster, for example: <c>cn-hangzhou.192.168.xx.xx</c>.</para>
+        /// <para>The list of nodes to remove. The node name must be the name of the node in the cluster, such as <c>cn-hangzhou.192.168.xx.xx</c>.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("nodes")]
@@ -33,14 +34,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<string> Nodes { get; set; }
 
         /// <summary>
-        /// <para>Whether to simultaneously remove ECS instances. Valid values:</para>
+        /// <para>Specifies whether to release the ECS instances at the same time. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: Simultaneously remove ECS instances.</description></item>
-        /// <item><description><c>false</c>: Retain ECS instances.</description></item>
+        /// <item><description><c>true</c>: Releases the ECS instances at the same time.</description></item>
+        /// <item><description><c>false</c>: Retains the ECS instances.</description></item>
         /// </list>
         /// <para>Default value: <c>false</c>.</para>
         /// <remarks>
-        /// <para>Simultaneous removal of ECS instances is not supported when the nodes are subscription instances.</para>
+        /// <para>Releasing ECS instances at the same time is not supported when the nodes are subscription instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -53,3 +54,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

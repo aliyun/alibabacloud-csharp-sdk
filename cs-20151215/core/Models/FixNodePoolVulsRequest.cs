@@ -1,19 +1,22 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class FixNodePoolVulsRequest : TeaModel {
+    public class FixNodePoolVulsRequest : Darabonba.Model {
         /// <summary>
         /// <para>Specifies whether to allow node restarts.</para>
         /// <list type="bullet">
-        /// <item><description>true: Node restarts are allowed.</description></item>
-        /// <item><description>false: Node restarts are not allowed.</description></item>
+        /// <item><description><para>true: Node restarts are allowed.</para>
+        /// </description></item>
+        /// <item><description><para>false: Node restarts are not allowed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,10 +39,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("rollout_policy")]
         [Validation(Required=false)]
         public FixNodePoolVulsRequestRolloutPolicy RolloutPolicy { get; set; }
-        public class FixNodePoolVulsRequestRolloutPolicy : TeaModel {
+        public class FixNodePoolVulsRequestRolloutPolicy : Darabonba.Model {
             /// <summary>
             /// <para>CVE fixes for nodes in the node pool are performed in batches. This parameter specifies the maximum number of nodes that can be fixed in parallel per batch.</para>
-            /// <para>Valid values: minimum value is 1 and maximum value is the total number of nodes in the node pool.</para>
+            /// <para>Valid values: The minimum value is 1 and the maximum value is the number of nodes in the node pool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -60,3 +63,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

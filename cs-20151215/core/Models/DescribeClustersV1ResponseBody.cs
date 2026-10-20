@@ -1,21 +1,22 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeClustersV1ResponseBody : TeaModel {
+    public class DescribeClustersV1ResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The list of cluster information.</para>
         /// </summary>
         [NameInMap("clusters")]
         [Validation(Required=false)]
         public List<DescribeClustersV1ResponseBodyClusters> Clusters { get; set; }
-        public class DescribeClustersV1ResponseBodyClusters : TeaModel {
+        public class DescribeClustersV1ResponseBodyClusters : Darabonba.Model {
             /// <summary>
             /// <para>The local domain name of the cluster.</para>
             /// 
@@ -37,7 +38,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The cluster specification.</para>
+            /// <para>The cluster specifications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ack.standard</para>
@@ -57,7 +58,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ClusterType { get; set; }
 
             /// <summary>
-            /// <para>The pod CIDR block, which is the Flannel network configuration.</para>
+            /// <para>The Pod network CIDR block for Flannel network configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172.20.xx.xx/16</para>
@@ -87,10 +88,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string CurrentVersion { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether deletion protection is enabled for the cluster. This prevents accidental deletion of the cluster through the console or API. Valid values:</para>
+            /// <para>Specifies whether deletion protection is enabled for the cluster to prevent accidental deletion through the console or API. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: Deletion protection is enabled. The cluster cannot be deleted through the console or API.</description></item>
-            /// <item><description><c>false</c>: Deletion protection is not enabled. The cluster can be deleted through the console or API.</description></item>
+            /// <item><description>true: Deletion protection is enabled. The cluster cannot be deleted through the console or API.</description></item>
+            /// <item><description>false: Deletion protection is disabled. The cluster can be deleted through the console or API.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -103,7 +104,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The Docker version of the cluster.</para>
+            /// <para>The Docker version used by the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>19.03.5</para>
@@ -116,7 +117,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The ID of the Server Load Balancer (SLB) instance for the Ingress of the cluster.</para>
+            /// <para>The ID of the Server Load Balancer (SLB) instance for the Ingress in the cluster.</para>
             /// <para>Default instance type: guaranteed-performance instance (slb.s1.small).</para>
             /// 
             /// <b>Example:</b>
@@ -128,7 +129,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ExternalLoadbalancerId { get; set; }
 
             /// <summary>
-            /// <para>The cluster version. For Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Kubernetes version release overview</a>.</para>
+            /// <para>The initial version of the cluster. For the Kubernetes versions supported by ACK, refer to <a href="https://help.aliyun.com/document_detail/185269.html">Overview of Kubernetes versions</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.32.1-aliyun.1</para>
@@ -140,8 +141,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The IP protocol stack of the cluster. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ipv4: creates a cluster that supports only the IPv4 protocol stack.</description></item>
-            /// <item><description>dual: creates a cluster that supports the IPv4/IPv6 dual stack.</description></item>
+            /// <item><description>ipv4: Creates a cluster that supports only the IPv4 protocol stack.</description></item>
+            /// <item><description>dual: Creates a cluster that supports both IPv4 and IPv6 protocol stacks.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -152,14 +153,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string IpStack { get; set; }
 
             /// <summary>
-            /// <para>The maintenance window of the cluster. This feature takes effect only for ACK managed clusters and ACK Serverless clusters.</para>
+            /// <para>The maintenance window of the cluster. This feature takes effect only in ACK managed clusters and ACK Serverless clusters.</para>
             /// </summary>
             [NameInMap("maintenance_window")]
             [Validation(Required=false)]
             public MaintenanceWindow MaintenanceWindow { get; set; }
 
             /// <summary>
-            /// <para>The access addresses of the cluster API server, including the internal network access address and the public network access address.</para>
+            /// <para>The access endpoints of the cluster API server, including the internal network access address and the public network access address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;api_server_endpoint\&quot;:\&quot;\&quot;,\&quot;intranet_api_server_endpoint\&quot;:\&quot;<a href="https://192.168.xx.xx:6443%5C%5C%22%7D">https://192.168.xx.xx:6443\\&quot;}</a></para>
@@ -179,7 +180,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string MetaData { get; set; }
 
             /// <summary>
-            /// <para>The cluster name.</para>
+            /// <para>The cluster name. Fuzzy match is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cluster-demo</para>
@@ -193,10 +194,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The network mode of the cluster. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>classic</c>: classic network.</description></item>
-            /// <item><description><c>vpc</c>: virtual private cloud (VPC).</description></item>
-            /// <item><description><c>overlay</c>: overlay network.</description></item>
-            /// <item><description><c>calico</c>: Calico network.</description></item>
+            /// <item><description>classic: classic network</description></item>
+            /// <item><description>vpc: VPC</description></item>
+            /// <item><description>overlay: overlay network</description></item>
+            /// <item><description>calico: Calico network</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -218,26 +219,25 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string NextVersion { get; set; }
 
             /// <summary>
-            /// <para>The automatic O&amp;M policy of the cluster.</para>
+            /// <para>The automated O&amp;M policy of the cluster.</para>
             /// </summary>
             [NameInMap("operation_policy")]
             [Validation(Required=false)]
             public DescribeClustersV1ResponseBodyClustersOperationPolicy OperationPolicy { get; set; }
-            public class DescribeClustersV1ResponseBodyClustersOperationPolicy : TeaModel {
+            public class DescribeClustersV1ResponseBodyClustersOperationPolicy : Darabonba.Model {
                 /// <summary>
-                /// <para>The automatic cluster upgrade configuration.</para>
+                /// <para>The auto-upgrade settings for the cluster.</para>
                 /// </summary>
                 [NameInMap("cluster_auto_upgrade")]
                 [Validation(Required=false)]
                 public DescribeClustersV1ResponseBodyClustersOperationPolicyClusterAutoUpgrade ClusterAutoUpgrade { get; set; }
-                public class DescribeClustersV1ResponseBodyClustersOperationPolicyClusterAutoUpgrade : TeaModel {
+                public class DescribeClustersV1ResponseBodyClustersOperationPolicyClusterAutoUpgrade : Darabonba.Model {
                     /// <summary>
-                    /// <para>The frequency of automatic cluster upgrades. For more information, see <a href="https://help.aliyun.com/document_detail/2712866.html">Upgrade frequency</a>.</para>
-                    /// <para>Valid values:</para>
+                    /// <para>The auto-upgrade channel for the cluster. For more information, refer to <a href="https://help.aliyun.com/document_detail/2712866.html">Upgrade channels</a>. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>patch: the latest patch version.</description></item>
-                    /// <item><description>stable: the second latest minor version.</description></item>
-                    /// <item><description>rapid: the latest minor version.</description></item>
+                    /// <item><description>patch: The latest patch version.</description></item>
+                    /// <item><description>stable: The second latest minor version.</description></item>
+                    /// <item><description>rapid: The latest minor version.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                     public string Channel { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether automatic cluster upgrade is enabled.</para>
+                    /// <para>Specifies whether auto-upgrade is enabled for the cluster.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -266,8 +266,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The Private Zone configuration of the cluster. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: Private Zone is enabled.</description></item>
-            /// <item><description><c>false</c>: Private Zone is not enabled.</description></item>
+            /// <item><description>true: Private Zone is enabled.</description></item>
+            /// <item><description>false: Private Zone is disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -279,7 +279,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? PrivateZone { get; set; }
 
             /// <summary>
-            /// <para>The cluster subtype.</para>
+            /// <para>The subtype of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Default</para>
@@ -291,8 +291,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The kube-proxy mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>iptables</c>: a mature and stable kube-proxy mode. Uses iptables rules for service discovery and load balancing of Kubernetes Services. Performance is moderate and affected by scale. Suitable for clusters with a small number of Services.</description></item>
-            /// <item><description><c>ipvs</c>: a high-performance kube-proxy mode. Uses the Linux IPVS module for service discovery and load balancing of Kubernetes Services. Suitable for clusters with a large number of Services that require high-performance load balancing.</description></item>
+            /// <item><description>iptables: The mature and stable kube-proxy mode. Service discovery and load balancing for Kubernetes services are configured by using iptables rules. This mode provides average performance and is affected by the cluster scale. It is suitable for clusters with a small number of services.</description></item>
+            /// <item><description>ipvs: The high-performance kube-proxy mode. Service discovery and load balancing for Kubernetes services are configured by using the Linux IPVS module. This mode is suitable for clusters with a large number of services and scenarios that require high-performance load balancing.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -303,7 +303,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ProxyMode { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the cluster.</para>
+            /// <para>The ID of the region where the cluster is deployed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
@@ -313,7 +313,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The resource group ID of the cluster.</para>
+            /// <para>The ID of the resource group to which the cluster belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-acfmyvw3wjm****</para>
@@ -323,7 +323,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The security group ID of the cluster.</para>
+            /// <para>The ID of the security group to which the cluster belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sg-2vcgwsrwgt5mp0yi****</para>
@@ -333,7 +333,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>The service CIDR block.</para>
+            /// <para>The CIDR block of the service network.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -344,7 +344,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ServiceCidr { get; set; }
 
             /// <summary>
-            /// <para>The current number of nodes in the cluster, including master nodes and worker nodes.</para>
+            /// <para>The current number of nodes in the cluster, including the master node and worker nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -354,23 +354,23 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? Size { get; set; }
 
             /// <summary>
-            /// <para>The running state of the cluster. Valid values:</para>
+            /// <para>The running status of the cluster. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>initial</c>: The cluster is being created.</description></item>
-            /// <item><description><c>failed</c>: The cluster failed to be created.</description></item>
-            /// <item><description><c>running</c>: The cluster is running.</description></item>
-            /// <item><description><c>updating</c>: The cluster is being updated.</description></item>
-            /// <item><description><c>upgrading</c>: The cluster is being upgraded.</description></item>
-            /// <item><description><c>removing</c>: Nodes are being removed.</description></item>
-            /// <item><description><c>draining</c>: Nodes are being drained.</description></item>
-            /// <item><description><c>scaling</c>: The cluster is being scaled.</description></item>
-            /// <item><description><c>inactive</c>: The cluster is inactive.</description></item>
-            /// <item><description><c>unavailable</c>: The cluster is unavailable.</description></item>
-            /// <item><description><c>deleting</c>: The cluster is being deleted.</description></item>
-            /// <item><description><c>deleted</c>: The cluster has been deleted.</description></item>
-            /// <item><description><c>delete_failed</c>: The cluster failed to be deleted.</description></item>
-            /// <item><description><c>waiting</c>: The cluster is in the accessed state, waiting to be connected.</description></item>
-            /// <item><description><c>disconnected</c>: The cluster is disconnected.</description></item>
+            /// <item><description>initial: The cluster is being created.</description></item>
+            /// <item><description>failed: The cluster failed to be created.</description></item>
+            /// <item><description>running: The cluster is running.</description></item>
+            /// <item><description>updating: The cluster is being updated.</description></item>
+            /// <item><description>upgrading: The cluster is being upgraded.</description></item>
+            /// <item><description>removing: Nodes are being removed.</description></item>
+            /// <item><description>draining: Nodes are being drained.</description></item>
+            /// <item><description>scaling: The cluster is being scaled.</description></item>
+            /// <item><description>inactive: The cluster is inactive.</description></item>
+            /// <item><description>unavailable: The cluster is unavailable.</description></item>
+            /// <item><description>deleting: The cluster is being deleted.</description></item>
+            /// <item><description>deleted: The cluster is deleted.</description></item>
+            /// <item><description>delete_failed: The cluster failed to be deleted.</description></item>
+            /// <item><description>waiting: The cluster is waiting for the accessed state.</description></item>
+            /// <item><description>disconnected: The cluster is disconnected.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -383,7 +383,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>[This field is deprecated] Use container_cidr to obtain the pod CIDR block.</para>
+            /// <para><b>[Deprecated]</b> Use container_cidr to obtain the Pod network CIDR block.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -421,7 +421,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Updated { get; set; }
 
             /// <summary>
-            /// <para>The VPC ID of the cluster.</para>
+            /// <para>The ID of the virtual private cloud (VPC) where the cluster is deployed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-2vcg932hsxsxuqbgl****</para>
@@ -433,7 +433,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The vSwitch ID of the cluster.</para>
+            /// <para>The ID of the vSwitch used by the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-2vc41xuumx5z2rdma****,vsw-2vc41xuumx5z2rdma****</para>
@@ -453,7 +453,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The name of the worker RAM role that authorizes ECS instances to serve as cluster worker nodes.</para>
+            /// <para>The name of the worker RAM role, which authorizes ECS instances to serve as worker nodes in the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>KubernetesWorkerRole-ec87d15b-edca-4302-933f-c8a16bf0****</para>
@@ -466,7 +466,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The zone ID of the cluster.</para>
+            /// <para>The ID of the zone to which the cluster belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing-b</para>
@@ -484,7 +484,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("page_info")]
         [Validation(Required=false)]
         public DescribeClustersV1ResponseBodyPageInfo PageInfo { get; set; }
-        public class DescribeClustersV1ResponseBodyPageInfo : TeaModel {
+        public class DescribeClustersV1ResponseBodyPageInfo : Darabonba.Model {
             /// <summary>
             /// <para>The page number.</para>
             /// 
@@ -496,7 +496,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The page size.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -520,3 +520,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

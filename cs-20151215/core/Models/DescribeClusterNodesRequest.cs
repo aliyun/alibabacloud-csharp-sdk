@@ -1,16 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeClusterNodesRequest : TeaModel {
+    public class DescribeClusterNodesRequest : Darabonba.Model {
         /// <summary>
-        /// <para>The instance IDs of nodes. Separate multiple IDs with commas (,).</para>
+        /// <para>The list of node instance IDs. Separate multiple values with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;i-bp11xjhwkj8k966u****,i-bp1dmhc2bu5igkyq****&quot;</para>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string InstanceIds { get; set; }
 
         /// <summary>
+        /// <para>The list of node IP addresses used for filtering. Separate multiple values with commas (,).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>192.168.0.1</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string NodeIps { get; set; }
 
         /// <summary>
+        /// <para>The node labels used for filtering. Specify the labels as key=value pairs separated by commas (,). Multiple labels are evaluated with the AND operator. Only nodes that match all specified labels are returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>nodeLabels=app=nginx,env=prod</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string NodeLabels { get; set; }
 
         /// <summary>
+        /// <para>The list of node names used for filtering. Separate multiple values with commas (,).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou.192.168.0.1</para>
         /// </summary>
@@ -65,7 +72,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records that can be displayed on each page. Valid values: [1, 100].</para>
+        /// <para>The maximum number of records to return per page. Valid values: 1 to 100.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -76,13 +83,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The status of cluster nodes. Used to filter by node running status. Valid values:</para>
+        /// <para>The running states of the cluster nodes used for filtering. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>all</c>: does not filter by running status. All nodes are returned.</description></item>
-        /// <item><description><c>running</c>: running nodes.</description></item>
-        /// <item><description><c>removing</c>: nodes that are being removed.</description></item>
-        /// <item><description><c>initial</c>: nodes that are being initialized.</description></item>
-        /// <item><description><c>failed</c>: nodes that failed to be created.</description></item>
+        /// <item><description><c>all</c>: does not filter nodes by running state and queries nodes in all states.</description></item>
+        /// <item><description><c>running</c>: the cluster nodes that are running.</description></item>
+        /// <item><description><c>removing</c>: the cluster nodes that are being removed.</description></item>
+        /// <item><description><c>initial</c>: the cluster nodes that are being initialized.</description></item>
+        /// <item><description><c>failed</c>: the cluster nodes that failed to be created.</description></item>
         /// </list>
         /// <para>Default value: <c>all</c>.</para>
         /// 
@@ -96,3 +103,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class RunClusterCheckRequest : TeaModel {
+    public class RunClusterCheckRequest : Darabonba.Model {
         /// <summary>
         /// <para>The check options.</para>
         /// </summary>
@@ -18,7 +19,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// <para>The check target.</para>
-        /// <para>If the type parameter is set to NodePoolUpgrade, this parameter must be set to the node pool ID.</para>
+        /// <para>If the check type parameter <c>type</c> is set to <c>NodePoolUpgrade</c>, this parameter must be set to the node pool ID.</para>
         /// <para>If other check types are selected, this parameter does not need to be set.</para>
         /// 
         /// <b>Example:</b>
@@ -42,3 +43,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

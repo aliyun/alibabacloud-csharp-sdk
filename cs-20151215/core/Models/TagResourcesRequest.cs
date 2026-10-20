@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class TagResourcesRequest : TeaModel {
+    public class TagResourcesRequest : Darabonba.Model {
         /// <summary>
         /// <para>The region ID of the resource.</para>
         /// <para>This parameter is required.</para>
@@ -43,7 +44,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The tag key-value pairs of the resource. You can specify up to 20 tag key-value pairs. Note:</para>
         /// <list type="bullet">
-        /// <item><description>If you specify this parameter, the value cannot be an empty string and can contain up to 128 characters.</description></item>
+        /// <item><description>Once a value is specified, it cannot be an empty string. The value can be up to 128 characters in length.</description></item>
         /// <item><description>The value cannot start with <c>aliyun</c> or <c>acs:</c>.</description></item>
         /// <item><description>The value cannot contain <c>http://</c> or <c>https://</c>.</description></item>
         /// </list>
@@ -56,3 +57,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

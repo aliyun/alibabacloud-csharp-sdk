@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeSubaccountK8sClusterUserConfigResponseBody : TeaModel {
+    public class DescribeSubaccountK8sClusterUserConfigResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The KubeConfig of the cluster.</para>
         /// <para>This parameter is required.</para>
@@ -33,3 +34,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

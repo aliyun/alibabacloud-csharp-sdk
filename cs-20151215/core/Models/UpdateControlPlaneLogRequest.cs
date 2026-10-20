@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class UpdateControlPlaneLogRequest : TeaModel {
+    public class UpdateControlPlaneLogRequest : Darabonba.Model {
         /// <summary>
         /// <para>The Alibaba Cloud account ID.</para>
         /// 
@@ -44,7 +45,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string LogProject { get; set; }
 
         /// <summary>
-        /// <para>The retention period of logs in the SLS Logstore. Valid values: 1 to 3000. Unit: days.</para>
+        /// <para>The log retention period in the SLS Logstore. Valid values: 1 to 3000. Unit: days.</para>
         /// <para>Default value: 30 days.</para>
         /// 
         /// <b>Example:</b>
@@ -60,3 +61,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

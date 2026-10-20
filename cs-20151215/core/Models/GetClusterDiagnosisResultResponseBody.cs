@@ -1,19 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class GetClusterDiagnosisResultResponseBody : TeaModel {
+    public class GetClusterDiagnosisResultResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The diagnosis result code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: diagnosis completed.</description></item>
-        /// <item><description>1: diagnosis failed.</description></item>
+        /// <item><description>0: Diagnosis completed.</description></item>
+        /// <item><description>1: Diagnosis failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,7 +55,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Finished { get; set; }
 
         /// <summary>
-        /// <para>The diagnosis status message.</para>
+        /// <para>The diagnosis status information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -76,9 +77,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The diagnosis status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: diagnosis created.</description></item>
-        /// <item><description>1: diagnosis running.</description></item>
-        /// <item><description>2: diagnosis completed.</description></item>
+        /// <item><description>0: Diagnosis created.</description></item>
+        /// <item><description>1: Diagnosis running.</description></item>
+        /// <item><description>2: Diagnosis completed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -111,3 +112,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

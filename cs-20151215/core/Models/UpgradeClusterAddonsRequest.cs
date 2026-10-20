@@ -1,21 +1,22 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class UpgradeClusterAddonsRequest : TeaModel {
+    public class UpgradeClusterAddonsRequest : Darabonba.Model {
         /// <summary>
         /// <para>The request parameters.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public List<UpgradeClusterAddonsRequestBody> Body { get; set; }
-        public class UpgradeClusterAddonsRequestBody : TeaModel {
+        public class UpgradeClusterAddonsRequestBody : Darabonba.Model {
             /// <summary>
             /// <para>The component name.</para>
             /// <para>This parameter is required.</para>
@@ -28,7 +29,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ComponentName { get; set; }
 
             /// <summary>
-            /// <para>The custom parameters of the component, encoded as a JSON string.</para>
+            /// <para>The custom component parameters, encoded as a JSON string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;CpuRequest&quot;:&quot;800m&quot;}</para>
@@ -38,7 +39,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Config { get; set; }
 
             /// <summary>
-            /// <para>The target version to which you want to upgrade. You can call the <c>DescribeAddon</c> operation to query the versions to which the component can be upgraded.</para>
+            /// <para>The target version to upgrade to. You can call the <c>DescribeAddon</c> operation to query the upgradable versions of a component.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -51,8 +52,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The component upgrade policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>overwrite: overwrites the existing version.</description></item>
-            /// <item><description>canary: performs a canary upgrade.</description></item>
+            /// <item><description>overwrite: overwrite upgrade.</description></item>
+            /// <item><description>canary: canary upgrade.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -77,3 +78,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

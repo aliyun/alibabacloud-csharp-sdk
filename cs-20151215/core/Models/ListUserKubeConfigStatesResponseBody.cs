@@ -1,21 +1,22 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ListUserKubeConfigStatesResponseBody : TeaModel {
+    public class ListUserKubeConfigStatesResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("page")]
         [Validation(Required=false)]
         public ListUserKubeConfigStatesResponseBodyPage Page { get; set; }
-        public class ListUserKubeConfigStatesResponseBodyPage : TeaModel {
+        public class ListUserKubeConfigStatesResponseBodyPage : Darabonba.Model {
             /// <summary>
             /// <para>The current page number.</para>
             /// 
@@ -27,7 +28,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of records returned per page.</para>
+            /// <para>The number of records per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -54,7 +55,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("states")]
         [Validation(Required=false)]
         public List<ListUserKubeConfigStatesResponseBodyStates> States { get; set; }
-        public class ListUserKubeConfigStatesResponseBodyStates : TeaModel {
+        public class ListUserKubeConfigStatesResponseBodyStates : Darabonba.Model {
             /// <summary>
             /// <para>The expiration time of the KubeConfig certificate. Format: UTC time in RFC 3339 format.</para>
             /// 
@@ -76,7 +77,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// </description></item>
             /// <item><description><para>Unknown: The status is unknown.</para>
             /// </description></item>
-            /// <item><description><para>Removed: The certificate has been revoked. An issuance record exists for the certificate.</para>
+            /// <item><description><para>Removed: The certificate has been removed (an issuance record exists for the certificate).</para>
             /// </description></item>
             /// </list>
             /// 
@@ -108,7 +109,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// <para>The cluster status. Valid values:</para>
+            /// <para>The running status of the cluster. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><c>initial</c>: The cluster is being created.</description></item>
             /// <item><description><c>failed</c>: The cluster failed to be created.</description></item>
@@ -134,3 +135,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

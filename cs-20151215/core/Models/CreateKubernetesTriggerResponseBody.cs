@@ -1,16 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class CreateKubernetesTriggerResponseBody : TeaModel {
+    public class CreateKubernetesTriggerResponseBody : Darabonba.Model {
         /// <summary>
-        /// <para>The trigger action. For example, <c>redeploy</c>: redeploy.</para>
+        /// <para>The action of the trigger. Example: <c>redeploy</c>: Redeployment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>redeploy</para>
@@ -40,7 +41,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The trigger project name.</para>
+        /// <para>The project name of the trigger.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default/test-app</para>
@@ -50,13 +51,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The trigger type.</para>
-        /// <para>Valid values:</para>
+        /// <para>The type of the trigger. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>deployment</c>: a trigger for stateless applications. </para>
-        /// </description></item>
-        /// <item><description><para><c>application</c>: a trigger for Application Center applications.</para>
-        /// </description></item>
+        /// <item><description><c>deployment</c>: The trigger for stateless applications. </description></item>
+        /// <item><description><c>application</c>: The trigger for Hybrid Cloud Application Center applications.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -69,3 +67,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

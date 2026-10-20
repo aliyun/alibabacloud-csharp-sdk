@@ -1,19 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ModifyPolicyInstanceRequest : TeaModel {
+    public class ModifyPolicyInstanceRequest : Darabonba.Model {
         /// <summary>
         /// <para>The governance action of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>deny</c>: Blocks non-compliant deployments.</description></item>
-        /// <item><description><c>warn</c>: Generates an alert.</description></item>
+        /// <item><description><c>deny</c>: blocks non-compliant deployments.</description></item>
+        /// <item><description><c>warn</c>: generates alerts.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +25,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Action { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the policy rule.</para>
+        /// <para>The instance ID of the policy rule instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>allowed-repos-cbhhb</para>
@@ -34,14 +35,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The namespaces to which the policy applies. If this parameter is empty, the policy applies to all namespaces.</para>
+        /// <para>The namespaces to which the policy applies. An empty value indicates all namespaces.</para>
         /// </summary>
         [NameInMap("namespaces")]
         [Validation(Required=false)]
         public List<string> Namespaces { get; set; }
 
         /// <summary>
-        /// <para>The configuration parameters of the current rule instance. For more information about parameter settings rules, see <a href="https://help.aliyun.com/document_detail/359819.html">Container security policy rules</a>.</para>
+        /// <para>The configuration parameters of the current rule instance. For more information about parameter settings rules, see <a href="https://help.aliyun.com/document_detail/359819.html">Container Security Policy Rule Library</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;restrictedNamespaces&quot;: [ &quot;test&quot; ]</para>
@@ -53,3 +54,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

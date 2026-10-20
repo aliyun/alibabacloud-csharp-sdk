@@ -1,23 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ListNodePoolComponentInstancesResponseBody : TeaModel {
+    public class ListNodePoolComponentInstancesResponseBody : Darabonba.Model {
+        /// <summary>
+        /// <para>The list of node component instances.</para>
+        /// </summary>
         [NameInMap("component_instances")]
         [Validation(Required=false)]
         public List<ListNodePoolComponentInstancesResponseBodyComponentInstances> ComponentInstances { get; set; }
-        public class ListNodePoolComponentInstancesResponseBodyComponentInstances : TeaModel {
+        public class ListNodePoolComponentInstancesResponseBodyComponentInstances : Darabonba.Model {
+            /// <summary>
+            /// <para>The configuration of the component.</para>
+            /// </summary>
             [NameInMap("config")]
             [Validation(Required=false)]
             public ListNodePoolComponentInstancesResponseBodyComponentInstancesConfig Config { get; set; }
-            public class ListNodePoolComponentInstancesResponseBodyComponentInstancesConfig : TeaModel {
+            public class ListNodePoolComponentInstancesResponseBodyComponentInstancesConfig : Darabonba.Model {
                 /// <summary>
+                /// <para>The custom configuration of the component.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;cpuManagerPolicy&quot;:&quot;static&quot;}</para>
                 /// </summary>
@@ -25,11 +34,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [Validation(Required=false)]
                 public Dictionary<string, object> CustomConfig { get; set; }
 
+                /// <summary>
+                /// <para>The environment variables of the node component.</para>
+                /// </summary>
                 [NameInMap("envs")]
                 [Validation(Required=false)]
                 public List<ListNodePoolComponentInstancesResponseBodyComponentInstancesConfigEnvs> Envs { get; set; }
-                public class ListNodePoolComponentInstancesResponseBodyComponentInstancesConfigEnvs : TeaModel {
+                public class ListNodePoolComponentInstancesResponseBodyComponentInstancesConfigEnvs : Darabonba.Model {
                     /// <summary>
+                    /// <para>The name of the environment variable.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>LOG_LEVEL</para>
                     /// </summary>
@@ -38,6 +52,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                     public string Name { get; set; }
 
                     /// <summary>
+                    /// <para>The value of the environment variable.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>info</para>
                     /// </summary>
@@ -50,6 +66,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
+            /// <para>The version number of the component configuration.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -58,6 +76,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ConfigRevision { get; set; }
 
             /// <summary>
+            /// <para>The name of the component.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>kubelet</para>
             /// </summary>
@@ -66,6 +86,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The state of the component.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>active</para>
             /// </summary>
@@ -74,6 +96,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string State { get; set; }
 
             /// <summary>
+            /// <para>The version of the component.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1.33.3-aliyun.1</para>
             /// </summary>
@@ -84,6 +108,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
+        /// <para>The maximum number of results to return. Default value: 200.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -92,6 +118,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The pagination token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5c0a1c0f91c14c6****</para>
         /// </summary>
@@ -102,3 +130,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

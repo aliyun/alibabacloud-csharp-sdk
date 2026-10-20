@@ -1,16 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class UpdateKMSEncryptionRequest : TeaModel {
+    public class UpdateKMSEncryptionRequest : Darabonba.Model {
         /// <summary>
-        /// <para>Specifies whether to disable the Secret encryption at rest feature.</para>
+        /// <para>Specifies whether to disable the encryption at rest feature for Secrets.</para>
         /// <list type="bullet">
         /// <item><description><c>true</c>: Disables the encryption at rest feature.</description></item>
         /// <item><description><c>false</c>: Enables the encryption at rest feature.</description></item>
@@ -24,12 +25,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? DisableEncryption { get; set; }
 
         /// <summary>
-        /// <para>The key ID of the KMS key used by the Secret encryption at rest feature.</para>
+        /// <para>The KMS key ID used for the encryption at rest feature for Secrets.</para>
         /// <remarks>
-        /// <para>Notice: You cannot use a service key. Use only a master key or a customer master key (CMK). The key type must be <c>Aliyun_AES_256</c>, and the key usage must be <c>ENCRYPT/DECRYPT</c>.</para>
+        /// <para>Notice: You cannot use a service key. You must use a master key or a customer master key (CMK). The key type must be <c>Aliyun_AES_256</c>, and the key usage must be <c>ENCRYPT/DECRYPT</c>.</para>
         /// </remarks>
         /// <remarks>
-        /// <para>Warning: During the procedure of enabling or shutdown of encryption at rest and after the feature is enabled, do not disable or delete the KMS key in the KMS console or through OpenAPI. Otherwise, the cluster API Server becomes not active, which prevents normal retrieval of objects such as Secrets and ServiceAccounts and affects the normal operation of business applications.</para>
+        /// <para>Warning: Do not use the KMS console or OpenAPI to disable or delete this KMS key during the enable or shutdown procedure for encryption at rest, or after the feature is successfully enabled. Otherwise, the cluster API server becomes inactive, which prevents you from retrieving objects such as Secrets and ServiceAccounts and affects the normal operation of your applications.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -42,3 +43,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeEventsForRegionRequest : TeaModel {
+    public class DescribeEventsForRegionRequest : Darabonba.Model {
         /// <summary>
         /// <para>The cluster ID.</para>
         /// 
@@ -19,10 +20,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// <para>The maximum number of results to return for a single request.</para>
+        /// </summary>
         [NameInMap("max_results")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        /// <summary>
+        /// <para>The query token. The value is the next_token parameter value returned by the previous API call.</para>
+        /// </summary>
         [NameInMap("next_token")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
@@ -38,8 +45,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results to return on each page.</para>
-        /// <para>Valid values: [1,100].</para>
+        /// <para>The maximum number of results to return per page.</para>
+        /// <para>Valid values: 1 to 100.</para>
         /// <para>Default value: 50.</para>
         /// 
         /// <b>Example:</b>
@@ -52,3 +59,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class CheckControlPlaneLogEnableResponseBody : TeaModel {
+    public class CheckControlPlaneLogEnableResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The Alibaba Cloud account ID.</para>
         /// 
@@ -28,7 +29,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<string> Components { get; set; }
 
         /// <summary>
-        /// <para>The name of the Simple Log Service (SLS) project that stores the control plane component logs.</para>
+        /// <para>The name of the SLS project that stores the control plane component logs.</para>
         /// <para>Default value: k8s-log-$Cluster ID.</para>
         /// 
         /// <b>Example:</b>
@@ -51,3 +52,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

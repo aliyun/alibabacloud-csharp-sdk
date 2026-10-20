@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeTaskInfoResponseBody : TeaModel {
+    public class DescribeTaskInfoResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The cluster ID.</para>
         /// 
@@ -40,12 +41,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string CurrentStage { get; set; }
 
         /// <summary>
-        /// <para>The node fault error message.</para>
+        /// <para>The task fault information.</para>
         /// </summary>
         [NameInMap("error")]
         [Validation(Required=false)]
         public DescribeTaskInfoResponseBodyError Error { get; set; }
-        public class DescribeTaskInfoResponseBodyError : TeaModel {
+        public class DescribeTaskInfoResponseBodyError : Darabonba.Model {
             /// <summary>
             /// <para>The error code.</para>
             /// 
@@ -74,9 +75,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("events")]
         [Validation(Required=false)]
         public List<DescribeTaskInfoResponseBodyEvents> Events { get; set; }
-        public class DescribeTaskInfoResponseBodyEvents : TeaModel {
+        public class DescribeTaskInfoResponseBodyEvents : Darabonba.Model {
             /// <summary>
-            /// <para>The event action.</para>
+            /// <para>The action of the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>start</para>
@@ -86,7 +87,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Action { get; set; }
 
             /// <summary>
-            /// <para>The event level.</para>
+            /// <para>The level of the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Normal</para>
@@ -96,7 +97,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Level { get; set; }
 
             /// <summary>
-            /// <para>The event message.</para>
+            /// <para>The message of the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>start to xxx</para>
@@ -106,7 +107,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The event reason.</para>
+            /// <para>The reason for the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NodePoolUpgradeStart</para>
@@ -116,7 +117,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Reason { get; set; }
 
             /// <summary>
-            /// <para>The event source.</para>
+            /// <para>The source of the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ACK</para>
@@ -126,7 +127,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The time when the event was generated.</para>
+            /// <para>The time when the event was generated. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1669706229286</para>
@@ -137,6 +138,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         }
 
+        /// <summary>
+        /// <para>The output of the task.</para>
+        /// </summary>
         [NameInMap("outputs")]
         [Validation(Required=false)]
         public Dictionary<string, object> Outputs { get; set; }
@@ -154,9 +158,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("stages")]
         [Validation(Required=false)]
         public List<DescribeTaskInfoResponseBodyStages> Stages { get; set; }
-        public class DescribeTaskInfoResponseBodyStages : TeaModel {
+        public class DescribeTaskInfoResponseBodyStages : Darabonba.Model {
             /// <summary>
-            /// <para>The end time of the task stage.</para>
+            /// <para>The end time of the task stage. The format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-12-15 23:00:00</para>
@@ -166,7 +170,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The message of the task stage.</para>
+            /// <para>The information about the task stage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success to xxxxx</para>
@@ -183,7 +187,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public Dictionary<string, object> Outputs { get; set; }
 
             /// <summary>
-            /// <para>The start time of the task stage.</para>
+            /// <para>The start time of the task stage. The format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-12-15 23:00:00</para>
@@ -209,7 +213,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <list type="bullet">
         /// <item><description><c>running</c>: The task is running.</description></item>
         /// <item><description><c>fail</c>: The task failed.</description></item>
-        /// <item><description><c>success</c>: The task succeeded.</description></item>
+        /// <item><description><c>success</c>: The task is completed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -220,14 +224,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string State { get; set; }
 
         /// <summary>
-        /// <para>The target object of the task.</para>
+        /// <para>The task execution target.</para>
         /// </summary>
         [NameInMap("target")]
         [Validation(Required=false)]
         public DescribeTaskInfoResponseBodyTarget Target { get; set; }
-        public class DescribeTaskInfoResponseBodyTarget : TeaModel {
+        public class DescribeTaskInfoResponseBodyTarget : Darabonba.Model {
             /// <summary>
-            /// <para>The ID of the target object.</para>
+            /// <para>The ID of the task execution target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c78592bfe92244365b3c3ad47f1de****</para>
@@ -237,7 +241,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The object type of the node on which the task is executed.</para>
+            /// <para>The type of the task execution target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cluster</para>
@@ -259,14 +263,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The task execution details.</para>
+        /// <para>The execution details of the task.</para>
         /// </summary>
         [NameInMap("task_result")]
         [Validation(Required=false)]
         public List<DescribeTaskInfoResponseBodyTaskResult> TaskResult { get; set; }
-        public class DescribeTaskInfoResponseBodyTaskResult : TeaModel {
+        public class DescribeTaskInfoResponseBodyTaskResult : Darabonba.Model {
             /// <summary>
-            /// <para>The resource on which the task operates. For example, if the resource involved in a scale-out task is an instance, this parameter returns the instance ID.</para>
+            /// <para>The resource operated by the task. For example, if the operated resource during a scale-out is an instance, this value is the instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-xxx</para>
@@ -276,7 +280,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Data { get; set; }
 
             /// <summary>
-            /// <para>The status of the resource scale-out. Valid values:</para>
+            /// <para>The scale-out status of the resource. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><c>success</c>: The scale-out succeeded.</description></item>
             /// <item><description><c>failed</c>: The scale-out failed.</description></item>
@@ -315,3 +319,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

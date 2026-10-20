@@ -1,16 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class OpenAckServiceResponseBody : TeaModel {
+    public class OpenAckServiceResponseBody : Darabonba.Model {
         /// <summary>
-        /// <para>The order ID of the service activation.</para>
+        /// <para>The order ID for activating the service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2067*******0374</para>
@@ -32,3 +33,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

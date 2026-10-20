@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class Addon : TeaModel {
+    public class Addon : Darabonba.Model {
         /// <summary>
         /// <para>The configuration of the component.</para>
         /// 
@@ -20,10 +21,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to disable automatic installation. When you create a cluster, some additional log components are automatically installed in addition to the required components. You can disable the automatic installations of a component and install the component later by calling the component API or in the corresponding console. Valid values:</para>
+        /// <para>Specifies whether to disable default installation. When a cluster is created, required components and additional components such as log components are installed by default. You can disable this default behavior and install these components later by calling the component installation API or by using the console. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: disables the automatic installation of a component.</description></item>
-        /// <item><description><c>false</c>: allows the automatic installation of a component.</description></item>
+        /// <item><description><c>true</c>: Disables default installation.</description></item>
+        /// <item><description><c>false</c>: Allows default installation.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +35,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? Disabled { get; set; }
 
         /// <summary>
-        /// <para>The component name.</para>
+        /// <para>The name of the component.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nginx-ingress-controller</para>
@@ -56,3 +57,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

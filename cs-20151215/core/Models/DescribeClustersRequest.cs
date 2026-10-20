@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeClustersRequest : TeaModel {
+    public class DescribeClustersRequest : Darabonba.Model {
         /// <summary>
         /// <para>The cluster type.</para>
         /// 
@@ -20,7 +21,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// <para>Perform a fuzzy match query based on the cluster name.</para>
+        /// <para>Specifies the cluster name for fuzzy matching.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -36,3 +37,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

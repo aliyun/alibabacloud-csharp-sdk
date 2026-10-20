@@ -1,16 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class UpdateContactGroupForAlertResponseBody : TeaModel {
+    public class UpdateContactGroupForAlertResponseBody : Darabonba.Model {
         /// <summary>
-        /// <para>The message returned when the operation failed.</para>
+        /// <para>The message returned when the operation fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>contact group illegal.</para>
@@ -36,3 +37,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

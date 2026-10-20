@@ -1,23 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeClusterNodesResponseBody : TeaModel {
+    public class DescribeClusterNodesResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The list of node details.</para>
         /// </summary>
         [NameInMap("nodes")]
         [Validation(Required=false)]
         public List<DescribeClusterNodesResponseBodyNodes> Nodes { get; set; }
-        public class DescribeClusterNodesResponseBodyNodes : TeaModel {
+        public class DescribeClusterNodesResponseBodyNodes : Darabonba.Model {
             /// <summary>
-            /// <para>The time when the node was created.</para>
+            /// <para>The time when the node was created. The time follows the ISO 8601 standard and includes the time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-04-16T07:28:00Z</para>
@@ -27,7 +28,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The error message generated when the node was created.</para>
+            /// <para>The error message returned when the node was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>error***</para>
@@ -37,7 +38,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The time when the node expires.</para>
+            /// <para>The time when the node expires. The time follows the ISO 8601 standard and includes the time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2099-12-31T15:59:00Z</para>
@@ -101,10 +102,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The role type of the node. Valid values:</para>
+            /// <para>The role of the node. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Master: a master node of the cluster.</description></item>
-            /// <item><description>Worker: a worker node of the cluster.</description></item>
+            /// <item><description>Master: the master node of the cluster.</description></item>
+            /// <item><description>Worker: the worker node of the cluster.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -115,13 +116,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string InstanceRole { get; set; }
 
             /// <summary>
-            /// <para>The ECS status of the node. Valid values:</para>
+            /// <para>The ECS instance status of the node. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>Pending</c>: being created.</description></item>
-            /// <item><description><c>Running</c>: running.</description></item>
-            /// <item><description><c>Starting</c>: being started.</description></item>
-            /// <item><description><c>Stopping</c>: being stopped.</description></item>
-            /// <item><description><c>Stopped</c>: stopped.</description></item>
+            /// <item><description><c>Pending</c>: the instance is being created.</description></item>
+            /// <item><description><c>Running</c>: the instance is running.</description></item>
+            /// <item><description><c>Starting</c>: the instance is starting.</description></item>
+            /// <item><description><c>Stopping</c>: the instance is stopping.</description></item>
+            /// <item><description><c>Stopped</c>: the instance is stopped.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -159,12 +160,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public List<string> IpAddress { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the node is an Alibaba Cloud instance. Valid values:</para>
+            /// <para>Specifies whether the node is an Alibaba Cloud instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>true</c>: The node is an Alibaba Cloud instance.</para>
-            /// </description></item>
-            /// <item><description><para><c>false</c>: The node is not an Alibaba Cloud instance.</para>
-            /// </description></item>
+            /// <item><description><c>true</c>: the node is an Alibaba Cloud instance.</description></item>
+            /// <item><description><c>false</c>: the node is not an Alibaba Cloud instance.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -175,7 +174,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? IsAliyunNode { get; set; }
 
             /// <summary>
-            /// <para>The node name, which is the identifier of the node in the cluster.</para>
+            /// <para>The name of the node, which is the node identifier in the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-chengdu.192.168xx.xx</para>
@@ -185,16 +184,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string NodeName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the node is ready. Valid values:</para>
+            /// <para>Specifies whether the node is ready. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>Ready</c>: The node is ready.</para>
-            /// </description></item>
-            /// <item><description><para><c>NotReady</c>: The node is not ready.</para>
-            /// </description></item>
-            /// <item><description><para><c>Unknown</c>: The node status is unknown.</para>
-            /// </description></item>
-            /// <item><description><para><c>Offline</c>: The node is offline.</para>
-            /// </description></item>
+            /// <item><description><c>Ready</c>: the node is ready.</description></item>
+            /// <item><description><c>NotReady</c>: the node is not ready.</description></item>
+            /// <item><description><c>Unknown</c>: the status is unknown.</description></item>
+            /// <item><description><c>Offline</c>: the node is offline.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -215,7 +210,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string NodepoolId { get; set; }
 
             /// <summary>
-            /// <para>The method used to initialize the node, such as manual creation or Resource Orchestration Service (ROS) creation.</para>
+            /// <para>The method used to initialize the node, such as manual creation or creation by Resource Orchestration Service (ROS).</para>
             /// 
             /// <b>Example:</b>
             /// <para>ess</para>
@@ -225,11 +220,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The spot instance type. Valid values:</para>
+            /// <para>The type of the spot instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>NoSpot: a non-spot instance.</description></item>
-            /// <item><description>SpotWithPriceLimit: a spot instance with a price limit.</description></item>
-            /// <item><description>SpotAsPriceGo: a spot instance priced at the market price at the time of purchase.</description></item>
+            /// <item><description>NoSpot: the instance is not a spot instance.</description></item>
+            /// <item><description>SpotWithPriceLimit: the instance is a spot instance with a maximum price limit.</description></item>
+            /// <item><description>SpotAsPriceGo: the instance is a spot instance whose price is automatically set based on the current market price.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -240,18 +235,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string SpotStrategy { get; set; }
 
             /// <summary>
-            /// <para>The running status of the node. Valid values:</para>
+            /// <para>The running state of the node. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>pending</c>: being created.</para>
-            /// </description></item>
-            /// <item><description><para><c>running</c>: running.</para>
-            /// </description></item>
-            /// <item><description><para><c>starting</c>: being started.</para>
-            /// </description></item>
-            /// <item><description><para><c>stopping</c>: being stopped.</para>
-            /// </description></item>
-            /// <item><description><para><c>stopped</c>: stopped.</para>
-            /// </description></item>
+            /// <item><description><c>pending</c>: the node is being created.</description></item>
+            /// <item><description><c>running</c>: the node is running.</description></item>
+            /// <item><description><c>starting</c>: the node is starting.</description></item>
+            /// <item><description><c>stopping</c>: the node is stopping.</description></item>
+            /// <item><description><c>stopped</c>: the node is stopped.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -269,7 +259,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("page")]
         [Validation(Required=false)]
         public DescribeClusterNodesResponseBodyPage Page { get; set; }
-        public class DescribeClusterNodesResponseBodyPage : TeaModel {
+        public class DescribeClusterNodesResponseBodyPage : Darabonba.Model {
             /// <summary>
             /// <para>The current page number.</para>
             /// 
@@ -281,7 +271,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of records that can be displayed on each page.</para>
+            /// <para>The maximum number of records to return per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -305,3 +295,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

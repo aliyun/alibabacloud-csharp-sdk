@@ -1,17 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ListAddonsRequest : TeaModel {
+    public class ListAddonsRequest : Darabonba.Model {
         /// <summary>
         /// <para>The cluster ID.
-        /// If you specify a cluster ID, the system queries the list of available components for the specified cluster, and all other parameters are ignored.</para>
+        /// If you specify a cluster ID, the available add-on components for the cluster are returned, and all other parameters are ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c02b3e03be10643e8a644a843ffcb****</para>
@@ -69,7 +70,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Profile { get; set; }
 
         /// <summary>
-        /// <para>The region.
+        /// <para>The region ID.
         /// If cluster_id is specified, this parameter is ignored.
         /// The region_id, cluster_type, profile, cluster_spec, and cluster_version parameters must be specified together.</para>
         /// 
@@ -83,3 +84,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

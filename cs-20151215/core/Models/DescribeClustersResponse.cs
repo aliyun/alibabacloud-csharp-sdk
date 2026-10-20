@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeClustersResponse : TeaModel {
+    public class DescribeClustersResponse : Darabonba.Model {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -20,7 +21,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("body")]
         [Validation(Required=false)]
         public List<DescribeClustersResponseBody> Body { get; set; }
-        public class DescribeClustersResponseBody : TeaModel {
+        public class DescribeClustersResponseBody : Darabonba.Model {
             [NameInMap("cluster_id")]
             [Validation(Required=false)]
             public string ClusterId { get; set; }
@@ -112,7 +113,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<DescribeClustersResponseBodyTags> Tags { get; set; }
-            public class DescribeClustersResponseBodyTags : TeaModel {
+            public class DescribeClustersResponseBodyTags : Darabonba.Model {
                 [NameInMap("key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
@@ -152,3 +153,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

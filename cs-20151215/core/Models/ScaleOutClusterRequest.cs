@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ScaleOutClusterRequest : TeaModel {
+    public class ScaleOutClusterRequest : Darabonba.Model {
         /// <summary>
         /// <b>Example:</b>
         /// <para>true</para>
@@ -113,7 +114,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("worker_data_disks")]
         [Validation(Required=false)]
         public List<ScaleOutClusterRequestWorkerDataDisks> WorkerDataDisks { get; set; }
-        public class ScaleOutClusterRequestWorkerDataDisks : TeaModel {
+        public class ScaleOutClusterRequestWorkerDataDisks : Darabonba.Model {
             /// <summary>
             /// <b>Example:</b>
             /// <para>sp-2zej1nogjvovnz4z****</para>
@@ -202,3 +203,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class GetClusterCheckResponseBody : TeaModel {
+    public class GetClusterCheckResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The check ID.</para>
         /// 
@@ -27,7 +28,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public Dictionary<string, List<Dictionary<string, object>>> CheckItems { get; set; }
 
         /// <summary>
-        /// <para>The creation time.</para>
+        /// <para>The creation time in ISO 8601 format with time zone information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-10-16T08:31:20.292030178Z</para>
@@ -79,3 +80,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

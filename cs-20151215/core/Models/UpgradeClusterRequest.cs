@@ -1,18 +1,19 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class UpgradeClusterRequest : TeaModel {
+    public class UpgradeClusterRequest : Darabonba.Model {
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[This parameter is deprecated] No value is required.</para>
+        /// <para><b>[Deprecated]</b> You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -23,10 +24,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ComponentName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to upgrade only the control plane. Valid values:</para>
+        /// <para>Specifies whether to upgrade only the control plane.</para>
         /// <list type="bullet">
-        /// <item><description>true: upgrades only the control plane.</description></item>
-        /// <item><description>false: upgrades both the control plane and worker nodes.</description></item>
+        /// <item><description>true: Upgrades only the control plane.</description></item>
+        /// <item><description>false: Upgrades both the control plane and worker nodes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,7 +38,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? MasterOnly { get; set; }
 
         /// <summary>
-        /// <para>The target version to which the cluster is upgraded.</para>
+        /// <para>The target version for the cluster upgrade.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.32.1-aliyun.1</para>
@@ -55,7 +56,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         [Obsolete]
         public UpgradeClusterRequestRollingPolicy RollingPolicy { get; set; }
-        public class UpgradeClusterRequestRollingPolicy : TeaModel {
+        public class UpgradeClusterRequestRollingPolicy : Darabonba.Model {
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
@@ -75,7 +76,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[This parameter is deprecated] Use the <c>next_version</c> parameter instead.</para>
+        /// <para><b>[Deprecated]</b> Use the <c>next_version</c> parameter instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -88,3 +89,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

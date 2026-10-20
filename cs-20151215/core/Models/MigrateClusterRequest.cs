@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class MigrateClusterRequest : TeaModel {
+    public class MigrateClusterRequest : Darabonba.Model {
         /// <summary>
         /// <para>The bucket endpoint.</para>
         /// 
@@ -32,3 +33,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

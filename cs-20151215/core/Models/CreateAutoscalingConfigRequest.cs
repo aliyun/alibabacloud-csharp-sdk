@@ -1,16 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class CreateAutoscalingConfigRequest : TeaModel {
+    public class CreateAutoscalingConfigRequest : Darabonba.Model {
         /// <summary>
-        /// <para>The scale-down trigger delay. The time interval between detecting a scale-down need (reaching the scale-down threshold) and actually performing the scale-down operation (reducing the number of Pods).</para>
+        /// <para>The scale-in trigger delay, which is the time interval between when a scale-in need is detected (the scale-in threshold is reached) and when the scale-in operation (reducing the number of Pods) is actually performed.</para>
         /// <para>Valid values: [1,60]. Unit: minutes.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -22,10 +23,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string CoolDownDuration { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether cluster-autoscaler evicts DaemonSet Pods on nodes during scale-down. Valid values:</para>
+        /// <para>Specifies whether cluster-autoscaler evicts DaemonSet Pods on a node during scale-in. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: DaemonSet Pods are evicted.</description></item>
-        /// <item><description><c>false</c>: DaemonSet Pods are not evicted.</description></item>
+        /// <item><description><c>true</c>: Eviction is performed.</description></item>
+        /// <item><description><c>false</c>: Eviction is not performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,8 +40,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>The node pool scale-out order policy. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>least-waste</c>: The default policy. If multiple node pools are available for scale-out, the node pool with the least resource waste is selected.</description></item>
-        /// <item><description><c>random</c>: The random policy. If multiple node pools are available for scale-out, a random node pool is selected.</description></item>
-        /// <item><description><c>priority</c>: The priority policy. If multiple node pools are available for scale-out, the node pool with the highest priority is selected based on the custom scaling group order you defined. Node pool priorities are defined by the <c>priorities</c> parameter.</description></item>
+        /// <item><description><c>random</c>: The random policy. If multiple node pools are available for scale-out, a node pool is randomly selected.</description></item>
+        /// <item><description><c>priority</c>: The priority policy. If multiple node pools are available for scale-out, the node pool with the highest priority based on your custom scaling group order is selected. Node pool priorities are defined by the <c>priorities</c> parameter.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -51,8 +52,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Expander { get; set; }
 
         /// <summary>
-        /// <para>The GPU scale-down threshold. The ratio of requested resources to total resources on a node.</para>
-        /// <para>A GPU node can be scaled down only when this ratio falls below the configured threshold, meaning the CPU, memory, and GPU utilization of the node are all below the GPU scale-down threshold.</para>
+        /// <para>The GPU scale-in threshold, which is the ratio of requested resources to total resources on a node.</para>
+        /// <para>A GPU node can be scaled in only when this ratio falls below the configured threshold, meaning the CPU, memory, and GPU resource utilization of the node are all below the GPU scale-in threshold.</para>
         /// <para>Valid values: [0.1~1].</para>
         /// <para>Default value: 0.3, which indicates 30%.</para>
         /// 
@@ -64,7 +65,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string GpuUtilizationThreshold { get; set; }
 
         /// <summary>
-        /// <para>The timeout period that cluster-autoscaler waits for Pod termination during node draining in scale-down scenarios.</para>
+        /// <para>The timeout period for cluster-autoscaler to wait for Pod termination during node draining in a scale-in scenario.</para>
         /// <para>Unit: seconds.</para>
         /// <para>Default value: 14400.</para>
         /// 
@@ -76,7 +77,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public int? MaxGracefulTerminationSec { get; set; }
 
         /// <summary>
-        /// <para>The minimum number of Pods allowed in each ReplicaSet before a node can be scaled down.</para>
+        /// <para>The minimum number of Pods allowed in each ReplicaSet before a node can be scaled in.</para>
         /// <para>Default value: 0.</para>
         /// 
         /// <b>Example:</b>
@@ -87,7 +88,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public int? MinReplicaCount { get; set; }
 
         /// <summary>
-        /// <para>The priority configuration for automatic scaling. After you create a node pool with auto scaling enabled, you can choose whether to configure a priority policy and priority settings by using <a href="https://help.aliyun.com/document_detail/119099.html">Enable node auto scaling</a> to assign priorities to the scaling groups of specified auto scaling node pools.</para>
+        /// <para>The priority configuration for auto scaling. After you create a node pool with elastic scaling enabled, you can configure priority policies and priority settings for the scaling groups of specified auto scaling node pools by using <a href="https://help.aliyun.com/document_detail/119099.html">Enable node auto scaling</a>.</para>
         /// <para>Valid values: [1, 100]. The value must be a positive integer. A larger value indicates a higher priority.</para>
         /// </summary>
         [NameInMap("priorities")]
@@ -95,10 +96,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public Dictionary<string, List<string>> Priorities { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to delete the corresponding Kubernetes Node object after a node is successfully scaled down in swift mode. For more information about swift mode, see <a href="https://help.aliyun.com/document_detail/119099.html">Scaling modes</a>. Default value: false. Valid values:</para>
+        /// <para>Specifies whether to delete the corresponding Kubernetes Node object after a node in rapid mode is successfully scaled in. For more information about rapid mode, see <a href="https://help.aliyun.com/document_detail/119099.html">Scaling modes</a>. Default value: false. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The Kubernetes Node object is deleted after the node is stopped in swift mode. Setting this parameter to true is not recommended because it may cause Kubernetes object data inconsistency.</description></item>
-        /// <item><description><c>false</c>: The Kubernetes Node object is retained after the node is stopped in swift mode.</description></item>
+        /// <item><description><c>true</c>: The Kubernetes Node object is deleted after the node in rapid mode is stopped. Setting this parameter to true is not recommended because it may cause data inconsistency in Kubernetes objects.</description></item>
+        /// <item><description><c>false</c>: The Kubernetes Node object is retained after the node in rapid mode is stopped.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -109,10 +110,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? RecycleNodeDeletionEnabled { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to allow node scale-down. Valid values:</para>
+        /// <para>Specifies whether to allow node scale-in. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: Scale-down is allowed.</description></item>
-        /// <item><description><c>false</c>: Scale-down is not allowed.</description></item>
+        /// <item><description><c>true</c>: Scale-in is allowed.</description></item>
+        /// <item><description><c>false</c>: Scale-in is prohibited.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -137,11 +138,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? ScaleUpFromZero { get; set; }
 
         /// <summary>
-        /// <para>The type of the auto scaling component. For clusters of version 1.24 and later, the default value is goatscaler. For earlier versions, the default value is cluster-autoscaler. Valid values:</para>
+        /// <para>The elastic component type. For clusters running version 1.24 or later, the default value is goatscaler. For earlier versions, the default value is cluster-autoscaler. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>goatscaler</c>: instant scaling.</para>
+        /// <item><description><para><c>goatscaler</c>: Instant scaling.</para>
         /// </description></item>
-        /// <item><description><para><c>cluster-autoscaler</c>: automatic scaling.</para>
+        /// <item><description><para><c>cluster-autoscaler</c>: Auto scaling.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -153,8 +154,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ScalerType { get; set; }
 
         /// <summary>
-        /// <para>The scaling sensitivity, which adjusts the interval at which the system evaluates scaling decisions.</para>
-        /// <para>Valid values: 15, 30, 60, 120, 180, and 300. Unit: seconds.</para>
+        /// <para>The scaling sensitivity, which adjusts the interval for the system to evaluate scaling decisions.</para>
+        /// <para>Valid values: 15, 30, 60, 120, 180, 300. Unit: seconds.</para>
         /// <para>Default value: 60.</para>
         /// 
         /// <b>Example:</b>
@@ -165,10 +166,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ScanInterval { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether cluster-autoscaler skips scaling down nodes that run Pods with local storage (such as EmptyDir or HostPath). Valid values:</para>
+        /// <para>Specifies whether cluster-autoscaler skips scale-in for nodes that run Pods with local storage (such as EmptyDir or HostPath). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: Nodes are not scaled down.</description></item>
-        /// <item><description><c>false</c>: Nodes are scaled down.</description></item>
+        /// <item><description><c>true</c>: Scale-in is skipped.</description></item>
+        /// <item><description><c>false</c>: Scale-in is performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -179,10 +180,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? SkipNodesWithLocalStorage { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether cluster-autoscaler skips scaling down nodes that run Pods in the kube-system namespace. This feature does not apply to DaemonSet Pods or Mirror Pods. Valid values:</para>
+        /// <para>Specifies whether cluster-autoscaler skips scale-in for nodes that run Pods in the kube-system namespace. This feature does not apply to DaemonSet Pods or Mirror Pods. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: Nodes are not scaled down.</description></item>
-        /// <item><description><c>false</c>: Nodes are scaled down.</description></item>
+        /// <item><description><c>true</c>: Scale-in is skipped.</description></item>
+        /// <item><description><c>false</c>: Scale-in is performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -193,7 +194,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? SkipNodesWithSystemPods { get; set; }
 
         /// <summary>
-        /// <para>The cool-down period. The time interval after the most recent scale-out during which the auto scaling component does not perform scale-down operations. Nodes added during scale-out can only be evaluated for scale-down after the cool-down period expires.</para>
+        /// <para>The cool-down period. The time interval after the most recent scale-out event during which the elastic component does not perform scale-in operations. A node that is scaled out can be considered for scale-in only after the cool-down period elapses.</para>
         /// <para>Valid values: [1,60]. Unit: minutes.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -205,8 +206,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string UnneededDuration { get; set; }
 
         /// <summary>
-        /// <para>The scale-down threshold. The ratio of requested resources to total resources on a node.</para>
-        /// <para>A node can be scaled down only when this ratio falls below the configured threshold, meaning both the CPU and memory resources utilization of the node are below the scale-down threshold.</para>
+        /// <para>The scale-in threshold, which is the ratio of requested resources to total resources on a node.</para>
+        /// <para>A node can be scaled in only when this ratio falls below the configured threshold, meaning both the CPU and memory resources utilization of the node are below the scale-in threshold.</para>
         /// <para>Valid values: [0.1~1].</para>
         /// <para>Default value: 0.5, which indicates 50%.</para>
         /// 
@@ -220,3 +221,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class FixNodePoolVulsResponseBody : TeaModel {
+    public class FixNodePoolVulsResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The fix task ID.</para>
         /// 
@@ -22,3 +23,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

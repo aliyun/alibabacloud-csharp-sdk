@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeClusterLogsResponse : TeaModel {
+    public class DescribeClusterLogsResponse : Darabonba.Model {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -20,9 +21,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("body")]
         [Validation(Required=false)]
         public List<DescribeClusterLogsResponseBody> Body { get; set; }
-        public class DescribeClusterLogsResponseBody : TeaModel {
+        public class DescribeClusterLogsResponseBody : Darabonba.Model {
             /// <summary>
-            /// <para>日志ID。</para>
+            /// <para>The log ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>73117232145******</para>
@@ -32,7 +33,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? ID { get; set; }
 
             /// <summary>
-            /// <para>集群ID。</para>
+            /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c23421cfa74454bc8b37163fd19af***</para>
@@ -42,7 +43,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>日志内容。</para>
+            /// <para>The log content.</para>
             /// 
             /// <b>Example:</b>
             /// <para>start to update cluster status to CREATE_COMPLETE</para>
@@ -52,7 +53,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ClusterLog { get; set; }
 
             /// <summary>
-            /// <para>日志产生时间。</para>
+            /// <para>The time when the log was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-04-10T17:54:26+08:00</para>
@@ -62,7 +63,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Created { get; set; }
 
             /// <summary>
-            /// <para>日志更新时间。</para>
+            /// <para>The time when the log was updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-04-10T17:54:26+08:00</para>
@@ -76,3 +77,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

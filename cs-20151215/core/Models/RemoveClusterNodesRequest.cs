@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class RemoveClusterNodesRequest : TeaModel {
+    public class RemoveClusterNodesRequest : Darabonba.Model {
         [NameInMap("drain_node")]
         [Validation(Required=false)]
         public bool? DrainNode { get; set; }
@@ -27,3 +28,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

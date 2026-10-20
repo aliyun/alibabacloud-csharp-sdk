@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class UpdateNodePoolComponentResponseBody : TeaModel {
+    public class UpdateNodePoolComponentResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The cluster ID.</para>
         /// 
@@ -30,7 +31,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The asynchronous task ID.</para>
+        /// <para>The ID of the asynchronous task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>T-67d7ec016ce37c0106000***</para>
@@ -42,3 +43,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

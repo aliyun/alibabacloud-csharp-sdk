@@ -1,19 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ListNodePoolComponentsResponseBody : TeaModel {
+    public class ListNodePoolComponentsResponseBody : Darabonba.Model {
+        /// <summary>
+        /// <para>The list of node components.</para>
+        /// </summary>
         [NameInMap("components")]
         [Validation(Required=false)]
         public List<ListNodePoolComponentsResponseBodyComponents> Components { get; set; }
-        public class ListNodePoolComponentsResponseBodyComponents : TeaModel {
+        public class ListNodePoolComponentsResponseBodyComponents : Darabonba.Model {
             /// <summary>
+            /// <para>The parameter schema of the node component, including custom parameters and system parameters.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>&quot;{\&quot;$schema\&quot;: \&quot;\&quot;,\&quot;properties\&quot;: {}&quot;</para>
             /// </summary>
@@ -22,6 +28,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ConfigSchema { get; set; }
 
             /// <summary>
+            /// <para>The name of the node component.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>kubelet</para>
             /// </summary>
@@ -30,6 +38,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The version of the node component.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1.28.9-aliyun.1</para>
             /// </summary>
@@ -40,6 +50,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
+        /// <para>The maximum number of results to return. Default value: 200.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -48,6 +60,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The pagination token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5c0a1c0f91c14c6****</para>
         /// </summary>
@@ -58,3 +72,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

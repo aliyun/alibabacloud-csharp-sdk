@@ -1,21 +1,22 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class UpdateUserPermissionsRequest : TeaModel {
+    public class UpdateUserPermissionsRequest : Darabonba.Model {
         /// <summary>
         /// <para>The request body parameters.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public List<UpdateUserPermissionsRequestBody> Body { get; set; }
-        public class UpdateUserPermissionsRequestBody : TeaModel {
+        public class UpdateUserPermissionsRequestBody : Darabonba.Model {
             /// <summary>
             /// <para>The ID of the target cluster for authorization.</para>
             /// <para>If the <c>role_type</c> parameter is set to <c>all-clusters</c>, you do not need to specify this parameter.</para>
@@ -44,7 +45,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? IsCustom { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the authorization is for a RAM role.</para>
+            /// <para>Indicates whether the authorization is for a RAM role.</para>
             /// <list type="bullet">
             /// <item><description><para>true: The authorization is for a RAM role.</para>
             /// </description></item>
@@ -60,7 +61,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? IsRamRole { get; set; }
 
             /// <summary>
-            /// <para>The namespace name. This parameter is empty by default for cluster-level authorization.</para>
+            /// <para>The namespace name. This parameter is empty by default for cluster-scoped authorization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -77,12 +78,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <item><description><c>ops</c>: O&amp;M engineer.</description></item>
             /// <item><description><c>dev</c>: developer.</description></item>
             /// <item><description><c>restricted</c>: restricted user.</description></item>
-            /// <item><description>A custom ClusterRole name.</description></item>
+            /// <item><description>Custom ClusterRole name.</description></item>
             /// </list>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description><c>admin</c>, <c>admin-view</c>, <c>ops</c>: These roles cannot be granted at the <b>namespace</b> level.</description></item>
-            /// <item><description><c>admin-view</c>: This role cannot be granted at the <b>all-clusters</b> level.</description></item>
+            /// <item><description><c>admin</c>, <c>admin-view</c>, <c>ops</c>: These roles do not support authorization at the <b>namespace</b> scope.</description></item>
+            /// <item><description><c>admin-view</c>: This role does not support authorization at the <b>all-clusters</b> scope.</description></item>
             /// </list>
             /// </remarks>
             /// 
@@ -96,9 +97,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The authorization type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>cluster</c>: cluster level.</description></item>
-            /// <item><description><c>namespace</c>: namespace level.</description></item>
-            /// <item><description><c>all-clusters</c>: all-clusters level.</description></item>
+            /// <item><description><c>cluster</c>: cluster scope.</description></item>
+            /// <item><description><c>namespace</c>: namespace scope.</description></item>
+            /// <item><description><c>all-clusters</c>: all-clusters scope.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -129,3 +130,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

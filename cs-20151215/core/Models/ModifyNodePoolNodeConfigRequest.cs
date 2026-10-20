@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ModifyNodePoolNodeConfigRequest : TeaModel {
+    public class ModifyNodePoolNodeConfigRequest : Darabonba.Model {
         /// <summary>
         /// <para>The containerd runtime configuration.</para>
         /// </summary>
@@ -36,7 +37,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("os_config")]
         [Validation(Required=false)]
         public ModifyNodePoolNodeConfigRequestOsConfig OsConfig { get; set; }
-        public class ModifyNodePoolNodeConfigRequestOsConfig : TeaModel {
+        public class ModifyNodePoolNodeConfigRequestOsConfig : Darabonba.Model {
             /// <summary>
             /// <para>The hugepage configuration.</para>
             /// </summary>
@@ -59,7 +60,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("rolling_policy")]
         [Validation(Required=false)]
         public ModifyNodePoolNodeConfigRequestRollingPolicy RollingPolicy { get; set; }
-        public class ModifyNodePoolNodeConfigRequestRollingPolicy : TeaModel {
+        public class ModifyNodePoolNodeConfigRequestRollingPolicy : Darabonba.Model {
             /// <summary>
             /// <para>The maximum number of nodes that are allowed to fail during the rolling update. Default value: 0, which indicates that the task fails if any node fails. If the value is greater than 0, the task fails and stops when the cumulative number of failed nodes exceeds this value.</para>
             /// 
@@ -71,7 +72,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? MaxFailedNodes { get; set; }
 
             /// <summary>
-            /// <para>The node updates in the node pool are performed in batches. This parameter specifies the maximum number of nodes that can be updated in parallel per batch.</para>
+            /// <para>Node updates in the node pool are performed in batches. This parameter specifies the maximum number of nodes that can be updated in parallel per batch.</para>
             /// <para>Valid values: [1,10].</para>
             /// <para>Default value: 10.</para>
             /// 
@@ -87,3 +88,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

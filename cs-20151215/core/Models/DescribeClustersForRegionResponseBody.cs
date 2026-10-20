@@ -1,21 +1,22 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeClustersForRegionResponseBody : TeaModel {
+    public class DescribeClustersForRegionResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The list of cluster details.</para>
         /// </summary>
         [NameInMap("clusters")]
         [Validation(Required=false)]
         public List<DescribeClustersForRegionResponseBodyClusters> Clusters { get; set; }
-        public class DescribeClustersForRegionResponseBodyClusters : TeaModel {
+        public class DescribeClustersForRegionResponseBodyClusters : Darabonba.Model {
             /// <summary>
             /// <para>The local domain name of the cluster.</para>
             /// 
@@ -43,10 +44,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <item><description><c>ack.pro.small</c>: Pro</description></item>
             /// <item><description><c>ack.pro.xlarge</c>: Pro XL</description></item>
             /// <item><description><c>ack.pro.2xlarge</c>: Pro 2XL</description></item>
-            /// <item><description><c>ack.pro.4xlarge</c>: Pro 4XL (contact customer service to add your account to the whitelist)</description></item>
+            /// <item><description><c>ack.pro.4xlarge</c>: Pro 4XL (Contact customer service to add your account to the whitelist.)</description></item>
             /// </list>
-            /// <para>Pro XL, Pro 2XL, and Pro 4XL are three tiers provided by &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro Provisioned Control Plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro Provisioned Control Plane</a>. By pre-allocating and dedicating control plane resources, these tiers ensure that API concurrency and Pod scheduling capabilities remain at a consistently high level. They are suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</para>
-            /// <para>For information about cluster management fees for Pro and Provisioned Control Plane editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>.</para>
+            /// <para>Pro XL, Pro 2XL, and Pro 4XL are three tiers provided by &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>. By pre-allocating and dedicating control plane resources, these tiers ensure that API concurrency and pod scheduling capabilities remain at a consistently high level. They are suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</para>
+            /// <para>For information about the cluster management fees for Pro and provisioned control plane editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ack.standard</para>
@@ -71,7 +72,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ClusterType { get; set; }
 
             /// <summary>
-            /// <para>The pod CIDR block of the cluster.</para>
+            /// <para>The CIDR block used by the cluster pods.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172.20.0.0/16</para>
@@ -104,7 +105,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>Indicates whether deletion protection is enabled for the cluster. Deletion protection prevents the cluster from being accidentally deleted in the console or by calling API operations. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true: Deletion protection is enabled. The cluster cannot be deleted in the console or by calling API operations.</description></item>
-            /// <item><description>false: Deletion protection is not enabled. The cluster can be deleted in the console or by calling API operations.</description></item>
+            /// <item><description>false: Deletion protection is disabled. The cluster can be deleted in the console or by calling API operations.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -135,7 +136,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string IpStack { get; set; }
 
             /// <summary>
-            /// <para>The cluster name.</para>
+            /// <para>The name of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-cluster</para>
@@ -191,7 +192,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The resource group ID of the cluster.</para>
+            /// <para>The ID of the resource group to which the cluster belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-acfmyvw3wjm****</para>
@@ -201,7 +202,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The security group ID of the cluster.</para>
+            /// <para>The ID of the security group associated with the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sg-2zeihch86ooz9io4****</para>
@@ -232,7 +233,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? Size { get; set; }
 
             /// <summary>
-            /// <para>The running state of the cluster. Valid values:</para>
+            /// <para>The running status of the cluster. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><c>initial</c>: The cluster is being created.</description></item>
             /// <item><description><c>failed</c>: The cluster failed to be created.</description></item>
@@ -286,7 +287,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Updated { get; set; }
 
             /// <summary>
-            /// <para>The VPC ID of the cluster.</para>
+            /// <para>The ID of the VPC where the cluster is deployed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-2zeg8nf1ukc0fcmvq****</para>
@@ -296,7 +297,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>The list of vSwitches for the cluster control plane.</para>
+            /// <para>The list of vSwitches used by the cluster control plane.</para>
             /// </summary>
             [NameInMap("vswitch_ids")]
             [Validation(Required=false)]
@@ -310,7 +311,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("page_info")]
         [Validation(Required=false)]
         public DescribeClustersForRegionResponseBodyPageInfo PageInfo { get; set; }
-        public class DescribeClustersForRegionResponseBodyPageInfo : TeaModel {
+        public class DescribeClustersForRegionResponseBodyPageInfo : Darabonba.Model {
             /// <summary>
             /// <para>The page number.</para>
             /// 
@@ -346,3 +347,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

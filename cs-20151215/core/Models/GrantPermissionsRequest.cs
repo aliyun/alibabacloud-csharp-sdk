@@ -1,25 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class GrantPermissionsRequest : TeaModel {
+    public class GrantPermissionsRequest : Darabonba.Model {
         /// <summary>
         /// <para>The request body parameters.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public List<GrantPermissionsRequestBody> Body { get; set; }
-        public class GrantPermissionsRequestBody : TeaModel {
+        public class GrantPermissionsRequestBody : Darabonba.Model {
             /// <summary>
-            /// <para>The ID of the cluster to be authorized.</para>
+            /// <para>The ID of the target cluster for authorization.</para>
             /// <list type="bullet">
-            /// <item><description>If the value of the <c>role_type</c> parameter is <c>all-clusters</c>, set this parameter to an empty string.</description></item>
+            /// <item><description>If the <c>role_type</c> parameter is set to <c>all-clusters</c>, set this parameter to an empty string.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -31,7 +32,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Cluster { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the authorization is a custom authorization, which means <c>role_name</c> uses a custom ClusterRole name.</para>
+            /// <para>Specifies whether the authorization is a custom authorization (the <c>role_name</c> parameter uses a custom ClusterRole name).</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -61,7 +62,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>The name of the preset role. Valid values:</para>
+            /// <para>The preset role name. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><c>admin</c>: administrator.</description></item>
             /// <item><description><c>admin-view</c>: read-only administrator.</description></item>
@@ -75,8 +76,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// </remarks>
             /// <list type="bullet">
             /// <item><description><c>admin</c>, <c>admin-view</c>, <c>ops</c>: cannot be granted at the namespace level.</description></item>
-            /// <item><description><c>admin-view</c>: cannot be granted at the all-clusters level.
-            /// .</description></item>
+            /// <item><description><c>admin-view</c>: cannot be granted at the all-clusters level.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -108,3 +108,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

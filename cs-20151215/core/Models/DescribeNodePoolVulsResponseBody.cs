@@ -1,21 +1,22 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeNodePoolVulsResponseBody : TeaModel {
+    public class DescribeNodePoolVulsResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The list of node pool vulnerabilities.</para>
         /// </summary>
         [NameInMap("vul_records")]
         [Validation(Required=false)]
         public List<DescribeNodePoolVulsResponseBodyVulRecords> VulRecords { get; set; }
-        public class DescribeNodePoolVulsResponseBodyVulRecords : TeaModel {
+        public class DescribeNodePoolVulsResponseBodyVulRecords : Darabonba.Model {
             /// <summary>
             /// <para>The node instance ID.</para>
             /// 
@@ -42,7 +43,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("vul_list")]
             [Validation(Required=false)]
             public List<DescribeNodePoolVulsResponseBodyVulRecordsVulList> VulList { get; set; }
-            public class DescribeNodePoolVulsResponseBodyVulRecordsVulList : TeaModel {
+            public class DescribeNodePoolVulsResponseBodyVulRecordsVulList : Darabonba.Model {
                 /// <summary>
                 /// <para>The vulnerability alias.</para>
                 /// 
@@ -96,7 +97,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [NameInMap("package_list")]
                 [Validation(Required=false)]
                 public List<DescribeNodePoolVulsResponseBodyVulRecordsVulListPackageList> PackageList { get; set; }
-                public class DescribeNodePoolVulsResponseBodyVulRecordsVulListPackageList : TeaModel {
+                public class DescribeNodePoolVulsResponseBodyVulRecordsVulListPackageList : Darabonba.Model {
                     /// <summary>
                     /// <para>The package name.</para>
                     /// 
@@ -114,7 +115,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the Security Center CVE fix service has been purchased.</para>
+        /// <para>Indicates whether the China Cloud Security CVE fix service has been purchased.</para>
         /// <list type="bullet">
         /// <item><description><para>true: Purchased.</para>
         /// </description></item>
@@ -132,3 +133,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

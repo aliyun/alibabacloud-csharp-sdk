@@ -1,16 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribePolicyInstancesStatusResponseBody : TeaModel {
+    public class DescribePolicyInstancesStatusResponseBody : Darabonba.Model {
         /// <summary>
-        /// <para>The number of policy instances deployed in the cluster at different governance levels.</para>
+        /// <para>The number of policy instances deployed at different governance levels in the cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{ &quot;high&quot;: 11,     &quot;medium&quot;: 1  }</para>
@@ -20,14 +21,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public Dictionary<string, object> InstancesSeverityCount { get; set; }
 
         /// <summary>
-        /// <para>The list of policy instance counts for different policy types.</para>
+        /// <para>The list of policy instance counts by policy type.</para>
         /// </summary>
         [NameInMap("policy_instances")]
         [Validation(Required=false)]
         public List<DescribePolicyInstancesStatusResponseBodyPolicyInstances> PolicyInstances { get; set; }
-        public class DescribePolicyInstancesStatusResponseBodyPolicyInstances : TeaModel {
+        public class DescribePolicyInstancesStatusResponseBodyPolicyInstances : Darabonba.Model {
             /// <summary>
-            /// <para>The policy type. For more information about supported policy types and their descriptions, see <a href="https://help.aliyun.com/document_detail/359819.html">Container security policy rule library</a>.</para>
+            /// <para>The policy type. For more information about supported policy types and their descriptions, see <a href="https://help.aliyun.com/document_detail/359819.html">Container security policy rules</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>compliance</para>
@@ -67,7 +68,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string PolicyName { get; set; }
 
             /// <summary>
-            /// <para>The governance level of the policy.</para>
+            /// <para>The policy governance level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>medium</para>
@@ -81,3 +82,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

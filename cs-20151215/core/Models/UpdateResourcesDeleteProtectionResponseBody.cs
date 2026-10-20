@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class UpdateResourcesDeleteProtectionResponseBody : TeaModel {
+    public class UpdateResourcesDeleteProtectionResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The namespace of the resource.</para>
         /// 
@@ -50,7 +51,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The list of resources for which the deletion protection status is updated.</para>
+        /// <para>The list of resources whose deletion protection status is updated.</para>
         /// </summary>
         [NameInMap("resources")]
         [Validation(Required=false)]
@@ -59,3 +60,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

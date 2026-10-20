@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DeleteAlertContactResponse : TeaModel {
+    public class DeleteAlertContactResponse : Darabonba.Model {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -20,11 +21,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("body")]
         [Validation(Required=false)]
         public DeleteAlertContactResponseBody Body { get; set; }
-        public class DeleteAlertContactResponseBody : TeaModel {
+        public class DeleteAlertContactResponseBody : Darabonba.Model {
             [NameInMap("result")]
             [Validation(Required=false)]
             public List<DeleteAlertContactResponseBodyResult> Result { get; set; }
-            public class DeleteAlertContactResponseBodyResult : TeaModel {
+            public class DeleteAlertContactResponseBodyResult : Darabonba.Model {
                 [NameInMap("status")]
                 [Validation(Required=false)]
                 public bool? Status { get; set; }
@@ -44,3 +45,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

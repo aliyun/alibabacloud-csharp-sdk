@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeUserPermissionResponse : TeaModel {
+    public class DescribeUserPermissionResponse : Darabonba.Model {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -20,13 +21,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("body")]
         [Validation(Required=false)]
         public List<DescribeUserPermissionResponseBody> Body { get; set; }
-        public class DescribeUserPermissionResponseBody : TeaModel {
+        public class DescribeUserPermissionResponseBody : Darabonba.Model {
             /// <summary>
-            /// <para>集群访问配置，格式为：</para>
+            /// <para>The cluster access configuration. The format varies based on the authorization scope:</para>
             /// <list type="bullet">
-            /// <item><description>当是集群维度授权时，格式为：<c>{cluster_id}</c>。</description></item>
-            /// <item><description>当是命名空间维度授权时，格式为：<c>{cluster_id}/{namespace}</c>。</description></item>
-            /// <item><description>当是所有集群授权时，值固定为：<c>all-clusters</c>。</description></item>
+            /// <item><description>Cluster-level authorization: <c>{cluster_id}</c>.</description></item>
+            /// <item><description>Namespace-level authorization: <c>{cluster_id}/{namespace}</c>.</description></item>
+            /// <item><description>All-cluster authorization: <c>all-clusters</c>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -37,11 +38,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>授权类型，取值：</para>
+            /// <para>The authorization type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>cluster</c>：集群维度。</description></item>
-            /// <item><description><c>namespace</c>：命名空间维度。</description></item>
-            /// <item><description><c>console</c>：所有集群维度的授权。</description></item>
+            /// <item><description><c>cluster</c>: cluster-level.</description></item>
+            /// <item><description><c>namespace</c>: namespace-level.</description></item>
+            /// <item><description><c>console</c>: all-cluster-level authorization.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -52,7 +53,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>自定义角色名称，当授权自定义角色时，该字段为指定的自定义集群管理角色名称。</para>
+            /// <para>The custom role name. When a custom role is authorized, this field specifies the name of the custom cluster management role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>terway-pod-reader</para>
@@ -62,13 +63,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string RoleName { get; set; }
 
             /// <summary>
-            /// <para>预置的角色类型，取值：</para>
+            /// <para>The preset role type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>admin</c>：管理员。</description></item>
-            /// <item><description><c>ops</c>：运维人员。</description></item>
-            /// <item><description><c>dev</c>：开发人员。</description></item>
-            /// <item><description><c>restricted</c>：受限用户。</description></item>
-            /// <item><description><c>custom</c>：使用自定义的集群管理角色。</description></item>
+            /// <item><description><c>admin</c>: Administrator.</description></item>
+            /// <item><description><c>ops</c>: O&amp;M engineer.</description></item>
+            /// <item><description><c>dev</c>: Developer.</description></item>
+            /// <item><description><c>restricted</c>: Restricted user.</description></item>
+            /// <item><description><c>custom</c>: Custom cluster management role.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -79,10 +80,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string RoleType { get; set; }
 
             /// <summary>
-            /// <para>是否为集群创建者的授权，取值：</para>
+            /// <para>Indicates whether the authorization belongs to the cluster creator. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>0</c>：代表不是集群创建者的授权记录。</description></item>
-            /// <item><description><c>1</c>：代表该授权记录为集群创建者的管理员权限。</description></item>
+            /// <item><description><c>0</c>: The authorization record does not belong to the cluster creator.</description></item>
+            /// <item><description><c>1</c>: The authorization record represents the administrator permissions of the cluster creator.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,10 +94,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? IsOwner { get; set; }
 
             /// <summary>
-            /// <para>是否为RAM角色授权，取值：</para>
+            /// <para>Indicates whether the authorization is for a RAM role. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>0</c>：代表当前记录不是RAM角色授权。</description></item>
-            /// <item><description><c>1</c>：代表当前记录是RAM角色授权。</description></item>
+            /// <item><description><c>0</c>: The record is not a RAM role authorization.</description></item>
+            /// <item><description><c>1</c>: The record is a RAM role authorization.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -111,3 +112,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

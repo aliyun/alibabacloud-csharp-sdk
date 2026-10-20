@@ -1,21 +1,22 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ListClusterChecksResponseBody : TeaModel {
+    public class ListClusterChecksResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The list of checks.</para>
         /// </summary>
         [NameInMap("checks")]
         [Validation(Required=false)]
         public List<ListClusterChecksResponseBodyChecks> Checks { get; set; }
-        public class ListClusterChecksResponseBodyChecks : TeaModel {
+        public class ListClusterChecksResponseBodyChecks : Darabonba.Model {
             /// <summary>
             /// <para>The check ID.</para>
             /// 
@@ -27,7 +28,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string CheckId { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time in ISO 8601 format, including time zone information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-04-11T02:56:02.565982623Z</para>
@@ -81,3 +82,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

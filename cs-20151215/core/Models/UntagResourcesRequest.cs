@@ -1,19 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class UntagResourcesRequest : TeaModel {
+    public class UntagResourcesRequest : Darabonba.Model {
         /// <summary>
         /// <para>Specifies whether to delete all custom tags. This parameter takes effect only when <c>tag_keys</c> is empty. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: Delete all tags.</description></item>
-        /// <item><description><c>false</c>: Do not delete all tags.</description></item>
+        /// <item><description><c>true</c>: Deletes all tags.</description></item>
+        /// <item><description><c>false</c>: Does not delete all tags.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,3 +66,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

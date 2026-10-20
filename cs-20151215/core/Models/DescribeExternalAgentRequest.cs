@@ -1,19 +1,22 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeExternalAgentRequest : TeaModel {
+    public class DescribeExternalAgentRequest : Darabonba.Model {
         /// <summary>
-        /// <para>The permission mode of the agent. Valid values:</para>
-        /// <para>admin: administrator mode with full permissions.
-        /// restricted: restricted mode with limited permissions.
-        /// Default value: admin.</para>
+        /// <para>The agent permission mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>admin: Administrator mode. Grants all permissions.</description></item>
+        /// <item><description>restricted: Restricted mode. Grants only partial permissions.</description></item>
+        /// </list>
+        /// <para>Default value: admin.</para>
         /// 
         /// <b>Example:</b>
         /// <para>admin</para>
@@ -23,10 +26,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string AgentMode { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to obtain internal network access credentials.</para>
+        /// <para>Specifies whether to obtain internal network access credentials. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: obtains only internal network connection credentials.</description></item>
-        /// <item><description><c>false</c>: obtains only public network connection credentials.</description></item>
+        /// <item><description><c>true</c>: Obtains only internal network connection credentials.</description></item>
+        /// <item><description><c>false</c>: Obtains only public network connection credentials.</description></item>
         /// </list>
         /// <para>Default value: <c>false</c>.</para>
         /// 
@@ -40,3 +43,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

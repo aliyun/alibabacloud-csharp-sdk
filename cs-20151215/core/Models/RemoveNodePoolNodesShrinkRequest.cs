@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class RemoveNodePoolNodesShrinkRequest : TeaModel {
+    public class RemoveNodePoolNodesShrinkRequest : Darabonba.Model {
         /// <summary>
         /// <para>Specifies whether to remove nodes concurrently.</para>
         /// <list type="bullet">
@@ -50,10 +51,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[This parameter is deprecated]</para>
+        /// <para><b>[Deprecated]</b></para>
         /// <para>The list of nodes to remove.</para>
         /// <remarks>
-        /// <para>Danger: This parameter is deprecated. Use <c>instance_ids</c> instead.</danger>.</para>
+        /// <para>Danger: This parameter is deprecated. Use <c>instance_ids</c> instead.</danger></para>
         /// </remarks>
         /// </summary>
         [NameInMap("nodes")]
@@ -78,3 +79,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeEventsRequest : TeaModel {
+    public class DescribeEventsRequest : Darabonba.Model {
         /// <summary>
         /// <para>The cluster ID.</para>
         /// 
@@ -20,7 +21,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results returned per request.</para>
+        /// <para>The maximum number of results to return for a single request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +31,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The query token. Set this parameter to the NextToken value returned by the previous API call.</para>
+        /// <para>The pagination token. Set this parameter to the NextToken value returned from the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5c0a1c0f91c14c6****</para>
@@ -40,7 +41,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number for the paged query.</para>
+        /// <para>The page number for paging in the paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -51,7 +52,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// <para>The maximum number of results to return per page.</para>
-        /// <para>Valid values: [1,100].</para>
+        /// <para>Valid values: 1 to 100.</para>
         /// <para>Default value: 50.</para>
         /// 
         /// <b>Example:</b>
@@ -62,24 +63,24 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The event type. If you do not set this parameter, all types of events are queried. Valid values:</para>
+        /// <para>The event type. If you do not specify this parameter, events of all types are queried. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>cluster_create</c>: creates a cluster.</description></item>
-        /// <item><description><c>cluster_scaleout</c>: scales out a cluster.</description></item>
-        /// <item><description><c>cluster_attach</c>: adds existing nodes.</description></item>
-        /// <item><description><c>cluster_delete</c>: deletes a cluster.</description></item>
-        /// <item><description><c>cluster_upgrade</c>: upgrades a cluster.</description></item>
-        /// <item><description><c>cluster_migrate</c>: migrates a cluster.</description></item>
-        /// <item><description><c>cluster_node_delete</c>: removes nodes.</description></item>
-        /// <item><description><c>cluster_node_drain</c>: drains nodes.</description></item>
-        /// <item><description><c>cluster_modify</c>: modifies a cluster.</description></item>
-        /// <item><description><c>cluster_configuration_modify</c>: modifies cluster management configurations.</description></item>
-        /// <item><description><c>cluster_addon_install</c>: installs a component.</description></item>
-        /// <item><description><c>cluster_addon_upgrade</c>: upgrades a component.</description></item>
-        /// <item><description><c>cluster_addon_uninstall</c>: uninstalls a component.</description></item>
-        /// <item><description><c>runtime_upgrade</c>: upgrades the runtime.</description></item>
-        /// <item><description><c>nodepool_upgrade</c>: upgrades a node pool.</description></item>
-        /// <item><description><c>nodepool_update</c>: updates a node pool.</description></item>
+        /// <item><description><c>cluster_create</c>: Cluster creation.</description></item>
+        /// <item><description><c>cluster_scaleout</c>: Cluster scale-out.</description></item>
+        /// <item><description><c>cluster_attach</c>: Addition of existing nodes.</description></item>
+        /// <item><description><c>cluster_delete</c>: Cluster deletion.</description></item>
+        /// <item><description><c>cluster_upgrade</c>: Cluster upgrade.</description></item>
+        /// <item><description><c>cluster_migrate</c>: Cluster migration.</description></item>
+        /// <item><description><c>cluster_node_delete</c>: Node removal.</description></item>
+        /// <item><description><c>cluster_node_drain</c>: Node draining.</description></item>
+        /// <item><description><c>cluster_modify</c>: Cluster modification.</description></item>
+        /// <item><description><c>cluster_configuration_modify</c>: Cluster control configuration modification.</description></item>
+        /// <item><description><c>cluster_addon_install</c>: Add-on installation.</description></item>
+        /// <item><description><c>cluster_addon_upgrade</c>: Add-on upgrade.</description></item>
+        /// <item><description><c>cluster_addon_uninstall</c>: Add-on uninstallation.</description></item>
+        /// <item><description><c>runtime_upgrade</c>: Runtime upgrade.</description></item>
+        /// <item><description><c>nodepool_upgrade</c>: Node pool upgrade.</description></item>
+        /// <item><description><c>nodepool_update</c>: Node pool update.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -92,3 +93,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

@@ -1,16 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DeleteAlertContactGroupShrinkRequest : TeaModel {
+    public class DeleteAlertContactGroupShrinkRequest : Darabonba.Model {
         /// <summary>
-        /// <para>List of alert contact group IDs.</para>
+        /// <para>The list of alert contact group IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("contact_group_ids")]
@@ -20,3 +21,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

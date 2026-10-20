@@ -1,23 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ListAutoRepairPoliciesResponseBody : TeaModel {
+    public class ListAutoRepairPoliciesResponseBody : Darabonba.Model {
         /// <summary>
-        /// <para>The auto-repair policies.</para>
+        /// <para>The self-healing rules.</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
         public List<ListAutoRepairPoliciesResponseBodyItems> Items { get; set; }
-        public class ListAutoRepairPoliciesResponseBodyItems : TeaModel {
+        public class ListAutoRepairPoliciesResponseBodyItems : Darabonba.Model {
             /// <summary>
-            /// <para>The ID of the auto-repair policy.</para>
+            /// <para>The ID of the self-healing rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>r-xxxxx</para>
@@ -27,7 +28,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The name of the auto-repair policy.</para>
+            /// <para>The name of the self-healing rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -37,14 +38,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The list of resources bound to the auto-repair policy.</para>
+            /// <para>The list of resources bound to the self-healing rule.</para>
             /// </summary>
             [NameInMap("resource_ids")]
             [Validation(Required=false)]
             public List<string> ResourceIds { get; set; }
 
             /// <summary>
-            /// <para>The subtype of resource bound to the auto-repair policy.</para>
+            /// <para>The subtype of resource bound to the self-healing rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ess</para>
@@ -54,7 +55,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ResourceSubType { get; set; }
 
             /// <summary>
-            /// <para>The type of resource bound to the auto-repair policy.</para>
+            /// <para>The type of resource bound to the self-healing rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nodepool</para>
@@ -64,21 +65,21 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The list of auto-repair sub-rules.</para>
+            /// <para>The list of self-healing sub-rules.</para>
             /// </summary>
             [NameInMap("rules")]
             [Validation(Required=false)]
             public List<ListAutoRepairPoliciesResponseBodyItemsRules> Rules { get; set; }
-            public class ListAutoRepairPoliciesResponseBodyItemsRules : TeaModel {
+            public class ListAutoRepairPoliciesResponseBodyItemsRules : Darabonba.Model {
                 /// <summary>
-                /// <para>The list of identified incidents.</para>
+                /// <para>The list of identified faults.</para>
                 /// </summary>
                 [NameInMap("incidents")]
                 [Validation(Required=false)]
                 public List<ListAutoRepairPoliciesResponseBodyItemsRulesIncidents> Incidents { get; set; }
-                public class ListAutoRepairPoliciesResponseBodyItemsRulesIncidents : TeaModel {
+                public class ListAutoRepairPoliciesResponseBodyItemsRulesIncidents : Darabonba.Model {
                     /// <summary>
-                    /// <para>The name of the incident.</para>
+                    /// <para>The name of the fault.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Node.FaultNeedReboot.HOST</para>
@@ -105,7 +106,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [NameInMap("repair_procedure")]
                 [Validation(Required=false)]
                 public List<ListAutoRepairPoliciesResponseBodyItemsRulesRepairProcedure> RepairProcedure { get; set; }
-                public class ListAutoRepairPoliciesResponseBodyItemsRulesRepairProcedure : TeaModel {
+                public class ListAutoRepairPoliciesResponseBodyItemsRulesRepairProcedure : Darabonba.Model {
                     /// <summary>
                     /// <para>The configuration parameters of the procedure.</para>
                     /// </summary>
@@ -114,21 +115,21 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                     public Dictionary<string, object> Config { get; set; }
 
                     /// <summary>
-                    /// <para>The configuration for manual intervention.</para>
+                    /// <para>The manual intervention configuration for the procedure.</para>
                     /// </summary>
                     [NameInMap("intervention")]
                     [Validation(Required=false)]
                     public ListAutoRepairPoliciesResponseBodyItemsRulesRepairProcedureIntervention Intervention { get; set; }
-                    public class ListAutoRepairPoliciesResponseBodyItemsRulesRepairProcedureIntervention : TeaModel {
+                    public class ListAutoRepairPoliciesResponseBodyItemsRulesRepairProcedureIntervention : Darabonba.Model {
                         /// <summary>
-                        /// <para>The label configuration for confirming authorization. When you add the following label to a node, it indicates that you authorize ACK to execute the action of this phase. After completing the action of this phase, ACK automatically removes the authorization inquiry label and the confirmation label corresponding to this phase. If you do not add the following label to authorize the action in time, ACK will not execute the action of this phase or any subsequent actions, and the node may remain in a damaged state.</para>
+                        /// <para>The label configuration for authorization confirmation. When you add the following labels to the node, you authorize ACK to execute the operation for this stage. After completing the operation for this stage, ACK automatically removes the authorization inquiry and authorization confirmation labels corresponding to this stage. If you do not add the following labels in time to grant authorization, ACK will not execute the action for this stage and subsequent actions, and the node may remain in a damaged state.</para>
                         /// </summary>
                         [NameInMap("approved_label")]
                         [Validation(Required=false)]
                         public ListAutoRepairPoliciesResponseBodyItemsRulesRepairProcedureInterventionApprovedLabel ApprovedLabel { get; set; }
-                        public class ListAutoRepairPoliciesResponseBodyItemsRulesRepairProcedureInterventionApprovedLabel : TeaModel {
+                        public class ListAutoRepairPoliciesResponseBodyItemsRulesRepairProcedureInterventionApprovedLabel : Darabonba.Model {
                             /// <summary>
-                            /// <para>The label <c>key</c>.</para>
+                            /// <para>The key value of the label.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>k8s.aliyun.com/incident</para>
@@ -138,7 +139,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                             public string Key { get; set; }
 
                             /// <summary>
-                            /// <para>The label <c>value</c>.</para>
+                            /// <para>The value of the label.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>approved</para>
@@ -150,7 +151,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                         }
 
                         /// <summary>
-                        /// <para>Specifies whether to enable manual approval.</para>
+                        /// <para>Specifies whether manual approval is enabled.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
@@ -160,14 +161,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                         public bool? Enable { get; set; }
 
                         /// <summary>
-                        /// <para>The label configuration for authorization inquiry. When this phase is entered, ACK adds the following label to your node and waits for your authorization to execute the action of this phase.</para>
+                        /// <para>The label configuration for authorization inquiry. When this stage is reached, ACK adds the following labels to your node and waits for your authorization to execute the action for this stage.</para>
                         /// </summary>
                         [NameInMap("inquiring_label")]
                         [Validation(Required=false)]
                         public ListAutoRepairPoliciesResponseBodyItemsRulesRepairProcedureInterventionInquiringLabel InquiringLabel { get; set; }
-                        public class ListAutoRepairPoliciesResponseBodyItemsRulesRepairProcedureInterventionInquiringLabel : TeaModel {
+                        public class ListAutoRepairPoliciesResponseBodyItemsRulesRepairProcedureInterventionInquiringLabel : Darabonba.Model {
                             /// <summary>
-                            /// <para>The label <c>key</c>.</para>
+                            /// <para>The key value of the label.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>k8s.aliyun.com/incident</para>
@@ -177,7 +178,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                             public string Key { get; set; }
 
                             /// <summary>
-                            /// <para>The taint <c>value</c>.</para>
+                            /// <para>The value of the taint.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>inquiring</para>
@@ -219,3 +220,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

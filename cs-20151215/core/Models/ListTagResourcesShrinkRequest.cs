@@ -1,16 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ListTagResourcesShrinkRequest : TeaModel {
+    public class ListTagResourcesShrinkRequest : Darabonba.Model {
         /// <summary>
-        /// <para>The token that determines the start point of the next query.</para>
+        /// <para>The token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>
@@ -66,3 +67,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

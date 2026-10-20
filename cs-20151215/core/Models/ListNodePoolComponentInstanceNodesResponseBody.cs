@@ -1,15 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ListNodePoolComponentInstanceNodesResponseBody : TeaModel {
+    public class ListNodePoolComponentInstanceNodesResponseBody : Darabonba.Model {
         /// <summary>
+        /// <para>The maximum number of records returned in a single response for pagination.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -18,6 +21,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The pagination cursor. Do not specify this parameter for the first request. For subsequent requests, specify the token returned in the previous response.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5c0a1c0f91c14c6****</para>
         /// </summary>
@@ -25,18 +30,30 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <para>The list of nodes.</para>
+        /// </summary>
         [NameInMap("node_list")]
         [Validation(Required=false)]
         public List<ListNodePoolComponentInstanceNodesResponseBodyNodeList> NodeList { get; set; }
-        public class ListNodePoolComponentInstanceNodesResponseBodyNodeList : TeaModel {
+        public class ListNodePoolComponentInstanceNodesResponseBodyNodeList : Darabonba.Model {
+            /// <summary>
+            /// <para>The details of the component on the node.</para>
+            /// </summary>
             [NameInMap("component")]
             [Validation(Required=false)]
             public ListNodePoolComponentInstanceNodesResponseBodyNodeListComponent Component { get; set; }
-            public class ListNodePoolComponentInstanceNodesResponseBodyNodeListComponent : TeaModel {
+            public class ListNodePoolComponentInstanceNodesResponseBodyNodeListComponent : Darabonba.Model {
+                /// <summary>
+                /// <para>The configuration of the node component.</para>
+                /// </summary>
                 [NameInMap("config")]
                 [Validation(Required=false)]
                 public ListNodePoolComponentInstanceNodesResponseBodyNodeListComponentConfig Config { get; set; }
-                public class ListNodePoolComponentInstanceNodesResponseBodyNodeListComponentConfig : TeaModel {
+                public class ListNodePoolComponentInstanceNodesResponseBodyNodeListComponentConfig : Darabonba.Model {
+                    /// <summary>
+                    /// <para>The custom configuration of the node component.</para>
+                    /// </summary>
                     [NameInMap("custom_config")]
                     [Validation(Required=false)]
                     public Dictionary<string, object> CustomConfig { get; set; }
@@ -44,6 +61,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 }
 
                 /// <summary>
+                /// <para>The custom configuration version number of the component on the node.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -52,6 +71,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string ConfigRevision { get; set; }
 
                 /// <summary>
+                /// <para>The name of the component on the node.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>kubelet</para>
                 /// </summary>
@@ -60,6 +81,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>The version of the component on the node.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1.28.9-aliyun.1</para>
                 /// </summary>
@@ -70,6 +93,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>i-bp1xxxxx</para>
             /// </summary>
@@ -78,6 +103,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The node name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou.10.91.xx.xx</para>
             /// </summary>
@@ -88,6 +115,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
+        /// <para>The total number of nodes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>50</para>
         /// </summary>
@@ -98,3 +127,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

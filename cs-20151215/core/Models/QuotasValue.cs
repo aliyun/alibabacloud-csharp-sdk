@@ -1,16 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class QuotasValue : TeaModel {
+    public class QuotasValue : Darabonba.Model {
         /// <summary>
-        /// <para>The quota value. To request a quota increase beyond the current value, submit a request on the <a href="https://quotas.console.aliyun.com/products/csk/quotas">Quota Center</a> page.</para>
+        /// <para>The quota value. If you need to exceed the quota, submit a request on the <a href="https://quotas.console.aliyun.com/products/csk/quotas">Quota Center page</a> to increase the quota.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -52,3 +53,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

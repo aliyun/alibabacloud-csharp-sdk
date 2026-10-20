@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class StopAlertResponseBody : TeaModel {
+    public class StopAlertResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The message returned when the execution fails.</para>
         /// 
@@ -22,7 +23,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The execution result status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>True: The execution is successful.</description></item>
+        /// <item><description>True: The execution succeeded.</description></item>
         /// <item><description>False: The execution failed.</description></item>
         /// </list>
         /// 
@@ -36,3 +37,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

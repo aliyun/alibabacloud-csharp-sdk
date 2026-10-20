@@ -1,21 +1,22 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ListClusterAddonInstancesResponseBody : TeaModel {
+    public class ListClusterAddonInstancesResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The list of installed component instances.</para>
         /// </summary>
         [NameInMap("addons")]
         [Validation(Required=false)]
         public List<ListClusterAddonInstancesResponseBodyAddons> Addons { get; set; }
-        public class ListClusterAddonInstancesResponseBodyAddons : TeaModel {
+        public class ListClusterAddonInstancesResponseBodyAddons : Darabonba.Model {
             /// <summary>
             /// <para>The component name.</para>
             /// 
@@ -30,9 +31,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The component status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>active: installed</description></item>
-            /// <item><description>updating: being modified</description></item>
+            /// <item><description>updating: being updated</description></item>
             /// <item><description>upgrading: being upgraded</description></item>
-            /// <item><description>deleting: being uninstalled.</description></item>
+            /// <item><description>deleting: being uninstalled</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -57,3 +58,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

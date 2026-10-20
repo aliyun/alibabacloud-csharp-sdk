@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class GetKubernetesTriggerRequest : TeaModel {
+    public class GetKubernetesTriggerRequest : Darabonba.Model {
         /// <summary>
         /// <para>The application name.</para>
         /// <para>This parameter is required.</para>
@@ -34,13 +35,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The trigger type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>deployment</c>: a trigger for a stateless application. </para>
-        /// </description></item>
-        /// <item><description><para><c>application</c>: a trigger for an application center application.</para>
-        /// </description></item>
+        /// <item><description><c>deployment</c>: the trigger for stateless applications.</description></item>
+        /// <item><description><c>application</c>: the trigger for Application Center applications.
+        /// Default value: <c>deployment</c>.
+        /// If you do not specify the trigger type, the query results are not filtered by trigger type.</description></item>
         /// </list>
-        /// <para>Default value: <c>deployment</c>.</para>
-        /// <para>If you do not specify a trigger type, the query results are not filtered by trigger type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>deployment</para>
@@ -51,8 +50,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// <para>The trigger action. Valid values:</para>
-        /// <para><c>redeploy</c>: redeploys the resources defined in <c>project_id</c>.</para>
-        /// <para>If you do not specify a trigger action, the query results are not filtered by trigger action.</para>
+        /// <list type="bullet">
+        /// <item><description><c>redeploy</c>: Redeploys the resources defined in <c>project_id</c>.
+        /// If you do not specify the trigger action, the query results are not filtered by trigger action.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>redeploy</para>
@@ -64,3 +65,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

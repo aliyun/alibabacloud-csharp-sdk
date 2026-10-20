@@ -1,16 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ListOperationPlansForRegionRequest : TeaModel {
+    public class ListOperationPlansForRegionRequest : Darabonba.Model {
         /// <summary>
-        /// <para>Filters results by cluster ID.</para>
+        /// <para>Filters the results by cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c02b3e03be10643e8a644a843ffcb****</para>
@@ -20,7 +21,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>Filters results by execution plan state.</para>
+        /// <para>Filters the results by execution plan state.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Scheduled</para>
@@ -30,7 +31,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string State { get; set; }
 
         /// <summary>
-        /// <para>Filters results by execution plan type.</para>
+        /// <para>Filters the results by execution plan type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CLUSTER_UPGRADE_MASTER</para>
@@ -42,3 +43,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

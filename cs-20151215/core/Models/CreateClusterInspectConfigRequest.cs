@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class CreateClusterInspectConfigRequest : TeaModel {
+    public class CreateClusterInspectConfigRequest : Darabonba.Model {
         /// <summary>
         /// <para>The list of disabled inspection items.</para>
         /// </summary>
@@ -28,7 +29,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>The inspection cycle defined using RFC 5545 Recurrence Rule syntax. You must specify BYHOUR and BYMINUTE. Only FREQ=DAILY is supported. COUNT and UNTIL are not supported.</para>
+        /// <para>The inspection cycle defined by using the RFC5545 Recurrence Rule syntax. You must specify BYHOUR and BYMINUTE. Only FREQ=DAILY is supported. COUNT and UNTIL are not supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,3 +42,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

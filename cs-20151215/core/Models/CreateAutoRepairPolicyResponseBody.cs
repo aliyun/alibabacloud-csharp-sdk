@@ -1,16 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class CreateAutoRepairPolicyResponseBody : TeaModel {
+    public class CreateAutoRepairPolicyResponseBody : Darabonba.Model {
         /// <summary>
-        /// <para>The self-healing rule ID.</para>
+        /// <para>The ID of the self-healing rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-xxxxxxx</para>
@@ -32,3 +33,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

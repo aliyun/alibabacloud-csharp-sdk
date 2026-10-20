@@ -1,21 +1,22 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeClusterVulsResponseBody : TeaModel {
+    public class DescribeClusterVulsResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The list of vulnerabilities.</para>
         /// </summary>
         [NameInMap("vul_records")]
         [Validation(Required=false)]
         public List<DescribeClusterVulsResponseBodyVulRecords> VulRecords { get; set; }
-        public class DescribeClusterVulsResponseBodyVulRecords : TeaModel {
+        public class DescribeClusterVulsResponseBodyVulRecords : Darabonba.Model {
             /// <summary>
             /// <para>The list of CVEs.</para>
             /// </summary>
@@ -24,12 +25,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public List<string> CveList { get; set; }
 
             /// <summary>
-            /// <para>The severity level of the vulnerability. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>nntf: low</description></item>
-            /// <item><description>later: medium</description></item>
-            /// <item><description>asap: high.</description></item>
-            /// </list>
+            /// <para>The vulnerability severity level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>asap</para>
@@ -59,7 +55,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string NodepoolId { get; set; }
 
             /// <summary>
-            /// <para>The name of the node pool.</para>
+            /// <para>The node pool name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -69,17 +65,17 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string NodepoolName { get; set; }
 
             /// <summary>
-            /// <para>The alias of the vulnerability.</para>
+            /// <para>The vulnerability alias.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>CVE-2022-xxxx:rsync 安全漏洞</para>
+            /// <para>CVE-2022-xxxx:rsync security vulnerability</para>
             /// </summary>
             [NameInMap("vul_alias_name")]
             [Validation(Required=false)]
             public string VulAliasName { get; set; }
 
             /// <summary>
-            /// <para>The name of the vulnerability.</para>
+            /// <para>The vulnerability name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oval:com.redhat.rhsa:def:xxxxxxx</para>
@@ -89,15 +85,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string VulName { get; set; }
 
             /// <summary>
-            /// <para>The type of the vulnerability. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>app: application vulnerability</description></item>
-            /// <item><description>sca: application vulnerability (Software Composition Analysis)</description></item>
-            /// <item><description>cve: Linux vulnerability</description></item>
-            /// <item><description>cms: WebCMS vulnerability</description></item>
-            /// <item><description>sys: Windows vulnerability</description></item>
-            /// <item><description>emg: emergency vulnerability.</description></item>
-            /// </list>
+            /// <para>The vulnerability type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cve</para>
@@ -111,3 +99,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

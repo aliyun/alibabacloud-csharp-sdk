@@ -1,20 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeNodePoolVulsRequest : TeaModel {
+    public class DescribeNodePoolVulsRequest : Darabonba.Model {
         /// <summary>
-        /// <para>The vulnerability fix urgency levels to query. Separate multiple levels with commas (,). Valid values:</para>
+        /// <para>The severity levels of vulnerabilities to query. Separate multiple levels with commas (,). Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>asap</c>: high</description></item>
         /// <item><description><c>later</c>: medium</description></item>
-        /// <item><description><c>nntf</c>: low.</description></item>
+        /// <item><description><c>nntf</c>: low</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -27,3 +28,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

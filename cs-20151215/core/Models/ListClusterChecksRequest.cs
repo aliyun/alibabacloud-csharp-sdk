@@ -1,16 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ListClusterChecksRequest : TeaModel {
+    public class ListClusterChecksRequest : Darabonba.Model {
         /// <summary>
-        /// <para>The check target to filter.</para>
+        /// <para>Filters specific check objects.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ngw-bp19ay6nnvd4cexxxx</para>
@@ -22,13 +23,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The check type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>ClusterMigrate: cluster migration.</para>
+        /// <item><description><para>ClusterMigrate: cluster migration</para>
         /// </description></item>
-        /// <item><description><para>MasterUpgrade: cluster control plane upgrade.</para>
+        /// <item><description><para>MasterUpgrade: cluster control plane upgrade</para>
         /// </description></item>
-        /// <item><description><para>NodePoolUpgrade: node pool upgrade.</para>
+        /// <item><description><para>NodePoolUpgrade: node pool upgrade</para>
         /// </description></item>
-        /// <item><description><para>ClusterUpgrade: cluster upgrade.</para>
+        /// <item><description><para>ClusterUpgrade: cluster upgrade</para>
         /// </description></item>
         /// </list>
         /// 
@@ -42,3 +43,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

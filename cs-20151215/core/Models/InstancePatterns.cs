@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class InstancePatterns : TeaModel {
+    public class InstancePatterns : Darabonba.Model {
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
@@ -199,3 +200,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

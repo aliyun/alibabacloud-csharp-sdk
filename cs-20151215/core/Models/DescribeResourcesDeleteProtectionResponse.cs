@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeResourcesDeleteProtectionResponse : TeaModel {
+    public class DescribeResourcesDeleteProtectionResponse : Darabonba.Model {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -20,7 +21,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("body")]
         [Validation(Required=false)]
         public List<DescribeResourcesDeleteProtectionResponseBody> Body { get; set; }
-        public class DescribeResourcesDeleteProtectionResponseBody : TeaModel {
+        public class DescribeResourcesDeleteProtectionResponseBody : Darabonba.Model {
             /// <summary>
             /// <para>The name of the queried resource.</para>
             /// <para>This parameter is required.</para>
@@ -53,10 +54,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Resource { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether deletion protection is enabled.</para>
+            /// <para>Indicates whether deletion protection is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: enabled.</description></item>
-            /// <item><description>false: disabled.</description></item>
+            /// <item><description>true: Enabled.</description></item>
+            /// <item><description>false: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,3 +72,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

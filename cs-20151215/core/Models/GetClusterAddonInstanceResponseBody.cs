@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class GetClusterAddonInstanceResponseBody : TeaModel {
+    public class GetClusterAddonInstanceResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The custom parameter settings of the component.</para>
         /// 
@@ -20,12 +21,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The logging feature status of the component.</para>
+        /// <para>The logging status of the component.</para>
         /// </summary>
         [NameInMap("logging")]
         [Validation(Required=false)]
         public GetClusterAddonInstanceResponseBodyLogging Logging { get; set; }
-        public class GetClusterAddonInstanceResponseBodyLogging : TeaModel {
+        public class GetClusterAddonInstanceResponseBodyLogging : Darabonba.Model {
             /// <summary>
             /// <para>Indicates whether the component supports the logging feature.</para>
             /// <list type="bullet">
@@ -59,7 +60,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The Log Service project used by the logging feature of the component.</para>
+            /// <para>The log project used by the logging feature of the component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>k8s-log-c02b3e03be10643e8a644a843ffcb****</para>
@@ -69,7 +70,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string LogProject { get; set; }
 
             /// <summary>
-            /// <para>The Log Service Logstore used by the logging feature of the component.</para>
+            /// <para>The Logstore used by the logging feature of the component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-logstore</para>
@@ -93,10 +94,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The component status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>active: installed.</description></item>
-        /// <item><description>updating: being modified.</description></item>
-        /// <item><description>upgrading: being upgraded.</description></item>
-        /// <item><description>deleting: being uninstalled.</description></item>
+        /// <item><description>active: The component is installed.</description></item>
+        /// <item><description>updating: The component is being modified.</description></item>
+        /// <item><description>upgrading: The component is being upgraded.</description></item>
+        /// <item><description>deleting: The component is being uninstalled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -119,3 +120,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

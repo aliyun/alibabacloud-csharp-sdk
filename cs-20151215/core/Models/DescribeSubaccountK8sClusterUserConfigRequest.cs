@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeSubaccountK8sClusterUserConfigRequest : TeaModel {
+    public class DescribeSubaccountK8sClusterUserConfigRequest : Darabonba.Model {
         /// <summary>
         /// <para>Specifies whether to obtain the internal network connection configuration. Valid values:</para>
         /// <list type="bullet">
@@ -28,7 +29,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>The validity period of the temporary KubeConfig. Unit: minutes.</para>
         /// <para>Valid values: [15, 4320], which is up to 3 days.</para>
         /// <remarks>
-        /// <para>If this parameter is not set, the system automatically determines a longer validity period. The specific expiration time is indicated by the value of the expiration field in the response.</para>
+        /// <para>If you do not set this parameter, the system automatically determines a longer validity period. The specific expiration time is indicated by the value of the expiration field in the response.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -41,3 +42,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

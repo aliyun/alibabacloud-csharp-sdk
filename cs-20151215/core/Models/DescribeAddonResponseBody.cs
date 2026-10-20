@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeAddonResponseBody : TeaModel {
+    public class DescribeAddonResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The CPU architectures supported by the component.</para>
         /// </summary>
@@ -72,7 +73,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("newer_versions")]
         [Validation(Required=false)]
         public List<DescribeAddonResponseBodyNewerVersions> NewerVersions { get; set; }
-        public class DescribeAddonResponseBodyNewerVersions : TeaModel {
+        public class DescribeAddonResponseBodyNewerVersions : Darabonba.Model {
             /// <summary>
             /// <para>The minimum cluster version required by this component version.</para>
             /// 
@@ -131,3 +132,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

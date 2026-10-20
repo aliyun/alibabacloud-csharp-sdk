@@ -1,19 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeKubernetesVersionMetadataRequest : TeaModel {
+    public class DescribeKubernetesVersionMetadataRequest : Darabonba.Model {
         /// <summary>
         /// <para>The cluster type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>Kubernetes</c>: ACK dedicated cluster.</description></item>
-        /// <item><description><c>ManagedKubernetes</c>: ACK managed cluster, including ACK Pro cluster, ACK Basic cluster, ACK Serverless Pro cluster, ACK Serverless Basic cluster, ACK Edge Pro cluster, and ACK Edge Basic cluster.</description></item>
+        /// <item><description><c>ManagedKubernetes</c>: ACK managed cluster, including ACK Pro clusters, ACK basic clusters, ACK Serverless Pro clusters, ACK Serverless basic clusters, ACK Edge Pro clusters, and ACK Edge basic clusters.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,8 +26,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// <para>The cluster version, which is consistent with the Kubernetes community baseline version. We recommend that you select the latest version. If you do not specify this parameter, the latest version is used by default.</para>
-        /// <para>For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Kubernetes version release overview</a>.</para>
+        /// <para>The Kubernetes version of the cluster. This version is consistent with the Kubernetes community baseline version. We recommend that you select the latest version. If you do not specify this parameter, the latest version is used by default.</para>
+        /// <para>For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Overview of Kubernetes versions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.32.1-aliyun.1</para>
@@ -38,11 +39,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The query mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>supported</c>: queries supported versions.</description></item>
-        /// <item><description><c>creatable</c>: queries creatable versions.</description></item>
+        /// <item><description><c>supported</c>: Supported versions.</description></item>
+        /// <item><description><c>creatable</c>: Versions available for cluster creation.</description></item>
         /// </list>
-        /// <para>If you specify <c>KubernetesVersion</c>, the query mode is ignored.</para>
-        /// <para>If you do not specify the query mode, creatable versions are returned by default.</para>
+        /// <para>If you specify KubernetesVersion, the system ignores the query mode.</para>
+        /// <para>If you do not specify a query mode, the system returns versions available for cluster creation by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>supported</para>
@@ -52,11 +53,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Mode { get; set; }
 
         /// <summary>
-        /// <para>The cluster type for specific scenarios. Valid values:</para>
+        /// <para>The cluster profile. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>Default</c>: non-edge scenario cluster.</description></item>
-        /// <item><description><c>Edge</c>: edge scenario cluster.</description></item>
-        /// <item><description><c>Serverless</c>: ACK Serverless cluster.</description></item>
+        /// <item><description><c>Default</c>: cluster for non-edge scenarios.</description></item>
+        /// <item><description><c>Edge</c>: cluster for edge scenarios.</description></item>
+        /// <item><description><c>Serverless</c>: ASK cluster.</description></item>
         /// </list>
         /// <para>Default value: <c>Default</c>.</para>
         /// 
@@ -68,12 +69,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Profile { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query upgradable versions for the specified cluster version. This parameter takes effect only when the KubernetesVersion parameter is specified.</para>
+        /// <para>Specifies whether to query the upgradable versions of the cluster version. This parameter takes effect only when the KubernetesVersion parameter is specified. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: queries upgradable versions.</para>
-        /// </description></item>
-        /// <item><description><para>false: does not query upgradable versions.</para>
-        /// </description></item>
+        /// <item><description>true: Queries upgradable versions.</description></item>
+        /// <item><description>false: Does not query upgradable versions.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -95,14 +94,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The runtime type. You can specify the runtime type to filter the system images that are supported by the runtime. Valid values:</para>
+        /// <para>The runtime type. You can specify a runtime type to filter system images supported by the runtime. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>docker</c>: Docker runtime.</description></item>
         /// <item><description><c>containerd</c>: containerd runtime.</description></item>
         /// <item><description><c>Sandboxed-Container.runv</c>: sandboxed container.</description></item>
         /// </list>
-        /// <para>If you specify the runtime type, the image versions supported by the specified runtime are returned.</para>
-        /// <para>If you do not specify the runtime type, all images are returned by default.</para>
+        /// <para>If you specify a runtime type, the system returns the image versions supported by the specified runtime.</para>
+        /// <para>If you do not specify a runtime type, the system returns all images by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>containerd</para>
@@ -114,3 +113,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

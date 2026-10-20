@@ -1,20 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class UpdateClusterAuditLogConfigRequest : TeaModel {
+    public class UpdateClusterAuditLogConfigRequest : Darabonba.Model {
         /// <summary>
         /// <para>Specifies whether to disable the cluster audit log feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>false: enables the audit log feature or updates the audit log configuration.</para>
+        /// <item><description><para>false: Enables the audit log feature or updates the audit log configuration.</para>
         /// </description></item>
-        /// <item><description><para>true: disables the audit log feature.</para>
+        /// <item><description><para>true: Disables the audit log feature.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -46,3 +47,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

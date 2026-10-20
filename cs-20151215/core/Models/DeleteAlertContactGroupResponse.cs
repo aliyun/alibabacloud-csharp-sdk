@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DeleteAlertContactGroupResponse : TeaModel {
+    public class DeleteAlertContactGroupResponse : Darabonba.Model {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -20,12 +21,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("body")]
         [Validation(Required=false)]
         public List<DeleteAlertContactGroupResponseBody> Body { get; set; }
-        public class DeleteAlertContactGroupResponseBody : TeaModel {
+        public class DeleteAlertContactGroupResponseBody : Darabonba.Model {
             /// <summary>
-            /// <para>Deletion status.</para>
+            /// <para>The deletion status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: Deletion successful.</description></item>
-            /// <item><description>false: Deletion failed.</description></item>
+            /// <item><description>true: Deleted.</description></item>
+            /// <item><description>false: Failed to delete.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -36,7 +37,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? Status { get; set; }
 
             /// <summary>
-            /// <para>The message returned when execution fails.</para>
+            /// <para>The message returned when the operation fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Delete contact group resource failed.</para>
@@ -46,7 +47,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Msg { get; set; }
 
             /// <summary>
-            /// <para>Alert contact group ID.</para>
+            /// <para>The alert contact group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12345</para>
@@ -60,3 +61,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

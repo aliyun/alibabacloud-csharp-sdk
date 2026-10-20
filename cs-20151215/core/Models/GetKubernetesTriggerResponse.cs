@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class GetKubernetesTriggerResponse : TeaModel {
+    public class GetKubernetesTriggerResponse : Darabonba.Model {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -20,7 +21,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("body")]
         [Validation(Required=false)]
         public List<GetKubernetesTriggerResponseBody> Body { get; set; }
-        public class GetKubernetesTriggerResponseBody : TeaModel {
+        public class GetKubernetesTriggerResponseBody : Darabonba.Model {
             /// <summary>
             /// <para>The trigger ID.</para>
             /// 
@@ -52,8 +53,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The trigger project name.</para>
-            /// <para>The value consists of the namespace and application name in the format of <c>${namespace}/${name}</c>. Example: default/test-app.</para>
+            /// <para>The trigger project name. It consists of the namespace and the name of the application, in the format of <c>${namespace}/${name}</c>. Example: default/test-app.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default/test-app</para>
@@ -63,12 +63,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The trigger type.</para>
-            /// <para>Valid values:</para>
+            /// <para>The trigger type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>deployment</c>: a trigger for a stateless application. </para>
+            /// <item><description><para><c>deployment</c>: the trigger for stateless applications. </para>
             /// </description></item>
-            /// <item><description><para><c>application</c>: a trigger for an application center application.</para>
+            /// <item><description><para><c>application</c>: the trigger for applications in the Hybrid Cloud Application Center.</para>
             /// </description></item>
             /// </list>
             /// <para>Default value: <c>deployment</c>.</para>
@@ -106,3 +105,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class InstallClusterAddonsRequest : TeaModel {
+    public class InstallClusterAddonsRequest : Darabonba.Model {
         /// <summary>
         /// <para>The request body parameters.</para>
         /// 
@@ -18,7 +19,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("body")]
         [Validation(Required=false)]
         public List<InstallClusterAddonsRequestBody> Body { get; set; }
-        public class InstallClusterAddonsRequestBody : TeaModel {
+        public class InstallClusterAddonsRequestBody : Darabonba.Model {
             /// <summary>
             /// <para>The custom parameters of the component, encoded as a JSON string.</para>
             /// 
@@ -56,3 +57,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

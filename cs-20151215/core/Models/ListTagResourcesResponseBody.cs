@@ -1,16 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ListTagResourcesResponseBody : TeaModel {
+    public class ListTagResourcesResponseBody : Darabonba.Model {
         /// <summary>
-        /// <para>The token that determines the start point of the next query.</para>
+        /// <para>The token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c374bf4864448****</para>
@@ -35,14 +36,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("tag_resources")]
         [Validation(Required=false)]
         public ListTagResourcesResponseBodyTagResources TagResources { get; set; }
-        public class ListTagResourcesResponseBodyTagResources : TeaModel {
+        public class ListTagResourcesResponseBodyTagResources : Darabonba.Model {
             /// <summary>
             /// <para>The tag resource.</para>
             /// </summary>
             [NameInMap("tag_resource")]
             [Validation(Required=false)]
             public List<ListTagResourcesResponseBodyTagResourcesTagResource> TagResource { get; set; }
-            public class ListTagResourcesResponseBodyTagResourcesTagResource : TeaModel {
+            public class ListTagResourcesResponseBodyTagResourcesTagResource : Darabonba.Model {
                 /// <summary>
                 /// <para>The resource ID.</para>
                 /// 
@@ -90,3 +91,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

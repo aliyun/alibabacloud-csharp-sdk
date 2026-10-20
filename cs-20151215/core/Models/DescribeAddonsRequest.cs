@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeAddonsRequest : TeaModel {
+    public class DescribeAddonsRequest : Darabonba.Model {
         /// <summary>
         /// <para>The cluster type. Valid values:</para>
         /// <list type="bullet">
@@ -41,10 +42,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterSpec { get; set; }
 
         /// <summary>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><c>Kubernetes</c>: ACK dedicated cluster.</para>
         /// </description></item>
-        /// <item><description><para><c>ManagedKubernetes</c>: ACK managed cluster types, including ACK managed clusters (ACK Pro and ACK Basic), ACK Serverless clusters (Pro and Basic), ACK Edge clusters (Pro and Basic), and ACK Lingjun clusters (Pro).</para>
+        /// <item><description><para><c>ManagedKubernetes</c>: ACK ACK cluster types, including ACK ACK clusters (ACK Pro and ACK Basic), ACK Serverless clusters (Pro and Basic), ACK Edge clusters (Pro and Basic), and ACK Lingjun clusters (Pro).</para>
         /// </description></item>
         /// <item><description><para><c>ExternalKubernetes</c>: registered cluster.</para>
         /// </description></item>
@@ -81,3 +83,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

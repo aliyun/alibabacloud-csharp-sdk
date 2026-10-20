@@ -1,21 +1,22 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class UpdateNodePoolComponentRequest : TeaModel {
+    public class UpdateNodePoolComponentRequest : Darabonba.Model {
         /// <summary>
         /// <para>The configuration of the node component.</para>
         /// </summary>
         [NameInMap("config")]
         [Validation(Required=false)]
         public UpdateNodePoolComponentRequestConfig Config { get; set; }
-        public class UpdateNodePoolComponentRequestConfig : TeaModel {
+        public class UpdateNodePoolComponentRequestConfig : Darabonba.Model {
             /// <summary>
             /// <para>The custom configuration of the component.</para>
             /// 
@@ -32,7 +33,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("envs")]
             [Validation(Required=false)]
             public List<UpdateNodePoolComponentRequestConfigEnvs> Envs { get; set; }
-            public class UpdateNodePoolComponentRequestConfigEnvs : TeaModel {
+            public class UpdateNodePoolComponentRequestConfigEnvs : Darabonba.Model {
                 /// <summary>
                 /// <para>The name of the environment variable.</para>
                 /// 
@@ -58,7 +59,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to disable log rotation. Default value: false. Updating the baseline configuration triggers log rotation on nodes.</para>
+        /// <para>Specifies whether to disable rolling updates. Default value: false. When set to false, updating the baseline configuration triggers a rolling update of nodes.</para>
         /// </summary>
         [NameInMap("disableRolling")]
         [Validation(Required=false)]
@@ -75,21 +76,21 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The list of nodes for log rotation. By default, all nodes are included.</para>
+        /// <para>The list of nodes to include in the rolling update. By default, all nodes are included.</para>
         /// </summary>
         [NameInMap("nodeNames")]
         [Validation(Required=false)]
         public List<string> NodeNames { get; set; }
 
         /// <summary>
-        /// <para>The log rotation configuration.</para>
+        /// <para>The rolling update configuration.</para>
         /// </summary>
         [NameInMap("rollingPolicy")]
         [Validation(Required=false)]
         public UpdateNodePoolComponentRequestRollingPolicy RollingPolicy { get; set; }
-        public class UpdateNodePoolComponentRequestRollingPolicy : TeaModel {
+        public class UpdateNodePoolComponentRequestRollingPolicy : Darabonba.Model {
             /// <summary>
-            /// <para>The upgrade interval between batches. Unit: seconds.</para>
+            /// <para>The interval between batches during the upgrade, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -109,7 +110,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? MaxFailedNodes { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of parallel operations per batch. Default value: 1.</para>
+            /// <para>The maximum number of nodes that can be updated in parallel per batch. Default value: 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -119,7 +120,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? MaxParallelism { get; set; }
 
             /// <summary>
-            /// <para>The automatic pause policy during node upgrade.</para>
+            /// <para>The automatic pause policy during node upgrades.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NotPause</para>
@@ -143,3 +144,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

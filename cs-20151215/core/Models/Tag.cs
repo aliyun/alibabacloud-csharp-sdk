@@ -1,16 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class Tag : TeaModel {
+    public class Tag : Darabonba.Model {
         /// <summary>
-        /// <para>The <c>key</c> of the label.</para>
+        /// <para>The tag <c>key</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>env</para>
@@ -20,7 +21,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The <c>value</c> of the label.</para>
+        /// <para>The tag <c>value</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>prod</para>
@@ -32,3 +33,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

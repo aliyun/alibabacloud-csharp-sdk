@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ListUserKubeConfigStatesRequest : TeaModel {
+    public class ListUserKubeConfigStatesRequest : Darabonba.Model {
         /// <summary>
         /// <para>The current page number.</para>
         /// <list type="bullet">
@@ -26,7 +27,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of results returned per page.</para>
+        /// <para>The number of results per page.</para>
         /// <list type="bullet">
         /// <item><description><para>Valid values: 1 to 100.</para>
         /// </description></item>
@@ -44,3 +45,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

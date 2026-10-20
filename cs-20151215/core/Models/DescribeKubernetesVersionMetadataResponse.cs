@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeKubernetesVersionMetadataResponse : TeaModel {
+    public class DescribeKubernetesVersionMetadataResponse : Darabonba.Model {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -20,9 +21,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("body")]
         [Validation(Required=false)]
         public List<DescribeKubernetesVersionMetadataResponseBody> Body { get; set; }
-        public class DescribeKubernetesVersionMetadataResponseBody : TeaModel {
+        public class DescribeKubernetesVersionMetadataResponseBody : Darabonba.Model {
             /// <summary>
-            /// <para>The feature capabilities of the Kubernetes version.</para>
+            /// <para>The features of the Kubernetes version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -40,7 +41,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("images")]
             [Validation(Required=false)]
             public List<DescribeKubernetesVersionMetadataResponseBodyImages> Images { get; set; }
-            public class DescribeKubernetesVersionMetadataResponseBodyImages : TeaModel {
+            public class DescribeKubernetesVersionMetadataResponseBodyImages : Darabonba.Model {
                 /// <summary>
                 /// <para>The image ID.</para>
                 /// 
@@ -88,7 +89,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string OsVersion { get; set; }
 
                 /// <summary>
-                /// <para>The type of the operating system distribution. We recommend that you use this field to specify the node operating system. Valid values:</para>
+                /// <para>The operating system distribution type. Use this field to specify the operating system for nodes. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><c>CentOS</c></description></item>
                 /// <item><description><c>AliyunLinux</c></description></item>
@@ -123,12 +124,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string OsType { get; set; }
 
                 /// <summary>
-                /// <para>The image category. Partial valid values:</para>
+                /// <para>The image category. Some valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><c>system</c>: public image.</description></item>
-                /// <item><description><c>self</c>: custom image.</description></item>
-                /// <item><description><c>others</c>: shared image from other users.</description></item>
-                /// <item><description><c>marketplace</c>: Alibaba Cloud Marketplace image.</description></item>
+                /// <item><description><c>system</c>: public images.</description></item>
+                /// <item><description><c>self</c>: your custom images.</description></item>
+                /// <item><description><c>others</c>: public images from other users.</description></item>
+                /// <item><description><c>marketplace</c>: Alibaba Cloud Marketplace images.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -172,7 +173,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public List<Runtime> Runtimes { get; set; }
 
             /// <summary>
-            /// <para>The Kubernetes version released by ACK. For more information about versions, see <a href="https://help.aliyun.com/document_detail/185269.html">Kubernetes version release overview</a>.</para>
+            /// <para>The Kubernetes version released by ACK. For more information about versions, see <a href="https://help.aliyun.com/document_detail/185269.html">Overview of Kubernetes version releases</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.31.1-aliyun.1</para>
@@ -182,7 +183,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Version { get; set; }
 
             /// <summary>
-            /// <para>The release date of the Kubernetes version.</para>
+            /// <para>The release time of the Kubernetes version. The time is in ISO 8601 format and includes time zone information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-01-30T00:00:00Z</para>
@@ -192,7 +193,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ReleaseDate { get; set; }
 
             /// <summary>
-            /// <para>The expiration date of the Kubernetes version.</para>
+            /// <para>The expiration time of the Kubernetes version. The time is in ISO 8601 format and includes time zone information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-30T00:00:00Z</para>
@@ -202,7 +203,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ExpirationDate { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the Kubernetes version can be used to create clusters.</para>
+            /// <para>Indicates whether the Kubernetes version can be created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -223,3 +224,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

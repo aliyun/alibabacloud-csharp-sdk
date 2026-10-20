@@ -1,19 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class UpdateNodePoolComponentInstanceRequest : TeaModel {
+    public class UpdateNodePoolComponentInstanceRequest : Darabonba.Model {
+        /// <summary>
+        /// <para>The node component configuration.</para>
+        /// </summary>
         [NameInMap("config")]
         [Validation(Required=false)]
         public UpdateNodePoolComponentInstanceRequestConfig Config { get; set; }
-        public class UpdateNodePoolComponentInstanceRequestConfig : TeaModel {
+        public class UpdateNodePoolComponentInstanceRequestConfig : Darabonba.Model {
             /// <summary>
+            /// <para>The custom configuration of the node component.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{&quot;cpuManagerPolicy&quot;:&quot;static&quot;}</para>
             /// </summary>
@@ -21,11 +27,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public Dictionary<string, object> CustomConfig { get; set; }
 
+            /// <summary>
+            /// <para>The environment variables of the node component.</para>
+            /// </summary>
             [NameInMap("envs")]
             [Validation(Required=false)]
             public List<UpdateNodePoolComponentInstanceRequestConfigEnvs> Envs { get; set; }
-            public class UpdateNodePoolComponentInstanceRequestConfigEnvs : TeaModel {
+            public class UpdateNodePoolComponentInstanceRequestConfigEnvs : Darabonba.Model {
                 /// <summary>
+                /// <para>The name of the environment variable.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>LOG_LEVEL</para>
                 /// </summary>
@@ -34,6 +45,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>The value of the environment variable.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>info</para>
                 /// </summary>
@@ -46,6 +59,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
+        /// <para>Specifies whether to disable the rolling update. Default value: false. Updating the baseline configuration triggers a rolling update of the nodes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -53,15 +68,23 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public bool? DisableRolling { get; set; }
 
+        /// <summary>
+        /// <para>The list of nodes to be updated in a rolling manner. By default, all nodes are updated.</para>
+        /// </summary>
         [NameInMap("node_names")]
         [Validation(Required=false)]
         public List<string> NodeNames { get; set; }
 
+        /// <summary>
+        /// <para>The rolling update configuration.</para>
+        /// </summary>
         [NameInMap("rolling_policy")]
         [Validation(Required=false)]
         public UpdateNodePoolComponentInstanceRequestRollingPolicy RollingPolicy { get; set; }
-        public class UpdateNodePoolComponentInstanceRequestRollingPolicy : TeaModel {
+        public class UpdateNodePoolComponentInstanceRequestRollingPolicy : Darabonba.Model {
             /// <summary>
+            /// <para>The upgrade interval between batches, in seconds. Default value: 0.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -70,6 +93,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? BatchInterval { get; set; }
 
             /// <summary>
+            /// <para>The maximum number of nodes that are allowed to fail during the rolling update. Default value: 0. A value of 0 indicates that the task fails if any node fails. A value greater than 0 indicates that the task fails and stops if the cumulative number of failed nodes exceeds this value.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -78,6 +103,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? MaxFailedNodes { get; set; }
 
             /// <summary>
+            /// <para>The maximum number of parallel updates per batch. Default value: 1.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -86,6 +113,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? MaxParallelism { get; set; }
 
             /// <summary>
+            /// <para>The auto-pause policy during the node upgrade process. Valid values: NotPause, FirstBatch, and EveryBatch. Default value: NotPause.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>NotPause</para>
             /// </summary>
@@ -96,6 +125,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
+        /// <para>The node component version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1.33.3-aliyun.1</para>
         /// </summary>
@@ -106,3 +137,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

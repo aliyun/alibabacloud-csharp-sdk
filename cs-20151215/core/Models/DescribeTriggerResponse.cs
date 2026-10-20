@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeTriggerResponse : TeaModel {
+    public class DescribeTriggerResponse : Darabonba.Model {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -20,9 +21,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("body")]
         [Validation(Required=false)]
         public List<DescribeTriggerResponseBody> Body { get; set; }
-        public class DescribeTriggerResponseBody : TeaModel {
+        public class DescribeTriggerResponseBody : Darabonba.Model {
             /// <summary>
-            /// <para>触发器ID。</para>
+            /// <para>The trigger ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>75973497486******</para>
@@ -32,7 +33,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>触发器名称。</para>
+            /// <para>The trigger name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -42,7 +43,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>集群ID。</para>
+            /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c259f563386444ebb8d7****</para>
@@ -52,8 +53,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>触发器项目名称。</para>
-            /// <para>由应用所在命名空间及应用名称组成，格式为<c>${namespace}/${name}</c>，取值示例：default/test-app。</para>
+            /// <para>The trigger project name.</para>
+            /// <para>The value consists of the namespace and application name in the format <c>${namespace}/${name}</c>. Example: default/test-app.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default/test-app</para>
@@ -63,12 +64,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ProjectId { get; set; }
 
             /// <summary>
-            /// <para>触发器类型。</para>
-            /// <para>取值：</para>
+            /// <para>The trigger type.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>deployment</c>：针对无状态应用的触发器。 </para>
+            /// <item><description><para><c>deployment</c>: a trigger for stateless applications. </para>
             /// </description></item>
-            /// <item><description><para><c>application</c>：针对应用中心应用的触发器。</para>
+            /// <item><description><para><c>application</c>: a trigger for App Hub applications.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -80,8 +81,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>触发器行为，取值：</para>
-            /// <para><c>redeploy</c>: 重新部署应用。</para>
+            /// <para>The trigger action. Valid values:</para>
+            /// <para><c>redeploy</c>: redeploys the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>redeploy</para>
@@ -91,7 +92,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Action { get; set; }
 
             /// <summary>
-            /// <para>Token信息。</para>
+            /// <para>The token information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eyJhbGci***</para>
@@ -105,3 +106,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

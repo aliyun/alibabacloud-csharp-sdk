@@ -1,19 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeClusterAttachScriptsRequest : TeaModel {
+    public class DescribeClusterAttachScriptsRequest : Darabonba.Model {
         /// <summary>
-        /// <para>The CPU architecture of the node. Supported CPU architectures include <c>amd64</c>, <c>arm</c>, and <c>arm64</c>.</para>
+        /// <para>The CPU architecture of the node. Valid values: <c>amd64</c>, <c>arm</c>, and <c>arm64</c>.</para>
         /// <para>Default value: <c>amd64</c>.</para>
         /// <remarks>
-        /// <para>This parameter is required when the cluster type is managed edge cluster.</para>
+        /// <para>This parameter is required when the cluster type is managed edge.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,7 +25,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Arch { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the generated token. The value is a UNIX timestamp. For example, 1739980800 indicates 2025-02-20 00:00:00.</para>
+        /// <para>The expiration time of the generated token, in UNIX timestamp format. For example, 1739980800 indicates 2025-02-20 00:00:00.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1740037333</para>
@@ -34,16 +35,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? Expired { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to mount data disks to the instance when you manually add the existing instance to the cluster. Container and image data is stored on the data disks. Valid values:</para>
+        /// <para>Specifies whether to mount data cloud disks to the instance when manually adding existing instances to the cluster, storing containers and images on the data cloud disks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: Mounts data disks to the instance. Existing data on the data disks will be lost. Back up your data before you proceed.</description></item>
-        /// <item><description><c>false</c>: Does not mount data disks to the instance.</description></item>
+        /// <item><description><c>true</c>: Mounts data cloud disks to the instance. Existing data on the data cloud disks will be lost. Back up your data in advance.</description></item>
+        /// <item><description><c>false</c>: Does not mount data cloud disks to the instance.</description></item>
         /// </list>
         /// <para>Default value: <c>false</c>.</para>
-        /// <para>Data disk mounting rules:</para>
+        /// <para>Data mounting rules:</para>
         /// <list type="bullet">
-        /// <item><description>If data disks are already mounted to the ECS instance and the file system of the last data disk is not initialized, the system automatically formats the data disk as ext4 to store /var/lib/docker and /var/lib/kubelet.</description></item>
-        /// <item><description>If no data disks are mounted to the ECS instance, no new data disks are mounted.</description></item>
+        /// <item><description>If the ECS instance already has data cloud disks mounted and the file system of the last data cloud disk is not initialized, the system automatically formats the data cloud disk as ext4 to store the content of /var/lib/docker and /var/lib/kubelet.</description></item>
+        /// <item><description>If the ECS instance does not have data cloud disks mounted, no new data cloud disks are mounted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,10 +55,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? FormatDisk { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to retain the instance name when adding an existing instance to the cluster. If the instance name is not retained, the instance name is in the format of <c>worker-k8s-for-cs-&lt;clusterid&gt;</c>. Valid values:</para>
+        /// <para>Specifies whether to retain the instance name when adding existing instances to the cluster. If the instance name is not retained, the instance name format is <c>worker-k8s-for-cs-&lt;clusterid&gt;</c>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>true</c>: Retains the instance name.</description></item>
-        /// <item><description><c>false</c>: Does not retain the instance name. The instance name is replaced based on system rules.</description></item>
+        /// <item><description><c>false</c>: Does not retain the instance name. The name is replaced based on system rules.</description></item>
         /// </list>
         /// <para>Default value: <c>true</c>.</para>
         /// 
@@ -69,7 +70,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? KeepInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The node pool ID. You can add the node to a specified node pool.</para>
+        /// <para>The node pool ID. When adding a node, you can add the node to the specified node pool.</para>
         /// <remarks>
         /// <para>If you do not specify a node pool ID, the node is added to the default node pool.</para>
         /// </remarks>
@@ -86,9 +87,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? OneTimeToken { get; set; }
 
         /// <summary>
-        /// <para>The configuration parameters for node registration.</para>
+        /// <para>The access configuration parameters of the node.</para>
         /// <remarks>
-        /// <para>This parameter is required when the cluster type is managed edge cluster.</para>
+        /// <para>This parameter is required when the cluster type is managed edge.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -99,7 +100,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Options { get; set; }
 
         /// <summary>
-        /// <para>If you specify a list of ApsaraDB RDS instances, the ECS instances in the cluster are automatically added to the whitelists of the specified ApsaraDB RDS instances.</para>
+        /// <para>If you specify a list of RDS instances, the ECS nodes in the cluster are automatically added to the RDS whitelist.</para>
         /// </summary>
         [NameInMap("rds_instances")]
         [Validation(Required=false)]
@@ -108,3 +109,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

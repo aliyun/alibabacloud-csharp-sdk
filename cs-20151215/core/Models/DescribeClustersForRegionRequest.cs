@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeClustersForRegionRequest : TeaModel {
+    public class DescribeClustersForRegionRequest : Darabonba.Model {
         /// <summary>
         /// <para>The cluster ID.</para>
         /// 
@@ -20,7 +21,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>Queries clusters of a specified specification. Valid values:</para>
+        /// <para>The specification of the cluster to query. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>ack.standard</c>: Basic</description></item>
         /// <item><description><c>ack.pro.small</c>: Pro</description></item>
@@ -28,8 +29,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <item><description><c>ack.pro.2xlarge</c>: Pro 2XL</description></item>
         /// <item><description><c>ack.pro.4xlarge</c>: Pro 4XL (contact customer service to add your account to the whitelist)</description></item>
         /// </list>
-        /// <para>Pro XL, Pro 2XL, and Pro 4XL are three tiers provided by &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro Provisioned Control Plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro Provisioned Control Plane</a>. By pre-allocating and dedicating control plane resources, these tiers ensure that API concurrency and Pod scheduling capabilities remain at a consistently high level. They are suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</para>
-        /// <para>For information about cluster management fees for Pro and Provisioned Control Plane editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>.</para>
+        /// <para>Pro XL, Pro 2XL, and Pro 4XL are three tiers provided by &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro Provisioned Control Plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro Provisioned Control Plane</a>. By pre-allocating and dedicating control plane resources, these tiers ensure that API concurrency and pod scheduling capabilities remain at a deterministic high level. They are suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</para>
+        /// <para>For information about cluster management fees for Pro and provisioned control plane editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ack.standard</para>
@@ -39,7 +40,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterSpec { get; set; }
 
         /// <summary>
-        /// <para>Queries clusters of a specified type. Valid values:</para>
+        /// <para>The type of cluster to query. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Kubernetes: ACK dedicated cluster.</description></item>
         /// <item><description>ManagedKubernetes: ACK managed cluster types, including ACK managed clusters (ACK Pro and ACK Basic), ACK Serverless clusters (Pro and Basic), ACK Edge clusters (Pro and Basic), and ACK Lingjun clusters (Pro).</description></item>
@@ -54,7 +55,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// <para>Fuzzy search by cluster name.</para>
+        /// <para>Fuzzy matches clusters by cluster name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-cluster</para>
@@ -84,7 +85,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Queries clusters of a specified subtype. Valid values:</para>
+        /// <para>The subtype of cluster to query. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Default: ACK managed cluster, including ACK Pro and ACK Basic.</description></item>
         /// <item><description>Edge: ACK Edge cluster, including ACK Edge Pro and ACK Edge Basic.</description></item>
@@ -102,3 +103,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

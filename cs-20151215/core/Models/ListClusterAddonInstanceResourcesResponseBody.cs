@@ -1,23 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ListClusterAddonInstanceResourcesResponseBody : TeaModel {
+    public class ListClusterAddonInstanceResourcesResponseBody : Darabonba.Model {
         /// <summary>
-        /// <para>The Helm release instance information of the component.</para>
+        /// <para>The Helm release instance information corresponding to the component.</para>
         /// </summary>
         [NameInMap("helm_release")]
         [Validation(Required=false)]
         public ListClusterAddonInstanceResourcesResponseBodyHelmRelease HelmRelease { get; set; }
-        public class ListClusterAddonInstanceResourcesResponseBodyHelmRelease : TeaModel {
+        public class ListClusterAddonInstanceResourcesResponseBodyHelmRelease : Darabonba.Model {
             /// <summary>
-            /// <para>The Helm chart name of the component.</para>
+            /// <para>The name of the Helm chart corresponding to the component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ack-node-problem-detector</para>
@@ -27,7 +28,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ChartName { get; set; }
 
             /// <summary>
-            /// <para>The Helm chart version of the component.</para>
+            /// <para>The version of the Helm chart corresponding to the component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.2.28</para>
@@ -64,7 +65,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("kubernetes_objects")]
         [Validation(Required=false)]
         public List<ListClusterAddonInstanceResourcesResponseBodyKubernetesObjects> KubernetesObjects { get; set; }
-        public class ListClusterAddonInstanceResourcesResponseBodyKubernetesObjects : TeaModel {
+        public class ListClusterAddonInstanceResourcesResponseBodyKubernetesObjects : Darabonba.Model {
             /// <summary>
             /// <para>The Kubernetes API group to which the object belongs.</para>
             /// 
@@ -120,3 +121,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

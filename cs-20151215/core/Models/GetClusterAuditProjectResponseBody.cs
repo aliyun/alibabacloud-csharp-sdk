@@ -1,16 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class GetClusterAuditProjectResponseBody : TeaModel {
+    public class GetClusterAuditProjectResponseBody : Darabonba.Model {
         /// <summary>
-        /// <para>Indicates whether the API server audit feature is enabled for the cluster. Valid values:</para>
+        /// <para>Indicates whether the API server audit feature is enabled for the cluster.</para>
         /// <list type="bullet">
         /// <item><description><para><c>true</c>: Enabled.</para>
         /// </description></item>
@@ -38,3 +39,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ScaleOutClusterResponseBody : TeaModel {
+    public class ScaleOutClusterResponseBody : Darabonba.Model {
         [NameInMap("cluster_id")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
@@ -24,3 +25,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeTemplatesRequest : TeaModel {
+    public class DescribeTemplatesRequest : Darabonba.Model {
         /// <summary>
         /// <para>The page number to return when paginating query results.</para>
         /// <para>Default value: 1.</para>
@@ -39,7 +40,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <item><description><para>If this parameter is left empty or set to other values, the template is not displayed on the Orchestration Templates page in the console.</para>
         /// </description></item>
         /// </list>
-        /// <para>Set this parameter to <c>kubernetes</c>.</para>
+        /// <para>Set this parameter to <c>kubernetes</c> in Settings.</para>
         /// 
         /// <b>Example:</b>
         /// <para>kubernetes</para>
@@ -51,3 +52,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

@@ -1,17 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeResourcesDeleteProtectionRequest : TeaModel {
+    public class DescribeResourcesDeleteProtectionRequest : Darabonba.Model {
         /// <summary>
         /// <para>The namespace of the resource to query.</para>
-        /// <para>This parameter is required when resource_type is set to services. If this parameter is not specified, the namespace defaults to default.</para>
+        /// <para>This parameter is required when resource_type is set to services. If this parameter is not specified, the default namespace is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -21,11 +22,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The name of the resource to query. Separate multiple resources with commas (,).</para>
+        /// <para>The names of the resources to query. Separate multiple resource names with commas (,).</para>
         /// <list type="bullet">
-        /// <item><description><para>If resource_type is set to namespaces, set this parameter to namespace names. If this parameter is not specified, the deletion protection status of all namespaces in the cluster is queried.</para>
+        /// <item><description><para>If resource_type is set to namespaces, specify namespace names. If this parameter is not specified, the deletion protection status of all namespaces in the cluster is queried.</para>
         /// </description></item>
-        /// <item><description><para>If resource_type is set to services, this parameter is required. Set this parameter to service names.</para>
+        /// <item><description><para>If resource_type is set to services, this parameter is required. Specify service names.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -39,3 +40,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

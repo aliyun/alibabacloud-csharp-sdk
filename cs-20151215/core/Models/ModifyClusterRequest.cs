@@ -1,18 +1,19 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ModifyClusterRequest : TeaModel {
+    public class ModifyClusterRequest : Darabonba.Model {
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The access control list for the registered cluster API Server SLB.</para>
+        /// <para>The access control list (ACL) for the API server SLB of a registered cluster.</para>
         /// </summary>
         [NameInMap("access_control_list")]
         [Validation(Required=false)]
@@ -20,18 +21,18 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<string> AccessControlList { get; set; }
 
         /// <summary>
-        /// <para>The custom API Server certificate Subject Alternative Name (SAN). This parameter adds custom IP addresses or domain names to the SAN field of the cluster API Server certificate for client access control.</para>
+        /// <para>The custom API server certificate Subject Alternative Names (SANs). This parameter adds custom IP addresses or domain names to the SAN field of the cluster API server certificate for client access control.</para>
         /// <para>Only managed clusters support this parameter.</para>
         /// </summary>
         [NameInMap("api_server_custom_cert_sans")]
         [Validation(Required=false)]
         public ModifyClusterRequestApiServerCustomCertSans ApiServerCustomCertSans { get; set; }
-        public class ModifyClusterRequestApiServerCustomCertSans : TeaModel {
+        public class ModifyClusterRequestApiServerCustomCertSans : Darabonba.Model {
             /// <summary>
             /// <para>Specifies whether to overwrite or append the SAN configuration. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>overwrite: overwrites the existing configuration.</description></item>
-            /// <item><description>append: appends to the existing configuration.</description></item>
+            /// <item><description>overwrite: overwrites the existing SAN configuration.</description></item>
+            /// <item><description>append: appends to the existing SAN configuration.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -51,10 +52,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether an Elastic IP Address (EIP) is attached to the cluster for public network access to the API server. Valid values:</para>
+        /// <para>Specifies whether the cluster is attached with an EIP for public network access to the API server. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: An EIP is attached to the cluster.</description></item>
-        /// <item><description><c>false</c>: No EIP is attached to the cluster.</description></item>
+        /// <item><description><c>true</c>: The cluster is attached with an EIP.</description></item>
+        /// <item><description><c>false</c>: The cluster is not attached with an EIP.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,7 +66,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? ApiServerEip { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the EIP attached to the cluster API Server. This parameter takes effect only when <c>api_server_eip</c> is set to <c>true</c>.</para>
+        /// <para>The instance ID of the EIP attached to the cluster API server. This parameter takes effect only when <c>api_server_eip</c> is set to <c>true</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eip-wz9fnasl6dsfhmvci****</para>
@@ -85,7 +86,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The custom cluster name. The name can contain digits, Chinese characters, letters, and hyphens (-). It must be 1 to 63 characters in length and cannot start with a hyphen (-).</para>
+        /// <para>The custom cluster name. The name must be 1 to 63 characters in length and can contain digits, Chinese characters, letters, and hyphens (-). It cannot start with a hyphen (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>cluster-new-name</para>
@@ -103,7 +104,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <item><description><c>ack.pro.4xlarge</c>: Pro 4XL (contact customer service to be added to the whitelist)</description></item>
         /// </list>
         /// <para>Pro XL, Pro 2XL, and Pro 4XL are three tiers provided by &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro Provisioned Control Plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro Provisioned Control Plane</a>. By pre-allocating and dedicating control plane resources, these tiers ensure that API concurrency and pod scheduling capabilities remain at a consistently high level. They are suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</para>
-        /// <para>For information about the cluster management fees for Pro and provisioned control plane editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>.</para>
+        /// <para>For information about the cluster management fees for Pro and Provisioned Control Plane editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ack.pro.small</para>
@@ -113,12 +114,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterSpec { get; set; }
 
         /// <summary>
-        /// <para>The dedicated cluster control plane configuration.</para>
+        /// <para>The control plane configuration for dedicated clusters.</para>
         /// </summary>
         [NameInMap("control_plane_config")]
         [Validation(Required=false)]
         public ModifyClusterRequestControlPlaneConfig ControlPlaneConfig { get; set; }
-        public class ModifyClusterRequestControlPlaneConfig : TeaModel {
+        public class ModifyClusterRequestControlPlaneConfig : Darabonba.Model {
             /// <summary>
             /// <para>Specifies whether to enable auto-renewal for control plane node instances. This parameter takes effect only when <c>charge_type</c> is set to <c>PrePaid</c>. Valid values:</para>
             /// <list type="bullet">
@@ -135,7 +136,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? AutoRenew { get; set; }
 
             /// <summary>
-            /// <para>The auto-renewal duration for each renewal cycle of control plane node instances.</para>
+            /// <para>The auto-renewal period for each renewal of control plane node instances.</para>
             /// <para>Valid values: {1, 2, 3, 6, 12}. Unit: months.</para>
             /// <para>Default value: 1.</para>
             /// 
@@ -176,7 +177,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? CloudMonitorFlags { get; set; }
 
             /// <summary>
-            /// <para>The node CPU management policy. The following policies are supported for clusters running version 1.12.6 or later:</para>
+            /// <para>The CPU management policy for nodes. The following policies are supported for clusters running version 1.12.6 or later:</para>
             /// <list type="bullet">
             /// <item><description><c>static</c>: Allows pods with certain resource characteristics on the node to be granted enhanced CPU affinity and exclusivity.</description></item>
             /// <item><description><c>none</c>: Uses the existing default CPU affinity scheme.</description></item>
@@ -232,7 +233,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public List<string> InstanceTypes { get; set; }
 
             /// <summary>
-            /// <para>The key pair name. Mutually exclusive with <c>login_password</c>.</para>
+            /// <para>The key pair name. Specify either this parameter or <c>login_password</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ack</para>
@@ -242,7 +243,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string KeyPair { get; set; }
 
             /// <summary>
-            /// <para>The SSH logon password. Mutually exclusive with <c>key_pair</c>. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. To use password-based logon, specify this parameter during scale-out.</para>
+            /// <para>The SSH logon password. Specify either this parameter or <c>key_pair</c>. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. To use password-based logon, specify this parameter during scale-out.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Ack@2000.</para>
@@ -252,7 +253,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string LoginPassword { get; set; }
 
             /// <summary>
-            /// <para>The node service port range. Available port range: [30000, 65535].</para>
+            /// <para>The node service port range. Valid port range: [30000, 65535].</para>
             /// <para>Default value: 30000-32767.</para>
             /// 
             /// <b>Example:</b>
@@ -264,7 +265,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
             /// <summary>
             /// <para>The subscription duration for control plane node instances. This parameter takes effect and is required only when <c>charge_type</c> is set to <c>PrePaid</c>.</para>
-            /// <para>When <c>period_unit=Month</c>, valid values are {1, 2, 3, 6, 12, 24, 36, 48, 60}.</para>
+            /// <para>When <c>period_unit=Month</c>, valid values: {1, 2, 3, 6, 12, 24, 36, 48, 60}.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -274,8 +275,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? Period { get; set; }
 
             /// <summary>
-            /// <para>The billing cycle unit for control plane node instances. This parameter takes effect only when <c>charge_type</c> is set to <c>PrePaid</c>.</para>
-            /// <para><c>Month</c>: The billing cycle is measured in months. Currently, only months are supported.</para>
+            /// <para>The billing period unit for control plane node instances. This parameter takes effect only when <c>charge_type</c> is set to <c>PrePaid</c>.</para>
+            /// <para><c>Month</c>: The billing period is measured in months. Currently, only months are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Month</para>
@@ -324,7 +325,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? Size { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable MLPS 2.0 security hardening. For more information, see <a href="https://help.aliyun.com/document_detail/196148.html">ACK MLPS 2.0 security hardening</a>.</para>
+            /// <para>Specifies whether to enable MLPS 2.0 security hardening. For more information, see <a href="https://help.aliyun.com/document_detail/196148.html">China Chinese ACK MLPS 2.0 security hardening</a>.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
             /// <item><description><c>true</c>: Enables MLPS 2.0 security hardening.</description></item>
@@ -340,7 +341,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? SocEnabled { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable burst (performance burst) for the node system cloud disk. Valid values:</para>
+            /// <para>Specifies whether to enable burst mode for the node system cloud disk. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><c>true</c>: Enabled.</description></item>
             /// <item><description><c>false</c>: Disabled.</description></item>
@@ -355,11 +356,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? SystemDiskBurstingEnabled { get; set; }
 
             /// <summary>
-            /// <para>The node system cloud disk type. Valid values:</para>
+            /// <para>The type of the node system cloud disk. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><c>cloud_efficiency</c>: ultra cloud disk.</description></item>
             /// <item><description><c>cloud_ssd</c>: standard SSD.</description></item>
-            /// <item><description><c>cloud_essd</c>: Enterprise SSD (ESSD).</description></item>
+            /// <item><description><c>cloud_essd</c>: ESSD.</description></item>
             /// <item><description><c>cloud_auto</c>: ESSD AutoPL cloud disk.</description></item>
             /// <item><description><c>cloud_essd_entry</c>: ESSD Entry cloud disk.</description></item>
             /// </list>
@@ -372,7 +373,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string SystemDiskCategory { get; set; }
 
             /// <summary>
-            /// <para>The performance level of the node system cloud disk. This parameter takes effect only for ESSD cloud disks. The performance level varies based on the cloud disk size. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">standard SSDs</a>.</para>
+            /// <para>The performance level of the node system cloud disk. This parameter takes effect only for ESSD cloud disks. The performance level varies based on the cloud disk size. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PL1</para>
@@ -382,7 +383,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string SystemDiskPerformanceLevel { get; set; }
 
             /// <summary>
-            /// <para>The provisioned read/write IOPS for the node system cloud disk. Valid values: 0 to min{50,000, 1000 × capacity - baseline performance}. Baseline performance = min{1,800 + 50 × capacity, 50000}.</para>
+            /// <para>The provisioned read/write IOPS for the node system cloud disk. Valid values: 0 to min{50,000, 1000 × capacity - baseline performance}. Baseline performance = min{1,800 + 50 × capacity, 50,000}.</para>
             /// <para>This parameter is supported only when <c>system_disk_category</c> is set to <c>cloud_auto</c>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL cloud disks</a>.</para>
             /// 
             /// <b>Example:</b>
@@ -393,7 +394,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? SystemDiskProvisionedIops { get; set; }
 
             /// <summary>
-            /// <para>The node system cloud disk size. Valid values: [40, 500]. Unit: GiB.</para>
+            /// <para>The size of the node system cloud disk. Valid values: 40 to 500. Unit: GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>120</para>
@@ -403,7 +404,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? SystemDiskSize { get; set; }
 
             /// <summary>
-            /// <para>The ID of the automatic snapshot policy applied to the node system cloud disk.</para>
+            /// <para>The ID of the automatic snapshot policy used by the node system cloud disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sp-2zej1nogjvovnz4z****</para>
@@ -420,16 +421,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("control_plane_endpoints_config")]
         [Validation(Required=false)]
         public ModifyClusterRequestControlPlaneEndpointsConfig ControlPlaneEndpointsConfig { get; set; }
-        public class ModifyClusterRequestControlPlaneEndpointsConfig : TeaModel {
+        public class ModifyClusterRequestControlPlaneEndpointsConfig : Darabonba.Model {
             /// <summary>
-            /// <para>The internal DNS configuration for the cluster. Applicable to ACK managed clusters. The internal domain name is used by node-side system components such as kubelet and kube-proxy to access the API Server. When internal domain name access is not enabled, node-side system components access the API Server through the CLB IP address.</para>
+            /// <para>The internal domain name configuration for the cluster. This applies to ACK managed clusters. The internal domain name is used by node-side system components such as kubelet and kube-proxy to access the API server. If the internal domain name access is not enabled, node-side system components access the API server through the CLB IP address.</para>
             /// </summary>
             [NameInMap("internal_dns_config")]
             [Validation(Required=false)]
             public ModifyClusterRequestControlPlaneEndpointsConfigInternalDnsConfig InternalDnsConfig { get; set; }
-            public class ModifyClusterRequestControlPlaneEndpointsConfigInternalDnsConfig : TeaModel {
+            public class ModifyClusterRequestControlPlaneEndpointsConfigInternalDnsConfig : Darabonba.Model {
                 /// <summary>
-                /// <para>The VPCs where the internal domain name resolution takes effect.</para>
+                /// <para>The VPCs in which the internal domain name DNS records take effect.</para>
                 /// </summary>
                 [NameInMap("bind_vpcs")]
                 [Validation(Required=false)]
@@ -438,7 +439,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// <summary>
                 /// <para>Specifies whether to enable internal domain name access for the cluster. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: Enables internal domain name access. Node-side components (kubelet, kube-proxy) access the API Server through the internal domain name.</description></item>
+                /// <item><description>true: Enables internal domain name access. Node-side components (kubelet, kube-proxy) access the API server through the internal domain name.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -451,12 +452,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
-            /// <para>The cluster access load balancing configuration.</para>
+            /// <para>The load balancing configuration for cluster access.</para>
             /// </summary>
             [NameInMap("load_balancers_config")]
             [Validation(Required=false)]
             public List<ModifyClusterRequestControlPlaneEndpointsConfigLoadBalancersConfig> LoadBalancersConfig { get; set; }
-            public class ModifyClusterRequestControlPlaneEndpointsConfigLoadBalancersConfig : TeaModel {
+            public class ModifyClusterRequestControlPlaneEndpointsConfigLoadBalancersConfig : Darabonba.Model {
                 /// <summary>
                 /// <para>The endpoint type.</para>
                 /// 
@@ -482,7 +483,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to enable deletion protection for the cluster to prevent accidental deletion through the console or API. Valid values:</para>
+        /// <para>Specifies whether to enable deletion protection for the cluster. This prevents accidental deletion of the cluster through the console or API. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>true</c>: Enables cluster deletion protection. The cluster cannot be deleted through the console or API.</description></item>
         /// <item><description><c>false</c>: Disables cluster deletion protection. The cluster can be deleted through the console or API.</description></item>
@@ -497,10 +498,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? DeletionProtection { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable or disable the RAM Roles for Service Accounts (RRSA) feature. Only managed clusters support this parameter. Valid values:</para>
+        /// <para>Specifies whether to enable or disable the RRSA feature. Only managed clusters support this parameter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: Enabled.</description></item>
-        /// <item><description><c>false</c>: Disabled.</description></item>
+        /// <item><description><c>true</c>: Enable.</description></item>
+        /// <item><description><c>false</c>: Disable.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -513,10 +514,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Specifies whether to rebind the cluster test domain name. Valid values:</para>
+        /// <para>Specifies whether to rebind the test domain name of the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: Rebinds the cluster test domain name.</description></item>
-        /// <item><description><c>false</c>: Does not rebind the cluster test domain name.</description></item>
+        /// <item><description><c>true</c>: Rebinds the test domain name of the cluster.</description></item>
+        /// <item><description><c>false</c>: Does not rebind the test domain name of the cluster.</description></item>
         /// </list>
         /// <para>Default value: <c>false</c>.</para>
         /// 
@@ -531,7 +532,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The SLB instance ID of the cluster to be modified.</para>
+        /// <para>The instance ID of the SLB for the cluster to be modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lb-wz97kes8tnndkpodw****</para>
@@ -544,10 +545,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Specifies whether to enable instance deletion protection to prevent accidental deletion of nodes through the console or API. Valid values:</para>
+        /// <para>Specifies whether to enable instance deletion protection. This prevents accidental deletion of nodes through the console or API. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>true</c>: Nodes cannot be accidentally deleted through the console or API.</description></item>
-        /// <item><description><c>false</c>: Nodes can be accidentally deleted through the console or API.</description></item>
+        /// <item><description><c>false</c>: Nodes can be deleted through the console or API.</description></item>
         /// </list>
         /// <para>Default value: <c>false</c>.</para>
         /// 
@@ -560,33 +561,33 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? InstanceDeletionProtection { get; set; }
 
         /// <summary>
-        /// <para>The maintenance window configuration for the cluster. This feature takes effect only for ACK Pro clusters.</para>
+        /// <para>The O&amp;M window configuration for the cluster. This feature takes effect only in ACK Pro managed clusters.</para>
         /// </summary>
         [NameInMap("maintenance_window")]
         [Validation(Required=false)]
         public MaintenanceWindow MaintenanceWindow { get; set; }
 
         /// <summary>
-        /// <para>The cluster automatic O&amp;M policy.</para>
+        /// <para>The automatic O&amp;M policy for the cluster.</para>
         /// </summary>
         [NameInMap("operation_policy")]
         [Validation(Required=false)]
         public ModifyClusterRequestOperationPolicy OperationPolicy { get; set; }
-        public class ModifyClusterRequestOperationPolicy : TeaModel {
+        public class ModifyClusterRequestOperationPolicy : Darabonba.Model {
             /// <summary>
-            /// <para>The cluster auto upgrade configuration.</para>
+            /// <para>The automatic cluster upgrade configuration.</para>
             /// </summary>
             [NameInMap("cluster_auto_upgrade")]
             [Validation(Required=false)]
             public ModifyClusterRequestOperationPolicyClusterAutoUpgrade ClusterAutoUpgrade { get; set; }
-            public class ModifyClusterRequestOperationPolicyClusterAutoUpgrade : TeaModel {
+            public class ModifyClusterRequestOperationPolicyClusterAutoUpgrade : Darabonba.Model {
                 /// <summary>
-                /// <para>The cluster auto upgrade frequency. For more information, see <a href="https://help.aliyun.com/document_detail/2712866.html">Upgrade frequency</a>.</para>
+                /// <para>The automatic cluster upgrade frequency. For more information, see <a href="https://help.aliyun.com/document_detail/2712866.html">Upgrade frequency</a>.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>patch: latest patch version.</description></item>
-                /// <item><description>stable: second-latest minor version.</description></item>
-                /// <item><description>rapid: latest minor version.</description></item>
+                /// <item><description>patch: The latest patch version.</description></item>
+                /// <item><description>stable: The second latest minor version.</description></item>
+                /// <item><description>rapid: The latest minor version.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -597,11 +598,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string Channel { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable cluster auto upgrade.</para>
+                /// <para>Specifies whether to enable automatic cluster upgrade.</para>
                 /// <list type="bullet">
-                /// <item><description><para>true: Enables auto upgrade.</para>
+                /// <item><description><para>true: Enables automatic upgrade.</para>
                 /// </description></item>
-                /// <item><description><para>false: Disables auto upgrade.</para>
+                /// <item><description><para>false: Disables automatic upgrade.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -629,9 +630,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The control plane security group ID.</para>
         /// <list type="bullet">
-        /// <item><description>If you have configured blocking rules in the security group, ensure that the security group rules allow the protocols and ports required by the cluster. For information about recommended security group rules, see <a href="https://help.aliyun.com/document_detail/353191.html">Configure and manage cluster security groups</a>.</description></item>
-        /// <item><description>For non-ACK dedicated clusters, the cluster control plane and installed managed components (such as terway-controlplane) briefly restart during the procedure. Perform this operation during off-peak hours. After the control plane security group is changed, the network interface controllers (NICs) used by the cluster control plane and installed managed components are automatically added to the new security group.</description></item>
-        /// <item><description>For ACK dedicated clusters, after the control plane security group is changed, newly scaled-out master nodes automatically use the new control plane security group. Existing control plane nodes are not affected.</description></item>
+        /// <item><description>If you have configured blocking rules in the security group, make sure the security group rules allow the protocols and ports that the cluster depends on. For the recommended security group rule scope, see <a href="https://help.aliyun.com/document_detail/353191.html">Configure and manage cluster security groups</a>.</description></item>
+        /// <item><description>For non-ACK dedicated clusters, the cluster control plane and installed managed components (such as terway-controlplane) will briefly restart during the cluster management procedure. Perform this operation during off-peak hours. After the control plane security group is changed, the elastic network interfaces (ENIs) used by the cluster control plane and installed managed components are automatically added to the new security group.</description></item>
+        /// <item><description>For ACK dedicated clusters, after the control plane security group is changed, newly scaled-out master nodes automatically apply the new control plane security group. Existing control plane nodes are not affected.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -647,7 +648,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("system_events_logging")]
         [Validation(Required=false)]
         public ModifyClusterRequestSystemEventsLogging SystemEventsLogging { get; set; }
-        public class ModifyClusterRequestSystemEventsLogging : TeaModel {
+        public class ModifyClusterRequestSystemEventsLogging : Darabonba.Model {
             /// <summary>
             /// <para>Specifies whether to enable system event storage.</para>
             /// <list type="bullet">
@@ -665,7 +666,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The name of the LogProject used for system event storage.</para>
+            /// <para>The name of the LogProject for system event storage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>k8s-log-cb95aa626a47740afbf6aa099b65****</para>
@@ -681,9 +682,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <list type="bullet">
         /// <item><description><para>After the time zone is changed, the cluster inspection configuration uses the new time zone settings.</para>
         /// </description></item>
-        /// <item><description><para>For managed clusters, the cluster control plane and installed managed components (such as terway-controlplane) briefly restart during the change. Perform this operation during off-peak hours. After the time zone is changed, newly scaled-out nodes automatically use the new time zone settings. Existing nodes are not affected. You can use the node pool node reset feature to apply the new settings to existing nodes.</para>
+        /// <item><description><para>For managed clusters, the cluster control plane and installed managed components (such as terway-controlplane) will briefly restart during the change. Perform this operation during off-peak hours. After the time zone is changed, newly scaled-out nodes automatically apply the new time zone settings. Existing nodes are not affected. You can use the node pool node reset feature to apply the new settings to existing nodes.</para>
         /// </description></item>
-        /// <item><description><para>For dedicated clusters, after the time zone is changed, newly scaled-out nodes (including control plane nodes) automatically use the new time zone settings. Existing nodes (including control plane nodes) are not affected. You can use the node pool node reset feature to apply the new settings to existing nodes. For control plane nodes, scale out and then scale in to apply the new settings to all control plane nodes.</para>
+        /// <item><description><para>For dedicated clusters, after the time zone is changed, newly scaled-out nodes (including control plane nodes) automatically apply the new time zone settings. Existing nodes (including control plane nodes) are not affected. You can use the node pool node reset feature to apply the new settings to existing nodes. For control plane nodes, you need to scale out and then scale in to apply the settings to all control plane nodes.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -695,12 +696,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Timezone { get; set; }
 
         /// <summary>
-        /// <para>The vSwitches for the cluster control plane. For dedicated clusters, the change applies to newly scaled-out control plane nodes. When changing control plane vSwitches for managed clusters, note the following:</para>
+        /// <para>The control plane vSwitches of the cluster. For dedicated clusters, the change applies to newly scaled-out control plane nodes. For managed clusters, note the following when changing control plane vSwitches:</para>
         /// <list type="bullet">
-        /// <item><description>This parameter performs a full overwrite. Specify the complete list of target vSwitches.</description></item>
-        /// <item><description>Control plane components briefly restart during the change. Proceed with caution.</description></item>
-        /// <item><description>Ensure that all security groups of the cluster (including the control plane security group, security groups of all node pools, and security groups used by the container network) allow inbound and outbound traffic for the IP CIDR blocks of the new vSwitches to prevent nodes and containers from losing connectivity to the API server.</description></item>
-        /// <item><description>If the new control plane vSwitches have ACL rules configured, ensure that the ACL rules allow communication with the CIDR blocks of cluster nodes and the container network.</description></item>
+        /// <item><description>This parameter performs an overwrite update. You must specify the complete target vSwitch list.</description></item>
+        /// <item><description>Control plane components will briefly restart during the change. Proceed with caution.</description></item>
+        /// <item><description>Make sure all security groups of the cluster (including the control plane security group, security groups of all node pools, and security groups used by the container network) allow inbound and outbound traffic for the IP CIDR blocks of the new vSwitches. This prevents nodes and containers from being unable to connect to the API server.</description></item>
+        /// <item><description>If the new control plane vSwitches have ACL rules configured, make sure the ACL rules allow communication with the IP CIDR blocks of cluster nodes and the container network.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("vswitch_ids")]
@@ -710,3 +711,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

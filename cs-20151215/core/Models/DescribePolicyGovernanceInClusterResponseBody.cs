@@ -1,35 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribePolicyGovernanceInClusterResponseBody : TeaModel {
+    public class DescribePolicyGovernanceInClusterResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The policy violation information aggregated by severity level.</para>
         /// </summary>
         [NameInMap("Violation")]
         [Validation(Required=false)]
         public DescribePolicyGovernanceInClusterResponseBodyViolation Violation { get; set; }
-        public class DescribePolicyGovernanceInClusterResponseBodyViolation : TeaModel {
+        public class DescribePolicyGovernanceInClusterResponseBodyViolation : Darabonba.Model {
             /// <summary>
-            /// <para>The summary information.</para>
+            /// <para>The aggregated information.</para>
             /// </summary>
             [NameInMap("totalViolations")]
             [Validation(Required=false)]
             public DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolations TotalViolations { get; set; }
-            public class DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolations : TeaModel {
+            public class DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolations : Darabonba.Model {
                 /// <summary>
-                /// <para>The summary of block records.</para>
+                /// <para>The aggregated interception records.</para>
                 /// </summary>
                 [NameInMap("deny")]
                 [Validation(Required=false)]
                 public List<DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolationsDeny> Deny { get; set; }
-                public class DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolationsDeny : TeaModel {
+                public class DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolationsDeny : Darabonba.Model {
                     /// <summary>
                     /// <para>The severity level. Valid values: low, medium, and high.</para>
                     /// 
@@ -53,14 +54,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 }
 
                 /// <summary>
-                /// <para>The summary of alert records.</para>
+                /// <para>The aggregated alert records.</para>
                 /// </summary>
                 [NameInMap("warn")]
                 [Validation(Required=false)]
                 public List<DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolationsWarn> Warn { get; set; }
-                public class DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolationsWarn : TeaModel {
+                public class DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolationsWarn : Darabonba.Model {
                     /// <summary>
-                    /// <para>The summary of severity levels.</para>
+                    /// <para>The severity level.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>high</para>
@@ -70,7 +71,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                     public string Severity { get; set; }
 
                     /// <summary>
-                    /// <para>The total number of violations.</para>
+                    /// <para>The number of violations.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -89,16 +90,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("violations")]
             [Validation(Required=false)]
             public DescribePolicyGovernanceInClusterResponseBodyViolationViolations Violations { get; set; }
-            public class DescribePolicyGovernanceInClusterResponseBodyViolationViolations : TeaModel {
+            public class DescribePolicyGovernanceInClusterResponseBodyViolationViolations : Darabonba.Model {
                 /// <summary>
-                /// <para>The summary of block records.</para>
+                /// <para>The aggregated interception records.</para>
                 /// </summary>
                 [NameInMap("deny")]
                 [Validation(Required=false)]
                 public List<DescribePolicyGovernanceInClusterResponseBodyViolationViolationsDeny> Deny { get; set; }
-                public class DescribePolicyGovernanceInClusterResponseBodyViolationViolationsDeny : TeaModel {
+                public class DescribePolicyGovernanceInClusterResponseBodyViolationViolationsDeny : Darabonba.Model {
                     /// <summary>
-                    /// <para>The policy description.</para>
+                    /// <para>The description of the policy.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Prevent specific namespaces from being deleted.</para>
@@ -140,14 +141,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 }
 
                 /// <summary>
-                /// <para>The summary of alert information.</para>
+                /// <para>The aggregated alert information.</para>
                 /// </summary>
                 [NameInMap("warn")]
                 [Validation(Required=false)]
                 public List<DescribePolicyGovernanceInClusterResponseBodyViolationViolationsWarn> Warn { get; set; }
-                public class DescribePolicyGovernanceInClusterResponseBodyViolationViolationsWarn : TeaModel {
+                public class DescribePolicyGovernanceInClusterResponseBodyViolationViolationsWarn : Darabonba.Model {
                     /// <summary>
-                    /// <para>The policy description.</para>
+                    /// <para>The description of the policy.</para>
                     /// </summary>
                     [NameInMap("policyDescription")]
                     [Validation(Required=false)]
@@ -169,6 +170,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
                     /// <summary>
                     /// <para>The number of violations.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>0</para>
                     /// </summary>
                     [NameInMap("violations")]
                     [Validation(Required=false)]
@@ -181,14 +185,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The policy governance audit logs of the current cluster.</para>
+        /// <para>The policy governance audit logs of the cluster.</para>
         /// </summary>
         [NameInMap("admit_log")]
         [Validation(Required=false)]
         public DescribePolicyGovernanceInClusterResponseBodyAdmitLog AdmitLog { get; set; }
-        public class DescribePolicyGovernanceInClusterResponseBodyAdmitLog : TeaModel {
+        public class DescribePolicyGovernanceInClusterResponseBodyAdmitLog : Darabonba.Model {
             /// <summary>
-            /// <para>The total number of logs returned by the current query.</para>
+            /// <para>The total number of logs queried.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -198,7 +202,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? Count { get; set; }
 
             /// <summary>
-            /// <para>The log project that stores policy action information.</para>
+            /// <para>The Log Service project that stores the policy action information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>k8s-log-clusterid</para>
@@ -208,7 +212,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string LogProject { get; set; }
 
             /// <summary>
-            /// <para>The Logstore that stores policy action information.</para>
+            /// <para>The Log Service Logstore that stores the policy action information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>policyadmit-clusterid</para>
@@ -223,9 +227,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("logs")]
             [Validation(Required=false)]
             public List<DescribePolicyGovernanceInClusterResponseBodyAdmitLogLogs> Logs { get; set; }
-            public class DescribePolicyGovernanceInClusterResponseBodyAdmitLogLogs : TeaModel {
+            public class DescribePolicyGovernanceInClusterResponseBodyAdmitLogLogs : Darabonba.Model {
                 /// <summary>
-                /// <para>The cluster ID.</para>
+                /// <para>The ID of the cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hash code</para>
@@ -235,10 +239,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string ClusterId { get; set; }
 
                 /// <summary>
-                /// <para>The action taken by the policy, including alert (warn) and block (deny). Valid values:</para>
+                /// <para>The action taken by the policy. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>warn: Only alerts on behaviors that violate the policy without actually blocking the request.</description></item>
-                /// <item><description>deny: Blocks requests that violate the policy.</description></item>
+                /// <item><description>warn: Alerts on policy violations but does not intercept the requests.</description></item>
+                /// <item><description>deny: Intercepts requests that violate the policy.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -259,7 +263,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string ConstraintApiVersion { get; set; }
 
                 /// <summary>
-                /// <para>The policy type.</para>
+                /// <para>The type of the policy.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cis-k8s</para>
@@ -279,7 +283,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string ConstraintGroup { get; set; }
 
                 /// <summary>
-                /// <para>The policy name in policy management.</para>
+                /// <para>The policy kind that corresponds to the policy name in policy management.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ACKNamespacesDeleteProtection</para>
@@ -289,7 +293,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string ConstraintKind { get; set; }
 
                 /// <summary>
-                /// <para>The policy instance name.</para>
+                /// <para>The name of the policy instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>namespace-delete-protection-jpjwv</para>
@@ -309,7 +313,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string EventMsg { get; set; }
 
                 /// <summary>
-                /// <para>The type of event triggered by the policy, such as violation.</para>
+                /// <para>The type of the event triggered by the policy, such as violation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>violation</para>
@@ -319,7 +323,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string EventType { get; set; }
 
                 /// <summary>
-                /// <para>The request ID.</para>
+                /// <para>The ID of the request.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hash code</para>
@@ -329,7 +333,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string RequestUid { get; set; }
 
                 /// <summary>
-                /// <para>The information about the user whose request violated the policy.</para>
+                /// <para>The user information of the request that violated the policy.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>account id</para>
@@ -339,7 +343,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string RequestUserinfo { get; set; }
 
                 /// <summary>
-                /// <para>The name of the user whose request violated the policy.</para>
+                /// <para>The username of the request that violated the policy.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>account user name</para>
@@ -349,7 +353,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string RequestUsername { get; set; }
 
                 /// <summary>
-                /// <para>The type of resource that violated the policy. For example, if a request to operate on a Namespace is rejected, this field is set to Namespace.</para>
+                /// <para>The type of the resource that violated the policy. For example, if a request to operate on a namespace is rejected, the value is Namespace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Namespace</para>
@@ -369,7 +373,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string ResourceName { get; set; }
 
                 /// <summary>
-                /// <para>The time when the policy violation occurred.</para>
+                /// <para>The time when the policy violation occurred. The time is in ISO 8601 format and includes time zone information.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-10-27T11:31:40Z</para>
@@ -383,8 +387,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The status of the query result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>Complete</c>: The query is complete and the returned result is the complete result.</description></item>
-            /// <item><description><c>Incomplete</c>: The query is complete but the returned result is incomplete. Repeat the request to obtain the complete result.</description></item>
+            /// <item><description><c>Complete</c>: The query is complete and the returned result is complete.</description></item>
+            /// <item><description><c>Incomplete</c>: The query is complete but the returned result is incomplete. You must repeat the request to obtain the complete result.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -397,12 +401,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The count of enabled policies at different severity levels in the current cluster.</para>
+        /// <para>The counts of enabled policies at different severity levels in the current cluster.</para>
         /// </summary>
         [NameInMap("on_state")]
         [Validation(Required=false)]
         public List<DescribePolicyGovernanceInClusterResponseBodyOnState> OnState { get; set; }
-        public class DescribePolicyGovernanceInClusterResponseBodyOnState : TeaModel {
+        public class DescribePolicyGovernanceInClusterResponseBodyOnState : Darabonba.Model {
             /// <summary>
             /// <para>The number of enabled policy types.</para>
             /// 
@@ -414,7 +418,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public int? EnabledCount { get; set; }
 
             /// <summary>
-            /// <para>The policy governance severity level.</para>
+            /// <para>The severity level of the policy governance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>high</para>
@@ -424,7 +428,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Severity { get; set; }
 
             /// <summary>
-            /// <para>The total number of policy types at this severity level.</para>
+            /// <para>The total number of policy types at the severity level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -438,3 +442,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

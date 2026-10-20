@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class GetUpgradeStatusResponseBody : TeaModel {
+    public class GetUpgradeStatusResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The error message during the cluster upgrade.</para>
         /// 
@@ -20,7 +21,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the precheck report.</para>
+        /// <para>The precheck report ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>be4c8eb72de94d459ea7ace7c811d119</para>
@@ -33,7 +34,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>The current upgrade status of the cluster. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>success</c>: The upgrade is successful.</description></item>
-        /// <item><description><c>fail</c>: The upgrade has failed.</description></item>
+        /// <item><description><c>fail</c>: The upgrade failed.</description></item>
         /// <item><description><c>pause</c>: The upgrade is paused.</description></item>
         /// <item><description><c>running</c>: The upgrade is in progress.</description></item>
         /// </list>
@@ -49,9 +50,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>The current upgrade phase of the cluster. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>not_start</c>: Not started.</description></item>
-        /// <item><description><c>prechecking</c>: Prechecking is in progress.</description></item>
-        /// <item><description><c>upgrading</c>: The upgrade is in progress.</description></item>
-        /// <item><description><c>pause</c>: The upgrade is paused.</description></item>
+        /// <item><description><c>prechecking</c>: Prechecking.</description></item>
+        /// <item><description><c>upgrading</c>: Upgrading.</description></item>
+        /// <item><description><c>pause</c>: Paused.</description></item>
         /// <item><description><c>success</c>: The upgrade is successful.</description></item>
         /// </list>
         /// 
@@ -68,7 +69,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("upgrade_task")]
         [Validation(Required=false)]
         public GetUpgradeStatusResponseBodyUpgradeTask UpgradeTask { get; set; }
-        public class GetUpgradeStatusResponseBodyUpgradeTask : TeaModel {
+        public class GetUpgradeStatusResponseBodyUpgradeTask : Darabonba.Model {
             /// <summary>
             /// <para>The description of the upgrade task.</para>
             /// 
@@ -82,9 +83,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The upgrade task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>running</c>: The task is running.</description></item>
-            /// <item><description><c>Success</c>: The task is successful.</description></item>
-            /// <item><description><c>Failed</c>: The task has failed.</description></item>
+            /// <item><description><c>running</c>: Running.</description></item>
+            /// <item><description><c>Success</c>: Successful.</description></item>
+            /// <item><description><c>Failed</c>: Failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -99,3 +100,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeClusterAddonInstanceResponseBody : TeaModel {
+    public class DescribeClusterAddonInstanceResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The component configuration.</para>
         /// 
@@ -32,13 +33,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The component status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>initial: installing</description></item>
-        /// <item><description>active: installed</description></item>
-        /// <item><description>unhealthy: abnormal</description></item>
-        /// <item><description>upgrading: upgrading</description></item>
-        /// <item><description>updating: updating</description></item>
-        /// <item><description>deleting: uninstalling</description></item>
-        /// <item><description>deleted: deleted.</description></item>
+        /// <item><description>initial: Installing.</description></item>
+        /// <item><description>active: Installed.</description></item>
+        /// <item><description>unhealthy: Unhealthy.</description></item>
+        /// <item><description>upgrading: Upgrading.</description></item>
+        /// <item><description>updating: Updating.</description></item>
+        /// <item><description>deleting: Uninstalling.</description></item>
+        /// <item><description>deleted: Deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -61,3 +62,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

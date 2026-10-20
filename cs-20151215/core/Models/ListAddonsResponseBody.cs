@@ -1,21 +1,22 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ListAddonsResponseBody : TeaModel {
+    public class ListAddonsResponseBody : Darabonba.Model {
         /// <summary>
-        /// <para>The list of available components.</para>
+        /// <para>The list of available add-on components.</para>
         /// </summary>
         [NameInMap("addons")]
         [Validation(Required=false)]
         public List<ListAddonsResponseBodyAddons> Addons { get; set; }
-        public class ListAddonsResponseBodyAddons : TeaModel {
+        public class ListAddonsResponseBodyAddons : Darabonba.Model {
             /// <summary>
             /// <para>The CPU architectures supported by the component.</para>
             /// </summary>
@@ -33,7 +34,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <item><description>monitor: logging and monitoring component.</description></item>
             /// <item><description>application: application component.</description></item>
             /// </list>
-            /// <para>An empty value indicates that the component belongs to another category.</para>
+            /// <para>An empty value indicates that the component belongs to another categorization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>monitor</para>
@@ -116,3 +117,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

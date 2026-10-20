@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ListClusterInspectReportsResponseBody : TeaModel {
+    public class ListClusterInspectReportsResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The pagination token.</para>
         /// 
@@ -25,9 +26,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("reports")]
         [Validation(Required=false)]
         public List<ListClusterInspectReportsResponseBodyReports> Reports { get; set; }
-        public class ListClusterInspectReportsResponseBodyReports : TeaModel {
+        public class ListClusterInspectReportsResponseBodyReports : Darabonba.Model {
             /// <summary>
-            /// <para>The completion time of the inspection report.</para>
+            /// <para>The completion time of the inspection report, in ISO 8601 format with time zone information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-12-18T19:40:16.778333+08:00</para>
@@ -47,7 +48,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ReportId { get; set; }
 
             /// <summary>
-            /// <para>The start time of the inspection report.</para>
+            /// <para>The start time of the inspection report, in ISO 8601 format with time zone information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-12-18T19:40:16.778333+08:00</para>
@@ -72,9 +73,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("summary")]
             [Validation(Required=false)]
             public ListClusterInspectReportsResponseBodyReportsSummary Summary { get; set; }
-            public class ListClusterInspectReportsResponseBodyReportsSummary : TeaModel {
+            public class ListClusterInspectReportsResponseBodyReportsSummary : Darabonba.Model {
                 /// <summary>
-                /// <para>The number of check items with a result of advice.</para>
+                /// <para>The number of check items whose result is advice.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -94,7 +95,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The number of check items with a result of error.</para>
+                /// <para>The number of check items whose result is error.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -104,7 +105,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public int? ErrorCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of check items with a result of normal.</para>
+                /// <para>The number of check items whose result is normal.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -114,7 +115,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public int? NormalCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of check items with a result of warning.</para>
+                /// <para>The number of check items whose result is warning.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -140,3 +141,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

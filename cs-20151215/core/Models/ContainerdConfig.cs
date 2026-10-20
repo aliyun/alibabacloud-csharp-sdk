@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ContainerdConfig : TeaModel {
+    public class ContainerdConfig : Darabonba.Model {
         /// <summary>
         /// <para>Whether to ignore volumes defined in the image.</para>
         /// </summary>
@@ -61,3 +62,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

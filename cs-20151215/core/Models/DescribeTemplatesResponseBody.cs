@@ -1,21 +1,22 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeTemplatesResponseBody : TeaModel {
+    public class DescribeTemplatesResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("page_info")]
         [Validation(Required=false)]
         public DescribeTemplatesResponseBodyPageInfo PageInfo { get; set; }
-        public class DescribeTemplatesResponseBodyPageInfo : TeaModel {
+        public class DescribeTemplatesResponseBodyPageInfo : Darabonba.Model {
             /// <summary>
             /// <para>The current page number.</para>
             /// 
@@ -37,7 +38,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -54,13 +55,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("templates")]
         [Validation(Required=false)]
         public List<DescribeTemplatesResponseBodyTemplates> Templates { get; set; }
-        public class DescribeTemplatesResponseBodyTemplates : TeaModel {
+        public class DescribeTemplatesResponseBodyTemplates : Darabonba.Model {
             /// <summary>
-            /// <para>The access permissions for the deployment template. Valid values:</para>
+            /// <para>The access permissions of the deployment template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>private</c>: private.</description></item>
-            /// <item><description><c>public</c>: public.</description></item>
-            /// <item><description><c>shared</c>: shared.</description></item>
+            /// <item><description><c>private</c>: Private.</description></item>
+            /// <item><description><c>public</c>: Public.</description></item>
+            /// <item><description><c>shared</c>: Shared.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -91,7 +92,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the orchestration template.</para>
+            /// <para>The orchestration template ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>874ec485-e7e6-4373-8a3b-47bde8******</para>
@@ -101,7 +102,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The name of the orchestration template.</para>
+            /// <para>The orchestration template name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>webserver</para>
@@ -133,7 +134,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The templatetype.</para>
             /// <list type="bullet">
-            /// <item><description><para>If the value is set to kubernetes, the template is displayed on the Orchestration Templates page in the console.</para>
+            /// <item><description><para>If the value is kubernetes, the template is displayed on the Orchestration Templates page in the console.</para>
             /// </description></item>
             /// <item><description><para>If this parameter is left empty or set to other values, the template is not displayed on the Orchestration Templates page in the console.</para>
             /// </description></item>
@@ -147,7 +148,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string TemplateType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the parent template associated with the template. This parameter is used to implement template versioning. Different versions of the same template share the same <c>template_with_hist_id</c> value.</para>
+            /// <para>The ID of the parent template associated with the template. This parameter is used to implement the multi-version feature for templates. Different versions of the same template share the same <c>template_with_hist_id</c> value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ad81d115-7c8b-47e7-a222-9c28d7******</para>
@@ -171,3 +172,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

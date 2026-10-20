@@ -1,16 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeUserQuotaResponseBody : TeaModel {
+    public class DescribeUserQuotaResponseBody : Darabonba.Model {
         /// <summary>
-        /// <para>The quota for managed clusters. Default value: 20. To request a quota increase beyond the default value, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit a request on the Quota Center page</a>.</para>
+        /// <para>The quota of managed clusters. Default value: 20. If you need to exceed the default value, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit a request on the Quota Center page</a> to increase the quota.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +21,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? AmkClusterQuota { get; set; }
 
         /// <summary>
-        /// <para>The quota for ASK clusters. Default value: 20. To request a quota increase beyond the default value, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit a request on the Quota Center page</a>.</para>
+        /// <para>The quota of ASK clusters. Default value: 20. If you need to exceed the default value, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit a request on the Quota Center page</a> to increase the quota.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -30,7 +31,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? AskClusterQuota { get; set; }
 
         /// <summary>
-        /// <para>The node pool quota per cluster. Default value: 20. To request a quota increase beyond the default value, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit a request on the Quota Center page</a>.</para>
+        /// <para>The node pool quota per cluster. Default value: 20. If you need to exceed the default value, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit a request on the Quota Center page</a> to increase the quota.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +41,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? ClusterNodepoolQuota { get; set; }
 
         /// <summary>
-        /// <para>The total cluster quota per account. Default value: 50. To request a quota increase beyond the default value, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit a request on the Quota Center page</a>.</para>
+        /// <para>The total cluster quota per account. Default value: 50. If you need to exceed the default value, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit a request on the Quota Center page</a> to increase the quota.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -52,7 +53,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("edge_improved_nodepool_quota")]
         [Validation(Required=false)]
         public DescribeUserQuotaResponseBodyEdgeImprovedNodepoolQuota EdgeImprovedNodepoolQuota { get; set; }
-        public class DescribeUserQuotaResponseBodyEdgeImprovedNodepoolQuota : TeaModel {
+        public class DescribeUserQuotaResponseBodyEdgeImprovedNodepoolQuota : Darabonba.Model {
             [NameInMap("bandwidth")]
             [Validation(Required=false)]
             public int? Bandwidth { get; set; }
@@ -68,7 +69,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The node quota per cluster. Default value: 100. To request a quota increase beyond the default value, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit a request on the Quota Center page</a>.</para>
+        /// <para>The node quota per cluster. Default value: 100. If you need to exceed the default value, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit a request on the Quota Center page</a> to increase the quota.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -78,7 +79,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? NodeQuota { get; set; }
 
         /// <summary>
-        /// <para>The new quota items. If this field is returned, the values in this field take precedence.</para>
+        /// <para>The new quota items. If this field exists, the values in this field take precedence.</para>
         /// </summary>
         [NameInMap("quotas")]
         [Validation(Required=false)]
@@ -87,3 +88,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

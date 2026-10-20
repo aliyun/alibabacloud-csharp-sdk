@@ -1,18 +1,19 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class RepairClusterNodePoolRequest : TeaModel {
+    public class RepairClusterNodePoolRequest : Darabonba.Model {
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[This field is deprecated] Specifies whether to allow instance restart.</para>
+        /// <para><b>[Deprecated]</b> Specifies whether to allow instance restart.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -35,7 +36,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("operations")]
         [Validation(Required=false)]
         public List<RepairClusterNodePoolRequestOperations> Operations { get; set; }
-        public class RepairClusterNodePoolRequestOperations : TeaModel {
+        public class RepairClusterNodePoolRequestOperations : Darabonba.Model {
             /// <summary>
             /// <para>The list of repair operation parameters.</para>
             /// </summary>
@@ -46,14 +47,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The repair operation ID. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>restart.kubelet: restart kubelet.</description></item>
-            /// <item><description>restart.docker: restart Docker.</description></item>
-            /// <item><description>restart.containerd: restart Containerd.</description></item>
-            /// <item><description>restart.ntp: restart ntpd or chronyd.</description></item>
-            /// <item><description>remove.containerdContainerInSandbox: delete a specified sandbox container under Containerd.</description></item>
-            /// <item><description>remove.dockerContainerInSandbox: delete a specified sandbox container under Docker.</description></item>
-            /// <item><description>remove.containerdContainer: delete a specified container under Containerd.</description></item>
-            /// <item><description>remove.dockerContainer: delete a specified container under Docker.</description></item>
+            /// <item><description>restart.kubelet: Restarts kubelet.</description></item>
+            /// <item><description>restart.docker: Restarts Docker.</description></item>
+            /// <item><description>restart.containerd: Restarts Containerd.</description></item>
+            /// <item><description>restart.ntp: Restarts ntpd or chronyd.</description></item>
+            /// <item><description>remove.containerdContainerInSandbox: Removes a specified sandbox container under Containerd.</description></item>
+            /// <item><description>remove.dockerContainerInSandbox: Removes a specified sandbox container under Docker.</description></item>
+            /// <item><description>remove.containerdContainer: Removes a specified container under Containerd.</description></item>
+            /// <item><description>remove.dockerContainer: Removes a specified container under Docker.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -68,3 +69,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

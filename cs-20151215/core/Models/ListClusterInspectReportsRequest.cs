@@ -1,16 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ListClusterInspectReportsRequest : TeaModel {
+    public class ListClusterInspectReportsRequest : Darabonba.Model {
         /// <summary>
-        /// <para>The maximum number of results to return. Maximum value: 50.</para>
+        /// <para>The maximum number of results to return. The maximum value is 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -32,3 +33,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

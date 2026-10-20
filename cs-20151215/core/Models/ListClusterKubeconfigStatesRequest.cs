@@ -1,19 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ListClusterKubeconfigStatesRequest : TeaModel {
+    public class ListClusterKubeconfigStatesRequest : Darabonba.Model {
         /// <summary>
-        /// <para>Specifies whether to query the KubeConfig list of cloud service roles in the cluster. Valid values:</para>
+        /// <para>Specifies whether to query the list of KubeConfigs for cloud service roles in the cluster.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: queries the KubeConfig list of cloud service roles in the cluster.</description></item>
-        /// <item><description>false: queries the KubeConfig list of Resource Access Management (RAM) users or roles in the cluster.</description></item>
+        /// <item><description>true: Queries the list of KubeConfigs for cloud service roles in the cluster.</description></item>
+        /// <item><description>false: Queries the list of KubeConfigs for Resource Access Management (RAM) users or roles in the cluster.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,12 +27,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// <para>The page number.</para>
-        /// <list type="bullet">
-        /// <item><description><para>Valid values: 1 or greater.</para>
-        /// </description></item>
-        /// <item><description><para>Default value: 1.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>Valid values: integers greater than or equal to 1.</para>
+        /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,13 +38,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page.</para>
-        /// <list type="bullet">
-        /// <item><description><para>Valid values: 1 to 50.</para>
-        /// </description></item>
-        /// <item><description><para>Default value: 10.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The number of entries per page.</para>
+        /// <para>Valid values: 1 to 50.</para>
+        /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -58,3 +52,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+

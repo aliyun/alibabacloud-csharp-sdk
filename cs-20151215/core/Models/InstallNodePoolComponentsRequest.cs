@@ -1,28 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class InstallNodePoolComponentsRequest : TeaModel {
+    public class InstallNodePoolComponentsRequest : Darabonba.Model {
         /// <summary>
         /// <para>The list of node components.</para>
         /// </summary>
         [NameInMap("components")]
         [Validation(Required=false)]
         public List<InstallNodePoolComponentsRequestComponents> Components { get; set; }
-        public class InstallNodePoolComponentsRequestComponents : TeaModel {
+        public class InstallNodePoolComponentsRequestComponents : Darabonba.Model {
             /// <summary>
-            /// <para>The component configuration.</para>
+            /// <para>The configuration of the component.</para>
             /// </summary>
             [NameInMap("config")]
             [Validation(Required=false)]
             public InstallNodePoolComponentsRequestComponentsConfig Config { get; set; }
-            public class InstallNodePoolComponentsRequestComponentsConfig : TeaModel {
+            public class InstallNodePoolComponentsRequestComponentsConfig : Darabonba.Model {
                 /// <summary>
                 /// <para>The custom configuration of the component.</para>
                 /// 
@@ -34,12 +35,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public Dictionary<string, object> CustomConfig { get; set; }
 
                 /// <summary>
-                /// <para>The environment variables of the node component.</para>
+                /// <para>The environment variables for the node component.</para>
                 /// </summary>
                 [NameInMap("envs")]
                 [Validation(Required=false)]
                 public List<InstallNodePoolComponentsRequestComponentsConfigEnvs> Envs { get; set; }
-                public class InstallNodePoolComponentsRequestComponentsConfigEnvs : TeaModel {
+                public class InstallNodePoolComponentsRequestComponentsConfigEnvs : Darabonba.Model {
                     /// <summary>
                     /// <para>The name of the environment variable.</para>
                     /// 
@@ -65,7 +66,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
-            /// <para>The component name.</para>
+            /// <para>The name of the component.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -76,7 +77,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The component version.</para>
+            /// <para>The version of the component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.28.9-aliyun.1</para>
@@ -88,21 +89,21 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The list of node names for the rolling operation. By default, all nodes are included.</para>
+        /// <para>The list of node names specified for the rolling update. Default value: all nodes.</para>
         /// </summary>
         [NameInMap("nodeNames")]
         [Validation(Required=false)]
         public List<string> NodeNames { get; set; }
 
         /// <summary>
-        /// <para>The rolling policy configuration.</para>
+        /// <para>The rolling update configuration.</para>
         /// </summary>
         [NameInMap("rollingPolicy")]
         [Validation(Required=false)]
         public InstallNodePoolComponentsRequestRollingPolicy RollingPolicy { get; set; }
-        public class InstallNodePoolComponentsRequestRollingPolicy : TeaModel {
+        public class InstallNodePoolComponentsRequestRollingPolicy : Darabonba.Model {
             /// <summary>
-            /// <para>The upgrade interval between batches. Unit: seconds.</para>
+            /// <para>The upgrade interval between batches, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -112,7 +113,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? BatchInterval { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of nodes that are allowed to fail during the rolling process. Default value: 0, which indicates that the task is considered failed if any node fails. If the value is greater than 0, the task is considered failed and stops when the cumulative number of failed nodes exceeds this value.</para>
+            /// <para>The maximum number of nodes that are allowed to fail during the rolling update. Default value: 0. A value of 0 indicates that the task fails if any node fails. A value greater than 0 indicates that the task fails and stops if the cumulative number of failed nodes exceeds this value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -146,3 +147,4 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
+
