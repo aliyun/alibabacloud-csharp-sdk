@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data field returned by the operation.</para>
+        /// <para>The business data field of the operation.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public List<AddFilesFromAuthorizedOssResponseBodyDataAddFileResultList> AddFileResultList { get; set; }
             public class AddFilesFromAuthorizedOssResponseBodyDataAddFileResultList : TeaModel {
                 /// <summary>
-                /// <para>The file ID. Keep this value safe because it is required for all subsequent API operations related to this file.</para>
+                /// <para>The file ID. Keep this value secure because it is used for all subsequent API operations related to this file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>file_809f469a59ac449586ec692576xxxxx_102248XXX</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public string FileId { get; set; }
 
                 /// <summary>
-                /// <para>The error message returned when the file import fails.</para>
+                /// <para>The error message returned when the file fails to be imported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>size too large</para>
@@ -66,11 +66,11 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 /// <summary>
                 /// <para>The file import status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>SUCCESS: The import to application data is complete.</description></item>
-                /// <item><description>FAILED: The import to application data failed.</description></item>
+                /// <item><description>SUCCESS: The application data is imported.</description></item>
+                /// <item><description>FAILED: The application data fails to be imported.</description></item>
                 /// </list>
                 /// <remarks>
-                /// <para>Only files with a SUCCESS status can be used to create or update a knowledge base.</para>
+                /// <para>Only files whose status is SUCCESS can be used to create or update knowledge bases.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -115,10 +115,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Indicates whether the operation is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Successful.</description></item>
-        /// <item><description>false: Failed.</description></item>
+        /// <item><description>true: The operation is successful.</description></item>
+        /// <item><description>false: The operation fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

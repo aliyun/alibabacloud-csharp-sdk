@@ -12,8 +12,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         /// <summary>
         /// <para>The long-term memory ID.</para>
         /// <remarks>
-        /// <para>Store this value properly. It is required for all subsequent API operations related to this long-term memory.
-        /// .</para>
+        /// <para>Store this value properly. It is required for all subsequent API operations related to this long-term memory.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

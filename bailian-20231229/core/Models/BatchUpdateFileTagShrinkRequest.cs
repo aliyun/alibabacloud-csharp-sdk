@@ -18,11 +18,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string FileInfosShrink { get; set; }
 
         /// <summary>
-        /// <para>The update mode. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>APPEND: appends tags to existing tags.</description></item>
-        /// <item><description>OVERWRITE: overwrites existing tags.</description></item>
-        /// </list>
+        /// <para>The update mode. Valid values: APPEND (append) and OVERWRITE (overwrite).</para>
         /// 
         /// <b>Example:</b>
         /// <para>OVERWRITE</para>

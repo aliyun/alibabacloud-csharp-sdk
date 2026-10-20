@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class GetParseSettingsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data fields.</para>
+        /// <para>The business data returned when the request is successful.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetParseSettingsResponseBodyData> Data { get; set; }
         public class GetParseSettingsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The file type. Valid values are: pdf, docx, doc, etc. All supported file types in the category are listed here.</para>
+            /// <para>The file type, specified as a file extension. Valid values include pdf, docx, and doc. All file types supported in the current category are listed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pdf</para>
@@ -37,12 +37,12 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public string FileType { get; set; }
 
             /// <summary>
-            /// <para>The parser used for files of the current type. Valid values:</para>
+            /// <para>The parser used to parse files of the current type under this category. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>DOCMIND (Intelligent parsing)</description></item>
-            /// <item><description>DOCMIND_DIGITAL (Digital parsing)</description></item>
-            /// <item><description>DOCMIND_LLM_VERSION (LLM parsing)</description></item>
-            /// <item><description>DASH_QWEN_VL_PARSER (Qwen VL parsing)</description></item>
+            /// <item><description>DOCMIND: Intelligent Document Parsing.</description></item>
+            /// <item><description>DOCMIND_DIGITAL: Electronic Document Parsing.</description></item>
+            /// <item><description>DOCMIND_LLM_VERSION: LLM-based Document Parsing.</description></item>
+            /// <item><description>DASH_QWEN_VL_PARSER: Qwen VL Parsing.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public string Parser { get; set; }
 
             /// <summary>
-            /// <para>The parser configuration. Currently, this is available only for Qwen VL parsing.</para>
+            /// <para>The parser configuration. This parameter is returned only when the type is set to Qwen VL parsing.</para>
             /// </summary>
             [NameInMap("ParserConfig")]
             [Validation(Required=false)]
@@ -70,13 +70,13 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public string ModelName { get; set; }
 
                 /// <summary>
-                /// <para>The prompt used for parsing.</para>
+                /// <para>The prompt used when calling Qwen VL parsing.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>#角色
-                /// 你是一个专业的图片内容标注人员，擅长识别并描述出图片中的内容。</para>
-                /// <h1>任务目标</h1>
-                /// <para>请结合输入图片，详细描述图片中的内容。</para>
+                /// <h1>Role</h1>
+                /// <para>You are a professional image content annotator who excels at identifying and describing the content in images.</para>
+                /// <h1>Task Objective</h1>
+                /// <para>Based on the input image, describe the content in the image in detail</para>
                 /// </summary>
                 [NameInMap("ModelPrompt")]
                 [Validation(Required=false)]
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             /// <para>The display name of the parsing method.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>电子文档解析</para>
+            /// <para>Electronic Document Parsing</para>
             /// </summary>
             [NameInMap("ParserDisplayName")]
             [Validation(Required=false)]
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The status code returned by the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -127,10 +127,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

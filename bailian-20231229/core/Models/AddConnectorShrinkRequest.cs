@@ -32,18 +32,18 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string ConnectorType { get; set; }
 
         /// <summary>
-        /// <para>The description for the connector.</para>
+        /// <para>The description of the connector.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>文件连接器</para>
+        /// <para>File connector</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The parameters for the file connector.</para>
+        /// <para>The configuration parameters for the file connector.</para>
         /// </summary>
         [NameInMap("FileConnectorConfig")]
         [Validation(Required=false)]

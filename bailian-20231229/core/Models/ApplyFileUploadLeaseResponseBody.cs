@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class ApplyFileUploadLeaseResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The error status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DataCenter.FileTooLarge</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The business data field of the operation.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ApplyFileUploadLeaseResponseBodyData Data { get; set; }
         public class ApplyFileUploadLeaseResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The unique ID of the lease. You need to use this parameter when you call the <b>AddFile</b> API.</para>
+            /// <para>The unique ID of the lease. This parameter is required when calling the <b>AddFile</b> operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1e6a159107384782be5e45ac4759b247.1719325231035</para>
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public ApplyFileUploadLeaseResponseBodyDataParam Param { get; set; }
             public class ApplyFileUploadLeaseResponseBodyDataParam : TeaModel {
                 /// <summary>
-                /// <para>Key-value pairs that need to be included in the header. Both keys and values are strings.</para>
+                /// <para>The key-value pairs to include in the request header. Both keys and values are strings.</para>
                 /// <remarks>
-                /// <para>The returned Content-Type may be empty. You can upload the file with the empty value.</para>
+                /// <para>The returned Content-Type may be empty. Use the empty value as-is when uploading.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -72,9 +72,9 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public string Method { get; set; }
 
                 /// <summary>
-                /// <para>The upload URL of the file.</para>
+                /// <para>The upload URL for the file.</para>
                 /// <remarks>
-                /// <para>This URL is a pre-signed URL. FormData upload is not supported. You must upload the file in binary mode.</para>
+                /// <para>This URL is a pre-signed URL. It does not support FormData uploads. Use binary upload instead.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             }
 
             /// <summary>
-            /// <para>The upload method of the file. Valid values:</para>
+            /// <para>The upload method for the file. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>OSS.PreSignedURL</description></item>
             /// <item><description>HTTP</description></item>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status code returned.</para>
+        /// <para>The status code returned by the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -133,10 +133,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call is successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The call is successful.</description></item>
-        /// <item><description>false: The call failed.</description></item>
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

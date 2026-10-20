@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class ListIndexDocumentsRequest : TeaModel {
         /// <summary>
-        /// <para>Filters the returned file list by file name (without the file extension). Default value: empty, which means no filtering by file name.</para>
+        /// <para>Filters the returned file list by file name (excluding the file extension). Default value: empty, which means no filtering by file name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>product-overview</para>
@@ -22,12 +22,12 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         /// <summary>
         /// <para>Filters the returned file list by file import status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>INSERT_ERROR: failed to import to the index.</description></item>
-        /// <item><description>RUNNING: index building in progress.</description></item>
-        /// <item><description>DELETED: deleted.</description></item>
-        /// <item><description>FINISH: index building succeeded.</description></item>
-        /// <item><description>PARSE_FAILED: parsing failed.</description></item>
-        /// <item><description>DOC_PARSING: parsing in progress.</description></item>
+        /// <item><description>INSERT_ERROR: Failed to import to the index.</description></item>
+        /// <item><description>RUNNING: Index building in progress.</description></item>
+        /// <item><description>DELETED: Deleted.</description></item>
+        /// <item><description>FINISH: Index building succeeded.</description></item>
+        /// <item><description>PARSE_FAILED: Parsing failed.</description></item>
+        /// <item><description>DOC_PARSING: Parsing in progress.</description></item>
         /// </list>
         /// <para>Default value: empty, which means no filtering by file import status.</para>
         /// 
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         /// <para>Specifies whether to enable fuzzy matching for file names. This parameter is used together with the <c>DocumentName</c> parameter. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: Performs fuzzy matching on the returned file list based on the file name.</description></item>
-        /// <item><description>false: Performs exact matching on the returned file list based on the file name.</description></item>
+        /// <item><description>false: Performs exact matching based on the file name.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string IndexId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Minimum value: 1. Default value: 1.</para>
+        /// <para>The page number to query. Minimum value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

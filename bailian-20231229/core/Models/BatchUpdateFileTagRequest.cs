@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
             /// <summary>
             /// <list type="bullet">
-            /// <item><description>The list of tags associated with the file. You can specify up to 100 tags, and the total character length of all tags cannot exceed 700.</description></item>
+            /// <item><description>The list of tags associated with the file. You can specify up to 100 tags. The total character length of all tags cannot exceed 700.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// </summary>
@@ -41,11 +41,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         }
 
         /// <summary>
-        /// <para>The update mode. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>APPEND: appends tags to existing tags.</description></item>
-        /// <item><description>OVERWRITE: overwrites existing tags.</description></item>
-        /// </list>
+        /// <para>The update mode. Valid values: APPEND (append) and OVERWRITE (overwrite).</para>
         /// 
         /// <b>Example:</b>
         /// <para>OVERWRITE</para>

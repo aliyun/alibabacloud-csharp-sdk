@@ -50,7 +50,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public string ColumnName { get; set; }
 
             /// <summary>
-            /// <para>The data type.</para>
+            /// <para>The data type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>datetime: datetime</description></item>
+            /// <item><description>string: string</description></item>
+            /// <item><description>double: double-precision floating point</description></item>
+            /// <item><description>image_url: image URL</description></item>
+            /// <item><description>long: long integer</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

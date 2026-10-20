@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
     public class CreateIndexResponseBody : TeaModel {
         /// <summary>
         /// <para>The error status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Forbidden</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -26,7 +29,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             /// <summary>
             /// <para>The knowledge base ID, also known as <c>IndexId</c>, which is the unique identifier of the created knowledge base.</para>
             /// <remarks>
-            /// <para>Store this value properly. It is used in all subsequent API operations related to this knowledge base.</para>
+            /// <para>Keep this value secure because it is required for all subsequent API operations related to this knowledge base.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -40,6 +43,9 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
         /// <summary>
         /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Invalid input, variable name is missing</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -56,7 +62,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status code returned by the operation.</para>
+        /// <para>The status code returned by the API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;200&quot;</para>
@@ -66,10 +72,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Specifies whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Successful.</description></item>
-        /// <item><description>false: Failed.</description></item>
+        /// <item><description>true: The request is successful.</description></item>
+        /// <item><description>false: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

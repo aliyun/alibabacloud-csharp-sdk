@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class UpdateTableFromAuthorizedOssRequest : TeaModel {
         /// <summary>
-        /// <para>Name of the OSS bucket. For details, see <a href="https://help.aliyun.com/document_detail/177682.html">bucket</a>.</para>
+        /// <para>The name of the OSS bucket. For more information, see <a href="https://help.aliyun.com/document_detail/177682.html">Buckets</a>. The target bucket must have the tag key <c>bailian-datahub-access</c> and tag value <c>read</c> added.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string OssBucket { get; set; }
 
         /// <summary>
-        /// <para>Object key of the file in the OSS bucket. For details, see <a href="https://help.aliyun.com/document_detail/273129.html">object naming</a>.</para>
+        /// <para>The key of the file to import in the OSS bucket. For more information, see <a href="https://help.aliyun.com/document_detail/273129.html">Object naming</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string OssKey { get; set; }
 
         /// <summary>
-        /// <para>Region ID of the OSS bucket. For details, see <a href="https://help.aliyun.com/document_detail/31837.html">OSS regions and endpoints</a>.</para>
+        /// <para>The region ID of the OSS bucket. For more information, see <a href="https://help.aliyun.com/document_detail/31837.html">OSS regions and endpoints</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,11 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string OssRegionId { get; set; }
 
         /// <summary>
-        /// <para>Update mode. Valid values: APPEND and OVERWRITE.</para>
+        /// <para>The update mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>OVERWRITE: overwrites existing data.</description></item>
+        /// <item><description>APPEND: appends data to existing data.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

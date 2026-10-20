@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class GetIndexJobStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error status code.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Index.Forbidden</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data field returned by the operation.</para>
+        /// <para>The business data field of the operation.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetIndexJobStatusResponseBodyData Data { get; set; }
         public class GetIndexJobStatusResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of files imported in this job.</para>
+            /// <para>The list of files imported in this task.</para>
             /// </summary>
             [NameInMap("Documents")]
             [Validation(Required=false)]
             public List<GetIndexJobStatusResponseBodyDataDocuments> Documents { get; set; }
             public class GetIndexJobStatusResponseBodyDataDocuments : TeaModel {
                 /// <summary>
-                /// <para>The error status code.</para>
+                /// <para>The error code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Index.Document.ChunkError</para>
@@ -57,12 +57,18 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 /// <para>The file name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>XXX产品介绍</para>
+                /// <para>XXX Product Introduction</para>
                 /// </summary>
                 [NameInMap("DocName")]
                 [Validation(Required=false)]
                 public string DocName { get; set; }
 
+                /// <summary>
+                /// <para>The time when the file was last modified. The value is a UNIX timestamp in milliseconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1782209511000</para>
+                /// </summary>
                 [NameInMap("GmtModified")]
                 [Validation(Required=false)]
                 public long? GmtModified { get; set; }
@@ -80,12 +86,12 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 /// <summary>
                 /// <para>The file import status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>INSERT_ERROR: Failed to import into the index.</description></item>
-                /// <item><description>RUNNING: Index building in progress.</description></item>
-                /// <item><description>DELETED: Deleted.</description></item>
-                /// <item><description>FINISH: Index building succeeded.</description></item>
-                /// <item><description>PARSE_FAILED: Parsing failed.</description></item>
-                /// <item><description>DOC_PARSING: Parsing in progress.</description></item>
+                /// <item><description>INSERT_ERROR: The index import failed.</description></item>
+                /// <item><description>RUNNING: The index is being built.</description></item>
+                /// <item><description>DELETED: The file is deleted.</description></item>
+                /// <item><description>FINISH: The index is built successfully.</description></item>
+                /// <item><description>PARSE_FAILED: The parsing failed.</description></item>
+                /// <item><description>DOC_PARSING: The file is being parsed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -98,7 +104,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             }
 
             /// <summary>
-            /// <para>The job ID.</para>
+            /// <para>The job task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>66122af12a4e45ddae6bd6c84555xxxx</para>
@@ -108,12 +114,12 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The current status of the knowledge base job. Valid values:</para>
+            /// <para>The current status of the knowledge base job task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>COMPLETED: Execution succeeded.</description></item>
-            /// <item><description>FAILED: Execution failed.</description></item>
-            /// <item><description>RUNNING: Execution in progress.</description></item>
-            /// <item><description>PENDING: Waiting for execution.</description></item>
+            /// <item><description>COMPLETED: The task is executed successfully.</description></item>
+            /// <item><description>FAILED: The task failed to be executed.</description></item>
+            /// <item><description>RUNNING: The task is being executed.</description></item>
+            /// <item><description>PENDING: The task is pending execution.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -156,10 +162,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Successful.</description></item>
-        /// <item><description>false: Failed.</description></item>
+        /// <item><description>true: The call was successful.</description></item>
+        /// <item><description>false: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

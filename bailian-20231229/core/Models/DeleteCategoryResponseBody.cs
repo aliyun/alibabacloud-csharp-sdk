@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data field returned by the operation.</para>
+        /// <para>The business data field of the operation.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

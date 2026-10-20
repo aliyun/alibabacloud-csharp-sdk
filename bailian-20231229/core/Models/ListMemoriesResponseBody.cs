@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The long-term memory entity list.</para>
+        /// <para>The list of long-term memory entities.</para>
         /// </summary>
         [NameInMap("memories")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             /// <para>The description of the long-term memory.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>我的大模型应用$APP_ID关于A用户的长期记忆体</para>
+            /// <para>Long-term memory of user A for my large model application $APP_ID</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace to which the long-term memory entity list belongs.</para>
+        /// <para>The workspace ID to which the long-term memory list belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>llm-3z7uw7fwz0vexxxx</para>

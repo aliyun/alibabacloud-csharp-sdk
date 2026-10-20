@@ -11,13 +11,16 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
     public class UpdateChunkResponseBody : TeaModel {
         /// <summary>
         /// <para>The error status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Index.InvalidParameter</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The business data returned upon a successful request.</para>
+        /// <para>The business data returned when the request succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -28,6 +31,9 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
         /// <summary>
         /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Required parameter missing or invalid.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -56,7 +62,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         /// <summary>
         /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Succeeded.</description></item>
+        /// <item><description>true: Successful.</description></item>
         /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 

@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
     public class ApplyFileUploadLeaseRequest : TeaModel {
         /// <summary>
         /// <para>The category type. If this parameter is not specified, the default value is UNSTRUCTURED. Valid values:</para>
-        /// <para>UNSTRUCTURED: category for building <a href="https://help.aliyun.com/document_detail/2807740.html">knowledge base</a> scenarios.
+        /// <para>UNSTRUCTURED: category, used for building <a href="https://help.aliyun.com/document_detail/2807740.html">knowledge base</a> scenarios.
         /// &lt;props=&quot;china&quot;&gt;
-        /// SESSION_FILE: upload files for agent application <a href="https://help.aliyun.com/zh/model-studio/user-guide/file-interaction">conversational interactions</a>.</para>
+        /// SESSION_FILE: upload a file for agent application <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/file-interaction">session interaction</a>.</para>
         /// <remarks>
         /// <para>To create a new data table and upload data, use the Alibaba Cloud Model Studio console. This is not supported through the API.</para>
         /// </remarks>
@@ -26,13 +26,13 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string CategoryType { get; set; }
 
         /// <summary>
-        /// <para>When uploading files for building a <a href="https://help.aliyun.com/document_detail/2807740.html">knowledge base</a>:</para>
+        /// <para>When uploading a file for building a <a href="https://help.aliyun.com/document_detail/2807740.html">knowledge base</a>:</para>
         /// <list type="bullet">
-        /// <item><description><para>This field represents the name of the uploaded file. The file name must include the file format extension. Supported formats:</para>
+        /// <item><description><para>This parameter specifies the name of the file to upload. The file name extension must match the file format. Supported formats:</para>
         /// <list type="bullet">
         /// <item><description>Documents (less than 150 MB): doc, docx, wps, ppt, pptx, xls, xlsx, md, txt, pdf, epub, mobi.</description></item>
-        /// <item><description>Spreadsheets (recommended within 10 MB and 100,000 rows): xls, xlsx.</description></item>
-        /// <item><description>Plain text (recommended not to exceed 10 MB): md, txt.</description></item>
+        /// <item><description>Spreadsheets (10 MB or less recommended, 100,000 rows or less): xls, xlsx.</description></item>
+        /// <item><description>Plain text (10 MB or less recommended): md, txt.</description></item>
         /// <item><description>Images (less than 20 MB, shortest side &gt; 15 px, longest side &lt; 8192 px, aspect ratio &lt; 50): png, jpg, jpeg, bmp, gif.</description></item>
         /// <item><description>Audio: aac, amr, flac, flv, m4a, mp3, mpeg, ogg, opus, wav, webm, wma.</description></item>
         /// <item><description>Video: mp4, mkv, avi, mov, wmv.</description></item>
@@ -43,9 +43,9 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         /// <para>To create a new data table and upload data, use the Alibaba Cloud Model Studio console. This is not supported through the API.</para>
         /// </remarks>
         /// <para>&lt;props=&quot;china&quot;&gt;
-        /// When uploading files for agent application <a href="https://help.aliyun.com/zh/model-studio/user-guide/file-interaction">conversational interactions</a>:</para>
+        /// When uploading a file for agent application <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/file-interaction">session interaction</a>:</para>
         /// </description></item>
-        /// <item><description><para>This field represents the name of the uploaded file. The file name must include the file format extension. Supported formats:</para>
+        /// <item><description><para>This parameter specifies the name of the file to upload. The file name extension must match the file format. Supported formats:</para>
         /// <list type="bullet">
         /// <item><description>Documents: doc, docx, wps, ppt, pptx, xls, xlsx, md, txt, pdf, epub, mobi.</description></item>
         /// <item><description>Images: png, jpg, jpeg, bmp, gif.</description></item>
@@ -59,14 +59,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>XXXX产品清单.pdf</para>
+        /// <para>ProductList.pdf</para>
         /// </summary>
         [NameInMap("FileName")]
         [Validation(Required=false)]
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>The MD5 value of the uploaded file. The server will verify this field (currently not enabled). Please fill in the correct value.</para>
+        /// <para>The MD5 value of the file to upload. The server validates this parameter (validation is not currently enabled). Specify the correct value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Md5 { get; set; }
 
         /// <summary>
-        /// <para>The size of the uploaded file in bytes. The server will verify this field (currently not enabled). Please fill in the correct value. Valid values: 1 B to 100 MB.</para>
+        /// <para>The size of the file to upload, in bytes. The server validates this parameter (validation is not currently enabled). Specify the correct value. Valid values: 1 B to 100 MB.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -89,14 +89,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
         /// <summary>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
-        /// <para>If you have enabled <a href="https://help.aliyun.com/zh/model-studio/configure-resources-in-private-network">Alibaba Cloud Model Studio secure storage</a> and need to generate a lease URL that is only accessible from the Alibaba Cloud internal network in the same region, you can set this parameter to true to improve security. If this parameter is not specified, the default value is false, which generates a publicly accessible lease URL.</para>
+        /// <para>If you use <a href="https://www.alibabacloud.com/help/en/model-studio/configure-resources-in-private-network">Alibaba Cloud Model Studio secure storage</a> and need to generate a lease URL accessible only from the Alibaba Cloud internal network in the same region, set this parameter to true for improved security. If this parameter is not specified, the default value is false, which generates a publicly accessible lease URL.</para>
         /// <remarks>
-        /// <para>If you have not enabled Alibaba Cloud Model Studio secure storage, or are unsure whether you are using it, do not set this parameter to true (upload will fail).</para>
+        /// <para>If you have not activated Alibaba Cloud Model Studio secure storage, or are unsure whether you are using it, do not set this parameter to true (the upload will fail).</para>
         /// </remarks>
         /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-        /// <para>If you have enabled Alibaba Cloud Model Studio secure storage and need to generate a lease URL that is only accessible from the Alibaba Cloud internal network in the same region, you can set this parameter to true to improve security. If this parameter is not specified, the default value is false, which generates a publicly accessible lease URL.</para>
+        /// <para>If you use Alibaba Cloud Model Studio secure storage and need to generate a lease URL accessible only from the Alibaba Cloud internal network in the same region, set this parameter to true for improved security. If this parameter is not specified, the default value is false, which generates a publicly accessible lease URL.</para>
         /// <remarks>
-        /// <para>If you have not enabled Alibaba Cloud Model Studio secure storage, or are unsure whether you are using it, do not set this parameter to true (upload will fail).</para>
+        /// <para>If you have not activated Alibaba Cloud Model Studio secure storage, or are unsure whether you are using it, do not set this parameter to true (the upload will fail).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

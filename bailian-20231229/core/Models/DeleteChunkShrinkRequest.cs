@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class DeleteChunkShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The list of text chunks to delete. A maximum of 10 text chunk IDs can be specified in a single request.</para>
+        /// <para>The list of text chunk IDs to delete. A maximum of 10 text chunk IDs can be passed in a single request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ChunkIds")]

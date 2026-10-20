@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data field returned by the operation.</para>
+        /// <para>The business data field of the operation.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The file format type. Valid values: pdf, docx, doc, txt, md, pptx, ppt, png, jpg, jpeg, bmp, gif, and EXCEL.</para>
+                /// <para>The file format type. Valid values: pdf, docx, doc, txt, md, pptx, ppt, png, jpg, jpeg, bmp, gif, EXCEL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pdf</para>

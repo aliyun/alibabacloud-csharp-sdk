@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public string FileId { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the operation was successful. Valid values:</para>
+                /// <para>Indicates whether the call was successful. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>true: Successful.</description></item>
                 /// <item><description>false: Failed.</description></item>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: Successful.</description></item>
         /// <item><description>false: Failed.</description></item>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class ListCategoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The error status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response payload.</para>
+        /// <para>The business data field of the operation.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListCategoryResponseBodyData Data { get; set; }
         public class ListCategoryResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of categories.</para>
+            /// <para>The category list.</para>
             /// </summary>
             [NameInMap("CategoryList")]
             [Validation(Required=false)]
@@ -47,16 +47,16 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 /// <para>The category name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>类目1</para>
+                /// <para>Category1</para>
                 /// </summary>
                 [NameInMap("CategoryName")]
                 [Validation(Required=false)]
                 public string CategoryName { get; set; }
 
                 /// <summary>
-                /// <para>The category type. The only valid value is:</para>
+                /// <para>The category type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><c>UNSTRUCTURED</c>: A standard category.</description></item>
+                /// <item><description>UNSTRUCTURED: category.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -67,14 +67,12 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public string CategoryType { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the category is the default. Valid values:</para>
+                /// <para>Indicates whether the category is a default category. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><c>true</c>: The category is the default.</para>
-                /// </description></item>
-                /// <item><description><para><c>false</c>: The category is not the default.</para>
-                /// </description></item>
+                /// <item><description>true: Yes.</description></item>
+                /// <item><description>false: No.</description></item>
                 /// </list>
-                /// <para>You cannot delete the default category.</para>
+                /// <para>Default categories cannot be deleted.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -84,7 +82,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public bool? IsDefault { get; set; }
 
                 /// <summary>
-                /// <para>The parent category ID.</para>
+                /// <para>The category ID of the parent category.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cate_addd11b1b79a74e8bbd675c356a91ee3xxxxxxxx</para>
@@ -96,12 +94,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether more results are available for retrieval. Valid values:</para>
+            /// <para>Indicates whether a next page of category data that matches the query conditions exists. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>true</c>: More results are available.</para>
-            /// </description></item>
-            /// <item><description><para><c>false</c>: This is the last page of results.</para>
-            /// </description></item>
+            /// <item><description>true: Yes.</description></item>
+            /// <item><description>false: No.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -112,7 +108,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public bool? HasNext { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of results to return per page.</para>
+            /// <para>The number of categories per page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -122,7 +118,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>The token used to retrieve the next page of results. This parameter is omitted when no more results are available.</para>
+            /// <para>The pagination token returned in this call.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AAAAALHWGpGoYCcYMxiFfmlhvh7Z4G8jiXR6IjHYd+M9WQVJ</para>
@@ -132,7 +128,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The total number of matching categories.</para>
+            /// <para>The total number of categories in the returned results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -164,7 +160,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status code for the request.</para>
+        /// <para>The status code returned by the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -174,12 +170,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request succeeded. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: The request succeeded.</para>
-        /// </description></item>
-        /// <item><description><para><c>false</c>: The request failed.</para>
-        /// </description></item>
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

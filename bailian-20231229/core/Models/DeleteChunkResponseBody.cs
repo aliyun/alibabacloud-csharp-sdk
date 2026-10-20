@@ -11,13 +11,16 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
     public class DeleteChunkResponseBody : TeaModel {
         /// <summary>
         /// <para>The error status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>InvalidParameter</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The business data returned upon a successful request.</para>
+        /// <para>The business data returned when the request succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -28,6 +31,9 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
         /// <summary>
         /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Required parameter(%s) missing or invalid, please check the request parameters.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -54,10 +60,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The call was successful.</description></item>
-        /// <item><description>false: The call failed.</description></item>
+        /// <item><description>true: The operation was successful.</description></item>
+        /// <item><description>false: The operation failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

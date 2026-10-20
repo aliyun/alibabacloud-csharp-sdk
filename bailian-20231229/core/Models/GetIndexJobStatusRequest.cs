@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class GetIndexJobStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The knowledge base ID, which is the <c>Data.Id</c> returned by the <b>CreateIndex</b> operation.</para>
+        /// <para>The knowledge base ID, which is the Data.Id returned by the CreateIndex operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string IndexId { get; set; }
 
         /// <summary>
-        /// <para>The knowledge base job ID, which is the <c>Data.Id</c> returned by the <b>SubmitIndexJob</b> or <b>SubmitIndexAddDocumentsJob</b> operation.</para>
+        /// <para>The knowledge base job task ID, which is the Data.Id returned by the SubmitIndexJob or SubmitIndexAddDocumentsJob operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>Both the <b>SubmitIndexJob</b> and <b>SubmitIndexAddDocumentsJob</b> operations support batch file import. This operation returns the overall status of the knowledge base job (<c>Status</c>) and the import status of each file (<c>Document.Status</c>). If there are many files, use the <c>PageNumber</c> parameter for paged query. Minimum value: 1. Default value: 1.</para>
+        /// <para>Both the <b>SubmitIndexJob</b> and <b>SubmitIndexAddDocumentsJob</b> operations support batch file import. The fields returned by this operation include the overall status of the knowledge base job task (<c>Status</c>) and the import status of each file (<c>Document.Status</c>). If a large number of files are imported, you can use the <c>PageNumber</c> parameter for paging. The starting value is 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of file import tasks to display per page in a paged query. No maximum limit. Default value: 10.</para>
+        /// <para>The number of file import tasks to return on each page during paging. Maximum value: unlimited. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

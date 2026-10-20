@@ -51,11 +51,11 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         /// <summary>
         /// <para>The parser identifier code. Different parsers are applicable to different scenarios. For more information, see &quot;Knowledge Base&quot;. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DOCMIND (Intelligent Document Parsing)</description></item>
-        /// <item><description>DOCMIND_DIGITAL (Electronic Document Parsing)</description></item>
-        /// <item><description>DOCMIND_LLM_VERSION (Large Model Document Parsing)</description></item>
-        /// <item><description>DASH_QWEN_VL_PARSER (Qwen VL Parsing)</description></item>
-        /// <item><description>DOCMIND_LLM_VERSION_MEDIA (Audio/Video Parsing)</description></item>
+        /// <item><description>DOCMIND (intelligent document parsing)</description></item>
+        /// <item><description>DOCMIND_DIGITAL (electronic document parsing)</description></item>
+        /// <item><description>DOCMIND_LLM_VERSION (large model document parsing)</description></item>
+        /// <item><description>DASH_QWEN_VL_PARSER (Qwen VL parsing)</description></item>
+        /// <item><description>DOCMIND_LLM_VERSION_MEDIA (audio and video parsing)</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Parser { get; set; }
 
         /// <summary>
-        /// <para>The parser configuration. This parameter is required only when the parser is set to Qwen VL Parsing.</para>
+        /// <para>The parser configuration. This parameter is required only when the parser is set to Qwen VL parsing.</para>
         /// </summary>
         [NameInMap("ParserConfig")]
         [Validation(Required=false)]
@@ -84,13 +84,13 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public string ModelName { get; set; }
 
             /// <summary>
-            /// <para>The prompt used when calling Qwen VL Parsing.</para>
+            /// <para>The prompt used when calling Qwen VL parsing.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>#角色
-            /// 你是一个专业的图片内容标注人员，擅长识别并描述出图片中的内容。</para>
-            /// <h1>任务目标</h1>
-            /// <para>请结合输入图片，详细描述图片中的内容。</para>
+            /// <h1>Role</h1>
+            /// <para>You are a professional image content annotator who excels at identifying and describing the content in images.</para>
+            /// <h1>Task Objective</h1>
+            /// <para>Based on the input image, describe the content in the image in detail</para>
             /// </summary>
             [NameInMap("modelPrompt")]
             [Validation(Required=false)]

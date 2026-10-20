@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public string FileId { get; set; }
 
             /// <summary>
-            /// <para>The parser type used to parse the file. Valid values:</para>
+            /// <para>The parser type used to parse this file. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>DASHSCOPE_DOCMIND: Alibaba Cloud intelligent document parsing.</description></item>
             /// </list>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class ListFileResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The error status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public string FileType { get; set; }
 
                 /// <summary>
-                /// <para>The reason for parsing failure.</para>
+                /// <para>The reason for the parsing failure.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Error Message</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public string Parser { get; set; }
 
                 /// <summary>
-                /// <para>The file size in bytes.</para>
+                /// <para>The file size, in bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>512</para>
@@ -119,9 +119,9 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 /// <summary>
                 /// <para>The file parsing status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>INIT: Initialization state. Waiting to be scheduled.</description></item>
+                /// <item><description>INIT: Initialization. The file is waiting to be scheduled.</description></item>
                 /// <item><description>PARSING: Parsing in progress.</description></item>
-                /// <item><description>PARSE_SUCCESS: Parsing completed.</description></item>
+                /// <item><description>PARSE_SUCCESS: Parsing succeeded.</description></item>
                 /// <item><description>PARSE_FAILED: Parsing failed.</description></item>
                 /// </list>
                 /// 
@@ -142,10 +142,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether there is a next page of category data that matches the query conditions. Valid values:</para>
+            /// <para>Indicates whether a next page exists for the category data that matches the query conditions. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: Yes.</description></item>
-            /// <item><description>false: No.</description></item>
+            /// <item><description>true: A next page exists.</description></item>
+            /// <item><description>false: No next page exists.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public bool? HasNext { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page for paging.</para>
+            /// <para>The number of entries per page for a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries in the returned results.</para>
+            /// <para>The total number of entries returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>48</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class DescribeFileResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error status code.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data field returned by the operation.</para>
+        /// <para>The business data field.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The file ID.</para>
+            /// <para>The ID of the file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>file_9a65732555b54d5ea10796ca5742ba22_xxxxxxxx</para>
@@ -57,17 +57,17 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public string FileId { get; set; }
 
             /// <summary>
-            /// <para>The file name.</para>
+            /// <para>The name of the file.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>XXX产品介绍.pdf</para>
+            /// <para>XXX Product Introduction.pdf</para>
             /// </summary>
             [NameInMap("FileName")]
             [Validation(Required=false)]
             public string FileName { get; set; }
 
             /// <summary>
-            /// <para>The file type (extension). Possible values: pdf, docx, doc, txt, md, pptx, ppt, xlsx, xls, html, png, jpg, jpeg, bmp, and gif.</para>
+            /// <para>The file type, which is the file extension. Valid values: pdf, docx, doc, txt, md, pptx, ppt, xlsx, xls, html, png, jpg, jpeg, bmp, and gif.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pdf</para>
@@ -77,7 +77,17 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public string FileType { get; set; }
 
             /// <summary>
-            /// <para>The reason for the parsing failure.</para>
+            /// <para>The download URL of the source file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>https:xxxx.com/xxx.pdf?sign=xxxx&amp;expiredAt=xxxx</para>
+            /// </summary>
+            [NameInMap("OriginFileDownloadUrl")]
+            [Validation(Required=false)]
+            public string OriginFileDownloadUrl { get; set; }
+
+            /// <summary>
+            /// <para>The cause of the parsing failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Error Message</para>
@@ -86,12 +96,18 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             [Validation(Required=false)]
             public string ParseErrorMessage { get; set; }
 
+            /// <summary>
+            /// <para>The download URL of the file parsing result.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="https://example.com/parse-result">https://example.com/parse-result</a></para>
+            /// </summary>
             [NameInMap("ParseResultDownloadUrl")]
             [Validation(Required=false)]
             public string ParseResultDownloadUrl { get; set; }
 
             /// <summary>
-            /// <para>The parser type used to parse the file. Possible values:</para>
+            /// <para>The type of the parser used to parse the file. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>DASHSCOPE_DOCMIND: the default document parser.</description></item>
             /// </list>
@@ -104,7 +120,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public string Parser { get; set; }
 
             /// <summary>
-            /// <para>The file size, in bytes.</para>
+            /// <para>The size of the file, in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234</para>
@@ -115,36 +131,35 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
             /// <summary>
             /// <para>&lt;props=&quot;china&quot;&gt;</para>
-            /// <para>For files used in document-based knowledge bases (type: UNSTRUCTURED), possible values:</para>
+            /// <para>The status of a file used for a document knowledge base (type: UNSTRUCTURED). Valid values:</para>
             /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-            /// <para>For files used in unstructured knowledge bases (type: UNSTRUCTURED), possible values:</para>
+            /// <para>The status of a file used for an unstructured knowledge base (type: UNSTRUCTURED). Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>INIT: Pending parsing.</description></item>
-            /// <item><description>IN_PARSE_QUEUE: Queued for parsing.</description></item>
-            /// <item><description>PARSING: Being parsed.</description></item>
-            /// <item><description>PARSE_SUCCESS: Parsing completed.
-            /// <note>The document can be imported into a knowledge base only after the status changes to PARSE_SUCCESS.</note></description></item>
-            /// <item><description>PARSE_FAILED: Parsing failed.</description></item>
+            /// <item><description>INIT: to be parsed.</description></item>
+            /// <item><description>IN_PARSE_QUEUE: queuing for parsing.</description></item>
+            /// <item><description>PARSING: parsing.</description></item>
+            /// <item><description>PARSE_SUCCESS: parsed.
+            /// <note>You can import a document into a knowledge base only after its status changes to PARSE_SUCCESS.</note></description></item>
+            /// <item><description>PARSE_FAILED: parsing failed.</description></item>
             /// </list>
             /// <para>&lt;props=&quot;china&quot;&gt;
-            /// For files used in agent application <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/file-interaction">session interaction</a> (type: SESSION_FILE), possible values:</para>
+            /// The status of a file used for <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/file-interaction">session interaction</a> in an agent application (type: SESSION_FILE). Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>INIT: Pending parsing.</description></item>
-            /// <item><description>IN_PARSE_QUEUE: Queued for parsing.</description></item>
-            /// <item><description>PARSING: Being parsed.</description></item>
-            /// <item><description>PARSE_SUCCESS: Parsing completed.</description></item>
-            /// <item><description>PARSE_FAILED: Parsing failed.</description></item>
-            /// <item><description>SAFE_CHECKING: Safety check in progress.</description></item>
-            /// <item><description>SAFE_CHECK_FAILED: Safety check failed.</description></item>
-            /// <item><description>INDEX_BUILDING: Index being built.</description></item>
-            /// <item><description>INDEX_BUILD_SUCCESS: Index built.</description></item>
-            /// <item><description>INDEX_BUILDING_FAILED: Index building failed.</description></item>
-            /// <item><description>INDEX_DELETED: File index deleted.</description></item>
-            /// <item><description>FILE_IS_READY: File is ready.
-            /// <note>Q&amp;A is available only after the status changes to FILE_IS_READY.</note></description></item>
-            /// <item><description>FILE_EXPIRED: File expired.
-            /// <note>The file is valid only for the current user session. After the user closes the session, the file expires (maximum validity period: 7 days). Long-term retention is not supported.</note>
-            /// .</description></item>
+            /// <item><description>INIT: to be parsed.</description></item>
+            /// <item><description>IN_PARSE_QUEUE: queuing for parsing.</description></item>
+            /// <item><description>PARSING: parsing.</description></item>
+            /// <item><description>PARSE_SUCCESS: parsed.</description></item>
+            /// <item><description>PARSE_FAILED: parsing failed.</description></item>
+            /// <item><description>SAFE_CHECKING: undergoing security check.</description></item>
+            /// <item><description>SAFE_CHECK_FAILED: security check failed.</description></item>
+            /// <item><description>INDEX_BUILDING: building index.</description></item>
+            /// <item><description>INDEX_BUILD_SUCCESS: index built.</description></item>
+            /// <item><description>INDEX_BUILDING_FAILED: index building failed.</description></item>
+            /// <item><description>INDEX_DELETED: file index deleted.</description></item>
+            /// <item><description>FILE_IS_READY: file ready.
+            /// <note>You can perform Q&amp;A only after the status changes to FILE_IS_READY.</note></description></item>
+            /// <item><description>FILE_EXPIRED: file expired.
+            /// <note>The file is valid only for the current session of the user. After the user closes the session, the file expires. The maximum validity period is 7 days. Long-term storage is not supported.</note></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -174,7 +189,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>17204B98-xxxx-4F9A-8464-2446A84821CA</para>
@@ -184,7 +199,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status code returned by the operation.</para>
+        /// <para>The status code returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -194,10 +209,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Successful.</description></item>
-        /// <item><description>false: Failed.</description></item>
+        /// <item><description>true: The operation was successful.</description></item>
+        /// <item><description>false: The operation failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

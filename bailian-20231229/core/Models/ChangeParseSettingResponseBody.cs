@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class ChangeParseSettingResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error status code.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InvalidParameter</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public ChangeParseSettingResponseBodyData Data { get; set; }
         public class ChangeParseSettingResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the configuration was changed. Valid values:</para>
+            /// <para>Indicates whether the configuration was changed.</para>
             /// <list type="bullet">
             /// <item><description>true: The configuration was updated.</description></item>
             /// <item><description>false: The configuration was not changed. The modification failed.</description></item>
