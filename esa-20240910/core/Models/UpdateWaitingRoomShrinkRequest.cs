@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateWaitingRoomShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The custom cookie name.</para>
+        /// <para>The name of the custom cookie.</para>
         /// 
         /// <b>Example:</b>
         /// <para>__aliwaitingroom_example</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CookieName { get; set; }
 
         /// <summary>
-        /// <para>The custom waiting room page content. This parameter is required when the waiting room type is set to custom. The content must be in Base64 encoding.</para>
+        /// <para>The custom content of the waiting room page. This parameter is required when the waiting room type is custom. The content requires Base64 encoding.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SGVsbG8gd29ybGQ=</para>
@@ -42,8 +42,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>Specifies whether to disable session renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: Enabled.</description></item>
-        /// <item><description><b>off</b>: Disabled.</description></item>
+        /// <item><description><b>on</b>: Disables session renewal.</description></item>
+        /// <item><description><b>off</b>: Enables session renewal.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,8 +56,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The status of the waiting room. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: Enabled.</description></item>
-        /// <item><description><b>off</b>: Disabled.</description></item>
+        /// <item><description><b>on</b>: Enables the waiting room.</description></item>
+        /// <item><description><b>off</b>: Disables the waiting room.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,17 +68,17 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Enable { get; set; }
 
         /// <summary>
-        /// <para>The hostname and path configurations.</para>
+        /// <para>The hostnames and paths.</para>
         /// </summary>
         [NameInMap("HostNameAndPath")]
         [Validation(Required=false)]
         public string HostNameAndPathShrink { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable JSON response. If enabled, requests with an Accept header containing &quot;application/json&quot; return JSON data. Valid values:</para>
+        /// <para>Specifies whether to enable JSON responses. If this feature is enabled and the Accept request header contains &quot;application/json&quot;, JSON data is returned. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: Enabled.</description></item>
-        /// <item><description><b>off</b>: Disabled.</description></item>
+        /// <item><description><b>on</b>: Enables the feature.</description></item>
+        /// <item><description><b>off</b>: Disables the feature.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -89,11 +89,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string JsonResponseEnable { get; set; }
 
         /// <summary>
-        /// <para>The language of the waiting room page. This parameter is required when the waiting room type is set to default. Valid values:</para>
+        /// <para>The language of the waiting room page. This parameter is required when the waiting room type is default. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>enus</b>: English.</description></item>
-        /// <item><description><b>zhcn</b>: Simplified Chinese.</description></item>
-        /// <item><description><b>zhhk</b>: Traditional Chinese.</description></item>
+        /// <item><description><b>enus</b>: English</description></item>
+        /// <item><description><b>zhcn</b>: Simplified Chinese</description></item>
+        /// <item><description><b>zhhk</b>: Traditional Chinese</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -124,10 +124,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string NewUsersPerMinute { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to queue all visitors. Valid values:</para>
+        /// <para>Specifies whether to queue all users. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: Enabled.</description></item>
-        /// <item><description><b>off</b>: Disabled.</description></item>
+        /// <item><description><b>on</b>: Enables the feature.</description></item>
+        /// <item><description><b>off</b>: Disables the feature.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -140,10 +140,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The queuing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>random</b>: random.</description></item>
-        /// <item><description><b>fifo</b>: first-in, first-out.</description></item>
-        /// <item><description><b>passthrough</b>: passthrough.</description></item>
-        /// <item><description><b>reject-all</b>: reject all.</description></item>
+        /// <item><description><b>random</b>: random</description></item>
+        /// <item><description><b>fifo</b>: first in, first out (FIFO)</description></item>
+        /// <item><description><b>passthrough</b>: passthrough</description></item>
+        /// <item><description><b>reject-all</b>: reject all</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string QueuingMethod { get; set; }
 
         /// <summary>
-        /// <para>The status code returned by the waiting room. Valid values:</para>
+        /// <para>The HTTP status code of the waiting room. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>200</b></description></item>
         /// <item><description><b>202</b></description></item>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string QueuingStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The session duration in minutes.</para>
+        /// <para>The duration of a user session, in minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SessionDuration { get; set; }
 
         /// <summary>
-        /// <para>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <para>The ID of the site. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to query the site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string TotalActiveUsers { get; set; }
 
         /// <summary>
-        /// <para>The waiting room ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850279.html">ListWaitingRooms</a> operation.</para>
+        /// <para>The ID of the waiting room. You can call the <a href="https://help.aliyun.com/document_detail/2850279.html">ListWaitingRooms</a> operation to query the waiting room ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -213,8 +213,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The type of the waiting room. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>default</b>: default type.</description></item>
-        /// <item><description><b>custom</b>: custom type.</description></item>
+        /// <item><description><b>default</b>: default type</description></item>
+        /// <item><description><b>custom</b>: custom type</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

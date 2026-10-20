@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CookieName { get; set; }
 
         /// <summary>
-        /// <para>The custom waiting room page content. This parameter is required when the waiting room type is set to custom. The content must use Base64 encoding.</para>
+        /// <para>The custom HTML content of the waiting room page. This parameter is required when the waiting room type is set to custom. The content must use Base64 encoding.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SGVsbG8gd29ybGQ=</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Enable { get; set; }
 
         /// <summary>
-        /// <para>The hostname and path configurations.</para>
+        /// <para>The hostnames and paths.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("HostNameAndPath")]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string HostNameAndPathShrink { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable JSON response. When enabled, requests with an Accept header containing &quot;application/json&quot; return JSON data. Valid values:</para>
+        /// <para>Specifies whether to enable JSON responses. If enabled, JSON data is returned when the Accept request header contains &quot;application/json&quot;. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>on</b>: Enabled.</description></item>
         /// <item><description><b>off</b>: Disabled.</description></item>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string NewUsersPerMinute { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to queue all visitors. Valid values:</para>
+        /// <para>Specifies whether to queue all requests. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>on</b>: Enabled.</description></item>
         /// <item><description><b>off</b>: Disabled.</description></item>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>The queuing method. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>random</b>: Random.</description></item>
-        /// <item><description><b>fifo</b>: First in, first out.</description></item>
+        /// <item><description><b>fifo</b>: First-in, first-out (FIFO).</description></item>
         /// <item><description><b>passthrough</b>: Passthrough.</description></item>
         /// <item><description><b>reject-all</b>: Reject all.</description></item>
         /// </list>
@@ -160,11 +160,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string QueuingMethod { get; set; }
 
         /// <summary>
-        /// <para>The waiting room status code. Valid values:</para>
+        /// <para>The HTTP status code of the waiting room. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>200</b></description></item>
         /// <item><description><b>202</b></description></item>
-        /// <item><description><b>429</b>.</description></item>
+        /// <item><description><b>429</b></description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string QueuingStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The session duration, in minutes.</para>
+        /// <para>The session duration in minutes.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SessionDuration { get; set; }
 
         /// <summary>
-        /// <para>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <para>The site ID. You can obtain the site ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -211,8 +211,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The type of the waiting room. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>default</b>: Default type.</description></item>
-        /// <item><description><b>custom</b>: Custom type.</description></item>
+        /// <item><description><b>default</b>: Default.</description></item>
+        /// <item><description><b>custom</b>: Custom.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

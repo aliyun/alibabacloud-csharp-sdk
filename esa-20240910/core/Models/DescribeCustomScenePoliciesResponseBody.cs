@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DescribeCustomScenePoliciesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The configurations of custom scene policies.</para>
+        /// <para>The list of configurations for scenario-specific policies.</para>
         /// </summary>
         [NameInMap("DataModule")]
         [Validation(Required=false)]
         public List<DescribeCustomScenePoliciesResponseBodyDataModule> DataModule { get; set; }
         public class DescribeCustomScenePoliciesResponseBodyDataModule : TeaModel {
             /// <summary>
-            /// <para>The end time of the policy.</para>
-            /// <para>The time is in UTC and follows the ISO 8601 standard. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
+            /// <para>The end time of the policy validity period.</para>
+            /// <para>The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-03-06T16:00:00Z</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the custom scene policy.</para>
+            /// <para>The name of the scenario-specific policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -38,9 +38,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>A list of associated site IDs.</para>
+            /// <para>The list of associated site IDs.</para>
             /// <remarks>
-            /// <para>This field is deprecated. We recommend that you use the <c>SiteIds</c> field instead.</para>
+            /// <para><b>[Deprecated]</b> Read the SiteIds field instead.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("Objects")]
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? PolicyId { get; set; }
 
             /// <summary>
-            /// <para>A comma-separated list of site IDs associated with the policy.</para>
+            /// <para>The associated site IDs. Multiple site IDs are separated by commas (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456****,123457****</para>
@@ -68,8 +68,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string SiteIds { get; set; }
 
             /// <summary>
-            /// <para>The start time of the policy.</para>
-            /// <para>The time is in UTC and follows the ISO 8601 standard. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
+            /// <para>The start time of the policy validity period.</para>
+            /// <para>The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-03-04T16:00:00Z</para>
@@ -81,14 +81,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The effective status of the policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>disabled</b>: The policy is disabled.</para>
-            /// </description></item>
-            /// <item><description><para><b>pending</b>: The policy is waiting to take effect.</para>
-            /// </description></item>
-            /// <item><description><para><b>running</b>: The policy is in effect.</para>
-            /// </description></item>
-            /// <item><description><para><b>expired</b>: The policy has expired.</para>
-            /// </description></item>
+            /// <item><description><b>Disabled</b>: Disabled.</description></item>
+            /// <item><description><b>Pending</b>: Pending.</description></item>
+            /// <item><description><b>Running</b>: Running.</description></item>
+            /// <item><description><b>Expired</b>: Expired.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -99,9 +95,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The template name. Valid value:</para>
+            /// <para>The template name. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>promotion</b>: A major event.</description></item>
+            /// <item><description><b>promotion</b>: Important Activity.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -124,7 +120,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries on the current page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -134,7 +130,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of policies that you can create.</para>
+        /// <para>The configuration quota.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -154,7 +150,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of returned entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

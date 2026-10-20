@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListCacheReserveInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of cache reserve instances.</para>
+        /// <para>The list of cache reservation instances.</para>
         /// </summary>
         [NameInMap("InstanceInfo")]
         [Validation(Required=false)]
         public List<ListCacheReserveInstancesResponseBodyInstanceInfo> InstanceInfo { get; set; }
         public class ListCacheReserveInstancesResponseBodyInstanceInfo : TeaModel {
             /// <summary>
-            /// <para>The capacity of the cache reserve instance. Unit: GB.</para>
+            /// <para>The cache reservation capacity. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>512000</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? CacheReserveCapacity { get; set; }
 
             /// <summary>
-            /// <para>The region where the cache reserve instance is deployed.</para>
+            /// <para>The region where the cache reservation is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HK</para>
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CacheReserveRegion { get; set; }
 
             /// <summary>
-            /// <para>The billing type. Valid values:</para>
+            /// <para>The billing method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PREPAY: subscription.</description></item>
-            /// <item><description>POSTPAY: pay-as-you-go.</description></item>
+            /// <item><description>PREPAY: Prepaid.</description></item>
+            /// <item><description>POSTPAY: Pay-as-you-go.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the instance.</para>
+            /// <para>The creation time of the instance. The time is in UTC and formatted in accordance with the ISO 8601 standard, for example, 2024-04-12T05:41:51Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-04-12T05:41:51Z</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? Duration { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance expires.</para>
+            /// <para>The time when the instance expires. The time is in UTC and formatted in accordance with the ISO 8601 standard, for example, 2024-10-05T16:00:00Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-05T16:00:00Z</para>
@@ -93,10 +93,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The instance status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>online</b>: The instance is running normally.</description></item>
-            /// <item><description><b>offline</b>: The instance has expired but has not exceeded the retention period and is unavailable.</description></item>
-            /// <item><description><b>disable</b>: The instance has been released.</description></item>
-            /// <item><description><b>overdue</b>: The instance is stopped due to an overdue payment.</description></item>
+            /// <item><description><b>online</b>: Normal service status.</description></item>
+            /// <item><description><b>offline</b>: Expired but not overdue, and in an inactive state.</description></item>
+            /// <item><description><b>disable</b>: Released.</description></item>
+            /// <item><description><b>overdue</b>: Stopped due to an overdue payment.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: <b>500</b>. Valid values: <b>1</b> to <b>500</b>.</para>
+        /// <para>The number of entries per page. Default value: <b>500</b>. Valid values: <b>1 to 500</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>

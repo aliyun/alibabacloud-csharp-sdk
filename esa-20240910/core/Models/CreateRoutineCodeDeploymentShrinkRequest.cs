@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateRoutineCodeDeploymentShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The list of percentage-based canary release version configurations. A maximum of two versions are supported, and the total percentage must equal 100.</para>
+        /// <para>The list of code version configurations for the percentage-based canary release. You can specify up to two code versions, and the sum of the percentages must be equal to 100.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CodeVersions")]
@@ -18,10 +18,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CodeVersionsShrink { get; set; }
 
         /// <summary>
-        /// <para>The environment name.<br>Valid values:</para>
+        /// <para>The environment name. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>staging</c>: staging environment </description></item>
-        /// <item><description><c>production</c>: production environment</description></item>
+        /// <item><description><c>staging</c>: the staging environment.</description></item>
+        /// <item><description><c>production</c>: the production environment.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Env { get; set; }
 
         /// <summary>
-        /// <para>The name of the Edge Function Routine.</para>
+        /// <para>The name of the Edge Routine.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The deployment strategy.<br>Valid values:</para>
+        /// <para>The deployment strategy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>percentage</c>: percentage mode</description></item>
+        /// <item><description><c>percentage</c>: percentage mode.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

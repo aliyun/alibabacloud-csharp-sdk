@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class SetHttpDDoSAttackIntelligentProtectionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The protection mode for the intelligent HTTP DDoS protection feature. Valid values:</para>
+        /// <para>The HTTP DDoS intelligent protection pattern. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>observe</b>: The system generates warnings for attack traffic but does not block it.</para>
-        /// </description></item>
-        /// <item><description><para><b>defense</b>: The system blocks detected attack traffic.</para>
-        /// </description></item>
+        /// <item><description><b>observe</b>: Warning.</description></item>
+        /// <item><description><b>defense</b>: Defense.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,16 +24,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AiMode { get; set; }
 
         /// <summary>
-        /// <para>The sensitivity level for the intelligent HTTP DDoS protection feature. Valid values:</para>
+        /// <para>The HTTP DDoS intelligent protection level. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>level0</b>: very loose</para>
-        /// </description></item>
-        /// <item><description><para><b>level30</b>: loose</para>
-        /// </description></item>
-        /// <item><description><para><b>level60</b>: normal</para>
-        /// </description></item>
-        /// <item><description><para><b>level90</b>: strict</para>
-        /// </description></item>
+        /// <item><description><b>level0</b>: Very loose.</description></item>
+        /// <item><description><b>level30</b>: Loose.</description></item>
+        /// <item><description><b>level60</b>: Normal.</description></item>
+        /// <item><description><b>level90</b>: Strict.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,7 +50,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The site ID.</para>
+        /// <para>The ID of the site.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456****</para>

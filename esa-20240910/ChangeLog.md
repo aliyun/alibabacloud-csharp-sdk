@@ -1,3 +1,11 @@
+2026-10-20 Version: 3.14.0
+- Support API CreateSliderCaptchaPage.
+- Support API DeleteSliderCaptchaPage.
+- Support API GetSliderCaptchaPage.
+- Support API ListSliderCaptchaPages.
+- Support API UpdateSliderCaptchaPage.
+
+
 2026-09-21 Version: 3.13.2
 - Update API GetWafFilter: add response parameters Body.Filter.Fields.$.Subs.
 

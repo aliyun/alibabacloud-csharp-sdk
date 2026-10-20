@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetUserMaxPlanQuotaResponseBody : TeaModel {
         /// <summary>
-        /// <para>The plan instance ID. You can obtain this value by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <para>The plan instance ID. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>esa-site-b09z4sk9pbls</para>
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
         /// <item><description>Free Edition: entranceplan</description></item>
-        /// <item><description>Basic: basic</description></item>
-        /// <item><description>Standard: medium</description></item>
-        /// <item><description>Premium Edition: high</description></item>
+        /// <item><description>Basic Edition: basic</description></item>
+        /// <item><description>Standard Edition: medium</description></item>
+        /// <item><description>Advanced Edition: high</description></item>
         /// </list>
         /// <para>&lt;props=&quot;intl&quot;&gt;</para>
         /// <list type="bullet">

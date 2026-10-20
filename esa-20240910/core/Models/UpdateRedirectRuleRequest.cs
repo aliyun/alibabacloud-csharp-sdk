@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateRedirectRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration ID. You can call the <a href="https://help.aliyun.com/document_detail/2867474.html">ListRedirectRules</a> operation to obtain the configuration ID.</para>
+        /// <para>The configuration ID. You can call the <a href="https://help.aliyun.com/document_detail/2867474.html">ListRedirectRules</a> operation to query the configuration ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ConfigId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to preserve the query string. Valid values:</para>
+        /// <para>Specifies whether to retain the query string. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>on: Enabled.</description></item>
         /// <item><description>off: Disabled.</description></item>
@@ -35,10 +35,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ReserveQueryString { get; set; }
 
         /// <summary>
-        /// <para>The rule content. A conditional expression is used to match user requests. This parameter is not required when you add a global configuration. Two scenarios are supported:</para>
+        /// <para>The content of the rule, which uses a conditional expression to match user requests. You do not need to specify this parameter when you add a global configuration. This parameter applies to the following scenarios:</para>
         /// <list type="bullet">
         /// <item><description>Match all incoming requests: Set the value to true.</description></item>
-        /// <item><description>Match specified requests: Set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</description></item>
+        /// <item><description>Match specific requests: Set the value to a custom expression, such as (http.host eq &quot;video.example.com&quot;).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the rule. This parameter is not required when you add a global configuration. Valid values:</para>
+        /// <para>Specifies whether to enable the rule. You do not need to specify this parameter when you add a global configuration. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>on: Enabled.</description></item>
         /// <item><description>off: Disabled.</description></item>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleEnable { get; set; }
 
         /// <summary>
-        /// <para>The rule name. This parameter is not required when you add a global configuration.</para>
+        /// <para>The name of the rule. You do not need to specify this parameter when you add a global configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rule_example</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The execution order of the rule. A smaller value indicates a higher priority.</para>
+        /// <para>The execution sequence of the rule. A smaller value indicates a higher priority.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? Sequence { get; set; }
 
         /// <summary>
-        /// <para>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</para>
+        /// <para>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to query the site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code used when the node responds to the client with the redirect address. Valid values:</para>
+        /// <para>The HTTP status code used by the node to respond to the client with the redirect address. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>301</description></item>
         /// <item><description>302</description></item>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string StatusCode { get; set; }
 
         /// <summary>
-        /// <para>The target URL after the redirect.</para>
+        /// <para>The destination URL after the redirect.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.exapmle.com/index.html">http://www.exapmle.com/index.html</a></para>

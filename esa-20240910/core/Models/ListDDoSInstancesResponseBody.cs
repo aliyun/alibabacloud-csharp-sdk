@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public List<ListDDoSInstancesResponseBodyInstanceInfo> InstanceInfo { get; set; }
         public class ListDDoSInstancesResponseBodyInstanceInfo : TeaModel {
             /// <summary>
-            /// <para>The purchase time of the instance. The time is in ISO 8601 format and displayed in UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</para>
+            /// <para>The creation time of the instance. The time is displayed in UTC and formatted in accordance with the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-07-01T07:59:07Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The scheduled release time. The time is in ISO 8601 format and displayed in UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</para>
+            /// <para>The scheduled release time. The time is displayed in UTC and formatted in accordance with the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-03-25T16:00:00Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ReserveReleaseTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the associated site plan instance.</para>
+            /// <para>The ID of the associated website plan instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>esa-site-b0s6kmx0r0n4</para>
@@ -79,10 +79,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The instance status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>online</b>: The instance is running normally.</description></item>
-            /// <item><description><b>offline</b>: The instance has expired but is not overdue, and is unavailable.</description></item>
-            /// <item><description><b>disable</b>: The instance has been released.</description></item>
-            /// <item><description><b>overdue</b>: The instance is suspended due to overdue payment.</description></item>
+            /// <item><description><b>online</b>: the instance is in normal service status.</description></item>
+            /// <item><description><b>offline</b>: the instance has expired but is not overdue, and is in an unavailable state.</description></item>
+            /// <item><description><b>disable</b>: the instance is released.</description></item>
+            /// <item><description><b>overdue</b>: the instance is stopped due to an overdue payment.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

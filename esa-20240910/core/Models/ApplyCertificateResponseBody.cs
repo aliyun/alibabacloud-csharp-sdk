@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of free certificate application details.</para>
+        /// <para>The list of details for the free certificate applications.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ApplyCertificateResponseBodyResult> Result { get; set; }
         public class ApplyCertificateResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The certificate domain name.</para>
+            /// <para>The domain name of the certificate.</para>
             /// 
             /// <b>Example:</b>
             /// <para>*.example.com</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SiteName { get; set; }
 
         /// <summary>
-        /// <para>The number of certificates applied for, which is the same as the number of input domain names.</para>
+        /// <para>The number of certificates applied for, which is the same as the number of specified domain names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

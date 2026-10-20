@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DescribeDDoSL7QpsListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time granularity of the queried data, in seconds.</para>
+        /// <para>The time granularity of the queried data. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? DataInterval { get; set; }
 
         /// <summary>
-        /// <para>Application layer time trend data list.</para>
+        /// <para>The list of application-layer time-series data.</para>
         /// </summary>
         [NameInMap("DataModule")]
         [Validation(Required=false)]
         public List<DescribeDDoSL7QpsListResponseBodyDataModule> DataModule { get; set; }
         public class DescribeDDoSL7QpsListResponseBodyDataModule : TeaModel {
             /// <summary>
-            /// <para>Attack QPS.</para>
+            /// <para>The attack QPS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? Attack { get; set; }
 
             /// <summary>
-            /// <para>Normal QPS.</para>
+            /// <para>The normal QPS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? Normal { get; set; }
 
             /// <summary>
-            /// <para>Data time, following ISO8601 notation and using UTC+0, formatted as yyyy-MM-ddTHH:mm:ssZ.</para>
+            /// <para>The data timestamp. The time is displayed in UTC and formatted based on ISO 8601 in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-04-19T16:00:00Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string TimeStamp { get; set; }
 
             /// <summary>
-            /// <para>Total QPS.</para>
+            /// <para>The total QPS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9</para>
@@ -69,8 +69,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The end time of the query.</para>
-        /// <para>The date format follows ISO8601 notation and uses UTC+0, formatted as yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// <para>The end time of the query. The time is displayed in UTC and formatted based on ISO 8601 in the yyyy-MM-ddTHH:mm:ssZ format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-04-19T19:00:00Z</para>
@@ -80,7 +79,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>Record ID.</para>
+        /// <para>The record ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>86510927836942****</para>
@@ -90,7 +89,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? RecordId { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>156A6B-677B1A-4297B7-9187B7-2B44792</para>
@@ -100,7 +99,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Site ID.</para>
+        /// <para>The site ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456****</para>
@@ -110,8 +109,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query.</para>
-        /// <para>The date format follows ISO8601 notation and uses UTC+0, formatted as yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// <para>The start time of the query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-04-19T16:00:00Z</para>

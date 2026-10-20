@@ -21,6 +21,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The configuration type. You can use this parameter to query global configurations or rule configurations. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>global: Queries global configurations.</description></item>
+        /// <item><description>rule: Queries rule configurations.</description></item>
+        /// </list>
+        /// <para>This parameter is optional. If you do not specify this parameter, global and rule configurations are not distinguished. This parameter takes effect only when the FunctionName parameter is specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rule</para>
@@ -30,7 +35,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ConfigType { get; set; }
 
         /// <summary>
-        /// <para>The function name of the feature.</para>
+        /// <para>The name of the feature function.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CacheRules</para>
@@ -60,7 +65,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The rule name. Filters the rule that matches the specified name. This parameter takes effect only when FunctionName is specified.</para>
+        /// <para>The rule name. You can use this parameter to query the rule whose name matches the specified value. This parameter takes effect only when the FunctionName parameter is specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -70,7 +75,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</para>
+        /// <para>The site ID. You can obtain the site ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -81,7 +86,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The version number of the site. For sites with version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. Default value: 0.</para>
+        /// <para>The version number of the site. For a site with version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,14 +10,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class SetAutomaticFrequencyControlConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The action to take on requests that trigger the control. Valid values:</para>
+        /// <para>The action to perform. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>observe</b>: Monitors the requests.</para>
-        /// </description></item>
-        /// <item><description><para><b>deny</b>: Blocks the requests.</para>
-        /// </description></item>
-        /// <item><description><para><b>js</b>: Issues a JS challenge.</para>
-        /// </description></item>
+        /// <item><description><b>observe</b>: Monitor.</description></item>
+        /// <item><description><b>deny</b>: Block.</description></item>
+        /// <item><description><b>js</b>: JavaScript Challenge.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -29,11 +26,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ActionType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable automatic frequency control. Valid values:</para>
+        /// <para>Specifies whether to enable the feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>on</b>: Enables automatic frequency control.</para>
+        /// <item><description><para><b>on</b>: Enabled.</para>
         /// </description></item>
-        /// <item><description><para><b>off</b>: Disables automatic frequency control.</para>
+        /// <item><description><para><b>off</b>: Disabled.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -48,12 +45,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The protection level. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>loose</b>: Loose protection.</para>
-        /// </description></item>
-        /// <item><description><para><b>normal</b>: Normal protection.</para>
-        /// </description></item>
-        /// <item><description><para><b>strict</b>: Strict protection.</para>
-        /// </description></item>
+        /// <item><description><b>loose</b>: Loose.</description></item>
+        /// <item><description><b>normal</b>: Medium.</description></item>
+        /// <item><description><b>strict</b>: Strict.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -65,7 +59,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Level { get; set; }
 
         /// <summary>
-        /// <para>The ID of the site. Call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain this ID.</para>
+        /// <para>The ID of the site. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,7 +70,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The version of the site. For a site with version management enabled, this parameter specifies the version to which the configuration applies. The default value is 0.</para>
+        /// <para>The version number of the site. For sites with version management enabled, you can use this parameter to specify the site version to which the configuration applies. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

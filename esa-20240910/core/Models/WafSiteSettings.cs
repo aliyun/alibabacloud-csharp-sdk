@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class WafSiteSettings : TeaModel {
         /// <summary>
-        /// <para>The bot protection headers.</para>
+        /// <para>The configuration for adding bot protection headers.</para>
         /// </summary>
         [NameInMap("AddBotProtectionHeaders")]
         [Validation(Required=false)]
         public WafSiteSettingsAddBotProtectionHeaders AddBotProtectionHeaders { get; set; }
         public class WafSiteSettingsAddBotProtectionHeaders : TeaModel {
             /// <summary>
-            /// <para>The switch.</para>
+            /// <para>The enable status.</para>
             /// </summary>
             [NameInMap("Enable")]
             [Validation(Required=false)]
@@ -26,14 +26,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The security headers.</para>
+        /// <para>The configuration for adding security headers.</para>
         /// </summary>
         [NameInMap("AddSecurityHeaders")]
         [Validation(Required=false)]
         public WafSiteSettingsAddSecurityHeaders AddSecurityHeaders { get; set; }
         public class WafSiteSettingsAddSecurityHeaders : TeaModel {
             /// <summary>
-            /// <para>The switch.</para>
+            /// <para>The enable status.</para>
             /// </summary>
             [NameInMap("Enable")]
             [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public WafSiteSettingsBandwidthAbuseProtection BandwidthAbuseProtection { get; set; }
         public class WafSiteSettingsBandwidthAbuseProtection : TeaModel {
             /// <summary>
-            /// <para>The action of the bandwidth abuse protection rule.</para>
+            /// <para>The action performed by the bandwidth abuse protection rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>deny</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The switch status of the bandwidth abuse protection rule.</para>
+            /// <para>The enable status of the bandwidth abuse protection rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>on</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public WafSiteSettingsBotManagementEffectOnStatic EffectOnStatic { get; set; }
             public class WafSiteSettingsBotManagementEffectOnStatic : TeaModel {
                 /// <summary>
-                /// <para>The switch.</para>
+                /// <para>The enable status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public WafSiteSettingsBotManagementJSDetection JSDetection { get; set; }
             public class WafSiteSettingsBotManagementJSDetection : TeaModel {
                 /// <summary>
-                /// <para>The switch.</para>
+                /// <para>The enable status.</para>
                 /// </summary>
                 [NameInMap("Enable")]
                 [Validation(Required=false)]
@@ -238,14 +238,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The disable security module configuration.</para>
+        /// <para>The configuration for disabling the security module.</para>
         /// </summary>
         [NameInMap("DisableSecurityModule")]
         [Validation(Required=false)]
         public WafSiteSettingsDisableSecurityModule DisableSecurityModule { get; set; }
         public class WafSiteSettingsDisableSecurityModule : TeaModel {
             /// <summary>
-            /// <para>The status switch for disabling the security module.</para>
+            /// <para>The enable status for disabling the security module.</para>
             /// 
             /// <b>Example:</b>
             /// <para>on</para>
@@ -257,12 +257,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The request body inspection configuration. Controls the deep packet inspection behavior of WAF for HTTP request bodies. After this feature is enabled, content-based matching rules such as SQL injection and XSS detection take effect on request bodies.</para>
-        /// <para>This configuration can contain the following fields:</para>
+        /// <para>The request body inspection configuration. This configuration controls the deep packet inspection behavior of WAF for HTTP request bodies. For example, matching based on request body content, such as SQL injection and XSS, takes effect only after this feature is enabled. This configuration can include the following fields:</para>
         /// <list type="bullet">
-        /// <item><description><c>Id</c>: The unique identifier of the built-in inspection rule.</description></item>
-        /// <item><description><c>SizeLimit</c>: The maximum size of the request body to inspect.</description></item>
-        /// <item><description><c>Action</c>: The action to take when the request body exceeds the size limit.</description></item>
+        /// <item><description>Id: The unique identifier of the built-in inspection rule.</description></item>
+        /// <item><description>SizeLimit: The maximum size of the request body to be inspected.</description></item>
+        /// <item><description>Action: The action to take when the size limit is exceeded.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("RequestBodyInspection")]
@@ -270,14 +269,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public WafSiteSettingsRequestBodyInspection RequestBodyInspection { get; set; }
         public class WafSiteSettingsRequestBodyInspection : TeaModel {
             /// <summary>
-            /// <para>The action to take when the request body size exceeds <c>SizeLimit</c>.</para>
-            /// <para>Common values (the complete enumeration is subject to the server-side configuration):</para>
+            /// <para>The action to take when the request body size exceeds the SizeLimit.
+            /// Common valid values (the complete enumeration is subject to the server configuration):</para>
             /// <list type="bullet">
-            /// <item><description><c>allow</c>: Allow directly without performing deep packet inspection on the excess portion.</description></item>
-            /// </list>
-            /// <remarks>
-            /// <para>The complete enum is subject to the WAF server-side configuration.</para>
+            /// <item><description>allow: Allows the request directly without performing deep packet inspection on the exceeded part.<remarks>
+            /// <para>The complete enumeration is subject to the WAF server configuration.</para>
             /// </remarks>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>allow</para>
@@ -287,7 +286,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Action { get; set; }
 
             /// <summary>
-            /// <para>The request body inspection rule ID (unique identifier of the built-in rule). When request body inspection is enabled, the server uses this ID to associate the matching logic of the built-in inspection rule. The ID value is subject to the WAF built-in rule list.</para>
+            /// <para>The ID of the request body inspection rule, which is the unique identifier of the built-in rule. When request body inspection is enabled, the server uses this ID to associate the matching logic of the built-in inspection rule. The valid values of the ID are subject to the WAF built-in rule list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000001</para>
@@ -297,14 +296,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The maximum size of the request body to inspect, in bytes.</para>
+            /// <para>The maximum size of the request body to be inspected, in bytes.</para>
             /// <list type="bullet">
-            /// <item><description>When the request body is less than or equal to this value, the entire content is subject to WAF matching.</description></item>
-            /// <item><description>When the request body exceeds this value, the action specified in the <c>Action</c> field is taken (for example, inspect only the first N bytes, reject, or allow directly).</description></item>
-            /// </list>
-            /// <remarks>
-            /// <para>The specific value range and default value are subject to the WAF server-side configuration.</para>
+            /// <item><description>If the request body is less than or equal to this value, the complete content is used for WAF matching.</description></item>
+            /// <item><description>If the request body exceeds this value, the action specified by the Action field is performed, such as inspecting only the first N bytes, blocking, or allowing.<remarks>
+            /// <para>The specific valid values and default value are subject to the WAF server configuration.</para>
             /// </remarks>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>16KB</para>
@@ -322,6 +321,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public WafSiteSettingsSecurityLevel SecurityLevel { get; set; }
         public class WafSiteSettingsSecurityLevel : TeaModel {
+            /// <summary>
+            /// <para>The security level rule ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10000001</para>
+            /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }

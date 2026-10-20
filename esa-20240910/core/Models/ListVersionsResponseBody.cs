@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The version list of the site.</para>
+        /// <para>The list of versions for the site.</para>
         /// </summary>
         [NameInMap("SiteVersionList")]
         [Validation(Required=false)]
         public List<ListVersionsResponseBodySiteVersionList> SiteVersionList { get; set; }
         public class ListVersionsResponseBodySiteVersionList : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The time follows the ISO 8601 standard and includes a time zone offset. Example: 2024-06-15T17:41:27+08:00.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-06-15T17:41:27+08:00</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>站点A使用多个环境。</para>
+            /// <para>Site A uses multiple environments</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The environment list of the site version. The version may have no environment or one or more environments configured, such as the default environment or environment 2.</para>
+            /// <para>The list of environments for the site version. No environment is configured, or one or more environments are configured, such as the default environment and Environment 2.</para>
             /// </summary>
             [NameInMap("EnvironmentNameList")]
             [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? ParentSiteVersion { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the version is read-only. Default value: false.</para>
+            /// <para>Specifies whether the version is read-only. Default value: false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -86,11 +86,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>online</b>: active.</para>
+            /// <item><description><para><b>online</b>: Available.</para>
             /// </description></item>
-            /// <item><description><para><b>configuring</b>: being configured.</para>
+            /// <item><description><para><b>configuring</b>: Configuring.</para>
             /// </description></item>
-            /// <item><description><para><b>configure_faild</b>: configuration failed.</para>
+            /// <item><description><para><b>configure_faild</b>: Configuration failed.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The update time. The time follows the ISO 8601 standard and includes a time zone offset. Example: 2024-06-15T17:41:27+08:00.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-06-15T17:41:27+08:00</para>

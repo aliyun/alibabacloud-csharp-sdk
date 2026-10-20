@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListRoutineBuildsRequest : TeaModel {
         /// <summary>
-        /// <para>The page number for a paged query. The value must be greater than or equal to 1.</para>
+        /// <para>The page number Settings for paging in a paged query. The value must be greater than or equal to 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query. Valid values: 1 to 500.</para>
+        /// <para>The number of entries per page for paging in a paged query. Valid values: 1 to 500.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ER name.</para>
+        /// <para>The name of the Edge Routine (ER).</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-routine</para>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RoutineName { get; set; }
 
         /// <summary>
-        /// <para>The field used for sorting. By default, results are sorted by purchase time. Valid values:</para>
+        /// <para>The field used for sorting. By default, tasks are sorted by creation time. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CreateTime: purchase time.</description></item>
-        /// <item><description>ExpireTime: expiration time.</description></item>
+        /// <item><description>CreateTime: Creation time.</description></item>
+        /// <item><description>ExpireTime: Expiration time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,8 +56,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The sort order. Default value: desc. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>asc: ascending order.</description></item>
-        /// <item><description>desc: descending order.</description></item>
+        /// <item><description>asc: Ascending order.</description></item>
+        /// <item><description>desc: Descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,12 +70,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The status of the build task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>int: initialization</description></item>
-        /// <item><description>pending: preparing</description></item>
-        /// <item><description>building: building</description></item>
-        /// <item><description>succeed: build succeeded</description></item>
-        /// <item><description>failed: build failed</description></item>
-        /// <item><description>canceled: canceled</description></item>
+        /// <item><description>int: Initialized.</description></item>
+        /// <item><description>pending: Preparing.</description></item>
+        /// <item><description>building: Building.</description></item>
+        /// <item><description>succeed: Succeeded.</description></item>
+        /// <item><description>failed: Failed.</description></item>
+        /// <item><description>canceled: Canceled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

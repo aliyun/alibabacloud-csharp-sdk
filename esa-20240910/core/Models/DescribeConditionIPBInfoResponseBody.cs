@@ -17,10 +17,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public List<DescribeConditionIPBInfoResponseBodyDatas> Datas { get; set; }
         public class DescribeConditionIPBInfoResponseBodyDatas : TeaModel {
             /// <summary>
-            /// <para>The returned data details, including the name of the country, ISP, or region and the corresponding identifier code.</para>
+            /// <para>The returned data details, including the name of the country, ISP, or region, and its corresponding identifier.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>[{\&quot;text\&quot;:\&quot;安徽\&quot;,\&quot;value\&quot;:\&quot;340000\&quot;},{\&quot;text\&quot;:\&quot;北京\&quot;,\&quot;value\&quot;:\&quot;110000\&quot;},{\&quot;text\&quot;:\&quot;重庆\&quot;,\&quot;value\&quot;:\&quot;500000\&quot;}]</para>
+            /// <para>[{&quot;text&quot;:&quot;Anhui&quot;,&quot;value&quot;:&quot;340000&quot;},{&quot;text&quot;:&quot;Beijing&quot;,&quot;value&quot;:&quot;110000&quot;},{&quot;text&quot;:&quot;Chongqing&quot;,&quot;value&quot;:&quot;500000&quot;}]</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The flattening mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>flatten_all: flattens all records.</description></item>
-        /// <item><description>flatten_at_root: flattens only the root domain. This is the default value.</description></item>
+        /// <item><description>flatten_all: Flattens all records.</description></item>
+        /// <item><description>flatten_at_root: Flattens only the root domain. This is the default value.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string FlattenMode { get; set; }
 
         /// <summary>
-        /// <para>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</para>
+        /// <para>The site ID. You can obtain the site ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

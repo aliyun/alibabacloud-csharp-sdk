@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListTransportLayerApplicationsRequest : TeaModel {
         /// <summary>
-        /// <para>The query type for the host record of Layer 4 applications. The following four types are supported, and the default is exact match.</para>
+        /// <para>The query type for the host record of the Layer 4 application. Default value: exact. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>fuzzy: Fuzzy match.</description></item>
-        /// <item><description>exact: Exact match.</description></item>
-        /// <item><description>prefix: Prefix match.</description></item>
-        /// <item><description>suffix: Suffix match.</description></item>
+        /// <item><description>fuzzy: fuzzy match</description></item>
+        /// <item><description>exact: exact match</description></item>
+        /// <item><description>prefix: prefix match</description></item>
+        /// <item><description>suffix: suffix match</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string MatchType { get; set; }
 
         /// <summary>
-        /// <para>The page number for paginated queries. The value must be greater than or equal to 1.</para>
+        /// <para>The page number Settings for paging in a paged query. Valid values: integers greater than or equal to 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paginated queries. Valid values: 1-500.</para>
+        /// <para>The number of entries per page for paging in a paged query. Valid values: 1 to 500.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RecordName { get; set; }
 
         /// <summary>
-        /// <para>Site ID. You can obtain it by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</para>
+        /// <para>The site ID. You can obtain the site ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
     public class UpdateCustomScenePolicyRequest : TeaModel {
         /// <summary>
         /// <para>The end time of the policy.</para>
-        /// <para>The time must be in UTC and in the ISO 8601 format: yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the policy.</para>
+        /// <para>The policy name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The site IDs to associate with the policy. Use a comma (,) to separate multiple IDs.</para>
+        /// <para>The IDs of the websites to associate. Separate multiple IDs with commas (,).</para>
         /// <remarks>
-        /// <para>This parameter is deprecated. We recommend using the <c>SiteIds</c> parameter instead. If the <c>SiteIds</c> parameter is specified, the <c>Objects</c> parameter is ignored. You must specify a value for either the <c>Objects</c> or <c>SiteIds</c> parameter.</para>
+        /// <para><b>[Deprecated]</b> We recommend that you use the SiteIds parameter instead. If the SiteIds parameter is specified, the API operation uses the value of SiteIds and ignores the value of Objects. To avoid ambiguity in update operations, you must specify at least one of the SiteIds and Objects parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Objects { get; set; }
 
         /// <summary>
-        /// <para>To obtain the policy ID, call the <a href="https://help.aliyun.com/document_detail/2850508.html">DescribeCustomScenePolicies</a> operation.</para>
+        /// <para>The ID of the policy. You can call the <a href="https://help.aliyun.com/document_detail/2850508.html">DescribeCustomScenePolicies</a> operation to query the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? PolicyId { get; set; }
 
         /// <summary>
-        /// <para>The site IDs to associate with the policy. Use a comma (,) to separate multiple IDs.</para>
+        /// <para>The IDs of the websites to associate. Separate multiple IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456****,123457****</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The start time of the policy.</para>
-        /// <para>The time must be in UTC and in the ISO 8601 format: yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -79,9 +79,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the template. Valid value:</para>
+        /// <para>The name of the template. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>promotion</b>: major promotion</description></item>
+        /// <item><description><b>promotion</b>: Important Activity.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

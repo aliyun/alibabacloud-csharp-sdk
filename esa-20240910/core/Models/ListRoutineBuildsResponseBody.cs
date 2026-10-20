@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public List<ListRoutineBuildsResponseBodyData> Data { get; set; }
         public class ListRoutineBuildsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The static assets directory.</para>
+            /// <para>The directory of static resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/root/usr</para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <para>The commit message.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Add static files.</para>
+            /// <para>Add static files</para>
             /// </summary>
             [NameInMap("CommitMessage")]
             [Validation(Required=false)]
             public string CommitMessage { get; set; }
 
             /// <summary>
-            /// <para>The creation time, in the ISO 8601 format in UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</para>
+            /// <para>The creation time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-03-26T02:19:34Z</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public Dictionary<string, string> EnvironmentVariables { get; set; }
 
             /// <summary>
-            /// <para>The Git account ID.</para>
+            /// <para>The ID of the Git account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>162124764031208</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? GitAccountId { get; set; }
 
             /// <summary>
-            /// <para>The Git account name.</para>
+            /// <para>The name of the Git account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rwa</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string GitAccountName { get; set; }
 
             /// <summary>
-            /// <para>The install command.</para>
+            /// <para>The installation command.</para>
             /// 
             /// <b>Example:</b>
             /// <para>npm install</para>
@@ -114,10 +114,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string InstallCommand { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the repository is private. Valid values:</para>
+            /// <para>Specifies whether the repository is private. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: The repository is private.</description></item>
-            /// <item><description>false: The repository is not private.</description></item>
+            /// <item><description>true: Yes.</description></item>
+            /// <item><description>false: No.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public bool? IsPrivate { get; set; }
 
             /// <summary>
-            /// <para>The Node.js version. Valid values: <c>22.x</c>, <c>20.x</c>, <c>18.x</c>, <c>16.x</c>, <c>14.x</c>, <c>12.x</c>.</para>
+            /// <para>The Node.js version. Valid values: <c>22.x</c>, <c>20.x</c>, <c>18.x</c>, <c>16.x</c>, <c>14.x</c>, and <c>12.x</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>22.x</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string NodeVersion { get; set; }
 
             /// <summary>
-            /// <para>The Yunxiao pipeline ID.</para>
+            /// <para>The ID of the Yunxiao pipeline.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3850166</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? PipelineId { get; set; }
 
             /// <summary>
-            /// <para>The Yunxiao build task ID.</para>
+            /// <para>The ID of the Yunxiao build task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>70</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? PipelineRunId { get; set; }
 
             /// <summary>
-            /// <para>The production branch name.</para>
+            /// <para>The name of the production branch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>main</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ProductionBranch { get; set; }
 
             /// <summary>
-            /// <para>The repository name.</para>
+            /// <para>The name of the repository.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rwa-test</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RootDirectory { get; set; }
 
             /// <summary>
-            /// <para>The ER build task ID.</para>
+            /// <para>The ID of the ER build task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4133325046294912</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? RoutineBuildId { get; set; }
 
             /// <summary>
-            /// <para>The ER entry file path.</para>
+            /// <para>The path to the ER entry file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/home</para>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RoutineEntry { get; set; }
 
             /// <summary>
-            /// <para>The ER name.</para>
+            /// <para>The name of the ER.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-routine</para>
@@ -220,12 +220,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The status of the build task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>int: initialization</description></item>
-            /// <item><description>pending: preparing</description></item>
-            /// <item><description>building: building</description></item>
-            /// <item><description>succeed: build succeeded</description></item>
-            /// <item><description>failed: build failed</description></item>
-            /// <item><description>canceled: canceled</description></item>
+            /// <item><description>int: Initialized.</description></item>
+            /// <item><description>pending: Preparing.</description></item>
+            /// <item><description>building: Building.</description></item>
+            /// <item><description>succeed: Succeeded.</description></item>
+            /// <item><description>failed: Failed.</description></item>
+            /// <item><description>canceled: Canceled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The template name.</para>
+            /// <para>The name of the template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string TemplateName { get; set; }
 
             /// <summary>
-            /// <para>The modification time, in the ISO 8601 format in UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</para>
+            /// <para>The update time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-06-20T00:44:23Z</para>
@@ -256,7 +256,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The user ID.</para>
+            /// <para>The ID of the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1427812834792318</para>

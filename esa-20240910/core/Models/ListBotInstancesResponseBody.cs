@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListBotInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instances that match the specified conditions under the current account.</para>
+        /// <para>The instances that meet the query conditions for the user.</para>
         /// </summary>
         [NameInMap("InstanceInfo")]
         [Validation(Required=false)]
         public List<ListBotInstancesResponseBodyInstanceInfo> InstanceInfo { get; set; }
         public class ListBotInstancesResponseBodyInstanceInfo : TeaModel {
             /// <summary>
-            /// <para>The Bot protection instance level. If this parameter is empty, the plan does not include a Bot protection instance. If a value is returned, the plan includes a Bot protection instance. Valid values:</para>
+            /// <para>The bot protection edition. If this parameter is empty, no bot protection instance is purchased in the plan. If a value is returned, a bot protection instance is purchased in the plan. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>enterprise_bot: web edition.</para>
+            /// <item><description><para>enterprise_bot: Web edition.</para>
             /// </description></item>
-            /// <item><description><para>enterprise_bot_with_app: app edition.</para>
+            /// <item><description><para>enterprise_bot_with_app: App edition.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string BotInstanceLevel { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance was purchased. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The creation time of the instance. The time is displayed in UTC and formatted in accordance with the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-04-12T05:41:51Z</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The scheduled release time. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The scheduled release time. The time is displayed in UTC and formatted in accordance with the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-03-25T16:00:00Z</para>
@@ -75,10 +75,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The instance status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>online</b>: The instance is running normally.</description></item>
-            /// <item><description><b>offline</b>: The instance has expired but has not exceeded the retention period and is unavailable.</description></item>
-            /// <item><description><b>disable</b>: The instance has been released.</description></item>
-            /// <item><description><b>overdue</b>: The instance has been stopped due to an overdue payment.</description></item>
+            /// <item><description><b>online</b>: normal.</description></item>
+            /// <item><description><b>offline</b>: expired but not overdue, and unavailable.</description></item>
+            /// <item><description><b>disable</b>: released.</description></item>
+            /// <item><description><b>overdue</b>: suspended due to overdue payment.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

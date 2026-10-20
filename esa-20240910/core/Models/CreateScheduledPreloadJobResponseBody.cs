@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AliUid { get; set; }
 
         /// <summary>
-        /// <para>The time when the task was created, in ISO 8601 format (for example, 2024-01-01T00:00:00+08:00).</para>
+        /// <para>The time when the task was created. The time is displayed in the ISO 8601 format, such as 2024-01-01T00:00:00+08:00.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-06-05T10:04:20+0800</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>The list of domain names for prefetch.</para>
+        /// <para>The list of prefetched domain names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testurl.com</para>
@@ -40,12 +40,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Domains { get; set; }
 
         /// <summary>
-        /// <para>The error message. Multiple faults are separated by commas. Valid values:</para>
+        /// <para>The error message. Multiple error messages are separated by commas. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>InvalidUrl</b>: The URL format is invalid.</description></item>
         /// <item><description><b>InvalidDomain</b>: The domain name ownership verification failed.</description></item>
         /// <item><description><b>QuotaExcess</b>: The quota limit is exceeded.</description></item>
-        /// <item><description><b>OtherErrors</b>: Other faults.</description></item>
+        /// <item><description><b>OtherErrors</b>: Other errors.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ErrorInfo { get; set; }
 
         /// <summary>
-        /// <para>The OSS address of the failed file.</para>
+        /// <para>The OSS URL of the failed file.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7">https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7</a></para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string FailedFileOss { get; set; }
 
         /// <summary>
-        /// <para>The URL list file ID, which is used for download.</para>
+        /// <para>The file ID of the URL list. This ID is used when you download the file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>665d3b48621bccf3fe29e1a7</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The number of URLs that have been submitted to the system for prefetch.</para>
+        /// <para>The number of URLs that have been submitted to the system for prefetch tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? TaskSubmitted { get; set; }
 
         /// <summary>
-        /// <para>The task type (refresh/prefetch).</para>
+        /// <para>The task type, such as refresh or prefetch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>preload</para>

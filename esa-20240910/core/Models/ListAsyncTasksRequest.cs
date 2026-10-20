@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of tasks to display per page.</para>
+        /// <para>The number of tasks to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The resource ID to which the task belongs, such as a site ID. You can obtain the site ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</para>
+        /// <para>The IDs of the resources to which the tasks belong, such as site IDs. You can obtain site IDs by calling the <a href="~~ListSites~~">ListSites</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4080****3752512</para>
@@ -52,9 +52,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The current status of the task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>in_progress: in progress.</description></item>
-        /// <item><description>success: completed.</description></item>
-        /// <item><description>fail: failed.</description></item>
+        /// <item><description>in_progress: The task is in progress.</description></item>
+        /// <item><description>success: The task is completed.</description></item>
+        /// <item><description>fail: The task failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string TaskStatus { get; set; }
 
         /// <summary>
-        /// <para>The task type. For example, the task type for applying for a free certificate is free_cert.</para>
+        /// <para>The task type. For example, the value for a free certificate application is free_cert.</para>
         /// 
         /// <b>Example:</b>
         /// <para>free_cert</para>

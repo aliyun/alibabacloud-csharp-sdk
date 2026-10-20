@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListUserRatePlanInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The plan instances that match the specified conditions under the user.</para>
+        /// <para>The plan instances that meet the query conditions under the user.</para>
         /// </summary>
         [NameInMap("InstanceInfo")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string BillingMode { get; set; }
 
             /// <summary>
-            /// <para>If empty, the plan does not include a bot protection instance. If a value is returned, the plan includes a bot protection instance. Valid values:</para>
+            /// <para>If this parameter is empty, no bot protection instance is purchased for the plan. If a value is returned, a bot protection instance is purchased for the plan. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>enterprise_bot: Web edition.</para>
             /// </description></item>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string BotInstanceLevel { get; set; }
 
             /// <summary>
-            /// <para>The prepaid bot protection requests included in the plan (in units of 10,000).</para>
+            /// <para>The prepaid number of bot requests in the plan. Unit: 10,000 requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -57,11 +57,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string BotRequest { get; set; }
 
             /// <summary>
-            /// <para>The acceleration coverage areas for sites that can be bound to this plan instance. Multiple values are separated by commas (,). Valid values:</para>
+            /// <para>The acceleration regions where the site can be bound. Multiple regions are separated by commas (,). Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>domestic</b>: China or the Chinese mainland.</description></item>
-            /// <item><description><b>overseas</b>: Global (excluding China or the Chinese mainland).</description></item>
-            /// <item><description><b>global</b>: Global (including China or the Chinese mainland).</description></item>
+            /// <item><description><b>domestic</b>: Chinese mainland.</description></item>
+            /// <item><description><b>overseas</b>: Global (excluding the Chinese mainland).</description></item>
+            /// <item><description><b>global</b>: Global (including the Chinese mainland).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Coverages { get; set; }
 
             /// <summary>
-            /// <para>The purchase time of the plan instance. The time is in ISO 8601 format and displayed in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
+            /// <para>The creation time of the plan instance. The time is displayed in UTC and formatted as yyyy-MM-ddTHH:mm:ssZ in accordance with ISO 8601.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-19T11:15:20Z</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The prepaid China network acceleration traffic (GB) included in the plan.</para>
+            /// <para>The prepaid China network acceleration traffic in the plan. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CrossborderTraffic { get; set; }
 
             /// <summary>
-            /// <para>The Anti-DDoS instance specification for the Chinese mainland included in the plan.</para>
+            /// <para>The specifications of the Anti-DDoS instance in the plan for the Chinese mainland.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn_300</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DdosBurstableDomesticProtection { get; set; }
 
             /// <summary>
-            /// <para>The Anti-DDoS instance specification outside the Chinese mainland included in the plan.</para>
+            /// <para>The specifications of the Anti-DDoS instance in the plan for regions outside the Chinese mainland.</para>
             /// 
             /// <b>Example:</b>
             /// <para>overseas_300</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DdosBurstableOverseasProtection { get; set; }
 
             /// <summary>
-            /// <para>If empty, the plan does not include an Anti-DDoS instance. If a value is returned, the plan includes an Anti-DDoS instance. The value is <c>esa_ddos_instance</c>.</para>
+            /// <para>If this parameter is empty, no Anti-DDoS instance is purchased for the plan. If a value is returned, an Anti-DDoS instance is purchased for the plan, and the value is <c>esa_ddos_instance</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>esa_ddos_instance</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? Duration { get; set; }
 
             /// <summary>
-            /// <para>The prepaid Edge Routine (ER) requests included in the plan (in units of 10,000).</para>
+            /// <para>The prepaid number of Edge Routine (ER) requests in the plan. Unit: 10,000 requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string EdgeRoutineRquest { get; set; }
 
             /// <summary>
-            /// <para>The prepaid WAF requests included in the plan (in units of 10,000).</para>
+            /// <para>The prepaid number of Web Application Firewall (WAF) requests in the plan. Unit: 10,000 requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string EdgeWafRequest { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the plan instance. The time is in ISO 8601 format and displayed in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
+            /// <para>The expiration time of the plan instance. The time is displayed in UTC and formatted as yyyy-MM-ddTHH:mm:ssZ in accordance with ISO 8601.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-19T11:15:20Z</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The plan instance ID.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sp-xcdn-96wblslz****</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The prepaid Layer 4 proxy traffic (GB) included in the plan - Chinese mainland.</para>
+            /// <para>The prepaid Layer 4 proxy traffic in the plan for the Chinese mainland. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Layer4Traffic { get; set; }
 
             /// <summary>
-            /// <para>The prepaid Layer 4 proxy traffic (GB) included in the plan - outside the Chinese mainland.</para>
+            /// <para>The prepaid Layer 4 proxy traffic in the plan for regions outside the Chinese mainland. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string OwnerId { get; set; }
 
             /// <summary>
-            /// <para>The plan name associated with the plan instance.</para>
+            /// <para>The name of the plan corresponding to the plan instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>basic</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string PlanName { get; set; }
 
             /// <summary>
-            /// <para>The prepaid Layer 7 acceleration traffic (GB) included in the plan.</para>
+            /// <para>The prepaid Layer 7 acceleration traffic in the plan. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -216,10 +216,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string PlanTraffic { get; set; }
 
             /// <summary>
-            /// <para>The plan type associated with the plan instance. Valid values:</para>
+            /// <para>The type of the plan corresponding to the plan instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>normal</b>: Fixed edition plan.</description></item>
-            /// <item><description><b>enterprise</b>: Enterprise edition plan.</description></item>
+            /// <item><description><b>normal</b>: Fixed plan.</description></item>
+            /// <item><description><b>enterprise</b>: Enterprise plan.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -243,8 +243,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <para>The auto-renewal status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>nomal: Normal.</description></item>
-            /// <item><description>auto_renewal: Auto-renewal enabled.</description></item>
-            /// <item><description>not_renewal: Auto-renewal disabled.</description></item>
+            /// <item><description>auto_renewal: Auto-renewal.</description></item>
+            /// <item><description>not_renewal: Non-renewal.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -263,7 +263,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ShareType { get; set; }
 
             /// <summary>
-            /// <para>The site quota for the plan instance.</para>
+            /// <para>The quota for the number of sites under the plan instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -280,7 +280,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public List<ListUserRatePlanInstancesResponseBodyInstanceInfoSites> Sites { get; set; }
             public class ListUserRatePlanInstancesResponseBodyInstanceInfoSites : TeaModel {
                 /// <summary>
-                /// <para>The site ID.</para>
+                /// <para>The ID of the site.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123456****</para>
@@ -290,7 +290,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public long? SiteId { get; set; }
 
                 /// <summary>
-                /// <para>The site name.</para>
+                /// <para>The name of the site.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example.com</para>
@@ -300,12 +300,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string SiteName { get; set; }
 
                 /// <summary>
-                /// <para>The site status. Valid values:</para>
+                /// <para>The status of the site. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>pending</b>: The site is pending configuration.</description></item>
                 /// <item><description><b>active</b>: The site is activated.</description></item>
                 /// <item><description><b>offline</b>: The site is offline.</description></item>
-                /// <item><description><b>moved</b>: The site has been superseded.</description></item>
+                /// <item><description><b>moved</b>: The site is replaced.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -318,7 +318,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>The prepaid smart routing requests included in the plan (in units of 10,000).</para>
+            /// <para>The prepaid number of smart routing requests in the plan. Unit: 10,000 requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -328,7 +328,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string SmartRoutingRequest { get; set; }
 
             /// <summary>
-            /// <para>The prepaid HTTP requests included in the plan (in units of 10,000).</para>
+            /// <para>The prepaid number of HTTP requests in the plan. Unit: 10,000 requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -340,9 +340,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The instance status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>online</b>: Normal service status.</description></item>
-            /// <item><description><b>offline</b>: Expired but not overdue, in an inactive state.</description></item>
-            /// <item><description><b>disable</b>: Released.</description></item>
+            /// <item><description><b>online</b>: The instance is in normal service status.</description></item>
+            /// <item><description><b>offline</b>: The instance has expired but is not overdue, and is in an inactive state.</description></item>
+            /// <item><description><b>disable</b>: The instance is released.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -353,14 +353,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The plan subscription type. Valid values:</para>
+            /// <para>The subscription type of the plan. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Free Edition (Chinese mainland): entranceplan</description></item>
-            /// <item><description>Free Edition (International): entranceplan_intl</description></item>
-            /// <item><description>Basic Edition: basicplan</description></item>
-            /// <item><description>Standard Edition: standardplan</description></item>
-            /// <item><description>Premium Edition: advancedplan</description></item>
-            /// <item><description>Enterprise Edition: enterpriseplan</description></item>
+            /// <item><description>entranceplan: Free Edition (Chinese mainland).</description></item>
+            /// <item><description>entranceplan_intl: Free Edition (International).</description></item>
+            /// <item><description>basicplan: Basic Edition.</description></item>
+            /// <item><description>standardplan: Standard Edition.</description></item>
+            /// <item><description>advancedplan: Advanced Edition.</description></item>
+            /// <item><description>enterpriseplan: Enterprise Edition.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -373,7 +373,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The current page number, same as the PageNumber request parameter.</para>
+        /// <para>The current page number, which is the same as the PageNumber request parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

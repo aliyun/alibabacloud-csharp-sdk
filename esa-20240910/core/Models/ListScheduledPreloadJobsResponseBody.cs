@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListScheduledPreloadJobsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of prefetch task information.</para>
+        /// <para>The list of prefetch tasks.</para>
         /// </summary>
         [NameInMap("Jobs")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string AliUid { get; set; }
 
             /// <summary>
-            /// <para>The task creation time in ISO 8601 format (for example, 2024-01-01T00:00:00+Z).</para>
+            /// <para>The time when the task was created. The time follows the ISO 8601 standard, such as 2024-01-01T00:00:00Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-06-01T08:53:13Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The list of domain names for prefetch.</para>
+            /// <para>The list of domain names to prefetch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testurl.com</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Domains { get; set; }
 
             /// <summary>
-            /// <para>The fault error message.</para>
+            /// <para>The error message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>invalid domain:test.com</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ErrorInfo { get; set; }
 
             /// <summary>
-            /// <para>The number of prefetch schedules.</para>
+            /// <para>The number of prefetch plans.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string FailedFileOss { get; set; }
 
             /// <summary>
-            /// <para>The URL list file ID, which is used for download.</para>
+            /// <para>The ID of the URL list file, which is used for downloading.</para>
             /// 
             /// <b>Example:</b>
             /// <para>665d3b48621bccf3fe29e1a7</para>
@@ -97,11 +97,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The URL insertion method. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>oss: URLs are imported in bulk from an OSS file.</description></item>
-            /// <item><description>testBox: URLs are entered one by one in a text box.</description></item>
-            /// </list>
+            /// <para>The method used to insert URLs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss</para>
@@ -131,7 +127,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? SiteId { get; set; }
 
             /// <summary>
-            /// <para>The number of URLs that have been submitted to the system for prefetch.</para>
+            /// <para>The number of URLs submitted to the system for prefetch tasks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -141,12 +137,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? TaskSubmitted { get; set; }
 
             /// <summary>
-            /// <para>The task type (refresh or prefetch). Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>path: Directory refresh.</description></item>
-            /// <item><description>refresh: URL refresh.</description></item>
-            /// <item><description>preload: URL prefetch.</description></item>
-            /// </list>
+            /// <para>The task type, such as refresh or prefetch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>preload</para>
@@ -188,7 +179,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records after filtering.</para>
+        /// <para>The total number of filtered records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

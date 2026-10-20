@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class SetHttpDDoSAttackRuleActionRequest : TeaModel {
         /// <summary>
-        /// <para>Rule action, with values:</para>
+        /// <para>The action of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>deny</b>: Block.</para>
+        /// <item><description><para><b>deny</b>: Blocks the request.</para>
         /// </description></item>
-        /// <item><description><para><b>js</b>: JS Verification.</para>
+        /// <item><description><para><b>js</b>: Performs a JavaScript challenge.</para>
         /// </description></item>
-        /// <item><description><para><b>observe</b>: Observe.</para>
+        /// <item><description><para><b>observe</b>: Monitors the request.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -29,9 +29,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleAction { get; set; }
 
         /// <summary>
-        /// <para>List of rule IDs to be operated on, separated by English commas (,).</para>
+        /// <para>The IDs of the rules to be managed. Separate multiple IDs with commas (,).</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeHttpDDoSAttackRules~~">DescribeHttpDDoSAttackRules</a> API to get this parameter.</para>
+        /// <para>You can call the <a href="~~DescribeHttpDDoSAttackRules~~">DescribeHttpDDoSAttackRules</a> operation to query the IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleIds { get; set; }
 
         /// <summary>
-        /// <para>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</para>
+        /// <para>The ID of the site. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to query the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

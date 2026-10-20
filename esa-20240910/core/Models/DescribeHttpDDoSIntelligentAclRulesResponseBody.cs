@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of rules.</para>
+        /// <para>The list of rule information.</para>
         /// </summary>
         [NameInMap("RuleInfos")]
         [Validation(Required=false)]
         public List<DescribeHttpDDoSIntelligentAclRulesResponseBodyRuleInfos> RuleInfos { get; set; }
         public class DescribeHttpDDoSIntelligentAclRulesResponseBodyRuleInfos : TeaModel {
             /// <summary>
-            /// <para>The protection action.</para>
+            /// <para>The mitigation action.</para>
             /// 
             /// <b>Example:</b>
             /// <para>deny</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Action { get; set; }
 
             /// <summary>
-            /// <para>The rule trigger condition.</para>
+            /// <para>The trigger condition of the rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;$and&quot;:[{&quot;key&quot;:&quot;URI&quot;,&quot;opValue&quot;:&quot;prefix-match&quot;,&quot;values&quot;:&quot;/&quot;}]}</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Condition { get; set; }
 
             /// <summary>
-            /// <para>The ID of the protection rule for log records.</para>
+            /// <para>The ID of the mitigation rule used for log records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000030</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? LogRuleId { get; set; }
 
             /// <summary>
-            /// <para>The action duration. Unit: seconds.</para>
+            /// <para>The punishment duration. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1800</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? PunishTime { get; set; }
 
             /// <summary>
-            /// <para>The record name.</para>
+            /// <para>The name of the record.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test.example.com</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RecordName { get; set; }
 
             /// <summary>
-            /// <para>The rule ID.</para>
+            /// <para>The ID of the rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20569929</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? RuleId { get; set; }
 
             /// <summary>
-            /// <para>The rule name.</para>
+            /// <para>The name of the rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>smart_cc_***</para>

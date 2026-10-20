@@ -17,9 +17,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public List<ListPostpaidRatePlanInstancesResponseBodyInstanceInfo> InstanceInfo { get; set; }
         public class ListPostpaidRatePlanInstancesResponseBodyInstanceInfo : TeaModel {
             /// <summary>
-            /// <para>The billing method. Valid values:</para>
+            /// <para>The Billable methods. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>dps_month95: Monthly 95th Percentile.</description></item>
+            /// <item><description>dps_month95: monthly 95th percentile billing.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The billing mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>POSTPAY: Pay-as-you-go.</description></item>
+            /// <item><description>POSTPAY: pay-as-you-go.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,11 +43,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string BillingMode { get; set; }
 
             /// <summary>
-            /// <para>The acceleration regions to which the instance can bindable sites. Multiple values are separated by commas (,). Valid values:</para>
+            /// <para>The acceleration regions for sites that can be bound to the instance. Multiple values are separated by commas (,). Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>domestic: The Chinese mainland.</description></item>
-            /// <item><description>overseas: Global (excluding the Chinese mainland).</description></item>
-            /// <item><description>global: Global (including the Chinese mainland).</description></item>
+            /// <item><description>domestic: the Chinese mainland.</description></item>
+            /// <item><description>overseas: global (excluding the Chinese mainland).</description></item>
+            /// <item><description>global: global (including the Chinese mainland).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Coverages { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance was created. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The time when the instance was created. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-19T11:15:20Z</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The scheduled specification change time. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The scheduled time for upgrade or downgrade. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-19T11:15:20Z</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string PlanName { get; set; }
 
             /// <summary>
-            /// <para>The Chinese name of the plan.</para>
+            /// <para>The plan name in Chinese.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-plan</para>
@@ -112,10 +112,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string PlanNameCn { get; set; }
 
             /// <summary>
-            /// <para>The plan type of the instance. Valid values:</para>
+            /// <para>The plan type corresponding to the plan instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>normal: Fixed edition plan.</description></item>
-            /// <item><description>enterprise: Enterprise edition plan.</description></item>
+            /// <item><description>normal: fixed plan.</description></item>
+            /// <item><description>enterprise: enterprise plan.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 /// <item><description>pending: The site is pending configuration.</description></item>
                 /// <item><description>active: The site is activated.</description></item>
                 /// <item><description>offline: The site is offline.</description></item>
-                /// <item><description>moved: The site has been superseded.</description></item>
+                /// <item><description>moved: The site has been replaced.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

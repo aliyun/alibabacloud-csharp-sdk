@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of queried site information.</para>
+        /// <para>The list of queried sites.</para>
         /// </summary>
         [NameInMap("Sites")]
         [Validation(Required=false)]
@@ -49,8 +49,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The site access type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>NS</b>: NS-based access.</description></item>
-            /// <item><description><b>CNAME</b>: CNAME-based access.</description></item>
+            /// <item><description><b>NS</b>: NS access</description></item>
+            /// <item><description><b>CNAME</b>: CNAME access</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string AccessType { get; set; }
 
             /// <summary>
-            /// <para>The CNAME suffix of the site. For sites that use CNAME-based access, this is the CNAME suffix that needs to be configured for records.</para>
+            /// <para>The CNAME suffix of the site. For sites accessed through CNAME, this records the CNAME suffix that needs to be configured.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.cname.com</para>
@@ -71,11 +71,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CnameZone { get; set; }
 
             /// <summary>
-            /// <para>The acceleration region of the site. Valid values:</para>
+            /// <para>The site acceleration region. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>domestic</b>: the Chinese mainland only.</description></item>
-            /// <item><description><b>global</b>: global.</description></item>
-            /// <item><description><b>overseas</b>: global (excluding the Chinese mainland).</description></item>
+            /// <item><description><b>domestic</b>: the Chinese mainland</description></item>
+            /// <item><description><b>global</b>: global</description></item>
+            /// <item><description><b>overseas</b>: global (excluding the Chinese mainland)</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Coverage { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the site. The time is in ISO 8601 format and displayed in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
+            /// <para>The creation time of the site. The time is displayed in UTC and formatted in accordance with ISO 8601 in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-12-24T02:01:11Z</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the plan attached to the site.</para>
+            /// <para>The instance ID of the plan that you attach to the site.</para>
             /// 
             /// <b>Example:</b>
             /// <para>onBvtlmIyeXLbiDw81F9</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The list of name servers assigned to the site. Multiple values are separated by commas (,).</para>
+            /// <para>The list of name servers assigned to the site. Multiple name servers are separated by commas (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>male1-1.ialicdn.com,female1-1.ialicdn.com</para>
@@ -118,11 +118,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The reason why the site is disabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>expiration_ arrears</b>: The subscription plan has expired or the account has an overdue payment.</description></item>
+            /// <item><description><b>expiration_ arrears</b>: The plan you subscribe to has expired or the account has an overdue payment.</description></item>
             /// <item><description><b>internally_disabled</b>: The site is disabled by the system.</description></item>
-            /// <item><description><b>missing_icp</b>: The domain name does not have an ICP filing.</description></item>
-            /// <item><description><b>content_violation</b>: Content violation.</description></item>
-            /// <item><description><b>proactively_disabled</b>: You proactively disabled the site or the site is disabled because the usage cap you configured is reached.</description></item>
+            /// <item><description><b>missing_icp</b>: The domain name lacks an ICP filing.</description></item>
+            /// <item><description><b>content_violation</b>: The site is disabled due to a content violation.</description></item>
+            /// <item><description><b>proactively_disabled</b>: You proactively disabled the site or the site is disabled because it reached the usage cap Settings.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -185,10 +185,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The site status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>pending</b>: the site is pending configuration.</description></item>
-            /// <item><description><b>active</b>: the site is activated.</description></item>
-            /// <item><description><b>offline</b>: the site is offline.</description></item>
-            /// <item><description><b>moved</b>: the site has been superseded.</description></item>
+            /// <item><description><b>pending</b>: The site is pending configuration.</description></item>
+            /// <item><description><b>active</b>: The site is activated.</description></item>
+            /// <item><description><b>offline</b>: The site is offline.</description></item>
+            /// <item><description><b>moved</b>: The site has been replaced.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public Dictionary<string, object> Tags { get; set; }
 
             /// <summary>
-            /// <para>The update time of the site. The time is in ISO 8601 format and displayed in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
+            /// <para>The update time of the site. The time is displayed in UTC and formatted in accordance with ISO 8601 in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-12-24T02:01:11Z</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The site ownership verification code. When a site uses CNAME-based access, this TXT verification code must be configured.</para>
+            /// <para>The site ownership verification code. When a site is accessed through CNAME, this is the TXT verification code that needs to be configured.</para>
             /// 
             /// <b>Example:</b>
             /// <para>verify_d516cb3740f81f0cef77d162edd1****</para>
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string VerifyCode { get; set; }
 
             /// <summary>
-            /// <para>The access time of the site. The time is in ISO 8601 format and displayed in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
+            /// <para>The access time of the site. The time is displayed in UTC and formatted in accordance with ISO 8601 in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-12-24T02:01:11Z</para>

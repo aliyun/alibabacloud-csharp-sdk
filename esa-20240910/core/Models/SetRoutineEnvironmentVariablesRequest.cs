@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class SetRoutineEnvironmentVariablesRequest : TeaModel {
         /// <summary>
-        /// <para>The environment name. Valid values:</para>
+        /// <para>The name of the environment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>staging</c>: staging environment.</description></item>
-        /// <item><description><c>production</c>: production environment.</description></item>
+        /// <item><description><c>staging</c>: staging environment</description></item>
+        /// <item><description><c>production</c>: production environment</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Env { get; set; }
 
         /// <summary>
-        /// <para>The dictionary of environment variables. The key is the environment variable name, and the value is the environment variable value.</para>
+        /// <para>The environment variable dictionary. The key is the environment variable name, and the value is the environment variable value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public Dictionary<string, EnvironmentVariablesValue> EnvironmentVariables { get; set; }
 
         /// <summary>
-        /// <para>The function name.</para>
+        /// <para>The name of the function.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

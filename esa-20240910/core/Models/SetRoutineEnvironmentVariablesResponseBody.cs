@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of environment variable keys that were set successfully.</para>
+        /// <para>The list of keys for the successfully set environment variables.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;key1&quot;,&quot;key2&quot;]</para>

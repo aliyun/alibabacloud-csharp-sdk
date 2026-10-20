@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateHttpResponseHeaderModificationRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The response header modifications. Three operation types are supported: add, delete, and modify.</para>
+        /// <para>The response header modifications. Add, delete, and modify operations are supported.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResponseHeaderModification")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public List<CreateHttpResponseHeaderModificationRuleRequestResponseHeaderModification> ResponseHeaderModification { get; set; }
         public class CreateHttpResponseHeaderModificationRuleRequestResponseHeaderModification : TeaModel {
             /// <summary>
-            /// <para>The response header name.</para>
+            /// <para>The name of the response header.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -31,9 +31,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The operation type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>add: adds a response header.</description></item>
-            /// <item><description>del: deletes a response header.</description></item>
-            /// <item><description>modify: modifies a response header.</description></item>
+            /// <item><description>add: Add.</description></item>
+            /// <item><description>del: Delete.</description></item>
+            /// <item><description>modify: Modify.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -47,8 +47,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The value type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>static: static pattern.</description></item>
-            /// <item><description>dynamic: dynamic schema.</description></item>
+            /// <item><description>static: Static pattern.</description></item>
+            /// <item><description>dynamic: Dynamic pattern.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The response header value.</para>
+            /// <para>The value of the response header.</para>
             /// 
             /// <b>Example:</b>
             /// <para>headervalue</para>
@@ -71,10 +71,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The rule content, which uses conditional expressions to match user requests. This parameter is not required when you add a global configuration. Two scenarios are supported:</para>
+        /// <para>The rule content, which uses a conditional expression to match user requests. This parameter is not required when you add a global configuration. Two scenarios are supported:</para>
         /// <list type="bullet">
         /// <item><description>Match all incoming requests: Set the value to true.</description></item>
-        /// <item><description>Match specified requests: Set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</description></item>
+        /// <item><description>Match specific requests: Set the value to a custom expression, such as (http.host eq &quot;video.example.com&quot;).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -85,10 +85,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>The rule switch. This parameter is not required when you add a global configuration. Valid values:</para>
+        /// <para>Specifies whether to enable the rule. This parameter is not required when you add a global configuration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: enabled.</description></item>
-        /// <item><description>off: disabled.</description></item>
+        /// <item><description>on: Enabled.</description></item>
+        /// <item><description>off: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The rule execution order. A smaller value indicates a higher priority.</para>
+        /// <para>The execution sequence of the rule. A smaller value indicates a higher priority.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the site version on which the configuration takes effect. The default value is 0.</para>
+        /// <para>The version number of the site configuration. For sites with configuration version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

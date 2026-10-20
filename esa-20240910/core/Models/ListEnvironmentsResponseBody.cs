@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public List<ListEnvironmentsResponseBodyEnvironmentList> EnvironmentList { get; set; }
         public class ListEnvironmentsResponseBodyEnvironmentList : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The time when the environment was created. The time follows the ISO 8601 standard and is in UTC. Example: 2024-08-15T08:15:30Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-08-15T08:15:30Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The environment name.</para>
+            /// <para>The name of the environment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>yichao-test-yctest</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string EnvironmentName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether this is the default environment.</para>
+            /// <para>Indicates whether the environment is the default environment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Rule { get; set; }
 
             /// <summary>
-            /// <para>The site version number.</para>
+            /// <para>The version number of the site.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? SiteVersion { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The time when the environment was updated. The time follows the ISO 8601 standard and is in UTC. Example: 2023-09-15T08:16:04Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-09-15T08:16:04Z</para>

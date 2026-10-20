@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class SetHttpDDoSAttackProtectionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The level of HTTP DDoS attack protection.</para>
+        /// <para>The mode of the HTTP DDoS Attack prevention mitigation policies.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The website ID.</para>
+        /// <para>The site ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456****</para>

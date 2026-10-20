@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleType { get; set; }
 
         /// <summary>
-        /// <para>The site ID. Obtain this by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <para>The ID of the site. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

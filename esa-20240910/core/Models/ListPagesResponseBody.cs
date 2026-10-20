@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The array of custom response pages. Each object in the array contains the details of a page.</para>
+        /// <para>The array of custom response pages. Each object in the array contains the specific information of a page.</para>
         /// </summary>
         [NameInMap("Pages")]
         [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the custom response page. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> operation.</para>
+            /// <para>The ID of the custom response page. You can obtain it by calling the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50000001</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Kind { get; set; }
 
             /// <summary>
-            /// <para>The content moderation result.</para>
+            /// <para>The content security moderation result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
             /// <summary>
             /// <para>The last modification time of the custom response page.</para>
-            /// <para>Format: RFC 3339 / ISO 8601, UTC time zone (ending with Z).</para>
+            /// <para>Format: RFC 3339/ISO 8601, UTC standard time zone (ending with Z).</para>
             /// <para>Example: 2026-06-10T14:23:45Z</para>
             /// 
             /// <b>Example:</b>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of custom response pages after filtering.</para>
+        /// <para>The total number of custom response pages after filtering.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

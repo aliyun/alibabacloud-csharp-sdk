@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateCustomScenePolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The policy end time.</para>
-        /// <para>The time must be in UTC and in ISO 8601 format: <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
+        /// <para>The end time of the policy.</para>
+        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-11-07T18:00:00Z</para>
@@ -31,9 +31,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>A list of associated site IDs.</para>
+        /// <para>The list of IDs of the associated websites.</para>
         /// <remarks>
-        /// <para>This field is deprecated. Read the value from the <c>SiteIds</c> field instead.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated. Use the SiteIds parameter instead.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Objects")]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public List<string> Objects { get; set; }
 
         /// <summary>
-        /// <para>The policy ID.</para>
+        /// <para>The ID of the policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The associated site IDs, separated by commas.</para>
+        /// <para>The IDs of the associated websites. Separate multiple IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>7096621098****, 7096621099****</para>
@@ -71,8 +71,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SiteIds { get; set; }
 
         /// <summary>
-        /// <para>The policy start time.</para>
-        /// <para>The time must be in UTC and in ISO 8601 format: <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
+        /// <para>The start time of the policy.</para>
+        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-11-07T17:00:00Z</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The template name.</para>
+        /// <para>The name of the template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>promotion</para>

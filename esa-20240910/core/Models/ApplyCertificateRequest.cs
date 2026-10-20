@@ -11,13 +11,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
     public class ApplyCertificateRequest : TeaModel {
         /// <summary>
         /// <para>The algorithm type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>RSA</para>
         /// </summary>
         [NameInMap("AlgType")]
         [Validation(Required=false)]
         public string AlgType { get; set; }
 
         /// <summary>
-        /// <para>The list of domain names, separated by commas.</para>
+        /// <para>The list of domain names. Separate multiple domain names with commas.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,9 +44,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The certificate type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>lets_encrypt: Let\&quot;s Encrypt certificate.</description></item>
-        /// <item><description>digicert_single: DigiCert single-domain certificate.</description></item>
-        /// <item><description>digicert_wildcard: DigiCert wildcard domain certificate.</description></item>
+        /// <item><description>lets_encrypt: Let\&quot;s Encrypt certificate</description></item>
+        /// <item><description>digicert_single: DigiCert single-domain certificate</description></item>
+        /// <item><description>digicert_wildcard: DigiCert wildcard certificate</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

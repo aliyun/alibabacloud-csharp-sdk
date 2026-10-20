@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class SetHttpDDoSAttackIntelligentProtectionRequest : TeaModel {
         /// <summary>
-        /// <para>The mode for the intelligent HTTP DDoS protection feature. Valid values:</para>
+        /// <para>The HTTP DDoS depth learning and defense pattern. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>observe</b>: The system generates warnings for attack traffic but does not block it.</para>
-        /// </description></item>
-        /// <item><description><para><b>defense</b>: The system blocks detected attack traffic.</para>
-        /// </description></item>
+        /// <item><description><b>observe</b>: Monitor.</description></item>
+        /// <item><description><b>defense</b>: Block.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -27,16 +25,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AiMode { get; set; }
 
         /// <summary>
-        /// <para>The sensitivity level for the intelligent HTTP DDoS protection feature. Valid values:</para>
+        /// <para>The HTTP DDoS deep learning and protection level. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>level0</b>: very loose</para>
-        /// </description></item>
-        /// <item><description><para><b>level30</b>: loose</para>
-        /// </description></item>
-        /// <item><description><para><b>level60</b>: normal</para>
-        /// </description></item>
-        /// <item><description><para><b>level90</b>: strict</para>
-        /// </description></item>
+        /// <item><description><b>level0</b>: Very loose.</description></item>
+        /// <item><description><b>level30</b>: Loose.</description></item>
+        /// <item><description><b>level60</b>: Normal.</description></item>
+        /// <item><description><b>level90</b>: Strict.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -48,7 +42,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AiTemplate { get; set; }
 
         /// <summary>
-        /// <para>The ID of the site. You can obtain the site ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <para>The ID of the site. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

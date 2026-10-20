@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListAsyncTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The task list.</para>
+        /// <para>The list of tasks.</para>
         /// </summary>
         [NameInMap("AsyncTasks")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The last modification time.</para>
+            /// <para>The last update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-09-19 09:37:04</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public Dictionary<string, string> TaskDescription { get; set; }
 
             /// <summary>
-            /// <para>The custom identifier that is set to associate with this task.</para>
+            /// <para>The custom identifier set to associate with the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>linke-quality-sign</para>
@@ -96,9 +96,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The current status of the task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>in_progress: in progress.</description></item>
-            /// <item><description>success: completed.</description></item>
-            /// <item><description>fail: failed.</description></item>
+            /// <item><description>in_progress: The task is in progress.</description></item>
+            /// <item><description>success: The task is completed.</description></item>
+            /// <item><description>fail: The task failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

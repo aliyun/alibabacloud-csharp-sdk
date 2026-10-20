@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>D4030CD2-0D9D-5E92-B358-421AE58307C6</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of rule details.</para>
+        /// <para>The list of rule information.</para>
         /// </summary>
         [NameInMap("RuleInfos")]
         [Validation(Required=false)]
         public List<DescribeHttpDDoSAttackRulesResponseBodyRuleInfos> RuleInfos { get; set; }
         public class DescribeHttpDDoSAttackRulesResponseBodyRuleInfos : TeaModel {
             /// <summary>
-            /// <para>The action to perform.</para>
+            /// <para>The action.</para>
             /// 
             /// <b>Example:</b>
             /// <para>deny</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DefaultAction { get; set; }
 
             /// <summary>
-            /// <para>The ID of the protection rule used for log records.</para>
+            /// <para>The attack prevention rule ID for log records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100010</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? LogRuleId { get; set; }
 
             /// <summary>
-            /// <para>The description of the rule.</para>
+            /// <para>The rule description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The HTTP request\&quot;s Accept header contains invalid features#1</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RuleDesc { get; set; }
 
             /// <summary>
-            /// <para>The ID of the HTTP DDoS protection rule.</para>
+            /// <para>The HTTP DDoS rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20203578</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RuleIdInfo { get; set; }
 
             /// <summary>
-            /// <para>The name of the rule.</para>
+            /// <para>The rule name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Illegal request。</para>
@@ -117,12 +117,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The status of the rule. Valid values:</para>
+            /// <para>The rule status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>on</b>: The rule is enabled.</para>
-            /// </description></item>
-            /// <item><description><para><b>off</b>: The rule is disabled.</para>
-            /// </description></item>
+            /// <item><description><b>on</b>: The rule is enabled.</description></item>
+            /// <item><description><b>off</b>: The rule is disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

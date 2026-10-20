@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateRoutineCodeDeploymentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of percentage-based canary release code version configurations.</para>
+        /// <para>The list of code version configurations for the percentage-based canary release.</para>
         /// </summary>
         [NameInMap("CodeVersions")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CodeVersion { get; set; }
 
             /// <summary>
-            /// <para>The canary release percentage for the code version.</para>
+            /// <para>The traffic percentage for the canary release of the code version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The deployment record ID.</para>
+        /// <para>The ID of the deployment record.</para>
         /// 
         /// <b>Example:</b>
         /// <para>234</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string DeploymentId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EDBD3EB3-97DA-5465-AEF5-8DCA5DC5E395</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The canary release strategy. Fixed value: percentage.</para>
+        /// <para>The canary release strategy. The value is fixed as <c>percentage</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>percentage</para>

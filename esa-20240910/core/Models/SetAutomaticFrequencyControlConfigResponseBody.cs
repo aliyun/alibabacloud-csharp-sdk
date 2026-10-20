@@ -10,14 +10,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class SetAutomaticFrequencyControlConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The action taken on requests that trigger the control. Valid values:</para>
+        /// <para>The action to perform. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>observe</b>: Requests are monitored.</para>
-        /// </description></item>
-        /// <item><description><para><b>deny</b>: Requests are blocked.</para>
-        /// </description></item>
-        /// <item><description><para><b>js</b>: JS challenges are issued.</para>
-        /// </description></item>
+        /// <item><description><b>observe</b>: Monitor.</description></item>
+        /// <item><description><b>deny</b>: Block.</description></item>
+        /// <item><description><b>js</b>: JavaScript Challenge.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,7 +25,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ActionType { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether automatic frequency control is enabled. Valid values:</para>
+        /// <para>Specifies whether to enable the feature. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>on</b>: Enabled.</para>
         /// </description></item>
@@ -46,12 +43,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The protection level. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>loose</b>: Loose protection.</para>
-        /// </description></item>
-        /// <item><description><para><b>normal</b>: Normal protection.</para>
-        /// </description></item>
-        /// <item><description><para><b>strict</b>: Strict protection.</para>
-        /// </description></item>
+        /// <item><description><b>loose</b>: Loose.</description></item>
+        /// <item><description><b>normal</b>: Medium.</description></item>
+        /// <item><description><b>strict</b>: Strict.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,7 +56,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Level { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>F32C57AA-7BF8-49AE-A2CC-9F42390F5A19</para>

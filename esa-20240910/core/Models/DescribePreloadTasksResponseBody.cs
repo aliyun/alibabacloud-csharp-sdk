@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-03-28 14:28:57</para>
@@ -67,11 +67,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The error description returned when the prefetch fails. Valid values:</para>
+            /// <para>The error description returned when a prefetch task fails. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Internal Error</b>: An internal error occurred.</description></item>
             /// <item><description><b>Origin Timeout</b>: The origin server response timed out.</description></item>
-            /// <item><description><b>Origin Return StatusCode 5XX</b>: The origin server returned a 5xx error code.</description></item>
+            /// <item><description><b>Origin Return StatusCode 5XX</b>: The origin server returned a 5xx status code.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The task completion progress percentage.</para>
+            /// <para>The task completion progress in percentage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100%</para>
@@ -94,9 +94,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Complete</b>: Complete.</description></item>
-            /// <item><description><b>Refreshing</b>: Prefetching.</description></item>
-            /// <item><description><b>Failed</b>: Prefetch failed.</description></item>
+            /// <item><description><b>Complete</b>: Completed.</description></item>
+            /// <item><description><b>Refreshing</b>: Refreshing.</description></item>
+            /// <item><description><b>Failed</b>: Failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
