@@ -5667,7 +5667,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询优化任务执行详情</para>
+        /// <para>Queries the status, errors, execution progress, type-related results, and artifact references of a specified run.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5707,7 +5707,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询优化任务执行详情</para>
+        /// <para>Queries the status, errors, execution progress, type-related results, and artifact references of a specified run.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5747,7 +5747,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询优化任务执行详情</para>
+        /// <para>Queries the status, errors, execution progress, type-related results, and artifact references of a specified run.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5766,7 +5766,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询优化任务执行详情</para>
+        /// <para>Queries the status, errors, execution progress, type-related results, and artifact references of a specified run.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5785,7 +5785,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询优化任务</para>
+        /// <para>Queries the type, status, configuration, and scheduling checkpoint of a specified optimization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5825,7 +5825,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询优化任务</para>
+        /// <para>Queries the type, status, configuration, and scheduling checkpoint of a specified optimization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5865,7 +5865,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询优化任务</para>
+        /// <para>Queries the type, status, configuration, and scheduling checkpoint of a specified optimization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5884,7 +5884,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询优化任务</para>
+        /// <para>Queries the type, status, configuration, and scheduling checkpoint of a specified optimization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6139,7 +6139,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries pipeline run statistics.</para>
+        /// <para>Queries the pipeline run statistics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6193,7 +6193,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries pipeline run statistics.</para>
+        /// <para>Queries the pipeline run statistics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6247,7 +6247,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries pipeline run statistics.</para>
+        /// <para>Queries the pipeline run statistics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6266,7 +6266,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries pipeline run statistics.</para>
+        /// <para>Queries the pipeline run statistics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9415,7 +9415,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a pipeline.</para>
+        /// <para>Terminates a pipeline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9461,7 +9461,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a pipeline.</para>
+        /// <para>Terminates a pipeline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9507,7 +9507,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a pipeline.</para>
+        /// <para>Terminates a pipeline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9526,7 +9526,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a pipeline.</para>
+        /// <para>Terminates a pipeline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11301,7 +11301,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新优化任务</para>
+        /// <para>Updates the status and type-related configurations of a specified optimization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11357,7 +11357,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新优化任务</para>
+        /// <para>Updates the status and type-related configurations of a specified optimization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11413,7 +11413,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新优化任务</para>
+        /// <para>Updates the status and type-related configurations of a specified optimization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11432,7 +11432,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新优化任务</para>
+        /// <para>Updates the status and type-related configurations of a specified optimization task.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class UpdateContextStoreRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the policy change. A new policy version is created when policy fields in the configuration are modified.</para>
+        /// <para>The description of the policy change. A new policy version is written when policy fields in the configuration change.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Relax similarity threshold</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string ChangeNote { get; set; }
 
         /// <summary>
-        /// <para>The context library configuration. If provided, it fully overwrites the existing configuration. If omitted, the original configuration is retained.</para>
+        /// <para>The context library configuration. If specified, the entire configuration is overwritten. If not specified, the original configuration is retained.</para>
         /// </summary>
         [NameInMap("config")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public UpdateContextStoreRequestConfigAudit Audit { get; set; }
             public class UpdateContextStoreRequestConfigAudit : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether to write item events for dropped recall candidates. Default value: false.</para>
+                /// <para>Specifies whether to write item events for dropped candidates during retrieval. Default value: false.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public bool? DroppedCandidates { get; set; }
 
                 /// <summary>
-                /// <para>The recording mode for recall queries. Valid values: raw (plaintext) and hash (HMAC only). Default value: raw.</para>
+                /// <para>The recording mode for retrieval queries. Valid values: raw (plaintext) and hash (HMAC only). Default value: raw.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>raw</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 /// <para>The list of exclusion rules. Content that matches these rules is not extracted.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>[&quot;Password&quot;,&quot;ID number&quot;]</para>
+                /// <para>[&quot;Password&quot;, &quot;ID number&quot;]</para>
                 /// </summary>
                 [NameInMap("excludeRules")]
                 [Validation(Required=false)]
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             }
 
             /// <summary>
-            /// <para>The metadata field mapping. The key is the business field, and the value is the storage field.</para>
+            /// <para>The metadata field mapping. The key is the business field and the value is the storage field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;userId&quot;:&quot;user_id&quot;,&quot;sessionId&quot;:&quot;session_id&quot;}</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public UpdateContextStoreRequestConfigScopePolicy ScopePolicy { get; set; }
             public class UpdateContextStoreRequestConfigScopePolicy : TeaModel {
                 /// <summary>
-                /// <para>The list of scope fields where at least one must be non-empty. Valid element values: userId, agentId, appId, and runId.</para>
+                /// <para>The list of scope fields where at least one must be non-empty. Valid values for elements: userId, agentId, appId, and runId.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[&quot;userId&quot;]</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public UpdateContextStoreRequestConfigSource Source { get; set; }
             public class UpdateContextStoreRequestConfigSource : TeaModel {
                 /// <summary>
-                /// <para>The AgentSpace where the trace data source is located. Cross-AgentSpace is not supported in the current phase. If provided, it must be equal to the path AgentSpace. Otherwise, a 400 parameter error is returned. The AgentSpace cannot be changed after creation.</para>
+                /// <para>The AgentSpace where the trace data source is located. Cross-AgentSpace is not supported in the current phase. If specified, it must be equal to the path AgentSpace; otherwise, a 400 parameter error is returned. The AgentSpace cannot be changed after creation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>my-agent-space</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public UpdateContextStoreRequestConfigSourceDataset Dataset { get; set; }
                 public class UpdateContextStoreRequestConfigSourceDataset : TeaModel {
                     /// <summary>
-                    /// <para>The list of custom field declarations. If provided, it fully overwrites the existing declarations.</para>
+                    /// <para>The list of custom field declarations. If specified, the entire list is overwritten.</para>
                     /// </summary>
                     [NameInMap("customFields")]
                     [Validation(Required=false)]
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                         public string Description { get; set; }
 
                         /// <summary>
-                        /// <para>Specifies whether the field is a sensitive field.</para>
+                        /// <para>Specifies whether the field is sensitive.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>false</para>
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                         public string SourceField { get; set; }
 
                         /// <summary>
-                        /// <para>The target write path, such as metadata.customerTier.</para>
+                        /// <para>The target path for writing, such as metadata.customerTier.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>metadata.customerTier</para>
@@ -277,7 +277,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 }
 
                 /// <summary>
-                /// <para>The start time for data backfill, in ISO 8601 UTC format.</para>
+                /// <para>The start time for data backfill in ISO 8601 UTC format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-01-01T00:00:00Z</para>
@@ -294,7 +294,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public UpdateContextStoreRequestConfigSourceTrajectory Trajectory { get; set; }
                 public class UpdateContextStoreRequestConfigSourceTrajectory : TeaModel {
                     /// <summary>
-                    /// <para>The trajectory filter conditions. Conditions are combined with AND, while items within a list are combined with OR.</para>
+                    /// <para>The trajectory filter conditions. Conditions are combined with AND, and elements within a list are combined with OR.</para>
                     /// </summary>
                     [NameInMap("filter")]
                     [Validation(Required=false)]
@@ -321,7 +321,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                         public bool? ExcludeDegraded { get; set; }
 
                         /// <summary>
-                        /// <para>The minimum number of steps, which must be greater than or equal to 0.</para>
+                        /// <para>The minimum number of steps. The value must be greater than or equal to 0.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>2</para>
@@ -331,7 +331,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                         public int? MinStepCount { get; set; }
 
                         /// <summary>
-                        /// <para>The native SLS query statement. This statement is combined with the preceding conditions by using the AND operator.</para>
+                        /// <para>The native Simple Log Service (SLS) query statement, which is ANDed with the preceding conditions.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>tool_names:&quot;search_order&quot;</para>
@@ -341,7 +341,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                         public string Query { get; set; }
 
                         /// <summary>
-                        /// <para>The list of service names. A single trailing asterisk (*) is supported. Specifying an explicitly empty list returns a 400 error.</para>
+                        /// <para>The list of service names. A single trailing asterisk (*) is supported. An explicitly empty list returns a 400 error.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>[&quot;crm-service&quot;,&quot;app-*&quot;]</para>
@@ -373,14 +373,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                     public int? PollIntervalSeconds { get; set; }
 
                     /// <summary>
-                    /// <para>The scope field mapping. The value must be a JSONPath expression. Only the $.a.b and $.a[0] formats are supported.</para>
+                    /// <para>The scope field mapping. The value is a JSONPath expression. Only the $.a.b and $.a[0] formats are supported.</para>
                     /// </summary>
                     [NameInMap("scopeMapping")]
                     [Validation(Required=false)]
                     public UpdateContextStoreRequestConfigSourceTrajectoryScopeMapping ScopeMapping { get; set; }
                     public class UpdateContextStoreRequestConfigSourceTrajectoryScopeMapping : TeaModel {
                         /// <summary>
-                        /// <para>The JSONPath expression for the agentId field. Default value: $.agent_name.</para>
+                        /// <para>The JSONPath expression for agentId. Default value: $.agent_name.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>$.agent_name</para>
@@ -390,7 +390,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                         public string AgentId { get; set; }
 
                         /// <summary>
-                        /// <para>The JSONPath expression for the appId field. Default value: $.service_names[0].</para>
+                        /// <para>The JSONPath expression for appId. Default value: $.service_names[0].</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>$.service_names[0]</para>
@@ -400,7 +400,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                         public string AppId { get; set; }
 
                         /// <summary>
-                        /// <para>The JSONPath expression for the runId field. Default value: $.trajectory_id.</para>
+                        /// <para>The JSONPath expression for runId. Default value: $.trajectory_id.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>$.trajectory_id</para>
@@ -410,7 +410,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                         public string RunId { get; set; }
 
                         /// <summary>
-                        /// <para>The JSONPath expression for the userId field. By default, this field is not mapped.</para>
+                        /// <para>The JSONPath expression for userId. By default, this field is not mapped.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>$.trajectory_extensions.user_id</para>
@@ -433,7 +433,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public UpdateContextStoreRequestConfigStoragePolicy StoragePolicy { get; set; }
             public class UpdateContextStoreRequestConfigStoragePolicy : TeaModel {
                 /// <summary>
-                /// <para>The allowed storage actions. By default, all actions are allowed: ADD, UPDATE, MERGE, and DELETE.</para>
+                /// <para>The allowed storage actions. Default value: all actions, including ADD, UPDATE, MERGE, and DELETE.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[&quot;ADD&quot;,&quot;UPDATE&quot;,&quot;MERGE&quot;,&quot;DELETE&quot;]</para>
@@ -443,7 +443,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public List<string> AllowedActions { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to deduplicate events in event mode. Default value: true.</para>
+                /// <para>Specifies whether to enable deduplication in event mode. Default value: true.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -453,7 +453,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public bool? Dedupe { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable human edit protection. Default value: true. When this feature is enabled, automatic extraction does not overwrite manually modified memories.</para>
+                /// <para>Specifies whether to enable manual edit protection. Default value: true. When enabled, automatic extraction does not overwrite manually modified memories.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -473,7 +473,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public string MergeKey { get; set; }
 
                 /// <summary>
-                /// <para>The storage mode. Valid values: event (append events) and upsert (merge and update). Default value: upsert.</para>
+                /// <para>The storage mode. Valid values: event (event append) and upsert (merge update). Default value: upsert.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>upsert</para>
@@ -493,7 +493,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public double? SimilarityThreshold { get; set; }
 
                 /// <summary>
-                /// <para>The number of days before the memory expires. A value of 0 indicates that the memory never expires.</para>
+                /// <para>The number of days before a memory expires. A value of 0 indicates that the memory never expires.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -527,7 +527,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The running status. For the memory type, valid values are Active (running) and Paused (data source consumption and extraction paused). For the experience type, it indicates the mining status of the experience library. The specific valid values and combination constraints are defined by the server.</para>
+        /// <para>The running status. Valid values: Active and Paused. For the memory type, pausing stops data source reading and extraction. For the experience Dataset follow type, pausing retains submitted and in-flight checkpoints, and resuming continues processing new records without skipping history from the current time. If you update only the status, you do not need to pass back the source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Active</para>

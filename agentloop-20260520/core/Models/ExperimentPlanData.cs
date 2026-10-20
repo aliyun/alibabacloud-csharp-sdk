@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class ExperimentPlanData : TeaModel {
         /// <summary>
-        /// <para>The creation time in milliseconds.</para>
+        /// <para>The creation time, in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1767225600000</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Offline evaluation plan for customer service Q&amp;A</para>
+        /// <para>Customer service Q&amp;A offline evaluation plan</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public int? ExperimentCount { get; set; }
 
         /// <summary>
-        /// <para>The experiment type. Valid values: offline (offline experiment) and online (online experiment).</para>
+        /// <para>The experiment type: offline (offline experiment) or online (online experiment).</para>
         /// 
         /// <b>Example:</b>
         /// <para>offline</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string ExperimentType { get; set; }
 
         /// <summary>
-        /// <para>The name of the associated data processing pipeline. This field is empty if no pipeline is associated. After association, when an experiment under this plan completes and writes results to a Logstore, the system filters by the trace ID of the experiment trace and calls PreviewPipeline to write the pipeline-processed results.</para>
+        /// <para>The name of the associated data processing pipeline. This field is empty if no pipeline is associated. After a pipeline is associated, when an experiment under this plan completes and writes experiment results to the Logstore, the system filters by the traceId of the current experiment trace and calls PreviewPipeline to write the results processed by the pipeline.</para>
         /// 
         /// <b>Example:</b>
         /// <para>trace-process-pipeline</para>
@@ -71,6 +71,9 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 
         /// <summary>
         /// <para>The experiment plan ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>exp-plan-e95bff54685a4ae29ff3a834c1008a71</para>
         /// </summary>
         [NameInMap("planId")]
         [Validation(Required=false)]
@@ -97,7 +100,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string QuerySql { get; set; }
 
         /// <summary>
-        /// <para>The status. Valid values: pending, running, and stopped.</para>
+        /// <para>The status: pending, running, or stopped.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pending</para>
@@ -107,7 +110,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The update time in milliseconds.</para>
+        /// <para>The update time, in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1767229200000</para>

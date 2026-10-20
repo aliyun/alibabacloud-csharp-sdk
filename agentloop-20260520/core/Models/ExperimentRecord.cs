@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class ExperimentRecord : TeaModel {
         /// <summary>
-        /// <para>The completion time in milliseconds.</para>
+        /// <para>The completion timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1767229200000</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string DatasetId { get; set; }
 
         /// <summary>
-        /// <para>The SLS project where the dataset is located.</para>
+        /// <para>The Simple Log Service (SLS) project where the dataset is located.</para>
         /// 
         /// <b>Example:</b>
         /// <para>agentspace-project</para>
@@ -71,6 +71,9 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 
         /// <summary>
         /// <para>The ID of the associated evaluation task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>eval-task-6bec93bfa03740dd86ce2bf1496e65fb</para>
         /// </summary>
         [NameInMap("evaluationTaskId")]
         [Validation(Required=false)]
@@ -87,7 +90,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public List<Evaluator> Evaluators { get; set; }
 
         /// <summary>
-        /// <para>The execution time in milliseconds.</para>
+        /// <para>The execution timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1767225600000</para>
@@ -108,6 +111,9 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 
         /// <summary>
         /// <para>The ID of the associated experiment plan.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>exp-plan-0242d983f5d340fd8479cf2c19eb279e</para>
         /// </summary>
         [NameInMap("experimentPlanId")]
         [Validation(Required=false)]
@@ -175,6 +181,9 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 
         /// <summary>
         /// <para>The experiment record ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>exp-run-f6d419b0ed3d43a7b585948a55efc07b</para>
         /// </summary>
         [NameInMap("recordId")]
         [Validation(Required=false)]

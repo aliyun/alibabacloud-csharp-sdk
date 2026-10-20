@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class CreateContextStoreAPIKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The complete API key value.</para>
+        /// <para>The full value of the API key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>

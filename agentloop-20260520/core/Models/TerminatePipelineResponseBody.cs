@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class TerminatePipelineResponseBody : TeaModel {
         /// <summary>
+        /// <para>The name of the AgentSpace where the pipeline is located.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>my-agent-space</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string AgentSpaceName { get; set; }
 
         /// <summary>
+        /// <para>The name of the pipeline.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>my-pipeline</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string PipelineName { get; set; }
 
         /// <summary>
+        /// <para>The request ID, which is used to locate the request during troubleshooting.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The scheduling status. The value is fixed to Terminated, which is an irreversible desired state.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Terminated</para>
         /// </summary>
@@ -42,6 +50,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string ScheduleStatus { get; set; }
 
         /// <summary>
+        /// <para>The termination time in ISO 8601 UTC format.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
         /// 
         /// <b>Example:</b>
@@ -52,6 +61,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string TerminateTime { get; set; }
 
         /// <summary>
+        /// <para>The reason for termination.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>project deprecated</para>
         /// </summary>

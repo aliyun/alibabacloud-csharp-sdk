@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The effective strategy version number after the update for the memory type. If the strategy remains unchanged, the version number is the same as before the update.</para>
+        /// <para>The strategy version number that takes effect after the update for the memory type. If the strategy remains unchanged, the version number is the same as that before the update.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

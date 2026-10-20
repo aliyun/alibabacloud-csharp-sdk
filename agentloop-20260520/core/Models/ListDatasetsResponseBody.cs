@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public List<ListDatasetsResponseBodyDatasets> Datasets { get; set; }
         public class ListDatasetsResponseBodyDatasets : TeaModel {
             /// <summary>
-            /// <para>The agent space name.</para>
+            /// <para>The name of the agent workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sop-agent</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The dataset name.</para>
+            /// <para>The name of the dataset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>product_faq_dataset</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string DatasetName { get; set; }
 
             /// <summary>
-            /// <para>The dataset description.</para>
+            /// <para>The description of the dataset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Product FAQ dataset for semantic search</para>
@@ -57,10 +57,16 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the dataset is added to favorites.</para>
+            /// </summary>
             [NameInMap("isFavorite")]
             [Validation(Required=false)]
             public bool? IsFavorite { get; set; }
 
+            /// <summary>
+            /// <para>The labels of the dataset.</para>
+            /// </summary>
             [NameInMap("labels")]
             [Validation(Required=false)]
             public Dictionary<string, List<string>> Labels { get; set; }
@@ -89,7 +95,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of results specified in this request.</para>
+        /// <para>The maximum number of entries returned for this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -99,8 +105,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page of results.</para>
-        /// <para>If the total number of results exceeds the maxResults limit, the data is truncated. You can use nextToken to query the next page of data.</para>
+        /// <para>The token for the next page of query results.</para>
+        /// <para>If the total number of returned results exceeds the maxResults limit, the data is truncated. You can use nextToken to query the next page of data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>umaQfI7x758Ns4TgWrj8yA3fYlnk7dJgsfhMrSViRY8=</para>

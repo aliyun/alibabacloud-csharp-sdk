@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class ResumePipelineResponseBody : TeaModel {
         /// <summary>
-        /// <para>The name of the AgentSpace where the pipeline is located.</para>
+        /// <para>The name of the AgentSpace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-agent-space</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string PipelineName { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID used to locate the request during troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The scheduling status. The value is fixed to Active.</para>
+        /// <para>The scheduling status, which is fixed to Active.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Active</para>

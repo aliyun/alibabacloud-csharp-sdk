@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class ListContextStoreAPIKeysResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries per page that was specified in the request. This value is echoed back.</para>
+        /// <para>The maximum number of results per page specified in the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID, which is used to locate the request for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string AgentSpace { get; set; }
 
             /// <summary>
-            /// <para>The full value of the API key. The plaintext value is returned only when the API key is created. In list scenarios, the value is masked based on business rules.</para>
+            /// <para>The full value of the API key. The plaintext value is returned only when the API key is created. In list scenarios, the value is masked based on business conventions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string ContextStoreName { get; set; }
 
             /// <summary>
-            /// <para>The time when the API key was created, in ISO 8601 UTC format.</para>
+            /// <para>The time when the API key was created. The time is in the ISO 8601 standard in the UTC format.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         }
 
         /// <summary>
-        /// <para>The total number of API keys that match the query conditions.</para>
+        /// <para>The total number of API keys that meet the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

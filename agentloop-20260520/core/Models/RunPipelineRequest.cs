@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class RunPipelineRequest : TeaModel {
         /// <summary>
-        /// <para>The start of the data processing window, in UNIX seconds. This parameter is required for SQL Pipeline and time window-based WorkItem Source. This parameter is optional for checkpoint-based WorkItem Source types such as Dataset and Logstore Pull.</para>
+        /// <para>The start time of the data processing window in UNIX seconds. This parameter is required for SQL pipelines and time window-based WorkItem sources. It can be omitted for checkpoint-based WorkItem sources such as Dataset and Logstore Pull.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1735660800</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public long? FromTime { get; set; }
 
         /// <summary>
-        /// <para>The output control settings. SQL Pipeline supports overriding. WorkItem Pipeline uses the saved Sink configuration and must keep the default value.</para>
+        /// <para>The output control settings. SQL pipelines support overriding these settings. WorkItem pipelines use the saved sink configurations and must keep the default values.</para>
         /// </summary>
         [NameInMap("output")]
         [Validation(Required=false)]
         public RunPipelineRequestOutput Output { get; set; }
         public class RunPipelineRequestOutput : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to write to the target Dataset. Default value: true.</para>
+            /// <para>Specifies whether to write data to the target dataset. Default value: true.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         }
 
         /// <summary>
-        /// <para>The end of the data processing window, in UNIX seconds. This parameter must be provided together with fromTime and must be greater than fromTime. This parameter is optional for checkpoint-based WorkItem Source types.</para>
+        /// <para>The end time of the data processing window in UNIX seconds. It must be provided together with fromTime and must be greater than fromTime. This parameter can be omitted for checkpoint-based WorkItem sources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1735747200</para>

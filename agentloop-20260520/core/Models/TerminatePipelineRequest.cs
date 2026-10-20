@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class TerminatePipelineRequest : TeaModel {
         /// <summary>
+        /// <para>The reason for termination.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>project deprecated</para>
         /// </summary>

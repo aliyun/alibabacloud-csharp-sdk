@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class GetOptimizeRunResponseBody : TeaModel {
         /// <summary>
+        /// <para>The number of executed attempts.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public int? AttemptCount { get; set; }
 
         /// <summary>
+        /// <para>The creation time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-08-12T10:00:00Z</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string CreateTime { get; set; }
 
         /// <summary>
+        /// <para>The current execution stage.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>attribution</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string CurrentStage { get; set; }
 
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>InternalError</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>The optimize run failed.</para>
         /// </summary>
@@ -49,11 +59,16 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
+        /// <summary>
+        /// <para>The type-related information and immutable result references. For efficiency analysis, frozen outputBindings and tokenPublication release receipts are returned.</para>
+        /// </summary>
         [NameInMap("extra")]
         [Validation(Required=false)]
         public Dictionary<string, object> Extra { get; set; }
 
         /// <summary>
+        /// <para>The completion time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-08-12T10:01:00Z</para>
         /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string FinishTime { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of attempts.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public int? MaxAttempts { get; set; }
 
         /// <summary>
+        /// <para>The ID of the execution instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>or-20260812-0001</para>
         /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string OptimizeRunId { get; set; }
 
         /// <summary>
+        /// <para>The name of the optimization task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>efficiency-analysis</para>
         /// </summary>
@@ -85,11 +106,16 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         [Validation(Required=false)]
         public string OptimizeTaskName { get; set; }
 
+        /// <summary>
+        /// <para>The current execution progress. The fields are defined by the task type.</para>
+        /// </summary>
         [NameInMap("progress")]
         [Validation(Required=false)]
         public Dictionary<string, object> Progress { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</para>
         /// </summary>
@@ -98,6 +124,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The initial start time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-08-12T10:00:01Z</para>
         /// </summary>
@@ -106,6 +134,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string StartTime { get; set; }
 
         /// <summary>
+        /// <para>The execution status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Succeeded</para>
         /// </summary>
@@ -114,6 +144,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>The number of analysis trajectories.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -122,6 +154,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public long? TrajectoryCount { get; set; }
 
         /// <summary>
+        /// <para>The trigger type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Scheduled</para>
         /// </summary>
@@ -130,6 +164,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string TriggerType { get; set; }
 
         /// <summary>
+        /// <para>The task type snapshot.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EfficiencyAnalysis</para>
         /// </summary>
@@ -138,6 +174,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Type { get; set; }
 
         /// <summary>
+        /// <para>The end time of the analysis window, in UNIX seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1786432690000</para>
         /// </summary>
@@ -146,6 +184,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public long? WindowEndTime { get; set; }
 
         /// <summary>
+        /// <para>The start time of the analysis window, in UNIX seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1786432688000</para>
         /// </summary>

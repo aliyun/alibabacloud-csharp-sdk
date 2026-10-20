@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class ListDatasetsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The dataset name.</para>
+        /// <para>The name of the dataset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>product_faq_dataset</para>
@@ -19,6 +19,9 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         [Validation(Required=false)]
         public string DatasetName { get; set; }
 
+        /// <summary>
+        /// <para>Filters datasets by labels.</para>
+        /// </summary>
         [NameInMap("labels")]
         [Validation(Required=false)]
         public string LabelsShrink { get; set; }
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. You do not need to set this parameter for the first request. For subsequent requests, set this parameter to the nextToken value returned in the previous response.</para>
+        /// <para>The next token. You do not need to set this parameter for the first request. For subsequent requests, pass the nextToken value returned in the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RsfoUqpOJd5nd0F1e4OquY/7dKNGp1JMgsKtvCagmtY=</para>

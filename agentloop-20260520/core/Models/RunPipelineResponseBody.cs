@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string AgentSpaceName { get; set; }
 
         /// <summary>
-        /// <para>The pipeline name.</para>
+        /// <para>The name of the pipeline.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-pipeline</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string PipelineName { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID, which is used to locate the request during troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The run ID created by this trigger.</para>
+        /// <para>The ID of the run created by this trigger.</para>
         /// 
         /// <b>Example:</b>
         /// <para>run-20260101-0001</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string RunId { get; set; }
 
         /// <summary>
-        /// <para>The current status of the run. The status is typically Pending after the run is queued.</para>
+        /// <para>The current status of the run. The status is typically Pending after the run is enqueued.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Pending</para>

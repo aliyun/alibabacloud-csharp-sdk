@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class GetDatasetResponseBody : TeaModel {
         /// <summary>
-        /// <para>The agent space name.</para>
+        /// <para>The name of the agent space.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sop-agent</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The dataset name.</para>
+        /// <para>The name of the dataset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>product_faq_dataset</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string DatasetName { get; set; }
 
         /// <summary>
-        /// <para>The dataset description.</para>
+        /// <para>The description of the dataset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Product FAQ dataset for semantic search</para>
@@ -50,10 +50,16 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the dataset is added to favorites.</para>
+        /// </summary>
         [NameInMap("isFavorite")]
         [Validation(Required=false)]
         public bool? IsFavorite { get; set; }
 
+        /// <summary>
+        /// <para>The labels of the dataset.</para>
+        /// </summary>
         [NameInMap("labels")]
         [Validation(Required=false)]
         public Dictionary<string, List<string>> Labels { get; set; }
