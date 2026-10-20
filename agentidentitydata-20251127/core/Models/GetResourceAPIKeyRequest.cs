@@ -9,18 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentIdentityData20251127.Models
 {
     public class GetResourceAPIKeyRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>test-api-key-provider</para>
-        /// </summary>
         [NameInMap("ResourceCredentialProviderName")]
         [Validation(Required=false)]
         public string ResourceCredentialProviderName { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>eyAgImFsZyI6ICJSUzI1N****</para>
-        /// </summary>
+        [NameInMap("TokenVaultName")]
+        [Validation(Required=false)]
+        public string TokenVaultName { get; set; }
+
         [NameInMap("WorkloadAccessToken")]
         [Validation(Required=false)]
         public string WorkloadAccessToken { get; set; }

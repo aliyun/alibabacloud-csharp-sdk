@@ -344,6 +344,10 @@ namespace AlibabaCloud.SDK.AgentIdentityData20251127
             {
                 body["ResourceCredentialProviderName"] = request.ResourceCredentialProviderName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TokenVaultName))
+            {
+                body["TokenVaultName"] = request.TokenVaultName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkloadAccessToken))
             {
                 body["WorkloadAccessToken"] = request.WorkloadAccessToken;
@@ -389,6 +393,10 @@ namespace AlibabaCloud.SDK.AgentIdentityData20251127
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceCredentialProviderName))
             {
                 body["ResourceCredentialProviderName"] = request.ResourceCredentialProviderName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TokenVaultName))
+            {
+                body["TokenVaultName"] = request.TokenVaultName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkloadAccessToken))
             {
@@ -478,6 +486,10 @@ namespace AlibabaCloud.SDK.AgentIdentityData20251127
                 request.ScopesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Scopes, "Scopes", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Audience))
+            {
+                body["Audience"] = request.Audience;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomParametersShrink))
             {
                 body["CustomParameters"] = request.CustomParametersShrink;
@@ -509,6 +521,10 @@ namespace AlibabaCloud.SDK.AgentIdentityData20251127
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionURI))
             {
                 body["SessionURI"] = request.SessionURI;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TokenVaultName))
+            {
+                body["TokenVaultName"] = request.TokenVaultName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkloadAccessToken))
             {
@@ -562,6 +578,10 @@ namespace AlibabaCloud.SDK.AgentIdentityData20251127
                 request.ScopesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Scopes, "Scopes", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Audience))
+            {
+                body["Audience"] = request.Audience;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomParametersShrink))
             {
                 body["CustomParameters"] = request.CustomParametersShrink;
@@ -593,6 +613,10 @@ namespace AlibabaCloud.SDK.AgentIdentityData20251127
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionURI))
             {
                 body["SessionURI"] = request.SessionURI;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TokenVaultName))
+            {
+                body["TokenVaultName"] = request.TokenVaultName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkloadAccessToken))
             {

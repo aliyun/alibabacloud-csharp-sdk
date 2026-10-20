@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentIdentityData20251127.Models
 {
     public class GetWorkloadAccessTokenRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>test-workload-identity</para>
-        /// </summary>
         [NameInMap("WorkloadIdentityName")]
         [Validation(Required=false)]
         public string WorkloadIdentityName { get; set; }
