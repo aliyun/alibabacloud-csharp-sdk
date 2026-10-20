@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return extended properties. Set this parameter to <c>true</c> to return extended properties or <c>false</c> to not return them.</para>
+        /// <para>Specifies whether to return extended properties. If this parameter is set to <c>true</c>, extended properties are returned. If this parameter is set to <c>false</c>, extended properties are not returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size. Default value: 10. Maximum value: 100.</para>
+        /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -74,25 +74,25 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the parent-level metadata entity. You can obtain this value from the response of the ListDatabases or ListSchemas operation. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</para>
+        /// <para>The ID of the parent metadata entity. You can refer to the response of the ListDatabases or ListSchemas operation, or see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</para>
         /// <list type="bullet">
-        /// <item><description><para>The value can be the database to which the table belongs. The format of <c>ParentMetaEntityId</c> is <c>${EntityType}:${InstanceID or encoded URL}:${DataCatalogIdentifier}:${DatabaseName}</c>. Use an empty string as a placeholder for levels that do not exist.</para>
+        /// <item><description><para>The parent entity can be the database to which the table belongs. The <c>ParentMetaEntityId</c> format is <c>${EntityType}:${Instance ID or URL-encoded JDBC URL}:${Data catalog identifier}:${Database name}</c>. Use an empty string as a placeholder for non-existent levels.</para>
         /// </description></item>
-        /// <item><description><para>The value can also be the database schema to which the table belongs. The format of <c>ParentMetaEntityId</c> is <c>${EntityType}:${InstanceID or encoded URL}:${DataCatalogIdentifier}:${DatabaseName}:${SchemaName}</c>. Use an empty string as a placeholder for levels that do not exist.</para>
+        /// <item><description><para>The parent entity can also be the database schema to which the table belongs. The <c>ParentMetaEntityId</c> format is <c>${EntityType}:${Instance ID or URL-encoded JDBC URL}:${Data catalog identifier}:${Database name}:${Schema name}</c>. Use an empty string as a placeholder for non-existent levels.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You can set <c>ParentMetaEntityId</c> to a database schema only when the database type supports schemas (<c>maxcompute/holo/postgresql/sqlserver/hybriddb_for_postgresql/oracle</c>, where the three-layer model must be enabled for the maxcompute type). Otherwise, you can set it only to a database.</description></item>
-        /// <item><description>For the maxcompute and dlf types, use an empty string as a placeholder for the instance ID. For the maxcompute type, the database name is the MaxCompute project name.</description></item>
-        /// <item><description>For the starrocks type, the data catalog identifier is the catalog name. For the dlf type, the data catalog identifier is the catalog ID. Other types do not support the catalog level, and you can use an empty string as a placeholder.</description></item>
+        /// <item><description>The database schema can be used for <c>ParentMetaEntityId</c> only when the database type supports schemas (<c>maxcompute</c>, <c>holo</c>, <c>postgresql</c>, <c>sqlserver</c>, <c>hybriddb_for_postgresql</c>, or <c>oracle</c>). For MaxCompute, the three-level model must be enabled. Otherwise, only the database can be used.</description></item>
+        /// <item><description>For MaxCompute and DLF types, use an empty string as a placeholder for the instance ID. For MaxCompute, the database name is the MaxCompute project name.</description></item>
+        /// <item><description>For StarRocks, the data catalog identifier is the catalog name. For DLF, the data catalog identifier is the catalog ID. Other types do not support the catalog level, so use an empty string as a placeholder.</description></item>
         /// </list>
         /// </remarks>
-        /// <para>The following examples show the format of ParentMetaEntityId for common types:</para>
+        /// <para>Examples of <c>ParentMetaEntityId</c> formats for common types:</para>
         /// <list type="bullet">
         /// <item><description><para><c>maxcompute-project:::project_name</c></para>
         /// </description></item>
-        /// <item><description><para><c>maxcompute-schema:::project_name:schema_name</c> (only when the three-layer model is enabled for the project)</para>
+        /// <item><description><para><c>maxcompute-schema:::project_name:schema_name</c> (only when the three-level model is enabled for the project)</para>
         /// </description></item>
         /// <item><description><para><c>dlf-database::catalog_id:database_name</c></para>
         /// </description></item>
@@ -106,12 +106,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <remarks>
         /// <para>Where:  </para>
         /// <list type="bullet">
-        /// <item><description><c>instance_id</c>: The instance ID. This value is required when the data source is registered in instance mode.</description></item>
-        /// <item><description><c>encoded_jdbc_url</c>: The URL-encoded JDBC connection string. This value is required when the data source is registered by using a connection string.</description></item>
-        /// <item><description><c>catalog_id</c>: The DLF catalog ID.</description></item>
-        /// <item><description><c>project_name</c>: The MaxCompute project name.</description></item>
-        /// <item><description><c>database_name</c>: The database name.</description></item>
-        /// <item><description><c>schema_name</c>: The schema name.</description></item>
+        /// <item><description><c>instance_id</c>: the instance ID, which is required when the data source is registered in instance mode.</description></item>
+        /// <item><description><c>encoded_jdbc_url</c>: the URL-encoded JDBC connection string, which is required when the data source is registered by using a connection string.</description></item>
+        /// <item><description><c>catalog_id</c>: the DLF catalog ID.</description></item>
+        /// <item><description><c>project_name</c>: the MaxCompute project name.</description></item>
+        /// <item><description><c>database_name</c>: the database name.</description></item>
+        /// <item><description><c>schema_name</c>: the schema name.</description></item>
         /// </list>
         /// </remarks>
         /// <para>This parameter is required.</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ParentMetaEntityId { get; set; }
 
         /// <summary>
-        /// <para>The field by which to sort the results. Default value: CreateTime. Valid values:</para>
+        /// <para>The field used for sorting. Default value: CreateTime. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>CreateTime: creation time</description></item>
         /// <item><description>ModifyTime: modification time</description></item>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The list of table types to query. If this parameter is left empty, all types are queried.</para>
+        /// <para>The list of table types to query. If this parameter is left empty, all table types are queried.</para>
         /// </summary>
         [NameInMap("TableTypes")]
         [Validation(Required=false)]

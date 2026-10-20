@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public ListProjectRolesResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListProjectRolesResponseBodyPagingInfo : TeaModel {
             /// <summary>
-            /// <para>The requested page number. Used for pagination.</para>
+            /// <para>The page number of the requested data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<ListProjectRolesResponseBodyPagingInfoProjectRoles> ProjectRoles { get; set; }
             public class ListProjectRolesResponseBodyPagingInfoProjectRoles : TeaModel {
                 /// <summary>
-                /// <para>The role code of the workspace.</para>
+                /// <para>The code of the workspace role.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>role_project_guest</para>
@@ -53,11 +53,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 [Validation(Required=false)]
                 public string Code { get; set; }
 
+                /// <summary>
+                /// <para>The list of DataWorks product module permissions granted to the role.</para>
+                /// </summary>
                 [NameInMap("ModulePermissions")]
                 [Validation(Required=false)]
                 public List<ListProjectRolesResponseBodyPagingInfoProjectRolesModulePermissions> ModulePermissions { get; set; }
                 public class ListProjectRolesResponseBodyPagingInfoProjectRolesModulePermissions : TeaModel {
                     /// <summary>
+                    /// <para>The ID of the DataWorks module.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
                     /// </summary>
@@ -66,6 +71,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public long? ModuleId { get; set; }
 
                     /// <summary>
+                    /// <para>The name of the DataWorks module.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>HoloStudio</para>
                     /// </summary>
@@ -74,6 +81,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string ModuleName { get; set; }
 
                     /// <summary>
+                    /// <para>The type of the permission.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>Read</para>
                     /// </summary>
@@ -84,7 +93,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The role name of the workspace.</para>
+                /// <para>The name of the workspace role.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Visitors</para>
@@ -95,7 +104,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The ID of the DataWorks workspace.</para>
-                /// <para>Note: For system default workspace roles, ProjectId returns a fixed value of -1.</para>
+                /// <para>Note: For default system workspace roles, the value of ProjectId is fixed to -1.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>21229</para>
@@ -105,7 +114,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>The role type of the workspace.</para>
+                /// <para>The type of the workspace role.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>System</para>
@@ -117,7 +126,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The total number of entries that meet the filter conditions.</para>
+            /// <para>The total number of entries that meet the specified conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>42</para>
@@ -129,7 +138,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID. Used to locate logs and troubleshoot issues.</para>
+        /// <para>The request ID. You can use the ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>61649187-0BCF-5E75-8D4B-64FDBEBBB447</para>

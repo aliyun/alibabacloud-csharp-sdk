@@ -3692,6 +3692,254 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a scheduling calendar.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You must purchase DataWorks Enterprise Edition to use this feature.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateCalendarRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCalendarResponse
+        /// </returns>
+        public CreateCalendarResponse CreateCalendarWithOptions(CreateCalendarRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateCalendarShrinkRequest request = new CreateCalendarShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ProjectIds))
+            {
+                request.ProjectIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ProjectIds, "ProjectIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SchedulePolicy))
+            {
+                request.SchedulePolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SchedulePolicy, "SchedulePolicy", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllProjects))
+            {
+                body["AllProjects"] = request.AllProjects;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                body["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpirationReminder))
+            {
+                body["ExpirationReminder"] = request.ExpirationReminder;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FallbackPolicy))
+            {
+                body["FallbackPolicy"] = request.FallbackPolicy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OverduePolicy))
+            {
+                body["OverduePolicy"] = request.OverduePolicy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                body["Owner"] = request.Owner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectIdsShrink))
+            {
+                body["ProjectIds"] = request.ProjectIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchedulePolicyShrink))
+            {
+                body["SchedulePolicy"] = request.SchedulePolicyShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                body["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCalendar",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCalendarResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a scheduling calendar.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You must purchase DataWorks Enterprise Edition to use this feature.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateCalendarRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCalendarResponse
+        /// </returns>
+        public async Task<CreateCalendarResponse> CreateCalendarWithOptionsAsync(CreateCalendarRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateCalendarShrinkRequest request = new CreateCalendarShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ProjectIds))
+            {
+                request.ProjectIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ProjectIds, "ProjectIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SchedulePolicy))
+            {
+                request.SchedulePolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SchedulePolicy, "SchedulePolicy", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllProjects))
+            {
+                body["AllProjects"] = request.AllProjects;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                body["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpirationReminder))
+            {
+                body["ExpirationReminder"] = request.ExpirationReminder;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FallbackPolicy))
+            {
+                body["FallbackPolicy"] = request.FallbackPolicy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OverduePolicy))
+            {
+                body["OverduePolicy"] = request.OverduePolicy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                body["Owner"] = request.Owner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectIdsShrink))
+            {
+                body["ProjectIds"] = request.ProjectIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchedulePolicyShrink))
+            {
+                body["SchedulePolicy"] = request.SchedulePolicyShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                body["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCalendar",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCalendarResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a scheduling calendar.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You must purchase DataWorks Enterprise Edition to use this feature.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateCalendarRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCalendarResponse
+        /// </returns>
+        public CreateCalendarResponse CreateCalendar(CreateCalendarRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateCalendarWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a scheduling calendar.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You must purchase DataWorks Enterprise Edition to use this feature.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateCalendarRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCalendarResponse
+        /// </returns>
+        public async Task<CreateCalendarResponse> CreateCalendarAsync(CreateCalendarRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateCalendarWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a component.</para>
         /// </summary>
         /// 
@@ -13808,12 +14056,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a workflow instance based on the specified configurations, such as a data backfill workflow instance.</para>
+        /// <para>Creates a workflow instance based on configurations, such as a data backfill workflow instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or later is required.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a later edition to use this feature.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -13917,12 +14165,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a workflow instance based on the specified configurations, such as a data backfill workflow instance.</para>
+        /// <para>Creates a workflow instance based on configurations, such as a data backfill workflow instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or later is required.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a later edition to use this feature.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -14026,12 +14274,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a workflow instance based on the specified configurations, such as a data backfill workflow instance.</para>
+        /// <para>Creates a workflow instance based on configurations, such as a data backfill workflow instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or later is required.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a later edition to use this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14049,12 +14297,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a workflow instance based on the specified configurations, such as a data backfill workflow instance.</para>
+        /// <para>Creates a workflow instance based on configurations, such as a data backfill workflow instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or later is required.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a later edition to use this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14468,6 +14716,150 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteBusinessWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a scheduling calendar.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>DataWorks Enterprise Edition is required.
+        /// You cannot delete a scheduling calendar that is referenced by nodes. Remove the node references first.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteCalendarRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCalendarResponse
+        /// </returns>
+        public DeleteCalendarResponse DeleteCalendarWithOptions(DeleteCalendarRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteCalendar",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteCalendarResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a scheduling calendar.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>DataWorks Enterprise Edition is required.
+        /// You cannot delete a scheduling calendar that is referenced by nodes. Remove the node references first.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteCalendarRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCalendarResponse
+        /// </returns>
+        public async Task<DeleteCalendarResponse> DeleteCalendarWithOptionsAsync(DeleteCalendarRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteCalendar",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteCalendarResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a scheduling calendar.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>DataWorks Enterprise Edition is required.
+        /// You cannot delete a scheduling calendar that is referenced by nodes. Remove the node references first.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteCalendarRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCalendarResponse
+        /// </returns>
+        public DeleteCalendarResponse DeleteCalendar(DeleteCalendarRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteCalendarWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a scheduling calendar.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>DataWorks Enterprise Edition is required.
+        /// You cannot delete a scheduling calendar that is referenced by nodes. Remove the node references first.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteCalendarRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCalendarResponse
+        /// </returns>
+        public async Task<DeleteCalendarResponse> DeleteCalendarAsync(DeleteCalendarRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteCalendarWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -23084,13 +23476,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Find the security policy that best matches the given conditions.</para>
+        /// <para>Queries the best-matching security policy based on specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request Description</h2>
-        /// <para>This API is used to find the most suitable security policy based on the provided control module, sub-module, and workspace ID. If a workspace ID is provided, the policy at the specified workspace level is matched first; otherwise, the tenant-level policy is returned. Note that system policies cannot be deleted or modified.</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation queries the most suitable security policy based on the provided control module, submodule, and workspace ID. If a workspace ID is provided, the system preferentially matches policies at the specified workspace level. Otherwise, tenant-level policies are returned. Note that system policies cannot be deleted or modified.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23140,13 +23532,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Find the security policy that best matches the given conditions.</para>
+        /// <para>Queries the best-matching security policy based on specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request Description</h2>
-        /// <para>This API is used to find the most suitable security policy based on the provided control module, sub-module, and workspace ID. If a workspace ID is provided, the policy at the specified workspace level is matched first; otherwise, the tenant-level policy is returned. Note that system policies cannot be deleted or modified.</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation queries the most suitable security policy based on the provided control module, submodule, and workspace ID. If a workspace ID is provided, the system preferentially matches policies at the specified workspace level. Otherwise, tenant-level policies are returned. Note that system policies cannot be deleted or modified.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23196,13 +23588,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Find the security policy that best matches the given conditions.</para>
+        /// <para>Queries the best-matching security policy based on specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request Description</h2>
-        /// <para>This API is used to find the most suitable security policy based on the provided control module, sub-module, and workspace ID. If a workspace ID is provided, the policy at the specified workspace level is matched first; otherwise, the tenant-level policy is returned. Note that system policies cannot be deleted or modified.</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation queries the most suitable security policy based on the provided control module, submodule, and workspace ID. If a workspace ID is provided, the system preferentially matches policies at the specified workspace level. Otherwise, tenant-level policies are returned. Note that system policies cannot be deleted or modified.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23220,13 +23612,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Find the security policy that best matches the given conditions.</para>
+        /// <para>Queries the best-matching security policy based on specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request Description</h2>
-        /// <para>This API is used to find the most suitable security policy based on the provided control module, sub-module, and workspace ID. If a workspace ID is provided, the policy at the specified workspace level is matched first; otherwise, the tenant-level policy is returned. Note that system policies cannot be deleted or modified.</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation queries the most suitable security policy based on the provided control module, submodule, and workspace ID. If a workspace ID is provided, the system preferentially matches policies at the specified workspace level. Otherwise, tenant-level policies are returned. Note that system policies cannot be deleted or modified.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24280,6 +24672,146 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetBusinessWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the current configuration of a specified scheduling calendar.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>DataWorks Enterprise Edition is required to use this API.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetCalendarRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCalendarResponse
+        /// </returns>
+        public GetCalendarResponse GetCalendarWithOptions(GetCalendarRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCalendar",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCalendarResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the current configuration of a specified scheduling calendar.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>DataWorks Enterprise Edition is required to use this API.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetCalendarRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCalendarResponse
+        /// </returns>
+        public async Task<GetCalendarResponse> GetCalendarWithOptionsAsync(GetCalendarRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCalendar",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCalendarResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the current configuration of a specified scheduling calendar.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>DataWorks Enterprise Edition is required to use this API.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetCalendarRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCalendarResponse
+        /// </returns>
+        public GetCalendarResponse GetCalendar(GetCalendarRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetCalendarWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the current configuration of a specified scheduling calendar.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>DataWorks Enterprise Edition is required to use this API.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetCalendarRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCalendarResponse
+        /// </returns>
+        public async Task<GetCalendarResponse> GetCalendarAsync(GetCalendarRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetCalendarWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -32036,17 +32568,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a security policy by its ID. This operation requires both DataWorks tenant administrator and security administrator permissions.</para>
+        /// <para>Retrieves the details of a security policy based on the provided security policy ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves the complete configuration information for a security policy by its ID.</description></item>
-        /// <item><description>The API returns an error message if the provided <c>Id</c> is invalid or does not exist.</description></item>
-        /// <item><description>The response includes basic policy information, such as its name and description, and policy details, such as control items and their settings.</description></item>
-        /// <item><description>Note: Some fields in a system default policy cannot be modified or deleted.</description></item>
+        /// <item><description>This API retrieves all configuration information of a specific security policy by using the specified security policy ID.</description></item>
+        /// <item><description>Ensure that the provided <c>Id</c> parameter value is valid and exists. Otherwise, an error message is returned.</description></item>
+        /// <item><description>The returned data structure includes the basic information of the policy, such as the name and description, and the detailed policy content, such as control items and their settings.</description></item>
+        /// <item><description>Note: Some fields of system default policies may be protected from modification or deletion.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -32089,17 +32621,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a security policy by its ID. This operation requires both DataWorks tenant administrator and security administrator permissions.</para>
+        /// <para>Retrieves the details of a security policy based on the provided security policy ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves the complete configuration information for a security policy by its ID.</description></item>
-        /// <item><description>The API returns an error message if the provided <c>Id</c> is invalid or does not exist.</description></item>
-        /// <item><description>The response includes basic policy information, such as its name and description, and policy details, such as control items and their settings.</description></item>
-        /// <item><description>Note: Some fields in a system default policy cannot be modified or deleted.</description></item>
+        /// <item><description>This API retrieves all configuration information of a specific security policy by using the specified security policy ID.</description></item>
+        /// <item><description>Ensure that the provided <c>Id</c> parameter value is valid and exists. Otherwise, an error message is returned.</description></item>
+        /// <item><description>The returned data structure includes the basic information of the policy, such as the name and description, and the detailed policy content, such as control items and their settings.</description></item>
+        /// <item><description>Note: Some fields of system default policies may be protected from modification or deletion.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -32142,17 +32674,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a security policy by its ID. This operation requires both DataWorks tenant administrator and security administrator permissions.</para>
+        /// <para>Retrieves the details of a security policy based on the provided security policy ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves the complete configuration information for a security policy by its ID.</description></item>
-        /// <item><description>The API returns an error message if the provided <c>Id</c> is invalid or does not exist.</description></item>
-        /// <item><description>The response includes basic policy information, such as its name and description, and policy details, such as control items and their settings.</description></item>
-        /// <item><description>Note: Some fields in a system default policy cannot be modified or deleted.</description></item>
+        /// <item><description>This API retrieves all configuration information of a specific security policy by using the specified security policy ID.</description></item>
+        /// <item><description>Ensure that the provided <c>Id</c> parameter value is valid and exists. Otherwise, an error message is returned.</description></item>
+        /// <item><description>The returned data structure includes the basic information of the policy, such as the name and description, and the detailed policy content, such as control items and their settings.</description></item>
+        /// <item><description>Note: Some fields of system default policies may be protected from modification or deletion.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -32171,17 +32703,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a security policy by its ID. This operation requires both DataWorks tenant administrator and security administrator permissions.</para>
+        /// <para>Retrieves the details of a security policy based on the provided security policy ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves the complete configuration information for a security policy by its ID.</description></item>
-        /// <item><description>The API returns an error message if the provided <c>Id</c> is invalid or does not exist.</description></item>
-        /// <item><description>The response includes basic policy information, such as its name and description, and policy details, such as control items and their settings.</description></item>
-        /// <item><description>Note: Some fields in a system default policy cannot be modified or deleted.</description></item>
+        /// <item><description>This API retrieves all configuration information of a specific security policy by using the specified security policy ID.</description></item>
+        /// <item><description>Ensure that the provided <c>Id</c> parameter value is valid and exists. Otherwise, an error message is returned.</description></item>
+        /// <item><description>The returned data structure includes the basic information of the policy, such as the name and description, and the detailed policy content, such as control items and their settings.</description></item>
+        /// <item><description>Note: Some fields of system default policies may be protected from modification or deletion.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -35852,6 +36384,342 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListBusinessWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the versions of a specified scheduling calendar.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>DataWorks Enterprise Edition is required.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListCalendarVersionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCalendarVersionsResponse
+        /// </returns>
+        public ListCalendarVersionsResponse ListCalendarVersionsWithOptions(ListCalendarVersionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCalendarVersions",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCalendarVersionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the versions of a specified scheduling calendar.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>DataWorks Enterprise Edition is required.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListCalendarVersionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCalendarVersionsResponse
+        /// </returns>
+        public async Task<ListCalendarVersionsResponse> ListCalendarVersionsWithOptionsAsync(ListCalendarVersionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCalendarVersions",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCalendarVersionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the versions of a specified scheduling calendar.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>DataWorks Enterprise Edition is required.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListCalendarVersionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCalendarVersionsResponse
+        /// </returns>
+        public ListCalendarVersionsResponse ListCalendarVersions(ListCalendarVersionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListCalendarVersionsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the versions of a specified scheduling calendar.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>DataWorks Enterprise Edition is required.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListCalendarVersionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCalendarVersionsResponse
+        /// </returns>
+        public async Task<ListCalendarVersionsResponse> ListCalendarVersionsAsync(ListCalendarVersionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListCalendarVersionsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of scheduling calendars.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>DataWorks Enterprise Edition is required.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListCalendarsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCalendarsResponse
+        /// </returns>
+        public ListCalendarsResponse ListCalendarsWithOptions(ListCalendarsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                body["Owner"] = request.Owner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                body["SortBy"] = request.SortBy;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCalendars",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCalendarsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of scheduling calendars.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>DataWorks Enterprise Edition is required.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListCalendarsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCalendarsResponse
+        /// </returns>
+        public async Task<ListCalendarsResponse> ListCalendarsWithOptionsAsync(ListCalendarsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                body["Owner"] = request.Owner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                body["SortBy"] = request.SortBy;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCalendars",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCalendarsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of scheduling calendars.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>DataWorks Enterprise Edition is required.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListCalendarsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCalendarsResponse
+        /// </returns>
+        public ListCalendarsResponse ListCalendars(ListCalendarsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListCalendarsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of scheduling calendars.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>DataWorks Enterprise Edition is required.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListCalendarsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCalendarsResponse
+        /// </returns>
+        public async Task<ListCalendarsResponse> ListCalendarsAsync(ListCalendarsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListCalendarsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -47264,12 +48132,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of workspace roles with pagination.</para>
+        /// <para>Queries the details of workspace roles by paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or later to use this operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -47341,12 +48209,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of workspace roles with pagination.</para>
+        /// <para>Queries the details of workspace roles by paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or later to use this operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -47418,12 +48286,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of workspace roles with pagination.</para>
+        /// <para>Queries the details of workspace roles by paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or later to use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -47441,12 +48309,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of workspace roles with pagination.</para>
+        /// <para>Queries the details of workspace roles by paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or later to use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -48632,17 +49500,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of security policies based on specified conditions. This operation requires DataWorks tenant administrator or security administrator permissions.</para>
+        /// <para>Retrieves a paginated list of security policies in the system based on specified conditions. This operation requires DataWorks tenant administrator and security administrator permissions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves a paginated list of configured security policies.</description></item>
-        /// <item><description>The <c>ControlModule</c> and <c>ControlSubModule</c> parameters filter policies by a specific module or submodule.</description></item>
-        /// <item><description>The <c>PageNum</c> and <c>PageSize</c> parameters control pagination. <c>PageNum</c> specifies the page number to retrieve (default: 1), and <c>PageSize</c> specifies the number of policies to return per page (default: 20).</description></item>
-        /// <item><description>Use the <c>MaxResults</c> and <c>NextToken</c> private parameters for advanced pagination.</description></item>
+        /// <item><description>This operation retrieves the configured security policies in the system in pages.</description></item>
+        /// <item><description>You can use the <c>ControlModule</c> and <c>ControlSubModule</c> parameters to filter policies under specific modules or submodules.</description></item>
+        /// <item><description>The pagination parameters include <c>PageNum</c> and <c>PageSize</c>, which indicate the page number and the number of entries per page. The default values are 1 and 20.</description></item>
+        /// <item><description>If you need further pagination control, you can use the <c>MaxResults</c> and <c>NextToken</c> parameters (private parameters).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -48697,17 +49565,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of security policies based on specified conditions. This operation requires DataWorks tenant administrator or security administrator permissions.</para>
+        /// <para>Retrieves a paginated list of security policies in the system based on specified conditions. This operation requires DataWorks tenant administrator and security administrator permissions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves a paginated list of configured security policies.</description></item>
-        /// <item><description>The <c>ControlModule</c> and <c>ControlSubModule</c> parameters filter policies by a specific module or submodule.</description></item>
-        /// <item><description>The <c>PageNum</c> and <c>PageSize</c> parameters control pagination. <c>PageNum</c> specifies the page number to retrieve (default: 1), and <c>PageSize</c> specifies the number of policies to return per page (default: 20).</description></item>
-        /// <item><description>Use the <c>MaxResults</c> and <c>NextToken</c> private parameters for advanced pagination.</description></item>
+        /// <item><description>This operation retrieves the configured security policies in the system in pages.</description></item>
+        /// <item><description>You can use the <c>ControlModule</c> and <c>ControlSubModule</c> parameters to filter policies under specific modules or submodules.</description></item>
+        /// <item><description>The pagination parameters include <c>PageNum</c> and <c>PageSize</c>, which indicate the page number and the number of entries per page. The default values are 1 and 20.</description></item>
+        /// <item><description>If you need further pagination control, you can use the <c>MaxResults</c> and <c>NextToken</c> parameters (private parameters).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -48762,17 +49630,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of security policies based on specified conditions. This operation requires DataWorks tenant administrator or security administrator permissions.</para>
+        /// <para>Retrieves a paginated list of security policies in the system based on specified conditions. This operation requires DataWorks tenant administrator and security administrator permissions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves a paginated list of configured security policies.</description></item>
-        /// <item><description>The <c>ControlModule</c> and <c>ControlSubModule</c> parameters filter policies by a specific module or submodule.</description></item>
-        /// <item><description>The <c>PageNum</c> and <c>PageSize</c> parameters control pagination. <c>PageNum</c> specifies the page number to retrieve (default: 1), and <c>PageSize</c> specifies the number of policies to return per page (default: 20).</description></item>
-        /// <item><description>Use the <c>MaxResults</c> and <c>NextToken</c> private parameters for advanced pagination.</description></item>
+        /// <item><description>This operation retrieves the configured security policies in the system in pages.</description></item>
+        /// <item><description>You can use the <c>ControlModule</c> and <c>ControlSubModule</c> parameters to filter policies under specific modules or submodules.</description></item>
+        /// <item><description>The pagination parameters include <c>PageNum</c> and <c>PageSize</c>, which indicate the page number and the number of entries per page. The default values are 1 and 20.</description></item>
+        /// <item><description>If you need further pagination control, you can use the <c>MaxResults</c> and <c>NextToken</c> parameters (private parameters).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -48791,17 +49659,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of security policies based on specified conditions. This operation requires DataWorks tenant administrator or security administrator permissions.</para>
+        /// <para>Retrieves a paginated list of security policies in the system based on specified conditions. This operation requires DataWorks tenant administrator and security administrator permissions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves a paginated list of configured security policies.</description></item>
-        /// <item><description>The <c>ControlModule</c> and <c>ControlSubModule</c> parameters filter policies by a specific module or submodule.</description></item>
-        /// <item><description>The <c>PageNum</c> and <c>PageSize</c> parameters control pagination. <c>PageNum</c> specifies the page number to retrieve (default: 1), and <c>PageSize</c> specifies the number of policies to return per page (default: 20).</description></item>
-        /// <item><description>Use the <c>MaxResults</c> and <c>NextToken</c> private parameters for advanced pagination.</description></item>
+        /// <item><description>This operation retrieves the configured security policies in the system in pages.</description></item>
+        /// <item><description>You can use the <c>ControlModule</c> and <c>ControlSubModule</c> parameters to filter policies under specific modules or submodules.</description></item>
+        /// <item><description>The pagination parameters include <c>PageNum</c> and <c>PageSize</c>, which indicate the page number and the number of entries per page. The default values are 1 and 20.</description></item>
+        /// <item><description>If you need further pagination control, you can use the <c>MaxResults</c> and <c>NextToken</c> parameters (private parameters).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -50104,13 +50972,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of data tables in DataWorks Data Map. For types that do not support the schema level, you can query data tables under a specified database. For types that support the schema level, you can query data tables under a specified database, MaxCompute project, or schema. The response contains only basic table information and does not include technical metadata or business metadata.</para>
+        /// <para>Queries the tables in Data Map. For types that do not support the schema level, this operation queries the tables in a specified database. For types that support the schema level, this operation queries the tables in a specified database, MaxCompute project, or schema. The response contains only basic table information and does not include technical or business metadata. For non-MaxCompute types, the response is not real-time and may be delayed by up to 1 hour compared to the metadata collection results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or later to use this API.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -50155,13 +51023,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of data tables in DataWorks Data Map. For types that do not support the schema level, you can query data tables under a specified database. For types that support the schema level, you can query data tables under a specified database, MaxCompute project, or schema. The response contains only basic table information and does not include technical metadata or business metadata.</para>
+        /// <para>Queries the tables in Data Map. For types that do not support the schema level, this operation queries the tables in a specified database. For types that support the schema level, this operation queries the tables in a specified database, MaxCompute project, or schema. The response contains only basic table information and does not include technical or business metadata. For non-MaxCompute types, the response is not real-time and may be delayed by up to 1 hour compared to the metadata collection results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or later to use this API.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -50206,13 +51074,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of data tables in DataWorks Data Map. For types that do not support the schema level, you can query data tables under a specified database. For types that support the schema level, you can query data tables under a specified database, MaxCompute project, or schema. The response contains only basic table information and does not include technical metadata or business metadata.</para>
+        /// <para>Queries the tables in Data Map. For types that do not support the schema level, this operation queries the tables in a specified database. For types that support the schema level, this operation queries the tables in a specified database, MaxCompute project, or schema. The response contains only basic table information and does not include technical or business metadata. For non-MaxCompute types, the response is not real-time and may be delayed by up to 1 hour compared to the metadata collection results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or later to use this API.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -50231,13 +51099,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of data tables in DataWorks Data Map. For types that do not support the schema level, you can query data tables under a specified database. For types that support the schema level, you can query data tables under a specified database, MaxCompute project, or schema. The response contains only basic table information and does not include technical metadata or business metadata.</para>
+        /// <para>Queries the tables in Data Map. For types that do not support the schema level, this operation queries the tables in a specified database. For types that support the schema level, this operation queries the tables in a specified database, MaxCompute project, or schema. The response contains only basic table information and does not include technical or business metadata. For non-MaxCompute types, the response is not real-time and may be delayed by up to 1 hour compared to the metadata collection results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or later to use this API.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -58904,6 +59772,258 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateBusinessWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a scheduling calendar. This is a full update that requires you to submit the complete editable configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You must purchase DataWorks Enterprise Edition to use this feature.
+        /// The calendar name cannot be modified. Unsubmitted dates are not retained.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateCalendarRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCalendarResponse
+        /// </returns>
+        public UpdateCalendarResponse UpdateCalendarWithOptions(UpdateCalendarRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateCalendarShrinkRequest request = new UpdateCalendarShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ProjectIds))
+            {
+                request.ProjectIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ProjectIds, "ProjectIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SchedulePolicy))
+            {
+                request.SchedulePolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SchedulePolicy, "SchedulePolicy", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllProjects))
+            {
+                body["AllProjects"] = request.AllProjects;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                body["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpirationReminder))
+            {
+                body["ExpirationReminder"] = request.ExpirationReminder;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FallbackPolicy))
+            {
+                body["FallbackPolicy"] = request.FallbackPolicy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OverduePolicy))
+            {
+                body["OverduePolicy"] = request.OverduePolicy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                body["Owner"] = request.Owner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectIdsShrink))
+            {
+                body["ProjectIds"] = request.ProjectIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchedulePolicyShrink))
+            {
+                body["SchedulePolicy"] = request.SchedulePolicyShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                body["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCalendar",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateCalendarResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a scheduling calendar. This is a full update that requires you to submit the complete editable configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You must purchase DataWorks Enterprise Edition to use this feature.
+        /// The calendar name cannot be modified. Unsubmitted dates are not retained.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateCalendarRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCalendarResponse
+        /// </returns>
+        public async Task<UpdateCalendarResponse> UpdateCalendarWithOptionsAsync(UpdateCalendarRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateCalendarShrinkRequest request = new UpdateCalendarShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ProjectIds))
+            {
+                request.ProjectIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ProjectIds, "ProjectIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SchedulePolicy))
+            {
+                request.SchedulePolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SchedulePolicy, "SchedulePolicy", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllProjects))
+            {
+                body["AllProjects"] = request.AllProjects;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                body["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpirationReminder))
+            {
+                body["ExpirationReminder"] = request.ExpirationReminder;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FallbackPolicy))
+            {
+                body["FallbackPolicy"] = request.FallbackPolicy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OverduePolicy))
+            {
+                body["OverduePolicy"] = request.OverduePolicy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                body["Owner"] = request.Owner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectIdsShrink))
+            {
+                body["ProjectIds"] = request.ProjectIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchedulePolicyShrink))
+            {
+                body["SchedulePolicy"] = request.SchedulePolicyShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                body["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCalendar",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateCalendarResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a scheduling calendar. This is a full update that requires you to submit the complete editable configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You must purchase DataWorks Enterprise Edition to use this feature.
+        /// The calendar name cannot be modified. Unsubmitted dates are not retained.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateCalendarRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCalendarResponse
+        /// </returns>
+        public UpdateCalendarResponse UpdateCalendar(UpdateCalendarRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateCalendarWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a scheduling calendar. This is a full update that requires you to submit the complete editable configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You must purchase DataWorks Enterprise Edition to use this feature.
+        /// The calendar name cannot be modified. Unsubmitted dates are not retained.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateCalendarRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCalendarResponse
+        /// </returns>
+        public async Task<UpdateCalendarResponse> UpdateCalendarAsync(UpdateCalendarRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateCalendarWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

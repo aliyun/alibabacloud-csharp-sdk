@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetSecurityStrategyRequest : TeaModel {
         /// <summary>
-        /// <para><b>The ID of the security strategy.</b></para>
+        /// <para><b>The security policy ID.</b></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

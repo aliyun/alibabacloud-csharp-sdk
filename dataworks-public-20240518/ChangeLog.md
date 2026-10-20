@@ -1,3 +1,13 @@
+2026-10-20 Version: 6.10.0
+- Support API CreateCalendar.
+- Support API DeleteCalendar.
+- Support API GetCalendar.
+- Support API ListCalendarVersions.
+- Support API ListCalendars.
+- Support API UpdateCalendar.
+- Update API CreateWorkflowInstances: add request parameters DefaultRunProperties.DataSourceNameMappings.
+
+
 2026-10-12 Version: 6.9.3
 - Generated csharp 2024-05-18 for dataworks-public.
 
