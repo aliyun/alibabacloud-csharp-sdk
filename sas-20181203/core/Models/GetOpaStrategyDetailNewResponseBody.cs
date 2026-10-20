@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetOpaStrategyDetailNewResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned. The status code <b>200</b> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</para>
+        /// <para>The result code. A value of <b>200</b> indicates success, whereas any other value indicates failure. You can use this field to identify the cause of the failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,28 +20,28 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetOpaStrategyDetailNewResponseBodyData Data { get; set; }
         public class GetOpaStrategyDetailNewResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The rule configuration.</para>
+            /// <para>The policy configuration information.</para>
             /// </summary>
             [NameInMap("AlarmDetail")]
             [Validation(Required=false)]
             public GetOpaStrategyDetailNewResponseBodyDataAlarmDetail AlarmDetail { get; set; }
             public class GetOpaStrategyDetailNewResponseBodyDataAlarmDetail : TeaModel {
                 /// <summary>
-                /// <para>The baseline check configuration.</para>
+                /// <para>The baseline configuration information.</para>
                 /// </summary>
                 [NameInMap("Baseline")]
                 [Validation(Required=false)]
                 public GetOpaStrategyDetailNewResponseBodyDataAlarmDetailBaseline Baseline { get; set; }
                 public class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailBaseline : TeaModel {
                     /// <summary>
-                    /// <para>The information about the baseline check item.</para>
+                    /// <para>The baseline item information.</para>
                     /// </summary>
                     [NameInMap("Item")]
                     [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     }
 
                     /// <summary>
-                    /// <para>The risk levels.</para>
+                    /// <para>The list of risk levels.</para>
                     /// </summary>
                     [NameInMap("RiskLevel")]
                     [Validation(Required=false)]
@@ -79,23 +79,23 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 }
 
                 /// <summary>
-                /// <para>The configuration of image build risk.</para>
+                /// <para>The risky image build command information.</para>
                 /// </summary>
                 [NameInMap("BuildRisk")]
                 [Validation(Required=false)]
                 public GetOpaStrategyDetailNewResponseBodyDataAlarmDetailBuildRisk BuildRisk { get; set; }
                 public class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailBuildRisk : TeaModel {
                     /// <summary>
-                    /// <para>The configuration of image build risk.</para>
+                    /// <para>The list of risk items.</para>
                     /// </summary>
                     [NameInMap("Item")]
                     [Validation(Required=false)]
                     public List<GetOpaStrategyDetailNewResponseBodyDataAlarmDetailBuildRiskItem> Item { get; set; }
                     public class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailBuildRiskItem : TeaModel {
                         /// <summary>
-                        /// <para>The ID of the image build risk.</para>
+                        /// <para>The ID of the risky image build command type.</para>
                         /// <remarks>
-                        /// <para>You can call the <a href="~~ListImageBuildRiskItem~~">ListImageBuildRiskItem</a> operation to query the ID of the malicious sample.</para>
+                        /// <para>You can call the <a href="~~ListImageBuildRiskItem~~">ListImageBuildRiskItem</a> operation to query this value.</para>
                         /// </remarks>
                         /// 
                         /// <b>Example:</b>
@@ -106,9 +106,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                         public string Id { get; set; }
 
                         /// <summary>
-                        /// <para>The name of the image build risk.</para>
+                        /// <para>The name of the risky image build command type.</para>
                         /// <remarks>
-                        /// <para>You can call the <a href="~~ListImageBuildRiskItem~~">ListImageBuildRiskItem</a> operation to query the ID of the malicious sample.</para>
+                        /// <para>You can call the <a href="~~ListImageBuildRiskItem~~">ListImageBuildRiskItem</a> operation to query this value.</para>
                         /// </remarks>
                         /// 
                         /// <b>Example:</b>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     }
 
                     /// <summary>
-                    /// <para>The risk levels.</para>
+                    /// <para>The list of risk levels.</para>
                     /// </summary>
                     [NameInMap("RiskLevel")]
                     [Validation(Required=false)]
@@ -130,14 +130,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 }
 
                 /// <summary>
-                /// <para>The configuration of malicious samples.</para>
+                /// <para>The malicious sample configuration information.</para>
                 /// </summary>
                 [NameInMap("MaliciousFile")]
                 [Validation(Required=false)]
                 public GetOpaStrategyDetailNewResponseBodyDataAlarmDetailMaliciousFile MaliciousFile { get; set; }
                 public class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailMaliciousFile : TeaModel {
                     /// <summary>
-                    /// <para>The information about the malicious sample.</para>
+                    /// <para>The malicious sample item information.</para>
                     /// </summary>
                     [NameInMap("Item")]
                     [Validation(Required=false)]
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     }
 
                     /// <summary>
-                    /// <para>The risk levels.</para>
+                    /// <para>The list of risk levels.</para>
                     /// </summary>
                     [NameInMap("RiskLevel")]
                     [Validation(Required=false)]
@@ -175,23 +175,23 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 }
 
                 /// <summary>
-                /// <para>The configuration of sensitive file.</para>
+                /// <para>The sensitive file information.</para>
                 /// </summary>
                 [NameInMap("SensitiveFile")]
                 [Validation(Required=false)]
                 public GetOpaStrategyDetailNewResponseBodyDataAlarmDetailSensitiveFile SensitiveFile { get; set; }
                 public class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailSensitiveFile : TeaModel {
                     /// <summary>
-                    /// <para>The configuration of sensitive file.</para>
+                    /// <para>The list of sensitive file check items.</para>
                     /// </summary>
                     [NameInMap("Item")]
                     [Validation(Required=false)]
                     public List<GetOpaStrategyDetailNewResponseBodyDataAlarmDetailSensitiveFileItem> Item { get; set; }
                     public class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailSensitiveFileItem : TeaModel {
                         /// <summary>
-                        /// <para>The ID of the sensitive files.</para>
+                        /// <para>The ID of the sensitive file type.</para>
                         /// <remarks>
-                        /// <para>You can call the <a href="~~GetSensitiveDefineRuleConfig~~">GetSensitiveDefineRuleConfig</a> operation to query the ID of the malicious sample.</para>
+                        /// <para>You can call the <a href="~~GetSensitiveDefineRuleConfig~~">GetSensitiveDefineRuleConfig</a> operation to query this value.</para>
                         /// </remarks>
                         /// 
                         /// <b>Example:</b>
@@ -202,9 +202,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                         public string Id { get; set; }
 
                         /// <summary>
-                        /// <para>The name of the sensitive files.</para>
+                        /// <para>The name of the sensitive file type.</para>
                         /// <remarks>
-                        /// <para>You can call the <a href="~~GetSensitiveDefineRuleConfig~~">GetSensitiveDefineRuleConfig</a> operation to query the ID of the malicious sample.</para>
+                        /// <para>You can call the <a href="~~GetSensitiveDefineRuleConfig~~">GetSensitiveDefineRuleConfig</a> operation to query this value.</para>
                         /// </remarks>
                         /// 
                         /// <b>Example:</b>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     }
 
                     /// <summary>
-                    /// <para>The risk levels.</para>
+                    /// <para>The list of risk levels.</para>
                     /// </summary>
                     [NameInMap("RiskLevel")]
                     [Validation(Required=false)]
@@ -226,21 +226,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 }
 
                 /// <summary>
-                /// <para>The vulnerability configuration.</para>
+                /// <para>The vulnerability configuration information.</para>
                 /// </summary>
                 [NameInMap("Vul")]
                 [Validation(Required=false)]
                 public GetOpaStrategyDetailNewResponseBodyDataAlarmDetailVul Vul { get; set; }
                 public class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailVul : TeaModel {
                     /// <summary>
-                    /// <para>The information about the vulnerability.</para>
+                    /// <para>The vulnerability item information.</para>
                     /// </summary>
                     [NameInMap("Item")]
                     [Validation(Required=false)]
                     public List<GetOpaStrategyDetailNewResponseBodyDataAlarmDetailVulItem> Item { get; set; }
                     public class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailVulItem : TeaModel {
                         /// <summary>
-                        /// <para>The ID of the vulnerability.</para>
+                        /// <para>The vulnerability ID.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>AVD-2023-1680169</para>
@@ -250,7 +250,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                         public string Id { get; set; }
 
                         /// <summary>
-                        /// <para>The name of the vulnerability.</para>
+                        /// <para>The vulnerability name.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>ezOffice evoInterfaceServlet Info Leak</para>
@@ -262,19 +262,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     }
 
                     /// <summary>
-                    /// <para>Risk type of vulnerability.</para>
+                    /// <para>The list of vulnerability types.</para>
                     /// </summary>
                     [NameInMap("RiskClass")]
                     [Validation(Required=false)]
                     public List<GetOpaStrategyDetailNewResponseBodyDataAlarmDetailVulRiskClass> RiskClass { get; set; }
                     public class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailVulRiskClass : TeaModel {
                         /// <summary>
-                        /// <para>The ID of the vulnerability types. Valid values:</para>
+                        /// <para>The ID of the vulnerability type. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><para><b>cve</b>: system vulnerability</para>
-                        /// </description></item>
-                        /// <item><description><para><b>app</b>: application vulnerability</para>
-                        /// </description></item>
+                        /// <item><description><b>cve</b>: system vulnerability</description></item>
+                        /// <item><description><b>app</b>: application vulnerability</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -285,16 +283,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                         public string Id { get; set; }
 
                         /// <summary>
-                        /// <para>The name of the vulnerability. Valid values:</para>
+                        /// <para>The name of the vulnerability type. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><para><b>system vulnerability</b></para>
-                        /// </description></item>
-                        /// <item><description><para><b>application vulnerability</b></para>
-                        /// </description></item>
+                        /// <item><description><b>System vulnerability</b></description></item>
+                        /// <item><description><b>Application vulnerability</b></description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>系统漏洞</para>
+                        /// <para>System vulnerability</para>
                         /// </summary>
                         [NameInMap("Name")]
                         [Validation(Required=false)]
@@ -303,7 +299,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     }
 
                     /// <summary>
-                    /// <para>The risk levels.</para>
+                    /// <para>The list of risk levels.</para>
                     /// </summary>
                     [NameInMap("RiskLevel")]
                     [Validation(Required=false)]
@@ -334,7 +330,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// <para>The page number. Default value: <b>1</b>. Pages start from page 1.</para>
+            /// <para>The page number from which to display the query results. Default value: <b>1</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -354,26 +350,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The image names.</para>
+            /// <para>The image name.</para>
             /// </summary>
             [NameInMap("ImageName")]
             [Validation(Required=false)]
             public List<string> ImageName { get; set; }
 
             /// <summary>
-            /// <para>The image tags.</para>
+            /// <para>The image tag.</para>
             /// </summary>
             [NameInMap("Label")]
             [Validation(Required=false)]
             public List<string> Label { get; set; }
 
             /// <summary>
-            /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+            /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>zh</b>: Chinese</para>
-            /// </description></item>
-            /// <item><description><para><b>en</b>: English</para>
-            /// </description></item>
+            /// <item><description><b>zh</b>: Chinese</description></item>
+            /// <item><description><b>en</b>: English</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -384,12 +378,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Lang { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the rule supports malicious Internet images. Valid values:</para>
+            /// <para>Specifies whether the policy supports malicious images from the Internet. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b></para>
-            /// </description></item>
-            /// <item><description><para><b>false</b></para>
-            /// </description></item>
+            /// <item><description><b>true</b>: supported</description></item>
+            /// <item><description><b>false</b>: not supported</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -400,7 +392,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? MaliciousImage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The maximum number of entries to return per page during paging in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -410,14 +402,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The action that is performed when the rule is hit. Valid values:</para>
+            /// <para>The action to perform when the policy is matched. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1</b>: trigger alerts</para>
-            /// </description></item>
-            /// <item><description><para><b>2</b>: block</para>
-            /// </description></item>
-            /// <item><description><para><b>3</b>: allow</para>
-            /// </description></item>
+            /// <item><description><b>1</b>: alert</description></item>
+            /// <item><description><b>2</b>: block</description></item>
+            /// <item><description><b>3</b>: allow</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -428,14 +417,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? RuleAction { get; set; }
 
             /// <summary>
-            /// <para>The application scope.</para>
+            /// <para>The scope.</para>
             /// </summary>
             [NameInMap("Scopes")]
             [Validation(Required=false)]
             public List<GetOpaStrategyDetailNewResponseBodyDataScopes> Scopes { get; set; }
             public class GetOpaStrategyDetailNewResponseBodyDataScopes : TeaModel {
                 /// <summary>
-                /// <para>The rule instance ID of the cluster.</para>
+                /// <para>The instance ID of the policy in the cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ack-0</para>
@@ -445,12 +434,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string AckPolicyInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether all namespaces are included. Valid values:</para>
+                /// <para>Specifies whether all namespaces are included. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>1</b>: yes</para>
-                /// </description></item>
-                /// <item><description><para><b>0</b>: no</para>
-                /// </description></item>
+                /// <item><description><b>1</b>: yes</description></item>
+                /// <item><description><b>0</b>: no</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -461,7 +448,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? AllNamespace { get; set; }
 
                 /// <summary>
-                /// <para>The cluster ID.</para>
+                /// <para>The ID of the cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>c1fdb5fd8d**7163</para>
@@ -471,7 +458,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string ClusterId { get; set; }
 
                 /// <summary>
-                /// <para>The namespaces.</para>
+                /// <para>The list of namespaces.</para>
                 /// </summary>
                 [NameInMap("NamespaceList")]
                 [Validation(Required=false)]
@@ -480,7 +467,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The rule ID.</para>
+            /// <para>The policy ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1005</para>
@@ -490,7 +477,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? StrategyId { get; set; }
 
             /// <summary>
-            /// <para>The rule name.</para>
+            /// <para>The policy name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test001</para>
@@ -500,7 +487,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string StrategyName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the rule template.</para>
+            /// <para>The ID of the policy template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1204</para>
@@ -510,12 +497,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? StrategyTemplateId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the rule supports unscanned images. Valid values:</para>
+            /// <para>Specifies whether the policy supports unscanned images. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b></para>
-            /// </description></item>
-            /// <item><description><para><b>false</b></para>
-            /// </description></item>
+            /// <item><description><b>true</b>: supported</description></item>
+            /// <item><description><b>false</b>: not supported</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -526,7 +511,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? UnScanedImage { get; set; }
 
             /// <summary>
-            /// <para>The image tags that are added to the whitelist.</para>
+            /// <para>The whitelist of image tags.</para>
             /// </summary>
             [NameInMap("WhiteList")]
             [Validation(Required=false)]
@@ -535,7 +520,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code that is returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -545,7 +530,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message returned by the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -555,7 +540,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E819FD71-D240-5E54-AA7F-20FED2ECBEB6</para>
@@ -565,12 +550,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b></para>
-        /// </description></item>
-        /// <item><description><para><b>false</b></para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The request is successful.</description></item>
+        /// <item><description><b>false</b>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

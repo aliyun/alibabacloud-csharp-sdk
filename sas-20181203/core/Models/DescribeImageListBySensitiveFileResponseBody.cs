@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageListBySensitiveFileResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result code. A value of <b>200</b> indicates success. Other values indicate failure. You can use this field to determine the cause of failure.</para>
+        /// <para>The result code. A value of <b>200</b> indicates success, whereas other values indicate failure. You can use this field to identify the cause of the failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Digest { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the first scan, in milliseconds.</para>
+            /// <para>The timestamp of the first scan. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649814050000</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The instance name.</para>
+            /// <para>The name of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sec-NessusSc</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the most recent scan, in milliseconds.</para>
+            /// <para>The timestamp of the latest scan. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649814050000</para>
@@ -119,9 +119,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The risk level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>high</b>: High risk.</description></item>
-            /// <item><description><b>medium</b>: Medium risk.</description></item>
-            /// <item><description><b>low</b>: Low risk.</description></item>
+            /// <item><description><b>high</b>: high</description></item>
+            /// <item><description><b>medium</b>: medium</description></item>
+            /// <item><description><b>low</b>: low</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -134,9 +134,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The status of the sensitive file. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Unhandled.</description></item>
-            /// <item><description><b>1</b>: Ignored.</description></item>
-            /// <item><description><b>2</b>: False positive.</description></item>
+            /// <item><description><b>0</b>: unhandled</description></item>
+            /// <item><description><b>1</b>: ignored</description></item>
+            /// <item><description><b>2</b>: false positive</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The detailed information of the error code.</para>
+        /// <para>The detailed information about the error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DescribeImageListBySensitiveFileResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeImageListBySensitiveFileResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries displayed on the current page in a paginated query.</para>
+            /// <para>The number of entries returned on the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the current page in a paginated query.</para>
+            /// <para>The page number of the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string LastRowKey { get; set; }
 
             /// <summary>
-            /// <para>The number of alert events displayed per page in a paginated query. Default value: <b>20</b>, indicating that 20 alert events are displayed per page.</para>
+            /// <para>The number of alert events returned per page in a paged query. Default value: <b>20</b>, which indicates that 20 alert events are returned per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. It can be used to troubleshoot issues.</para>
+        /// <para>The ID of the request. The ID is a unique identifier generated by Alibaba Cloud for the request and can be used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E0C5C07F-1576-509A-AE44-1C36B8445B37</para>
@@ -248,10 +248,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result status of the API call. Valid values:</para>
+        /// <para>The status of the operation result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The API call was successful.</description></item>
-        /// <item><description><b>false</b>: The API call failed.</description></item>
+        /// <item><description><b>true</b>: The operation is successful.</description></item>
+        /// <item><description><b>false</b>: The operation fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCloudVendorAccountAKListRequest : TeaModel {
         /// <summary>
-        /// <para>The unique ID of the AccessKey pair.</para>
+        /// <para>The unique ID of the AK.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2624</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AuthIds { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The page number of the current page during paging. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 20.</para>
+        /// <para>The maximum number of entries to return on each page during paging. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -54,10 +54,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The status of the AccessKey pair. Valid values:</para>
+        /// <para>The status of the AK. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: enabled</description></item>
-        /// <item><description><b>1</b>: disabled</description></item>
+        /// <item><description><b>0</b>: Enabled.</description></item>
+        /// <item><description><b>1</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>The username of the sub-account of the cloud service provider to which the AccessKey pair belongs.</para>
+        /// <para>The username of the sub-account of the cloud service provider to which the AK belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AlibabaCloud_***</para>
@@ -78,10 +78,23 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SubAccountName { get; set; }
 
         /// <summary>
-        /// <para>Cloud asset vendor. Values:</para>
+        /// <para>The cloud service provider. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Tencent</b>: Tencent Cloud </description></item>
-        /// <item><description><b>AWS</b>: Amazon Web Services</description></item>
+        /// <item><description><b>Tencent</b>: Tencent Cloud.</description></item>
+        /// <item><description><b>HUAWEICLOUD</b>: Huawei Cloud.</description></item>
+        /// <item><description><b>Azure</b>: Azure.</description></item>
+        /// <item><description><b>AWS</b>: AWS.</description></item>
+        /// <item><description><b>VOLCENGINE</b>: Volcengine.</description></item>
+        /// <item><description><b>google</b>: Google Cloud.</description></item>
+        /// <item><description><b>CHAITIN</b>: Chaitin Tech.</description></item>
+        /// <item><description><b>FORTINET</b>: Fortinet.</description></item>
+        /// <item><description><b>THREATBOOK</b>: ThreatBook.</description></item>
+        /// <item><description><b>KingsoftCloud</b>: Kingsoft Cloud.</description></item>
+        /// <item><description><b>UCloud</b>: UCloud.</description></item>
+        /// <item><description><b>BaiduCloud</b>: Baidu AI Cloud.</description></item>
+        /// <item><description><b>WIZ</b>: Wiz.</description></item>
+        /// <item><description><b>OracleCloud</b>: Oracle Cloud.</description></item>
+        /// <item><description><b>StateCloud</b>: CTYun.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -92,7 +105,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Vendor { get; set; }
 
         /// <summary>
-        /// <para>The name of the AccessKey pair.</para>
+        /// <para>The name of the AK account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

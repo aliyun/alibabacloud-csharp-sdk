@@ -985,7 +985,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds multi-cloud asset configuration information.</para>
+        /// <para>Creates multi-cloud asset configuration information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1075,7 +1075,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds multi-cloud asset configuration information.</para>
+        /// <para>Creates multi-cloud asset configuration information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1165,7 +1165,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds multi-cloud asset configuration information.</para>
+        /// <para>Creates multi-cloud asset configuration information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1183,7 +1183,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds multi-cloud asset configuration information.</para>
+        /// <para>Creates multi-cloud asset configuration information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31777,7 +31777,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the multi-cloud assets added to Security Center.</para>
+        /// <para>Queries the list of multi-cloud asset configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31847,7 +31847,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the multi-cloud assets added to Security Center.</para>
+        /// <para>Queries the list of multi-cloud asset configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31917,7 +31917,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the multi-cloud assets added to Security Center.</para>
+        /// <para>Queries the list of multi-cloud asset configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31935,7 +31935,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the multi-cloud assets added to Security Center.</para>
+        /// <para>Queries the list of multi-cloud asset configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40473,7 +40473,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics information of servers in your assets.</para>
+        /// <para>Queries the statistics information of servers in assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40523,7 +40523,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics information of servers in your assets.</para>
+        /// <para>Queries the statistics information of servers in assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40573,7 +40573,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics information of servers in your assets.</para>
+        /// <para>Queries the statistics information of servers in assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40591,7 +40591,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics information of servers in your assets.</para>
+        /// <para>Queries the statistics information of servers in assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42097,7 +42097,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a baseline risk export, such as the file name and download link.</para>
+        /// <para>Queries the file name, download URL, and other information about a baseline export.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42139,7 +42139,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a baseline risk export, such as the file name and download link.</para>
+        /// <para>Queries the file name, download URL, and other information about a baseline export.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42181,7 +42181,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a baseline risk export, such as the file name and download link.</para>
+        /// <para>Queries the file name, download URL, and other information about a baseline export.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42199,7 +42199,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a baseline risk export, such as the file name and download link.</para>
+        /// <para>Queries the file name, download URL, and other information about a baseline export.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46289,7 +46289,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about images affected by sensitive files.</para>
+        /// <para>Queries the information about images affected by sensitive files.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -46377,7 +46377,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about images affected by sensitive files.</para>
+        /// <para>Queries the information about images affected by sensitive files.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -46465,7 +46465,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about images affected by sensitive files.</para>
+        /// <para>Queries the information about images affected by sensitive files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46483,7 +46483,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about images affected by sensitive files.</para>
+        /// <para>Queries the information about images affected by sensitive files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47573,7 +47573,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the sensitive files of an image.</para>
+        /// <para>Queries sensitive files in an image.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -47641,7 +47641,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the sensitive files of an image.</para>
+        /// <para>Queries sensitive files in an image.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -47709,7 +47709,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the sensitive files of an image.</para>
+        /// <para>Queries sensitive files in an image.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47727,7 +47727,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the sensitive files of an image.</para>
+        /// <para>Queries sensitive files in an image.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -62477,7 +62477,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of IDC scan tasks for asset synchronization.</para>
+        /// <para>Queries the details of an IDC scan task for an asset synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -62539,7 +62539,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of IDC scan tasks for asset synchronization.</para>
+        /// <para>Queries the details of an IDC scan task for an asset synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -62601,7 +62601,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of IDC scan tasks for asset synchronization.</para>
+        /// <para>Queries the details of an IDC scan task for an asset synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -62619,7 +62619,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of IDC scan tasks for asset synchronization.</para>
+        /// <para>Queries the details of an IDC scan task for an asset synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -79977,7 +79977,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a non-image process defense rule.</para>
+        /// <para>Retrieves the details of a non-image program defense rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -80023,7 +80023,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a non-image process defense rule.</para>
+        /// <para>Retrieves the details of a non-image program defense rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -80069,7 +80069,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a non-image process defense rule.</para>
+        /// <para>Retrieves the details of a non-image program defense rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -80087,7 +80087,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a non-image process defense rule.</para>
+        /// <para>Retrieves the details of a non-image program defense rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -86161,7 +86161,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of the rule that is used to block at-risk images.</para>
+        /// <para>Queries the details of a risky image blocking policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -86203,7 +86203,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of the rule that is used to block at-risk images.</para>
+        /// <para>Queries the details of a risky image blocking policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -86245,7 +86245,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of the rule that is used to block at-risk images.</para>
+        /// <para>Queries the details of a risky image blocking policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -86263,7 +86263,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of the rule that is used to block at-risk images.</para>
+        /// <para>Queries the details of a risky image blocking policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -87245,7 +87245,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the application list for container file defense configurations.</para>
+        /// <para>Retrieves the list of applications for container file defense configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -87287,7 +87287,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the application list for container file defense configurations.</para>
+        /// <para>Retrieves the list of applications for container file defense configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -87329,7 +87329,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the application list for container file defense configurations.</para>
+        /// <para>Retrieves the list of applications for container file defense configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -87347,7 +87347,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the application list for container file defense configurations.</para>
+        /// <para>Retrieves the list of applications for container file defense configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -104429,12 +104429,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the multi-account authorization assignment list under multi-account authorization management.</para>
+        /// <para>Queries the list of multi-account authorization assignments under multi-account authorization management.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. You can also set logical relationships between different search conditions to search for assets that meet multiple search conditions.</para>
+        /// <para>You can search for assets by conditions such as the instance ID, instance name, VPC ID, region, and public IP address. You can also configure logical relationships between different search conditions to find assets that meet multiple conditions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -104480,12 +104480,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the multi-account authorization assignment list under multi-account authorization management.</para>
+        /// <para>Queries the list of multi-account authorization assignments under multi-account authorization management.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. You can also set logical relationships between different search conditions to search for assets that meet multiple search conditions.</para>
+        /// <para>You can search for assets by conditions such as the instance ID, instance name, VPC ID, region, and public IP address. You can also configure logical relationships between different search conditions to find assets that meet multiple conditions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -104531,12 +104531,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the multi-account authorization assignment list under multi-account authorization management.</para>
+        /// <para>Queries the list of multi-account authorization assignments under multi-account authorization management.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. You can also set logical relationships between different search conditions to search for assets that meet multiple search conditions.</para>
+        /// <para>You can search for assets by conditions such as the instance ID, instance name, VPC ID, region, and public IP address. You can also configure logical relationships between different search conditions to find assets that meet multiple conditions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -104554,12 +104554,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the multi-account authorization assignment list under multi-account authorization management.</para>
+        /// <para>Queries the list of multi-account authorization assignments under multi-account authorization management.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. You can also set logical relationships between different search conditions to search for assets that meet multiple search conditions.</para>
+        /// <para>You can search for assets by conditions such as the instance ID, instance name, VPC ID, region, and public IP address. You can also configure logical relationships between different search conditions to find assets that meet multiple conditions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -108873,7 +108873,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the process list of intelligent behavior analytics.</para>
+        /// <para>Queries the process list for intelligent behavior analytics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -108959,7 +108959,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the process list of intelligent behavior analytics.</para>
+        /// <para>Queries the process list for intelligent behavior analytics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -109045,7 +109045,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the process list of intelligent behavior analytics.</para>
+        /// <para>Queries the process list for intelligent behavior analytics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -109063,7 +109063,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the process list of intelligent behavior analytics.</para>
+        /// <para>Queries the process list for intelligent behavior analytics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -109353,7 +109353,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Serverless instance UUIDs by application ID.</para>
+        /// <para>Queries the UUIDs of Serverless instances by application ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -109415,7 +109415,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Serverless instance UUIDs by application ID.</para>
+        /// <para>Queries the UUIDs of Serverless instances by application ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -109477,7 +109477,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Serverless instance UUIDs by application ID.</para>
+        /// <para>Queries the UUIDs of Serverless instances by application ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -109495,7 +109495,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Serverless instance UUIDs by application ID.</para>
+        /// <para>Queries the UUIDs of Serverless instances by application ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -113117,7 +113117,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the authorization and authentication configuration of multi-cloud assets.</para>
+        /// <para>Modifies the authorization and authentication configuration information of multi-cloud assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -113207,7 +113207,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the authorization and authentication configuration of multi-cloud assets.</para>
+        /// <para>Modifies the authorization and authentication configuration information of multi-cloud assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -113297,7 +113297,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the authorization and authentication configuration of multi-cloud assets.</para>
+        /// <para>Modifies the authorization and authentication configuration information of multi-cloud assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -113315,7 +113315,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the authorization and authentication configuration of multi-cloud assets.</para>
+        /// <para>Modifies the authorization and authentication configuration information of multi-cloud assets.</para>
         /// </summary>
         /// 
         /// <param name="request">

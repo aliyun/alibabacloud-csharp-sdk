@@ -19,9 +19,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The analysis result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>black</b>: Malicious process.</description></item>
-            /// <item><description><b>white</b>: Normal process.</description></item>
-            /// <item><description><b>abnormal</b>: Abnormal process.</description></item>
+            /// <item><description><b>black</b>: malicious process</description></item>
+            /// <item><description><b>white</b>: normal process</description></item>
+            /// <item><description><b>abnormal</b>: abnormal process</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AnalyzeResult { get; set; }
 
             /// <summary>
+            /// <para>The English description of the process behavior.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Normal system process</para>
             /// </summary>
@@ -40,6 +42,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ExplanationEn { get; set; }
 
             /// <summary>
+            /// <para>The Chinese description of the process behavior.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>正常系统进程</para>
             /// </summary>
@@ -48,7 +52,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ExplanationZh { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the process was first detected.</para>
+            /// <para>The timestamp of the first occurrence.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1694576692000</para>
@@ -88,7 +92,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ProcessPath { get; set; }
 
             /// <summary>
-            /// <para>The remarks.</para>
+            /// <para>The remark.</para>
             /// 
             /// <b>Example:</b>
             /// <para>safe process</para>
@@ -108,14 +112,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Sha256 { get; set; }
 
             /// <summary>
-            /// <para>The process labels.</para>
+            /// <para>The process tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListUnknownThreatDetectProcessResponseBodyDataTags> Tags { get; set; }
             public class ListUnknownThreatDetectProcessResponseBodyDataTags : TeaModel {
                 /// <summary>
-                /// <para>The English label of the process.</para>
+                /// <para>The English tag of the process.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>System Process</para>
@@ -125,7 +129,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string TagEn { get; set; }
 
                 /// <summary>
-                /// <para>The Chinese label of the process.</para>
+                /// <para>The Chinese tag of the process.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>System Process</para>
@@ -146,7 +150,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public ListUnknownThreatDetectProcessResponseBodyPageInfo PageInfo { get; set; }
         public class ListUnknownThreatDetectProcessResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries on the current page.</para>
+            /// <para>The number of entries returned on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -156,7 +160,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the current page in a paged query. This is used for paging.</para>
+            /// <para>The page number of the current page returned during paging for a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -166,7 +170,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of entries per page in a paged query. This is used for paging.</para>
+            /// <para>The maximum number of entries returned on each page during paging for a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>

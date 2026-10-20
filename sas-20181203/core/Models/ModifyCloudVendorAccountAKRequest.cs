@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyCloudVendorAccountAKRequest : TeaModel {
         /// <summary>
-        /// <para>The unique ID of the AccessKey pair.</para>
+        /// <para>The unique ID of the AccessKey (AK).</para>
         /// <remarks>
-        /// <para>Call the <a href="~~DescribeCloudVendorAccountAKList~~">DescribeCloudVendorAccountAKList</a> operation to obtain this parameter.</para>
+        /// <para>You can call the <a href="~~DescribeCloudVendorAccountAKList~~">DescribeCloudVendorAccountAKList</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,13 +24,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AuthIds { get; set; }
 
         /// <summary>
-        /// <para>The list of module codes associated with the AccessKey pair. Valid values:</para>
+        /// <para>The list of codes for the modules associated with the AK. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>HOST</b>: host</description></item>
         /// <item><description><b>CSPM</b>: cloud product configuration check</description></item>
-        /// <item><description><b>SIEM</b>: Cloud Threat Detection and Response (CTDR)</description></item>
+        /// <item><description><b>SIEM</b>: threat analysis and response</description></item>
         /// <item><description><b>TRIAL</b>: log audit<remarks>
-        /// <para>Call the <a href="~~GetSupportedModules~~">GetSupportedModules</a> operation to obtain the supported modules.</para>
+        /// <para>You can call the <a href="~~GetSupportedModules~~">GetSupportedModules</a> operation to obtain the supported modules.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The account ID.</para>
         /// <remarks>
-        /// <para>The account ID of the connected cloud vendor. This parameter is required when the permission description includes Cloud Threat Detection and Response (CTDR).</para>
+        /// <para>The account ID of the connected cloud vendor. This parameter is required when the permission description includes threat analysis and response.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -53,14 +53,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CtdrCloudUserId { get; set; }
 
         /// <summary>
-        /// <para>The domain of the connected account. Valid values:</para>
+        /// <para>The domain to which the connected account belongs. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>china</b>: China</description></item>
         /// <item><description><b>global</b>: global</description></item>
-        /// <item><description><b>europe</b>: Huawei Cloud Europe</description></item>
+        /// <item><description><b>europe</b>: Huawei Cloud Europe site</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is valid only when <b>Vendor</b> is set to <b>HUAWEICLOUD</b>, <b>Azure</b>, <b>AWS</b>, or <b>VOLCENGINE</b>, and is required.</para>
+        /// <para>This parameter is valid and required only when <b>Vendor</b> is set to <b>HUAWEICLOUD</b>, <b>Azure</b>, <b>AWS</b>, <b>VOLCENGINE</b>, <b>KingsoftCloud</b>, <b>UCloud</b>, <b>BaiduCloud</b>, or <b>OracleCloud</b>. For <b>KingsoftCloud</b> and <b>BaiduCloud</b>, this parameter is fixed to <b>china</b>. For <b>OracleCloud</b>, this parameter is fixed to <b>global</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -73,8 +73,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The extended information.</para>
         /// <remarks>
-        /// <para>Used to store extended information for different vendors.
-        /// Google Cloud is accessed through a service account. ExtendInfo stores the JSON-formatted service key file, excluding the private_key_id and zprivate_key fields. The file contains the following fields: type, project_id, client_email, client_id, auth_uri, token_uri, auth_provider_x509_cert_url, client_x509_cert_url, and universe_domain.</para>
+        /// <para>This parameter is used to record the extended information of different vendors.
+        /// Google Cloud is accessed through a service account. ExtendInfo stores the JSON-formatted service key file, excluding the private_key_id and zprivate_key fields. The file contains the following fields: type, project_id, client_email, client_id, auth_uri, token_uri, auth_provider_x509_cert_url, client_x509_cert_url, and universe_domain. If the vendor is <b>OracleCloud</b>, this parameter contains the <b>fingerprint</b> key, which indicates the fingerprint.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -85,10 +85,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ExtendInfo { get; set; }
 
         /// <summary>
-        /// <para>The language type for the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language type of the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -99,38 +99,96 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The list of regions used for AccessKey information verification.</para>
+        /// <para>The list of regions used for AK information verification. This parameter is valid only when <b>Vendor</b> is set to <b>AWS</b> or <b>OracleCloud</b>.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~ListCloudVendorRegions~~">ListCloudVendorRegions</a> operation to obtain this parameter.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public List<string> Regions { get; set; }
 
         /// <summary>
-        /// <para>The AccessKey parameter ID. Valid values:</para>
-        /// <ol>
+        /// <para>The ID of the AK parameter. Valid values:</para>
+        /// <list type="bullet">
         /// <item><description>If AkType is set to primary:</description></item>
-        /// </ol>
-        /// <list type="bullet">
-        /// <item><description><b>Tencent</b>: AccessKeyId of the primary account</description></item>
-        /// <item><description><b>HUAWEICLOUD</b>: AccessKeyId of the primary account</description></item>
-        /// <item><description><b>Azure</b>: ClientId</description></item>
-        /// <item><description><b>AWS</b>: AccessKeyId of the primary account</description></item>
-        /// <item><description><b>VOLCENGINE</b>: AccessKeyId of the primary account</description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description><b>Tencent</b>: the AccessKey ID of the primary account</description></item>
         /// </list>
-        /// <ol start="2">
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description><b>HUAWEICLOUD</b>: the AccessKey ID of the primary account</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description><b>Azure</b>: the client ID</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description><b>AWS</b>: the AccessKey ID of the primary account</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description><b>VOLCENGINE</b>: the AccessKey ID of the primary account</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description><b>KingsoftCloud</b>: the AccessKey ID of the primary account</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description><b>UCloud</b>: the AccessKey ID of the primary account</description></item>
+        /// </list>
+        /// </description></item>
         /// <item><description>If AkType is set to sub:</description></item>
-        /// </ol>
-        /// <list type="bullet">
-        /// <item><description><b>Tencent</b>: AccessKeyId of the RAM user</description></item>
-        /// <item><description><b>HUAWEICLOUD</b>: AccessKeyId of the RAM user</description></item>
-        /// <item><description><b>Azure</b>: ClientId</description></item>
-        /// <item><description><b>AWS</b>: AccessKeyId of the RAM user</description></item>
-        /// <item><description><b>VOLCENGINE</b>: AccessKeyId of the RAM user</description></item>
-        /// <item><description><b>google</b>: private_key_id</description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description><b>Tencent</b>: the AccessKey ID of the sub-account</description></item>
         /// </list>
-        /// <remarks>
-        /// <para>If AkType is set to <b>primary</b>, this value is the SecretID of the primary account on the third-party cloud. If AkType is set to <b>sub</b>, this value is the Access Key ID of the RAM user on the third-party cloud. For <b>Azure</b>, no distinction is made, and this value is the <b>appId</b> of the authentication information. Google Cloud is accessed through a service account. AkType is set to sub by default, and this value is the private_key_id property value from the JSON-formatted service key file.</para>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description><b>HUAWEICLOUD</b>: the AccessKey ID of the sub-account</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description><b>Azure</b>: the client ID</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description><b>AWS</b>: the AccessKey ID of the sub-account</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description><b>VOLCENGINE</b>: the AccessKey ID of the sub-account</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description><b>google</b>: the private key ID</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description><b>OracleCloud</b>: the Oracle Cloud Identifier (OCID) of the sub-user</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description><b>BaiduCloud</b>: the AccessKey ID of the sub-account</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description><b>KingsoftCloud</b>: the AccessKey ID of the sub-account</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description><b>UCloud</b>: the AccessKey ID of the sub-account</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description><b>StateCloud</b>: the AccessKey ID of the sub-account<remarks>
+        /// <para>If AkType is set to <b>primary</b>, this value is the SecretID of the primary account of the third-party cloud. If AkType is set to <b>sub</b>, this value is the AccessKey ID of the sub-account of the third-party cloud. For <b>Azure</b>, no distinction is made, and this value is the <b>appId</b> of the authentication information. Google Cloud is accessed through a service account. By default, AkType is set to sub, and this value is obtained from the private_key_id property of the JSON-formatted service key file. If the vendor is <b>OracleCloud</b>, this value is the OCID of the sub-user.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>S3D6c4O***</para>
@@ -140,10 +198,82 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SecretId { get; set; }
 
         /// <summary>
-        /// <para>The AccessKey parameter secret.</para>
-        /// <remarks>
-        /// <para>If AkType is set to <b>primary</b>, this value is the Secret Access Key of the primary account on the third-party cloud. If AkType is set to <b>sub</b>, this value is the Secret Access Key of the RAM user on the third-party cloud. For <b>Azure</b>, no distinction is made, and this value is the <b>password</b> of the authentication information. Google Cloud is accessed through a service account. AkType is set to sub by default, and this value is the private_key property value from the JSON-formatted service key file.</para>
+        /// <para>The secret of the AK parameter. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If AkType is set to primary:</description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description><b>Tencent</b>: the SecretAccessKey of the primary account</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description><b>HUAWEICLOUD</b>: the SecretAccessKey of the primary account</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description><b>Azure</b>: the client secret</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description><b>AWS</b>: the SecretAccessKey of the primary account</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description><b>VOLCENGINE</b>: the SecretAccessKey of the primary account</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description><b>KingsoftCloud</b>: the SecretAccessKey of the primary account</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description><b>UCloud</b>: the SecretAccessKey of the primary account</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>If AkType is set to sub:</description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description><b>Tencent</b>: the SecretAccessKey of the sub-account</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description><b>HUAWEICLOUD</b>: the SecretAccessKey of the sub-account</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description><b>Azure</b>: the client secret</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description><b>AWS</b>: the SecretAccessKey of the sub-account</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description><b>google</b>: the private key</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description><b>OracleCloud</b>: the private key of the sub-user</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description><b>BaiduCloud</b>: the SecretAccessKey of the sub-account</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description><b>KingsoftCloud</b>: the SecretAccessKey of the sub-account</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description><b>UCloud</b>: the SecretAccessKey of the sub-account</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description><b>StateCloud</b>: the SecretAccessKey of the sub-account<remarks>
+        /// <para>If AkType is set to <b>primary</b>, this value is the Secret Access Key of the primary account of the third-party cloud. If AkType is set to <b>sub</b>, this value is the Secret Access Key of the sub-account of the third-party cloud. For <b>Azure</b>, no distinction is made, and this value is the <b>password</b> of the authentication information. Google Cloud is accessed through a service account. By default, AkType is set to sub, and this value is obtained from the private_key property of the JSON-formatted service key file. For <b>OracleCloud</b>, this value is obtained from the content of the corresponding private key file.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>AE6SLd****</para>
@@ -153,10 +283,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SecretKey { get; set; }
 
         /// <summary>
-        /// <para>The usage status of the AccessKey pair. Valid values:</para>
+        /// <para>The usage status of the AK. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: enabled</description></item>
-        /// <item><description><b>1</b>: disabled.</description></item>
+        /// <item><description><b>1</b>: disabled</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -169,7 +299,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The list of subscription IDs.</para>
         /// <remarks>
-        /// <para>This parameter is no longer valid.</para>
+        /// <para><b>[Deprecated]</b> This parameter is no longer valid.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("SubscriptionIds")]
@@ -179,7 +309,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The tenant ID.</para>
         /// <remarks>
-        /// <para>This parameter is valid only when Vendor is set to Azure.</para>
+        /// <para>This parameter is valid only when Vendor is set to <b>Azure</b> or <b>OracleCloud</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -190,9 +320,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>The name of the AccessKey account.</para>
+        /// <para>The name of the AK account.</para>
         /// <remarks>
-        /// <para>Used to identify the account to which third-party host assets belong.</para>
+        /// <para>This parameter is used to identify the account information to which the third-party host assets belong.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

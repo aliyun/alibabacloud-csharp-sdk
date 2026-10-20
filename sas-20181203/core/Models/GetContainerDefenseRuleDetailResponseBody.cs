@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetContainerDefenseRuleDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result code. A value of <b>200</b> indicates success. Any other value indicates failure. You can use this field to determine the cause of the failure.</para>
+        /// <para>The result code. A value of <b>200</b> indicates success, and any other value indicates failure. You can use this field to determine the cause of the failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>防御规则。</para>
+            /// <para>Defense rule</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The alert name. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Non-image Process Startup</b>.</description></item>
+            /// <item><description><b>Non-image program startup</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The alerting type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Container Active Defense</b>.</description></item>
+            /// <item><description><b>Container proactive defense</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -85,9 +85,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The rule action. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1</b>: alert.</para>
+            /// <item><description><para><b>1</b>: Alert</para>
             /// </description></item>
-            /// <item><description><para><b>2</b>: block.</para>
+            /// <item><description><para><b>2</b>: Block</para>
             /// </description></item>
             /// </list>
             /// 
@@ -111,8 +111,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The switch status of the rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: enabled.</description></item>
-            /// <item><description><b>0</b>: disabled.</description></item>
+            /// <item><description><b>1</b>: Enabled</description></item>
+            /// <item><description><b>0</b>: Disabled</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -125,9 +125,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The rule type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1</b>: system rule.</para>
+            /// <item><description><para><b>1</b>: System rule</para>
             /// </description></item>
-            /// <item><description><para><b>2</b>: custom rule.</para>
+            /// <item><description><para><b>2</b>: Custom rule</para>
             /// </description></item>
             /// </list>
             /// 
@@ -139,17 +139,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RuleType { get; set; }
 
             /// <summary>
-            /// <para>The scope in which the rule takes effect.</para>
+            /// <para>The effective scope of the rule.</para>
             /// </summary>
             [NameInMap("Scope")]
             [Validation(Required=false)]
             public List<GetContainerDefenseRuleDetailResponseBodyDataScope> Scope { get; set; }
             public class GetContainerDefenseRuleDetailResponseBodyDataScope : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether all namespaces are included. Valid values:</para>
+                /// <para>Specifies whether all namespaces are included. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: no.</description></item>
-                /// <item><description><b>1</b>: yes.</description></item>
+                /// <item><description><b>0</b>: No</description></item>
+                /// <item><description><b>1</b>: Yes</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <term><b>Obsolete</b></term>
                 /// 
                 /// <summary>
-                /// <para>The list of file hashes.<notice>This parameter is not supported.</notice>.</para>
+                /// <para>The list of file hashes.&gt;Notice: This parameter is not supported.</notice></para>
                 /// </summary>
                 [NameInMap("Hash")]
                 [Validation(Required=false)]
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. A value of 200 indicates that the request was successful.</para>
+        /// <para>The HTTP status code. A value of 200 indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message returned for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -234,7 +234,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The ID of the request. This ID is a unique identifier generated by Alibaba Cloud for the request and can be used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>77546BF4-CCE8-5F8D-B42B-5FD3306B43B4</para>
@@ -244,10 +244,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Indicates whether the API call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: successful.</description></item>
-        /// <item><description><b>false</b>: failed.</description></item>
+        /// <item><description><b>true</b>: Successful</description></item>
+        /// <item><description><b>false</b>: Failed</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

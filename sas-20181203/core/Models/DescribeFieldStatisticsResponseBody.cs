@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeFieldStatisticsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The statistics of server assets.</para>
+        /// <para>The information about the queried server assets.</para>
         /// </summary>
         [NameInMap("GroupedFields")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? BaiduInstanceCount { get; set; }
 
             /// <summary>
-            /// <para>The number of compute cores of exposed assets.</para>
+            /// <para>The number of CPU cores of exposed assets.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? HuaweiInstanceCount { get; set; }
 
             /// <summary>
-            /// <para>The number of assets that Security Center can detect.</para>
+            /// <para>The number of assets that can be detected by Security Center.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? ImportantAssetCount { get; set; }
 
             /// <summary>
-            /// <para>The total number of compute cores of all assets under the asset type that you specified in the query. If you did not specify an asset type, this value is the total number of compute cores of all servers and cloud products in your assets.</para>
+            /// <para>The total number of CPU cores of all assets of the specified type. If no asset type is specified, this value is the sum of the CPU cores of all servers and cloud services in your assets.</para>
             /// 
             /// <b>Example:</b>
             /// <para>301</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? InstanceCoreCount { get; set; }
 
             /// <summary>
-            /// <para>The total number of assets under the asset type that you specified in the query. If you did not specify an asset type, this value is the total number of all servers and cloud products in your assets.</para>
+            /// <para>The total number of assets of the specified type. If no asset type is specified, this value is the sum of all servers and cloud services in your assets.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? InstanceCount { get; set; }
 
             /// <summary>
-            /// <para>The number of tasks under the asset type that you specified in the query. If you did not specify an asset type, this value is the total number of all servers and cloud products in your assets.</para>
+            /// <para>The number of tasks for the specified asset type. If no asset type is specified, this value is the sum of tasks for all servers and cloud services in your assets.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? KingsoftInstanceCount { get; set; }
 
             /// <summary>
-            /// <para>The number of compute cores of newly added servers.</para>
+            /// <para>The number of CPU cores of newly added servers.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? NewInstanceCount { get; set; }
 
             /// <summary>
-            /// <para>The number of assets without risky asset issues.</para>
+            /// <para>The number of assets that are not a risky asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? NoRiskInstanceCount { get; set; }
 
             /// <summary>
-            /// <para>The number of asset types without bound authorization under the asset type that you specified in the query.</para>
+            /// <para>The number of Asset Types that do not attach or have no authorization under the specified asset type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? NotBindMachineInstanceCount { get; set; }
 
             /// <summary>
-            /// <para>The number of compute cores of servers that are not started (powered off).</para>
+            /// <para>The number of CPU cores of stopped servers.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? NotRunningStatusCoreCount { get; set; }
 
             /// <summary>
-            /// <para>The number of servers that are not started (powered off).</para>
+            /// <para>The number of stopped servers.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -247,7 +247,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? OfflineInstanceCount { get; set; }
 
             /// <summary>
-            /// <para>The number of instances outside the cloud.</para>
+            /// <para>The number of third-party cloud servers.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("OracleInstanceCount")]
+            [Validation(Required=false)]
+            public int? OracleInstanceCount { get; set; }
+
+            /// <summary>
+            /// <para>The number of instances outside Alibaba Cloud.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -277,7 +287,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? RegionCount { get; set; }
 
             /// <summary>
-            /// <para>The number of compute cores of assets at risk.</para>
+            /// <para>The number of CPU cores of assets with risks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>201</para>
@@ -287,7 +297,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? RiskInstanceCoreCount { get; set; }
 
             /// <summary>
-            /// <para>The number of assets at risk.</para>
+            /// <para>The number of assets with risks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>90</para>
@@ -327,7 +337,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? TestAssetCount { get; set; }
 
             /// <summary>
-            /// <para>The number of simple application servers.</para>
+            /// <para>The number of Simple Application Server instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -357,7 +367,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? UnKnowStatusInstanceCount { get; set; }
 
             /// <summary>
-            /// <para>The number of compute cores of unprotected assets.</para>
+            /// <para>The number of CPU cores of unprotected assets.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -399,7 +409,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The ID of the request. The ID is a unique identifier generated by Alibaba Cloud for the request and can be used to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7E0618A9-D5EF-4220-9471-C42B5E92719F</para>

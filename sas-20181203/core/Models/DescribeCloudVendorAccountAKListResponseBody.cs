@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCloudVendorAccountAKListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the AccessKey pairs.</para>
+        /// <para>The list of AK information.</para>
         /// </summary>
         [NameInMap("CloudVendorAccountAKs")]
         [Validation(Required=false)]
         public List<DescribeCloudVendorAccountAKListResponseBodyCloudVendorAccountAKs> CloudVendorAccountAKs { get; set; }
         public class DescribeCloudVendorAccountAKListResponseBodyCloudVendorAccountAKs : TeaModel {
             /// <summary>
-            /// <para>The type of the account to which the AccessKey pair belongs. Valid values:</para>
+            /// <para>The type of the AK. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>primary</b>: a primary account</description></item>
-            /// <item><description><b>sub</b>: a sub-account</description></item>
+            /// <item><description><b>primary</b>: Primary account.</description></item>
+            /// <item><description><b>sub</b>: Sub-account.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AkType { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the AccessKey pair.</para>
+            /// <para>The unique ID of the AK.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2345</para>
@@ -41,14 +41,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? AuthId { get; set; }
 
             /// <summary>
-            /// <para>The modules that are associated with the AccessKey pair.</para>
+            /// <para>The list of modules associated with the AK.</para>
             /// </summary>
             [NameInMap("AuthModules")]
             [Validation(Required=false)]
             public List<DescribeCloudVendorAccountAKListResponseBodyCloudVendorAccountAKsAuthModules> AuthModules { get; set; }
             public class DescribeCloudVendorAccountAKListResponseBodyCloudVendorAccountAKsAuthModules : TeaModel {
                 /// <summary>
-                /// <para>The error message of the module.</para>
+                /// <para>The exception message of the module.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ak_domain_error</para>
@@ -60,10 +60,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// <para>The code of the module. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>HOST</b>: host</description></item>
-                /// <item><description><b>CSPM</b>: configuration assessment</description></item>
-                /// <item><description><b>SIEM</b>: CloudSiem</description></item>
-                /// <item><description><b>TRIAL</b>: log audit</description></item>
+                /// <item><description><b>HOST</b>: Host.</description></item>
+                /// <item><description><b>CSPM</b>: Cloud product configuration check.</description></item>
+                /// <item><description><b>SIEM</b>: Cloud SIEM.</description></item>
+                /// <item><description><b>TRIAL</b>: Log audit.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Module { get; set; }
 
                 /// <summary>
-                /// <para>The cloud asset that is associated with the module.</para>
+                /// <para>The description of the cloud assets associated with the module.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Cloud server or virtual machine</para>
@@ -94,12 +94,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string ModuleDisp { get; set; }
 
                 /// <summary>
-                /// <para>The service status of the module. Valid values:</para>
+                /// <para>The status of the module. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: being used</description></item>
-                /// <item><description><b>1</b>: exception occurred</description></item>
-                /// <item><description><b>2</b>: being validated</description></item>
-                /// <item><description><b>3</b>: validation timed out</description></item>
+                /// <item><description><b>0</b>: In use.</description></item>
+                /// <item><description><b>1</b>: Abnormal.</description></item>
+                /// <item><description><b>2</b>: Validating.</description></item>
+                /// <item><description><b>3</b>: Validation timed out.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? ModuleServiceStatus { get; set; }
 
                 /// <summary>
-                /// <para>The permission description of the module.</para>
+                /// <para>The description of the permissions associated with the module.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Read permission of the cloud server or virtual machine</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string ModuleStatement { get; set; }
 
                 /// <summary>
-                /// <para>The error message of the log audit service.</para>
+                /// <para>The error message for log audit access.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>timeout</para>
@@ -130,14 +130,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string TrailMessage { get; set; }
 
                 /// <summary>
-                /// <para>The status of the log audit service. Valid values:</para>
+                /// <para>The accessed state of log audit. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>init</b>: being initialized</description></item>
-                /// <item><description><b>verify</b>: being validated</description></item>
-                /// <item><description><b>enable</b>: enabled</description></item>
-                /// <item><description><b>disable</b>: disabled</description></item>
-                /// <item><description><b>error</b>: exception occurred</description></item>
-                /// <item><description><b>timeout</b>: validation timed out</description></item>
+                /// <item><description><b>init</b>: Initialization.</description></item>
+                /// <item><description><b>verify</b>: Authenticate.</description></item>
+                /// <item><description><b>enable</b>: Enabled.</description></item>
+                /// <item><description><b>disable</b>: Disabled.</description></item>
+                /// <item><description><b>error</b>: Error.</description></item>
+                /// <item><description><b>timeout</b>: Timed out.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -150,7 +150,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The Account ID.</para>
+            /// <para>The account ID.</para>
+            /// <remarks>
+            /// <para>The account ID of the connected cloud service provider.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>azure_demo_1</para>
@@ -160,17 +163,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CtdrCloudUserId { get; set; }
 
             /// <summary>
-            /// <para>The extended information of the module.</para>
+            /// <para>The extended information.</para>
+            /// <remarks>
+            /// <para>Used to record the extended information of different vendors.
+            /// Google Cloud is connected through a service account. ExtendInfo stores the service key file in JSON format, excluding the private_key_id and zprivate_key fields. The file contains the following fields: type, project_id, client_email, client_id, auth_uri, token_uri, auth_provider_x509_cert_url, client_x509_cert_url, and universe_domain. When the vendor is <b>OracleCloud</b>, this parameter contains the following keys: <b>fingerprint</b>, which indicates the fingerprint; <b>tenancy</b>, which indicates the tenant; and <b>domain</b>, which indicates the region to which the connected account belongs.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;product\&quot;:\&quot;webFirewall\&quot;,\&quot;remark\&quot;:\&quot;remark\&quot;}</para>
+            /// <para>{&quot;domain&quot;:&quot;global&quot;,&quot;fingerprint&quot;:&quot;c0:f4:******&quot;,&quot;tenancy&quot;:&quot;ocid1.tenancy.*****&quot;}</para>
             /// </summary>
             [NameInMap("ExtendInfo")]
             [Validation(Required=false)]
             public string ExtendInfo { get; set; }
 
             /// <summary>
-            /// <para>The error message of the AccessKey pair.</para>
+            /// <para>The exception message of the AK.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The IAM user is forbidden in the currently selected region</para>
@@ -180,7 +187,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The AccessKey ID.</para>
+            /// <para>The ID of the AK parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>S3D6c4O***</para>
@@ -190,12 +197,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string SecretId { get; set; }
 
             /// <summary>
-            /// <para>The service status of the AccessKey pair. Valid values:</para>
+            /// <para>The usage status of the AK. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: being used</description></item>
-            /// <item><description><b>1</b>: exception occurred</description></item>
-            /// <item><description><b>2</b>: being validated</description></item>
-            /// <item><description><b>3</b>: validation timed out</description></item>
+            /// <item><description><b>0</b>: In use.</description></item>
+            /// <item><description><b>1</b>: Abnormal.</description></item>
+            /// <item><description><b>2</b>: Validating.</description></item>
+            /// <item><description><b>3</b>: Validation timed out.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -206,10 +213,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? ServiceStatus { get; set; }
 
             /// <summary>
-            /// <para>The status of the AccessKey pair. Valid values:</para>
+            /// <para>The status of the AK. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: enabled</description></item>
-            /// <item><description><b>1</b>: disabled</description></item>
+            /// <item><description><b>0</b>: Enabled.</description></item>
+            /// <item><description><b>1</b>: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -222,10 +229,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The cloud service provider. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Tencent</b>: Tencent Cloud</description></item>
-            /// <item><description><b>HUAWEICLOUD</b>: Huawei Cloud</description></item>
-            /// <item><description><b>Azure</b>: Microsoft Azure</description></item>
-            /// <item><description><b>AWS</b>: Amazon Web Services (AWS)</description></item>
+            /// <item><description><b>Tencent</b>: Tencent Cloud.</description></item>
+            /// <item><description><b>HUAWEICLOUD</b>: Huawei Cloud.</description></item>
+            /// <item><description><b>Azure</b>: Azure.</description></item>
+            /// <item><description><b>AWS</b>: AWS.</description></item>
+            /// <item><description><b>VOLCENGINE</b>: Volcengine.</description></item>
+            /// <item><description><b>google</b>: Google Cloud.</description></item>
+            /// <item><description><b>CHAITIN</b>: Chaitin Tech.</description></item>
+            /// <item><description><b>FORTINET</b>: Fortinet.</description></item>
+            /// <item><description><b>THREATBOOK</b>: ThreatBook.</description></item>
+            /// <item><description><b>KingsoftCloud</b>: Kingsoft Cloud.</description></item>
+            /// <item><description><b>UCloud</b>: UCloud.</description></item>
+            /// <item><description><b>BaiduCloud</b>: Baidu AI Cloud.</description></item>
+            /// <item><description><b>WIZ</b>: Wiz.</description></item>
+            /// <item><description><b>OracleCloud</b>: Oracle Cloud.</description></item>
+            /// <item><description><b>StateCloud</b>: CTYun.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -236,7 +254,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Vendor { get; set; }
 
             /// <summary>
-            /// <para>The name of the AccessKey pair.</para>
+            /// <para>The name of the AK account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -246,7 +264,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string VendorAuthAlias { get; set; }
 
             /// <summary>
-            /// <para>Account ID of the multi-cloud instance.</para>
+            /// <para>The account ID of the multi-cloud instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -256,10 +274,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string VendorUid { get; set; }
 
             /// <summary>
-            /// <para>Account name of the multi-cloud instance.</para>
+            /// <para>The account name of the multi-cloud instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>VendorUserName</para>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("VendorUserName")]
             [Validation(Required=false)]
@@ -285,7 +303,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The page number of the current page during paging.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -295,7 +313,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The maximum number of entries returned per page during paging.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -305,7 +323,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>55</para>
@@ -317,7 +335,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique identifier generated by Alibaba Cloud for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1383B0DB-D5D6-4B0C-9E6B-75939C8****</para>

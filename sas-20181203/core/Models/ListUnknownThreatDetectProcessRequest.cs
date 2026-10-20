@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AnalyzeResult { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page when using paged query. This is used for paging.</para>
+        /// <para>The page number of the current page returned during paging for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range during which the process was first detected. The value is a timestamp in milliseconds.</para>
+        /// <para>The end time of the time range during which the process was first detected. The value is a timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1768891966345</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? FirstTimeEnd { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range during which the process was first detected. The value is a timestamp in milliseconds.</para>
+        /// <para>The start time of the time range during which the process was first detected. The value is a timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1768891966344</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Md5 { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page when using paged query. This is used for paging.</para>
+        /// <para>The maximum number of entries to return on each page during paging for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Sha256 { get; set; }
 
         /// <summary>
-        /// <para>The label.</para>
+        /// <para>The tag.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Process Tag</para>

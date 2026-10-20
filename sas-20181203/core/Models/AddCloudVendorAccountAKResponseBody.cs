@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class AddCloudVendorAccountAKResponseBody : TeaModel {
         /// <summary>
-        /// <para>The AK information that is added.</para>
+        /// <para>The added AccessKey information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public AddCloudVendorAccountAKResponseBodyData Data { get; set; }
         public class AddCloudVendorAccountAKResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The AK type. Valid values:</para>
+            /// <para>The AccessKey type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>primary</b>: Primary account.</description></item>
-            /// <item><description><b>sub</b>: Sub-account.</description></item>
+            /// <item><description><b>primary</b>: Primary account</description></item>
+            /// <item><description><b>sub</b>: Sub-account</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AkType { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the AK.</para>
+            /// <para>The unique ID of the AccessKey.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2158</para>
@@ -41,14 +41,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? AuthId { get; set; }
 
             /// <summary>
-            /// <para>The list of AK-associated modules.</para>
+            /// <para>The list of modules associated with the AccessKey.</para>
             /// </summary>
             [NameInMap("AuthModules")]
             [Validation(Required=false)]
             public List<AddCloudVendorAccountAKResponseBodyDataAuthModules> AuthModules { get; set; }
             public class AddCloudVendorAccountAKResponseBodyDataAuthModules : TeaModel {
                 /// <summary>
-                /// <para>The module exception information.</para>
+                /// <para>The exception information of the module.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ak_domain_error</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Message { get; set; }
 
                 /// <summary>
-                /// <para>The module code. Valid values:</para>
+                /// <para>The code of the module. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>HOST</b>: Host</description></item>
                 /// <item><description><b>CSPM</b>: Cloud product configuration check</description></item>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Module { get; set; }
 
                 /// <summary>
-                /// <para>The cloud asset description associated with the module.</para>
+                /// <para>The description of the cloud assets associated with the module.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Cloud server or virtual machine</para>
@@ -94,12 +94,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string ModuleDisp { get; set; }
 
                 /// <summary>
-                /// <para>The module status. Valid values:</para>
+                /// <para>The status of the module. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: In use.</description></item>
-                /// <item><description><b>1</b>: Abnormal.</description></item>
-                /// <item><description><b>2</b>: Validity verification in progress.</description></item>
-                /// <item><description><b>3</b>: Validity verification timed out.</description></item>
+                /// <item><description><b>0</b>: In use</description></item>
+                /// <item><description><b>1</b>: Exception</description></item>
+                /// <item><description><b>2</b>: Verifying</description></item>
+                /// <item><description><b>3</b>: Verification timed out</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? ModuleServiceStatus { get; set; }
 
                 /// <summary>
-                /// <para>The associate permission description for the module.</para>
+                /// <para>The description of the permissions associated with the module.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Read permission of the cloud server or virtual machine</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CtdrCloudUserId { get; set; }
 
             /// <summary>
-            /// <para>The AK exception information.</para>
+            /// <para>The exception information of the AccessKey.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The IAM user is forbidden in the currently selected region</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The AK parameter ID.</para>
+            /// <para>The AccessKey ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AE6SLd****</para>
@@ -155,12 +155,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string SecretId { get; set; }
 
             /// <summary>
-            /// <para>The AK usage status. Valid values:</para>
+            /// <para>The usage status of the AccessKey. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: In use.</description></item>
-            /// <item><description><b>1</b>: Abnormal.</description></item>
-            /// <item><description><b>2</b>: Validity verification in progress.</description></item>
-            /// <item><description><b>3</b>: Validity verification timed out.</description></item>
+            /// <item><description><b>0</b>: In use</description></item>
+            /// <item><description><b>1</b>: Exception</description></item>
+            /// <item><description><b>2</b>: Verifying</description></item>
+            /// <item><description><b>3</b>: Verification timed out</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -171,10 +171,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? ServiceStatus { get; set; }
 
             /// <summary>
-            /// <para>The AK status. Valid values:</para>
+            /// <para>The AccessKey status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Enabled.</description></item>
-            /// <item><description><b>1</b>: Not enabled.</description></item>
+            /// <item><description><b>0</b>: Enabled</description></item>
+            /// <item><description><b>1</b>: Disabled</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -193,9 +193,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <item><description><b>AWS</b>: AWS</description></item>
             /// <item><description><b>VOLCENGINE</b>: Volcengine</description></item>
             /// <item><description><b>google</b>: Google Cloud</description></item>
-            /// <item><description><b>CHAITIN</b>: Chaitin Technology</description></item>
+            /// <item><description><b>CHAITIN</b>: Chaitin Tech</description></item>
             /// <item><description><b>FORTINET</b>: Fortinet</description></item>
             /// <item><description><b>THREATBOOK</b>: ThreatBook</description></item>
+            /// <item><description><b>KingsoftCloud</b>: Kingsoft Cloud</description></item>
+            /// <item><description><b>UCloud</b>: UCloud</description></item>
+            /// <item><description><b>BaiduCloud</b>: Baidu AI Cloud</description></item>
+            /// <item><description><b>WIZ</b>: Wiz</description></item>
+            /// <item><description><b>OracleCloud</b>: Oracle Cloud</description></item>
+            /// <item><description><b>StateCloud</b>: China Telecom Cloud</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -206,9 +212,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Vendor { get; set; }
 
             /// <summary>
-            /// <para>The AK account name.</para>
+            /// <para>The name of the AccessKey account.</para>
             /// <remarks>
-            /// <para>Used to identify the account to which third-party host assets belong.</para>
+            /// <para>This parameter is used to identify the account to which the third-party host assets belong.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -221,7 +227,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A60DA4EC-7CD8-577D-AD73-***</para>
