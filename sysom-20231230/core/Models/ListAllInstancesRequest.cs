@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Current { get; set; }
 
         /// <summary>
-        /// <para>The list of filter conditions.</para>
+        /// <para>The list of filters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string ManagedType { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return in a single request.</para>
+        /// <para>The maximum number of records to return in a single request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -60,9 +60,9 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token.</para>
+        /// <para>The pagination cursor.</para>
         /// <remarks>
-        /// <para>If this parameter is not empty, more data is available.</para>
+        /// <para>If this parameter is not empty, it indicates that more data is available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10.</para>
+        /// <para>The number of entries to return on each page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

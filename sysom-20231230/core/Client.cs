@@ -4205,6 +4205,164 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the hotfixes and compatible packages for a CVE.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries published hotfixes in batches by CVE ID. You can filter the results by full kernel version.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetCveHotfixRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCveHotfixResponse
+        /// </returns>
+        public GetCveHotfixResponse GetCveHotfixWithOptions(GetCveHotfixRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CveIds))
+            {
+                body["cveIds"] = request.CveIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KernelVersions))
+            {
+                body["kernelVersions"] = request.KernelVersions;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCveHotfix",
+                Version = "2023-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/hotfixManager/hotfixes/cve",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCveHotfixResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the hotfixes and compatible packages for a CVE.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries published hotfixes in batches by CVE ID. You can filter the results by full kernel version.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetCveHotfixRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCveHotfixResponse
+        /// </returns>
+        public async Task<GetCveHotfixResponse> GetCveHotfixWithOptionsAsync(GetCveHotfixRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CveIds))
+            {
+                body["cveIds"] = request.CveIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KernelVersions))
+            {
+                body["kernelVersions"] = request.KernelVersions;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCveHotfix",
+                Version = "2023-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/hotfixManager/hotfixes/cve",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCveHotfixResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the hotfixes and compatible packages for a CVE.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries published hotfixes in batches by CVE ID. You can filter the results by full kernel version.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetCveHotfixRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCveHotfixResponse
+        /// </returns>
+        public GetCveHotfixResponse GetCveHotfix(GetCveHotfixRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetCveHotfixWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the hotfixes and compatible packages for a CVE.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries published hotfixes in batches by CVE ID. You can filter the results by full kernel version.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetCveHotfixRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCveHotfixResponse
+        /// </returns>
+        public async Task<GetCveHotfixResponse> GetCveHotfixAsync(GetCveHotfixRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetCveHotfixWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves diagnostic results.</para>
         /// </summary>
         /// 
@@ -10189,7 +10347,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of managed and unmanaged instances along with their instance information.</para>
+        /// <para>Queries a list of managed and unmanaged instances along with their details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10267,7 +10425,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of managed and unmanaged instances along with their instance information.</para>
+        /// <para>Queries a list of managed and unmanaged instances along with their details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10345,7 +10503,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of managed and unmanaged instances along with their instance information.</para>
+        /// <para>Queries a list of managed and unmanaged instances along with their details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10364,7 +10522,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of managed and unmanaged instances along with their instance information.</para>
+        /// <para>Queries a list of managed and unmanaged instances along with their details.</para>
         /// </summary>
         /// 
         /// <param name="request">
