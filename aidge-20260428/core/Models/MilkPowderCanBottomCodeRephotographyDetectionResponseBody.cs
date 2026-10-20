@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class MilkPowderCanBottomCodeRephotographyDetectionResponseBody : Darabonba.Model {
+    public class MilkPowderCanBottomCodeRephotographyDetectionResponseBody : TeaModel {
         /// <summary>
         /// <para>The error code.</para>
         /// 
@@ -26,21 +25,21 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public MilkPowderCanBottomCodeRephotographyDetectionResponseBodyData Data { get; set; }
-        public class MilkPowderCanBottomCodeRephotographyDetectionResponseBodyData : Darabonba.Model {
+        public class MilkPowderCanBottomCodeRephotographyDetectionResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The details of the recapture detection result.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public MilkPowderCanBottomCodeRephotographyDetectionResponseBodyDataResult Result { get; set; }
-            public class MilkPowderCanBottomCodeRephotographyDetectionResponseBodyDataResult : Darabonba.Model {
+            public class MilkPowderCanBottomCodeRephotographyDetectionResponseBodyDataResult : TeaModel {
                 /// <summary>
                 /// <para>The localization information.</para>
                 /// </summary>
                 [NameInMap("Grounding")]
                 [Validation(Required=false)]
                 public MilkPowderCanBottomCodeRephotographyDetectionResponseBodyDataResultGrounding Grounding { get; set; }
-                public class MilkPowderCanBottomCodeRephotographyDetectionResponseBodyDataResultGrounding : Darabonba.Model {
+                public class MilkPowderCanBottomCodeRephotographyDetectionResponseBodyDataResultGrounding : TeaModel {
                     /// <summary>
                     /// <para>The coverage. Valid values:</para>
                     /// <list type="bullet">
@@ -61,7 +60,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     [NameInMap("Regions")]
                     [Validation(Required=false)]
                     public List<MilkPowderCanBottomCodeRephotographyDetectionResponseBodyDataResultGroundingRegions> Regions { get; set; }
-                    public class MilkPowderCanBottomCodeRephotographyDetectionResponseBodyDataResultGroundingRegions : Darabonba.Model {
+                    public class MilkPowderCanBottomCodeRephotographyDetectionResponseBodyDataResultGroundingRegions : TeaModel {
                         /// <summary>
                         /// <para>The bounding box coordinates in the format of <c>[top-left x, top-left y, bottom-right x, bottom-right y]</c>. Valid values: 0 to 1000. The left value must be less than the right value, and the top value must be less than the bottom value.</para>
                         /// </summary>
@@ -160,4 +159,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

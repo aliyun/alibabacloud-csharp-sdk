@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class StorefrontSceneRecognitionResponseBody : Darabonba.Model {
+    public class StorefrontSceneRecognitionResponseBody : TeaModel {
         /// <summary>
         /// <para>The error code.</para>
         /// 
@@ -26,21 +25,21 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public StorefrontSceneRecognitionResponseBodyData Data { get; set; }
-        public class StorefrontSceneRecognitionResponseBodyData : Darabonba.Model {
+        public class StorefrontSceneRecognitionResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The scene recognition result details.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public StorefrontSceneRecognitionResponseBodyDataResult Result { get; set; }
-            public class StorefrontSceneRecognitionResponseBodyDataResult : Darabonba.Model {
+            public class StorefrontSceneRecognitionResponseBodyDataResult : TeaModel {
                 /// <summary>
                 /// <para>The classification details. This can be an empty array.</para>
                 /// </summary>
                 [NameInMap("Details")]
                 [Validation(Required=false)]
                 public List<StorefrontSceneRecognitionResponseBodyDataResultDetails> Details { get; set; }
-                public class StorefrontSceneRecognitionResponseBodyDataResultDetails : Darabonba.Model {
+                public class StorefrontSceneRecognitionResponseBodyDataResultDetails : TeaModel {
                     /// <summary>
                     /// <para>The non-empty category name.</para>
                     /// 
@@ -69,7 +68,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 [NameInMap("Grounding")]
                 [Validation(Required=false)]
                 public StorefrontSceneRecognitionResponseBodyDataResultGrounding Grounding { get; set; }
-                public class StorefrontSceneRecognitionResponseBodyDataResultGrounding : Darabonba.Model {
+                public class StorefrontSceneRecognitionResponseBodyDataResultGrounding : TeaModel {
                     /// <summary>
                     /// <para>The coverage.</para>
                     /// 
@@ -86,7 +85,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     [NameInMap("Regions")]
                     [Validation(Required=false)]
                     public List<StorefrontSceneRecognitionResponseBodyDataResultGroundingRegions> Regions { get; set; }
-                    public class StorefrontSceneRecognitionResponseBodyDataResultGroundingRegions : Darabonba.Model {
+                    public class StorefrontSceneRecognitionResponseBodyDataResultGroundingRegions : TeaModel {
                         /// <summary>
                         /// <para>The bounding box coordinates.</para>
                         /// </summary>
@@ -172,4 +171,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

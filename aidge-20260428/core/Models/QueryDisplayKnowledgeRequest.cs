@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class QueryDisplayKnowledgeRequest : Darabonba.Model {
+    public class QueryDisplayKnowledgeRequest : TeaModel {
         /// <summary>
         /// <para>The page number. Default value: 1.</para>
         /// 
@@ -71,4 +70,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

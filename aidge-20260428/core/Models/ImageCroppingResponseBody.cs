@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class ImageCroppingResponseBody : Darabonba.Model {
+    public class ImageCroppingResponseBody : TeaModel {
         /// <summary>
         /// <para>The response code.</para>
         /// 
@@ -26,7 +25,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ImageCroppingResponseBodyData Data { get; set; }
-        public class ImageCroppingResponseBodyData : Darabonba.Model {
+        public class ImageCroppingResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The image height.</para>
             /// 
@@ -106,4 +105,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

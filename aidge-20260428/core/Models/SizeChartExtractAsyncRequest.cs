@@ -1,15 +1,22 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class SizeChartExtractAsyncRequest : Darabonba.Model {
+    public class SizeChartExtractAsyncRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>order-20260928-001</para>
+        /// </summary>
+        [NameInMap("BizId")]
+        [Validation(Required=false)]
+        public string BizId { get; set; }
+
         /// <summary>
         /// <para>The list of column names to extract, such as Size, Bust, and Length.</para>
         /// </summary>
@@ -41,4 +48,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

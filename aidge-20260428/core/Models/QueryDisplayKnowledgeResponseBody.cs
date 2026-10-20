@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class QueryDisplayKnowledgeResponseBody : Darabonba.Model {
+    public class QueryDisplayKnowledgeResponseBody : TeaModel {
         /// <summary>
         /// <para>The error code.</para>
         /// 
@@ -26,7 +25,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryDisplayKnowledgeResponseBodyData Data { get; set; }
-        public class QueryDisplayKnowledgeResponseBodyData : Darabonba.Model {
+        public class QueryDisplayKnowledgeResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The business error code.</para>
             /// 
@@ -93,7 +92,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             [NameInMap("Records")]
             [Validation(Required=false)]
             public List<QueryDisplayKnowledgeResponseBodyDataRecords> Records { get; set; }
-            public class QueryDisplayKnowledgeResponseBodyDataRecords : Darabonba.Model {
+            public class QueryDisplayKnowledgeResponseBodyDataRecords : TeaModel {
                 /// <summary>
                 /// <para>The description of the failure cause. This parameter is returned only when the status is FAILED.</para>
                 /// 
@@ -270,4 +269,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

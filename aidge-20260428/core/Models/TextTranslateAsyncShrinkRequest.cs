@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class TextTranslateAsyncShrinkRequest : Darabonba.Model {
+    public class TextTranslateAsyncShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The business ID of the caller. The maximum length is 128 characters. This ID is passed through in the translation results.</para>
         /// 
@@ -100,4 +99,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

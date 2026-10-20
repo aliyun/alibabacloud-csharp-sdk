@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class ImageMattingAsyncRequest : Darabonba.Model {
+    public class ImageMattingAsyncRequest : TeaModel {
         /// <summary>
         /// <para>Specifies the background format of the returned image. Valid values:</para>
         /// <list type="bullet">
@@ -34,6 +33,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("BgColor")]
         [Validation(Required=false)]
         public string BgColor { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>order-20260928-001</para>
+        /// </summary>
+        [NameInMap("BizId")]
+        [Validation(Required=false)]
+        public string BizId { get; set; }
 
         /// <summary>
         /// <para>The URL of the original image. The image must be in JPG, JPEG, PNG, BMP, or WEBP format. The resolution must be between 100 × 100 and 3000 × 3000 pixels, and the file size cannot exceed 10 MB.</para>
@@ -69,4 +76,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

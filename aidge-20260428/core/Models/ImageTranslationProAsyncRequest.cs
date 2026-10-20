@@ -1,15 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class ImageTranslationProAsyncRequest : Darabonba.Model {
+    public class ImageTranslationProAsyncRequest : TeaModel {
+        /// <summary>
+        /// <para>The business ID of the caller. This ID is recorded when the request is accepted and returned as-is when you query the asynchronous task result.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>order-20260928-001</para>
+        /// </summary>
+        [NameInMap("BizId")]
+        [Validation(Required=false)]
+        public string BizId { get; set; }
+
         /// <summary>
         /// <para>The ID of the intervention glossary. You must create the glossary in the console and provide its ID. If this parameter is left empty, the translation results are not modified.</para>
         /// 
@@ -21,7 +30,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Glossary { get; set; }
 
         /// <summary>
-        /// <para>• Image URL: Must be accessible over the Internet.<br>• Format: PNG, JPEG, JPG, BMP, or WEBP.<br>• Pixels: Both the width and height must not exceed 4,000.<br>• File size: The original file size must be less than or equal to 10 MB.</para>
+        /// <para>• Image URL: The URL must be publicly accessible over the Internet.<br>• Formats: PNG, JPEG, JPG, BMP, and WEBP.<br>• Pixels: The width and height cannot exceed 4,000 pixels.<br>• File size: The original file size cannot exceed 10 MB.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +41,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ImageUrl { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to translate the text on the product subject in the image. Set this parameter to false to protect the subject information, such as the product name, from being translated. Default value: false.</para>
+        /// <para>Specifies whether to translate the text on the image subject. Set this parameter to false to protect the subject information, such as the product name, from being translated. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -64,7 +73,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string TargetLanguage { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to translate the brand names in the image. Default value: false, which indicates that brand names are not translated.</para>
+        /// <para>Specifies whether to translate brand names in the image. Default value: false, which indicates that brand names are not translated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -74,7 +83,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public bool? TranslatingBrandInTheProduct { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return layout information such as the position, font, and color of the text. If you set this parameter to true, layer information is returned, which can be used for secondary editing in an image editor. Default value: false.</para>
+        /// <para>Specifies whether to return layout information such as the position, font, and color of the text. If you set this parameter to true, layer information is returned, which can be used for secondary editing when you integrate an image editor. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -86,4 +95,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

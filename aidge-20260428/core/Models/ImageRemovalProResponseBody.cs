@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class ImageRemovalProResponseBody : Darabonba.Model {
+    public class ImageRemovalProResponseBody : TeaModel {
         /// <summary>
         /// <para>The error code. This parameter is not returned if the call is successful.</para>
         /// 
@@ -26,7 +25,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ImageRemovalProResponseBodyData Data { get; set; }
-        public class ImageRemovalProResponseBodyData : Darabonba.Model {
+        public class ImageRemovalProResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The URL of the erasure result image. This parameter is returned in synchronous mode.</para>
             /// 
@@ -93,4 +92,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

@@ -1,17 +1,16 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class QueryAsyncTaskResultResponseBody : Darabonba.Model {
+    public class QueryAsyncTaskResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. This parameter is not returned if the call is successful.</para>
+        /// <para>The error code. This parameter is not returned when the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -21,12 +20,22 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The asynchronous task result.</para>
+        /// <para>The result of the asynchronous task.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryAsyncTaskResultResponseBodyData Data { get; set; }
-        public class QueryAsyncTaskResultResponseBodyData : Darabonba.Model {
+        public class QueryAsyncTaskResultResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The business ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>order-20260928-001</para>
+            /// </summary>
+            [NameInMap("BizId")]
+            [Validation(Required=false)]
+            public string BizId { get; set; }
+
             /// <summary>
             /// <para>The task result.</para>
             /// 
@@ -48,7 +57,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The downstream task ID.</para>
+            /// <para>The ID of the downstream task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>task-xxxxx</para>
@@ -67,7 +76,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. This parameter is not returned if the call is successful.</para>
+        /// <para>The error message. This parameter is not returned when the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -87,11 +96,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The call is successful.</description></item>
-        /// <item><description>false: The call failed.</description></item>
-        /// </list>
+        /// <para>Indicates whether the call is successful. Valid values: true: The call is successful. false: The call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
@@ -103,4 +108,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

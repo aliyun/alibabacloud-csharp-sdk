@@ -1,17 +1,16 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class ImageTranslationStandardAsyncResponseBody : Darabonba.Model {
+    public class ImageTranslationStandardAsyncResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. This parameter is not returned for successful calls.</para>
+        /// <para>The error code. This parameter is not returned for normal calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -21,14 +20,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The submission result of the asynchronous task for Image Translation Standard Edition.</para>
+        /// <para>The asynchronous task submission result of Image Translation Standard Edition.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ImageTranslationStandardAsyncResponseBodyData Data { get; set; }
-        public class ImageTranslationStandardAsyncResponseBodyData : Darabonba.Model {
+        public class ImageTranslationStandardAsyncResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the task used to query the asynchronous task result.</para>
+            /// <para>The task ID used to query the asynchronous task result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TID_550e8400-e29b-41d4-a716-446655440000</para>
@@ -40,7 +39,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. This parameter is not returned for successful calls.</para>
+        /// <para>The error message. This parameter is not returned for normal calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -72,4 +71,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

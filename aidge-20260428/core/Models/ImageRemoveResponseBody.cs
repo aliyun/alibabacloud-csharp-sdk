@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class ImageRemoveResponseBody : Darabonba.Model {
+    public class ImageRemoveResponseBody : TeaModel {
         /// <summary>
         /// <para>The status code.</para>
         /// 
@@ -26,7 +25,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ImageRemoveResponseBodyData Data { get; set; }
-        public class ImageRemoveResponseBodyData : Darabonba.Model {
+        public class ImageRemoveResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The height of the result image, in pixels.</para>
             /// 
@@ -103,4 +102,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

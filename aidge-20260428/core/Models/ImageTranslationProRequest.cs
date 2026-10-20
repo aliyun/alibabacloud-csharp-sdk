@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class ImageTranslationProRequest : Darabonba.Model {
+    public class ImageTranslationProRequest : TeaModel {
         /// <summary>
         /// <para>Specifies whether to use asynchronous mode. Default value: false (synchronous mode). When set to true, the API immediately returns a TaskId. Use the query translation result API to retrieve the final result.</para>
         /// 
@@ -103,4 +102,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class GeneralRephotographyDetectionRequest : Darabonba.Model {
+    public class GeneralRephotographyDetectionRequest : TeaModel {
         /// <summary>
         /// <para>The HTTPS URL of the original image to recognize. The URL must be accessible and must not contain whitespace or URL-embedded usernames or passwords.</para>
         /// <para>This parameter is required.</para>
@@ -24,4 +23,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

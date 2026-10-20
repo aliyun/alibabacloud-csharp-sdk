@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class ImageTranslationStandardRequest : Darabonba.Model {
+    public class ImageTranslationStandardRequest : TeaModel {
         /// <summary>
         /// <para>The intervention glossary ID. This parameter is optional. You must create the glossary separately in the console and provide its ID. If the glossary ID is empty, the translation results are not modified.</para>
         /// 
@@ -91,4 +90,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

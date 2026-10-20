@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class AssetOptimizeLiteRequest : Darabonba.Model {
+    public class AssetOptimizeLiteRequest : TeaModel {
         /// <summary>
         /// <para>The custom glossary for term intervention.</para>
         /// 
@@ -107,4 +106,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

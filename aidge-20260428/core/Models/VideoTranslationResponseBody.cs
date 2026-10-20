@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class VideoTranslationResponseBody : Darabonba.Model {
+    public class VideoTranslationResponseBody : TeaModel {
         /// <summary>
         /// <para>The status code.</para>
         /// 
@@ -26,7 +25,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public VideoTranslationResponseBodyData Data { get; set; }
-        public class VideoTranslationResponseBodyData : Darabonba.Model {
+        public class VideoTranslationResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The ID of the asynchronous task. You can use this ID for subsequent queries.</para>
             /// 
@@ -72,4 +71,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

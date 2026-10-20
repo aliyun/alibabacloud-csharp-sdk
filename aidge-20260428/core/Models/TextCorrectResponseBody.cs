@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class TextCorrectResponseBody : Darabonba.Model {
+    public class TextCorrectResponseBody : TeaModel {
         /// <summary>
         /// <para>The response code. The value &quot;success&quot; is returned if the call is successful.</para>
         /// 
@@ -26,7 +25,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public TextCorrectResponseBodyData Data { get; set; }
-        public class TextCorrectResponseBodyData : Darabonba.Model {
+        public class TextCorrectResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The corrected text.</para>
             /// 
@@ -82,4 +81,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

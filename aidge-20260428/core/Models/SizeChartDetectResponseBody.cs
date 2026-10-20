@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class SizeChartDetectResponseBody : Darabonba.Model {
+    public class SizeChartDetectResponseBody : TeaModel {
         /// <summary>
         /// <para>The error code. This parameter is not returned if the call is successful.</para>
         /// 
@@ -26,7 +25,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SizeChartDetectResponseBodyData Data { get; set; }
-        public class SizeChartDetectResponseBodyData : Darabonba.Model {
+        public class SizeChartDetectResponseBodyData : TeaModel {
             /// <summary>
             /// <para>Indicates whether the image is a size chart.</para>
             /// 
@@ -86,4 +85,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

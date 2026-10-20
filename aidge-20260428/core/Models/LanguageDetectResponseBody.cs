@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class LanguageDetectResponseBody : Darabonba.Model {
+    public class LanguageDetectResponseBody : TeaModel {
         /// <summary>
         /// <para>The response code. A value of 200 indicates a successful call. For other response codes, refer to the error code documentation.</para>
         /// 
@@ -26,7 +25,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public LanguageDetectResponseBodyData Data { get; set; }
-        public class LanguageDetectResponseBodyData : Darabonba.Model {
+        public class LanguageDetectResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The detected language code.</para>
             /// 
@@ -82,4 +81,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class VideoGenerationResponseBody : Darabonba.Model {
+    public class VideoGenerationResponseBody : TeaModel {
         /// <summary>
         /// <para>The response code. A value of success indicates that the call is successful, and a value of failed indicates that the call fails.</para>
         /// 
@@ -26,7 +25,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public VideoGenerationResponseBodyData Data { get; set; }
-        public class VideoGenerationResponseBodyData : Darabonba.Model {
+        public class VideoGenerationResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The downstream task ID.</para>
             /// 
@@ -79,4 +78,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

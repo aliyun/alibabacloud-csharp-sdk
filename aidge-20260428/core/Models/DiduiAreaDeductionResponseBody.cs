@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class DiduiAreaDeductionResponseBody : Darabonba.Model {
+    public class DiduiAreaDeductionResponseBody : TeaModel {
         /// <summary>
         /// <para>The error code.</para>
         /// 
@@ -26,7 +25,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DiduiAreaDeductionResponseBodyData Data { get; set; }
-        public class DiduiAreaDeductionResponseBodyData : Darabonba.Model {
+        public class DiduiAreaDeductionResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The number of downstream calls.</para>
             /// 
@@ -103,14 +102,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             [NameInMap("Result")]
             [Validation(Required=false)]
             public DiduiAreaDeductionResponseBodyDataResult Result { get; set; }
-            public class DiduiAreaDeductionResponseBodyDataResult : Darabonba.Model {
+            public class DiduiAreaDeductionResponseBodyDataResult : TeaModel {
                 /// <summary>
                 /// <para>The stage 4 area label.</para>
                 /// </summary>
                 [NameInMap("Stage4AreaLabel")]
                 [Validation(Required=false)]
                 public DiduiAreaDeductionResponseBodyDataResultStage4AreaLabel Stage4AreaLabel { get; set; }
-                public class DiduiAreaDeductionResponseBodyDataResultStage4AreaLabel : Darabonba.Model {
+                public class DiduiAreaDeductionResponseBodyDataResultStage4AreaLabel : TeaModel {
                     /// <summary>
                     /// <para>The floor display area, in square meters.</para>
                     /// 
@@ -210,4 +209,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class GeneralRephotographyDetectionResponseBody : Darabonba.Model {
+    public class GeneralRephotographyDetectionResponseBody : TeaModel {
         /// <summary>
         /// <para>The error code.</para>
         /// 
@@ -26,21 +25,21 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GeneralRephotographyDetectionResponseBodyData Data { get; set; }
-        public class GeneralRephotographyDetectionResponseBodyData : Darabonba.Model {
+        public class GeneralRephotographyDetectionResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The business result. This value is an empty object if the request fails.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public GeneralRephotographyDetectionResponseBodyDataResult Result { get; set; }
-            public class GeneralRephotographyDetectionResponseBodyDataResult : Darabonba.Model {
+            public class GeneralRephotographyDetectionResponseBodyDataResult : TeaModel {
                 /// <summary>
                 /// <para>The supplementary element localization result.</para>
                 /// </summary>
                 [NameInMap("Grounding")]
                 [Validation(Required=false)]
                 public GeneralRephotographyDetectionResponseBodyDataResultGrounding Grounding { get; set; }
-                public class GeneralRephotographyDetectionResponseBodyDataResultGrounding : Darabonba.Model {
+                public class GeneralRephotographyDetectionResponseBodyDataResultGrounding : TeaModel {
                     /// <summary>
                     /// <para>The coverage of the localization. Valid values:</para>
                     /// <list type="bullet">
@@ -61,7 +60,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     [NameInMap("Regions")]
                     [Validation(Required=false)]
                     public List<GeneralRephotographyDetectionResponseBodyDataResultGroundingRegions> Regions { get; set; }
-                    public class GeneralRephotographyDetectionResponseBodyDataResultGroundingRegions : Darabonba.Model {
+                    public class GeneralRephotographyDetectionResponseBodyDataResultGroundingRegions : TeaModel {
                         /// <summary>
                         /// <para>The bounding box coordinates.</para>
                         /// </summary>
@@ -160,4 +159,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class ImageRemoveAsyncResponseBody : Darabonba.Model {
+    public class ImageRemoveAsyncResponseBody : TeaModel {
         /// <summary>
         /// <para>The status code, such as &quot;success&quot;.</para>
         /// 
@@ -21,12 +20,12 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned result struct.</para>
+        /// <para>The returned result struct information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ImageRemoveAsyncResponseBodyData Data { get; set; }
-        public class ImageRemoveAsyncResponseBodyData : Darabonba.Model {
+        public class ImageRemoveAsyncResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The task ID used to query the result of the asynchronous task.</para>
             /// 
@@ -40,7 +39,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message, such as &quot;The parameters contain sensitive information. Please try another input.&quot;</para>
+        /// <para>The error message, such as &quot;The parameters contain sensitive information. Try another input.&quot;</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -50,7 +49,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to identify a unique request.</para>
+        /// <para>The request ID, which is used to identify a unique request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</para>
@@ -60,7 +59,11 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values: true (success) and false (failure).</para>
+        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The call is successful.</description></item>
+        /// <item><description>false: The call fails.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
@@ -72,4 +75,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

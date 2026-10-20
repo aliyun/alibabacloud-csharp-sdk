@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class AiTryOnResponseBody : Darabonba.Model {
+    public class AiTryOnResponseBody : TeaModel {
         /// <summary>
         /// <para>The error code. This parameter is not returned when the call is successful.</para>
         /// 
@@ -26,7 +25,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public AiTryOnResponseBodyData Data { get; set; }
-        public class AiTryOnResponseBodyData : Darabonba.Model {
+        public class AiTryOnResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The height of the result image in pixels.</para>
             /// 
@@ -66,7 +65,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             [NameInMap("UsageMap")]
             [Validation(Required=false)]
             public AiTryOnResponseBodyDataUsageMap UsageMap { get; set; }
-            public class AiTryOnResponseBodyDataUsageMap : Darabonba.Model {
+            public class AiTryOnResponseBodyDataUsageMap : TeaModel {
                 /// <summary>
                 /// <para>The number of processed images.</para>
                 /// 
@@ -128,4 +127,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

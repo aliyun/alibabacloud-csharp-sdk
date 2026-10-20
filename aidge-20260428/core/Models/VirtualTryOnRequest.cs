@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class VirtualTryOnRequest : Darabonba.Model {
+    public class VirtualTryOnRequest : TeaModel {
         /// <summary>
         /// <para>The URL of the garment image. Only one image is supported. The URL must be a publicly accessible <c>http</c>/<c>https</c> address. The image must be in JPG, JPEG, PNG, BMP, or WEBP format, with a resolution between 256 × 256 and 2049 × 2049 pixels, and a file size of no more than 10 MB.<br></para>
         /// <para>This parameter is required.</para>
@@ -56,4 +55,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

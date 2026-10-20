@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class EcomVideoRecreationRequest : Darabonba.Model {
+    public class EcomVideoRecreationRequest : TeaModel {
         /// <summary>
         /// <para>The input parameters for video variation generation.</para>
         /// <para>This parameter is required.</para>
@@ -17,7 +16,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Input")]
         [Validation(Required=false)]
         public EcomVideoRecreationRequestInput Input { get; set; }
-        public class EcomVideoRecreationRequestInput : Darabonba.Model {
+        public class EcomVideoRecreationRequestInput : TeaModel {
             /// <summary>
             /// <para>The description or supplementary constraints for the target person in person replacement. The length is 1 to 500 characters. This parameter is required when PersonReferenceImageUrls is not provided.<br>Example value: The target person is an adult male, retaining the original clothing and actions.</para>
             /// 
@@ -58,7 +57,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             [NameInMap("ProductInfo")]
             [Validation(Required=false)]
             public EcomVideoRecreationRequestInputProductInfo ProductInfo { get; set; }
-            public class EcomVideoRecreationRequestInputProductInfo : Darabonba.Model {
+            public class EcomVideoRecreationRequestInputProductInfo : TeaModel {
                 /// <summary>
                 /// <para>The product category.<br>Example value: Women\&quot;s clothing/Sun protection clothing.</para>
                 /// 
@@ -120,7 +119,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Output")]
         [Validation(Required=false)]
         public EcomVideoRecreationRequestOutput Output { get; set; }
-        public class EcomVideoRecreationRequestOutput : Darabonba.Model {
+        public class EcomVideoRecreationRequestOutput : TeaModel {
             /// <summary>
             /// <para>The target duration in seconds. In <c>reference</c> mode, the input value is ignored and forced to -1, which follows the duration of the original video. In <c>rebuild</c> mode, you can pass an integer from 5 to 60, or pass -1 to indicate an automatic duration.</para>
             /// 
@@ -156,4 +155,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

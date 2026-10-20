@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class ImageTranslationPlusResponseBody : Darabonba.Model {
+    public class ImageTranslationPlusResponseBody : TeaModel {
         /// <summary>
         /// <para>The error code. This parameter is not returned if the call is successful.</para>
         /// 
@@ -26,7 +25,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ImageTranslationPlusResponseBodyData Data { get; set; }
-        public class ImageTranslationPlusResponseBodyData : Darabonba.Model {
+        public class ImageTranslationPlusResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The asynchronous task ID. Use this ID to poll for results through the queryTaskResult operation.</para>
             /// 
@@ -76,4 +75,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

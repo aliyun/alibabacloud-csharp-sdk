@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class CategoryMatchResponseBody : Darabonba.Model {
+    public class CategoryMatchResponseBody : TeaModel {
         /// <summary>
         /// <para>The status code. The value &quot;success&quot; is returned for successful calls.</para>
         /// 
@@ -26,7 +25,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CategoryMatchResponseBodyData Data { get; set; }
-        public class CategoryMatchResponseBodyData : Darabonba.Model {
+        public class CategoryMatchResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The ID of the matched category.</para>
             /// 
@@ -129,4 +128,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

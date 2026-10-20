@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class DeleteDisplayKnowledgeResponseBody : Darabonba.Model {
+    public class DeleteDisplayKnowledgeResponseBody : TeaModel {
         /// <summary>
         /// <para>The error code.</para>
         /// 
@@ -26,7 +25,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DeleteDisplayKnowledgeResponseBodyData Data { get; set; }
-        public class DeleteDisplayKnowledgeResponseBodyData : Darabonba.Model {
+        public class DeleteDisplayKnowledgeResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The number of accepted records.</para>
             /// 
@@ -103,7 +102,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             [NameInMap("Results")]
             [Validation(Required=false)]
             public List<DeleteDisplayKnowledgeResponseBodyDataResults> Results { get; set; }
-            public class DeleteDisplayKnowledgeResponseBodyDataResults : Darabonba.Model {
+            public class DeleteDisplayKnowledgeResponseBodyDataResults : TeaModel {
                 /// <summary>
                 /// <para>The error code for the failure.</para>
                 /// 
@@ -238,4 +237,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

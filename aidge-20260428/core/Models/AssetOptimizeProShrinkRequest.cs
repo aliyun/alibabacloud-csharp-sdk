@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class AssetOptimizeProShrinkRequest : Darabonba.Model {
+    public class AssetOptimizeProShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The list of column names to recognize in size chart images. Optional.</para>
         /// 
@@ -137,4 +136,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

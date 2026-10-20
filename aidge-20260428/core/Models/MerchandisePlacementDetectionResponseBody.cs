@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class MerchandisePlacementDetectionResponseBody : Darabonba.Model {
+    public class MerchandisePlacementDetectionResponseBody : TeaModel {
         /// <summary>
         /// <para>The error code. This parameter is not returned for successful calls.</para>
         /// 
@@ -26,7 +25,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public MerchandisePlacementDetectionResponseBodyData Data { get; set; }
-        public class MerchandisePlacementDetectionResponseBodyData : Darabonba.Model {
+        public class MerchandisePlacementDetectionResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The number of valid detection boxes.</para>
             /// 
@@ -43,7 +42,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             [NameInMap("Data")]
             [Validation(Required=false)]
             public List<MerchandisePlacementDetectionResponseBodyDataData> Data { get; set; }
-            public class MerchandisePlacementDetectionResponseBodyDataData : Darabonba.Model {
+            public class MerchandisePlacementDetectionResponseBodyDataData : TeaModel {
                 /// <summary>
                 /// <para>The detection box position coordinates in the format [x1,y1,x2,y2].</para>
                 /// </summary>
@@ -77,7 +76,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 [NameInMap("Top1")]
                 [Validation(Required=false)]
                 public MerchandisePlacementDetectionResponseBodyDataDataTop1 Top1 { get; set; }
-                public class MerchandisePlacementDetectionResponseBodyDataDataTop1 : Darabonba.Model {
+                public class MerchandisePlacementDetectionResponseBodyDataDataTop1 : TeaModel {
                     /// <summary>
                     /// <para>The similarity score, ranging from 0 to 1.</para>
                     /// 
@@ -116,7 +115,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 [NameInMap("Topk")]
                 [Validation(Required=false)]
                 public List<MerchandisePlacementDetectionResponseBodyDataDataTopk> Topk { get; set; }
-                public class MerchandisePlacementDetectionResponseBodyDataDataTopk : Darabonba.Model {
+                public class MerchandisePlacementDetectionResponseBodyDataDataTopk : TeaModel {
                     /// <summary>
                     /// <para>The recall rank.</para>
                     /// 
@@ -210,4 +209,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

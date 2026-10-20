@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class ProductHotspotDetectionResponseBody : Darabonba.Model {
+    public class ProductHotspotDetectionResponseBody : TeaModel {
         /// <summary>
         /// <para>The error code.</para>
         /// 
@@ -26,21 +25,21 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ProductHotspotDetectionResponseBodyData Data { get; set; }
-        public class ProductHotspotDetectionResponseBodyData : Darabonba.Model {
+        public class ProductHotspotDetectionResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The list of detected products and their bounding boxes.</para>
             /// </summary>
             [NameInMap("Products")]
             [Validation(Required=false)]
             public List<ProductHotspotDetectionResponseBodyDataProducts> Products { get; set; }
-            public class ProductHotspotDetectionResponseBodyDataProducts : Darabonba.Model {
+            public class ProductHotspotDetectionResponseBodyDataProducts : TeaModel {
                 /// <summary>
                 /// <para>The bounding boxes of the detected product instances.</para>
                 /// </summary>
                 [NameInMap("Boxes")]
                 [Validation(Required=false)]
                 public List<ProductHotspotDetectionResponseBodyDataProductsBoxes> Boxes { get; set; }
-                public class ProductHotspotDetectionResponseBodyDataProductsBoxes : Darabonba.Model {
+                public class ProductHotspotDetectionResponseBodyDataProductsBoxes : TeaModel {
                     /// <summary>
                     /// <para>The bottom boundary of the bounding box.</para>
                     /// 
@@ -150,4 +149,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

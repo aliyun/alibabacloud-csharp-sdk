@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class PackageWeightSizeCheckResponseBody : Darabonba.Model {
+    public class PackageWeightSizeCheckResponseBody : TeaModel {
         /// <summary>
         /// <para>The response code. A value of 200 indicates a successful call. For other response codes, refer to the error code information.</para>
         /// 
@@ -26,7 +25,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public PackageWeightSizeCheckResponseBodyData Data { get; set; }
-        public class PackageWeightSizeCheckResponseBodyData : Darabonba.Model {
+        public class PackageWeightSizeCheckResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The asynchronous task ID used to query the review result later by calling QueryAsyncTaskResult.</para>
             /// 
@@ -72,4 +71,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class PackageWeightSizeCheckRequest : Darabonba.Model {
+    public class PackageWeightSizeCheckRequest : TeaModel {
         /// <summary>
         /// <para>The URL of the image with manual bounding box annotations, which is the original image overlaid with blue or red rectangular bounding box lines. The URL must be publicly accessible. The image must not exceed 4000 × 4000 pixels or 10 MB in size. Supported formats: png, jpeg, and jpg.</para>
         /// <para>This parameter is required.</para>
@@ -35,4 +34,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class MerchandisePlacementDetectionLiteRequest : Darabonba.Model {
+    public class MerchandisePlacementDetectionLiteRequest : TeaModel {
         /// <summary>
         /// <para>The HTTPS URL of the display image to be detected.</para>
         /// <para>This parameter is required.</para>
@@ -24,4 +23,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

@@ -1,17 +1,16 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class ImageRemovalProAsyncResponseBody : Darabonba.Model {
+    public class ImageRemovalProAsyncResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. This parameter is not returned when the call is successful.</para>
+        /// <para>The error code. This parameter is not returned for successful calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -26,9 +25,9 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ImageRemovalProAsyncResponseBodyData Data { get; set; }
-        public class ImageRemovalProAsyncResponseBodyData : Darabonba.Model {
+        public class ImageRemovalProAsyncResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The node ID used to query the asynchronous task result.</para>
+            /// <para>The ID of the task. You can use this ID to query the asynchronous task result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TID_550e8400-e29b-41d4-a716-446655440000</para>
@@ -40,7 +39,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. This parameter is not returned when the call is successful. Example: &quot;The parameters contain sensitive information. Try other inputs.&quot;</para>
+        /// <para>The error message. This parameter is not returned for successful calls. Example: &quot;The parameters contain sensitive information. Try other inputs.&quot;</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -50,7 +49,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to identify a unique request.</para>
+        /// <para>The ID of the request. This ID is used to uniquely identify the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</para>
@@ -60,7 +59,11 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. A value of true indicates success, and a value of false indicates failure.</para>
+        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: successful.</description></item>
+        /// <item><description>false: failed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
@@ -72,4 +75,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

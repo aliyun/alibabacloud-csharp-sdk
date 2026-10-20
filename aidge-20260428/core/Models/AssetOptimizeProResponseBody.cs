@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class AssetOptimizeProResponseBody : Darabonba.Model {
+    public class AssetOptimizeProResponseBody : TeaModel {
         /// <summary>
         /// <para>The status code. The value &quot;success&quot; is returned for a successful call.</para>
         /// 
@@ -26,7 +25,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public AssetOptimizeProResponseBodyData Data { get; set; }
-        public class AssetOptimizeProResponseBodyData : Darabonba.Model {
+        public class AssetOptimizeProResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The asynchronous task ID. Use this ID to query the processing result by calling QueryAsyncTaskResult.</para>
             /// 
@@ -72,4 +71,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

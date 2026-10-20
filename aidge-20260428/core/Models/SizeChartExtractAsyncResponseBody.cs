@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class SizeChartExtractAsyncResponseBody : Darabonba.Model {
+    public class SizeChartExtractAsyncResponseBody : TeaModel {
         /// <summary>
         /// <para>The error code. This parameter is not returned when the call is successful.</para>
         /// 
@@ -26,7 +25,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SizeChartExtractAsyncResponseBodyData Data { get; set; }
-        public class SizeChartExtractAsyncResponseBodyData : Darabonba.Model {
+        public class SizeChartExtractAsyncResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The ID of the asynchronous task used to query the result.</para>
             /// 
@@ -72,4 +71,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

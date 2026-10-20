@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class VideoGenerationRequest : Darabonba.Model {
+    public class VideoGenerationRequest : TeaModel {
         /// <summary>
         /// <para>The product input.</para>
         /// <para>This parameter is required.</para>
@@ -17,14 +16,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Input")]
         [Validation(Required=false)]
         public VideoGenerationRequestInput Input { get; set; }
-        public class VideoGenerationRequestInput : Darabonba.Model {
+        public class VideoGenerationRequestInput : TeaModel {
             /// <summary>
             /// <para>The asset binding list.</para>
             /// </summary>
             [NameInMap("AssetBindings")]
             [Validation(Required=false)]
             public List<VideoGenerationRequestInputAssetBindings> AssetBindings { get; set; }
-            public class VideoGenerationRequestInputAssetBindings : Darabonba.Model {
+            public class VideoGenerationRequestInputAssetBindings : TeaModel {
                 /// <summary>
                 /// <para>The asset index, such as 0, 1, 2, or 3, which must be consistent with the number of the image URL.</para>
                 /// 
@@ -105,7 +104,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Intent")]
         [Validation(Required=false)]
         public VideoGenerationRequestIntent Intent { get; set; }
-        public class VideoGenerationRequestIntent : Darabonba.Model {
+        public class VideoGenerationRequestIntent : TeaModel {
             /// <summary>
             /// <para>The delivery channel.</para>
             /// 
@@ -166,7 +165,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Output")]
         [Validation(Required=false)]
         public VideoGenerationRequestOutput Output { get; set; }
-        public class VideoGenerationRequestOutput : Darabonba.Model {
+        public class VideoGenerationRequestOutput : TeaModel {
             /// <summary>
             /// <para>The video duration varies by Intent.goal: auto_video supports 5 to 15 seconds, scripted_video supports 5 to 30 seconds, and camera_motion generates a fixed 10-second video and returns two 5-second videos.</para>
             /// <para>This parameter is required.</para>
@@ -204,4 +203,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

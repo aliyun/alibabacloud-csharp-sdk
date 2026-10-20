@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class MerchandisePriceTagDetectionResponseBody : Darabonba.Model {
+    public class MerchandisePriceTagDetectionResponseBody : TeaModel {
         /// <summary>
         /// <para>The error code.</para>
         /// 
@@ -26,21 +25,21 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public MerchandisePriceTagDetectionResponseBodyData Data { get; set; }
-        public class MerchandisePriceTagDetectionResponseBodyData : Darabonba.Model {
+        public class MerchandisePriceTagDetectionResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The detection and recognition result details.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public MerchandisePriceTagDetectionResponseBodyDataResult Result { get; set; }
-            public class MerchandisePriceTagDetectionResponseBodyDataResult : Darabonba.Model {
+            public class MerchandisePriceTagDetectionResponseBodyDataResult : TeaModel {
                 /// <summary>
                 /// <para>The localization information.</para>
                 /// </summary>
                 [NameInMap("Grounding")]
                 [Validation(Required=false)]
                 public MerchandisePriceTagDetectionResponseBodyDataResultGrounding Grounding { get; set; }
-                public class MerchandisePriceTagDetectionResponseBodyDataResultGrounding : Darabonba.Model {
+                public class MerchandisePriceTagDetectionResponseBodyDataResultGrounding : TeaModel {
                     /// <summary>
                     /// <para>The coverage.</para>
                     /// 
@@ -57,7 +56,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     [NameInMap("Regions")]
                     [Validation(Required=false)]
                     public List<MerchandisePriceTagDetectionResponseBodyDataResultGroundingRegions> Regions { get; set; }
-                    public class MerchandisePriceTagDetectionResponseBodyDataResultGroundingRegions : Darabonba.Model {
+                    public class MerchandisePriceTagDetectionResponseBodyDataResultGroundingRegions : TeaModel {
                         /// <summary>
                         /// <para>The bounding box coordinates.</para>
                         /// </summary>
@@ -95,14 +94,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 [NameInMap("PriceTags")]
                 [Validation(Required=false)]
                 public List<MerchandisePriceTagDetectionResponseBodyDataResultPriceTags> PriceTags { get; set; }
-                public class MerchandisePriceTagDetectionResponseBodyDataResultPriceTags : Darabonba.Model {
+                public class MerchandisePriceTagDetectionResponseBodyDataResultPriceTags : TeaModel {
                     /// <summary>
                     /// <para>The location.</para>
                     /// </summary>
                     [NameInMap("Location")]
                     [Validation(Required=false)]
                     public MerchandisePriceTagDetectionResponseBodyDataResultPriceTagsLocation Location { get; set; }
-                    public class MerchandisePriceTagDetectionResponseBodyDataResultPriceTagsLocation : Darabonba.Model {
+                    public class MerchandisePriceTagDetectionResponseBodyDataResultPriceTagsLocation : TeaModel {
                         /// <summary>
                         /// <para>The bottom boundary of the detection box.</para>
                         /// 
@@ -244,4 +243,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

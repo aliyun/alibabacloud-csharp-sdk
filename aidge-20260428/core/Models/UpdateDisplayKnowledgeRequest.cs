@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class UpdateDisplayKnowledgeRequest : Darabonba.Model {
+    public class UpdateDisplayKnowledgeRequest : TeaModel {
         /// <summary>
         /// <para>The knowledge base ID.</para>
         /// <para>This parameter is required.</para>
@@ -28,7 +27,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Records")]
         [Validation(Required=false)]
         public List<UpdateDisplayKnowledgeRequestRecords> Records { get; set; }
-        public class UpdateDisplayKnowledgeRequestRecords : Darabonba.Model {
+        public class UpdateDisplayKnowledgeRequestRecords : TeaModel {
             /// <summary>
             /// <para>The HTTP or HTTPS URL of the product image.</para>
             /// 
@@ -74,4 +73,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-

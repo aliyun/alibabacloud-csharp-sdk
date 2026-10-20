@@ -1,17 +1,16 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class ImageTranslationProAsyncResponseBody : Darabonba.Model {
+    public class ImageTranslationProAsyncResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. A value of success indicates that the task is submitted successfully.</para>
+        /// <para>The response code. A value of success indicates that the task is submitted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -26,9 +25,9 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ImageTranslationProAsyncResponseBodyData Data { get; set; }
-        public class ImageTranslationProAsyncResponseBodyData : Darabonba.Model {
+        public class ImageTranslationProAsyncResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the asynchronous task. It is used to query results and associate notifications. Do not use the example prefix as a business validation rule.</para>
+            /// <para>The ID of the asynchronous task. This ID is used to query results and associate notifications. Do not use the example prefix as a business validation rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TID_550e8400-e29b-41d4-a716-446655440000</para>
@@ -40,7 +39,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The call description. A successful call returns Success. If the call fails, read the actual error message.</para>
+        /// <para>The call description. A value of Success indicates a successful call. If the call fails, read the actual error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -50,7 +49,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the submission request. It is used for troubleshooting.</para>
+        /// <para>The ID of the submission request. This ID is used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</para>
@@ -72,4 +71,3 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
-
