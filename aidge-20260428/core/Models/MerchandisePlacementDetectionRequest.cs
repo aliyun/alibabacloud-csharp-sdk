@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class MerchandisePlacementDetectionRequest : TeaModel {
+    public class MerchandisePlacementDetectionRequest : Darabonba.Model {
         /// <summary>
         /// <para>Specify this parameter to use a custom API version. If you created a custom API during the trial phase, you can find the corresponding ApiId in the product console under Intelligent Inspection &gt; API Management &gt; My API.</para>
         /// 
@@ -63,3 +64,4 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
+

@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class SizeChartExtractShrinkRequest : TeaModel {
+    public class SizeChartExtractShrinkRequest : Darabonba.Model {
         /// <summary>
         /// <para>The list of column names (such as Size, Bust, and Length).</para>
         /// 
@@ -43,3 +44,4 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
+

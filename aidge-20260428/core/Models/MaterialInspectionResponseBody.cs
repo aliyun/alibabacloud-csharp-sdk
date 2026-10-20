@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class MaterialInspectionResponseBody : TeaModel {
+    public class MaterialInspectionResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The error code. This parameter is not returned if the call is successful.</para>
         /// 
@@ -25,14 +26,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public MaterialInspectionResponseBodyData Data { get; set; }
-        public class MaterialInspectionResponseBodyData : TeaModel {
+        public class MaterialInspectionResponseBodyData : Darabonba.Model {
             /// <summary>
             /// <para>The inspection result.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public MaterialInspectionResponseBodyDataResult Result { get; set; }
-            public class MaterialInspectionResponseBodyDataResult : TeaModel {
+            public class MaterialInspectionResponseBodyDataResult : Darabonba.Model {
                 /// <summary>
                 /// <para>The natural language summary, such as &quot;1 rule: 1 PASS, all inspection items are compliant.&quot;</para>
                 /// 
@@ -69,7 +70,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 [NameInMap("Steps")]
                 [Validation(Required=false)]
                 public List<MaterialInspectionResponseBodyDataResultSteps> Steps { get; set; }
-                public class MaterialInspectionResponseBodyDataResultSteps : TeaModel {
+                public class MaterialInspectionResponseBodyDataResultSteps : Darabonba.Model {
                     /// <summary>
                     /// <para>The determination result of the step. Valid values: PASS, FAIL, and UNABLE_TO_JUDGE.</para>
                     /// 
@@ -153,3 +154,4 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
+

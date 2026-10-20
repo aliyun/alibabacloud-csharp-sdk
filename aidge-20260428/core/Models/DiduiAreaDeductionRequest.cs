@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class DiduiAreaDeductionRequest : TeaModel {
+    public class DiduiAreaDeductionRequest : Darabonba.Model {
         /// <summary>
         /// <para>The list of products and their detection boxes.</para>
         /// <para>This parameter is required.</para>
@@ -16,7 +17,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Products")]
         [Validation(Required=false)]
         public List<DiduiAreaDeductionRequestProducts> Products { get; set; }
-        public class DiduiAreaDeductionRequestProducts : TeaModel {
+        public class DiduiAreaDeductionRequestProducts : Darabonba.Model {
             /// <summary>
             /// <para>The instance boxes for the current SKU. The coordinate range is 0 to 1000.</para>
             /// <para>This parameter is required.</para>
@@ -24,7 +25,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             [NameInMap("Boxes")]
             [Validation(Required=false)]
             public List<DiduiAreaDeductionRequestProductsBoxes> Boxes { get; set; }
-            public class DiduiAreaDeductionRequestProductsBoxes : TeaModel {
+            public class DiduiAreaDeductionRequestProductsBoxes : Darabonba.Model {
                 /// <summary>
                 /// <para>The bottom boundary of the detection box.</para>
                 /// <para>This parameter is required.</para>
@@ -118,3 +119,4 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
+

@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class TextTranslateShrinkRequest : TeaModel {
+    public class TextTranslateShrinkRequest : Darabonba.Model {
         /// <summary>
         /// <para>This field represents your identity and facilitates subsequent communication on various issues. If you are an Alibaba internal organization, specify a value based on your actual scenario, such as BU name-product or BU name-chat. If you are an external Alibaba partner, specify the full name of your company. This company name must be consistent with the company name used when you registered your Alibaba Cloud account.</para>
         /// 
@@ -86,3 +87,4 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
+

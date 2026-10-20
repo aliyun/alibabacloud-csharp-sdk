@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class EcomVideoRecreationShrinkRequest : TeaModel {
+    public class EcomVideoRecreationShrinkRequest : Darabonba.Model {
         /// <summary>
         /// <para>The input parameters for video variation generation.</para>
         /// <para>This parameter is required.</para>
@@ -27,3 +28,4 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
+

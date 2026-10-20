@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class TextTranslateResponseBody : TeaModel {
+    public class TextTranslateResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The response code. The value &quot;success&quot; is returned for successful calls.</para>
         /// 
@@ -25,14 +26,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public TextTranslateResponseBodyData Data { get; set; }
-        public class TextTranslateResponseBodyData : TeaModel {
+        public class TextTranslateResponseBodyData : Darabonba.Model {
             /// <summary>
             /// <para>The translation result list. Each element corresponds to a translation result for an entry in the input text list.</para>
             /// </summary>
             [NameInMap("Translations")]
             [Validation(Required=false)]
             public List<TextTranslateResponseBodyDataTranslations> Translations { get; set; }
-            public class TextTranslateResponseBodyDataTranslations : TeaModel {
+            public class TextTranslateResponseBodyDataTranslations : Darabonba.Model {
                 /// <summary>
                 /// <para>The number of characters in the source text.</para>
                 /// 
@@ -110,3 +111,4 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
+

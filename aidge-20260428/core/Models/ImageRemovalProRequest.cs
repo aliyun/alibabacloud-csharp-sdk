@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class ImageRemovalProRequest : TeaModel {
+    public class ImageRemovalProRequest : Darabonba.Model {
         /// <summary>
         /// <para>The call type. Valid values:</para>
         /// <list type="bullet">
@@ -38,3 +39,4 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
+

@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class ImageRecognitionShrinkRequest : TeaModel {
+    public class ImageRecognitionShrinkRequest : Darabonba.Model {
         /// <summary>
         /// <para>The URL of the image to recognize.</para>
         /// <para>This parameter is required.</para>
@@ -93,3 +94,4 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
+

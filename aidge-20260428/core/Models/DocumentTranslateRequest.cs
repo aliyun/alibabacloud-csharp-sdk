@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class DocumentTranslateRequest : TeaModel {
+    public class DocumentTranslateRequest : Darabonba.Model {
         /// <summary>
         /// <para>The type of the document. Valid values: PDF and word.<br>Supported capacity limits:  </para>
         /// <list type="bullet">
@@ -60,3 +61,4 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
+

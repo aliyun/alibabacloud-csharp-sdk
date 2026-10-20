@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class ImageRemoveRequest : TeaModel {
+    public class ImageRemoveRequest : Darabonba.Model {
         /// <summary>
         /// <para>The URL of the original image. The image must be in JPG, JPEG, PNG, BMP, or WEBP format, with a resolution between 256 × 256 and 3000 × 3000 pixels, and a file size of no more than 10 MB.</para>
         /// <para>This parameter is required.</para>
@@ -93,3 +94,4 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
+

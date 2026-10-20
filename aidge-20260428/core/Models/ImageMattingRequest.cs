@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class ImageMattingRequest : TeaModel {
+    public class ImageMattingRequest : Darabonba.Model {
         /// <summary>
         /// <para>Specifies the background type of the returned image. Valid values:</para>
         /// <list type="bullet">
@@ -68,3 +69,4 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
+

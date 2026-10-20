@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class MerchandisePlacementDetectionLiteResponseBody : TeaModel {
+    public class MerchandisePlacementDetectionLiteResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The error code.</para>
         /// 
@@ -25,21 +26,21 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public MerchandisePlacementDetectionLiteResponseBodyData Data { get; set; }
-        public class MerchandisePlacementDetectionLiteResponseBodyData : TeaModel {
+        public class MerchandisePlacementDetectionLiteResponseBodyData : Darabonba.Model {
             /// <summary>
             /// <para>The result.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public MerchandisePlacementDetectionLiteResponseBodyDataResult Result { get; set; }
-            public class MerchandisePlacementDetectionLiteResponseBodyDataResult : TeaModel {
+            public class MerchandisePlacementDetectionLiteResponseBodyDataResult : Darabonba.Model {
                 /// <summary>
                 /// <para>The supplementary element grounding results.</para>
                 /// </summary>
                 [NameInMap("Grounding")]
                 [Validation(Required=false)]
                 public MerchandisePlacementDetectionLiteResponseBodyDataResultGrounding Grounding { get; set; }
-                public class MerchandisePlacementDetectionLiteResponseBodyDataResultGrounding : TeaModel {
+                public class MerchandisePlacementDetectionLiteResponseBodyDataResultGrounding : Darabonba.Model {
                     /// <summary>
                     /// <para>The coverage status. Valid values:</para>
                     /// <list type="bullet">
@@ -61,7 +62,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     [NameInMap("Regions")]
                     [Validation(Required=false)]
                     public List<MerchandisePlacementDetectionLiteResponseBodyDataResultGroundingRegions> Regions { get; set; }
-                    public class MerchandisePlacementDetectionLiteResponseBodyDataResultGroundingRegions : TeaModel {
+                    public class MerchandisePlacementDetectionLiteResponseBodyDataResultGroundingRegions : Darabonba.Model {
                         /// <summary>
                         /// <para>The 2D bounding box in the format of [top-left x, top-left y, bottom-right x, bottom-right y]. The values range from 0 to 1000. The left coordinate is less than the right coordinate, and the top coordinate is less than the bottom coordinate.</para>
                         /// </summary>
@@ -99,14 +100,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 [NameInMap("Products")]
                 [Validation(Required=false)]
                 public List<MerchandisePlacementDetectionLiteResponseBodyDataResultProducts> Products { get; set; }
-                public class MerchandisePlacementDetectionLiteResponseBodyDataResultProducts : TeaModel {
+                public class MerchandisePlacementDetectionLiteResponseBodyDataResultProducts : Darabonba.Model {
                     /// <summary>
                     /// <para>The bounding boxes corresponding to the SKU.</para>
                     /// </summary>
                     [NameInMap("Boxes")]
                     [Validation(Required=false)]
                     public List<MerchandisePlacementDetectionLiteResponseBodyDataResultProductsBoxes> Boxes { get; set; }
-                    public class MerchandisePlacementDetectionLiteResponseBodyDataResultProductsBoxes : TeaModel {
+                    public class MerchandisePlacementDetectionLiteResponseBodyDataResultProductsBoxes : Darabonba.Model {
                         /// <summary>
                         /// <para>The bottom coordinate.</para>
                         /// 
@@ -222,3 +223,4 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
+

@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class QueryAsyncTaskResultResponseBody : TeaModel {
+    public class QueryAsyncTaskResultResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The error code. This parameter is not returned if the call is successful.</para>
         /// 
@@ -25,7 +26,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryAsyncTaskResultResponseBodyData Data { get; set; }
-        public class QueryAsyncTaskResultResponseBodyData : TeaModel {
+        public class QueryAsyncTaskResultResponseBodyData : Darabonba.Model {
             /// <summary>
             /// <para>The task result.</para>
             /// 
@@ -102,3 +103,4 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
+

@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class ImageTranslationStandardResponseBody : TeaModel {
+    public class ImageTranslationStandardResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The response code. A value of 200 indicates a successful call. For other response codes, refer to the error code information.</para>
         /// 
@@ -25,14 +26,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ImageTranslationStandardResponseBodyData Data { get; set; }
-        public class ImageTranslationStandardResponseBodyData : TeaModel {
+        public class ImageTranslationStandardResponseBodyData : Darabonba.Model {
             /// <summary>
             /// <para>The edit information.</para>
             /// </summary>
             [NameInMap("EditInfo")]
             [Validation(Required=false)]
             public ImageTranslationStandardResponseBodyDataEditInfo EditInfo { get; set; }
-            public class ImageTranslationStandardResponseBodyDataEditInfo : TeaModel {
+            public class ImageTranslationStandardResponseBodyDataEditInfo : Darabonba.Model {
                 /// <summary>
                 /// <para>The list of fonts used.</para>
                 /// 
@@ -49,7 +50,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 [NameInMap("GoodsRects")]
                 [Validation(Required=false)]
                 public ImageTranslationStandardResponseBodyDataEditInfoGoodsRects GoodsRects { get; set; }
-                public class ImageTranslationStandardResponseBodyDataEditInfoGoodsRects : TeaModel {
+                public class ImageTranslationStandardResponseBodyDataEditInfoGoodsRects : Darabonba.Model {
                     /// <summary>
                     /// <para>The rotation angle.</para>
                     /// </summary>
@@ -163,7 +164,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 [NameInMap("TextAreas")]
                 [Validation(Required=false)]
                 public List<ImageTranslationStandardResponseBodyDataEditInfoTextAreas> TextAreas { get; set; }
-                public class ImageTranslationStandardResponseBodyDataEditInfoTextAreas : TeaModel {
+                public class ImageTranslationStandardResponseBodyDataEditInfoTextAreas : Darabonba.Model {
                     /// <summary>
                     /// <para>The color.</para>
                     /// 
@@ -220,7 +221,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     [NameInMap("Texts")]
                     [Validation(Required=false)]
                     public List<ImageTranslationStandardResponseBodyDataEditInfoTextAreasTexts> Texts { get; set; }
-                    public class ImageTranslationStandardResponseBodyDataEditInfoTextAreasTexts : TeaModel {
+                    public class ImageTranslationStandardResponseBodyDataEditInfoTextAreasTexts : Darabonba.Model {
                         /// <summary>
                         /// <para>The color.</para>
                         /// 
@@ -257,7 +258,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                         [NameInMap("ImageRect")]
                         [Validation(Required=false)]
                         public ImageTranslationStandardResponseBodyDataEditInfoTextAreasTextsImageRect ImageRect { get; set; }
-                        public class ImageTranslationStandardResponseBodyDataEditInfoTextAreasTextsImageRect : TeaModel {
+                        public class ImageTranslationStandardResponseBodyDataEditInfoTextAreasTextsImageRect : Darabonba.Model {
                             /// <summary>
                             /// <para>The rotation angle.</para>
                             /// </summary>
@@ -321,7 +322,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                         [NameInMap("TextRect")]
                         [Validation(Required=false)]
                         public ImageTranslationStandardResponseBodyDataEditInfoTextAreasTextsTextRect TextRect { get; set; }
-                        public class ImageTranslationStandardResponseBodyDataEditInfoTextAreasTextsTextRect : TeaModel {
+                        public class ImageTranslationStandardResponseBodyDataEditInfoTextAreasTextsTextRect : Darabonba.Model {
                             /// <summary>
                             /// <para>The rotation angle.</para>
                             /// </summary>
@@ -460,3 +461,4 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
+

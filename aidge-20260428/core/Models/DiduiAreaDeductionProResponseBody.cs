@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class DiduiAreaDeductionProResponseBody : TeaModel {
+    public class DiduiAreaDeductionProResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The error code.</para>
         /// 
@@ -25,7 +26,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DiduiAreaDeductionProResponseBodyData Data { get; set; }
-        public class DiduiAreaDeductionProResponseBodyData : TeaModel {
+        public class DiduiAreaDeductionProResponseBodyData : Darabonba.Model {
             /// <summary>
             /// <para>The ID of the asynchronous task, which is used to call QueryAsyncTaskResult to query the task result.</para>
             /// 
@@ -71,3 +72,4 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
+

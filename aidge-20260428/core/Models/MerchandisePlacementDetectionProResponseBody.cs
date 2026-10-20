@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class MerchandisePlacementDetectionProResponseBody : TeaModel {
+    public class MerchandisePlacementDetectionProResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The error code.</para>
         /// 
@@ -25,7 +26,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public MerchandisePlacementDetectionProResponseBodyData Data { get; set; }
-        public class MerchandisePlacementDetectionProResponseBodyData : TeaModel {
+        public class MerchandisePlacementDetectionProResponseBodyData : Darabonba.Model {
             /// <summary>
             /// <para>The number of valid bounding boxes.</para>
             /// 
@@ -42,7 +43,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             [NameInMap("Data")]
             [Validation(Required=false)]
             public List<MerchandisePlacementDetectionProResponseBodyDataData> Data { get; set; }
-            public class MerchandisePlacementDetectionProResponseBodyDataData : TeaModel {
+            public class MerchandisePlacementDetectionProResponseBodyDataData : Darabonba.Model {
                 /// <summary>
                 /// <para>The normalized bounding box coordinates [x1,y1,x2,y2], with values in the range 0–1000.</para>
                 /// </summary>
@@ -117,3 +118,4 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
+

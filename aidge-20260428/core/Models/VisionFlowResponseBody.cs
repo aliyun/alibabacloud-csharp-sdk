@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class VisionFlowResponseBody : TeaModel {
+    public class VisionFlowResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The status code. The value &quot;success&quot; is returned for a successful call.</para>
         /// 
@@ -25,7 +26,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public VisionFlowResponseBodyData Data { get; set; }
-        public class VisionFlowResponseBodyData : TeaModel {
+        public class VisionFlowResponseBodyData : Darabonba.Model {
             /// <summary>
             /// <para>The asynchronous task ID, used to query processing results later through QueryAsyncTaskResult.</para>
             /// 
@@ -71,3 +72,4 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
+

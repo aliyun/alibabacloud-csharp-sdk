@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class SubmitProductMatchRequest : TeaModel {
+    public class SubmitProductMatchRequest : Darabonba.Model {
         /// <summary>
         /// <para>The product brand. If this value is not specified, the system attempts to extract the brand from the shop name.</para>
         /// 
@@ -86,3 +87,4 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
+

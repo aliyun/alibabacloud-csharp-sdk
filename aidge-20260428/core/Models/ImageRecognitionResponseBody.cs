@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class ImageRecognitionResponseBody : TeaModel {
+    public class ImageRecognitionResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The error code. This parameter is not returned if the call is successful.</para>
         /// 
@@ -25,7 +26,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ImageRecognitionResponseBodyData Data { get; set; }
-        public class ImageRecognitionResponseBodyData : TeaModel {
+        public class ImageRecognitionResponseBodyData : Darabonba.Model {
             /// <summary>
             /// <para>The border pixel information, returned as a comma-separated string.</para>
             /// 
@@ -198,3 +199,4 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
+

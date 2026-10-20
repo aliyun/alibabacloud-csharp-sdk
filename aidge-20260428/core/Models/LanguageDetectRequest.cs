@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class LanguageDetectRequest : TeaModel {
+    public class LanguageDetectRequest : Darabonba.Model {
         /// <summary>
         /// <para>The detection scenario. Default value: common. If you are identifying search phrases, set this parameter to query. If an incorrect value is specified or this parameter is left empty, the common general identification mode is used. Note: pass query in lowercase.</para>
         /// 
@@ -33,3 +34,4 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
+

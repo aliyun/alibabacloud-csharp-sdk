@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class TextCorrectRequest : TeaModel {
+    public class TextCorrectRequest : Darabonba.Model {
         /// <summary>
         /// <para>The source language code. This parameter is required. You can set this parameter to auto for automatic language detection. 14 languages are supported.</para>
         /// <para>This parameter is required.</para>
@@ -34,3 +35,4 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
+

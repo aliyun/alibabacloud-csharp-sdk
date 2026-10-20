@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class CategoryAttributeMatchResponseBody : TeaModel {
+    public class CategoryAttributeMatchResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The error code. This parameter is not returned for successful calls.</para>
         /// 
@@ -25,14 +26,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CategoryAttributeMatchResponseBodyData Data { get; set; }
-        public class CategoryAttributeMatchResponseBodyData : TeaModel {
+        public class CategoryAttributeMatchResponseBodyData : Darabonba.Model {
             /// <summary>
             /// <para>The list of attribute filling results.</para>
             /// </summary>
             [NameInMap("Attributes")]
             [Validation(Required=false)]
             public List<CategoryAttributeMatchResponseBodyDataAttributes> Attributes { get; set; }
-            public class CategoryAttributeMatchResponseBodyDataAttributes : TeaModel {
+            public class CategoryAttributeMatchResponseBodyDataAttributes : Darabonba.Model {
                 /// <summary>
                 /// <para>The attribute ID.</para>
                 /// 
@@ -185,7 +186,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             [NameInMap("UsageMap")]
             [Validation(Required=false)]
             public CategoryAttributeMatchResponseBodyDataUsageMap UsageMap { get; set; }
-            public class CategoryAttributeMatchResponseBodyDataUsageMap : TeaModel {
+            public class CategoryAttributeMatchResponseBodyDataUsageMap : Darabonba.Model {
                 /// <summary>
                 /// <para>The number of processing times.</para>
                 /// 
@@ -233,3 +234,4 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
+

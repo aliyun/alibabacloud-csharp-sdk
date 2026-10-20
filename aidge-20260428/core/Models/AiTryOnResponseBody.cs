@@ -1,16 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class AiTryOnResponseBody : TeaModel {
+    public class AiTryOnResponseBody : Darabonba.Model {
         /// <summary>
-        /// <para>The error code. This parameter is not returned if the call is successful.</para>
+        /// <para>The error code. This parameter is not returned when the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +21,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The result struct.</para>
+        /// <para>The returned result struct.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public AiTryOnResponseBodyData Data { get; set; }
-        public class AiTryOnResponseBodyData : TeaModel {
+        public class AiTryOnResponseBodyData : Darabonba.Model {
             /// <summary>
-            /// <para>The height of the result image, in pixels.</para>
+            /// <para>The height of the result image in pixels.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1360</para>
@@ -47,7 +48,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string ImageUrl { get; set; }
 
             /// <summary>
-            /// <para>The width of the result image, in pixels.</para>
+            /// <para>The width of the result image in pixels.</para>
             /// 
             /// <b>Example:</b>
             /// <para>768</para>
@@ -65,7 +66,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             [NameInMap("UsageMap")]
             [Validation(Required=false)]
             public AiTryOnResponseBodyDataUsageMap UsageMap { get; set; }
-            public class AiTryOnResponseBodyDataUsageMap : TeaModel {
+            public class AiTryOnResponseBodyDataUsageMap : Darabonba.Model {
                 /// <summary>
                 /// <para>The number of processed images.</para>
                 /// 
@@ -77,7 +78,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public long? ProcessedImageCount { get; set; }
 
                 /// <summary>
-                /// <para>The resolution of the processed image.</para>
+                /// <para>The resolution of the processed images.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1K</para>
@@ -91,7 +92,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. This parameter is not returned if the call is successful.</para>
+        /// <para>The error message. This parameter is not returned when the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -101,7 +102,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID. Used to uniquely identify a request.</para>
+        /// <para>The request ID, which is used to identify a unique request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</para>
@@ -111,7 +112,11 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values: true and false.</para>
+        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The call is successful.</description></item>
+        /// <item><description>false: The call fails.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
@@ -123,3 +128,4 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
+

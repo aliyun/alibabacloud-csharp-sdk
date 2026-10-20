@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class PetHealthAnalysisResponseBody : TeaModel {
+    public class PetHealthAnalysisResponseBody : Darabonba.Model {
         /// <summary>
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,7 +21,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public PetHealthAnalysisResponseBodyData Data { get; set; }
-        public class PetHealthAnalysisResponseBodyData : TeaModel {
+        public class PetHealthAnalysisResponseBodyData : Darabonba.Model {
             /// <summary>
             /// <b>Example:</b>
             /// <para>task_778fa8bd21804828a5d147050e30edac</para>
@@ -58,3 +59,4 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
+

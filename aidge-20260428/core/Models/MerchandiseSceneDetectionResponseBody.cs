@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class MerchandiseSceneDetectionResponseBody : TeaModel {
+    public class MerchandiseSceneDetectionResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The error code.</para>
         /// 
@@ -25,21 +26,21 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public MerchandiseSceneDetectionResponseBodyData Data { get; set; }
-        public class MerchandiseSceneDetectionResponseBodyData : TeaModel {
+        public class MerchandiseSceneDetectionResponseBodyData : Darabonba.Model {
             /// <summary>
             /// <para>The details of the display scene detection result.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public MerchandiseSceneDetectionResponseBodyDataResult Result { get; set; }
-            public class MerchandiseSceneDetectionResponseBodyDataResult : TeaModel {
+            public class MerchandiseSceneDetectionResponseBodyDataResult : Darabonba.Model {
                 /// <summary>
                 /// <para>The positioning information.</para>
                 /// </summary>
                 [NameInMap("Grounding")]
                 [Validation(Required=false)]
                 public MerchandiseSceneDetectionResponseBodyDataResultGrounding Grounding { get; set; }
-                public class MerchandiseSceneDetectionResponseBodyDataResultGrounding : TeaModel {
+                public class MerchandiseSceneDetectionResponseBodyDataResultGrounding : Darabonba.Model {
                     /// <summary>
                     /// <para>The coverage.</para>
                     /// 
@@ -56,7 +57,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     [NameInMap("Regions")]
                     [Validation(Required=false)]
                     public List<MerchandiseSceneDetectionResponseBodyDataResultGroundingRegions> Regions { get; set; }
-                    public class MerchandiseSceneDetectionResponseBodyDataResultGroundingRegions : TeaModel {
+                    public class MerchandiseSceneDetectionResponseBodyDataResultGroundingRegions : Darabonba.Model {
                         /// <summary>
                         /// <para>The 2D bounding box in the format of [top-left x, top-left y, bottom-right x, bottom-right y]. Valid values: 0 to 1000. The left coordinate must be less than the right coordinate, and the top coordinate must be less than the bottom coordinate.</para>
                         /// </summary>
@@ -94,7 +95,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 [NameInMap("Scenes")]
                 [Validation(Required=false)]
                 public List<MerchandiseSceneDetectionResponseBodyDataResultScenes> Scenes { get; set; }
-                public class MerchandiseSceneDetectionResponseBodyDataResultScenes : TeaModel {
+                public class MerchandiseSceneDetectionResponseBodyDataResultScenes : Darabonba.Model {
                     /// <summary>
                     /// <para>Optional. The area proportion.</para>
                     /// 
@@ -148,7 +149,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     [NameInMap("SceneLocation")]
                     [Validation(Required=false)]
                     public List<MerchandiseSceneDetectionResponseBodyDataResultScenesSceneLocation> SceneLocation { get; set; }
-                    public class MerchandiseSceneDetectionResponseBodyDataResultScenesSceneLocation : TeaModel {
+                    public class MerchandiseSceneDetectionResponseBodyDataResultScenesSceneLocation : Darabonba.Model {
                         /// <summary>
                         /// <para>The x-coordinate of the region point.</para>
                         /// 
@@ -250,3 +251,4 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
+

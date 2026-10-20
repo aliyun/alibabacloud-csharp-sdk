@@ -1,22 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
+using System.IO;
 using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using System.Threading.Tasks;
-
-using Tea;
-using Tea.Utils;
-
+using Darabonba.Utils;
+using _OpenApiClient = AlibabaCloud.OpenApiClient.Client;
+using AlibabaCloud.OpenApiClient.Models;
+using AlibabaCloud.OpenApiClient;
 using AlibabaCloud.SDK.Aidge20260428.Models;
+using Darabonba;
 
 namespace AlibabaCloud.SDK.Aidge20260428
 {
-    public class Client : AlibabaCloud.OpenApiClient.Client
+    public class Client : _OpenApiClient
     {
 
-        public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
+        public Client(Config config): base(config)
         {
             this._endpointRule = "regional";
             CheckConfig(config);
@@ -26,61 +27,201 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         public string GetEndpoint(string productId, string regionId, string endpointRule, string network, string suffix, Dictionary<string, string> endpointMap, string endpoint)
         {
-            if (!AlibabaCloud.TeaUtil.Common.Empty(endpoint))
+            if (!endpoint.IsNull())
             {
                 return endpoint;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(endpointMap) && !AlibabaCloud.TeaUtil.Common.Empty(endpointMap.Get(regionId)))
+            if (!endpointMap.IsNull() && !endpointMap.Get(regionId).IsNull())
             {
                 return endpointMap.Get(regionId);
             }
-            return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
+            return Utils.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Virtual Try-On is an AI algorithm-based image generation API service that replaces the clothing on a model with the garment provided by the user based on the input garment image and model image, while preserving the model\&quot;s other details and scene details without altering the model\&quot;s pose, facial features, or other attributes, and achieving realistic and well-fitted clothing placement. Users only need to provide the URL of the original product image to obtain a processed clean image.</para>
+        /// <para>Synchronously adds content to a display knowledge base in batches.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// AddDisplayKnowledgeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddDisplayKnowledgeResponse
+        /// </returns>
+        public AddDisplayKnowledgeResponse AddDisplayKnowledgeWithOptions(AddDisplayKnowledgeRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
+        {
+            tmpReq.Validate();
+            AddDisplayKnowledgeShrinkRequest request = new AddDisplayKnowledgeShrinkRequest();
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.Records.IsNull())
+            {
+                request.RecordsShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.Records, "Records", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!request.RagId.IsNull())
+            {
+                query["RagId"] = request.RagId;
+            }
+            if (!request.RecordsShrink.IsNull())
+            {
+                query["Records"] = request.RecordsShrink;
+            }
+            OpenApiRequest req = new OpenApiRequest
+            {
+                Query = Utils.Query(query),
+            };
+            Params params_ = new Params
+            {
+                Action = "AddDisplayKnowledge",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return Darabonba.Model.ToObject<AddDisplayKnowledgeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Synchronously adds content to a display knowledge base in batches.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// AddDisplayKnowledgeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddDisplayKnowledgeResponse
+        /// </returns>
+        public async Task<AddDisplayKnowledgeResponse> AddDisplayKnowledgeWithOptionsAsync(AddDisplayKnowledgeRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
+        {
+            tmpReq.Validate();
+            AddDisplayKnowledgeShrinkRequest request = new AddDisplayKnowledgeShrinkRequest();
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.Records.IsNull())
+            {
+                request.RecordsShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.Records, "Records", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!request.RagId.IsNull())
+            {
+                query["RagId"] = request.RagId;
+            }
+            if (!request.RecordsShrink.IsNull())
+            {
+                query["Records"] = request.RecordsShrink;
+            }
+            OpenApiRequest req = new OpenApiRequest
+            {
+                Query = Utils.Query(query),
+            };
+            Params params_ = new Params
+            {
+                Action = "AddDisplayKnowledge",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return Darabonba.Model.ToObject<AddDisplayKnowledgeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Synchronously adds content to a display knowledge base in batches.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddDisplayKnowledgeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddDisplayKnowledgeResponse
+        /// </returns>
+        public AddDisplayKnowledgeResponse AddDisplayKnowledge(AddDisplayKnowledgeRequest request)
+        {
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            return AddDisplayKnowledgeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Synchronously adds content to a display knowledge base in batches.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddDisplayKnowledgeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddDisplayKnowledgeResponse
+        /// </returns>
+        public async Task<AddDisplayKnowledgeResponse> AddDisplayKnowledgeAsync(AddDisplayKnowledgeRequest request)
+        {
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            return await AddDisplayKnowledgeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates virtual try-on images by applying a specified garment to a model image based on AI algorithms. The service preserves the model\&quot;s pose, facial features, and background details while ensuring a realistic and well-fitted appearance. You only need to provide the URLs of the original model and garment images to obtain the processed image.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Scenarios</h2>
         /// <list type="bullet">
-        /// <item><description><b>Virtual try-on for clothing products:</b>
-        /// Supports multiple clothing categories including tops, bottoms, jumpsuits, and dresses. After uploading a person image and a product image, the service generates natural and realistic try-on results that intuitively showcase how the clothing looks when worn.</description></item>
+        /// <item><description><b>Virtual try-on for clothing:</b>
+        /// Supports various clothing categories such as tops, bottoms, jumpsuits, and dresses. After you upload a model image and a garment image, the service generates natural and realistic try-on effects to visually demonstrate how the garment looks on the model.</description></item>
         /// <item><description><b>Virtual try-on for shoes and hats:</b>
-        /// Supports virtual try-on for shoes, hats, and similar products. The service intelligently matches the product position and proportion based on the person\&quot;s pose and body parts, producing coordinated and lifelike wearing effects.</description></item>
+        /// Supports virtual try-on for accessories such as shoes and hats. The service intelligently matches the position and proportion of the product based on the model\&quot;s pose and body parts to present a coordinated and realistic wearing effect.</description></item>
         /// <item><description><b>E-commerce product display and marketing:</b>
-        /// Helps merchants quickly generate model try-on images for different products, reducing the costs of traditional photography, outfit changes, and post-production, and improving the production efficiency of product images.  </description></item>
+        /// Helps merchants quickly generate model try-on images for different products. This reduces the costs of traditional photography, outfit changes, and post-production, and improves the production efficiency of product images.</description></item>
         /// <item><description><b>Online shopping experience optimization:</b>
-        /// Consumers can preview how products look when worn through virtual try-on, gaining a more intuitive understanding of the product\&quot;s style, coordination, and overall appearance, which assists purchase decisions and enhances the shopping experience.</description></item>
+        /// Allows consumers to preview the wearing effect of products through virtual try-on. This provides a more intuitive understanding of the style, matching, and overall effect of the product, which assists in purchase decisions and enhances the shopping experience.</description></item>
         /// </list>
         /// <h2>Features</h2>
         /// <list type="bullet">
-        /// <item><description><b>First, the user needs to provide a model image and a product image. The system uses the model image as the try-on subject and applies the clothing from the product image onto the model:</b><list type="bullet">
-        /// <item><description>a. Model image: The person image on which the virtual try-on is performed.</description></item>
-        /// <item><description>b. Product image: The clothing, shoes, or hat image to be applied onto the model.</description></item>
+        /// <item><description><b>Provide a model image and a product image. The system uses the model image as the try-on subject and applies the garment from the product image to the model:</b><list type="bullet">
+        /// <item><description>a. Model image: The image of the person who will wear the garment in the virtual try-on.</description></item>
+        /// <item><description>b. Product image: The image of the clothing, shoes, or hat to be worn by the model.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>Second, the user can select the corresponding product type based on the actual product. Supported types include tops, bottoms, jumpsuits, dresses, shoes, and hats:</b><list type="bullet">
-        /// <item><description>a. Specify product type: The user can directly specify the product type, and the system processes accordingly.</description></item>
-        /// <item><description>b. Automatic type recognition: If the user does not specify a product type, the system automatically identifies the product category from the product image and performs the virtual try-on based on the recognition result.</description></item>
+        /// <item><description><b>Select the corresponding product type based on the actual product. Supported types include tops, bottoms, jumpsuits, dresses, shoes, and hats:</b><list type="bullet">
+        /// <item><description>a. Specify product type: You can directly specify the type of the current product, and the system will process it accordingly.</description></item>
+        /// <item><description>b. Automatic type recognition: If you do not specify the product type, the system automatically recognizes the product category in the product image and performs the virtual try-on based on the recognition result.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>Finally, the system combines the model image, product image, and product type to generate a virtual try-on image that showcases how the product looks on the model:</b><list type="bullet">
-        /// <item><description>a. Preserve model details: The generation process does not alter the person\&quot;s appearance, hairstyle, pose, body shape, or other details in the original model image.</description></item>
-        /// <item><description>b. Maintain scene consistency: The background, composition, lighting, and overall visual effect of the original model image remain unchanged. Only the wearing area corresponding to the product is processed.</description></item>
-        /// <item><description>c. Generate try-on results: The product is naturally applied onto the model, conforming to the person\&quot;s pose and body structure, producing a coordinated and realistic virtual try-on image.</description></item>
+        /// <item><description><b>The system generates a virtual try-on image by combining the model image, product image, and product type to show the wearing effect of the product on the model:</b><list type="bullet">
+        /// <item><description>a. Preserve model details: The generation process does not alter the appearance, hairstyle, pose, body shape, or other details of the person in the original model image.</description></item>
+        /// <item><description>b. Maintain image consistency: The background, composition, lighting, and overall visual effect of the original model image remain unchanged. Only the wearing area corresponding to the product is processed.</description></item>
+        /// <item><description>c. Generate try-on effect: The product is naturally applied to the model, fitting the person\&quot;s pose and body structure to generate a coordinated and realistic virtual try-on image.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
-        /// <h2>Sample results</h2>
+        /// <h2>Examples</h2>
         /// <table>
         /// <thead>
         /// <tr>
         /// <th><b>Type</b></th>
         /// <th><b>Model image</b></th>
-        /// <th><b>Clothing image</b></th>
+        /// <th><b>Garment image</b></th>
         /// <th><b>Try-on result</b></th>
         /// </tr>
         /// </thead>
@@ -133,31 +274,31 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// AiTryOnResponse
         /// </returns>
-        public AiTryOnResponse AiTryOnWithOptions(AiTryOnRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public AiTryOnResponse AiTryOnWithOptions(AiTryOnRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClothImageUrl))
+            if (!request.ClothImageUrl.IsNull())
             {
                 query["ClothImageUrl"] = request.ClothImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClothType))
+            if (!request.ClothType.IsNull())
             {
                 query["ClothType"] = request.ClothType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelImageUrl))
+            if (!request.ModelImageUrl.IsNull())
             {
                 query["ModelImageUrl"] = request.ModelImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resolution))
+            if (!request.Resolution.IsNull())
             {
                 query["Resolution"] = request.Resolution;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "AiTryOn",
                 Version = "2026-04-28",
@@ -169,53 +310,53 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<AiTryOnResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<AiTryOnResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Virtual Try-On is an AI algorithm-based image generation API service that replaces the clothing on a model with the garment provided by the user based on the input garment image and model image, while preserving the model\&quot;s other details and scene details without altering the model\&quot;s pose, facial features, or other attributes, and achieving realistic and well-fitted clothing placement. Users only need to provide the URL of the original product image to obtain a processed clean image.</para>
+        /// <para>Generates virtual try-on images by applying a specified garment to a model image based on AI algorithms. The service preserves the model\&quot;s pose, facial features, and background details while ensuring a realistic and well-fitted appearance. You only need to provide the URLs of the original model and garment images to obtain the processed image.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Scenarios</h2>
         /// <list type="bullet">
-        /// <item><description><b>Virtual try-on for clothing products:</b>
-        /// Supports multiple clothing categories including tops, bottoms, jumpsuits, and dresses. After uploading a person image and a product image, the service generates natural and realistic try-on results that intuitively showcase how the clothing looks when worn.</description></item>
+        /// <item><description><b>Virtual try-on for clothing:</b>
+        /// Supports various clothing categories such as tops, bottoms, jumpsuits, and dresses. After you upload a model image and a garment image, the service generates natural and realistic try-on effects to visually demonstrate how the garment looks on the model.</description></item>
         /// <item><description><b>Virtual try-on for shoes and hats:</b>
-        /// Supports virtual try-on for shoes, hats, and similar products. The service intelligently matches the product position and proportion based on the person\&quot;s pose and body parts, producing coordinated and lifelike wearing effects.</description></item>
+        /// Supports virtual try-on for accessories such as shoes and hats. The service intelligently matches the position and proportion of the product based on the model\&quot;s pose and body parts to present a coordinated and realistic wearing effect.</description></item>
         /// <item><description><b>E-commerce product display and marketing:</b>
-        /// Helps merchants quickly generate model try-on images for different products, reducing the costs of traditional photography, outfit changes, and post-production, and improving the production efficiency of product images.  </description></item>
+        /// Helps merchants quickly generate model try-on images for different products. This reduces the costs of traditional photography, outfit changes, and post-production, and improves the production efficiency of product images.</description></item>
         /// <item><description><b>Online shopping experience optimization:</b>
-        /// Consumers can preview how products look when worn through virtual try-on, gaining a more intuitive understanding of the product\&quot;s style, coordination, and overall appearance, which assists purchase decisions and enhances the shopping experience.</description></item>
+        /// Allows consumers to preview the wearing effect of products through virtual try-on. This provides a more intuitive understanding of the style, matching, and overall effect of the product, which assists in purchase decisions and enhances the shopping experience.</description></item>
         /// </list>
         /// <h2>Features</h2>
         /// <list type="bullet">
-        /// <item><description><b>First, the user needs to provide a model image and a product image. The system uses the model image as the try-on subject and applies the clothing from the product image onto the model:</b><list type="bullet">
-        /// <item><description>a. Model image: The person image on which the virtual try-on is performed.</description></item>
-        /// <item><description>b. Product image: The clothing, shoes, or hat image to be applied onto the model.</description></item>
+        /// <item><description><b>Provide a model image and a product image. The system uses the model image as the try-on subject and applies the garment from the product image to the model:</b><list type="bullet">
+        /// <item><description>a. Model image: The image of the person who will wear the garment in the virtual try-on.</description></item>
+        /// <item><description>b. Product image: The image of the clothing, shoes, or hat to be worn by the model.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>Second, the user can select the corresponding product type based on the actual product. Supported types include tops, bottoms, jumpsuits, dresses, shoes, and hats:</b><list type="bullet">
-        /// <item><description>a. Specify product type: The user can directly specify the product type, and the system processes accordingly.</description></item>
-        /// <item><description>b. Automatic type recognition: If the user does not specify a product type, the system automatically identifies the product category from the product image and performs the virtual try-on based on the recognition result.</description></item>
+        /// <item><description><b>Select the corresponding product type based on the actual product. Supported types include tops, bottoms, jumpsuits, dresses, shoes, and hats:</b><list type="bullet">
+        /// <item><description>a. Specify product type: You can directly specify the type of the current product, and the system will process it accordingly.</description></item>
+        /// <item><description>b. Automatic type recognition: If you do not specify the product type, the system automatically recognizes the product category in the product image and performs the virtual try-on based on the recognition result.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>Finally, the system combines the model image, product image, and product type to generate a virtual try-on image that showcases how the product looks on the model:</b><list type="bullet">
-        /// <item><description>a. Preserve model details: The generation process does not alter the person\&quot;s appearance, hairstyle, pose, body shape, or other details in the original model image.</description></item>
-        /// <item><description>b. Maintain scene consistency: The background, composition, lighting, and overall visual effect of the original model image remain unchanged. Only the wearing area corresponding to the product is processed.</description></item>
-        /// <item><description>c. Generate try-on results: The product is naturally applied onto the model, conforming to the person\&quot;s pose and body structure, producing a coordinated and realistic virtual try-on image.</description></item>
+        /// <item><description><b>The system generates a virtual try-on image by combining the model image, product image, and product type to show the wearing effect of the product on the model:</b><list type="bullet">
+        /// <item><description>a. Preserve model details: The generation process does not alter the appearance, hairstyle, pose, body shape, or other details of the person in the original model image.</description></item>
+        /// <item><description>b. Maintain image consistency: The background, composition, lighting, and overall visual effect of the original model image remain unchanged. Only the wearing area corresponding to the product is processed.</description></item>
+        /// <item><description>c. Generate try-on effect: The product is naturally applied to the model, fitting the person\&quot;s pose and body structure to generate a coordinated and realistic virtual try-on image.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
-        /// <h2>Sample results</h2>
+        /// <h2>Examples</h2>
         /// <table>
         /// <thead>
         /// <tr>
         /// <th><b>Type</b></th>
         /// <th><b>Model image</b></th>
-        /// <th><b>Clothing image</b></th>
+        /// <th><b>Garment image</b></th>
         /// <th><b>Try-on result</b></th>
         /// </tr>
         /// </thead>
@@ -268,31 +409,31 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// AiTryOnResponse
         /// </returns>
-        public async Task<AiTryOnResponse> AiTryOnWithOptionsAsync(AiTryOnRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<AiTryOnResponse> AiTryOnWithOptionsAsync(AiTryOnRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClothImageUrl))
+            if (!request.ClothImageUrl.IsNull())
             {
                 query["ClothImageUrl"] = request.ClothImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClothType))
+            if (!request.ClothType.IsNull())
             {
                 query["ClothType"] = request.ClothType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelImageUrl))
+            if (!request.ModelImageUrl.IsNull())
             {
                 query["ModelImageUrl"] = request.ModelImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resolution))
+            if (!request.Resolution.IsNull())
             {
                 query["Resolution"] = request.Resolution;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "AiTryOn",
                 Version = "2026-04-28",
@@ -304,53 +445,53 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<AiTryOnResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<AiTryOnResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Virtual Try-On is an AI algorithm-based image generation API service that replaces the clothing on a model with the garment provided by the user based on the input garment image and model image, while preserving the model\&quot;s other details and scene details without altering the model\&quot;s pose, facial features, or other attributes, and achieving realistic and well-fitted clothing placement. Users only need to provide the URL of the original product image to obtain a processed clean image.</para>
+        /// <para>Generates virtual try-on images by applying a specified garment to a model image based on AI algorithms. The service preserves the model\&quot;s pose, facial features, and background details while ensuring a realistic and well-fitted appearance. You only need to provide the URLs of the original model and garment images to obtain the processed image.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Scenarios</h2>
         /// <list type="bullet">
-        /// <item><description><b>Virtual try-on for clothing products:</b>
-        /// Supports multiple clothing categories including tops, bottoms, jumpsuits, and dresses. After uploading a person image and a product image, the service generates natural and realistic try-on results that intuitively showcase how the clothing looks when worn.</description></item>
+        /// <item><description><b>Virtual try-on for clothing:</b>
+        /// Supports various clothing categories such as tops, bottoms, jumpsuits, and dresses. After you upload a model image and a garment image, the service generates natural and realistic try-on effects to visually demonstrate how the garment looks on the model.</description></item>
         /// <item><description><b>Virtual try-on for shoes and hats:</b>
-        /// Supports virtual try-on for shoes, hats, and similar products. The service intelligently matches the product position and proportion based on the person\&quot;s pose and body parts, producing coordinated and lifelike wearing effects.</description></item>
+        /// Supports virtual try-on for accessories such as shoes and hats. The service intelligently matches the position and proportion of the product based on the model\&quot;s pose and body parts to present a coordinated and realistic wearing effect.</description></item>
         /// <item><description><b>E-commerce product display and marketing:</b>
-        /// Helps merchants quickly generate model try-on images for different products, reducing the costs of traditional photography, outfit changes, and post-production, and improving the production efficiency of product images.  </description></item>
+        /// Helps merchants quickly generate model try-on images for different products. This reduces the costs of traditional photography, outfit changes, and post-production, and improves the production efficiency of product images.</description></item>
         /// <item><description><b>Online shopping experience optimization:</b>
-        /// Consumers can preview how products look when worn through virtual try-on, gaining a more intuitive understanding of the product\&quot;s style, coordination, and overall appearance, which assists purchase decisions and enhances the shopping experience.</description></item>
+        /// Allows consumers to preview the wearing effect of products through virtual try-on. This provides a more intuitive understanding of the style, matching, and overall effect of the product, which assists in purchase decisions and enhances the shopping experience.</description></item>
         /// </list>
         /// <h2>Features</h2>
         /// <list type="bullet">
-        /// <item><description><b>First, the user needs to provide a model image and a product image. The system uses the model image as the try-on subject and applies the clothing from the product image onto the model:</b><list type="bullet">
-        /// <item><description>a. Model image: The person image on which the virtual try-on is performed.</description></item>
-        /// <item><description>b. Product image: The clothing, shoes, or hat image to be applied onto the model.</description></item>
+        /// <item><description><b>Provide a model image and a product image. The system uses the model image as the try-on subject and applies the garment from the product image to the model:</b><list type="bullet">
+        /// <item><description>a. Model image: The image of the person who will wear the garment in the virtual try-on.</description></item>
+        /// <item><description>b. Product image: The image of the clothing, shoes, or hat to be worn by the model.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>Second, the user can select the corresponding product type based on the actual product. Supported types include tops, bottoms, jumpsuits, dresses, shoes, and hats:</b><list type="bullet">
-        /// <item><description>a. Specify product type: The user can directly specify the product type, and the system processes accordingly.</description></item>
-        /// <item><description>b. Automatic type recognition: If the user does not specify a product type, the system automatically identifies the product category from the product image and performs the virtual try-on based on the recognition result.</description></item>
+        /// <item><description><b>Select the corresponding product type based on the actual product. Supported types include tops, bottoms, jumpsuits, dresses, shoes, and hats:</b><list type="bullet">
+        /// <item><description>a. Specify product type: You can directly specify the type of the current product, and the system will process it accordingly.</description></item>
+        /// <item><description>b. Automatic type recognition: If you do not specify the product type, the system automatically recognizes the product category in the product image and performs the virtual try-on based on the recognition result.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>Finally, the system combines the model image, product image, and product type to generate a virtual try-on image that showcases how the product looks on the model:</b><list type="bullet">
-        /// <item><description>a. Preserve model details: The generation process does not alter the person\&quot;s appearance, hairstyle, pose, body shape, or other details in the original model image.</description></item>
-        /// <item><description>b. Maintain scene consistency: The background, composition, lighting, and overall visual effect of the original model image remain unchanged. Only the wearing area corresponding to the product is processed.</description></item>
-        /// <item><description>c. Generate try-on results: The product is naturally applied onto the model, conforming to the person\&quot;s pose and body structure, producing a coordinated and realistic virtual try-on image.</description></item>
+        /// <item><description><b>The system generates a virtual try-on image by combining the model image, product image, and product type to show the wearing effect of the product on the model:</b><list type="bullet">
+        /// <item><description>a. Preserve model details: The generation process does not alter the appearance, hairstyle, pose, body shape, or other details of the person in the original model image.</description></item>
+        /// <item><description>b. Maintain image consistency: The background, composition, lighting, and overall visual effect of the original model image remain unchanged. Only the wearing area corresponding to the product is processed.</description></item>
+        /// <item><description>c. Generate try-on effect: The product is naturally applied to the model, fitting the person\&quot;s pose and body structure to generate a coordinated and realistic virtual try-on image.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
-        /// <h2>Sample results</h2>
+        /// <h2>Examples</h2>
         /// <table>
         /// <thead>
         /// <tr>
         /// <th><b>Type</b></th>
         /// <th><b>Model image</b></th>
-        /// <th><b>Clothing image</b></th>
+        /// <th><b>Garment image</b></th>
         /// <th><b>Try-on result</b></th>
         /// </tr>
         /// </thead>
@@ -402,54 +543,54 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public AiTryOnResponse AiTryOn(AiTryOnRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return AiTryOnWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Virtual Try-On is an AI algorithm-based image generation API service that replaces the clothing on a model with the garment provided by the user based on the input garment image and model image, while preserving the model\&quot;s other details and scene details without altering the model\&quot;s pose, facial features, or other attributes, and achieving realistic and well-fitted clothing placement. Users only need to provide the URL of the original product image to obtain a processed clean image.</para>
+        /// <para>Generates virtual try-on images by applying a specified garment to a model image based on AI algorithms. The service preserves the model\&quot;s pose, facial features, and background details while ensuring a realistic and well-fitted appearance. You only need to provide the URLs of the original model and garment images to obtain the processed image.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Scenarios</h2>
         /// <list type="bullet">
-        /// <item><description><b>Virtual try-on for clothing products:</b>
-        /// Supports multiple clothing categories including tops, bottoms, jumpsuits, and dresses. After uploading a person image and a product image, the service generates natural and realistic try-on results that intuitively showcase how the clothing looks when worn.</description></item>
+        /// <item><description><b>Virtual try-on for clothing:</b>
+        /// Supports various clothing categories such as tops, bottoms, jumpsuits, and dresses. After you upload a model image and a garment image, the service generates natural and realistic try-on effects to visually demonstrate how the garment looks on the model.</description></item>
         /// <item><description><b>Virtual try-on for shoes and hats:</b>
-        /// Supports virtual try-on for shoes, hats, and similar products. The service intelligently matches the product position and proportion based on the person\&quot;s pose and body parts, producing coordinated and lifelike wearing effects.</description></item>
+        /// Supports virtual try-on for accessories such as shoes and hats. The service intelligently matches the position and proportion of the product based on the model\&quot;s pose and body parts to present a coordinated and realistic wearing effect.</description></item>
         /// <item><description><b>E-commerce product display and marketing:</b>
-        /// Helps merchants quickly generate model try-on images for different products, reducing the costs of traditional photography, outfit changes, and post-production, and improving the production efficiency of product images.  </description></item>
+        /// Helps merchants quickly generate model try-on images for different products. This reduces the costs of traditional photography, outfit changes, and post-production, and improves the production efficiency of product images.</description></item>
         /// <item><description><b>Online shopping experience optimization:</b>
-        /// Consumers can preview how products look when worn through virtual try-on, gaining a more intuitive understanding of the product\&quot;s style, coordination, and overall appearance, which assists purchase decisions and enhances the shopping experience.</description></item>
+        /// Allows consumers to preview the wearing effect of products through virtual try-on. This provides a more intuitive understanding of the style, matching, and overall effect of the product, which assists in purchase decisions and enhances the shopping experience.</description></item>
         /// </list>
         /// <h2>Features</h2>
         /// <list type="bullet">
-        /// <item><description><b>First, the user needs to provide a model image and a product image. The system uses the model image as the try-on subject and applies the clothing from the product image onto the model:</b><list type="bullet">
-        /// <item><description>a. Model image: The person image on which the virtual try-on is performed.</description></item>
-        /// <item><description>b. Product image: The clothing, shoes, or hat image to be applied onto the model.</description></item>
+        /// <item><description><b>Provide a model image and a product image. The system uses the model image as the try-on subject and applies the garment from the product image to the model:</b><list type="bullet">
+        /// <item><description>a. Model image: The image of the person who will wear the garment in the virtual try-on.</description></item>
+        /// <item><description>b. Product image: The image of the clothing, shoes, or hat to be worn by the model.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>Second, the user can select the corresponding product type based on the actual product. Supported types include tops, bottoms, jumpsuits, dresses, shoes, and hats:</b><list type="bullet">
-        /// <item><description>a. Specify product type: The user can directly specify the product type, and the system processes accordingly.</description></item>
-        /// <item><description>b. Automatic type recognition: If the user does not specify a product type, the system automatically identifies the product category from the product image and performs the virtual try-on based on the recognition result.</description></item>
+        /// <item><description><b>Select the corresponding product type based on the actual product. Supported types include tops, bottoms, jumpsuits, dresses, shoes, and hats:</b><list type="bullet">
+        /// <item><description>a. Specify product type: You can directly specify the type of the current product, and the system will process it accordingly.</description></item>
+        /// <item><description>b. Automatic type recognition: If you do not specify the product type, the system automatically recognizes the product category in the product image and performs the virtual try-on based on the recognition result.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>Finally, the system combines the model image, product image, and product type to generate a virtual try-on image that showcases how the product looks on the model:</b><list type="bullet">
-        /// <item><description>a. Preserve model details: The generation process does not alter the person\&quot;s appearance, hairstyle, pose, body shape, or other details in the original model image.</description></item>
-        /// <item><description>b. Maintain scene consistency: The background, composition, lighting, and overall visual effect of the original model image remain unchanged. Only the wearing area corresponding to the product is processed.</description></item>
-        /// <item><description>c. Generate try-on results: The product is naturally applied onto the model, conforming to the person\&quot;s pose and body structure, producing a coordinated and realistic virtual try-on image.</description></item>
+        /// <item><description><b>The system generates a virtual try-on image by combining the model image, product image, and product type to show the wearing effect of the product on the model:</b><list type="bullet">
+        /// <item><description>a. Preserve model details: The generation process does not alter the appearance, hairstyle, pose, body shape, or other details of the person in the original model image.</description></item>
+        /// <item><description>b. Maintain image consistency: The background, composition, lighting, and overall visual effect of the original model image remain unchanged. Only the wearing area corresponding to the product is processed.</description></item>
+        /// <item><description>c. Generate try-on effect: The product is naturally applied to the model, fitting the person\&quot;s pose and body structure to generate a coordinated and realistic virtual try-on image.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
-        /// <h2>Sample results</h2>
+        /// <h2>Examples</h2>
         /// <table>
         /// <thead>
         /// <tr>
         /// <th><b>Type</b></th>
         /// <th><b>Model image</b></th>
-        /// <th><b>Clothing image</b></th>
+        /// <th><b>Garment image</b></th>
         /// <th><b>Try-on result</b></th>
         /// </tr>
         /// </thead>
@@ -501,7 +642,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<AiTryOnResponse> AiTryOnAsync(AiTryOnRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await AiTryOnWithOptionsAsync(request, runtime);
         }
 
@@ -537,51 +678,51 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// AssetOptimizeLiteResponse
         /// </returns>
-        public AssetOptimizeLiteResponse AssetOptimizeLiteWithOptions(AssetOptimizeLiteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public AssetOptimizeLiteResponse AssetOptimizeLiteWithOptions(AssetOptimizeLiteRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
+            if (!request.Glossary.IsNull())
             {
                 query["Glossary"] = request.Glossary;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludingProductArea))
+            if (!request.IncludingProductArea.IsNull())
             {
                 query["IncludingProductArea"] = request.IncludingProductArea;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedTrans))
+            if (!request.NeedTrans.IsNull())
             {
                 query["NeedTrans"] = request.NeedTrans;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductUrl))
+            if (!request.ProductUrl.IsNull())
             {
                 query["ProductUrl"] = request.ProductUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            if (!request.SourceLanguage.IsNull())
             {
                 query["SourceLanguage"] = request.SourceLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourcePlatform))
+            if (!request.SourcePlatform.IsNull())
             {
                 query["SourcePlatform"] = request.SourcePlatform;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            if (!request.TargetLanguage.IsNull())
             {
                 query["TargetLanguage"] = request.TargetLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetPlatform))
+            if (!request.TargetPlatform.IsNull())
             {
                 query["TargetPlatform"] = request.TargetPlatform;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslatingBrandInTheProduct))
+            if (!request.TranslatingBrandInTheProduct.IsNull())
             {
                 query["TranslatingBrandInTheProduct"] = request.TranslatingBrandInTheProduct;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "AssetOptimizeLite",
                 Version = "2026-04-28",
@@ -593,7 +734,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<AssetOptimizeLiteResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<AssetOptimizeLiteResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -628,51 +769,51 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// AssetOptimizeLiteResponse
         /// </returns>
-        public async Task<AssetOptimizeLiteResponse> AssetOptimizeLiteWithOptionsAsync(AssetOptimizeLiteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<AssetOptimizeLiteResponse> AssetOptimizeLiteWithOptionsAsync(AssetOptimizeLiteRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
+            if (!request.Glossary.IsNull())
             {
                 query["Glossary"] = request.Glossary;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludingProductArea))
+            if (!request.IncludingProductArea.IsNull())
             {
                 query["IncludingProductArea"] = request.IncludingProductArea;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedTrans))
+            if (!request.NeedTrans.IsNull())
             {
                 query["NeedTrans"] = request.NeedTrans;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductUrl))
+            if (!request.ProductUrl.IsNull())
             {
                 query["ProductUrl"] = request.ProductUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            if (!request.SourceLanguage.IsNull())
             {
                 query["SourceLanguage"] = request.SourceLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourcePlatform))
+            if (!request.SourcePlatform.IsNull())
             {
                 query["SourcePlatform"] = request.SourcePlatform;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            if (!request.TargetLanguage.IsNull())
             {
                 query["TargetLanguage"] = request.TargetLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetPlatform))
+            if (!request.TargetPlatform.IsNull())
             {
                 query["TargetPlatform"] = request.TargetPlatform;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslatingBrandInTheProduct))
+            if (!request.TranslatingBrandInTheProduct.IsNull())
             {
                 query["TranslatingBrandInTheProduct"] = request.TranslatingBrandInTheProduct;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "AssetOptimizeLite",
                 Version = "2026-04-28",
@@ -684,7 +825,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<AssetOptimizeLiteResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<AssetOptimizeLiteResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -718,7 +859,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public AssetOptimizeLiteResponse AssetOptimizeLite(AssetOptimizeLiteRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return AssetOptimizeLiteWithOptions(request, runtime);
         }
 
@@ -753,7 +894,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<AssetOptimizeLiteResponse> AssetOptimizeLiteAsync(AssetOptimizeLiteRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await AssetOptimizeLiteWithOptionsAsync(request, runtime);
         }
 
@@ -789,69 +930,69 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// AssetOptimizeProResponse
         /// </returns>
-        public AssetOptimizeProResponse AssetOptimizeProWithOptions(AssetOptimizeProRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public AssetOptimizeProResponse AssetOptimizeProWithOptions(AssetOptimizeProRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            tmpReq.Validate();
             AssetOptimizeProShrinkRequest request = new AssetOptimizeProShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ColumnNameList))
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.ColumnNameList.IsNull())
             {
-                request.ColumnNameListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ColumnNameList, "ColumnNameList", "json");
+                request.ColumnNameListShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.ColumnNameList, "ColumnNameList", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColumnNameListShrink))
+            if (!request.ColumnNameListShrink.IsNull())
             {
                 query["ColumnNameList"] = request.ColumnNameListShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
+            if (!request.Glossary.IsNull())
             {
                 query["Glossary"] = request.Glossary;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludingProductArea))
+            if (!request.IncludingProductArea.IsNull())
             {
                 query["IncludingProductArea"] = request.IncludingProductArea;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LanguageModel))
+            if (!request.LanguageModel.IsNull())
             {
                 query["LanguageModel"] = request.LanguageModel;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedTrans))
+            if (!request.NeedTrans.IsNull())
             {
                 query["NeedTrans"] = request.NeedTrans;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductUrl))
+            if (!request.ProductUrl.IsNull())
             {
                 query["ProductUrl"] = request.ProductUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            if (!request.SourceLanguage.IsNull())
             {
                 query["SourceLanguage"] = request.SourceLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourcePlatform))
+            if (!request.SourcePlatform.IsNull())
             {
                 query["SourcePlatform"] = request.SourcePlatform;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            if (!request.TargetLanguage.IsNull())
             {
                 query["TargetLanguage"] = request.TargetLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetPlatform))
+            if (!request.TargetPlatform.IsNull())
             {
                 query["TargetPlatform"] = request.TargetPlatform;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Threshold))
+            if (!request.Threshold.IsNull())
             {
                 query["Threshold"] = request.Threshold;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslatingBrandInTheProduct))
+            if (!request.TranslatingBrandInTheProduct.IsNull())
             {
                 query["TranslatingBrandInTheProduct"] = request.TranslatingBrandInTheProduct;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "AssetOptimizePro",
                 Version = "2026-04-28",
@@ -863,7 +1004,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<AssetOptimizeProResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<AssetOptimizeProResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -898,69 +1039,69 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// AssetOptimizeProResponse
         /// </returns>
-        public async Task<AssetOptimizeProResponse> AssetOptimizeProWithOptionsAsync(AssetOptimizeProRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<AssetOptimizeProResponse> AssetOptimizeProWithOptionsAsync(AssetOptimizeProRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            tmpReq.Validate();
             AssetOptimizeProShrinkRequest request = new AssetOptimizeProShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ColumnNameList))
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.ColumnNameList.IsNull())
             {
-                request.ColumnNameListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ColumnNameList, "ColumnNameList", "json");
+                request.ColumnNameListShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.ColumnNameList, "ColumnNameList", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColumnNameListShrink))
+            if (!request.ColumnNameListShrink.IsNull())
             {
                 query["ColumnNameList"] = request.ColumnNameListShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
+            if (!request.Glossary.IsNull())
             {
                 query["Glossary"] = request.Glossary;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludingProductArea))
+            if (!request.IncludingProductArea.IsNull())
             {
                 query["IncludingProductArea"] = request.IncludingProductArea;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LanguageModel))
+            if (!request.LanguageModel.IsNull())
             {
                 query["LanguageModel"] = request.LanguageModel;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedTrans))
+            if (!request.NeedTrans.IsNull())
             {
                 query["NeedTrans"] = request.NeedTrans;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductUrl))
+            if (!request.ProductUrl.IsNull())
             {
                 query["ProductUrl"] = request.ProductUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            if (!request.SourceLanguage.IsNull())
             {
                 query["SourceLanguage"] = request.SourceLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourcePlatform))
+            if (!request.SourcePlatform.IsNull())
             {
                 query["SourcePlatform"] = request.SourcePlatform;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            if (!request.TargetLanguage.IsNull())
             {
                 query["TargetLanguage"] = request.TargetLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetPlatform))
+            if (!request.TargetPlatform.IsNull())
             {
                 query["TargetPlatform"] = request.TargetPlatform;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Threshold))
+            if (!request.Threshold.IsNull())
             {
                 query["Threshold"] = request.Threshold;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslatingBrandInTheProduct))
+            if (!request.TranslatingBrandInTheProduct.IsNull())
             {
                 query["TranslatingBrandInTheProduct"] = request.TranslatingBrandInTheProduct;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "AssetOptimizePro",
                 Version = "2026-04-28",
@@ -972,7 +1113,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<AssetOptimizeProResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<AssetOptimizeProResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1006,7 +1147,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public AssetOptimizeProResponse AssetOptimizePro(AssetOptimizeProRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return AssetOptimizeProWithOptions(request, runtime);
         }
 
@@ -1041,7 +1182,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<AssetOptimizeProResponse> AssetOptimizeProAsync(AssetOptimizeProRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await AssetOptimizeProWithOptionsAsync(request, runtime);
         }
 
@@ -1270,53 +1411,53 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// CategoryAttributeMatchResponse
         /// </returns>
-        public CategoryAttributeMatchResponse CategoryAttributeMatchWithOptions(CategoryAttributeMatchRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CategoryAttributeMatchResponse CategoryAttributeMatchWithOptions(CategoryAttributeMatchRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            tmpReq.Validate();
             CategoryAttributeMatchShrinkRequest request = new CategoryAttributeMatchShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ImageUrl))
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.ImageUrl.IsNull())
             {
-                request.ImageUrlShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ImageUrl, "ImageUrl", "json");
+                request.ImageUrlShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.ImageUrl, "ImageUrl", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            if (!request.Description.IsNull())
             {
                 body["Description"] = request.Description;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrlShrink))
+            if (!request.ImageUrlShrink.IsNull())
             {
                 body["ImageUrl"] = request.ImageUrlShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItemSpec))
+            if (!request.ItemSpec.IsNull())
             {
                 body["ItemSpec"] = request.ItemSpec;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sku))
+            if (!request.Sku.IsNull())
             {
                 body["Sku"] = request.Sku;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCategory))
+            if (!request.SourceCategory.IsNull())
             {
                 body["SourceCategory"] = request.SourceCategory;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourcePlatform))
+            if (!request.SourcePlatform.IsNull())
             {
                 body["SourcePlatform"] = request.SourcePlatform;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetPlatform))
+            if (!request.TargetPlatform.IsNull())
             {
                 body["TargetPlatform"] = request.TargetPlatform;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            if (!request.Title.IsNull())
             {
                 body["Title"] = request.Title;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "CategoryAttributeMatch",
                 Version = "2026-04-28",
@@ -1328,7 +1469,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CategoryAttributeMatchResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<CategoryAttributeMatchResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1556,53 +1697,53 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// CategoryAttributeMatchResponse
         /// </returns>
-        public async Task<CategoryAttributeMatchResponse> CategoryAttributeMatchWithOptionsAsync(CategoryAttributeMatchRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CategoryAttributeMatchResponse> CategoryAttributeMatchWithOptionsAsync(CategoryAttributeMatchRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            tmpReq.Validate();
             CategoryAttributeMatchShrinkRequest request = new CategoryAttributeMatchShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ImageUrl))
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.ImageUrl.IsNull())
             {
-                request.ImageUrlShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ImageUrl, "ImageUrl", "json");
+                request.ImageUrlShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.ImageUrl, "ImageUrl", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            if (!request.Description.IsNull())
             {
                 body["Description"] = request.Description;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrlShrink))
+            if (!request.ImageUrlShrink.IsNull())
             {
                 body["ImageUrl"] = request.ImageUrlShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItemSpec))
+            if (!request.ItemSpec.IsNull())
             {
                 body["ItemSpec"] = request.ItemSpec;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sku))
+            if (!request.Sku.IsNull())
             {
                 body["Sku"] = request.Sku;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCategory))
+            if (!request.SourceCategory.IsNull())
             {
                 body["SourceCategory"] = request.SourceCategory;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourcePlatform))
+            if (!request.SourcePlatform.IsNull())
             {
                 body["SourcePlatform"] = request.SourcePlatform;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetPlatform))
+            if (!request.TargetPlatform.IsNull())
             {
                 body["TargetPlatform"] = request.TargetPlatform;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            if (!request.Title.IsNull())
             {
                 body["Title"] = request.Title;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "CategoryAttributeMatch",
                 Version = "2026-04-28",
@@ -1614,7 +1755,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CategoryAttributeMatchResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<CategoryAttributeMatchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1841,7 +1982,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public CategoryAttributeMatchResponse CategoryAttributeMatch(CategoryAttributeMatchRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return CategoryAttributeMatchWithOptions(request, runtime);
         }
 
@@ -2069,7 +2210,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<CategoryAttributeMatchResponse> CategoryAttributeMatchAsync(CategoryAttributeMatchRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await CategoryAttributeMatchWithOptionsAsync(request, runtime);
         }
 
@@ -2189,43 +2330,43 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// CategoryMatchResponse
         /// </returns>
-        public CategoryMatchResponse CategoryMatchWithOptions(CategoryMatchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CategoryMatchResponse CategoryMatchWithOptions(CategoryMatchRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            if (!request.Description.IsNull())
             {
                 query["Description"] = request.Description;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItemSpec))
+            if (!request.ItemSpec.IsNull())
             {
                 query["ItemSpec"] = request.ItemSpec;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sku))
+            if (!request.Sku.IsNull())
             {
                 query["Sku"] = request.Sku;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCategory))
+            if (!request.SourceCategory.IsNull())
             {
                 query["SourceCategory"] = request.SourceCategory;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourcePlatform))
+            if (!request.SourcePlatform.IsNull())
             {
                 query["SourcePlatform"] = request.SourcePlatform;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetPlatform))
+            if (!request.TargetPlatform.IsNull())
             {
                 query["TargetPlatform"] = request.TargetPlatform;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            if (!request.Title.IsNull())
             {
                 query["Title"] = request.Title;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "CategoryMatch",
                 Version = "2026-04-28",
@@ -2237,7 +2378,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CategoryMatchResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<CategoryMatchResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -2356,43 +2497,43 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// CategoryMatchResponse
         /// </returns>
-        public async Task<CategoryMatchResponse> CategoryMatchWithOptionsAsync(CategoryMatchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CategoryMatchResponse> CategoryMatchWithOptionsAsync(CategoryMatchRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            if (!request.Description.IsNull())
             {
                 query["Description"] = request.Description;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItemSpec))
+            if (!request.ItemSpec.IsNull())
             {
                 query["ItemSpec"] = request.ItemSpec;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sku))
+            if (!request.Sku.IsNull())
             {
                 query["Sku"] = request.Sku;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCategory))
+            if (!request.SourceCategory.IsNull())
             {
                 query["SourceCategory"] = request.SourceCategory;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourcePlatform))
+            if (!request.SourcePlatform.IsNull())
             {
                 query["SourcePlatform"] = request.SourcePlatform;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetPlatform))
+            if (!request.TargetPlatform.IsNull())
             {
                 query["TargetPlatform"] = request.TargetPlatform;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            if (!request.Title.IsNull())
             {
                 query["Title"] = request.Title;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "CategoryMatch",
                 Version = "2026-04-28",
@@ -2404,7 +2545,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<CategoryMatchResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<CategoryMatchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -2522,7 +2663,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public CategoryMatchResponse CategoryMatch(CategoryMatchRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return CategoryMatchWithOptions(request, runtime);
         }
 
@@ -2641,72 +2782,50 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<CategoryMatchResponse> CategoryMatchAsync(CategoryMatchRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await CategoryMatchWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calculates the edge lengths and floor area of a floor display based on the floor display image and product detection boxes.</para>
+        /// <para>Deletes display knowledge base content in batches synchronously.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h2>Usage notes</h2>
-        /// <para><b>Before you use this operation, make sure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of the floor display area inference service.</b></para>
-        /// <list type="bullet">
-        /// <item><description>This operation infers the actual dimensions (lengths of two edges) and floor area of a floor display based on the provided overall floor display image, SKU knowledge base, and product location information in the image.</description></item>
-        /// <item><description>Make sure that the knowledge base corresponding to the specified <c>RagId</c> belongs to the caller and is in the active (<c>AVAILABLE</c>) state.</description></item>
-        /// <item><description>The <c>Products</c> array must contain at least one product item, and each product item must have at least one bounding box defined in <c>Boxes</c>.</description></item>
-        /// <item><description>All coordinate values are represented in a normalized coordinate system ranging from 0 to 1000. Make sure that the input satisfies the relationships <c>Left &lt; Right</c> and <c>Top &lt; Bottom</c>.</description></item>
-        /// <item><description>Set a reasonable timeout period when you call this operation (300 seconds or less recommended) to avoid failures caused by network latency or high processing complexity.</description></item>
-        /// <item><description>For calls in a production environment, use the POP Action method. The internal REST address is intended for integration testing during the development phase.</description></item>
-        /// </list>
-        /// </description>
-        /// 
         /// <param name="tmpReq">
-        /// DiduiAreaDeductionRequest
+        /// DeleteDisplayKnowledgeRequest
         /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
         /// 
         /// <returns>
-        /// DiduiAreaDeductionResponse
+        /// DeleteDisplayKnowledgeResponse
         /// </returns>
-        public DiduiAreaDeductionResponse DiduiAreaDeductionWithOptions(DiduiAreaDeductionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteDisplayKnowledgeResponse DeleteDisplayKnowledgeWithOptions(DeleteDisplayKnowledgeRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            DiduiAreaDeductionShrinkRequest request = new DiduiAreaDeductionShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Products))
+            tmpReq.Validate();
+            DeleteDisplayKnowledgeShrinkRequest request = new DeleteDisplayKnowledgeShrinkRequest();
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.RecordIds.IsNull())
             {
-                request.ProductsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Products, "Products", "json");
+                request.RecordIdsShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.RecordIds, "RecordIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductsShrink))
-            {
-                query["Products"] = request.ProductsShrink;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RagId))
+            if (!request.RagId.IsNull())
             {
                 query["RagId"] = request.RagId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReqId))
+            if (!request.RecordIdsShrink.IsNull())
             {
-                query["ReqId"] = request.ReqId;
+                query["RecordIds"] = request.RecordIdsShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetImageUrl))
+            OpenApiRequest req = new OpenApiRequest
             {
-                query["TargetImageUrl"] = request.TargetImageUrl;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
-                Action = "DiduiAreaDeduction",
+                Action = "DeleteDisplayKnowledge",
                 Version = "2026-04-28",
                 Protocol = "HTTPS",
                 Pathname = "/",
@@ -2716,7 +2835,95 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DiduiAreaDeductionResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<DeleteDisplayKnowledgeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes display knowledge base content in batches synchronously.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteDisplayKnowledgeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDisplayKnowledgeResponse
+        /// </returns>
+        public async Task<DeleteDisplayKnowledgeResponse> DeleteDisplayKnowledgeWithOptionsAsync(DeleteDisplayKnowledgeRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
+        {
+            tmpReq.Validate();
+            DeleteDisplayKnowledgeShrinkRequest request = new DeleteDisplayKnowledgeShrinkRequest();
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.RecordIds.IsNull())
+            {
+                request.RecordIdsShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.RecordIds, "RecordIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!request.RagId.IsNull())
+            {
+                query["RagId"] = request.RagId;
+            }
+            if (!request.RecordIdsShrink.IsNull())
+            {
+                query["RecordIds"] = request.RecordIdsShrink;
+            }
+            OpenApiRequest req = new OpenApiRequest
+            {
+                Query = Utils.Query(query),
+            };
+            Params params_ = new Params
+            {
+                Action = "DeleteDisplayKnowledge",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return Darabonba.Model.ToObject<DeleteDisplayKnowledgeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes display knowledge base content in batches synchronously.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDisplayKnowledgeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDisplayKnowledgeResponse
+        /// </returns>
+        public DeleteDisplayKnowledgeResponse DeleteDisplayKnowledge(DeleteDisplayKnowledgeRequest request)
+        {
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            return DeleteDisplayKnowledgeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes display knowledge base content in batches synchronously.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDisplayKnowledgeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDisplayKnowledgeResponse
+        /// </returns>
+        public async Task<DeleteDisplayKnowledgeResponse> DeleteDisplayKnowledgeAsync(DeleteDisplayKnowledgeRequest request)
+        {
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            return await DeleteDisplayKnowledgeWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2748,37 +2955,37 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// DiduiAreaDeductionResponse
         /// </returns>
-        public async Task<DiduiAreaDeductionResponse> DiduiAreaDeductionWithOptionsAsync(DiduiAreaDeductionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DiduiAreaDeductionResponse DiduiAreaDeductionWithOptions(DiduiAreaDeductionRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            tmpReq.Validate();
             DiduiAreaDeductionShrinkRequest request = new DiduiAreaDeductionShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Products))
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.Products.IsNull())
             {
-                request.ProductsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Products, "Products", "json");
+                request.ProductsShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.Products, "Products", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductsShrink))
+            if (!request.ProductsShrink.IsNull())
             {
                 query["Products"] = request.ProductsShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RagId))
+            if (!request.RagId.IsNull())
             {
                 query["RagId"] = request.RagId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReqId))
+            if (!request.ReqId.IsNull())
             {
                 query["ReqId"] = request.ReqId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetImageUrl))
+            if (!request.TargetImageUrl.IsNull())
             {
                 query["TargetImageUrl"] = request.TargetImageUrl;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "DiduiAreaDeduction",
                 Version = "2026-04-28",
@@ -2790,7 +2997,81 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DiduiAreaDeductionResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<DiduiAreaDeductionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calculates the edge lengths and floor area of a floor display based on the floor display image and product detection boxes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage notes</h2>
+        /// <para><b>Before you use this operation, make sure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of the floor display area inference service.</b></para>
+        /// <list type="bullet">
+        /// <item><description>This operation infers the actual dimensions (lengths of two edges) and floor area of a floor display based on the provided overall floor display image, SKU knowledge base, and product location information in the image.</description></item>
+        /// <item><description>Make sure that the knowledge base corresponding to the specified <c>RagId</c> belongs to the caller and is in the active (<c>AVAILABLE</c>) state.</description></item>
+        /// <item><description>The <c>Products</c> array must contain at least one product item, and each product item must have at least one bounding box defined in <c>Boxes</c>.</description></item>
+        /// <item><description>All coordinate values are represented in a normalized coordinate system ranging from 0 to 1000. Make sure that the input satisfies the relationships <c>Left &lt; Right</c> and <c>Top &lt; Bottom</c>.</description></item>
+        /// <item><description>Set a reasonable timeout period when you call this operation (300 seconds or less recommended) to avoid failures caused by network latency or high processing complexity.</description></item>
+        /// <item><description>For calls in a production environment, use the POP Action method. The internal REST address is intended for integration testing during the development phase.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DiduiAreaDeductionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DiduiAreaDeductionResponse
+        /// </returns>
+        public async Task<DiduiAreaDeductionResponse> DiduiAreaDeductionWithOptionsAsync(DiduiAreaDeductionRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
+        {
+            tmpReq.Validate();
+            DiduiAreaDeductionShrinkRequest request = new DiduiAreaDeductionShrinkRequest();
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.Products.IsNull())
+            {
+                request.ProductsShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.Products, "Products", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!request.ProductsShrink.IsNull())
+            {
+                query["Products"] = request.ProductsShrink;
+            }
+            if (!request.RagId.IsNull())
+            {
+                query["RagId"] = request.RagId;
+            }
+            if (!request.ReqId.IsNull())
+            {
+                query["ReqId"] = request.ReqId;
+            }
+            if (!request.TargetImageUrl.IsNull())
+            {
+                query["TargetImageUrl"] = request.TargetImageUrl;
+            }
+            OpenApiRequest req = new OpenApiRequest
+            {
+                Query = Utils.Query(query),
+            };
+            Params params_ = new Params
+            {
+                Action = "DiduiAreaDeduction",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return Darabonba.Model.ToObject<DiduiAreaDeductionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -2821,7 +3102,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public DiduiAreaDeductionResponse DiduiAreaDeduction(DiduiAreaDeductionRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return DiduiAreaDeductionWithOptions(request, runtime);
         }
 
@@ -2853,7 +3134,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<DiduiAreaDeductionResponse> DiduiAreaDeductionAsync(DiduiAreaDeductionRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await DiduiAreaDeductionWithOptionsAsync(request, runtime);
         }
 
@@ -2887,23 +3168,23 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// DiduiAreaDeductionProResponse
         /// </returns>
-        public DiduiAreaDeductionProResponse DiduiAreaDeductionProWithOptions(DiduiAreaDeductionProRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DiduiAreaDeductionProResponse DiduiAreaDeductionProWithOptions(DiduiAreaDeductionProRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RagId))
+            if (!request.RagId.IsNull())
             {
                 query["RagId"] = request.RagId;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "DiduiAreaDeductionPro",
                 Version = "2026-04-28",
@@ -2915,7 +3196,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DiduiAreaDeductionProResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<DiduiAreaDeductionProResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -2948,23 +3229,23 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// DiduiAreaDeductionProResponse
         /// </returns>
-        public async Task<DiduiAreaDeductionProResponse> DiduiAreaDeductionProWithOptionsAsync(DiduiAreaDeductionProRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DiduiAreaDeductionProResponse> DiduiAreaDeductionProWithOptionsAsync(DiduiAreaDeductionProRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RagId))
+            if (!request.RagId.IsNull())
             {
                 query["RagId"] = request.RagId;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "DiduiAreaDeductionPro",
                 Version = "2026-04-28",
@@ -2976,7 +3257,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DiduiAreaDeductionProResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<DiduiAreaDeductionProResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -3008,7 +3289,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public DiduiAreaDeductionProResponse DiduiAreaDeductionPro(DiduiAreaDeductionProRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return DiduiAreaDeductionProWithOptions(request, runtime);
         }
 
@@ -3041,7 +3322,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<DiduiAreaDeductionProResponse> DiduiAreaDeductionProAsync(DiduiAreaDeductionProRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await DiduiAreaDeductionProWithOptionsAsync(request, runtime);
         }
 
@@ -3085,31 +3366,31 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// DocumentTranslateResponse
         /// </returns>
-        public DocumentTranslateResponse DocumentTranslateWithOptions(DocumentTranslateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DocumentTranslateResponse DocumentTranslateWithOptions(DocumentTranslateRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileType))
+            if (!request.FileType.IsNull())
             {
                 query["FileType"] = request.FileType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
+            if (!request.Glossary.IsNull())
             {
                 query["Glossary"] = request.Glossary;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            if (!request.TargetLanguage.IsNull())
             {
                 query["TargetLanguage"] = request.TargetLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            if (!request.Url.IsNull())
             {
                 query["Url"] = request.Url;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "DocumentTranslate",
                 Version = "2026-04-28",
@@ -3121,7 +3402,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DocumentTranslateResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<DocumentTranslateResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -3164,31 +3445,31 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// DocumentTranslateResponse
         /// </returns>
-        public async Task<DocumentTranslateResponse> DocumentTranslateWithOptionsAsync(DocumentTranslateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DocumentTranslateResponse> DocumentTranslateWithOptionsAsync(DocumentTranslateRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileType))
+            if (!request.FileType.IsNull())
             {
                 query["FileType"] = request.FileType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
+            if (!request.Glossary.IsNull())
             {
                 query["Glossary"] = request.Glossary;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            if (!request.TargetLanguage.IsNull())
             {
                 query["TargetLanguage"] = request.TargetLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            if (!request.Url.IsNull())
             {
                 query["Url"] = request.Url;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "DocumentTranslate",
                 Version = "2026-04-28",
@@ -3200,7 +3481,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<DocumentTranslateResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<DocumentTranslateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -3242,7 +3523,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public DocumentTranslateResponse DocumentTranslate(DocumentTranslateRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return DocumentTranslateWithOptions(request, runtime);
         }
 
@@ -3285,7 +3566,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<DocumentTranslateResponse> DocumentTranslateAsync(DocumentTranslateRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await DocumentTranslateWithOptionsAsync(request, runtime);
         }
 
@@ -3353,33 +3634,33 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// EcomVideoRecreationResponse
         /// </returns>
-        public EcomVideoRecreationResponse EcomVideoRecreationWithOptions(EcomVideoRecreationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public EcomVideoRecreationResponse EcomVideoRecreationWithOptions(EcomVideoRecreationRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            tmpReq.Validate();
             EcomVideoRecreationShrinkRequest request = new EcomVideoRecreationShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Input))
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.Input.IsNull())
             {
-                request.InputShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Input, "Input", "json");
+                request.InputShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.Input, "Input", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Output))
+            if (!tmpReq.Output.IsNull())
             {
-                request.OutputShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Output, "Output", "json");
+                request.OutputShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.Output, "Output", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputShrink))
+            if (!request.InputShrink.IsNull())
             {
                 query["Input"] = request.InputShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputShrink))
+            if (!request.OutputShrink.IsNull())
             {
                 query["Output"] = request.OutputShrink;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "EcomVideoRecreation",
                 Version = "2026-04-28",
@@ -3391,7 +3672,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<EcomVideoRecreationResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<EcomVideoRecreationResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -3458,33 +3739,33 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// EcomVideoRecreationResponse
         /// </returns>
-        public async Task<EcomVideoRecreationResponse> EcomVideoRecreationWithOptionsAsync(EcomVideoRecreationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<EcomVideoRecreationResponse> EcomVideoRecreationWithOptionsAsync(EcomVideoRecreationRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            tmpReq.Validate();
             EcomVideoRecreationShrinkRequest request = new EcomVideoRecreationShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Input))
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.Input.IsNull())
             {
-                request.InputShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Input, "Input", "json");
+                request.InputShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.Input, "Input", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Output))
+            if (!tmpReq.Output.IsNull())
             {
-                request.OutputShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Output, "Output", "json");
+                request.OutputShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.Output, "Output", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputShrink))
+            if (!request.InputShrink.IsNull())
             {
                 query["Input"] = request.InputShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputShrink))
+            if (!request.OutputShrink.IsNull())
             {
                 query["Output"] = request.OutputShrink;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "EcomVideoRecreation",
                 Version = "2026-04-28",
@@ -3496,7 +3777,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<EcomVideoRecreationResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<EcomVideoRecreationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -3562,7 +3843,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public EcomVideoRecreationResponse EcomVideoRecreation(EcomVideoRecreationRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return EcomVideoRecreationWithOptions(request, runtime);
         }
 
@@ -3629,7 +3910,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<EcomVideoRecreationResponse> EcomVideoRecreationAsync(EcomVideoRecreationRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await EcomVideoRecreationWithOptionsAsync(request, runtime);
         }
 
@@ -3663,19 +3944,19 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// GeneralRephotographyDetectionResponse
         /// </returns>
-        public GeneralRephotographyDetectionResponse GeneralRephotographyDetectionWithOptions(GeneralRephotographyDetectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GeneralRephotographyDetectionResponse GeneralRephotographyDetectionWithOptions(GeneralRephotographyDetectionRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "GeneralRephotographyDetection",
                 Version = "2026-04-28",
@@ -3687,7 +3968,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GeneralRephotographyDetectionResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<GeneralRephotographyDetectionResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -3720,19 +4001,19 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// GeneralRephotographyDetectionResponse
         /// </returns>
-        public async Task<GeneralRephotographyDetectionResponse> GeneralRephotographyDetectionWithOptionsAsync(GeneralRephotographyDetectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GeneralRephotographyDetectionResponse> GeneralRephotographyDetectionWithOptionsAsync(GeneralRephotographyDetectionRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "GeneralRephotographyDetection",
                 Version = "2026-04-28",
@@ -3744,7 +4025,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GeneralRephotographyDetectionResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<GeneralRephotographyDetectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -3776,7 +4057,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public GeneralRephotographyDetectionResponse GeneralRephotographyDetection(GeneralRephotographyDetectionRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return GeneralRephotographyDetectionWithOptions(request, runtime);
         }
 
@@ -3809,7 +4090,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<GeneralRephotographyDetectionResponse> GeneralRephotographyDetectionAsync(GeneralRephotographyDetectionRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await GeneralRephotographyDetectionWithOptionsAsync(request, runtime);
         }
 
@@ -3873,27 +4154,27 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// ImageCroppingResponse
         /// </returns>
-        public ImageCroppingResponse ImageCroppingWithOptions(ImageCroppingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ImageCroppingResponse ImageCroppingWithOptions(ImageCroppingRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetHeight))
+            if (!request.TargetHeight.IsNull())
             {
                 query["TargetHeight"] = request.TargetHeight;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetWidth))
+            if (!request.TargetWidth.IsNull())
             {
                 query["TargetWidth"] = request.TargetWidth;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ImageCropping",
                 Version = "2026-04-28",
@@ -3905,7 +4186,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ImageCroppingResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<ImageCroppingResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -3968,27 +4249,27 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// ImageCroppingResponse
         /// </returns>
-        public async Task<ImageCroppingResponse> ImageCroppingWithOptionsAsync(ImageCroppingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ImageCroppingResponse> ImageCroppingWithOptionsAsync(ImageCroppingRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetHeight))
+            if (!request.TargetHeight.IsNull())
             {
                 query["TargetHeight"] = request.TargetHeight;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetWidth))
+            if (!request.TargetWidth.IsNull())
             {
                 query["TargetWidth"] = request.TargetWidth;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ImageCropping",
                 Version = "2026-04-28",
@@ -4000,7 +4281,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ImageCroppingResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<ImageCroppingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4062,7 +4343,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public ImageCroppingResponse ImageCropping(ImageCroppingRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return ImageCroppingWithOptions(request, runtime);
         }
 
@@ -4125,7 +4406,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<ImageCroppingResponse> ImageCroppingAsync(ImageCroppingRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await ImageCroppingWithOptionsAsync(request, runtime);
         }
 
@@ -4197,35 +4478,35 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// ImageMattingResponse
         /// </returns>
-        public ImageMattingResponse ImageMattingWithOptions(ImageMattingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ImageMattingResponse ImageMattingWithOptions(ImageMattingRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackGroundType))
+            if (!request.BackGroundType.IsNull())
             {
                 query["BackGroundType"] = request.BackGroundType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BgColor))
+            if (!request.BgColor.IsNull())
             {
                 query["BgColor"] = request.BgColor;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetHeight))
+            if (!request.TargetHeight.IsNull())
             {
                 query["TargetHeight"] = request.TargetHeight;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetWidth))
+            if (!request.TargetWidth.IsNull())
             {
                 query["TargetWidth"] = request.TargetWidth;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ImageMatting",
                 Version = "2026-04-28",
@@ -4237,7 +4518,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ImageMattingResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<ImageMattingResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4308,35 +4589,35 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// ImageMattingResponse
         /// </returns>
-        public async Task<ImageMattingResponse> ImageMattingWithOptionsAsync(ImageMattingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ImageMattingResponse> ImageMattingWithOptionsAsync(ImageMattingRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackGroundType))
+            if (!request.BackGroundType.IsNull())
             {
                 query["BackGroundType"] = request.BackGroundType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BgColor))
+            if (!request.BgColor.IsNull())
             {
                 query["BgColor"] = request.BgColor;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetHeight))
+            if (!request.TargetHeight.IsNull())
             {
                 query["TargetHeight"] = request.TargetHeight;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetWidth))
+            if (!request.TargetWidth.IsNull())
             {
                 query["TargetWidth"] = request.TargetWidth;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ImageMatting",
                 Version = "2026-04-28",
@@ -4348,7 +4629,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ImageMattingResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<ImageMattingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4418,7 +4699,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public ImageMattingResponse ImageMatting(ImageMattingRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return ImageMattingWithOptions(request, runtime);
         }
 
@@ -4489,7 +4770,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<ImageMattingResponse> ImageMattingAsync(ImageMattingRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await ImageMattingWithOptionsAsync(request, runtime);
         }
 
@@ -4559,35 +4840,35 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// ImageMattingAsyncResponse
         /// </returns>
-        public ImageMattingAsyncResponse ImageMattingAsyncWithOptions(ImageMattingAsyncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ImageMattingAsyncResponse ImageMattingAsyncWithOptions(ImageMattingAsyncRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackGroundType))
+            if (!request.BackGroundType.IsNull())
             {
                 query["BackGroundType"] = request.BackGroundType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BgColor))
+            if (!request.BgColor.IsNull())
             {
                 query["BgColor"] = request.BgColor;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetHeight))
+            if (!request.TargetHeight.IsNull())
             {
                 query["TargetHeight"] = request.TargetHeight;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetWidth))
+            if (!request.TargetWidth.IsNull())
             {
                 query["TargetWidth"] = request.TargetWidth;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ImageMattingAsync",
                 Version = "2026-04-28",
@@ -4599,7 +4880,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ImageMattingAsyncResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<ImageMattingAsyncResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4668,35 +4949,35 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// ImageMattingAsyncResponse
         /// </returns>
-        public async Task<ImageMattingAsyncResponse> ImageMattingAsyncWithOptionsAsync(ImageMattingAsyncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ImageMattingAsyncResponse> ImageMattingAsyncWithOptionsAsync(ImageMattingAsyncRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackGroundType))
+            if (!request.BackGroundType.IsNull())
             {
                 query["BackGroundType"] = request.BackGroundType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BgColor))
+            if (!request.BgColor.IsNull())
             {
                 query["BgColor"] = request.BgColor;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetHeight))
+            if (!request.TargetHeight.IsNull())
             {
                 query["TargetHeight"] = request.TargetHeight;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetWidth))
+            if (!request.TargetWidth.IsNull())
             {
                 query["TargetWidth"] = request.TargetWidth;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ImageMattingAsync",
                 Version = "2026-04-28",
@@ -4708,7 +4989,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ImageMattingAsyncResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<ImageMattingAsyncResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4776,7 +5057,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public ImageMattingAsyncResponse ImageMattingAsync(ImageMattingAsyncRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return ImageMattingAsyncWithOptions(request, runtime);
         }
 
@@ -4845,7 +5126,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<ImageMattingAsyncResponse> ImageMattingAsyncAsync(ImageMattingAsyncRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await ImageMattingAsyncWithOptionsAsync(request, runtime);
         }
 
@@ -4959,57 +5240,57 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// ImageRecognitionResponse
         /// </returns>
-        public ImageRecognitionResponse ImageRecognitionWithOptions(ImageRecognitionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ImageRecognitionResponse ImageRecognitionWithOptions(ImageRecognitionRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            tmpReq.Validate();
             ImageRecognitionShrinkRequest request = new ImageRecognitionShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NonObjectDetectElements))
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.NonObjectDetectElements.IsNull())
             {
-                request.NonObjectDetectElementsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NonObjectDetectElements, "NonObjectDetectElements", "json");
+                request.NonObjectDetectElementsShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.NonObjectDetectElements, "NonObjectDetectElements", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ObjectDetectElements))
+            if (!tmpReq.ObjectDetectElements.IsNull())
             {
-                request.ObjectDetectElementsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectDetectElements, "ObjectDetectElements", "json");
+                request.ObjectDetectElementsShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectDetectElements, "ObjectDetectElements", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NonObjectDetectElementsShrink))
+            if (!request.NonObjectDetectElementsShrink.IsNull())
             {
                 query["NonObjectDetectElements"] = request.NonObjectDetectElementsShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectDetectElementsShrink))
+            if (!request.ObjectDetectElementsShrink.IsNull())
             {
                 query["ObjectDetectElements"] = request.ObjectDetectElementsShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnBorderPixel))
+            if (!request.ReturnBorderPixel.IsNull())
             {
                 query["ReturnBorderPixel"] = request.ReturnBorderPixel;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnCharacter))
+            if (!request.ReturnCharacter.IsNull())
             {
                 query["ReturnCharacter"] = request.ReturnCharacter;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnCharacterProp))
+            if (!request.ReturnCharacterProp.IsNull())
             {
                 query["ReturnCharacterProp"] = request.ReturnCharacterProp;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnProductNum))
+            if (!request.ReturnProductNum.IsNull())
             {
                 query["ReturnProductNum"] = request.ReturnProductNum;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnProductProp))
+            if (!request.ReturnProductProp.IsNull())
             {
                 query["ReturnProductProp"] = request.ReturnProductProp;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ImageRecognition",
                 Version = "2026-04-28",
@@ -5021,7 +5302,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ImageRecognitionResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<ImageRecognitionResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -5134,57 +5415,57 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// ImageRecognitionResponse
         /// </returns>
-        public async Task<ImageRecognitionResponse> ImageRecognitionWithOptionsAsync(ImageRecognitionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ImageRecognitionResponse> ImageRecognitionWithOptionsAsync(ImageRecognitionRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            tmpReq.Validate();
             ImageRecognitionShrinkRequest request = new ImageRecognitionShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NonObjectDetectElements))
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.NonObjectDetectElements.IsNull())
             {
-                request.NonObjectDetectElementsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NonObjectDetectElements, "NonObjectDetectElements", "json");
+                request.NonObjectDetectElementsShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.NonObjectDetectElements, "NonObjectDetectElements", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ObjectDetectElements))
+            if (!tmpReq.ObjectDetectElements.IsNull())
             {
-                request.ObjectDetectElementsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectDetectElements, "ObjectDetectElements", "json");
+                request.ObjectDetectElementsShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectDetectElements, "ObjectDetectElements", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NonObjectDetectElementsShrink))
+            if (!request.NonObjectDetectElementsShrink.IsNull())
             {
                 query["NonObjectDetectElements"] = request.NonObjectDetectElementsShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectDetectElementsShrink))
+            if (!request.ObjectDetectElementsShrink.IsNull())
             {
                 query["ObjectDetectElements"] = request.ObjectDetectElementsShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnBorderPixel))
+            if (!request.ReturnBorderPixel.IsNull())
             {
                 query["ReturnBorderPixel"] = request.ReturnBorderPixel;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnCharacter))
+            if (!request.ReturnCharacter.IsNull())
             {
                 query["ReturnCharacter"] = request.ReturnCharacter;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnCharacterProp))
+            if (!request.ReturnCharacterProp.IsNull())
             {
                 query["ReturnCharacterProp"] = request.ReturnCharacterProp;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnProductNum))
+            if (!request.ReturnProductNum.IsNull())
             {
                 query["ReturnProductNum"] = request.ReturnProductNum;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnProductProp))
+            if (!request.ReturnProductProp.IsNull())
             {
                 query["ReturnProductProp"] = request.ReturnProductProp;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ImageRecognition",
                 Version = "2026-04-28",
@@ -5196,7 +5477,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ImageRecognitionResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<ImageRecognitionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -5308,7 +5589,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public ImageRecognitionResponse ImageRecognition(ImageRecognitionRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return ImageRecognitionWithOptions(request, runtime);
         }
 
@@ -5421,7 +5702,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<ImageRecognitionResponse> ImageRecognitionAsync(ImageRecognitionRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await ImageRecognitionWithOptionsAsync(request, runtime);
         }
 
@@ -5535,57 +5816,57 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// ImageRecognitionAsyncResponse
         /// </returns>
-        public ImageRecognitionAsyncResponse ImageRecognitionAsyncWithOptions(ImageRecognitionAsyncRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ImageRecognitionAsyncResponse ImageRecognitionAsyncWithOptions(ImageRecognitionAsyncRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            tmpReq.Validate();
             ImageRecognitionAsyncShrinkRequest request = new ImageRecognitionAsyncShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NonObjectDetectElements))
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.NonObjectDetectElements.IsNull())
             {
-                request.NonObjectDetectElementsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NonObjectDetectElements, "NonObjectDetectElements", "json");
+                request.NonObjectDetectElementsShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.NonObjectDetectElements, "NonObjectDetectElements", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ObjectDetectElements))
+            if (!tmpReq.ObjectDetectElements.IsNull())
             {
-                request.ObjectDetectElementsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectDetectElements, "ObjectDetectElements", "json");
+                request.ObjectDetectElementsShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectDetectElements, "ObjectDetectElements", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NonObjectDetectElementsShrink))
+            if (!request.NonObjectDetectElementsShrink.IsNull())
             {
                 query["NonObjectDetectElements"] = request.NonObjectDetectElementsShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectDetectElementsShrink))
+            if (!request.ObjectDetectElementsShrink.IsNull())
             {
                 query["ObjectDetectElements"] = request.ObjectDetectElementsShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnBorderPixel))
+            if (!request.ReturnBorderPixel.IsNull())
             {
                 query["ReturnBorderPixel"] = request.ReturnBorderPixel;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnCharacter))
+            if (!request.ReturnCharacter.IsNull())
             {
                 query["ReturnCharacter"] = request.ReturnCharacter;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnCharacterProp))
+            if (!request.ReturnCharacterProp.IsNull())
             {
                 query["ReturnCharacterProp"] = request.ReturnCharacterProp;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnProductNum))
+            if (!request.ReturnProductNum.IsNull())
             {
                 query["ReturnProductNum"] = request.ReturnProductNum;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnProductProp))
+            if (!request.ReturnProductProp.IsNull())
             {
                 query["ReturnProductProp"] = request.ReturnProductProp;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ImageRecognitionAsync",
                 Version = "2026-04-28",
@@ -5597,7 +5878,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ImageRecognitionAsyncResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<ImageRecognitionAsyncResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -5710,57 +5991,57 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// ImageRecognitionAsyncResponse
         /// </returns>
-        public async Task<ImageRecognitionAsyncResponse> ImageRecognitionAsyncWithOptionsAsync(ImageRecognitionAsyncRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ImageRecognitionAsyncResponse> ImageRecognitionAsyncWithOptionsAsync(ImageRecognitionAsyncRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            tmpReq.Validate();
             ImageRecognitionAsyncShrinkRequest request = new ImageRecognitionAsyncShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NonObjectDetectElements))
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.NonObjectDetectElements.IsNull())
             {
-                request.NonObjectDetectElementsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NonObjectDetectElements, "NonObjectDetectElements", "json");
+                request.NonObjectDetectElementsShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.NonObjectDetectElements, "NonObjectDetectElements", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ObjectDetectElements))
+            if (!tmpReq.ObjectDetectElements.IsNull())
             {
-                request.ObjectDetectElementsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectDetectElements, "ObjectDetectElements", "json");
+                request.ObjectDetectElementsShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectDetectElements, "ObjectDetectElements", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NonObjectDetectElementsShrink))
+            if (!request.NonObjectDetectElementsShrink.IsNull())
             {
                 query["NonObjectDetectElements"] = request.NonObjectDetectElementsShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectDetectElementsShrink))
+            if (!request.ObjectDetectElementsShrink.IsNull())
             {
                 query["ObjectDetectElements"] = request.ObjectDetectElementsShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnBorderPixel))
+            if (!request.ReturnBorderPixel.IsNull())
             {
                 query["ReturnBorderPixel"] = request.ReturnBorderPixel;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnCharacter))
+            if (!request.ReturnCharacter.IsNull())
             {
                 query["ReturnCharacter"] = request.ReturnCharacter;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnCharacterProp))
+            if (!request.ReturnCharacterProp.IsNull())
             {
                 query["ReturnCharacterProp"] = request.ReturnCharacterProp;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnProductNum))
+            if (!request.ReturnProductNum.IsNull())
             {
                 query["ReturnProductNum"] = request.ReturnProductNum;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnProductProp))
+            if (!request.ReturnProductProp.IsNull())
             {
                 query["ReturnProductProp"] = request.ReturnProductProp;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ImageRecognitionAsync",
                 Version = "2026-04-28",
@@ -5772,7 +6053,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ImageRecognitionAsyncResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<ImageRecognitionAsyncResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -5884,7 +6165,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public ImageRecognitionAsyncResponse ImageRecognitionAsync(ImageRecognitionAsyncRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return ImageRecognitionAsyncWithOptions(request, runtime);
         }
 
@@ -5997,7 +6278,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<ImageRecognitionAsyncResponse> ImageRecognitionAsyncAsync(ImageRecognitionAsyncRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await ImageRecognitionAsyncWithOptionsAsync(request, runtime);
         }
 
@@ -6061,23 +6342,23 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// ImageRemovalProResponse
         /// </returns>
-        public ImageRemovalProResponse ImageRemovalProWithOptions(ImageRemovalProRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ImageRemovalProResponse ImageRemovalProWithOptions(ImageRemovalProRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Async))
+            if (!request.Async.IsNull())
             {
                 query["Async"] = request.Async;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ImageRemovalPro",
                 Version = "2026-04-28",
@@ -6089,7 +6370,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ImageRemovalProResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<ImageRemovalProResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -6152,23 +6433,23 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// ImageRemovalProResponse
         /// </returns>
-        public async Task<ImageRemovalProResponse> ImageRemovalProWithOptionsAsync(ImageRemovalProRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ImageRemovalProResponse> ImageRemovalProWithOptionsAsync(ImageRemovalProRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Async))
+            if (!request.Async.IsNull())
             {
                 query["Async"] = request.Async;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ImageRemovalPro",
                 Version = "2026-04-28",
@@ -6180,7 +6461,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ImageRemovalProResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<ImageRemovalProResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -6242,7 +6523,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public ImageRemovalProResponse ImageRemovalPro(ImageRemovalProRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return ImageRemovalProWithOptions(request, runtime);
         }
 
@@ -6305,7 +6586,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<ImageRemovalProResponse> ImageRemovalProAsync(ImageRemovalProRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await ImageRemovalProWithOptionsAsync(request, runtime);
         }
 
@@ -6365,19 +6646,19 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// ImageRemovalProAsyncResponse
         /// </returns>
-        public ImageRemovalProAsyncResponse ImageRemovalProAsyncWithOptions(ImageRemovalProAsyncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ImageRemovalProAsyncResponse ImageRemovalProAsyncWithOptions(ImageRemovalProAsyncRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ImageRemovalProAsync",
                 Version = "2026-04-28",
@@ -6389,7 +6670,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ImageRemovalProAsyncResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<ImageRemovalProAsyncResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -6448,19 +6729,19 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// ImageRemovalProAsyncResponse
         /// </returns>
-        public async Task<ImageRemovalProAsyncResponse> ImageRemovalProAsyncWithOptionsAsync(ImageRemovalProAsyncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ImageRemovalProAsyncResponse> ImageRemovalProAsyncWithOptionsAsync(ImageRemovalProAsyncRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ImageRemovalProAsync",
                 Version = "2026-04-28",
@@ -6472,7 +6753,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ImageRemovalProAsyncResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<ImageRemovalProAsyncResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -6530,7 +6811,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public ImageRemovalProAsyncResponse ImageRemovalProAsync(ImageRemovalProAsyncRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return ImageRemovalProAsyncWithOptions(request, runtime);
         }
 
@@ -6589,7 +6870,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<ImageRemovalProAsyncResponse> ImageRemovalProAsyncAsync(ImageRemovalProAsyncRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await ImageRemovalProAsyncWithOptionsAsync(request, runtime);
         }
 
@@ -6716,61 +6997,61 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// ImageRemoveResponse
         /// </returns>
-        public ImageRemoveResponse ImageRemoveWithOptions(ImageRemoveRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ImageRemoveResponse ImageRemoveWithOptions(ImageRemoveRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            tmpReq.Validate();
             ImageRemoveShrinkRequest request = new ImageRemoveShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NonObjectRemoveElements))
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.NonObjectRemoveElements.IsNull())
             {
-                request.NonObjectRemoveElementsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NonObjectRemoveElements, "NonObjectRemoveElements", "json");
+                request.NonObjectRemoveElementsShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.NonObjectRemoveElements, "NonObjectRemoveElements", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ObjectRemoveElements))
+            if (!tmpReq.ObjectRemoveElements.IsNull())
             {
-                request.ObjectRemoveElementsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectRemoveElements, "ObjectRemoveElements", "json");
+                request.ObjectRemoveElementsShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectRemoveElements, "ObjectRemoveElements", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserImage))
+            if (!tmpReq.UserImage.IsNull())
             {
-                request.UserImageShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserImage, "UserImage", "json");
+                request.UserImageShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.UserImage, "UserImage", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserText))
+            if (!tmpReq.UserText.IsNull())
             {
-                request.UserTextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserText, "UserText", "json");
+                request.UserTextShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.UserText, "UserText", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mask))
+            if (!request.Mask.IsNull())
             {
                 query["Mask"] = request.Mask;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NonObjectRemoveElementsShrink))
+            if (!request.NonObjectRemoveElementsShrink.IsNull())
             {
                 query["NonObjectRemoveElements"] = request.NonObjectRemoveElementsShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectRemoveElementsShrink))
+            if (!request.ObjectRemoveElementsShrink.IsNull())
             {
                 query["ObjectRemoveElements"] = request.ObjectRemoveElementsShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Position))
+            if (!request.Position.IsNull())
             {
                 query["Position"] = request.Position;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserImageShrink))
+            if (!request.UserImageShrink.IsNull())
             {
                 query["UserImage"] = request.UserImageShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserTextShrink))
+            if (!request.UserTextShrink.IsNull())
             {
                 query["UserText"] = request.UserTextShrink;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ImageRemove",
                 Version = "2026-04-28",
@@ -6782,7 +7063,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ImageRemoveResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<ImageRemoveResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -6908,61 +7189,61 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// ImageRemoveResponse
         /// </returns>
-        public async Task<ImageRemoveResponse> ImageRemoveWithOptionsAsync(ImageRemoveRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ImageRemoveResponse> ImageRemoveWithOptionsAsync(ImageRemoveRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            tmpReq.Validate();
             ImageRemoveShrinkRequest request = new ImageRemoveShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NonObjectRemoveElements))
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.NonObjectRemoveElements.IsNull())
             {
-                request.NonObjectRemoveElementsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NonObjectRemoveElements, "NonObjectRemoveElements", "json");
+                request.NonObjectRemoveElementsShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.NonObjectRemoveElements, "NonObjectRemoveElements", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ObjectRemoveElements))
+            if (!tmpReq.ObjectRemoveElements.IsNull())
             {
-                request.ObjectRemoveElementsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectRemoveElements, "ObjectRemoveElements", "json");
+                request.ObjectRemoveElementsShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectRemoveElements, "ObjectRemoveElements", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserImage))
+            if (!tmpReq.UserImage.IsNull())
             {
-                request.UserImageShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserImage, "UserImage", "json");
+                request.UserImageShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.UserImage, "UserImage", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserText))
+            if (!tmpReq.UserText.IsNull())
             {
-                request.UserTextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserText, "UserText", "json");
+                request.UserTextShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.UserText, "UserText", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mask))
+            if (!request.Mask.IsNull())
             {
                 query["Mask"] = request.Mask;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NonObjectRemoveElementsShrink))
+            if (!request.NonObjectRemoveElementsShrink.IsNull())
             {
                 query["NonObjectRemoveElements"] = request.NonObjectRemoveElementsShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectRemoveElementsShrink))
+            if (!request.ObjectRemoveElementsShrink.IsNull())
             {
                 query["ObjectRemoveElements"] = request.ObjectRemoveElementsShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Position))
+            if (!request.Position.IsNull())
             {
                 query["Position"] = request.Position;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserImageShrink))
+            if (!request.UserImageShrink.IsNull())
             {
                 query["UserImage"] = request.UserImageShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserTextShrink))
+            if (!request.UserTextShrink.IsNull())
             {
                 query["UserText"] = request.UserTextShrink;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ImageRemove",
                 Version = "2026-04-28",
@@ -6974,7 +7255,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ImageRemoveResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<ImageRemoveResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -7099,7 +7380,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public ImageRemoveResponse ImageRemove(ImageRemoveRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return ImageRemoveWithOptions(request, runtime);
         }
 
@@ -7225,7 +7506,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<ImageRemoveResponse> ImageRemoveAsync(ImageRemoveRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await ImageRemoveWithOptionsAsync(request, runtime);
         }
 
@@ -7345,61 +7626,61 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// ImageRemoveAsyncResponse
         /// </returns>
-        public ImageRemoveAsyncResponse ImageRemoveAsyncWithOptions(ImageRemoveAsyncRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ImageRemoveAsyncResponse ImageRemoveAsyncWithOptions(ImageRemoveAsyncRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            tmpReq.Validate();
             ImageRemoveAsyncShrinkRequest request = new ImageRemoveAsyncShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NonObjectRemoveElements))
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.NonObjectRemoveElements.IsNull())
             {
-                request.NonObjectRemoveElementsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NonObjectRemoveElements, "NonObjectRemoveElements", "json");
+                request.NonObjectRemoveElementsShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.NonObjectRemoveElements, "NonObjectRemoveElements", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ObjectRemoveElements))
+            if (!tmpReq.ObjectRemoveElements.IsNull())
             {
-                request.ObjectRemoveElementsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectRemoveElements, "ObjectRemoveElements", "json");
+                request.ObjectRemoveElementsShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectRemoveElements, "ObjectRemoveElements", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserImage))
+            if (!tmpReq.UserImage.IsNull())
             {
-                request.UserImageShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserImage, "UserImage", "json");
+                request.UserImageShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.UserImage, "UserImage", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserText))
+            if (!tmpReq.UserText.IsNull())
             {
-                request.UserTextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserText, "UserText", "json");
+                request.UserTextShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.UserText, "UserText", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mask))
+            if (!request.Mask.IsNull())
             {
                 query["Mask"] = request.Mask;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NonObjectRemoveElementsShrink))
+            if (!request.NonObjectRemoveElementsShrink.IsNull())
             {
                 query["NonObjectRemoveElements"] = request.NonObjectRemoveElementsShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectRemoveElementsShrink))
+            if (!request.ObjectRemoveElementsShrink.IsNull())
             {
                 query["ObjectRemoveElements"] = request.ObjectRemoveElementsShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Position))
+            if (!request.Position.IsNull())
             {
                 query["Position"] = request.Position;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserImageShrink))
+            if (!request.UserImageShrink.IsNull())
             {
                 query["UserImage"] = request.UserImageShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserTextShrink))
+            if (!request.UserTextShrink.IsNull())
             {
                 query["UserText"] = request.UserTextShrink;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ImageRemoveAsync",
                 Version = "2026-04-28",
@@ -7411,7 +7692,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ImageRemoveAsyncResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<ImageRemoveAsyncResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -7530,61 +7811,61 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// ImageRemoveAsyncResponse
         /// </returns>
-        public async Task<ImageRemoveAsyncResponse> ImageRemoveAsyncWithOptionsAsync(ImageRemoveAsyncRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ImageRemoveAsyncResponse> ImageRemoveAsyncWithOptionsAsync(ImageRemoveAsyncRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            tmpReq.Validate();
             ImageRemoveAsyncShrinkRequest request = new ImageRemoveAsyncShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NonObjectRemoveElements))
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.NonObjectRemoveElements.IsNull())
             {
-                request.NonObjectRemoveElementsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NonObjectRemoveElements, "NonObjectRemoveElements", "json");
+                request.NonObjectRemoveElementsShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.NonObjectRemoveElements, "NonObjectRemoveElements", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ObjectRemoveElements))
+            if (!tmpReq.ObjectRemoveElements.IsNull())
             {
-                request.ObjectRemoveElementsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectRemoveElements, "ObjectRemoveElements", "json");
+                request.ObjectRemoveElementsShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectRemoveElements, "ObjectRemoveElements", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserImage))
+            if (!tmpReq.UserImage.IsNull())
             {
-                request.UserImageShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserImage, "UserImage", "json");
+                request.UserImageShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.UserImage, "UserImage", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserText))
+            if (!tmpReq.UserText.IsNull())
             {
-                request.UserTextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserText, "UserText", "json");
+                request.UserTextShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.UserText, "UserText", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mask))
+            if (!request.Mask.IsNull())
             {
                 query["Mask"] = request.Mask;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NonObjectRemoveElementsShrink))
+            if (!request.NonObjectRemoveElementsShrink.IsNull())
             {
                 query["NonObjectRemoveElements"] = request.NonObjectRemoveElementsShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectRemoveElementsShrink))
+            if (!request.ObjectRemoveElementsShrink.IsNull())
             {
                 query["ObjectRemoveElements"] = request.ObjectRemoveElementsShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Position))
+            if (!request.Position.IsNull())
             {
                 query["Position"] = request.Position;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserImageShrink))
+            if (!request.UserImageShrink.IsNull())
             {
                 query["UserImage"] = request.UserImageShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserTextShrink))
+            if (!request.UserTextShrink.IsNull())
             {
                 query["UserText"] = request.UserTextShrink;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ImageRemoveAsync",
                 Version = "2026-04-28",
@@ -7596,7 +7877,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ImageRemoveAsyncResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<ImageRemoveAsyncResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -7714,7 +7995,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public ImageRemoveAsyncResponse ImageRemoveAsync(ImageRemoveAsyncRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return ImageRemoveAsyncWithOptions(request, runtime);
         }
 
@@ -7833,7 +8114,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<ImageRemoveAsyncResponse> ImageRemoveAsyncAsync(ImageRemoveAsyncRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await ImageRemoveAsyncWithOptionsAsync(request, runtime);
         }
 
@@ -7972,43 +8253,43 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// ImageTranslationPlusResponse
         /// </returns>
-        public ImageTranslationPlusResponse ImageTranslationPlusWithOptions(ImageTranslationPlusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ImageTranslationPlusResponse ImageTranslationPlusWithOptions(ImageTranslationPlusRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
+            if (!request.Glossary.IsNull())
             {
                 body["Glossary"] = request.Glossary;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 body["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludingProductArea))
+            if (!request.IncludingProductArea.IsNull())
             {
                 body["IncludingProductArea"] = request.IncludingProductArea;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            if (!request.SourceLanguage.IsNull())
             {
                 body["SourceLanguage"] = request.SourceLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            if (!request.TargetLanguage.IsNull())
             {
                 body["TargetLanguage"] = request.TargetLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslatingBrandInTheProduct))
+            if (!request.TranslatingBrandInTheProduct.IsNull())
             {
                 body["TranslatingBrandInTheProduct"] = request.TranslatingBrandInTheProduct;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseImageEditor))
+            if (!request.UseImageEditor.IsNull())
             {
                 body["UseImageEditor"] = request.UseImageEditor;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ImageTranslationPlus",
                 Version = "2026-04-28",
@@ -8020,7 +8301,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ImageTranslationPlusResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<ImageTranslationPlusResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -8158,43 +8439,43 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// ImageTranslationPlusResponse
         /// </returns>
-        public async Task<ImageTranslationPlusResponse> ImageTranslationPlusWithOptionsAsync(ImageTranslationPlusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ImageTranslationPlusResponse> ImageTranslationPlusWithOptionsAsync(ImageTranslationPlusRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
+            if (!request.Glossary.IsNull())
             {
                 body["Glossary"] = request.Glossary;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 body["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludingProductArea))
+            if (!request.IncludingProductArea.IsNull())
             {
                 body["IncludingProductArea"] = request.IncludingProductArea;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            if (!request.SourceLanguage.IsNull())
             {
                 body["SourceLanguage"] = request.SourceLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            if (!request.TargetLanguage.IsNull())
             {
                 body["TargetLanguage"] = request.TargetLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslatingBrandInTheProduct))
+            if (!request.TranslatingBrandInTheProduct.IsNull())
             {
                 body["TranslatingBrandInTheProduct"] = request.TranslatingBrandInTheProduct;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseImageEditor))
+            if (!request.UseImageEditor.IsNull())
             {
                 body["UseImageEditor"] = request.UseImageEditor;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ImageTranslationPlus",
                 Version = "2026-04-28",
@@ -8206,7 +8487,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ImageTranslationPlusResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<ImageTranslationPlusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -8343,7 +8624,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public ImageTranslationPlusResponse ImageTranslationPlus(ImageTranslationPlusRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return ImageTranslationPlusWithOptions(request, runtime);
         }
 
@@ -8481,7 +8762,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<ImageTranslationPlusResponse> ImageTranslationPlusAsync(ImageTranslationPlusRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await ImageTranslationPlusWithOptionsAsync(request, runtime);
         }
 
@@ -8621,43 +8902,43 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// ImageTranslationPlusAsyncResponse
         /// </returns>
-        public ImageTranslationPlusAsyncResponse ImageTranslationPlusAsyncWithOptions(ImageTranslationPlusAsyncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ImageTranslationPlusAsyncResponse ImageTranslationPlusAsyncWithOptions(ImageTranslationPlusAsyncRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
+            if (!request.Glossary.IsNull())
             {
                 query["Glossary"] = request.Glossary;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludingProductArea))
+            if (!request.IncludingProductArea.IsNull())
             {
                 query["IncludingProductArea"] = request.IncludingProductArea;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            if (!request.SourceLanguage.IsNull())
             {
                 query["SourceLanguage"] = request.SourceLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            if (!request.TargetLanguage.IsNull())
             {
                 query["TargetLanguage"] = request.TargetLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslatingBrandInTheProduct))
+            if (!request.TranslatingBrandInTheProduct.IsNull())
             {
                 query["TranslatingBrandInTheProduct"] = request.TranslatingBrandInTheProduct;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseImageEditor))
+            if (!request.UseImageEditor.IsNull())
             {
                 query["UseImageEditor"] = request.UseImageEditor;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ImageTranslationPlusAsync",
                 Version = "2026-04-28",
@@ -8669,7 +8950,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ImageTranslationPlusAsyncResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<ImageTranslationPlusAsyncResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -8808,43 +9089,43 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// ImageTranslationPlusAsyncResponse
         /// </returns>
-        public async Task<ImageTranslationPlusAsyncResponse> ImageTranslationPlusAsyncWithOptionsAsync(ImageTranslationPlusAsyncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ImageTranslationPlusAsyncResponse> ImageTranslationPlusAsyncWithOptionsAsync(ImageTranslationPlusAsyncRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
+            if (!request.Glossary.IsNull())
             {
                 query["Glossary"] = request.Glossary;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludingProductArea))
+            if (!request.IncludingProductArea.IsNull())
             {
                 query["IncludingProductArea"] = request.IncludingProductArea;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            if (!request.SourceLanguage.IsNull())
             {
                 query["SourceLanguage"] = request.SourceLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            if (!request.TargetLanguage.IsNull())
             {
                 query["TargetLanguage"] = request.TargetLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslatingBrandInTheProduct))
+            if (!request.TranslatingBrandInTheProduct.IsNull())
             {
                 query["TranslatingBrandInTheProduct"] = request.TranslatingBrandInTheProduct;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseImageEditor))
+            if (!request.UseImageEditor.IsNull())
             {
                 query["UseImageEditor"] = request.UseImageEditor;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ImageTranslationPlusAsync",
                 Version = "2026-04-28",
@@ -8856,7 +9137,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ImageTranslationPlusAsyncResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<ImageTranslationPlusAsyncResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -8994,7 +9275,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public ImageTranslationPlusAsyncResponse ImageTranslationPlusAsync(ImageTranslationPlusAsyncRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return ImageTranslationPlusAsyncWithOptions(request, runtime);
         }
 
@@ -9133,7 +9414,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<ImageTranslationPlusAsyncResponse> ImageTranslationPlusAsyncAsync(ImageTranslationPlusAsyncRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await ImageTranslationPlusAsyncWithOptionsAsync(request, runtime);
         }
 
@@ -9168,47 +9449,47 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// ImageTranslationProResponse
         /// </returns>
-        public ImageTranslationProResponse ImageTranslationProWithOptions(ImageTranslationProRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ImageTranslationProResponse ImageTranslationProWithOptions(ImageTranslationProRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Async))
+            if (!request.Async.IsNull())
             {
                 body["Async"] = request.Async;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
+            if (!request.Glossary.IsNull())
             {
                 body["Glossary"] = request.Glossary;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 body["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludingProductArea))
+            if (!request.IncludingProductArea.IsNull())
             {
                 body["IncludingProductArea"] = request.IncludingProductArea;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            if (!request.SourceLanguage.IsNull())
             {
                 body["SourceLanguage"] = request.SourceLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            if (!request.TargetLanguage.IsNull())
             {
                 body["TargetLanguage"] = request.TargetLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslatingBrandInTheProduct))
+            if (!request.TranslatingBrandInTheProduct.IsNull())
             {
                 body["TranslatingBrandInTheProduct"] = request.TranslatingBrandInTheProduct;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseImageEditor))
+            if (!request.UseImageEditor.IsNull())
             {
                 body["UseImageEditor"] = request.UseImageEditor;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ImageTranslationPro",
                 Version = "2026-04-28",
@@ -9220,7 +9501,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ImageTranslationProResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<ImageTranslationProResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -9254,47 +9535,47 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// ImageTranslationProResponse
         /// </returns>
-        public async Task<ImageTranslationProResponse> ImageTranslationProWithOptionsAsync(ImageTranslationProRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ImageTranslationProResponse> ImageTranslationProWithOptionsAsync(ImageTranslationProRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Async))
+            if (!request.Async.IsNull())
             {
                 body["Async"] = request.Async;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
+            if (!request.Glossary.IsNull())
             {
                 body["Glossary"] = request.Glossary;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 body["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludingProductArea))
+            if (!request.IncludingProductArea.IsNull())
             {
                 body["IncludingProductArea"] = request.IncludingProductArea;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            if (!request.SourceLanguage.IsNull())
             {
                 body["SourceLanguage"] = request.SourceLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            if (!request.TargetLanguage.IsNull())
             {
                 body["TargetLanguage"] = request.TargetLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslatingBrandInTheProduct))
+            if (!request.TranslatingBrandInTheProduct.IsNull())
             {
                 body["TranslatingBrandInTheProduct"] = request.TranslatingBrandInTheProduct;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseImageEditor))
+            if (!request.UseImageEditor.IsNull())
             {
                 body["UseImageEditor"] = request.UseImageEditor;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ImageTranslationPro",
                 Version = "2026-04-28",
@@ -9306,7 +9587,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ImageTranslationProResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<ImageTranslationProResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -9339,7 +9620,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public ImageTranslationProResponse ImageTranslationPro(ImageTranslationProRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return ImageTranslationProWithOptions(request, runtime);
         }
 
@@ -9373,7 +9654,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<ImageTranslationProResponse> ImageTranslationProAsync(ImageTranslationProRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await ImageTranslationProWithOptionsAsync(request, runtime);
         }
 
@@ -9413,43 +9694,43 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// ImageTranslationProAsyncResponse
         /// </returns>
-        public ImageTranslationProAsyncResponse ImageTranslationProAsyncWithOptions(ImageTranslationProAsyncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ImageTranslationProAsyncResponse ImageTranslationProAsyncWithOptions(ImageTranslationProAsyncRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
+            if (!request.Glossary.IsNull())
             {
                 query["Glossary"] = request.Glossary;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludingProductArea))
+            if (!request.IncludingProductArea.IsNull())
             {
                 query["IncludingProductArea"] = request.IncludingProductArea;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            if (!request.SourceLanguage.IsNull())
             {
                 query["SourceLanguage"] = request.SourceLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            if (!request.TargetLanguage.IsNull())
             {
                 query["TargetLanguage"] = request.TargetLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslatingBrandInTheProduct))
+            if (!request.TranslatingBrandInTheProduct.IsNull())
             {
                 query["TranslatingBrandInTheProduct"] = request.TranslatingBrandInTheProduct;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseImageEditor))
+            if (!request.UseImageEditor.IsNull())
             {
                 query["UseImageEditor"] = request.UseImageEditor;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ImageTranslationProAsync",
                 Version = "2026-04-28",
@@ -9461,7 +9742,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ImageTranslationProAsyncResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<ImageTranslationProAsyncResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -9500,43 +9781,43 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// ImageTranslationProAsyncResponse
         /// </returns>
-        public async Task<ImageTranslationProAsyncResponse> ImageTranslationProAsyncWithOptionsAsync(ImageTranslationProAsyncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ImageTranslationProAsyncResponse> ImageTranslationProAsyncWithOptionsAsync(ImageTranslationProAsyncRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
+            if (!request.Glossary.IsNull())
             {
                 query["Glossary"] = request.Glossary;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludingProductArea))
+            if (!request.IncludingProductArea.IsNull())
             {
                 query["IncludingProductArea"] = request.IncludingProductArea;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            if (!request.SourceLanguage.IsNull())
             {
                 query["SourceLanguage"] = request.SourceLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            if (!request.TargetLanguage.IsNull())
             {
                 query["TargetLanguage"] = request.TargetLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslatingBrandInTheProduct))
+            if (!request.TranslatingBrandInTheProduct.IsNull())
             {
                 query["TranslatingBrandInTheProduct"] = request.TranslatingBrandInTheProduct;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseImageEditor))
+            if (!request.UseImageEditor.IsNull())
             {
                 query["UseImageEditor"] = request.UseImageEditor;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ImageTranslationProAsync",
                 Version = "2026-04-28",
@@ -9548,7 +9829,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ImageTranslationProAsyncResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<ImageTranslationProAsyncResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -9586,7 +9867,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public ImageTranslationProAsyncResponse ImageTranslationProAsync(ImageTranslationProAsyncRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return ImageTranslationProAsyncWithOptions(request, runtime);
         }
 
@@ -9625,7 +9906,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<ImageTranslationProAsyncResponse> ImageTranslationProAsyncAsync(ImageTranslationProAsyncRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await ImageTranslationProAsyncWithOptionsAsync(request, runtime);
         }
 
@@ -9663,43 +9944,43 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// ImageTranslationStandardResponse
         /// </returns>
-        public ImageTranslationStandardResponse ImageTranslationStandardWithOptions(ImageTranslationStandardRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ImageTranslationStandardResponse ImageTranslationStandardWithOptions(ImageTranslationStandardRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
+            if (!request.Glossary.IsNull())
             {
                 query["Glossary"] = request.Glossary;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludingProductArea))
+            if (!request.IncludingProductArea.IsNull())
             {
                 query["IncludingProductArea"] = request.IncludingProductArea;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            if (!request.SourceLanguage.IsNull())
             {
                 query["SourceLanguage"] = request.SourceLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            if (!request.TargetLanguage.IsNull())
             {
                 query["TargetLanguage"] = request.TargetLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslatingBrandInTheProduct))
+            if (!request.TranslatingBrandInTheProduct.IsNull())
             {
                 query["TranslatingBrandInTheProduct"] = request.TranslatingBrandInTheProduct;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseImageEditor))
+            if (!request.UseImageEditor.IsNull())
             {
                 query["UseImageEditor"] = request.UseImageEditor;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ImageTranslationStandard",
                 Version = "2026-04-28",
@@ -9711,7 +9992,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ImageTranslationStandardResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<ImageTranslationStandardResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -9748,43 +10029,43 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// ImageTranslationStandardResponse
         /// </returns>
-        public async Task<ImageTranslationStandardResponse> ImageTranslationStandardWithOptionsAsync(ImageTranslationStandardRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ImageTranslationStandardResponse> ImageTranslationStandardWithOptionsAsync(ImageTranslationStandardRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
+            if (!request.Glossary.IsNull())
             {
                 query["Glossary"] = request.Glossary;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludingProductArea))
+            if (!request.IncludingProductArea.IsNull())
             {
                 query["IncludingProductArea"] = request.IncludingProductArea;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            if (!request.SourceLanguage.IsNull())
             {
                 query["SourceLanguage"] = request.SourceLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            if (!request.TargetLanguage.IsNull())
             {
                 query["TargetLanguage"] = request.TargetLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslatingBrandInTheProduct))
+            if (!request.TranslatingBrandInTheProduct.IsNull())
             {
                 query["TranslatingBrandInTheProduct"] = request.TranslatingBrandInTheProduct;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseImageEditor))
+            if (!request.UseImageEditor.IsNull())
             {
                 query["UseImageEditor"] = request.UseImageEditor;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ImageTranslationStandard",
                 Version = "2026-04-28",
@@ -9796,7 +10077,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ImageTranslationStandardResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<ImageTranslationStandardResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -9832,7 +10113,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public ImageTranslationStandardResponse ImageTranslationStandard(ImageTranslationStandardRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return ImageTranslationStandardWithOptions(request, runtime);
         }
 
@@ -9869,7 +10150,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<ImageTranslationStandardResponse> ImageTranslationStandardAsync(ImageTranslationStandardRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await ImageTranslationStandardWithOptionsAsync(request, runtime);
         }
 
@@ -9911,43 +10192,43 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// ImageTranslationStandardAsyncResponse
         /// </returns>
-        public ImageTranslationStandardAsyncResponse ImageTranslationStandardAsyncWithOptions(ImageTranslationStandardAsyncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ImageTranslationStandardAsyncResponse ImageTranslationStandardAsyncWithOptions(ImageTranslationStandardAsyncRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
+            if (!request.Glossary.IsNull())
             {
                 query["Glossary"] = request.Glossary;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludingProductArea))
+            if (!request.IncludingProductArea.IsNull())
             {
                 query["IncludingProductArea"] = request.IncludingProductArea;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            if (!request.SourceLanguage.IsNull())
             {
                 query["SourceLanguage"] = request.SourceLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            if (!request.TargetLanguage.IsNull())
             {
                 query["TargetLanguage"] = request.TargetLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslatingBrandInTheProduct))
+            if (!request.TranslatingBrandInTheProduct.IsNull())
             {
                 query["TranslatingBrandInTheProduct"] = request.TranslatingBrandInTheProduct;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseImageEditor))
+            if (!request.UseImageEditor.IsNull())
             {
                 query["UseImageEditor"] = request.UseImageEditor;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ImageTranslationStandardAsync",
                 Version = "2026-04-28",
@@ -9959,7 +10240,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ImageTranslationStandardAsyncResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<ImageTranslationStandardAsyncResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -10000,43 +10281,43 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// ImageTranslationStandardAsyncResponse
         /// </returns>
-        public async Task<ImageTranslationStandardAsyncResponse> ImageTranslationStandardAsyncWithOptionsAsync(ImageTranslationStandardAsyncRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ImageTranslationStandardAsyncResponse> ImageTranslationStandardAsyncWithOptionsAsync(ImageTranslationStandardAsyncRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
+            if (!request.Glossary.IsNull())
             {
                 query["Glossary"] = request.Glossary;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludingProductArea))
+            if (!request.IncludingProductArea.IsNull())
             {
                 query["IncludingProductArea"] = request.IncludingProductArea;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            if (!request.SourceLanguage.IsNull())
             {
                 query["SourceLanguage"] = request.SourceLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            if (!request.TargetLanguage.IsNull())
             {
                 query["TargetLanguage"] = request.TargetLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslatingBrandInTheProduct))
+            if (!request.TranslatingBrandInTheProduct.IsNull())
             {
                 query["TranslatingBrandInTheProduct"] = request.TranslatingBrandInTheProduct;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseImageEditor))
+            if (!request.UseImageEditor.IsNull())
             {
                 query["UseImageEditor"] = request.UseImageEditor;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ImageTranslationStandardAsync",
                 Version = "2026-04-28",
@@ -10048,7 +10329,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ImageTranslationStandardAsyncResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<ImageTranslationStandardAsyncResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -10088,7 +10369,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public ImageTranslationStandardAsyncResponse ImageTranslationStandardAsync(ImageTranslationStandardAsyncRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return ImageTranslationStandardAsyncWithOptions(request, runtime);
         }
 
@@ -10129,7 +10410,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<ImageTranslationStandardAsyncResponse> ImageTranslationStandardAsyncAsync(ImageTranslationStandardAsyncRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await ImageTranslationStandardAsyncWithOptionsAsync(request, runtime);
         }
 
@@ -10154,23 +10435,23 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// LanguageDetectResponse
         /// </returns>
-        public LanguageDetectResponse LanguageDetectWithOptions(LanguageDetectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public LanguageDetectResponse LanguageDetectWithOptions(LanguageDetectRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scene))
+            if (!request.Scene.IsNull())
             {
                 query["Scene"] = request.Scene;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceText))
+            if (!request.SourceText.IsNull())
             {
                 query["SourceText"] = request.SourceText;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "LanguageDetect",
                 Version = "2026-04-28",
@@ -10182,7 +10463,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<LanguageDetectResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<LanguageDetectResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -10206,23 +10487,23 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// LanguageDetectResponse
         /// </returns>
-        public async Task<LanguageDetectResponse> LanguageDetectWithOptionsAsync(LanguageDetectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<LanguageDetectResponse> LanguageDetectWithOptionsAsync(LanguageDetectRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scene))
+            if (!request.Scene.IsNull())
             {
                 query["Scene"] = request.Scene;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceText))
+            if (!request.SourceText.IsNull())
             {
                 query["SourceText"] = request.SourceText;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "LanguageDetect",
                 Version = "2026-04-28",
@@ -10234,7 +10515,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<LanguageDetectResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<LanguageDetectResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -10257,7 +10538,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public LanguageDetectResponse LanguageDetect(LanguageDetectRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return LanguageDetectWithOptions(request, runtime);
         }
 
@@ -10281,7 +10562,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<LanguageDetectResponse> LanguageDetectAsync(LanguageDetectRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await LanguageDetectWithOptionsAsync(request, runtime);
         }
 
@@ -10333,35 +10614,35 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// MaterialInspectionResponse
         /// </returns>
-        public MaterialInspectionResponse MaterialInspectionWithOptions(MaterialInspectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public MaterialInspectionResponse MaterialInspectionWithOptions(MaterialInspectionRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiId))
+            if (!request.ApiId.IsNull())
             {
                 query["ApiId"] = request.ApiId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageRefer))
+            if (!request.ImageRefer.IsNull())
             {
                 query["ImageRefer"] = request.ImageRefer;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReqId))
+            if (!request.ReqId.IsNull())
             {
                 query["ReqId"] = request.ReqId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rules))
+            if (!request.Rules.IsNull())
             {
                 query["Rules"] = request.Rules;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "MaterialInspection",
                 Version = "2026-04-28",
@@ -10373,7 +10654,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<MaterialInspectionResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<MaterialInspectionResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -10424,35 +10705,35 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// MaterialInspectionResponse
         /// </returns>
-        public async Task<MaterialInspectionResponse> MaterialInspectionWithOptionsAsync(MaterialInspectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<MaterialInspectionResponse> MaterialInspectionWithOptionsAsync(MaterialInspectionRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiId))
+            if (!request.ApiId.IsNull())
             {
                 query["ApiId"] = request.ApiId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageRefer))
+            if (!request.ImageRefer.IsNull())
             {
                 query["ImageRefer"] = request.ImageRefer;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReqId))
+            if (!request.ReqId.IsNull())
             {
                 query["ReqId"] = request.ReqId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rules))
+            if (!request.Rules.IsNull())
             {
                 query["Rules"] = request.Rules;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "MaterialInspection",
                 Version = "2026-04-28",
@@ -10464,7 +10745,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<MaterialInspectionResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<MaterialInspectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -10514,7 +10795,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public MaterialInspectionResponse MaterialInspection(MaterialInspectionRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return MaterialInspectionWithOptions(request, runtime);
         }
 
@@ -10565,7 +10846,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<MaterialInspectionResponse> MaterialInspectionAsync(MaterialInspectionRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await MaterialInspectionWithOptionsAsync(request, runtime);
         }
 
@@ -10610,35 +10891,35 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// MerchandisePlacementDetectionResponse
         /// </returns>
-        public MerchandisePlacementDetectionResponse MerchandisePlacementDetectionWithOptions(MerchandisePlacementDetectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public MerchandisePlacementDetectionResponse MerchandisePlacementDetectionWithOptions(MerchandisePlacementDetectionRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiId))
+            if (!request.ApiId.IsNull())
             {
                 query["ApiId"] = request.ApiId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RagId))
+            if (!request.RagId.IsNull())
             {
                 query["RagId"] = request.RagId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rule))
+            if (!request.Rule.IsNull())
             {
                 query["Rule"] = request.Rule;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            if (!request.Type.IsNull())
             {
                 query["Type"] = request.Type;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "MerchandisePlacementDetection",
                 Version = "2026-04-28",
@@ -10650,7 +10931,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<MerchandisePlacementDetectionResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<MerchandisePlacementDetectionResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -10694,35 +10975,35 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// MerchandisePlacementDetectionResponse
         /// </returns>
-        public async Task<MerchandisePlacementDetectionResponse> MerchandisePlacementDetectionWithOptionsAsync(MerchandisePlacementDetectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<MerchandisePlacementDetectionResponse> MerchandisePlacementDetectionWithOptionsAsync(MerchandisePlacementDetectionRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiId))
+            if (!request.ApiId.IsNull())
             {
                 query["ApiId"] = request.ApiId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RagId))
+            if (!request.RagId.IsNull())
             {
                 query["RagId"] = request.RagId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rule))
+            if (!request.Rule.IsNull())
             {
                 query["Rule"] = request.Rule;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            if (!request.Type.IsNull())
             {
                 query["Type"] = request.Type;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "MerchandisePlacementDetection",
                 Version = "2026-04-28",
@@ -10734,7 +11015,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<MerchandisePlacementDetectionResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<MerchandisePlacementDetectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -10777,7 +11058,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public MerchandisePlacementDetectionResponse MerchandisePlacementDetection(MerchandisePlacementDetectionRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return MerchandisePlacementDetectionWithOptions(request, runtime);
         }
 
@@ -10821,7 +11102,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<MerchandisePlacementDetectionResponse> MerchandisePlacementDetectionAsync(MerchandisePlacementDetectionRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await MerchandisePlacementDetectionWithOptionsAsync(request, runtime);
         }
 
@@ -10857,19 +11138,19 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// MerchandisePlacementDetectionLiteResponse
         /// </returns>
-        public MerchandisePlacementDetectionLiteResponse MerchandisePlacementDetectionLiteWithOptions(MerchandisePlacementDetectionLiteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public MerchandisePlacementDetectionLiteResponse MerchandisePlacementDetectionLiteWithOptions(MerchandisePlacementDetectionLiteRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "MerchandisePlacementDetectionLite",
                 Version = "2026-04-28",
@@ -10881,7 +11162,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<MerchandisePlacementDetectionLiteResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<MerchandisePlacementDetectionLiteResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -10916,19 +11197,19 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// MerchandisePlacementDetectionLiteResponse
         /// </returns>
-        public async Task<MerchandisePlacementDetectionLiteResponse> MerchandisePlacementDetectionLiteWithOptionsAsync(MerchandisePlacementDetectionLiteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<MerchandisePlacementDetectionLiteResponse> MerchandisePlacementDetectionLiteWithOptionsAsync(MerchandisePlacementDetectionLiteRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "MerchandisePlacementDetectionLite",
                 Version = "2026-04-28",
@@ -10940,7 +11221,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<MerchandisePlacementDetectionLiteResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<MerchandisePlacementDetectionLiteResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -10974,7 +11255,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public MerchandisePlacementDetectionLiteResponse MerchandisePlacementDetectionLite(MerchandisePlacementDetectionLiteRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return MerchandisePlacementDetectionLiteWithOptions(request, runtime);
         }
 
@@ -11009,7 +11290,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<MerchandisePlacementDetectionLiteResponse> MerchandisePlacementDetectionLiteAsync(MerchandisePlacementDetectionLiteRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await MerchandisePlacementDetectionLiteWithOptionsAsync(request, runtime);
         }
 
@@ -11045,27 +11326,27 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// MerchandisePlacementDetectionProResponse
         /// </returns>
-        public MerchandisePlacementDetectionProResponse MerchandisePlacementDetectionProWithOptions(MerchandisePlacementDetectionProRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public MerchandisePlacementDetectionProResponse MerchandisePlacementDetectionProWithOptions(MerchandisePlacementDetectionProRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rule))
+            if (!request.Rule.IsNull())
             {
                 query["Rule"] = request.Rule;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            if (!request.Type.IsNull())
             {
                 query["Type"] = request.Type;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "MerchandisePlacementDetectionPro",
                 Version = "2026-04-28",
@@ -11077,7 +11358,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<MerchandisePlacementDetectionProResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<MerchandisePlacementDetectionProResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -11112,27 +11393,27 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// MerchandisePlacementDetectionProResponse
         /// </returns>
-        public async Task<MerchandisePlacementDetectionProResponse> MerchandisePlacementDetectionProWithOptionsAsync(MerchandisePlacementDetectionProRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<MerchandisePlacementDetectionProResponse> MerchandisePlacementDetectionProWithOptionsAsync(MerchandisePlacementDetectionProRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rule))
+            if (!request.Rule.IsNull())
             {
                 query["Rule"] = request.Rule;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            if (!request.Type.IsNull())
             {
                 query["Type"] = request.Type;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "MerchandisePlacementDetectionPro",
                 Version = "2026-04-28",
@@ -11144,7 +11425,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<MerchandisePlacementDetectionProResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<MerchandisePlacementDetectionProResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -11178,7 +11459,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public MerchandisePlacementDetectionProResponse MerchandisePlacementDetectionPro(MerchandisePlacementDetectionProRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return MerchandisePlacementDetectionProWithOptions(request, runtime);
         }
 
@@ -11213,7 +11494,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<MerchandisePlacementDetectionProResponse> MerchandisePlacementDetectionProAsync(MerchandisePlacementDetectionProRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await MerchandisePlacementDetectionProWithOptionsAsync(request, runtime);
         }
 
@@ -11249,19 +11530,19 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// MerchandisePriceTagDetectionResponse
         /// </returns>
-        public MerchandisePriceTagDetectionResponse MerchandisePriceTagDetectionWithOptions(MerchandisePriceTagDetectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public MerchandisePriceTagDetectionResponse MerchandisePriceTagDetectionWithOptions(MerchandisePriceTagDetectionRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "MerchandisePriceTagDetection",
                 Version = "2026-04-28",
@@ -11273,7 +11554,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<MerchandisePriceTagDetectionResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<MerchandisePriceTagDetectionResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -11308,19 +11589,19 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// MerchandisePriceTagDetectionResponse
         /// </returns>
-        public async Task<MerchandisePriceTagDetectionResponse> MerchandisePriceTagDetectionWithOptionsAsync(MerchandisePriceTagDetectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<MerchandisePriceTagDetectionResponse> MerchandisePriceTagDetectionWithOptionsAsync(MerchandisePriceTagDetectionRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "MerchandisePriceTagDetection",
                 Version = "2026-04-28",
@@ -11332,7 +11613,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<MerchandisePriceTagDetectionResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<MerchandisePriceTagDetectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -11366,7 +11647,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public MerchandisePriceTagDetectionResponse MerchandisePriceTagDetection(MerchandisePriceTagDetectionRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return MerchandisePriceTagDetectionWithOptions(request, runtime);
         }
 
@@ -11401,7 +11682,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<MerchandisePriceTagDetectionResponse> MerchandisePriceTagDetectionAsync(MerchandisePriceTagDetectionRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await MerchandisePriceTagDetectionWithOptionsAsync(request, runtime);
         }
 
@@ -11437,19 +11718,19 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// MerchandiseSceneDetectionResponse
         /// </returns>
-        public MerchandiseSceneDetectionResponse MerchandiseSceneDetectionWithOptions(MerchandiseSceneDetectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public MerchandiseSceneDetectionResponse MerchandiseSceneDetectionWithOptions(MerchandiseSceneDetectionRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "MerchandiseSceneDetection",
                 Version = "2026-04-28",
@@ -11461,7 +11742,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<MerchandiseSceneDetectionResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<MerchandiseSceneDetectionResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -11496,19 +11777,19 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// MerchandiseSceneDetectionResponse
         /// </returns>
-        public async Task<MerchandiseSceneDetectionResponse> MerchandiseSceneDetectionWithOptionsAsync(MerchandiseSceneDetectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<MerchandiseSceneDetectionResponse> MerchandiseSceneDetectionWithOptionsAsync(MerchandiseSceneDetectionRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "MerchandiseSceneDetection",
                 Version = "2026-04-28",
@@ -11520,7 +11801,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<MerchandiseSceneDetectionResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<MerchandiseSceneDetectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -11554,7 +11835,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public MerchandiseSceneDetectionResponse MerchandiseSceneDetection(MerchandiseSceneDetectionRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return MerchandiseSceneDetectionWithOptions(request, runtime);
         }
 
@@ -11589,7 +11870,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<MerchandiseSceneDetectionResponse> MerchandiseSceneDetectionAsync(MerchandiseSceneDetectionRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await MerchandiseSceneDetectionWithOptionsAsync(request, runtime);
         }
 
@@ -11625,19 +11906,19 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// MilkPowderCanBottomCodeRephotographyDetectionResponse
         /// </returns>
-        public MilkPowderCanBottomCodeRephotographyDetectionResponse MilkPowderCanBottomCodeRephotographyDetectionWithOptions(MilkPowderCanBottomCodeRephotographyDetectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public MilkPowderCanBottomCodeRephotographyDetectionResponse MilkPowderCanBottomCodeRephotographyDetectionWithOptions(MilkPowderCanBottomCodeRephotographyDetectionRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "MilkPowderCanBottomCodeRephotographyDetection",
                 Version = "2026-04-28",
@@ -11649,7 +11930,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<MilkPowderCanBottomCodeRephotographyDetectionResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<MilkPowderCanBottomCodeRephotographyDetectionResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -11684,19 +11965,19 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// MilkPowderCanBottomCodeRephotographyDetectionResponse
         /// </returns>
-        public async Task<MilkPowderCanBottomCodeRephotographyDetectionResponse> MilkPowderCanBottomCodeRephotographyDetectionWithOptionsAsync(MilkPowderCanBottomCodeRephotographyDetectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<MilkPowderCanBottomCodeRephotographyDetectionResponse> MilkPowderCanBottomCodeRephotographyDetectionWithOptionsAsync(MilkPowderCanBottomCodeRephotographyDetectionRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "MilkPowderCanBottomCodeRephotographyDetection",
                 Version = "2026-04-28",
@@ -11708,7 +11989,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<MilkPowderCanBottomCodeRephotographyDetectionResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<MilkPowderCanBottomCodeRephotographyDetectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -11742,7 +12023,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public MilkPowderCanBottomCodeRephotographyDetectionResponse MilkPowderCanBottomCodeRephotographyDetection(MilkPowderCanBottomCodeRephotographyDetectionRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return MilkPowderCanBottomCodeRephotographyDetectionWithOptions(request, runtime);
         }
 
@@ -11777,7 +12058,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<MilkPowderCanBottomCodeRephotographyDetectionResponse> MilkPowderCanBottomCodeRephotographyDetectionAsync(MilkPowderCanBottomCodeRephotographyDetectionRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await MilkPowderCanBottomCodeRephotographyDetectionWithOptionsAsync(request, runtime);
         }
 
@@ -11813,19 +12094,19 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// MilkPowderCartonCodeRephotographyDetectionResponse
         /// </returns>
-        public MilkPowderCartonCodeRephotographyDetectionResponse MilkPowderCartonCodeRephotographyDetectionWithOptions(MilkPowderCartonCodeRephotographyDetectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public MilkPowderCartonCodeRephotographyDetectionResponse MilkPowderCartonCodeRephotographyDetectionWithOptions(MilkPowderCartonCodeRephotographyDetectionRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "MilkPowderCartonCodeRephotographyDetection",
                 Version = "2026-04-28",
@@ -11837,7 +12118,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<MilkPowderCartonCodeRephotographyDetectionResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<MilkPowderCartonCodeRephotographyDetectionResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -11872,19 +12153,19 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// MilkPowderCartonCodeRephotographyDetectionResponse
         /// </returns>
-        public async Task<MilkPowderCartonCodeRephotographyDetectionResponse> MilkPowderCartonCodeRephotographyDetectionWithOptionsAsync(MilkPowderCartonCodeRephotographyDetectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<MilkPowderCartonCodeRephotographyDetectionResponse> MilkPowderCartonCodeRephotographyDetectionWithOptionsAsync(MilkPowderCartonCodeRephotographyDetectionRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "MilkPowderCartonCodeRephotographyDetection",
                 Version = "2026-04-28",
@@ -11896,7 +12177,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<MilkPowderCartonCodeRephotographyDetectionResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<MilkPowderCartonCodeRephotographyDetectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -11930,7 +12211,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public MilkPowderCartonCodeRephotographyDetectionResponse MilkPowderCartonCodeRephotographyDetection(MilkPowderCartonCodeRephotographyDetectionRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return MilkPowderCartonCodeRephotographyDetectionWithOptions(request, runtime);
         }
 
@@ -11965,7 +12246,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<MilkPowderCartonCodeRephotographyDetectionResponse> MilkPowderCartonCodeRephotographyDetectionAsync(MilkPowderCartonCodeRephotographyDetectionRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await MilkPowderCartonCodeRephotographyDetectionWithOptionsAsync(request, runtime);
         }
 
@@ -12005,23 +12286,23 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// PackageWeightSizeCheckResponse
         /// </returns>
-        public PackageWeightSizeCheckResponse PackageWeightSizeCheckWithOptions(PackageWeightSizeCheckRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public PackageWeightSizeCheckResponse PackageWeightSizeCheckWithOptions(PackageWeightSizeCheckRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnnotatedImageUrl))
+            if (!request.AnnotatedImageUrl.IsNull())
             {
                 query["AnnotatedImageUrl"] = request.AnnotatedImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RawImageUrl))
+            if (!request.RawImageUrl.IsNull())
             {
                 query["RawImageUrl"] = request.RawImageUrl;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "PackageWeightSizeCheck",
                 Version = "2026-04-28",
@@ -12033,7 +12314,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<PackageWeightSizeCheckResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<PackageWeightSizeCheckResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -12072,23 +12353,23 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// PackageWeightSizeCheckResponse
         /// </returns>
-        public async Task<PackageWeightSizeCheckResponse> PackageWeightSizeCheckWithOptionsAsync(PackageWeightSizeCheckRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<PackageWeightSizeCheckResponse> PackageWeightSizeCheckWithOptionsAsync(PackageWeightSizeCheckRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnnotatedImageUrl))
+            if (!request.AnnotatedImageUrl.IsNull())
             {
                 query["AnnotatedImageUrl"] = request.AnnotatedImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RawImageUrl))
+            if (!request.RawImageUrl.IsNull())
             {
                 query["RawImageUrl"] = request.RawImageUrl;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "PackageWeightSizeCheck",
                 Version = "2026-04-28",
@@ -12100,7 +12381,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<PackageWeightSizeCheckResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<PackageWeightSizeCheckResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -12138,7 +12419,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public PackageWeightSizeCheckResponse PackageWeightSizeCheck(PackageWeightSizeCheckRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return PackageWeightSizeCheckWithOptions(request, runtime);
         }
 
@@ -12177,7 +12458,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<PackageWeightSizeCheckResponse> PackageWeightSizeCheckAsync(PackageWeightSizeCheckRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await PackageWeightSizeCheckWithOptionsAsync(request, runtime);
         }
 
@@ -12196,33 +12477,33 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// PetHealthAnalysisResponse
         /// </returns>
-        public PetHealthAnalysisResponse PetHealthAnalysisWithOptions(PetHealthAnalysisRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public PetHealthAnalysisResponse PetHealthAnalysisWithOptions(PetHealthAnalysisRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            tmpReq.Validate();
             PetHealthAnalysisShrinkRequest request = new PetHealthAnalysisShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ImageUrl))
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.ImageUrl.IsNull())
             {
-                request.ImageUrlShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ImageUrl, "ImageUrl", "json");
+                request.ImageUrlShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.ImageUrl, "ImageUrl", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrlShrink))
+            if (!request.ImageUrlShrink.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrlShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemPrompt))
+            if (!request.SystemPrompt.IsNull())
             {
                 query["SystemPrompt"] = request.SystemPrompt;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserPrompt))
+            if (!request.UserPrompt.IsNull())
             {
                 query["UserPrompt"] = request.UserPrompt;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "PetHealthAnalysis",
                 Version = "2026-04-28",
@@ -12234,7 +12515,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<PetHealthAnalysisResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<PetHealthAnalysisResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -12252,33 +12533,33 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// PetHealthAnalysisResponse
         /// </returns>
-        public async Task<PetHealthAnalysisResponse> PetHealthAnalysisWithOptionsAsync(PetHealthAnalysisRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<PetHealthAnalysisResponse> PetHealthAnalysisWithOptionsAsync(PetHealthAnalysisRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            tmpReq.Validate();
             PetHealthAnalysisShrinkRequest request = new PetHealthAnalysisShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ImageUrl))
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.ImageUrl.IsNull())
             {
-                request.ImageUrlShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ImageUrl, "ImageUrl", "json");
+                request.ImageUrlShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.ImageUrl, "ImageUrl", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrlShrink))
+            if (!request.ImageUrlShrink.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrlShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemPrompt))
+            if (!request.SystemPrompt.IsNull())
             {
                 query["SystemPrompt"] = request.SystemPrompt;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserPrompt))
+            if (!request.UserPrompt.IsNull())
             {
                 query["UserPrompt"] = request.UserPrompt;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "PetHealthAnalysis",
                 Version = "2026-04-28",
@@ -12290,7 +12571,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<PetHealthAnalysisResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<PetHealthAnalysisResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -12307,7 +12588,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public PetHealthAnalysisResponse PetHealthAnalysis(PetHealthAnalysisRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return PetHealthAnalysisWithOptions(request, runtime);
         }
 
@@ -12325,7 +12606,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<PetHealthAnalysisResponse> PetHealthAnalysisAsync(PetHealthAnalysisRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await PetHealthAnalysisWithOptionsAsync(request, runtime);
         }
 
@@ -12398,49 +12679,49 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// PrepaidTextTranslateResponse
         /// </returns>
-        public PrepaidTextTranslateResponse PrepaidTextTranslateWithOptions(PrepaidTextTranslateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public PrepaidTextTranslateResponse PrepaidTextTranslateWithOptions(PrepaidTextTranslateRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            tmpReq.Validate();
             PrepaidTextTranslateShrinkRequest request = new PrepaidTextTranslateShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceTextList))
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.SourceTextList.IsNull())
             {
-                request.SourceTextListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceTextList, "SourceTextList", "json");
+                request.SourceTextListShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.SourceTextList, "SourceTextList", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizName))
+            if (!request.BizName.IsNull())
             {
                 body["BizName"] = request.BizName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FormatType))
+            if (!request.FormatType.IsNull())
             {
                 body["FormatType"] = request.FormatType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
+            if (!request.Glossary.IsNull())
             {
                 body["Glossary"] = request.Glossary;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            if (!request.SourceLanguage.IsNull())
             {
                 body["SourceLanguage"] = request.SourceLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTextListShrink))
+            if (!request.SourceTextListShrink.IsNull())
             {
                 body["SourceTextList"] = request.SourceTextListShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            if (!request.TargetLanguage.IsNull())
             {
                 body["TargetLanguage"] = request.TargetLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslateScene))
+            if (!request.TranslateScene.IsNull())
             {
                 body["TranslateScene"] = request.TranslateScene;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "PrepaidTextTranslate",
                 Version = "2026-04-28",
@@ -12452,7 +12733,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<PrepaidTextTranslateResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<PrepaidTextTranslateResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -12524,49 +12805,49 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// PrepaidTextTranslateResponse
         /// </returns>
-        public async Task<PrepaidTextTranslateResponse> PrepaidTextTranslateWithOptionsAsync(PrepaidTextTranslateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<PrepaidTextTranslateResponse> PrepaidTextTranslateWithOptionsAsync(PrepaidTextTranslateRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            tmpReq.Validate();
             PrepaidTextTranslateShrinkRequest request = new PrepaidTextTranslateShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceTextList))
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.SourceTextList.IsNull())
             {
-                request.SourceTextListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceTextList, "SourceTextList", "json");
+                request.SourceTextListShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.SourceTextList, "SourceTextList", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizName))
+            if (!request.BizName.IsNull())
             {
                 body["BizName"] = request.BizName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FormatType))
+            if (!request.FormatType.IsNull())
             {
                 body["FormatType"] = request.FormatType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
+            if (!request.Glossary.IsNull())
             {
                 body["Glossary"] = request.Glossary;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            if (!request.SourceLanguage.IsNull())
             {
                 body["SourceLanguage"] = request.SourceLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTextListShrink))
+            if (!request.SourceTextListShrink.IsNull())
             {
                 body["SourceTextList"] = request.SourceTextListShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            if (!request.TargetLanguage.IsNull())
             {
                 body["TargetLanguage"] = request.TargetLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslateScene))
+            if (!request.TranslateScene.IsNull())
             {
                 body["TranslateScene"] = request.TranslateScene;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "PrepaidTextTranslate",
                 Version = "2026-04-28",
@@ -12578,7 +12859,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<PrepaidTextTranslateResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<PrepaidTextTranslateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -12649,7 +12930,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public PrepaidTextTranslateResponse PrepaidTextTranslate(PrepaidTextTranslateRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return PrepaidTextTranslateWithOptions(request, runtime);
         }
 
@@ -12721,7 +13002,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<PrepaidTextTranslateResponse> PrepaidTextTranslateAsync(PrepaidTextTranslateRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await PrepaidTextTranslateWithOptionsAsync(request, runtime);
         }
 
@@ -12755,33 +13036,33 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// ProductHotspotDetectionResponse
         /// </returns>
-        public ProductHotspotDetectionResponse ProductHotspotDetectionWithOptions(ProductHotspotDetectionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ProductHotspotDetectionResponse ProductHotspotDetectionWithOptions(ProductHotspotDetectionRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            tmpReq.Validate();
             ProductHotspotDetectionShrinkRequest request = new ProductHotspotDetectionShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ReferenceImageUrls))
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.ReferenceImageUrls.IsNull())
             {
-                request.ReferenceImageUrlsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ReferenceImageUrls, "ReferenceImageUrls", "json");
+                request.ReferenceImageUrlsShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.ReferenceImageUrls, "ReferenceImageUrls", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReferenceImageUrlsShrink))
+            if (!request.ReferenceImageUrlsShrink.IsNull())
             {
                 query["ReferenceImageUrls"] = request.ReferenceImageUrlsShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReqId))
+            if (!request.ReqId.IsNull())
             {
                 query["ReqId"] = request.ReqId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetImageUrl))
+            if (!request.TargetImageUrl.IsNull())
             {
                 query["TargetImageUrl"] = request.TargetImageUrl;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ProductHotspotDetection",
                 Version = "2026-04-28",
@@ -12793,7 +13074,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ProductHotspotDetectionResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<ProductHotspotDetectionResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -12826,33 +13107,33 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// ProductHotspotDetectionResponse
         /// </returns>
-        public async Task<ProductHotspotDetectionResponse> ProductHotspotDetectionWithOptionsAsync(ProductHotspotDetectionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ProductHotspotDetectionResponse> ProductHotspotDetectionWithOptionsAsync(ProductHotspotDetectionRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            tmpReq.Validate();
             ProductHotspotDetectionShrinkRequest request = new ProductHotspotDetectionShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ReferenceImageUrls))
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.ReferenceImageUrls.IsNull())
             {
-                request.ReferenceImageUrlsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ReferenceImageUrls, "ReferenceImageUrls", "json");
+                request.ReferenceImageUrlsShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.ReferenceImageUrls, "ReferenceImageUrls", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReferenceImageUrlsShrink))
+            if (!request.ReferenceImageUrlsShrink.IsNull())
             {
                 query["ReferenceImageUrls"] = request.ReferenceImageUrlsShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReqId))
+            if (!request.ReqId.IsNull())
             {
                 query["ReqId"] = request.ReqId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetImageUrl))
+            if (!request.TargetImageUrl.IsNull())
             {
                 query["TargetImageUrl"] = request.TargetImageUrl;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "ProductHotspotDetection",
                 Version = "2026-04-28",
@@ -12864,7 +13145,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ProductHotspotDetectionResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<ProductHotspotDetectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -12896,7 +13177,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public ProductHotspotDetectionResponse ProductHotspotDetection(ProductHotspotDetectionRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return ProductHotspotDetectionWithOptions(request, runtime);
         }
 
@@ -12929,7 +13210,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<ProductHotspotDetectionResponse> ProductHotspotDetectionAsync(ProductHotspotDetectionRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await ProductHotspotDetectionWithOptionsAsync(request, runtime);
         }
 
@@ -12953,19 +13234,19 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// QueryAsyncTaskResultResponse
         /// </returns>
-        public QueryAsyncTaskResultResponse QueryAsyncTaskResultWithOptions(QueryAsyncTaskResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public QueryAsyncTaskResultResponse QueryAsyncTaskResultWithOptions(QueryAsyncTaskResultRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            if (!request.TaskId.IsNull())
             {
                 query["TaskId"] = request.TaskId;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "QueryAsyncTaskResult",
                 Version = "2026-04-28",
@@ -12977,7 +13258,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<QueryAsyncTaskResultResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<QueryAsyncTaskResultResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -13000,19 +13281,19 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// QueryAsyncTaskResultResponse
         /// </returns>
-        public async Task<QueryAsyncTaskResultResponse> QueryAsyncTaskResultWithOptionsAsync(QueryAsyncTaskResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<QueryAsyncTaskResultResponse> QueryAsyncTaskResultWithOptionsAsync(QueryAsyncTaskResultRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            if (!request.TaskId.IsNull())
             {
                 query["TaskId"] = request.TaskId;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "QueryAsyncTaskResult",
                 Version = "2026-04-28",
@@ -13024,7 +13305,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<QueryAsyncTaskResultResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<QueryAsyncTaskResultResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -13046,7 +13327,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public QueryAsyncTaskResultResponse QueryAsyncTaskResult(QueryAsyncTaskResultRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return QueryAsyncTaskResultWithOptions(request, runtime);
         }
 
@@ -13069,75 +13350,66 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<QueryAsyncTaskResultResponse> QueryAsyncTaskResultAsync(QueryAsyncTaskResultRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await QueryAsyncTaskResultWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detects whether an image contains a size chart. (Synchronous)</para>
+        /// <para>Performs a paged query on the content of a display knowledge base with paging (synchronization).</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h1>1. Product Introduction</h1>
-        /// <para>Detects whether an image contains a size chart. (Synchronous)</para>
-        /// <h1>2. Common scenarios</h1>
-        /// <para><b>Batch processing scenario:</b> Detect images that contain size charts from a batch of images for further image translation or extraction. The size chart detection service helps reduce costs.</para>
-        /// <h1>3. Features</h1>
-        /// <para>The size chart detection service uses image recognition technology to automatically determine whether an input image contains size chart content. You provide an image URL, and the system returns a detection result (True/False) indicating whether the image is a size chart.
-        /// You can customize the confidence threshold (default: 0.4) and flexibly adjust the detection sensitivity based on your business precision requirements. A lower threshold results in more lenient detection, while a higher threshold results in stricter detection. The API processes a single image per request, making it suitable for integration into automated batch workflows for sequential invocation.</para>
-        /// <h1>4. Effect comparison</h1>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th><b>Input image</b></th>
-        /// <th><b>Confidence</b></th>
-        /// <th><b>Output result</b></th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4jKqm0bAebrKLnw1/img/0a914347-2acb-4b94-bf07-86aab2b31279.png" alt="image.png"></td>
-        /// <td>0.4</td>
-        /// <td>true</td>
-        /// </tr>
-        /// <tr>
-        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4jKqm0bAebrKLnw1/img/ab29b032-139a-4b22-9371-b387581559b7.webp" alt="O1CN01ZjViRX1rdaL6QDFNo_!!6000000005654-0-tps-2048-2048.webp"></td>
-        /// <td>0.4</td>
-        /// <td>false</td>
-        /// </tr>
-        /// </tbody></table>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// SizeChartDetectRequest
+        /// <param name="tmpReq">
+        /// QueryDisplayKnowledgeRequest
         /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
         /// 
         /// <returns>
-        /// SizeChartDetectResponse
+        /// QueryDisplayKnowledgeResponse
         /// </returns>
-        public SizeChartDetectResponse SizeChartDetectWithOptions(SizeChartDetectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public QueryDisplayKnowledgeResponse QueryDisplayKnowledgeWithOptions(QueryDisplayKnowledgeRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            tmpReq.Validate();
+            QueryDisplayKnowledgeShrinkRequest request = new QueryDisplayKnowledgeShrinkRequest();
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.Statuses.IsNull())
+            {
+                request.StatusesShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.Statuses, "Statuses", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.PageNum.IsNull())
             {
-                query["ImageUrl"] = request.ImageUrl;
+                query["PageNum"] = request.PageNum;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Threshold))
+            if (!request.PageSize.IsNull())
             {
-                query["Threshold"] = request.Threshold;
+                query["PageSize"] = request.PageSize;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            if (!request.RagId.IsNull())
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                query["RagId"] = request.RagId;
+            }
+            if (!request.SkuId.IsNull())
+            {
+                query["SkuId"] = request.SkuId;
+            }
+            if (!request.SkuName.IsNull())
+            {
+                query["SkuName"] = request.SkuName;
+            }
+            if (!request.StatusesShrink.IsNull())
+            {
+                query["Statuses"] = request.StatusesShrink;
+            }
+            OpenApiRequest req = new OpenApiRequest
+            {
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
-                Action = "SizeChartDetect",
+                Action = "QueryDisplayKnowledge",
                 Version = "2026-04-28",
                 Protocol = "HTTPS",
                 Pathname = "/",
@@ -13147,7 +13419,111 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SizeChartDetectResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<QueryDisplayKnowledgeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query on the content of a display knowledge base with paging (synchronization).</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// QueryDisplayKnowledgeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDisplayKnowledgeResponse
+        /// </returns>
+        public async Task<QueryDisplayKnowledgeResponse> QueryDisplayKnowledgeWithOptionsAsync(QueryDisplayKnowledgeRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
+        {
+            tmpReq.Validate();
+            QueryDisplayKnowledgeShrinkRequest request = new QueryDisplayKnowledgeShrinkRequest();
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.Statuses.IsNull())
+            {
+                request.StatusesShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.Statuses, "Statuses", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!request.PageNum.IsNull())
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!request.PageSize.IsNull())
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!request.RagId.IsNull())
+            {
+                query["RagId"] = request.RagId;
+            }
+            if (!request.SkuId.IsNull())
+            {
+                query["SkuId"] = request.SkuId;
+            }
+            if (!request.SkuName.IsNull())
+            {
+                query["SkuName"] = request.SkuName;
+            }
+            if (!request.StatusesShrink.IsNull())
+            {
+                query["Statuses"] = request.StatusesShrink;
+            }
+            OpenApiRequest req = new OpenApiRequest
+            {
+                Query = Utils.Query(query),
+            };
+            Params params_ = new Params
+            {
+                Action = "QueryDisplayKnowledge",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return Darabonba.Model.ToObject<QueryDisplayKnowledgeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query on the content of a display knowledge base with paging (synchronization).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDisplayKnowledgeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDisplayKnowledgeResponse
+        /// </returns>
+        public QueryDisplayKnowledgeResponse QueryDisplayKnowledge(QueryDisplayKnowledgeRequest request)
+        {
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            return QueryDisplayKnowledgeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query on the content of a display knowledge base with paging (synchronization).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDisplayKnowledgeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDisplayKnowledgeResponse
+        /// </returns>
+        public async Task<QueryDisplayKnowledgeResponse> QueryDisplayKnowledgeAsync(QueryDisplayKnowledgeRequest request)
+        {
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            return await QueryDisplayKnowledgeWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -13196,23 +13572,23 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// SizeChartDetectResponse
         /// </returns>
-        public async Task<SizeChartDetectResponse> SizeChartDetectWithOptionsAsync(SizeChartDetectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public SizeChartDetectResponse SizeChartDetectWithOptions(SizeChartDetectRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Threshold))
+            if (!request.Threshold.IsNull())
             {
                 query["Threshold"] = request.Threshold;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "SizeChartDetect",
                 Version = "2026-04-28",
@@ -13224,7 +13600,84 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SizeChartDetectResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<SizeChartDetectResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects whether an image contains a size chart. (Synchronous)</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>1. Product Introduction</h1>
+        /// <para>Detects whether an image contains a size chart. (Synchronous)</para>
+        /// <h1>2. Common scenarios</h1>
+        /// <para><b>Batch processing scenario:</b> Detect images that contain size charts from a batch of images for further image translation or extraction. The size chart detection service helps reduce costs.</para>
+        /// <h1>3. Features</h1>
+        /// <para>The size chart detection service uses image recognition technology to automatically determine whether an input image contains size chart content. You provide an image URL, and the system returns a detection result (True/False) indicating whether the image is a size chart.
+        /// You can customize the confidence threshold (default: 0.4) and flexibly adjust the detection sensitivity based on your business precision requirements. A lower threshold results in more lenient detection, while a higher threshold results in stricter detection. The API processes a single image per request, making it suitable for integration into automated batch workflows for sequential invocation.</para>
+        /// <h1>4. Effect comparison</h1>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>Input image</b></th>
+        /// <th><b>Confidence</b></th>
+        /// <th><b>Output result</b></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4jKqm0bAebrKLnw1/img/0a914347-2acb-4b94-bf07-86aab2b31279.png" alt="image.png"></td>
+        /// <td>0.4</td>
+        /// <td>true</td>
+        /// </tr>
+        /// <tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4jKqm0bAebrKLnw1/img/ab29b032-139a-4b22-9371-b387581559b7.webp" alt="O1CN01ZjViRX1rdaL6QDFNo_!!6000000005654-0-tps-2048-2048.webp"></td>
+        /// <td>0.4</td>
+        /// <td>false</td>
+        /// </tr>
+        /// </tbody></table>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SizeChartDetectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SizeChartDetectResponse
+        /// </returns>
+        public async Task<SizeChartDetectResponse> SizeChartDetectWithOptionsAsync(SizeChartDetectRequest request, Darabonba.Models.RuntimeOptions runtime)
+        {
+            request.Validate();
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!request.ImageUrl.IsNull())
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            if (!request.Threshold.IsNull())
+            {
+                query["Threshold"] = request.Threshold;
+            }
+            OpenApiRequest req = new OpenApiRequest
+            {
+                Query = Utils.Query(query),
+            };
+            Params params_ = new Params
+            {
+                Action = "SizeChartDetect",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return Darabonba.Model.ToObject<SizeChartDetectResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -13272,7 +13725,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public SizeChartDetectResponse SizeChartDetect(SizeChartDetectRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return SizeChartDetectWithOptions(request, runtime);
         }
 
@@ -13321,7 +13774,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<SizeChartDetectResponse> SizeChartDetectAsync(SizeChartDetectRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await SizeChartDetectWithOptionsAsync(request, runtime);
         }
 
@@ -13475,33 +13928,33 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// SizeChartExtractResponse
         /// </returns>
-        public SizeChartExtractResponse SizeChartExtractWithOptions(SizeChartExtractRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public SizeChartExtractResponse SizeChartExtractWithOptions(SizeChartExtractRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            tmpReq.Validate();
             SizeChartExtractShrinkRequest request = new SizeChartExtractShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ColumnNameList))
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.ColumnNameList.IsNull())
             {
-                request.ColumnNameListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ColumnNameList, "ColumnNameList", "json");
+                request.ColumnNameListShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.ColumnNameList, "ColumnNameList", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColumnNameListShrink))
+            if (!request.ColumnNameListShrink.IsNull())
             {
                 query["ColumnNameList"] = request.ColumnNameListShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LanguageModel))
+            if (!request.LanguageModel.IsNull())
             {
                 query["LanguageModel"] = request.LanguageModel;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "SizeChartExtract",
                 Version = "2026-04-28",
@@ -13513,7 +13966,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SizeChartExtractResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<SizeChartExtractResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -13666,33 +14119,33 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// SizeChartExtractResponse
         /// </returns>
-        public async Task<SizeChartExtractResponse> SizeChartExtractWithOptionsAsync(SizeChartExtractRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<SizeChartExtractResponse> SizeChartExtractWithOptionsAsync(SizeChartExtractRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            tmpReq.Validate();
             SizeChartExtractShrinkRequest request = new SizeChartExtractShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ColumnNameList))
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.ColumnNameList.IsNull())
             {
-                request.ColumnNameListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ColumnNameList, "ColumnNameList", "json");
+                request.ColumnNameListShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.ColumnNameList, "ColumnNameList", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColumnNameListShrink))
+            if (!request.ColumnNameListShrink.IsNull())
             {
                 query["ColumnNameList"] = request.ColumnNameListShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LanguageModel))
+            if (!request.LanguageModel.IsNull())
             {
                 query["LanguageModel"] = request.LanguageModel;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "SizeChartExtract",
                 Version = "2026-04-28",
@@ -13704,7 +14157,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SizeChartExtractResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<SizeChartExtractResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -13856,7 +14309,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public SizeChartExtractResponse SizeChartExtract(SizeChartExtractRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return SizeChartExtractWithOptions(request, runtime);
         }
 
@@ -14009,7 +14462,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<SizeChartExtractResponse> SizeChartExtractAsync(SizeChartExtractRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await SizeChartExtractWithOptionsAsync(request, runtime);
         }
 
@@ -14157,33 +14610,33 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// SizeChartExtractAsyncResponse
         /// </returns>
-        public SizeChartExtractAsyncResponse SizeChartExtractAsyncWithOptions(SizeChartExtractAsyncRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public SizeChartExtractAsyncResponse SizeChartExtractAsyncWithOptions(SizeChartExtractAsyncRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            tmpReq.Validate();
             SizeChartExtractAsyncShrinkRequest request = new SizeChartExtractAsyncShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ColumnNameList))
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.ColumnNameList.IsNull())
             {
-                request.ColumnNameListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ColumnNameList, "ColumnNameList", "json");
+                request.ColumnNameListShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.ColumnNameList, "ColumnNameList", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColumnNameListShrink))
+            if (!request.ColumnNameListShrink.IsNull())
             {
                 query["ColumnNameList"] = request.ColumnNameListShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LanguageModel))
+            if (!request.LanguageModel.IsNull())
             {
                 query["LanguageModel"] = request.LanguageModel;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "SizeChartExtractAsync",
                 Version = "2026-04-28",
@@ -14195,7 +14648,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SizeChartExtractAsyncResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<SizeChartExtractAsyncResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -14342,33 +14795,33 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// SizeChartExtractAsyncResponse
         /// </returns>
-        public async Task<SizeChartExtractAsyncResponse> SizeChartExtractAsyncWithOptionsAsync(SizeChartExtractAsyncRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<SizeChartExtractAsyncResponse> SizeChartExtractAsyncWithOptionsAsync(SizeChartExtractAsyncRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            tmpReq.Validate();
             SizeChartExtractAsyncShrinkRequest request = new SizeChartExtractAsyncShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ColumnNameList))
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.ColumnNameList.IsNull())
             {
-                request.ColumnNameListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ColumnNameList, "ColumnNameList", "json");
+                request.ColumnNameListShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.ColumnNameList, "ColumnNameList", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColumnNameListShrink))
+            if (!request.ColumnNameListShrink.IsNull())
             {
                 query["ColumnNameList"] = request.ColumnNameListShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LanguageModel))
+            if (!request.LanguageModel.IsNull())
             {
                 query["LanguageModel"] = request.LanguageModel;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "SizeChartExtractAsync",
                 Version = "2026-04-28",
@@ -14380,7 +14833,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SizeChartExtractAsyncResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<SizeChartExtractAsyncResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -14526,7 +14979,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public SizeChartExtractAsyncResponse SizeChartExtractAsync(SizeChartExtractAsyncRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return SizeChartExtractAsyncWithOptions(request, runtime);
         }
 
@@ -14673,7 +15126,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<SizeChartExtractAsyncResponse> SizeChartExtractAsyncAsync(SizeChartExtractAsyncRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await SizeChartExtractAsyncWithOptionsAsync(request, runtime);
         }
 
@@ -14709,19 +15162,19 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// StorefrontSceneRecognitionResponse
         /// </returns>
-        public StorefrontSceneRecognitionResponse StorefrontSceneRecognitionWithOptions(StorefrontSceneRecognitionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public StorefrontSceneRecognitionResponse StorefrontSceneRecognitionWithOptions(StorefrontSceneRecognitionRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "StorefrontSceneRecognition",
                 Version = "2026-04-28",
@@ -14733,7 +15186,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StorefrontSceneRecognitionResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<StorefrontSceneRecognitionResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -14768,19 +15221,19 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// StorefrontSceneRecognitionResponse
         /// </returns>
-        public async Task<StorefrontSceneRecognitionResponse> StorefrontSceneRecognitionWithOptionsAsync(StorefrontSceneRecognitionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<StorefrontSceneRecognitionResponse> StorefrontSceneRecognitionWithOptionsAsync(StorefrontSceneRecognitionRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "StorefrontSceneRecognition",
                 Version = "2026-04-28",
@@ -14792,7 +15245,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StorefrontSceneRecognitionResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<StorefrontSceneRecognitionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -14826,7 +15279,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public StorefrontSceneRecognitionResponse StorefrontSceneRecognition(StorefrontSceneRecognitionRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return StorefrontSceneRecognitionWithOptions(request, runtime);
         }
 
@@ -14861,7 +15314,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<StorefrontSceneRecognitionResponse> StorefrontSceneRecognitionAsync(StorefrontSceneRecognitionRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await StorefrontSceneRecognitionWithOptionsAsync(request, runtime);
         }
 
@@ -14880,43 +15333,43 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// SubmitProductMatchResponse
         /// </returns>
-        public SubmitProductMatchResponse SubmitProductMatchWithOptions(SubmitProductMatchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public SubmitProductMatchResponse SubmitProductMatchWithOptions(SubmitProductMatchRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BrandName))
+            if (!request.BrandName.IsNull())
             {
                 query["BrandName"] = request.BrandName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            if (!request.Category.IsNull())
             {
                 query["Category"] = request.Category;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItemId))
+            if (!request.ItemId.IsNull())
             {
                 query["ItemId"] = request.ItemId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductUrl))
+            if (!request.ProductUrl.IsNull())
             {
                 query["ProductUrl"] = request.ProductUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShopName))
+            if (!request.ShopName.IsNull())
             {
                 query["ShopName"] = request.ShopName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            if (!request.Title.IsNull())
             {
                 query["Title"] = request.Title;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "SubmitProductMatch",
                 Version = "2026-04-28",
@@ -14928,7 +15381,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SubmitProductMatchResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<SubmitProductMatchResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -14946,43 +15399,43 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// SubmitProductMatchResponse
         /// </returns>
-        public async Task<SubmitProductMatchResponse> SubmitProductMatchWithOptionsAsync(SubmitProductMatchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<SubmitProductMatchResponse> SubmitProductMatchWithOptionsAsync(SubmitProductMatchRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BrandName))
+            if (!request.BrandName.IsNull())
             {
                 query["BrandName"] = request.BrandName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            if (!request.Category.IsNull())
             {
                 query["Category"] = request.Category;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItemId))
+            if (!request.ItemId.IsNull())
             {
                 query["ItemId"] = request.ItemId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductUrl))
+            if (!request.ProductUrl.IsNull())
             {
                 query["ProductUrl"] = request.ProductUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShopName))
+            if (!request.ShopName.IsNull())
             {
                 query["ShopName"] = request.ShopName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            if (!request.Title.IsNull())
             {
                 query["Title"] = request.Title;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "SubmitProductMatch",
                 Version = "2026-04-28",
@@ -14994,7 +15447,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<SubmitProductMatchResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<SubmitProductMatchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -15011,7 +15464,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public SubmitProductMatchResponse SubmitProductMatch(SubmitProductMatchRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return SubmitProductMatchWithOptions(request, runtime);
         }
 
@@ -15029,7 +15482,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<SubmitProductMatchResponse> SubmitProductMatchAsync(SubmitProductMatchRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await SubmitProductMatchWithOptionsAsync(request, runtime);
         }
 
@@ -15148,23 +15601,23 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// TextCorrectResponse
         /// </returns>
-        public TextCorrectResponse TextCorrectWithOptions(TextCorrectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public TextCorrectResponse TextCorrectWithOptions(TextCorrectRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            if (!request.SourceLanguage.IsNull())
             {
                 query["SourceLanguage"] = request.SourceLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceText))
+            if (!request.SourceText.IsNull())
             {
                 query["SourceText"] = request.SourceText;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "TextCorrect",
                 Version = "2026-04-28",
@@ -15176,7 +15629,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<TextCorrectResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<TextCorrectResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -15294,23 +15747,23 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// TextCorrectResponse
         /// </returns>
-        public async Task<TextCorrectResponse> TextCorrectWithOptionsAsync(TextCorrectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<TextCorrectResponse> TextCorrectWithOptionsAsync(TextCorrectRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            if (!request.SourceLanguage.IsNull())
             {
                 query["SourceLanguage"] = request.SourceLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceText))
+            if (!request.SourceText.IsNull())
             {
                 query["SourceText"] = request.SourceText;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "TextCorrect",
                 Version = "2026-04-28",
@@ -15322,7 +15775,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<TextCorrectResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<TextCorrectResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -15439,7 +15892,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public TextCorrectResponse TextCorrect(TextCorrectRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return TextCorrectWithOptions(request, runtime);
         }
 
@@ -15557,7 +16010,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<TextCorrectResponse> TextCorrectAsync(TextCorrectRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await TextCorrectWithOptionsAsync(request, runtime);
         }
 
@@ -15631,49 +16084,49 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// TextTranslateResponse
         /// </returns>
-        public TextTranslateResponse TextTranslateWithOptions(TextTranslateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public TextTranslateResponse TextTranslateWithOptions(TextTranslateRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            tmpReq.Validate();
             TextTranslateShrinkRequest request = new TextTranslateShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceTextList))
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.SourceTextList.IsNull())
             {
-                request.SourceTextListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceTextList, "SourceTextList", "json");
+                request.SourceTextListShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.SourceTextList, "SourceTextList", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizName))
+            if (!request.BizName.IsNull())
             {
                 body["BizName"] = request.BizName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FormatType))
+            if (!request.FormatType.IsNull())
             {
                 body["FormatType"] = request.FormatType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
+            if (!request.Glossary.IsNull())
             {
                 body["Glossary"] = request.Glossary;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            if (!request.SourceLanguage.IsNull())
             {
                 body["SourceLanguage"] = request.SourceLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTextListShrink))
+            if (!request.SourceTextListShrink.IsNull())
             {
                 body["SourceTextList"] = request.SourceTextListShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            if (!request.TargetLanguage.IsNull())
             {
                 body["TargetLanguage"] = request.TargetLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslateScene))
+            if (!request.TranslateScene.IsNull())
             {
                 body["TranslateScene"] = request.TranslateScene;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "TextTranslate",
                 Version = "2026-04-28",
@@ -15685,7 +16138,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<TextTranslateResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<TextTranslateResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -15758,49 +16211,49 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// TextTranslateResponse
         /// </returns>
-        public async Task<TextTranslateResponse> TextTranslateWithOptionsAsync(TextTranslateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<TextTranslateResponse> TextTranslateWithOptionsAsync(TextTranslateRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            tmpReq.Validate();
             TextTranslateShrinkRequest request = new TextTranslateShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceTextList))
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.SourceTextList.IsNull())
             {
-                request.SourceTextListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceTextList, "SourceTextList", "json");
+                request.SourceTextListShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.SourceTextList, "SourceTextList", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizName))
+            if (!request.BizName.IsNull())
             {
                 body["BizName"] = request.BizName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FormatType))
+            if (!request.FormatType.IsNull())
             {
                 body["FormatType"] = request.FormatType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
+            if (!request.Glossary.IsNull())
             {
                 body["Glossary"] = request.Glossary;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            if (!request.SourceLanguage.IsNull())
             {
                 body["SourceLanguage"] = request.SourceLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTextListShrink))
+            if (!request.SourceTextListShrink.IsNull())
             {
                 body["SourceTextList"] = request.SourceTextListShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            if (!request.TargetLanguage.IsNull())
             {
                 body["TargetLanguage"] = request.TargetLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslateScene))
+            if (!request.TranslateScene.IsNull())
             {
                 body["TranslateScene"] = request.TranslateScene;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "TextTranslate",
                 Version = "2026-04-28",
@@ -15812,7 +16265,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<TextTranslateResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<TextTranslateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -15884,7 +16337,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public TextTranslateResponse TextTranslate(TextTranslateRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return TextTranslateWithOptions(request, runtime);
         }
 
@@ -15957,76 +16410,76 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<TextTranslateResponse> TextTranslateAsync(TextTranslateRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await TextTranslateWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文本翻译异步</para>
+        /// <para>Translates text by using the Maas MT model, an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs and optimized for e-commerce terms such as brands, models, materials, and attributes. It supports 156 languages, more than 400 language pairs, and automatic language detection for source texts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>适用场景</h2>
+        /// <h2>Scenarios</h2>
         /// <list type="bullet">
-        /// <item><description><para>商品标题：Maas MT大模型翻译可以将商品标题中的短语、关键词、流行词等准确翻译成目标语言，提升商品在电商平台的曝光率。</para>
+        /// <item><description><para>Product titles: The Maas MT large language model accurately translates phrases, keywords, and trending words in product titles into the target language to increase product exposure on e-commerce platforms.</para>
         /// </description></item>
-        /// <item><description><para>商品详描：商品详描整体文本较长、格式多样且复杂，Maas 大模型翻译支持长文本翻译和 HTML 格式，翻译效果和格式还原能力表现出色。</para>
+        /// <item><description><para>Product descriptions: Product descriptions are typically long and have diverse and complex formats. The Maas large language model supports long-text translation and HTML formatting, delivering excellent translation quality and format restoration.</para>
         /// </description></item>
-        /// <item><description><para>商品属性：商品属性词汇较短，且存在电商专有词（如型号、参数）等。</para>
+        /// <item><description><para>Product attributes: Product attribute terms are short and contain e-commerce-specific words such as models and parameters.</para>
         /// </description></item>
-        /// <item><description><para>客服对话：在客服场景中，可优化“上下文缺失、打字错误“等问题，并在部分语向上支持礼貌用语。</para>
+        /// <item><description><para>Customer service conversations: In customer service scenarios, the model optimizes issues such as missing context and typos, and supports polite expressions in specific language pairs.</para>
+        /// <para>  The Maas MT large language model can also be used for translation in general scenarios, such as office work, meetings, and daily conversations.</para>
         /// </description></item>
         /// </list>
-        /// <para>      同时，Maas MT大模型翻译也可以用于通用场景的翻译，如办公、会议、日常对话等。</para>
-        /// <h2>功能介绍</h2>
+        /// <h2>Features</h2>
         /// <list type="bullet">
-        /// <item><description><para><b>超低幻觉率与高速推理</b> Maas MT大模型翻译是在翻译场景上经过偏好对齐的大语言模型，与通用大语言模型相比，翻译推理速度快，幻觉率极低，尤其适合大规模调用的场景。</para>
+        /// <item><description><para><b>Ultra-low hallucination rate and high-speed inference</b> The Maas MT large language model is aligned with preferences for translation scenarios. Compared with general-purpose large language models, it provides faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</para>
         /// </description></item>
-        /// <item><description><para><b>支持翻译的文本格式类型</b> 当前支持 text 和 html 的文本类型。</para>
+        /// <item><description><para><b>Supported text formats</b> The model supports text and HTML formats.</para>
         /// </description></item>
-        /// <item><description><para><b>翻译干预能力支持</b> 支持自定义翻译结果，包含不被翻译（ABC-ABC），指定翻译（ABC-DEF），不翻译（ABC-空值）。常用于品牌词保护等场景。只需调用接口时传入相应的干预词表ID，即可实现，可满足您在不同场景下的翻译需求。一般您可以上传10万条干预词，如有更多需要可以联系平台进行处理。</para>
+        /// <item><description><para><b>Translation intervention</b> You can customize translation results, including keeping terms untranslated (ABC-ABC), specifying translations (ABC-DEF), and omitting translations (ABC-null value). This feature is commonly used for brand word protection. You only need to pass the corresponding intervention glossary ID when calling the API. This meets your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</para>
         /// </description></item>
-        /// <item><description><para><b>翻译效果对比</b></para>
+        /// <item><description><para><b>Translation quality comparison</b></para>
         /// <table>
         /// <thead>
         /// <tr>
-        /// <th><b>原文</b></th>
-        /// <th><b>Aidge译后</b></th>
-        /// <th><b>其他翻译产品1</b></th>
-        /// <th><b>其他翻译产品2</b></th>
-        /// <th><b>Aidge翻译优势</b></th>
+        /// <th><b>Source text</b></th>
+        /// <th><b>Aidge translation</b></th>
+        /// <th><b>Other translation product 1</b></th>
+        /// <th><b>Other translation product 2</b></th>
+        /// <th><b>Aidge translation advantages</b></th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>75mm 4Pin 0.38A GA81S2U 12V GTX 960 Cooling Fan for Zotac GTX960 Graphics Card Cooling Fan</td>
-        /// <td>75mm 4Pin 0.38A GA81S2U 12V GTX 960, ventilador de enfriamiento para tarjeta gráfica Zotac GTX960.</td>
-        /// <td>Ventilador de refrigeración de 75mm 4Pin 0.38A GA81S2U 12V para la tarjeta gráfica Zotac GTX960 Ventilador de enfriamiento GTX 960.</td>
-        /// <td>Ventilador de refrigeración para tarjeta gráfica Zotac GTX960, 75mm, 4 pines, 0,38A, GA81S2U, 12V, GTX 960</td>
-        /// <td>商品主体更清晰</td>
+        /// <td>75mm 4Pin 0.38A GA81S2U 12V GTX 960 Cooling Fan for Zotac GTX960 Graphics Card Cooling Fan</td>
+        /// <td>75mm 4Pin 0.38A GA81S2U 12V GTX 960, ventilador de enfriamiento para tarjeta gráfica Zotac GTX960.</td>
+        /// <td>Ventilador de refrigeración de 75mm 4Pin 0.38A GA81S2U 12V para la tarjeta gráfica Zotac GTX960 Ventilador de enfriamiento GTX 960.</td>
+        /// <td>Ventilador de refrigeración para tarjeta gráfica Zotac GTX960, 75mm, 4 pines, 0,38A, GA81S2U, 12V, GTX 960</td>
+        /// <td>Clearer product subject</td>
         /// </tr>
         /// <tr>
-        /// <td>New Arrival Classic Style Luxury Brand 6 Hands Swiss Automatic Mechanical Men\&quot;s Business Steel Watch</td>
-        /// <td>Nueva llegada, reloj mecánico automático de lujo con 6 manecillas, estilo clásico, de acero para hombres de negocios</td>
-        /// <td>Nueva Llegada Reloj De Acero de Negocios para Hombre con Mecanismo Automático Suizo y 6 Agujas de Estilo Clásico de Marca de Lujo.</td>
-        /// <td>Reloj de acero de negocios para hombre, mecánico automático suizo, marca de lujo, estilo clásico, 6 manos, nueva llegada</td>
-        /// <td>句式更完整，表述更清晰，断句更合理</td>
+        /// <td>New Arrival Classic Style Luxury Brand 6 Hands Swiss Automatic Mechanical Men\&quot;s Business Steel Watch</td>
+        /// <td>Nueva llegada, reloj mecánico automático de lujo con 6 manecillas, estilo clásico, de acero para hombres de negocios</td>
+        /// <td>Nueva Llegada Reloj De Acero de Negocios para Hombre con Mecanismo Automático Suizo y 6 Agujas de Estilo Clásico de Marca de Lujo.</td>
+        /// <td>Reloj de acero de negocios para hombre, mecánico automático suizo, marca de lujo, estilo clásico, 6 manos, nueva llegada</td>
+        /// <td>More complete sentence structure, clearer expression, and more reasonable punctuation</td>
         /// </tr>
         /// <tr>
-        /// <td>Men Key Bag Genuine Cow Leather Buckets Key Cases Pouch Zipper Keychain Auto Car Key Case Women Home Key Holder Wallet</td>
-        /// <td>Sac à clés pour hommes en cuir de vache véritable, étuis à clés, pochette à fermeture éclair, porte-clés, étui à clé de voiture, porte-clés pour femmes, organisateur de portefeuille</td>
-        /// <td>Porte-clés sac en cuir de vache véritable, étuis à clés en forme de seau, pochette à fermeture éclair, porte-clés auto pour voiture, étui à clés pour femmes, organisateur de clés de maison, portefeuille.</td>
-        /// <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermature éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
-        /// <td>产品主体表述更清晰明确，是“钥匙包”而非“钥匙扣”，其它译文容易对产品主体产生歧义</td>
+        /// <td>Men Key Bag Genuine Cow Leather Buckets Key Cases Pouch Zipper Keychain Auto Car Key Case Women Home Key Holder Wallet</td>
+        /// <td>Sac à clés pour hommes en cuir de vache véritable, étuis à clés, pochette à fermeture éclair, porte-clés, étui à clé de voiture, porte-clés pour femmes, organisateur de portefeuille</td>
+        /// <td>Porte-clés sac en cuir de vache véritable, étuis à clés en forme de seau, pochette à fermeture éclair, porte-clés auto pour voiture, étui à clés pour femmes, organisateur de clés de maison, portefeuille.</td>
+        /// <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermeture éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
+        /// <td>Clearer and more explicit product subject expression, identifying it as a &quot;key bag&quot; rather than a &quot;keychain&quot;, avoiding ambiguity in other translations</td>
         /// </tr>
         /// </tbody></table>
         /// </description></item>
         /// </list>
-        /// <h2>接入准备与调用流程</h2>
-        /// <para>文本翻译支持同步和异步两种调用方式。本文介绍异步调用接口，如需使用同步调用，请参阅<a href="https://api.aliyun.com/document/Aidge/2026-04-28/TextTranslate">《文本翻译-同步接口》</a>。
-        /// 文本翻译及其他能力的异步接口共用结果获取流程、RocketMQ 订阅规则、消息加密协议、依赖配置，以及 Java 消费与解密代码。
-        /// 异步调用的接入流程，订阅规则，消息格式与加密协议，以及详细的接入方案请参阅<a href="https://help.aliyun.com/zh/aidge/asynchronous-interface-call-instructions">异步接口调用说明</a>。</para>
+        /// <h2>Preparations and invocation flow</h2>
+        /// <para>Text translation supports both synchronous and asynchronous invocation methods. This topic describes the asynchronous invocation API. To use synchronous calls, see <a href="https://api.aliyun.com/document/Aidge/2026-04-28/TextTranslate">Text Translation - Synchronous API</a>.
+        /// The asynchronous APIs for text translation and other features share the same result retrieval flow, RocketMQ subscribe rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.
+        /// For the asynchronous invocation onboarding flow, subscribe rules, message formats and encryption protocols, and detailed integration solutions, see <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API invocation instructions</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -16039,53 +16492,53 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// TextTranslateAsyncResponse
         /// </returns>
-        public TextTranslateAsyncResponse TextTranslateAsyncWithOptions(TextTranslateAsyncRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public TextTranslateAsyncResponse TextTranslateAsyncWithOptions(TextTranslateAsyncRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            tmpReq.Validate();
             TextTranslateAsyncShrinkRequest request = new TextTranslateAsyncShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceTextList))
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.SourceTextList.IsNull())
             {
-                request.SourceTextListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceTextList, "SourceTextList", "json");
+                request.SourceTextListShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.SourceTextList, "SourceTextList", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            if (!request.BizId.IsNull())
             {
                 query["BizId"] = request.BizId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizName))
+            if (!request.BizName.IsNull())
             {
                 query["BizName"] = request.BizName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FormatType))
+            if (!request.FormatType.IsNull())
             {
                 query["FormatType"] = request.FormatType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
+            if (!request.Glossary.IsNull())
             {
                 query["Glossary"] = request.Glossary;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            if (!request.SourceLanguage.IsNull())
             {
                 query["SourceLanguage"] = request.SourceLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTextListShrink))
+            if (!request.SourceTextListShrink.IsNull())
             {
                 query["SourceTextList"] = request.SourceTextListShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            if (!request.TargetLanguage.IsNull())
             {
                 query["TargetLanguage"] = request.TargetLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslateScene))
+            if (!request.TranslateScene.IsNull())
             {
                 query["TranslateScene"] = request.TranslateScene;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "TextTranslateAsync",
                 Version = "2026-04-28",
@@ -16097,75 +16550,75 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<TextTranslateAsyncResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<TextTranslateAsyncResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文本翻译异步</para>
+        /// <para>Translates text by using the Maas MT model, an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs and optimized for e-commerce terms such as brands, models, materials, and attributes. It supports 156 languages, more than 400 language pairs, and automatic language detection for source texts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>适用场景</h2>
+        /// <h2>Scenarios</h2>
         /// <list type="bullet">
-        /// <item><description><para>商品标题：Maas MT大模型翻译可以将商品标题中的短语、关键词、流行词等准确翻译成目标语言，提升商品在电商平台的曝光率。</para>
+        /// <item><description><para>Product titles: The Maas MT large language model accurately translates phrases, keywords, and trending words in product titles into the target language to increase product exposure on e-commerce platforms.</para>
         /// </description></item>
-        /// <item><description><para>商品详描：商品详描整体文本较长、格式多样且复杂，Maas 大模型翻译支持长文本翻译和 HTML 格式，翻译效果和格式还原能力表现出色。</para>
+        /// <item><description><para>Product descriptions: Product descriptions are typically long and have diverse and complex formats. The Maas large language model supports long-text translation and HTML formatting, delivering excellent translation quality and format restoration.</para>
         /// </description></item>
-        /// <item><description><para>商品属性：商品属性词汇较短，且存在电商专有词（如型号、参数）等。</para>
+        /// <item><description><para>Product attributes: Product attribute terms are short and contain e-commerce-specific words such as models and parameters.</para>
         /// </description></item>
-        /// <item><description><para>客服对话：在客服场景中，可优化“上下文缺失、打字错误“等问题，并在部分语向上支持礼貌用语。</para>
+        /// <item><description><para>Customer service conversations: In customer service scenarios, the model optimizes issues such as missing context and typos, and supports polite expressions in specific language pairs.</para>
+        /// <para>  The Maas MT large language model can also be used for translation in general scenarios, such as office work, meetings, and daily conversations.</para>
         /// </description></item>
         /// </list>
-        /// <para>      同时，Maas MT大模型翻译也可以用于通用场景的翻译，如办公、会议、日常对话等。</para>
-        /// <h2>功能介绍</h2>
+        /// <h2>Features</h2>
         /// <list type="bullet">
-        /// <item><description><para><b>超低幻觉率与高速推理</b> Maas MT大模型翻译是在翻译场景上经过偏好对齐的大语言模型，与通用大语言模型相比，翻译推理速度快，幻觉率极低，尤其适合大规模调用的场景。</para>
+        /// <item><description><para><b>Ultra-low hallucination rate and high-speed inference</b> The Maas MT large language model is aligned with preferences for translation scenarios. Compared with general-purpose large language models, it provides faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</para>
         /// </description></item>
-        /// <item><description><para><b>支持翻译的文本格式类型</b> 当前支持 text 和 html 的文本类型。</para>
+        /// <item><description><para><b>Supported text formats</b> The model supports text and HTML formats.</para>
         /// </description></item>
-        /// <item><description><para><b>翻译干预能力支持</b> 支持自定义翻译结果，包含不被翻译（ABC-ABC），指定翻译（ABC-DEF），不翻译（ABC-空值）。常用于品牌词保护等场景。只需调用接口时传入相应的干预词表ID，即可实现，可满足您在不同场景下的翻译需求。一般您可以上传10万条干预词，如有更多需要可以联系平台进行处理。</para>
+        /// <item><description><para><b>Translation intervention</b> You can customize translation results, including keeping terms untranslated (ABC-ABC), specifying translations (ABC-DEF), and omitting translations (ABC-null value). This feature is commonly used for brand word protection. You only need to pass the corresponding intervention glossary ID when calling the API. This meets your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</para>
         /// </description></item>
-        /// <item><description><para><b>翻译效果对比</b></para>
+        /// <item><description><para><b>Translation quality comparison</b></para>
         /// <table>
         /// <thead>
         /// <tr>
-        /// <th><b>原文</b></th>
-        /// <th><b>Aidge译后</b></th>
-        /// <th><b>其他翻译产品1</b></th>
-        /// <th><b>其他翻译产品2</b></th>
-        /// <th><b>Aidge翻译优势</b></th>
+        /// <th><b>Source text</b></th>
+        /// <th><b>Aidge translation</b></th>
+        /// <th><b>Other translation product 1</b></th>
+        /// <th><b>Other translation product 2</b></th>
+        /// <th><b>Aidge translation advantages</b></th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>75mm 4Pin 0.38A GA81S2U 12V GTX 960 Cooling Fan for Zotac GTX960 Graphics Card Cooling Fan</td>
-        /// <td>75mm 4Pin 0.38A GA81S2U 12V GTX 960, ventilador de enfriamiento para tarjeta gráfica Zotac GTX960.</td>
-        /// <td>Ventilador de refrigeración de 75mm 4Pin 0.38A GA81S2U 12V para la tarjeta gráfica Zotac GTX960 Ventilador de enfriamiento GTX 960.</td>
-        /// <td>Ventilador de refrigeración para tarjeta gráfica Zotac GTX960, 75mm, 4 pines, 0,38A, GA81S2U, 12V, GTX 960</td>
-        /// <td>商品主体更清晰</td>
+        /// <td>75mm 4Pin 0.38A GA81S2U 12V GTX 960 Cooling Fan for Zotac GTX960 Graphics Card Cooling Fan</td>
+        /// <td>75mm 4Pin 0.38A GA81S2U 12V GTX 960, ventilador de enfriamiento para tarjeta gráfica Zotac GTX960.</td>
+        /// <td>Ventilador de refrigeración de 75mm 4Pin 0.38A GA81S2U 12V para la tarjeta gráfica Zotac GTX960 Ventilador de enfriamiento GTX 960.</td>
+        /// <td>Ventilador de refrigeración para tarjeta gráfica Zotac GTX960, 75mm, 4 pines, 0,38A, GA81S2U, 12V, GTX 960</td>
+        /// <td>Clearer product subject</td>
         /// </tr>
         /// <tr>
-        /// <td>New Arrival Classic Style Luxury Brand 6 Hands Swiss Automatic Mechanical Men\&quot;s Business Steel Watch</td>
-        /// <td>Nueva llegada, reloj mecánico automático de lujo con 6 manecillas, estilo clásico, de acero para hombres de negocios</td>
-        /// <td>Nueva Llegada Reloj De Acero de Negocios para Hombre con Mecanismo Automático Suizo y 6 Agujas de Estilo Clásico de Marca de Lujo.</td>
-        /// <td>Reloj de acero de negocios para hombre, mecánico automático suizo, marca de lujo, estilo clásico, 6 manos, nueva llegada</td>
-        /// <td>句式更完整，表述更清晰，断句更合理</td>
+        /// <td>New Arrival Classic Style Luxury Brand 6 Hands Swiss Automatic Mechanical Men\&quot;s Business Steel Watch</td>
+        /// <td>Nueva llegada, reloj mecánico automático de lujo con 6 manecillas, estilo clásico, de acero para hombres de negocios</td>
+        /// <td>Nueva Llegada Reloj De Acero de Negocios para Hombre con Mecanismo Automático Suizo y 6 Agujas de Estilo Clásico de Marca de Lujo.</td>
+        /// <td>Reloj de acero de negocios para hombre, mecánico automático suizo, marca de lujo, estilo clásico, 6 manos, nueva llegada</td>
+        /// <td>More complete sentence structure, clearer expression, and more reasonable punctuation</td>
         /// </tr>
         /// <tr>
-        /// <td>Men Key Bag Genuine Cow Leather Buckets Key Cases Pouch Zipper Keychain Auto Car Key Case Women Home Key Holder Wallet</td>
-        /// <td>Sac à clés pour hommes en cuir de vache véritable, étuis à clés, pochette à fermeture éclair, porte-clés, étui à clé de voiture, porte-clés pour femmes, organisateur de portefeuille</td>
-        /// <td>Porte-clés sac en cuir de vache véritable, étuis à clés en forme de seau, pochette à fermeture éclair, porte-clés auto pour voiture, étui à clés pour femmes, organisateur de clés de maison, portefeuille.</td>
-        /// <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermature éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
-        /// <td>产品主体表述更清晰明确，是“钥匙包”而非“钥匙扣”，其它译文容易对产品主体产生歧义</td>
+        /// <td>Men Key Bag Genuine Cow Leather Buckets Key Cases Pouch Zipper Keychain Auto Car Key Case Women Home Key Holder Wallet</td>
+        /// <td>Sac à clés pour hommes en cuir de vache véritable, étuis à clés, pochette à fermeture éclair, porte-clés, étui à clé de voiture, porte-clés pour femmes, organisateur de portefeuille</td>
+        /// <td>Porte-clés sac en cuir de vache véritable, étuis à clés en forme de seau, pochette à fermeture éclair, porte-clés auto pour voiture, étui à clés pour femmes, organisateur de clés de maison, portefeuille.</td>
+        /// <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermeture éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
+        /// <td>Clearer and more explicit product subject expression, identifying it as a &quot;key bag&quot; rather than a &quot;keychain&quot;, avoiding ambiguity in other translations</td>
         /// </tr>
         /// </tbody></table>
         /// </description></item>
         /// </list>
-        /// <h2>接入准备与调用流程</h2>
-        /// <para>文本翻译支持同步和异步两种调用方式。本文介绍异步调用接口，如需使用同步调用，请参阅<a href="https://api.aliyun.com/document/Aidge/2026-04-28/TextTranslate">《文本翻译-同步接口》</a>。
-        /// 文本翻译及其他能力的异步接口共用结果获取流程、RocketMQ 订阅规则、消息加密协议、依赖配置，以及 Java 消费与解密代码。
-        /// 异步调用的接入流程，订阅规则，消息格式与加密协议，以及详细的接入方案请参阅<a href="https://help.aliyun.com/zh/aidge/asynchronous-interface-call-instructions">异步接口调用说明</a>。</para>
+        /// <h2>Preparations and invocation flow</h2>
+        /// <para>Text translation supports both synchronous and asynchronous invocation methods. This topic describes the asynchronous invocation API. To use synchronous calls, see <a href="https://api.aliyun.com/document/Aidge/2026-04-28/TextTranslate">Text Translation - Synchronous API</a>.
+        /// The asynchronous APIs for text translation and other features share the same result retrieval flow, RocketMQ subscribe rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.
+        /// For the asynchronous invocation onboarding flow, subscribe rules, message formats and encryption protocols, and detailed integration solutions, see <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API invocation instructions</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -16178,53 +16631,53 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// TextTranslateAsyncResponse
         /// </returns>
-        public async Task<TextTranslateAsyncResponse> TextTranslateAsyncWithOptionsAsync(TextTranslateAsyncRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<TextTranslateAsyncResponse> TextTranslateAsyncWithOptionsAsync(TextTranslateAsyncRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            tmpReq.Validate();
             TextTranslateAsyncShrinkRequest request = new TextTranslateAsyncShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceTextList))
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.SourceTextList.IsNull())
             {
-                request.SourceTextListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceTextList, "SourceTextList", "json");
+                request.SourceTextListShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.SourceTextList, "SourceTextList", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            if (!request.BizId.IsNull())
             {
                 query["BizId"] = request.BizId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizName))
+            if (!request.BizName.IsNull())
             {
                 query["BizName"] = request.BizName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FormatType))
+            if (!request.FormatType.IsNull())
             {
                 query["FormatType"] = request.FormatType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
+            if (!request.Glossary.IsNull())
             {
                 query["Glossary"] = request.Glossary;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            if (!request.SourceLanguage.IsNull())
             {
                 query["SourceLanguage"] = request.SourceLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTextListShrink))
+            if (!request.SourceTextListShrink.IsNull())
             {
                 query["SourceTextList"] = request.SourceTextListShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            if (!request.TargetLanguage.IsNull())
             {
                 query["TargetLanguage"] = request.TargetLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslateScene))
+            if (!request.TranslateScene.IsNull())
             {
                 query["TranslateScene"] = request.TranslateScene;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "TextTranslateAsync",
                 Version = "2026-04-28",
@@ -16236,75 +16689,75 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<TextTranslateAsyncResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<TextTranslateAsyncResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文本翻译异步</para>
+        /// <para>Translates text by using the Maas MT model, an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs and optimized for e-commerce terms such as brands, models, materials, and attributes. It supports 156 languages, more than 400 language pairs, and automatic language detection for source texts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>适用场景</h2>
+        /// <h2>Scenarios</h2>
         /// <list type="bullet">
-        /// <item><description><para>商品标题：Maas MT大模型翻译可以将商品标题中的短语、关键词、流行词等准确翻译成目标语言，提升商品在电商平台的曝光率。</para>
+        /// <item><description><para>Product titles: The Maas MT large language model accurately translates phrases, keywords, and trending words in product titles into the target language to increase product exposure on e-commerce platforms.</para>
         /// </description></item>
-        /// <item><description><para>商品详描：商品详描整体文本较长、格式多样且复杂，Maas 大模型翻译支持长文本翻译和 HTML 格式，翻译效果和格式还原能力表现出色。</para>
+        /// <item><description><para>Product descriptions: Product descriptions are typically long and have diverse and complex formats. The Maas large language model supports long-text translation and HTML formatting, delivering excellent translation quality and format restoration.</para>
         /// </description></item>
-        /// <item><description><para>商品属性：商品属性词汇较短，且存在电商专有词（如型号、参数）等。</para>
+        /// <item><description><para>Product attributes: Product attribute terms are short and contain e-commerce-specific words such as models and parameters.</para>
         /// </description></item>
-        /// <item><description><para>客服对话：在客服场景中，可优化“上下文缺失、打字错误“等问题，并在部分语向上支持礼貌用语。</para>
+        /// <item><description><para>Customer service conversations: In customer service scenarios, the model optimizes issues such as missing context and typos, and supports polite expressions in specific language pairs.</para>
+        /// <para>  The Maas MT large language model can also be used for translation in general scenarios, such as office work, meetings, and daily conversations.</para>
         /// </description></item>
         /// </list>
-        /// <para>      同时，Maas MT大模型翻译也可以用于通用场景的翻译，如办公、会议、日常对话等。</para>
-        /// <h2>功能介绍</h2>
+        /// <h2>Features</h2>
         /// <list type="bullet">
-        /// <item><description><para><b>超低幻觉率与高速推理</b> Maas MT大模型翻译是在翻译场景上经过偏好对齐的大语言模型，与通用大语言模型相比，翻译推理速度快，幻觉率极低，尤其适合大规模调用的场景。</para>
+        /// <item><description><para><b>Ultra-low hallucination rate and high-speed inference</b> The Maas MT large language model is aligned with preferences for translation scenarios. Compared with general-purpose large language models, it provides faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</para>
         /// </description></item>
-        /// <item><description><para><b>支持翻译的文本格式类型</b> 当前支持 text 和 html 的文本类型。</para>
+        /// <item><description><para><b>Supported text formats</b> The model supports text and HTML formats.</para>
         /// </description></item>
-        /// <item><description><para><b>翻译干预能力支持</b> 支持自定义翻译结果，包含不被翻译（ABC-ABC），指定翻译（ABC-DEF），不翻译（ABC-空值）。常用于品牌词保护等场景。只需调用接口时传入相应的干预词表ID，即可实现，可满足您在不同场景下的翻译需求。一般您可以上传10万条干预词，如有更多需要可以联系平台进行处理。</para>
+        /// <item><description><para><b>Translation intervention</b> You can customize translation results, including keeping terms untranslated (ABC-ABC), specifying translations (ABC-DEF), and omitting translations (ABC-null value). This feature is commonly used for brand word protection. You only need to pass the corresponding intervention glossary ID when calling the API. This meets your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</para>
         /// </description></item>
-        /// <item><description><para><b>翻译效果对比</b></para>
+        /// <item><description><para><b>Translation quality comparison</b></para>
         /// <table>
         /// <thead>
         /// <tr>
-        /// <th><b>原文</b></th>
-        /// <th><b>Aidge译后</b></th>
-        /// <th><b>其他翻译产品1</b></th>
-        /// <th><b>其他翻译产品2</b></th>
-        /// <th><b>Aidge翻译优势</b></th>
+        /// <th><b>Source text</b></th>
+        /// <th><b>Aidge translation</b></th>
+        /// <th><b>Other translation product 1</b></th>
+        /// <th><b>Other translation product 2</b></th>
+        /// <th><b>Aidge translation advantages</b></th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>75mm 4Pin 0.38A GA81S2U 12V GTX 960 Cooling Fan for Zotac GTX960 Graphics Card Cooling Fan</td>
-        /// <td>75mm 4Pin 0.38A GA81S2U 12V GTX 960, ventilador de enfriamiento para tarjeta gráfica Zotac GTX960.</td>
-        /// <td>Ventilador de refrigeración de 75mm 4Pin 0.38A GA81S2U 12V para la tarjeta gráfica Zotac GTX960 Ventilador de enfriamiento GTX 960.</td>
-        /// <td>Ventilador de refrigeración para tarjeta gráfica Zotac GTX960, 75mm, 4 pines, 0,38A, GA81S2U, 12V, GTX 960</td>
-        /// <td>商品主体更清晰</td>
+        /// <td>75mm 4Pin 0.38A GA81S2U 12V GTX 960 Cooling Fan for Zotac GTX960 Graphics Card Cooling Fan</td>
+        /// <td>75mm 4Pin 0.38A GA81S2U 12V GTX 960, ventilador de enfriamiento para tarjeta gráfica Zotac GTX960.</td>
+        /// <td>Ventilador de refrigeración de 75mm 4Pin 0.38A GA81S2U 12V para la tarjeta gráfica Zotac GTX960 Ventilador de enfriamiento GTX 960.</td>
+        /// <td>Ventilador de refrigeración para tarjeta gráfica Zotac GTX960, 75mm, 4 pines, 0,38A, GA81S2U, 12V, GTX 960</td>
+        /// <td>Clearer product subject</td>
         /// </tr>
         /// <tr>
-        /// <td>New Arrival Classic Style Luxury Brand 6 Hands Swiss Automatic Mechanical Men\&quot;s Business Steel Watch</td>
-        /// <td>Nueva llegada, reloj mecánico automático de lujo con 6 manecillas, estilo clásico, de acero para hombres de negocios</td>
-        /// <td>Nueva Llegada Reloj De Acero de Negocios para Hombre con Mecanismo Automático Suizo y 6 Agujas de Estilo Clásico de Marca de Lujo.</td>
-        /// <td>Reloj de acero de negocios para hombre, mecánico automático suizo, marca de lujo, estilo clásico, 6 manos, nueva llegada</td>
-        /// <td>句式更完整，表述更清晰，断句更合理</td>
+        /// <td>New Arrival Classic Style Luxury Brand 6 Hands Swiss Automatic Mechanical Men\&quot;s Business Steel Watch</td>
+        /// <td>Nueva llegada, reloj mecánico automático de lujo con 6 manecillas, estilo clásico, de acero para hombres de negocios</td>
+        /// <td>Nueva Llegada Reloj De Acero de Negocios para Hombre con Mecanismo Automático Suizo y 6 Agujas de Estilo Clásico de Marca de Lujo.</td>
+        /// <td>Reloj de acero de negocios para hombre, mecánico automático suizo, marca de lujo, estilo clásico, 6 manos, nueva llegada</td>
+        /// <td>More complete sentence structure, clearer expression, and more reasonable punctuation</td>
         /// </tr>
         /// <tr>
-        /// <td>Men Key Bag Genuine Cow Leather Buckets Key Cases Pouch Zipper Keychain Auto Car Key Case Women Home Key Holder Wallet</td>
-        /// <td>Sac à clés pour hommes en cuir de vache véritable, étuis à clés, pochette à fermeture éclair, porte-clés, étui à clé de voiture, porte-clés pour femmes, organisateur de portefeuille</td>
-        /// <td>Porte-clés sac en cuir de vache véritable, étuis à clés en forme de seau, pochette à fermeture éclair, porte-clés auto pour voiture, étui à clés pour femmes, organisateur de clés de maison, portefeuille.</td>
-        /// <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermature éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
-        /// <td>产品主体表述更清晰明确，是“钥匙包”而非“钥匙扣”，其它译文容易对产品主体产生歧义</td>
+        /// <td>Men Key Bag Genuine Cow Leather Buckets Key Cases Pouch Zipper Keychain Auto Car Key Case Women Home Key Holder Wallet</td>
+        /// <td>Sac à clés pour hommes en cuir de vache véritable, étuis à clés, pochette à fermeture éclair, porte-clés, étui à clé de voiture, porte-clés pour femmes, organisateur de portefeuille</td>
+        /// <td>Porte-clés sac en cuir de vache véritable, étuis à clés en forme de seau, pochette à fermeture éclair, porte-clés auto pour voiture, étui à clés pour femmes, organisateur de clés de maison, portefeuille.</td>
+        /// <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermeture éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
+        /// <td>Clearer and more explicit product subject expression, identifying it as a &quot;key bag&quot; rather than a &quot;keychain&quot;, avoiding ambiguity in other translations</td>
         /// </tr>
         /// </tbody></table>
         /// </description></item>
         /// </list>
-        /// <h2>接入准备与调用流程</h2>
-        /// <para>文本翻译支持同步和异步两种调用方式。本文介绍异步调用接口，如需使用同步调用，请参阅<a href="https://api.aliyun.com/document/Aidge/2026-04-28/TextTranslate">《文本翻译-同步接口》</a>。
-        /// 文本翻译及其他能力的异步接口共用结果获取流程、RocketMQ 订阅规则、消息加密协议、依赖配置，以及 Java 消费与解密代码。
-        /// 异步调用的接入流程，订阅规则，消息格式与加密协议，以及详细的接入方案请参阅<a href="https://help.aliyun.com/zh/aidge/asynchronous-interface-call-instructions">异步接口调用说明</a>。</para>
+        /// <h2>Preparations and invocation flow</h2>
+        /// <para>Text translation supports both synchronous and asynchronous invocation methods. This topic describes the asynchronous invocation API. To use synchronous calls, see <a href="https://api.aliyun.com/document/Aidge/2026-04-28/TextTranslate">Text Translation - Synchronous API</a>.
+        /// The asynchronous APIs for text translation and other features share the same result retrieval flow, RocketMQ subscribe rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.
+        /// For the asynchronous invocation onboarding flow, subscribe rules, message formats and encryption protocols, and detailed integration solutions, see <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API invocation instructions</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16316,76 +16769,76 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public TextTranslateAsyncResponse TextTranslateAsync(TextTranslateAsyncRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return TextTranslateAsyncWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文本翻译异步</para>
+        /// <para>Translates text by using the Maas MT model, an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs and optimized for e-commerce terms such as brands, models, materials, and attributes. It supports 156 languages, more than 400 language pairs, and automatic language detection for source texts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>适用场景</h2>
+        /// <h2>Scenarios</h2>
         /// <list type="bullet">
-        /// <item><description><para>商品标题：Maas MT大模型翻译可以将商品标题中的短语、关键词、流行词等准确翻译成目标语言，提升商品在电商平台的曝光率。</para>
+        /// <item><description><para>Product titles: The Maas MT large language model accurately translates phrases, keywords, and trending words in product titles into the target language to increase product exposure on e-commerce platforms.</para>
         /// </description></item>
-        /// <item><description><para>商品详描：商品详描整体文本较长、格式多样且复杂，Maas 大模型翻译支持长文本翻译和 HTML 格式，翻译效果和格式还原能力表现出色。</para>
+        /// <item><description><para>Product descriptions: Product descriptions are typically long and have diverse and complex formats. The Maas large language model supports long-text translation and HTML formatting, delivering excellent translation quality and format restoration.</para>
         /// </description></item>
-        /// <item><description><para>商品属性：商品属性词汇较短，且存在电商专有词（如型号、参数）等。</para>
+        /// <item><description><para>Product attributes: Product attribute terms are short and contain e-commerce-specific words such as models and parameters.</para>
         /// </description></item>
-        /// <item><description><para>客服对话：在客服场景中，可优化“上下文缺失、打字错误“等问题，并在部分语向上支持礼貌用语。</para>
+        /// <item><description><para>Customer service conversations: In customer service scenarios, the model optimizes issues such as missing context and typos, and supports polite expressions in specific language pairs.</para>
+        /// <para>  The Maas MT large language model can also be used for translation in general scenarios, such as office work, meetings, and daily conversations.</para>
         /// </description></item>
         /// </list>
-        /// <para>      同时，Maas MT大模型翻译也可以用于通用场景的翻译，如办公、会议、日常对话等。</para>
-        /// <h2>功能介绍</h2>
+        /// <h2>Features</h2>
         /// <list type="bullet">
-        /// <item><description><para><b>超低幻觉率与高速推理</b> Maas MT大模型翻译是在翻译场景上经过偏好对齐的大语言模型，与通用大语言模型相比，翻译推理速度快，幻觉率极低，尤其适合大规模调用的场景。</para>
+        /// <item><description><para><b>Ultra-low hallucination rate and high-speed inference</b> The Maas MT large language model is aligned with preferences for translation scenarios. Compared with general-purpose large language models, it provides faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</para>
         /// </description></item>
-        /// <item><description><para><b>支持翻译的文本格式类型</b> 当前支持 text 和 html 的文本类型。</para>
+        /// <item><description><para><b>Supported text formats</b> The model supports text and HTML formats.</para>
         /// </description></item>
-        /// <item><description><para><b>翻译干预能力支持</b> 支持自定义翻译结果，包含不被翻译（ABC-ABC），指定翻译（ABC-DEF），不翻译（ABC-空值）。常用于品牌词保护等场景。只需调用接口时传入相应的干预词表ID，即可实现，可满足您在不同场景下的翻译需求。一般您可以上传10万条干预词，如有更多需要可以联系平台进行处理。</para>
+        /// <item><description><para><b>Translation intervention</b> You can customize translation results, including keeping terms untranslated (ABC-ABC), specifying translations (ABC-DEF), and omitting translations (ABC-null value). This feature is commonly used for brand word protection. You only need to pass the corresponding intervention glossary ID when calling the API. This meets your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</para>
         /// </description></item>
-        /// <item><description><para><b>翻译效果对比</b></para>
+        /// <item><description><para><b>Translation quality comparison</b></para>
         /// <table>
         /// <thead>
         /// <tr>
-        /// <th><b>原文</b></th>
-        /// <th><b>Aidge译后</b></th>
-        /// <th><b>其他翻译产品1</b></th>
-        /// <th><b>其他翻译产品2</b></th>
-        /// <th><b>Aidge翻译优势</b></th>
+        /// <th><b>Source text</b></th>
+        /// <th><b>Aidge translation</b></th>
+        /// <th><b>Other translation product 1</b></th>
+        /// <th><b>Other translation product 2</b></th>
+        /// <th><b>Aidge translation advantages</b></th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>75mm 4Pin 0.38A GA81S2U 12V GTX 960 Cooling Fan for Zotac GTX960 Graphics Card Cooling Fan</td>
-        /// <td>75mm 4Pin 0.38A GA81S2U 12V GTX 960, ventilador de enfriamiento para tarjeta gráfica Zotac GTX960.</td>
-        /// <td>Ventilador de refrigeración de 75mm 4Pin 0.38A GA81S2U 12V para la tarjeta gráfica Zotac GTX960 Ventilador de enfriamiento GTX 960.</td>
-        /// <td>Ventilador de refrigeración para tarjeta gráfica Zotac GTX960, 75mm, 4 pines, 0,38A, GA81S2U, 12V, GTX 960</td>
-        /// <td>商品主体更清晰</td>
+        /// <td>75mm 4Pin 0.38A GA81S2U 12V GTX 960 Cooling Fan for Zotac GTX960 Graphics Card Cooling Fan</td>
+        /// <td>75mm 4Pin 0.38A GA81S2U 12V GTX 960, ventilador de enfriamiento para tarjeta gráfica Zotac GTX960.</td>
+        /// <td>Ventilador de refrigeración de 75mm 4Pin 0.38A GA81S2U 12V para la tarjeta gráfica Zotac GTX960 Ventilador de enfriamiento GTX 960.</td>
+        /// <td>Ventilador de refrigeración para tarjeta gráfica Zotac GTX960, 75mm, 4 pines, 0,38A, GA81S2U, 12V, GTX 960</td>
+        /// <td>Clearer product subject</td>
         /// </tr>
         /// <tr>
-        /// <td>New Arrival Classic Style Luxury Brand 6 Hands Swiss Automatic Mechanical Men\&quot;s Business Steel Watch</td>
-        /// <td>Nueva llegada, reloj mecánico automático de lujo con 6 manecillas, estilo clásico, de acero para hombres de negocios</td>
-        /// <td>Nueva Llegada Reloj De Acero de Negocios para Hombre con Mecanismo Automático Suizo y 6 Agujas de Estilo Clásico de Marca de Lujo.</td>
-        /// <td>Reloj de acero de negocios para hombre, mecánico automático suizo, marca de lujo, estilo clásico, 6 manos, nueva llegada</td>
-        /// <td>句式更完整，表述更清晰，断句更合理</td>
+        /// <td>New Arrival Classic Style Luxury Brand 6 Hands Swiss Automatic Mechanical Men\&quot;s Business Steel Watch</td>
+        /// <td>Nueva llegada, reloj mecánico automático de lujo con 6 manecillas, estilo clásico, de acero para hombres de negocios</td>
+        /// <td>Nueva Llegada Reloj De Acero de Negocios para Hombre con Mecanismo Automático Suizo y 6 Agujas de Estilo Clásico de Marca de Lujo.</td>
+        /// <td>Reloj de acero de negocios para hombre, mecánico automático suizo, marca de lujo, estilo clásico, 6 manos, nueva llegada</td>
+        /// <td>More complete sentence structure, clearer expression, and more reasonable punctuation</td>
         /// </tr>
         /// <tr>
-        /// <td>Men Key Bag Genuine Cow Leather Buckets Key Cases Pouch Zipper Keychain Auto Car Key Case Women Home Key Holder Wallet</td>
-        /// <td>Sac à clés pour hommes en cuir de vache véritable, étuis à clés, pochette à fermeture éclair, porte-clés, étui à clé de voiture, porte-clés pour femmes, organisateur de portefeuille</td>
-        /// <td>Porte-clés sac en cuir de vache véritable, étuis à clés en forme de seau, pochette à fermeture éclair, porte-clés auto pour voiture, étui à clés pour femmes, organisateur de clés de maison, portefeuille.</td>
-        /// <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermature éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
-        /// <td>产品主体表述更清晰明确，是“钥匙包”而非“钥匙扣”，其它译文容易对产品主体产生歧义</td>
+        /// <td>Men Key Bag Genuine Cow Leather Buckets Key Cases Pouch Zipper Keychain Auto Car Key Case Women Home Key Holder Wallet</td>
+        /// <td>Sac à clés pour hommes en cuir de vache véritable, étuis à clés, pochette à fermeture éclair, porte-clés, étui à clé de voiture, porte-clés pour femmes, organisateur de portefeuille</td>
+        /// <td>Porte-clés sac en cuir de vache véritable, étuis à clés en forme de seau, pochette à fermeture éclair, porte-clés auto pour voiture, étui à clés pour femmes, organisateur de clés de maison, portefeuille.</td>
+        /// <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermeture éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
+        /// <td>Clearer and more explicit product subject expression, identifying it as a &quot;key bag&quot; rather than a &quot;keychain&quot;, avoiding ambiguity in other translations</td>
         /// </tr>
         /// </tbody></table>
         /// </description></item>
         /// </list>
-        /// <h2>接入准备与调用流程</h2>
-        /// <para>文本翻译支持同步和异步两种调用方式。本文介绍异步调用接口，如需使用同步调用，请参阅<a href="https://api.aliyun.com/document/Aidge/2026-04-28/TextTranslate">《文本翻译-同步接口》</a>。
-        /// 文本翻译及其他能力的异步接口共用结果获取流程、RocketMQ 订阅规则、消息加密协议、依赖配置，以及 Java 消费与解密代码。
-        /// 异步调用的接入流程，订阅规则，消息格式与加密协议，以及详细的接入方案请参阅<a href="https://help.aliyun.com/zh/aidge/asynchronous-interface-call-instructions">异步接口调用说明</a>。</para>
+        /// <h2>Preparations and invocation flow</h2>
+        /// <para>Text translation supports both synchronous and asynchronous invocation methods. This topic describes the asynchronous invocation API. To use synchronous calls, see <a href="https://api.aliyun.com/document/Aidge/2026-04-28/TextTranslate">Text Translation - Synchronous API</a>.
+        /// The asynchronous APIs for text translation and other features share the same result retrieval flow, RocketMQ subscribe rules, message encryption protocols, dependency configurations, and Java consumption and decryption code.
+        /// For the asynchronous invocation onboarding flow, subscribe rules, message formats and encryption protocols, and detailed integration solutions, see <a href="https://www.alibabacloud.com/help/en/aidge/asynchronous-interface-call-instructions">Asynchronous API invocation instructions</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16397,86 +16850,50 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<TextTranslateAsyncResponse> TextTranslateAsyncAsync(TextTranslateAsyncRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await TextTranslateAsyncWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The e-commerce AI video generation agent is designed for e-commerce merchants and platforms. Based on product main images, titles, and selling points, it automatically generates 5- to 30-second product showcase short videos to help customers efficiently produce and distribute e-commerce content. The product supports multiple resolution outputs such as 720P and 1080P. You can invoke single products quickly and generate multiple products in batches, meeting the needs of daily operations and large-scale product content production. It currently overwrites all clothing categories (tops, pants, skirts, suits, underwear, swimwear, etc.) and is gradually expanding to core e-commerce categories such as skincare, cosmetics, food and beverages, and home appliances.</para>
+        /// <para>Synchronously updates the content of a display knowledge base in batches.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h1>Scenarios</h1>
-        /// <list type="bullet">
-        /// <item><description>Batch generation of product short videos for sellers and platforms: Supports multiple video aspect ratios and sizes (3:4, 9:16), adapting to product detail page video slots, product homepage displays, information feed placements, short video promotions, and event venue materials.</description></item>
-        /// <item><description>Quick generation of the first batch of video materials for new product launches: When merchants have a large number of new products to launch, they only need to upload basic information such as product images and titles to quickly generate product showcase videos, model wearing videos, and spoken explanation videos, helping merchants quickly complete material deployment during the launch phase.</description></item>
-        /// <item><description>High-fidelity clothing display: Generates model display videos that are closer to real commercial shooting effects based on product main images, focusing on optimizing capabilities such as pattern restoration, fabric texture retention, accurate color presentation, and stable and consistent details. It supports common e-commerce display methods such as wearing, turning, walking, close-up shots, and multi-angle switching.</description></item>
-        /// <item><description>Generation of high-quality commercial shooting models: Built-in target audience model library, covering plus-size women, plus-size men, swimwear, girl style, light mature commuting, youth casual, business menswear, sports and fitness, and other body types, skin colors, and races. It supports various commercial shooting expressions such as standing display, side display, walking display, and partial close-ups.</description></item>
-        /// <item><description>High-frequency e-commerce scenarios such as standard product explanations: Applicable to standardized product categories such as skincare, cosmetics, personal care small appliances, food and beverages, home cleaning daily necessities, and 3C digital products. It can quickly generate product explanation videos based on product main images, titles, selling point information, and explanation scripts.</description></item>
-        /// <item><description>Multi-product and multi-selling point testing to improve delivery efficiency: For information feed advertising, short video delivery, and content promotion scenarios, it can quickly generate multiple versions of video materials, making it easy for enterprises to verify the conversion effects of different selling points and presentation forms at a low cost, and improve delivery ROI.</description></item>
-        /// </list>
-        /// <h1>Features</h1>
-        /// <list type="bullet">
-        /// <item><description>Fully automatic end-to-end batch generation with zero prompt threshold: Callers only need to pass in the product image URL and title, and the system automatically completes the entire process from product understanding, storyboard planning to video generation, without the need to manually write prompts, select templates, or repeatedly adjust parameters. Built-in multiple agents such as product understanding, image quality inspection, script planning, and director camera movement greatly lower the threshold for use.</description></item>
-        /// <item><description>Highly stable generation with a low waste rate: Adopts a deterministic generation process and multi-layer quality control mechanism to output usable materials with fewer retries, reducing invalid generation and resource waste, and making the overall production cost more controllable.</description></item>
-        /// <item><description>E-commerce exclusive product fidelity capability: Built-in multi-round quality inspection agent locks the product state throughout the video generation process (such as zippers will not be pulled open, sleeves will not be put down, and prints will not disappear), ensuring product consistency through multi-layer defense of script rewriting, explicit constraint injection, and failure-aware retry.</description></item>
-        /// <item><description>Reference image first + 6-axis consistency check: Adopts the Reference-Image-First generation paradigm, using the original product image as the only visual source of truth, and automatically performs 6-dimensional VL diagnosis (color drift, pattern missing, contour deviation, structure addition/reduction, model matching, dirt detection) to fundamentally eliminate the problem of generated images not looking like the product.</description></item>
-        /// <item><description>Flexible storyboard arrangement and duration control: Supports adjustable video duration of 5 to 30 seconds; the agent independently plans independent storyboards to display the product effects in different scenarios; it also supports a fixed scene mode to deeply display the product tonality under a unified visual style.</description></item>
-        /// <item><description>Cinematic camera movement capabilities: Built-in advanced camera movement modes such as bullet time, Grammy slow motion, 360° surround rotation, and model full-body rotation display, achieving deterministic output through segmented precise control.</description></item>
-        /// <item><description>Model library and customization services: Built-in multi-type model resource library, supporting merchants to specify fixed models, customize exclusive model images, and bind brand visual personas for a long time to ensure brand visual consistency.</description></item>
-        /// <item><description>Adapting to high-frequency e-commerce content scenarios: Supports multiple resolutions such as 720P and 1080P, and multiple aspect ratios such as 3:4 and 9:16, adapting to product detail page video slots, product homepage video displays, waterfall/information feed placements, event venue materials, and new product and promotional video generation.</description></item>
-        /// </list>
-        /// </description>
-        /// 
         /// <param name="tmpReq">
-        /// VideoGenerationRequest
+        /// UpdateDisplayKnowledgeRequest
         /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
         /// 
         /// <returns>
-        /// VideoGenerationResponse
+        /// UpdateDisplayKnowledgeResponse
         /// </returns>
-        public VideoGenerationResponse VideoGenerationWithOptions(VideoGenerationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateDisplayKnowledgeResponse UpdateDisplayKnowledgeWithOptions(UpdateDisplayKnowledgeRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            VideoGenerationShrinkRequest request = new VideoGenerationShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Input))
+            tmpReq.Validate();
+            UpdateDisplayKnowledgeShrinkRequest request = new UpdateDisplayKnowledgeShrinkRequest();
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.Records.IsNull())
             {
-                request.InputShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Input, "Input", "json");
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Intent))
-            {
-                request.IntentShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Intent, "Intent", "json");
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Output))
-            {
-                request.OutputShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Output, "Output", "json");
+                request.RecordsShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.Records, "Records", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputShrink))
+            if (!request.RagId.IsNull())
             {
-                query["Input"] = request.InputShrink;
+                query["RagId"] = request.RagId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntentShrink))
+            if (!request.RecordsShrink.IsNull())
             {
-                query["Intent"] = request.IntentShrink;
+                query["Records"] = request.RecordsShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputShrink))
+            OpenApiRequest req = new OpenApiRequest
             {
-                query["Output"] = request.OutputShrink;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
-                Action = "VideoGeneration",
+                Action = "UpdateDisplayKnowledge",
                 Version = "2026-04-28",
                 Protocol = "HTTPS",
                 Pathname = "/",
@@ -16486,7 +16903,95 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<VideoGenerationResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<UpdateDisplayKnowledgeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Synchronously updates the content of a display knowledge base in batches.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateDisplayKnowledgeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDisplayKnowledgeResponse
+        /// </returns>
+        public async Task<UpdateDisplayKnowledgeResponse> UpdateDisplayKnowledgeWithOptionsAsync(UpdateDisplayKnowledgeRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
+        {
+            tmpReq.Validate();
+            UpdateDisplayKnowledgeShrinkRequest request = new UpdateDisplayKnowledgeShrinkRequest();
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.Records.IsNull())
+            {
+                request.RecordsShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.Records, "Records", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!request.RagId.IsNull())
+            {
+                query["RagId"] = request.RagId;
+            }
+            if (!request.RecordsShrink.IsNull())
+            {
+                query["Records"] = request.RecordsShrink;
+            }
+            OpenApiRequest req = new OpenApiRequest
+            {
+                Query = Utils.Query(query),
+            };
+            Params params_ = new Params
+            {
+                Action = "UpdateDisplayKnowledge",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return Darabonba.Model.ToObject<UpdateDisplayKnowledgeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Synchronously updates the content of a display knowledge base in batches.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDisplayKnowledgeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDisplayKnowledgeResponse
+        /// </returns>
+        public UpdateDisplayKnowledgeResponse UpdateDisplayKnowledge(UpdateDisplayKnowledgeRequest request)
+        {
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            return UpdateDisplayKnowledgeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Synchronously updates the content of a display knowledge base in batches.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDisplayKnowledgeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDisplayKnowledgeResponse
+        /// </returns>
+        public async Task<UpdateDisplayKnowledgeResponse> UpdateDisplayKnowledgeAsync(UpdateDisplayKnowledgeRequest request)
+        {
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            return await UpdateDisplayKnowledgeWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -16528,41 +17033,41 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// VideoGenerationResponse
         /// </returns>
-        public async Task<VideoGenerationResponse> VideoGenerationWithOptionsAsync(VideoGenerationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public VideoGenerationResponse VideoGenerationWithOptions(VideoGenerationRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            tmpReq.Validate();
             VideoGenerationShrinkRequest request = new VideoGenerationShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Input))
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.Input.IsNull())
             {
-                request.InputShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Input, "Input", "json");
+                request.InputShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.Input, "Input", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Intent))
+            if (!tmpReq.Intent.IsNull())
             {
-                request.IntentShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Intent, "Intent", "json");
+                request.IntentShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.Intent, "Intent", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Output))
+            if (!tmpReq.Output.IsNull())
             {
-                request.OutputShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Output, "Output", "json");
+                request.OutputShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.Output, "Output", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputShrink))
+            if (!request.InputShrink.IsNull())
             {
                 query["Input"] = request.InputShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntentShrink))
+            if (!request.IntentShrink.IsNull())
             {
                 query["Intent"] = request.IntentShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputShrink))
+            if (!request.OutputShrink.IsNull())
             {
                 query["Output"] = request.OutputShrink;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "VideoGeneration",
                 Version = "2026-04-28",
@@ -16574,7 +17079,95 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<VideoGenerationResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<VideoGenerationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The e-commerce AI video generation agent is designed for e-commerce merchants and platforms. Based on product main images, titles, and selling points, it automatically generates 5- to 30-second product showcase short videos to help customers efficiently produce and distribute e-commerce content. The product supports multiple resolution outputs such as 720P and 1080P. You can invoke single products quickly and generate multiple products in batches, meeting the needs of daily operations and large-scale product content production. It currently overwrites all clothing categories (tops, pants, skirts, suits, underwear, swimwear, etc.) and is gradually expanding to core e-commerce categories such as skincare, cosmetics, food and beverages, and home appliances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Scenarios</h1>
+        /// <list type="bullet">
+        /// <item><description>Batch generation of product short videos for sellers and platforms: Supports multiple video aspect ratios and sizes (3:4, 9:16), adapting to product detail page video slots, product homepage displays, information feed placements, short video promotions, and event venue materials.</description></item>
+        /// <item><description>Quick generation of the first batch of video materials for new product launches: When merchants have a large number of new products to launch, they only need to upload basic information such as product images and titles to quickly generate product showcase videos, model wearing videos, and spoken explanation videos, helping merchants quickly complete material deployment during the launch phase.</description></item>
+        /// <item><description>High-fidelity clothing display: Generates model display videos that are closer to real commercial shooting effects based on product main images, focusing on optimizing capabilities such as pattern restoration, fabric texture retention, accurate color presentation, and stable and consistent details. It supports common e-commerce display methods such as wearing, turning, walking, close-up shots, and multi-angle switching.</description></item>
+        /// <item><description>Generation of high-quality commercial shooting models: Built-in target audience model library, covering plus-size women, plus-size men, swimwear, girl style, light mature commuting, youth casual, business menswear, sports and fitness, and other body types, skin colors, and races. It supports various commercial shooting expressions such as standing display, side display, walking display, and partial close-ups.</description></item>
+        /// <item><description>High-frequency e-commerce scenarios such as standard product explanations: Applicable to standardized product categories such as skincare, cosmetics, personal care small appliances, food and beverages, home cleaning daily necessities, and 3C digital products. It can quickly generate product explanation videos based on product main images, titles, selling point information, and explanation scripts.</description></item>
+        /// <item><description>Multi-product and multi-selling point testing to improve delivery efficiency: For information feed advertising, short video delivery, and content promotion scenarios, it can quickly generate multiple versions of video materials, making it easy for enterprises to verify the conversion effects of different selling points and presentation forms at a low cost, and improve delivery ROI.</description></item>
+        /// </list>
+        /// <h1>Features</h1>
+        /// <list type="bullet">
+        /// <item><description>Fully automatic end-to-end batch generation with zero prompt threshold: Callers only need to pass in the product image URL and title, and the system automatically completes the entire process from product understanding, storyboard planning to video generation, without the need to manually write prompts, select templates, or repeatedly adjust parameters. Built-in multiple agents such as product understanding, image quality inspection, script planning, and director camera movement greatly lower the threshold for use.</description></item>
+        /// <item><description>Highly stable generation with a low waste rate: Adopts a deterministic generation process and multi-layer quality control mechanism to output usable materials with fewer retries, reducing invalid generation and resource waste, and making the overall production cost more controllable.</description></item>
+        /// <item><description>E-commerce exclusive product fidelity capability: Built-in multi-round quality inspection agent locks the product state throughout the video generation process (such as zippers will not be pulled open, sleeves will not be put down, and prints will not disappear), ensuring product consistency through multi-layer defense of script rewriting, explicit constraint injection, and failure-aware retry.</description></item>
+        /// <item><description>Reference image first + 6-axis consistency check: Adopts the Reference-Image-First generation paradigm, using the original product image as the only visual source of truth, and automatically performs 6-dimensional VL diagnosis (color drift, pattern missing, contour deviation, structure addition/reduction, model matching, dirt detection) to fundamentally eliminate the problem of generated images not looking like the product.</description></item>
+        /// <item><description>Flexible storyboard arrangement and duration control: Supports adjustable video duration of 5 to 30 seconds; the agent independently plans independent storyboards to display the product effects in different scenarios; it also supports a fixed scene mode to deeply display the product tonality under a unified visual style.</description></item>
+        /// <item><description>Cinematic camera movement capabilities: Built-in advanced camera movement modes such as bullet time, Grammy slow motion, 360° surround rotation, and model full-body rotation display, achieving deterministic output through segmented precise control.</description></item>
+        /// <item><description>Model library and customization services: Built-in multi-type model resource library, supporting merchants to specify fixed models, customize exclusive model images, and bind brand visual personas for a long time to ensure brand visual consistency.</description></item>
+        /// <item><description>Adapting to high-frequency e-commerce content scenarios: Supports multiple resolutions such as 720P and 1080P, and multiple aspect ratios such as 3:4 and 9:16, adapting to product detail page video slots, product homepage video displays, waterfall/information feed placements, event venue materials, and new product and promotional video generation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// VideoGenerationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VideoGenerationResponse
+        /// </returns>
+        public async Task<VideoGenerationResponse> VideoGenerationWithOptionsAsync(VideoGenerationRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
+        {
+            tmpReq.Validate();
+            VideoGenerationShrinkRequest request = new VideoGenerationShrinkRequest();
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.Input.IsNull())
+            {
+                request.InputShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.Input, "Input", "json");
+            }
+            if (!tmpReq.Intent.IsNull())
+            {
+                request.IntentShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.Intent, "Intent", "json");
+            }
+            if (!tmpReq.Output.IsNull())
+            {
+                request.OutputShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.Output, "Output", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!request.InputShrink.IsNull())
+            {
+                query["Input"] = request.InputShrink;
+            }
+            if (!request.IntentShrink.IsNull())
+            {
+                query["Intent"] = request.IntentShrink;
+            }
+            if (!request.OutputShrink.IsNull())
+            {
+                query["Output"] = request.OutputShrink;
+            }
+            OpenApiRequest req = new OpenApiRequest
+            {
+                Query = Utils.Query(query),
+            };
+            Params params_ = new Params
+            {
+                Action = "VideoGeneration",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return Darabonba.Model.ToObject<VideoGenerationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -16615,7 +17208,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public VideoGenerationResponse VideoGeneration(VideoGenerationRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return VideoGenerationWithOptions(request, runtime);
         }
 
@@ -16657,29 +17250,29 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<VideoGenerationResponse> VideoGenerationAsync(VideoGenerationRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await VideoGenerationWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Translates embedded text, such as subtitles and selling points, in video frames into a target language and erases the original text.</para>
+        /// <para>Translates the speech and on-screen text in a video into a target language. You can select speech subtitle translation, on-screen text translation, or both. This API applies to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising. The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the task ID and poll the task status by calling the query API until the task is completed and the result is returned.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product introduction</h2>
-        /// <para>The video translation API translates speech and on-screen text in videos into a target language. You can select speech and subtitle translation, on-screen text translation, or both. This API is suitable for scenarios such as multi-language distribution of e-commerce videos, international social media marketing, and global brand advertising.
-        /// This API uses asynchronous invocation. After you submit a translation task, you obtain a TaskId. You can use the query API to poll the task status until the task is completed and then obtain the result.</para>
+        /// <para>The video translation API translates the speech and on-screen text in a video into a target language. You can select speech subtitle translation, on-screen text translation, or both. This API applies to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising.
+        /// The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the <c>TaskId</c> and poll the task status by calling the query API until the task is completed and the result is returned.</para>
         /// <h2>Scenarios</h2>
         /// <list type="bullet">
-        /// <item><description><para><b>Cross-border e-commerce video localization</b>: Translates selling point text in product introduction videos into the language of the target market to promote products on overseas platforms.</para>
+        /// <item><description><para><b>Cross-border e-commerce video localization</b>: Translates the selling point text in product introduction videos into the language of the target market to facilitate promotion on overseas platforms.</para>
         /// </description></item>
-        /// <item><description><para><b>International social media marketing</b>: Localizes on-screen text in videos for platforms such as TikTok, Instagram, and YouTube with one click to improve comprehension and conversion rates among overseas users.</para>
+        /// <item><description><para><b>International social media marketing</b>: Localizes the on-screen text in videos for platforms such as TikTok, Instagram, and YouTube with one click to improve comprehension and conversion rates among overseas users.</para>
         /// </description></item>
-        /// <item><description><para><b>Global brand advertising</b>: Automatically generates video versions in the languages of the delivery regions to reduce manual production costs.</para>
+        /// <item><description><para><b>Global brand advertising</b>: Automatically generates video versions in the languages of the target regions to reduce manual production costs.</para>
         /// </description></item>
-        /// <item><description><para><b>Training and product instructions</b>: Translates on-screen text in training courses or product demo videos into multiple languages for global teams.</para>
+        /// <item><description><para><b>Training and product instructions</b>: Translates the on-screen text in training courses or product demo videos into multiple languages for global teams.</para>
         /// </description></item>
         /// </list>
         /// <h2>Features</h2>
@@ -16692,27 +17285,27 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>Speech and subtitle translation</td>
-        /// <td>speech</td>
-        /// <td>Translates video speech into target language voiceovers. Does not erase original subtitles or add new subtitles.</td>
+        /// <td>Speech subtitle translation</td>
+        /// <td><c>speech</c></td>
+        /// <td>Translates the video speech into target language dubbing. Original subtitles are not removed, and no new subtitles are added.</td>
         /// </tr>
         /// <tr>
         /// <td>On-screen text translation</td>
-        /// <td>visual</td>
-        /// <td>Translates embedded text in video frames, such as subtitles and selling points, and erases the original text. You can enable quality check for on-screen text processing by using the API.</td>
+        /// <td><c>visual</c></td>
+        /// <td>Translates the embedded text (subtitles, selling point text, etc.) in the video frames and erases the original text. You can enable quality check for on-screen text processing by using the API.</td>
         /// </tr>
         /// <tr>
-        /// <td>Speech and subtitle translation (speech) generates target language voiceovers based on the spoken content in the video and synthesizes them into the video. It does not erase original subtitles or add new subtitles. Original subtitles refer to the existing subtitles in the video frames that correspond to the spoken content.</td>
-        /// <td></td>
-        /// <td></td>
-        /// </tr>
-        /// <tr>
-        /// <td>On-screen text translation (visual) targets recognizable text in the original video language within the video frames, such as titles, product selling points, and descriptive text. It can be used independently without selecting speech and subtitle translation first. The text does not need to appear in the speech. Original subtitles within the processing scope may also be processed.</td>
+        /// <td>Speech subtitle translation (<c>speech</c>) generates target language dubbing based on the spoken content in the video and synthesizes it into the video. It does not remove original subtitles or add new subtitles. Original subtitles refer to the existing subtitles in the video frames that correspond to the spoken content.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>When both speech and visual are selected, the speech and subtitle translation is completed and the video is synthesized first. Then, on-screen text processing is performed on this video. The translated voiceover is retained, and a final video is output. The order of features in the array does not affect the execution order. Therefore, not processing original subtitles only means that the speech and subtitle phase does not erase or add subtitles. The subsequent on-screen text processing may still change the original subtitles.</td>
+        /// <td>On-screen text translation (<c>visual</c>) targets the recognizable original language text in the video frames, such as titles, product selling points, and descriptive text. It can be used independently without selecting speech subtitle translation first, and the text does not need to appear in the speech. Original subtitles within the processing scope may also be processed.</td>
+        /// <td></td>
+        /// <td></td>
+        /// </tr>
+        /// <tr>
+        /// <td>When both <c>speech</c> and <c>visual</c> are selected, the speech subtitle translation is completed and the video is synthesized first. Then, on-screen text processing is performed on this video, retaining the translated dubbing and outputting a final video. The order of features in the array does not affect the execution order. Therefore, not processing original subtitles only means that no subtitles are removed or added during the speech subtitle phase. Subsequent on-screen text processing may still alter the original subtitles.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
@@ -16729,55 +17322,55 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// VideoTranslationResponse
         /// </returns>
-        public VideoTranslationResponse VideoTranslationWithOptions(VideoTranslationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public VideoTranslationResponse VideoTranslationWithOptions(VideoTranslationRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            tmpReq.Validate();
             VideoTranslationShrinkRequest request = new VideoTranslationShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Capabilities))
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.Capabilities.IsNull())
             {
-                request.CapabilitiesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Capabilities, "Capabilities", "json");
+                request.CapabilitiesShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.Capabilities, "Capabilities", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EraseOnly))
+            if (!request.EraseOnly.IsNull())
             {
                 query["EraseOnly"] = request.EraseOnly;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemoveLogo))
+            if (!request.RemoveLogo.IsNull())
             {
                 query["RemoveLogo"] = request.RemoveLogo;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubtitleMode))
+            if (!request.SubtitleMode.IsNull())
             {
                 query["SubtitleMode"] = request.SubtitleMode;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CapabilitiesShrink))
+            if (!request.CapabilitiesShrink.IsNull())
             {
                 body["Capabilities"] = request.CapabilitiesShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableQualityCheck))
+            if (!request.EnableQualityCheck.IsNull())
             {
                 body["EnableQualityCheck"] = request.EnableQualityCheck;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            if (!request.SourceLanguage.IsNull())
             {
                 body["SourceLanguage"] = request.SourceLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            if (!request.TargetLanguage.IsNull())
             {
                 body["TargetLanguage"] = request.TargetLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoUrl))
+            if (!request.VideoUrl.IsNull())
             {
                 body["VideoUrl"] = request.VideoUrl;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Query = Utils.Query(query),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "VideoTranslation",
                 Version = "2026-04-28",
@@ -16789,28 +17382,28 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<VideoTranslationResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<VideoTranslationResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Translates embedded text, such as subtitles and selling points, in video frames into a target language and erases the original text.</para>
+        /// <para>Translates the speech and on-screen text in a video into a target language. You can select speech subtitle translation, on-screen text translation, or both. This API applies to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising. The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the task ID and poll the task status by calling the query API until the task is completed and the result is returned.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product introduction</h2>
-        /// <para>The video translation API translates speech and on-screen text in videos into a target language. You can select speech and subtitle translation, on-screen text translation, or both. This API is suitable for scenarios such as multi-language distribution of e-commerce videos, international social media marketing, and global brand advertising.
-        /// This API uses asynchronous invocation. After you submit a translation task, you obtain a TaskId. You can use the query API to poll the task status until the task is completed and then obtain the result.</para>
+        /// <para>The video translation API translates the speech and on-screen text in a video into a target language. You can select speech subtitle translation, on-screen text translation, or both. This API applies to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising.
+        /// The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the <c>TaskId</c> and poll the task status by calling the query API until the task is completed and the result is returned.</para>
         /// <h2>Scenarios</h2>
         /// <list type="bullet">
-        /// <item><description><para><b>Cross-border e-commerce video localization</b>: Translates selling point text in product introduction videos into the language of the target market to promote products on overseas platforms.</para>
+        /// <item><description><para><b>Cross-border e-commerce video localization</b>: Translates the selling point text in product introduction videos into the language of the target market to facilitate promotion on overseas platforms.</para>
         /// </description></item>
-        /// <item><description><para><b>International social media marketing</b>: Localizes on-screen text in videos for platforms such as TikTok, Instagram, and YouTube with one click to improve comprehension and conversion rates among overseas users.</para>
+        /// <item><description><para><b>International social media marketing</b>: Localizes the on-screen text in videos for platforms such as TikTok, Instagram, and YouTube with one click to improve comprehension and conversion rates among overseas users.</para>
         /// </description></item>
-        /// <item><description><para><b>Global brand advertising</b>: Automatically generates video versions in the languages of the delivery regions to reduce manual production costs.</para>
+        /// <item><description><para><b>Global brand advertising</b>: Automatically generates video versions in the languages of the target regions to reduce manual production costs.</para>
         /// </description></item>
-        /// <item><description><para><b>Training and product instructions</b>: Translates on-screen text in training courses or product demo videos into multiple languages for global teams.</para>
+        /// <item><description><para><b>Training and product instructions</b>: Translates the on-screen text in training courses or product demo videos into multiple languages for global teams.</para>
         /// </description></item>
         /// </list>
         /// <h2>Features</h2>
@@ -16823,27 +17416,27 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>Speech and subtitle translation</td>
-        /// <td>speech</td>
-        /// <td>Translates video speech into target language voiceovers. Does not erase original subtitles or add new subtitles.</td>
+        /// <td>Speech subtitle translation</td>
+        /// <td><c>speech</c></td>
+        /// <td>Translates the video speech into target language dubbing. Original subtitles are not removed, and no new subtitles are added.</td>
         /// </tr>
         /// <tr>
         /// <td>On-screen text translation</td>
-        /// <td>visual</td>
-        /// <td>Translates embedded text in video frames, such as subtitles and selling points, and erases the original text. You can enable quality check for on-screen text processing by using the API.</td>
+        /// <td><c>visual</c></td>
+        /// <td>Translates the embedded text (subtitles, selling point text, etc.) in the video frames and erases the original text. You can enable quality check for on-screen text processing by using the API.</td>
         /// </tr>
         /// <tr>
-        /// <td>Speech and subtitle translation (speech) generates target language voiceovers based on the spoken content in the video and synthesizes them into the video. It does not erase original subtitles or add new subtitles. Original subtitles refer to the existing subtitles in the video frames that correspond to the spoken content.</td>
-        /// <td></td>
-        /// <td></td>
-        /// </tr>
-        /// <tr>
-        /// <td>On-screen text translation (visual) targets recognizable text in the original video language within the video frames, such as titles, product selling points, and descriptive text. It can be used independently without selecting speech and subtitle translation first. The text does not need to appear in the speech. Original subtitles within the processing scope may also be processed.</td>
+        /// <td>Speech subtitle translation (<c>speech</c>) generates target language dubbing based on the spoken content in the video and synthesizes it into the video. It does not remove original subtitles or add new subtitles. Original subtitles refer to the existing subtitles in the video frames that correspond to the spoken content.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>When both speech and visual are selected, the speech and subtitle translation is completed and the video is synthesized first. Then, on-screen text processing is performed on this video. The translated voiceover is retained, and a final video is output. The order of features in the array does not affect the execution order. Therefore, not processing original subtitles only means that the speech and subtitle phase does not erase or add subtitles. The subsequent on-screen text processing may still change the original subtitles.</td>
+        /// <td>On-screen text translation (<c>visual</c>) targets the recognizable original language text in the video frames, such as titles, product selling points, and descriptive text. It can be used independently without selecting speech subtitle translation first, and the text does not need to appear in the speech. Original subtitles within the processing scope may also be processed.</td>
+        /// <td></td>
+        /// <td></td>
+        /// </tr>
+        /// <tr>
+        /// <td>When both <c>speech</c> and <c>visual</c> are selected, the speech subtitle translation is completed and the video is synthesized first. Then, on-screen text processing is performed on this video, retaining the translated dubbing and outputting a final video. The order of features in the array does not affect the execution order. Therefore, not processing original subtitles only means that no subtitles are removed or added during the speech subtitle phase. Subsequent on-screen text processing may still alter the original subtitles.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
@@ -16860,55 +17453,55 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// VideoTranslationResponse
         /// </returns>
-        public async Task<VideoTranslationResponse> VideoTranslationWithOptionsAsync(VideoTranslationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<VideoTranslationResponse> VideoTranslationWithOptionsAsync(VideoTranslationRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            tmpReq.Validate();
             VideoTranslationShrinkRequest request = new VideoTranslationShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Capabilities))
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.Capabilities.IsNull())
             {
-                request.CapabilitiesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Capabilities, "Capabilities", "json");
+                request.CapabilitiesShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.Capabilities, "Capabilities", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EraseOnly))
+            if (!request.EraseOnly.IsNull())
             {
                 query["EraseOnly"] = request.EraseOnly;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemoveLogo))
+            if (!request.RemoveLogo.IsNull())
             {
                 query["RemoveLogo"] = request.RemoveLogo;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubtitleMode))
+            if (!request.SubtitleMode.IsNull())
             {
                 query["SubtitleMode"] = request.SubtitleMode;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CapabilitiesShrink))
+            if (!request.CapabilitiesShrink.IsNull())
             {
                 body["Capabilities"] = request.CapabilitiesShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableQualityCheck))
+            if (!request.EnableQualityCheck.IsNull())
             {
                 body["EnableQualityCheck"] = request.EnableQualityCheck;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            if (!request.SourceLanguage.IsNull())
             {
                 body["SourceLanguage"] = request.SourceLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            if (!request.TargetLanguage.IsNull())
             {
                 body["TargetLanguage"] = request.TargetLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoUrl))
+            if (!request.VideoUrl.IsNull())
             {
                 body["VideoUrl"] = request.VideoUrl;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+                Query = Utils.Query(query),
+                Body = Utils.ParseToMap(body),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "VideoTranslation",
                 Version = "2026-04-28",
@@ -16920,28 +17513,28 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<VideoTranslationResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<VideoTranslationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Translates embedded text, such as subtitles and selling points, in video frames into a target language and erases the original text.</para>
+        /// <para>Translates the speech and on-screen text in a video into a target language. You can select speech subtitle translation, on-screen text translation, or both. This API applies to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising. The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the task ID and poll the task status by calling the query API until the task is completed and the result is returned.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product introduction</h2>
-        /// <para>The video translation API translates speech and on-screen text in videos into a target language. You can select speech and subtitle translation, on-screen text translation, or both. This API is suitable for scenarios such as multi-language distribution of e-commerce videos, international social media marketing, and global brand advertising.
-        /// This API uses asynchronous invocation. After you submit a translation task, you obtain a TaskId. You can use the query API to poll the task status until the task is completed and then obtain the result.</para>
+        /// <para>The video translation API translates the speech and on-screen text in a video into a target language. You can select speech subtitle translation, on-screen text translation, or both. This API applies to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising.
+        /// The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the <c>TaskId</c> and poll the task status by calling the query API until the task is completed and the result is returned.</para>
         /// <h2>Scenarios</h2>
         /// <list type="bullet">
-        /// <item><description><para><b>Cross-border e-commerce video localization</b>: Translates selling point text in product introduction videos into the language of the target market to promote products on overseas platforms.</para>
+        /// <item><description><para><b>Cross-border e-commerce video localization</b>: Translates the selling point text in product introduction videos into the language of the target market to facilitate promotion on overseas platforms.</para>
         /// </description></item>
-        /// <item><description><para><b>International social media marketing</b>: Localizes on-screen text in videos for platforms such as TikTok, Instagram, and YouTube with one click to improve comprehension and conversion rates among overseas users.</para>
+        /// <item><description><para><b>International social media marketing</b>: Localizes the on-screen text in videos for platforms such as TikTok, Instagram, and YouTube with one click to improve comprehension and conversion rates among overseas users.</para>
         /// </description></item>
-        /// <item><description><para><b>Global brand advertising</b>: Automatically generates video versions in the languages of the delivery regions to reduce manual production costs.</para>
+        /// <item><description><para><b>Global brand advertising</b>: Automatically generates video versions in the languages of the target regions to reduce manual production costs.</para>
         /// </description></item>
-        /// <item><description><para><b>Training and product instructions</b>: Translates on-screen text in training courses or product demo videos into multiple languages for global teams.</para>
+        /// <item><description><para><b>Training and product instructions</b>: Translates the on-screen text in training courses or product demo videos into multiple languages for global teams.</para>
         /// </description></item>
         /// </list>
         /// <h2>Features</h2>
@@ -16954,27 +17547,27 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>Speech and subtitle translation</td>
-        /// <td>speech</td>
-        /// <td>Translates video speech into target language voiceovers. Does not erase original subtitles or add new subtitles.</td>
+        /// <td>Speech subtitle translation</td>
+        /// <td><c>speech</c></td>
+        /// <td>Translates the video speech into target language dubbing. Original subtitles are not removed, and no new subtitles are added.</td>
         /// </tr>
         /// <tr>
         /// <td>On-screen text translation</td>
-        /// <td>visual</td>
-        /// <td>Translates embedded text in video frames, such as subtitles and selling points, and erases the original text. You can enable quality check for on-screen text processing by using the API.</td>
+        /// <td><c>visual</c></td>
+        /// <td>Translates the embedded text (subtitles, selling point text, etc.) in the video frames and erases the original text. You can enable quality check for on-screen text processing by using the API.</td>
         /// </tr>
         /// <tr>
-        /// <td>Speech and subtitle translation (speech) generates target language voiceovers based on the spoken content in the video and synthesizes them into the video. It does not erase original subtitles or add new subtitles. Original subtitles refer to the existing subtitles in the video frames that correspond to the spoken content.</td>
-        /// <td></td>
-        /// <td></td>
-        /// </tr>
-        /// <tr>
-        /// <td>On-screen text translation (visual) targets recognizable text in the original video language within the video frames, such as titles, product selling points, and descriptive text. It can be used independently without selecting speech and subtitle translation first. The text does not need to appear in the speech. Original subtitles within the processing scope may also be processed.</td>
+        /// <td>Speech subtitle translation (<c>speech</c>) generates target language dubbing based on the spoken content in the video and synthesizes it into the video. It does not remove original subtitles or add new subtitles. Original subtitles refer to the existing subtitles in the video frames that correspond to the spoken content.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>When both speech and visual are selected, the speech and subtitle translation is completed and the video is synthesized first. Then, on-screen text processing is performed on this video. The translated voiceover is retained, and a final video is output. The order of features in the array does not affect the execution order. Therefore, not processing original subtitles only means that the speech and subtitle phase does not erase or add subtitles. The subsequent on-screen text processing may still change the original subtitles.</td>
+        /// <td>On-screen text translation (<c>visual</c>) targets the recognizable original language text in the video frames, such as titles, product selling points, and descriptive text. It can be used independently without selecting speech subtitle translation first, and the text does not need to appear in the speech. Original subtitles within the processing scope may also be processed.</td>
+        /// <td></td>
+        /// <td></td>
+        /// </tr>
+        /// <tr>
+        /// <td>When both <c>speech</c> and <c>visual</c> are selected, the speech subtitle translation is completed and the video is synthesized first. Then, on-screen text processing is performed on this video, retaining the translated dubbing and outputting a final video. The order of features in the array does not affect the execution order. Therefore, not processing original subtitles only means that no subtitles are removed or added during the speech subtitle phase. Subsequent on-screen text processing may still alter the original subtitles.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
@@ -16990,29 +17583,29 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public VideoTranslationResponse VideoTranslation(VideoTranslationRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return VideoTranslationWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Translates embedded text, such as subtitles and selling points, in video frames into a target language and erases the original text.</para>
+        /// <para>Translates the speech and on-screen text in a video into a target language. You can select speech subtitle translation, on-screen text translation, or both. This API applies to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising. The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the task ID and poll the task status by calling the query API until the task is completed and the result is returned.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product introduction</h2>
-        /// <para>The video translation API translates speech and on-screen text in videos into a target language. You can select speech and subtitle translation, on-screen text translation, or both. This API is suitable for scenarios such as multi-language distribution of e-commerce videos, international social media marketing, and global brand advertising.
-        /// This API uses asynchronous invocation. After you submit a translation task, you obtain a TaskId. You can use the query API to poll the task status until the task is completed and then obtain the result.</para>
+        /// <para>The video translation API translates the speech and on-screen text in a video into a target language. You can select speech subtitle translation, on-screen text translation, or both. This API applies to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising.
+        /// The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the <c>TaskId</c> and poll the task status by calling the query API until the task is completed and the result is returned.</para>
         /// <h2>Scenarios</h2>
         /// <list type="bullet">
-        /// <item><description><para><b>Cross-border e-commerce video localization</b>: Translates selling point text in product introduction videos into the language of the target market to promote products on overseas platforms.</para>
+        /// <item><description><para><b>Cross-border e-commerce video localization</b>: Translates the selling point text in product introduction videos into the language of the target market to facilitate promotion on overseas platforms.</para>
         /// </description></item>
-        /// <item><description><para><b>International social media marketing</b>: Localizes on-screen text in videos for platforms such as TikTok, Instagram, and YouTube with one click to improve comprehension and conversion rates among overseas users.</para>
+        /// <item><description><para><b>International social media marketing</b>: Localizes the on-screen text in videos for platforms such as TikTok, Instagram, and YouTube with one click to improve comprehension and conversion rates among overseas users.</para>
         /// </description></item>
-        /// <item><description><para><b>Global brand advertising</b>: Automatically generates video versions in the languages of the delivery regions to reduce manual production costs.</para>
+        /// <item><description><para><b>Global brand advertising</b>: Automatically generates video versions in the languages of the target regions to reduce manual production costs.</para>
         /// </description></item>
-        /// <item><description><para><b>Training and product instructions</b>: Translates on-screen text in training courses or product demo videos into multiple languages for global teams.</para>
+        /// <item><description><para><b>Training and product instructions</b>: Translates the on-screen text in training courses or product demo videos into multiple languages for global teams.</para>
         /// </description></item>
         /// </list>
         /// <h2>Features</h2>
@@ -17025,27 +17618,27 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>Speech and subtitle translation</td>
-        /// <td>speech</td>
-        /// <td>Translates video speech into target language voiceovers. Does not erase original subtitles or add new subtitles.</td>
+        /// <td>Speech subtitle translation</td>
+        /// <td><c>speech</c></td>
+        /// <td>Translates the video speech into target language dubbing. Original subtitles are not removed, and no new subtitles are added.</td>
         /// </tr>
         /// <tr>
         /// <td>On-screen text translation</td>
-        /// <td>visual</td>
-        /// <td>Translates embedded text in video frames, such as subtitles and selling points, and erases the original text. You can enable quality check for on-screen text processing by using the API.</td>
+        /// <td><c>visual</c></td>
+        /// <td>Translates the embedded text (subtitles, selling point text, etc.) in the video frames and erases the original text. You can enable quality check for on-screen text processing by using the API.</td>
         /// </tr>
         /// <tr>
-        /// <td>Speech and subtitle translation (speech) generates target language voiceovers based on the spoken content in the video and synthesizes them into the video. It does not erase original subtitles or add new subtitles. Original subtitles refer to the existing subtitles in the video frames that correspond to the spoken content.</td>
-        /// <td></td>
-        /// <td></td>
-        /// </tr>
-        /// <tr>
-        /// <td>On-screen text translation (visual) targets recognizable text in the original video language within the video frames, such as titles, product selling points, and descriptive text. It can be used independently without selecting speech and subtitle translation first. The text does not need to appear in the speech. Original subtitles within the processing scope may also be processed.</td>
+        /// <td>Speech subtitle translation (<c>speech</c>) generates target language dubbing based on the spoken content in the video and synthesizes it into the video. It does not remove original subtitles or add new subtitles. Original subtitles refer to the existing subtitles in the video frames that correspond to the spoken content.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>When both speech and visual are selected, the speech and subtitle translation is completed and the video is synthesized first. Then, on-screen text processing is performed on this video. The translated voiceover is retained, and a final video is output. The order of features in the array does not affect the execution order. Therefore, not processing original subtitles only means that the speech and subtitle phase does not erase or add subtitles. The subsequent on-screen text processing may still change the original subtitles.</td>
+        /// <td>On-screen text translation (<c>visual</c>) targets the recognizable original language text in the video frames, such as titles, product selling points, and descriptive text. It can be used independently without selecting speech subtitle translation first, and the text does not need to appear in the speech. Original subtitles within the processing scope may also be processed.</td>
+        /// <td></td>
+        /// <td></td>
+        /// </tr>
+        /// <tr>
+        /// <td>When both <c>speech</c> and <c>visual</c> are selected, the speech subtitle translation is completed and the video is synthesized first. Then, on-screen text processing is performed on this video, retaining the translated dubbing and outputting a final video. The order of features in the array does not affect the execution order. Therefore, not processing original subtitles only means that no subtitles are removed or added during the speech subtitle phase. Subsequent on-screen text processing may still alter the original subtitles.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
@@ -17061,7 +17654,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<VideoTranslationResponse> VideoTranslationAsync(VideoTranslationRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await VideoTranslationWithOptionsAsync(request, runtime);
         }
 
@@ -17161,31 +17754,31 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// VirtualTryOnResponse
         /// </returns>
-        public VirtualTryOnResponse VirtualTryOnWithOptions(VirtualTryOnRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public VirtualTryOnResponse VirtualTryOnWithOptions(VirtualTryOnRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClothImageUrl))
+            if (!request.ClothImageUrl.IsNull())
             {
                 query["ClothImageUrl"] = request.ClothImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClothType))
+            if (!request.ClothType.IsNull())
             {
                 query["ClothType"] = request.ClothType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelImageUrl))
+            if (!request.ModelImageUrl.IsNull())
             {
                 query["ModelImageUrl"] = request.ModelImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resolution))
+            if (!request.Resolution.IsNull())
             {
                 query["Resolution"] = request.Resolution;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "VirtualTryOn",
                 Version = "2026-04-28",
@@ -17197,7 +17790,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<VirtualTryOnResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<VirtualTryOnResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -17296,31 +17889,31 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// VirtualTryOnResponse
         /// </returns>
-        public async Task<VirtualTryOnResponse> VirtualTryOnWithOptionsAsync(VirtualTryOnRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<VirtualTryOnResponse> VirtualTryOnWithOptionsAsync(VirtualTryOnRequest request, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            request.Validate();
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClothImageUrl))
+            if (!request.ClothImageUrl.IsNull())
             {
                 query["ClothImageUrl"] = request.ClothImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClothType))
+            if (!request.ClothType.IsNull())
             {
                 query["ClothType"] = request.ClothType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelImageUrl))
+            if (!request.ModelImageUrl.IsNull())
             {
                 query["ModelImageUrl"] = request.ModelImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resolution))
+            if (!request.Resolution.IsNull())
             {
                 query["Resolution"] = request.Resolution;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "VirtualTryOn",
                 Version = "2026-04-28",
@@ -17332,7 +17925,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<VirtualTryOnResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<VirtualTryOnResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -17430,7 +18023,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public VirtualTryOnResponse VirtualTryOn(VirtualTryOnRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return VirtualTryOnWithOptions(request, runtime);
         }
 
@@ -17529,7 +18122,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<VirtualTryOnResponse> VirtualTryOnAsync(VirtualTryOnRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await VirtualTryOnWithOptionsAsync(request, runtime);
         }
 
@@ -17623,105 +18216,105 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// VisionFlowResponse
         /// </returns>
-        public VisionFlowResponse VisionFlowWithOptions(VisionFlowRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public VisionFlowResponse VisionFlowWithOptions(VisionFlowRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            tmpReq.Validate();
             VisionFlowShrinkRequest request = new VisionFlowShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ability))
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.Ability.IsNull())
             {
-                request.AbilityShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ability, "Ability", "json");
+                request.AbilityShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.Ability, "Ability", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NonobjectDetectElements))
+            if (!tmpReq.NonobjectDetectElements.IsNull())
             {
-                request.NonobjectDetectElementsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NonobjectDetectElements, "NonobjectDetectElements", "json");
+                request.NonobjectDetectElementsShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.NonobjectDetectElements, "NonobjectDetectElements", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NonobjectRemoveElements))
+            if (!tmpReq.NonobjectRemoveElements.IsNull())
             {
-                request.NonobjectRemoveElementsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NonobjectRemoveElements, "NonobjectRemoveElements", "json");
+                request.NonobjectRemoveElementsShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.NonobjectRemoveElements, "NonobjectRemoveElements", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ObjectDetectElements))
+            if (!tmpReq.ObjectDetectElements.IsNull())
             {
-                request.ObjectDetectElementsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectDetectElements, "ObjectDetectElements", "json");
+                request.ObjectDetectElementsShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectDetectElements, "ObjectDetectElements", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ObjectRemoveElements))
+            if (!tmpReq.ObjectRemoveElements.IsNull())
             {
-                request.ObjectRemoveElementsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectRemoveElements, "ObjectRemoveElements", "json");
+                request.ObjectRemoveElementsShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectRemoveElements, "ObjectRemoveElements", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AbilityShrink))
+            if (!request.AbilityShrink.IsNull())
             {
                 query["Ability"] = request.AbilityShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackGroundType))
+            if (!request.BackGroundType.IsNull())
             {
                 query["BackGroundType"] = request.BackGroundType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
+            if (!request.Glossary.IsNull())
             {
                 query["Glossary"] = request.Glossary;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludingProductArea))
+            if (!request.IncludingProductArea.IsNull())
             {
                 query["IncludingProductArea"] = request.IncludingProductArea;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsFilter))
+            if (!request.IsFilter.IsNull())
             {
                 query["IsFilter"] = request.IsFilter;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mask))
+            if (!request.Mask.IsNull())
             {
                 query["Mask"] = request.Mask;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NonobjectDetectElementsShrink))
+            if (!request.NonobjectDetectElementsShrink.IsNull())
             {
                 query["NonobjectDetectElements"] = request.NonobjectDetectElementsShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NonobjectRemoveElementsShrink))
+            if (!request.NonobjectRemoveElementsShrink.IsNull())
             {
                 query["NonobjectRemoveElements"] = request.NonobjectRemoveElementsShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectDetectElementsShrink))
+            if (!request.ObjectDetectElementsShrink.IsNull())
             {
                 query["ObjectDetectElements"] = request.ObjectDetectElementsShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectRemoveElementsShrink))
+            if (!request.ObjectRemoveElementsShrink.IsNull())
             {
                 query["ObjectRemoveElements"] = request.ObjectRemoveElementsShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            if (!request.SourceLanguage.IsNull())
             {
                 query["SourceLanguage"] = request.SourceLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetHeight))
+            if (!request.TargetHeight.IsNull())
             {
                 query["TargetHeight"] = request.TargetHeight;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            if (!request.TargetLanguage.IsNull())
             {
                 query["TargetLanguage"] = request.TargetLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetWidth))
+            if (!request.TargetWidth.IsNull())
             {
                 query["TargetWidth"] = request.TargetWidth;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslatingBrandInTheProduct))
+            if (!request.TranslatingBrandInTheProduct.IsNull())
             {
                 query["TranslatingBrandInTheProduct"] = request.TranslatingBrandInTheProduct;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpscaleFactor))
+            if (!request.UpscaleFactor.IsNull())
             {
                 query["UpscaleFactor"] = request.UpscaleFactor;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "VisionFlow",
                 Version = "2026-04-28",
@@ -17733,7 +18326,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<VisionFlowResponse>(CallApi(params_, req, runtime));
+            return Darabonba.Model.ToObject<VisionFlowResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -17826,105 +18419,105 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <returns>
         /// VisionFlowResponse
         /// </returns>
-        public async Task<VisionFlowResponse> VisionFlowWithOptionsAsync(VisionFlowRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<VisionFlowResponse> VisionFlowWithOptionsAsync(VisionFlowRequest tmpReq, Darabonba.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            tmpReq.Validate();
             VisionFlowShrinkRequest request = new VisionFlowShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ability))
+            Utils.Convert(tmpReq, request);
+            if (!tmpReq.Ability.IsNull())
             {
-                request.AbilityShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ability, "Ability", "json");
+                request.AbilityShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.Ability, "Ability", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NonobjectDetectElements))
+            if (!tmpReq.NonobjectDetectElements.IsNull())
             {
-                request.NonobjectDetectElementsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NonobjectDetectElements, "NonobjectDetectElements", "json");
+                request.NonobjectDetectElementsShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.NonobjectDetectElements, "NonobjectDetectElements", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NonobjectRemoveElements))
+            if (!tmpReq.NonobjectRemoveElements.IsNull())
             {
-                request.NonobjectRemoveElementsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NonobjectRemoveElements, "NonobjectRemoveElements", "json");
+                request.NonobjectRemoveElementsShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.NonobjectRemoveElements, "NonobjectRemoveElements", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ObjectDetectElements))
+            if (!tmpReq.ObjectDetectElements.IsNull())
             {
-                request.ObjectDetectElementsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectDetectElements, "ObjectDetectElements", "json");
+                request.ObjectDetectElementsShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectDetectElements, "ObjectDetectElements", "json");
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ObjectRemoveElements))
+            if (!tmpReq.ObjectRemoveElements.IsNull())
             {
-                request.ObjectRemoveElementsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectRemoveElements, "ObjectRemoveElements", "json");
+                request.ObjectRemoveElementsShrink = Utils.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectRemoveElements, "ObjectRemoveElements", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AbilityShrink))
+            if (!request.AbilityShrink.IsNull())
             {
                 query["Ability"] = request.AbilityShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackGroundType))
+            if (!request.BackGroundType.IsNull())
             {
                 query["BackGroundType"] = request.BackGroundType;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
+            if (!request.Glossary.IsNull())
             {
                 query["Glossary"] = request.Glossary;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            if (!request.ImageUrl.IsNull())
             {
                 query["ImageUrl"] = request.ImageUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludingProductArea))
+            if (!request.IncludingProductArea.IsNull())
             {
                 query["IncludingProductArea"] = request.IncludingProductArea;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsFilter))
+            if (!request.IsFilter.IsNull())
             {
                 query["IsFilter"] = request.IsFilter;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mask))
+            if (!request.Mask.IsNull())
             {
                 query["Mask"] = request.Mask;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NonobjectDetectElementsShrink))
+            if (!request.NonobjectDetectElementsShrink.IsNull())
             {
                 query["NonobjectDetectElements"] = request.NonobjectDetectElementsShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NonobjectRemoveElementsShrink))
+            if (!request.NonobjectRemoveElementsShrink.IsNull())
             {
                 query["NonobjectRemoveElements"] = request.NonobjectRemoveElementsShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectDetectElementsShrink))
+            if (!request.ObjectDetectElementsShrink.IsNull())
             {
                 query["ObjectDetectElements"] = request.ObjectDetectElementsShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectRemoveElementsShrink))
+            if (!request.ObjectRemoveElementsShrink.IsNull())
             {
                 query["ObjectRemoveElements"] = request.ObjectRemoveElementsShrink;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            if (!request.SourceLanguage.IsNull())
             {
                 query["SourceLanguage"] = request.SourceLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetHeight))
+            if (!request.TargetHeight.IsNull())
             {
                 query["TargetHeight"] = request.TargetHeight;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            if (!request.TargetLanguage.IsNull())
             {
                 query["TargetLanguage"] = request.TargetLanguage;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetWidth))
+            if (!request.TargetWidth.IsNull())
             {
                 query["TargetWidth"] = request.TargetWidth;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslatingBrandInTheProduct))
+            if (!request.TranslatingBrandInTheProduct.IsNull())
             {
                 query["TranslatingBrandInTheProduct"] = request.TranslatingBrandInTheProduct;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpscaleFactor))
+            if (!request.UpscaleFactor.IsNull())
             {
                 query["UpscaleFactor"] = request.UpscaleFactor;
             }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            OpenApiRequest req = new OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Query = Utils.Query(query),
             };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            Params params_ = new Params
             {
                 Action = "VisionFlow",
                 Version = "2026-04-28",
@@ -17936,7 +18529,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<VisionFlowResponse>(await CallApiAsync(params_, req, runtime));
+            return Darabonba.Model.ToObject<VisionFlowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -18028,7 +18621,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public VisionFlowResponse VisionFlow(VisionFlowRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return VisionFlowWithOptions(request, runtime);
         }
 
@@ -18121,9 +18714,10 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </returns>
         public async Task<VisionFlowResponse> VisionFlowAsync(VisionFlowRequest request)
         {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
             return await VisionFlowWithOptionsAsync(request, runtime);
         }
 
     }
 }
+

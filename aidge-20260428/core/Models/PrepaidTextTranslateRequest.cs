@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class PrepaidTextTranslateRequest : TeaModel {
+    public class PrepaidTextTranslateRequest : Darabonba.Model {
         /// <summary>
         /// <para>The business scenario identifier. This parameter is optional. Valid values: e-commerce-title, e-commerce-description, e-commerce-chat, e-commerce-cpv, novel, game. If not specified or an invalid value is passed, the general translation policy is used by default.</para>
         /// 
@@ -84,3 +85,4 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
+

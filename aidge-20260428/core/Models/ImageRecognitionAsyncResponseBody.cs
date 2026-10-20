@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class ImageRecognitionAsyncResponseBody : TeaModel {
+    public class ImageRecognitionAsyncResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The error code. This parameter is not returned when the call is successful.</para>
         /// 
@@ -25,7 +26,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ImageRecognitionAsyncResponseBodyData Data { get; set; }
-        public class ImageRecognitionAsyncResponseBodyData : TeaModel {
+        public class ImageRecognitionAsyncResponseBodyData : Darabonba.Model {
             /// <summary>
             /// <para>The ID of the task used to query the asynchronous task result.</para>
             /// 
@@ -75,3 +76,4 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
+

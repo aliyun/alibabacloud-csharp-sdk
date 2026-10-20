@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class SubmitProductMatchResponseBody : TeaModel {
+    public class SubmitProductMatchResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The error code. This parameter is not returned if the call is successful.</para>
         /// 
@@ -25,7 +26,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SubmitProductMatchResponseBodyData Data { get; set; }
-        public class SubmitProductMatchResponseBodyData : TeaModel {
+        public class SubmitProductMatchResponseBodyData : Darabonba.Model {
             /// <summary>
             /// <para>The task acceptance time in ISO 8601 UTC format.</para>
             /// 
@@ -85,3 +86,4 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
+

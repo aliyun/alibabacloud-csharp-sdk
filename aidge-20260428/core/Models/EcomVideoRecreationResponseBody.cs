@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class EcomVideoRecreationResponseBody : TeaModel {
+    public class EcomVideoRecreationResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The result code. A value of <c>success</c> indicates success. If the call fails, the corresponding error code is returned.</para>
         /// 
@@ -25,7 +26,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public EcomVideoRecreationResponseBodyData Data { get; set; }
-        public class EcomVideoRecreationResponseBodyData : TeaModel {
+        public class EcomVideoRecreationResponseBodyData : Darabonba.Model {
             /// <summary>
             /// <para>The ID of the asynchronous task, which is used to query the task result by calling QueryAsyncTaskResult.</para>
             /// 
@@ -71,3 +72,4 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
+

@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class ImageTranslationProResponseBody : TeaModel {
+    public class ImageTranslationProResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The response code. A value of 200 indicates a successful call. For other response codes, refer to the error code information.</para>
         /// 
@@ -25,21 +26,21 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ImageTranslationProResponseBodyData Data { get; set; }
-        public class ImageTranslationProResponseBodyData : TeaModel {
+        public class ImageTranslationProResponseBodyData : Darabonba.Model {
             /// <summary>
             /// <para>The editor protocol, which contains translation result files and editing information.</para>
             /// </summary>
             [NameInMap("GenFiles")]
             [Validation(Required=false)]
             public List<ImageTranslationProResponseBodyDataGenFiles> GenFiles { get; set; }
-            public class ImageTranslationProResponseBodyDataGenFiles : TeaModel {
+            public class ImageTranslationProResponseBodyDataGenFiles : Darabonba.Model {
                 /// <summary>
                 /// <para>The editor information, which contains recognized information such as text areas, product areas, and fonts.</para>
                 /// </summary>
                 [NameInMap("EditInfo")]
                 [Validation(Required=false)]
                 public ImageTranslationProResponseBodyDataGenFilesEditInfo EditInfo { get; set; }
-                public class ImageTranslationProResponseBodyDataGenFilesEditInfo : TeaModel {
+                public class ImageTranslationProResponseBodyDataGenFilesEditInfo : Darabonba.Model {
                     /// <summary>
                     /// <para>The list of font types.</para>
                     /// </summary>
@@ -53,7 +54,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     [NameInMap("GoodsRects")]
                     [Validation(Required=false)]
                     public ImageTranslationProResponseBodyDataGenFilesEditInfoGoodsRects GoodsRects { get; set; }
-                    public class ImageTranslationProResponseBodyDataGenFilesEditInfoGoodsRects : TeaModel {
+                    public class ImageTranslationProResponseBodyDataGenFilesEditInfoGoodsRects : Darabonba.Model {
                         /// <summary>
                         /// <para>The rotation angle of the text box, in degrees. A value less than 1 indicates a horizontal text box.</para>
                         /// 
@@ -136,7 +137,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     [NameInMap("TextAreas")]
                     [Validation(Required=false)]
                     public List<ImageTranslationProResponseBodyDataGenFilesEditInfoTextAreas> TextAreas { get; set; }
-                    public class ImageTranslationProResponseBodyDataGenFilesEditInfoTextAreas : TeaModel {
+                    public class ImageTranslationProResponseBodyDataGenFilesEditInfoTextAreas : Darabonba.Model {
                         /// <summary>
                         /// <para>The text color, such as #ffffff.</para>
                         /// 
@@ -193,7 +194,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                         [NameInMap("Texts")]
                         [Validation(Required=false)]
                         public List<ImageTranslationProResponseBodyDataGenFilesEditInfoTextAreasTexts> Texts { get; set; }
-                        public class ImageTranslationProResponseBodyDataGenFilesEditInfoTextAreasTexts : TeaModel {
+                        public class ImageTranslationProResponseBodyDataGenFilesEditInfoTextAreasTexts : Darabonba.Model {
                             /// <summary>
                             /// <para>The text color after translation.</para>
                             /// 
@@ -230,7 +231,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                             [NameInMap("ImageRect")]
                             [Validation(Required=false)]
                             public ImageTranslationProResponseBodyDataGenFilesEditInfoTextAreasTextsImageRect ImageRect { get; set; }
-                            public class ImageTranslationProResponseBodyDataGenFilesEditInfoTextAreasTextsImageRect : TeaModel {
+                            public class ImageTranslationProResponseBodyDataGenFilesEditInfoTextAreasTextsImageRect : Darabonba.Model {
                                 /// <summary>
                                 /// <para>The rotation angle of the text box, in degrees. A value less than 1 indicates a horizontal text box.</para>
                                 /// 
@@ -309,7 +310,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                             [NameInMap("TextRect")]
                             [Validation(Required=false)]
                             public ImageTranslationProResponseBodyDataGenFilesEditInfoTextAreasTextsTextRect TextRect { get; set; }
-                            public class ImageTranslationProResponseBodyDataGenFilesEditInfoTextAreasTextsTextRect : TeaModel {
+                            public class ImageTranslationProResponseBodyDataGenFilesEditInfoTextAreasTextsTextRect : Darabonba.Model {
                                 /// <summary>
                                 /// <para>The rotation angle of the text box, in degrees. A value less than 1 indicates a horizontal text box.</para>
                                 /// 
@@ -414,7 +415,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 [NameInMap("ResultList")]
                 [Validation(Required=false)]
                 public List<ImageTranslationProResponseBodyDataGenFilesResultList> ResultList { get; set; }
-                public class ImageTranslationProResponseBodyDataGenFilesResultList : TeaModel {
+                public class ImageTranslationProResponseBodyDataGenFilesResultList : Darabonba.Model {
                     /// <summary>
                     /// <para>The URL of the translated image file.</para>
                     /// 
@@ -455,7 +456,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             [NameInMap("ResultList")]
             [Validation(Required=false)]
             public List<ImageTranslationProResponseBodyDataResultList> ResultList { get; set; }
-            public class ImageTranslationProResponseBodyDataResultList : TeaModel {
+            public class ImageTranslationProResponseBodyDataResultList : Darabonba.Model {
                 /// <summary>
                 /// <para>The URL of the translated result image.</para>
                 /// 
@@ -534,3 +535,4 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
+

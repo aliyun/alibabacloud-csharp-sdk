@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class DocumentTranslateResponseBody : TeaModel {
+    public class DocumentTranslateResponseBody : Darabonba.Model {
         /// <summary>
         /// <para>The response code.</para>
         /// 
@@ -25,7 +26,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DocumentTranslateResponseBodyData Data { get; set; }
-        public class DocumentTranslateResponseBodyData : TeaModel {
+        public class DocumentTranslateResponseBodyData : Darabonba.Model {
             /// <summary>
             /// <para>The unique identifier of the asynchronous task. Use this ID to query the task status and result.</para>
             /// 
@@ -72,3 +73,4 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
+

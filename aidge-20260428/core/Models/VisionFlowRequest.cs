@@ -1,14 +1,15 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-
-using Tea;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class VisionFlowRequest : TeaModel {
+    public class VisionFlowRequest : Darabonba.Model {
         /// <summary>
         /// <para>The AI capabilities to apply (1 = Intelligent Element Detection, 2 = Intelligent Matting, 3 = Intelligent Removal, 4 = Image Translation Pro, 5 = Intelligent Cropping, 6 = HD Upscaling). Multiple selections allowed.</para>
         /// <para>This parameter is required.</para>
@@ -184,3 +185,4 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
     }
 
 }
+

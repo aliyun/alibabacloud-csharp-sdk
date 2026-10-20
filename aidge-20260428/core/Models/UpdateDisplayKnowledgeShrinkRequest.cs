@@ -1,0 +1,35 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.IO;
+using System.Collections;
+using System.Collections.Generic;
+using Darabonba;
+using Darabonba.Utils;
+
+namespace AlibabaCloud.SDK.Aidge20260428.Models
+{
+    public class UpdateDisplayKnowledgeShrinkRequest : Darabonba.Model {
+        /// <summary>
+        /// <para>The knowledge base ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rag_xxx</para>
+        /// </summary>
+        [NameInMap("RagId")]
+        [Validation(Required=false)]
+        public string RagId { get; set; }
+
+        /// <summary>
+        /// <para>The records to update. A maximum of 500 records can be specified.</para>
+        /// <para>This parameter is required.</para>
+        /// </summary>
+        [NameInMap("Records")]
+        [Validation(Required=false)]
+        public string RecordsShrink { get; set; }
+
+    }
+
+}
+
