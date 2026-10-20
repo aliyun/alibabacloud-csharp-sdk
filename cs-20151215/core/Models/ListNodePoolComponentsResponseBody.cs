@@ -1,22 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ListNodePoolComponentsResponseBody : Darabonba.Model {
+    public class ListNodePoolComponentsResponseBody : TeaModel {
         /// <summary>
         /// <para>The list of node components.</para>
         /// </summary>
         [NameInMap("components")]
         [Validation(Required=false)]
         public List<ListNodePoolComponentsResponseBodyComponents> Components { get; set; }
-        public class ListNodePoolComponentsResponseBodyComponents : Darabonba.Model {
+        public class ListNodePoolComponentsResponseBodyComponents : TeaModel {
             /// <summary>
             /// <para>The parameter schema of the node component, including custom parameters and system parameters.</para>
             /// 
@@ -72,4 +71,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ScaleClusterNodePoolRequest : Darabonba.Model {
+    public class ScaleClusterNodePoolRequest : TeaModel {
         /// <summary>
         /// <para>The number of nodes to add. For example, if the node pool currently has 2 nodes and you set this parameter to 2, the node pool will have 4 nodes after the scale-out. Due to the node quota limit of the current cluster, you can add up to 500 nodes in a single operation.</para>
         /// 
@@ -23,4 +22,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

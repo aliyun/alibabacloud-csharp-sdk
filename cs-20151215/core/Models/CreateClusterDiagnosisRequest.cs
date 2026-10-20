@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class CreateClusterDiagnosisRequest : Darabonba.Model {
+    public class CreateClusterDiagnosisRequest : TeaModel {
         /// <summary>
         /// <para>The parameters used to specify the diagnosis target. The following examples show the parameters for different diagnosis types:</para>
         /// <para>node:</para>
@@ -51,4 +50,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

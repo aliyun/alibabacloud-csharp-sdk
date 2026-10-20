@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ListNodePoolComponentInstanceNodesResponseBody : Darabonba.Model {
+    public class ListNodePoolComponentInstanceNodesResponseBody : TeaModel {
         /// <summary>
         /// <para>The maximum number of records returned in a single response for pagination.</para>
         /// 
@@ -36,21 +35,21 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("node_list")]
         [Validation(Required=false)]
         public List<ListNodePoolComponentInstanceNodesResponseBodyNodeList> NodeList { get; set; }
-        public class ListNodePoolComponentInstanceNodesResponseBodyNodeList : Darabonba.Model {
+        public class ListNodePoolComponentInstanceNodesResponseBodyNodeList : TeaModel {
             /// <summary>
             /// <para>The details of the component on the node.</para>
             /// </summary>
             [NameInMap("component")]
             [Validation(Required=false)]
             public ListNodePoolComponentInstanceNodesResponseBodyNodeListComponent Component { get; set; }
-            public class ListNodePoolComponentInstanceNodesResponseBodyNodeListComponent : Darabonba.Model {
+            public class ListNodePoolComponentInstanceNodesResponseBodyNodeListComponent : TeaModel {
                 /// <summary>
                 /// <para>The configuration of the node component.</para>
                 /// </summary>
                 [NameInMap("config")]
                 [Validation(Required=false)]
                 public ListNodePoolComponentInstanceNodesResponseBodyNodeListComponentConfig Config { get; set; }
-                public class ListNodePoolComponentInstanceNodesResponseBodyNodeListComponentConfig : Darabonba.Model {
+                public class ListNodePoolComponentInstanceNodesResponseBodyNodeListComponentConfig : TeaModel {
                     /// <summary>
                     /// <para>The custom configuration of the node component.</para>
                     /// </summary>
@@ -127,4 +126,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

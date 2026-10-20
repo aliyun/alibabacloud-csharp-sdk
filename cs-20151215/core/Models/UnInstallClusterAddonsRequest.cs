@@ -1,22 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class UnInstallClusterAddonsRequest : Darabonba.Model {
+    public class UnInstallClusterAddonsRequest : TeaModel {
         /// <summary>
         /// <para>The list of components.</para>
         /// </summary>
         [NameInMap("addons")]
         [Validation(Required=false)]
         public List<UnInstallClusterAddonsRequestAddons> Addons { get; set; }
-        public class UnInstallClusterAddonsRequestAddons : Darabonba.Model {
+        public class UnInstallClusterAddonsRequestAddons : TeaModel {
             /// <summary>
             /// <para>Specifies whether to clean up associated cloud resources when uninstalling the component. Valid values:</para>
             /// <list type="bullet">
@@ -46,4 +45,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

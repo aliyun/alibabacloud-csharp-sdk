@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class MaintenanceWindow : Darabonba.Model {
+    public class MaintenanceWindow : TeaModel {
         /// <summary>
         /// <para>The maintenance duration. Valid values: 1 to 24. Unit: hours.</para>
         /// <para>Default value: 3h.</para>
@@ -42,7 +41,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("exclusions")]
         [Validation(Required=false)]
         public List<MaintenanceWindowExclusions> Exclusions { get; set; }
-        public class MaintenanceWindowExclusions : Darabonba.Model {
+        public class MaintenanceWindowExclusions : TeaModel {
             /// <summary>
             /// <para>The description of the exclusion. The description can be up to 128 characters in length and does not support 4-byte characters such as emojis.</para>
             /// 
@@ -135,4 +134,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

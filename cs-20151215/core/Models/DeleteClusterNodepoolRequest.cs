@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DeleteClusterNodepoolRequest : Darabonba.Model {
+    public class DeleteClusterNodepoolRequest : TeaModel {
         /// <summary>
         /// <para>Specifies whether to force delete the node pool.</para>
         /// <list type="bullet">
@@ -29,4 +28,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

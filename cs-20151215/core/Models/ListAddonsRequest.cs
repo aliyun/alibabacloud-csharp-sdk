@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ListAddonsRequest : Darabonba.Model {
+    public class ListAddonsRequest : TeaModel {
         /// <summary>
         /// <para>The cluster ID.
         /// If you specify a cluster ID, the available add-on components for the cluster are returned, and all other parameters are ignored.</para>
@@ -84,4 +83,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

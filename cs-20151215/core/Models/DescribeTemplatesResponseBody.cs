@@ -1,22 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeTemplatesResponseBody : Darabonba.Model {
+    public class DescribeTemplatesResponseBody : TeaModel {
         /// <summary>
         /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("page_info")]
         [Validation(Required=false)]
         public DescribeTemplatesResponseBodyPageInfo PageInfo { get; set; }
-        public class DescribeTemplatesResponseBodyPageInfo : Darabonba.Model {
+        public class DescribeTemplatesResponseBodyPageInfo : TeaModel {
             /// <summary>
             /// <para>The current page number.</para>
             /// 
@@ -55,7 +54,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("templates")]
         [Validation(Required=false)]
         public List<DescribeTemplatesResponseBodyTemplates> Templates { get; set; }
-        public class DescribeTemplatesResponseBodyTemplates : Darabonba.Model {
+        public class DescribeTemplatesResponseBodyTemplates : TeaModel {
             /// <summary>
             /// <para>The access permissions of the deployment template. Valid values:</para>
             /// <list type="bullet">
@@ -172,4 +171,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

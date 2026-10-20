@@ -1,29 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ListNodePoolComponentInstancesResponseBody : Darabonba.Model {
+    public class ListNodePoolComponentInstancesResponseBody : TeaModel {
         /// <summary>
         /// <para>The list of node component instances.</para>
         /// </summary>
         [NameInMap("component_instances")]
         [Validation(Required=false)]
         public List<ListNodePoolComponentInstancesResponseBodyComponentInstances> ComponentInstances { get; set; }
-        public class ListNodePoolComponentInstancesResponseBodyComponentInstances : Darabonba.Model {
+        public class ListNodePoolComponentInstancesResponseBodyComponentInstances : TeaModel {
             /// <summary>
             /// <para>The configuration of the component.</para>
             /// </summary>
             [NameInMap("config")]
             [Validation(Required=false)]
             public ListNodePoolComponentInstancesResponseBodyComponentInstancesConfig Config { get; set; }
-            public class ListNodePoolComponentInstancesResponseBodyComponentInstancesConfig : Darabonba.Model {
+            public class ListNodePoolComponentInstancesResponseBodyComponentInstancesConfig : TeaModel {
                 /// <summary>
                 /// <para>The custom configuration of the component.</para>
                 /// 
@@ -40,7 +39,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [NameInMap("envs")]
                 [Validation(Required=false)]
                 public List<ListNodePoolComponentInstancesResponseBodyComponentInstancesConfigEnvs> Envs { get; set; }
-                public class ListNodePoolComponentInstancesResponseBodyComponentInstancesConfigEnvs : Darabonba.Model {
+                public class ListNodePoolComponentInstancesResponseBodyComponentInstancesConfigEnvs : TeaModel {
                     /// <summary>
                     /// <para>The name of the environment variable.</para>
                     /// 
@@ -130,4 +129,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

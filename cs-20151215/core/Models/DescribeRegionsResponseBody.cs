@@ -1,22 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeRegionsResponseBody : Darabonba.Model {
+    public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
         /// <para>The list of regions.</para>
         /// </summary>
         [NameInMap("regions")]
         [Validation(Required=false)]
         public List<DescribeRegionsResponseBodyRegions> Regions { get; set; }
-        public class DescribeRegionsResponseBodyRegions : Darabonba.Model {
+        public class DescribeRegionsResponseBodyRegions : TeaModel {
             /// <summary>
             /// <para>The region name.</para>
             /// 
@@ -52,4 +51,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

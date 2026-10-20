@@ -1,22 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ListUserKubeConfigStatesResponseBody : Darabonba.Model {
+    public class ListUserKubeConfigStatesResponseBody : TeaModel {
         /// <summary>
         /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("page")]
         [Validation(Required=false)]
         public ListUserKubeConfigStatesResponseBodyPage Page { get; set; }
-        public class ListUserKubeConfigStatesResponseBodyPage : Darabonba.Model {
+        public class ListUserKubeConfigStatesResponseBodyPage : TeaModel {
             /// <summary>
             /// <para>The current page number.</para>
             /// 
@@ -55,7 +54,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("states")]
         [Validation(Required=false)]
         public List<ListUserKubeConfigStatesResponseBodyStates> States { get; set; }
-        public class ListUserKubeConfigStatesResponseBodyStates : Darabonba.Model {
+        public class ListUserKubeConfigStatesResponseBodyStates : TeaModel {
             /// <summary>
             /// <para>The expiration time of the KubeConfig certificate. Format: UTC time in RFC 3339 format.</para>
             /// 
@@ -135,4 +134,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

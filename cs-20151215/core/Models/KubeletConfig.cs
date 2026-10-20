@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class KubeletConfig : Darabonba.Model {
+    public class KubeletConfig : TeaModel {
         /// <summary>
         /// <para>The whitelist of allowed unsafe sysctl patterns.</para>
         /// </summary>
@@ -255,7 +254,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("reservedMemory")]
         [Validation(Required=false)]
         public List<KubeletConfigReservedMemory> ReservedMemory { get; set; }
-        public class KubeletConfigReservedMemory : Darabonba.Model {
+        public class KubeletConfigReservedMemory : TeaModel {
             /// <summary>
             /// <para>The memory resources limit.</para>
             /// 
@@ -327,7 +326,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("tracing")]
         [Validation(Required=false)]
         public KubeletConfigTracing Tracing { get; set; }
-        public class KubeletConfigTracing : Darabonba.Model {
+        public class KubeletConfigTracing : TeaModel {
             /// <summary>
             /// <para>The endpoint of the collector.</para>
             /// 
@@ -353,4 +352,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

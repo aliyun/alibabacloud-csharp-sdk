@@ -1,22 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class UpgradeClusterAddonsRequest : Darabonba.Model {
+    public class UpgradeClusterAddonsRequest : TeaModel {
         /// <summary>
         /// <para>The request parameters.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public List<UpgradeClusterAddonsRequestBody> Body { get; set; }
-        public class UpgradeClusterAddonsRequestBody : Darabonba.Model {
+        public class UpgradeClusterAddonsRequestBody : TeaModel {
             /// <summary>
             /// <para>The component name.</para>
             /// <para>This parameter is required.</para>
@@ -78,4 +77,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

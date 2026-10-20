@@ -1,22 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class UpdateNodePoolComponentRequest : Darabonba.Model {
+    public class UpdateNodePoolComponentRequest : TeaModel {
         /// <summary>
         /// <para>The configuration of the node component.</para>
         /// </summary>
         [NameInMap("config")]
         [Validation(Required=false)]
         public UpdateNodePoolComponentRequestConfig Config { get; set; }
-        public class UpdateNodePoolComponentRequestConfig : Darabonba.Model {
+        public class UpdateNodePoolComponentRequestConfig : TeaModel {
             /// <summary>
             /// <para>The custom configuration of the component.</para>
             /// 
@@ -33,7 +32,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("envs")]
             [Validation(Required=false)]
             public List<UpdateNodePoolComponentRequestConfigEnvs> Envs { get; set; }
-            public class UpdateNodePoolComponentRequestConfigEnvs : Darabonba.Model {
+            public class UpdateNodePoolComponentRequestConfigEnvs : TeaModel {
                 /// <summary>
                 /// <para>The name of the environment variable.</para>
                 /// 
@@ -88,7 +87,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("rollingPolicy")]
         [Validation(Required=false)]
         public UpdateNodePoolComponentRequestRollingPolicy RollingPolicy { get; set; }
-        public class UpdateNodePoolComponentRequestRollingPolicy : Darabonba.Model {
+        public class UpdateNodePoolComponentRequestRollingPolicy : TeaModel {
             /// <summary>
             /// <para>The interval between batches during the upgrade, in seconds.</para>
             /// 
@@ -144,4 +143,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

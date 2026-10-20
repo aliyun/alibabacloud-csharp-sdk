@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeClusterLogsResponse : Darabonba.Model {
+    public class DescribeClusterLogsResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -21,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("body")]
         [Validation(Required=false)]
         public List<DescribeClusterLogsResponseBody> Body { get; set; }
-        public class DescribeClusterLogsResponseBody : Darabonba.Model {
+        public class DescribeClusterLogsResponseBody : TeaModel {
             /// <summary>
             /// <para>The log ID.</para>
             /// 
@@ -77,4 +76,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class RepairClusterNodePoolRequest : Darabonba.Model {
+    public class RepairClusterNodePoolRequest : TeaModel {
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
@@ -36,7 +35,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("operations")]
         [Validation(Required=false)]
         public List<RepairClusterNodePoolRequestOperations> Operations { get; set; }
-        public class RepairClusterNodePoolRequestOperations : Darabonba.Model {
+        public class RepairClusterNodePoolRequestOperations : TeaModel {
             /// <summary>
             /// <para>The list of repair operation parameters.</para>
             /// </summary>
@@ -69,4 +68,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

@@ -1,22 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeClustersForRegionResponseBody : Darabonba.Model {
+    public class DescribeClustersForRegionResponseBody : TeaModel {
         /// <summary>
         /// <para>The list of cluster details.</para>
         /// </summary>
         [NameInMap("clusters")]
         [Validation(Required=false)]
         public List<DescribeClustersForRegionResponseBodyClusters> Clusters { get; set; }
-        public class DescribeClustersForRegionResponseBodyClusters : Darabonba.Model {
+        public class DescribeClustersForRegionResponseBodyClusters : TeaModel {
             /// <summary>
             /// <para>The local domain name of the cluster.</para>
             /// 
@@ -311,7 +310,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("page_info")]
         [Validation(Required=false)]
         public DescribeClustersForRegionResponseBodyPageInfo PageInfo { get; set; }
-        public class DescribeClustersForRegionResponseBodyPageInfo : Darabonba.Model {
+        public class DescribeClustersForRegionResponseBodyPageInfo : TeaModel {
             /// <summary>
             /// <para>The page number.</para>
             /// 
@@ -347,4 +346,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

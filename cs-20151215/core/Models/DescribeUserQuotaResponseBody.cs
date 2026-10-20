@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeUserQuotaResponseBody : Darabonba.Model {
+    public class DescribeUserQuotaResponseBody : TeaModel {
         /// <summary>
         /// <para>The quota of managed clusters. Default value: 20. If you need to exceed the default value, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit a request on the Quota Center page</a> to increase the quota.</para>
         /// 
@@ -53,7 +52,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("edge_improved_nodepool_quota")]
         [Validation(Required=false)]
         public DescribeUserQuotaResponseBodyEdgeImprovedNodepoolQuota EdgeImprovedNodepoolQuota { get; set; }
-        public class DescribeUserQuotaResponseBodyEdgeImprovedNodepoolQuota : Darabonba.Model {
+        public class DescribeUserQuotaResponseBodyEdgeImprovedNodepoolQuota : TeaModel {
             [NameInMap("bandwidth")]
             [Validation(Required=false)]
             public int? Bandwidth { get; set; }
@@ -88,4 +87,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

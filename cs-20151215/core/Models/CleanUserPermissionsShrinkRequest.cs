@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class CleanUserPermissionsShrinkRequest : Darabonba.Model {
+    public class CleanUserPermissionsShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The list of cluster IDs. If this list is specified, only the KubeConfig credentials and RBAC permissions of the current user in the specified clusters are cleaned up.</para>
         /// </summary>
@@ -34,4 +33,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

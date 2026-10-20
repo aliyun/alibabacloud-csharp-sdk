@@ -1,22 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeEventsForRegionResponseBody : Darabonba.Model {
+    public class DescribeEventsForRegionResponseBody : TeaModel {
         /// <summary>
         /// <para>The list of events.</para>
         /// </summary>
         [NameInMap("events")]
         [Validation(Required=false)]
         public List<DescribeEventsForRegionResponseBodyEvents> Events { get; set; }
-        public class DescribeEventsForRegionResponseBodyEvents : Darabonba.Model {
+        public class DescribeEventsForRegionResponseBodyEvents : TeaModel {
             /// <summary>
             /// <para>The cluster ID.</para>
             /// 
@@ -33,7 +32,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("data")]
             [Validation(Required=false)]
             public DescribeEventsForRegionResponseBodyEventsData Data { get; set; }
-            public class DescribeEventsForRegionResponseBodyEventsData : Darabonba.Model {
+            public class DescribeEventsForRegionResponseBodyEventsData : TeaModel {
                 /// <summary>
                 /// <para>The event level.</para>
                 /// 
@@ -131,7 +130,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("page_info")]
         [Validation(Required=false)]
         public DescribeEventsForRegionResponseBodyPageInfo PageInfo { get; set; }
-        public class DescribeEventsForRegionResponseBodyPageInfo : Darabonba.Model {
+        public class DescribeEventsForRegionResponseBodyPageInfo : TeaModel {
             /// <summary>
             /// <para>The page number.</para>
             /// 
@@ -167,4 +166,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

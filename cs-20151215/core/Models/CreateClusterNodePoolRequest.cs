@@ -1,22 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class CreateClusterNodePoolRequest : Darabonba.Model {
+    public class CreateClusterNodePoolRequest : TeaModel {
         /// <summary>
         /// <para>The intelligent managed configuration for the node pool.</para>
         /// </summary>
         [NameInMap("auto_mode")]
         [Validation(Required=false)]
         public CreateClusterNodePoolRequestAutoMode AutoMode { get; set; }
-        public class CreateClusterNodePoolRequestAutoMode : Darabonba.Model {
+        public class CreateClusterNodePoolRequestAutoMode : TeaModel {
             /// <summary>
             /// <para>Specifies whether to enable intelligent managed mode.
             /// Valid values:</para>
@@ -40,7 +39,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("auto_scaling")]
         [Validation(Required=false)]
         public CreateClusterNodePoolRequestAutoScaling AutoScaling { get; set; }
-        public class CreateClusterNodePoolRequestAutoScaling : Darabonba.Model {
+        public class CreateClusterNodePoolRequestAutoScaling : TeaModel {
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
@@ -187,7 +186,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("eflo_node_group")]
         [Validation(Required=false)]
         public CreateClusterNodePoolRequestEfloNodeGroup EfloNodeGroup { get; set; }
-        public class CreateClusterNodePoolRequestEfloNodeGroup : Darabonba.Model {
+        public class CreateClusterNodePoolRequestEfloNodeGroup : TeaModel {
             /// <summary>
             /// <para>Specifies whether to enable automatic node addition for the Lingjun node pool.</para>
             /// </summary>
@@ -248,7 +247,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         [Obsolete]
         public CreateClusterNodePoolRequestInterconnectConfig InterconnectConfig { get; set; }
-        public class CreateClusterNodePoolRequestInterconnectConfig : Darabonba.Model {
+        public class CreateClusterNodePoolRequestInterconnectConfig : TeaModel {
             /// <summary>
             /// <para><b>[Deprecated]</b></para>
             /// <para>The network bandwidth of the enhanced edge node pool. Unit: Mbps.</para>
@@ -340,7 +339,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("kubernetes_config")]
         [Validation(Required=false)]
         public CreateClusterNodePoolRequestKubernetesConfig KubernetesConfig { get; set; }
-        public class CreateClusterNodePoolRequestKubernetesConfig : Darabonba.Model {
+        public class CreateClusterNodePoolRequestKubernetesConfig : TeaModel {
             /// <summary>
             /// <para>Specifies whether to install the CloudMonitor agent on ECS nodes. After installation, you can view monitoring information about the created ECS instances in the CloudMonitor console. We recommend that you enable this feature. Valid values:</para>
             /// <list type="bullet">
@@ -488,7 +487,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("management")]
         [Validation(Required=false)]
         public CreateClusterNodePoolRequestManagement Management { get; set; }
-        public class CreateClusterNodePoolRequestManagement : Darabonba.Model {
+        public class CreateClusterNodePoolRequestManagement : TeaModel {
             /// <summary>
             /// <para>Specifies whether to enable ECS fault detection for node self-healing.</para>
             /// </summary>
@@ -519,7 +518,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("auto_repair_policy")]
             [Validation(Required=false)]
             public CreateClusterNodePoolRequestManagementAutoRepairPolicy AutoRepairPolicy { get; set; }
-            public class CreateClusterNodePoolRequestManagementAutoRepairPolicy : Darabonba.Model {
+            public class CreateClusterNodePoolRequestManagementAutoRepairPolicy : TeaModel {
                 /// <summary>
                 /// <para>Specifies whether manual approval is required for node repair.</para>
                 /// </summary>
@@ -585,7 +584,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("auto_upgrade_policy")]
             [Validation(Required=false)]
             public CreateClusterNodePoolRequestManagementAutoUpgradePolicy AutoUpgradePolicy { get; set; }
-            public class CreateClusterNodePoolRequestManagementAutoUpgradePolicy : Darabonba.Model {
+            public class CreateClusterNodePoolRequestManagementAutoUpgradePolicy : TeaModel {
                 /// <summary>
                 /// <para>Specifies whether to allow automatic kubelet upgrade. This parameter takes effect only when <c>auto_upgrade=true</c>. Valid values:</para>
                 /// <list type="bullet">
@@ -654,7 +653,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("auto_vul_fix_policy")]
             [Validation(Required=false)]
             public CreateClusterNodePoolRequestManagementAutoVulFixPolicy AutoVulFixPolicy { get; set; }
-            public class CreateClusterNodePoolRequestManagementAutoVulFixPolicy : Darabonba.Model {
+            public class CreateClusterNodePoolRequestManagementAutoVulFixPolicy : TeaModel {
                 /// <summary>
                 /// <para>The packages to exclude during vulnerability fix.</para>
                 /// <para>Default value: <c>kernel</c>.</para>
@@ -733,7 +732,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             [Obsolete]
             public CreateClusterNodePoolRequestManagementUpgradeConfig UpgradeConfig { get; set; }
-            public class CreateClusterNodePoolRequestManagementUpgradeConfig : Darabonba.Model {
+            public class CreateClusterNodePoolRequestManagementUpgradeConfig : TeaModel {
                 /// <term><b>Obsolete</b></term>
                 /// 
                 /// <summary>
@@ -815,14 +814,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("node_components")]
         [Validation(Required=false)]
         public List<CreateClusterNodePoolRequestNodeComponents> NodeComponents { get; set; }
-        public class CreateClusterNodePoolRequestNodeComponents : Darabonba.Model {
+        public class CreateClusterNodePoolRequestNodeComponents : TeaModel {
             /// <summary>
             /// <para>The configuration of the node component.</para>
             /// </summary>
             [NameInMap("config")]
             [Validation(Required=false)]
             public CreateClusterNodePoolRequestNodeComponentsConfig Config { get; set; }
-            public class CreateClusterNodePoolRequestNodeComponentsConfig : Darabonba.Model {
+            public class CreateClusterNodePoolRequestNodeComponentsConfig : TeaModel {
                 /// <summary>
                 /// <para>The custom configuration of the node component.</para>
                 /// 
@@ -839,7 +838,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [NameInMap("envs")]
                 [Validation(Required=false)]
                 public List<CreateClusterNodePoolRequestNodeComponentsConfigEnvs> Envs { get; set; }
-                public class CreateClusterNodePoolRequestNodeComponentsConfigEnvs : Darabonba.Model {
+                public class CreateClusterNodePoolRequestNodeComponentsConfigEnvs : TeaModel {
                     /// <summary>
                     /// <para>The name of the environment variable.</para>
                     /// 
@@ -892,7 +891,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("node_config")]
         [Validation(Required=false)]
         public CreateClusterNodePoolRequestNodeConfig NodeConfig { get; set; }
-        public class CreateClusterNodePoolRequestNodeConfig : Darabonba.Model {
+        public class CreateClusterNodePoolRequestNodeConfig : TeaModel {
             /// <summary>
             /// <para>The kubelet parameter settings.</para>
             /// </summary>
@@ -908,7 +907,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("nodepool_info")]
         [Validation(Required=false)]
         public CreateClusterNodePoolRequestNodepoolInfo NodepoolInfo { get; set; }
-        public class CreateClusterNodePoolRequestNodepoolInfo : Darabonba.Model {
+        public class CreateClusterNodePoolRequestNodepoolInfo : TeaModel {
             /// <summary>
             /// <para>The node pool name.</para>
             /// <para>This parameter is required.</para>
@@ -955,7 +954,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("scaling_group")]
         [Validation(Required=false)]
         public CreateClusterNodePoolRequestScalingGroup ScalingGroup { get; set; }
-        public class CreateClusterNodePoolRequestScalingGroup : Darabonba.Model {
+        public class CreateClusterNodePoolRequestScalingGroup : TeaModel {
             /// <summary>
             /// <para>Specifies whether to enable auto-renewal for nodes in the node pool. This parameter takes effect only when <c>instance_charge_type</c> is set to <c>PrePaid</c>. Valid values:</para>
             /// <list type="bullet">
@@ -1019,7 +1018,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("cpu_options")]
             [Validation(Required=false)]
             public CreateClusterNodePoolRequestScalingGroupCpuOptions CpuOptions { get; set; }
-            public class CreateClusterNodePoolRequestScalingGroupCpuOptions : Darabonba.Model {
+            public class CreateClusterNodePoolRequestScalingGroupCpuOptions : TeaModel {
                 /// <summary>
                 /// <para>Specifies whether to enable nested virtualization. Valid values: disabled: Disables nested virtualization. enabled: Enables nested virtualization.</para>
                 /// 
@@ -1318,7 +1317,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("private_pool_options")]
             [Validation(Required=false)]
             public CreateClusterNodePoolRequestScalingGroupPrivatePoolOptions PrivatePoolOptions { get; set; }
-            public class CreateClusterNodePoolRequestScalingGroupPrivatePoolOptions : Darabonba.Model {
+            public class CreateClusterNodePoolRequestScalingGroupPrivatePoolOptions : TeaModel {
                 /// <summary>
                 /// <para>The private node pool ID. When <c>match_criteria</c> is set to <c>Target</c>, you must specify the private pool ID.</para>
                 /// 
@@ -1378,7 +1377,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("resource_pool_options")]
             [Validation(Required=false)]
             public CreateClusterNodePoolRequestScalingGroupResourcePoolOptions ResourcePoolOptions { get; set; }
-            public class CreateClusterNodePoolRequestScalingGroupResourcePoolOptions : Darabonba.Model {
+            public class CreateClusterNodePoolRequestScalingGroupResourcePoolOptions : TeaModel {
                 /// <summary>
                 /// <para>The list of private pool IDs, which are elasticity assurance IDs or capacity reservation IDs. Only Target mode private pool IDs can be specified. Valid values of N: 1 to 20.</para>
                 /// </summary>
@@ -1492,7 +1491,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("spot_price_limit")]
             [Validation(Required=false)]
             public List<CreateClusterNodePoolRequestScalingGroupSpotPriceLimit> SpotPriceLimit { get; set; }
-            public class CreateClusterNodePoolRequestScalingGroupSpotPriceLimit : Darabonba.Model {
+            public class CreateClusterNodePoolRequestScalingGroupSpotPriceLimit : TeaModel {
                 /// <summary>
                 /// <para>The instance type of the spot instance.</para>
                 /// 
@@ -1668,7 +1667,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<CreateClusterNodePoolRequestScalingGroupTags> Tags { get; set; }
-            public class CreateClusterNodePoolRequestScalingGroupTags : Darabonba.Model {
+            public class CreateClusterNodePoolRequestScalingGroupTags : TeaModel {
                 /// <summary>
                 /// <para>The tag key.</para>
                 /// 
@@ -1710,7 +1709,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("tee_config")]
         [Validation(Required=false)]
         public CreateClusterNodePoolRequestTeeConfig TeeConfig { get; set; }
-        public class CreateClusterNodePoolRequestTeeConfig : Darabonba.Model {
+        public class CreateClusterNodePoolRequestTeeConfig : TeaModel {
             /// <summary>
             /// <para>Specifies whether to enable confidential computing for the cluster.</para>
             /// <list type="bullet">
@@ -1732,4 +1731,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

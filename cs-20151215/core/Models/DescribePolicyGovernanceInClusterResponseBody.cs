@@ -1,36 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribePolicyGovernanceInClusterResponseBody : Darabonba.Model {
+    public class DescribePolicyGovernanceInClusterResponseBody : TeaModel {
         /// <summary>
         /// <para>The policy violation information aggregated by severity level.</para>
         /// </summary>
         [NameInMap("Violation")]
         [Validation(Required=false)]
         public DescribePolicyGovernanceInClusterResponseBodyViolation Violation { get; set; }
-        public class DescribePolicyGovernanceInClusterResponseBodyViolation : Darabonba.Model {
+        public class DescribePolicyGovernanceInClusterResponseBodyViolation : TeaModel {
             /// <summary>
             /// <para>The aggregated information.</para>
             /// </summary>
             [NameInMap("totalViolations")]
             [Validation(Required=false)]
             public DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolations TotalViolations { get; set; }
-            public class DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolations : Darabonba.Model {
+            public class DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolations : TeaModel {
                 /// <summary>
                 /// <para>The aggregated interception records.</para>
                 /// </summary>
                 [NameInMap("deny")]
                 [Validation(Required=false)]
                 public List<DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolationsDeny> Deny { get; set; }
-                public class DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolationsDeny : Darabonba.Model {
+                public class DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolationsDeny : TeaModel {
                     /// <summary>
                     /// <para>The severity level. Valid values: low, medium, and high.</para>
                     /// 
@@ -59,7 +58,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [NameInMap("warn")]
                 [Validation(Required=false)]
                 public List<DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolationsWarn> Warn { get; set; }
-                public class DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolationsWarn : Darabonba.Model {
+                public class DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolationsWarn : TeaModel {
                     /// <summary>
                     /// <para>The severity level.</para>
                     /// 
@@ -90,14 +89,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("violations")]
             [Validation(Required=false)]
             public DescribePolicyGovernanceInClusterResponseBodyViolationViolations Violations { get; set; }
-            public class DescribePolicyGovernanceInClusterResponseBodyViolationViolations : Darabonba.Model {
+            public class DescribePolicyGovernanceInClusterResponseBodyViolationViolations : TeaModel {
                 /// <summary>
                 /// <para>The aggregated interception records.</para>
                 /// </summary>
                 [NameInMap("deny")]
                 [Validation(Required=false)]
                 public List<DescribePolicyGovernanceInClusterResponseBodyViolationViolationsDeny> Deny { get; set; }
-                public class DescribePolicyGovernanceInClusterResponseBodyViolationViolationsDeny : Darabonba.Model {
+                public class DescribePolicyGovernanceInClusterResponseBodyViolationViolationsDeny : TeaModel {
                     /// <summary>
                     /// <para>The description of the policy.</para>
                     /// 
@@ -146,7 +145,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [NameInMap("warn")]
                 [Validation(Required=false)]
                 public List<DescribePolicyGovernanceInClusterResponseBodyViolationViolationsWarn> Warn { get; set; }
-                public class DescribePolicyGovernanceInClusterResponseBodyViolationViolationsWarn : Darabonba.Model {
+                public class DescribePolicyGovernanceInClusterResponseBodyViolationViolationsWarn : TeaModel {
                     /// <summary>
                     /// <para>The description of the policy.</para>
                     /// </summary>
@@ -190,7 +189,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("admit_log")]
         [Validation(Required=false)]
         public DescribePolicyGovernanceInClusterResponseBodyAdmitLog AdmitLog { get; set; }
-        public class DescribePolicyGovernanceInClusterResponseBodyAdmitLog : Darabonba.Model {
+        public class DescribePolicyGovernanceInClusterResponseBodyAdmitLog : TeaModel {
             /// <summary>
             /// <para>The total number of logs queried.</para>
             /// 
@@ -227,7 +226,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("logs")]
             [Validation(Required=false)]
             public List<DescribePolicyGovernanceInClusterResponseBodyAdmitLogLogs> Logs { get; set; }
-            public class DescribePolicyGovernanceInClusterResponseBodyAdmitLogLogs : Darabonba.Model {
+            public class DescribePolicyGovernanceInClusterResponseBodyAdmitLogLogs : TeaModel {
                 /// <summary>
                 /// <para>The ID of the cluster.</para>
                 /// 
@@ -406,7 +405,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("on_state")]
         [Validation(Required=false)]
         public List<DescribePolicyGovernanceInClusterResponseBodyOnState> OnState { get; set; }
-        public class DescribePolicyGovernanceInClusterResponseBodyOnState : Darabonba.Model {
+        public class DescribePolicyGovernanceInClusterResponseBodyOnState : TeaModel {
             /// <summary>
             /// <para>The number of enabled policy types.</para>
             /// 
@@ -442,4 +441,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

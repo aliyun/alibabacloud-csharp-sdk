@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeResourcesDeleteProtectionRequest : Darabonba.Model {
+    public class DescribeResourcesDeleteProtectionRequest : TeaModel {
         /// <summary>
         /// <para>The namespace of the resource to query.</para>
         /// <para>This parameter is required when resource_type is set to services. If this parameter is not specified, the default namespace is used.</para>
@@ -40,4 +39,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

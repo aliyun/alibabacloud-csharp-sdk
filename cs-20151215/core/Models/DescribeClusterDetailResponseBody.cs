@@ -1,22 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeClusterDetailResponseBody : Darabonba.Model {
+    public class DescribeClusterDetailResponseBody : TeaModel {
         /// <summary>
         /// <para>The intelligent management mode configuration.</para>
         /// </summary>
         [NameInMap("auto_mode")]
         [Validation(Required=false)]
         public DescribeClusterDetailResponseBodyAutoMode AutoMode { get; set; }
-        public class DescribeClusterDetailResponseBodyAutoMode : Darabonba.Model {
+        public class DescribeClusterDetailResponseBodyAutoMode : TeaModel {
             /// <summary>
             /// <para>Indicates whether the intelligent management mode is enabled.</para>
             /// 
@@ -102,7 +101,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("control_plane_config")]
         [Validation(Required=false)]
         public DescribeClusterDetailResponseBodyControlPlaneConfig ControlPlaneConfig { get; set; }
-        public class DescribeClusterDetailResponseBodyControlPlaneConfig : Darabonba.Model {
+        public class DescribeClusterDetailResponseBodyControlPlaneConfig : TeaModel {
             /// <summary>
             /// <para>Indicates whether auto-renewal is enabled for the nodes.</para>
             /// 
@@ -345,14 +344,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("control_plane_endpoints_config")]
         [Validation(Required=false)]
         public DescribeClusterDetailResponseBodyControlPlaneEndpointsConfig ControlPlaneEndpointsConfig { get; set; }
-        public class DescribeClusterDetailResponseBodyControlPlaneEndpointsConfig : Darabonba.Model {
+        public class DescribeClusterDetailResponseBodyControlPlaneEndpointsConfig : TeaModel {
             /// <summary>
             /// <para>The internal DNS configuration of the cluster, applicable to ACK managed clusters. The internal domain name is used by node-side system components such as kubelet and kube-proxy to access the API server. If internal domain name access is not enabled, node-side system components access the API server by using the IP address of the Classic Load Balancer (CLB) instance.</para>
             /// </summary>
             [NameInMap("internal_dns_config")]
             [Validation(Required=false)]
             public DescribeClusterDetailResponseBodyControlPlaneEndpointsConfigInternalDnsConfig InternalDnsConfig { get; set; }
-            public class DescribeClusterDetailResponseBodyControlPlaneEndpointsConfigInternalDnsConfig : Darabonba.Model {
+            public class DescribeClusterDetailResponseBodyControlPlaneEndpointsConfigInternalDnsConfig : TeaModel {
                 /// <summary>
                 /// <para>The VPC scope where the internal DNS records of the cluster take effect. By default, this includes the VPC where the cluster is deployed.</para>
                 /// </summary>
@@ -381,7 +380,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("load_balancers_config")]
             [Validation(Required=false)]
             public List<DescribeClusterDetailResponseBodyControlPlaneEndpointsConfigLoadBalancersConfig> LoadBalancersConfig { get; set; }
-            public class DescribeClusterDetailResponseBodyControlPlaneEndpointsConfigLoadBalancersConfig : Darabonba.Model {
+            public class DescribeClusterDetailResponseBodyControlPlaneEndpointsConfigLoadBalancersConfig : TeaModel {
                 /// <summary>
                 /// <para>The endpoint.</para>
                 /// 
@@ -584,14 +583,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("operation_policy")]
         [Validation(Required=false)]
         public DescribeClusterDetailResponseBodyOperationPolicy OperationPolicy { get; set; }
-        public class DescribeClusterDetailResponseBodyOperationPolicy : Darabonba.Model {
+        public class DescribeClusterDetailResponseBodyOperationPolicy : TeaModel {
             /// <summary>
             /// <para>The automatic upgrade configuration of the cluster.</para>
             /// </summary>
             [NameInMap("cluster_auto_upgrade")]
             [Validation(Required=false)]
             public DescribeClusterDetailResponseBodyOperationPolicyClusterAutoUpgrade ClusterAutoUpgrade { get; set; }
-            public class DescribeClusterDetailResponseBodyOperationPolicyClusterAutoUpgrade : Darabonba.Model {
+            public class DescribeClusterDetailResponseBodyOperationPolicyClusterAutoUpgrade : TeaModel {
                 /// <summary>
                 /// <para>The automatic upgrade channel of the cluster. For more information, see <a href="https://help.aliyun.com/document_detail/2712866.html">Upgrade channels</a>. Valid values:</para>
                 /// <list type="bullet">
@@ -709,7 +708,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("rrsa_config")]
         [Validation(Required=false)]
         public DescribeClusterDetailResponseBodyRrsaConfig RrsaConfig { get; set; }
-        public class DescribeClusterDetailResponseBodyRrsaConfig : Darabonba.Model {
+        public class DescribeClusterDetailResponseBodyRrsaConfig : TeaModel {
             /// <summary>
             /// <para>The default audience of the OIDC token. If multiple values are included, they are separated by commas (,). These values form an array for the <c>aud</c> field in the OIDC token.</para>
             /// 
@@ -940,4 +939,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

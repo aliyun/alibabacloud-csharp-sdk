@@ -1,22 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ListAddonsResponseBody : Darabonba.Model {
+    public class ListAddonsResponseBody : TeaModel {
         /// <summary>
         /// <para>The list of available add-on components.</para>
         /// </summary>
         [NameInMap("addons")]
         [Validation(Required=false)]
         public List<ListAddonsResponseBodyAddons> Addons { get; set; }
-        public class ListAddonsResponseBodyAddons : Darabonba.Model {
+        public class ListAddonsResponseBodyAddons : TeaModel {
             /// <summary>
             /// <para>The CPU architectures supported by the component.</para>
             /// </summary>
@@ -117,4 +116,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class CreateKubernetesTriggerResponseBody : Darabonba.Model {
+    public class CreateKubernetesTriggerResponseBody : TeaModel {
         /// <summary>
         /// <para>The action of the trigger. Example: <c>redeploy</c>: Redeployment.</para>
         /// 
@@ -67,4 +66,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribePolicyInstancesStatusResponseBody : Darabonba.Model {
+    public class DescribePolicyInstancesStatusResponseBody : TeaModel {
         /// <summary>
         /// <para>The number of policy instances deployed at different governance levels in the cluster.</para>
         /// 
@@ -26,7 +25,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("policy_instances")]
         [Validation(Required=false)]
         public List<DescribePolicyInstancesStatusResponseBodyPolicyInstances> PolicyInstances { get; set; }
-        public class DescribePolicyInstancesStatusResponseBodyPolicyInstances : Darabonba.Model {
+        public class DescribePolicyInstancesStatusResponseBodyPolicyInstances : TeaModel {
             /// <summary>
             /// <para>The policy type. For more information about supported policy types and their descriptions, see <a href="https://help.aliyun.com/document_detail/359819.html">Container security policy rules</a>.</para>
             /// 
@@ -82,4 +81,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

@@ -1,22 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DeleteClusterRequest : Darabonba.Model {
+    public class DeleteClusterRequest : TeaModel {
         /// <summary>
         /// <para>The deletion options for cluster-associated resources.</para>
         /// </summary>
         [NameInMap("delete_options")]
         [Validation(Required=false)]
         public List<DeleteClusterRequestDeleteOptions> DeleteOptions { get; set; }
-        public class DeleteClusterRequestDeleteOptions : Darabonba.Model {
+        public class DeleteClusterRequestDeleteOptions : TeaModel {
             /// <summary>
             /// <para>The deletion policy for this resource type. Valid values:</para>
             /// <list type="bullet">
@@ -94,4 +93,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeTaskInfoResponseBody : Darabonba.Model {
+    public class DescribeTaskInfoResponseBody : TeaModel {
         /// <summary>
         /// <para>The cluster ID.</para>
         /// 
@@ -46,7 +45,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("error")]
         [Validation(Required=false)]
         public DescribeTaskInfoResponseBodyError Error { get; set; }
-        public class DescribeTaskInfoResponseBodyError : Darabonba.Model {
+        public class DescribeTaskInfoResponseBodyError : TeaModel {
             /// <summary>
             /// <para>The error code.</para>
             /// 
@@ -75,7 +74,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("events")]
         [Validation(Required=false)]
         public List<DescribeTaskInfoResponseBodyEvents> Events { get; set; }
-        public class DescribeTaskInfoResponseBodyEvents : Darabonba.Model {
+        public class DescribeTaskInfoResponseBodyEvents : TeaModel {
             /// <summary>
             /// <para>The action of the event.</para>
             /// 
@@ -158,7 +157,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("stages")]
         [Validation(Required=false)]
         public List<DescribeTaskInfoResponseBodyStages> Stages { get; set; }
-        public class DescribeTaskInfoResponseBodyStages : Darabonba.Model {
+        public class DescribeTaskInfoResponseBodyStages : TeaModel {
             /// <summary>
             /// <para>The end time of the task stage. The format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
@@ -229,7 +228,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("target")]
         [Validation(Required=false)]
         public DescribeTaskInfoResponseBodyTarget Target { get; set; }
-        public class DescribeTaskInfoResponseBodyTarget : Darabonba.Model {
+        public class DescribeTaskInfoResponseBodyTarget : TeaModel {
             /// <summary>
             /// <para>The ID of the task execution target.</para>
             /// 
@@ -268,7 +267,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("task_result")]
         [Validation(Required=false)]
         public List<DescribeTaskInfoResponseBodyTaskResult> TaskResult { get; set; }
-        public class DescribeTaskInfoResponseBodyTaskResult : Darabonba.Model {
+        public class DescribeTaskInfoResponseBodyTaskResult : TeaModel {
             /// <summary>
             /// <para>The resource operated by the task. For example, if the operated resource during a scale-out is an instance, this value is the instance ID.</para>
             /// 
@@ -319,4 +318,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

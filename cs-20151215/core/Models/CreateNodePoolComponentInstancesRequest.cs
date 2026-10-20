@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class CreateNodePoolComponentInstancesRequest : Darabonba.Model {
+    public class CreateNodePoolComponentInstancesRequest : TeaModel {
         /// <summary>
         /// <para>The list of node components.</para>
         /// <para>This parameter is required.</para>
@@ -17,14 +16,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("components")]
         [Validation(Required=false)]
         public List<CreateNodePoolComponentInstancesRequestComponents> Components { get; set; }
-        public class CreateNodePoolComponentInstancesRequestComponents : Darabonba.Model {
+        public class CreateNodePoolComponentInstancesRequestComponents : TeaModel {
             /// <summary>
             /// <para>The configuration of the component.</para>
             /// </summary>
             [NameInMap("config")]
             [Validation(Required=false)]
             public CreateNodePoolComponentInstancesRequestComponentsConfig Config { get; set; }
-            public class CreateNodePoolComponentInstancesRequestComponentsConfig : Darabonba.Model {
+            public class CreateNodePoolComponentInstancesRequestComponentsConfig : TeaModel {
                 /// <summary>
                 /// <para>The custom configuration of the component.</para>
                 /// 
@@ -41,7 +40,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [NameInMap("envs")]
                 [Validation(Required=false)]
                 public List<CreateNodePoolComponentInstancesRequestComponentsConfigEnvs> Envs { get; set; }
-                public class CreateNodePoolComponentInstancesRequestComponentsConfigEnvs : Darabonba.Model {
+                public class CreateNodePoolComponentInstancesRequestComponentsConfigEnvs : TeaModel {
                     /// <summary>
                     /// <para>The name of the environment variable.</para>
                     /// 
@@ -103,7 +102,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("rolling_policy")]
         [Validation(Required=false)]
         public CreateNodePoolComponentInstancesRequestRollingPolicy RollingPolicy { get; set; }
-        public class CreateNodePoolComponentInstancesRequestRollingPolicy : Darabonba.Model {
+        public class CreateNodePoolComponentInstancesRequestRollingPolicy : TeaModel {
             /// <summary>
             /// <para>The interval between batches in seconds. Default value: 0.</para>
             /// 
@@ -149,4 +148,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

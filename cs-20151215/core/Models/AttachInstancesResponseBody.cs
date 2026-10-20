@@ -1,22 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class AttachInstancesResponseBody : Darabonba.Model {
+    public class AttachInstancesResponseBody : TeaModel {
         /// <summary>
         /// <para>The list of node addition information.</para>
         /// </summary>
         [NameInMap("list")]
         [Validation(Required=false)]
         public List<AttachInstancesResponseBodyList> List { get; set; }
-        public class AttachInstancesResponseBodyList : Darabonba.Model {
+        public class AttachInstancesResponseBodyList : TeaModel {
             /// <summary>
             /// <para>The status code of the node addition result.</para>
             /// 
@@ -62,4 +61,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

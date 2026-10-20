@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ModifyAutoRepairPolicyRequest : Darabonba.Model {
+    public class ModifyAutoRepairPolicyRequest : TeaModel {
         /// <summary>
         /// <para>The name of the self-healing rule.</para>
         /// 
@@ -26,14 +25,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("rules")]
         [Validation(Required=false)]
         public List<ModifyAutoRepairPolicyRequestRules> Rules { get; set; }
-        public class ModifyAutoRepairPolicyRequestRules : Darabonba.Model {
+        public class ModifyAutoRepairPolicyRequestRules : TeaModel {
             /// <summary>
             /// <para>The list of identified faults.</para>
             /// </summary>
             [NameInMap("incidents")]
             [Validation(Required=false)]
             public List<ModifyAutoRepairPolicyRequestRulesIncidents> Incidents { get; set; }
-            public class ModifyAutoRepairPolicyRequestRulesIncidents : Darabonba.Model {
+            public class ModifyAutoRepairPolicyRequestRulesIncidents : TeaModel {
                 /// <summary>
                 /// <para>The name of the fault.</para>
                 /// 
@@ -62,7 +61,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("repair_procedure")]
             [Validation(Required=false)]
             public List<ModifyAutoRepairPolicyRequestRulesRepairProcedure> RepairProcedure { get; set; }
-            public class ModifyAutoRepairPolicyRequestRulesRepairProcedure : Darabonba.Model {
+            public class ModifyAutoRepairPolicyRequestRulesRepairProcedure : TeaModel {
                 /// <summary>
                 /// <para>The parameter settings of the flow.</para>
                 /// </summary>
@@ -76,14 +75,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [NameInMap("intervention")]
                 [Validation(Required=false)]
                 public ModifyAutoRepairPolicyRequestRulesRepairProcedureIntervention Intervention { get; set; }
-                public class ModifyAutoRepairPolicyRequestRulesRepairProcedureIntervention : Darabonba.Model {
+                public class ModifyAutoRepairPolicyRequestRulesRepairProcedureIntervention : TeaModel {
                     /// <summary>
                     /// <para>The label configuration for authorization confirmation. When you add the following labels to the node, you authorize ACK to execute the operation for this stage. After completing the operation for this stage, ACK automatically removes the authorization inquiry and authorization confirmation labels corresponding to this stage. If you do not promptly add the following labels to grant authorization, ACK will not execute the action for this stage and subsequent actions, and the node may remain in a damaged state.</para>
                     /// </summary>
                     [NameInMap("approved_label")]
                     [Validation(Required=false)]
                     public ModifyAutoRepairPolicyRequestRulesRepairProcedureInterventionApprovedLabel ApprovedLabel { get; set; }
-                    public class ModifyAutoRepairPolicyRequestRulesRepairProcedureInterventionApprovedLabel : Darabonba.Model {
+                    public class ModifyAutoRepairPolicyRequestRulesRepairProcedureInterventionApprovedLabel : TeaModel {
                         /// <summary>
                         /// <para>The key value of the label.</para>
                         /// 
@@ -122,7 +121,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                     [NameInMap("inquiring_label")]
                     [Validation(Required=false)]
                     public ModifyAutoRepairPolicyRequestRulesRepairProcedureInterventionInquiringLabel InquiringLabel { get; set; }
-                    public class ModifyAutoRepairPolicyRequestRulesRepairProcedureInterventionInquiringLabel : Darabonba.Model {
+                    public class ModifyAutoRepairPolicyRequestRulesRepairProcedureInterventionInquiringLabel : TeaModel {
                         /// <summary>
                         /// <para>The key value of the label.</para>
                         /// 
@@ -174,4 +173,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

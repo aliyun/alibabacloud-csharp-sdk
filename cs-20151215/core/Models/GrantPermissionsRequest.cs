@@ -1,22 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class GrantPermissionsRequest : Darabonba.Model {
+    public class GrantPermissionsRequest : TeaModel {
         /// <summary>
         /// <para>The request body parameters.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public List<GrantPermissionsRequestBody> Body { get; set; }
-        public class GrantPermissionsRequestBody : Darabonba.Model {
+        public class GrantPermissionsRequestBody : TeaModel {
             /// <summary>
             /// <para>The ID of the target cluster for authorization.</para>
             /// <list type="bullet">
@@ -108,4 +107,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

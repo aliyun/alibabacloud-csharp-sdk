@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeClusterTasksResponseBody : Darabonba.Model {
+    public class DescribeClusterTasksResponseBody : TeaModel {
         [NameInMap("next_token")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
@@ -20,7 +19,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("page_info")]
         [Validation(Required=false)]
         public DescribeClusterTasksResponseBodyPageInfo PageInfo { get; set; }
-        public class DescribeClusterTasksResponseBodyPageInfo : Darabonba.Model {
+        public class DescribeClusterTasksResponseBodyPageInfo : TeaModel {
             /// <summary>
             /// <para>The page number.</para>
             /// 
@@ -69,7 +68,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("tasks")]
         [Validation(Required=false)]
         public List<DescribeClusterTasksResponseBodyTasks> Tasks { get; set; }
-        public class DescribeClusterTasksResponseBodyTasks : Darabonba.Model {
+        public class DescribeClusterTasksResponseBodyTasks : TeaModel {
             /// <summary>
             /// <para>The creation time.</para>
             /// 
@@ -86,7 +85,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("error")]
             [Validation(Required=false)]
             public DescribeClusterTasksResponseBodyTasksError Error { get; set; }
-            public class DescribeClusterTasksResponseBodyTasksError : Darabonba.Model {
+            public class DescribeClusterTasksResponseBodyTasksError : TeaModel {
                 /// <summary>
                 /// <para>The error code.</para>
                 /// 
@@ -154,4 +153,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

@@ -1,22 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ListClusterKubeconfigStatesResponseBody : Darabonba.Model {
+    public class ListClusterKubeconfigStatesResponseBody : TeaModel {
         /// <summary>
         /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("page")]
         [Validation(Required=false)]
         public ListClusterKubeconfigStatesResponseBodyPage Page { get; set; }
-        public class ListClusterKubeconfigStatesResponseBodyPage : Darabonba.Model {
+        public class ListClusterKubeconfigStatesResponseBodyPage : TeaModel {
             /// <summary>
             /// <para>The page number.</para>
             /// 
@@ -55,7 +54,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("states")]
         [Validation(Required=false)]
         public List<ListClusterKubeconfigStatesResponseBodyStates> States { get; set; }
-        public class ListClusterKubeconfigStatesResponseBodyStates : Darabonba.Model {
+        public class ListClusterKubeconfigStatesResponseBodyStates : TeaModel {
             /// <summary>
             /// <para>The display name of the Resource Access Management (RAM) user or the name of the RAM role.</para>
             /// 
@@ -160,7 +159,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("cloud_service_roles")]
             [Validation(Required=false)]
             public List<ListClusterKubeconfigStatesResponseBodyStatesCloudServiceRoles> CloudServiceRoles { get; set; }
-            public class ListClusterKubeconfigStatesResponseBodyStatesCloudServiceRoles : Darabonba.Model {
+            public class ListClusterKubeconfigStatesResponseBodyStatesCloudServiceRoles : TeaModel {
                 /// <summary>
                 /// <para>Specifies whether the content is consistent with the default cluster role template.</para>
                 /// <para>Valid values:</para>
@@ -220,4 +219,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

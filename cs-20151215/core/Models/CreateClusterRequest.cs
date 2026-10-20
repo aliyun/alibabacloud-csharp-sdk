@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class CreateClusterRequest : Darabonba.Model {
+    public class CreateClusterRequest : TeaModel {
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
@@ -64,7 +63,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("audit_log_config")]
         [Validation(Required=false)]
         public CreateClusterRequestAuditLogConfig AuditLogConfig { get; set; }
-        public class CreateClusterRequestAuditLogConfig : Darabonba.Model {
+        public class CreateClusterRequestAuditLogConfig : TeaModel {
             /// <summary>
             /// <para>Specifies whether to enable the cluster audit log feature. Valid values:</para>
             /// <list type="bullet">
@@ -105,7 +104,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("auto_mode")]
         [Validation(Required=false)]
         public CreateClusterRequestAutoMode AutoMode { get; set; }
-        public class CreateClusterRequestAutoMode : Darabonba.Model {
+        public class CreateClusterRequestAutoMode : TeaModel {
             /// <summary>
             /// <para>Specifies whether to enable intelligent managed mode. Valid values:</para>
             /// <list type="bullet">
@@ -293,7 +292,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("control_plane_config")]
         [Validation(Required=false)]
         public CreateClusterRequestControlPlaneConfig ControlPlaneConfig { get; set; }
-        public class CreateClusterRequestControlPlaneConfig : Darabonba.Model {
+        public class CreateClusterRequestControlPlaneConfig : TeaModel {
             /// <summary>
             /// <para>Specifies whether to enable auto-renewal for control plane nodes. This parameter takes effect only when the billing method is set to <c>PrePaid</c>. Valid values:</para>
             /// <list type="bullet">
@@ -611,14 +610,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("control_plane_endpoints_config")]
         [Validation(Required=false)]
         public CreateClusterRequestControlPlaneEndpointsConfig ControlPlaneEndpointsConfig { get; set; }
-        public class CreateClusterRequestControlPlaneEndpointsConfig : Darabonba.Model {
+        public class CreateClusterRequestControlPlaneEndpointsConfig : TeaModel {
             /// <summary>
             /// <para>The internal DNS configuration for the cluster. This parameter applies to ACK managed clusters. The internal domain name is used by node-side system components such as kubelet and kube-proxy to access the API Server. If the internal domain name access is not enabled, node-side system components access the API Server through the CLB IP address.</para>
             /// </summary>
             [NameInMap("internal_dns_config")]
             [Validation(Required=false)]
             public CreateClusterRequestControlPlaneEndpointsConfigInternalDnsConfig InternalDnsConfig { get; set; }
-            public class CreateClusterRequestControlPlaneEndpointsConfigInternalDnsConfig : Darabonba.Model {
+            public class CreateClusterRequestControlPlaneEndpointsConfigInternalDnsConfig : TeaModel {
                 /// <summary>
                 /// <para>The VPCs where the internal DNS records of the cluster take effect.</para>
                 /// </summary>
@@ -634,7 +633,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("load_balancers_config")]
             [Validation(Required=false)]
             public List<CreateClusterRequestControlPlaneEndpointsConfigLoadBalancersConfig> LoadBalancersConfig { get; set; }
-            public class CreateClusterRequestControlPlaneEndpointsConfigLoadBalancersConfig : Darabonba.Model {
+            public class CreateClusterRequestControlPlaneEndpointsConfigLoadBalancersConfig : TeaModel {
                 /// <summary>
                 /// <para>The endpoint type.</para>
                 /// 
@@ -1309,14 +1308,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("operation_policy")]
         [Validation(Required=false)]
         public CreateClusterRequestOperationPolicy OperationPolicy { get; set; }
-        public class CreateClusterRequestOperationPolicy : Darabonba.Model {
+        public class CreateClusterRequestOperationPolicy : TeaModel {
             /// <summary>
             /// <para>The cluster auto upgrade configuration.</para>
             /// </summary>
             [NameInMap("cluster_auto_upgrade")]
             [Validation(Required=false)]
             public CreateClusterRequestOperationPolicyClusterAutoUpgrade ClusterAutoUpgrade { get; set; }
-            public class CreateClusterRequestOperationPolicyClusterAutoUpgrade : Darabonba.Model {
+            public class CreateClusterRequestOperationPolicyClusterAutoUpgrade : TeaModel {
                 /// <summary>
                 /// <para>The cluster auto upgrade frequency. Valid values:</para>
                 /// <list type="bullet">
@@ -1510,7 +1509,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("rrsa_config")]
         [Validation(Required=false)]
         public CreateClusterRequestRrsaConfig RrsaConfig { get; set; }
-        public class CreateClusterRequestRrsaConfig : Darabonba.Model {
+        public class CreateClusterRequestRrsaConfig : TeaModel {
             /// <summary>
             /// <para>Specifies whether to enable the RRSA feature.</para>
             /// <list type="bullet">
@@ -1787,7 +1786,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         [Obsolete]
         public List<CreateClusterRequestWorkerDataDisks> WorkerDataDisks { get; set; }
-        public class CreateClusterRequestWorkerDataDisks : Darabonba.Model {
+        public class CreateClusterRequestWorkerDataDisks : TeaModel {
             /// <summary>
             /// <para>The data cloud disk type.</para>
             /// <para>This parameter is required.</para>
@@ -2007,4 +2006,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

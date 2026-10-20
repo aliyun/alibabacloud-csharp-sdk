@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class FixNodePoolVulsRequest : Darabonba.Model {
+    public class FixNodePoolVulsRequest : TeaModel {
         /// <summary>
         /// <para>Specifies whether to allow node restarts.</para>
         /// <list type="bullet">
@@ -39,7 +38,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("rollout_policy")]
         [Validation(Required=false)]
         public FixNodePoolVulsRequestRolloutPolicy RolloutPolicy { get; set; }
-        public class FixNodePoolVulsRequestRolloutPolicy : Darabonba.Model {
+        public class FixNodePoolVulsRequestRolloutPolicy : TeaModel {
             /// <summary>
             /// <para>CVE fixes for nodes in the node pool are performed in batches. This parameter specifies the maximum number of nodes that can be fixed in parallel per batch.</para>
             /// <para>Valid values: The minimum value is 1 and the maximum value is the number of nodes in the node pool.</para>
@@ -63,4 +62,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

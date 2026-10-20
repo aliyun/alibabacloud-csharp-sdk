@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribePolicyInstancesResponse : Darabonba.Model {
+    public class DescribePolicyInstancesResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -21,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("body")]
         [Validation(Required=false)]
         public List<DescribePolicyInstancesResponseBody> Body { get; set; }
-        public class DescribePolicyInstancesResponseBody : Darabonba.Model {
+        public class DescribePolicyInstancesResponseBody : TeaModel {
             /// <summary>
             /// <para>The UID of the policy instance implementer.</para>
             /// 
@@ -202,4 +201,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

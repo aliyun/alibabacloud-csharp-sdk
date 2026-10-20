@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeTemplateAttributeResponse : Darabonba.Model {
+    public class DescribeTemplateAttributeResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -21,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("body")]
         [Validation(Required=false)]
         public List<DescribeTemplateAttributeResponseBody> Body { get; set; }
-        public class DescribeTemplateAttributeResponseBody : Darabonba.Model {
+        public class DescribeTemplateAttributeResponseBody : TeaModel {
             /// <summary>
             /// <para>The orchestration template ID. A new ID is generated each time the template is modified.</para>
             /// 
@@ -138,4 +137,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

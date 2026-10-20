@@ -1,22 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class GetClusterInspectReportDetailResponseBody : Darabonba.Model {
+    public class GetClusterInspectReportDetailResponseBody : TeaModel {
         /// <summary>
         /// <para>The list of results.</para>
         /// </summary>
         [NameInMap("checkItemResults")]
         [Validation(Required=false)]
         public List<GetClusterInspectReportDetailResponseBodyCheckItemResults> CheckItemResults { get; set; }
-        public class GetClusterInspectReportDetailResponseBodyCheckItemResults : Darabonba.Model {
+        public class GetClusterInspectReportDetailResponseBodyCheckItemResults : TeaModel {
             /// <summary>
             /// <para>The category of the inspection item. Valid values:</para>
             /// <list type="bullet">
@@ -194,7 +193,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("summary")]
         [Validation(Required=false)]
         public GetClusterInspectReportDetailResponseBodySummary Summary { get; set; }
-        public class GetClusterInspectReportDetailResponseBodySummary : Darabonba.Model {
+        public class GetClusterInspectReportDetailResponseBodySummary : TeaModel {
             /// <summary>
             /// <para>The number of check items whose result is advice.</para>
             /// 
@@ -250,4 +249,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

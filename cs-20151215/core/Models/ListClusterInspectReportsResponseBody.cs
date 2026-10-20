@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ListClusterInspectReportsResponseBody : Darabonba.Model {
+    public class ListClusterInspectReportsResponseBody : TeaModel {
         /// <summary>
         /// <para>The pagination token.</para>
         /// 
@@ -26,7 +25,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("reports")]
         [Validation(Required=false)]
         public List<ListClusterInspectReportsResponseBodyReports> Reports { get; set; }
-        public class ListClusterInspectReportsResponseBodyReports : Darabonba.Model {
+        public class ListClusterInspectReportsResponseBodyReports : TeaModel {
             /// <summary>
             /// <para>The completion time of the inspection report, in ISO 8601 format with time zone information.</para>
             /// 
@@ -73,7 +72,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("summary")]
             [Validation(Required=false)]
             public ListClusterInspectReportsResponseBodyReportsSummary Summary { get; set; }
-            public class ListClusterInspectReportsResponseBodyReportsSummary : Darabonba.Model {
+            public class ListClusterInspectReportsResponseBodyReportsSummary : TeaModel {
                 /// <summary>
                 /// <para>The number of check items whose result is advice.</para>
                 /// 
@@ -141,4 +140,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

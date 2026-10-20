@@ -1,22 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class Nodepool : Darabonba.Model {
+    public class Nodepool : TeaModel {
         /// <summary>
         /// <para>The auto-scaling node pool configuration.</para>
         /// </summary>
         [NameInMap("auto_scaling")]
         [Validation(Required=false)]
         public NodepoolAutoScaling AutoScaling { get; set; }
-        public class NodepoolAutoScaling : Darabonba.Model {
+        public class NodepoolAutoScaling : TeaModel {
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
@@ -150,7 +149,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         [Obsolete]
         public NodepoolInterconnectConfig InterconnectConfig { get; set; }
-        public class NodepoolInterconnectConfig : Darabonba.Model {
+        public class NodepoolInterconnectConfig : TeaModel {
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
@@ -243,7 +242,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("kubernetes_config")]
         [Validation(Required=false)]
         public NodepoolKubernetesConfig KubernetesConfig { get; set; }
-        public class NodepoolKubernetesConfig : Darabonba.Model {
+        public class NodepoolKubernetesConfig : TeaModel {
             /// <summary>
             /// <para>Specifies whether to install the CloudMonitor agent on ECS nodes. After installation, you can view the monitoring information of the created ECS instances in the CloudMonitor console. Valid values:</para>
             /// <list type="bullet">
@@ -349,7 +348,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("management")]
         [Validation(Required=false)]
         public NodepoolManagement Management { get; set; }
-        public class NodepoolManagement : Darabonba.Model {
+        public class NodepoolManagement : TeaModel {
             /// <summary>
             /// <para>Specifies whether to enable Elastic Compute Service (ECS) fault detection for node self-healing.</para>
             /// </summary>
@@ -377,7 +376,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("auto_repair_policy")]
             [Validation(Required=false)]
             public NodepoolManagementAutoRepairPolicy AutoRepairPolicy { get; set; }
-            public class NodepoolManagementAutoRepairPolicy : Darabonba.Model {
+            public class NodepoolManagementAutoRepairPolicy : TeaModel {
                 /// <summary>
                 /// <para>The maximum number of parallel repairs. When a large number of abnormal nodes exist in the node pool, this parameter specifies the maximum number or percentage of nodes that can be repaired simultaneously. You can specify a number (for example, 5, valid values: 1 to 100000) or a percentage (for example, 10%, valid values: 1% to 100%). Default value: 1.</para>
                 /// 
@@ -426,7 +425,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("auto_upgrade_policy")]
             [Validation(Required=false)]
             public NodepoolManagementAutoUpgradePolicy AutoUpgradePolicy { get; set; }
-            public class NodepoolManagementAutoUpgradePolicy : Darabonba.Model {
+            public class NodepoolManagementAutoUpgradePolicy : TeaModel {
                 /// <summary>
                 /// <para>Specifies whether to allow automatic kubelet upgrades.</para>
                 /// 
@@ -455,7 +454,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("auto_vul_fix_policy")]
             [Validation(Required=false)]
             public NodepoolManagementAutoVulFixPolicy AutoVulFixPolicy { get; set; }
-            public class NodepoolManagementAutoVulFixPolicy : Darabonba.Model {
+            public class NodepoolManagementAutoVulFixPolicy : TeaModel {
                 /// <summary>
                 /// <para>Specifies whether to allow node restarts.</para>
                 /// 
@@ -508,7 +507,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             [Obsolete]
             public NodepoolManagementUpgradeConfig UpgradeConfig { get; set; }
-            public class NodepoolManagementUpgradeConfig : Darabonba.Model {
+            public class NodepoolManagementUpgradeConfig : TeaModel {
                 /// <summary>
                 /// <para>Specifies whether to enable auto-upgrade. Valid values:</para>
                 /// <list type="bullet">
@@ -574,14 +573,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("node_components")]
         [Validation(Required=false)]
         public List<NodepoolNodeComponents> NodeComponents { get; set; }
-        public class NodepoolNodeComponents : Darabonba.Model {
+        public class NodepoolNodeComponents : TeaModel {
             /// <summary>
             /// <para>The node component configuration.</para>
             /// </summary>
             [NameInMap("config")]
             [Validation(Required=false)]
             public NodepoolNodeComponentsConfig Config { get; set; }
-            public class NodepoolNodeComponentsConfig : Darabonba.Model {
+            public class NodepoolNodeComponentsConfig : TeaModel {
                 /// <summary>
                 /// <para>The custom node component configuration.</para>
                 /// 
@@ -598,7 +597,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [NameInMap("envs")]
                 [Validation(Required=false)]
                 public List<NodepoolNodeComponentsConfigEnvs> Envs { get; set; }
-                public class NodepoolNodeComponentsConfigEnvs : Darabonba.Model {
+                public class NodepoolNodeComponentsConfigEnvs : TeaModel {
                     /// <summary>
                     /// <para>The name of the environment variable.</para>
                     /// 
@@ -651,7 +650,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("node_config")]
         [Validation(Required=false)]
         public NodepoolNodeConfig NodeConfig { get; set; }
-        public class NodepoolNodeConfig : Darabonba.Model {
+        public class NodepoolNodeConfig : TeaModel {
             /// <summary>
             /// <para>The Kubelet parameter settings.</para>
             /// </summary>
@@ -667,7 +666,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("nodepool_info")]
         [Validation(Required=false)]
         public NodepoolNodepoolInfo NodepoolInfo { get; set; }
-        public class NodepoolNodepoolInfo : Darabonba.Model {
+        public class NodepoolNodepoolInfo : TeaModel {
             /// <summary>
             /// <para>The name of the node pool.</para>
             /// <para>This parameter is required.</para>
@@ -711,7 +710,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("scaling_group")]
         [Validation(Required=false)]
         public NodepoolScalingGroup ScalingGroup { get; set; }
-        public class NodepoolScalingGroup : Darabonba.Model {
+        public class NodepoolScalingGroup : TeaModel {
             /// <summary>
             /// <para>Specifies whether to enable auto-renewal for the node pool. This parameter takes effect only when instance_charge_type is set to <c>PrePaid</c>. Valid values:</para>
             /// <list type="bullet">
@@ -759,7 +758,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("cpu_options")]
             [Validation(Required=false)]
             public NodepoolScalingGroupCpuOptions CpuOptions { get; set; }
-            public class NodepoolScalingGroupCpuOptions : Darabonba.Model {
+            public class NodepoolScalingGroupCpuOptions : TeaModel {
                 /// <summary>
                 /// <para>Specifies whether to enable nested virtualization. Valid values:
                 /// disabled: Disables nested virtualization.
@@ -1021,7 +1020,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("private_pool_options")]
             [Validation(Required=false)]
             public NodepoolScalingGroupPrivatePoolOptions PrivatePoolOptions { get; set; }
-            public class NodepoolScalingGroupPrivatePoolOptions : Darabonba.Model {
+            public class NodepoolScalingGroupPrivatePoolOptions : TeaModel {
                 /// <summary>
                 /// <para>The ID of the private pool.</para>
                 /// 
@@ -1080,7 +1079,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("resource_pool_options")]
             [Validation(Required=false)]
             public NodepoolScalingGroupResourcePoolOptions ResourcePoolOptions { get; set; }
-            public class NodepoolScalingGroupResourcePoolOptions : Darabonba.Model {
+            public class NodepoolScalingGroupResourcePoolOptions : TeaModel {
                 /// <summary>
                 /// <para>The list of private pool IDs, which are the IDs of elasticity assurances or capacity reservations. You can specify only the IDs of private pools in Target mode. Valid values of N: 1 to 20.</para>
                 /// </summary>
@@ -1166,7 +1165,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("spot_price_limit")]
             [Validation(Required=false)]
             public List<NodepoolScalingGroupSpotPriceLimit> SpotPriceLimit { get; set; }
-            public class NodepoolScalingGroupSpotPriceLimit : Darabonba.Model {
+            public class NodepoolScalingGroupSpotPriceLimit : TeaModel {
                 /// <summary>
                 /// <para>The spot instance type.</para>
                 /// 
@@ -1327,7 +1326,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<NodepoolScalingGroupTags> Tags { get; set; }
-            public class NodepoolScalingGroupTags : Darabonba.Model {
+            public class NodepoolScalingGroupTags : TeaModel {
                 /// <summary>
                 /// <para>The tag key.</para>
                 /// 
@@ -1366,7 +1365,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("tee_config")]
         [Validation(Required=false)]
         public NodepoolTeeConfig TeeConfig { get; set; }
-        public class NodepoolTeeConfig : Darabonba.Model {
+        public class NodepoolTeeConfig : TeaModel {
             /// <summary>
             /// <para>Specifies whether the node pool is a confidential computing node pool.</para>
             /// <para>This parameter is required.</para>
@@ -1383,4 +1382,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

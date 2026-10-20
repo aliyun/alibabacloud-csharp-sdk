@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class UpdateTemplateRequest : Darabonba.Model {
+    public class UpdateTemplateRequest : TeaModel {
         /// <summary>
         /// <para>The description of the deployment template.</para>
         /// 
@@ -70,4 +69,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

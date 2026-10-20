@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class UpdateContactGroupForAlertRequest : Darabonba.Model {
+    public class UpdateContactGroupForAlertRequest : TeaModel {
         /// <summary>
         /// <para>The name of the alert metric contact group.</para>
         /// 
@@ -50,4 +49,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

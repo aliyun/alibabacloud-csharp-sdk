@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DeleteClusterNodesRequest : Darabonba.Model {
+    public class DeleteClusterNodesRequest : TeaModel {
         /// <summary>
         /// <para>Specifies whether to automatically drain Pods on the nodes. Valid values:</para>
         /// <list type="bullet">
@@ -54,4 +53,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

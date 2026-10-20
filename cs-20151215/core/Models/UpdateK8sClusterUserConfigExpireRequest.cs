@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class UpdateK8sClusterUserConfigExpireRequest : Darabonba.Model {
+    public class UpdateK8sClusterUserConfigExpireRequest : TeaModel {
         /// <summary>
         /// <para>The custom expiration time specified by the user. Unit: hours.</para>
         /// <para>Valid values: [1, 876000], which indicates a maximum of 100 years.</para>
@@ -36,4 +35,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class GetClusterAddonInstanceResponseBody : Darabonba.Model {
+    public class GetClusterAddonInstanceResponseBody : TeaModel {
         /// <summary>
         /// <para>The custom parameter settings of the component.</para>
         /// 
@@ -26,7 +25,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("logging")]
         [Validation(Required=false)]
         public GetClusterAddonInstanceResponseBodyLogging Logging { get; set; }
-        public class GetClusterAddonInstanceResponseBodyLogging : Darabonba.Model {
+        public class GetClusterAddonInstanceResponseBodyLogging : TeaModel {
             /// <summary>
             /// <para>Indicates whether the component supports the logging feature.</para>
             /// <list type="bullet">
@@ -120,4 +119,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

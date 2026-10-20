@@ -1,22 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeClustersV1ResponseBody : Darabonba.Model {
+    public class DescribeClustersV1ResponseBody : TeaModel {
         /// <summary>
         /// <para>The list of cluster information.</para>
         /// </summary>
         [NameInMap("clusters")]
         [Validation(Required=false)]
         public List<DescribeClustersV1ResponseBodyClusters> Clusters { get; set; }
-        public class DescribeClustersV1ResponseBodyClusters : Darabonba.Model {
+        public class DescribeClustersV1ResponseBodyClusters : TeaModel {
             /// <summary>
             /// <para>The local domain name of the cluster.</para>
             /// 
@@ -224,14 +223,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("operation_policy")]
             [Validation(Required=false)]
             public DescribeClustersV1ResponseBodyClustersOperationPolicy OperationPolicy { get; set; }
-            public class DescribeClustersV1ResponseBodyClustersOperationPolicy : Darabonba.Model {
+            public class DescribeClustersV1ResponseBodyClustersOperationPolicy : TeaModel {
                 /// <summary>
                 /// <para>The auto-upgrade settings for the cluster.</para>
                 /// </summary>
                 [NameInMap("cluster_auto_upgrade")]
                 [Validation(Required=false)]
                 public DescribeClustersV1ResponseBodyClustersOperationPolicyClusterAutoUpgrade ClusterAutoUpgrade { get; set; }
-                public class DescribeClustersV1ResponseBodyClustersOperationPolicyClusterAutoUpgrade : Darabonba.Model {
+                public class DescribeClustersV1ResponseBodyClustersOperationPolicyClusterAutoUpgrade : TeaModel {
                     /// <summary>
                     /// <para>The auto-upgrade channel for the cluster. For more information, refer to <a href="https://help.aliyun.com/document_detail/2712866.html">Upgrade channels</a>. Valid values:</para>
                     /// <list type="bullet">
@@ -484,7 +483,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("page_info")]
         [Validation(Required=false)]
         public DescribeClustersV1ResponseBodyPageInfo PageInfo { get; set; }
-        public class DescribeClustersV1ResponseBodyPageInfo : Darabonba.Model {
+        public class DescribeClustersV1ResponseBodyPageInfo : TeaModel {
             /// <summary>
             /// <para>The page number.</para>
             /// 
@@ -520,4 +519,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

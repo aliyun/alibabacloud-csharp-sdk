@@ -1,22 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeClusterNodesResponseBody : Darabonba.Model {
+    public class DescribeClusterNodesResponseBody : TeaModel {
         /// <summary>
         /// <para>The list of node details.</para>
         /// </summary>
         [NameInMap("nodes")]
         [Validation(Required=false)]
         public List<DescribeClusterNodesResponseBodyNodes> Nodes { get; set; }
-        public class DescribeClusterNodesResponseBodyNodes : Darabonba.Model {
+        public class DescribeClusterNodesResponseBodyNodes : TeaModel {
             /// <summary>
             /// <para>The time when the node was created. The time follows the ISO 8601 standard and includes the time zone.</para>
             /// 
@@ -259,7 +258,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("page")]
         [Validation(Required=false)]
         public DescribeClusterNodesResponseBodyPage Page { get; set; }
-        public class DescribeClusterNodesResponseBodyPage : Darabonba.Model {
+        public class DescribeClusterNodesResponseBodyPage : TeaModel {
             /// <summary>
             /// <para>The current page number.</para>
             /// 
@@ -295,4 +294,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

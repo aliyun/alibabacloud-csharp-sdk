@@ -1,22 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeNodePoolVulsResponseBody : Darabonba.Model {
+    public class DescribeNodePoolVulsResponseBody : TeaModel {
         /// <summary>
         /// <para>The list of node pool vulnerabilities.</para>
         /// </summary>
         [NameInMap("vul_records")]
         [Validation(Required=false)]
         public List<DescribeNodePoolVulsResponseBodyVulRecords> VulRecords { get; set; }
-        public class DescribeNodePoolVulsResponseBodyVulRecords : Darabonba.Model {
+        public class DescribeNodePoolVulsResponseBodyVulRecords : TeaModel {
             /// <summary>
             /// <para>The node instance ID.</para>
             /// 
@@ -43,7 +42,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("vul_list")]
             [Validation(Required=false)]
             public List<DescribeNodePoolVulsResponseBodyVulRecordsVulList> VulList { get; set; }
-            public class DescribeNodePoolVulsResponseBodyVulRecordsVulList : Darabonba.Model {
+            public class DescribeNodePoolVulsResponseBodyVulRecordsVulList : TeaModel {
                 /// <summary>
                 /// <para>The vulnerability alias.</para>
                 /// 
@@ -97,7 +96,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [NameInMap("package_list")]
                 [Validation(Required=false)]
                 public List<DescribeNodePoolVulsResponseBodyVulRecordsVulListPackageList> PackageList { get; set; }
-                public class DescribeNodePoolVulsResponseBodyVulRecordsVulListPackageList : Darabonba.Model {
+                public class DescribeNodePoolVulsResponseBodyVulRecordsVulListPackageList : TeaModel {
                     /// <summary>
                     /// <para>The package name.</para>
                     /// 
@@ -133,4 +132,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

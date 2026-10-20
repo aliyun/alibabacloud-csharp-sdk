@@ -1,22 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ListOperationPlansForRegionResponseBody : Darabonba.Model {
+    public class ListOperationPlansForRegionResponseBody : TeaModel {
         /// <summary>
         /// <para>The list of execution plans.</para>
         /// </summary>
         [NameInMap("plans")]
         [Validation(Required=false)]
         public List<ListOperationPlansForRegionResponseBodyPlans> Plans { get; set; }
-        public class ListOperationPlansForRegionResponseBodyPlans : Darabonba.Model {
+        public class ListOperationPlansForRegionResponseBodyPlans : TeaModel {
             /// <summary>
             /// <para>The ID of the cluster.</para>
             /// 
@@ -83,7 +82,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("state_reason")]
             [Validation(Required=false)]
             public ListOperationPlansForRegionResponseBodyPlansStateReason StateReason { get; set; }
-            public class ListOperationPlansForRegionResponseBodyPlansStateReason : Darabonba.Model {
+            public class ListOperationPlansForRegionResponseBodyPlansStateReason : TeaModel {
                 /// <summary>
                 /// <para>The code.</para>
                 /// 
@@ -151,4 +150,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

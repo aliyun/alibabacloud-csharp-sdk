@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribePolicyDetailsResponseBody : Darabonba.Model {
+    public class DescribePolicyDetailsResponseBody : TeaModel {
         /// <summary>
         /// <para>The governance action of the rule. Valid values:</para>
         /// <list type="bullet">
@@ -110,4 +109,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

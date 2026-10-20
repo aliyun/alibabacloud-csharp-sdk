@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class GetUpgradeStatusResponseBody : Darabonba.Model {
+    public class GetUpgradeStatusResponseBody : TeaModel {
         /// <summary>
         /// <para>The error message during the cluster upgrade.</para>
         /// 
@@ -69,7 +68,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("upgrade_task")]
         [Validation(Required=false)]
         public GetUpgradeStatusResponseBodyUpgradeTask UpgradeTask { get; set; }
-        public class GetUpgradeStatusResponseBodyUpgradeTask : Darabonba.Model {
+        public class GetUpgradeStatusResponseBodyUpgradeTask : TeaModel {
             /// <summary>
             /// <para>The description of the upgrade task.</para>
             /// 
@@ -100,4 +99,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

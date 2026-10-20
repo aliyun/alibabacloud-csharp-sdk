@@ -1,22 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class GetClusterDiagnosisCheckItemsResponseBody : Darabonba.Model {
+    public class GetClusterDiagnosisCheckItemsResponseBody : TeaModel {
         /// <summary>
         /// <para>The check items.</para>
         /// </summary>
         [NameInMap("check_items")]
         [Validation(Required=false)]
         public List<GetClusterDiagnosisCheckItemsResponseBodyCheckItems> CheckItems { get; set; }
-        public class GetClusterDiagnosisCheckItemsResponseBodyCheckItems : Darabonba.Model {
+        public class GetClusterDiagnosisCheckItemsResponseBodyCheckItems : TeaModel {
             /// <summary>
             /// <para>The description.</para>
             /// 
@@ -132,4 +131,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

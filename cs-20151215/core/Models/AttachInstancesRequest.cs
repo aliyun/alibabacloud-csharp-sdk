@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class AttachInstancesRequest : Darabonba.Model {
+    public class AttachInstancesRequest : TeaModel {
         /// <summary>
         /// <para>The CPU management policy of the node. The following policies are supported for clusters running version 1.12.6 or later:</para>
         /// <list type="bullet">
@@ -217,4 +216,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

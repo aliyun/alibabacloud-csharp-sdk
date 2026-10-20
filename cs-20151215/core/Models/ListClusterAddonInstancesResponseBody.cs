@@ -1,22 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ListClusterAddonInstancesResponseBody : Darabonba.Model {
+    public class ListClusterAddonInstancesResponseBody : TeaModel {
         /// <summary>
         /// <para>The list of installed component instances.</para>
         /// </summary>
         [NameInMap("addons")]
         [Validation(Required=false)]
         public List<ListClusterAddonInstancesResponseBodyAddons> Addons { get; set; }
-        public class ListClusterAddonInstancesResponseBodyAddons : Darabonba.Model {
+        public class ListClusterAddonInstancesResponseBodyAddons : TeaModel {
             /// <summary>
             /// <para>The component name.</para>
             /// 
@@ -58,4 +57,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

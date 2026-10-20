@@ -1,22 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeClusterVulsResponseBody : Darabonba.Model {
+    public class DescribeClusterVulsResponseBody : TeaModel {
         /// <summary>
         /// <para>The list of vulnerabilities.</para>
         /// </summary>
         [NameInMap("vul_records")]
         [Validation(Required=false)]
         public List<DescribeClusterVulsResponseBodyVulRecords> VulRecords { get; set; }
-        public class DescribeClusterVulsResponseBodyVulRecords : Darabonba.Model {
+        public class DescribeClusterVulsResponseBodyVulRecords : TeaModel {
             /// <summary>
             /// <para>The list of CVEs.</para>
             /// </summary>
@@ -99,4 +98,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

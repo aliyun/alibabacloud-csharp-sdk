@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class GetKubernetesTriggerRequest : Darabonba.Model {
+    public class GetKubernetesTriggerRequest : TeaModel {
         /// <summary>
         /// <para>The application name.</para>
         /// <para>This parameter is required.</para>
@@ -65,4 +64,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

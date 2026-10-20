@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeResourcesDeleteProtectionResponse : Darabonba.Model {
+    public class DescribeResourcesDeleteProtectionResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -21,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("body")]
         [Validation(Required=false)]
         public List<DescribeResourcesDeleteProtectionResponseBody> Body { get; set; }
-        public class DescribeResourcesDeleteProtectionResponseBody : Darabonba.Model {
+        public class DescribeResourcesDeleteProtectionResponseBody : TeaModel {
             /// <summary>
             /// <para>The name of the queried resource.</para>
             /// <para>This parameter is required.</para>
@@ -72,4 +71,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

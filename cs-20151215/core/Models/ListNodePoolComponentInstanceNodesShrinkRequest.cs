@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ListNodePoolComponentInstanceNodesShrinkRequest : Darabonba.Model {
+    public class ListNodePoolComponentInstanceNodesShrinkRequest : TeaModel {
         /// <summary>
         /// <para>Filters nodes by the specified configuration version number of the node component.</para>
         /// 
@@ -63,4 +62,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

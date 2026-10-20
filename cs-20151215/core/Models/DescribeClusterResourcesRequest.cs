@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeClusterResourcesRequest : Darabonba.Model {
+    public class DescribeClusterResourcesRequest : TeaModel {
         /// <summary>
         /// <para>Specifies whether to also query resources created by cluster components.</para>
         /// <list type="bullet">
@@ -29,4 +28,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

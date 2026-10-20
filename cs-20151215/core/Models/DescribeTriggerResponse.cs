@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeTriggerResponse : Darabonba.Model {
+    public class DescribeTriggerResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -21,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("body")]
         [Validation(Required=false)]
         public List<DescribeTriggerResponseBody> Body { get; set; }
-        public class DescribeTriggerResponseBody : Darabonba.Model {
+        public class DescribeTriggerResponseBody : TeaModel {
             /// <summary>
             /// <para>The trigger ID.</para>
             /// 
@@ -106,4 +105,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

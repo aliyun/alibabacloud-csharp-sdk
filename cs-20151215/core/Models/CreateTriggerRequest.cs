@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class CreateTriggerRequest : Darabonba.Model {
+    public class CreateTriggerRequest : TeaModel {
         /// <summary>
         /// <para>The trigger action. Valid values:</para>
         /// <para><c>redeploy</c>: redeploys the resource defined in <c>project_id</c>.</para>
@@ -66,4 +65,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

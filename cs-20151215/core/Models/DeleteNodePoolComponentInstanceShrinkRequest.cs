@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DeleteNodePoolComponentInstanceShrinkRequest : Darabonba.Model {
+    public class DeleteNodePoolComponentInstanceShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The interval between batches, in seconds. Default value: 0.</para>
         /// 
@@ -69,4 +68,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

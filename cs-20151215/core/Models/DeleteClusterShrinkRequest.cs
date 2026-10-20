@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DeleteClusterShrinkRequest : Darabonba.Model {
+    public class DeleteClusterShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The deletion options for cluster-associated resources.</para>
         /// </summary>
@@ -61,4 +60,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

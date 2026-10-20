@@ -1,22 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeEventsResponseBody : Darabonba.Model {
+    public class DescribeEventsResponseBody : TeaModel {
         /// <summary>
         /// <para>The event details.</para>
         /// </summary>
         [NameInMap("events")]
         [Validation(Required=false)]
         public List<DescribeEventsResponseBodyEvents> Events { get; set; }
-        public class DescribeEventsResponseBodyEvents : Darabonba.Model {
+        public class DescribeEventsResponseBodyEvents : TeaModel {
             /// <summary>
             /// <para>The cluster ID.</para>
             /// 
@@ -33,7 +32,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("data")]
             [Validation(Required=false)]
             public DescribeEventsResponseBodyEventsData Data { get; set; }
-            public class DescribeEventsResponseBodyEventsData : Darabonba.Model {
+            public class DescribeEventsResponseBodyEventsData : TeaModel {
                 /// <summary>
                 /// <para>The event level. Valid values:</para>
                 /// <list type="bullet">
@@ -157,7 +156,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("page_info")]
         [Validation(Required=false)]
         public DescribeEventsResponseBodyPageInfo PageInfo { get; set; }
-        public class DescribeEventsResponseBodyPageInfo : Darabonba.Model {
+        public class DescribeEventsResponseBodyPageInfo : TeaModel {
             /// <summary>
             /// <para>The page number for paging in the paged query.</para>
             /// 
@@ -193,4 +192,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

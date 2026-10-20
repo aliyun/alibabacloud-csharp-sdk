@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ModifyNodePoolNodeConfigRequest : Darabonba.Model {
+    public class ModifyNodePoolNodeConfigRequest : TeaModel {
         /// <summary>
         /// <para>The containerd runtime configuration.</para>
         /// </summary>
@@ -37,7 +36,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("os_config")]
         [Validation(Required=false)]
         public ModifyNodePoolNodeConfigRequestOsConfig OsConfig { get; set; }
-        public class ModifyNodePoolNodeConfigRequestOsConfig : Darabonba.Model {
+        public class ModifyNodePoolNodeConfigRequestOsConfig : TeaModel {
             /// <summary>
             /// <para>The hugepage configuration.</para>
             /// </summary>
@@ -60,7 +59,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("rolling_policy")]
         [Validation(Required=false)]
         public ModifyNodePoolNodeConfigRequestRollingPolicy RollingPolicy { get; set; }
-        public class ModifyNodePoolNodeConfigRequestRollingPolicy : Darabonba.Model {
+        public class ModifyNodePoolNodeConfigRequestRollingPolicy : TeaModel {
             /// <summary>
             /// <para>The maximum number of nodes that are allowed to fail during the rolling update. Default value: 0, which indicates that the task fails if any node fails. If the value is greater than 0, the task fails and stops when the cumulative number of failed nodes exceeds this value.</para>
             /// 
@@ -88,4 +87,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

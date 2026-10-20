@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class UpgradeClusterNodepoolRequest : Darabonba.Model {
+    public class UpgradeClusterNodepoolRequest : TeaModel {
         /// <summary>
         /// <para>Specifies whether to ignore warning-level pre-checks.</para>
         /// </summary>
@@ -50,7 +49,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("rolling_policy")]
         [Validation(Required=false)]
         public UpgradeClusterNodepoolRequestRollingPolicy RollingPolicy { get; set; }
-        public class UpgradeClusterNodepoolRequestRollingPolicy : Darabonba.Model {
+        public class UpgradeClusterNodepoolRequestRollingPolicy : TeaModel {
             /// <summary>
             /// <para>The upgrade interval between batches. This parameter takes effect only when the pause policy is set to <c>NotPause</c>.</para>
             /// <para>Valid values: [5,120]. Unit: minutes.</para>
@@ -140,4 +139,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeClusterAttachScriptsRequest : Darabonba.Model {
+    public class DescribeClusterAttachScriptsRequest : TeaModel {
         /// <summary>
         /// <para>The CPU architecture of the node. Valid values: <c>amd64</c>, <c>arm</c>, and <c>arm64</c>.</para>
         /// <para>Default value: <c>amd64</c>.</para>
@@ -109,4 +108,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

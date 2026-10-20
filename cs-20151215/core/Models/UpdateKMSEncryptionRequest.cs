@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class UpdateKMSEncryptionRequest : Darabonba.Model {
+    public class UpdateKMSEncryptionRequest : TeaModel {
         /// <summary>
         /// <para>Specifies whether to disable the encryption at rest feature for Secrets.</para>
         /// <list type="bullet">
@@ -43,4 +42,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

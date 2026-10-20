@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class ModifyClusterRequest : Darabonba.Model {
+    public class ModifyClusterRequest : TeaModel {
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
@@ -27,7 +26,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("api_server_custom_cert_sans")]
         [Validation(Required=false)]
         public ModifyClusterRequestApiServerCustomCertSans ApiServerCustomCertSans { get; set; }
-        public class ModifyClusterRequestApiServerCustomCertSans : Darabonba.Model {
+        public class ModifyClusterRequestApiServerCustomCertSans : TeaModel {
             /// <summary>
             /// <para>Specifies whether to overwrite or append the SAN configuration. Valid values:</para>
             /// <list type="bullet">
@@ -119,7 +118,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("control_plane_config")]
         [Validation(Required=false)]
         public ModifyClusterRequestControlPlaneConfig ControlPlaneConfig { get; set; }
-        public class ModifyClusterRequestControlPlaneConfig : Darabonba.Model {
+        public class ModifyClusterRequestControlPlaneConfig : TeaModel {
             /// <summary>
             /// <para>Specifies whether to enable auto-renewal for control plane node instances. This parameter takes effect only when <c>charge_type</c> is set to <c>PrePaid</c>. Valid values:</para>
             /// <list type="bullet">
@@ -421,14 +420,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("control_plane_endpoints_config")]
         [Validation(Required=false)]
         public ModifyClusterRequestControlPlaneEndpointsConfig ControlPlaneEndpointsConfig { get; set; }
-        public class ModifyClusterRequestControlPlaneEndpointsConfig : Darabonba.Model {
+        public class ModifyClusterRequestControlPlaneEndpointsConfig : TeaModel {
             /// <summary>
             /// <para>The internal domain name configuration for the cluster. This applies to ACK managed clusters. The internal domain name is used by node-side system components such as kubelet and kube-proxy to access the API server. If the internal domain name access is not enabled, node-side system components access the API server through the CLB IP address.</para>
             /// </summary>
             [NameInMap("internal_dns_config")]
             [Validation(Required=false)]
             public ModifyClusterRequestControlPlaneEndpointsConfigInternalDnsConfig InternalDnsConfig { get; set; }
-            public class ModifyClusterRequestControlPlaneEndpointsConfigInternalDnsConfig : Darabonba.Model {
+            public class ModifyClusterRequestControlPlaneEndpointsConfigInternalDnsConfig : TeaModel {
                 /// <summary>
                 /// <para>The VPCs in which the internal domain name DNS records take effect.</para>
                 /// </summary>
@@ -457,7 +456,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("load_balancers_config")]
             [Validation(Required=false)]
             public List<ModifyClusterRequestControlPlaneEndpointsConfigLoadBalancersConfig> LoadBalancersConfig { get; set; }
-            public class ModifyClusterRequestControlPlaneEndpointsConfigLoadBalancersConfig : Darabonba.Model {
+            public class ModifyClusterRequestControlPlaneEndpointsConfigLoadBalancersConfig : TeaModel {
                 /// <summary>
                 /// <para>The endpoint type.</para>
                 /// 
@@ -573,14 +572,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("operation_policy")]
         [Validation(Required=false)]
         public ModifyClusterRequestOperationPolicy OperationPolicy { get; set; }
-        public class ModifyClusterRequestOperationPolicy : Darabonba.Model {
+        public class ModifyClusterRequestOperationPolicy : TeaModel {
             /// <summary>
             /// <para>The automatic cluster upgrade configuration.</para>
             /// </summary>
             [NameInMap("cluster_auto_upgrade")]
             [Validation(Required=false)]
             public ModifyClusterRequestOperationPolicyClusterAutoUpgrade ClusterAutoUpgrade { get; set; }
-            public class ModifyClusterRequestOperationPolicyClusterAutoUpgrade : Darabonba.Model {
+            public class ModifyClusterRequestOperationPolicyClusterAutoUpgrade : TeaModel {
                 /// <summary>
                 /// <para>The automatic cluster upgrade frequency. For more information, see <a href="https://help.aliyun.com/document_detail/2712866.html">Upgrade frequency</a>.</para>
                 /// <para>Valid values:</para>
@@ -648,7 +647,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("system_events_logging")]
         [Validation(Required=false)]
         public ModifyClusterRequestSystemEventsLogging SystemEventsLogging { get; set; }
-        public class ModifyClusterRequestSystemEventsLogging : Darabonba.Model {
+        public class ModifyClusterRequestSystemEventsLogging : TeaModel {
             /// <summary>
             /// <para>Specifies whether to enable system event storage.</para>
             /// <list type="bullet">
@@ -711,4 +710,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

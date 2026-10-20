@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class OpenAckServiceRequest : Darabonba.Model {
+    public class OpenAckServiceRequest : TeaModel {
         /// <summary>
         /// <para>The type of service to activate. Valid values:</para>
         /// <list type="bullet">
@@ -27,4 +26,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

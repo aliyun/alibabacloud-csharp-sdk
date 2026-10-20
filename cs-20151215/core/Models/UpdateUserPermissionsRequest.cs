@@ -1,22 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class UpdateUserPermissionsRequest : Darabonba.Model {
+    public class UpdateUserPermissionsRequest : TeaModel {
         /// <summary>
         /// <para>The request body parameters.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public List<UpdateUserPermissionsRequestBody> Body { get; set; }
-        public class UpdateUserPermissionsRequestBody : Darabonba.Model {
+        public class UpdateUserPermissionsRequestBody : TeaModel {
             /// <summary>
             /// <para>The ID of the target cluster for authorization.</para>
             /// <para>If the <c>role_type</c> parameter is set to <c>all-clusters</c>, you do not need to specify this parameter.</para>
@@ -130,4 +129,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

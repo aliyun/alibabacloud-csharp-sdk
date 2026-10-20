@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeKubernetesVersionMetadataResponse : Darabonba.Model {
+    public class DescribeKubernetesVersionMetadataResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -21,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("body")]
         [Validation(Required=false)]
         public List<DescribeKubernetesVersionMetadataResponseBody> Body { get; set; }
-        public class DescribeKubernetesVersionMetadataResponseBody : Darabonba.Model {
+        public class DescribeKubernetesVersionMetadataResponseBody : TeaModel {
             /// <summary>
             /// <para>The features of the Kubernetes version.</para>
             /// 
@@ -41,7 +40,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("images")]
             [Validation(Required=false)]
             public List<DescribeKubernetesVersionMetadataResponseBodyImages> Images { get; set; }
-            public class DescribeKubernetesVersionMetadataResponseBodyImages : Darabonba.Model {
+            public class DescribeKubernetesVersionMetadataResponseBodyImages : TeaModel {
                 /// <summary>
                 /// <para>The image ID.</para>
                 /// 
@@ -224,4 +223,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

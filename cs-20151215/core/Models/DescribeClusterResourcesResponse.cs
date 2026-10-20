@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class DescribeClusterResourcesResponse : Darabonba.Model {
+    public class DescribeClusterResourcesResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -21,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [NameInMap("body")]
         [Validation(Required=false)]
         public List<DescribeClusterResourcesResponseBody> Body { get; set; }
-        public class DescribeClusterResourcesResponseBody : Darabonba.Model {
+        public class DescribeClusterResourcesResponseBody : TeaModel {
             /// <summary>
             /// <para>The cluster ID.</para>
             /// 
@@ -112,7 +111,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("dependencies")]
             [Validation(Required=false)]
             public List<DescribeClusterResourcesResponseBodyDependencies> Dependencies { get; set; }
-            public class DescribeClusterResourcesResponseBodyDependencies : Darabonba.Model {
+            public class DescribeClusterResourcesResponseBodyDependencies : TeaModel {
                 /// <summary>
                 /// <para>The cluster ID of the dependent resource.</para>
                 /// 
@@ -151,7 +150,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("associated_object")]
             [Validation(Required=false)]
             public DescribeClusterResourcesResponseBodyAssociatedObject AssociatedObject { get; set; }
-            public class DescribeClusterResourcesResponseBodyAssociatedObject : Darabonba.Model {
+            public class DescribeClusterResourcesResponseBodyAssociatedObject : TeaModel {
                 /// <summary>
                 /// <para>The object type of the Kubernetes object.</para>
                 /// 
@@ -190,7 +189,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("delete_behavior")]
             [Validation(Required=false)]
             public DescribeClusterResourcesResponseBodyDeleteBehavior DeleteBehavior { get; set; }
-            public class DescribeClusterResourcesResponseBodyDeleteBehavior : Darabonba.Model {
+            public class DescribeClusterResourcesResponseBodyDeleteBehavior : TeaModel {
                 /// <summary>
                 /// <para>Indicates whether the resource is deleted by default when the cluster is deleted.</para>
                 /// <list type="bullet">
@@ -255,4 +254,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

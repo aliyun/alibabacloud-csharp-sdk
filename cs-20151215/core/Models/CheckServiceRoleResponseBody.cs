@@ -1,22 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class CheckServiceRoleResponseBody : Darabonba.Model {
+    public class CheckServiceRoleResponseBody : TeaModel {
         /// <summary>
         /// <para>The service role check results.</para>
         /// </summary>
         [NameInMap("roles")]
         [Validation(Required=false)]
         public List<CheckServiceRoleResponseBodyRoles> Roles { get; set; }
-        public class CheckServiceRoleResponseBodyRoles : Darabonba.Model {
+        public class CheckServiceRoleResponseBodyRoles : TeaModel {
             /// <summary>
             /// <para>Indicates whether the role has been authorized.</para>
             /// 
@@ -52,4 +51,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-

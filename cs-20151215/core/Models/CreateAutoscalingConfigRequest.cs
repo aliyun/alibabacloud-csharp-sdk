@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class CreateAutoscalingConfigRequest : Darabonba.Model {
+    public class CreateAutoscalingConfigRequest : TeaModel {
         /// <summary>
         /// <para>The scale-in trigger delay, which is the time interval between when a scale-in need is detected (the scale-in threshold is reached) and when the scale-in operation (reducing the number of Pods) is actually performed.</para>
         /// <para>Valid values: [1,60]. Unit: minutes.</para>
@@ -221,4 +220,3 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     }
 
 }
-
