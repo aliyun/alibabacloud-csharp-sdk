@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string BodyShrink { get; set; }
 
         /// <summary>
-        /// <para>Idempotency is not currently guaranteed. Do not rely on this parameter to prevent duplicate requests.</para>
+        /// <para>Idempotence is not currently guaranteed. Do not rely on this parameter to prevent duplicate requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>custom-agent-request-20261010-001</para>

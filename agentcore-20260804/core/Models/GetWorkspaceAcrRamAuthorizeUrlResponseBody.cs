@@ -11,6 +11,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
     public class GetWorkspaceAcrRamAuthorizeUrlResponseBody : TeaModel {
         /// <summary>
         /// <para>The business status code.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -21,6 +22,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 
         /// <summary>
         /// <para>The response data.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -28,6 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public class GetWorkspaceAcrRamAuthorizeUrlResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The ID of the ACR Enterprise instance.</para>
+            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cri-1234567890abcdef</para>
@@ -38,6 +41,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 
             /// <summary>
             /// <para>The RAM authorization URL used to create or append target ACR permissions for the shared role.</para>
+            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://ram.console.aliyun.com/authorize?request=%7B%22referrer%22%3A%22AgentCore%22%2C%22payloads%22%3A%5B%7B%22missionId%22%3A%22AgentCore.CustomRoleForOSSObjectRestore%22%2C%22roleName%22%3A%22AliyunAgentCoreWorkspace-ws-1234567890abcdef12345%22%2C%22rolePolicies%22%3A%5B%7B%22policyName%22%3A%22AgentCoreAcrPull-63373f3802583663d49465d8061e410a899d8f2936b8fc0cb9ec905b71f273c6%22%2C%22policyType%22%3A%22Custom%22%2C%22templateId%22%3A%22CrPullInstanceImage%22%2C%22templateValue%22%3A%7B%22crInstance%22%3A%22acs%3Acr%3Acn-hangzhou%3A1234567890123456%3Ainstance%2Fcri-1234567890abcdef%22%2C%22crRepository%22%3A%22acs%3Acr%3Acn-hangzhou%3A1234567890123456%3Arepository%2Fcri-1234567890abcdef%2Fexample%2Fagent-image%22%7D%7D%5D%7D%5D%7D">https://ram.console.aliyun.com/authorize?request=%7B%22referrer%22%3A%22AgentCore%22%2C%22payloads%22%3A%5B%7B%22missionId%22%3A%22AgentCore.CustomRoleForOSSObjectRestore%22%2C%22roleName%22%3A%22AliyunAgentCoreWorkspace-ws-1234567890abcdef12345%22%2C%22rolePolicies%22%3A%5B%7B%22policyName%22%3A%22AgentCoreAcrPull-63373f3802583663d49465d8061e410a899d8f2936b8fc0cb9ec905b71f273c6%22%2C%22policyType%22%3A%22Custom%22%2C%22templateId%22%3A%22CrPullInstanceImage%22%2C%22templateValue%22%3A%7B%22crInstance%22%3A%22acs%3Acr%3Acn-hangzhou%3A1234567890123456%3Ainstance%2Fcri-1234567890abcdef%22%2C%22crRepository%22%3A%22acs%3Acr%3Acn-hangzhou%3A1234567890123456%3Arepository%2Fcri-1234567890abcdef%2Fexample%2Fagent-image%22%7D%7D%5D%7D%5D%7D</a></para>
@@ -47,7 +51,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AuthorizeUrl { get; set; }
 
             /// <summary>
-            /// <para>The shared role name selected by the backend. This field is not editable on the frontend.</para>
+            /// <para>The name of the shared role selected by the backend. This field is not editable on the frontend.</para>
+            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AliyunAgentCoreWorkspace-ws-1234567890abcdef12345</para>
@@ -58,6 +63,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 
             /// <summary>
             /// <para>The source of the shared role. This does not indicate that authorization is complete.</para>
+            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WORKSPACE_SHARED</para>
@@ -68,6 +74,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 
             /// <summary>
             /// <para>The workspace ID.</para>
+            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ws-1234567890abcdef12345</para>
@@ -80,6 +87,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 
         /// <summary>
         /// <para>The HTTP status code.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -90,6 +98,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 
         /// <summary>
         /// <para>The response message.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -100,6 +109,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 
         /// <summary>
         /// <para>The request ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345678-1234-1234-1234-123456789012</para>
@@ -110,6 +120,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 
         /// <summary>
         /// <para>Indicates whether the request is successful.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
