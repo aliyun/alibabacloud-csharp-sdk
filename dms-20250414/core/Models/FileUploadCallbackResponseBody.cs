@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public FileUploadCallbackResponseBodyData Data { get; set; }
         public class FileUploadCallbackResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The file ID.</para>
+            /// <para>The ID of the file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>f-8*******01m</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the call failed.</para>
+        /// <para>The error message returned if the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Specified parameter Tid is not valid.</para>
@@ -59,9 +59,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request was successful.                                 </description></item>
+        /// <item><description><b>true</b>: The request is successful.                                 </description></item>
         /// <item><description><b>false</b>: The request failed.</description></item>
         /// </list>
         /// 

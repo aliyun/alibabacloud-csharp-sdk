@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class UpdateAirflowResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the access denial.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NOT_FOUND</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Details of the updated Airflow instance.</para>
+        /// <para>The updated details.</para>
         /// </summary>
         [NameInMap("Root")]
         [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string AirflowName { get; set; }
 
             /// <summary>
-            /// <para>The version of Airflow.</para>
+            /// <para>The Airflow version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3.1</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string AirflowVersion { get; set; }
 
             /// <summary>
-            /// <para>The instance specification.</para>
+            /// <para>SMALL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SMALL</para>
@@ -107,14 +107,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string AppType { get; set; }
 
             /// <summary>
-            /// <para>A list of custom configuration items.</para>
+            /// <para>The list of custom configuration items.</para>
             /// </summary>
             [NameInMap("CustomAirflowCfg")]
             [Validation(Required=false)]
             public List<string> CustomAirflowCfg { get; set; }
 
             /// <summary>
-            /// <para>The directory where DAGs are scanned.</para>
+            /// <para>The directory scanned for DAGs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default/dags</para>
@@ -124,14 +124,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string DagsDir { get; set; }
 
             /// <summary>
-            /// <para>A data mount item.</para>
+            /// <para>The list of data mount information.</para>
             /// </summary>
             [NameInMap("DataMountInfoList")]
             [Validation(Required=false)]
             public List<DataMountInfo> DataMountInfoList { get; set; }
 
             /// <summary>
-            /// <para>The error message returned upon deployment failure.</para>
+            /// <para>The deployment error message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>quota exists</para>
@@ -151,14 +151,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether serverless mode is enabled.</para>
+            /// <para>Specifies whether to enable serverless workers.</para>
             /// </summary>
             [NameInMap("EnableServerless")]
             [Validation(Required=false)]
             public bool? EnableServerless { get; set; }
 
             /// <summary>
-            /// <para>The environment variables.</para>
+            /// <para>The environment configurations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>k=v</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Environments { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-01-07T15:10:32+08:00</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string GmtCreated { get; set; }
 
             /// <summary>
-            /// <para>The graceful shutdown timeout, in seconds.</para>
+            /// <para>The timeout period for a worker to exit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string OssBucketName { get; set; }
 
             /// <summary>
-            /// <para>The path in OSS where logs are stored.</para>
+            /// <para>The OSS path for storing logs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/airflow</para>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string OssPath { get; set; }
 
             /// <summary>
-            /// <para>The directory where Airflow plugins are scanned.</para>
+            /// <para>The directory scanned for Airflow plugins.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default/plugins</para>
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string PluginsDir { get; set; }
 
             /// <summary>
-            /// <para>The path to the Python requirements file.</para>
+            /// <para>The path of the installation package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default/requirements.txt</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string RequirementFile { get; set; }
 
             /// <summary>
-            /// <para>The Python package requirements.</para>
+            /// <para>The configurations of the installation package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>jieba==0.42</para>
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>The startup script for the Airflow container.</para>
+            /// <para>The startup script of the Airflow container.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default/startup.sh</para>
@@ -298,7 +298,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>The number of worker node replicas.</para>
+            /// <para>The number of scaled worker nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -330,12 +330,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The request is successful.                                 </description></item>
+        /// <item><description><b>false</b>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

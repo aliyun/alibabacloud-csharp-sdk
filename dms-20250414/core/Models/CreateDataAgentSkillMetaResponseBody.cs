@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public CreateDataAgentSkillMetaResponseBodyData Data { get; set; }
         public class CreateDataAgentSkillMetaResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The Alibaba Cloud account ID of the parent account.</para>
+            /// <para>The Alibaba Cloud account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16738266********</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string AliyunParentUid { get; set; }
 
             /// <summary>
-            /// <para>The Alibaba Cloud account ID.</para>
+            /// <para>The Alibaba Cloud user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20372822********</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string AliyunUid { get; set; }
 
             /// <summary>
-            /// <para>The creator name.</para>
+            /// <para>The name of the creator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HaoY*****</para>
@@ -57,7 +57,11 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the skill is available. Valid values: true and false.</para>
+            /// <para>Indicates whether the skill is available. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: The skill is available.</description></item>
+            /// <item><description>false: The skill is not available.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -77,7 +81,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string GmtCreated { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-12-11T14:04:32.000+00:00</para>
@@ -89,7 +93,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <summary>
             /// <para>The skill parsing error message.</para>
             /// <list type="bullet">
-            /// <item><description>When the skill status is INVALID, the parsing error message is returned.</description></item>
+            /// <item><description>This message is returned when the skill status is INVALID.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -142,9 +146,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <summary>
             /// <para>The skill status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>INIT: Not ready.</description></item>
-            /// <item><description>ACTIVE: Active.</description></item>
-            /// <item><description>INVALID: Invalid.</description></item>
+            /// <item><description>INIT: The skill is not ready.</description></item>
+            /// <item><description>ACTIVE: The skill is active.</description></item>
+            /// <item><description>INVALID: The skill is invalid.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -177,7 +181,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned when a system-level request failure occurs.</para>
+        /// <para>The error message returned when a system-level request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Specified parameter Tid is not valid.</para>
@@ -197,10 +201,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request was successful.                                 </description></item>
-        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// <item><description><b>true</b>: The request is successful.                                 </description></item>
+        /// <item><description><b>false</b>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

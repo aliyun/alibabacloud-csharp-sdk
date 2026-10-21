@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string OssCredential { get; set; }
 
             /// <summary>
-            /// <para>The time of the request. The format follows the ISO 8601 date and time standard.</para>
+            /// <para>The time of the request, which follows the ISO 8601 date and time standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20260101T135341Z</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string OssDate { get; set; }
 
             /// <summary>
-            /// <para>The STS token used to upload files to OSS. The token is valid for 1 hour.</para>
+            /// <para>The STS token used to upload files to OSS, valid for one hour.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CAIS4gJ1q6Ft5B2yfSjIr5vPHMj4p+lHx/utUUjg13ptZ+5u3oDzkzz2IHhMdXlrCOgYt/8xnG1V6f8flrJ/ToQAX0HfatZq5ZkS9AqnaoXM/te496IFg5D9y7dIs8GgjqHoeOzcYI73WJXEMiLp9EJaxb/9ak/RPTiMOoGIjphKd8keWhLCAxNNGNZRIHkJyqZYTwyzU8ygKRn3mGHdIVN1sw5n8wNF5L+439eX52i17jS46JdM/9ysesH5NpQxbMwkDYnk5oEsKPqdihw3wgNR6aJ7gJZD/Tr6pdyHCzFTmU7ea7uEqYw3clYiOPBnRvEd8eKPnPl5q/HVm4Hs0wxKNuxOSCXZS4yp3MLeH+ekJgOGwWFHz9qnOLmtQXqV22tMCRpzXIj6Zlmz+/reI6iNW+Ory74mxSFbrz3ZP4yv+o+Yv3QbMVumcySkKVbBbVvnv0R8GNsIC2lMUbp+rfShhfFuG2QagAECCyigwAlSAryrFmteD+EVuvxvi0NE7zDJLbUkhek6dcY+/u5V5jcmvL67CQ7bTNk+9lV8WDCvtoCD9ucqTaHweJEd8fS2DaFedAMDf8BfZa2C1CTLhVXdSgE2WORYbMqidelRm7dH3fTbZVvryWKDaveDRLt5J/Qfs**********</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string OssSecurityToken { get; set; }
 
             /// <summary>
-            /// <para>The description information used for signature authentication.</para>
+            /// <para>The description used for signature authentication.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9bebe0900716bdefaab899781c7bdfd614ec6ed711e0de5ddf6f5a**********</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string OssSignatureVersion { get; set; }
 
             /// <summary>
-            /// <para>The permission restrictions and constraints for file uploads.</para>
+            /// <para>The permission limits and constraints for file uploads.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eyJjb25kaXRpb25zIjpbeyJ4LW9zcy1jcmVkZW50aWFsIjoiU1RTLk5YeldyTEo2ZnA5RlNuUTN6OGthQjFFWH**********</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the call fails.</para>
+        /// <para>The error message returned when the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Specified parameter Tid is not valid.</para>

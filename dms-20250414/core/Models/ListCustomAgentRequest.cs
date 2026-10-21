@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string SearchKey { get; set; }
 
         /// <summary>
-        /// <para>The status of the custom agent.</para>
+        /// <para>The custom agent status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RELEASED</para>

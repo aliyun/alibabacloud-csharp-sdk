@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string CallFrom { get; set; }
 
         /// <summary>
-        /// <para>The current Data Management unit.</para>
+        /// <para>The current DMS unit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DmsUnit { get; set; }
 
         /// <summary>
-        /// <para>The file size, in bytes.</para>
+        /// <para>The size of the file, in bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8110</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public long? FileSize { get; set; }
 
         /// <summary>
-        /// <para>The file name.</para>
+        /// <para>The name of the file.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +50,15 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public string Filename { get; set; }
 
+        /// <summary>
+        /// <para>The name of the user\&quot;s OSS bucket.</para>
+        /// <list type="bullet">
+        /// <item><description>Specify this parameter to use a file in the user\&quot;s OSS bucket and register the file as a data center file through the callback.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>bgc-hangzhou-test-bucket</para>
+        /// </summary>
         [NameInMap("OssBucket")]
         [Validation(Required=false)]
         public string OssBucket { get; set; }
@@ -57,7 +66,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <summary>
         /// <para>The full path of the uploaded file.</para>
         /// <list type="bullet">
-        /// <item><description>Format: The UploadDir field returned by the DescribeFileUploadSignature operation concatenated with the file name.</description></item>
+        /// <item><description>Format: Concatenate the UploadDir field returned by the DescribeFileUploadSignature operation with the file name.</description></item>
         /// <item><description>Example: ${UploadDir}/${Filename}</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -66,6 +75,12 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public string UploadLocation { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the workspace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ccihe433d3*******lxljv</para>
+        /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }

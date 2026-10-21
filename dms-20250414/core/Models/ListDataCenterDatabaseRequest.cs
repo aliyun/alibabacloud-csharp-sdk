@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string CallFrom { get; set; }
 
         /// <summary>
-        /// <para>The current Data Management unit.</para>
+        /// <para>The current DMS unit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DmsUnit { get; set; }
 
         /// <summary>
-        /// <para>The import type.</para>
+        /// <para>The import type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>FILE</description></item>
         /// </list>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The keyword for fuzzy match of databases.</para>
+        /// <para>The keyword used for fuzzy search of databases.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testdb</para>
@@ -62,6 +62,12 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public string SearchKey { get; set; }
 
+        /// <summary>
+        /// <para>The workspace ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8vrxbemhm*******v91y3fjy</para>
+        /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }

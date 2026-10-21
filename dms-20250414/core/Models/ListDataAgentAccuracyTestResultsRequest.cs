@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class ListDataAgentAccuracyTestResultsRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the accuracy test.</para>
+        /// <para>The instance ID of the accuracy test to which the task belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>at-106n4rg17gv9fxxxxxxxxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string AccuracyTestInsId { get; set; }
 
         /// <summary>
-        /// <para>The result ID used to retrieve a single record.</para>
+        /// <para>The ID of the result used to exactly match a single record.</para>
         /// 
         /// <b>Example:</b>
         /// <para>at-emhnbwewfngrxxxxxxxxxx</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string AccuracyTestResultId { get; set; }
 
         /// <summary>
-        /// <para>The subtask ID used to filter results.</para>
+        /// <para>The ID of the subtask used to filter results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>f1eb8728-xxxx-xxxx-xxxx-xxxxxxxxxxxx</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string AccuracyTestTaskId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page.</para>
+        /// <para>The maximum number of results per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nu use</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID.</para>
+        /// <para>The ID of the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8wfig6l33n4f4xxxxxxxxxx</para>

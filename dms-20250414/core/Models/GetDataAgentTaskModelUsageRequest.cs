@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class GetDataAgentTaskModelUsageRequest : TeaModel {
         /// <summary>
-        /// <para>The start time of the query time range. The value is a UNIX timestamp in seconds. The recommended interval length is no longer than one month.</para>
+        /// <para>The start time of the query time range. The value is a UNIX timestamp in seconds. The recommended interval length is no more than one month.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1735660800</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public long? BeginTime { get; set; }
 
         /// <summary>
-        /// <para>The current Data Management unit.</para>
+        /// <para>The current DMS unit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DMSUnit { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query time range. The value is a UNIX timestamp in seconds. The recommended interval length is no longer than one month.</para>
+        /// <para>The end time of the query time range. The value is a UNIX timestamp in seconds. The recommended interval length is no more than one month.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1735747200</para>
@@ -39,10 +39,19 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
+        /// <summary>
+        /// <para>The list of billing instance IDs to be queried.</para>
+        /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
+        /// <summary>
+        /// <para>The billing level.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ENTERPRISE</para>
+        /// </summary>
         [NameInMap("PayLevel")]
         [Validation(Required=false)]
         public string PayLevel { get; set; }

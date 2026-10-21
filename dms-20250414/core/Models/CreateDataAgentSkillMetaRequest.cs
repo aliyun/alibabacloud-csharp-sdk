@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <summary>
         /// <para>The skill description.</para>
         /// <list type="bullet">
-        /// <item><description>By default, this parameter is optional. The backend parses the ZIP package specified by UploadLocation to obtain the skill description.</description></item>
+        /// <item><description>Optional. If not specified, the system parses the ZIP package specified by UploadLocation to obtain the skill description.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <summary>
         /// <para>The skill name.</para>
         /// <list type="bullet">
-        /// <item><description>By default, this parameter is optional. The backend parses the ZIP package specified by UploadLocation to obtain the skill name.</description></item>
+        /// <item><description>Optional. If not specified, the system parses the ZIP package specified by UploadLocation to obtain the skill name.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,9 +36,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string SkillName { get; set; }
 
         /// <summary>
-        /// <para>The full path for uploading the skill ZIP file.</para>
+        /// <para>The full path to the uploaded skill ZIP file.</para>
         /// <list type="bullet">
-        /// <item><description>Format: The UploadDir field returned by the DescribeSkillFileUploadSignature operation concatenated with the file name.</description></item>
+        /// <item><description>Format: Concatenate the file name to the UploadDir value returned by the DescribeSkillFileUploadSignature operation.</description></item>
         /// <item><description>Example: ${UploadDir}/${Filename}</description></item>
         /// </list>
         /// </summary>

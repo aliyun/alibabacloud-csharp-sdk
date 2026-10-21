@@ -37,19 +37,31 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string AgentId { get; set; }
 
             /// <summary>
-            /// <para>The data source. We recommend that you configure this parameter in a custom agent.</para>
+            /// <para>The evaluation dataset.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>[{\&quot;DataSourceType\&quot;:\&quot;database\&quot;,\&quot;RegionId\&quot;:\&quot;cn-hangzhou\&quot;,\&quot;DmsInstanceId\&quot;:\&quot;27xxxxx\&quot;,\&quot;DmsDatabaseId\&quot;:\&quot;752xxxxx\&quot;,\&quot;Database\&quot;:\&quot;employees\&quot;,\&quot;Tables\&quot;:[\&quot;employees\&quot;,\&quot;salaries\&quot;,\&quot;departments\&quot;]}]</para>
+            /// <para>ds-9z6***74al</para>
             /// </summary>
             [NameInMap("Dataset")]
             [Validation(Required=false)]
             public string Dataset { get; set; }
 
+            /// <summary>
+            /// <para>The data source information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;DataSourceType&quot;:&quot;remote_data_center&quot;,&quot;DmsDatabaseId&quot;:&quot;f-894<em><b>01m&quot;,&quot;FileId&quot;:&quot;f-894</b></em>01m&quot;,&quot;Database&quot;:&quot;data.csv&quot;,&quot;Tables&quot;:[&quot;example&quot;],&quot;TableIds&quot;:[&quot;aij5***qf8&quot;],&quot;RegionId&quot;:&quot;cn-hangzhou&quot;}]</para>
+            /// </summary>
             [NameInMap("Datasource")]
             [Validation(Required=false)]
             public string Datasource { get; set; }
 
+            /// <summary>
+            /// <para>The description of the evaluation item.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Customer Agent\&quot;s Evaluation</para>
+            /// </summary>
             [NameInMap("Desc")]
             [Validation(Required=false)]
             public string Desc { get; set; }
@@ -74,6 +86,12 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public string FileId { get; set; }
 
+            /// <summary>
+            /// <para>The maximum concurrency limit for the evaluation task.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>15</para>
+            /// </summary>
             [NameInMap("MaxConcurrent")]
             [Validation(Required=false)]
             public int? MaxConcurrent { get; set; }
@@ -88,10 +106,22 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public int? Mode { get; set; }
 
+            /// <summary>
+            /// <para>The name of the evaluation item.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Evaluation_for_customagent213</para>
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <para>Reserved.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("NeedDelete")]
             [Validation(Required=false)]
             public bool? NeedDelete { get; set; }
@@ -109,7 +139,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code returned when an exception occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
@@ -119,7 +149,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request failed.</para>
+        /// <para>The error message returned when the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Specified parameter Tid is not valid.</para>
@@ -139,10 +169,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request was successful.                                 </description></item>
-        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// <item><description><b>true</b>: The request is successful.                                 </description></item>
+        /// <item><description><b>false</b>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

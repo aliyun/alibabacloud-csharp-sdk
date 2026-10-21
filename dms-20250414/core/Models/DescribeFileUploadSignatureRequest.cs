@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class DescribeFileUploadSignatureRequest : TeaModel {
         /// <summary>
-        /// <para>The parameter used only by the frontend.</para>
+        /// <para>For frontend use only.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>仅前端使用</para>
+        /// <para>For frontend use only</para>
         /// </summary>
         [NameInMap("CallFrom")]
         [Validation(Required=false)]
@@ -29,6 +29,12 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public string DmsUnit { get; set; }
 
+        /// <summary>
+        /// <para>The workspace ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>yrgug4e*******ypey63v</para>
+        /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }

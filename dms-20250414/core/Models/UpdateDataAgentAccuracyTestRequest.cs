@@ -39,6 +39,12 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public string Dataset { get; set; }
 
+        /// <summary>
+        /// <para>The data source information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;DataSourceType&quot;:&quot;remote_data_center&quot;,&quot;DmsDatabaseId&quot;:&quot;f-894<em><b>01m&quot;,&quot;FileId&quot;:&quot;f-894</b></em>01m&quot;,&quot;Database&quot;:&quot;data.csv&quot;,&quot;Tables&quot;:[&quot;example&quot;],&quot;TableIds&quot;:[&quot;aij5***qf8&quot;],&quot;RegionId&quot;:&quot;cn-hangzhou&quot;}]</para>
+        /// </summary>
         [NameInMap("Datasource")]
         [Validation(Required=false)]
         public string Datasource { get; set; }
@@ -54,7 +60,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Desc { get; set; }
 
         /// <summary>
-        /// <para>The current Data Management unit.</para>
+        /// <para>The current DMS unit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -114,7 +120,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether sessions are displayed after analysis. This parameter is not supported.</para>
+        /// <para>Specifies whether to display sessions after analysis. This parameter is currently not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>no use</para>

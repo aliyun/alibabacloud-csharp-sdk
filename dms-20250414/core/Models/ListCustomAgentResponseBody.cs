@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class ListCustomAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response struct.</para>
+        /// <para>The returned struct.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string AgentType { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the main Alibaba Cloud account.</para>
+                /// <para>The ID of the Alibaba Cloud main account.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>16738266********</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string AliyunParentId { get; set; }
 
                 /// <summary>
-                /// <para>The Alibaba Cloud account ID.</para>
+                /// <para>The ID of the Alibaba Cloud account.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20372822********</para>
@@ -58,14 +58,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string AliyunUid { get; set; }
 
                 /// <summary>
-                /// <para>The callback configuration.</para>
+                /// <para>The callback feature configuration.</para>
                 /// </summary>
                 [NameInMap("CallbackConfig")]
                 [Validation(Required=false)]
                 public ListCustomAgentResponseBodyDataContentCallbackConfig CallbackConfig { get; set; }
                 public class ListCustomAgentResponseBodyDataContentCallbackConfig : TeaModel {
                     /// <summary>
-                    /// <para>The parameters for callback tool invocation.</para>
+                    /// <para>The callback tool invocation parameters.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{&quot;ID&quot;:&quot;test&quot;}</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                     public int? CallbackTime { get; set; }
 
                     /// <summary>
-                    /// <para>The identifier of the callback tool.</para>
+                    /// <para>The callback tool identifier.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>For example, MCP server ID (6te...g7a)</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 ///   &quot;personal&quot; : {
                 ///     &quot;DataSourceType&quot; : &quot;remote_data_center&quot;,
                 ///     &quot;FileId&quot; : &quot;f-5qlrwaw10<b><b><b><b>s3gpw1z&quot;,
-                ///     &quot;Database&quot; : &quot;TestTable</b></b></b>.xlsx&quot;,
+                ///     &quot;Database&quot; : &quot;Test table</b></b></b>.xlsx&quot;,
                 ///     &quot;Tables&quot; : [ &quot;Sheet1&quot; ],
                 ///     &quot;TableIds&quot; : [ &quot;</b>****&quot; ],
                 ///     &quot;RegionId&quot; : &quot;cn-hangzhou&quot;
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string DataJson { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the agent is displayed by default.</para>
+                /// <para>Specifies whether the agent is displayed by default.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public int? DefaultAgent { get; set; }
 
                 /// <summary>
-                /// <para>The description of the custom agent.</para>
+                /// <para>The custom agent description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Agent test description</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                     public bool? ForbiddenAppendDataSource { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether to skip user inquiries during the process.</para>
+                    /// <para>Specifies whether to prohibit user inquiries during the process.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -282,7 +282,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 /// <b>Example:</b>
                 /// <para>Analysis framework:</para>
                 /// <ol>
-                /// <item><description>Monitor core metrics (GMV, order volume, UV, conversion rate) on a daily, weekly, and monthly basis, and analyze trend changes and year-over-year and month-over-month fluctuations.</description></item>
+                /// <item><description>Monitor core metrics (GMV, order volume, UV, conversion rate) on a daily, weekly, and monthly basis, and analyze trend changes and year-over-year or month-over-month fluctuations.</description></item>
                 /// <item><description>Segment by new and existing customers, channels, and regions to identify growth sources and shortcomings.</description></item>
                 /// <item><description>Conduct funnel analysis based on user behavior paths (browse -&gt; add to cart -&gt; pay) to locate churn points</description></item>
                 /// </ol>
@@ -292,7 +292,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string Instruction { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether a periodic task is configured.</para>
+                /// <para>Specifies whether a scheduled task is configured.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -307,10 +307,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 /// <b>Example:</b>
                 /// <para>Core metric definitions:</para>
                 /// <ol>
-                /// <item><description>GMV (Gross Merchandise Volume) refers to the total order amount, including both paid and unpaid orders.</description></item>
+                /// <item><description>GMV (Gross Merchandise Volume) refers to the total order amount, including both successfully paid and unpaid orders.</description></item>
                 /// <item><description>Order volume is the number of valid daily orders.</description></item>
                 /// <item><description>UV (Unique Visitors) refers to the number of deduplicated users visiting the website or app.</description></item>
-                /// <item><description>Conversion rate = paid orders / UV, reflecting the traffic conversion efficiency</description></item>
+                /// <item><description>Conversion rate = Number of paid orders / UV, reflecting the traffic conversion efficiency</description></item>
                 /// </ol>
                 /// </summary>
                 [NameInMap("Knowledge")]
@@ -360,22 +360,53 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 
                 }
 
+                /// <summary>
+                /// <para>The knowledge semantic configuration list.</para>
+                /// </summary>
                 [NameInMap("KnowledgeSemanticConfigList")]
                 [Validation(Required=false)]
                 public List<ListCustomAgentResponseBodyDataContentKnowledgeSemanticConfigList> KnowledgeSemanticConfigList { get; set; }
                 public class ListCustomAgentResponseBodyDataContentKnowledgeSemanticConfigList : TeaModel {
+                    /// <summary>
+                    /// <para>The DMS database ID.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>69293629</para>
+                    /// </summary>
                     [NameInMap("DbId")]
                     [Validation(Required=false)]
                     public string DbId { get; set; }
 
+                    /// <summary>
+                    /// <para>The DMS instance ID.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>2979631</para>
+                    /// </summary>
                     [NameInMap("InstanceId")]
                     [Validation(Required=false)]
                     public string InstanceId { get; set; }
 
+                    /// <summary>
+                    /// <para>The knowledge UUID.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>7ca8f50d78234******e87</para>
+                    /// </summary>
                     [NameInMap("KnowledgeUuid")]
                     [Validation(Required=false)]
                     public string KnowledgeUuid { get; set; }
 
+                    /// <summary>
+                    /// <para>The knowledge semantic type. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>sql_template: SQL template.</description></item>
+                    /// <item><description>ossie_model: Ossie semantic view.</description></item>
+                    /// </list>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>sql_template</para>
+                    /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]
                     public string Type { get; set; }
@@ -403,7 +434,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string ModifierUserName { get; set; }
 
                 /// <summary>
-                /// <para>The name of the custom agent.</para>
+                /// <para>The custom agent name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Agent test name</para>
@@ -413,7 +444,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The next run time of the periodic task.</para>
+                /// <para>The next run time of the scheduled task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1767715200</para>
@@ -433,7 +464,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string OfflineTime { get; set; }
 
                 /// <summary>
-                /// <para>The list of recommended questions. You can configure up to 10 recommended questions.</para>
+                /// <para>The recommended question list.</para>
+                /// <list type="bullet">
+                /// <item><description>You can configure up to 10 recommended questions.</description></item>
+                /// </list>
                 /// </summary>
                 [NameInMap("RecommendQuestionList")]
                 [Validation(Required=false)]
@@ -460,7 +494,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string RelatedSessionId { get; set; }
 
                 /// <summary>
-                /// <para>The publish time.</para>
+                /// <para>The release time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-12-11T14:04:32.000+00:00</para>
@@ -470,14 +504,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string ReleaseTime { get; set; }
 
                 /// <summary>
-                /// <para>The periodic task configuration.</para>
+                /// <para>The scheduled task configuration.</para>
                 /// </summary>
                 [NameInMap("ScheduleTaskConfig")]
                 [Validation(Required=false)]
                 public ListCustomAgentResponseBodyDataContentScheduleTaskConfig ScheduleTaskConfig { get; set; }
                 public class ListCustomAgentResponseBodyDataContentScheduleTaskConfig : TeaModel {
                     /// <summary>
-                    /// <para>The cron expression for time-based periodic scheduling.</para>
+                    /// <para>The cron expression for time-based scheduling.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0 0 0 ? * 1-7</para>
@@ -487,7 +521,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                     public string CronExpression { get; set; }
 
                     /// <summary>
-                    /// <para>The question for the periodic task.</para>
+                    /// <para>The question for the scheduled task.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Analyze this data and provide a brief report</para>
@@ -497,7 +531,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                     public string Query { get; set; }
 
                     /// <summary>
-                    /// <para>The referenced historical session ID.</para>
+                    /// <para>The reference historical session ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>4m24*****mg7j2v</para>
@@ -529,7 +563,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string TextReportConfig { get; set; }
 
                 /// <summary>
-                /// <para>The list of user-specified skills.</para>
+                /// <para>The user-specified skill list.</para>
                 /// </summary>
                 [NameInMap("UserSpecifiedSkillList")]
                 [Validation(Required=false)]
@@ -550,8 +584,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 /// <list type="bullet">
                 /// <item><description>default: Default.</description></item>
                 /// <item><description>journal: Journal.</description></item>
-                /// <item><description>legacy: Classic.</description></item>
-                /// <item><description>neobrutalism: Stylized.</description></item>
+                /// <item><description>legacy: Legacy.</description></item>
+                /// <item><description>neobrutalism: Neobrutalism.</description></item>
                 /// <item><description>infographic: Infographic.</description></item>
                 /// </list>
                 /// 
@@ -627,7 +661,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned when the request fails.</para>
+        /// <para>The error message returned if the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Specified parameter Tid is not valid.</para>

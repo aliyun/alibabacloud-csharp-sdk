@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <summary>
         /// <para>The type of the custom agent. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Default: The built-in custom agent. Each workspace can have at most one agent of this type, and it cannot be deleted.</description></item>
-        /// <item><description>Common: A regular custom agent.</description></item>
+        /// <item><description>Default: the system-built-in custom agent. Each workspace can have at most one Default agent, and it cannot be deleted.</description></item>
+        /// <item><description>Common: a regular custom agent.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -23,6 +23,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public string AgentType { get; set; }
 
+        /// <summary>
+        /// <para>The callback feature configuration.</para>
+        /// </summary>
         [NameInMap("CallbackConfig")]
         [Validation(Required=false)]
         public string CallbackConfigShrink { get; set; }
@@ -38,23 +41,23 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DMSUnit { get; set; }
 
         /// <summary>
-        /// <para>The specified data scope in <b>JSON character string format</b>.</para>
+        /// <para>The specified data scope, in <b>JSON character string format</b>.</para>
         /// <list type="bullet">
-        /// <item><description>General parameter description:<list type="bullet">
-        /// <item><description>tableFlag: Set to true to specify the data scope.</description></item>
-        /// <item><description>scope: Set to personal as a fixed value.</description></item>
-        /// <item><description>personal: The parameters for file and database types.</description></item>
+        /// <item><description>General parameter descriptions<list type="bullet">
+        /// <item><description>tableFlag: true specifies the data scope.</description></item>
+        /// <item><description>scope: personal is a fixed value.</description></item>
+        /// <item><description>personal: the parameters for file and database types.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
-        /// <para><b>File type</b>: Pass parameters in the following format:</para>
+        /// <para><b>File type</b>: pass parameters in the following format:</para>
         /// <list type="bullet">
-        /// <item><description>DataSourceType: Set to remote_data_center as a fixed value.</description></item>
-        /// <item><description>FileId: The file ID.</description></item>
-        /// <item><description>Database: The database name returned by the ListDataCenterTable operation, which is usually the file name.</description></item>
-        /// <item><description>Tables: The table names returned by the ListDataCenterTable operation.</description></item>
-        /// <item><description>TableIds: The table IDs returned by the ListDataCenterTable operation.</description></item>
-        /// <item><description>RegionId: The current region.</description></item>
+        /// <item><description>DataSourceType: remote_data_center is a fixed value.</description></item>
+        /// <item><description>FileId: the file ID.</description></item>
+        /// <item><description>Database: the database name returned by the ListDataCenterTable operation, which is usually the file name.</description></item>
+        /// <item><description>Tables: the table names returned by the ListDataCenterTable operation.</description></item>
+        /// <item><description>TableIds: the table IDs returned by the ListDataCenterTable operation.</description></item>
+        /// <item><description>RegionId: the current region.</description></item>
         /// </list>
         /// <pre><c>{
         ///   &quot;tableFlag&quot;: true,
@@ -73,18 +76,18 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         ///   }
         /// }
         /// </c></pre>
-        /// <para><b>Database type</b>: Pass parameters in the following format:</para>
+        /// <para><b>Database type</b>: pass parameters in the following format:</para>
         /// <list type="bullet">
-        /// <item><description>DataSourceType: Set to database as a fixed value.</description></item>
-        /// <item><description>DmsInstanceId: The DMS instance ID returned by the data center operation.</description></item>
-        /// <item><description>DmsDatabaseId: The DMS database ID returned by the data center operation.</description></item>
-        /// <item><description>FileId: The instance name. (Deprecated)</description></item>
-        /// <item><description>DbName: The database name returned by the data center operation.</description></item>
-        /// <item><description>Database: The database name returned by the data center operation.</description></item>
-        /// <item><description>Tables: The table names returned by the data center operation.</description></item>
-        /// <item><description>TableIds: The table IDs returned by the data center operation.</description></item>
-        /// <item><description>Engine: The engine type, such as mysql or postgresql.</description></item>
-        /// <item><description>RegionId: The current region.</description></item>
+        /// <item><description>DataSourceType: database is a fixed value.</description></item>
+        /// <item><description>DmsInstanceId: the DMS instance ID returned by the data center API.</description></item>
+        /// <item><description>DmsDatabaseId: the DMS database ID returned by the data center API.</description></item>
+        /// <item><description>FileId: the instance name (<b>[Deprecated]</b>).</description></item>
+        /// <item><description>DbName: the database name returned by the data center API.</description></item>
+        /// <item><description>Database: the database name returned by the data center API.</description></item>
+        /// <item><description>Tables: the table names returned by the data center API.</description></item>
+        /// <item><description>TableIds: the table IDs returned by the data center API.</description></item>
+        /// <item><description>Engine: the database engine type, such as mysql or postgresql.</description></item>
+        /// <item><description>RegionId: the current region.</description></item>
         /// </list>
         /// <pre><c>{
         ///   &quot;tableFlag&quot;: true,
@@ -115,7 +118,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         ///   &quot;personal&quot; : {
         ///     &quot;DataSourceType&quot; : &quot;remote_data_center&quot;,
         ///     &quot;FileId&quot; : &quot;f-5qlrwaw10<b><b><b><b>s3gpw1z&quot;,
-        ///     &quot;Database&quot; : &quot;Sample table</b></b></b>.xlsx&quot;,
+        ///     &quot;Database&quot; : &quot;Test table</b></b></b>.xlsx&quot;,
         ///     &quot;Tables&quot; : [ &quot;Sheet1&quot; ],
         ///     &quot;TableIds&quot; : [ &quot;</b>****&quot; ],
         ///     &quot;RegionId&quot; : &quot;cn-hangzhou&quot;
@@ -130,7 +133,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <para>The description of the custom agent.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Sample agent description</para>
+        /// <para>Agent test description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -144,15 +147,18 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ExecutionConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The instructions. Maximum length: 10,000 characters.</para>
+        /// <para>The instructions.</para>
+        /// <list type="bullet">
+        /// <item><description>Input limit: up to 10,000 characters.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Core metric definitions:</para>
         /// <ol>
-        /// <item><description>GMV (Gross Merchandise Volume) refers to the total sum of order amounts, including both paid and unpaid orders.</description></item>
-        /// <item><description>Order volume refers to the number of valid orders placed per day.</description></item>
+        /// <item><description>GMV (Gross Merchandise Volume) refers to the total order amount, including both paid and unpaid orders.</description></item>
+        /// <item><description>Order volume refers to the number of valid daily orders.</description></item>
         /// <item><description>UV (Unique Visitors) refers to the number of deduplicated users visiting the website or app.</description></item>
-        /// <item><description>Conversion rate = Number of paid orders / UV, reflecting the traffic conversion efficiency</description></item>
+        /// <item><description>Conversion rate = Paid orders / UV, reflecting the traffic conversion efficiency</description></item>
         /// </ol>
         /// </summary>
         [NameInMap("Instruction")]
@@ -160,15 +166,18 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Instruction { get; set; }
 
         /// <summary>
-        /// <para>The knowledge. Maximum length: 10,000 characters.</para>
+        /// <para>The knowledge.</para>
+        /// <list type="bullet">
+        /// <item><description>Input limit: up to 10,000 characters.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Core metric definitions:</para>
         /// <ol>
-        /// <item><description>GMV (Gross Merchandise Volume) refers to the total sum of order amounts, including both paid and unpaid orders.</description></item>
-        /// <item><description>Order volume refers to the number of valid orders placed per day.</description></item>
+        /// <item><description>GMV (Gross Merchandise Volume) refers to the total order amount, including both paid and unpaid orders.</description></item>
+        /// <item><description>Order volume refers to the number of valid daily orders.</description></item>
         /// <item><description>UV (Unique Visitors) refers to the number of deduplicated users visiting the website or app.</description></item>
-        /// <item><description>Conversion rate = Number of paid orders / UV, reflecting the traffic conversion efficiency</description></item>
+        /// <item><description>Conversion rate = Paid orders / UV, reflecting the traffic conversion efficiency</description></item>
         /// </ol>
         /// </summary>
         [NameInMap("Knowledge")]
@@ -182,6 +191,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public string KnowledgeConfigListShrink { get; set; }
 
+        /// <summary>
+        /// <para>The knowledge semantic configuration list.</para>
+        /// </summary>
         [NameInMap("KnowledgeSemanticConfigList")]
         [Validation(Required=false)]
         public string KnowledgeSemanticConfigListShrink { get; set; }
@@ -190,14 +202,17 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <para>The name of the custom agent.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Sample agent name</para>
+        /// <para>Agent test name</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The list of recommended questions. You can configure up to 10 recommended questions.</para>
+        /// <para>The list of recommended questions.</para>
+        /// <list type="bullet">
+        /// <item><description>You can configure up to 10 recommended questions.</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("RecommendQuestionList")]
         [Validation(Required=false)]
@@ -224,7 +239,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <para>The text report format.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>For the text report, use Chinese characters for all numbers instead of Arabic numerals</para>
+        /// <para>The text report requires that all numbers be written as Chinese numerals instead of Arabic numerals</para>
         /// </summary>
         [NameInMap("TextReportConfig")]
         [Validation(Required=false)]
@@ -241,7 +256,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <para>The web report format.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>For the web report, use Chinese characters for all numbers instead of Arabic numerals</para>
+        /// <para>The web report requires that all numbers be written as Chinese numerals instead of Arabic numerals</para>
         /// </summary>
         [NameInMap("WebReportConfig")]
         [Validation(Required=false)]

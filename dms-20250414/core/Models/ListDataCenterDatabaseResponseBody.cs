@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The database description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>This is a sample database.</para>
+            /// <para>This is diamonds dataset.</para>
             /// </summary>
             [NameInMap("DatabaseDesc")]
             [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string DbType { get; set; }
 
             /// <summary>
-            /// <para>The time when the database description was last updated.</para>
+            /// <para>The update time of the database description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-12-11T14:04:32.000+00:00</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string DescUpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Data Management database that hosts the instance.</para>
+            /// <para>The ID of the DMS database where the instance is hosted.</para>
             /// <list type="bullet">
             /// <item><description>This parameter is not returned when ImportType is FILE.</description></item>
             /// </list>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public long? DmsDbId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Data Management instance that hosts the instance.</para>
+            /// <para>The ID of the DMS instance where the instance is hosted.</para>
             /// <list type="bullet">
             /// <item><description>This parameter is not returned when ImportType is FILE.</description></item>
             /// </list>
@@ -100,12 +100,18 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public long? DmsInstanceId { get; set; }
 
+            /// <summary>
+            /// <para>The public network download link.</para>
+            /// <list type="bullet">
+            /// <item><description><b>[Deprecated]</b></description></item>
+            /// </list>
+            /// </summary>
             [NameInMap("DownloadLink")]
             [Validation(Required=false)]
             public string DownloadLink { get; set; }
 
             /// <summary>
-            /// <para>The time when the file was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-12-11T14:04:32.000+00:00</para>
@@ -115,7 +121,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string GmtCreated { get; set; }
 
             /// <summary>
-            /// <para>The import type.</para>
+            /// <para>The import type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>FILE</description></item>
             /// <item><description>RDS</description></item>
@@ -145,6 +151,12 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
+            /// <summary>
+            /// <para>The internal network download link.</para>
+            /// <list type="bullet">
+            /// <item><description><b>[Deprecated]</b></description></item>
+            /// </list>
+            /// </summary>
             [NameInMap("IntranetDownloadLink")]
             [Validation(Required=false)]
             public string IntranetDownloadLink { get; set; }
@@ -163,6 +175,12 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public string IsInternal { get; set; }
 
+            /// <summary>
+            /// <para>The name of the user\&quot;s OSS bucket.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>bgc-hangzhou-test-bucket</para>
+            /// </summary>
             [NameInMap("OssBucket")]
             [Validation(Required=false)]
             public string OssBucket { get; set; }
@@ -177,6 +195,12 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public long? Size { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the user\&quot;s OSS bucket is used.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("UseUserOssBucket")]
             [Validation(Required=false)]
             public bool? UseUserOssBucket { get; set; }
@@ -184,7 +208,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code returned when an exception occurs in the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -214,10 +238,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request was successful.                                 </description></item>
-        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// <item><description><b>true</b>: The request is successful.</description></item>
+        /// <item><description><b>false</b>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
