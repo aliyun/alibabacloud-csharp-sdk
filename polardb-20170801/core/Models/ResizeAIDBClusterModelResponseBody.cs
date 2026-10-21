@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the current request performed only a capacity dry run.</para>
+        /// <para>Indicates whether the current request performs a capacity dry run only.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The capacity that can be directly borrowed from the global pool without reshaping. This parameter is returned only when DryRun is set to true.</para>
+        /// <para>The capacity that can be directly borrowed from the large pool without reshaping. This parameter is returned only when DryRun is set to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3000</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? PoolHitCapacity { get; set; }
 
         /// <summary>
-        /// <para>The direct hit ratio of the global pool. Valid values: 0 to 1. This parameter is returned only when DryRun is set to true.</para>
+        /// <para>The direct hit ratio of the large pool. Valid values: 0 to 1. This parameter is returned only when DryRun is set to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.75</para>

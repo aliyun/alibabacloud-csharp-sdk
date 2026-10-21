@@ -61121,7 +61121,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the model or the client-facing invocation name of an AI cluster.</para>
+        /// <para>Modifies the AI cluster model or the customer-facing invocation name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -61187,7 +61187,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the model or the client-facing invocation name of an AI cluster.</para>
+        /// <para>Modifies the AI cluster model or the customer-facing invocation name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -61253,7 +61253,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the model or the client-facing invocation name of an AI cluster.</para>
+        /// <para>Modifies the AI cluster model or the customer-facing invocation name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -61271,7 +61271,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the model or the client-facing invocation name of an AI cluster.</para>
+        /// <para>Modifies the AI cluster model or the customer-facing invocation name.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class VerifyAgenticDBTenantApiKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The key ID. This parameter is empty if the API key is invalid.</para>
+        /// <para>The ID of the API key. This parameter is empty if the API key is invalid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ak-71304e39c7e841a1</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The expiration time. This parameter is empty if the API key is permanently valid.</para>
-        /// <para>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
+        /// <para>The time is in ISO 8601 format and uses the UTC time zone (format: YYYY-MM-DDTHH:mm:ssZ).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2027-01-01T00:00:00Z</para>
@@ -41,12 +41,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ExpireTime { get; set; }
 
         /// <summary>
-        /// <para>The reason for the validation failure. This parameter is empty if the API key is valid. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>NotFound: The API key is not found.</description></item>
-        /// <item><description>Expired: The API key has expired.</description></item>
-        /// <item><description>Revoked: The API key has been revoked.</description></item>
-        /// </list>
+        /// <para>The reason for validation failure. Valid values: NotFound, Expired, and Revoked. This parameter is empty if the API key is valid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NotFound</para>

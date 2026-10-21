@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateBudgetPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The alert threshold, as a percentage. Valid values: 0 to 100.</para>
+        /// <para>The alert threshold percentage (0 to 100).</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AlertThresholdPct { get; set; }
 
         /// <summary>
-        /// <para>The ID of the dimension object. This parameter is required if <c>BudgetType</c> is set to <c>ConsumerTotal</c> or <c>ConsumerGroupTotal</c>.</para>
+        /// <para>The ID of the dimension object. This parameter is required when BudgetType is set to ConsumerGroupTotal or Consumer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mi-xxxxx</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string BudgetDimensionRefId { get; set; }
 
         /// <summary>
-        /// <para>The number of budget points.</para>
+        /// <para>The budget points.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,24 +43,22 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The budget type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>GlobalTotal</c>: global total budget</para>
-        /// </description></item>
-        /// <item><description><para><c>ConsumerTotal</c>: consumer total budget</para>
-        /// </description></item>
-        /// <item><description><para><c>ConsumerGroupTotal</c>: consumer group total budget</para>
-        /// </description></item>
+        /// <item><description><b>GlobalTotal</b>: Global total budget.</description></item>
+        /// <item><description><b>ConsumerGroupTotal</b>: Total budget for a consumer group.</description></item>
+        /// <item><description><b>ConsumerGroupMemberDefault</b>: Default budget for a consumer group member.</description></item>
+        /// <item><description><b>Consumer</b>: Budget for a single consumer.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ConsumerTotal</para>
+        /// <para>GlobalTotal</para>
         /// </summary>
         [NameInMap("BudgetType")]
         [Validation(Required=false)]
         public string BudgetType { get; set; }
 
         /// <summary>
-        /// <para>The gateway cluster ID.</para>
+        /// <para>The gateway instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -81,7 +79,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The day of the month on which the budget resets. Valid values: 1 to 28.</para>
+        /// <para>The day of the month when the budget is reset (1 to 28).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

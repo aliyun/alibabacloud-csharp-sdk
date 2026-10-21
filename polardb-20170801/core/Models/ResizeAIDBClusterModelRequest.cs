@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a read-only capacity dry run.</para>
+        /// <para>Specifies whether to perform a read-only capacity dry run.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The region ID. Requests are routed to the region where the instance resides.</para>
+        /// <para>The region ID. Requests are routed based on the region to which the instance belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The target total capacity. An abstract capacity unit of 1000 is equivalent to one L20N card. The value must be a positive integer.</para>
+        /// <para>The target total capacity. The abstract capacity unit is 1000, which equals one L20N equivalent card. The value must be a positive integer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

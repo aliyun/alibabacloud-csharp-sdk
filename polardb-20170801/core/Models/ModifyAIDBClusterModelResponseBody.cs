@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyAIDBClusterModelResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the request is a dry-run request.</para>
+        /// <para>Indicates whether the request is a dry run.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The resolved target model name.</para>
+        /// <para>The parsed target model name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Qwen3-32B</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TargetModelName { get; set; }
 
         /// <summary>
-        /// <para>The resolved target OSS path.</para>
+        /// <para>The parsed target OSS path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/my-model-bucket/models/qwen3</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? TaskId { get; set; }
 
         /// <summary>
-        /// <para>The number of change batches.</para>
+        /// <para>The total number of modification batches.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? TotalBatches { get; set; }
 
         /// <summary>
-        /// <para>The number of affected model serving instances.</para>
+        /// <para>The number of affected model service instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? TotalMsds { get; set; }
 
         /// <summary>
-        /// <para>The change warnings returned by the upstream. The caller must display these warnings.</para>
+        /// <para>The modification warnings returned by the upstream service. The caller must display these warnings.</para>
         /// </summary>
         [NameInMap("Warnings")]
         [Validation(Required=false)]

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The new client-facing invocation name. If this parameter is not specified, the existing invocation name is retained.</para>
+        /// <para>The new customer-facing invocation name. If you do not specify this parameter, the existing invocation name is retained.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-flagship-chat</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DisplayModelName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to only preview the change without actually performing it.</para>
+        /// <para>Specifies whether to only preview the modification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The name of the target model. Select a value from the ModelName values returned by the DescribeAvailableModels operation.</para>
+        /// <para>The target model name. Select a value from the ModelName values returned by DescribeAvailableModels.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,11 +63,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The restart mode for workers. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>inPlace</description></item>
-        /// <item><description>recreate</description></item>
-        /// </list>
+        /// <para>The worker restart mode. Valid values: inPlace and recreate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>inPlace</para>
