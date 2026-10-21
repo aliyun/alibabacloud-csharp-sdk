@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class VideoTranslationShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The list of translation features. Valid values: <c>speech</c> and <c>visual</c>. You can select both. At least one feature must be specified. Duplicate values are not allowed.</para>
+        /// <para>The list of translation features. Valid values: speech and visual. You can select both. At least one feature is required. Duplicate values are not accepted.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Capabilities")]
@@ -18,37 +18,37 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string CapabilitiesShrink { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the quality check for on-screen text processing. Default value: <c>false</c>. The quality check is enabled only when <c>visual</c> is included and this parameter is explicitly set to <c>true</c>. If only <c>speech</c> is selected, this parameter is ignored. No quality check is performed, no quality check fields are returned, and no errors are reported due to this parameter. Enabling the quality check may increase the waiting time. Do not enable it unless necessary.</para>
+        /// <para>Specifies whether to enable quality inspection for on-screen text processing. Effective only when visual is included and this parameter is explicitly set to true. If only speech is selected, this parameter is ignored, no quality inspection is performed, no quality inspection fields are returned, and no error is reported due to this parameter. Enabling quality inspection may increase the processing time. Do not enable it unless necessary. Default value: false.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("EnableQualityCheck")]
         [Validation(Required=false)]
         public bool? EnableQualityCheck { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to only erase the source language text on the screen without translating it. This parameter is valid only when <c>visual</c> is included. Valid values: <c>true</c> (only erases the text) and <c>false</c> (translates the on-screen text). Default value: <c>false</c>.</para>
+        /// <para>Applicable only when visual is included. Specifies whether to erase on-screen text without translation. Valid values: true: erases on-screen text without translation. false: translates on-screen text. Default value: false.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("EraseOnly")]
         [Validation(Required=false)]
         public bool? EraseOnly { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to remove the brand logo. This parameter is valid only when <c>visual</c> is included. Valid values: <c>true</c> (removes the brand logo) and <c>false</c> (retains the logo). Default value: <c>false</c>. This parameter is independent of <c>EraseOnly</c>.</para>
+        /// <para>Applicable only when visual is included. Specifies whether to erase brand logos. Valid values: true: erases brand logos. false: retains brand logos. Default value: false. This parameter is independent of EraseOnly.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("RemoveLogo")]
         [Validation(Required=false)]
         public bool? RemoveLogo { get; set; }
 
         /// <summary>
-        /// <para>The source language. For supported languages, see Language support.</para>
+        /// <para>The original language of the video (source language). For supported languages, see Language support.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -58,20 +58,20 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string SourceLanguage { get; set; }
 
         /// <summary>
-        /// <para>The subtitle processing mode. This parameter is valid only when <c>speech</c> is included. Valid values: <c>erase</c> (removes only the original subtitles) and <c>replace</c> (removes the original subtitles and adds new subtitles). If this parameter is omitted, the original subtitles are not processed and no new subtitles are added.</para>
+        /// <para>Applicable only when speech is included. Valid values: erase: erases the original subtitles only. replace: replaces the original subtitles with translated subtitles, which means erasing the original subtitles and adding subtitles synchronized with the translated speech. If not specified, the original subtitles are not processed, which means neither erasing the original subtitles nor adding new subtitles.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>erase</para>
+        /// <para>replace</para>
         /// </summary>
         [NameInMap("SubtitleMode")]
         [Validation(Required=false)]
         public string SubtitleMode { get; set; }
 
         /// <summary>
-        /// <para>The target language. This parameter is required.</para>
+        /// <para>Required when speech is included. Optional when only visual is included and EraseOnly is set to true. If specified in this case, it is ignored. Required in other cases.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ru</para>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("TargetLanguage")]
         [Validation(Required=false)]

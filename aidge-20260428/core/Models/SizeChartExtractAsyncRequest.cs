@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class SizeChartExtractAsyncRequest : TeaModel {
         /// <summary>
+        /// <para>The business order number of the caller. It is recorded when the request is accepted and returned as is when you query the asynchronous task result.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>order-20260928-001</para>
         /// </summary>
@@ -25,7 +27,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public List<string> ColumnNameList { get; set; }
 
         /// <summary>
-        /// <para>The image URL. The image must be in the JPG, JPEG, PNG, BMP, or WEBP format. The resolution must be between 256 × 256 pixels and 3000 × 3000 pixels. The file size cannot exceed 10 MB.</para>
+        /// <para>The image URL. The image must be in the JPG, JPEG, PNG, BMP, or WEBP format. The resolution must be between 256 × 256 pixels and 3000 × 3000 pixels, and the file size cannot exceed 10 MB.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

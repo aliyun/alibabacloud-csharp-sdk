@@ -1,3 +1,6 @@
+2026-10-21 Version: 5.10.4
+- Generated csharp 2026-04-28 for Aidge.
+
 2026-10-20 Version: 5.10.3
 - Update API ImageMattingAsync: add request parameters BizId.
 - Update API ImageRecognitionAsync: add request parameters BizId.

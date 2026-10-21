@@ -4775,16 +4775,16 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Extracts the salient subject from an image, separates it from the background, and returns the subject image without the background. It also provides multiple background options and custom size options to optimize product display.</para>
+        /// <para>Extracts the salient subject from an image by separating it from the background and returns the subject image with the background removed. It also provides multiple background options and custom size options to optimize product display.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h1>Scenarios</h1>
         /// <list type="bullet">
-        /// <item><description><para>Supports secondary editing of materials: After the image subject is separated from the background, you can further edit the image.</para>
+        /// <item><description><para>Supports secondary editing of materials: After separating the image subject from the background, you can further edit the image.</para>
         /// </description></item>
-        /// <item><description><para>Improves material processing efficiency: Quickly extracts the subjects from various material images for background replacement, which improves the production efficiency of advertising images and marketing posters.</para>
+        /// <item><description><para>Improves material processing efficiency: Quickly extracts the subjects from various material images for background replacement, thereby improving the production efficiency of advertising images and marketing posters.</para>
         /// </description></item>
         /// </list>
         /// <h1>Features.</h1>
@@ -4801,9 +4801,9 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </list>
         /// <h4>3. Multi-format output and background operations</h4>
         /// <list type="bullet">
-        /// <item><description><para><b>Transparent background export</b>: Directly generates PNG images with transparent or white backgrounds, which adapts to e-commerce and design scenarios.</para>
+        /// <item><description><para><b>Transparent background export</b>: Directly generates PNG images with transparent backgrounds and white backgrounds, adapting to e-commerce and design scenarios.</para>
         /// </description></item>
-        /// <item><description><para><b>Supports custom background colors</b></para>
+        /// <item><description><para><b>Custom background color support</b></para>
         /// </description></item>
         /// </list>
         /// <h1>Effect comparison</h1>
@@ -4888,16 +4888,16 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Extracts the salient subject from an image, separates it from the background, and returns the subject image without the background. It also provides multiple background options and custom size options to optimize product display.</para>
+        /// <para>Extracts the salient subject from an image by separating it from the background and returns the subject image with the background removed. It also provides multiple background options and custom size options to optimize product display.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h1>Scenarios</h1>
         /// <list type="bullet">
-        /// <item><description><para>Supports secondary editing of materials: After the image subject is separated from the background, you can further edit the image.</para>
+        /// <item><description><para>Supports secondary editing of materials: After separating the image subject from the background, you can further edit the image.</para>
         /// </description></item>
-        /// <item><description><para>Improves material processing efficiency: Quickly extracts the subjects from various material images for background replacement, which improves the production efficiency of advertising images and marketing posters.</para>
+        /// <item><description><para>Improves material processing efficiency: Quickly extracts the subjects from various material images for background replacement, thereby improving the production efficiency of advertising images and marketing posters.</para>
         /// </description></item>
         /// </list>
         /// <h1>Features.</h1>
@@ -4914,9 +4914,9 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </list>
         /// <h4>3. Multi-format output and background operations</h4>
         /// <list type="bullet">
-        /// <item><description><para><b>Transparent background export</b>: Directly generates PNG images with transparent or white backgrounds, which adapts to e-commerce and design scenarios.</para>
+        /// <item><description><para><b>Transparent background export</b>: Directly generates PNG images with transparent backgrounds and white backgrounds, adapting to e-commerce and design scenarios.</para>
         /// </description></item>
-        /// <item><description><para><b>Supports custom background colors</b></para>
+        /// <item><description><para><b>Custom background color support</b></para>
         /// </description></item>
         /// </list>
         /// <h1>Effect comparison</h1>
@@ -5001,16 +5001,16 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Extracts the salient subject from an image, separates it from the background, and returns the subject image without the background. It also provides multiple background options and custom size options to optimize product display.</para>
+        /// <para>Extracts the salient subject from an image by separating it from the background and returns the subject image with the background removed. It also provides multiple background options and custom size options to optimize product display.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h1>Scenarios</h1>
         /// <list type="bullet">
-        /// <item><description><para>Supports secondary editing of materials: After the image subject is separated from the background, you can further edit the image.</para>
+        /// <item><description><para>Supports secondary editing of materials: After separating the image subject from the background, you can further edit the image.</para>
         /// </description></item>
-        /// <item><description><para>Improves material processing efficiency: Quickly extracts the subjects from various material images for background replacement, which improves the production efficiency of advertising images and marketing posters.</para>
+        /// <item><description><para>Improves material processing efficiency: Quickly extracts the subjects from various material images for background replacement, thereby improving the production efficiency of advertising images and marketing posters.</para>
         /// </description></item>
         /// </list>
         /// <h1>Features.</h1>
@@ -5027,9 +5027,9 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </list>
         /// <h4>3. Multi-format output and background operations</h4>
         /// <list type="bullet">
-        /// <item><description><para><b>Transparent background export</b>: Directly generates PNG images with transparent or white backgrounds, which adapts to e-commerce and design scenarios.</para>
+        /// <item><description><para><b>Transparent background export</b>: Directly generates PNG images with transparent backgrounds and white backgrounds, adapting to e-commerce and design scenarios.</para>
         /// </description></item>
-        /// <item><description><para><b>Supports custom background colors</b></para>
+        /// <item><description><para><b>Custom background color support</b></para>
         /// </description></item>
         /// </list>
         /// <h1>Effect comparison</h1>
@@ -5070,16 +5070,16 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Extracts the salient subject from an image, separates it from the background, and returns the subject image without the background. It also provides multiple background options and custom size options to optimize product display.</para>
+        /// <para>Extracts the salient subject from an image by separating it from the background and returns the subject image with the background removed. It also provides multiple background options and custom size options to optimize product display.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h1>Scenarios</h1>
         /// <list type="bullet">
-        /// <item><description><para>Supports secondary editing of materials: After the image subject is separated from the background, you can further edit the image.</para>
+        /// <item><description><para>Supports secondary editing of materials: After separating the image subject from the background, you can further edit the image.</para>
         /// </description></item>
-        /// <item><description><para>Improves material processing efficiency: Quickly extracts the subjects from various material images for background replacement, which improves the production efficiency of advertising images and marketing posters.</para>
+        /// <item><description><para>Improves material processing efficiency: Quickly extracts the subjects from various material images for background replacement, thereby improving the production efficiency of advertising images and marketing posters.</para>
         /// </description></item>
         /// </list>
         /// <h1>Features.</h1>
@@ -5096,9 +5096,9 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </list>
         /// <h4>3. Multi-format output and background operations</h4>
         /// <list type="bullet">
-        /// <item><description><para><b>Transparent background export</b>: Directly generates PNG images with transparent or white backgrounds, which adapts to e-commerce and design scenarios.</para>
+        /// <item><description><para><b>Transparent background export</b>: Directly generates PNG images with transparent backgrounds and white backgrounds, adapting to e-commerce and design scenarios.</para>
         /// </description></item>
-        /// <item><description><para><b>Supports custom background colors</b></para>
+        /// <item><description><para><b>Custom background color support</b></para>
         /// </description></item>
         /// </list>
         /// <h1>Effect comparison</h1>
@@ -14515,18 +14515,18 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Extracts structured information such as size charts and package weight and dimensions from images by using multimodal large models in asynchronous mode.</para>
+        /// <para>Extracts structured information such as size charts and package weight and dimensions from images by using multimodal large language models in asynchronous mode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Scenarios</h2>
-        /// <para>Size charts: Extracts size charts for apparel categories into text.
-        /// Package weight and dimensions: Extracts package weight and dimension information from images.</para>
+        /// <para>Size charts: extracts size charts of apparel categories into text.
+        /// Package weight and dimensions: extracts package weight and dimension information from images.</para>
         /// <h2>Feature description</h2>
-        /// <para>The size chart extraction service is based on multimodal foundation models. It automatically recognizes size charts or package weight and dimension information in images and converts the information into structured text. Provide an image URL, and the system processes the request as an asynchronous task and returns the extracted structured data. You can specify the column names to be recognized, such as Size, Bust, and Length, by using ColumnNameList for precise targeted extraction. You can also control the output language by using the LanguageModel parameter. Valid values: cn for Chinese and en for English. If you do not specify this parameter, the original language is retained. This service is applicable to scenarios such as text conversion of size charts for apparel categories and batch structuring of package weight and dimension information for commodities.
-        /// Core capabilities: Input an image URL and optional column name configurations to output the structured data of the size chart or package weight and dimensions in the image. The API operation uses the asynchronous task mode (background: true). After you submit the task, a task ID is returned. You must poll the task to obtain the final result. This mode is suitable for processing complex images or handling large-scale calls.</para>
-        /// <h2>Example results</h2>
+        /// <para>The size chart extraction service is based on multimodal large language models. It automatically recognizes size charts or package weight and dimension information in images and converts the information into structured text. You provide an image URL, and the system processes the request as an asynchronous task and returns the extracted structured data. You can specify the column names to be recognized, such as Size, Bust, and Length, by using ColumnNameList to achieve precise and targeted extraction. You can also control the output language by using the LanguageModel parameter. Valid values: cn for Chinese and en for English. If you do not specify this parameter, the original language is retained. This service is applicable to scenarios such as text conversion of size charts for apparel categories and batch structuring of package weight and dimension information for commodities.
+        /// Core capabilities: You can input an image URL and optional column name configurations to output the structured data of the size chart or package weight and dimensions in the image. The API operation uses the asynchronous task mode (background: true). After you submit the task, a task ID is returned. You must poll the task to obtain the final result. This mode is suitable for processing complex images or handling a large number of calls.</para>
+        /// <h2>Comparison</h2>
         /// <table>
         /// <thead>
         /// <tr>
@@ -14541,90 +14541,90 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </tbody></table>
         /// <pre><c>      &quot;SizeChart&quot;: [
         ///         {
-        ///           &quot;尺码&quot;: {
+        ///           &quot;Size&quot;: {
         ///             &quot;value&quot;: &quot;S&quot;
         ///           },
-        ///           &quot;腰围&quot;: {
+        ///           &quot;Waist&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 58
         ///           },
-        ///           &quot;裙长&quot;: {
+        ///           &quot;Skirt length&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 81
         ///           },
-        ///           &quot;体重建议&quot;: {
+        ///           &quot;Weight recommendation&quot;: {
         ///             &quot;unit&quot;: &quot;kg&quot;,
         ///             &quot;lower_value&quot;: 40,
         ///             &quot;upper_value&quot;: 47.5
         ///           }
         ///         },
         ///         {
-        ///           &quot;尺码&quot;: {
+        ///           &quot;Size&quot;: {
         ///             &quot;value&quot;: &quot;M&quot;
         ///           },
-        ///           &quot;腰围&quot;: {
+        ///           &quot;Waist&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 59
         ///           },
-        ///           &quot;裙长&quot;: {
+        ///           &quot;Skirt length&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 82
         ///           },
-        ///           &quot;体重建议&quot;: {
+        ///           &quot;Weight recommendation&quot;: {
         ///             &quot;unit&quot;: &quot;kg&quot;,
         ///             &quot;lower_value&quot;: 45,
         ///             &quot;upper_value&quot;: 52.5
         ///           }
         ///         },
         ///         {
-        ///           &quot;尺码&quot;: {
+        ///           &quot;Size&quot;: {
         ///             &quot;value&quot;: &quot;L&quot;
         ///           },
-        ///           &quot;腰围&quot;: {
+        ///           &quot;Waist&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 60
         ///           },
-        ///           &quot;裙长&quot;: {
+        ///           &quot;Skirt length&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 83
         ///           },
-        ///           &quot;体重建议&quot;: {
+        ///           &quot;Weight recommendation&quot;: {
         ///             &quot;unit&quot;: &quot;kg&quot;,
         ///             &quot;lower_value&quot;: 50,
         ///             &quot;upper_value&quot;: 57.5
         ///           }
         ///         },
         ///         {
-        ///           &quot;尺码&quot;: {
+        ///           &quot;Size&quot;: {
         ///             &quot;value&quot;: &quot;XL&quot;
         ///           },
-        ///           &quot;腰围&quot;: {
+        ///           &quot;Waist&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 61
         ///           },
-        ///           &quot;裙长&quot;: {
+        ///           &quot;Skirt length&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 84
         ///           },
-        ///           &quot;体重建议&quot;: {
+        ///           &quot;Weight recommendation&quot;: {
         ///             &quot;unit&quot;: &quot;kg&quot;,
         ///             &quot;lower_value&quot;: 55,
         ///             &quot;upper_value&quot;: 62.5
         ///           }
         ///         },
         ///         {
-        ///           &quot;尺码&quot;: {
+        ///           &quot;Size&quot;: {
         ///             &quot;value&quot;: &quot;2XL&quot;
         ///           },
-        ///           &quot;腰围&quot;: {
+        ///           &quot;Waist&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 62
         ///           },
-        ///           &quot;裙长&quot;: {
+        ///           &quot;Skirt length&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 85
         ///           },
-        ///           &quot;体重建议&quot;: {
+        ///           &quot;Weight recommendation&quot;: {
         ///             &quot;unit&quot;: &quot;kg&quot;,
         ///             &quot;lower_value&quot;: 60,
         ///             &quot;upper_value&quot;: 67.5
@@ -14704,18 +14704,18 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Extracts structured information such as size charts and package weight and dimensions from images by using multimodal large models in asynchronous mode.</para>
+        /// <para>Extracts structured information such as size charts and package weight and dimensions from images by using multimodal large language models in asynchronous mode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Scenarios</h2>
-        /// <para>Size charts: Extracts size charts for apparel categories into text.
-        /// Package weight and dimensions: Extracts package weight and dimension information from images.</para>
+        /// <para>Size charts: extracts size charts of apparel categories into text.
+        /// Package weight and dimensions: extracts package weight and dimension information from images.</para>
         /// <h2>Feature description</h2>
-        /// <para>The size chart extraction service is based on multimodal foundation models. It automatically recognizes size charts or package weight and dimension information in images and converts the information into structured text. Provide an image URL, and the system processes the request as an asynchronous task and returns the extracted structured data. You can specify the column names to be recognized, such as Size, Bust, and Length, by using ColumnNameList for precise targeted extraction. You can also control the output language by using the LanguageModel parameter. Valid values: cn for Chinese and en for English. If you do not specify this parameter, the original language is retained. This service is applicable to scenarios such as text conversion of size charts for apparel categories and batch structuring of package weight and dimension information for commodities.
-        /// Core capabilities: Input an image URL and optional column name configurations to output the structured data of the size chart or package weight and dimensions in the image. The API operation uses the asynchronous task mode (background: true). After you submit the task, a task ID is returned. You must poll the task to obtain the final result. This mode is suitable for processing complex images or handling large-scale calls.</para>
-        /// <h2>Example results</h2>
+        /// <para>The size chart extraction service is based on multimodal large language models. It automatically recognizes size charts or package weight and dimension information in images and converts the information into structured text. You provide an image URL, and the system processes the request as an asynchronous task and returns the extracted structured data. You can specify the column names to be recognized, such as Size, Bust, and Length, by using ColumnNameList to achieve precise and targeted extraction. You can also control the output language by using the LanguageModel parameter. Valid values: cn for Chinese and en for English. If you do not specify this parameter, the original language is retained. This service is applicable to scenarios such as text conversion of size charts for apparel categories and batch structuring of package weight and dimension information for commodities.
+        /// Core capabilities: You can input an image URL and optional column name configurations to output the structured data of the size chart or package weight and dimensions in the image. The API operation uses the asynchronous task mode (background: true). After you submit the task, a task ID is returned. You must poll the task to obtain the final result. This mode is suitable for processing complex images or handling a large number of calls.</para>
+        /// <h2>Comparison</h2>
         /// <table>
         /// <thead>
         /// <tr>
@@ -14730,90 +14730,90 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </tbody></table>
         /// <pre><c>      &quot;SizeChart&quot;: [
         ///         {
-        ///           &quot;尺码&quot;: {
+        ///           &quot;Size&quot;: {
         ///             &quot;value&quot;: &quot;S&quot;
         ///           },
-        ///           &quot;腰围&quot;: {
+        ///           &quot;Waist&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 58
         ///           },
-        ///           &quot;裙长&quot;: {
+        ///           &quot;Skirt length&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 81
         ///           },
-        ///           &quot;体重建议&quot;: {
+        ///           &quot;Weight recommendation&quot;: {
         ///             &quot;unit&quot;: &quot;kg&quot;,
         ///             &quot;lower_value&quot;: 40,
         ///             &quot;upper_value&quot;: 47.5
         ///           }
         ///         },
         ///         {
-        ///           &quot;尺码&quot;: {
+        ///           &quot;Size&quot;: {
         ///             &quot;value&quot;: &quot;M&quot;
         ///           },
-        ///           &quot;腰围&quot;: {
+        ///           &quot;Waist&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 59
         ///           },
-        ///           &quot;裙长&quot;: {
+        ///           &quot;Skirt length&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 82
         ///           },
-        ///           &quot;体重建议&quot;: {
+        ///           &quot;Weight recommendation&quot;: {
         ///             &quot;unit&quot;: &quot;kg&quot;,
         ///             &quot;lower_value&quot;: 45,
         ///             &quot;upper_value&quot;: 52.5
         ///           }
         ///         },
         ///         {
-        ///           &quot;尺码&quot;: {
+        ///           &quot;Size&quot;: {
         ///             &quot;value&quot;: &quot;L&quot;
         ///           },
-        ///           &quot;腰围&quot;: {
+        ///           &quot;Waist&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 60
         ///           },
-        ///           &quot;裙长&quot;: {
+        ///           &quot;Skirt length&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 83
         ///           },
-        ///           &quot;体重建议&quot;: {
+        ///           &quot;Weight recommendation&quot;: {
         ///             &quot;unit&quot;: &quot;kg&quot;,
         ///             &quot;lower_value&quot;: 50,
         ///             &quot;upper_value&quot;: 57.5
         ///           }
         ///         },
         ///         {
-        ///           &quot;尺码&quot;: {
+        ///           &quot;Size&quot;: {
         ///             &quot;value&quot;: &quot;XL&quot;
         ///           },
-        ///           &quot;腰围&quot;: {
+        ///           &quot;Waist&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 61
         ///           },
-        ///           &quot;裙长&quot;: {
+        ///           &quot;Skirt length&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 84
         ///           },
-        ///           &quot;体重建议&quot;: {
+        ///           &quot;Weight recommendation&quot;: {
         ///             &quot;unit&quot;: &quot;kg&quot;,
         ///             &quot;lower_value&quot;: 55,
         ///             &quot;upper_value&quot;: 62.5
         ///           }
         ///         },
         ///         {
-        ///           &quot;尺码&quot;: {
+        ///           &quot;Size&quot;: {
         ///             &quot;value&quot;: &quot;2XL&quot;
         ///           },
-        ///           &quot;腰围&quot;: {
+        ///           &quot;Waist&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 62
         ///           },
-        ///           &quot;裙长&quot;: {
+        ///           &quot;Skirt length&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 85
         ///           },
-        ///           &quot;体重建议&quot;: {
+        ///           &quot;Weight recommendation&quot;: {
         ///             &quot;unit&quot;: &quot;kg&quot;,
         ///             &quot;lower_value&quot;: 60,
         ///             &quot;upper_value&quot;: 67.5
@@ -14893,18 +14893,18 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Extracts structured information such as size charts and package weight and dimensions from images by using multimodal large models in asynchronous mode.</para>
+        /// <para>Extracts structured information such as size charts and package weight and dimensions from images by using multimodal large language models in asynchronous mode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Scenarios</h2>
-        /// <para>Size charts: Extracts size charts for apparel categories into text.
-        /// Package weight and dimensions: Extracts package weight and dimension information from images.</para>
+        /// <para>Size charts: extracts size charts of apparel categories into text.
+        /// Package weight and dimensions: extracts package weight and dimension information from images.</para>
         /// <h2>Feature description</h2>
-        /// <para>The size chart extraction service is based on multimodal foundation models. It automatically recognizes size charts or package weight and dimension information in images and converts the information into structured text. Provide an image URL, and the system processes the request as an asynchronous task and returns the extracted structured data. You can specify the column names to be recognized, such as Size, Bust, and Length, by using ColumnNameList for precise targeted extraction. You can also control the output language by using the LanguageModel parameter. Valid values: cn for Chinese and en for English. If you do not specify this parameter, the original language is retained. This service is applicable to scenarios such as text conversion of size charts for apparel categories and batch structuring of package weight and dimension information for commodities.
-        /// Core capabilities: Input an image URL and optional column name configurations to output the structured data of the size chart or package weight and dimensions in the image. The API operation uses the asynchronous task mode (background: true). After you submit the task, a task ID is returned. You must poll the task to obtain the final result. This mode is suitable for processing complex images or handling large-scale calls.</para>
-        /// <h2>Example results</h2>
+        /// <para>The size chart extraction service is based on multimodal large language models. It automatically recognizes size charts or package weight and dimension information in images and converts the information into structured text. You provide an image URL, and the system processes the request as an asynchronous task and returns the extracted structured data. You can specify the column names to be recognized, such as Size, Bust, and Length, by using ColumnNameList to achieve precise and targeted extraction. You can also control the output language by using the LanguageModel parameter. Valid values: cn for Chinese and en for English. If you do not specify this parameter, the original language is retained. This service is applicable to scenarios such as text conversion of size charts for apparel categories and batch structuring of package weight and dimension information for commodities.
+        /// Core capabilities: You can input an image URL and optional column name configurations to output the structured data of the size chart or package weight and dimensions in the image. The API operation uses the asynchronous task mode (background: true). After you submit the task, a task ID is returned. You must poll the task to obtain the final result. This mode is suitable for processing complex images or handling a large number of calls.</para>
+        /// <h2>Comparison</h2>
         /// <table>
         /// <thead>
         /// <tr>
@@ -14919,90 +14919,90 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </tbody></table>
         /// <pre><c>      &quot;SizeChart&quot;: [
         ///         {
-        ///           &quot;尺码&quot;: {
+        ///           &quot;Size&quot;: {
         ///             &quot;value&quot;: &quot;S&quot;
         ///           },
-        ///           &quot;腰围&quot;: {
+        ///           &quot;Waist&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 58
         ///           },
-        ///           &quot;裙长&quot;: {
+        ///           &quot;Skirt length&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 81
         ///           },
-        ///           &quot;体重建议&quot;: {
+        ///           &quot;Weight recommendation&quot;: {
         ///             &quot;unit&quot;: &quot;kg&quot;,
         ///             &quot;lower_value&quot;: 40,
         ///             &quot;upper_value&quot;: 47.5
         ///           }
         ///         },
         ///         {
-        ///           &quot;尺码&quot;: {
+        ///           &quot;Size&quot;: {
         ///             &quot;value&quot;: &quot;M&quot;
         ///           },
-        ///           &quot;腰围&quot;: {
+        ///           &quot;Waist&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 59
         ///           },
-        ///           &quot;裙长&quot;: {
+        ///           &quot;Skirt length&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 82
         ///           },
-        ///           &quot;体重建议&quot;: {
+        ///           &quot;Weight recommendation&quot;: {
         ///             &quot;unit&quot;: &quot;kg&quot;,
         ///             &quot;lower_value&quot;: 45,
         ///             &quot;upper_value&quot;: 52.5
         ///           }
         ///         },
         ///         {
-        ///           &quot;尺码&quot;: {
+        ///           &quot;Size&quot;: {
         ///             &quot;value&quot;: &quot;L&quot;
         ///           },
-        ///           &quot;腰围&quot;: {
+        ///           &quot;Waist&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 60
         ///           },
-        ///           &quot;裙长&quot;: {
+        ///           &quot;Skirt length&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 83
         ///           },
-        ///           &quot;体重建议&quot;: {
+        ///           &quot;Weight recommendation&quot;: {
         ///             &quot;unit&quot;: &quot;kg&quot;,
         ///             &quot;lower_value&quot;: 50,
         ///             &quot;upper_value&quot;: 57.5
         ///           }
         ///         },
         ///         {
-        ///           &quot;尺码&quot;: {
+        ///           &quot;Size&quot;: {
         ///             &quot;value&quot;: &quot;XL&quot;
         ///           },
-        ///           &quot;腰围&quot;: {
+        ///           &quot;Waist&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 61
         ///           },
-        ///           &quot;裙长&quot;: {
+        ///           &quot;Skirt length&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 84
         ///           },
-        ///           &quot;体重建议&quot;: {
+        ///           &quot;Weight recommendation&quot;: {
         ///             &quot;unit&quot;: &quot;kg&quot;,
         ///             &quot;lower_value&quot;: 55,
         ///             &quot;upper_value&quot;: 62.5
         ///           }
         ///         },
         ///         {
-        ///           &quot;尺码&quot;: {
+        ///           &quot;Size&quot;: {
         ///             &quot;value&quot;: &quot;2XL&quot;
         ///           },
-        ///           &quot;腰围&quot;: {
+        ///           &quot;Waist&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 62
         ///           },
-        ///           &quot;裙长&quot;: {
+        ///           &quot;Skirt length&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 85
         ///           },
-        ///           &quot;体重建议&quot;: {
+        ///           &quot;Weight recommendation&quot;: {
         ///             &quot;unit&quot;: &quot;kg&quot;,
         ///             &quot;lower_value&quot;: 60,
         ///             &quot;upper_value&quot;: 67.5
@@ -15040,18 +15040,18 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Extracts structured information such as size charts and package weight and dimensions from images by using multimodal large models in asynchronous mode.</para>
+        /// <para>Extracts structured information such as size charts and package weight and dimensions from images by using multimodal large language models in asynchronous mode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Scenarios</h2>
-        /// <para>Size charts: Extracts size charts for apparel categories into text.
-        /// Package weight and dimensions: Extracts package weight and dimension information from images.</para>
+        /// <para>Size charts: extracts size charts of apparel categories into text.
+        /// Package weight and dimensions: extracts package weight and dimension information from images.</para>
         /// <h2>Feature description</h2>
-        /// <para>The size chart extraction service is based on multimodal foundation models. It automatically recognizes size charts or package weight and dimension information in images and converts the information into structured text. Provide an image URL, and the system processes the request as an asynchronous task and returns the extracted structured data. You can specify the column names to be recognized, such as Size, Bust, and Length, by using ColumnNameList for precise targeted extraction. You can also control the output language by using the LanguageModel parameter. Valid values: cn for Chinese and en for English. If you do not specify this parameter, the original language is retained. This service is applicable to scenarios such as text conversion of size charts for apparel categories and batch structuring of package weight and dimension information for commodities.
-        /// Core capabilities: Input an image URL and optional column name configurations to output the structured data of the size chart or package weight and dimensions in the image. The API operation uses the asynchronous task mode (background: true). After you submit the task, a task ID is returned. You must poll the task to obtain the final result. This mode is suitable for processing complex images or handling large-scale calls.</para>
-        /// <h2>Example results</h2>
+        /// <para>The size chart extraction service is based on multimodal large language models. It automatically recognizes size charts or package weight and dimension information in images and converts the information into structured text. You provide an image URL, and the system processes the request as an asynchronous task and returns the extracted structured data. You can specify the column names to be recognized, such as Size, Bust, and Length, by using ColumnNameList to achieve precise and targeted extraction. You can also control the output language by using the LanguageModel parameter. Valid values: cn for Chinese and en for English. If you do not specify this parameter, the original language is retained. This service is applicable to scenarios such as text conversion of size charts for apparel categories and batch structuring of package weight and dimension information for commodities.
+        /// Core capabilities: You can input an image URL and optional column name configurations to output the structured data of the size chart or package weight and dimensions in the image. The API operation uses the asynchronous task mode (background: true). After you submit the task, a task ID is returned. You must poll the task to obtain the final result. This mode is suitable for processing complex images or handling a large number of calls.</para>
+        /// <h2>Comparison</h2>
         /// <table>
         /// <thead>
         /// <tr>
@@ -15066,90 +15066,90 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </tbody></table>
         /// <pre><c>      &quot;SizeChart&quot;: [
         ///         {
-        ///           &quot;尺码&quot;: {
+        ///           &quot;Size&quot;: {
         ///             &quot;value&quot;: &quot;S&quot;
         ///           },
-        ///           &quot;腰围&quot;: {
+        ///           &quot;Waist&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 58
         ///           },
-        ///           &quot;裙长&quot;: {
+        ///           &quot;Skirt length&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 81
         ///           },
-        ///           &quot;体重建议&quot;: {
+        ///           &quot;Weight recommendation&quot;: {
         ///             &quot;unit&quot;: &quot;kg&quot;,
         ///             &quot;lower_value&quot;: 40,
         ///             &quot;upper_value&quot;: 47.5
         ///           }
         ///         },
         ///         {
-        ///           &quot;尺码&quot;: {
+        ///           &quot;Size&quot;: {
         ///             &quot;value&quot;: &quot;M&quot;
         ///           },
-        ///           &quot;腰围&quot;: {
+        ///           &quot;Waist&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 59
         ///           },
-        ///           &quot;裙长&quot;: {
+        ///           &quot;Skirt length&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 82
         ///           },
-        ///           &quot;体重建议&quot;: {
+        ///           &quot;Weight recommendation&quot;: {
         ///             &quot;unit&quot;: &quot;kg&quot;,
         ///             &quot;lower_value&quot;: 45,
         ///             &quot;upper_value&quot;: 52.5
         ///           }
         ///         },
         ///         {
-        ///           &quot;尺码&quot;: {
+        ///           &quot;Size&quot;: {
         ///             &quot;value&quot;: &quot;L&quot;
         ///           },
-        ///           &quot;腰围&quot;: {
+        ///           &quot;Waist&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 60
         ///           },
-        ///           &quot;裙长&quot;: {
+        ///           &quot;Skirt length&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 83
         ///           },
-        ///           &quot;体重建议&quot;: {
+        ///           &quot;Weight recommendation&quot;: {
         ///             &quot;unit&quot;: &quot;kg&quot;,
         ///             &quot;lower_value&quot;: 50,
         ///             &quot;upper_value&quot;: 57.5
         ///           }
         ///         },
         ///         {
-        ///           &quot;尺码&quot;: {
+        ///           &quot;Size&quot;: {
         ///             &quot;value&quot;: &quot;XL&quot;
         ///           },
-        ///           &quot;腰围&quot;: {
+        ///           &quot;Waist&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 61
         ///           },
-        ///           &quot;裙长&quot;: {
+        ///           &quot;Skirt length&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 84
         ///           },
-        ///           &quot;体重建议&quot;: {
+        ///           &quot;Weight recommendation&quot;: {
         ///             &quot;unit&quot;: &quot;kg&quot;,
         ///             &quot;lower_value&quot;: 55,
         ///             &quot;upper_value&quot;: 62.5
         ///           }
         ///         },
         ///         {
-        ///           &quot;尺码&quot;: {
+        ///           &quot;Size&quot;: {
         ///             &quot;value&quot;: &quot;2XL&quot;
         ///           },
-        ///           &quot;腰围&quot;: {
+        ///           &quot;Waist&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 62
         ///           },
-        ///           &quot;裙长&quot;: {
+        ///           &quot;Skirt length&quot;: {
         ///             &quot;unit&quot;: &quot;CM&quot;,
         ///             &quot;value&quot;: 85
         ///           },
-        ///           &quot;体重建议&quot;: {
+        ///           &quot;Weight recommendation&quot;: {
         ///             &quot;unit&quot;: &quot;kg&quot;,
         ///             &quot;lower_value&quot;: 60,
         ///             &quot;upper_value&quot;: 67.5
@@ -17311,23 +17311,23 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Translates the speech and on-screen text in a video into a target language. You can select speech subtitle translation, on-screen text translation, or both. This API applies to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising. The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the task ID and poll the task status by calling the query API until the task is completed and the result is returned.</para>
+        /// <para>Translates the speech and on-screen text in a video into a target language. You can select speech subtitle translation, on-screen text translation, or both. This API applies to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising. The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the TaskId and poll the task status by calling the query API until the task is completed and the result is returned.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product introduction</h2>
         /// <para>The video translation API translates the speech and on-screen text in a video into a target language. You can select speech subtitle translation, on-screen text translation, or both. This API applies to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising.
-        /// The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the <c>TaskId</c> and poll the task status by calling the query API until the task is completed and the result is returned.</para>
+        /// The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the TaskId and poll the task status by calling the query API until the task is completed and the result is returned.</para>
         /// <h2>Scenarios</h2>
         /// <list type="bullet">
-        /// <item><description><para><b>Cross-border e-commerce video localization</b>: Translates the selling point text in product introduction videos into the language of the target market to facilitate promotion on overseas platforms.</para>
+        /// <item><description><para><b>Cross-border e-commerce video localization</b>: Translates the speech subtitles and selling point text in product introduction videos into the language of the target market to promote products on overseas platforms.</para>
         /// </description></item>
-        /// <item><description><para><b>International social media marketing</b>: Localizes the on-screen text in videos for platforms such as TikTok, Instagram, and YouTube with one click to improve comprehension and conversion rates among overseas users.</para>
+        /// <item><description><para><b>International social media marketing</b>: Localizes speech subtitles and on-screen text for platforms such as TikTok, Instagram, and YouTube with one click to improve comprehension and conversion rates among overseas users.</para>
         /// </description></item>
-        /// <item><description><para><b>Global brand advertising</b>: Automatically generates video versions in the languages of the target regions to reduce manual production costs.</para>
+        /// <item><description><para><b>Global brand advertising</b>: Automatically generates video versions in the corresponding languages based on the delivery regions to reduce manual production costs.</para>
         /// </description></item>
-        /// <item><description><para><b>Training and product instructions</b>: Translates the on-screen text in training courses or product demo videos into multiple languages for global teams.</para>
+        /// <item><description><para><b>Training and product instructions</b>: Translates the speech subtitles and on-screen text in training courses or product demo videos into multiple languages for global teams.</para>
         /// </description></item>
         /// </list>
         /// <h2>Features</h2>
@@ -17341,26 +17341,26 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </thead>
         /// <tbody><tr>
         /// <td>Speech subtitle translation</td>
-        /// <td><c>speech</c></td>
-        /// <td>Translates the video speech into target language dubbing. Original subtitles are not removed, and no new subtitles are added.</td>
+        /// <td>speech</td>
+        /// <td>Translates the video speech into target language dubbing. You can choose to erase the original subtitles only or replace them with translated subtitles. By default, the original subtitles are not processed and no new subtitles are added.</td>
         /// </tr>
         /// <tr>
         /// <td>On-screen text translation</td>
-        /// <td><c>visual</c></td>
-        /// <td>Translates the embedded text (subtitles, selling point text, etc.) in the video frames and erases the original text. You can enable quality check for on-screen text processing by using the API.</td>
+        /// <td>visual</td>
+        /// <td>Translates the source language text in the video frames, or erases the on-screen text without translation. You can choose to erase brand logos.</td>
         /// </tr>
         /// <tr>
-        /// <td>Speech subtitle translation (<c>speech</c>) generates target language dubbing based on the spoken content in the video and synthesizes it into the video. It does not remove original subtitles or add new subtitles. Original subtitles refer to the existing subtitles in the video frames that correspond to the spoken content.</td>
-        /// <td></td>
-        /// <td></td>
-        /// </tr>
-        /// <tr>
-        /// <td>On-screen text translation (<c>visual</c>) targets the recognizable original language text in the video frames, such as titles, product selling points, and descriptive text. It can be used independently without selecting speech subtitle translation first, and the text does not need to appear in the speech. Original subtitles within the processing scope may also be processed.</td>
+        /// <td>Speech subtitle translation (speech) generates target language dubbing based on the spoken content in the video, processes the subtitles based on the original subtitle processing option, and synthesizes the final video. Original subtitles refer to the existing subtitles in the video frames that correspond to the spoken content. Replacing with translated subtitles erases the original subtitles first and then adds subtitles synchronized with the translated speech.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>When both <c>speech</c> and <c>visual</c> are selected, the speech subtitle translation is completed and the video is synthesized first. Then, on-screen text processing is performed on this video, retaining the translated dubbing and outputting a final video. The order of features in the array does not affect the execution order. Therefore, not processing original subtitles only means that no subtitles are removed or added during the speech subtitle phase. Subsequent on-screen text processing may still alter the original subtitles.</td>
+        /// <td>On-screen text translation (visual) targets recognizable original video language text in the video frames, such as titles, product selling points, and descriptive text. It can be used independently without selecting speech subtitle translation first, and does not require the text to appear in the speech. Original subtitles within the processing scope may also be processed.</td>
+        /// <td></td>
+        /// <td></td>
+        /// </tr>
+        /// <tr>
+        /// <td>When both speech and visual are selected, the speech subtitle translation is completed and the video is synthesized first, and then the on-screen text processing is performed on this video. The translated dubbing is retained, and a final video is output. The order of features in the array does not affect the execution order. Therefore, not processing original subtitles only means that no subtitles are erased or added during the speech subtitle phase, and subsequent on-screen text processing may still change the original subtitles. Subtitles that have been replaced with translated subtitles are retained during subsequent on-screen text processing.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
@@ -17442,23 +17442,23 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Translates the speech and on-screen text in a video into a target language. You can select speech subtitle translation, on-screen text translation, or both. This API applies to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising. The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the task ID and poll the task status by calling the query API until the task is completed and the result is returned.</para>
+        /// <para>Translates the speech and on-screen text in a video into a target language. You can select speech subtitle translation, on-screen text translation, or both. This API applies to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising. The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the TaskId and poll the task status by calling the query API until the task is completed and the result is returned.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product introduction</h2>
         /// <para>The video translation API translates the speech and on-screen text in a video into a target language. You can select speech subtitle translation, on-screen text translation, or both. This API applies to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising.
-        /// The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the <c>TaskId</c> and poll the task status by calling the query API until the task is completed and the result is returned.</para>
+        /// The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the TaskId and poll the task status by calling the query API until the task is completed and the result is returned.</para>
         /// <h2>Scenarios</h2>
         /// <list type="bullet">
-        /// <item><description><para><b>Cross-border e-commerce video localization</b>: Translates the selling point text in product introduction videos into the language of the target market to facilitate promotion on overseas platforms.</para>
+        /// <item><description><para><b>Cross-border e-commerce video localization</b>: Translates the speech subtitles and selling point text in product introduction videos into the language of the target market to promote products on overseas platforms.</para>
         /// </description></item>
-        /// <item><description><para><b>International social media marketing</b>: Localizes the on-screen text in videos for platforms such as TikTok, Instagram, and YouTube with one click to improve comprehension and conversion rates among overseas users.</para>
+        /// <item><description><para><b>International social media marketing</b>: Localizes speech subtitles and on-screen text for platforms such as TikTok, Instagram, and YouTube with one click to improve comprehension and conversion rates among overseas users.</para>
         /// </description></item>
-        /// <item><description><para><b>Global brand advertising</b>: Automatically generates video versions in the languages of the target regions to reduce manual production costs.</para>
+        /// <item><description><para><b>Global brand advertising</b>: Automatically generates video versions in the corresponding languages based on the delivery regions to reduce manual production costs.</para>
         /// </description></item>
-        /// <item><description><para><b>Training and product instructions</b>: Translates the on-screen text in training courses or product demo videos into multiple languages for global teams.</para>
+        /// <item><description><para><b>Training and product instructions</b>: Translates the speech subtitles and on-screen text in training courses or product demo videos into multiple languages for global teams.</para>
         /// </description></item>
         /// </list>
         /// <h2>Features</h2>
@@ -17472,26 +17472,26 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </thead>
         /// <tbody><tr>
         /// <td>Speech subtitle translation</td>
-        /// <td><c>speech</c></td>
-        /// <td>Translates the video speech into target language dubbing. Original subtitles are not removed, and no new subtitles are added.</td>
+        /// <td>speech</td>
+        /// <td>Translates the video speech into target language dubbing. You can choose to erase the original subtitles only or replace them with translated subtitles. By default, the original subtitles are not processed and no new subtitles are added.</td>
         /// </tr>
         /// <tr>
         /// <td>On-screen text translation</td>
-        /// <td><c>visual</c></td>
-        /// <td>Translates the embedded text (subtitles, selling point text, etc.) in the video frames and erases the original text. You can enable quality check for on-screen text processing by using the API.</td>
+        /// <td>visual</td>
+        /// <td>Translates the source language text in the video frames, or erases the on-screen text without translation. You can choose to erase brand logos.</td>
         /// </tr>
         /// <tr>
-        /// <td>Speech subtitle translation (<c>speech</c>) generates target language dubbing based on the spoken content in the video and synthesizes it into the video. It does not remove original subtitles or add new subtitles. Original subtitles refer to the existing subtitles in the video frames that correspond to the spoken content.</td>
-        /// <td></td>
-        /// <td></td>
-        /// </tr>
-        /// <tr>
-        /// <td>On-screen text translation (<c>visual</c>) targets the recognizable original language text in the video frames, such as titles, product selling points, and descriptive text. It can be used independently without selecting speech subtitle translation first, and the text does not need to appear in the speech. Original subtitles within the processing scope may also be processed.</td>
+        /// <td>Speech subtitle translation (speech) generates target language dubbing based on the spoken content in the video, processes the subtitles based on the original subtitle processing option, and synthesizes the final video. Original subtitles refer to the existing subtitles in the video frames that correspond to the spoken content. Replacing with translated subtitles erases the original subtitles first and then adds subtitles synchronized with the translated speech.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>When both <c>speech</c> and <c>visual</c> are selected, the speech subtitle translation is completed and the video is synthesized first. Then, on-screen text processing is performed on this video, retaining the translated dubbing and outputting a final video. The order of features in the array does not affect the execution order. Therefore, not processing original subtitles only means that no subtitles are removed or added during the speech subtitle phase. Subsequent on-screen text processing may still alter the original subtitles.</td>
+        /// <td>On-screen text translation (visual) targets recognizable original video language text in the video frames, such as titles, product selling points, and descriptive text. It can be used independently without selecting speech subtitle translation first, and does not require the text to appear in the speech. Original subtitles within the processing scope may also be processed.</td>
+        /// <td></td>
+        /// <td></td>
+        /// </tr>
+        /// <tr>
+        /// <td>When both speech and visual are selected, the speech subtitle translation is completed and the video is synthesized first, and then the on-screen text processing is performed on this video. The translated dubbing is retained, and a final video is output. The order of features in the array does not affect the execution order. Therefore, not processing original subtitles only means that no subtitles are erased or added during the speech subtitle phase, and subsequent on-screen text processing may still change the original subtitles. Subtitles that have been replaced with translated subtitles are retained during subsequent on-screen text processing.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
@@ -17573,23 +17573,23 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Translates the speech and on-screen text in a video into a target language. You can select speech subtitle translation, on-screen text translation, or both. This API applies to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising. The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the task ID and poll the task status by calling the query API until the task is completed and the result is returned.</para>
+        /// <para>Translates the speech and on-screen text in a video into a target language. You can select speech subtitle translation, on-screen text translation, or both. This API applies to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising. The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the TaskId and poll the task status by calling the query API until the task is completed and the result is returned.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product introduction</h2>
         /// <para>The video translation API translates the speech and on-screen text in a video into a target language. You can select speech subtitle translation, on-screen text translation, or both. This API applies to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising.
-        /// The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the <c>TaskId</c> and poll the task status by calling the query API until the task is completed and the result is returned.</para>
+        /// The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the TaskId and poll the task status by calling the query API until the task is completed and the result is returned.</para>
         /// <h2>Scenarios</h2>
         /// <list type="bullet">
-        /// <item><description><para><b>Cross-border e-commerce video localization</b>: Translates the selling point text in product introduction videos into the language of the target market to facilitate promotion on overseas platforms.</para>
+        /// <item><description><para><b>Cross-border e-commerce video localization</b>: Translates the speech subtitles and selling point text in product introduction videos into the language of the target market to promote products on overseas platforms.</para>
         /// </description></item>
-        /// <item><description><para><b>International social media marketing</b>: Localizes the on-screen text in videos for platforms such as TikTok, Instagram, and YouTube with one click to improve comprehension and conversion rates among overseas users.</para>
+        /// <item><description><para><b>International social media marketing</b>: Localizes speech subtitles and on-screen text for platforms such as TikTok, Instagram, and YouTube with one click to improve comprehension and conversion rates among overseas users.</para>
         /// </description></item>
-        /// <item><description><para><b>Global brand advertising</b>: Automatically generates video versions in the languages of the target regions to reduce manual production costs.</para>
+        /// <item><description><para><b>Global brand advertising</b>: Automatically generates video versions in the corresponding languages based on the delivery regions to reduce manual production costs.</para>
         /// </description></item>
-        /// <item><description><para><b>Training and product instructions</b>: Translates the on-screen text in training courses or product demo videos into multiple languages for global teams.</para>
+        /// <item><description><para><b>Training and product instructions</b>: Translates the speech subtitles and on-screen text in training courses or product demo videos into multiple languages for global teams.</para>
         /// </description></item>
         /// </list>
         /// <h2>Features</h2>
@@ -17603,26 +17603,26 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </thead>
         /// <tbody><tr>
         /// <td>Speech subtitle translation</td>
-        /// <td><c>speech</c></td>
-        /// <td>Translates the video speech into target language dubbing. Original subtitles are not removed, and no new subtitles are added.</td>
+        /// <td>speech</td>
+        /// <td>Translates the video speech into target language dubbing. You can choose to erase the original subtitles only or replace them with translated subtitles. By default, the original subtitles are not processed and no new subtitles are added.</td>
         /// </tr>
         /// <tr>
         /// <td>On-screen text translation</td>
-        /// <td><c>visual</c></td>
-        /// <td>Translates the embedded text (subtitles, selling point text, etc.) in the video frames and erases the original text. You can enable quality check for on-screen text processing by using the API.</td>
+        /// <td>visual</td>
+        /// <td>Translates the source language text in the video frames, or erases the on-screen text without translation. You can choose to erase brand logos.</td>
         /// </tr>
         /// <tr>
-        /// <td>Speech subtitle translation (<c>speech</c>) generates target language dubbing based on the spoken content in the video and synthesizes it into the video. It does not remove original subtitles or add new subtitles. Original subtitles refer to the existing subtitles in the video frames that correspond to the spoken content.</td>
-        /// <td></td>
-        /// <td></td>
-        /// </tr>
-        /// <tr>
-        /// <td>On-screen text translation (<c>visual</c>) targets the recognizable original language text in the video frames, such as titles, product selling points, and descriptive text. It can be used independently without selecting speech subtitle translation first, and the text does not need to appear in the speech. Original subtitles within the processing scope may also be processed.</td>
+        /// <td>Speech subtitle translation (speech) generates target language dubbing based on the spoken content in the video, processes the subtitles based on the original subtitle processing option, and synthesizes the final video. Original subtitles refer to the existing subtitles in the video frames that correspond to the spoken content. Replacing with translated subtitles erases the original subtitles first and then adds subtitles synchronized with the translated speech.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>When both <c>speech</c> and <c>visual</c> are selected, the speech subtitle translation is completed and the video is synthesized first. Then, on-screen text processing is performed on this video, retaining the translated dubbing and outputting a final video. The order of features in the array does not affect the execution order. Therefore, not processing original subtitles only means that no subtitles are removed or added during the speech subtitle phase. Subsequent on-screen text processing may still alter the original subtitles.</td>
+        /// <td>On-screen text translation (visual) targets recognizable original video language text in the video frames, such as titles, product selling points, and descriptive text. It can be used independently without selecting speech subtitle translation first, and does not require the text to appear in the speech. Original subtitles within the processing scope may also be processed.</td>
+        /// <td></td>
+        /// <td></td>
+        /// </tr>
+        /// <tr>
+        /// <td>When both speech and visual are selected, the speech subtitle translation is completed and the video is synthesized first, and then the on-screen text processing is performed on this video. The translated dubbing is retained, and a final video is output. The order of features in the array does not affect the execution order. Therefore, not processing original subtitles only means that no subtitles are erased or added during the speech subtitle phase, and subsequent on-screen text processing may still change the original subtitles. Subtitles that have been replaced with translated subtitles are retained during subsequent on-screen text processing.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
@@ -17644,23 +17644,23 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Translates the speech and on-screen text in a video into a target language. You can select speech subtitle translation, on-screen text translation, or both. This API applies to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising. The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the task ID and poll the task status by calling the query API until the task is completed and the result is returned.</para>
+        /// <para>Translates the speech and on-screen text in a video into a target language. You can select speech subtitle translation, on-screen text translation, or both. This API applies to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising. The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the TaskId and poll the task status by calling the query API until the task is completed and the result is returned.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product introduction</h2>
         /// <para>The video translation API translates the speech and on-screen text in a video into a target language. You can select speech subtitle translation, on-screen text translation, or both. This API applies to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising.
-        /// The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the <c>TaskId</c> and poll the task status by calling the query API until the task is completed and the result is returned.</para>
+        /// The API uses an asynchronous invocation mode. After you submit a translation task, you can obtain the TaskId and poll the task status by calling the query API until the task is completed and the result is returned.</para>
         /// <h2>Scenarios</h2>
         /// <list type="bullet">
-        /// <item><description><para><b>Cross-border e-commerce video localization</b>: Translates the selling point text in product introduction videos into the language of the target market to facilitate promotion on overseas platforms.</para>
+        /// <item><description><para><b>Cross-border e-commerce video localization</b>: Translates the speech subtitles and selling point text in product introduction videos into the language of the target market to promote products on overseas platforms.</para>
         /// </description></item>
-        /// <item><description><para><b>International social media marketing</b>: Localizes the on-screen text in videos for platforms such as TikTok, Instagram, and YouTube with one click to improve comprehension and conversion rates among overseas users.</para>
+        /// <item><description><para><b>International social media marketing</b>: Localizes speech subtitles and on-screen text for platforms such as TikTok, Instagram, and YouTube with one click to improve comprehension and conversion rates among overseas users.</para>
         /// </description></item>
-        /// <item><description><para><b>Global brand advertising</b>: Automatically generates video versions in the languages of the target regions to reduce manual production costs.</para>
+        /// <item><description><para><b>Global brand advertising</b>: Automatically generates video versions in the corresponding languages based on the delivery regions to reduce manual production costs.</para>
         /// </description></item>
-        /// <item><description><para><b>Training and product instructions</b>: Translates the on-screen text in training courses or product demo videos into multiple languages for global teams.</para>
+        /// <item><description><para><b>Training and product instructions</b>: Translates the speech subtitles and on-screen text in training courses or product demo videos into multiple languages for global teams.</para>
         /// </description></item>
         /// </list>
         /// <h2>Features</h2>
@@ -17674,26 +17674,26 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// </thead>
         /// <tbody><tr>
         /// <td>Speech subtitle translation</td>
-        /// <td><c>speech</c></td>
-        /// <td>Translates the video speech into target language dubbing. Original subtitles are not removed, and no new subtitles are added.</td>
+        /// <td>speech</td>
+        /// <td>Translates the video speech into target language dubbing. You can choose to erase the original subtitles only or replace them with translated subtitles. By default, the original subtitles are not processed and no new subtitles are added.</td>
         /// </tr>
         /// <tr>
         /// <td>On-screen text translation</td>
-        /// <td><c>visual</c></td>
-        /// <td>Translates the embedded text (subtitles, selling point text, etc.) in the video frames and erases the original text. You can enable quality check for on-screen text processing by using the API.</td>
+        /// <td>visual</td>
+        /// <td>Translates the source language text in the video frames, or erases the on-screen text without translation. You can choose to erase brand logos.</td>
         /// </tr>
         /// <tr>
-        /// <td>Speech subtitle translation (<c>speech</c>) generates target language dubbing based on the spoken content in the video and synthesizes it into the video. It does not remove original subtitles or add new subtitles. Original subtitles refer to the existing subtitles in the video frames that correspond to the spoken content.</td>
-        /// <td></td>
-        /// <td></td>
-        /// </tr>
-        /// <tr>
-        /// <td>On-screen text translation (<c>visual</c>) targets the recognizable original language text in the video frames, such as titles, product selling points, and descriptive text. It can be used independently without selecting speech subtitle translation first, and the text does not need to appear in the speech. Original subtitles within the processing scope may also be processed.</td>
+        /// <td>Speech subtitle translation (speech) generates target language dubbing based on the spoken content in the video, processes the subtitles based on the original subtitle processing option, and synthesizes the final video. Original subtitles refer to the existing subtitles in the video frames that correspond to the spoken content. Replacing with translated subtitles erases the original subtitles first and then adds subtitles synchronized with the translated speech.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>When both <c>speech</c> and <c>visual</c> are selected, the speech subtitle translation is completed and the video is synthesized first. Then, on-screen text processing is performed on this video, retaining the translated dubbing and outputting a final video. The order of features in the array does not affect the execution order. Therefore, not processing original subtitles only means that no subtitles are removed or added during the speech subtitle phase. Subsequent on-screen text processing may still alter the original subtitles.</td>
+        /// <td>On-screen text translation (visual) targets recognizable original video language text in the video frames, such as titles, product selling points, and descriptive text. It can be used independently without selecting speech subtitle translation first, and does not require the text to appear in the speech. Original subtitles within the processing scope may also be processed.</td>
+        /// <td></td>
+        /// <td></td>
+        /// </tr>
+        /// <tr>
+        /// <td>When both speech and visual are selected, the speech subtitle translation is completed and the video is synthesized first, and then the on-screen text processing is performed on this video. The translated dubbing is retained, and a final video is output. The order of features in the array does not affect the execution order. Therefore, not processing original subtitles only means that no subtitles are erased or added during the speech subtitle phase, and subsequent on-screen text processing may still change the original subtitles. Subtitles that have been replaced with translated subtitles are retained during subsequent on-screen text processing.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
