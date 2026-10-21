@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ListNormalizationSecurityDomainsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries returned in this query.</para>
+        /// <para>The maximum number of entries returned for this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next query. Leave this parameter empty for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</para>
+        /// <para>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>

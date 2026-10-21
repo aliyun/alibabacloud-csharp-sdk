@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ListProductsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries returned.</para>
+        /// <para>The maximum number of entries to return in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to retrieve the next page of results. If the value of this parameter is not empty, more results are available. You can use this token in the next request to retrieve the next page of results.</para>
+        /// <para>The pagination token. You do not need to specify this parameter for the first request or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public List<ListProductsResponseBodyProducts> Products { get; set; }
         public class ListProductsResponseBodyProducts : TeaModel {
             /// <summary>
-            /// <para>The number of abnormal data ingestion configurations.</para>
+            /// <para>The number of abnormal data ingestion entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public long? ActiveTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether data collection configurations can be added.</para>
+            /// <para>Indicates whether data collection can be added.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public bool? AllowAddDataIngestion { get; set; }
 
             /// <summary>
-            /// <para>The time when the product was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1733269771123</para>
@@ -77,12 +77,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The data ingestion status. Valid values:</para>
+            /// <para>The accessed state of data ingestion. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true: enabled.</para>
-            /// </description></item>
-            /// <item><description><para>false: disabled.</para>
-            /// </description></item>
+            /// <item><description>enabled: Enabled.</description></item>
+            /// <item><description>disabled: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,7 +91,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public bool? DataIngestionStatus { get; set; }
 
             /// <summary>
-            /// <para>The number of enabled data ingestion configurations.</para>
+            /// <para>The number of enabled data ingestion entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -123,7 +121,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string ProductId { get; set; }
 
             /// <summary>
-            /// <para>This parameter is deprecated.</para>
+            /// <para><b>[Deprecated]</b> This parameter is deprecated and does not need to be specified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sas</para>
@@ -135,10 +133,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             /// <summary>
             /// <para>The product type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>preset</para>
-            /// </description></item>
-            /// <item><description><para>custom</para>
-            /// </description></item>
+            /// <item><description>preset</description></item>
+            /// <item><description>custom</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -149,7 +145,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string ProductType { get; set; }
 
             /// <summary>
-            /// <para>The total number of data ingestion configurations.</para>
+            /// <para>The total number of data ingestion entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -159,7 +155,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public int? TotalDataIngestionCount { get; set; }
 
             /// <summary>
-            /// <para>The time when the product was updated.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1733269771123</para>
@@ -201,7 +197,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>57</para>

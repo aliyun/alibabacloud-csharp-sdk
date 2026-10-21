@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public GetNormalizationRuleVersionResponseBodyNormalizationRuleVersion NormalizationRuleVersion { get; set; }
         public class GetNormalizationRuleVersionResponseBodyNormalizationRuleVersion : TeaModel {
             /// <summary>
-            /// <para>The time when the rule version was created.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1733269771123</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the normalization rule category.</para>
+            /// <para>The category ID of the normalization rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NETWORK_CATEGORY</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationRuleDescription { get; set; }
 
             /// <summary>
-            /// <para>The expression for the normalization rule.</para>
+            /// <para>The expression of the normalization rule.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -101,10 +101,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             /// <summary>
             /// <para>The type of the normalization rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>predefined: a predefined rule.</para>
-            /// </description></item>
-            /// <item><description><para>custom: a custom rule.</para>
-            /// </description></item>
+            /// <item><description>predefined: predefined normalization rule.</description></item>
+            /// <item><description>custom: custom normalization rule.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -125,7 +123,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public int? NormalizationRuleVersion { get; set; }
 
             /// <summary>
-            /// <para>The name of the normalization rule version.</para>
+            /// <para>The version name of the normalization rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v1</para>
@@ -145,7 +143,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationSchemaId { get; set; }
 
             /// <summary>
-            /// <para>The product ID.</para>
+            /// <para>The ID of the product.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alibaba_cloud_sas</para>
@@ -155,12 +153,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string ProductId { get; set; }
 
             /// <summary>
-            /// <para>The region where the Data Management center for Threat Analysis is located. Select a region for the management center based on the region where your assets are located. Valid values:</para>
+            /// <para>The region where the data management center of Threat Analysis is located. Select the region of the management center based on the region where your assets are located. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>cn-hangzhou: Your assets are in the Chinese mainland.</para>
-            /// </description></item>
-            /// <item><description><para>ap-southeast-1: Your assets are in a region outside China.</para>
-            /// </description></item>
+            /// <item><description>cn-hangzhou: Assets are located in the Chinese mainland.</description></item>
+            /// <item><description>ap-southeast-1: Assets are located outside the Chinese mainland.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -171,7 +167,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The time when the rule version was last updated.</para>
+            /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1733269771123</para>
@@ -181,7 +177,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public long? UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the vendor for the normalization rule.</para>
+            /// <para>The ID of the vendor that corresponds to the normalization rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alibaba_cloud</para>

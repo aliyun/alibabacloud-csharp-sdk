@@ -10,13 +10,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ListNormalizationRuleVersionsRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response messages. Valid values:</para>
+        /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese.</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English.</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
+        /// <para>Note: This parameter is required in actual calls. If this parameter is not specified, the service returns a 400 error &quot;The specified Lang can not be empty.&quot; Explicitly pass in the language code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -26,7 +25,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return for the current request.</para>
+        /// <para>The maximum number of entries to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -39,7 +38,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to retrieve the next page of results. You do not need to specify this parameter for the first request. If a next page exists, set this parameter to the value of NextToken that is returned from the last call.</para>
+        /// <para>The pagination token. You do not need to specify this parameter for the first request or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>
@@ -49,7 +48,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the normalization rule.</para>
+        /// <para>The normalization rule ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nr-z0b2ssjteut85uoh9nzp</para>
@@ -59,12 +58,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NormalizationRuleId { get; set; }
 
         /// <summary>
-        /// <para>The region where the Data Management Center for threat analysis is located. Select the region for the Management Center based on the region of your assets. Valid values:</para>
+        /// <para>The region where the threat detection and response data management center resides. Specify the management center based on the region of your assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: Your assets are in the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: Your assets are in a region outside Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: The assets reside in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: The assets reside outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -75,7 +72,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of the member. An administrator can use this parameter to switch to the perspective of this member.</para>
+        /// <para>The user ID that the administrator uses to switch to the view of another member.</para>
         /// 
         /// <b>Example:</b>
         /// <para>173326*******</para>

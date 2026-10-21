@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class CreateDataSetResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result returned after the dataset is created.</para>
+        /// <para>The result of the dataset creation.</para>
         /// </summary>
         [NameInMap("DataSetRecordStatistic")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataSetId { get; set; }
 
             /// <summary>
-            /// <para>The number of new records in the dataset.</para>
+            /// <para>The number of new dataset records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6</para>

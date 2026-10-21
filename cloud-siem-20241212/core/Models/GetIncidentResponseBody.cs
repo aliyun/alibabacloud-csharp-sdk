@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public GetIncidentResponseBodyIncident Incident { get; set; }
         public class GetIncidentResponseBodyIncident : TeaModel {
             /// <summary>
-            /// <para>The count of attack stages associated with the event alerts.</para>
+            /// <para>The number of attack phases in the alerts associated with the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public object AttckTactics { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1757386075000</para>
@@ -55,13 +55,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DetectionRuleId { get; set; }
 
             /// <summary>
-            /// <para>The event summaries type. Valid values:</para>
+            /// <para>The event aggregation type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>none: no event is generated.</description></item>
-            /// <item><description>graph_compute: graph computing (supported by predefined rules).</description></item>
-            /// <item><description>expert: expert rule.</description></item>
-            /// <item><description>passthrough: alerting pass-through (one-to-one).</description></item>
-            /// <item><description>window: same-type aggregation (window).</description></item>
+            /// <item><description>none: No event is generated.</description></item>
+            /// <item><description>graph_compute: Graph computing (supported by predefined rules).</description></item>
+            /// <item><description>expert: Expert rules.</description></item>
+            /// <item><description>passthrough: Alert pass-through (one-to-one).</description></item>
+            /// <item><description>window: Similar event aggregation (window).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string IncidentName { get; set; }
 
             /// <summary>
-            /// <para>The remarks of the event.</para>
+            /// <para>The remarks on the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Remark</para>
@@ -104,10 +104,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             /// <summary>
             /// <para>The status of the event. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: unhandled.</description></item>
-            /// <item><description>1: handling.</description></item>
-            /// <item><description>5: handling failed.</description></item>
-            /// <item><description>10: handled.</description></item>
+            /// <item><description>0: Unhandled.</description></item>
+            /// <item><description>1: Processing.</description></item>
+            /// <item><description>5: Processing failed.</description></item>
+            /// <item><description>10: Handled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public object RelateUserIds { get; set; }
 
             /// <summary>
-            /// <para>The response time. Unit: milliseconds (ms).</para>
+            /// <para>The response time in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1757386075000</para>
@@ -200,11 +200,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             /// <summary>
             /// <para>The threat level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>5: critical.</description></item>
-            /// <item><description>4: high.</description></item>
-            /// <item><description>3: medium.</description></item>
-            /// <item><description>2: low.</description></item>
-            /// <item><description>1: informational.</description></item>
+            /// <item><description>5: Critical.</description></item>
+            /// <item><description>4: High.</description></item>
+            /// <item><description>3: Medium.</description></item>
+            /// <item><description>2: Low.</description></item>
+            /// <item><description>1: Informational.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string ThreatScore { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1757386075000</para>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9AAA9ED9-78F4-5021-86DC-D51C7511****</para>

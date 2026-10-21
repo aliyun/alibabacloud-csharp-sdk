@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string FieldName { get; set; }
 
             /// <summary>
-            /// <para>The normalization object type to which the field belongs.</para>
+            /// <para>The normalized object type to which the field belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alert</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string FieldNormalization { get; set; }
 
             /// <summary>
-            /// <para>The list of optional enumeration values for the field. This parameter is not returned if no enumeration values are available.</para>
+            /// <para>The list of optional enumeration values for the field. This parameter is not returned if no enumeration values exist.</para>
             /// </summary>
             [NameInMap("RightValue")]
             [Validation(Required=false)]
@@ -119,12 +119,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 /// <summary>
                 /// <para>The aggregation method for the dispatch rule condition. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><c>=</c>: equal to</description></item>
-                /// <item><description><c>&lt;&gt;</c>: not equal to</description></item>
-                /// <item><description><c>in</c>: contains</description></item>
-                /// <item><description><c>not in</c>: does not contain</description></item>
-                /// <item><description><c>REGEXP</c>: matches the regular expression</description></item>
-                /// <item><description><c>NOT REGEXP</c>: does not match the regular expression</description></item>
+                /// <item><description><c>=</c>: Equal to.</description></item>
+                /// <item><description><c>&lt;&gt;</c>: Not equal to.</description></item>
+                /// <item><description><c>in</c>: Contains.</description></item>
+                /// <item><description><c>not in</c>: Does not contain.</description></item>
+                /// <item><description><c>REGEXP</c>: Matches the regular expression.</description></item>
+                /// <item><description><c>NOT REGEXP</c>: Does not match the regular expression.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next query. Valid values: leave this parameter empty for the first query or if no more results exist. If a next query exists, set this parameter to the NextToken value returned by the previous API call.</para>
+        /// <para>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If a next query exists, set this parameter to the NextToken value returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class CancelCopilotTurnRequest : TeaModel {
         /// <summary>
-        /// <para>The conversation ID.</para>
+        /// <para>The session ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ConversationId { get; set; }
 
         /// <summary>
-        /// <para>The language of the response message. Valid values:</para>
+        /// <para>The language of the response messages. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese.</description></item>
         /// <item><description><b>en</b>: English.</description></item>
@@ -35,10 +35,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The region where the Threat Analysis data management center is located. Specify the management center based on the region of your assets. Valid values:</para>
+        /// <para>The region where the data management center for threat analysis is located. Select the management center region based on the region where your assets reside. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: Your assets reside in the Chinese mainland.</description></item>
-        /// <item><description>ap-southeast-1: Your assets reside in regions outside the Chinese mainland.</description></item>
+        /// <item><description>cn-hangzhou: Assets are located in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: Assets are located outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The trace ID used to track the service request.</para>
+        /// <para>The trace ID used to track service requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>550e8400e29b41d4a71644665544****</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string TraceId { get; set; }
 
         /// <summary>
-        /// <para>The primary key ID.</para>
+        /// <para>The conversation turn ID, obtained from the streaming response of CreateCopilotChat.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

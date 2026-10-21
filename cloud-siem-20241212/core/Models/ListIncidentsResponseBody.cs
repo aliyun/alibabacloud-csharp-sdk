@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public List<ListIncidentsResponseBodyIncidents> Incidents { get; set; }
         public class ListIncidentsResponseBodyIncidents : TeaModel {
             /// <summary>
-            /// <para>The alert information of the incident.</para>
+            /// <para>The list of associated alert information.</para>
             /// </summary>
             [NameInMap("AlertInfos")]
             [Validation(Required=false)]
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public List<string> AlertSources { get; set; }
 
             /// <summary>
-            /// <para>The attacker tactics.</para>
+            /// <para>The list of MITRE ATT&amp;CK tactics.</para>
             /// </summary>
             [NameInMap("AttckTactics")]
             [Validation(Required=false)]
             public string AttckTactics { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1603248483000</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DetectionRuleName { get; set; }
 
             /// <summary>
-            /// <para>The entity information associated with the incident.</para>
+            /// <para>The list of associated entity information.</para>
             /// </summary>
             [NameInMap("EntityInfos")]
             [Validation(Required=false)]
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string IncidentName { get; set; }
 
             /// <summary>
-            /// <para>The remark of the incident.</para>
+            /// <para>The remark for the incident.</para>
             /// 
             /// <b>Example:</b>
             /// <para>remark</para>
@@ -101,10 +101,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             /// <summary>
             /// <para>The event status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: unhandled.</description></item>
-            /// <item><description>1: handling.</description></item>
-            /// <item><description>5: handling failed.</description></item>
-            /// <item><description>10: handled.</description></item>
+            /// <item><description>0: Unhandled.</description></item>
+            /// <item><description>1: Handling.</description></item>
+            /// <item><description>5: Handling failed.</description></item>
+            /// <item><description>10: Handled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string IncidentUuid { get; set; }
 
             /// <summary>
-            /// <para>The UID of the account that owns the event.</para>
+            /// <para>The UID of the account responsible for the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234567890xxxxxx</para>
@@ -194,11 +194,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             /// <summary>
             /// <para>The threat level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>5: critical.</description></item>
-            /// <item><description>4: high.</description></item>
-            /// <item><description>3: medium.</description></item>
-            /// <item><description>2: low.</description></item>
-            /// <item><description>1: informational.</description></item>
+            /// <item><description>5: Critical.</description></item>
+            /// <item><description>4: High.</description></item>
+            /// <item><description>3: Medium.</description></item>
+            /// <item><description>2: Low.</description></item>
+            /// <item><description>1: Informational.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string ThreatLevel { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1603248483000</para>
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries to return in this request.</para>
+        /// <para>The maximum number of entries to read in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -231,7 +231,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next query. Leave this parameter empty for the first query or if no more results exist. If a next page exists, set this parameter to the NextToken value returned by the previous API call.</para>
+        /// <para>The pagination token used to retrieve the next page of results. Leave this parameter empty for the first request or when there are no more pages. If more pages exist, set this parameter to the NextToken value returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>
@@ -241,7 +241,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number for pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -251,7 +251,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries to display per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

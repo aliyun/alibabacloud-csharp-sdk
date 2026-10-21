@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ListNormalizationCategoriesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries returned on the current page.</para>
+        /// <para>The maximum number of entries to return in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to retrieve the next page of results. If the response does not contain this parameter, no more results are available.</para>
+        /// <para>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>A list of normalization categories.</para>
+        /// <para>The list of standardized categories.</para>
         /// </summary>
         [NameInMap("NormalizationCategories")]
         [Validation(Required=false)]
         public List<ListNormalizationCategoriesResponseBodyNormalizationCategories> NormalizationCategories { get; set; }
         public class ListNormalizationCategoriesResponseBodyNormalizationCategories : TeaModel {
             /// <summary>
-            /// <para>The ID of the normalization category.</para>
+            /// <para>The ID of the standardized category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>COMMON_CATEGORY</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationCategoryId { get; set; }
 
             /// <summary>
-            /// <para>The name of the normalization category.</para>
+            /// <para>The name of the standardized category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>COMMON_CATEGORY</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>57</para>

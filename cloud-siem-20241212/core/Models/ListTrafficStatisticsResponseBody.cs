@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public List<ListTrafficStatisticsResponseBodyTrafficStatisticsTrafficStatisticData> TrafficStatisticData { get; set; }
             public class ListTrafficStatisticsResponseBodyTrafficStatisticsTrafficStatisticData : TeaModel {
                 /// <summary>
-                /// <para>The statistic time.</para>
+                /// <para>The statistical time. The value is a date number in the YYYYMMDD format. For example, 20250815 indicates August 15, 2025.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20250815</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public long? TrafficStatisticTime { get; set; }
 
                 /// <summary>
-                /// <para>The statistic value.</para>
+                /// <para>The statistical value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.699814</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             }
 
             /// <summary>
-            /// <para>The statistic target.</para>
+            /// <para>The statistical target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>all</para>

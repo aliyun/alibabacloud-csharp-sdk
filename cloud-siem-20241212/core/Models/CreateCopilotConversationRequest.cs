@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class CreateCopilotConversationRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the response messages. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese.</description></item>
         /// <item><description><b>en</b>: English.</description></item>
@@ -54,10 +54,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The region of the data management center for threat analysis. Specify the management center region based on the region where your assets reside. Valid values:</para>
+        /// <para>The region where the data management center for threat analysis is located. Select the management center region based on the region where your assets reside. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: Your assets reside in the Chinese mainland.</description></item>
-        /// <item><description>ap-southeast-1: Your assets reside in regions outside the Chinese mainland.</description></item>
+        /// <item><description>cn-hangzhou: Assets are located in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: Assets are located outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The deep thinking configuration.</para>
+        /// <para>The thinking mode configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>enabled</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ThinkingMode { get; set; }
 
         /// <summary>
-        /// <para>The conversation title.</para>
+        /// <para>The session title.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Security incident investigation</para>

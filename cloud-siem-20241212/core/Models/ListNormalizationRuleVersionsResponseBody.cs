@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ListNormalizationRuleVersionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries returned on each page.</para>
+        /// <para>The maximum number of entries to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If the NextToken parameter is empty, no more results are available.</para>
+        /// <para>The pagination token. You do not need to specify this parameter for the first request or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public List<ListNormalizationRuleVersionsResponseBodyNormalizationRuleVersions> NormalizationRuleVersions { get; set; }
         public class ListNormalizationRuleVersionsResponseBodyNormalizationRuleVersions : TeaModel {
             /// <summary>
-            /// <para>The time when the version was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1733269771123</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The expression of the normalization rule.</para>
+            /// <para>The normalization rule expression.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationRuleExpression { get; set; }
 
             /// <summary>
-            /// <para>The ID of the normalization rule.</para>
+            /// <para>The normalization rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nr-z0b2ssjteut85uoh9nzp</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationRuleId { get; set; }
 
             /// <summary>
-            /// <para>The version of the normalization rule.</para>
+            /// <para>The normalization rule version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>V1</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public int? NormalizationRuleVersion { get; set; }
 
             /// <summary>
-            /// <para>The time when the version was updated.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1733269771123</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>

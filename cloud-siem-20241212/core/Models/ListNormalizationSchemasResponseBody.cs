@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next query. Leave this parameter empty for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</para>
+        /// <para>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the normalization rule category.</para>
+            /// <para>The normalization rule category ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NETWORK_CATEGORY</para>
@@ -57,9 +57,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationCategoryId { get; set; }
 
             /// <summary>
-            /// <para>The field source. Valid values:
-            /// normalized: normalized field.
-            /// native: native field.</para>
+            /// <para>The field source. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>normalized: normalized field.</description></item>
+            /// <item><description>native: native field.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>normalized</para>
@@ -69,7 +71,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationFieldSource { get; set; }
 
             /// <summary>
-            /// <para>The description of the normalization schema.</para>
+            /// <para>The normalization schema description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Network flow log</para>
@@ -79,7 +81,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationSchemaDescription { get; set; }
 
             /// <summary>
-            /// <para>The source of the normalization schema. Valid values: preset (predefined) and custom (user-defined).</para>
+            /// <para>The normalization schema source. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>preset: predefined.</description></item>
+            /// <item><description>custom: custom.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>preset</para>
@@ -89,7 +95,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationSchemaFrom { get; set; }
 
             /// <summary>
-            /// <para>The ID of the normalization schema.</para>
+            /// <para>The normalization schema ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HTTP_ACTIVITY</para>
@@ -99,7 +105,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationSchemaId { get; set; }
 
             /// <summary>
-            /// <para>The name of the normalization schema.</para>
+            /// <para>The normalization schema name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>normalization_rule_Z57np</para>

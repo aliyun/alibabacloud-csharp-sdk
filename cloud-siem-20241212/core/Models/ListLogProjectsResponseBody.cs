@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ListLogProjectsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of Simple Log Service projects.</para>
+        /// <para>The list of log projects.</para>
         /// </summary>
         [NameInMap("LogProjects")]
         [Validation(Required=false)]
         public List<string> LogProjects { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries returned on this call.</para>
+        /// <para>The maximum number of entries to return in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to retrieve the next page of results. If this parameter is not returned, no more results are available.</para>
+        /// <para>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>

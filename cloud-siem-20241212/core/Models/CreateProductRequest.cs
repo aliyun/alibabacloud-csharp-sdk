@@ -12,10 +12,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese.</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English.</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.
+        /// Note: This parameter is required in practice. If you do not specify this parameter, the service returns a 400 error: &quot;The specified Lang can not be empty.&quot;</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +25,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The name of the product.</para>
+        /// <para>The product name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alibaba_cloud_sas</para>
@@ -36,12 +35,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ProductName { get; set; }
 
         /// <summary>
-        /// <para>The region of the Data Management center. Select a region based on the location of your assets. Valid values:</para>
+        /// <para>The region where the threat analysis data management center resides. Specify the management center based on the region of your assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: Assets are in the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: Assets are outside China.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: Your assets reside in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: Your assets reside outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,7 +49,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of a member. This parameter is used when an administrator operates as another member.</para>
+        /// <para>The user ID that the administrator uses to switch to the view of another member.</para>
         /// 
         /// <b>Example:</b>
         /// <para>173326*******</para>
@@ -62,7 +59,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>The name of the vendor.</para>
+        /// <para>The vendor name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>111</para>

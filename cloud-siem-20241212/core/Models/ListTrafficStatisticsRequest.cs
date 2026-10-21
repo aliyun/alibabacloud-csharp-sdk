@@ -10,12 +10,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ListTrafficStatisticsRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response messages. Valid values:</para>
+        /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese.</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English.</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.
+        /// Note: This parameter is required in practice. If this parameter is not specified, the API returns a 400 error: &quot;The specified Lang can not be empty.&quot;</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +25,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>A list of user IDs for batch data ingestion.</para>
+        /// <para>The list of user IDs for batch data ingestion.</para>
         /// </summary>
         [NameInMap("LogUserIds")]
         [Validation(Required=false)]
@@ -43,12 +42,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ProductId { get; set; }
 
         /// <summary>
-        /// <para>The region of the Data Management center for threat analysis. Select a region based on the location of your asset. Valid values:</para>
+        /// <para>The region where the threat detection and response data management center resides. Specify the management center based on the region of your assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: Your asset is in the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: Your asset is outside China.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: The assets reside in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: The assets reside outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -69,7 +66,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? RegionTag { get; set; }
 
         /// <summary>
-        /// <para>The user ID of a member. This parameter is used by an administrator to switch to the perspective of the member.</para>
+        /// <para>The user ID that the administrator switches to when viewing from another member\&quot;s perspective.</para>
         /// 
         /// <b>Example:</b>
         /// <para>173326*******</para>
@@ -89,12 +86,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string TrafficStatisticPeriod { get; set; }
 
         /// <summary>
-        /// <para>The statistic granularity. Valid values:</para>
+        /// <para>The statistical granularity. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>day: day. This is the default value.</para>
-        /// </description></item>
-        /// <item><description><para>hour: hour.</para>
-        /// </description></item>
+        /// <item><description>day: day. This is the default value.</description></item>
+        /// <item><description>hour: hour.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -105,16 +100,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string TrafficStatisticPeriodType { get; set; }
 
         /// <summary>
-        /// <para>The statistic dimension. Valid values:</para>
+        /// <para>The statistical dimension. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Region</para>
-        /// </description></item>
-        /// <item><description><para>Product</para>
-        /// </description></item>
-        /// <item><description><para>DataIngetion</para>
-        /// </description></item>
-        /// <item><description><para>logUserId</para>
-        /// </description></item>
+        /// <item><description>Region</description></item>
+        /// <item><description>Product</description></item>
+        /// <item><description>DataIngetion</description></item>
+        /// <item><description>logUserId</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -125,7 +116,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string TrafficStatisticType { get; set; }
 
         /// <summary>
-        /// <para>The type of the log traffic.</para>
+        /// <para>The log traffic type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>agentAnalysisLogTraffic</para>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public SetDefaultNormalizationRuleVersionResponseBodyNormalizationRuleVersion NormalizationRuleVersion { get; set; }
         public class SetDefaultNormalizationRuleVersionResponseBodyNormalizationRuleVersion : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The time when the normalization rule version was created. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1733269771123</para>
@@ -133,6 +133,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationSchemaId { get; set; }
 
             /// <summary>
+            /// <para>The normalization security domain ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>NETWORK_AND_WEB_SECURITY</para>
             /// </summary>
@@ -151,7 +153,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string ProductId { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The time when the normalization rule version was last updated. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1733269771123</para>

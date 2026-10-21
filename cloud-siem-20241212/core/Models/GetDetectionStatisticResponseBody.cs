@@ -10,12 +10,15 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class GetDetectionStatisticResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detection rule count result.</para>
+        /// <para>The count results of detection rules.</para>
         /// </summary>
         [NameInMap("DetectionStatistic")]
         [Validation(Required=false)]
         public GetDetectionStatisticResponseBodyDetectionStatistic DetectionStatistic { get; set; }
         public class GetDetectionStatisticResponseBodyDetectionStatistic : TeaModel {
+            /// <summary>
+            /// <para>The number of AI-powered aggregation rules.</para>
+            /// </summary>
             [NameInMap("AiPoweredAggregationRuleCount")]
             [Validation(Required=false)]
             public int? AiPoweredAggregationRuleCount { get; set; }
@@ -71,7 +74,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public int? PassthroughRuleCount { get; set; }
 
             /// <summary>
-            /// <para>The number of similar aggregation rules.</para>
+            /// <para>The number of same-type aggregation rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6</para>
@@ -83,7 +86,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6FB890AC-90B2-5EEA-845B-F7C86FB2****</para>

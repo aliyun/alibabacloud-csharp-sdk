@@ -39,12 +39,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a specified Security Operations Agent conversation turn and returns the turn status after the cancellation request is processed.</para>
+        /// <para>Requests cancellation of a specified security operations Agent conversation turn and returns the turn status after the cancellation request is processed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cancels a specified Security Operations Agent conversation turn.</para>
+        /// <para>Cancels a specified security operations Agent conversation turn. Before calling this operation, use CreateCopilotConversation to create a session and obtain the ConversationId, then use CreateCopilotChat to initiate a streaming conversation and obtain the TurnId from the response.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -102,12 +102,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a specified Security Operations Agent conversation turn and returns the turn status after the cancellation request is processed.</para>
+        /// <para>Requests cancellation of a specified security operations Agent conversation turn and returns the turn status after the cancellation request is processed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cancels a specified Security Operations Agent conversation turn.</para>
+        /// <para>Cancels a specified security operations Agent conversation turn. Before calling this operation, use CreateCopilotConversation to create a session and obtain the ConversationId, then use CreateCopilotChat to initiate a streaming conversation and obtain the TurnId from the response.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -165,12 +165,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a specified Security Operations Agent conversation turn and returns the turn status after the cancellation request is processed.</para>
+        /// <para>Requests cancellation of a specified security operations Agent conversation turn and returns the turn status after the cancellation request is processed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cancels a specified Security Operations Agent conversation turn.</para>
+        /// <para>Cancels a specified security operations Agent conversation turn. Before calling this operation, use CreateCopilotConversation to create a session and obtain the ConversationId, then use CreateCopilotChat to initiate a streaming conversation and obtain the TurnId from the response.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -188,12 +188,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a specified Security Operations Agent conversation turn and returns the turn status after the cancellation request is processed.</para>
+        /// <para>Requests cancellation of a specified security operations Agent conversation turn and returns the turn status after the cancellation request is processed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cancels a specified Security Operations Agent conversation turn.</para>
+        /// <para>Cancels a specified security operations Agent conversation turn. Before calling this operation, use CreateCopilotConversation to create a session and obtain the ConversationId, then use CreateCopilotChat to initiate a streaming conversation and obtain the TurnId from the response.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -211,12 +211,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks for available version upgrades.</para>
+        /// <para>Checks the status of a version upgrade item.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration. A supporting tool class that includes configuration examples is provided. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>Checks the execution status of a specified upgrade item. You must specify the upgrade item ID (UpgradeItemId) when calling this operation. The response includes the checkpoint status (CheckStatus) and check result (CheckResult) of the upgrade item.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -270,12 +270,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks for available version upgrades.</para>
+        /// <para>Checks the status of a version upgrade item.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration. A supporting tool class that includes configuration examples is provided. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>Checks the execution status of a specified upgrade item. You must specify the upgrade item ID (UpgradeItemId) when calling this operation. The response includes the checkpoint status (CheckStatus) and check result (CheckResult) of the upgrade item.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -329,12 +329,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks for available version upgrades.</para>
+        /// <para>Checks the status of a version upgrade item.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration. A supporting tool class that includes configuration examples is provided. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>Checks the execution status of a specified upgrade item. You must specify the upgrade item ID (UpgradeItemId) when calling this operation. The response includes the checkpoint status (CheckStatus) and check result (CheckResult) of the upgrade item.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -352,12 +352,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks for available version upgrades.</para>
+        /// <para>Checks the status of a version upgrade item.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration. A supporting tool class that includes configuration examples is provided. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>Checks the execution status of a specified upgrade item. You must specify the upgrade item ID (UpgradeItemId) when calling this operation. The response includes the checkpoint status (CheckStatus) and check result (CheckResult) of the upgrade item.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -811,12 +811,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a security operations Agent conversation that belongs to the current tenant and owner, and returns the conversation ID, status, and conversation configuration.</para>
+        /// <para>Creates a security operations Agent session that belongs to the current tenant and owner, and returns the session ID, status, and session configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a security operations Agent conversation.</para>
+        /// <para>Creates a security operations Agent session.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -886,12 +886,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a security operations Agent conversation that belongs to the current tenant and owner, and returns the conversation ID, status, and conversation configuration.</para>
+        /// <para>Creates a security operations Agent session that belongs to the current tenant and owner, and returns the session ID, status, and session configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a security operations Agent conversation.</para>
+        /// <para>Creates a security operations Agent session.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -961,12 +961,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a security operations Agent conversation that belongs to the current tenant and owner, and returns the conversation ID, status, and conversation configuration.</para>
+        /// <para>Creates a security operations Agent session that belongs to the current tenant and owner, and returns the session ID, status, and session configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a security operations Agent conversation.</para>
+        /// <para>Creates a security operations Agent session.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -984,12 +984,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a security operations Agent conversation that belongs to the current tenant and owner, and returns the conversation ID, status, and conversation configuration.</para>
+        /// <para>Creates a security operations Agent session that belongs to the current tenant and owner, and returns the session ID, status, and session configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a security operations Agent conversation.</para>
+        /// <para>Creates a security operations Agent session.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1007,12 +1007,17 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data ingestion policy.</para>
+        /// <para>Creates an access policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The frequency and timing of notifications are limited. Each user receives a maximum of two notifications per day between 08:00 and 20:00.</para>
+        /// <para>Creates an access policy to ingest log data from a data source into threat analysis.
+        /// Before you begin:</para>
+        /// <ol>
+        /// <item><description>Call the CreateDataSource operation to create a data source and obtain the data source ID (DataSourceId).</description></item>
+        /// <item><description>Call the CreateNormalizationRule operation to create a normalization rule and obtain the normalization rule ID (NormalizationRuleId).</description></item>
+        /// </ol>
         /// </description>
         /// 
         /// <param name="request">
@@ -1110,12 +1115,17 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data ingestion policy.</para>
+        /// <para>Creates an access policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The frequency and timing of notifications are limited. Each user receives a maximum of two notifications per day between 08:00 and 20:00.</para>
+        /// <para>Creates an access policy to ingest log data from a data source into threat analysis.
+        /// Before you begin:</para>
+        /// <ol>
+        /// <item><description>Call the CreateDataSource operation to create a data source and obtain the data source ID (DataSourceId).</description></item>
+        /// <item><description>Call the CreateNormalizationRule operation to create a normalization rule and obtain the normalization rule ID (NormalizationRuleId).</description></item>
+        /// </ol>
         /// </description>
         /// 
         /// <param name="request">
@@ -1213,12 +1223,17 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data ingestion policy.</para>
+        /// <para>Creates an access policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The frequency and timing of notifications are limited. Each user receives a maximum of two notifications per day between 08:00 and 20:00.</para>
+        /// <para>Creates an access policy to ingest log data from a data source into threat analysis.
+        /// Before you begin:</para>
+        /// <ol>
+        /// <item><description>Call the CreateDataSource operation to create a data source and obtain the data source ID (DataSourceId).</description></item>
+        /// <item><description>Call the CreateNormalizationRule operation to create a normalization rule and obtain the normalization rule ID (NormalizationRuleId).</description></item>
+        /// </ol>
         /// </description>
         /// 
         /// <param name="request">
@@ -1236,12 +1251,17 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data ingestion policy.</para>
+        /// <para>Creates an access policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The frequency and timing of notifications are limited. Each user receives a maximum of two notifications per day between 08:00 and 20:00.</para>
+        /// <para>Creates an access policy to ingest log data from a data source into threat analysis.
+        /// Before you begin:</para>
+        /// <ol>
+        /// <item><description>Call the CreateDataSource operation to create a data source and obtain the data source ID (DataSourceId).</description></item>
+        /// <item><description>Call the CreateNormalizationRule operation to create a normalization rule and obtain the normalization rule ID (NormalizationRuleId).</description></item>
+        /// </ol>
         /// </description>
         /// 
         /// <param name="request">
@@ -2331,12 +2351,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configure client-side storage restrictions.</para>
+        /// <para>Creates a restrictive user-side storage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter uses a complex JSON structure. A supporting tool class is provided to simplify this configuration. For an example, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON Configurations string. We provide a utility class to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2402,12 +2422,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configure client-side storage restrictions.</para>
+        /// <para>Creates a restrictive user-side storage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter uses a complex JSON structure. A supporting tool class is provided to simplify this configuration. For an example, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON Configurations string. We provide a utility class to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2473,12 +2493,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configure client-side storage restrictions.</para>
+        /// <para>Creates a restrictive user-side storage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter uses a complex JSON structure. A supporting tool class is provided to simplify this configuration. For an example, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON Configurations string. We provide a utility class to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2496,12 +2516,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configure client-side storage restrictions.</para>
+        /// <para>Creates a restrictive user-side storage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter uses a complex JSON structure. A supporting tool class is provided to simplify this configuration. For an example, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON Configurations string. We provide a utility class to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2524,7 +2544,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2649,7 +2669,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2774,7 +2794,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2797,7 +2817,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2820,7 +2840,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration. A supporting tool class provides configuration examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. To help with specific configuration examples, we provide a supporting utility class. Refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2919,7 +2939,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration. A supporting tool class provides configuration examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. To help with specific configuration examples, we provide a supporting utility class. Refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3018,7 +3038,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration. A supporting tool class provides configuration examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. To help with specific configuration examples, we provide a supporting utility class. Refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3041,7 +3061,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration. A supporting tool class provides configuration examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. To help with specific configuration examples, we provide a supporting utility class. Refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3064,7 +3084,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig request parameter is a complex JSON configuration. A supporting tool class is available and provides configuration examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex set of JSON Configurations. We provide a utility class with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3127,7 +3147,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig request parameter is a complex JSON configuration. A supporting tool class is available and provides configuration examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex set of JSON Configurations. We provide a utility class with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3190,7 +3210,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig request parameter is a complex JSON configuration. A supporting tool class is available and provides configuration examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex set of JSON Configurations. We provide a utility class with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3213,7 +3233,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig request parameter is a complex JSON configuration. A supporting tool class is available and provides configuration examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex set of JSON Configurations. We provide a utility class with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3236,7 +3256,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. To help you configure it, we provide a supporting tool with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3331,7 +3351,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. To help you configure it, we provide a supporting tool with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3426,7 +3446,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. To help you configure it, we provide a supporting tool with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3449,7 +3469,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. To help you configure it, we provide a supporting tool with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3472,7 +3492,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Notifications are limited by frequency and time. Each user can receive a maximum of two notifications per day between 08:00 and 20:00. Notifications are not sent outside this time frame.</para>
+        /// <para>Creates a vendor.
+        /// Before you begin: You must have purchased the cloud-siem service and have a valid order before calling this operation. If you have not purchased the service or your order has expired, the API returns &quot;The order doesn\&quot;t exist or is expired.&quot; Purchase or renew the service before calling this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3531,7 +3552,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Notifications are limited by frequency and time. Each user can receive a maximum of two notifications per day between 08:00 and 20:00. Notifications are not sent outside this time frame.</para>
+        /// <para>Creates a vendor.
+        /// Before you begin: You must have purchased the cloud-siem service and have a valid order before calling this operation. If you have not purchased the service or your order has expired, the API returns &quot;The order doesn\&quot;t exist or is expired.&quot; Purchase or renew the service before calling this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3590,7 +3612,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Notifications are limited by frequency and time. Each user can receive a maximum of two notifications per day between 08:00 and 20:00. Notifications are not sent outside this time frame.</para>
+        /// <para>Creates a vendor.
+        /// Before you begin: You must have purchased the cloud-siem service and have a valid order before calling this operation. If you have not purchased the service or your order has expired, the API returns &quot;The order doesn\&quot;t exist or is expired.&quot; Purchase or renew the service before calling this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3613,7 +3636,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Notifications are limited by frequency and time. Each user can receive a maximum of two notifications per day between 08:00 and 20:00. Notifications are not sent outside this time frame.</para>
+        /// <para>Creates a vendor.
+        /// Before you begin: You must have purchased the cloud-siem service and have a valid order before calling this operation. If you have not purchased the service or your order has expired, the API returns &quot;The order doesn\&quot;t exist or is expired.&quot; Purchase or renew the service before calling this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4096,7 +4120,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig request parameter is a complex JSON configuration. A supporting tool class provides configuration examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">demo</a>.</para>
+        /// <para>Deletes a specified data source.
+        /// Before you begin: The calling account must have a valid SIEM data source management value-added feature subscription.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4155,7 +4180,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig request parameter is a complex JSON configuration. A supporting tool class provides configuration examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">demo</a>.</para>
+        /// <para>Deletes a specified data source.
+        /// Before you begin: The calling account must have a valid SIEM data source management value-added feature subscription.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4214,7 +4240,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig request parameter is a complex JSON configuration. A supporting tool class provides configuration examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">demo</a>.</para>
+        /// <para>Deletes a specified data source.
+        /// Before you begin: The calling account must have a valid SIEM data source management value-added feature subscription.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4237,7 +4264,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig request parameter is a complex JSON configuration. A supporting tool class provides configuration examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">demo</a>.</para>
+        /// <para>Deletes a specified data source.
+        /// Before you begin: The calling account must have a valid SIEM data source management value-added feature subscription.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4399,12 +4427,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Logstore.</para>
+        /// <para>Deletes a LogStore.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The \<c>JsonConfig\\</c> request parameter is a complex JSON configuration. A supporting tool class with configuration examples is available. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration string. We provide a utility class with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4470,12 +4498,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Logstore.</para>
+        /// <para>Deletes a LogStore.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The \<c>JsonConfig\\</c> request parameter is a complex JSON configuration. A supporting tool class with configuration examples is available. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration string. We provide a utility class with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4541,12 +4569,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Logstore.</para>
+        /// <para>Deletes a LogStore.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The \<c>JsonConfig\\</c> request parameter is a complex JSON configuration. A supporting tool class with configuration examples is available. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration string. We provide a utility class with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4564,12 +4592,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Logstore.</para>
+        /// <para>Deletes a LogStore.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The \<c>JsonConfig\\</c> request parameter is a complex JSON configuration. A supporting tool class with configuration examples is available. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration string. We provide a utility class with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5603,12 +5631,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a data ingestion policy.</para>
+        /// <para>Stops a collection policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The frequency and time of notifications are limited. Each user receives a maximum of two notifications per day between 08:00 and 20:00.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5662,12 +5691,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a data ingestion policy.</para>
+        /// <para>Stops a collection policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The frequency and time of notifications are limited. Each user receives a maximum of two notifications per day between 08:00 and 20:00.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5721,12 +5751,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a data ingestion policy.</para>
+        /// <para>Stops a collection policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The frequency and time of notifications are limited. Each user receives a maximum of two notifications per day between 08:00 and 20:00.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5744,12 +5775,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a data ingestion policy.</para>
+        /// <para>Stops a collection policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The frequency and time of notifications are limited. Each user receives a maximum of two notifications per day between 08:00 and 20:00.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6112,7 +6144,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON Configurations. A utility class is provided to help with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. To help you configure it, a utility class is provided. For specific configuration examples, refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6207,7 +6239,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON Configurations. A utility class is provided to help with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. To help you configure it, a utility class is provided. For specific configuration examples, refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6302,7 +6334,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON Configurations. A utility class is provided to help with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. To help you configure it, a utility class is provided. For specific configuration examples, refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6325,7 +6357,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON Configurations. A utility class is provided to help with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. To help you configure it, a utility class is provided. For specific configuration examples, refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6348,7 +6380,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration. A supporting tool class is provided to assist with this configuration. For an example, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The JsonConfig input parameter is a complex JSON configuration string. We provide a utility class to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <h3>Before you begin</h3>
+        /// <ol>
+        /// <item><description>Before calling this operation, ensure that a pending upgrade order exists (created through the Alibaba Cloud Management Console or a business flow).</description></item>
+        /// <item><description>Call ListUpgradeItems to view the items that can be upgraded, and call CheckUpgradeItem to perform a dry run.</description></item>
+        /// <item><description>If no items can be upgraded, the API returns an error.</description></item>
+        /// </ol>
         /// </description>
         /// 
         /// <param name="request">
@@ -6403,7 +6441,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration. A supporting tool class is provided to assist with this configuration. For an example, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The JsonConfig input parameter is a complex JSON configuration string. We provide a utility class to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <h3>Before you begin</h3>
+        /// <ol>
+        /// <item><description>Before calling this operation, ensure that a pending upgrade order exists (created through the Alibaba Cloud Management Console or a business flow).</description></item>
+        /// <item><description>Call ListUpgradeItems to view the items that can be upgraded, and call CheckUpgradeItem to perform a dry run.</description></item>
+        /// <item><description>If no items can be upgraded, the API returns an error.</description></item>
+        /// </ol>
         /// </description>
         /// 
         /// <param name="request">
@@ -6458,7 +6502,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration. A supporting tool class is provided to assist with this configuration. For an example, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The JsonConfig input parameter is a complex JSON configuration string. We provide a utility class to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <h3>Before you begin</h3>
+        /// <ol>
+        /// <item><description>Before calling this operation, ensure that a pending upgrade order exists (created through the Alibaba Cloud Management Console or a business flow).</description></item>
+        /// <item><description>Call ListUpgradeItems to view the items that can be upgraded, and call CheckUpgradeItem to perform a dry run.</description></item>
+        /// <item><description>If no items can be upgraded, the API returns an error.</description></item>
+        /// </ol>
         /// </description>
         /// 
         /// <param name="request">
@@ -6481,7 +6531,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration. A supporting tool class is provided to assist with this configuration. For an example, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The JsonConfig input parameter is a complex JSON configuration string. We provide a utility class to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <h3>Before you begin</h3>
+        /// <ol>
+        /// <item><description>Before calling this operation, ensure that a pending upgrade order exists (created through the Alibaba Cloud Management Console or a business flow).</description></item>
+        /// <item><description>Call ListUpgradeItems to view the items that can be upgraded, and call CheckUpgradeItem to perform a dry run.</description></item>
+        /// <item><description>If no items can be upgraded, the API returns an error.</description></item>
+        /// </ol>
         /// </description>
         /// 
         /// <param name="request">
@@ -6499,7 +6555,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an alert.</para>
+        /// <para>Retrieves alert details.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6562,7 +6618,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an alert.</para>
+        /// <para>Retrieves alert details.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6625,7 +6681,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an alert.</para>
+        /// <para>Retrieves alert details.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6648,7 +6704,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an alert.</para>
+        /// <para>Retrieves alert details.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6819,12 +6875,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metadata, status, configuration, and historical summary of a specified security operations Agent conversation.</para>
+        /// <para>Queries the metadata, status, configuration, and historical summary of a specified security operations agent session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries a specified security operations Agent conversation.</para>
+        /// <para>Queries a specified security operations agent session.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6878,12 +6934,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metadata, status, configuration, and historical summary of a specified security operations Agent conversation.</para>
+        /// <para>Queries the metadata, status, configuration, and historical summary of a specified security operations agent session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries a specified security operations Agent conversation.</para>
+        /// <para>Queries a specified security operations agent session.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6937,12 +6993,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metadata, status, configuration, and historical summary of a specified security operations Agent conversation.</para>
+        /// <para>Queries the metadata, status, configuration, and historical summary of a specified security operations agent session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries a specified security operations Agent conversation.</para>
+        /// <para>Queries a specified security operations agent session.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6960,12 +7016,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metadata, status, configuration, and historical summary of a specified security operations Agent conversation.</para>
+        /// <para>Queries the metadata, status, configuration, and historical summary of a specified security operations agent session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries a specified security operations Agent conversation.</para>
+        /// <para>Queries a specified security operations agent session.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6983,12 +7039,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the status of a security operations Agent conversation turn.</para>
+        /// <para>Retrieves the conversation turn status of the Security Operations agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries a specified security operations Agent conversation turn.</para>
+        /// <para>Queries a specified Security Operations agent conversation turn. Before calling this operation, call CreateCopilotConversation to create a session and obtain the ConversationId, and then call CreateCopilotChat to initiate a conversation and obtain the TurnId.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7046,12 +7102,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the status of a security operations Agent conversation turn.</para>
+        /// <para>Retrieves the conversation turn status of the Security Operations agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries a specified security operations Agent conversation turn.</para>
+        /// <para>Queries a specified Security Operations agent conversation turn. Before calling this operation, call CreateCopilotConversation to create a session and obtain the ConversationId, and then call CreateCopilotChat to initiate a conversation and obtain the TurnId.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7109,12 +7165,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the status of a security operations Agent conversation turn.</para>
+        /// <para>Retrieves the conversation turn status of the Security Operations agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries a specified security operations Agent conversation turn.</para>
+        /// <para>Queries a specified Security Operations agent conversation turn. Before calling this operation, call CreateCopilotConversation to create a session and obtain the ConversationId, and then call CreateCopilotChat to initiate a conversation and obtain the TurnId.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7132,12 +7188,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the status of a security operations Agent conversation turn.</para>
+        /// <para>Retrieves the conversation turn status of the Security Operations agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries a specified security operations Agent conversation turn.</para>
+        /// <para>Queries a specified Security Operations agent conversation turn. Before calling this operation, call CreateCopilotConversation to create a session and obtain the ConversationId, and then call CreateCopilotChat to initiate a conversation and obtain the TurnId.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7155,12 +7211,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a security operations Agent conversation turn by conversation ID and client message ID.</para>
+        /// <para>Queries the details of the security operations agent conversation turn based on the conversation ID and client message ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries a security operations Agent conversation turn by client message ID.</para>
+        /// <para>Queries the security operations agent conversation turn based on the client message ID. Before calling this operation, call CreateCopilotConversation to create a conversation and then call CreateCopilotChat to initiate a conversation. The ClientMessageId is specified by the client when initiating the conversation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7218,12 +7274,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a security operations Agent conversation turn by conversation ID and client message ID.</para>
+        /// <para>Queries the details of the security operations agent conversation turn based on the conversation ID and client message ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries a security operations Agent conversation turn by client message ID.</para>
+        /// <para>Queries the security operations agent conversation turn based on the client message ID. Before calling this operation, call CreateCopilotConversation to create a conversation and then call CreateCopilotChat to initiate a conversation. The ClientMessageId is specified by the client when initiating the conversation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7281,12 +7337,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a security operations Agent conversation turn by conversation ID and client message ID.</para>
+        /// <para>Queries the details of the security operations agent conversation turn based on the conversation ID and client message ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries a security operations Agent conversation turn by client message ID.</para>
+        /// <para>Queries the security operations agent conversation turn based on the client message ID. Before calling this operation, call CreateCopilotConversation to create a conversation and then call CreateCopilotChat to initiate a conversation. The ClientMessageId is specified by the client when initiating the conversation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7304,12 +7360,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a security operations Agent conversation turn by conversation ID and client message ID.</para>
+        /// <para>Queries the details of the security operations agent conversation turn based on the conversation ID and client message ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries a security operations Agent conversation turn by client message ID.</para>
+        /// <para>Queries the security operations agent conversation turn based on the client message ID. Before calling this operation, call CreateCopilotConversation to create a conversation and then call CreateCopilotChat to initiate a conversation. The ClientMessageId is specified by the client when initiating the conversation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7327,12 +7383,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a batch data ingestion task.</para>
+        /// <para>Retrieves the data batch ingestion configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig request parameter is a complex JSON configuration. A supporting tool class with configuration examples is provided. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration string. We provide a utility class to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7382,12 +7438,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a batch data ingestion task.</para>
+        /// <para>Retrieves the data batch ingestion configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig request parameter is a complex JSON configuration. A supporting tool class with configuration examples is provided. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration string. We provide a utility class to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7437,12 +7493,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a batch data ingestion task.</para>
+        /// <para>Retrieves the data batch ingestion configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig request parameter is a complex JSON configuration. A supporting tool class with configuration examples is provided. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration string. We provide a utility class to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7460,12 +7516,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a batch data ingestion task.</para>
+        /// <para>Retrieves the data batch ingestion configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig request parameter is a complex JSON configuration. A supporting tool class with configuration examples is provided. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration string. We provide a utility class to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7485,6 +7541,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// <summary>
         /// <para>Retrieves the details of user logs in log management.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the log storage region, project, capacity, Logstore, and multi-account delivery settings of the current account. Before you update the multi-account configuration, read Data.DeliverySettings.ConfigurationVersion and TargetProject, and pass them to the write operation as is. The capacity is measured in GB, and the TTL is measured in days. The account UID in DeliverySettings is a string. If the system fails to read the optional delivery settings, the cause is returned in DeliverySettingsError, and other storage information is still returned.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDataStorageRequest
@@ -7536,6 +7597,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// <para>Retrieves the details of user logs in log management.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the log storage region, project, capacity, Logstore, and multi-account delivery settings of the current account. Before you update the multi-account configuration, read Data.DeliverySettings.ConfigurationVersion and TargetProject, and pass them to the write operation as is. The capacity is measured in GB, and the TTL is measured in days. The account UID in DeliverySettings is a string. If the system fails to read the optional delivery settings, the cause is returned in DeliverySettingsError, and other storage information is still returned.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetDataStorageRequest
         /// </param>
@@ -7586,6 +7652,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// <para>Retrieves the details of user logs in log management.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the log storage region, project, capacity, Logstore, and multi-account delivery settings of the current account. Before you update the multi-account configuration, read Data.DeliverySettings.ConfigurationVersion and TargetProject, and pass them to the write operation as is. The capacity is measured in GB, and the TTL is measured in days. The account UID in DeliverySettings is a string. If the system fails to read the optional delivery settings, the cause is returned in DeliverySettingsError, and other storage information is still returned.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetDataStorageRequest
         /// </param>
@@ -7603,6 +7674,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// <summary>
         /// <para>Retrieves the details of user logs in log management.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the log storage region, project, capacity, Logstore, and multi-account delivery settings of the current account. Before you update the multi-account configuration, read Data.DeliverySettings.ConfigurationVersion and TargetProject, and pass them to the write operation as is. The capacity is measured in GB, and the TTL is measured in days. The account UID in DeliverySettings is a string. If the system fails to read the optional delivery settings, the cause is returned in DeliverySettingsError, and other storage information is still returned.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDataStorageRequest
@@ -7904,7 +7980,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration string. A utility class is provided to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The JsonConfig request parameter is a complex JSON configuration. We provide a supporting utility class to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7963,7 +8039,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration string. A utility class is provided to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The JsonConfig request parameter is a complex JSON configuration. We provide a supporting utility class to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8022,7 +8098,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration string. A utility class is provided to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The JsonConfig request parameter is a complex JSON configuration. We provide a supporting utility class to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8045,7 +8121,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration string. A utility class is provided to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The JsonConfig request parameter is a complex JSON configuration. We provide a supporting utility class to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8063,12 +8139,224 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a log ticket.</para>
+        /// <para>Queries the AI investigation details of a specified incident, including the report ID, investigation time, judgment category, summary, conclusion, and report content.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration. A supporting tool class is provided to assist with the configuration. For an example, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>Queries the AI investigation results that have been generated for a specified incident. You can call ListIncidentInvestigations to obtain the report ID or display ID first, and then call this operation to query the details.
+        /// The query priority is as follows:</para>
+        /// <ol>
+        /// <item><description>If IncidentInvestigationId is specified, the query is performed by report ID.</description></item>
+        /// <item><description>If the report ID is not specified but IncidentInvestigationDisplayId is specified, the query is performed by display ID.</description></item>
+        /// <item><description>If neither identifier is specified, the most recent successfully completed investigation result for the incident corresponding to IncidentUuid is returned, selected in descending order of investigation end time.
+        /// If no matching investigation record is found, IncidentInvestigation is empty.
+        /// IncidentInvestigationStatus indicates the judgment category in the report. Both IncidentInvestigationReport and IncidentInvestigationOutput are JSON-formatted strings that must be parsed before their fields can be used. Internal fields may change across report versions, and callers should handle missing fields gracefully. The examples show only partial report content.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetIncidentInvestigationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIncidentInvestigationResponse
+        /// </returns>
+        public GetIncidentInvestigationResponse GetIncidentInvestigationWithOptions(GetIncidentInvestigationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncidentInvestigationDisplayId))
+            {
+                body["IncidentInvestigationDisplayId"] = request.IncidentInvestigationDisplayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncidentInvestigationId))
+            {
+                body["IncidentInvestigationId"] = request.IncidentInvestigationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncidentUuid))
+            {
+                body["IncidentUuid"] = request.IncidentUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetIncidentInvestigation",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetIncidentInvestigationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the AI investigation details of a specified incident, including the report ID, investigation time, judgment category, summary, conclusion, and report content.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the AI investigation results that have been generated for a specified incident. You can call ListIncidentInvestigations to obtain the report ID or display ID first, and then call this operation to query the details.
+        /// The query priority is as follows:</para>
+        /// <ol>
+        /// <item><description>If IncidentInvestigationId is specified, the query is performed by report ID.</description></item>
+        /// <item><description>If the report ID is not specified but IncidentInvestigationDisplayId is specified, the query is performed by display ID.</description></item>
+        /// <item><description>If neither identifier is specified, the most recent successfully completed investigation result for the incident corresponding to IncidentUuid is returned, selected in descending order of investigation end time.
+        /// If no matching investigation record is found, IncidentInvestigation is empty.
+        /// IncidentInvestigationStatus indicates the judgment category in the report. Both IncidentInvestigationReport and IncidentInvestigationOutput are JSON-formatted strings that must be parsed before their fields can be used. Internal fields may change across report versions, and callers should handle missing fields gracefully. The examples show only partial report content.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetIncidentInvestigationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIncidentInvestigationResponse
+        /// </returns>
+        public async Task<GetIncidentInvestigationResponse> GetIncidentInvestigationWithOptionsAsync(GetIncidentInvestigationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncidentInvestigationDisplayId))
+            {
+                body["IncidentInvestigationDisplayId"] = request.IncidentInvestigationDisplayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncidentInvestigationId))
+            {
+                body["IncidentInvestigationId"] = request.IncidentInvestigationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncidentUuid))
+            {
+                body["IncidentUuid"] = request.IncidentUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetIncidentInvestigation",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetIncidentInvestigationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the AI investigation details of a specified incident, including the report ID, investigation time, judgment category, summary, conclusion, and report content.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the AI investigation results that have been generated for a specified incident. You can call ListIncidentInvestigations to obtain the report ID or display ID first, and then call this operation to query the details.
+        /// The query priority is as follows:</para>
+        /// <ol>
+        /// <item><description>If IncidentInvestigationId is specified, the query is performed by report ID.</description></item>
+        /// <item><description>If the report ID is not specified but IncidentInvestigationDisplayId is specified, the query is performed by display ID.</description></item>
+        /// <item><description>If neither identifier is specified, the most recent successfully completed investigation result for the incident corresponding to IncidentUuid is returned, selected in descending order of investigation end time.
+        /// If no matching investigation record is found, IncidentInvestigation is empty.
+        /// IncidentInvestigationStatus indicates the judgment category in the report. Both IncidentInvestigationReport and IncidentInvestigationOutput are JSON-formatted strings that must be parsed before their fields can be used. Internal fields may change across report versions, and callers should handle missing fields gracefully. The examples show only partial report content.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetIncidentInvestigationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIncidentInvestigationResponse
+        /// </returns>
+        public GetIncidentInvestigationResponse GetIncidentInvestigation(GetIncidentInvestigationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetIncidentInvestigationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the AI investigation details of a specified incident, including the report ID, investigation time, judgment category, summary, conclusion, and report content.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the AI investigation results that have been generated for a specified incident. You can call ListIncidentInvestigations to obtain the report ID or display ID first, and then call this operation to query the details.
+        /// The query priority is as follows:</para>
+        /// <ol>
+        /// <item><description>If IncidentInvestigationId is specified, the query is performed by report ID.</description></item>
+        /// <item><description>If the report ID is not specified but IncidentInvestigationDisplayId is specified, the query is performed by display ID.</description></item>
+        /// <item><description>If neither identifier is specified, the most recent successfully completed investigation result for the incident corresponding to IncidentUuid is returned, selected in descending order of investigation end time.
+        /// If no matching investigation record is found, IncidentInvestigation is empty.
+        /// IncidentInvestigationStatus indicates the judgment category in the report. Both IncidentInvestigationReport and IncidentInvestigationOutput are JSON-formatted strings that must be parsed before their fields can be used. Internal fields may change across report versions, and callers should handle missing fields gracefully. The examples show only partial report content.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetIncidentInvestigationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIncidentInvestigationResponse
+        /// </returns>
+        public async Task<GetIncidentInvestigationResponse> GetIncidentInvestigationAsync(GetIncidentInvestigationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetIncidentInvestigationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves log credentials.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration string. A utility class is provided to help with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8122,12 +8410,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a log ticket.</para>
+        /// <para>Retrieves log credentials.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration. A supporting tool class is provided to assist with the configuration. For an example, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration string. A utility class is provided to help with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8181,12 +8469,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a log ticket.</para>
+        /// <para>Retrieves log credentials.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration. A supporting tool class is provided to assist with the configuration. For an example, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration string. A utility class is provided to help with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8204,12 +8492,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a log ticket.</para>
+        /// <para>Retrieves log credentials.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration. A supporting tool class is provided to assist with the configuration. For an example, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration string. A utility class is provided to help with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8232,7 +8520,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration string. A utility class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The request parameter JsonConfig contains highly complex JSON configurations. To help you configure it, we provide a utility class with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8295,7 +8583,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration string. A utility class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The request parameter JsonConfig contains highly complex JSON configurations. To help you configure it, we provide a utility class with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8358,7 +8646,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration string. A utility class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The request parameter JsonConfig contains highly complex JSON configurations. To help you configure it, we provide a utility class with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8381,7 +8669,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration string. A utility class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The request parameter JsonConfig contains highly complex JSON configurations. To help you configure it, we provide a utility class with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8399,12 +8687,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about a normalization rule version.</para>
+        /// <para>Retrieves normalization rule version information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig request parameter is a complex JSON configuration. A supporting tool class provides examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The JsonConfig request parameter is a highly complex JSON configuration. To help you configure it, we provide a supporting utility class with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8462,12 +8750,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about a normalization rule version.</para>
+        /// <para>Retrieves normalization rule version information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig request parameter is a complex JSON configuration. A supporting tool class provides examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The JsonConfig request parameter is a highly complex JSON configuration. To help you configure it, we provide a supporting utility class with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8525,12 +8813,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about a normalization rule version.</para>
+        /// <para>Retrieves normalization rule version information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig request parameter is a complex JSON configuration. A supporting tool class provides examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The JsonConfig request parameter is a highly complex JSON configuration. To help you configure it, we provide a supporting utility class with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8548,12 +8836,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about a normalization rule version.</para>
+        /// <para>Retrieves normalization rule version information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig request parameter is a complex JSON configuration. A supporting tool class provides examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The JsonConfig request parameter is a highly complex JSON configuration. To help you configure it, we provide a supporting utility class with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8571,12 +8859,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a normalization schema.</para>
+        /// <para>Retrieves the normalized schema.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration string. A supporting tool class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The JsonConfig request parameter is a complex JSON configuration. We provide a utility class with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8634,12 +8922,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a normalization schema.</para>
+        /// <para>Retrieves the normalized schema.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration string. A supporting tool class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The JsonConfig request parameter is a complex JSON configuration. We provide a utility class with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8697,12 +8985,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a normalization schema.</para>
+        /// <para>Retrieves the normalized schema.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration string. A supporting tool class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The JsonConfig request parameter is a complex JSON configuration. We provide a utility class with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8720,12 +9008,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a normalization schema.</para>
+        /// <para>Retrieves the normalized schema.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration string. A supporting tool class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The JsonConfig request parameter is a complex JSON configuration. We provide a utility class with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8749,7 +9037,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Notifications are subject to frequency and time restrictions.
-        /// Each user receives a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8809,7 +9097,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Notifications are subject to frequency and time restrictions.
-        /// Each user receives a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8869,7 +9157,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Notifications are subject to frequency and time restrictions.
-        /// Each user receives a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8893,7 +9181,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Notifications are subject to frequency and time restrictions.
-        /// Each user receives a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8916,7 +9204,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig request parameter is a complex JSON object. A supporting tool class is provided to help you create the configuration. For an example, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8971,7 +9259,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig request parameter is a complex JSON object. A supporting tool class is provided to help you create the configuration. For an example, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9026,7 +9314,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig request parameter is a complex JSON object. A supporting tool class is provided to help you create the configuration. For an example, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9049,7 +9337,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig request parameter is a complex JSON object. A supporting tool class is provided to help you create the configuration. For an example, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9308,7 +9596,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class with configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON Configurations. We provide a utility class with configuration examples to help you get started. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Before invoking this operation, ensure that Cloud SIEM storage resources (the alert-record Logstore in the Simple Log Service project) are activated. Invoke GetDataStorage to check the storage status. If storage is not activated, purchase SIEM storage first. Otherwise, the invocation will fail.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9415,7 +9705,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class with configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON Configurations. We provide a utility class with configuration examples to help you get started. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Before invoking this operation, ensure that Cloud SIEM storage resources (the alert-record Logstore in the Simple Log Service project) are activated. Invoke GetDataStorage to check the storage status. If storage is not activated, purchase SIEM storage first. Otherwise, the invocation will fail.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9522,7 +9814,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class with configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON Configurations. We provide a utility class with configuration examples to help you get started. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Before invoking this operation, ensure that Cloud SIEM storage resources (the alert-record Logstore in the Simple Log Service project) are activated. Invoke GetDataStorage to check the storage status. If storage is not activated, purchase SIEM storage first. Otherwise, the invocation will fail.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9545,7 +9839,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class with configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON Configurations. We provide a utility class with configuration examples to help you get started. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Before invoking this operation, ensure that Cloud SIEM storage resources (the alert-record Logstore in the Simple Log Service project) are activated. Invoke GetDataStorage to check the storage status. If storage is not activated, purchase SIEM storage first. Otherwise, the invocation will fail.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9563,12 +9859,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get AI-analyzed entity list</para>
+        /// <para>Retrieves the list of AI decision-making entities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Each user can receive up to two notifications daily, but only between 08:00 and 20:00.</para>
+        /// <para>Notifications are subject to frequency and time restrictions. Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -9644,12 +9940,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get AI-analyzed entity list</para>
+        /// <para>Retrieves the list of AI decision-making entities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Each user can receive up to two notifications daily, but only between 08:00 and 20:00.</para>
+        /// <para>Notifications are subject to frequency and time restrictions. Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -9725,12 +10021,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get AI-analyzed entity list</para>
+        /// <para>Retrieves the list of AI decision-making entities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Each user can receive up to two notifications daily, but only between 08:00 and 20:00.</para>
+        /// <para>Notifications are subject to frequency and time restrictions. Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9748,12 +10044,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get AI-analyzed entity list</para>
+        /// <para>Retrieves the list of AI decision-making entities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Each user can receive up to two notifications daily, but only between 08:00 and 20:00.</para>
+        /// <para>Notifications are subject to frequency and time restrictions. Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10216,7 +10512,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Notifications are subject to frequency and time limits. Each user can receive a maximum of two notifications per day between 08:00 and 20:00. Notifications are not sent outside this time frame.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10291,7 +10588,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Notifications are subject to frequency and time limits. Each user can receive a maximum of two notifications per day between 08:00 and 20:00. Notifications are not sent outside this time frame.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10366,7 +10664,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Notifications are subject to frequency and time limits. Each user can receive a maximum of two notifications per day between 08:00 and 20:00. Notifications are not sent outside this time frame.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10389,7 +10688,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Notifications are subject to frequency and time limits. Each user can receive a maximum of two notifications per day between 08:00 and 20:00. Notifications are not sent outside this time frame.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10407,12 +10707,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of data access policies.</para>
+        /// <para>Retrieves a list of data ingestion policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Each user receives up to two notifications per day, sent only between 08:00 and 20:00.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -10496,12 +10797,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of data access policies.</para>
+        /// <para>Retrieves a list of data ingestion policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Each user receives up to two notifications per day, sent only between 08:00 and 20:00.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -10585,12 +10887,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of data access policies.</para>
+        /// <para>Retrieves a list of data ingestion policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Each user receives up to two notifications per day, sent only between 08:00 and 20:00.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10608,12 +10911,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of data access policies.</para>
+        /// <para>Retrieves a list of data ingestion policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Each user receives up to two notifications per day, sent only between 08:00 and 20:00.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11072,7 +11376,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Notifications are limited by frequency and time. Each user receives a maximum of two notifications per day between 08:00 and 20:00.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent at other times.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -11145,7 +11450,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Notifications are limited by frequency and time. Each user receives a maximum of two notifications per day between 08:00 and 20:00.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent at other times.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -11218,7 +11524,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Notifications are limited by frequency and time. Each user receives a maximum of two notifications per day between 08:00 and 20:00.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent at other times.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11241,7 +11548,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Notifications are limited by frequency and time. Each user receives a maximum of two notifications per day between 08:00 and 20:00.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent at other times.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11259,12 +11567,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists data sources.</para>
+        /// <para>Retrieves a list of data sources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Notifications are subject to frequency and time limits. A maximum of two notifications are sent to each user per day, and only between 08:00 and 20:00.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -11396,12 +11705,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists data sources.</para>
+        /// <para>Retrieves a list of data sources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Notifications are subject to frequency and time limits. A maximum of two notifications are sent to each user per day, and only between 08:00 and 20:00.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -11533,12 +11843,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists data sources.</para>
+        /// <para>Retrieves a list of data sources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Notifications are subject to frequency and time limits. A maximum of two notifications are sent to each user per day, and only between 08:00 and 20:00.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11556,12 +11867,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists data sources.</para>
+        /// <para>Retrieves a list of data sources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Notifications are subject to frequency and time limits. A maximum of two notifications are sent to each user per day, and only between 08:00 and 20:00.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11584,7 +11896,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Notifications are subject to frequency and time limits. Each user can receive a maximum of two notifications per day. These notifications are sent only between 08:00 and 20:00.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -11721,7 +12034,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Notifications are subject to frequency and time limits. Each user can receive a maximum of two notifications per day. These notifications are sent only between 08:00 and 20:00.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -11858,7 +12172,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Notifications are subject to frequency and time limits. Each user can receive a maximum of two notifications per day. These notifications are sent only between 08:00 and 20:00.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11881,7 +12196,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Notifications are subject to frequency and time limits. Each user can receive a maximum of two notifications per day. These notifications are sent only between 08:00 and 20:00.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11905,7 +12221,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Notifications are subject to frequency and time restrictions.
-        /// Each user receives a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -12049,7 +12365,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Notifications are subject to frequency and time restrictions.
-        /// Each user receives a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -12193,7 +12509,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Notifications are subject to frequency and time restrictions.
-        /// Each user receives a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12217,7 +12533,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Notifications are subject to frequency and time restrictions.
-        /// Each user receives a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12235,12 +12551,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists log projects.</para>
+        /// <para>Retrieves a list of log projects.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig request parameter is a complex JSON configuration. A supporting tool class is available to simplify this configuration. For an example, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>Retrieves a list of log projects associated with threat detection and response.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12306,12 +12622,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists log projects.</para>
+        /// <para>Retrieves a list of log projects.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig request parameter is a complex JSON configuration. A supporting tool class is available to simplify this configuration. For an example, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>Retrieves a list of log projects associated with threat detection and response.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12377,12 +12693,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists log projects.</para>
+        /// <para>Retrieves a list of log projects.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig request parameter is a complex JSON configuration. A supporting tool class is available to simplify this configuration. For an example, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>Retrieves a list of log projects associated with threat detection and response.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12400,12 +12716,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists log projects.</para>
+        /// <para>Retrieves a list of log projects.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig request parameter is a complex JSON configuration. A supporting tool class is available to simplify this configuration. For an example, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>Retrieves a list of log projects associated with threat detection and response.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12571,12 +12887,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of Logstores.</para>
+        /// <para>Retrieves the list of log stores.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The notification frequency is limited. Each user can receive up to two notifications per day between 08:00 and 20:00. No notifications are sent outside this time frame.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12646,12 +12963,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of Logstores.</para>
+        /// <para>Retrieves the list of log stores.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The notification frequency is limited. Each user can receive up to two notifications per day between 08:00 and 20:00. No notifications are sent outside this time frame.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12721,12 +13039,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of Logstores.</para>
+        /// <para>Retrieves the list of log stores.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The notification frequency is limited. Each user can receive up to two notifications per day between 08:00 and 20:00. No notifications are sent outside this time frame.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12744,12 +13063,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of Logstores.</para>
+        /// <para>Retrieves the list of log stores.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The notification frequency is limited. Each user can receive up to two notifications per day between 08:00 and 20:00. No notifications are sent outside this time frame.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12767,12 +13087,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists normalization categories.</para>
+        /// <para>Retrieves the list of standardized categories.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Notifications are subject to frequency and time limits. Each user can receive a maximum of two notifications per day between 08:00 and 20:00.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12834,12 +13155,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists normalization categories.</para>
+        /// <para>Retrieves the list of standardized categories.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Notifications are subject to frequency and time limits. Each user can receive a maximum of two notifications per day between 08:00 and 20:00.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12901,12 +13223,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists normalization categories.</para>
+        /// <para>Retrieves the list of standardized categories.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Notifications are subject to frequency and time limits. Each user can receive a maximum of two notifications per day between 08:00 and 20:00.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12924,12 +13247,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists normalization categories.</para>
+        /// <para>Retrieves the list of standardized categories.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Notifications are subject to frequency and time limits. Each user can receive a maximum of two notifications per day between 08:00 and 20:00.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12947,12 +13271,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of normalization fields.</para>
+        /// <para>Retrieves the list of normalization fields.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided for configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13022,12 +13346,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of normalization fields.</para>
+        /// <para>Retrieves the list of normalization fields.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided for configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13097,12 +13421,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of normalization fields.</para>
+        /// <para>Retrieves the list of normalization fields.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided for configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13120,12 +13444,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of normalization fields.</para>
+        /// <para>Retrieves the list of normalization fields.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided for configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13143,12 +13467,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the security capabilities of normalization rules.</para>
+        /// <para>Retrieves the list of security capabilities associated with normalization rules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The \<c>JsonConfig\\</c> request parameter is a complex JSON configuration. A helper tool class is provided with configuration examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -13220,12 +13544,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the security capabilities of normalization rules.</para>
+        /// <para>Retrieves the list of security capabilities associated with normalization rules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The \<c>JsonConfig\\</c> request parameter is a complex JSON configuration. A helper tool class is provided with configuration examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -13297,12 +13621,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the security capabilities of normalization rules.</para>
+        /// <para>Retrieves the list of security capabilities associated with normalization rules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The \<c>JsonConfig\\</c> request parameter is a complex JSON configuration. A helper tool class is provided with configuration examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13320,12 +13644,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the security capabilities of normalization rules.</para>
+        /// <para>Retrieves the list of security capabilities associated with normalization rules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The \<c>JsonConfig\\</c> request parameter is a complex JSON configuration. A helper tool class is provided with configuration examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13343,12 +13667,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of normalization rule versions.</para>
+        /// <para>Retrieves a list of normalization rule versions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration. A supporting tool class is available and provides configuration examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The JsonConfig input parameter is a complex JSON configuration. We provide a utility class to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13410,12 +13734,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of normalization rule versions.</para>
+        /// <para>Retrieves a list of normalization rule versions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration. A supporting tool class is available and provides configuration examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The JsonConfig input parameter is a complex JSON configuration. We provide a utility class to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13477,12 +13801,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of normalization rule versions.</para>
+        /// <para>Retrieves a list of normalization rule versions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration. A supporting tool class is available and provides configuration examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The JsonConfig input parameter is a complex JSON configuration. We provide a utility class to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13500,12 +13824,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of normalization rule versions.</para>
+        /// <para>Retrieves a list of normalization rule versions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration. A supporting tool class is available and provides configuration examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The JsonConfig input parameter is a complex JSON configuration. We provide a utility class to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13812,7 +14136,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class with specific configuration examples is provided. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration string. A utility class is provided with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13891,7 +14215,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class with specific configuration examples is provided. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration string. A utility class is provided with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13970,7 +14294,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class with specific configuration examples is provided. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration string. A utility class is provided with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13993,7 +14317,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class with specific configuration examples is provided. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration string. A utility class is provided with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14011,12 +14335,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of security domains.</para>
+        /// <para>Retrieves the list of security domains.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class and configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14074,12 +14398,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of security domains.</para>
+        /// <para>Retrieves the list of security domains.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class and configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14137,12 +14461,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of security domains.</para>
+        /// <para>Retrieves the list of security domains.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class and configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14160,12 +14484,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of security domains.</para>
+        /// <para>Retrieves the list of security domains.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class and configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14188,7 +14512,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The \<c>JsonConfig\\</c> request parameter is a complex JSON configuration. A supporting tool class is provided that contains configuration examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a highly complex JSON configuration. A utility class with specific configuration examples is provided. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -14273,7 +14597,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The \<c>JsonConfig\\</c> request parameter is a complex JSON configuration. A supporting tool class is provided that contains configuration examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a highly complex JSON configuration. A utility class with specific configuration examples is provided. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -14358,7 +14682,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The \<c>JsonConfig\\</c> request parameter is a complex JSON configuration. A supporting tool class is provided that contains configuration examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a highly complex JSON configuration. A utility class with specific configuration examples is provided. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14381,7 +14705,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The \<c>JsonConfig\\</c> request parameter is a complex JSON configuration. A supporting tool class is provided that contains configuration examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a highly complex JSON configuration. A utility class with specific configuration examples is provided. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14404,7 +14728,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14481,7 +14805,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14558,7 +14882,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14581,7 +14905,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14605,7 +14929,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Notifications are subject to frequency and time restrictions.
-        /// Each user receives a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14673,7 +14997,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Notifications are subject to frequency and time restrictions.
-        /// Each user receives a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14741,7 +15065,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Notifications are subject to frequency and time restrictions.
-        /// Each user receives a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14765,7 +15089,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Notifications are subject to frequency and time restrictions.
-        /// Each user receives a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15028,7 +15352,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON Configurations string. We provide a utility class with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15107,7 +15431,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON Configurations string. We provide a utility class with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15186,7 +15510,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON Configurations string. We provide a utility class with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15209,7 +15533,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON Configurations string. We provide a utility class with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15227,12 +15551,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of traffic statistics.</para>
+        /// <para>Retrieves the list of traffic statistics.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration. A supporting tool class with configuration examples is provided. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -15316,12 +15640,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of traffic statistics.</para>
+        /// <para>Retrieves the list of traffic statistics.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration. A supporting tool class with configuration examples is provided. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -15405,12 +15729,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of traffic statistics.</para>
+        /// <para>Retrieves the list of traffic statistics.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration. A supporting tool class with configuration examples is provided. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15428,12 +15752,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of traffic statistics.</para>
+        /// <para>Retrieves the list of traffic statistics.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration. A supporting tool class with configuration examples is provided. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15456,7 +15780,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig request parameter is a complex JSON configuration. A supporting tool class provides examples for this configuration. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The JsonConfig input parameter is a complex JSON configuration. To help you configure it, we provide a utility class with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15519,7 +15843,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig request parameter is a complex JSON configuration. A supporting tool class provides examples for this configuration. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The JsonConfig input parameter is a complex JSON configuration. To help you configure it, we provide a utility class with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15582,7 +15906,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig request parameter is a complex JSON configuration. A supporting tool class provides examples for this configuration. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The JsonConfig input parameter is a complex JSON configuration. To help you configure it, we provide a utility class with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15605,7 +15929,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig request parameter is a complex JSON configuration. A supporting tool class provides examples for this configuration. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The JsonConfig input parameter is a complex JSON configuration. To help you configure it, we provide a utility class with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15623,12 +15947,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of vendors.</para>
+        /// <para>Retrieves the list of vendors.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The frequency and time of notifications are limited. Each user can receive a maximum of two notifications per day, which are sent only between 08:00 and 20:00.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -15704,12 +16029,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of vendors.</para>
+        /// <para>Retrieves the list of vendors.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The frequency and time of notifications are limited. Each user can receive a maximum of two notifications per day, which are sent only between 08:00 and 20:00.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -15785,12 +16111,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of vendors.</para>
+        /// <para>Retrieves the list of vendors.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The frequency and time of notifications are limited. Each user can receive a maximum of two notifications per day, which are sent only between 08:00 and 20:00.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15808,12 +16135,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of vendors.</para>
+        /// <para>Retrieves the list of vendors.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The frequency and time of notifications are limited. Each user can receive a maximum of two notifications per day, which are sent only between 08:00 and 20:00.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15836,7 +16164,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>There are limits on the frequency and time of notifications. Each user can receive a maximum of two notifications per day between 08:00 and 20:00. Notifications are not sent outside of this time frame.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15895,7 +16224,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>There are limits on the frequency and time of notifications. Each user can receive a maximum of two notifications per day between 08:00 and 20:00. Notifications are not sent outside of this time frame.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15954,7 +16284,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>There are limits on the frequency and time of notifications. Each user can receive a maximum of two notifications per day between 08:00 and 20:00. Notifications are not sent outside of this time frame.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15977,7 +16308,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>There are limits on the frequency and time of notifications. Each user can receive a maximum of two notifications per day between 08:00 and 20:00. Notifications are not sent outside of this time frame.</para>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16329,7 +16661,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Notifications are subject to frequency and time restrictions.
-        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16393,7 +16725,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Notifications are subject to frequency and time restrictions.
-        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16457,7 +16789,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Notifications are subject to frequency and time restrictions.
-        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16481,7 +16813,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Notifications are subject to frequency and time restrictions.
-        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18212,7 +18544,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration. A supporting tool class provides configuration examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. To help you configure it, we provide a utility class with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18313,7 +18645,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration. A supporting tool class provides configuration examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. To help you configure it, we provide a utility class with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18414,7 +18746,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration. A supporting tool class provides configuration examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. To help you configure it, we provide a utility class with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18437,7 +18769,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration. A supporting tool class provides configuration examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. To help you configure it, we provide a utility class with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18691,8 +19023,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the log storage region for Log Management.</para>
+        /// <para>Modifies the log storage region in log management.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the log storage region or the global switch for multi-account centralized delivery. Submit these two types of operations separately. Before modifying the global switch, query GetDataStorage first and use the returned ConfigurationVersion and TargetProject. Do not copy the fixed version and account from the examples. The current V2 version does not support the legacy DeliveryStatus global switch. After writing, re-query GetDataStorage to obtain the latest configuration.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDataStorageRequest
@@ -18708,6 +19045,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigurationVersion))
+            {
+                body["ConfigurationVersion"] = request.ConfigurationVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataStorageRegionId))
             {
                 body["DataStorageRegionId"] = request.DataStorageRegionId;
@@ -18720,6 +19061,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             {
                 body["Lang"] = request.Lang;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultiAccountDeliveryEnabled))
+            {
+                body["MultiAccountDeliveryEnabled"] = request.MultiAccountDeliveryEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
@@ -18727,6 +19072,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
             {
                 body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetProject))
+            {
+                body["TargetProject"] = request.TargetProject;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -18749,8 +19098,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the log storage region for Log Management.</para>
+        /// <para>Modifies the log storage region in log management.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the log storage region or the global switch for multi-account centralized delivery. Submit these two types of operations separately. Before modifying the global switch, query GetDataStorage first and use the returned ConfigurationVersion and TargetProject. Do not copy the fixed version and account from the examples. The current V2 version does not support the legacy DeliveryStatus global switch. After writing, re-query GetDataStorage to obtain the latest configuration.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDataStorageRequest
@@ -18766,6 +19120,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigurationVersion))
+            {
+                body["ConfigurationVersion"] = request.ConfigurationVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataStorageRegionId))
             {
                 body["DataStorageRegionId"] = request.DataStorageRegionId;
@@ -18778,6 +19136,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             {
                 body["Lang"] = request.Lang;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultiAccountDeliveryEnabled))
+            {
+                body["MultiAccountDeliveryEnabled"] = request.MultiAccountDeliveryEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 body["RegionId"] = request.RegionId;
@@ -18785,6 +19147,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
             {
                 body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetProject))
+            {
+                body["TargetProject"] = request.TargetProject;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -18807,8 +19173,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the log storage region for Log Management.</para>
+        /// <para>Modifies the log storage region in log management.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the log storage region or the global switch for multi-account centralized delivery. Submit these two types of operations separately. Before modifying the global switch, query GetDataStorage first and use the returned ConfigurationVersion and TargetProject. Do not copy the fixed version and account from the examples. The current V2 version does not support the legacy DeliveryStatus global switch. After writing, re-query GetDataStorage to obtain the latest configuration.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDataStorageRequest
@@ -18825,8 +19196,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the log storage region for Log Management.</para>
+        /// <para>Modifies the log storage region in log management.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the log storage region or the global switch for multi-account centralized delivery. Submit these two types of operations separately. Before modifying the global switch, query GetDataStorage first and use the returned ConfigurationVersion and TargetProject. Do not copy the fixed version and account from the examples. The current V2 version does not support the legacy DeliveryStatus global switch. After writing, re-query GetDataStorage to obtain the latest configuration.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDataStorageRequest
@@ -18843,10 +19219,15 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the status of log delivery.</para>
+        /// <para>Modifies the log delivery status.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the Cloud Threat Detection and Response (CTDR) data storage service is activated for your account and that the data storage order has not expired. Call the GetDataStorage operation to check the data storage order status.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
         /// UpdateDataStorageDeliveryRequest
         /// </param>
         /// <param name="runtime">
@@ -18856,10 +19237,24 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// <returns>
         /// UpdateDataStorageDeliveryResponse
         /// </returns>
-        public UpdateDataStorageDeliveryResponse UpdateDataStorageDeliveryWithOptions(UpdateDataStorageDeliveryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateDataStorageDeliveryResponse UpdateDataStorageDeliveryWithOptions(UpdateDataStorageDeliveryRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateDataStorageDeliveryShrinkRequest request = new UpdateDataStorageDeliveryShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SelectedAccountIds))
+            {
+                request.SelectedAccountIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SelectedAccountIds, "SelectedAccountIds", "simple");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoIncludeNewAccounts))
+            {
+                body["AutoIncludeNewAccounts"] = request.AutoIncludeNewAccounts;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigurationVersion))
+            {
+                body["ConfigurationVersion"] = request.ConfigurationVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 body["Lang"] = request.Lang;
@@ -18879,6 +19274,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
             {
                 body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectedAccountIdsShrink))
+            {
+                body["SelectedAccountIds"] = request.SelectedAccountIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubUserId))
+            {
+                body["SubUserId"] = request.SubUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetProject))
+            {
+                body["TargetProject"] = request.TargetProject;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -18901,10 +19308,15 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the status of log delivery.</para>
+        /// <para>Modifies the log delivery status.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the Cloud Threat Detection and Response (CTDR) data storage service is activated for your account and that the data storage order has not expired. Call the GetDataStorage operation to check the data storage order status.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
         /// UpdateDataStorageDeliveryRequest
         /// </param>
         /// <param name="runtime">
@@ -18914,10 +19326,24 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// <returns>
         /// UpdateDataStorageDeliveryResponse
         /// </returns>
-        public async Task<UpdateDataStorageDeliveryResponse> UpdateDataStorageDeliveryWithOptionsAsync(UpdateDataStorageDeliveryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdateDataStorageDeliveryResponse> UpdateDataStorageDeliveryWithOptionsAsync(UpdateDataStorageDeliveryRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateDataStorageDeliveryShrinkRequest request = new UpdateDataStorageDeliveryShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SelectedAccountIds))
+            {
+                request.SelectedAccountIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SelectedAccountIds, "SelectedAccountIds", "simple");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoIncludeNewAccounts))
+            {
+                body["AutoIncludeNewAccounts"] = request.AutoIncludeNewAccounts;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigurationVersion))
+            {
+                body["ConfigurationVersion"] = request.ConfigurationVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 body["Lang"] = request.Lang;
@@ -18937,6 +19363,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
             {
                 body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectedAccountIdsShrink))
+            {
+                body["SelectedAccountIds"] = request.SelectedAccountIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubUserId))
+            {
+                body["SubUserId"] = request.SubUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetProject))
+            {
+                body["TargetProject"] = request.TargetProject;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -18959,8 +19397,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the status of log delivery.</para>
+        /// <para>Modifies the log delivery status.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the Cloud Threat Detection and Response (CTDR) data storage service is activated for your account and that the data storage order has not expired. Call the GetDataStorage operation to check the data storage order status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDataStorageDeliveryRequest
@@ -18977,8 +19420,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the status of log delivery.</para>
+        /// <para>Modifies the log delivery status.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the Cloud Threat Detection and Response (CTDR) data storage service is activated for your account and that the data storage order has not expired. Call the GetDataStorage operation to check the data storage order status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDataStorageDeliveryRequest
@@ -19168,7 +19616,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Because this operation uses complex request parameters, a supporting tool class is provided to assist with the JSON configuration. For an example, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. To help you configure it, a utility class is provided with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19351,7 +19799,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Because this operation uses complex request parameters, a supporting tool class is provided to assist with the JSON configuration. For an example, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. To help you configure it, a utility class is provided with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19534,7 +19982,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Because this operation uses complex request parameters, a supporting tool class is provided to assist with the JSON configuration. For an example, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. To help you configure it, a utility class is provided with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19557,7 +20005,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Because this operation uses complex request parameters, a supporting tool class is provided to assist with the JSON configuration. For an example, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. To help you configure it, a utility class is provided with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19580,7 +20028,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration. For configuration examples, see the supporting tool class in the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. To help you configure it, we provide a utility class with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -19705,7 +20153,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration. For configuration examples, see the supporting tool class in the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. To help you configure it, we provide a utility class with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -19830,7 +20278,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration. For configuration examples, see the supporting tool class in the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. To help you configure it, we provide a utility class with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19853,7 +20301,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration. For configuration examples, see the supporting tool class in the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. To help you configure it, we provide a utility class with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20072,7 +20520,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig request parameter is a complex JSON configuration. For an example of a supporting tool class with configuration examples, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. To help with specific configuration examples, a utility class is provided. Refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20139,7 +20587,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig request parameter is a complex JSON configuration. For an example of a supporting tool class with configuration examples, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. To help with specific configuration examples, a utility class is provided. Refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20206,7 +20654,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig request parameter is a complex JSON configuration. For an example of a supporting tool class with configuration examples, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. To help with specific configuration examples, a utility class is provided. Refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20229,7 +20677,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig request parameter is a complex JSON configuration. For an example of a supporting tool class with configuration examples, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. To help with specific configuration examples, a utility class is provided. Refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20252,7 +20700,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The JsonConfig input parameter is a complex JSON configuration. To help you configure it, a supporting utility class with examples is provided. Refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20347,7 +20795,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The JsonConfig input parameter is a complex JSON configuration. To help you configure it, a supporting utility class with examples is provided. Refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20442,7 +20890,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The JsonConfig input parameter is a complex JSON configuration. To help you configure it, a supporting utility class with examples is provided. Refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20465,7 +20913,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The JsonConfig input parameter is a complex JSON configuration. To help you configure it, a supporting utility class with examples is provided. Refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20655,12 +21103,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verify log storage.</para>
+        /// <para>Validates the log storage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig request parameter is a complex JSON configuration. A supporting tool class is provided to help you create the configuration. For a code sample, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The JsonConfig request parameter is a complex JSON configuration. To simplify this, we provide a utility class to assist with specific configuration examples. For more information, refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20726,12 +21174,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verify log storage.</para>
+        /// <para>Validates the log storage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig request parameter is a complex JSON configuration. A supporting tool class is provided to help you create the configuration. For a code sample, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The JsonConfig request parameter is a complex JSON configuration. To simplify this, we provide a utility class to assist with specific configuration examples. For more information, refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20797,12 +21245,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verify log storage.</para>
+        /// <para>Validates the log storage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig request parameter is a complex JSON configuration. A supporting tool class is provided to help you create the configuration. For a code sample, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The JsonConfig request parameter is a complex JSON configuration. To simplify this, we provide a utility class to assist with specific configuration examples. For more information, refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20820,12 +21268,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verify log storage.</para>
+        /// <para>Validates the log storage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig request parameter is a complex JSON configuration. A supporting tool class is provided to help you create the configuration. For a code sample, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The JsonConfig request parameter is a complex JSON configuration. To simplify this, we provide a utility class to assist with specific configuration examples. For more information, refer to the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20843,12 +21291,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validates a normalization rule.</para>
+        /// <para>Validates normalization rules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration. A supporting tool class provides configuration examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">demo</a>.</para>
+        /// <para>The JsonConfig request parameter is a highly complex JSON configuration. To help you configure it, we provide a utility class with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20934,12 +21382,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validates a normalization rule.</para>
+        /// <para>Validates normalization rules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration. A supporting tool class provides configuration examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">demo</a>.</para>
+        /// <para>The JsonConfig request parameter is a highly complex JSON configuration. To help you configure it, we provide a utility class with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21025,12 +21473,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validates a normalization rule.</para>
+        /// <para>Validates normalization rules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration. A supporting tool class provides configuration examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">demo</a>.</para>
+        /// <para>The JsonConfig request parameter is a highly complex JSON configuration. To help you configure it, we provide a utility class with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21048,12 +21496,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validates a normalization rule.</para>
+        /// <para>Validates normalization rules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The JsonConfig input parameter is a complex JSON configuration. A supporting tool class provides configuration examples. For more information, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">demo</a>.</para>
+        /// <para>The JsonConfig request parameter is a highly complex JSON configuration. To help you configure it, we provide a utility class with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">

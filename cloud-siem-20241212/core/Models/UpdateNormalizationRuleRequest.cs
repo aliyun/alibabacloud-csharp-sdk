@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class UpdateNormalizationRuleRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to package non-standard fields into the extend_content extension field. Valid values:</para>
+        /// <para>Specifies whether to pack non-standard fields into the extended field extend_content. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>enabled: The feature is enabled.</para>
-        /// </description></item>
-        /// <item><description><para>disabled: The feature is disabled.</para>
-        /// </description></item>
+        /// <item><description>enabled: Enabled.</description></item>
+        /// <item><description>disabled: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ExtendContentPacked { get; set; }
 
         /// <summary>
-        /// <para>The storage mode for extension fields. Valid values: flat, pack, and reject.</para>
+        /// <para>The extended field storage mode. Valid values: flat, pack, reject.</para>
         /// 
         /// <b>Example:</b>
         /// <para>flat</para>
@@ -36,12 +34,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ExtendFieldStoreMode { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <para>The language of the response messages. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese.</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English.</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,7 +48,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The normalization category.</para>
+        /// <para>The normalization category to which the rule belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>HOST_CATEGORY</para>
@@ -62,7 +58,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NormalizationCategoryId { get; set; }
 
         /// <summary>
-        /// <para>The description of the normalization rule.</para>
+        /// <para>The normalization rule description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>normalization_rule_Z57np</para>
@@ -72,7 +68,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NormalizationRuleDescription { get; set; }
 
         /// <summary>
-        /// <para>The expression for the normalization rule.</para>
+        /// <para>The normalization rule expression.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -84,7 +80,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NormalizationRuleExpression { get; set; }
 
         /// <summary>
-        /// <para>The format of the normalization rule.</para>
+        /// <para>The normalization rule format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SPL</para>
@@ -94,7 +90,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NormalizationRuleFormat { get; set; }
 
         /// <summary>
-        /// <para>The ID of the normalization rule.</para>
+        /// <para>The normalization rule ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nr-z0b2ssjteut85uoh9nzp</para>
@@ -111,14 +107,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public List<string> NormalizationRuleIds { get; set; }
 
         /// <summary>
-        /// <para>The mode of the normalization rule. Valid values:</para>
+        /// <para>The normalization rule mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>both</para>
-        /// </description></item>
-        /// <item><description><para>scan</para>
-        /// </description></item>
-        /// <item><description><para>realtime</para>
-        /// </description></item>
+        /// <item><description>both</description></item>
+        /// <item><description>scan</description></item>
+        /// <item><description>realtime</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -129,7 +122,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NormalizationRuleMode { get; set; }
 
         /// <summary>
-        /// <para>The name of the normalization rule.</para>
+        /// <para>The normalization rule name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>normalization_rule_Z57np</para>
@@ -139,12 +132,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NormalizationRuleName { get; set; }
 
         /// <summary>
-        /// <para>The type of the normalization rule. Valid values:</para>
+        /// <para>The normalization rule type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>predefined: predefined normalization rule.</para>
-        /// </description></item>
-        /// <item><description><para>custom: custom normalization rule.</para>
-        /// </description></item>
+        /// <item><description>predefined: predefined normalization rule.</description></item>
+        /// <item><description>custom: custom normalization rule.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -155,7 +146,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NormalizationRuleType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the normalization structure.</para>
+        /// <para>The normalization schema ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>HTTP_ACTIVITY</para>
@@ -165,6 +156,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NormalizationSchemaId { get; set; }
 
         /// <summary>
+        /// <para>The normalization security domain ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>NETWORK_AND_WEB_SECURITY</para>
         /// </summary>
@@ -173,12 +166,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NormalizationSecurityDomainId { get; set; }
 
         /// <summary>
-        /// <para>The field to use for sorting the rule list. Valid values:</para>
+        /// <para>The field used to sort the rule list. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>GmtModified: Sorts by modification time.</para>
-        /// </description></item>
-        /// <item><description><para>Id: Sorts by rule ID (default).</para>
-        /// </description></item>
+        /// <item><description>GmtModified: Sort by modification time.</description></item>
+        /// <item><description>Id: Sort by rule ID (default).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -199,12 +190,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ProductId { get; set; }
 
         /// <summary>
-        /// <para>The region where the Data Management center of threat analysis is located. Select a region based on the region where your assets are located. Valid values:</para>
+        /// <para>The region where the data management center of the threat detection service is located. Select the management center region based on the region where your assets reside. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: an asset in the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: an asset outside the Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: Your assets are located in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: Your assets are located outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -215,7 +204,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of a member. This parameter is used when an administrator switches to the perspective of the member.</para>
+        /// <para>The user ID of the member account that the administrator switches to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>173326*******</para>
@@ -225,7 +214,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>The vendor ID that corresponds to the normalization rule.</para>
+        /// <para>The vendor ID associated with the normalization rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alibaba_cloud</para>

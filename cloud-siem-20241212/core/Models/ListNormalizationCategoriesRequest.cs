@@ -12,10 +12,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese.</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English.</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.
+        /// This parameter is effectively required. If you do not specify this parameter, the server returns a 400 error (The specified Lang can not be empty.) instead of using the default value zh.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +25,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page.</para>
+        /// <para>The maximum number of entries to return in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -39,7 +38,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to retrieve the next page of results. Set this parameter to the NextToken value returned in the previous API call to retrieve the next page of results. You do not need to specify this parameter for the first query.</para>
+        /// <para>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>
@@ -51,10 +50,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The type of the normalization rule category. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>log</para>
-        /// </description></item>
-        /// <item><description><para>entity</para>
-        /// </description></item>
+        /// <item><description>log</description></item>
+        /// <item><description>entity</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,12 +62,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NormalizationCategoryType { get; set; }
 
         /// <summary>
-        /// <para>The region of the Data Management center for threat analysis. Select the region for the Data Management center based on the region where your assets are located. Valid values:</para>
+        /// <para>The region where the threat analysis data management center resides. Specify this parameter based on the region where your assets reside. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: Assets are in the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: Assets are in a region outside China.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: Your assets reside in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: Your assets reside outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -81,7 +76,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of the member. An administrator can use this parameter to switch to the perspective of this member.</para>
+        /// <para>The user ID of the member to which the administrator switches the view.</para>
         /// 
         /// <b>Example:</b>
         /// <para>173326*******</para>

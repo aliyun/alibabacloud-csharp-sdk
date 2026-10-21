@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public GetCopilotConversationResponseBodyConversation Conversation { get; set; }
         public class GetCopilotConversationResponseBodyConversation : TeaModel {
             /// <summary>
-            /// <para>The conversation ID.</para>
+            /// <para>The session ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>54b6c969-4b75-47be-9f43-71f88aeb****</para>
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string ConversationId { get; set; }
 
             /// <summary>
-            /// <para>The conversation summary.</para>
+            /// <para>The session summary.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Preliminary correlation analysis of alerts and network logs has been completed</para>
+            /// <para>Initial correlation analysis between alerts and network logs has been completed</para>
             /// </summary>
             [NameInMap("ConversationSummary")]
             [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string Model { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether planning is enabled. Valid values: [disable, enable, force]. Default value: enable.</para>
+            /// <para>Specifies whether the plan mode is enabled. Valid values: disable, enable, and force. Default value: enable.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The conversation summary version number.</para>
+            /// <para>The version number of the session summary.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string ThinkingMode { get; set; }
 
             /// <summary>
-            /// <para>The conversation title.</para>
+            /// <para>The session title.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Security event investigation</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string Title { get; set; }
 
             /// <summary>
-            /// <para>The update date.</para>
+            /// <para>The update date. The format is YYYY-MM-DDTHH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-06-09T10:27:35</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the export task.</para>
+        /// <para>The export task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>400151</para>

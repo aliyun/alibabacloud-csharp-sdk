@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The security operations Agent conversation turn.</para>
+        /// <para>The Security Operations agent conversation turn.</para>
         /// </summary>
         [NameInMap("Turn")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string ClientMessageId { get; set; }
 
             /// <summary>
-            /// <para>The security operations Agent session ID.</para>
+            /// <para>The Security Operations agent conversation ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>54b6c969-4b75-47be-9f43-71f88aeb****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string ConversationId { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The time is in ISO 8601 format and includes a time zone offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T10:17:46.398+08:00</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public long? ReasoningTokens { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether retry is allowed.</para>
+            /// <para>Indicates whether retries are allowed.</para>
             /// </summary>
             [NameInMap("RetryAllowed")]
             [Validation(Required=false)]

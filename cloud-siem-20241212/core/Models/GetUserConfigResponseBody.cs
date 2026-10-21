@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public GetUserConfigResponseBodyUser User { get; set; }
         public class GetUserConfigResponseBodyUser : TeaModel {
             /// <summary>
-            /// <para>The current CTDR version.</para>
+            /// <para>The current Cloud Threat Detection and Response (CTDR) version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v2</para>
@@ -39,14 +39,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             /// <summary>
             /// <para>The upgrade status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>pending: The upgrade is pending.</para>
-            /// </description></item>
-            /// <item><description><para>upgrading: The upgrade is in progress.</para>
-            /// </description></item>
-            /// <item><description><para>success: The upgrade is successful.</para>
-            /// </description></item>
-            /// <item><description><para>failed: The upgrade failed.</para>
-            /// </description></item>
+            /// <item><description>pending: Pending upgrade.</description></item>
+            /// <item><description>upgrading: Upgrading.</description></item>
+            /// <item><description>success: Upgrade succeeded.</description></item>
+            /// <item><description>failed: Upgrade failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -57,7 +53,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataStorageVersion { get; set; }
 
             /// <summary>
-            /// <para>The version of Log Management.</para>
+            /// <para>The log management version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v2</para>
@@ -67,7 +63,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string UpgradeCtdrVersion { get; set; }
 
             /// <summary>
-            /// <para>The target CTDR version for the upgrade.</para>
+            /// <para>The CTDR version to upgrade to.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v2</para>

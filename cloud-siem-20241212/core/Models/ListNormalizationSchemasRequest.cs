@@ -10,11 +10,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ListNormalizationSchemasRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the request and response. Valid values:</para>
+        /// <para>The language type for the request and response messages. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese.</description></item>
         /// <item><description><b>en</b>: English.</description></item>
         /// </list>
+        /// <para>Note: This parameter is required in actual calls. If this parameter is not specified, the service returns a 400 error &quot;The specified Lang can not be empty.&quot; Explicitly pass in the language code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -37,7 +38,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next query. Leave this parameter empty for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</para>
+        /// <para>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>
@@ -47,7 +48,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the normalization rule category.</para>
+        /// <para>The normalization rule category ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NETWORK_CATEGORY</para>
@@ -93,8 +94,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The region where the threat analysis data management center is located. Specify the management center based on the region of your assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: the asset is in the Chinese mainland.</description></item>
-        /// <item><description>ap-southeast-1: the asset is outside the Chinese mainland.</description></item>
+        /// <item><description>cn-hangzhou: The assets are located in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: The assets are located outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -105,7 +106,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID that the administrator switches to when viewing as another member.</para>
+        /// <para>The user ID used when an administrator switches to the perspective of another member.</para>
         /// 
         /// <b>Example:</b>
         /// <para>173326*******</para>

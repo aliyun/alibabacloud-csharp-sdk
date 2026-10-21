@@ -13,7 +13,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese.</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English.
+        /// Note: This parameter is required in practice. If you do not specify this parameter, the API returns a 400 error: &quot;The specified Lang can not be empty.&quot; You must explicitly pass zh or en.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +35,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request or if no more results exist. If more results exist, set this parameter to the NextToken value returned in the previous API call.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request or if no more results exist. Set this parameter to the NextToken value returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>
@@ -64,7 +65,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string QueryViewType { get; set; }
 
         /// <summary>
-        /// <para>The region where the threat analysis data management center is located. Specify the management center based on the region of your assets. Valid values:</para>
+        /// <para>The region where the Cloud Threat Detection and Response (CTDR) data management center resides. Specify this parameter based on the region of your assets. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>cn-hangzhou: Your assets belong to the Chinese mainland or Hong Kong (China).</description></item>
         /// <item><description>ap-southeast-1: Your assets belong to regions outside China.</description></item>

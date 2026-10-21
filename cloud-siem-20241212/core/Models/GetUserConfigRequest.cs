@@ -12,11 +12,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese.</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English.</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
+        /// <para>Note: This parameter is required. If this parameter is not specified, the API returns a 400 error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -26,12 +25,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The region of the Data Management center for threat analysis. Select a region for the Management Hub based on the region where your assets are located. Valid values:</para>
+        /// <para>The region where the threat detection and response data management center resides. Specify the management center based on the region where your assets reside. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: Assets in the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: Assets outside China.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: Your assets reside in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: Your assets reside outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,7 +39,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of a member. An administrator can use this parameter to switch to the perspective of the specified member.</para>
+        /// <para>The user ID of the member to which the administrator switches the view.</para>
         /// 
         /// <b>Example:</b>
         /// <para>173326*******</para>

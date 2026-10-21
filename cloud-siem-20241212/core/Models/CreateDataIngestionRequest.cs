@@ -22,10 +22,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The data ingestion mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>realtime</para>
-        /// </description></item>
-        /// <item><description><para>scan</para>
-        /// </description></item>
+        /// <item><description>realtime</description></item>
+        /// <item><description>scan</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,7 +34,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string DataIngestionMode { get; set; }
 
         /// <summary>
-        /// <para>The error code for the data ingestion status.</para>
+        /// <para>The status code for data ingestion exceptions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UserUnauthorized</para>
@@ -48,10 +46,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The data ingestion type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>preset</para>
-        /// </description></item>
-        /// <item><description><para>custom</para>
-        /// </description></item>
+        /// <item><description>preset</description></item>
+        /// <item><description>custom</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,7 +58,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string DataIngestionType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the data source can be edited.</para>
+        /// <para>Specifies whether the data source is editable.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -72,7 +68,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public bool? DataSourceEditable { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data source.</para>
+        /// <para>The data source ID.</para>
+        /// <remarks>
+        /// <para>This parameter is required in practice. If you do not specify this parameter, the API returns a 400 error: &quot;The specified DataSourceId is invalid.&quot;
+        /// Before calling this operation, call the CreateDataSource operation to create a data source and obtain the data source ID.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>ds-3g6lyf4eonngyohaq7tr</para>
@@ -84,9 +84,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese.</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English.</para>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.<remarks>
+        /// <para>This parameter is required in practice. If you do not specify this parameter, the API returns a 400 error: &quot;The specified Lang can not be empty.&quot;</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
         /// 
@@ -98,7 +99,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the normalization rule can be edited.</para>
+        /// <para>Specifies whether the normalization rule is editable.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -108,7 +109,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public bool? NormalizationRuleEditable { get; set; }
 
         /// <summary>
-        /// <para>The ID of the normalization rule.</para>
+        /// <para>The normalization rule ID.
+        /// Before calling this operation, call the CreateNormalizationRule operation to create a normalization rule and obtain the normalization rule ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nr-hdmady54piigkjfv17yp</para>
@@ -128,12 +130,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ProductId { get; set; }
 
         /// <summary>
-        /// <para>The region where the Data Management hub for threat analysis is located. Select a region for the management hub based on the region of your assets. Valid values:</para>
+        /// <para>The region of the management center for threat analysis. Specify the management center based on the region where your assets reside. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: Your assets are in the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: Your assets are in a region outside China.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: Your assets reside in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: Your assets reside outside China.</description></item>
+        /// <item><description>cn-shanghai: The actual effective value. RegionId refers to the management center location, which is a different dimension from the API endpoint region (cn-shanghai).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -144,7 +145,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of a member. An administrator can use this parameter to assume the permissions of the specified member.</para>
+        /// <para>The ID of the member to which the administrator switches the view.</para>
         /// 
         /// <b>Example:</b>
         /// <para>173326*******</para>
@@ -154,7 +155,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data source for the scan mode.</para>
+        /// <para>The data source ID for scan mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ds-014frtpy28m5ct2eoyo1</para>
@@ -164,7 +165,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ScanDataSourceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the stream job.</para>
+        /// <para>The job ID of the stream task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>802c0129b6cfd50861d4b25deea29afb</para>
@@ -174,7 +175,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string StreamJobId { get; set; }
 
         /// <summary>
-        /// <para>The update time.</para>
+        /// <para>The update time. This value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1733269771123</para>

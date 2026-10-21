@@ -12,10 +12,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese.</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English.</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.
+        /// This parameter is required in practice. If you do not specify this parameter or pass an empty string, the API returns a 400 error (The specified Lang can not be empty.).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +25,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page.</para>
+        /// <para>The maximum number of entries to return in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -39,7 +38,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token to start the next query. Leave this parameter empty for the first query. If the response is truncated, use the \<c>NextToken\\</c> value from the previous response.</para>
+        /// <para>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>
@@ -49,7 +48,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the normalization rule.</para>
+        /// <para>The normalization rule ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nr-z0b2ssjteut85uoh9nzp</para>
@@ -59,19 +58,17 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NormalizationRuleId { get; set; }
 
         /// <summary>
-        /// <para>A list of normalization rule IDs.</para>
+        /// <para>The list of normalization rule IDs.</para>
         /// </summary>
         [NameInMap("NormalizationRuleIds")]
         [Validation(Required=false)]
         public string NormalizationRuleIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The region of the threat analysis Data Management Center. Select the region where your assets are located. Valid values:</para>
+        /// <para>The region where the threat analysis data management center resides. Specify the management center based on the region of your assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: Your assets are in the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: Your assets are outside the Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: The assets reside in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: The assets reside outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,7 +79,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID that an administrator uses to switch to a member\&quot;s perspective.</para>
+        /// <para>The user ID that the administrator uses to switch to the view of another member.</para>
         /// 
         /// <b>Example:</b>
         /// <para>173326*******</para>

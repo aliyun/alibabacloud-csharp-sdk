@@ -13,7 +13,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese.</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English.
+        /// This parameter is required and cannot be omitted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +25,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return in this request.</para>
+        /// <para>The maximum number of entries to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -47,7 +48,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether a next query token exists. You do not need to specify this parameter for the first query or if no next query exists. If a next query exists, set this parameter to the NextToken value returned by the previous API call.</para>
+        /// <para>Specifies whether a next query token exists. Leave this parameter empty for the first query or when no more results are available. If a next page exists, set this parameter to the NextToken value returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>
@@ -57,6 +58,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The field source.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>native</para>
         /// </summary>
@@ -65,6 +68,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NormalizationFieldSource { get; set; }
 
         /// <summary>
+        /// <para>The schema type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>log</para>
         /// </summary>
@@ -73,10 +78,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NormalizationSchemaType { get; set; }
 
         /// <summary>
-        /// <para>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the region where your assets reside. Valid values:</para>
+        /// <para>The region where the threat analysis data management center resides. Specify the management center region based on the region of your assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: Your assets reside in the Chinese mainland.</description></item>
-        /// <item><description>ap-southeast-1: Your assets reside outside China.</description></item>
+        /// <item><description>cn-hangzhou: The assets reside in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: The assets reside outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -87,7 +92,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the member to which the administrator switches the view.</para>
+        /// <para>The user ID that the administrator switches to when viewing as another member.</para>
         /// 
         /// <b>Example:</b>
         /// <para>173326*******</para>

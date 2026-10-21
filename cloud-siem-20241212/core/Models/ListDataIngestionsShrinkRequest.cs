@@ -10,19 +10,17 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ListDataIngestionsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>An array of data ingestion policy IDs.</para>
+        /// <para>The list of data ingestion policy IDs.</para>
         /// </summary>
         [NameInMap("DataIngestionIds")]
         [Validation(Required=false)]
         public string DataIngestionIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The data ingestion status. Valid values:</para>
+        /// <para>The accessed state of data ingestion. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>enabled</c>: Enabled.</para>
-        /// </description></item>
-        /// <item><description><para><c>disabled</c>: Disabled.</para>
-        /// </description></item>
+        /// <item><description>enabled: Enabled.</description></item>
+        /// <item><description>disabled: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -33,7 +31,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string DataIngestionStatus { get; set; }
 
         /// <summary>
-        /// <para>An array of data ingestion template IDs.</para>
+        /// <para>The list of data ingestion template IDs.</para>
         /// </summary>
         [NameInMap("DataIngestionTemplateIds")]
         [Validation(Required=false)]
@@ -42,10 +40,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese.</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English.</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,7 +52,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>An array of normalization schema IDs.</para>
+        /// <para>The list of normalization schema IDs.</para>
         /// </summary>
         [NameInMap("NormalizationSchemaIds")]
         [Validation(Required=false)]
@@ -73,12 +69,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ProductId { get; set; }
 
         /// <summary>
-        /// <para>The region where the threat analysis feature is deployed. Select the region that corresponds to the location of your asset. Valid values:</para>
+        /// <para>The data management center of the threat analysis feature. Specify this parameter based on the region where your assets reside. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>cn-hangzhou</c>: Your asset is in the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para><c>ap-southeast-1</c>: Your asset is in a region outside the Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: Your assets reside in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: Your assets reside outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -89,7 +83,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of a member. An administrator can use this parameter to query data as the specified member.</para>
+        /// <para>The user ID of the member to which the administrator switches the view.</para>
         /// 
         /// <b>Example:</b>
         /// <para>173326*******</para>

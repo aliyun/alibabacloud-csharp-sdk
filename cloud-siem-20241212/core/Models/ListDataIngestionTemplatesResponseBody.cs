@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string CapacityCount { get; set; }
 
             /// <summary>
-            /// <para>The time when the template was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1733269771123</para>
@@ -39,10 +39,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             /// <summary>
             /// <para>The data ingestion mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>realtime</para>
-            /// </description></item>
-            /// <item><description><para>scan</para>
-            /// </description></item>
+            /// <item><description>realtime</description></item>
+            /// <item><description>scan</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -53,12 +51,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataIngestionMode { get; set; }
 
             /// <summary>
-            /// <para>The data ingestion status. Valid values:</para>
+            /// <para>The accessed state of data ingestion. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>enabled: enabled.</para>
-            /// </description></item>
-            /// <item><description><para>disabled: disabled.</para>
-            /// </description></item>
+            /// <item><description>enabled: Enabled.</description></item>
+            /// <item><description>disabled: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -69,7 +65,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataIngestionStatus { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data ingestion template.</para>
+            /// <para>The data ingestion template ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alibaba_cloud_sas_account_snapshot_log</para>
@@ -79,7 +75,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataIngestionTemplateId { get; set; }
 
             /// <summary>
-            /// <para>The name of the data ingestion template.</para>
+            /// <para>The data source template name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alibaba_cloud_sas_account_snapshot_log</para>
@@ -91,14 +87,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             /// <summary>
             /// <para>The status of the data ingestion template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>pending</para>
-            /// </description></item>
-            /// <item><description><para>running</para>
-            /// </description></item>
-            /// <item><description><para>success</para>
-            /// </description></item>
-            /// <item><description><para>failed</para>
-            /// </description></item>
+            /// <item><description>pending</description></item>
+            /// <item><description>running</description></item>
+            /// <item><description>success</description></item>
+            /// <item><description>failed</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -109,7 +101,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataIngestionTemplateStatus { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data source template.</para>
+            /// <para>The data source template ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alibaba_cloud_sas_account_snapshot_log_173326*******</para>
@@ -119,7 +111,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataSourceTemplateId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the normalization rule.</para>
+            /// <para>The normalization rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alibaba_cloud_actiontrail_event_rule</para>
@@ -129,7 +121,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationRuleId { get; set; }
 
             /// <summary>
-            /// <para>The name of the normalization rule.</para>
+            /// <para>The normalization rule name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>normalization_rule_ke1RN</para>
@@ -139,7 +131,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationRuleName { get; set; }
 
             /// <summary>
-            /// <para>The time when the template was last updated.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>173326*******</para>

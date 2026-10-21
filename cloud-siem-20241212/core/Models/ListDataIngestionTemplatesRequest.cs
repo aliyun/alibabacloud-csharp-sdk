@@ -12,14 +12,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The status of the data ingestion template. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>pending</para>
-        /// </description></item>
-        /// <item><description><para>running</para>
-        /// </description></item>
-        /// <item><description><para>success</para>
-        /// </description></item>
-        /// <item><description><para>failed</para>
-        /// </description></item>
+        /// <item><description>pending</description></item>
+        /// <item><description>running</description></item>
+        /// <item><description>success</description></item>
+        /// <item><description>failed</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -30,7 +26,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string DataIngestionTemplateStatus { get; set; }
 
         /// <summary>
-        /// <para>A list of data source template IDs.</para>
+        /// <para>The list of data source template IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alibaba_cloud_sas_account_snapshot_log_173326*******</para>
@@ -42,11 +38,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese.</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English.</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
+        /// <para>Note: This parameter is required. If you do not specify this parameter, the service returns a 400 error: &quot;The specified Lang can not be empty.&quot; Explicitly pass in a language code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -86,12 +81,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ProductId { get; set; }
 
         /// <summary>
-        /// <para>The region where the Data Management center of threat analysis is located. You must select a region based on the region where your assets are located. Valid values:</para>
+        /// <para>The region where the data management center of threat detection and response resides. Specify the management center based on the region of your assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: Your assets are in the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: Your assets are in a region outside China.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: Your assets reside in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: Your assets reside outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -102,7 +95,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of the member whose perspective you want to use. This parameter is available only for administrators.</para>
+        /// <para>The user ID used by an administrator to assume the view of another member.</para>
         /// 
         /// <b>Example:</b>
         /// <para>173326*******</para>

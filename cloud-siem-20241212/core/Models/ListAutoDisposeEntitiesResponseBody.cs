@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ListAutoDisposeEntitiesResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of AI-powered automated analysis entities.</para>
+        /// <para>The list of AI automatic decision-making entity information.</para>
         /// </summary>
         [NameInMap("AutoDecisionEntities")]
         [Validation(Required=false)]
@@ -29,10 +29,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             /// <summary>
             /// <para>The disposal method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>ignore</c>: Ignore.</para>
-            /// </description></item>
-            /// <item><description><para><c>dispose</c>: Playbook-based disposal.</para>
-            /// </description></item>
+            /// <item><description>ignore: Ignored.</description></item>
+            /// <item><description>dispose: Playbook-based disposal.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -65,16 +63,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             /// <summary>
             /// <para>The entity type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>ip</c>: An IP address.</para>
-            /// </description></item>
-            /// <item><description><para><c>domain</c>: A domain.</para>
-            /// </description></item>
-            /// <item><description><para><c>process</c>: A process.</para>
-            /// </description></item>
-            /// <item><description><para><c>file</c>: A file.</para>
-            /// </description></item>
-            /// <item><description><para><c>host</c>: A host.</para>
-            /// </description></item>
+            /// <item><description>ip: IP address.</description></item>
+            /// <item><description>domain: domain name.</description></item>
+            /// <item><description>process: process.</description></item>
+            /// <item><description>file: file.</description></item>
+            /// <item><description>host: host.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -105,7 +98,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string PlaybookUuid { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier (UUID) of the entry.</para>
+            /// <para>The UUID of the playbook. This is the unique identifier of the playbook.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0d23f133-22d7-4388-b738-ab******</para>
@@ -127,7 +120,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries returned in this request.</para>
+        /// <para>The maximum number of entries returned in this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -137,7 +130,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token used to retrieve the next page of results. An empty value indicates that all results have been returned.</para>
+        /// <para>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If a next query exists, set this parameter to the NextToken value returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>
@@ -157,7 +150,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>
@@ -167,7 +160,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total count of entries.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>57</para>

@@ -15,6 +15,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <item><description><b>zh</b> (default): Chinese.</description></item>
         /// <item><description><b>en</b>: English.</description></item>
         /// </list>
+        /// <para>Note: This parameter is required. If this parameter is not specified, the API returns a 400 error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -26,8 +27,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the region where your assets reside. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: the Chinese mainland and Hong Kong (China)</description></item>
-        /// <item><description>ap-southeast-1: regions outside China</description></item>
+        /// <item><description>cn-hangzhou: the Chinese mainland and Hong Kong (China).</description></item>
+        /// <item><description>ap-southeast-1: regions outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +39,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the member to which the administrator switches the view.</para>
+        /// <para>The Alibaba Cloud account ID that the administrator switches to for viewing as another member.</para>
+        /// <para>Note: This parameter requires administrator permissions or multi-account settings. If you do not have sufficient permissions, the API returns a Forbidden.NoPermission error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>
@@ -50,7 +52,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The view type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: the current Alibaba Cloud account view.</description></item>
+        /// <item><description>0: the view of the current Alibaba Cloud account.</description></item>
         /// <item><description>1: the view of all accounts in the enterprise.</description></item>
         /// </list>
         /// 

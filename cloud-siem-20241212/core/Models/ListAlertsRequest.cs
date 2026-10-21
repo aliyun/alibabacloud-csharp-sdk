@@ -12,11 +12,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The threat level of the alert. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>5: critical.</description></item>
-        /// <item><description>4: high-risk.</description></item>
-        /// <item><description>3: medium-risk.</description></item>
-        /// <item><description>2: low-risk.</description></item>
-        /// <item><description>1: informational.</description></item>
+        /// <item><description>5: Critical.</description></item>
+        /// <item><description>4: High.</description></item>
+        /// <item><description>3: Medium.</description></item>
+        /// <item><description>2: Low.</description></item>
+        /// <item><description>1: Informational.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("AlertLevel")]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public List<string> AlertLevel { get; set; }
 
         /// <summary>
-        /// <para>The alert ID associated with the event.</para>
+        /// <para>The ID of the alert that is associated with the event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sas_71e24437d2797ce8fc59692905a4****</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string AlertUuid { get; set; }
 
         /// <summary>
-        /// <para>The end time of the alert.</para>
+        /// <para>The end time of the alert. This value is a UNIX timestamp. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1766801904000</para>
@@ -49,6 +49,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <item><description><b>zh</b> (default): Chinese.</description></item>
         /// <item><description><b>en</b>: English.</description></item>
         /// </list>
+        /// <para>Note: This parameter is required in practice. If you do not specify this parameter, the API returns a 400 error: &quot;The specified Lang can not be empty.&quot;</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -58,7 +59,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return in this request.</para>
+        /// <para>The maximum number of entries to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -95,7 +96,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <para>The field used for sorting. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>GmtCreate: creation time.</description></item>
-        /// <item><description>GmtModified: update time.</description></item>
+        /// <item><description>GmtModified: last modified time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -130,10 +131,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The query filter condition in JSON format. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>{&quot;Type&quot;:&quot;maxCost&quot;, &quot;Value&quot;:&quot;100&quot;}</c>: the top 100 queries with the longest execution duration.</description></item>
-        /// <item><description><c>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;finished&quot;}</c>: completed queries.</description></item>
-        /// <item><description><c>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;running&quot;}</c>: running queries.</description></item>
-        /// <item><description><c>{&quot;Type&quot;:&quot;cost&quot;,&quot;Min&quot;:&quot;30&quot;,&quot;Max&quot;:&quot;50&quot;}</c>: queries with a custom execution duration range. You can specify the minimum and maximum execution duration. <b>Min</b> specifies the minimum execution duration. <b>Max</b> specifies the maximum execution duration. Unit: milliseconds (ms).<list type="bullet">
+        /// <item><description><c>{&quot;Type&quot;:&quot;maxCost&quot;, &quot;Value&quot;:&quot;100&quot;}</c>: The 100 queries with the longest execution duration.</description></item>
+        /// <item><description><c>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;finished&quot;}</c>: Completed queries.</description></item>
+        /// <item><description><c>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;running&quot;}</c>: Running queries.</description></item>
+        /// <item><description><c>{&quot;Type&quot;:&quot;cost&quot;,&quot;Min&quot;:&quot;30&quot;,&quot;Max&quot;:&quot;50&quot;}</c>: Custom execution duration queries. You can specify the minimum and maximum execution duration. <b>Min</b> specifies the minimum execution duration. <b>Max</b> specifies the maximum execution duration. Unit: milliseconds (ms).<list type="bullet">
         /// <item><description>If only <b>Min</b> is specified, queries with an execution duration greater than this value are returned.</description></item>
         /// <item><description>If only <b>Max</b> is specified, queries with an execution duration less than this value are returned.</description></item>
         /// <item><description>If both <b>Min</b> and <b>Max</b> are specified, queries with an execution duration greater than or equal to <b>Min</b> and less than or equal to <b>Max</b> are returned.</description></item>
@@ -159,10 +160,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string QueryViewId { get; set; }
 
         /// <summary>
-        /// <para>The region where the threat analysis data management center is located. Specify the management center based on the region of your assets. Valid values:</para>
+        /// <para>The region where the threat detection and response data management center resides. Specify the management center based on the region of your assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: Your assets are located in the Chinese mainland or Hong Kong (China).</description></item>
-        /// <item><description>ap-southeast-1: Your assets are located outside China.</description></item>
+        /// <item><description>cn-hangzhou: Your assets reside in the Chinese mainland or Hong Kong (China).</description></item>
+        /// <item><description>ap-southeast-1: Your assets reside in regions outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -173,7 +174,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the member accounts in the resource folder.</para>
+        /// <para>The ID of the member accounts in the resource directory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>
@@ -197,10 +198,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? RoleType { get; set; }
 
         /// <summary>
-        /// <para>The time when the alert first occurred.</para>
+        /// <para>The time when the alert first occurred. This value is a UNIX timestamp. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2025-09-30T02:23:00Z</para>
+        /// <para>1759198980000</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

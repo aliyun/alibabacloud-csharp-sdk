@@ -10,12 +10,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ListVendorsRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response message. Valid values:</para>
+        /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese.</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English.</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.
+        /// Note: Although the schema marks this parameter as optional, it is required when you call this operation. If you do not specify this parameter, the API returns a 400 error.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +25,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return for this request.</para>
+        /// <para>The maximum number of entries to return in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -39,7 +38,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to retrieve the next page of results. If this is your first query or if no next page exists, you do not need to specify this parameter. If a next page exists, set the value to the NextToken value that is returned in the last response.</para>
+        /// <para>The pagination token for the next query. You do not need to specify this parameter for the first request or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>
@@ -49,12 +48,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region where the Data Management center for threat analysis is located. Select a region for the Management Hub based on the region where your asset resides. Valid values:</para>
+        /// <para>The region where the threat analysis data management center resides. Specify the management center region based on the region of your assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: Your asset is in the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: Your asset is outside China.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: The assets reside in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: The assets reside outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,7 +62,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of a member. An administrator can use this ID to switch to the member\&quot;s perspective.</para>
+        /// <para>The user ID that the administrator uses to switch to the perspective of another member.</para>
         /// 
         /// <b>Example:</b>
         /// <para>173326*******</para>
@@ -75,7 +72,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>A list of vendors.</para>
+        /// <para>The list of vendors.</para>
         /// </summary>
         [NameInMap("VendorIds")]
         [Validation(Required=false)]
@@ -94,10 +91,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The vendor type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>preset</para>
-        /// </description></item>
-        /// <item><description><para>custom</para>
-        /// </description></item>
+        /// <item><description>preset</description></item>
+        /// <item><description>custom</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

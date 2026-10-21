@@ -13,7 +13,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese.</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English.
+        /// This parameter is required in practice. If you do not specify this parameter, the API returns a 400 error (The specified Lang can not be empty.).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,7 +38,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next query. Leave this parameter empty for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</para>
+        /// <para>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If a next query is required, set this parameter to the NextToken value returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>
@@ -47,7 +48,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The category ID of the normalization rule.</para>
+        /// <para>The normalization rule category ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NETWORK_CATEGORY</para>
@@ -64,7 +65,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public List<string> NormalizationRuleIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the normalization rule.</para>
+        /// <para>The normalization rule name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>normalization_rule_Z57np</para>
@@ -74,7 +75,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NormalizationRuleName { get; set; }
 
         /// <summary>
-        /// <para>The type of the normalization rule. Valid values:</para>
+        /// <para>The normalization rule type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>predefined: predefined normalization rule.</description></item>
         /// <item><description>custom: custom normalization rule.</description></item>
@@ -98,6 +99,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NormalizationSchemaId { get; set; }
 
         /// <summary>
+        /// <para>The security domain ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>NETWORK_AND_WEB_SECURITY</para>
         /// </summary>
@@ -119,7 +122,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>desc</description></item>
-        /// <item><description>asc.</description></item>
+        /// <item><description>asc</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -160,10 +163,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ProductId { get; set; }
 
         /// <summary>
-        /// <para>The region where the data management center of the threat analysis feature resides. Specify this parameter based on the region where your assets reside. Valid values:</para>
+        /// <para>The data management center of threat analysis. Specify the management center based on the region where your assets reside. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: the Chinese mainland.</description></item>
-        /// <item><description>ap-southeast-1: outside China.</description></item>
+        /// <item><description>cn-hangzhou: Your assets reside in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: Your assets reside outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -174,7 +177,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of the member to which the administrator switches the view.</para>
+        /// <para>The ID of the member to which the administrator switches the view.</para>
         /// 
         /// <b>Example:</b>
         /// <para>173326*******</para>

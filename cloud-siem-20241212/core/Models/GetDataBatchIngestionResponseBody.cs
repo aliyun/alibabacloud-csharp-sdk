@@ -10,26 +10,24 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class GetDataBatchIngestionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the batch data ingestion task.</para>
+        /// <para>The data batch ingestion configuration.</para>
         /// </summary>
         [NameInMap("DataBatchIngestion")]
         [Validation(Required=false)]
         public GetDataBatchIngestionResponseBodyDataBatchIngestion DataBatchIngestion { get; set; }
         public class GetDataBatchIngestionResponseBodyDataBatchIngestion : TeaModel {
             /// <summary>
-            /// <para>The list of data ingestion IDs for Alibaba Cloud services.</para>
+            /// <para>The list of cloud native mode ingestion IDs.</para>
             /// </summary>
             [NameInMap("ApsaraDataIngestionIds")]
             [Validation(Required=false)]
             public List<string> ApsaraDataIngestionIds { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to automatically discover new users. Valid values:</para>
+            /// <para>Indicates whether new users are automatically discovered. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>enabled: New users are automatically discovered.</para>
-            /// </description></item>
-            /// <item><description><para>disabled: New users are not automatically discovered.</para>
-            /// </description></item>
+            /// <item><description>enabled: Enabled.</description></item>
+            /// <item><description>disabled: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -40,7 +38,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string AutoScanNew { get; set; }
 
             /// <summary>
-            /// <para>The time when the configuration of the batch data ingestion task took effect.</para>
+            /// <para>The effective period of the data batch ingestion. This value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1733269771123</para>
@@ -50,7 +48,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataBatchIngestionEffectTime { get; set; }
 
             /// <summary>
-            /// <para>The mode of the batch data ingestion task.</para>
+            /// <para>The batch data ingestion mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>full</para>
@@ -60,7 +58,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataBatchIngestionMode { get; set; }
 
             /// <summary>
-            /// <para>The time when the batch data ingestion task was configured.</para>
+            /// <para>The time when the data batch ingestion was configured. This value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1733269771123</para>
@@ -70,16 +68,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataBatchIngestionSetTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the batch data ingestion task. Valid values:</para>
+            /// <para>The accessed state of the data batch ingestion. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>pending: The configuration is pending to take effect.</para>
-            /// </description></item>
-            /// <item><description><para>running: The configuration is taking effect.</para>
-            /// </description></item>
-            /// <item><description><para>success: The configuration has taken effect.</para>
-            /// </description></item>
-            /// <item><description><para>failed: The configuration failed to take effect.</para>
-            /// </description></item>
+            /// <item><description>pending: Pending.</description></item>
+            /// <item><description>running: In effect.</description></item>
+            /// <item><description>success: Succeeded.</description></item>
+            /// <item><description>failed: Failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -90,14 +84,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataBatchIngestionStatus { get; set; }
 
             /// <summary>
-            /// <para>The list of data ingestion tasks.</para>
+            /// <para>The list of data ingestions.</para>
             /// </summary>
             [NameInMap("DataIngestions")]
             [Validation(Required=false)]
             public List<GetDataBatchIngestionResponseBodyDataBatchIngestionDataIngestions> DataIngestions { get; set; }
             public class GetDataBatchIngestionResponseBodyDataBatchIngestionDataIngestions : TeaModel {
                 /// <summary>
-                /// <para>The ID of the data ingestion task.</para>
+                /// <para>The data ingestion ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>alibaba_cloud_sas_process_ingestion_173326*******</para>
@@ -107,12 +101,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public string DataIngestionId { get; set; }
 
                 /// <summary>
-                /// <para>The status of the data ingestion task. Valid values:</para>
+                /// <para>The accessed state of the data ingestion. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>enabled: enabled</para>
-                /// </description></item>
-                /// <item><description><para>disabled: disabled</para>
-                /// </description></item>
+                /// <item><description>enabled: Enabled.</description></item>
+                /// <item><description>disabled: Disabled.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -123,7 +115,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public string DataIngestionStatus { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the data source.</para>
+                /// <para>The data source ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>alibaba_cloud_sas_process_log_173326*******</para>
@@ -133,7 +125,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public string DataSourceId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the product.</para>
+                /// <para>The product ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>alibaba_cloud_sas</para>
@@ -143,7 +135,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public string ProductId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the vendor.</para>
+                /// <para>The vendor ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>alibaba_cloud</para>
@@ -155,7 +147,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether to automatically discover new Logstores.</para>
+            /// <para>Indicates whether automatic discovery of new Logstores is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -165,14 +157,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public bool? DataSourceRecognizeEnabled { get; set; }
 
             /// <summary>
-            /// <para>The list of user IDs for batch data ingestion.</para>
+            /// <para>The list of user IDs for data batch ingestion.</para>
             /// </summary>
             [NameInMap("LogUserIds")]
             [Validation(Required=false)]
             public List<string> LogUserIds { get; set; }
 
             /// <summary>
-            /// <para>The list of recommended data ingestion IDs.</para>
+            /// <para>The list of recommended ingestion IDs.</para>
             /// </summary>
             [NameInMap("RecommendDataIngestionIds")]
             [Validation(Required=false)]
@@ -181,7 +173,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>

@@ -29,8 +29,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The collector status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>&quot;enabled&quot;: enabled.</description></item>
-        /// <item><description>&quot;disabled&quot; (default): disabled.</description></item>
+        /// <item><description>enabled: Enabled.</description></item>
+        /// <item><description>disabled (default): Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -71,6 +71,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <item><description><b>zh</b> (default): Chinese.</description></item>
         /// <item><description><b>en</b>: English.</description></item>
         /// </list>
+        /// <para>Note: This parameter is required. If you do not specify this parameter, the service returns a 400 error: &quot;The specified Lang can not be empty.&quot; Explicitly pass a language code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -90,7 +91,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. You do not need to set this parameter for the first request or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</para>
+        /// <para>The pagination token for the next query. Leave this parameter empty for the first query or if no more results exist. If a next page exists, set this parameter to the NextToken value returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>
@@ -100,7 +101,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The sort field. Currently, only sorting by updateTime is supported. If OrderField is left empty, the default order returned by the database is used.</para>
+        /// <para>The sort field. Currently, only sorting by updateTime is supported. If OrderField is empty, the default order returned by the database is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Id</para>
@@ -112,8 +113,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>&quot;asc&quot;: ascending order.</description></item>
-        /// <item><description>&quot;desc&quot; (default): descending order.</description></item>
+        /// <item><description>asc: ascending order.</description></item>
+        /// <item><description>desc (default): descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -158,7 +159,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID that the administrator switches to when viewing as another member.</para>
+        /// <para>The ID of the member to which the administrator switches the view.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>

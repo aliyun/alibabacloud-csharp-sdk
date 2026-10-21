@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class UpdateProductRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the response messages. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese.</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English.</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English. This parameter is required. If not provided, the service returns a 400 error.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The product ID.</para>
+        /// <para>The product ID. Only products with ProductType set to custom support updates. System preset products (ProductType set to preset) cannot be modified. Calling this operation on a preset product returns a 403 error. To create a custom product, use the CreateProduct API first. This parameter is the resource identifier for the Update operation and is required. Only custom products can be updated. System preset products cannot be updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alibaba_cloud_sas</para>
@@ -46,12 +44,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ProductName { get; set; }
 
         /// <summary>
-        /// <para>The region of the Data Management center for threat analysis. Select the region for the Data Management center based on the region of your assets. Valid values:</para>
+        /// <para>The region where the data management center of Cloud Threat Detection and Response (CTDR) is located. Select the management center region based on the region where your assets reside. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: The Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: Regions outside the Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: Assets are located in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: Assets are located outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,7 +58,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of a member. An administrator can specify this parameter to switch to the perspective of the member.</para>
+        /// <para>The user ID that the administrator uses to switch to another member\&quot;s view.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1733269771123</para>

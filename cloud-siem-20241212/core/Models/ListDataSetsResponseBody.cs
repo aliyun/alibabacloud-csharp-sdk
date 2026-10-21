@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public List<ListDataSetsResponseBodyDataSets> DataSets { get; set; }
         public class ListDataSetsResponseBodyDataSets : TeaModel {
             /// <summary>
-            /// <para>The time when the dataset was created.</para>
+            /// <para>The creation time. This value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1713787368000</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the dataset.</para>
+            /// <para>The dataset description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lmftest desc</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataSetDescription { get; set; }
 
             /// <summary>
-            /// <para>The name of the unique key for the dataset.</para>
+            /// <para>The unique key name of the dataset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ip</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataSetFieldKeyName { get; set; }
 
             /// <summary>
-            /// <para>The names of the fields in the dataset.</para>
+            /// <para>The field names of the dataset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[&quot;ip&quot;,&quot;region&quot;]</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataSetFileName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the dataset.</para>
+            /// <para>The dataset ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dataset-t8ha6p7k61rmniqw****</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataSetId { get; set; }
 
             /// <summary>
-            /// <para>The name of the dataset.</para>
+            /// <para>The dataset name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lmftest</para>
@@ -87,14 +87,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataSetName { get; set; }
 
             /// <summary>
-            /// <para>The dataset references.</para>
+            /// <para>The dataset reference data.</para>
             /// </summary>
             [NameInMap("DataSetReferences")]
             [Validation(Required=false)]
             public List<ListDataSetsResponseBodyDataSetsDataSetReferences> DataSetReferences { get; set; }
             public class ListDataSetsResponseBodyDataSetsDataSetReferences : TeaModel {
                 /// <summary>
-                /// <para>The ID of the dataset.</para>
+                /// <para>The dataset ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dataset-nhcrmjpx1zsorlaq****</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public string DataSetId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the rule or playbook that is associated with the dataset.</para>
+                /// <para>The ID of the rule or playbook associated with the dataset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>456232</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public string DataSetReferenceId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the rule or playbook that is associated with the dataset.</para>
+                /// <para>The name of the rule or playbook associated with the dataset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>playbook_name</para>
@@ -124,12 +124,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public string DataSetReferenceName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the service that is associated with the dataset. Valid values:</para>
+                /// <para>The type of service associated with the dataset. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>custom_rule: custom rule.</para>
-                /// </description></item>
-                /// <item><description><para>playbook: playbook.</para>
-                /// </description></item>
+                /// <item><description>custom_rule: custom rule.</description></item>
+                /// <item><description>playbook: playbook.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -142,12 +140,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             }
 
             /// <summary>
-            /// <para>The status of the dataset. Valid values:</para>
+            /// <para>The dataset status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>0: deleted.</para>
-            /// </description></item>
-            /// <item><description><para>1: enabled.</para>
-            /// </description></item>
+            /// <item><description>0: deleted.</description></item>
+            /// <item><description>1: enabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -158,12 +154,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public int? DataSetStatus { get; set; }
 
             /// <summary>
-            /// <para>The type of the dataset. Valid values:</para>
+            /// <para>The dataset type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>custom: custom.</para>
-            /// </description></item>
-            /// <item><description><para>preset: predefined.</para>
-            /// </description></item>
+            /// <item><description>custom: custom dataset.</description></item>
+            /// <item><description>preset: predefined dataset.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -181,12 +175,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public List<ListDataSetsResponseBodyDataSetsIpWhitelistRecognizers> IpWhitelistRecognizers { get; set; }
             public class ListDataSetsResponseBodyDataSetsIpWhitelistRecognizers : TeaModel {
                 /// <summary>
-                /// <para>The status of automatic detection. Valid values:</para>
+                /// <para>The automatic recognition status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>enabled: enabled.</para>
-                /// </description></item>
-                /// <item><description><para>disabled: disabled.</para>
-                /// </description></item>
+                /// <item><description>enabled: enabled.</description></item>
+                /// <item><description>disabled: disabled.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -197,26 +189,17 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public string AutoRecognizeStatus { get; set; }
 
                 /// <summary>
-                /// <para>The type of IP address that the recognizer detects. Valid values:</para>
+                /// <para>The IP type identified by the recognizer. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>sas_vulnerability_scanner_ip: Security Center web vulnerability scanner IP address.</para>
-                /// </description></item>
-                /// <item><description><para>waf_back_source_ip: Web Application Firewall back-to-origin IP address.</para>
-                /// </description></item>
-                /// <item><description><para>ddos_back_source_ip: Anti-DDoS back-to-origin IP address.</para>
-                /// </description></item>
-                /// <item><description><para>esa_back_source_ip: Edge Security Acceleration (ESA) back-to-origin node IP address.</para>
-                /// </description></item>
-                /// <item><description><para>ecs_public_ip: Elastic Compute Service (ECS) public IP address.</para>
-                /// </description></item>
-                /// <item><description><para>slb_public_ip: Server Load Balancer (SLB) public IP address.</para>
-                /// </description></item>
-                /// <item><description><para>vpc_eip: Elastic IP Address (EIP).</para>
-                /// </description></item>
-                /// <item><description><para>cdn_back_source_ip: Alibaba Cloud CDN back-to-origin IP address.</para>
-                /// </description></item>
-                /// <item><description><para>ga_back_source_ip: Global Accelerator (GA) back-to-origin IP address.</para>
-                /// </description></item>
+                /// <item><description>sas_vulnerability_scanner_ip: IP addresses of the Security Center vulnerability web scanner.</description></item>
+                /// <item><description>waf_back_source_ip: back-to-origin IP addresses of Web Application Firewall (WAF).</description></item>
+                /// <item><description>ddos_back_source_ip: back-to-origin IP addresses of Anti-DDoS.</description></item>
+                /// <item><description>esa_back_source_ip: back-to-origin node IP addresses of Edge Security Acceleration (ESA).</description></item>
+                /// <item><description>ecs_public_ip: public IP addresses of Elastic Compute Service (ECS) instances.</description></item>
+                /// <item><description>slb_public_ip: public IP addresses of Server Load Balancer (SLB) instances.</description></item>
+                /// <item><description>vpc_eip: elastic IP addresses (EIPs).</description></item>
+                /// <item><description>cdn_back_source_ip: back-to-origin IP addresses of Content Delivery Network (CDN).</description></item>
+                /// <item><description>ga_back_source_ip: back-to-origin IP addresses of Global Accelerator (GA).</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -227,12 +210,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public string IpWhitelistRecognizerType { get; set; }
 
                 /// <summary>
-                /// <para>The detection scope. Valid values:</para>
+                /// <para>The recognition scope. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>current_account: current account only.</para>
-                /// </description></item>
-                /// <item><description><para>rd_accounts: multiple accounts.</para>
-                /// </description></item>
+                /// <item><description>current_account: current account only.</description></item>
+                /// <item><description>rd_accounts: multi-account enabled.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -243,7 +224,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public string RecognizeScope { get; set; }
 
                 /// <summary>
-                /// <para>The time when the dataset was updated.</para>
+                /// <para>The update time. This value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1713787368000</para>
@@ -255,7 +236,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             }
 
             /// <summary>
-            /// <para>The time when the dataset was updated.</para>
+            /// <para>The update time. This value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1713787368000</para>
@@ -267,7 +248,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of results to return for the request. This parameter is used for queries that use NextToken. Valid values: 1 to 100. Default value: 50.</para>
+        /// <para>The maximum number of results to return when you use the NextToken-based pagination method. Valid values: 1 to 100. Default value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -277,7 +258,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to start the next query.</para>
+        /// <para>The pagination token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>
@@ -317,7 +298,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>57</para>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public List<ListDataIngestionsResponseBodyDataIngestions> DataIngestions { get; set; }
         public class ListDataIngestionsResponseBodyDataIngestions : TeaModel {
             /// <summary>
-            /// <para>The time when the data ingestion was enabled.</para>
+            /// <para>The activation time. This value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1733269771123</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public int? CapacityCount { get; set; }
 
             /// <summary>
-            /// <para>The time when the data ingestion was created.</para>
+            /// <para>The creation time. This value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1733269771123</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data ingestion.</para>
+            /// <para>The data ingestion ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alibaba_cloud_sas_netstat_ingestion_173326*******</para>
@@ -57,12 +57,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataIngestionId { get; set; }
 
             /// <summary>
-            /// <para>The mode of the data ingestion. Valid values:</para>
+            /// <para>The data ingestion mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>realtime</para>
-            /// </description></item>
-            /// <item><description><para>scan</para>
-            /// </description></item>
+            /// <item><description>realtime</description></item>
+            /// <item><description>scan</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -83,14 +81,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public bool? DataIngestionModeEditable { get; set; }
 
             /// <summary>
-            /// <para>The state of the data ingestion. Valid values:</para>
+            /// <para>The data ingestion state. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>ingested</para>
-            /// </description></item>
-            /// <item><description><para>uningested</para>
-            /// </description></item>
-            /// <item><description><para>abnormal</para>
-            /// </description></item>
+            /// <item><description>ingested</description></item>
+            /// <item><description>uningested</description></item>
+            /// <item><description>abnormal</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -101,7 +96,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataIngestionState { get; set; }
 
             /// <summary>
-            /// <para>The error code for the data ingestion anomaly.</para>
+            /// <para>The error code for the data ingestion exception state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>UserUnauthorized</para>
@@ -111,12 +106,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataIngestionStateCode { get; set; }
 
             /// <summary>
-            /// <para>The status of the data ingestion. Valid values:</para>
+            /// <para>The accessed state of data ingestion. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>enabled: The data ingestion is enabled.</para>
-            /// </description></item>
-            /// <item><description><para>disabled: The data ingestion is disabled.</para>
-            /// </description></item>
+            /// <item><description>enabled: Enabled.</description></item>
+            /// <item><description>disabled: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -127,7 +120,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataIngestionStatus { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data ingestion template.</para>
+            /// <para>The data ingestion template ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alibaba_cloud_sas_netstat_ingestion</para>
@@ -137,12 +130,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataIngestionTemplateId { get; set; }
 
             /// <summary>
-            /// <para>The type of the data ingestion. Valid values:</para>
+            /// <para>The data ingestion type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>preset</para>
-            /// </description></item>
-            /// <item><description><para>custom</para>
-            /// </description></item>
+            /// <item><description>preset</description></item>
+            /// <item><description>custom</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -163,7 +154,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public bool? DataSourceEditable { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data source.</para>
+            /// <para>The data source ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ds-scpfegri73oyoknbc90c</para>
@@ -183,7 +174,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public bool? NormalizationRuleEditable { get; set; }
 
             /// <summary>
-            /// <para>The ID of the normalization rule.</para>
+            /// <para>The normalization rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nr-0aywiqdtaqdvwac7xkbjsf3a</para>
@@ -193,7 +184,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationRuleId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data source for real-time ingestion.</para>
+            /// <para>The data source ID in real-time mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ds-scpfegri73oyoknbc90c</para>
@@ -203,7 +194,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string RealtimeDataSourceId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data source for scan-based ingestion.</para>
+            /// <para>The data source ID in scan mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ds-scpfegri73oyoknbc90c</para>
@@ -213,7 +204,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string ScanDataSourceId { get; set; }
 
             /// <summary>
-            /// <para>The job ID of the stream processing task.</para>
+            /// <para>The stream job ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>73a78aa245e3b1299d6ceed093de7bd8</para>
@@ -223,7 +214,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string StreamJobId { get; set; }
 
             /// <summary>
-            /// <para>The time when the data ingestion was last updated.</para>
+            /// <para>The update time. This value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1733269771123</para>

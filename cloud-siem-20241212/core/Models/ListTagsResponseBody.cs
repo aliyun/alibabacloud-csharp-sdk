@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ListTagsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of results to return when using NextToken-based pagination. Valid values: 1 to 100. Default value: 50.</para>
+        /// <para>The maximum number of entries to return when you use NextToken for pagination. Valid values: 1 to 100. Default value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next query. Leave this parameter empty for the first query or if no more results exist. If a next query is available, set this parameter to the NextToken value returned by the previous API call.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. If not all results are returned in a query, a value is returned for NextToken. In the next query, set NextToken to this value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public List<ListTagsResponseBodyTags> Tags { get; set; }
         public class ListTagsResponseBodyTags : TeaModel {
             /// <summary>
-            /// <para>The number of quick queries returned on the current page.</para>
+            /// <para>The number of custom queries returned on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>

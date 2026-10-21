@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class RefreshDataSourceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the data source.</para>
+        /// <para>The data source ID. This parameter is required in actual API calls. If it is not provided, the service returns a 400 error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ds-jl67vixpe1scwysgyu3x</para>
@@ -20,13 +20,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string DataSourceId { get; set; }
 
         /// <summary>
-        /// <para>The language of the messages. Valid values:</para>
+        /// <para>The language of the received messages. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
+        /// <para>Note: This parameter is required in actual API calls. If it is not provided, the service returns a 400 error: &quot;The specified Lang can not be empty.&quot; Pass the language code explicitly.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -36,12 +35,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The region where the Data Management Center for threat analysis is located. Select the region of the Data Management Center based on the region of your assets. Valid values:</para>
+        /// <para>The region where the data management center for threat analysis is located. Select the management center region based on the region where your assets reside. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: Your assets are in the Chinese mainland or China (Hong Kong).</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: Your assets are in a region outside China.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: assets in the Chinese mainland and Hong Kong (China)</description></item>
+        /// <item><description>ap-southeast-1: assets in regions outside China</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,7 +49,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of a member. An administrator can use this parameter to switch to the perspective of the specified member.</para>
+        /// <para>The user ID that the administrator uses to switch to the view of another member.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>

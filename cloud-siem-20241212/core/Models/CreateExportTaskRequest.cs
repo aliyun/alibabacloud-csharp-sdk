@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class CreateExportTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The parameters for the export task. The value is a JSON string that is generated based on the query conditions.</para>
+        /// <para>The export task parameters, which are concatenated based on query conditions in JSON format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ExportTaskParameter { get; set; }
 
         /// <summary>
-        /// <para>The type of data to export. Valid values:</para>
+        /// <para>The export type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>incident_list: event list.</description></item>
+        /// <item><description>incident_list: Event list.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,9 +40,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese.</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English.</para>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.<remarks>
+        /// <para>Note: This parameter is required. If you do not specify this parameter, the API returns a 400 error: &quot;The specified Lang can not be empty.&quot;</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
         /// 
@@ -54,12 +55,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The region of the Data Management center. Select a region based on where your assets are located. Valid values:</para>
+        /// <para>The region where the threat analysis data management center resides. Specify the management center region based on the region of your assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: The Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: Regions outside China.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: Your assets reside in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: Your assets reside outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,7 +69,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of a member. An administrator can use this parameter to switch to the perspective of a member.</para>
+        /// <para>The ID of the member to which the administrator switches the view.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ValidateNormalizationRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The rule ID.</para>
+        /// <para>The ID of the rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>The storage mode for extended fields. Valid values: \<c>flat\\</c>, \<c>pack\\</c>, and \<c>reject\\</c>.</para>
+        /// <para>The storage mode of extended fields. Valid values: flat, pack, and reject.</para>
         /// 
         /// <b>Example:</b>
         /// <para>flat</para>
@@ -30,13 +30,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ExtendFieldStoreMode { get; set; }
 
         /// <summary>
-        /// <para>The language of the response messages. Valid values:</para>
+        /// <para>The language of the response message. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese.</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English.</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
+        /// <para>Note: This parameter is required in actual API calls. If this parameter is not provided, the service returns a 400 error with the message \&quot;The specified Lang can not be empty.\&quot; Explicitly specify the language code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -46,7 +45,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The sample log. The value must be in the JSON format.</para>
+        /// <para>The log sample in JSON format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;aaa&quot;:&quot;bbb&quot;,&quot;xxx&quot;:&quot;yyy&quot;}</para>
@@ -56,7 +55,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string LogSample { get; set; }
 
         /// <summary>
-        /// <para>The normalization category of the rule.</para>
+        /// <para>The normalization category to which the rule belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NETWORK_CATEGORY</para>
@@ -66,7 +65,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NormalizationCategoryId { get; set; }
 
         /// <summary>
-        /// <para>The expression for the normalization rule.</para>
+        /// <para>The expression of the normalization rule.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -78,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NormalizationRuleExpression { get; set; }
 
         /// <summary>
-        /// <para>The mode of the normalization rule. Valid values: \<c>both\\</c> and \<c>realtime\\</c>.</para>
+        /// <para>The mode of the normalization rule. Valid values: both and realtime.</para>
         /// 
         /// <b>Example:</b>
         /// <para>realtime</para>
@@ -88,7 +87,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NormalizationRuleMode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the normalization pattern for the rule.</para>
+        /// <para>The ID of the normalization schema to which the rule belongs. This parameter is required in actual API calls. If this parameter is not provided, the service returns a 400 error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>HTTP_ACTIVITY</para>
@@ -98,7 +97,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NormalizationSchemaId { get; set; }
 
         /// <summary>
-        /// <para>The product ID.</para>
+        /// <para>The ID of the product.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alibaba_cloud_sas</para>
@@ -108,12 +107,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ProductId { get; set; }
 
         /// <summary>
-        /// <para>The region where the Data Management center for threat analysis is deployed. Select the region based on the location of your assets. Valid values:</para>
+        /// <para>The region where the data management center of Threat Analysis is located. Select the region of the management center based on the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: Your assets are in the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: Your assets are in regions outside the Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: The assets are located in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: The assets are located outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -124,7 +121,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of the member. An administrator uses this parameter to switch to the perspective of the member.</para>
+        /// <para>The ID of the user whose perspective the administrator switches to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>173326*******</para>
@@ -134,7 +131,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>The vendor ID.</para>
+        /// <para>The ID of the vendor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alibaba_cloud</para>

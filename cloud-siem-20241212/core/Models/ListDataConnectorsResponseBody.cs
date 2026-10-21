@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string AuthConfigId { get; set; }
 
             /// <summary>
-            /// <para>The cloud product of the authentication configuration.</para>
+            /// <para>The cloud product to which the authentication configuration belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>salesForceRestAPI</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string AuthConfigProduct { get; set; }
 
             /// <summary>
-            /// <para>The cloud vendor of the authentication configuration.</para>
+            /// <para>The cloud vendor to which the authentication configuration belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SALESFORCE</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string LogStoreName { get; set; }
 
             /// <summary>
-            /// <para>The name of the SLS data import job associated with the collector.</para>
+            /// <para>The name of the SLS data import job for the collector.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1a2b3c4d5e6f7a8b9c0d1e2f3a4b****</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string SlsIngestionJobName { get; set; }
 
             /// <summary>
-            /// <para>The status of the SLS data import job associated with the collector.</para>
+            /// <para>The status of the SLS data import job for the collector.</para>
             /// 
             /// <b>Example:</b>
             /// <para>running</para>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records returned in this request.</para>
+        /// <para>The maximum number of records returned in this query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

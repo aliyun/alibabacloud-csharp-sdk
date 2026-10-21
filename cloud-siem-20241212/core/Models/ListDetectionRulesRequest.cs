@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ListDetectionRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The ATT\&amp;CK technique of the alert.</para>
+        /// <para>The alert ATT&amp;CK technique.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Discovery</para>
@@ -22,16 +22,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The threat level of the alert. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>5: critical.</para>
-        /// </description></item>
-        /// <item><description><para>4: important.</para>
-        /// </description></item>
-        /// <item><description><para>3: medium.</para>
-        /// </description></item>
-        /// <item><description><para>2: low.</para>
-        /// </description></item>
-        /// <item><description><para>1: informational.</para>
-        /// </description></item>
+        /// <item><description>5: Critical.</description></item>
+        /// <item><description>4: High.</description></item>
+        /// <item><description>3: Medium.</description></item>
+        /// <item><description>2: Low.</description></item>
+        /// <item><description>1: Informational.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string AlertTacticId { get; set; }
 
         /// <summary>
-        /// <para>The alert type.</para>
+        /// <para>The Alarm Metric of the alerting rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>siem_rule_type_alert_storm</para>
@@ -62,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string AlertType { get; set; }
 
         /// <summary>
-        /// <para>The type of the detection rule expression.</para>
+        /// <para>The expression content of the detection rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>playbook</para>
@@ -111,12 +106,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The type of the detection rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>preset: a built-in detection rule.</para>
-        /// </description></item>
-        /// <item><description><para>custom: a custom detection rule.</para>
-        /// </description></item>
-        /// <item><description><para>custom_template: a rule template.</para>
-        /// </description></item>
+        /// <item><description>preset: preset detection rule.</description></item>
+        /// <item><description>custom: custom detection rule.</description></item>
+        /// <item><description>custom_template: rule template.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -127,18 +119,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string DetectionRuleType { get; set; }
 
         /// <summary>
-        /// <para>The event aggregation type. Valid values:</para>
+        /// <para>The event summaries type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>none: No events are generated.</para>
-        /// </description></item>
-        /// <item><description><para>graph_compute: graph computing (supported by predefined rules).</para>
-        /// </description></item>
-        /// <item><description><para>expert: expert rule.</para>
-        /// </description></item>
-        /// <item><description><para>passthrough: alert passthrough (one-to-one).</para>
-        /// </description></item>
-        /// <item><description><para>window: aggregation of similar alerts (by window).</para>
-        /// </description></item>
+        /// <item><description>none: No event is generated.</description></item>
+        /// <item><description>graph_compute: Graph computing (supported by predefined rules).</description></item>
+        /// <item><description>expert: Expert rule.</description></item>
+        /// <item><description>passthrough: Alerting pass-through (one-to-one).</description></item>
+        /// <item><description>window: Same-type aggregation (window).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -151,11 +138,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese.</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English.</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
+        /// <para>Note: This parameter is required. If you do not specify this parameter, the service returns a 400 error: &quot;The specified Lang can not be empty.&quot; Explicitly pass a language code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -185,7 +171,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string LogSchemaId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of data entries to read.</para>
+        /// <para>The maximum number of entries to return in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -195,7 +181,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to start the next query.</para>
+        /// <para>The token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>
@@ -207,10 +193,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>asc</b>: ascending order. This is the default value.</para>
-        /// </description></item>
-        /// <item><description><para><b>desc</b>: descending order.</para>
-        /// </description></item>
+        /// <item><description><b>asc</b>: Ascending order. This is the default value.</description></item>
+        /// <item><description><b>desc</b>: Descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -221,12 +205,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string OrderDirection { get; set; }
 
         /// <summary>
-        /// <para>The field to sort by. Valid values:</para>
+        /// <para>The field used for sorting. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>GmtCreate: the creation time.</para>
-        /// </description></item>
-        /// <item><description><para>GmtModified: the update time.</para>
-        /// </description></item>
+        /// <item><description>GmtCreate: creation time.</description></item>
+        /// <item><description>GmtModified: update time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -237,7 +219,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string OrderFieldName { get; set; }
 
         /// <summary>
-        /// <para>The pagination parameter. This specifies the current page number.</para>
+        /// <para>The page number of the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -247,7 +229,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The pagination parameter. This specifies the number of entries per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -257,12 +239,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region where the Data Management center of threat analysis is located. Select a region based on the region where your assets are located. Valid values:</para>
+        /// <para>The region where the threat analysis data management center is located. Specify the management center based on the region of your assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: Your assets are in the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: Your assets are outside China.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: The assets are located in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: The assets are located outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -273,7 +253,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID that the administrator uses to switch to the perspective of another member.</para>
+        /// <para>The ID of the member to which the administrator switches the view.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>

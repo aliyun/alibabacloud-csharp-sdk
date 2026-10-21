@@ -12,11 +12,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese.</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English.</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
+        /// <para>Note: This parameter is required in actual calls. If this parameter is not specified, the service returns a 400 error: &quot;The specified Lang can not be empty.&quot; Explicitly pass a language code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -26,7 +25,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return.</para>
+        /// <para>The maximum number of entries to return in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -39,7 +38,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to start the next query. You do not need to specify this parameter for the first query. For subsequent queries, set this parameter to the \<c>NextToken\\</c> value that is returned from the previous API call.</para>
+        /// <para>The pagination token. You do not need to specify this parameter for the first request or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>
@@ -68,10 +67,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The product type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>preset</para>
-        /// </description></item>
-        /// <item><description><para>custom</para>
-        /// </description></item>
+        /// <item><description>preset</description></item>
+        /// <item><description>custom</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,12 +79,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The region of the Data Management center for threat analysis. Select the region for the Management Hub based on the region where your assets are located. Valid values:</para>
+        /// <para>The region where the threat analysis data management center is located. Specify the management center based on the region of your assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: Your assets are in the Chinese mainland or China (Hong Kong).</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: Your assets are in regions outside China.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: The assets are located in the Chinese mainland or Hong Kong (China).</description></item>
+        /// <item><description>ap-southeast-1: The assets are located outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -98,7 +93,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of the member. An administrator can specify this parameter to switch to the perspective of this member.</para>
+        /// <para>The user ID of the member to which the administrator switches the view.</para>
         /// 
         /// <b>Example:</b>
         /// <para>173326*******</para>

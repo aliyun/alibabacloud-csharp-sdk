@@ -10,11 +10,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class GetDetectionStatisticRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the response message. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese.</description></item>
         /// <item><description><b>en</b>: English.</description></item>
         /// </list>
+        /// <para>Note: This parameter is required in actual API calls. If it is not provided, the service returns a 400 error with the message &quot;The specified Lang can not be empty.&quot;. Explicitly specify the language code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -24,10 +25,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the region where your assets reside. Valid values:</para>
+        /// <para>The region of the data management center for threat analysis. Select the region of the management center based on the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: China (Hangzhou). Your assets reside in the Chinese mainland.</description></item>
-        /// <item><description>ap-southeast-1: Singapore. Your assets reside outside China.</description></item>
+        /// <item><description>cn-hangzhou: Assets are located in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: Assets are located outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +39,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the member to which the administrator switches the view.</para>
+        /// <para>The ID of the user whose view the administrator assumes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>

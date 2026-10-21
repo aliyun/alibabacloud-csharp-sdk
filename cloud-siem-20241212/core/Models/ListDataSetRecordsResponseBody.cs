@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ListDataSetRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of dataset records.</para>
+        /// <para>The list of dataset records.</para>
         /// </summary>
         [NameInMap("DataSetRecords")]
         [Validation(Required=false)]
         public List<ListDataSetRecordsResponseBodyDataSetRecords> DataSetRecords { get; set; }
         public class ListDataSetRecordsResponseBodyDataSetRecords : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1658974643000</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The dataset ID.</para>
+            /// <para>The ID of the dataset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dataset-t8ha6p7k61rmniqw****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataSetId { get; set; }
 
             /// <summary>
-            /// <para>The dataset name.</para>
+            /// <para>The name of the dataset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lmftest</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataSetName { get; set; }
 
             /// <summary>
-            /// <para>The dataset record ID.</para>
+            /// <para>The ID of the dataset record.</para>
             /// 
             /// <b>Example:</b>
             /// <para>124566</para>
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataSetRecordId { get; set; }
 
             /// <summary>
-            /// <para>The dataset record value.</para>
+            /// <para>The values of the dataset record.</para>
             /// </summary>
             [NameInMap("DataSetRecordValues")]
             [Validation(Required=false)]
             public string DataSetRecordValues { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1658974643000</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of results to return per page for token-based pagination. Valid values: 1 to 100. Default: 50.</para>
+        /// <para>The maximum number of results to return per query when you use the NextToken parameter. Valid values: 1 to 100. Default value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the next page of results.</para>
+        /// <para>The token used to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9AAA9ED9-78F4-5021-86DC-D51C7511****</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries that match the query.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>57</para>

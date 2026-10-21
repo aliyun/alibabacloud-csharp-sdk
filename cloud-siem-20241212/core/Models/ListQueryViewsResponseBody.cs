@@ -9,14 +9,32 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ListQueryViewsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The Simple Log Service project name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>aliyun-cloudsiem-data-173326*******-cn-hangzhou</para>
+        /// </summary>
         [NameInMap("LogProjectName")]
         [Validation(Required=false)]
         public string LogProjectName { get; set; }
 
+        /// <summary>
+        /// <para>The log storage region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("LogRegionId")]
         [Validation(Required=false)]
         public string LogRegionId { get; set; }
 
+        /// <summary>
+        /// <para>The Simple Log Service Logstore name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>audit-activity</para>
+        /// </summary>
         [NameInMap("LogStoreName")]
         [Validation(Required=false)]
         public string LogStoreName { get; set; }
@@ -32,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request or if no more results exist. If more results exist, set this parameter to the NextToken value returned in the previous API call.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request or if no more results exist. Set this parameter to the NextToken value returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAASLVeIxed4466E0LVmGkzwS6hJKd9DGVGMDRM6Lu****</para>

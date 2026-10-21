@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public List<ListDetectionRulesResponseBodyDetectionRules> DetectionRules { get; set; }
         public class ListDetectionRulesResponseBodyDetectionRules : TeaModel {
             /// <summary>
-            /// <para>The ATT\&amp;CK technique of the alert.</para>
+            /// <para>The alert ATT&amp;CK technique.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Discovery</para>
@@ -26,12 +26,15 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             [Validation(Required=false)]
             public string AlertAttCk { get; set; }
 
+            /// <summary>
+            /// <para>The ATT&amp;CK technique mapping.</para>
+            /// </summary>
             [NameInMap("AlertAttCkMapping")]
             [Validation(Required=false)]
             public string AlertAttCkMapping { get; set; }
 
             /// <summary>
-            /// <para>The alert description. You can use $$ to reference the output fields of the query.</para>
+            /// <para>The alert description. You can use $$ to reference query output fields.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Alert from: $product_code$, detected network attack from $src_ip$, affected assets include: $dst_ip$</para>
@@ -43,16 +46,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             /// <summary>
             /// <para>The threat level of the alert. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>5: critical.</para>
-            /// </description></item>
-            /// <item><description><para>4: important.</para>
-            /// </description></item>
-            /// <item><description><para>3: medium.</para>
-            /// </description></item>
-            /// <item><description><para>2: low.</para>
-            /// </description></item>
-            /// <item><description><para>1: informational.</para>
-            /// </description></item>
+            /// <item><description>5: Critical.</description></item>
+            /// <item><description>4: High.</description></item>
+            /// <item><description>3: Medium.</description></item>
+            /// <item><description>2: Low.</description></item>
+            /// <item><description>1: Informational.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -62,12 +60,15 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             [Validation(Required=false)]
             public string AlertLevel { get; set; }
 
+            /// <summary>
+            /// <para>The alert level mapping.</para>
+            /// </summary>
             [NameInMap("AlertLevelMapping")]
             [Validation(Required=false)]
             public string AlertLevelMapping { get; set; }
 
             /// <summary>
-            /// <para>The alert name. You can use $$ to reference the output fields of the query.</para>
+            /// <para>The alert name. You can use $$ to reference query output fields.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Detected high-frequency multi-type network attacks from $src_ip$</para>
@@ -77,16 +78,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string AlertName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the alert template for the detection rule. Valid values:</para>
+            /// <para>The alert template ID of the detection rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>ALERT_ACTIVITY: other alerts.</para>
-            /// </description></item>
-            /// <item><description><para>EDR_ALERT_ACTIVITY: Endpoint Detection and Response (EDR) alerts.</para>
-            /// </description></item>
-            /// <item><description><para>FIREWALL_ALERT_ACTIVITY: firewall alerts.</para>
-            /// </description></item>
-            /// <item><description><para>WAF_ALERT_ACTIVITY: Web Application Firewall (WAF) alerts.</para>
-            /// </description></item>
+            /// <item><description>ALERT_ACTIVITY: other alerts.</description></item>
+            /// <item><description>EDR_ALERT_ACTIVITY: endpoint detection and response alerts.</description></item>
+            /// <item><description>FIREWALL_ALERT_ACTIVITY: firewall alerts.</description></item>
+            /// <item><description>WAF_ALERT_ACTIVITY: web application firewall alerts.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -107,7 +104,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string AlertTacticId { get; set; }
 
             /// <summary>
-            /// <para>The number of alert thresholds.</para>
+            /// <para>The alert threshold count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -127,7 +124,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string AlertThresholdGroup { get; set; }
 
             /// <summary>
-            /// <para>The length of the alert threshold period.</para>
+            /// <para>The alert threshold period length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5m</para>
@@ -137,7 +134,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string AlertThresholdPeriod { get; set; }
 
             /// <summary>
-            /// <para>The alert type.</para>
+            /// <para>The alerting type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WebShell</para>
@@ -146,12 +143,15 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             [Validation(Required=false)]
             public string AlertType { get; set; }
 
+            /// <summary>
+            /// <para>The alerting type mapping.</para>
+            /// </summary>
             [NameInMap("AlertTypeMapping")]
             [Validation(Required=false)]
             public string AlertTypeMapping { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. Format: YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-03-21 13:47:01</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The content of the detection rule expression.</para>
+            /// <para>The expression content of the detection rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>*|set session mode=scan;SELECT * FROM log
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DetectionExpressionContent { get; set; }
 
             /// <summary>
-            /// <para>The type of the detection rule expression.</para>
+            /// <para>The expression content of the detection rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>playbook</para>
@@ -226,12 +226,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             /// <summary>
             /// <para>The status of the detection rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>enabled: The rule is enabled.</para>
-            /// </description></item>
-            /// <item><description><para>disabled: The rule is disabled.</para>
-            /// </description></item>
-            /// <item><description><para>testing: The rule is being tested.</para>
-            /// </description></item>
+            /// <item><description>enabled: Enabled.</description></item>
+            /// <item><description>disabled: Disabled.</description></item>
+            /// <item><description>testing: Testing.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -244,12 +241,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             /// <summary>
             /// <para>The type of the detection rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>preset: a built-in detection rule.</para>
-            /// </description></item>
-            /// <item><description><para>custom: a custom detection rule.</para>
-            /// </description></item>
-            /// <item><description><para>custom_template: a rule template.</para>
-            /// </description></item>
+            /// <item><description>preset: preset detection rule.</description></item>
+            /// <item><description>custom: custom detection rule.</description></item>
+            /// <item><description>custom_template: rule template.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -274,7 +268,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public List<ListDetectionRulesResponseBodyDetectionRulesEntityMappingsNormalizationFieldMappings> NormalizationFieldMappings { get; set; }
                 public class ListDetectionRulesResponseBodyDetectionRulesEntityMappingsNormalizationFieldMappings : TeaModel {
                     /// <summary>
-                    /// <para>The mapped field.</para>
+                    /// <para>The mapping field.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ip</para>
@@ -284,7 +278,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                     public string MappingFieldName { get; set; }
 
                     /// <summary>
-                    /// <para>The standard entity field.</para>
+                    /// <para>The normalized entity field.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>src_ip</para>
@@ -294,7 +288,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                     public string NormalizationFieldName { get; set; }
 
                     /// <summary>
-                    /// <para>The data type of the standard entity field.</para>
+                    /// <para>The data type of the normalized entity field.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vachar</para>
@@ -318,7 +312,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             }
 
             /// <summary>
-            /// <para>The configuration of the event aggregation period.</para>
+            /// <para>The event aggregation period configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5m</para>
@@ -330,16 +324,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             /// <summary>
             /// <para>The event aggregation type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>none: No events are generated.</para>
-            /// </description></item>
-            /// <item><description><para>graph_compute: graph computing (supported by predefined rules).</para>
-            /// </description></item>
-            /// <item><description><para>expert: expert rule.</para>
-            /// </description></item>
-            /// <item><description><para>passthrough: alert passthrough (one-to-one).</para>
-            /// </description></item>
-            /// <item><description><para>window: aggregation of similar alerts (by window).</para>
-            /// </description></item>
+            /// <item><description>none: No event is generated.</description></item>
+            /// <item><description>graph_compute: Graph computing (supported by predefined rules).</description></item>
+            /// <item><description>expert: Expert rule.</description></item>
+            /// <item><description>passthrough: Alerting pass-through (one-to-one).</description></item>
+            /// <item><description>window: Same-type aggregation (window).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -370,14 +359,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string LogSchemaId { get; set; }
 
             /// <summary>
-            /// <para>The configuration of the playbook.</para>
+            /// <para>The XML configuration of the playbook.</para>
             /// </summary>
             [NameInMap("Playbook")]
             [Validation(Required=false)]
             public ListDetectionRulesResponseBodyDetectionRulesPlaybook Playbook { get; set; }
             public class ListDetectionRulesResponseBodyDetectionRulesPlaybook : TeaModel {
                 /// <summary>
-                /// <para>The configuration of the input parameters for invoking the playbook.</para>
+                /// <para>The input parameter configuration for invoking the playbook.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[
@@ -428,7 +417,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             }
 
             /// <summary>
-            /// <para>The custom parameters of the playbook.</para>
+            /// <para>The user-defined parameters of the playbook.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -442,7 +431,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string PlaybookParameters { get; set; }
 
             /// <summary>
-            /// <para>The UUID of the playbook.</para>
+            /// <para>The playbook UUID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dde983ed-eb56-45ea-ac2e-3b12b2a9****</para>
@@ -452,7 +441,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string PlaybookUuid { get; set; }
 
             /// <summary>
-            /// <para>The start time of the scheduling. This is a 13-digit timestamp.</para>
+            /// <para>The scheduling start time (13-digit timestamp).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1733269771123</para>
@@ -462,7 +451,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public long? ScheduleBeginTime { get; set; }
 
             /// <summary>
-            /// <para>The cron expression for scheduling. This parameter is required when ScheduleType is set to cron.</para>
+            /// <para>The scheduling cron expression. This parameter is required when ScheduleType is set to cron.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5m</para>
@@ -472,7 +461,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string ScheduleExpression { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of retries after a timeout. The value can be from 1 to 100.</para>
+            /// <para>The maximum number of retries upon timeout. Valid values: 1 to 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -482,7 +471,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public int? ScheduleMaxRetries { get; set; }
 
             /// <summary>
-            /// <para>The maximum timeout period, in seconds. The value can be from 60 to 1800.</para>
+            /// <para>The maximum timeout period, in seconds. Valid values: 60 to 1800.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -494,10 +483,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             /// <summary>
             /// <para>The scheduling type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>fixed_rate: fixed interval</para>
-            /// </description></item>
-            /// <item><description><para>cron: cron expression</para>
-            /// </description></item>
+            /// <item><description>fixed_rate: fixed interval.</description></item>
+            /// <item><description>cron: cron expression.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -508,7 +495,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string ScheduleType { get; set; }
 
             /// <summary>
-            /// <para>The length of the scheduling window.</para>
+            /// <para>The scheduling window length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5m</para>
@@ -518,7 +505,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string ScheduleWindow { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The update time. Format: YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-04-16 10:51:00</para>
@@ -530,7 +517,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of data entries to read.</para>
+        /// <para>The maximum number of entries to return in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -540,7 +527,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to start the next query.</para>
+        /// <para>The token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>
@@ -550,7 +537,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The pagination parameter. This specifies the current page number.</para>
+        /// <para>The page number of the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -560,7 +547,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The pagination parameter. This specifies the number of entries per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

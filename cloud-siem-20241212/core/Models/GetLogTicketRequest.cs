@@ -10,13 +10,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class GetLogTicketRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response messages. Valid values:</para>
+        /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese.</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English.</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
+        /// <para>Note: This parameter is required in actual calls. If this parameter is not specified, the service returns a 400 error &quot;The specified Lang can not be empty.&quot; Explicitly pass in the language code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -36,12 +35,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public long? LogUserId { get; set; }
 
         /// <summary>
-        /// <para>The region of the Data Management hub for threat analysis. Select the region based on the location of your asset. Valid values:</para>
+        /// <para>The region where the Cloud Threat Detection and Response (CTDR) data management center is located. Specify the management center based on the region of your assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: The asset is in the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: The asset is in a region outside China.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: The assets are located in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: The assets are located outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,7 +49,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of a member. This parameter lets an administrator switch to the perspective of the member.</para>
+        /// <para>The user ID that the administrator switches to when viewing as another member.</para>
         /// 
         /// <b>Example:</b>
         /// <para>173326*******</para>

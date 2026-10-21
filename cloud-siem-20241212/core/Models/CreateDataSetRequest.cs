@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string DataSetDescription { get; set; }
 
         /// <summary>
-        /// <para>The name of the unique key for the dataset.</para>
+        /// <para>The unique key name of the dataset.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,10 +55,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The status of the dataset. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: deleted.</para>
-        /// </description></item>
-        /// <item><description><para>1: enabled.</para>
-        /// </description></item>
+        /// <item><description>0: Deleted.</description></item>
+        /// <item><description>1: Enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -71,10 +69,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The type of the dataset. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>custom: custom.</para>
-        /// </description></item>
-        /// <item><description><para>preset: predefined.</para>
-        /// </description></item>
+        /// <item><description>custom: custom.</description></item>
+        /// <item><description>preset: predefined.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -92,12 +88,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public List<CreateDataSetRequestIpWhitelistRecognizers> IpWhitelistRecognizers { get; set; }
         public class CreateDataSetRequestIpWhitelistRecognizers : TeaModel {
             /// <summary>
-            /// <para>The automatic detection status. Valid values:</para>
+            /// <para>The automatic recognition status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>enabled: enabled.</para>
-            /// </description></item>
-            /// <item><description><para>disabled: disabled.</para>
-            /// </description></item>
+            /// <item><description>enabled: Enabled.</description></item>
+            /// <item><description>disabled: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -108,26 +102,17 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string AutoRecognizeStatus { get; set; }
 
             /// <summary>
-            /// <para>The type of IP address that the recognizer detects. Valid values:</para>
+            /// <para>The IP address type identified by the recognizer. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>sas_vulnerability_scanner_ip: The IP address of the Security Center web vulnerability scanner.</para>
-            /// </description></item>
-            /// <item><description><para>waf_back_source_ip: The back-to-origin IP address of Web Application Firewall (WAF).</para>
-            /// </description></item>
-            /// <item><description><para>ddos_back_source_ip: The back-to-origin IP address of Anti-DDoS.</para>
-            /// </description></item>
-            /// <item><description><para>esa_back_source_ip: The back-to-origin IP address of an Edge Security Acceleration (ESA) node.</para>
-            /// </description></item>
-            /// <item><description><para>ecs_public_ip: The public IP address of an Elastic Compute Service (ECS) instance.</para>
-            /// </description></item>
-            /// <item><description><para>slb_public_ip: The public IP address of a Server Load Balancer (SLB) instance.</para>
-            /// </description></item>
-            /// <item><description><para>vpc_eip: An Elastic IP Address (EIP).</para>
-            /// </description></item>
-            /// <item><description><para>cdn_back_source_ip: The back-to-origin IP address of a content delivery network (CDN).</para>
-            /// </description></item>
-            /// <item><description><para>ga_back_source_ip: The back-to-origin IP address of Global Accelerator (GA).</para>
-            /// </description></item>
+            /// <item><description>sas_vulnerability_scanner_ip: IP addresses of the Security Center vulnerability web scanner.</description></item>
+            /// <item><description>waf_back_source_ip: back-to-origin IP addresses of Web Application Firewall (WAF).</description></item>
+            /// <item><description>ddos_back_source_ip: back-to-origin IP addresses of Anti-DDoS.</description></item>
+            /// <item><description>esa_back_source_ip: back-to-origin node IP addresses of Edge secure acceleration (ESA).</description></item>
+            /// <item><description>ecs_public_ip: public IP addresses of Elastic Compute Service (ECS) instances.</description></item>
+            /// <item><description>slb_public_ip: public IP addresses of Server Load Balancer (SLB) instances.</description></item>
+            /// <item><description>vpc_eip: elastic IP addresses (EIPs).</description></item>
+            /// <item><description>cdn_back_source_ip: back-to-origin IP addresses of content delivery network (CDN).</description></item>
+            /// <item><description>ga_back_source_ip: back-to-origin IP addresses of Global Accelerator (GA).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -138,12 +123,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string IpWhitelistRecognizerType { get; set; }
 
             /// <summary>
-            /// <para>The detection scope. Valid values:</para>
+            /// <para>The recognition scope. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>current_account: the current account only.</para>
-            /// </description></item>
-            /// <item><description><para>rd_accounts: all accounts in your resource directory.</para>
-            /// </description></item>
+            /// <item><description>current_account: the current account only.</description></item>
+            /// <item><description>rd_accounts: multi-account mode enabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -158,10 +141,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese.</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English.</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.
+        /// Note: This parameter is required. If you do not specify this parameter, the API returns a 400 error: &quot;The specified Lang can not be empty.&quot;</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -172,12 +154,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The region of the Data Management center for threat analysis. Select a region based on where your assets are located. Valid values:</para>
+        /// <para>The region where the threat analysis data management center resides. Specify the management center based on the region of your assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: Your assets are in the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: Your assets are outside China.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: Your assets reside in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: Your assets reside outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -188,7 +168,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of the member whose permissions are used to perform the operation. This parameter is used when an administrator acts on behalf of a member.</para>
+        /// <para>The ID of the member to which the administrator switches the view.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>

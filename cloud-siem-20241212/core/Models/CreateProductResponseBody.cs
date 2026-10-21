@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class CreateProductResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the product.</para>
+        /// <para>The product ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alibaba_cloud_sas</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ProductId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>

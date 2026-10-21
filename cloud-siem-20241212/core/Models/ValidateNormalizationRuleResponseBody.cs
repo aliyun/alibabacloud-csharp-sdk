@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ValidateNormalizationRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public List<ValidateNormalizationRuleResponseBodyValidateResult> ValidateResult { get; set; }
         public class ValidateNormalizationRuleResponseBodyValidateResult : TeaModel {
             /// <summary>
-            /// <para>The field name.</para>
+            /// <para>The name of the field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>host</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string FieldName { get; set; }
 
             /// <summary>
-            /// <para>The field value.</para>
+            /// <para>The field information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ze</para>
@@ -69,20 +69,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             /// <summary>
             /// <para>The reason for the validation result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>OperationDenied.TheValueIsRequired: A required parameter is empty.</para>
-            /// </description></item>
-            /// <item><description><para>OperationDenied.TheValueIsNull: The parameter value is empty.</para>
-            /// </description></item>
-            /// <item><description><para>OperationDenied.TheEnumValueNotSupport: The field value is not within the valid enumeration.</para>
-            /// </description></item>
-            /// <item><description><para>OperationDenied.TheValueLessThanMin: The field value is less than the minimum value.</para>
-            /// </description></item>
-            /// <item><description><para>OperationDenied.TheValueMoreThanMax: The field value is greater than the maximum value.</para>
-            /// </description></item>
-            /// <item><description><para>OperationDenied.TheValueNotMatchRegularExpression: The field value does not match the regular expression.</para>
-            /// </description></item>
-            /// <item><description><para>success: The validation passed.</para>
-            /// </description></item>
+            /// <item><description>OperationDenied.TheValueIsRequired: A required parameter is empty.</description></item>
+            /// <item><description>OperationDenied.TheValueIsNull: The parameter value is null.</description></item>
+            /// <item><description>OperationDenied.TheEnumValueNotSupport: The field value is not within the valid enum values.</description></item>
+            /// <item><description>OperationDenied.TheValueLessThanMin: The field value is less than the specified minimum value.</description></item>
+            /// <item><description>OperationDenied.TheValueMoreThanMax: The field value is greater than the specified maximum value.</description></item>
+            /// <item><description>OperationDenied.TheValueNotMatchRegularExpression: The field value fails the regular expression match.</description></item>
+            /// <item><description>success: The validation is passed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,7 +86,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The source of the normalized field. Valid values: \<c>preset\\</c> (built-in) and \<c>custom\\</c>.</para>
+            /// <para>The source of the normalized field. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>preset: Built-in.</description></item>
+            /// <item><description>custom: Custom.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>preset</para>
@@ -113,7 +110,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationFieldName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the normalized field is required.</para>
+            /// <para>Specifies whether the normalized field is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -123,14 +120,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public bool? NormalizationFieldRequired { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the name of the normalized field is a built-in field name.</para>
+            /// <para>Specifies whether the normalized field name is built into the system.</para>
             /// </summary>
             [NameInMap("NormalizationFieldReserved")]
             [Validation(Required=false)]
             public bool? NormalizationFieldReserved { get; set; }
 
             /// <summary>
-            /// <para>The type of the normalized field. Supported types: \<c>text\\</c>, \<c>long\\</c>, \<c>double\\</c>, and \<c>json\\</c>.</para>
+            /// <para>The type of the normalized field. Valid values: text, long, double, and json.</para>
             /// 
             /// <b>Example:</b>
             /// <para>text</para>
@@ -140,7 +137,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationFieldType { get; set; }
 
             /// <summary>
-            /// <para>The reason why the validation of the normalized field failed.</para>
+            /// <para>The reason why the normalized field fails the validation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OperationDenied.TheValueIsRequired</para>
@@ -150,7 +147,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationFieldValidationReason { get; set; }
 
             /// <summary>
-            /// <para>The validation status of the normalized field. Valid values: \<c>pass\\</c> and \<c>fail\\</c>.</para>
+            /// <para>The validation status of the normalized field. Valid values: pass and fail.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pass</para>
@@ -160,14 +157,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationFieldValidationStatus { get; set; }
 
             /// <summary>
-            /// <para>The result of the validation. Valid values:</para>
+            /// <para>The validation result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>1: The validation passed.</para>
-            /// </description></item>
-            /// <item><description><para>0: A warning is returned.</para>
-            /// </description></item>
-            /// <item><description><para>-1: The validation failed.</para>
-            /// </description></item>
+            /// <item><description>1: The validation is passed.</description></item>
+            /// <item><description>0: A warning is returned.</description></item>
+            /// <item><description>1: The validation fails.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public GetNormalizationSchemaResponseBodyNormalizationSchema NormalizationSchema { get; set; }
         public class GetNormalizationSchemaResponseBodyNormalizationSchema : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1733269771123</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the normalization rule category.</para>
+            /// <para>The ID of the normalized rule category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NETWORK_CATEGORY</para>
@@ -37,6 +37,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationCategoryId { get; set; }
 
             /// <summary>
+            /// <para>The source of the field. Valid values: normalized: normalized field, native: native field.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>native</para>
             /// </summary>
@@ -52,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public List<GetNormalizationSchemaResponseBodyNormalizationSchemaNormalizationFields> NormalizationFields { get; set; }
             public class GetNormalizationSchemaResponseBodyNormalizationSchemaNormalizationFields : TeaModel {
                 /// <summary>
-                /// <para>The creation time.</para>
+                /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1736386610000</para>
@@ -62,7 +64,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The normalization field description.</para>
+                /// <para>The description of the normalization field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cloud_user</para>
@@ -72,7 +74,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public string NormalizationFieldDescription { get; set; }
 
                 /// <summary>
-                /// <para>The normalization field example.</para>
+                /// <para>The example of the normalization field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>173326*******</para>
@@ -82,7 +84,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public string NormalizationFieldExample { get; set; }
 
                 /// <summary>
-                /// <para>The source of the standard field. Valid values:</para>
+                /// <para>The source of the normalization field. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>preset: built-in.</description></item>
                 /// <item><description>custom: custom.</description></item>
@@ -96,21 +98,21 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public string NormalizationFieldFrom { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether indexes are created for all keys of the JSON-type standard field.</para>
+                /// <para>Specifies whether indexes are created for all keys of a JSON normalization field.</para>
                 /// </summary>
                 [NameInMap("NormalizationFieldJsonIndexAll")]
                 [Validation(Required=false)]
                 public bool? NormalizationFieldJsonIndexAll { get; set; }
 
                 /// <summary>
-                /// <para>The key list of the JSON-type standard field.</para>
+                /// <para>The list of keys for a JSON normalization field.</para>
                 /// </summary>
                 [NameInMap("NormalizationFieldJsonKeys")]
                 [Validation(Required=false)]
                 public List<GetNormalizationSchemaResponseBodyNormalizationSchemaNormalizationFieldsNormalizationFieldJsonKeys> NormalizationFieldJsonKeys { get; set; }
                 public class GetNormalizationSchemaResponseBodyNormalizationSchemaNormalizationFieldsNormalizationFieldJsonKeys : TeaModel {
                     /// <summary>
-                    /// <para>The creation time.</para>
+                    /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1736386610000</para>
@@ -120,7 +122,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                     public long? CreateTime { get; set; }
 
                     /// <summary>
-                    /// <para>The key description of the JSON-type standard field.</para>
+                    /// <para>The description of the key for a JSON normalization field.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Cloud Provider Code</para>
@@ -130,7 +132,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                     public string NormalizationFieldDescription { get; set; }
 
                     /// <summary>
-                    /// <para>The key example of the JSON-type standard field.</para>
+                    /// <para>The example of the key for a JSON normalization field.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>alibaba_cloud</para>
@@ -140,7 +142,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                     public string NormalizationFieldExample { get; set; }
 
                     /// <summary>
-                    /// <para>The key source of the JSON-type standard field.</para>
+                    /// <para>The source of the key for a JSON normalization field.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>preset</para>
@@ -150,7 +152,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                     public string NormalizationFieldFrom { get; set; }
 
                     /// <summary>
-                    /// <para>The key name of the JSON-type standard field.</para>
+                    /// <para>The name of the key for a JSON normalization field.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cloud_code</para>
@@ -160,28 +162,28 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                     public string NormalizationFieldName { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the key of the JSON-type standard field is required.</para>
+                    /// <para>Specifies whether the key of a JSON normalization field is required.</para>
                     /// </summary>
                     [NameInMap("NormalizationFieldRequired")]
                     [Validation(Required=false)]
                     public bool? NormalizationFieldRequired { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the field is a system built-in standard field name.</para>
+                    /// <para>Specifies whether the normalization field name is a system built-in name.</para>
                     /// </summary>
                     [NameInMap("NormalizationFieldReserved")]
                     [Validation(Required=false)]
                     public bool? NormalizationFieldReserved { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the key of the JSON-type standard field is tokenized.</para>
+                    /// <para>Specifies whether the key of a JSON normalization field is tokenized.</para>
                     /// </summary>
                     [NameInMap("NormalizationFieldTokenize")]
                     [Validation(Required=false)]
                     public bool? NormalizationFieldTokenize { get; set; }
 
                     /// <summary>
-                    /// <para>The key type of the JSON-type standard field.</para>
+                    /// <para>The type of the key for a JSON normalization field.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>varchar</para>
@@ -191,7 +193,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                     public string NormalizationFieldType { get; set; }
 
                     /// <summary>
-                    /// <para>The update time.</para>
+                    /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1736386610000</para>
@@ -203,7 +205,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 }
 
                 /// <summary>
-                /// <para>The normalization field name.</para>
+                /// <para>The name of the normalization field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cloud_user</para>
@@ -213,14 +215,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public string NormalizationFieldName { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the field is required.</para>
+                /// <para>Specifies whether the field is required.</para>
                 /// </summary>
                 [NameInMap("NormalizationFieldRequired")]
                 [Validation(Required=false)]
                 public bool? NormalizationFieldRequired { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the normalization field is required.</para>
+                /// <para>Specifies whether the normalization field is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -230,7 +232,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public bool? NormalizationFieldRequirement { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the normalization field is reserved.</para>
+                /// <para>Specifies whether the normalization field is reserved.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -240,14 +242,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public bool? NormalizationFieldReserved { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the standard field is tokenized.</para>
+                /// <para>Specifies whether the normalization field is tokenized.</para>
                 /// </summary>
                 [NameInMap("NormalizationFieldTokenize")]
                 [Validation(Required=false)]
                 public bool? NormalizationFieldTokenize { get; set; }
 
                 /// <summary>
-                /// <para>The normalization field type. Valid values:</para>
+                /// <para>The type of the normalization field. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>varchar</description></item>
                 /// <item><description>bigint</description></item>
@@ -262,7 +264,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public string NormalizationFieldType { get; set; }
 
                 /// <summary>
-                /// <para>The update time.</para>
+                /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1736386610000</para>
@@ -274,7 +276,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             }
 
             /// <summary>
-            /// <para>The normalization schema description.</para>
+            /// <para>The description of the normalization schema.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Network 5-Tuple Logs</para>
@@ -298,7 +300,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationSchemaFrom { get; set; }
 
             /// <summary>
-            /// <para>The normalization schema ID.</para>
+            /// <para>The ID of the normalization schema.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HTTP_ACTIVITY</para>
@@ -308,7 +310,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationSchemaId { get; set; }
 
             /// <summary>
-            /// <para>The normalization schema name.</para>
+            /// <para>The name of the normalization schema.</para>
             /// 
             /// <b>Example:</b>
             /// <para>normalization_rule_Z57np</para>
@@ -325,7 +327,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public List<GetNormalizationSchemaResponseBodyNormalizationSchemaNormalizationSchemaReferences> NormalizationSchemaReferences { get; set; }
             public class GetNormalizationSchemaResponseBodyNormalizationSchemaNormalizationSchemaReferences : TeaModel {
                 /// <summary>
-                /// <para>The normalization rule ID.</para>
+                /// <para>The ID of the normalization rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>alibaba_cloud_cfw_flow_rule</para>
@@ -337,7 +339,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             }
 
             /// <summary>
-            /// <para>The normalization schema type. Valid values:</para>
+            /// <para>The type of the normalization schema. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>log</description></item>
             /// <item><description>entity</description></item>
@@ -352,6 +354,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationSchemaType { get; set; }
 
             /// <summary>
+            /// <para>The security domain ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>DATA_SECURITY</para>
             /// </summary>
@@ -360,6 +364,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationSecurityDomainId { get; set; }
 
             /// <summary>
+            /// <para>The product ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>alibaba_cloud_bastionhost</para>
             /// </summary>
@@ -367,12 +373,15 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             [Validation(Required=false)]
             public string ProductId { get; set; }
 
+            /// <summary>
+            /// <para>The list of recommended entities.</para>
+            /// </summary>
             [NameInMap("RecommendEntities")]
             [Validation(Required=false)]
             public List<string> RecommendEntities { get; set; }
 
             /// <summary>
-            /// <para>The Simple Log Service LogStore.</para>
+            /// <para>The Simple Log Service Logstore.</para>
             /// 
             /// <b>Example:</b>
             /// <para>network-activity</para>
@@ -392,7 +401,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string TargetStoreView { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1733269771123</para>
@@ -402,6 +411,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public long? UpdateTime { get; set; }
 
             /// <summary>
+            /// <para>The vendor ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>alibaba_cloud</para>
             /// </summary>

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>If this value is true, the minor engine version is not the latest version.</para>
         /// <remarks>
-        /// <para>If the minor engine version of your server is not the latest version, the sampling logs may be inaccurate, which causes inaccurate IP statistics. We recommend that you upgrade the minor engine version at your earliest convenience.</para>
+        /// <para>If the minor engine version of your server is not the latest version, the sampling logs may be inaccurate, which causes imprecise IP statistics. We recommend that you upgrade the minor engine version at your earliest convenience.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Alert")]

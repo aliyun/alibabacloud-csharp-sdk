@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public List<ListAlertsResponseBodyAlerts> Alerts { get; set; }
         public class ListAlertsResponseBodyAlerts : TeaModel {
             /// <summary>
-            /// <para>The alert details.</para>
+            /// <para>The detailed content of the alert.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;alert_uuid&quot;:&quot;a3f8c2e1-9b7d-4f6a-8c2e-1d5b9a7f****&quot;}</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string AlertRecord { get; set; }
 
             /// <summary>
-            /// <para>The alert UUID.</para>
+            /// <para>The UUID of the alert.</para>
             /// 
             /// <b>Example:</b>
             /// <para>798341271677187</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries to return in this request.</para>
+        /// <para>The maximum number of entries to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

@@ -17,12 +17,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public List<ListDataSourceTemplatesResponseBodyDataSourceTemplates> DataSourceTemplates { get; set; }
         public class ListDataSourceTemplatesResponseBodyDataSourceTemplates : TeaModel {
             /// <summary>
-            /// <para>Indicates whether to automatically discover new users. Valid values:</para>
+            /// <para>Indicates whether automatic discovery of new users is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>enabled: enabled.</para>
-            /// </description></item>
-            /// <item><description><para>disabled: disabled.</para>
-            /// </description></item>
+            /// <item><description>enabled: Enabled.</description></item>
+            /// <item><description>disabled: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -33,7 +31,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string AutoScanNew { get; set; }
 
             /// <summary>
-            /// <para>The time when the template was created.</para>
+            /// <para>The creation time. This value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1733269771123</para>
@@ -43,12 +41,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The source of the data. Valid values:</para>
+            /// <para>The data source origin. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>center</para>
-            /// </description></item>
-            /// <item><description><para>custom</para>
-            /// </description></item>
+            /// <item><description>center</description></item>
+            /// <item><description>custom</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -59,7 +55,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataSourceFrom { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether to automatically discover new data sources.</para>
+            /// <para>Indicates whether automatic discovery of new data sources is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -79,7 +75,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataSourceRecognizer { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data source template.</para>
+            /// <para>The data source template ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alibaba_cloud_actiontrail_event_ingestion</para>
@@ -89,7 +85,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataSourceTemplateId { get; set; }
 
             /// <summary>
-            /// <para>The name of the data source template.</para>
+            /// <para>The data source template name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alibaba_cloud_actiontrail_event_ingestion</para>
@@ -99,7 +95,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataSourceTemplateName { get; set; }
 
             /// <summary>
-            /// <para>The rule for matching the name of the Simple Log Service project.</para>
+            /// <para>The matching rule for the Simple Log Service project name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aliyun-cloudsiem-data-173326*******</para>
@@ -116,7 +112,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public List<string> LogRegionIds { get; set; }
 
             /// <summary>
-            /// <para>The rule for matching the name of the Simple Log Service Logstore.</para>
+            /// <para>The matching rule for the Simple Log Service Logstore name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>audit-activity</para>
@@ -133,7 +129,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public List<string> LogUserIds { get; set; }
 
             /// <summary>
-            /// <para>The time when the template was updated.</para>
+            /// <para>The update time. This value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1733269771123</para>

@@ -46,10 +46,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The region where the Threat Analysis data management center is located. Specify the management center based on the region of your assets. Valid values:</para>
+        /// <para>The region of the data management center for threat analysis. Select the region of the management center based on the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: Your assets belong to the Chinese mainland or China (Hong Kong).</description></item>
-        /// <item><description>ap-southeast-1: Your assets belong to regions outside China.</description></item>
+        /// <item><description>cn-hangzhou: Select this value if your assets are located in the Chinese mainland and Hong Kong (China).</description></item>
+        /// <item><description>ap-southeast-1: Select this value if your assets are located outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Traces the service request.</para>
+        /// <para>The trace ID used to track the service request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>550e8400e29b41d4a71644665544****</para>

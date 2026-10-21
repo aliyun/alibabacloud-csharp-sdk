@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ExecuteLogQueryRequest : TeaModel {
         /// <summary>
-        /// <para>The end time.</para>
+        /// <para>The end time. The value is a UNIX timestamp in milliseconds (ms).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1733269771123</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to pack non-standard fields into the extension field extend_content. Valid values:</para>
+        /// <para>Specifies whether to pack non-standard fields into the extended field extend_content. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>enabled: Enabled.</description></item>
         /// <item><description>disabled: Disabled.</description></item>
@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ExtendContentPacked { get; set; }
 
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the response messages. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese.</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English. This parameter is required. If not specified, the service returns a 400 error. Explicitly set this parameter to zh or en.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,12 +47,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// <para>The log query condition.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{\&quot;alert_level\&quot;:[\&quot;5\&quot;,\&quot;4\&quot;,\&quot;3\&quot;,\&quot;2\&quot;,\&quot;1\&quot;]}</para>
+        /// </summary>
         [NameInMap("LogCondition")]
         [Validation(Required=false)]
         public string LogCondition { get; set; }
 
         /// <summary>
-        /// <para>The Simple Log Service project name.</para>
+        /// <para>The name of the Simple Log Service project. This parameter is required when executing a log query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>slsaudit-center-173326*******-cn-hangzhou</para>
@@ -74,7 +80,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string LogQuery { get; set; }
 
         /// <summary>
-        /// <para>The log storage region ID.</para>
+        /// <para>The ID of the log storage region. This parameter is required when executing a log query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -84,7 +90,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string LogRegionId { get; set; }
 
         /// <summary>
-        /// <para>The Simple Log Service project name.</para>
+        /// <para>The name of the Simple Log Service project. This parameter is required when executing a log query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>huawei-cn-cfw</para>
@@ -104,7 +110,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public long? LogUserId { get; set; }
 
         /// <summary>
-        /// <para>If packing is enabled, you must specify NormalizationSchemaId.</para>
+        /// <para>The NormalizationSchemaId to specify if packing is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WAF_ALERT_ACTIVITY</para>
@@ -114,10 +120,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NormalizationSchemaId { get; set; }
 
         /// <summary>
-        /// <para>The region where the threat analysis data management center is located. Specify the management center based on the region of your assets. Valid values:</para>
+        /// <para>The region where the data management center of the threat analysis feature is located. Select the management center region based on the region where your assets reside. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: the asset is in the Chinese mainland.</description></item>
-        /// <item><description>ap-southeast-1: the asset is outside the Chinese mainland.</description></item>
+        /// <item><description>cn-hangzhou: Assets are located in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: Assets are located outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -128,7 +134,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of the member to which the administrator switches the view.</para>
+        /// <para>The user ID of the member account that the administrator switches to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>173326*******</para>
@@ -138,7 +144,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>The start time.</para>
+        /// <para>The start time. The value is a UNIX timestamp in milliseconds (ms).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1733269771123</para>

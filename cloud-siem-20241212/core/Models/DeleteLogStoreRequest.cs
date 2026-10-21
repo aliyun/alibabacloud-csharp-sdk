@@ -12,9 +12,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese.</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English.</para>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.<remarks>
+        /// <para>Note: This parameter is required in practice. If this parameter is not specified, the API returns a 400 error: &quot;The specified Lang can not be empty.&quot;</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
         /// 
@@ -26,7 +27,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The name of the Simple Log Service project.</para>
+        /// <para>The Simple Log Service project name.</para>
+        /// <remarks>
+        /// <para>Note: This parameter is required in practice. If this parameter is not specified, the API returns a 400 error: &quot;SLS log project name is empty.&quot;</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>aliyun-cloudsiem-data-173326*******-cn-hangzhou</para>
@@ -36,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string LogProjectName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the log storage region.</para>
+        /// <para>The log storage region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -46,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string LogRegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the Simple Log Service Logstore.</para>
+        /// <para>The Simple Log Service LogStore name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rds-logstore</para>
@@ -56,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string LogStoreName { get; set; }
 
         /// <summary>
-        /// <para>The user ID for data ingestion.</para>
+        /// <para>The user ID for data access.</para>
         /// 
         /// <b>Example:</b>
         /// <para>173326*******</para>
@@ -66,12 +70,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public long? LogUserId { get; set; }
 
         /// <summary>
-        /// <para>The region of the Management Hub. Select a region based on the location of your assets. Valid values:</para>
+        /// <para>The region where the Cloud Threat Detection and Response (CTDR) data management center is located. Specify the management center based on the region of your assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: if your assets are in the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: if your assets are outside China.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: Your assets belong to the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: Your assets belong to regions outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,7 +84,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of the member whose perspective the administrator wants to switch to.</para>
+        /// <para>The user ID that the administrator switches to when viewing from the perspective of another member.</para>
         /// 
         /// <b>Example:</b>
         /// <para>173326*******</para>

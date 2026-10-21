@@ -10,12 +10,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class CreateLogStoreRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response messages. Valid values:</para>
+        /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese.</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English.</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.
+        /// Note: This parameter is required. If this parameter is not specified, the API returns a 400 error. Valid values: zh (Chinese) or en (English).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +25,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The name of the Simple Log Service project.</para>
+        /// <para>The Simple Log Service project name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aliyun-cloudsiem-channel-173326*******-cn-hangzhou</para>
@@ -36,7 +35,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string LogProjectName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the log storage region.</para>
+        /// <para>The log storage region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -46,7 +45,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string LogRegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the Simple Log Service Logstore.</para>
+        /// <para>The Simple Log Service LogStore name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>logstoreqykug</para>
@@ -66,12 +65,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public long? LogUserId { get; set; }
 
         /// <summary>
-        /// <para>The region of the Data Management Center for threat analysis. Select a region for the Management Center based on the region of your assets. Valid values:</para>
+        /// <para>The region where the data management center of Cloud Threat Detection and Response (CTDR) is located. Specify the management center based on the region of your assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: Your assets are in the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: Your assets are in a region outside China.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: Your assets reside in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: Your assets reside outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,7 +79,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of a member. An administrator can specify this parameter to switch to the perspective of the member.</para>
+        /// <para>The user ID that the administrator switches to when viewing as another member.</para>
         /// 
         /// <b>Example:</b>
         /// <para>173326*******</para>

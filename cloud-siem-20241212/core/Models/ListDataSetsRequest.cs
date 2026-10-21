@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ListDataSetsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the dataset.</para>
+        /// <para>The dataset ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dataset-qt0n8246gs9nackg****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public List<string> DataSetIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the dataset.</para>
+        /// <para>The dataset name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lmftest</para>
@@ -37,12 +37,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string DataSetName { get; set; }
 
         /// <summary>
-        /// <para>The status of the dataset. Valid values:</para>
+        /// <para>The dataset status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: deleted.</para>
-        /// </description></item>
-        /// <item><description><para>1: enabled.</para>
-        /// </description></item>
+        /// <item><description>0: deleted.</description></item>
+        /// <item><description>1: enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,12 +51,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? DataSetStatus { get; set; }
 
         /// <summary>
-        /// <para>The type of the dataset. Valid values:</para>
+        /// <para>The dataset type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>custom: custom.</para>
-        /// </description></item>
-        /// <item><description><para>preset: predefined.</para>
-        /// </description></item>
+        /// <item><description>custom: custom dataset.</description></item>
+        /// <item><description>preset: predefined dataset.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -71,10 +67,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese.</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English.</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.
+        /// This parameter is required in practice. If you do not specify this parameter, the API returns a 400 error (The specified Lang can not be empty.). Valid values: zh and en.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -85,7 +80,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results to return for the request. This parameter is used for queries that use NextToken. Valid values: 1 to 100. Default value: 50.</para>
+        /// <para>The maximum number of results to return when you use the NextToken-based pagination method. Valid values: 1 to 100. Default value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -95,7 +90,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to start the next query.</para>
+        /// <para>The pagination token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>
@@ -107,10 +102,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>asc</b> (default): ascending.</para>
-        /// </description></item>
-        /// <item><description><para><b>desc</b>: descending.</para>
-        /// </description></item>
+        /// <item><description><b>asc</b> (default): ascending order.</description></item>
+        /// <item><description><b>desc</b>: descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -121,12 +114,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string OrderDirection { get; set; }
 
         /// <summary>
-        /// <para>The field to use for sorting. Valid values:</para>
+        /// <para>The field used for sorting. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>GmtCreate: creation time.</para>
-        /// </description></item>
-        /// <item><description><para>GmtModified: update time.</para>
-        /// </description></item>
+        /// <item><description>GmtCreate: creation time.</description></item>
+        /// <item><description>GmtModified: update time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -157,12 +148,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region where the Data Management Center for threat analysis is deployed. Select a region based on the location of your assets. Valid values:</para>
+        /// <para>The region where the threat analysis data management center resides. Specify the management center based on the region of your assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: Your assets are in the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: Your assets are in a region outside China.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: The assets reside in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: The assets reside outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -173,7 +162,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID that an administrator uses to switch to the perspective of a member.</para>
+        /// <para>The ID of the member to which the administrator switches the view.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>
